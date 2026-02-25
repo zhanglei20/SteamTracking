@@ -264,6 +264,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
           const [_, __webpack_require__] = _.useState(22);
@@ -288,51 +289,37 @@
             } else _ += window.location.href;
             1 == _ ? _._.OpenSteamURL(_) : (window.location.href = _);
           }, [_]);
-          return _.createElement(
-            "div",
-            {
-              className: _.OpenInBannerContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.OpenInBannerContent,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _.OpenInBannerContainer,
+            children: (0, _.jsxs)("div", {
+              className: _.OpenInBannerContent,
+              children: [
+                (0, _.jsx)("div", {
                   className: _.BannerButtonContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     onClick: _,
                     className: _.BannerButton,
-                  },
-                  (0, _._)("#OpenInDesktopAppBanner_OpenAppButton"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                    children: (0, _._)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  }),
+                }),
+                (0, _.jsx)("div", {
                   className: _.BannerMessage,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: _.BannerTitle,
-                  },
-                  _.createElement(
-                    "b",
-                    null,
-                    (0, _._)("#OpenInDesktopAppBanner_NotSignedIn"),
-                  ),
-                  _.createElement("br", null),
-                  (0, _._)("#OpenInDesktopAppBanner_Body"),
-                ),
-              ),
-            ),
-          );
+                    children: [
+                      (0, _.jsx)("b", {
+                        children: (0, _._)(
+                          "#OpenInDesktopAppBanner_NotSignedIn",
+                        ),
+                      }),
+                      (0, _.jsx)("br", {}),
+                      (0, _._)("#OpenInDesktopAppBanner_Body"),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          });
         }),
         _ = _;
     },

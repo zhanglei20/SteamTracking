@@ -121,60 +121,56 @@
       function _(_) {
         const { crumbs: _, className: __webpack_require__ } = _;
         return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.BreadContainer, __webpack_require__),
-              },
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_.BreadContainer, __webpack_require__),
+              children: [
+                (0, _.jsx)(_._, {
                   className: "blockbg",
                   "flow-children": "row",
-                },
-                _.map((_) => {
-                  const _ = new Array();
-                  return (
-                    _.url.startsWith("http")
-                      ? _.push(
-                          _.createElement(
-                            _._,
-                            {
-                              key: "anchor_" + _.name,
-                              href: _.url,
-                            },
-                            _.name,
+                  children: _.map((_) => {
+                    const _ = new Array();
+                    return (
+                      _.url.startsWith("http")
+                        ? _.push(
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                href: _.url,
+                                children: _.name,
+                              },
+                              "anchor_" + _.name,
+                            ),
+                          )
+                        : _.push(
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                _: _.url,
+                                children: _.name,
+                              },
+                              "link_" + _.name,
+                            ),
                           ),
-                        )
-                      : _.push(
-                          _.createElement(
-                            _._,
-                            {
-                              key: "link_" + _.name,
-                              _: _.url,
-                            },
-                            _.name,
-                          ),
+                      _.push(
+                        (0, _.jsx)(
+                          "span",
+                          {
+                            children: " > ",
+                          },
+                          _.name + "span",
                         ),
-                    _.push(
-                      _.createElement(
-                        "span",
-                        {
-                          key: _.name + "span",
-                        },
-                        " > ",
                       ),
-                    ),
-                    _
-                  );
+                      _
+                    );
+                  }),
                 }),
-              ),
-              _.createElement("div", {
-                style: {
-                  clear: "left",
-                },
-              }),
-            )
+                (0, _.jsx)("div", {
+                  style: {
+                    clear: "left",
+                  },
+                }),
+              ],
+            })
           : null;
       }
     },
@@ -186,6 +182,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -514,165 +511,153 @@
           [_, _] = _.useState(_),
           [_, _] = _.useState(-1),
           _ = _ >= 0;
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#EventDashboard_Stats_title"),
-            strDescription: (0, _._)("#EventDashboard_Stats_desc"),
-            closeModal: __webpack_require__,
-            bDisableBackgroundDismiss: !0,
-            bOKDisabled: _,
-            onOK: () =>
-              (async function (_, _, _, _, _) {
-                const _ = new Array(),
-                  _ = _().CancelToken.source();
-                let _ = 0;
-                _(_);
-                const _ = 100;
-                let _,
-                  _ = 0,
-                  _ = new Array();
-                const _ = (0, _._)(_._.LANGUAGE);
-                do {
-                  if (
-                    ((_ += 1),
-                    (_ = await _._.LoadAdjacentPartnerEvents(
-                      _,
-                      _.clanSteamID,
-                      void 0,
-                      0,
-                      _,
-                      {
-                        rtime_oldestevent: _,
-                        only_summaries: !0,
-                      },
-                      _,
-                    )),
-                    _?.length > 0)
-                  ) {
-                    (_ += _.length), _(_), (_ = _[_.length - 1].GID);
-                    const _ = _.filter(
-                      (_) => _.startTime <= _ && _.BIsVisibleEvent(),
-                    ).map((_) => _.GID);
-                    _.length > 0 &&
-                      (await _.LoadStatsForEvents(_.clanSteamID, _, _),
-                      (_ += _.length),
-                      _(_),
-                      __webpack_require__.forEach((_) => {
-                        const _ = _.GetStatsFor(_.clanSteamID, _),
-                          _ = _._.GetClanEventModel(_),
-                          _ = _.GetStartTimeAndDateUnixSeconds(),
-                          _ = _.GetEndTimeAndDateUnixSeconds();
-                        _.push({
-                          appid: _.appid,
-                          app_name: _?.GetName() || "",
-                          event_name: _.GetNameWithFallback(_),
-                          event_type: _.GetEventTypeAsString(),
-                          event_start_date: (0, _._)(_) + " @ " + (0, _._)(_),
-                          event_end_date: (0, _._)(_) + " @ " + (0, _._)(_),
-                          ..._.m_stats,
-                          event_gid: "'" + _,
-                        });
-                      }));
-                  }
-                } while (_.length == _ && _ < 100);
-                return (
-                  _.WriteCSVToFile(
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#EventDashboard_Stats_title"),
+          strDescription: (0, _._)("#EventDashboard_Stats_desc"),
+          closeModal: __webpack_require__,
+          bDisableBackgroundDismiss: !0,
+          bOKDisabled: _,
+          onOK: () =>
+            (async function (_, _, _, _, _) {
+              const _ = new Array(),
+                _ = _().CancelToken.source();
+              let _ = 0;
+              _(_);
+              const _ = 100;
+              let _,
+                _ = 0,
+                _ = new Array();
+              const _ = (0, _._)(_._.LANGUAGE);
+              do {
+                if (
+                  ((_ += 1),
+                  (_ = await _._.LoadAdjacentPartnerEvents(
                     _,
-                    "event_stats_" +
-                      _.group_name.toLocaleLowerCase().replace(/\s/g, "_") +
-                      ".csv",
-                  ),
-                  !0
-                );
-              })(_, _, _ ? _ : _, _ ? Number.MAX_SAFE_INTEGER : _, _).then(() =>
-                __webpack_require__(),
-              ),
-          },
-          Boolean(_.appid && !_)
-            ? _.createElement(_._, {
+                    _.clanSteamID,
+                    void 0,
+                    0,
+                    _,
+                    {
+                      rtime_oldestevent: _,
+                      only_summaries: !0,
+                    },
+                    _,
+                  )),
+                  _?.length > 0)
+                ) {
+                  (_ += _.length), _(_), (_ = _[_.length - 1].GID);
+                  const _ = _.filter(
+                    (_) => _.startTime <= _ && _.BIsVisibleEvent(),
+                  ).map((_) => _.GID);
+                  _.length > 0 &&
+                    (await _.LoadStatsForEvents(_.clanSteamID, _, _),
+                    (_ += _.length),
+                    _(_),
+                    __webpack_require__.forEach((_) => {
+                      const _ = _.GetStatsFor(_.clanSteamID, _),
+                        _ = _._.GetClanEventModel(_),
+                        _ = _.GetStartTimeAndDateUnixSeconds(),
+                        _ = _.GetEndTimeAndDateUnixSeconds();
+                      _.push({
+                        appid: _.appid,
+                        app_name: _?.GetName() || "",
+                        event_name: _.GetNameWithFallback(_),
+                        event_type: _.GetEventTypeAsString(),
+                        event_start_date: (0, _._)(_) + " @ " + (0, _._)(_),
+                        event_end_date: (0, _._)(_) + " @ " + (0, _._)(_),
+                        ..._.m_stats,
+                        event_gid: "'" + _,
+                      });
+                    }));
+                }
+              } while (_.length == _ && _ < 100);
+              return (
+                _.WriteCSVToFile(
+                  _,
+                  "event_stats_" +
+                    _.group_name.toLocaleLowerCase().replace(/\s/g, "_") +
+                    ".csv",
+                ),
+                !0
+              );
+            })(_, _, _ ? _ : _, _ ? Number.MAX_SAFE_INTEGER : _, _).then(() =>
+              __webpack_require__(),
+            ),
+          children: Boolean(_.appid && !_)
+            ? (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 position: "center",
                 size: "medium",
               })
-            : _.createElement(
-                "div",
-                {
-                  className: _().DialogCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
+            : (0, _.jsxs)("div", {
+                className: _().DialogCtn,
+                children: [
+                  (0, _.jsx)("div", {
                     className: "DialogLabel",
-                  },
-                  (0, _._)("#EventDashboard_Stats_Oldest_Title"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: "_DialogInputContainer _DialogLayout",
-                  },
-                  _.createElement(_._, {
-                    label: (0, _._)("#EventDashboard_Stats_Oldest"),
-                    onChange: _,
-                    checked: _,
-                    disabled: _,
+                    children: (0, _._)("#EventDashboard_Stats_Oldest_Title"),
                   }),
-                  !_ &&
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#EventDashboard_Stats_Oldest_Override"),
-                      _.createElement(_._, {
-                        nEarliestTime: _,
-                        nLatestTime: _ ? void 0 : _,
-                        bShowTimeZone: !0,
-                        fnGetTimeToUpdate: () => _,
-                        fnSetTimeToUpdate: _,
+                  (0, _.jsxs)("div", {
+                    className: "_DialogInputContainer _DialogLayout",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDashboard_Stats_Oldest"),
+                        onChange: _,
+                        checked: _,
                         disabled: _,
                       }),
-                    ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogLabel",
-                  },
-                  (0, _._)("#EventDashboard_Stats_Newest_Title"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: "_DialogInputContainer _DialogLayout",
-                  },
-                  _.createElement(_._, {
-                    label: (0, _._)("#EventDashboard_Stats_Newest"),
-                    onChange: _,
-                    checked: _,
-                    disabled: _,
+                      !_ &&
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _._)("#EventDashboard_Stats_Oldest_Override"),
+                            (0, _.jsx)(_._, {
+                              nEarliestTime: _,
+                              nLatestTime: _ ? void 0 : _,
+                              bShowTimeZone: !0,
+                              fnGetTimeToUpdate: () => _,
+                              fnSetTimeToUpdate: _,
+                              disabled: _,
+                            }),
+                          ],
+                        }),
+                    ],
                   }),
-                  !_ &&
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#EventDashboard_Stats_Newest_Override"),
-                      _.createElement(_._, {
-                        nEarliestTime: _ ? _ : _,
-                        bShowTimeZone: !0,
-                        fnGetTimeToUpdate: () => _,
-                        fnSetTimeToUpdate: _,
+                  (0, _.jsx)("div", {
+                    className: "DialogLabel",
+                    children: (0, _._)("#EventDashboard_Stats_Newest_Title"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "_DialogInputContainer _DialogLayout",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDashboard_Stats_Newest"),
+                        onChange: _,
+                        checked: _,
                         disabled: _,
                       }),
-                    ),
-                ),
-                _ &&
-                  _.createElement(_._, {
-                    position: "center",
-                    size: "medium",
-                    string: (0, _._)("#EventDashboard_Stats_Progress", _),
+                      !_ &&
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _._)("#EventDashboard_Stats_Newest_Override"),
+                            (0, _.jsx)(_._, {
+                              nEarliestTime: _ ? _ : _,
+                              bShowTimeZone: !0,
+                              fnGetTimeToUpdate: () => _,
+                              fnSetTimeToUpdate: _,
+                              disabled: _,
+                            }),
+                          ],
+                        }),
+                    ],
                   }),
-              ),
-        );
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      position: "center",
+                      size: "medium",
+                      string: (0, _._)("#EventDashboard_Stats_Progress", _),
+                    }),
+                ],
+              }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -692,436 +677,373 @@
         const _ = _._.GetClanInfoByClanAccountID(
           __webpack_require__.GetAccountID(),
         );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_ ? _.EventDetailView : _.DashboardView),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_ ? _.EventDetailView : _.DashboardView),
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_.HeaderCtn),
-            },
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.StatsCtnTitle,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatTitle,
-                  },
-                  (0, _._)("#EventDashBoard_SummaryStats_Title"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#EventDashBoard_SummaryStats_Desc"),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsActionRow,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: (_) =>
-                        (0, _._)(
-                          _,
-                          `${_._.PARTNER_BASE_URL}/doc/marketing/event_tools/stats`,
-                        ),
-                    },
-                    (0, _._)("#EventDashBoard_SummaryStats_AboutStats"),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: (_) =>
-                        (0, _._)(
-                          _.createElement(_, {
-                            clanInfo: _,
+              children: [
+                !_ &&
+                  (0, _.jsxs)("div", {
+                    className: _.StatsCtnTitle,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.StatTitle,
+                        children: [
+                          (0, _._)("#EventDashBoard_SummaryStats_Title"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)(
+                              "#EventDashBoard_SummaryStats_Desc",
+                            ),
                           }),
-                          (0, _._)(_),
-                        ),
-                    },
-                    (0, _._)("#EventDashBoard_SummaryStats_Export"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsActionRow,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () => _(!_),
-                    },
-                    (0, _._)("#EventDashBoard_SummaryStats_Details"),
-                  ),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.TotalsCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.HeaderStat,
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _.StatDescription,
-                  },
-                  (0, _._)("#EventDashBoard_SummaryStats_TotalImpressions"),
-                ),
-                _.createElement(
-                  "span",
-                  {
-                    className: _.StatFigure,
-                  },
-                  (0, _._)(_.total_showm),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.HeaderStat,
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _.StatDescription,
-                  },
-                  (0, _._)("#EventDashBoard_SummaryStats_TotalViews"),
-                ),
-                _.createElement(
-                  "span",
-                  {
-                    className: _.StatFigure,
-                  },
-                  (0, _._)(_.total_read),
-                ),
-              ),
-            ),
-          ),
-          Boolean(_ && _) &&
-            _.createElement(
-              "div",
-              {
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsActionRow,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            onClick: (_) =>
+                              (0, _._)(
+                                _,
+                                `${_._.PARTNER_BASE_URL}/doc/marketing/event_tools/stats`,
+                              ),
+                            children: (0, _._)(
+                              "#EventDashBoard_SummaryStats_AboutStats",
+                            ),
+                          }),
+                          (0, _.jsx)(_._, {
+                            onClick: (_) =>
+                              (0, _._)(
+                                (0, _.jsx)(_, {
+                                  clanInfo: _,
+                                }),
+                                (0, _._)(_),
+                              ),
+                            children: (0, _._)(
+                              "#EventDashBoard_SummaryStats_Export",
+                            ),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.StatsActionRow,
+                        children: (0, _.jsx)(_._, {
+                          onClick: () => _(!_),
+                          children: (0, _._)(
+                            "#EventDashBoard_SummaryStats_Details",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                (0, _.jsxs)("div", {
+                  className: _.TotalsCtn,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.HeaderStat,
+                      children: [
+                        (0, _.jsx)("span", {
+                          className: _.StatDescription,
+                          children: (0, _._)(
+                            "#EventDashBoard_SummaryStats_TotalImpressions",
+                          ),
+                        }),
+                        (0, _.jsx)("span", {
+                          className: _.StatFigure,
+                          children: (0, _._)(_.total_showm),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.HeaderStat,
+                      children: [
+                        (0, _.jsx)("span", {
+                          className: _.StatDescription,
+                          children: (0, _._)(
+                            "#EventDashBoard_SummaryStats_TotalViews",
+                          ),
+                        }),
+                        (0, _.jsx)("span", {
+                          className: _.StatFigure,
+                          children: (0, _._)(_.total_read),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            Boolean(_ && _) &&
+              (0, _.jsxs)("div", {
                 className: _.ModerationWarningCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.ModerationWarning,
-                },
-                (0, _._)("#EventDashBoard_ModerationQueueWarning"),
-              ),
-              _.createElement(
-                "a",
-                {
-                  href:
-                    _._.PARTNER_BASE_URL +
-                    "doc/marketing/event_tools/moderation",
-                },
-                (0, _._)("#EventDashBoard_Location_ModerationTitle"),
-              ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.ModerationWarning,
+                    children: (0, _._)(
+                      "#EventDashBoard_ModerationQueueWarning",
+                    ),
+                  }),
+                  (0, _.jsx)("a", {
+                    href:
+                      _._.PARTNER_BASE_URL +
+                      "doc/marketing/event_tools/moderation",
+                    children: (0, _._)(
+                      "#EventDashBoard_Location_ModerationTitle",
+                    ),
+                  }),
+                ],
+              }),
+            _ &&
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_.StatsCtn),
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _.StatsLeftSection,
-                      _ && _.DisabledStats,
-                    ),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.StatsTitle_ctn,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventDashBoard_Location_LibraryHome"),
-                    ),
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.ModerationNote,
-                      },
-                      "( ",
-                      (0, _._)("#EventDashBoard_Location_WaitingModeraion"),
-                      " )",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.StatsTitle,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventDashBoard_Summary_LibraryHome_Shown"),
-                    ),
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(_.library_overview_shown),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.StatsTitle,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventDashBoard_Summary_LibraryHome_Read"),
-                    ),
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(_.library_overview_read),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.StatsTitle_ctn,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventDashBoard_Location_LibraryDetail"),
-                    ),
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.ModerationNote,
-                      },
-                      "( ",
-                      (0, _._)("#EventDashBoard_Location_WaitingModeraion"),
-                      " )",
-                    ),
-                  ),
-                  _.app_details_spotlight_shown > 0 &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(
-                        "div",
-                        {
+                children: [
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(
+                        _.StatsLeftSection,
+                        _ && _.DisabledStats,
+                      ),
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.StatsTitle_ctn,
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Location_LibraryHome",
+                              ),
+                            }),
+                            (0, _.jsxs)("span", {
+                              className: _.ModerationNote,
+                              children: [
+                                "( ",
+                                (0, _._)(
+                                  "#EventDashBoard_Location_WaitingModeraion",
+                                ),
+                                " )",
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
                           className: _.StatsTitle,
-                        },
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(
-                            "#EventDashBoard_Summary_AppDetailSpotlight_Shown",
-                          ),
-                        ),
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(_.app_details_spotlight_shown),
-                        ),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Summary_LibraryHome_Shown",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(_.library_overview_shown),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
                           className: _.StatsTitle,
-                        },
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(
-                            "#EventDashBoard_Summary_AppDetailSpotlight_Read",
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Summary_LibraryHome_Read",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(_.library_overview_read),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.StatsTitle_ctn,
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Location_LibraryDetail",
+                              ),
+                            }),
+                            (0, _.jsxs)("span", {
+                              className: _.ModerationNote,
+                              children: [
+                                "( ",
+                                (0, _._)(
+                                  "#EventDashBoard_Location_WaitingModeraion",
+                                ),
+                                " )",
+                              ],
+                            }),
+                          ],
+                        }),
+                        _.app_details_spotlight_shown > 0 &&
+                          (0, _.jsxs)(_.Fragment, {
+                            children: [
+                              (0, _.jsxs)("div", {
+                                className: _.StatsTitle,
+                                children: [
+                                  (0, _.jsx)("span", {
+                                    children: (0, _._)(
+                                      "#EventDashBoard_Summary_AppDetailSpotlight_Shown",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("span", {
+                                    children: (0, _._)(
+                                      _.app_details_spotlight_shown,
+                                    ),
+                                  }),
+                                ],
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _.StatsTitle,
+                                children: [
+                                  (0, _.jsx)("span", {
+                                    children: (0, _._)(
+                                      "#EventDashBoard_Summary_AppDetailSpotlight_Read",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("span", {
+                                    children: (0, _._)(
+                                      _.app_details_spotlight_read,
+                                    ),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        (0, _.jsxs)("div", {
+                          className: _.StatsTitle,
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Summary_AppDetailActivity_Shown",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(_.app_details_activity_shown),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.StatsTitle,
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(
+                                "#EventDashBoard_Summary_AppDetailActivity_Read",
+                              ),
+                            }),
+                            (0, _.jsx)("span", {
+                              children: (0, _._)(_.app_details_activity_read),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: _.StatsRightSection,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.StatsTitle_ctn,
+                        children: (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#EventDashBoard_Location_StoreDetail",
                           ),
-                        ),
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(_.app_details_spotlight_read),
-                        ),
-                      ),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.StatsTitle,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(
-                        "#EventDashBoard_Summary_AppDetailActivity_Shown",
-                      ),
-                    ),
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(_.app_details_activity_shown),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.StatsTitle,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(
-                        "#EventDashBoard_Summary_AppDetailActivity_Read",
-                      ),
-                    ),
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(_.app_details_activity_read),
-                    ),
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _.StatsRightSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle_ctn,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Location_StoreDetail"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Summary_StoreAppPage_Shown"),
-                  ),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)(_.store_app_page_shown),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Summary_StoreAppPage_Read"),
-                  ),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)(_.store_app_page_read),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle_ctn,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Location_CommunityDetail"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Summary_Community_Shown"),
-                  ),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)(_.community_hub_shown),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Summary_Community_Read"),
-                  ),
-                  _.createElement("span", null, (0, _._)(_.community_hub_read)),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle_ctn,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Location_NewsHubDetail"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Summary_NewsHub_Shown"),
-                  ),
-                  _.createElement("span", null, (0, _._)(_.news_hub_shown)),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StatsTitle,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventDashBoard_Summary_NewsHub_Read"),
-                  ),
-                  _.createElement("span", null, (0, _._)(_.news_hub_read)),
-                ),
-              ),
-            ),
-        );
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsTitle,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventDashBoard_Summary_StoreAppPage_Shown",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(_.store_app_page_shown),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsTitle,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventDashBoard_Summary_StoreAppPage_Read",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(_.store_app_page_read),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.StatsTitle_ctn,
+                        children: (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#EventDashBoard_Location_CommunityDetail",
+                          ),
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsTitle,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventDashBoard_Summary_Community_Shown",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(_.community_hub_shown),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsTitle,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventDashBoard_Summary_Community_Read",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(_.community_hub_read),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.StatsTitle_ctn,
+                        children: (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#EventDashBoard_Location_NewsHubDetail",
+                          ),
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsTitle,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventDashBoard_Summary_NewsHub_Shown",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(_.news_hub_shown),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.StatsTitle,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventDashBoard_Summary_NewsHub_Read",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(_.news_hub_read),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1163,56 +1085,50 @@
         return 0 == _.size
           ? null
           : _.can_edit
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().DefaultSectionCtn,
-                    _().ValveOnlyBackground,
-                  ),
-                },
-                _.createElement(_._, null, "(VO) Meet Steam URLs"),
-                Array.from(_.keys()).map((_) => {
-                  const _ = _.get(_);
-                  return _.createElement(
-                    "div",
-                    {
-                      key: `tokenurl_${_}`,
-                    },
-                    _.createElement(
-                      "a",
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _().DefaultSectionCtn,
+                  _().ValveOnlyBackground,
+                ),
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: "(VO) Meet Steam URLs",
+                  }),
+                  Array.from(_.keys()).map((_) => {
+                    const _ = _.get(_);
+                    return (0, _.jsx)(
+                      "div",
                       {
-                        href: `${_._.STORE_BASE_URL}meetsteam/${_.GID}/${_}`,
-                        target: "_blank",
+                        children: (0, _.jsxs)("a", {
+                          href: `${_._.STORE_BASE_URL}meetsteam/${_.GID}/${_}`,
+                          target: "_blank",
+                          children: [
+                            "Shows Sessions: ",
+                            __webpack_require__.map((_) =>
+                              (0, _.jsxs)(
+                                "span",
+                                {
+                                  children: [_.get(_), ","],
+                                },
+                                "name" + _ + "_" + _,
+                              ),
+                            ),
+                          ],
+                        }),
                       },
-                      "Shows Sessions: ",
-                      __webpack_require__.map((_) =>
-                        _.createElement(
-                          "span",
-                          {
-                            key: "name" + _ + "_" + _,
-                          },
-                          _.get(_),
-                          ",",
-                        ),
-                      ),
-                    ),
-                  );
-                }),
-                Boolean(_) &&
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
+                      `tokenurl_${_}`,
+                    );
+                  }),
+                  Boolean(_) &&
+                    (0, _.jsx)("div", {
+                      children: (0, _.jsx)("a", {
                         href: `${_._.STORE_BASE_URL}meetsteam/${_.GID}`,
                         target: "_blank",
-                      },
-                      "Show all public sessions",
-                    ),
-                  ),
-              )
+                        children: "Show all public sessions",
+                      }),
+                    }),
+                ],
+              })
             : null;
       }
       const _ = _.lazy(() =>
@@ -1266,7 +1182,7 @@
             (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
             !_ && 36 == _.GetEventType())
           )
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               eventModel: _,
               route: _._.k_eStoreSalePage,
               bPopup: !1,
@@ -1274,258 +1190,222 @@
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
             _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
           if (!_.bLoaded || !_ || (_ && !_ && 2 !== _))
-            return _.createElement(
-              "div",
-              {
-                className: _().FlexCenter,
-                style: {
-                  height: "400px",
-                },
+            return (0, _.jsx)("div", {
+              className: _().FlexCenter,
+              style: {
+                height: "400px",
               },
-              _.createElement(_._, {
+              children: (0, _.jsx)(_._, {
                 size: "medium",
                 string: (0, _._)("#Loading"),
               }),
-            );
+            });
           let _ = _.GetDescriptionWithFallback(__webpack_require__);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             event: _,
             lang: __webpack_require__,
             titleBar: _,
-            body: _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
+            body: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().EventDetailTitleContainer,
-                },
-                _.createElement(_._, {
-                  crumbs: [
-                    {
-                      name: (0, _._)("#BreadCrumbs_AllEvents"),
-                      url: _,
-                    },
-                    {
-                      name: (0, _._)(
-                        "#BreadCrumbs_GameEvents",
-                        _?.GetName() || _.group_name,
-                      ),
-                      url: _,
-                    },
+                  children: [
+                    (0, _.jsx)(_._, {
+                      crumbs: [
+                        {
+                          name: (0, _._)("#BreadCrumbs_AllEvents"),
+                          url: _,
+                        },
+                        {
+                          name: (0, _._)(
+                            "#BreadCrumbs_GameEvents",
+                            _?.GetName() || _.group_name,
+                          ),
+                          url: _,
+                        },
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().EventDetailTitle,
+                      children: _.GetNameWithFallback(__webpack_require__),
+                    }),
+                    _.BHasSubTitle(__webpack_require__) &&
+                      (0, _.jsx)("div", {
+                        className: _().EventDetailsSubTitle,
+                        children: _.GetSubTitle(__webpack_require__),
+                      }),
                   ],
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventDetailTitle,
-                  },
-                  _.GetNameWithFallback(__webpack_require__),
-                ),
-                _.BHasSubTitle(__webpack_require__) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EventDetailsSubTitle,
-                    },
-                    _.GetSubTitle(__webpack_require__),
-                  ),
-              ),
-              Boolean(_.BEventCanShowBroadcastWidget(_)) &&
-                _.createElement(
-                  "div",
-                  {
+                Boolean(_.BEventCanShowBroadcastWidget(_)) &&
+                  (0, _.jsx)("div", {
                     className: _().EventBroadcastCtn,
-                  },
-                  _.createElement(
-                    _.Suspense,
-                    {
+                    children: (0, _.jsx)(_.Suspense, {
                       fallback: null,
-                    },
-                    _.createElement(_, {
-                      event: _,
-                      bIsPreview: _,
-                      accountIDs: _ ? _.jsondata.broadcast_whitelist : void 0,
+                      children: (0, _.jsx)(_, {
+                        event: _,
+                        bIsPreview: _,
+                        accountIDs: _ ? _.jsondata.broadcast_whitelist : void 0,
+                      }),
                     }),
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
+                  }),
+                (0, _.jsxs)("div", {
                   className: (0, _._)(_().EventColumns, "EventDetail"),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventDetailsDescription,
-                  },
-                  _.createElement(
-                    _._,
-                    null,
-                    _.BHasTag("steam_award_nomination_request") &&
-                      _.createElement(_.EventDisplaySteamAwardNomination, {
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().EventDetailsDescription,
+                      children: [
+                        (0, _.jsxs)(_._, {
+                          children: [
+                            _.BHasTag("steam_award_nomination_request") &&
+                              (0, _.jsx)(_.EventDisplaySteamAwardNomination, {
+                                event: _,
+                                lang: __webpack_require__,
+                                previewMode: _,
+                              }),
+                            _.BHasTag("steam_award_vote_request") &&
+                              (0, _.jsx)(_.WinterSaleSteamAwardVoteWrapper, {
+                                appID: _.appid,
+                                bIsEventActionEnabled:
+                                  _.BIsEventActionEnabled(),
+                                voteCategories:
+                                  _.GetSteamAwardNomineeCategories(),
+                              }),
+                          ],
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsxs)("div", {
+                            className: (0, _._)(
+                              "EventDetailsBody",
+                              _().EventDetailsBody,
+                            ),
+                            children: [
+                              (0, _.jsx)(_._, {
+                                text: _ || "",
+                                partnerEventStore: _,
+                                showErrorInfo: _,
+                                event: _,
+                                languageOverride: __webpack_require__,
+                              }),
+                              Boolean(
+                                _.jsondata.bSaleEnabled &&
+                                  _.jsondata.sale_vanity_id,
+                              ) &&
+                                (0, _.jsxs)("div", {
+                                  className: (0, _._)(_().ReadMoreCnt),
+                                  children: [
+                                    (0, _.jsx)(_._, {
+                                      gidEvent: _.GID,
+                                    }),
+                                    (0, _.jsx)("a", {
+                                      className: (0, _._)(
+                                        _().Button,
+                                        "LinkButton",
+                                      ),
+                                      href: (0, _._)(_.GetSaleURL()),
+                                      children: (0, _._)(
+                                        "#Event_Button_VisitSalePage",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              Boolean(_.jsondata.associated_appid) &&
+                                (0, _.jsx)(_._, {
+                                  _: _.jsondata.associated_appid,
+                                  inputType: "game",
+                                  bApplyUserContentPref: !1,
+                                }),
+                            ],
+                          }),
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_._, {
+                            event: _,
+                          }),
+                        }),
+                        Boolean(_.jsondata.read_more_link) &&
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(_().ReadMoreCnt),
+                            children: (0, _.jsx)(_._, {
+                              className: (0, _._)(_().Button),
+                              href: _.jsondata.read_more_link,
+                              children: (0, _._)(
+                                "#EventEmail_Button_ClickForMoreDetails",
+                              ),
+                            }),
+                          }),
+                        (0, _.jsx)("span", {
+                          className: _().Clear,
+                        }),
+                        (0, _.jsxs)(_._, {
+                          children: [
+                            Boolean(_.appid) &&
+                              (0, _.jsx)(_._, {
+                                appid: _.appid,
+                              }),
+                            Boolean(_.jsondata.sale_social_media_items) &&
+                              (0, _.jsx)(_._, {
+                                gidClanEvent: _.GID,
+                                rgSocial: _.jsondata.sale_social_media_items,
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
                         event: _,
                         lang: __webpack_require__,
-                        previewMode: _,
+                        nOverrideStartTime: _,
+                        nOverrideEndTime: _,
                       }),
-                    _.BHasTag("steam_award_vote_request") &&
-                      _.createElement(_.WinterSaleSteamAwardVoteWrapper, {
-                        appID: _.appid,
-                        bIsEventActionEnabled: _.BIsEventActionEnabled(),
-                        voteCategories: _.GetSteamAwardNomineeCategories(),
-                      }),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(
-                          "EventDetailsBody",
-                          _().EventDetailsBody,
-                        ),
-                      },
-                      _.createElement(_._, {
-                        text: _ || "",
-                        partnerEventStore: _,
-                        showErrorInfo: _,
-                        event: _,
-                        languageOverride: __webpack_require__,
-                      }),
-                      Boolean(
-                        _.jsondata.bSaleEnabled && _.jsondata.sale_vanity_id,
-                      ) &&
-                        _.createElement(
-                          "div",
-                          {
-                            className: (0, _._)(_().ReadMoreCnt),
-                          },
-                          _.createElement(_._, {
-                            gidEvent: _.GID,
-                          }),
-                          _.createElement(
-                            "a",
-                            {
-                              className: (0, _._)(_().Button, "LinkButton"),
-                              href: (0, _._)(_.GetSaleURL()),
-                            },
-                            (0, _._)("#Event_Button_VisitSalePage"),
-                          ),
-                        ),
-                      Boolean(_.jsondata.associated_appid) &&
-                        _.createElement(_._, {
-                          _: _.jsondata.associated_appid,
-                          inputType: "game",
-                          bApplyUserContentPref: !1,
-                        }),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_._, {
-                      event: _,
                     }),
-                  ),
-                  Boolean(_.jsondata.read_more_link) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().ReadMoreCnt),
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          className: (0, _._)(_().Button),
-                          href: _.jsondata.read_more_link,
-                        },
-                        (0, _._)("#EventEmail_Button_ClickForMoreDetails"),
-                      ),
-                    ),
-                  _.createElement("span", {
-                    className: _().Clear,
-                  }),
-                  _.createElement(
-                    _._,
-                    null,
-                    Boolean(_.appid) &&
-                      _.createElement(_._, {
-                        appid: _.appid,
-                      }),
-                    Boolean(_.jsondata.sale_social_media_items) &&
-                      _.createElement(_._, {
-                        gidClanEvent: _.GID,
-                        rgSocial: _.jsondata.sale_social_media_items,
-                      }),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    event: _,
-                    lang: __webpack_require__,
-                    nOverrideStartTime: _,
-                    nOverrideEndTime: _,
-                  }),
-                ),
-              ),
-              _.createElement(_._, {
-                eventModel: _,
-                emoticonStore: _,
-                partnerEventStore: _,
-              }),
-            ),
-            postbody: _.createElement(_._, null, _, _),
-            footer: _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().AppSummaryCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventBodyPosition,
-                  },
-                  Boolean(_) &&
-                    _.createElement(
-                      "div",
-                      {
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  eventModel: _,
+                  emoticonStore: _,
+                  partnerEventStore: _,
+                }),
+              ],
+            }),
+            postbody: (0, _.jsxs)(_._, {
+              children: [_, _],
+            }),
+            footer: (0, _.jsx)(_._, {
+              children: (0, _.jsx)("div", {
+                className: _().AppSummaryCtn,
+                children: (0, _.jsxs)("div", {
+                  className: _().EventBodyPosition,
+                  children: [
+                    Boolean(_) &&
+                      (0, _.jsxs)("div", {
                         className: _().AppSummaryWidgetTitleCtn,
-                      },
-                      _.createElement(
-                        "span",
-                        {
-                          className: _().Title,
-                        },
-                        (0, _._)("#CreatorHome_ThisGame"),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(
-                            _().AppSummaryWidgetCtn,
-                            "AppSummaryWidgetCtn",
-                          ),
-                        },
-                        _.createElement(_._, {
-                          _: _.appid,
-                          type: (0, _._)(_.GetAppType()),
-                          bPreferAssetWithoutOverride: !1,
-                        }),
-                      ),
-                    ),
-                  _.createElement(_._, {
-                    appid: _.appid,
-                    bSmallFormat: !0,
-                  }),
-                ),
-              ),
-            ),
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _().Title,
+                            children: (0, _._)("#CreatorHome_ThisGame"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _().AppSummaryWidgetCtn,
+                              "AppSummaryWidgetCtn",
+                            ),
+                            children: (0, _.jsx)(_._, {
+                              _: _.appid,
+                              type: (0, _._)(_.GetAppType()),
+                              bPreferAssetWithoutOverride: !1,
+                            }),
+                          }),
+                        ],
+                      }),
+                    (0, _.jsx)(_._, {
+                      appid: _.appid,
+                      bSmallFormat: !0,
+                    }),
+                  ],
+                }),
+              }),
+            }),
           });
         }),
         _ = (0, _._)((_) => {
@@ -1543,107 +1423,107 @@
             _ =
               !!_ &&
               _.BImageNeedScreenshotFallback("background", __webpack_require__);
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().EventDetailsPageContainer,
-                _,
-                _().PartnerEventFont,
-                _
-                  ? _().DetailArtworkAgeAppropriate
-                  : _().DetailArtworkAgeNotAppropriate,
-                !_ && _().NoTitleArtwork,
-                _ && _().ScreenshotInsteadOfCover,
-              ),
-            },
-            _.createElement(_._, {
-              appId: _.appid,
-              clanId: _.clanSteamID.GetAccountID(),
-            }),
-            _,
-            _.createElement(_, {
-              strImageURL: _,
-            }),
-            _.createElement(_, {
-              strImageURL: _,
-              body: _,
-              postbody: _,
-            }),
-            Boolean(_) && _.createElement(_._, null, _),
-          );
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _().EventDetailsPageContainer,
+              _,
+              _().PartnerEventFont,
+              _
+                ? _().DetailArtworkAgeAppropriate
+                : _().DetailArtworkAgeNotAppropriate,
+              !_ && _().NoTitleArtwork,
+              _ && _().ScreenshotInsteadOfCover,
+            ),
+            children: [
+              (0, _.jsx)(_._, {
+                appId: _.appid,
+                clanId: _.clanSteamID.GetAccountID(),
+              }),
+              _,
+              (0, _.jsx)(_, {
+                strImageURL: _,
+              }),
+              (0, _.jsx)(_, {
+                strImageURL: _,
+                body: _,
+                postbody: _,
+              }),
+              Boolean(_) &&
+                (0, _.jsx)(_._, {
+                  children: _,
+                }),
+            ],
+          });
         }),
         _ = (_) => {
           const { strImageURL: _ } = _;
-          return _.createElement(
-            "div",
-            {
-              className: _().EventCoverImageCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().EventCoverImageCtn,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().EventCoverImageBlr,
-              },
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement("div", {
-                    className: _().EventCoverImageFuzz,
-                    style: {
-                      backgroundColor: "rgb(37, 41, 46)",
-                      backgroundImage: `url(${_})`,
-                    },
+                children:
+                  _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().EventCoverImageFuzz,
+                        style: {
+                          backgroundColor: "rgb(37, 41, 46)",
+                          backgroundImage: `url(${_})`,
+                        },
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().EventCoverImage,
+                        style: {
+                          backgroundColor: "rgb(37, 41, 46)",
+                          backgroundImage: `url(${_})`,
+                        },
+                      }),
+                    ],
                   }),
-                  _.createElement("div", {
-                    className: _().EventCoverImage,
-                    style: {
-                      backgroundColor: "rgb(37, 41, 46)",
-                      backgroundImage: `url(${_})`,
-                    },
-                  }),
-                ),
-            ),
-            _ &&
-              _.createElement("div", {
-                className: _().CoverImageGradient,
               }),
-          );
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().CoverImageGradient,
+                }),
+            ],
+          });
         },
         _ = (_) => {
           const { body: _, postbody: __webpack_require__, strImageURL: _ } = _;
-          return _.createElement(
-            "div",
-            {
-              className: _().EventBodyCtn,
-            },
-            _.createElement("div", {
-              className: _().EventBackgroundBlurCtn,
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().EventBodyCtn,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().EventBackgroundBlurCtn,
+              }),
+              (0, _.jsxs)("div", {
                 className: _().EventBodyPosition,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().EventBody,
-                },
-                Boolean(_) &&
-                  _.createElement("div", {
-                    className: _().EventBackgroundBlur,
-                    style: {
-                      backgroundImage: `url(${_})`,
-                    },
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().EventBody,
+                    children: [
+                      Boolean(_) &&
+                        (0, _.jsx)("div", {
+                          className: _().EventBackgroundBlur,
+                          style: {
+                            backgroundImage: `url(${_})`,
+                          },
+                        }),
+                      (0, _.jsx)(_._, {
+                        children: _,
+                      }),
+                    ],
                   }),
-                _.createElement(_._, null, _),
-              ),
-              Boolean(__webpack_require__) &&
-                _.createElement(_._, null, __webpack_require__),
-            ),
-          );
+                  Boolean(__webpack_require__) &&
+                    (0, _.jsx)(_._, {
+                      children: __webpack_require__,
+                    }),
+                ],
+              }),
+            ],
+          });
         };
       function _(_) {
         const {
@@ -1669,72 +1549,59 @@
         return _
           ? _.appid && !_
             ? null
-            : _.createElement(
-                "div",
-                {
-                  className: _().EventDetailTitleDesc,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventDetailsSticky,
-                  },
-                  _.is_ogg
-                    ? _.createElement(_, {
-                        appid: _.appid,
-                      })
-                    : _.createElement(_, {
-                        clanSteamID: _,
-                      }),
-                  _.createElement(_._, {
-                    event: _,
-                    nOverrideEndTime: _,
-                    nOverrideStartTime: _,
-                  }),
-                  28 !== _ &&
-                    _ < _ &&
-                    _.createElement(
-                      "div",
-                      {
+            : (0, _.jsx)("div", {
+                className: _().EventDetailTitleDesc,
+                children: (0, _.jsxs)("div", {
+                  className: _().EventDetailsSticky,
+                  children: [
+                    _.is_ogg
+                      ? (0, _.jsx)(_, {
+                          appid: _.appid,
+                        })
+                      : (0, _.jsx)(_, {
+                          clanSteamID: _,
+                        }),
+                    (0, _.jsx)(_._, {
+                      event: _,
+                      nOverrideEndTime: _,
+                      nOverrideStartTime: _,
+                    }),
+                    28 !== _ &&
+                      _ < _ &&
+                      (0, _.jsx)("div", {
                         className: _().EventDetailTimeInfo,
-                      },
-                      _.createElement(_._, {
-                        eventModel: _,
+                        children: (0, _.jsx)(_._, {
+                          eventModel: _,
+                          lang: __webpack_require__,
+                        }),
+                      }),
+                    (0, _.jsxs)("div", {
+                      className: _().EventDetailUserType,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().RightSideTitles,
+                          children: (0, _._)(
+                            "#EventDisplay_RightColumnTitle_EventType",
+                          ),
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().EventDetailsType,
+                          children: [_, " "],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_, {
+                      event: _,
+                      bIsOGG: _.is_ogg,
+                    }),
+                    Boolean(_.jsondata.meet_steam_groups) &&
+                      (0, _.jsx)(_, {
+                        event: _,
                         lang: __webpack_require__,
                       }),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EventDetailUserType,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().RightSideTitles,
-                      },
-                      (0, _._)("#EventDisplay_RightColumnTitle_EventType"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().EventDetailsType,
-                      },
-                      _,
-                      " ",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    event: _,
-                    bIsOGG: _.is_ogg,
-                  }),
-                  Boolean(_.jsondata.meet_steam_groups) &&
-                    _.createElement(_, {
-                      event: _,
-                      lang: __webpack_require__,
-                    }),
-                ),
-              )
+                  ],
+                }),
+              })
           : ((0, _._)(
               _,
               "EventDetailsRightColumn - clan info (" +
@@ -1751,78 +1618,64 @@
           include_platforms: !0,
           include_release: !0,
         });
-        return _.createElement(
-          "div",
-          {
-            className: _().EventDetailGameCallToAction,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().EventDetailGameCallToAction,
+          children: [
+            (0, _.jsx)("div", {
               className: _().RightSideTitles,
-            },
-            _._.some((_) => _ === _)
-              ? (0, _._)("#EventDisplay_RightColumnTitle_Blog")
-              : (0, _._)("#EventDisplay_RightColumnTitle_Game"),
-          ),
-          _.createElement(_._, {
-            imageType: "header",
-            capsule: {
-              _: _,
-              type: "game",
-            },
-            bHidePriceIfOwned: !0,
-            bHideStatusBanners: !0,
-            bPreferAssetWithoutOverride: !1,
-          }),
-          _.createElement(
-            "div",
-            {
+              children: _._.some((_) => _ === _)
+                ? (0, _._)("#EventDisplay_RightColumnTitle_Blog")
+                : (0, _._)("#EventDisplay_RightColumnTitle_Game"),
+            }),
+            (0, _.jsx)(_._, {
+              imageType: "header",
+              capsule: {
+                _: _,
+                type: "game",
+              },
+              bHidePriceIfOwned: !0,
+              bHideStatusBanners: !0,
+              bPreferAssetWithoutOverride: !1,
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(_().GameActions),
-            },
-            __webpack_require__
-              ? _.createElement(_._, {
-                  appid: _,
-                  bIsFree: __webpack_require__.BIsFree(),
-                  bIsComingSoon: __webpack_require__.BIsComingSoon(),
-                  className: _().ActionButton,
-                })
-              : _.createElement(_._, {
-                  size: "small",
-                  position: "center",
-                }),
-          ),
-        );
+              children: __webpack_require__
+                ? (0, _.jsx)(_._, {
+                    appid: _,
+                    bIsFree: __webpack_require__.BIsFree(),
+                    bIsComingSoon: __webpack_require__.BIsComingSoon(),
+                    className: _().ActionButton,
+                  })
+                : (0, _.jsx)(_._, {
+                    size: "small",
+                    position: "center",
+                  }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { clanSteamID: _ } = _,
           [__webpack_require__, _] = (0, _._)(_.GetAccountID());
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _().EventDetailGameCallToAction,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().EventDetailGameCallToAction,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().RightSideTitles,
-                },
-                _.group_name,
-              ),
-              _.createElement(
-                _._,
-                {
-                  href: (0, _._)(_._.GetCreatorStoreURL(_)),
-                },
-                _.createElement("div", {
-                  className: _().EventDetailsAvatar,
-                  style: {
-                    backgroundImage: `url(${_.avatar_full_url})`,
-                  },
+                  children: _.group_name,
                 }),
-              ),
-            )
+                (0, _.jsx)(_._, {
+                  href: (0, _._)(_._.GetCreatorStoreURL(_)),
+                  children: (0, _.jsx)("div", {
+                    className: _().EventDetailsAvatar,
+                    style: {
+                      backgroundImage: `url(${_.avatar_full_url})`,
+                    },
+                  }),
+                }),
+              ],
+            })
           : ((0, _._)(
               _,
               "EventDetailsRightCreatorInfo - clan info (" +
@@ -1838,11 +1691,11 @@
           return (
             _.forEach((_) =>
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "option",
                   {
-                    key: _,
                     value: _,
+                    children: _,
                   },
                   _,
                 ),
@@ -1859,43 +1712,35 @@
             !_._.Get().GetPartnerEventPermissions(this.props.event.clanSteamID)
               .valve_admin
           )
-            return _.createElement("div", null);
+            return (0, _.jsx)("div", {});
           let _ = this.GenerateOptions();
-          return _.createElement(
-            "div",
-            {
-              style: {
-                paddingTop: 10,
-              },
+          return (0, _.jsx)("div", {
+            style: {
+              paddingTop: 10,
             },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().FlexColumnContainer,
-                  _().ValveOnlyBackground,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().FlexColumnContainer,
+                _().ValveOnlyBackground,
+              ),
+              children: [
+                (0, _.jsx)("div", {
                   className: (0, _._)(
                     _().EventEditorTextTitle,
                     _().ValveSupportOnly,
                   ),
-                },
-                "Valve Support Tools (VO)",
-              ),
-              _.createElement("span", null, "Override Locale"),
-              _.createElement(
-                "select",
-                {
+                  children: "Valve Support Tools (VO)",
+                }),
+                (0, _.jsx)("span", {
+                  children: "Override Locale",
+                }),
+                (0, _.jsx)("select", {
                   onChange: this.OnLanguageChange,
-                },
-                _,
-              ),
-            ),
-          );
+                  children: _,
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnLanguageChange", null),
@@ -1929,71 +1774,62 @@
             _.BIsPartnerEvent() &&
             _.BIsVisibleEvent() &&
             _.GetStatsFor(_.clanSteamID, _.GID);
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().EditorStatsCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().EditorStatsRow,
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#EventEditor_Comments"),
-                ),
-                _.createElement("span", null, (0, _._)(_.nCommentCount)),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().EditorStatsRow,
-                },
-                _.createElement("span", null, (0, _._)("#EventEditor_UpVotes")),
-                _.createElement(
-                  "span",
-                  null,
-                  _.nVotesUp ? (0, _._)(_.nVotesUp) : 0,
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().EditorStatsRow,
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#EventEditor_DownVotes"),
-                ),
-                _.createElement(
-                  "span",
-                  null,
-                  _.nVotesDown ? (0, _._)(_.nVotesDown) : 0,
-                ),
-              ),
-            ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().EditorStatsRow,
+                    children: [
+                      (0, _.jsx)("span", {
+                        children: (0, _._)("#EventEditor_Comments"),
+                      }),
+                      (0, _.jsx)("span", {
+                        children: (0, _._)(_.nCommentCount),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().EditorStatsRow,
+                    children: [
+                      (0, _.jsx)("span", {
+                        children: (0, _._)("#EventEditor_UpVotes"),
+                      }),
+                      (0, _.jsx)("span", {
+                        children: _.nVotesUp ? (0, _._)(_.nVotesUp) : 0,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().EditorStatsRow,
+                    children: [
+                      (0, _.jsx)("span", {
+                        children: (0, _._)("#EventEditor_DownVotes"),
+                      }),
+                      (0, _.jsx)("span", {
+                        children: _.nVotesDown ? (0, _._)(_.nVotesDown) : 0,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
                   className: _().EditorStatsCtn,
-                },
-                (0, _._)("#EventDashBoard_SummaryStats_Admin_Title"),
-                _.createElement(_, {
-                  summary: _.m_stats,
-                  clanSteamID: _.clanSteamID,
-                  bIsAllowedInLibrary: _,
-                  bEventIsInModerationQueue: (0, _._)(_),
-                  bCompact: !0,
+                  children: [
+                    (0, _._)("#EventDashBoard_SummaryStats_Admin_Title"),
+                    (0, _.jsx)(_, {
+                      summary: _.m_stats,
+                      clanSteamID: _.clanSteamID,
+                      bIsAllowedInLibrary: _,
+                      bEventIsInModerationQueue: (0, _._)(_),
+                      bCompact: !0,
+                    }),
+                  ],
                 }),
-              ),
-          );
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -2004,6 +1840,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -2151,146 +1988,132 @@
             },
             _,
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().EventTimeSection, _),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().EventTimeSection, _),
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().EventTimeTitle, "DialogLabel"),
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: _,
-                direction: "top",
-              },
-              Boolean(_) && _.createElement("span", null, _),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().DateErrorCtn,
-                },
-                _.createElement("img", {
-                  src: _._,
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: _,
+                  direction: "top",
+                  children:
+                    Boolean(_) &&
+                    (0, _.jsx)("span", {
+                      children: _,
+                    }),
                 }),
-                _,
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+                _ &&
+                  (0, _.jsxs)("span", {
+                    className: _().DateErrorCtn,
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _._,
+                      }),
+                      _,
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _().FlexRowContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                timeFormat: !1,
-                value: null != _ ? _ : _,
-                isValidDate: (_) =>
-                  !_ &&
-                  (function (_, _, _, _) {
-                    const _ = _().unix(_).hour(0).seconds(0).minute(0);
-                    let _ = _.unix() >= _.unix();
-                    if (_ && _ && _ >= _) {
-                      const _ = _().unix(_).hour(23).minute(59).seconds(59);
-                      _ = _.unix() <= _.unix();
-                    }
-                    _ &&
-                      _ &&
-                      ((0 != _.weekday() && 6 != _.weekday()) || (_ = !1));
-                    return _;
-                  })(__webpack_require__, _, _, _),
-                initialValue: _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
-                  className: (0, _._)(
-                    _().DateWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().InputBorder, _().TimeBlock),
+                  children: [
+                    (0, _.jsx)(_(), {
+                      onChange: _,
+                      timeFormat: !1,
+                      value: null != _ ? _ : _,
+                      isValidDate: (_) =>
+                        !_ &&
+                        (function (_, _, _, _) {
+                          const _ = _().unix(_).hour(0).seconds(0).minute(0);
+                          let _ = _.unix() >= _.unix();
+                          if (_ && _ && _ >= _) {
+                            const _ = _()
+                              .unix(_)
+                              .hour(23)
+                              .minute(59)
+                              .seconds(59);
+                            _ = _.unix() <= _.unix();
+                          }
+                          _ &&
+                            _ &&
+                            ((0 != _.weekday() && 6 != _.weekday()) ||
+                              (_ = !1));
+                          return _;
+                        })(__webpack_require__, _, _, _),
+                      initialValue: _,
+                      inputProps: {
+                        placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
+                        className: (0, _._)(
+                          _().DateWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: _,
+                        onChange: (_) => _(_.currentTarget.value),
+                        onBlur: (_) => _(_.currentTarget.value),
+                      },
+                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().PacificTimeHint,
+                        children: _.format("L"),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().InputBorder, _().TimeBlock),
+                  children: [
+                    (0, _.jsx)(_(), {
+                      onChange: _,
+                      dateFormat: !1,
+                      timeFormat: _,
+                      timeConstraints: _,
+                      value: null != _ ? _ : _,
+                      inputProps: {
+                        placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
+                        className: (0, _._)(
+                          _().TimeWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: _,
+                        onChange: (_) => _(_.currentTarget.value),
+                        onBlur: (_) => _(_.currentTarget.value),
+                      },
+                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().PacificTimeHint,
+                        children: _.format("LT"),
+                      }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().TimeZone,
+                        children: _.zoneAbbr(),
+                      }),
+                      !!_ &&
+                        (0, _.jsx)("div", {
+                          className: _().TimeZone,
+                          children: _.zoneAbbr(),
+                        }),
+                    ],
+                  }),
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                children: (0, _._)("#DateTimePicker_DateTime_Fixed"),
               }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("L"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                dateFormat: !1,
-                timeFormat: _,
-                timeConstraints: _,
-                value: null != _ ? _ : _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
-                  className: (0, _._)(
-                    _().TimeWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
-              }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("LT"),
-                ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TimeZone,
-                  },
-                  _.zoneAbbr(),
-                ),
-                !!_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TimeZone,
-                    },
-                    _.zoneAbbr(),
-                  ),
-              ),
-          ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DateTimePicker_DateTime_Fixed"),
-            ),
-        );
+          ],
+        });
       }
       function _(_, _, _) {
         const [_, _] = _.useState(!1);
@@ -2337,6 +2160,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2443,136 +2267,120 @@
           const _ = _._.InitFromClanID(_);
           return _._.is_support ||
             _._.Get().GetPartnerEventPermissions(_).can_edit
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 eventModel: _,
                 partnerEventStore: _.partnerEventStore,
                 addtionalAdminButtons: _
                   ? [
-                      _.createElement(_, {
-                        key: "removesteamchina",
-                        eventModel: _,
-                      }),
+                      (0, _.jsx)(
+                        _,
+                        {
+                          eventModel: _,
+                        },
+                        "removesteamchina",
+                      ),
                     ]
                   : void 0,
               })
             : _.Get().BHasSteamChinaAppApprovalPriviledge()
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.DisplayAdminPanel,
-                  },
-                  _.createElement(
-                    "span",
-                    {
+              ? (0, _.jsxs)("div", {
+                  className: _.DisplayAdminPanel,
+                  children: [
+                    (0, _.jsx)("span", {
                       className: _.DisplayAdminPanel_Title,
-                    },
-                    (0, _._)("#EventDisplay_Admin_Title"),
-                  ),
-                  _.createElement(_, {
-                    key: "removesteamchina",
-                    eventModel: _,
-                  }),
-                )
+                      children: (0, _._)("#EventDisplay_Admin_Title"),
+                    }),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        eventModel: _,
+                      },
+                      "removesteamchina",
+                    ),
+                  ],
+                })
               : null;
         }),
         _ = (_) => {
           const { eventModel: _ } = _;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.Button,
-                _.AdminButton,
-                _.ValveOnlyBackground,
-              ),
-              onClick: (_) => {
-                let _ = !1;
-                (0, _._)(
-                  _.createElement(
-                    _._,
-                    {
-                      strTitle: (0, _._)(
-                        "#EventAdmin_Moderation_HideEventInSC",
-                      ),
-                      strDescription: (0, _._)(
-                        "#EventAdmin_Moderation_HideEventInSC_Desc",
-                      ),
-                      bDestructiveWarning: !0,
-                      closeModal: _.closeModal,
-                      onOK: () => {
-                        (_ = !0),
-                          (async () => {
-                            let _ = new URLSearchParams();
-                            __webpack_require__.append(
-                              "sessionid",
-                              _._.SESSIONID,
-                            ),
-                              __webpack_require__.append(
-                                "clan_accountid",
-                                "" + _.clanSteamID.GetAccountID(),
-                              ),
-                              __webpack_require__.append(
-                                "gid_clan_event",
-                                "" + _.GID,
-                              );
-                            let _ = !1,
-                              _ = 0;
-                            try {
-                              const _ = `${_._.STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina`,
-                                _ = await _().post(_, _, {
-                                  withCredentials: !0,
-                                });
-                              (_ =
-                                1 == _?.data?.success ||
-                                29 == _?.data?.success),
-                                29 == _?.data?.success &&
-                                  console.warn(
-                                    `RemoveEventFromSteamChinaButton: we receive duplicate request ${_.clanSteamID.GetAccountID()} : ${_.GID}; event is still removed from SC`,
-                                  ),
-                                (_ = _?.data?.success);
-                            } catch (_) {
-                              const _ = (0, _._)(_);
-                              (_ = _.errorCode),
-                                console.error(
-                                  "RemoveEventFromSteamChinaButton: error " +
-                                    _.strErrorMsg,
-                                  _,
-                                );
-                            }
-                            _.closeModal && _.closeModal(),
-                              (0, _._)(
-                                _
-                                  ? _.createElement(
-                                      _._,
-                                      {
-                                        bAlertDialog: !0,
-                                      },
-                                      (0, _._)("#EventDisplay_Share_Success"),
-                                    )
-                                  : _.createElement(
-                                      _._,
-                                      null,
-                                      (0, _._)("#EventDisplay_Share_Failure") +
-                                        " " +
-                                        _,
-                                    ),
-                                window,
-                              );
-                          })();
-                      },
-                    },
-                    _ &&
-                      _.createElement(_._, {
-                        size: "medium",
-                        position: "center",
-                      }),
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_.Button, _.AdminButton, _.ValveOnlyBackground),
+            onClick: (_) => {
+              let _ = !1;
+              (0, _._)(
+                (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#EventAdmin_Moderation_HideEventInSC"),
+                  strDescription: (0, _._)(
+                    "#EventAdmin_Moderation_HideEventInSC_Desc",
                   ),
-                  (0, _._)(_),
-                );
-              },
+                  bDestructiveWarning: !0,
+                  closeModal: _.closeModal,
+                  onOK: () => {
+                    (_ = !0),
+                      (async () => {
+                        let _ = new URLSearchParams();
+                        __webpack_require__.append("sessionid", _._.SESSIONID),
+                          __webpack_require__.append(
+                            "clan_accountid",
+                            "" + _.clanSteamID.GetAccountID(),
+                          ),
+                          __webpack_require__.append(
+                            "gid_clan_event",
+                            "" + _.GID,
+                          );
+                        let _ = !1,
+                          _ = 0;
+                        try {
+                          const _ = `${_._.STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina`,
+                            _ = await _().post(_, _, {
+                              withCredentials: !0,
+                            });
+                          (_ = 1 == _?.data?.success || 29 == _?.data?.success),
+                            29 == _?.data?.success &&
+                              console.warn(
+                                `RemoveEventFromSteamChinaButton: we receive duplicate request ${_.clanSteamID.GetAccountID()} : ${_.GID}; event is still removed from SC`,
+                              ),
+                            (_ = _?.data?.success);
+                        } catch (_) {
+                          const _ = (0, _._)(_);
+                          (_ = _.errorCode),
+                            console.error(
+                              "RemoveEventFromSteamChinaButton: error " +
+                                _.strErrorMsg,
+                              _,
+                            );
+                        }
+                        _.closeModal && _.closeModal(),
+                          (0, _._)(
+                            _
+                              ? (0, _.jsx)(_._, {
+                                  bAlertDialog: !0,
+                                  children: (0, _._)(
+                                    "#EventDisplay_Share_Success",
+                                  ),
+                                })
+                              : (0, _.jsx)(_._, {
+                                  children:
+                                    (0, _._)("#EventDisplay_Share_Failure") +
+                                    " " +
+                                    _,
+                                }),
+                            window,
+                          );
+                      })();
+                  },
+                  children:
+                    _ &&
+                    (0, _.jsx)(_._, {
+                      size: "medium",
+                      position: "center",
+                    }),
+                }),
+                (0, _._)(_),
+              );
             },
-            (0, _._)("#EventAdmin_Moderation_HideEventInSC"),
-          );
+            children: (0, _._)("#EventAdmin_Moderation_HideEventInSC"),
+          });
         };
     },
   },

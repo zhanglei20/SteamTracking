@@ -29401,6 +29401,31 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 .scrollfade_ScrollFade_30Xro.scrollfade_ScrolledToTop_3bWn5.scrollfade_ScrolledToBottom_2wvQS {
   -webkit-mask-image: none;
 }
+.playtestinvite_PlaytestInvite_33pX- {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+.playtestinvite_PlaytestInvite_33pX-.gpfocus button.Primary.GamepadMode,
+.GamepadMode .playtestinvite_PlaytestInvite_33pX-.gpfocus button.Primary {
+  background: #fff;
+  color: #0e141b;
+  transition-duration: 0s;
+}
+.playtestinvite_PlaytestInviteSelf_3MYjY {
+  font-style: italic;
+  cursor: pointer;
+}
+.playtestinvite_PlaytestInviteSelf_3MYjY:hover {
+  filter: brightness(1.2);
+}
+.playtestinvite_PlaytestInviteSelf_3MYjY img {
+  width: 16px;
+  height: 16px;
+  margin-bottom: -2px;
+  margin-inline-end: 4px;
+  margin-inline-start: 4px;
+}
 .messages_PreMessage_2M4GH,
 .messages_CodeMessage_1E4OI,
 .messages_QuoteMessage_3-LVU {
@@ -47395,7 +47420,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 }
 .ChatMessageInvite.gameInviteMsg .leftInviteContainer,
 .ChatMessageInvite.broadcastInviteMsg .leftInviteContainer,
-.ChatMessageInvite.broadcastViewRequestMsg .leftInviteContainer {
+.ChatMessageInvite.broadcastViewRequestMsg .leftInviteContainer,
+.ChatMessageInvite.playtestInviteMsg .leftInviteContainer {
   position: relative;
   overflow: hidden;
   flex: 1;
@@ -47460,7 +47486,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 }
 .ChatMessageInvite.gameInviteMsg .rightInviteContainer,
 .ChatMessageInvite.broadcastInviteMsg .rightInviteContainer,
-.ChatMessageInvite.broadcastViewRequestMsg .rightInviteContainer {
+.ChatMessageInvite.broadcastViewRequestMsg .rightInviteContainer,
+.ChatMessageInvite.playtestInviteMsg .rightInviteContainer {
   flex: 2;
 }
 .ChatMessageInvite .rightInviteContainer {
@@ -49632,7 +49659,8 @@ html.web_chat_frame .perf_timing_area {
 }
 .SingleUserChat .msg.gameInviteMsg,
 .SingleUserChat .msg.broadcastInviteMsg,
-.SingleUserChat .msg.broadcastViewRequestMsg {
+.SingleUserChat .msg.broadcastViewRequestMsg,
+.SingleUserChat .msg.playtestInviteMsg {
   max-width: 656px;
   display: flex;
   flex-direction: row;
@@ -49646,7 +49674,8 @@ html.web_chat_frame .perf_timing_area {
 }
 .gameInviteMsg .productImage,
 .broadcastInviteMsg .productImage,
-.broadcastViewRequestMsg .productImage {
+.broadcastViewRequestMsg .productImage,
+.playtestInviteMsg .productImage {
   width: 100%;
   box-shadow: 0 4px 12px 0px #00000088;
   border-radius: 2px;
@@ -49654,7 +49683,8 @@ html.web_chat_frame .perf_timing_area {
 }
 .gameInviteMsg .productImage.productImageBlur,
 .broadcastInviteMsg .productImage.productImageBlur,
-.broadcastViewRequestMsg .productImage.productImageBlur {
+.broadcastViewRequestMsg .productImage.productImageBlur,
+.playtestInviteMsg .productImage.productImageBlur {
   width: 100%;
   height: 100%;
   filter: blur(30px);
@@ -49670,7 +49700,8 @@ html.web_chat_frame .perf_timing_area {
 }
 .gameInviteMsg .centerBlock,
 .broadcastInviteMsg .centerBlock,
-.broadcastViewRequestMsg .centerBlock {
+.broadcastViewRequestMsg .centerBlock,
+.playtestInviteMsg .centerBlock {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
@@ -49688,7 +49719,8 @@ html.web_chat_frame .perf_timing_area {
 }
 .gameInviteMsg .productName,
 .broadcastInviteMsg .productName,
-.broadcastViewRequestMsg .productName {
+.broadcastViewRequestMsg .productName,
+.playtestInviteMsg .productName {
   font-size: 28px;
   color: #fff;
   font-weight: 100;

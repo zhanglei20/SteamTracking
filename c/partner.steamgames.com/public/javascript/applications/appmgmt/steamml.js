@@ -102,6 +102,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       !(function (_) {
         (_[(_.Unrequested = 0)] = "Unrequested"),
@@ -358,112 +359,89 @@
         let _ = [];
         for (const _ of _)
           _.push(
-            _.createElement(
+            (0, _.jsxs)(
               _._,
               {
                 _: _.SteamMLSchemas(_.appid, _.schemaid),
                 className: _.SchemaElement,
-                key: _.schemaid,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.HorizontalSection,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.SchemaName,
+                        children: _.name,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.SchemaID,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.Label,
+                            children: "Schema ID",
+                          }),
+                          " ",
+                          _.schemaid,
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.AppID,
+                    children: ["AppID ", _.appid],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.HorizontalSection,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.RowCount,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.Label,
+                            children: "Rows:",
+                          }),
+                          " ",
+                          _.row_count,
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.KeepCount,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.Label,
+                            children: "Keep Count:",
+                          }),
+                          " ",
+                          (0, _._)(_.keep_count),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.HorizontalSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SchemaName,
-                  },
-                  _.name,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SchemaID,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.Label,
-                    },
-                    "Schema ID",
-                  ),
-                  " ",
-                  _.schemaid,
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.AppID,
-                },
-                "AppID ",
-                _.appid,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.HorizontalSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RowCount,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.Label,
-                    },
-                    "Rows:",
-                  ),
-                  " ",
-                  _.row_count,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.KeepCount,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.Label,
-                    },
-                    "Keep Count:",
-                  ),
-                  " ",
-                  (0, _._)(_.keep_count),
-                ),
-              ),
+              _.schemaid,
             ),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.SchemaList,
-          },
-          _.createElement(
-            "select",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.SchemaList,
+          children: [
+            (0, _.jsx)("select", {
               className: _.SelectAppID,
               value: _,
               onChange: (_) => _(_.target.value),
-            },
-            __webpack_require__.map((_) =>
-              _.createElement(
-                "option",
-                {
-                  key: _.value,
-                  value: _.value,
-                },
-                _.label,
+              children: __webpack_require__.map((_) =>
+                (0, _.jsx)(
+                  "option",
+                  {
+                    value: _.value,
+                    children: _.label,
+                  },
+                  _.value,
+                ),
               ),
-            ),
-          ),
-          _,
-        );
+            }),
+            _,
+          ],
+        });
       });
       function _(_) {
         switch (_) {
@@ -505,18 +483,14 @@
           _ = -1 == _ && !_.count;
         return (
           _.structure
-            ? (_ = _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.SchemaDetailsElement,
-                    _.SchemaDetailsStruct,
-                  ),
-                },
-                !_.count &&
-                  _.createElement(
-                    "div",
-                    {
+            ? (_ = (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _.SchemaDetailsElement,
+                  _.SchemaDetailsStruct,
+                ),
+                children: [
+                  !_.count &&
+                    (0, _.jsxs)("div", {
                       className: _.SchemaDetailsStructRow,
                       onClick: () => {
                         __webpack_require__(
@@ -525,98 +499,78 @@
                             : _.slice(0, _).concat(_.slice(_ + 1)),
                         );
                       },
-                    },
-                    _.createElement(
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_ && _.Collapsed, _.CollapseIcon),
+                          children: "▼",
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.SchemaDetailsElementBody,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.ElementName,
+                              children: _.name,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _.TypeName,
+                              children: "STRUCT",
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  _.structure.member.map((_) =>
+                    (0, _.jsx)(
                       "div",
                       {
-                        className: (0, _._)(_ && _.Collapsed, _.CollapseIcon),
+                        className: (0, _._)(
+                          _ && _.IndentCollapsed,
+                          _.StructIndent,
+                        ),
+                        children: _(_, _, _),
                       },
-                      "▼",
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SchemaDetailsElementBody,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ElementName,
-                        },
-                        _.name,
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.TypeName,
-                        },
-                        "STRUCT",
-                      ),
+                      _.name,
                     ),
                   ),
-                _.structure.member.map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _ && _.IndentCollapsed,
-                        _.StructIndent,
-                      ),
-                      key: _.name,
-                    },
-                    _(_, _, _),
-                  ),
-                ),
-              ))
+                ],
+              }))
             : _.array && _.array.primitive
-              ? (_ = _.createElement(
-                  "div",
-                  {
+              ? (_ = (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _.SchemaDetailsElement,
+                    _.SchemaDetailsArray,
+                  ),
+                  children: (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _.SchemaDetailsElementBody,
+                      _(_.array.primitive.type_info.type),
+                    ),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ElementName,
+                        children: _.name,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.TypeName,
+                        children: [
+                          _(_.array.primitive.type_info.type),
+                          " [",
+                          _.array.max_length,
+                          "]",
+                        ],
+                      }),
+                    ],
+                  }),
+                }))
+              : _.array && _.array.structure
+                ? (_ = (0, _.jsxs)("div", {
                     className: (0, _._)(
                       _.SchemaDetailsElement,
                       _.SchemaDetailsArray,
                     ),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.SchemaDetailsElementBody,
-                        _(_.array.primitive.type_info.type),
-                      ),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ElementName,
-                      },
-                      _.name,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.TypeName,
-                      },
-                      _(_.array.primitive.type_info.type),
-                      " [",
-                      _.array.max_length,
-                      "]",
-                    ),
-                  ),
-                ))
-              : _.array && _.array.structure
-                ? (_ = _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.SchemaDetailsElement,
-                        _.SchemaDetailsArray,
-                      ),
-                    },
-                    !_.count &&
-                      _.createElement(
-                        "div",
-                        {
+                    children: [
+                      !_.count &&
+                        (0, _.jsxs)("div", {
                           className: _.SchemaDetailsStructRow,
                           onClick: () => {
                             __webpack_require__(
@@ -625,87 +579,71 @@
                                 : _.slice(0, _).concat(_.slice(_ + 1)),
                             );
                           },
-                        },
-                        _.createElement(
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: (0, _._)(
+                                _ && _.Collapsed,
+                                _.CollapseIcon,
+                              ),
+                              children: "▼",
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.SchemaDetailsElementBody,
+                              children: [
+                                (0, _.jsx)("div", {
+                                  className: _.ElementName,
+                                  children: _.name,
+                                }),
+                                (0, _.jsxs)("div", {
+                                  className: _.TypeName,
+                                  children: [
+                                    "STRUCT [",
+                                    _.array.max_length,
+                                    "]",
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      _.array.structure.member.map((_) =>
+                        (0, _.jsx)(
                           "div",
                           {
                             className: (0, _._)(
-                              _ && _.Collapsed,
-                              _.CollapseIcon,
+                              _ && _.IndentCollapsed,
+                              _.StructIndent,
                             ),
+                            children: _(_, _, _),
                           },
-                          "▼",
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.SchemaDetailsElementBody,
-                          },
-                          _.createElement(
-                            "div",
-                            {
-                              className: _.ElementName,
-                            },
-                            _.name,
-                          ),
-                          _.createElement(
-                            "div",
-                            {
-                              className: _.TypeName,
-                            },
-                            "STRUCT [",
-                            _.array.max_length,
-                            "]",
-                          ),
+                          _.name,
                         ),
                       ),
-                    _.array.structure.member.map((_) =>
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(
-                            _ && _.IndentCollapsed,
-                            _.StructIndent,
-                          ),
-                          key: _.name,
-                        },
-                        _(_, _, _),
-                      ),
-                    ),
-                  ))
+                    ],
+                  }))
                 : _.primitive &&
-                  (_ = _.createElement(
-                    "div",
-                    {
+                  (_ = (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _.SchemaDetailsElement,
+                      _.SchemaDetailsArray,
+                    ),
+                    children: (0, _.jsxs)("div", {
                       className: (0, _._)(
-                        _.SchemaDetailsElement,
-                        _.SchemaDetailsArray,
-                      ),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(
-                          _.SchemaDetailsElementBody,
-                          _(_.primitive.type_info.type),
-                        ),
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ElementName,
-                        },
-                        _.name,
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.TypeName,
-                        },
+                        _.SchemaDetailsElementBody,
                         _(_.primitive.type_info.type),
                       ),
-                    ),
-                  )),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.ElementName,
+                          children: _.name,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.TypeName,
+                          children: _(_.primitive.type_info.type),
+                        }),
+                      ],
+                    }),
+                  })),
           _
         );
       }
@@ -717,151 +655,111 @@
           const _ = _.Get().GetSchemaDetails(parseInt(_.appid), _.schemaid);
           return _
             ? (console.log((0, _._)(_)),
-              _.createElement(
-                "div",
-                {
-                  className: _.SchemaDetails,
-                },
-                _.createElement(
-                  _._,
-                  {
+              (0, _.jsxs)("div", {
+                className: _.SchemaDetails,
+                children: [
+                  (0, _.jsx)(_._, {
                     _: _.SteamMLSchemas("0"),
                     className: _.Back,
-                  },
-                  "<< BACK",
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: "<< BACK",
+                  }),
+                  (0, _.jsx)("div", {
                     className: _.SchemaDetailsHeader,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                    children: (0, _.jsxs)("div", {
                       className: _.SchemaDetailsTitle,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SchemaDetailsName,
-                      },
-                      "SCHEMA ",
-                      _.name,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SchemaDetailsSchemaID,
-                      },
-                      _.schemaid,
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.SchemaDetailsName,
+                          children: ["SCHEMA ", _.name],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.SchemaDetailsSchemaID,
+                          children: _.schemaid,
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
                     className: _.SchemaDetailsElements,
-                  },
-                  _(_, _, _),
-                ),
-              ))
+                    children: _(_, _, _),
+                  }),
+                ],
+              }))
             : null;
         }),
         _ = (0, _._)((_) =>
-          _.createElement(
-            "div",
-            {
-              className: _.SchemaPage,
-            },
-            _.createElement(_, null),
-            _.createElement(_, null),
-          ),
+          (0, _.jsxs)("div", {
+            className: _.SchemaPage,
+            children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+          }),
         ),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.SteamMLButton,
-                _.acceptStyle && _.AcceptButton,
-                _.cancelStyle && _.CancelButton,
-                _.disabled && _.Disabled,
-              ),
-              style: {
-                minWidth: _.minWidth,
-              },
-              onClick: (_) => {
-                _.disabled || (_.onClick(), _.stopPropagation());
-              },
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Inner,
-              },
-              _.children,
+          (0, _.jsx)("div", {
+            className: (0, _._)(
+              _.SteamMLButton,
+              _.acceptStyle && _.AcceptButton,
+              _.cancelStyle && _.CancelButton,
+              _.disabled && _.Disabled,
             ),
-          ),
+            style: {
+              minWidth: _.minWidth,
+            },
+            onClick: (_) => {
+              _.disabled || (_.onClick(), _.stopPropagation());
+            },
+            children: (0, _.jsx)("div", {
+              className: _.Inner,
+              children: _.children,
+            }),
+          }),
         _ = ({ problem: _ }) => (
           console.log((0, _._)(_)),
-          _.createElement(
-            _._,
-            {
-              _: _.SteamMLProblems(_.problemid),
-              className: _.ProblemEntry,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_._, {
+            _: _.SteamMLProblems(_.problemid),
+            className: _.ProblemEntry,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ProblemName,
-              },
-              _.name,
-            ),
-            !_.active &&
-              _.createElement(
-                "div",
-                {
+                children: _.name,
+              }),
+              !_.active &&
+                (0, _.jsx)("div", {
                   className: _.Inactive,
-                },
-                "Inactive",
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: "Inactive",
+                }),
+              (0, _.jsx)("div", {
                 className: _.ProblemDescription,
-              },
-              _.problem_description,
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _.problem_description,
+              }),
+              (0, _.jsx)("div", {
                 className: _.ProblemID,
-              },
-              _.problemid,
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _.problemid,
+              }),
+              (0, _.jsxs)("div", {
                 className: _.Dates,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CreatedDate,
-                },
-                "Created ",
-                new Date(1e3 * _.create_time).toLocaleDateString(["en-us"]),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.UpdatedDate,
-                },
-                "Last modified ",
-                new Date(1e3 * _.update_time).toLocaleDateString(["en-us"]),
-              ),
-            ),
-          )
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.CreatedDate,
+                    children: [
+                      "Created ",
+                      new Date(1e3 * _.create_time).toLocaleDateString([
+                        "en-us",
+                      ]),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.UpdatedDate,
+                    children: [
+                      "Last modified ",
+                      new Date(1e3 * _.update_time).toLocaleDateString([
+                        "en-us",
+                      ]),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          })
         ),
         _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)(!1),
@@ -873,140 +771,115 @@
               ?.sort((_, _) => (_.name < _.name ? -1 : 1)),
             _ = _?.filter((_, _, _) => 0 == _ || _.name != _[_ - 1].name),
             _ = _.length > 0 && _.length > 0 && _.length > 0;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.AddNewProblem,
-                !_ && _.IsPrompt,
-                _ && _.IsHeader,
-              ),
-              onClick: () => __webpack_require__(!0),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _.AddNewProblem,
+              !_ && _.IsPrompt,
+              _ && _.IsHeader,
+            ),
+            onClick: () => __webpack_require__(!0),
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.NewProblemHeader,
-              },
-              _.createElement("img", {
-                className: _.PlusSymbol,
-                src: `${_._.IMG_URL}webui/storeadmin/plus.png`,
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.PlusSymbol,
+                    src: `${_._.IMG_URL}webui/storeadmin/plus.png`,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.AddProblemHeader,
+                    children: "Add New Problem" + (_ ? "" : "?"),
+                  }),
+                ],
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.AddProblemHeader,
-                },
-                "Add New Problem" + (_ ? "" : "?"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.NewProblemDescription,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.LabelValue,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Label,
-                  },
-                  "Name",
-                ),
-                _.createElement("input", {
-                  className: _.Value,
-                  type: "text",
-                  value: _,
-                  onChange: (_) => _(_.target.value),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.LabelValue,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Label,
-                  },
-                  "Description",
-                ),
-                _.createElement("input", {
-                  className: _.Value,
-                  type: "text",
-                  value: _,
-                  onChange: (_) => _(_.target.value),
-                }),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SchemaListContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SchemaSelectListTitle,
-                    },
-                    "Select Schemas to Include",
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SchemaSelectList,
-                    },
-                    _.map((_) => {
-                      const _ = -1 != _.indexOf(_.schemaid);
-                      return _.createElement(
-                        "div",
-                        {
-                          key: _.schemaid,
-                          className: (0, _._)(_.SchemaOption, _ && _.Selected),
-                          onClick: () =>
-                            _(
-                              _
-                                ? _.filter((_) => _ != _.schemaid)
-                                : _.concat(_.schemaid),
-                            ),
-                        },
-                        _.name,
-                      );
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.LabelValue,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.Label,
+                        children: "Name",
+                      }),
+                      (0, _.jsx)("input", {
+                        className: _.Value,
+                        type: "text",
+                        value: _,
+                        onChange: (_) => _(_.target.value),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.LabelValue,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.Label,
+                        children: "Description",
+                      }),
+                      (0, _.jsx)("input", {
+                        className: _.Value,
+                        type: "text",
+                        value: _,
+                        onChange: (_) => _(_.target.value),
+                      }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _.SchemaListContainer,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.SchemaSelectListTitle,
+                          children: "Select Schemas to Include",
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.SchemaSelectList,
+                          children: _.map((_) => {
+                            const _ = -1 != _.indexOf(_.schemaid);
+                            return (0, _.jsx)(
+                              "div",
+                              {
+                                className: (0, _._)(
+                                  _.SchemaOption,
+                                  _ && _.Selected,
+                                ),
+                                onClick: () =>
+                                  _(
+                                    _
+                                      ? _.filter((_) => _ != _.schemaid)
+                                      : _.concat(_.schemaid),
+                                  ),
+                                children: _.name,
+                              },
+                              _.schemaid,
+                            );
+                          }),
+                        }),
+                      ],
                     }),
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _.ButtonContainer,
-                },
-                _.createElement(
-                  _,
-                  {
-                    acceptStyle: !0,
-                    minWidth: 100,
-                    disabled: !_,
-                    onClick: () => _ && void _.Get().CreateProblem(_, _, _),
-                  },
-                  "Create",
-                ),
-                _.createElement(
-                  _,
-                  {
-                    cancelStyle: !0,
-                    minWidth: 100,
-                    onClick: () => __webpack_require__(!1),
-                  },
-                  "Cancel",
-                ),
-              ),
-            ),
-          );
+                  (0, _.jsxs)("div", {
+                    className: _.ButtonContainer,
+                    children: [
+                      (0, _.jsx)(_, {
+                        acceptStyle: !0,
+                        minWidth: 100,
+                        disabled: !_,
+                        onClick: () => _ && void _.Get().CreateProblem(_, _, _),
+                        children: "Create",
+                      }),
+                      (0, _.jsx)(_, {
+                        cancelStyle: !0,
+                        minWidth: 100,
+                        onClick: () => __webpack_require__(!1),
+                        children: "Cancel",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         },
         _ = (0, _._)(({ schemaid: _ }) => {
           const _ = _.Get().GetSchemaList(0, !0);
@@ -1015,20 +888,15 @@
             const _ = _.filter((_) => _.schemaid == _);
             _.length > 0 && (_ = _[0]);
           }
-          return _.createElement(
-            "div",
-            {
-              className: _.SchemaElement,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.SchemaName,
-                },
-                _.name,
-              ),
-          );
+          return (0, _.jsx)("div", {
+            className: _.SchemaElement,
+            children:
+              _ &&
+              (0, _.jsx)("div", {
+                className: _.SchemaName,
+                children: _.name,
+              }),
+          });
         }),
         _ = (0, _._)(({ problem: _ }) => {
           const [_, __webpack_require__] = (0, _.useState)(!1),
@@ -1073,214 +941,179 @@
           return (
             _ && _.current.focus(),
             _ && _.current.focus(),
-            _.createElement(
-              "div",
-              {
-                className: _.ProblemDetails,
-              },
-              _.createElement(
-                _._,
-                {
+            (0, _.jsxs)("div", {
+              className: _.ProblemDetails,
+              children: [
+                (0, _.jsx)(_._, {
                   _: _.SteamMLProblems(0),
                   className: _.BackButton,
-                },
-                "<< BACK ",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "<< BACK ",
+                }),
+                (0, _.jsxs)("div", {
                   className: _.ProblemDetailsHeaderContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.ProblemName, _ && _.Hidden),
-                    onClick: (_) => (_(), _(), void __webpack_require__(!0)),
-                  },
-                  _.name,
-                ),
-                _.createElement(
-                  "form",
-                  {
-                    className: _ ? void 0 : _.Hidden,
-                    onSubmit: (_) => {
-                      _.Get().EditProblemName(_, _),
-                        (_.name = _),
-                        __webpack_require__(!1),
-                        _.preventDefault();
-                    },
-                  },
-                  _.createElement("input", {
-                    ref: _,
-                    className: _.ProblemNameEditing,
-                    type: "text",
-                    value: _,
-                    onBlur: () => _(),
-                    onFocus: (_) => _.target.select(),
-                    onChange: (_) => _(_.target.value),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.ProblemDescription, _ && _.Hidden),
-                    onClick: (_) => (_(), _(), void _(!0)),
-                  },
-                  _.problem_description,
-                ),
-                _.createElement(
-                  "form",
-                  {
-                    className: _ ? void 0 : _.Hidden,
-                    onSubmit: (_) => {
-                      _.Get().EditProblemDesc(_, _),
-                        (_.problem_description = _),
-                        _(!1),
-                        _.preventDefault();
-                    },
-                  },
-                  _.createElement("input", {
-                    ref: _,
-                    className: _.ProblemDescEditing,
-                    type: "text",
-                    value: _,
-                    onBlur: () => _(),
-                    onFocus: (_) => _.target.select(),
-                    onChange: (_) => _(_.target.value),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ProblemID,
-                  },
-                  _.problemid,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Dates,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.CreatedDate,
-                    },
-                    "Created ",
-                    new Date(1e3 * _.create_time).toLocaleDateString(["en-us"]),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.UpdatedDate,
-                    },
-                    "Last modified ",
-                    new Date(1e3 * _.update_time).toLocaleDateString(["en-us"]),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.ProblemName, _ && _.Hidden),
+                      onClick: (_) => (_(), _(), void __webpack_require__(!0)),
+                      children: _.name,
+                    }),
+                    (0, _.jsx)("form", {
+                      className: _ ? void 0 : _.Hidden,
+                      onSubmit: (_) => {
+                        _.Get().EditProblemName(_, _),
+                          (_.name = _),
+                          __webpack_require__(!1),
+                          _.preventDefault();
+                      },
+                      children: (0, _.jsx)("input", {
+                        ref: _,
+                        className: _.ProblemNameEditing,
+                        type: "text",
+                        value: _,
+                        onBlur: () => _(),
+                        onFocus: (_) => _.target.select(),
+                        onChange: (_) => _(_.target.value),
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.ProblemDescription, _ && _.Hidden),
+                      onClick: (_) => (_(), _(), void _(!0)),
+                      children: _.problem_description,
+                    }),
+                    (0, _.jsx)("form", {
+                      className: _ ? void 0 : _.Hidden,
+                      onSubmit: (_) => {
+                        _.Get().EditProblemDesc(_, _),
+                          (_.problem_description = _),
+                          _(!1),
+                          _.preventDefault();
+                      },
+                      children: (0, _.jsx)("input", {
+                        ref: _,
+                        className: _.ProblemDescEditing,
+                        type: "text",
+                        value: _,
+                        onBlur: () => _(),
+                        onFocus: (_) => _.target.select(),
+                        onChange: (_) => _(_.target.value),
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.ProblemID,
+                      children: _.problemid,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.Dates,
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.CreatedDate,
+                          children: [
+                            "Created ",
+                            new Date(1e3 * _.create_time).toLocaleDateString([
+                              "en-us",
+                            ]),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.UpdatedDate,
+                          children: [
+                            "Last modified ",
+                            new Date(1e3 * _.update_time).toLocaleDateString([
+                              "en-us",
+                            ]),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
                   className: _.SchemaListContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SchemaListHeader,
-                  },
-                  "Schemas:",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SchemaListEdit,
-                    onClick: () => (_(), _(), void _(!0)),
-                  },
-                  "Edit",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.SchemaList, _ && _.Hidden),
-                  },
-                  _.schemaid.map((_) =>
-                    _.createElement(_, {
-                      key: _,
-                      schemaid: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.SchemaListHeader,
+                      children: "Schemas:",
                     }),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _.SchemaSelectList,
-                      (!_ || !_) && _.Hidden,
-                    ),
-                  },
-                  _ &&
-                    _.map((_) => {
-                      const _ = -1 != _.indexOf(_.schemaid);
-                      return _.createElement(
-                        "div",
-                        {
-                          key: _.schemaid,
-                          className: (0, _._)(_.SchemaOption, _ && _.Selected),
-                          onClick: () =>
-                            _(
-                              _
-                                ? _.filter((_) => _ != _.schemaid)
-                                : _.concat(_.schemaid),
-                            ),
-                        },
-                        _.name,
-                      );
+                    (0, _.jsx)("div", {
+                      className: _.SchemaListEdit,
+                      onClick: () => (_(), _(), void _(!0)),
+                      children: "Edit",
                     }),
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ButtonContainer,
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        minWidth: 100,
-                        acceptStyle: !0,
-                        disabled: 0 == _.length,
-                        onClick: () => (
-                          _.Get().EditProblemSchemas(_, _),
-                          (_.schemaid = _),
-                          void _(!1)
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.SchemaList, _ && _.Hidden),
+                      children: _.schemaid.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            schemaid: _,
+                          },
+                          _,
                         ),
-                      },
-                      "Accept",
-                    ),
-                    _.createElement(
-                      _,
-                      {
-                        minWidth: 100,
-                        cancelStyle: !0,
-                        onClick: () => _(),
-                      },
-                      "Cancel",
-                    ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.DeleteLink, _ && _.Hidden),
-                    onClick: () => (
-                      _.Get().DeleteProblem(_),
-                      void _.push(_.SteamMLProblems(0))
-                    ),
-                  },
-                  "Delete Problem",
-                ),
-              ),
-            )
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _.SchemaSelectList,
+                        (!_ || !_) && _.Hidden,
+                      ),
+                      children:
+                        _ &&
+                        _.map((_) => {
+                          const _ = -1 != _.indexOf(_.schemaid);
+                          return (0, _.jsx)(
+                            "div",
+                            {
+                              className: (0, _._)(
+                                _.SchemaOption,
+                                _ && _.Selected,
+                              ),
+                              onClick: () =>
+                                _(
+                                  _
+                                    ? _.filter((_) => _ != _.schemaid)
+                                    : _.concat(_.schemaid),
+                                ),
+                              children: _.name,
+                            },
+                            _.schemaid,
+                          );
+                        }),
+                    }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _.ButtonContainer,
+                        children: [
+                          (0, _.jsx)(_, {
+                            minWidth: 100,
+                            acceptStyle: !0,
+                            disabled: 0 == _.length,
+                            onClick: () => (
+                              _.Get().EditProblemSchemas(_, _),
+                              (_.schemaid = _),
+                              void _(!1)
+                            ),
+                            children: "Accept",
+                          }),
+                          (0, _.jsx)(_, {
+                            minWidth: 100,
+                            cancelStyle: !0,
+                            onClick: () => _(),
+                            children: "Cancel",
+                          }),
+                        ],
+                      }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.DeleteLink, _ && _.Hidden),
+                      onClick: () => (
+                        _.Get().DeleteProblem(_),
+                        void _.push(_.SteamMLProblems(0))
+                      ),
+                      children: "Delete Problem",
+                    }),
+                  ],
+                }),
+              ],
+            })
           );
         }),
         _ = (0, _._)((_) => {
@@ -1291,46 +1124,41 @@
             _
               ? (_ = _.Get().GetProblemList())
               : (_ = _.Get().GetProblemDetails(parseInt(_.problemid))),
-            _.createElement(
-              "div",
-              {
-                className: _.ProblemPage,
-              },
-              _ &&
+            (0, _.jsxs)("div", {
+              className: _.ProblemPage,
+              children: [
                 _ &&
-                _.createElement(
-                  "div",
-                  {
+                  _ &&
+                  (0, _.jsxs)("div", {
                     className: _.ProblemListContainer,
-                  },
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: _.problemid,
+                    children: [
+                      _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            problem: _,
+                          },
+                          _.problemid,
+                        ),
+                      ),
+                      0 == _.length &&
+                        (0, _.jsx)("div", {
+                          className: _.NoProblems,
+                          children: "No Existing Problems",
+                        }),
+                      (0, _.jsx)(_, {}),
+                    ],
+                  }),
+                !_ &&
+                  _ &&
+                  (0, _.jsx)("div", {
+                    className: _.ProblemDetails,
+                    children: (0, _.jsx)(_, {
                       problem: _,
                     }),
-                  ),
-                  0 == _.length &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.NoProblems,
-                      },
-                      "No Existing Problems",
-                    ),
-                  _.createElement(_, null),
-                ),
-              !_ &&
-                _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ProblemDetails,
-                  },
-                  _.createElement(_, {
-                    problem: _,
                   }),
-                ),
-            )
+              ],
+            })
           );
         }),
         _ = {
@@ -1341,48 +1169,41 @@
         };
       class _ extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: _.Background,
-            },
-            _.createElement(
-              _._,
-              {
-                basename: (0, _._)() + _.SteamMLBase(),
-              },
-              _.createElement(_, null),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _.SteamMLSchemas(":appid", ":schemaid"),
-                  component: _,
+          return (0, _.jsx)("div", {
+            className: _.Background,
+            children: (0, _.jsxs)(_._, {
+              basename: (0, _._)() + _.SteamMLBase(),
+              children: [
+                (0, _.jsx)(_, {}),
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: _.SteamMLSchemas(":appid", ":schemaid"),
+                      component: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: _.SteamMLModels(),
+                      component: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: _.SteamMLProblems(":problemid"),
+                      component: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: "/",
+                      children: (0, _.jsx)(_._, {
+                        _: _.SteamMLSchemas(),
+                      }),
+                    }),
+                  ],
                 }),
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _.SteamMLModels(),
-                  component: _,
-                }),
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _.SteamMLProblems(":problemid"),
-                  component: _,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    exact: !0,
-                    path: "/",
-                  },
-                  _.createElement(_._, {
-                    _: _.SteamMLSchemas(),
-                  }),
-                ),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         }
       }
       const _ = (_) => {
@@ -1399,38 +1220,31 @@
               path: _.SteamMLProblems(":problemid"),
               exact: !0,
             });
-          return _.createElement(
-            "div",
-            {
-              className: _.Header,
-            },
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)("div", {
+            className: _.Header,
+            children: [
+              (0, _.jsx)(_._, {
                 _: _.SteamMLSchemas(),
                 className: (0, _._)(_.HeaderOption, _ && _.Selected),
-              },
-              "SCHEMAS",
-            ),
-            _.createElement(
-              _._,
-              {
+                children: "SCHEMAS",
+              }),
+              (0, _.jsx)(_._, {
                 _: _.SteamMLModels(),
                 className: (0, _._)(_.HeaderOption, _ && _.Selected),
-              },
-              "MODELS",
-            ),
-            _.createElement(
-              _._,
-              {
+                children: "MODELS",
+              }),
+              (0, _.jsx)(_._, {
                 _: _.SteamMLProblems(),
                 className: (0, _._)(_.HeaderOption, _ && _.Selected),
-              },
-              "PROBLEMS",
-            ),
-          );
+                children: "PROBLEMS",
+              }),
+            ],
+          });
         },
-        _ = (_) => _.createElement("div", null, "MODEL PAGE");
+        _ = (_) =>
+          (0, _.jsx)("div", {
+            children: "MODEL PAGE",
+          });
     },
   },
 ]);

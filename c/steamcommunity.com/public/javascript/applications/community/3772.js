@@ -77,6 +77,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -100,7 +101,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _()(_, _.EditableComponentToolbarContainer),
           ...__webpack_require__,
         });
@@ -125,18 +126,15 @@
           (_ < 80 || _) &&
             ((_.top = __webpack_require__ - 32 - 16 + "px"),
             (_.height = "48px")),
-          _.createElement(
-            "div",
-            {
-              style: _,
-              className: _()(
-                _.InlineHoverContainer,
-                _ && _.WidthConstrained,
-                !_ && _.Hidden,
-              ),
-            },
-            _,
-          )
+          (0, _.jsx)("div", {
+            style: _,
+            className: _()(
+              _.InlineHoverContainer,
+              _ && _.WidthConstrained,
+              !_ && _.Hidden,
+            ),
+            children: _,
+          })
         );
       }
       function _(_) {
@@ -161,24 +159,21 @@
               });
             }
           }, [_]),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "span",
-              {
-                ref: _,
-                className: _()(_, _.EditableComponentInlineContainer),
-                ..._,
-              },
-              _.createElement(_, {
-                ..._,
-                toolbar: __webpack_require__,
-                visible: _ && _.width > 0,
-              }),
-              _,
-            ),
-          )
+          (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsxs)("span", {
+              ref: _,
+              className: _()(_, _.EditableComponentInlineContainer),
+              ..._,
+              children: [
+                (0, _.jsx)(_, {
+                  ..._,
+                  toolbar: __webpack_require__,
+                  visible: _ && _.width > 0,
+                }),
+                _,
+              ],
+            }),
+          })
         );
       }
       function _(_) {
@@ -190,53 +185,40 @@
           bStrongShadows: _ = !1,
           children: _,
         } = _;
-        return _.createElement(
-          _,
-          {
-            bStrongShadows: _,
-          },
-          _,
-          _ &&
-            _.createElement(
-              _,
-              {
+        return (0, _.jsxs)(_, {
+          bStrongShadows: _,
+          children: [
+            _,
+            _ &&
+              (0, _.jsx)(_, {
                 onClick: _,
                 description: __webpack_require__,
-              },
-              _.createElement(_.ffu, null),
-            ),
-          _ &&
-            _.createElement(
-              _,
-              {
+                children: (0, _.jsx)(_.ffu, {}),
+              }),
+            _ &&
+              (0, _.jsx)(_, {
                 onClick: _,
                 description: _,
-              },
-              _.createElement(_.sED, null),
-            ),
-        );
+                children: (0, _.jsx)(_.sED, {}),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { bStrongShadows: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          "span",
-          {
-            className: _()(_.EditableComponentToolbar, _ && _.StrongShadows),
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)("span", {
+          className: _()(_.EditableComponentToolbar, _ && _.StrongShadows),
+          children: __webpack_require__,
+        });
       }
       function _(_) {
         const { onClick: _, description: __webpack_require__, children: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            onClick: _,
-            tooltip: __webpack_require__,
-            className: _.FloatingToolbarButton,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          onClick: _,
+          tooltip: __webpack_require__,
+          className: _.FloatingToolbarButton,
+          children: _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -294,47 +276,45 @@
           _ = _.useCallback(() => {
             _(_);
           }, [_, _]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _.createElement(
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
             _,
-            null,
-            _.createElement(_, {
-              onDeleteClick: _,
-              strDeleteDescription: (0, _._)(
-                "#EventEditor_CarouselEditor_RemoveCarousel",
-              ),
-              onEditClick: _,
-              strEditDescription: (0, _._)(
-                "#EventEditor_CarouselEditor_EditCarousel",
-              ),
-            }),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  strTag: "carousel",
-                  args: {},
-                  rawargs: "",
-                  event: _.GetEventModel(),
-                },
-                _.map((_, _) =>
-                  _.createElement(_, {
-                    key: _,
-                    node: _,
-                    nodeAttrs: _(_),
-                    schemaConfig: _,
+            (0, _.jsxs)(_, {
+              children: [
+                (0, _.jsx)(_, {
+                  onDeleteClick: _,
+                  strDeleteDescription: (0, _._)(
+                    "#EventEditor_CarouselEditor_RemoveCarousel",
+                  ),
+                  onEditClick: _,
+                  strEditDescription: (0, _._)(
+                    "#EventEditor_CarouselEditor_EditCarousel",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    strTag: "carousel",
+                    args: {},
+                    rawargs: "",
                     event: _.GetEventModel(),
+                    children: _.map((_, _) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          node: _,
+                          nodeAttrs: _(_),
+                          schemaConfig: _,
+                          event: _.GetEventModel(),
+                        },
+                        _,
+                      ),
+                    ),
                   }),
-                ),
-              ),
-            ),
-          ),
-        );
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_, _) {
         const _ = _.carouselNodeType,
@@ -361,18 +341,15 @@
           );
         return [
           _,
-          _.createElement(
-            _._,
-            {
-              active: void 0 !== _,
-            },
-            _.createElement(_, {
+          (0, _.jsx)(_._, {
+            active: void 0 !== _,
+            children: (0, _.jsx)(_, {
               ..._,
               images: _,
               onCarouselImagesSelected: _,
               hideModal: _,
             }),
-          ),
+          }),
         ];
       }
       function _(_) {
@@ -418,98 +395,86 @@
             videoNodeType: _,
             onItemSelected: _,
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsxs)(_._, {
               active: !0,
               onDismiss: __webpack_require__,
-            },
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#EventEditor_CarouselEditor_EditCarousel"),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                label: (0, _._)("#EventEditor_CarouselEditor_AutoAdvance"),
-                checked: _,
-                onChange: _,
-              }),
-              _.createElement(
-                _._,
-                {
-                  onDragEnd: _,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    droppableId: "droppable",
-                    direction: "horizontal",
-                  },
-                  (_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.CarouselList,
-                        ..._.droppableProps,
-                        ref: _.innerRef,
-                      },
-                      _.map((_, _) =>
-                        _.createElement(
-                          _._,
-                          {
-                            key: _(_),
-                          },
-                          _.createElement(
-                            _._,
-                            {
-                              draggableId: _(_),
-                              index: _,
-                            },
-                            (_, _, _) =>
-                              _.createElement(_, {
-                                draggableProvided: _,
-                                image: _,
-                                setSelectedImages: _,
-                                iImage: _,
-                                cImages: _.length,
-                              }),
-                          ),
-                        ),
-                      ),
-                      _.placeholder,
-                    ),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  bottomSeparator: "none",
-                  label: (0, _._)("#EventEditor_CarouselEditor_AddAnotherItem"),
-                  className: _.AddButton,
-                  onClick: _,
-                },
-                _.createElement(_.OMN, {
-                  className: _.PlusIcon,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _._)(
+                    "#EventEditor_CarouselEditor_EditCarousel",
+                  ),
                 }),
-              ),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                onCancel: __webpack_require__,
-                onOK: _,
-              }),
-            ),
-          ),
-        );
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      label: (0, _._)(
+                        "#EventEditor_CarouselEditor_AutoAdvance",
+                      ),
+                      checked: _,
+                      onChange: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      onDragEnd: _,
+                      children: (0, _.jsx)(_._, {
+                        droppableId: "droppable",
+                        direction: "horizontal",
+                        children: (_) =>
+                          (0, _.jsxs)("div", {
+                            className: _.CarouselList,
+                            ..._.droppableProps,
+                            ref: _.innerRef,
+                            children: [
+                              _.map((_, _) =>
+                                (0, _.jsx)(
+                                  _._,
+                                  {
+                                    children: (0, _.jsx)(_._, {
+                                      draggableId: _(_),
+                                      index: _,
+                                      children: (_, _, _) =>
+                                        (0, _.jsx)(_, {
+                                          draggableProvided: _,
+                                          image: _,
+                                          setSelectedImages: _,
+                                          iImage: _,
+                                          cImages: _.length,
+                                        }),
+                                    }),
+                                  },
+                                  _(_),
+                                ),
+                              ),
+                              _.placeholder,
+                            ],
+                          }),
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      bottomSeparator: "none",
+                      label: (0, _._)(
+                        "#EventEditor_CarouselEditor_AddAnotherItem",
+                      ),
+                      className: _.AddButton,
+                      onClick: _,
+                      children: (0, _.jsx)(_.OMN, {
+                        className: _.PlusIcon,
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    onCancel: __webpack_require__,
+                    onOK: _,
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -522,46 +487,33 @@
           _ = _.useCallback(() => {
             _((_) => _.filter((_) => _ != __webpack_require__));
           }, [__webpack_require__, _]);
-        return _.createElement(
-          "div",
-          {
-            className: _()(_.ListItem, _.DraggableItem),
-            ref: _.innerRef,
-            ..._.draggableProps,
-            ..._.dragHandleProps,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.ImagePreview,
-            },
-            _.createElement("img", {
-              src: _._.ReplacementTokenToClanImageURL(
-                __webpack_require__.node.attrs.src,
-              ),
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: _()(_.ListItem, _.DraggableItem),
+          ref: _.innerRef,
+          ..._.draggableProps,
+          ..._.dragHandleProps,
+          children: (0, _.jsxs)("div", {
+            className: _.ImagePreview,
+            children: [
+              (0, _.jsx)("img", {
+                src: _._.ReplacementTokenToClanImageURL(
+                  __webpack_require__.node.attrs.src,
+                ),
+              }),
+              (0, _.jsx)("div", {
                 className: _.Controls,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _.Control,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     onClick: _,
                     className: _.Button,
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              ),
-            ),
-          ),
-        );
+                    children: (0, _.jsx)(_.sED, {}),
+                  }),
+                }),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -580,7 +532,7 @@
           } = _,
           [_, _, _] = (0, _._)(),
           _ = _(__webpack_require__);
-        let _ = _.createElement(_, {
+        let _ = (0, _.jsx)(_, {
           schemaConfig: _,
           event: _.GetEventModel(),
           node: __webpack_require__,
@@ -604,33 +556,30 @@
             src: _(_),
           };
         let _ = _()(_.ClanImageContainer, _ && _.Selected);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              bIsEdit: !0,
-              nodeAttrs: _,
-              hideModal: _,
-              imageNodeType: _,
-              videoNodeType: _,
-              clanSteamID: _,
-              onItemSelected: _,
-            }),
-          _,
-          _.createElement(
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                bIsEdit: !0,
+                nodeAttrs: _,
+                hideModal: _,
+                imageNodeType: _,
+                videoNodeType: _,
+                clanSteamID: _,
+                onItemSelected: _,
+              }),
             _,
-            {
+            (0, _.jsx)(_, {
               className: _,
-              toolbar: _.createElement(_, {
+              toolbar: (0, _.jsx)(_, {
                 showModal: _,
                 removeNode: _,
                 contextMenuProps: _,
               }),
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -641,7 +590,7 @@
           _ = _.useCallback(
             (_) => {
               (0, _._)(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   ..._,
                 }),
                 _,
@@ -653,46 +602,36 @@
             },
             [_],
           );
-        return _.createElement(
-          _,
-          {
-            onEditClick: _,
-            onDeleteClick: __webpack_require__,
-          },
-          _.createElement(
-            _,
-            {
-              onClick: _,
-              description: (0, _._)("#ActionButtonLabelContextMenu"),
-            },
-            _.createElement(_.h28, null),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          onEditClick: _,
+          onDeleteClick: __webpack_require__,
+          children: (0, _.jsx)(_, {
+            onClick: _,
+            description: (0, _._)("#ActionButtonLabelContextMenu"),
+            children: (0, _.jsx)(_.h28, {}),
+          }),
+        });
       }
       function _(_) {
         const { createCarousel: _, src: __webpack_require__ } = _,
           _ = _.useCallback(() => {
             window.open(__webpack_require__);
           }, [__webpack_require__]);
-        return _.createElement(
-          _._,
-          null,
-          _ &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)(_._, {
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
                 onSelected: _,
-              },
-              (0, _._)("#EventEditor_CarouselEditor_CreateACarousel"),
-            ),
-          _.createElement(
-            _._,
-            {
+                children: (0, _._)(
+                  "#EventEditor_CarouselEditor_CreateACarousel",
+                ),
+              }),
+            (0, _.jsx)(_._, {
               onSelected: _,
-            },
-            (0, _._)("#EventEditor_ImageEdit_PreviewImage"),
-          ),
-        );
+              children: (0, _._)("#EventEditor_ImageEdit_PreviewImage"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { type: _, attrs: __webpack_require__ } = _;
@@ -725,7 +664,7 @@
           { type: _, attrs: _ } = _,
           _ = _.ConvertAttrToBBCodeArgs(_, _);
         return "image" == _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               strTag: "img",
               args: _,
               rawargs: "",
@@ -733,14 +672,17 @@
               showErrorInfo: !0,
             })
           : "video" == _
-            ? _.createElement(_._, {
-                key: `${_.mp4}_${_.webm}`,
-                strTag: "video",
-                args: _,
-                rawargs: "",
-                event: __webpack_require__,
-                showErrorInfo: !0,
-              })
+            ? (0, _.jsx)(
+                _._,
+                {
+                  strTag: "video",
+                  args: _,
+                  rawargs: "",
+                  event: __webpack_require__,
+                  showErrorInfo: !0,
+                },
+                `${_.mp4}_${_.webm}`,
+              )
             : ((0, _._)(_, "unhandled type: " + _), null);
       }
       function _(_, _) {
@@ -792,7 +734,7 @@
           closeImageModal: _,
           imageModal:
             _ &&
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               nodeAttrs: _,
               hideModal: _,
               onItemSelected: _,
@@ -856,7 +798,7 @@
         let _,
           _ = null;
         if ("image" == _)
-          (_ = _.createElement(_, {
+          (_ = (0, _.jsx)(_, {
             active: "hotlink" == _,
             bIsEdit: _,
             hideModal: _,
@@ -868,7 +810,7 @@
               : (0, _._)("#EventEditor_InsertImage_Title"));
         else {
           if ("video" != _) return (0, _._)(_, "Unhandled type"), null;
-          (_ = _.createElement(_, {
+          (_ = (0, _.jsx)(_, {
             active: "hotlink" == _,
             bIsEdit: _,
             hideModal: _,
@@ -877,64 +819,47 @@
           })),
             (_ = (0, _._)("#EventEditor_EditVideo_Title"));
         }
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-            onDismiss: _,
-            className: _.ClanImageModalContent,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          active: !0,
+          onDismiss: _,
+          className: _.ClanImageModalContent,
+          children: [
+            (0, _.jsx)(_._, {
               _: _,
-            },
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: _,
+            }),
+            (0, _.jsxs)(_._, {
               labelId: _,
               value: _,
               onChange: (_) => _(_),
-            },
-            _.createElement(
-              _._,
-              {
-                value: "uploaded",
-              },
-              "Uploaded",
-            ),
-            _.createElement(
-              _._,
-              {
-                value: "hotlink",
-              },
-              "Enter URL",
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _()(_.ClanImageModalMode, "uploaded" == _ && _.Active),
-            },
-            _.createElement(_, {
-              bIsEdit: _,
-              hideModal: _,
-              onImageSelected: _,
-              onVideoSelected: _ && _,
-              clanSteamID: _,
-              selectedImage: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  value: "uploaded",
+                  children: "Uploaded",
+                }),
+                (0, _.jsx)(_._, {
+                  value: "hotlink",
+                  children: "Enter URL",
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
+              className: _()(_.ClanImageModalMode, "uploaded" == _ && _.Active),
+              children: (0, _.jsx)(_, {
+                bIsEdit: _,
+                hideModal: _,
+                onImageSelected: _,
+                onVideoSelected: _ && _,
+                clanSteamID: _,
+                selectedImage: _,
+              }),
+            }),
+            (0, _.jsx)("div", {
               className: _()(_.ClanImageModalMode, "hotlink" == _ && _.Active),
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -954,27 +879,24 @@
           _.useEffect(() => {
             _ && _.current.Focus();
           }, [_]),
-          _.createElement(
-            _._,
-            {
-              onSubmit: () => _(_),
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                ref: _,
-                value: _,
-                onChange: _,
-                label: (0, _._)("#EventEditor_InsertImage_URL"),
+          (0, _.jsxs)(_._, {
+            onSubmit: () => _(_),
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  ref: _,
+                  value: _,
+                  onChange: _,
+                  label: (0, _._)("#EventEditor_InsertImage_URL"),
+                }),
               }),
-            ),
-            _.createElement(_._, {
-              onCancel: _,
-              strOKText: _,
-              bOKDisabled: !_ || _ == _,
-            }),
-          )
+              (0, _.jsx)(_._, {
+                onCancel: _,
+                strOKText: _,
+                bOKDisabled: !_ || _ == _,
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -994,57 +916,56 @@
         _.useEffect(() => {
           _ && _.current.Focus();
         }, [_]);
-        return _.createElement(
-          _._,
-          {
-            onSubmit: (_) => {
-              _({
-                ..._,
-                mp4: _ || void 0,
-                webm: _ || void 0,
-                poster: _ || void 0,
-                autoplay: _,
-                controls: _,
-              }),
-                _();
-            },
+        return (0, _.jsxs)(_._, {
+          onSubmit: (_) => {
+            _({
+              ..._,
+              mp4: _ || void 0,
+              webm: _ || void 0,
+              poster: _ || void 0,
+              autoplay: _,
+              controls: _,
+            }),
+              _();
           },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              ref: _,
-              value: _,
-              onChange: (_) => _(_.currentTarget.value),
-              label: (0, _._)("#EventEditor_InsertVideo_InputMP4"),
+          children: [
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  ref: _,
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#EventEditor_InsertVideo_InputMP4"),
+                }),
+                (0, _.jsx)(_._, {
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#EventEditor_InsertVideo_InputWebM"),
+                }),
+                (0, _.jsx)(_._, {
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#EventEditor_InsertVideo_InputPoster"),
+                }),
+                (0, _.jsx)(_._, {
+                  checked: _,
+                  onChange: _,
+                  label: (0, _._)("#EventEditor_InsertVideo_InputAutoplay"),
+                }),
+                (0, _.jsx)(_._, {
+                  checked: _,
+                  onChange: _,
+                  label: (0, _._)("#EventEditor_InsertVideo_InputShowControls"),
+                }),
+              ],
             }),
-            _.createElement(_._, {
-              value: _,
-              onChange: (_) => _(_.currentTarget.value),
-              label: (0, _._)("#EventEditor_InsertVideo_InputWebM"),
+            (0, _.jsx)(_._, {
+              onCancel: _,
+              strOKText: (0, _._)("#EventEditor_EditVideo_Title"),
+              bOKDisabled: !_ && !_,
             }),
-            _.createElement(_._, {
-              value: _,
-              onChange: (_) => _(_.currentTarget.value),
-              label: (0, _._)("#EventEditor_InsertVideo_InputPoster"),
-            }),
-            _.createElement(_._, {
-              checked: _,
-              onChange: _,
-              label: (0, _._)("#EventEditor_InsertVideo_InputAutoplay"),
-            }),
-            _.createElement(_._, {
-              checked: _,
-              onChange: _,
-              label: (0, _._)("#EventEditor_InsertVideo_InputShowControls"),
-            }),
-          ),
-          _.createElement(_._, {
-            onCancel: _,
-            strOKText: (0, _._)("#EventEditor_EditVideo_Title"),
-            bOKDisabled: !_ && !_,
-          }),
-        );
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1086,41 +1007,33 @@
             },
             [_],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              onSubmit: () => _ && _(_),
-              className: _.ClanImageGridForm,
-            },
-            _.createElement(_._, {
-              fnSetImageSearch: _,
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsxs)(_._, {
+            onSubmit: () => _ && _(_),
+            className: _.ClanImageGridForm,
+            children: [
+              (0, _.jsx)(_._, {
+                fnSetImageSearch: _,
+              }),
+              (0, _.jsx)("div", {
                 className: _.ClanImageGridContainer,
-              },
-              _.createElement(_._, {
-                clanAccountID: _.GetAccountID(),
-                fileNameSearch: _,
-                onImageSelected: _,
-                selectedItem: _,
+                children: (0, _.jsx)(_._, {
+                  clanAccountID: _.GetAccountID(),
+                  fileNameSearch: _,
+                  onImageSelected: _,
+                  selectedItem: _,
+                }),
               }),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                onCancel: __webpack_require__,
-                strOKText: _,
-                bOKDisabled: !_ || _ == _.selectedImage,
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  onCancel: __webpack_require__,
+                  strOKText: _,
+                  bOKDisabled: !_ || _ == _.selectedImage,
+                }),
               }),
-            ),
-          ),
-        );
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -1157,14 +1070,11 @@
             [_, __webpack_require__, _],
           );
         return __webpack_require__
-          ? _.createElement(
-              _._,
-              {
-                ProcessFileUpload: _,
-                bAllowImageHotLinking: !0,
-              },
-              _,
-            )
+          ? (0, _.jsx)(_._, {
+              ProcessFileUpload: _,
+              bAllowImageHotLinking: !0,
+              children: _,
+            })
           : _;
       }
       function _(_, _, _) {
@@ -1216,42 +1126,41 @@
             },
             [_, _],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              videoID: _,
-              align: __webpack_require__,
-              bEditing: !0,
-              hideModal: _,
-              onSave: _,
-            }),
-          _.createElement(
-            _,
-            {
-              className: (0, _._)(_.PreviewYoutubeEditor, _ && _.Selected),
-            },
-            _.createElement(_, {
-              onEditClick: _,
-              onDeleteClick: _.removeNode,
-              bStrongShadows: !0,
-            }),
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
             _ &&
-              _.createElement("div", {
-                className: _.SelectionOverlay,
+              (0, _.jsx)(_, {
+                videoID: _,
+                align: __webpack_require__,
+                bEditing: !0,
+                hideModal: _,
+                onSave: _,
               }),
-            _.createElement(_._, {
-              event: _.GetEventModel(),
-              strTag: "previewyoutube",
-              args: {
-                "": `${_};${__webpack_require__}`,
-              },
-              rawargs: `${_};${__webpack_require__}`,
-              showErrorInfo: !0,
+            (0, _.jsxs)(_, {
+              className: (0, _._)(_.PreviewYoutubeEditor, _ && _.Selected),
+              children: [
+                (0, _.jsx)(_, {
+                  onEditClick: _,
+                  onDeleteClick: _.removeNode,
+                  bStrongShadows: !0,
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.SelectionOverlay,
+                  }),
+                (0, _.jsx)(_._, {
+                  event: _.GetEventModel(),
+                  strTag: "previewyoutube",
+                  args: {
+                    "": `${_};${__webpack_require__}`,
+                  },
+                  rawargs: `${_};${__webpack_require__}`,
+                  showErrorInfo: !0,
+                }),
+              ],
             }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1273,59 +1182,51 @@
           _ = _.useCallback((_) => {
             _ && (_.element.focus(), _.element.select());
           }, []);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#EventEditor_InsertYouTube"),
-              closeModal: _,
-              strOKText: _
-                ? (0, _._)("#Button_Save")
-                : (0, _._)("#EventEditor_InsertYouTube"),
-              onOK: _,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsxs)(_._, {
+            strTitle: (0, _._)("#EventEditor_InsertYouTube"),
+            closeModal: _,
+            strOKText: _
+              ? (0, _._)("#Button_Save")
+              : (0, _._)("#EventEditor_InsertYouTube"),
+            onOK: _,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _.Error,
-                },
-                _,
-              ),
-            _.createElement(_._, {
-              label: (0, _._)("#EventEditor_InsertYouTube_URL"),
-              placeholder: (0, _._)("#EventEditor_InsertYouTube_Placholder"),
-              value: _,
-              ref: _,
-              onChange: (_) => _(_.currentTarget.value),
-            }),
-            _.createElement(
-              _._,
-              {
+                  children: _,
+                }),
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#EventEditor_InsertYouTube_URL"),
+                placeholder: (0, _._)("#EventEditor_InsertYouTube_Placholder"),
+                value: _,
+                ref: _,
+                onChange: (_) => _(_.currentTarget.value),
+              }),
+              (0, _.jsxs)(_._, {
                 label: (0, _._)("#EventEditor_InsertYouTube_Position"),
-              },
-              _.createElement(_._, {
-                checked: _ == _._.left,
-                onChange: (_) => _ && _(_._.left),
-                label: (0, _._)("#EventEditor_InsertYouTube_Left"),
+                children: [
+                  (0, _.jsx)(_._, {
+                    checked: _ == _._.left,
+                    onChange: (_) => _ && _(_._.left),
+                    label: (0, _._)("#EventEditor_InsertYouTube_Left"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    checked: _ == _._.right,
+                    onChange: (_) => _ && _(_._.right),
+                    label: (0, _._)("#EventEditor_InsertYouTube_Right"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    checked: _ == _._.full,
+                    onChange: (_) => _ && _(_._.full),
+                    label: (0, _._)("#EventEditor_InsertYouTube_Full"),
+                  }),
+                ],
               }),
-              _.createElement(_._, {
-                checked: _ == _._.right,
-                onChange: (_) => _ && _(_._.right),
-                label: (0, _._)("#EventEditor_InsertYouTube_Right"),
-              }),
-              _.createElement(_._, {
-                checked: _ == _._.full,
-                onChange: (_) => _ && _(_._.full),
-                label: (0, _._)("#EventEditor_InsertYouTube_Full"),
-              }),
-            ),
-          ),
-        );
+            ],
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1354,37 +1255,30 @@
           [_, _] = (0, _.useState)(() => _(!0, null)),
           [_, _] = (0, _.useState)(() => _(!0, null)),
           [_] = (0, _._)(() => [_.location_type]);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#MeetSteam_create_title"),
-              onOK: () => __webpack_require__(_, _),
-              closeModal: () => {
-                _(_(!0, null)), _(_(!0, null)), _();
-              },
-              bOKDisabled: null == !_,
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#MeetSteam_create_title"),
+            onOK: () => __webpack_require__(_, _),
+            closeModal: () => {
+              _(_(!0, null)), _(_(!0, null)), _();
             },
-            _.createElement(
-              "div",
-              {
-                className: _().DialogCtn,
-              },
-              _.createElement(_, {
-                group: _,
-                fnSetGroup: _,
-              }),
-              _.createElement(_, {
-                session: _,
-                fnSetSession: _,
-              }),
-            ),
-          ),
-        );
+            bOKDisabled: null == !_,
+            children: (0, _.jsxs)("div", {
+              className: _().DialogCtn,
+              children: [
+                (0, _.jsx)(_, {
+                  group: _,
+                  fnSetGroup: _,
+                }),
+                (0, _.jsx)(_, {
+                  session: _,
+                  fnSetSession: _,
+                }),
+              ],
+            }),
+          }),
+        });
       }
       function _(_) {
         const {
@@ -1393,34 +1287,25 @@
             fnUpdateGroupSession: _,
           } = _,
           [_, _] = (0, _.useState)(() => _(!1, __webpack_require__));
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#MeetSteam_edit_title"),
-              onOK: () => {
-                _(_), _();
-              },
-              onCancel: () => {
-                _(_(!1, __webpack_require__)), _();
-              },
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#MeetSteam_edit_title"),
+            onOK: () => {
+              _(_), _();
             },
-            _.createElement(
-              "div",
-              {
-                className: _().DialogCtn,
-              },
-              _.createElement(_, {
+            onCancel: () => {
+              _(_(!1, __webpack_require__)), _();
+            },
+            children: (0, _.jsx)("div", {
+              className: _().DialogCtn,
+              children: (0, _.jsx)(_, {
                 group: _,
                 fnSetGroup: _,
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
       function _(_) {
         const {
@@ -1431,141 +1316,134 @@
           } = _,
           [_, _] = (0, _.useState)(() => _(_, _)),
           [_] = (0, _._)(() => [_.location_type]);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)(
-                _ ? "#MeetSteam_create_title" : "#MeetSteam_edit_title",
-              ),
-              onOK: () => {
-                _(_), __webpack_require__();
-              },
-              onCancel: () => {
-                _(_(_, _)), __webpack_require__();
-              },
-              bOKDisabled: !_,
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
+            strTitle: (0, _._)(
+              _ ? "#MeetSteam_create_title" : "#MeetSteam_edit_title",
+            ),
+            onOK: () => {
+              _(_), __webpack_require__();
             },
-            _.createElement(
-              "div",
-              {
-                className: _().DialogCtn,
-              },
-              _.createElement(_, {
+            onCancel: () => {
+              _(_(_, _)), __webpack_require__();
+            },
+            bOKDisabled: !_,
+            children: (0, _.jsx)("div", {
+              className: _().DialogCtn,
+              children: (0, _.jsx)(_, {
                 session: _,
                 fnSetSession: _,
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
       function _(_) {
         const { group: _, fnSetGroup: __webpack_require__ } = _,
           _ = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            type: "text",
-            label: (0, _._)("#MeetSteam_edit_session_name"),
-            value: _._.Get(_.localized_session_title, _),
-            onChange: (_) => {
-              const _ = {
-                ..._,
-              };
-              (_.localized_session_title = _._.Set(
-                _.localized_session_title,
-                _,
-                _.currentTarget.value,
-              )),
-                __webpack_require__(_);
-            },
-          }),
-          _.createElement(_._, null, (0, _._)("#MeetSteam_edit_session_desc")),
-          _.createElement("textarea", {
-            className: (0, _._)(
-              "DialogTextInputBase",
-              _().EventDescriptionField,
-            ),
-            value: _._.Get(_.localized_session_description, _),
-            rows: 5,
-            onChange: (_) => {
-              const _ = {
-                ..._,
-              };
-              (_.localized_session_description = _._.Set(
-                _.localized_session_description,
-                _,
-                _.currentTarget.value,
-              )),
-                __webpack_require__(_);
-            },
-          }),
-          _.createElement(_._, {
-            type: "text",
-            label: "Intended Audience",
-            tooltip:
-              "A short descriptions for whom then event is designed for to help partners self select",
-            value: _._.Get(_.localized_intended_audience, _),
-            onChange: (_) => {
-              const _ = {
-                ..._,
-              };
-              (_.localized_intended_audience = _._.Set(
-                _.localized_intended_audience,
-                _,
-                _.currentTarget.value,
-              )),
-                __webpack_require__(_);
-            },
-          }),
-          _.createElement(
-            _._,
-            null,
-            "FAQ ",
-            _.createElement(_._, {
-              tooltip:
-                "Optional FAQ section which appears in the pop-up display and hidden by default",
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              type: "text",
+              label: (0, _._)("#MeetSteam_edit_session_name"),
+              value: _._.Get(_.localized_session_title, _),
+              onChange: (_) => {
+                const _ = {
+                  ..._,
+                };
+                (_.localized_session_title = _._.Set(
+                  _.localized_session_title,
+                  _,
+                  _.currentTarget.value,
+                )),
+                  __webpack_require__(_);
+              },
             }),
-          ),
-          _.createElement("textarea", {
-            className: (0, _._)(
-              "DialogTextInputBase",
-              _().EventDescriptionField,
-            ),
-            value: _._.Get(_.localized_sesssion_faq, _),
-            rows: 5,
-            onChange: (_) => {
-              const _ = {
-                ..._,
-              };
-              (_.localized_sesssion_faq = _._.Set(
-                _.localized_sesssion_faq,
-                _,
-                _.currentTarget.value,
-              )),
-                __webpack_require__(_);
-            },
-          }),
-          _.createElement(_._, {
-            checked: _.ask_registration_question,
-            onChange: (_) => {
-              const _ = {
-                ..._,
-              };
-              (_.ask_registration_question = _), __webpack_require__(_);
-            },
-            label:
-              "Ask partner to tell us what they want to learn from the sessions",
-          }),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#MeetSteam_edit_session_desc"),
+            }),
+            (0, _.jsx)("textarea", {
+              className: (0, _._)(
+                "DialogTextInputBase",
+                _().EventDescriptionField,
+              ),
+              value: _._.Get(_.localized_session_description, _),
+              rows: 5,
+              onChange: (_) => {
+                const _ = {
+                  ..._,
+                };
+                (_.localized_session_description = _._.Set(
+                  _.localized_session_description,
+                  _,
+                  _.currentTarget.value,
+                )),
+                  __webpack_require__(_);
+              },
+            }),
+            (0, _.jsx)(_._, {
+              type: "text",
+              label: "Intended Audience",
+              tooltip:
+                "A short descriptions for whom then event is designed for to help partners self select",
+              value: _._.Get(_.localized_intended_audience, _),
+              onChange: (_) => {
+                const _ = {
+                  ..._,
+                };
+                (_.localized_intended_audience = _._.Set(
+                  _.localized_intended_audience,
+                  _,
+                  _.currentTarget.value,
+                )),
+                  __webpack_require__(_);
+              },
+            }),
+            (0, _.jsxs)(_._, {
+              children: [
+                "FAQ ",
+                (0, _.jsx)(_._, {
+                  tooltip:
+                    "Optional FAQ section which appears in the pop-up display and hidden by default",
+                }),
+              ],
+            }),
+            (0, _.jsx)("textarea", {
+              className: (0, _._)(
+                "DialogTextInputBase",
+                _().EventDescriptionField,
+              ),
+              value: _._.Get(_.localized_sesssion_faq, _),
+              rows: 5,
+              onChange: (_) => {
+                const _ = {
+                  ..._,
+                };
+                (_.localized_sesssion_faq = _._.Set(
+                  _.localized_sesssion_faq,
+                  _,
+                  _.currentTarget.value,
+                )),
+                  __webpack_require__(_);
+              },
+            }),
+            (0, _.jsx)(_._, {
+              checked: _.ask_registration_question,
+              onChange: (_) => {
+                const _ = {
+                  ..._,
+                };
+                (_.ask_registration_question = _), __webpack_require__(_);
+              },
+              label:
+                "Ask partner to tell us what they want to learn from the sessions",
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         var _;
@@ -1577,36 +1455,35 @@
               : _.length) > 0,
           );
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                null,
-                "By default, all sessions are visibility to any partner wiht a list. We can limit visibility to users by adding tokens below. Multiple Meet Steam sections can be visible together if they share the same token. To make the tokens appears most friendly, we are limiting them to exactly 5 digits. Only one token can be set on the URL.",
-              ),
-              __webpack_require__.group_visibility_tokens.map((_, _) =>
-                _.createElement(_._, {
-                  key: "token" + _ + "_" + _,
-                  type: "number",
-                  min: "10000",
-                  max: "99999",
-                  value: _ || 1e4,
-                  onChange: (_) => {
-                    const _ = {
-                      ...__webpack_require__,
-                    };
-                    (_.group_visibility_tokens[_] = Number.parseInt(
-                      _.currentTarget.value,
-                    )),
-                      _(_);
-                  },
-                  label: "Visibility Token",
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
+                  children:
+                    "By default, all sessions are visibility to any partner wiht a list. We can limit visibility to users by adding tokens below. Multiple Meet Steam sections can be visible together if they share the same token. To make the tokens appears most friendly, we are limiting them to exactly 5 digits. Only one token can be set on the URL.",
                 }),
-              ),
-              _.createElement(
-                _._,
-                {
+                __webpack_require__.group_visibility_tokens.map((_, _) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      type: "number",
+                      min: "10000",
+                      max: "99999",
+                      value: _ || 1e4,
+                      onChange: (_) => {
+                        const _ = {
+                          ...__webpack_require__,
+                        };
+                        (_.group_visibility_tokens[_] = Number.parseInt(
+                          _.currentTarget.value,
+                        )),
+                          _(_);
+                      },
+                      label: "Visibility Token",
+                    },
+                    "token" + _ + "_" + _,
+                  ),
+                ),
+                (0, _.jsx)(_._, {
                   onClick: () => {
                     const _ = {
                       ...__webpack_require__,
@@ -1617,13 +1494,12 @@
                     ]),
                       _(_);
                   },
-                },
-                "Add Token",
-              ),
-              Boolean(__webpack_require__.group_visibility_tokens.length > 0) &&
-                _.createElement(
-                  _._,
-                  {
+                  children: "Add Token",
+                }),
+                Boolean(
+                  __webpack_require__.group_visibility_tokens.length > 0,
+                ) &&
+                  (0, _.jsx)(_._, {
                     onClick: () => {
                       const _ = {
                         ...__webpack_require__,
@@ -1632,11 +1508,11 @@
                         _.group_visibility_tokens.slice(0, -1)),
                         _(_);
                     },
-                  },
-                  "Remove Last Token",
-                ),
-            )
-          : _.createElement(_._, {
+                    children: "Remove Last Token",
+                  }),
+              ],
+            })
+          : (0, _.jsx)(_._, {
               checked: !1,
               onChange: _,
               label: "Change Visibility Options",
@@ -1661,85 +1537,84 @@
         const _ = Math.max(0, Math.floor((_ - _) / 60)),
           _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
           _ = "in_person" === _ ? (null != _ ? _ : _._) : _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            startTime: _.rtime_start,
-            location_type: _,
-            fnUpdateLocationAndTZ: (_, _) =>
-              __webpack_require__({
-                ..._,
-                location_type: _,
-                in_person_time_zone: _,
-              }),
-            in_person_time_zone: _,
-          }),
-          _.createElement("br", null),
-          _.createElement(_._, {
-            strDescription: (0, _._)("#MeetSteam_edit_start"),
-            nEarliestTime: 0,
-            fnGetTimeToUpdate: () => _,
-            fnSetTimeToUpdate: (_) =>
-              __webpack_require__({
-                ..._,
-                rtime_start: _,
-                rtime_end: _ + _._.PerMinute * _,
-              }),
-            fnIsValidDateTime: () => !0,
-            bShowTimeZone: !0,
-          }),
-          _.createElement("br", null),
-          _.createElement(_._, {
-            type: "number",
-            min: 0,
-            label: (0, _._)("#MeetSteam_edit_duration"),
-            onChange: (_) => {
-              const _ = Number.parseInt(_.currentTarget.value);
-              __webpack_require__({
-                ..._,
-                rtime_end: _.rtime_start + _._.PerMinute * _,
-              });
-            },
-            value: _,
-          }),
-          _.createElement(_, {
-            rtime_start: _,
-            rtime_end: _,
-            sDisplayTimeZone: _,
-          }),
-          _.createElement("br", null),
-          _.createElement("br", null),
-          _.createElement(
-            "div",
-            {
-              className: _().ParticipantRow,
-            },
-            _.createElement(_._, {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              startTime: _.rtime_start,
+              location_type: _,
+              fnUpdateLocationAndTZ: (_, _) =>
+                __webpack_require__({
+                  ..._,
+                  location_type: _,
+                  in_person_time_zone: _,
+                }),
+              in_person_time_zone: _,
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              strDescription: (0, _._)("#MeetSteam_edit_start"),
+              nEarliestTime: 0,
+              fnGetTimeToUpdate: () => _,
+              fnSetTimeToUpdate: (_) =>
+                __webpack_require__({
+                  ..._,
+                  rtime_start: _,
+                  rtime_end: _ + _._.PerMinute * _,
+                }),
+              fnIsValidDateTime: () => !0,
+              bShowTimeZone: !0,
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
               type: "number",
+              min: 0,
+              label: (0, _._)("#MeetSteam_edit_duration"),
+              onChange: (_) => {
+                const _ = Number.parseInt(_.currentTarget.value);
+                __webpack_require__({
+                  ..._,
+                  rtime_end: _.rtime_start + _._.PerMinute * _,
+                });
+              },
               value: _,
-              label: (0, _._)("#MeetSteam_edit_max_capacity"),
-              min: 1,
-              onChange: (_) =>
-                __webpack_require__({
-                  ..._,
-                  max_capacity: Number.parseInt(_.currentTarget.value),
-                }),
             }),
-            _.createElement(_._, {
-              controlled: !0,
-              label: (0, _._)("#MeetSteam_edit_guest_count"),
-              tooltip: (0, _._)("#MeetSteam_edit_guest_count_ttip"),
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) =>
-                __webpack_require__({
-                  ..._,
-                  max_per_team: _.data,
-                }),
+            (0, _.jsx)(_, {
+              rtime_start: _,
+              rtime_end: _,
+              sDisplayTimeZone: _,
             }),
-          ),
-        );
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsxs)("div", {
+              className: _().ParticipantRow,
+              children: [
+                (0, _.jsx)(_._, {
+                  type: "number",
+                  value: _,
+                  label: (0, _._)("#MeetSteam_edit_max_capacity"),
+                  min: 1,
+                  onChange: (_) =>
+                    __webpack_require__({
+                      ..._,
+                      max_capacity: Number.parseInt(_.currentTarget.value),
+                    }),
+                }),
+                (0, _.jsx)(_._, {
+                  controlled: !0,
+                  label: (0, _._)("#MeetSteam_edit_guest_count"),
+                  tooltip: (0, _._)("#MeetSteam_edit_guest_count_ttip"),
+                  rgOptions: _,
+                  selectedOption: _,
+                  onChange: (_) =>
+                    __webpack_require__({
+                      ..._,
+                      max_per_team: _.data,
+                    }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1753,26 +1628,26 @@
           _ = _.unix(__webpack_require__)._(_._),
           _ = _.unix(__webpack_require__)._(_),
           _ = _.utcOffset() - _.utcOffset();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            null,
-            (0, _._)("#MeetSteam_edit_displayed_start"),
-            ": ",
-            (0, _._)(_.unix() + 60 * _, !1, _.format("z")),
-            " ",
-          ),
-          _.createElement(
-            "div",
-            null,
-            (0, _._)("#MeetSteam_edit_displayed_end"),
-            ": ",
-            (0, _._)(_.unix() + 60 * _, !1, _.format("z")),
-            " ",
-          ),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _._)("#MeetSteam_edit_displayed_start"),
+                ": ",
+                (0, _._)(_.unix() + 60 * _, !1, _.format("z")),
+                " ",
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _._)("#MeetSteam_edit_displayed_end"),
+                ": ",
+                (0, _._)(_.unix() + 60 * _, !1, _.format("z")),
+                " ",
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1807,75 +1682,62 @@
           },
           _ = _.useId(),
           _ = _.useId();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               _: _,
               className: _.EventEditorTextTitle,
-            },
-            (0, _._)("#MeetSteam_edit_date_display_title"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#MeetSteam_edit_date_display_title"),
+            }),
+            (0, _.jsx)("div", {
               _: _,
               className: _.EventEditorTextSubTitle,
-            },
-            (0, _._)("#MeetSteam_edit_date_display_desc"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#MeetSteam_edit_date_display_desc"),
+            }),
+            (0, _.jsxs)(_._, {
               labelId: _,
               descriptionId: _,
               value: __webpack_require__,
               onChange: (_) => _(_, _),
-            },
-            _.createElement(
-              _._,
-              {
-                value: "in_person",
-              },
-              (0, _._)("#MeetSteam_edit_date_display_in_person"),
-            ),
-            _.createElement(
-              _._,
-              {
-                value: "virtual",
-              },
-              (0, _._)("#MeetSteam_edit_date_display_virtual"),
-            ),
-          ),
-          "in_person" === __webpack_require__ &&
-            _.createElement(_._, {
-              styles: {
-                option: (_) => ({
-                  ..._,
-                  color: "#444444",
+              children: [
+                (0, _.jsx)(_._, {
+                  value: "in_person",
+                  children: (0, _._)("#MeetSteam_edit_date_display_in_person"),
                 }),
-              },
-              isSearchable: !0,
-              isMulti: !1,
-              options: _.map((_) => ({
-                label: _.friendly_name,
-                value: _.name,
-              })),
-              defaultMenuIsOpen: !1,
-              value: _
-                ? {
-                    label: _(_),
-                    value: _,
-                  }
-                : {
-                    label: _(_._),
-                    value: _._,
-                  },
-              onChange: (_) => _(__webpack_require__, _.value),
+                (0, _.jsx)(_._, {
+                  value: "virtual",
+                  children: (0, _._)("#MeetSteam_edit_date_display_virtual"),
+                }),
+              ],
             }),
-        );
+            "in_person" === __webpack_require__ &&
+              (0, _.jsx)(_._, {
+                styles: {
+                  option: (_) => ({
+                    ..._,
+                    color: "#444444",
+                  }),
+                },
+                isSearchable: !0,
+                isMulti: !1,
+                options: _.map((_) => ({
+                  label: _.friendly_name,
+                  value: _.name,
+                })),
+                defaultMenuIsOpen: !1,
+                value: _
+                  ? {
+                      label: _(_),
+                      value: _,
+                    }
+                  : {
+                      label: _(_._),
+                      value: _._,
+                    },
+                onChange: (_) => _(__webpack_require__, _.value),
+              }),
+          ],
+        });
       }
       function _(_, _) {
         if (_) {
@@ -2023,101 +1885,82 @@
             __webpack_require__(), _();
           }, [__webpack_require__, _]);
         return _ && _.GetClanAccountID() == (0, _._)()
-          ? _.createElement(
-              "div",
-              {
-                className: _().EditorCtn,
-              },
-              _.createElement(_, {
-                groupData: _,
-                focusView: __webpack_require__,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().controls,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Edit"),
-                  },
-                  _.createElement(_.ffu, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Delete"),
-                  },
-                  _.createElement(_.sED, null),
-                ),
-                Boolean(
-                  (null === (_ = _.group_visibility_tokens) || void 0 === _
-                    ? void 0
-                    : _.length) > 0,
-                ) &&
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () => {},
-                      tooltip:
-                        "Limited visibility to those with the appropriate URLs",
-                    },
-                    _.createElement(_.WLA, null),
-                  ),
-                Boolean(_.ask_registration_question) &&
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () => {},
-                      tooltip:
-                        "Will ask partner to provides questions for us for this session.",
-                    },
-                    _.createElement(_.vfN, null),
-                  ),
-              ),
-              Boolean(_) &&
-                _.createElement(_, {
-                  hideModal: _,
-                  groupInput: _,
-                  fnUpdateGroupSession: (_) => {
-                    const { groupIndex: _ } = _(_.group_id),
-                      _ = _._.GetEditModel();
-                    (__webpack_require__.GetEventModel().jsondata.meet_steam_groups[
-                      _
-                    ] = _),
-                      __webpack_require__.SetDirty(_._.description);
-                  },
+          ? (0, _.jsxs)("div", {
+              className: _().EditorCtn,
+              children: [
+                (0, _.jsx)(_, {
+                  groupData: _,
+                  focusView: __webpack_require__,
                 }),
-              Boolean(_) &&
-                _.createElement(
-                  _._,
-                  {
-                    active: !0,
-                  },
-                  _.createElement(_._, {
-                    strTitle: (0, _._)("#Button_Delete"),
-                    strDescription: (0, _._)("#Dialog_AreYouSure"),
-                    onOK: () => {
+                (0, _.jsxs)("div", {
+                  className: _().controls,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      tooltip: (0, _._)("#Button_Edit"),
+                      children: (0, _.jsx)(_.ffu, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      tooltip: (0, _._)("#Button_Delete"),
+                      children: (0, _.jsx)(_.sED, {}),
+                    }),
+                    Boolean(
+                      (null === (_ = _.group_visibility_tokens) || void 0 === _
+                        ? void 0
+                        : _.length) > 0,
+                    ) &&
+                      (0, _.jsx)(_._, {
+                        onClick: () => {},
+                        tooltip:
+                          "Limited visibility to those with the appropriate URLs",
+                        children: (0, _.jsx)(_.WLA, {}),
+                      }),
+                    Boolean(_.ask_registration_question) &&
+                      (0, _.jsx)(_._, {
+                        onClick: () => {},
+                        tooltip:
+                          "Will ask partner to provides questions for us for this session.",
+                        children: (0, _.jsx)(_.vfN, {}),
+                      }),
+                  ],
+                }),
+                Boolean(_) &&
+                  (0, _.jsx)(_, {
+                    hideModal: _,
+                    groupInput: _,
+                    fnUpdateGroupSession: (_) => {
                       const { groupIndex: _ } = _(_.group_id),
-                        _ = _._.GetEditModel(),
-                        _ = [..._.GetEventModel().jsondata.meet_steam_groups];
-                      __webpack_require__.splice(_, 1),
-                        (_.GetEventModel().jsondata.meet_steam_groups = _),
-                        _.SetDirty(_._.description),
-                        _();
+                        _ = _._.GetEditModel();
+                      (__webpack_require__.GetEventModel().jsondata.meet_steam_groups[
+                        _
+                      ] = _),
+                        __webpack_require__.SetDirty(_._.description);
                     },
-                    closeModal: _,
                   }),
-                ),
-            )
-          : _.createElement(
-              "div",
-              null,
-              "Error: Cannot edit meet steam session group",
-            );
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    active: !0,
+                    children: (0, _.jsx)(_._, {
+                      strTitle: (0, _._)("#Button_Delete"),
+                      strDescription: (0, _._)("#Dialog_AreYouSure"),
+                      onOK: () => {
+                        const { groupIndex: _ } = _(_.group_id),
+                          _ = _._.GetEditModel(),
+                          _ = [..._.GetEventModel().jsondata.meet_steam_groups];
+                        __webpack_require__.splice(_, 1),
+                          (_.GetEventModel().jsondata.meet_steam_groups = _),
+                          _.SetDirty(_._.description),
+                          _();
+                      },
+                      closeModal: _,
+                    }),
+                  }),
+              ],
+            })
+          : (0, _.jsx)("div", {
+              children: "Error: Cannot edit meet steam session group",
+            });
       }
       function _(_) {
         const { groupData: _, focusView: __webpack_require__ } = _,
@@ -2127,41 +1970,40 @@
             __webpack_require__(), _();
           }, [__webpack_require__, _]);
         return _
-          ? _.createElement(
-              _._,
-              {
-                groupData: _,
-              },
-              _.map((_, _) =>
-                _.createElement(_, {
-                  key: "timecol_" + _.group_id + "_" + _._,
-                  focusView: __webpack_require__,
-                  sessionID: _._,
-                  bShowOR: _ + 1 < _.length,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)(_._, {
+              groupData: _,
+              children: [
+                _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      focusView: __webpack_require__,
+                      sessionID: _._,
+                      bShowOR: _ + 1 < _.length,
+                    },
+                    "timecol_" + _.group_id + "_" + _._,
+                  ),
+                ),
+                (0, _.jsx)(_._, {
                   className: _().AddNew,
                   onClick: _,
                   tooltip: (0, _._)("#MeetSteam_add"),
-                },
-                _.createElement(_.OMN, null),
-              ),
-              _ &&
-                _.createElement(_, {
-                  bCreate: !0,
-                  hideModal: _,
-                  fnUpdateSession: (_) => {
-                    const _ = _._.GetEditModel(),
-                      _ = [..._.sessions, _];
-                    _.sort((_, _) => _.rtime_start - _.rtime_start),
-                      (_.sessions = _),
-                      __webpack_require__.SetDirty(_._.description);
-                  },
+                  children: (0, _.jsx)(_.OMN, {}),
                 }),
-            )
+                _ &&
+                  (0, _.jsx)(_, {
+                    bCreate: !0,
+                    hideModal: _,
+                    fnUpdateSession: (_) => {
+                      const _ = _._.GetEditModel(),
+                        _ = [..._.sessions, _];
+                      _.sort((_, _) => _.rtime_start - _.rtime_start),
+                        (_.sessions = _),
+                        __webpack_require__.SetDirty(_._.description);
+                    },
+                  }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -2180,92 +2022,81 @@
           _ = _.useCallback(() => {
             _(), _();
           }, [_, _]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: _().Column,
               ..._,
-            },
-            _.createElement(_._, {
-              sessionData: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().controls,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Edit"),
-                  },
-                  _.createElement(_.ffu, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Delete"),
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              ),
-            Boolean(_) &&
-              _.createElement(_, {
-                bCreate: !1,
-                hideModal: _,
-                sessionInput: _,
-                fnUpdateSession: (_) => {
-                  const _ = _._.GetEditModel(),
-                    { groupIndex: _, sessionIndex: _ } = _(_),
-                    _ = [
-                      ...__webpack_require__.GetEventModel().jsondata
-                        .meet_steam_groups[_].sessions,
-                    ];
-                  (_[_] = _),
-                    _.sort((_, _) => _.rtime_start - _.rtime_start),
-                    (__webpack_require__.GetEventModel().jsondata.meet_steam_groups[
-                      _
-                    ].sessions = _),
-                    __webpack_require__.SetDirty(_._.description);
-                },
-              }),
-            Boolean(_) &&
-              _.createElement(
-                _._,
-                {
-                  active: !0,
-                },
-                _.createElement(_._, {
-                  strTitle: (0, _._)("#Button_Delete"),
-                  strDescription: (0, _._)("#Dialog_AreYouSure"),
-                  onOK: () => {
-                    const _ = _._.GetEditModel(),
-                      { groupIndex: __webpack_require__, sessionIndex: _ } =
-                        _(_),
-                      _ = [
-                        ..._.GetEventModel().jsondata.meet_steam_groups[
-                          __webpack_require__
-                        ].sessions,
-                      ];
-                    _.splice(_, 1),
-                      _.sort((_, _) => _.rtime_start - _.rtime_start),
-                      (_.GetEventModel().jsondata.meet_steam_groups[
-                        __webpack_require__
-                      ].sessions = _),
-                      _.SetDirty(_._.description);
-                  },
-                  closeModal: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  sessionData: _,
                 }),
-              ),
-          ),
-          __webpack_require__ && _.createElement(_._, null),
-        );
+                Boolean(_) &&
+                  (0, _.jsxs)("div", {
+                    className: _().controls,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        tooltip: (0, _._)("#Button_Edit"),
+                        children: (0, _.jsx)(_.ffu, {}),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        tooltip: (0, _._)("#Button_Delete"),
+                        children: (0, _.jsx)(_.sED, {}),
+                      }),
+                    ],
+                  }),
+                Boolean(_) &&
+                  (0, _.jsx)(_, {
+                    bCreate: !1,
+                    hideModal: _,
+                    sessionInput: _,
+                    fnUpdateSession: (_) => {
+                      const _ = _._.GetEditModel(),
+                        { groupIndex: _, sessionIndex: _ } = _(_),
+                        _ = [
+                          ...__webpack_require__.GetEventModel().jsondata
+                            .meet_steam_groups[_].sessions,
+                        ];
+                      (_[_] = _),
+                        _.sort((_, _) => _.rtime_start - _.rtime_start),
+                        (__webpack_require__.GetEventModel().jsondata.meet_steam_groups[
+                          _
+                        ].sessions = _),
+                        __webpack_require__.SetDirty(_._.description);
+                    },
+                  }),
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    active: !0,
+                    children: (0, _.jsx)(_._, {
+                      strTitle: (0, _._)("#Button_Delete"),
+                      strDescription: (0, _._)("#Dialog_AreYouSure"),
+                      onOK: () => {
+                        const _ = _._.GetEditModel(),
+                          { groupIndex: __webpack_require__, sessionIndex: _ } =
+                            _(_),
+                          _ = [
+                            ..._.GetEventModel().jsondata.meet_steam_groups[
+                              __webpack_require__
+                            ].sessions,
+                          ];
+                        _.splice(_, 1),
+                          _.sort((_, _) => _.rtime_start - _.rtime_start),
+                          (_.GetEventModel().jsondata.meet_steam_groups[
+                            __webpack_require__
+                          ].sessions = _),
+                          _.SetDirty(_._.description);
+                      },
+                      closeModal: _,
+                    }),
+                  }),
+              ],
+            }),
+            __webpack_require__ && (0, _.jsx)(_._, {}),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2304,14 +2135,11 @@
             [__webpack_require__, _, _, _, _],
           );
         return __webpack_require__
-          ? _.createElement(
-              _._,
-              {
-                tooltip: (0, _._)("#FormattingToolbar_Tables_InsertTable"),
-                command: _,
-              },
-              _.createElement(_._Q2, null),
-            )
+          ? (0, _.jsx)(_._, {
+              tooltip: (0, _._)("#FormattingToolbar_Tables_InsertTable"),
+              command: _,
+              children: (0, _.jsx)(_._Q2, {}),
+            })
           : null;
       }
       function _(_) {
@@ -2326,122 +2154,83 @@
               [_.nodes.table],
             ),
           ),
-          _.createElement(
-            _._,
-            {
-              visible: _,
-              msAnimationDuration: 100,
-            },
-            _.createElement(
-              _._,
-              {
-                className: __webpack_require__,
-              },
-              _.createElement(_, {
+          (0, _.jsx)(_._, {
+            visible: _,
+            msAnimationDuration: 100,
+            children: (0, _.jsx)(_._, {
+              className: __webpack_require__,
+              children: (0, _.jsx)(_, {
                 schema: _,
               }),
-            ),
-          )
+            }),
+          })
         );
       }
       function _(_) {
         const { schema: _ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_AddRowBefore"),
               command: _._,
-            },
-            _.createElement(_.BPi, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.BPi, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_AddRowAfter"),
               command: _._,
-            },
-            _.createElement(_.fG_, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.fG_, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_DeleteRow"),
               command: _._,
-            },
-            _.createElement(_.XW_, null),
-          ),
-          _.createElement(_._, null),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.XW_, {}),
+            }),
+            (0, _.jsx)(_._, {}),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_AddColumnBefore"),
               command: _._,
-            },
-            _.createElement(_.l26, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.l26, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_AddColumnAfter"),
               command: _._,
-            },
-            _.createElement(_.ur3, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.ur3, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_DeleteColumn"),
               command: _._,
-            },
-            _.createElement(_.dyV, null),
-          ),
-          _.createElement(_._, null),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.dyV, {}),
+            }),
+            (0, _.jsx)(_._, {}),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_HeaderRow"),
               command: _._,
-            },
-            _.createElement(_.mLi, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.mLi, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_HeaderColumn"),
               command: _._,
-            },
-            _.createElement(_.sXN, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.sXN, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_HeaderCell"),
               command: _._,
-            },
-            _.createElement(_.Maz, null),
-          ),
-          _.createElement(_._, null),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.Maz, {}),
+            }),
+            (0, _.jsx)(_._, {}),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_MergeCells"),
               command: _._,
-            },
-            _.createElement(_.rnq, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.rnq, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_SplitCells"),
               command: _._,
-            },
-            _.createElement(_.vB9, null),
-          ),
-          !1,
-        );
+              children: (0, _.jsx)(_.vB9, {}),
+            }),
+            !1,
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2488,46 +2277,39 @@
             const _ = _.reduce((_, _) => _.concat(_.sessions), []);
             return 0 == _.length ? _ : Math.min(..._.map((_) => _.rtime_start));
           }, [_, _]);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: Boolean(_)
-                ? "Update Meet Steam Schedule"
-                : "Create Meet Steam Schedule View",
-              onOK: () => __webpack_require__(_),
-              closeModal: () => {
-                _(_(!Boolean(_), _)), _();
-              },
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
+            strTitle: Boolean(_)
+              ? "Update Meet Steam Schedule"
+              : "Create Meet Steam Schedule View",
+            onOK: () => __webpack_require__(_),
+            closeModal: () => {
+              _(_(!Boolean(_), _)), _();
             },
-            _.createElement(
-              "div",
-              {
-                className: _().DialogCtn,
-              },
-              _.createElement(_, {
-                startTime: _.GetEventStartTime(),
-                location_type: _,
-                in_person_time_zone: _,
-                fnUpdateLocationAndTZ: (_, _) =>
-                  _({
-                    ..._,
-                    location_type: _,
-                    in_person_time_zone: _,
-                  }),
-              }),
-              _.createElement(_, {
-                inputScheduleModel: _,
-                fnUpdateSession: (_) => _(_),
-                rtBreakStartingTime: _,
-              }),
-            ),
-          ),
-        );
+            children: (0, _.jsxs)("div", {
+              className: _().DialogCtn,
+              children: [
+                (0, _.jsx)(_, {
+                  startTime: _.GetEventStartTime(),
+                  location_type: _,
+                  in_person_time_zone: _,
+                  fnUpdateLocationAndTZ: (_, _) =>
+                    _({
+                      ..._,
+                      location_type: _,
+                      in_person_time_zone: _,
+                    }),
+                }),
+                (0, _.jsx)(_, {
+                  inputScheduleModel: _,
+                  fnUpdateSession: (_) => _(_),
+                  rtBreakStartingTime: _,
+                }),
+              ],
+            }),
+          }),
+        });
       }
       function _(_) {
         const {
@@ -2554,22 +2336,24 @@
             },
             [_, __webpack_require__],
           );
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("div", null, "Scheduled Breaks"),
-          _.sort((_, _) => _.rtime_start - _.rtime_start).map((_, _) =>
-            _.createElement(_, {
-              key: "breakedit" + _.break_id,
-              sDisplayTimeZone: _,
-              index: _,
-              breakSession: _,
-              fnOnUpdate: (_) => _(_, _),
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("div", {
+              children: "Scheduled Breaks",
             }),
-          ),
-          _.createElement(
-            _._,
-            {
+            _.sort((_, _) => _.rtime_start - _.rtime_start).map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  sDisplayTimeZone: _,
+                  index: _,
+                  breakSession: _,
+                  fnOnUpdate: (_) => _(_, _),
+                },
+                "breakedit" + _.break_id,
+              ),
+            ),
+            (0, _.jsx)(_._, {
               onClick: () => {
                 var _;
                 const _ = __webpack_require__.session_breaks
@@ -2591,10 +2375,10 @@
                     : _.length) || 0,
                 );
               },
-            },
-            "+ Add Break",
-          ),
-        );
+              children: "+ Add Break",
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2610,56 +2394,58 @@
             _.localized_break_description[_] || "",
             Math.max(0, Math.floor((_.rtime_end - _.rtime_start) / 60)),
           ]);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("div", null, "Break # ", _ + 1),
-          _.createElement("br", null),
-          _.createElement(_._, {
-            strDescription: "Break Start Time",
-            nEarliestTime: 0,
-            fnGetTimeToUpdate: () => _,
-            fnSetTimeToUpdate: (_) =>
-              __webpack_require__({
-                ..._,
-                rtime_start: _,
-                rtime_end: _ + _._.PerMinute * _,
-              }),
-            fnIsValidDateTime: () => !0,
-            bShowTimeZone: !0,
-          }),
-          _.createElement("br", null),
-          _.createElement(_._, {
-            type: "number",
-            min: 0,
-            label: "Break duration in minutes",
-            onChange: (_) => {
-              const _ = Number.parseInt(_.currentTarget.value);
-              __webpack_require__({
-                ..._,
-                rtime_end: _.rtime_start + _._.PerMinute * _,
-              });
-            },
-            value: _,
-          }),
-          _.createElement(_._, {
-            type: "text",
-            label: "Break Description",
-            value: _,
-            onChange: (_) => {
-              const _ = {
-                ..._,
-              };
-              (_.localized_break_description[_] = _.currentTarget.value),
-                __webpack_require__(_);
-            },
-          }),
-          _.createElement(_, {
-            rtime_start: _,
-            rtime_end: _,
-            sDisplayTimeZone: _,
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
+              children: ["Break # ", _ + 1],
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              strDescription: "Break Start Time",
+              nEarliestTime: 0,
+              fnGetTimeToUpdate: () => _,
+              fnSetTimeToUpdate: (_) =>
+                __webpack_require__({
+                  ..._,
+                  rtime_start: _,
+                  rtime_end: _ + _._.PerMinute * _,
+                }),
+              fnIsValidDateTime: () => !0,
+              bShowTimeZone: !0,
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              type: "number",
+              min: 0,
+              label: "Break duration in minutes",
+              onChange: (_) => {
+                const _ = Number.parseInt(_.currentTarget.value);
+                __webpack_require__({
+                  ..._,
+                  rtime_end: _.rtime_start + _._.PerMinute * _,
+                });
+              },
+              value: _,
+            }),
+            (0, _.jsx)(_._, {
+              type: "text",
+              label: "Break Description",
+              value: _,
+              onChange: (_) => {
+                const _ = {
+                  ..._,
+                };
+                (_.localized_break_description[_] = _.currentTarget.value),
+                  __webpack_require__(_);
+              },
+            }),
+            (0, _.jsx)(_, {
+              rtime_start: _,
+              rtime_end: _,
+              sDisplayTimeZone: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2685,76 +2471,63 @@
             _(), _();
           }, [_, _]);
         return _ && _.GetClanAccountID() == (0, _._)()
-          ? _.createElement(
-              "div",
-              {
-                className: _().EditorCtn,
-              },
-              _.createElement(_._, {
-                eventModel: _.GetEventModel(),
-                scheduleData: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().controls,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Edit"),
-                  },
-                  _.createElement(_.ffu, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Delete"),
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              ),
-              Boolean(_) &&
-                _.createElement(_, {
-                  hideModal: _,
-                  inputScheduleModel: _,
-                  fnUpdateSession: (_) => {
-                    const { scheduleIndex: _ } = _(_.schedule_id);
-                    (_.GetEventModel().jsondata.meet_steam_schedules[_] = _),
-                      _.SetDirty(_._.description);
-                  },
+          ? (0, _.jsxs)("div", {
+              className: _().EditorCtn,
+              children: [
+                (0, _.jsx)(_._, {
+                  eventModel: _.GetEventModel(),
+                  scheduleData: _,
                 }),
-              Boolean(_) &&
-                _.createElement(
-                  _._,
-                  {
-                    active: !0,
-                  },
-                  _.createElement(_._, {
-                    strTitle: (0, _._)("#Button_Delete"),
-                    strDescription: (0, _._)("#Dialog_AreYouSure"),
-                    onOK: () => {
-                      const { scheduleIndex: _ } = _(_.schedule_id),
-                        _ = _._.GetEditModel(),
-                        _ = [
-                          ..._.GetEventModel().jsondata.meet_steam_schedules,
-                        ];
-                      _.splice(_, 1),
-                        (_.GetEventModel().jsondata.meet_steam_schedules = _),
-                        _.SetDirty(_._.description),
-                        __webpack_require__();
+                (0, _.jsxs)("div", {
+                  className: _().controls,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      tooltip: (0, _._)("#Button_Edit"),
+                      children: (0, _.jsx)(_.ffu, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      tooltip: (0, _._)("#Button_Delete"),
+                      children: (0, _.jsx)(_.sED, {}),
+                    }),
+                  ],
+                }),
+                Boolean(_) &&
+                  (0, _.jsx)(_, {
+                    hideModal: _,
+                    inputScheduleModel: _,
+                    fnUpdateSession: (_) => {
+                      const { scheduleIndex: _ } = _(_.schedule_id);
+                      (_.GetEventModel().jsondata.meet_steam_schedules[_] = _),
+                        _.SetDirty(_._.description);
                     },
-                    closeModal: _,
                   }),
-                ),
-            )
-          : _.createElement(
-              "div",
-              null,
-              "Error: Cannot edit meet steam schedule view",
-            );
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    active: !0,
+                    children: (0, _.jsx)(_._, {
+                      strTitle: (0, _._)("#Button_Delete"),
+                      strDescription: (0, _._)("#Dialog_AreYouSure"),
+                      onOK: () => {
+                        const { scheduleIndex: _ } = _(_.schedule_id),
+                          _ = _._.GetEditModel(),
+                          _ = [
+                            ..._.GetEventModel().jsondata.meet_steam_schedules,
+                          ];
+                        _.splice(_, 1),
+                          (_.GetEventModel().jsondata.meet_steam_schedules = _),
+                          _.SetDirty(_._.description),
+                          __webpack_require__();
+                      },
+                      closeModal: _,
+                    }),
+                  }),
+              ],
+            })
+          : (0, _.jsx)("div", {
+              children: "Error: Cannot edit meet steam schedule view",
+            });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2780,7 +2553,7 @@
             (_) => {
               _(!0);
               const _ = (0, _._)(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   OnSelected: _,
                 }),
                 _,
@@ -2795,20 +2568,17 @@
             },
             [_],
           );
-        return _.createElement(
-          _._,
-          {
-            tooltip: "#Editor_Emoticon",
-            onClick: _,
-            toggled: _,
-          },
-          _.createElement(_.jZW, null),
-        );
+        return (0, _.jsx)(_._, {
+          tooltip: "#Editor_Emoticon",
+          onClick: _,
+          toggled: _,
+          children: (0, _.jsx)(_.jZW, {}),
+        });
       }
       function _(_) {
         return (
           (0, _._)(_._),
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             emoticonStore: _._,
             OnSelected: _.OnSelected,
           })
@@ -2829,33 +2599,24 @@
             clanAccountID: _,
           } = _,
           [_, _] = (0, _.useState)(() => _(!0, null));
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#UserPolls_Create_title"),
-              onOK: () => __webpack_require__(_),
-              closeModal: () => {
-                _(_(!0, null)), _();
-              },
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#UserPolls_Create_title"),
+            onOK: () => __webpack_require__(_),
+            closeModal: () => {
+              _(_(!0, null)), _();
             },
-            _.createElement(
-              "div",
-              {
-                className: _().DialogCtn,
-              },
-              _.createElement(_, {
+            children: (0, _.jsx)("div", {
+              className: _().DialogCtn,
+              children: (0, _.jsx)(_, {
                 clanAccountID: _,
                 userPollDef: _,
                 fnSetDef: _,
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
       function _(_) {
         const {
@@ -2865,36 +2626,27 @@
             fnUpdateUserPollDef: _,
           } = _,
           [_, _] = (0, _.useState)(() => _(!1, __webpack_require__));
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#UserPolls_Edit_title"),
-              onOK: () => {
-                _(_);
-              },
-              onCancel: () => {
-                _(_(!1, __webpack_require__));
-              },
-              closeModal: _,
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#UserPolls_Edit_title"),
+            onOK: () => {
+              _(_);
             },
-            _.createElement(
-              "div",
-              {
-                className: _().DialogCtn,
-              },
-              _.createElement(_, {
+            onCancel: () => {
+              _(_(!1, __webpack_require__));
+            },
+            closeModal: _,
+            children: (0, _.jsx)("div", {
+              className: _().DialogCtn,
+              children: (0, _.jsx)(_, {
                 userPollDef: _,
                 clanAccountID: _,
                 fnSetDef: _,
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
       function _(_) {
         switch (_) {
@@ -2919,58 +2671,57 @@
             data: _,
             label: _(_),
           }));
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            type: "text",
-            label: (0, _._)("#UserPolls_Description"),
-            value: _._.Get(_.localized_poll_description, _),
-            onChange: (_) => {
-              const _ = {
-                ..._,
-              };
-              (_.localized_poll_description = _._.Set(
-                _.localized_poll_description,
-                _,
-                _.currentTarget.value,
-              )),
-                __webpack_require__(_);
-            },
-          }),
-          _.createElement(_, {
-            ..._,
-          }),
-          _.createElement(_, {
-            ..._,
-          }),
-          _.createElement(_._, null, (0, _._)("#UserPolls_Visibility")),
-          _.createElement(
-            "div",
-            {
-              className: _().PollArea,
-            },
-            _.createElement(_._, {
-              strDropDownClassName: _.DropDownScroll,
-              rgOptions: _,
-              selectedOption: _,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              type: "text",
+              label: (0, _._)("#UserPolls_Description"),
+              value: _._.Get(_.localized_poll_description, _),
               onChange: (_) => {
-                _.data != _.results_visibility_settings &&
-                  __webpack_require__({
-                    ..._,
-                    results_visibility_settings: _.data,
-                  });
-              },
-              bDisableMouseOverlay: !0,
-              contextMenuPositionOptions: {
-                bDisableMouseOverlay: !0,
+                const _ = {
+                  ..._,
+                };
+                (_.localized_poll_description = _._.Set(
+                  _.localized_poll_description,
+                  _,
+                  _.currentTarget.value,
+                )),
+                  __webpack_require__(_);
               },
             }),
-          ),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#UserPolls_Visibility"),
+            }),
+            (0, _.jsx)("div", {
+              className: _().PollArea,
+              children: (0, _.jsx)(_._, {
+                strDropDownClassName: _.DropDownScroll,
+                rgOptions: _,
+                selectedOption: _,
+                onChange: (_) => {
+                  _.data != _.results_visibility_settings &&
+                    __webpack_require__({
+                      ..._,
+                      results_visibility_settings: _.data,
+                    });
+                },
+                bDisableMouseOverlay: !0,
+                contextMenuPositionOptions: {
+                  bDisableMouseOverlay: !0,
+                },
+              }),
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3000,37 +2751,36 @@
             },
             [_, __webpack_require__],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, null, (0, _._)("#UserPolls_BackgroundImage")),
-          _.createElement(
-            "div",
-            {
-              className: _().PollArea,
-            },
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#UserPolls_BackgroundImage_desc"),
-            ),
-            _.createElement(_._, {
-              rgRealmList: _.GetIncludedRealmList(),
-              rgSupportArtwork: _._,
-              strUploadAjaxURL: _,
-              fnOnUploadSuccess: _,
-              elOverrideDragAndDropText: (0, _._)(
-                "#Template_Section_MediaUpdate_Static_Dnd",
-              ),
-              bTwoPhaseUpload: !0,
-              bDirectTempStorageUpload: !0,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#UserPolls_BackgroundImage"),
             }),
-            Boolean(_) &&
-              _.createElement("img", {
-                src: (0, _._)(_, _),
-              }),
-          ),
-        );
+            (0, _.jsxs)("div", {
+              className: _().PollArea,
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#UserPolls_BackgroundImage_desc"),
+                }),
+                (0, _.jsx)(_._, {
+                  rgRealmList: _.GetIncludedRealmList(),
+                  rgSupportArtwork: _._,
+                  strUploadAjaxURL: _,
+                  fnOnUploadSuccess: _,
+                  elOverrideDragAndDropText: (0, _._)(
+                    "#Template_Section_MediaUpdate_Static_Dnd",
+                  ),
+                  bTwoPhaseUpload: !0,
+                  bDirectTempStorageUpload: !0,
+                }),
+                Boolean(_) &&
+                  (0, _.jsx)("img", {
+                    src: (0, _._)(_, _),
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         switch (_) {
@@ -3081,68 +2831,67 @@
               _
             );
           }, [_, _]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, null, (0, _._)("#UserPolls_Voters")),
-          _.createElement(
-            "div",
-            {
-              className: _().PollArea,
-            },
-            _.createElement(_._, {
-              strDropDownClassName: _.DropDownScroll,
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) => {
-                if (_.data != __webpack_require__.voter_eligibility) {
-                  let _ = {
-                    ...__webpack_require__,
-                    voter_eligibility: _.data,
-                  };
-                  _.data == _._.k_EPollVoter_MinPlayTime &&
-                    (_.voter_min_playtime_seconds = 5 * _),
-                    _(_);
-                }
-              },
-              bDisableMouseOverlay: !0,
-              contextMenuPositionOptions: {
-                bDisableMouseOverlay: !0,
-              },
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#UserPolls_Voters"),
             }),
-            Boolean(_ == _._.k_EPollVoter_MinPlayTime) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().OptionInset,
-                },
-                _.createElement(_._, {
-                  type: "number",
-                  label: (0, _._)("#UserPolls_MinPlayTime"),
-                  value: _ / _,
-                  min: 5,
+            (0, _.jsxs)("div", {
+              className: _().PollArea,
+              children: [
+                (0, _.jsx)(_._, {
+                  strDropDownClassName: _.DropDownScroll,
+                  rgOptions: _,
+                  selectedOption: _,
                   onChange: (_) => {
-                    var _, _;
-                    const _ =
-                      (null !==
-                        (_ = Number.parseInt(
-                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                            void 0 === _
-                            ? void 0
-                            : _.value,
-                        )) && void 0 !== _
-                        ? _
-                        : 5) * _;
-                    __webpack_require__.voter_min_playtime_seconds != _ &&
-                      _({
+                    if (_.data != __webpack_require__.voter_eligibility) {
+                      let _ = {
                         ...__webpack_require__,
-                        voter_min_playtime_seconds: _,
-                      });
+                        voter_eligibility: _.data,
+                      };
+                      _.data == _._.k_EPollVoter_MinPlayTime &&
+                        (_.voter_min_playtime_seconds = 5 * _),
+                        _(_);
+                    }
+                  },
+                  bDisableMouseOverlay: !0,
+                  contextMenuPositionOptions: {
+                    bDisableMouseOverlay: !0,
                   },
                 }),
-              ),
-          ),
-        );
+                Boolean(_ == _._.k_EPollVoter_MinPlayTime) &&
+                  (0, _.jsx)("div", {
+                    className: _().OptionInset,
+                    children: (0, _.jsx)(_._, {
+                      type: "number",
+                      label: (0, _._)("#UserPolls_MinPlayTime"),
+                      value: _ / _,
+                      min: 5,
+                      onChange: (_) => {
+                        var _, _;
+                        const _ =
+                          (null !==
+                            (_ = Number.parseInt(
+                              null ===
+                                (_ = null == _ ? void 0 : _.currentTarget) ||
+                                void 0 === _
+                                ? void 0
+                                : _.value,
+                            )) && void 0 !== _
+                            ? _
+                            : 5) * _;
+                        __webpack_require__.voter_min_playtime_seconds != _ &&
+                          _({
+                            ...__webpack_require__,
+                            voter_min_playtime_seconds: _,
+                          });
+                      },
+                    }),
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { userPollDef: _, fnSetDef: __webpack_require__ } = _,
@@ -3150,137 +2899,121 @@
             _.poll_end_time,
             _.poll_end_days_since_start,
           ]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, null, (0, _._)("#UserPolls_Starts")),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#UserPolls_Starts"),
+            }),
+            (0, _.jsxs)("div", {
               className: _().PollArea,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.FlexRowContainer, _.RadioOption),
-              },
-              _.createElement("input", {
-                type: "radio",
-                name: "StartDateRadio",
-                _: "UserPollDialog_Days",
-                checked: Boolean(_),
-                onChange: () => {
-                  _.poll_end_days_since_start ||
-                    __webpack_require__({
-                      ..._,
-                      poll_end_time: void 0,
-                      poll_end_days_since_start: _ * _,
-                    });
-                },
-              }),
-              _.createElement(
-                "label",
-                {
-                  htmlFor: "UserPollDialog_Days",
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#UserPolls_EndTime_In_Days"),
-                ),
-              ),
-            ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().OptionInset,
-                },
-                _.createElement(_._, {
-                  type: "number",
-                  value: _ / _,
-                  min: 1,
-                  onChange: (_) => {
-                    var _, _;
-                    const _ =
-                      (null !==
-                        (_ = Number.parseInt(
-                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                            void 0 === _
-                            ? void 0
-                            : _.value,
-                        )) && void 0 !== _
-                        ? _
-                        : 1) * _;
-                    _.poll_end_days_since_start != _ &&
-                      __webpack_require__({
-                        ..._,
-                        poll_end_time: void 0,
-                        poll_end_days_since_start: _,
-                      });
-                  },
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.FlexRowContainer, _.RadioOption),
+                  children: [
+                    (0, _.jsx)("input", {
+                      type: "radio",
+                      name: "StartDateRadio",
+                      _: "UserPollDialog_Days",
+                      checked: Boolean(_),
+                      onChange: () => {
+                        _.poll_end_days_since_start ||
+                          __webpack_require__({
+                            ..._,
+                            poll_end_time: void 0,
+                            poll_end_days_since_start: _ * _,
+                          });
+                      },
+                    }),
+                    (0, _.jsx)("label", {
+                      htmlFor: "UserPollDialog_Days",
+                      children: (0, _.jsx)("span", {
+                        children: (0, _._)("#UserPolls_EndTime_In_Days"),
+                      }),
+                    }),
+                  ],
                 }),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.FlexRowContainer, _.RadioOption),
-              },
-              _.createElement("input", {
-                type: "radio",
-                name: "StartDateRadio",
-                _: "UserPollDialog_SpecificTime",
-                checked: Boolean(_),
-                onChange: () => {
-                  _.poll_end_time ||
-                    __webpack_require__({
-                      ..._,
-                      poll_end_days_since_start: void 0,
-                      poll_end_time: Math.floor(Date.now() / 1e3) + _ * _,
-                    });
-                },
-              }),
-              _.createElement(
-                "label",
-                {
-                  htmlFor: "UserPollDialog_SpecificTime",
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#UserPolls_EndTime_Specific"),
-                ),
-              ),
-            ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().OptionInset, _.FlexRowContainer),
-                },
-                _.createElement(_._, {
-                  strDescription: "",
-                  nEarliestTime: Math.floor(Date.now() / 1e3) + 3600,
-                  fnGetTimeToUpdate: () => _,
-                  fnSetTimeToUpdate: (_) => {
-                    _.poll_end_time != _ &&
-                      __webpack_require__({
-                        ..._,
-                        poll_end_days_since_start: void 0,
-                        poll_end_time: _,
-                      });
-                  },
-                  fnIsValidDateTime: () =>
-                    _ > Math.floor(Date.now() / 1e3) + 3600,
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _().OptionInset,
+                    children: (0, _.jsx)(_._, {
+                      type: "number",
+                      value: _ / _,
+                      min: 1,
+                      onChange: (_) => {
+                        var _, _;
+                        const _ =
+                          (null !==
+                            (_ = Number.parseInt(
+                              null ===
+                                (_ = null == _ ? void 0 : _.currentTarget) ||
+                                void 0 === _
+                                ? void 0
+                                : _.value,
+                            )) && void 0 !== _
+                            ? _
+                            : 1) * _;
+                        _.poll_end_days_since_start != _ &&
+                          __webpack_require__({
+                            ..._,
+                            poll_end_time: void 0,
+                            poll_end_days_since_start: _,
+                          });
+                      },
+                    }),
+                  }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.FlexRowContainer, _.RadioOption),
+                  children: [
+                    (0, _.jsx)("input", {
+                      type: "radio",
+                      name: "StartDateRadio",
+                      _: "UserPollDialog_SpecificTime",
+                      checked: Boolean(_),
+                      onChange: () => {
+                        _.poll_end_time ||
+                          __webpack_require__({
+                            ..._,
+                            poll_end_days_since_start: void 0,
+                            poll_end_time: Math.floor(Date.now() / 1e3) + _ * _,
+                          });
+                      },
+                    }),
+                    (0, _.jsx)("label", {
+                      htmlFor: "UserPollDialog_SpecificTime",
+                      children: (0, _.jsx)("span", {
+                        children: (0, _._)("#UserPolls_EndTime_Specific"),
+                      }),
+                    }),
+                  ],
                 }),
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#UserPolls_EndTime_Zone"),
-                ),
-              ),
-          ),
-        );
+                Boolean(_) &&
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_().OptionInset, _.FlexRowContainer),
+                    children: [
+                      (0, _.jsx)(_._, {
+                        strDescription: "",
+                        nEarliestTime: Math.floor(Date.now() / 1e3) + 3600,
+                        fnGetTimeToUpdate: () => _,
+                        fnSetTimeToUpdate: (_) => {
+                          _.poll_end_time != _ &&
+                            __webpack_require__({
+                              ..._,
+                              poll_end_days_since_start: void 0,
+                              poll_end_time: _,
+                            });
+                        },
+                        fnIsValidDateTime: () =>
+                          _ > Math.floor(Date.now() / 1e3) + 3600,
+                      }),
+                      (0, _.jsx)("span", {
+                        children: (0, _._)("#UserPolls_EndTime_Zone"),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       const _ = 7,
         _ = 86400,
@@ -3323,30 +3056,21 @@
           } = _,
           [_, _] = (0, _.useState)(() => _(_, _)),
           _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)(
-                _ ? "#UserPolls_Option_Create" : "#UserPolls_Option_Edit",
-              ),
-              onOK: () => {
-                _(_), __webpack_require__();
-              },
-              onCancel: () => {
-                _(_(_, _)), __webpack_require__();
-              },
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
+            strTitle: (0, _._)(
+              _ ? "#UserPolls_Option_Create" : "#UserPolls_Option_Edit",
+            ),
+            onOK: () => {
+              _(_), __webpack_require__();
             },
-            _.createElement(
-              "div",
-              {
-                className: _().DialogCtn,
-              },
-              _.createElement(_._, {
+            onCancel: () => {
+              _(_(_, _)), __webpack_require__();
+            },
+            children: (0, _.jsx)("div", {
+              className: _().DialogCtn,
+              children: (0, _.jsx)(_._, {
                 type: "text",
                 label: (0, _._)("#UserPolls_Option_Title"),
                 value: _._.Get(_.localized_option, _),
@@ -3363,9 +3087,9 @@
                     _(_);
                 },
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
       function _(_, _) {
         if (_) {
@@ -3439,96 +3163,76 @@
             _(), _();
           }, [_, _]);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _().EditorCtn,
-              },
-              _.createElement(_, {
-                userPollDef: _,
-                focusView: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().controls,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Edit"),
-                  },
-                  _.createElement(_.ffu, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)("#Button_Delete"),
-                  },
-                  _.createElement(_.sED, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {},
-                    tooltip: _(_.results_visibility_settings),
-                  },
-                  _.createElement(_.WLA, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {},
-                    tooltip: _(_.voter_eligibility),
-                  },
-                  _.createElement(_.JpU, null),
-                ),
-              ),
-              Boolean(_) &&
-                _.createElement(_, {
-                  hideModal: _,
+          ? (0, _.jsxs)("div", {
+              className: _().EditorCtn,
+              children: [
+                (0, _.jsx)(_, {
                   userPollDef: _,
-                  clanAccountID: _.GetClanAccountID(),
-                  fnUpdateUserPollDef: (_) => {
-                    const { pollIndex: _ } = _(_.poll_id),
-                      _ = _._.GetEditModel();
-                    (__webpack_require__.GetEventModel().jsondata.user_polls[
-                      _
-                    ] = _),
-                      __webpack_require__.SetDirty(_._.description);
-                  },
+                  focusView: _,
                 }),
-              Boolean(_) &&
-                _.createElement(
-                  _._,
-                  {
-                    active: !0,
-                  },
-                  _.createElement(_._, {
-                    strTitle: (0, _._)("#Button_Delete"),
-                    strDescription: (0, _._)("#Dialog_AreYouSure"),
-                    onOK: () => {
+                (0, _.jsxs)("div", {
+                  className: _().controls,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      tooltip: (0, _._)("#Button_Edit"),
+                      children: (0, _.jsx)(_.ffu, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      tooltip: (0, _._)("#Button_Delete"),
+                      children: (0, _.jsx)(_.sED, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: () => {},
+                      tooltip: _(_.results_visibility_settings),
+                      children: (0, _.jsx)(_.WLA, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: () => {},
+                      tooltip: _(_.voter_eligibility),
+                      children: (0, _.jsx)(_.JpU, {}),
+                    }),
+                  ],
+                }),
+                Boolean(_) &&
+                  (0, _.jsx)(_, {
+                    hideModal: _,
+                    userPollDef: _,
+                    clanAccountID: _.GetClanAccountID(),
+                    fnUpdateUserPollDef: (_) => {
                       const { pollIndex: _ } = _(_.poll_id),
-                        _ = _._.GetEditModel(),
-                        _ = [..._.GetEventModel().jsondata.user_polls];
-                      _.splice(_, 1),
-                        (_.GetEventModel().jsondata.user_polls = _),
-                        _.SetDirty(_._.description),
-                        __webpack_require__();
+                        _ = _._.GetEditModel();
+                      (__webpack_require__.GetEventModel().jsondata.user_polls[
+                        _
+                      ] = _),
+                        __webpack_require__.SetDirty(_._.description);
                     },
-                    closeModal: _,
                   }),
-                ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _.ErrorStylesWithIcon,
-              },
-              (0, _._)("#UserPolls_Editor_FailToFindModel", _),
-            );
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    active: !0,
+                    children: (0, _.jsx)(_._, {
+                      strTitle: (0, _._)("#Button_Delete"),
+                      strDescription: (0, _._)("#Dialog_AreYouSure"),
+                      onOK: () => {
+                        const { pollIndex: _ } = _(_.poll_id),
+                          _ = _._.GetEditModel(),
+                          _ = [..._.GetEventModel().jsondata.user_polls];
+                        _.splice(_, 1),
+                          (_.GetEventModel().jsondata.user_polls = _),
+                          _.SetDirty(_._.description),
+                          __webpack_require__();
+                      },
+                      closeModal: _,
+                    }),
+                  }),
+              ],
+            })
+          : (0, _.jsx)("div", {
+              className: _.ErrorStylesWithIcon,
+              children: (0, _._)("#UserPolls_Editor_FailToFindModel", _),
+            });
       }
       function _(_) {
         const { userPollDef: _, focusView: __webpack_require__ } = _,
@@ -3544,63 +3248,58 @@
             __webpack_require__(), _();
           }, [__webpack_require__, _]);
         return _
-          ? _.createElement(
-              _._,
-              {
-                userPollDef: _,
-                eventModel: _.GetEventModel(),
-                lang: _,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "polloption" + _.poll_id + "_" + _.option_id,
-                  focusView: __webpack_require__,
-                  optionID: _.option_id,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_._, {
+              userPollDef: _,
+              eventModel: _.GetEventModel(),
+              lang: _,
+              children: [
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      focusView: __webpack_require__,
+                      optionID: _.option_id,
+                    },
+                    "polloption" + _.poll_id + "_" + _.option_id,
+                  ),
+                ),
+                (0, _.jsxs)("div", {
                   className: _().AdminOptions,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: "",
-                    onClick: _,
-                  },
-                  (0, _._)("#UserPolls_Option_Add"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: "",
-                    onClick: _,
-                  },
-                  (0, _._)("#UserPolls_Option_Reorder"),
-                ),
-              ),
-              _ &&
-                _.createElement(_, {
-                  bCreate: !0,
-                  hideModal: _,
-                  fnUpdatePollOption: (_) => {
-                    const _ = _._.GetEditModel();
-                    _.options || (_.options = []),
-                      _.options.push(_),
-                      __webpack_require__.SetDirty(_._.description);
-                  },
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: "",
+                      onClick: _,
+                      children: (0, _._)("#UserPolls_Option_Add"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: "",
+                      onClick: _,
+                      children: (0, _._)("#UserPolls_Option_Reorder"),
+                    }),
+                  ],
                 }),
-              _ &&
-                _.createElement(_, {
-                  hideModal: _,
-                  options: _,
-                  bRandomize: _,
-                  fnUpdateOptions: (_, _) => {
-                    (_.randomize_option_order = _), (_.options = _);
-                  },
-                }),
-            )
+                _ &&
+                  (0, _.jsx)(_, {
+                    bCreate: !0,
+                    hideModal: _,
+                    fnUpdatePollOption: (_) => {
+                      const _ = _._.GetEditModel();
+                      _.options || (_.options = []),
+                        _.options.push(_),
+                        __webpack_require__.SetDirty(_._.description);
+                    },
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    hideModal: _,
+                    options: _,
+                    bRandomize: _,
+                    fnUpdateOptions: (_, _) => {
+                      (_.randomize_option_order = _), (_.options = _);
+                    },
+                  }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -3613,49 +3312,44 @@
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(__webpack_require__),
           [_, _] = (0, _.useState)(_);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#UserPolls_Option_Reorder"),
-              strDescription: (0, _._)("#UserPolls_Option_Reorder_desc"),
-              onCancel: () => {
-                _(__webpack_require__), _(_);
-              },
-              onOK: () => {
-                _([..._], _);
-              },
-              closeModal: _,
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsxs)(_._, {
+            strTitle: (0, _._)("#UserPolls_Option_Reorder"),
+            strDescription: (0, _._)("#UserPolls_Option_Reorder_desc"),
+            onCancel: () => {
+              _(__webpack_require__), _(_);
             },
-            _.createElement(_._, {
-              label: (0, _._)("#UserPolls_Option_Randomize"),
-              checked: _,
-              onChange: _,
-            }),
-            _.createElement(_._, {
-              items: _,
-              render: (_) => {
-                var _, _;
-                return _.createElement(
-                  "div",
-                  null,
-                  (null === (_ = _.localized_option) || void 0 === _
-                    ? void 0
-                    : _[_]) ||
-                    (null === (_ = _.localized_option) || void 0 === _
-                      ? void 0
-                      : _[0]) ||
-                    "",
-                );
-              },
-              onReorder: (_) => _(_),
-            }),
-          ),
-        );
+            onOK: () => {
+              _([..._], _);
+            },
+            closeModal: _,
+            children: [
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#UserPolls_Option_Randomize"),
+                checked: _,
+                onChange: _,
+              }),
+              (0, _.jsx)(_._, {
+                items: _,
+                render: (_) => {
+                  var _, _;
+                  return (0, _.jsx)("div", {
+                    children:
+                      (null === (_ = _.localized_option) || void 0 === _
+                        ? void 0
+                        : _[_]) ||
+                      (null === (_ = _.localized_option) || void 0 === _
+                        ? void 0
+                        : _[0]) ||
+                      "",
+                  });
+                },
+                onReorder: (_) => _(_),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { optionID: _, focusView: __webpack_require__ } = _,
@@ -3675,80 +3369,68 @@
           _ = _.useCallback(() => {
             __webpack_require__(), _();
           }, [__webpack_require__, _]);
-        return _.createElement(
-          "div",
-          {
-            className: _().Column,
-            ..._,
-          },
-          _.createElement(_._, {
-            pollOptionDef: _,
-            lang: _,
-          }),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
-                className: _().controls,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                  tooltip: (0, _._)("#Button_Edit"),
-                },
-                _.createElement(_.ffu, null),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                  tooltip: (0, _._)("#Button_Delete"),
-                },
-                _.createElement(_.sED, null),
-              ),
-            ),
-          Boolean(_) &&
-            _.createElement(_, {
-              bCreate: !1,
-              hideModal: _,
-              pollOptionsInput: _,
-              fnUpdatePollOption: (_) => {
-                const _ = _._.GetEditModel(),
-                  { optionIndex: _, pollIndex: _ } = _(_),
-                  _ = [
-                    ...__webpack_require__.GetEventModel().jsondata.user_polls[
-                      _
-                    ].options,
-                  ];
-                (_[_] = _),
-                  (__webpack_require__.GetEventModel().jsondata.user_polls[
-                    _
-                  ].options = _),
-                  __webpack_require__.SetDirty(_._.description);
-              },
+        return (0, _.jsxs)("div", {
+          className: _().Column,
+          ..._,
+          children: [
+            (0, _.jsx)(_._, {
+              pollOptionDef: _,
+              lang: _,
             }),
-          Boolean(_) &&
-            _.createElement(
-              _._,
-              {
-                active: !0,
-              },
-              _.createElement(_._, {
-                strTitle: (0, _._)("#Button_Delete"),
-                strDescription: (0, _._)("#Dialog_AreYouSure"),
-                onOK: () => {
-                  const _ = _._.GetEditModel(),
-                    { optionIndex: __webpack_require__, pollIndex: _ } = _(_),
-                    _ = [..._.GetEventModel().jsondata.user_polls[_].options];
-                  _.splice(__webpack_require__, 1),
-                    (_.GetEventModel().jsondata.user_polls[_].options = _),
-                    _.SetDirty(_._.description);
-                },
-                closeModal: _,
+            Boolean(_) &&
+              (0, _.jsxs)("div", {
+                className: _().controls,
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    tooltip: (0, _._)("#Button_Edit"),
+                    children: (0, _.jsx)(_.ffu, {}),
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    tooltip: (0, _._)("#Button_Delete"),
+                    children: (0, _.jsx)(_.sED, {}),
+                  }),
+                ],
               }),
-            ),
-        );
+            Boolean(_) &&
+              (0, _.jsx)(_, {
+                bCreate: !1,
+                hideModal: _,
+                pollOptionsInput: _,
+                fnUpdatePollOption: (_) => {
+                  const _ = _._.GetEditModel(),
+                    { optionIndex: _, pollIndex: _ } = _(_),
+                    _ = [
+                      ...__webpack_require__.GetEventModel().jsondata
+                        .user_polls[_].options,
+                    ];
+                  (_[_] = _),
+                    (__webpack_require__.GetEventModel().jsondata.user_polls[
+                      _
+                    ].options = _),
+                    __webpack_require__.SetDirty(_._.description);
+                },
+              }),
+            Boolean(_) &&
+              (0, _.jsx)(_._, {
+                active: !0,
+                children: (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#Button_Delete"),
+                  strDescription: (0, _._)("#Dialog_AreYouSure"),
+                  onOK: () => {
+                    const _ = _._.GetEditModel(),
+                      { optionIndex: __webpack_require__, pollIndex: _ } = _(_),
+                      _ = [..._.GetEventModel().jsondata.user_polls[_].options];
+                    _.splice(__webpack_require__, 1),
+                      (_.GetEventModel().jsondata.user_polls[_].options = _),
+                      _.SetDirty(_._.description);
+                  },
+                  closeModal: _,
+                }),
+              }),
+          ],
+        });
       }
       const _ = _.memo(function (_) {
         const {
@@ -3760,85 +3442,80 @@
           bSpellcheckEnabled: _,
           setSpellcheckEnabled: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            refUpdateToolbar: _,
-            view: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.className,
-            },
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsx)(_._, {
+          refUpdateToolbar: _,
+          view: _,
+          children: (0, _.jsxs)("div", {
+            className: _.className,
+            children: [
+              (0, _.jsxs)(_._, {
                 className: _.className,
-              },
-              _.createElement(_._, null),
-              _.createElement(_._, null),
-              _.createElement(_._, {
+                children: [
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)(_._, {
+                    schema: __webpack_require__,
+                  }),
+                  (0, _.jsx)(_._, {}),
+                  __webpack_require__.marks.link &&
+                    (0, _.jsx)(_, {
+                      schema: __webpack_require__,
+                    }),
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)(_._, {
+                    schema: __webpack_require__,
+                  }),
+                  (0, _.jsx)(_._, {
+                    schema: __webpack_require__,
+                    levels: 3,
+                  }),
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)(_, {
+                    schema: __webpack_require__,
+                  }),
+                  (0, _.jsx)(_, {
+                    schema: __webpack_require__,
+                    clanSteamID: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    schema: __webpack_require__,
+                  }),
+                  (0, _.jsx)(_._, {
+                    schema: __webpack_require__,
+                    showIndentButtonsAsNeeded: !0,
+                  }),
+                  (0, _.jsx)(_._, {}),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      bSpellcheckEnabled: _,
+                      setSpellcheckEnabled: _,
+                    }),
+                  __webpack_require__.nodes.meetsteamsessiongroup &&
+                    (0, _.jsx)(_, {
+                      schema: __webpack_require__,
+                    }),
+                  __webpack_require__.nodes.meetsteamscheduleview &&
+                    (0, _.jsx)(_, {
+                      schema: __webpack_require__,
+                    }),
+                  __webpack_require__.nodes.userpolls &&
+                    _._.is_support &&
+                    (0, _.jsx)(_, {
+                      schema: __webpack_require__,
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                className: _.className,
                 schema: __webpack_require__,
               }),
-              _.createElement(_._, null),
-              __webpack_require__.marks.link &&
-                _.createElement(_, {
-                  schema: __webpack_require__,
-                }),
-              _.createElement(_._, null),
-              _.createElement(_._, {
-                schema: __webpack_require__,
-              }),
-              _.createElement(_._, {
-                schema: __webpack_require__,
-                levels: 3,
-              }),
-              _.createElement(_._, null),
-              _.createElement(_, {
-                schema: __webpack_require__,
-              }),
-              _.createElement(_, {
-                schema: __webpack_require__,
-                clanSteamID: _,
-              }),
-              _.createElement(_, {
-                schema: __webpack_require__,
-              }),
-              _.createElement(_._, {
-                schema: __webpack_require__,
-                showIndentButtonsAsNeeded: !0,
-              }),
-              _.createElement(_._, null),
-              _ &&
-                _.createElement(_._, {
-                  bSpellcheckEnabled: _,
-                  setSpellcheckEnabled: _,
-                }),
-              __webpack_require__.nodes.meetsteamsessiongroup &&
-                _.createElement(_, {
-                  schema: __webpack_require__,
-                }),
-              __webpack_require__.nodes.meetsteamscheduleview &&
-                _.createElement(_, {
-                  schema: __webpack_require__,
-                }),
-              __webpack_require__.nodes.userpolls &&
-                _._.is_support &&
-                _.createElement(_, {
-                  schema: __webpack_require__,
-                }),
-            ),
-            _.createElement(_, {
-              className: _.className,
-              schema: __webpack_require__,
-            }),
-          ),
-        );
+            ],
+          }),
+        });
       });
       function _(_) {
         const _ = (0, _._)();
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           schema: _.schema,
           addtlAttrs: _,
         });
@@ -3872,25 +3549,22 @@
             },
             [_, _, _, _],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              hideModal: _,
-              clanAccountID: _.GetClanAccountID(),
-              fnUpdateSession: _,
-            }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                hideModal: _,
+                clanAccountID: _.GetClanAccountID(),
+                fnUpdateSession: _,
+              }),
+            (0, _.jsx)(_._, {
               tooltip: "#UserPolls_Toolbar_ttip",
               onClick: _,
               toggled: _,
-            },
-            _.createElement(_.fQB, null),
-          ),
-        );
+              children: (0, _.jsx)(_.fQB, {}),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { schema: _, clanSteamID: __webpack_require__ } = _,
@@ -3915,36 +3589,30 @@
             onItemSelected: _,
             onHideModal: _,
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _ &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            _ &&
+              (0, _.jsx)(_._, {
                 tooltip: "#EventEditor_InsertImage_Title",
                 onClick: _,
                 toggled: "image" == _,
-              },
-              _.createElement(_._V3, null),
-            ),
-          _ &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_._V3, {}),
+              }),
+            _ &&
+              (0, _.jsx)(_._, {
                 tooltip: "#EventEditor_EditVideo_Title",
                 onClick: _,
                 toggled: "video" == _,
-              },
-              _.createElement(_.CeX, null),
-            ),
-          _ &&
-            _.createElement(_, {
-              schema: _,
-            }),
-          (_ || _ || _) && _.createElement(_._, null),
-        );
+                children: (0, _.jsx)(_.CeX, {}),
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                schema: _,
+              }),
+            (_ || _ || _) && (0, _.jsx)(_._, {}),
+          ],
+        });
       }
       function _(_) {
         const { schema: _ } = _,
@@ -3970,26 +3638,23 @@
             },
             [_, _, _],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              hideModal: _,
-              onSave: _,
-            }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                hideModal: _,
+                onSave: _,
+              }),
+            (0, _.jsx)(_._, {
               tooltip: "#EventEditor_InsertYouTube",
               onClick: _,
               toggled: _,
-            },
-            _.createElement("img", {
-              src: _._,
+              children: (0, _.jsx)("img", {
+                src: _._,
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { schema: _ } = _,
@@ -4022,26 +3687,23 @@
             [_, _, _, _],
           );
         if ((null == _ ? void 0 : _.GetClanAccountID()) == (0, _._)())
-          return _.createElement(
-            _.Fragment,
-            null,
-            _ &&
-              _.createElement(_, {
-                hideModal: _,
-                fnUpdateSession: _,
-              }),
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ &&
+                (0, _.jsx)(_, {
+                  hideModal: _,
+                  fnUpdateSession: _,
+                }),
+              (0, _.jsx)(_._, {
                 tooltip: "#MeetSteam_add_group_ttip",
                 onClick: _,
                 toggled: _,
-              },
-              _.createElement("img", {
-                src: _._,
+                children: (0, _.jsx)("img", {
+                  src: _._,
+                }),
               }),
-            ),
-          );
+            ],
+          });
       }
       function _(_) {
         const { schema: _ } = _,
@@ -4073,27 +3735,24 @@
             [_, _, _, _],
           );
         if ((null == _ ? void 0 : _.GetClanAccountID()) == (0, _._)())
-          return _.createElement(
-            _.Fragment,
-            null,
-            _ &&
-              _.createElement(_, {
-                hideModal: _,
-                inputScheduleModel: null,
-                fnUpdateSession: _,
-              }),
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ &&
+                (0, _.jsx)(_, {
+                  hideModal: _,
+                  inputScheduleModel: null,
+                  fnUpdateSession: _,
+                }),
+              (0, _.jsx)(_._, {
                 tooltip: "#MeetSteam_add_schedule_ttip",
                 onClick: _,
                 toggled: _,
-              },
-              _.createElement("img", {
-                src: _._,
+                children: (0, _.jsx)("img", {
+                  src: _._,
+                }),
               }),
-            ),
-          );
+            ],
+          });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4126,7 +3785,7 @@
           ],
           [_, __webpack_require__],
         );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           specs: _,
         });
       }
@@ -4144,15 +3803,12 @@
                 filter: "brightness(1.2)",
               }
             : void 0;
-          return _.createElement(
-            "span",
-            {
-              style: _,
-            },
-            _.createElement(_._, {
+          return (0, _.jsx)("span", {
+            style: _,
+            children: (0, _.jsx)(_._, {
               emoticon: _,
             }),
-          );
+          });
         }
         return `:${_}:`;
       }
@@ -4174,26 +3830,20 @@
             partnerEventStore: _._,
             event: _.GetEventModel(),
           });
-          return _.createElement(
-            _,
-            {
-              toolbar: _.createElement(_, {
-                href: __webpack_require__,
-                removeNode: _.removeNode,
-                update: _.update,
-                schema: _.schema,
-              }),
-            },
-            _,
-          );
+          return (0, _.jsx)(_, {
+            toolbar: (0, _.jsx)(_, {
+              href: __webpack_require__,
+              removeNode: _.removeNode,
+              update: _.update,
+              schema: _.schema,
+            }),
+            children: _,
+          });
         }
-        return _.createElement(
-          "a",
-          {
-            href: __webpack_require__,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)("a", {
+          href: __webpack_require__,
+          children: __webpack_require__,
+        });
       }
       function _(_) {
         const {
@@ -4202,22 +3852,15 @@
           update: _,
           schema: _,
         } = _;
-        return _.createElement(
-          _,
-          {
-            onDeleteClick: __webpack_require__,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          onDeleteClick: __webpack_require__,
+          children: [
+            (0, _.jsx)(_, {
               onClick: () => window.open(_),
               description: (0, _._)("#ContextMenu_OpenLinkInNewWindow"),
-            },
-            _.createElement(_.YNO, null),
-          ),
-          _.createElement(
-            _,
-            {
+              children: (0, _.jsx)(_.YNO, {}),
+            }),
+            (0, _.jsx)(_, {
               onClick: () =>
                 _(
                   (0, _._)(
@@ -4231,10 +3874,10 @@
               description: (0, _._)(
                 "#EventEditor_DynamicLink_ConvertToTextLink",
               ),
-            },
-            _.createElement(_.Rkk, null),
-          ),
-        );
+              children: (0, _.jsx)(_.Rkk, {}),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
@@ -4242,14 +3885,12 @@
           _ = _.GetEventModel().loadedAllLanguages,
           _ = _.GetCurEditLanguage();
         return _
-          ? _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
                 ..._,
                 eCurrentEditLanguage: _,
               }),
-            )
+            })
           : null;
       });
       const _ = _.memo(function (_) {
@@ -4390,33 +4031,23 @@
               );
             }, [_, _, _, _, _]);
           })(__webpack_require__, _.image, _.video, _.link, _),
-          _.createElement(
-            _,
-            {
-              editModel: _,
-              imageNode: _.image,
-              videoNode: _.video,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().EventDescriptionContainer,
-              },
-              _.createElement(_, {
-                view: _,
-                schema: _.pm_schema,
-                refUpdateToolbar: _,
-                className: _().ToolBar,
-                clanSteamID: _.GetClanSteamID(),
-              }),
-              _.createElement(
-                "div",
-                {
+          (0, _.jsx)(_, {
+            editModel: _,
+            imageNode: _.image,
+            videoNode: _.video,
+            children: (0, _.jsxs)("div", {
+              className: _().EventDescriptionContainer,
+              children: [
+                (0, _.jsx)(_, {
+                  view: _,
+                  schema: _.pm_schema,
+                  refUpdateToolbar: _,
+                  className: _().ToolBar,
+                  clanSteamID: _.GetClanSteamID(),
+                }),
+                (0, _.jsx)("div", {
                   className: _().EventDescriptionArea,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     pmState: _,
                     className: (0, _._)(
                       _().EventDescriptionRichField,
@@ -4427,16 +4058,16 @@
                     panelProps: {
                       onBlur: () => _.CommitChanges(),
                     },
-                  },
-                  _.createElement(_, {
-                    eventSchemaConfig: _,
-                    editModel: _,
-                    onURLPasted: _,
+                    children: (0, _.jsx)(_, {
+                      eventSchemaConfig: _,
+                      editModel: _,
+                      onURLPasted: _,
+                    }),
                   }),
-                ),
-              ),
-            ),
-          )
+                }),
+              ],
+            }),
+          })
         );
       });
       const _ = _.memo(function (_) {
@@ -4446,28 +4077,28 @@
             onURLPasted: _,
           } = _,
           { marks: _, nodes: _ } = _.pm_schema;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            linkMarkType: _.link,
-            onURLPasted: _,
-            schema: _.pm_schema,
-          }),
-          _.image &&
-            _.createElement(_._, {
-              nodeType: _.image,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              linkMarkType: _.link,
+              onURLPasted: _,
+              schema: _.pm_schema,
             }),
-          _.createElement(_, {
-            schemaConfig: _,
-            editModel: __webpack_require__,
-            clanSteamID: __webpack_require__.GetClanSteamID(),
-          }),
-          _.createElement(_, {
-            emoticonStore: _._,
-            schema: _.pm_schema,
-          }),
-        );
+            _.image &&
+              (0, _.jsx)(_._, {
+                nodeType: _.image,
+              }),
+            (0, _.jsx)(_, {
+              schemaConfig: _,
+              editModel: __webpack_require__,
+              clanSteamID: __webpack_require__.GetClanSteamID(),
+            }),
+            (0, _.jsx)(_, {
+              emoticonStore: _._,
+              schema: _.pm_schema,
+            }),
+          ],
+        });
       });
       function _(_) {
         const {
@@ -4567,7 +4198,7 @@
             ],
             [_, _, _, __webpack_require__, _, _],
           );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           specs: _,
         });
       }

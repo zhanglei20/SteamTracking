@@ -55,8 +55,8 @@
         __webpack_require__._(module_exports, {
           default: () => _,
         });
-      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -283,41 +283,30 @@
               },
               [],
             ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Container),
-                },
-                _.createElement(
-                  "div",
-                  {
+            (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("div", {
+                className: (0, _._)(_.Container),
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.Controls,
-                  },
-                  _.createElement(
-                    _._,
-                    {
+                    children: (0, _.jsx)(_._, {
                       onClick: async () => {
                         _.current && _.current();
                         const _ = _().CancelToken.source();
                         (_.current = _.cancel),
                           _(await _.Get().LoadBroadcastDebugInfo(_));
                       },
-                    },
-                    "(VO) Load Debug Info",
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    info: __webpack_require__,
+                      children: "(VO) Load Debug Info",
+                    }),
                   }),
-                ),
-              ),
-            )
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {
+                      info: __webpack_require__,
+                    }),
+                  }),
+                ],
+              }),
+            })
           );
         },
         _ = (_) => {
@@ -327,494 +316,445 @@
           if (!__webpack_require__) return null;
           const _ = _.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
             _ = _._.GetBroadcast(_);
-          return _.createElement(
-            "div",
-            {
-              className: _.DisplaySection,
-            },
-            Boolean(
-              __webpack_require__.last_error_result &&
-                1 != __webpack_require__.last_error_result,
-            ) &&
-              _.createElement(
-                "div",
-                {
-                  className: _.SubSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Header,
-                  },
-                  "Error",
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  "EResult: ",
-                  __webpack_require__.last_error_result,
-                  ", occurred ",
-                  __webpack_require__.last_error_time,
-                  " - ",
-                  _.createElement(_._, {
-                    dateAndTime: __webpack_require__.last_error_time,
-                    bSingleLine: !0,
-                  }),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.SubSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "Broadcast Setup",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Broadcaster: ",
-                __webpack_require__.steam_id,
-                ", SteamID: ",
-                _,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Directory Server: ",
-                __webpack_require__.directory_server,
-                ", SessionID: ",
-                __webpack_require__.broadcast_id,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Ingester Server: ",
-                __webpack_require__.relay_server,
-                ", UploadID: ",
-                __webpack_require__.upload_id,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Origin Server: ",
-                __webpack_require__.origin_server,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Chat Server: ",
-                __webpack_require__.chat_server,
-                ", chat_id: ",
-                __webpack_require__.chat_id,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Transcoder Server : ",
-                __webpack_require__.transcode_server,
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SubSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "Ingester Info",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Client: ",
-                __webpack_require__.remote_address,
-                " ",
-                Boolean(__webpack_require__.is_rtmp)
-                  ? "(RTMP)"
-                  : "(STEAM CLIENT)",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Video Config: ",
-                __webpack_require__.upload_height,
-                "x",
-                __webpack_require__.upload_width,
-                "@",
-                __webpack_require__.upload_fps,
-                ", ",
-                __webpack_require__.upload_bandwidth,
-                " kbps ",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Audio Config: ",
-                __webpack_require__.upload_audio_channels,
-                "x",
-                __webpack_require__.upload_audio_samplerate,
-                "Hz, ",
-                __webpack_require__.upload_audio_bitrate / 1e3,
-                " kbps ",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Upload Stats: ",
-                __webpack_require__.upload_avg_fps,
-                " FPS, ",
-                __webpack_require__.upload_avg_bandwidth,
-                " kbps, ",
-                __webpack_require__.upload_avg_key_interval,
-                " msec key frame interval",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Upload Totals: ",
-                __webpack_require__.upload_total_frames_received,
-                " video frames,  ",
-                Math.round(
-                  (__webpack_require__.upload_current_video_pts -
-                    __webpack_require__.upload_first_video_pts) /
-                    __webpack_require__.upload_video_timescale,
-                ),
-                " seconds ( ",
-                (0, _._)(
-                  __webpack_require__.upload_total_bytes_uploaded || 0,
-                  1,
-                ),
-                " ) ",
-              ),
-            ),
-            Boolean(__webpack_require__.transcode_server) &&
-              _.createElement(
-                "div",
-                {
-                  className: _.SubSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Header,
-                  },
-                  "Transcoder Info",
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  "Decoder ( ",
-                  __webpack_require__.upload_height,
-                  "x",
-                  __webpack_require__.upload_width,
-                  "@",
-                  __webpack_require__.upload_fps,
-                  ", ",
-                  __webpack_require__.upload_bandwidth,
-                  " kbps ) :  ",
-                  __webpack_require__.transcoder_frames_to_decode,
-                  " queued,  ",
-                  __webpack_require__.transcoder_frames_total_decoded,
-                  " decoded",
-                ),
-                __webpack_require__.transcoder_streams.map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: _.representation_id,
-                    },
-                    "Encoder ",
-                    _.representation_id,
-                    " ( ",
-                    _.height,
-                    "x",
-                    _.width,
-                    "@",
-                    _.fps,
-                    " ",
-                    _.bitrate,
-                    " kbps ) : ",
-                    _.frames_to_encode,
-                    " queued, ",
-                    _.frames_total_encoded,
-                    " encoded",
-                  ),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.SubSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "Origin Info",
-              ),
-              null ===
-                (_ =
-                  null == __webpack_require__
-                    ? void 0
-                    : __webpack_require__.origin_video_streams) || void 0 === _
-                ? void 0
-                : _.map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: _.representation_id,
-                      },
-                      "Video Stream ",
-                      _.representation_id,
-                      " ( ",
-                      _.height,
-                      "x",
-                      _.width,
-                      "@",
-                      _.fps,
-                      " ",
-                      _.bitrate,
-                      " kbps ) :  ",
-                      _.num_frames_queued,
-                      " frames queued,  ",
-                      _.num_segments_received,
-                      " segments received,  ",
-                      2 * _.num_segments_cached,
-                      " seconds cached ( ",
-                      (0, _._)(_.memory_used, 2),
-                      " )",
-                    ),
-                  ),
-              "Audio Stream ",
-              __webpack_require__.origin_audio_stream.representation_id,
-              " ( ",
-              __webpack_require__.upload_audio_channels,
-              "x",
-              __webpack_require__.upload_audio_samplerate,
-              "Hz, ",
-              __webpack_require__.upload_audio_bitrate / 1e3,
-              " kbps ) :  ",
-              __webpack_require__.origin_audio_stream.num_frames_queued,
-              " frames queued,  ",
-              __webpack_require__.origin_audio_stream.num_segments_received,
-              " segments received,  ",
-              2 * __webpack_require__.origin_audio_stream.num_segments_cached,
-              " seconds cached ( ",
-              (0, _._)(__webpack_require__.origin_audio_stream.memory_used, 2),
-              " )",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SubSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "Viewer Info",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Viewers: ",
-                __webpack_require__.current_viewers,
-                " current (",
-                __webpack_require__.current_anon_viewers,
-                " anonymous), ",
-                __webpack_require__.total_unique_viewers,
-                " total unique, ",
-                __webpack_require__.max_concurrent_viewers,
-                " max concurrent",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Average time watched: ",
-                __webpack_require__.average_watch_duration,
-                " seconds",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Last Minute: ",
-                __webpack_require__.added_viewers_last_minute,
-                " watch requests, ",
-                __webpack_require__.rejected_viewers_last_minute,
-                " rejected",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Restrictions: ",
-                __webpack_require__.restriction,
-              ),
-              _.createElement(
-                "div",
-                null,
-                __webpack_require__.extra_viewer_info,
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SubSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "Settings",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "is replay? ",
-                __webpack_require__.is_replay,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "is replay local file? ",
-                __webpack_require__.is_replay_local_file,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "is replay clip? ",
-                __webpack_require__.is_replay_clip,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "is capturing VOD? ",
-                __webpack_require__.is_capturing_vod,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "is white listed for store streaming? ",
-                __webpack_require__.is_whitelisted,
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SubSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "App Info",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "appid: ",
-                __webpack_require__.app_id,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "app name: ",
-                __webpack_require__.app_name,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "broadcast title: ",
-                __webpack_require__.title,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "thumbnail: ",
-                __webpack_require__.thumbnail_url,
-              ),
-              Boolean(__webpack_require__.thumbnail_url) &&
-                _.createElement("img", {
-                  src: __webpack_require__.thumbnail_url,
-                }),
+          return (0, _.jsxs)("div", {
+            className: _.DisplaySection,
+            children: [
               Boolean(
-                __webpack_require__.app_id && __webpack_require__.app_id > 0,
+                __webpack_require__.last_error_result &&
+                  1 != __webpack_require__.last_error_result,
               ) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.AppSummaryWidgetCtn,
-                  },
-                  _.createElement(_._, {
-                    _: __webpack_require__.app_id,
-                    type: "game",
-                    bPreferAssetWithoutOverride: !1,
-                  }),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
+                (0, _.jsxs)("div", {
+                  className: _.SubSection,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Header,
+                      children: "Error",
+                    }),
+                    (0, _.jsxs)("div", {
+                      children: [
+                        "EResult: ",
+                        __webpack_require__.last_error_result,
+                        ", occurred ",
+                        __webpack_require__.last_error_time,
+                        " - ",
+                        (0, _.jsx)(_._, {
+                          dateAndTime: __webpack_require__.last_error_time,
+                          bSingleLine: !0,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
                 className: _.SubSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "Manifest Information",
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Heartbeat Interval: ",
-                _.m_data.heartbeat_interval,
-              ),
-              _.createElement("div", null, "DASH MPEG Url: ", _.m_data.url),
-              _.createElement("div", null, "HLS Url: ", _.m_data.hls_url),
-            ),
-            _.createElement(
-              _._,
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "Broadcast Setup",
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Broadcaster: ",
+                      __webpack_require__.steam_id,
+                      ", SteamID: ",
+                      _,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Directory Server: ",
+                      __webpack_require__.directory_server,
+                      ", SessionID: ",
+                      __webpack_require__.broadcast_id,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Ingester Server: ",
+                      __webpack_require__.relay_server,
+                      ", UploadID: ",
+                      __webpack_require__.upload_id,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Origin Server: ",
+                      __webpack_require__.origin_server,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Chat Server: ",
+                      __webpack_require__.chat_server,
+                      ", chat_id: ",
+                      __webpack_require__.chat_id,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Transcoder Server : ",
+                      __webpack_require__.transcode_server,
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _.SubSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "Ingester Info",
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Client: ",
+                      __webpack_require__.remote_address,
+                      " ",
+                      Boolean(__webpack_require__.is_rtmp)
+                        ? "(RTMP)"
+                        : "(STEAM CLIENT)",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Video Config: ",
+                      __webpack_require__.upload_height,
+                      "x",
+                      __webpack_require__.upload_width,
+                      "@",
+                      __webpack_require__.upload_fps,
+                      ", ",
+                      __webpack_require__.upload_bandwidth,
+                      " kbps ",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Audio Config: ",
+                      __webpack_require__.upload_audio_channels,
+                      "x",
+                      __webpack_require__.upload_audio_samplerate,
+                      "Hz, ",
+                      __webpack_require__.upload_audio_bitrate / 1e3,
+                      " kbps ",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Upload Stats: ",
+                      __webpack_require__.upload_avg_fps,
+                      " FPS, ",
+                      __webpack_require__.upload_avg_bandwidth,
+                      " kbps, ",
+                      __webpack_require__.upload_avg_key_interval,
+                      " msec key frame interval",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Upload Totals: ",
+                      __webpack_require__.upload_total_frames_received,
+                      " video frames,  ",
+                      Math.round(
+                        (__webpack_require__.upload_current_video_pts -
+                          __webpack_require__.upload_first_video_pts) /
+                          __webpack_require__.upload_video_timescale,
+                      ),
+                      " seconds ( ",
+                      (0, _._)(
+                        __webpack_require__.upload_total_bytes_uploaded || 0,
+                        1,
+                      ),
+                      " ) ",
+                    ],
+                  }),
+                ],
+              }),
+              Boolean(__webpack_require__.transcode_server) &&
+                (0, _.jsxs)("div", {
+                  className: _.SubSection,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Header,
+                      children: "Transcoder Info",
+                    }),
+                    (0, _.jsxs)("div", {
+                      children: [
+                        "Decoder ( ",
+                        __webpack_require__.upload_height,
+                        "x",
+                        __webpack_require__.upload_width,
+                        "@",
+                        __webpack_require__.upload_fps,
+                        ", ",
+                        __webpack_require__.upload_bandwidth,
+                        " kbps ) :  ",
+                        __webpack_require__.transcoder_frames_to_decode,
+                        " queued,  ",
+                        __webpack_require__.transcoder_frames_total_decoded,
+                        " decoded",
+                      ],
+                    }),
+                    __webpack_require__.transcoder_streams.map((_) =>
+                      (0, _.jsxs)(
+                        "div",
+                        {
+                          children: [
+                            "Encoder ",
+                            _.representation_id,
+                            " ( ",
+                            _.height,
+                            "x",
+                            _.width,
+                            "@",
+                            _.fps,
+                            " ",
+                            _.bitrate,
+                            " kbps ) : ",
+                            _.frames_to_encode,
+                            " queued, ",
+                            _.frames_total_encoded,
+                            " encoded",
+                          ],
+                        },
+                        _.representation_id,
+                      ),
+                    ),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
+                className: _.SubSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "Origin Info",
+                  }),
+                  null ===
+                    (_ =
+                      null == __webpack_require__
+                        ? void 0
+                        : __webpack_require__.origin_video_streams) ||
+                  void 0 === _
+                    ? void 0
+                    : _.map((_) =>
+                        (0, _.jsxs)(
+                          "div",
+                          {
+                            children: [
+                              "Video Stream ",
+                              _.representation_id,
+                              " ( ",
+                              _.height,
+                              "x",
+                              _.width,
+                              "@",
+                              _.fps,
+                              " ",
+                              _.bitrate,
+                              " kbps ) :  ",
+                              _.num_frames_queued,
+                              " frames queued,  ",
+                              _.num_segments_received,
+                              " segments received,  ",
+                              2 * _.num_segments_cached,
+                              " seconds cached ( ",
+                              (0, _._)(_.memory_used, 2),
+                              " )",
+                            ],
+                          },
+                          _.representation_id,
+                        ),
+                      ),
+                  "Audio Stream ",
+                  __webpack_require__.origin_audio_stream.representation_id,
+                  " ( ",
+                  __webpack_require__.upload_audio_channels,
+                  "x",
+                  __webpack_require__.upload_audio_samplerate,
+                  "Hz, ",
+                  __webpack_require__.upload_audio_bitrate / 1e3,
+                  " kbps ) :  ",
+                  __webpack_require__.origin_audio_stream.num_frames_queued,
+                  " frames queued,  ",
+                  __webpack_require__.origin_audio_stream.num_segments_received,
+                  " segments received,  ",
+                  2 *
+                    __webpack_require__.origin_audio_stream.num_segments_cached,
+                  " seconds cached ( ",
+                  (0, _._)(
+                    __webpack_require__.origin_audio_stream.memory_used,
+                    2,
+                  ),
+                  " )",
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _.SubSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "Viewer Info",
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Viewers: ",
+                      __webpack_require__.current_viewers,
+                      " current (",
+                      __webpack_require__.current_anon_viewers,
+                      " anonymous), ",
+                      __webpack_require__.total_unique_viewers,
+                      " total unique, ",
+                      __webpack_require__.max_concurrent_viewers,
+                      " max concurrent",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Average time watched: ",
+                      __webpack_require__.average_watch_duration,
+                      " seconds",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Last Minute: ",
+                      __webpack_require__.added_viewers_last_minute,
+                      " watch requests, ",
+                      __webpack_require__.rejected_viewers_last_minute,
+                      " rejected",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Restrictions: ",
+                      __webpack_require__.restriction,
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    children: __webpack_require__.extra_viewer_info,
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _.SubSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "Settings",
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: ["is replay? ", __webpack_require__.is_replay],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "is replay local file? ",
+                      __webpack_require__.is_replay_local_file,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "is replay clip? ",
+                      __webpack_require__.is_replay_clip,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "is capturing VOD? ",
+                      __webpack_require__.is_capturing_vod,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "is white listed for store streaming? ",
+                      __webpack_require__.is_whitelisted,
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _.SubSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "App Info",
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: ["appid: ", __webpack_require__.app_id],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: ["app name: ", __webpack_require__.app_name],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: ["broadcast title: ", __webpack_require__.title],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "thumbnail: ",
+                      __webpack_require__.thumbnail_url,
+                    ],
+                  }),
+                  Boolean(__webpack_require__.thumbnail_url) &&
+                    (0, _.jsx)("img", {
+                      src: __webpack_require__.thumbnail_url,
+                    }),
+                  Boolean(
+                    __webpack_require__.app_id &&
+                      __webpack_require__.app_id > 0,
+                  ) &&
+                    (0, _.jsx)("div", {
+                      className: _.AppSummaryWidgetCtn,
+                      children: (0, _.jsx)(_._, {
+                        _: __webpack_require__.app_id,
+                        type: "game",
+                        bPreferAssetWithoutOverride: !1,
+                      }),
+                    }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _.SubSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "Manifest Information",
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Heartbeat Interval: ",
+                      _.m_data.heartbeat_interval,
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: ["DASH MPEG Url: ", _.m_data.url],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: ["HLS Url: ", _.m_data.hls_url],
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
                 onClick: () => _(!_),
-              },
-              "Toggle Raw Data",
-            ),
-            Boolean(_) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubSection,
-                  },
-                  _.createElement(_._, {
-                    data: __webpack_require__,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubSection,
-                  },
-                  _.createElement(_._, {
-                    data: (null == _ ? void 0 : _.m_data) || "",
-                  }),
-                ),
-              ),
-          );
+                children: "Toggle Raw Data",
+              }),
+              Boolean(_) &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.SubSection,
+                      children: (0, _.jsx)(_._, {
+                        data: __webpack_require__,
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.SubSection,
+                      children: (0, _.jsx)(_._, {
+                        data: (null == _ ? void 0 : _.m_data) || "",
+                      }),
+                    }),
+                  ],
+                }),
+            ],
+          });
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -823,40 +763,32 @@
       const _ = (_) => {
         const _ = _.steamid.GetAccountID(),
           { data: __webpack_require__ } = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _.AvatarCtn,
-          },
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.AvatarCtn,
+          children: [
+            (0, _.jsx)("a", {
               href: __webpack_require__.GetCommunityProfileURL(),
               "data-miniprofile": "s" + _.steamid.ConvertTo64BitString(),
-            },
-            _.createElement(_._, {
-              persona: __webpack_require__,
-              size: _.size,
-              statusPosition: "bottom",
+              children: (0, _.jsx)(_._, {
+                persona: __webpack_require__,
+                size: _.size,
+                statusPosition: "bottom",
+              }),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: _.NameAndProps,
-            },
-            Boolean(_.bShowName) &&
-              _.createElement(
-                "a",
-                {
-                  href: __webpack_require__.GetCommunityProfileURL(),
-                  "data-miniprofile": "s" + _.steamid.ConvertTo64BitString(),
-                },
-                __webpack_require__.m_strProfileURL,
-              ),
-            _.children,
-          ),
-        );
+              children: [
+                Boolean(_.bShowName) &&
+                  (0, _.jsx)("a", {
+                    href: __webpack_require__.GetCommunityProfileURL(),
+                    "data-miniprofile": "s" + _.steamid.ConvertTo64BitString(),
+                    children: __webpack_require__.m_strProfileURL,
+                  }),
+                _.children,
+              ],
+            }),
+          ],
+        });
       };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -880,66 +812,57 @@
           });
         let _ = null == _ ? void 0 : _.GetAssets().GetMainCapsuleURL(),
           _ = _ && _.length > 0;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.ProfileCtn,
-            },
-            _ &&
-              _.createElement(
-                "a",
-                {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            className: _.ProfileCtn,
+            children: [
+              _ &&
+                (0, _.jsx)("a", {
                   className: _.GameCapsule,
                   href: (0, _._)(
                     (null == _ ? void 0 : _.GetStorePageURL()) ||
                       _._.STORE_BASE_URL + "app/" + _,
                   ),
-                },
-                _.createElement("img", {
-                  src: _,
-                }),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.StreamDetailsCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.GameAndOptionsCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.GameAndViewersCtn,
-                  },
-                  _.createElement(_, {
-                    broadcasterSteamID: _,
+                  children: (0, _.jsx)("img", {
+                    src: _,
                   }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ViewerCount,
-                    },
-                    (0, _._)("#Broadcast_ViewerCount", (0, _._)(_)),
-                  ),
-                ),
-                _.createElement(_, {
-                  broadcasterSteamID: _,
                 }),
-              ),
-              _.createElement(_, {
-                steamid: _,
-                size: "Medium",
-                bShowName: !0,
+              (0, _.jsxs)("div", {
+                className: _.StreamDetailsCtn,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.GameAndOptionsCtn,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.GameAndViewersCtn,
+                        children: [
+                          (0, _.jsx)(_, {
+                            broadcasterSteamID: _,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.ViewerCount,
+                            children: (0, _._)(
+                              "#Broadcast_ViewerCount",
+                              (0, _._)(_),
+                            ),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)(_, {
+                        broadcasterSteamID: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    steamid: _,
+                    size: "Medium",
+                    bShowName: !0,
+                  }),
+                ],
               }),
-            ),
-          ),
-        );
+            ],
+          }),
+        });
       }
       const _ = (0, _._)((_) => {
           const { broadcasterSteamID: _ } = _,
@@ -952,50 +875,44 @@
             [_] = (0, _._)(_, {
               include_assets: !0,
             });
-          return _.createElement(
-            "div",
-            {
-              className: _.BroadcastTitleCtn,
-            },
-            (0, _._)("#Broadcast_Playing"),
-            _.createElement(
-              "a",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.BroadcastTitleCtn,
+            children: [
+              (0, _._)("#Broadcast_Playing"),
+              (0, _.jsx)("a", {
                 href: (0, _._)(
                   (null == _ ? void 0 : _.GetStorePageURL()) ||
                     _._.STORE_BASE_URL + "app/" + _,
                 ),
-              },
-              Boolean(_) ? _ : null == _ ? void 0 : _.GetName(),
-            ),
-            Boolean((null == _ ? void 0 : _.length) > 0) &&
-              _.createElement("span", null, " - ", _),
-          );
+                children: Boolean(_) ? _ : null == _ ? void 0 : _.GetName(),
+              }),
+              Boolean((null == _ ? void 0 : _.length) > 0) &&
+                (0, _.jsxs)("span", {
+                  children: [" - ", _],
+                }),
+            ],
+          });
         }),
         _ = (0, _._)((_) => {
           const { broadcasterSteamID: _ } = _;
           _.ConvertTo64BitString();
-          return _.createElement(
-            "div",
-            {
-              className: _.BroadcastUserActionsCtn,
-            },
-            Boolean(
-              _._.steamid != _.broadcasterSteamID.ConvertTo64BitString(),
-            ) &&
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsxs)("div", {
+            className: _.BroadcastUserActionsCtn,
+            children: [
+              Boolean(
+                _._.steamid != _.broadcasterSteamID.ConvertTo64BitString(),
+              ) &&
+                (0, _.jsx)(_._, {
                   onClick: (_) => {
                     _._.logged_in
                       ? (0, _._)(
-                          _.createElement(_, {
+                          (0, _.jsx)(_, {
                             broadcasterSteamID: _,
                           }),
                           (0, _._)(_),
                         )
                       : (0, _._)(
-                          _.createElement(_._, {
+                          (0, _.jsx)(_._, {
                             strTitle: (0, _._)(
                               "#EventDisplay_Share_NotLoggedIn",
                             ),
@@ -1008,55 +925,43 @@
                           (0, _._)(_),
                         );
                   },
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     toolTipContent: (0, _._)("#Broadcast_User_Report_ttip"),
-                  },
-                  _.createElement(_.lNU, null),
-                ),
-              ),
-            _.createElement(
-              _._,
-              {
+                    children: (0, _.jsx)(_.lNU, {}),
+                  }),
+                }),
+              (0, _.jsx)(_._, {
                 onClick: (_) =>
                   (0, _._)(
                     _,
                     "https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8",
                   ),
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)("#Broadcast_User_FAQ_ttip"),
-                },
-                _.createElement(_.$$j, null),
-              ),
-            ),
-          );
+                  children: (0, _.jsx)(_.$$j, {}),
+                }),
+              }),
+            ],
+          });
         }),
         _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)("");
-          return _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#Broadcast_ReportItem_Title"),
-              strDescription: (0, _._)("#Broadcast_ReportItem_Description"),
-              onCancel: _.closeModal,
-              bOKDisabled: 0 == _.trim().length,
-              onOK: async () => {
-                await _.Get().SendUserReportOnBroadcast(_),
-                  _.closeModal && _.closeModal();
-              },
+          return (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#Broadcast_ReportItem_Title"),
+            strDescription: (0, _._)("#Broadcast_ReportItem_Description"),
+            onCancel: _.closeModal,
+            bOKDisabled: 0 == _.trim().length,
+            onOK: async () => {
+              await _.Get().SendUserReportOnBroadcast(_),
+                _.closeModal && _.closeModal();
             },
-            _.createElement("textarea", {
+            children: (0, _.jsx)("textarea", {
               value: _,
               onChange: (_) => __webpack_require__(_.currentTarget.value),
               rows: 10,
               cols: 80,
             }),
-          );
+          });
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1064,7 +969,7 @@
           if (!_._.is_support) return null;
           const _ = (_, _) => {
               (0, _._)(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   broadcastSteamID: _.broadcastSteamID,
                   strAction: _,
                 }),
@@ -1074,48 +979,37 @@
             _ =
               "https://steamsupport.valvesoftware.com/account/overview/" +
               _.broadcastSteamID.ConvertTo64BitString();
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.AdminControls, _().ValveOnlyBackground),
-            },
-            _.createElement("div", null, "(VO) Support Tools"),
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.AdminControls, _().ValveOnlyBackground),
+            children: [
+              (0, _.jsx)("div", {
+                children: "(VO) Support Tools",
+              }),
+              (0, _.jsx)(_._, {
                 onClick: (_) => _(_, "frontpage"),
-              },
-              "Remove from Front Page",
-            ),
-            _.createElement(
-              _._,
-              {
+                children: "Remove from Front Page",
+              }),
+              (0, _.jsx)(_._, {
                 onClick: (_) => _(_, "ban"),
-              },
-              "Ban from Broadcasting",
-            ),
-            _.createElement(
-              _._,
-              {
+                children: "Ban from Broadcasting",
+              }),
+              (0, _.jsx)(_._, {
                 onClick: (_) => {
                   (0, _._)(
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       steamid: _.broadcastSteamID,
                     }),
                     (0, _._)(_),
                   );
                 },
-              },
-              "Make Unbannable",
-            ),
-            _.createElement(
-              _._,
-              {
+                children: "Make Unbannable",
+              }),
+              (0, _.jsx)(_._, {
                 onClick: (_) => (0, _._)(_, _),
-              },
-              "Go to Support Page",
-            ),
-          );
+                children: "Go to Support Page",
+              }),
+            ],
+          });
         },
         _ = (0, _._)((_) => {
           const { broadcastSteamID: _, strAction: __webpack_require__ } = _,
@@ -1131,127 +1025,105 @@
             [],
           );
           const _ = () => _.closeModal && _.closeModal();
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                onEscKeypress: _,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  "frontpage" == __webpack_require__
-                    ? "Remove Broadcast From Front Page"
-                    : "Ban from Broadcasting",
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "p",
-                      null,
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              onEscKeypress: _,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children:
                       "frontpage" == __webpack_require__
-                        ? "How long should we prevent the broadcast from appearing in community or store?"
-                        : "How long should we prevent the user from Broadcast at all on Steam?",
-                    ),
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement(_._, {
-                        rgOptions: [
-                          {
-                            label: "1 Day",
-                            data: 1,
-                          },
-                          {
-                            label: "1 Week",
-                            data: 7,
-                          },
-                          {
-                            label: "1 Month",
-                            data: 30,
-                          },
-                          {
-                            label: "6 Months",
-                            data: 180,
-                          },
-                          {
-                            label: "1 Year",
-                            data: 365,
-                          },
-                        ],
-                        selectedOption: _,
-                        onChange: (_) => _(_.data),
-                      }),
-                      Boolean(_) && _.createElement(_._, null),
-                      Boolean(_) &&
-                        _.createElement(
-                          "div",
-                          null,
-                          _
-                            ? "Successfully Completed Request"
-                            : "Failed to complete request, check browser console and/or try again later",
-                        ),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _
-                    ? _.createElement(
-                        _._,
-                        {
+                        ? "Remove Broadcast From Front Page"
+                        : "Ban from Broadcasting",
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)("p", {
+                          children:
+                            "frontpage" == __webpack_require__
+                              ? "How long should we prevent the broadcast from appearing in community or store?"
+                              : "How long should we prevent the user from Broadcast at all on Steam?",
+                        }),
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _.jsx)(_._, {
+                              rgOptions: [
+                                {
+                                  label: "1 Day",
+                                  data: 1,
+                                },
+                                {
+                                  label: "1 Week",
+                                  data: 7,
+                                },
+                                {
+                                  label: "1 Month",
+                                  data: 30,
+                                },
+                                {
+                                  label: "6 Months",
+                                  data: 180,
+                                },
+                                {
+                                  label: "1 Year",
+                                  data: 365,
+                                },
+                              ],
+                              selectedOption: _,
+                              onChange: (_) => _(_.data),
+                            }),
+                            Boolean(_) && (0, _.jsx)(_._, {}),
+                            Boolean(_) &&
+                              (0, _.jsx)("div", {
+                                children: _
+                                  ? "Successfully Completed Request"
+                                  : "Failed to complete request, check browser console and/or try again later",
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: _
+                      ? (0, _.jsx)(_._, {
                           onClick: _,
-                        },
-                        (0, _._)("#Button_Dismiss"),
-                      )
-                    : _.createElement(
-                        _._,
-                        null,
-                        _.createElement(
-                          _._,
-                          {
-                            onClick: _,
-                          },
-                          (0, _._)("#Button_Cancel"),
-                        ),
-                        _.createElement(
-                          _._,
-                          {
-                            onClick: async () => {
-                              _(!0);
-                              try {
-                                _.current && _.current();
-                                const _ = _().CancelToken.source();
-                                _.current = _.cancel;
-                                let _ =
-                                  await _.Get().SetBroadcasterRestrictions(
-                                    __webpack_require__,
-                                    _,
-                                    _,
-                                  );
-                                _.token.reason || (_ = !0);
-                              } finally {
-                                _(!1), _(!0), _(false);
-                              }
-                            },
-                          },
-                          (0, _._)("#Button_Confirm"),
-                        ),
-                      ),
-                ),
-              ),
-            ),
-          );
+                          children: (0, _._)("#Button_Dismiss"),
+                        })
+                      : (0, _.jsxs)(_._, {
+                          children: [
+                            (0, _.jsx)(_._, {
+                              onClick: _,
+                              children: (0, _._)("#Button_Cancel"),
+                            }),
+                            (0, _.jsx)(_._, {
+                              onClick: async () => {
+                                _(!0);
+                                try {
+                                  _.current && _.current();
+                                  const _ = _().CancelToken.source();
+                                  _.current = _.cancel;
+                                  let _ =
+                                    await _.Get().SetBroadcasterRestrictions(
+                                      __webpack_require__,
+                                      _,
+                                      _,
+                                    );
+                                  _.token.reason || (_ = !0);
+                                } finally {
+                                  _(!1), _(!0), _(false);
+                                }
+                              },
+                              children: (0, _._)("#Button_Confirm"),
+                            }),
+                          ],
+                        }),
+                  }),
+                ],
+              }),
+            }),
+          });
         }),
         _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)(!1),
@@ -1265,88 +1137,69 @@
             [],
           );
           const _ = () => _.closeModal && _.closeModal();
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                onEscKeypress: _,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, null, "Make Broadcast Unbannable"),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "p",
-                      null,
-                      "Prevent automatic, report based banning changes to this strema visibility the stream for 1 week?",
-                    ),
-                    _.createElement(
-                      "div",
-                      null,
-                      Boolean(_) && _.createElement(_._, null),
-                      Boolean(_) &&
-                        _.createElement(
-                          "div",
-                          null,
-                          _
-                            ? "Successfully Set Unbannable"
-                            : "Failed to make Unbannable",
-                        ),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _
-                    ? _.createElement(
-                        _._,
-                        {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              onEscKeypress: _,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: "Make Broadcast Unbannable",
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)("p", {
+                          children:
+                            "Prevent automatic, report based banning changes to this strema visibility the stream for 1 week?",
+                        }),
+                        (0, _.jsxs)("div", {
+                          children: [
+                            Boolean(_) && (0, _.jsx)(_._, {}),
+                            Boolean(_) &&
+                              (0, _.jsx)("div", {
+                                children: _
+                                  ? "Successfully Set Unbannable"
+                                  : "Failed to make Unbannable",
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: _
+                      ? (0, _.jsx)(_._, {
                           onClick: _,
-                        },
-                        (0, _._)("#Button_Dismiss"),
-                      )
-                    : _.createElement(
-                        _._,
-                        null,
-                        _.createElement(
-                          _._,
-                          {
-                            onClick: _,
-                          },
-                          (0, _._)("#Button_Cancel"),
-                        ),
-                        _.createElement(
-                          _._,
-                          {
-                            onClick: async () => {
-                              __webpack_require__(!0);
-                              let _ = !1;
-                              try {
-                                _.current && _.current();
-                                const _ = _().CancelToken.source();
-                                (_.current = _.cancel),
-                                  (_ = await _.Get().SetUnBannable(_));
-                              } finally {
-                                __webpack_require__(!1), _(!0), _(_);
-                              }
-                            },
-                          },
-                          (0, _._)("#Button_Confirm"),
-                        ),
-                      ),
-                ),
-              ),
-            ),
-          );
+                          children: (0, _._)("#Button_Dismiss"),
+                        })
+                      : (0, _.jsxs)(_._, {
+                          children: [
+                            (0, _.jsx)(_._, {
+                              onClick: _,
+                              children: (0, _._)("#Button_Cancel"),
+                            }),
+                            (0, _.jsx)(_._, {
+                              onClick: async () => {
+                                __webpack_require__(!0);
+                                let _ = !1;
+                                try {
+                                  _.current && _.current();
+                                  const _ = _().CancelToken.source();
+                                  (_.current = _.cancel),
+                                    (_ = await _.Get().SetUnBannable(_));
+                                } finally {
+                                  __webpack_require__(!1), _(!0), _(_);
+                                }
+                              },
+                              children: (0, _._)("#Button_Confirm"),
+                            }),
+                          ],
+                        }),
+                  }),
+                ],
+              }),
+            }),
+          });
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1363,86 +1216,61 @@
           _ = _._.GetBroadcast(_),
           _ = _._.GetOrCreateBroadcastInfo(_);
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.BroadcastPage),
-                },
-                _.createElement(
-                  "div",
-                  {
+          ? (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)("div", {
+                className: (0, _._)(_.BroadcastPage),
+                children: [
+                  (0, _.jsxs)("div", {
                     className: (0, _._)(_().BroadcastAndChat),
-                  },
-                  Boolean(!_.Get().BShowOnlyChat()) &&
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(_().wrapper),
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: (0, _._)({
-                              [_().video_placeholder]: !0,
-                              video_placeholder_trgt: !0,
-                              [_().NoChat]: _.Get().BShowOnlyVideo(),
-                            }),
-                          },
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().BroadcastPlayerContainer,
-                            },
-                            _.createElement(
-                              _._,
-                              null,
-                              _.createElement(_.default, {
-                                steamIDBroadcast: _,
-                                watchLocation: _,
-                                bStartMuted: _,
+                    children: [
+                      Boolean(!_.Get().BShowOnlyChat()) &&
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)("div", {
+                            className: (0, _._)(_().wrapper),
+                            children: (0, _.jsx)("div", {
+                              className: (0, _._)({
+                                [_().video_placeholder]: !0,
+                                video_placeholder_trgt: !0,
+                                [_().NoChat]: _.Get().BShowOnlyVideo(),
                               }),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  Boolean(!_.Get().BShowOnlyVideo()) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().detail_chat_ctn,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ChatContainer,
-                        },
-                        _.createElement(
-                          _._,
-                          null,
-                          _.createElement(_._, {
-                            emoticonStore: _._,
-                            watchLocation: 6,
-                            steamID: _,
-                            broadcastID: _ ? _.m_ulBroadcastID : void 0,
+                              children: (0, _.jsx)("div", {
+                                className: _().BroadcastPlayerContainer,
+                                children: (0, _.jsx)(_._, {
+                                  children: (0, _.jsx)(_.default, {
+                                    steamIDBroadcast: _,
+                                    watchLocation: _,
+                                    bStartMuted: _,
+                                  }),
+                                }),
+                              }),
+                            }),
                           }),
-                        ),
-                      ),
-                    ),
-                ),
-                Boolean(!_.Get().BShowInIframe()) &&
-                  _.createElement(_, {
-                    broadcasterSteamID: _,
-                    broadcastInfo: _,
+                        }),
+                      Boolean(!_.Get().BShowOnlyVideo()) &&
+                        (0, _.jsx)("div", {
+                          className: _().detail_chat_ctn,
+                          children: (0, _.jsx)("div", {
+                            className: _().ChatContainer,
+                            children: (0, _.jsx)(_._, {
+                              children: (0, _.jsx)(_._, {
+                                emoticonStore: _._,
+                                watchLocation: 6,
+                                steamID: _,
+                                broadcastID: _ ? _.m_ulBroadcastID : void 0,
+                              }),
+                            }),
+                          }),
+                        }),
+                    ],
                   }),
-              ),
-            )
+                  Boolean(!_.Get().BShowInIframe()) &&
+                    (0, _.jsx)(_, {
+                      broadcasterSteamID: _,
+                      broadcastInfo: _,
+                    }),
+                ],
+              }),
+            })
           : null;
       });
       function _(_) {
@@ -1461,84 +1289,72 @@
                   _(_);
                 })();
             }, [_]),
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_, {
-                broadcasterSteamID: _,
-              }),
-              _.createElement(_, {
-                steamid: _,
-              }),
-              Boolean(_._.is_support) &&
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(_, {
-                    broadcastSteamID: _,
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  broadcasterSteamID: _,
+                }),
+                (0, _.jsx)(_, {
+                  steamid: _,
+                }),
+                Boolean(_._.is_support) &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)(_, {
+                        broadcastSteamID: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().ValveOnlyBackground,
+                          _.DebugCtn,
+                        ),
+                        children: (0, _.jsx)(_, {}),
+                      }),
+                    ],
                   }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().ValveOnlyBackground, _.DebugCtn),
-                    },
-                    _.createElement(_, null),
-                  ),
-                ),
-              _(_) &&
-                _.createElement(
-                  "div",
-                  {
+                _(_) &&
+                  (0, _.jsxs)("div", {
                     className: _.GameInfoCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.GameAboutTitleCtn,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.GameAboutTitle,
-                      },
-                      " ",
-                      (0, _._)("#Broadcast_About_Game"),
-                      " ",
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().EventSectionSpacer,
-                      },
-                      " ",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.GameInfo,
-                    },
-                    _.createElement(_._, {
-                      _: Number.parseInt(__webpack_require__.m_strAppId),
-                      type: "game",
-                      bPreferAssetWithoutOverride: !1,
-                    }),
-                  ),
-                ),
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RelatedEvents,
-                  },
-                  _.createElement(_._, {
-                    clanAccountID: _.clanAccountID,
-                    trackingLocation: 6,
-                    partnerEventStore: _._,
-                    bViewAllShowInfiniteScroll: !0,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.GameAboutTitleCtn,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.GameAboutTitle,
+                            children: [
+                              " ",
+                              (0, _._)("#Broadcast_About_Game"),
+                              " ",
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().EventSectionSpacer,
+                            children: " ",
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.GameInfo,
+                        children: (0, _.jsx)(_._, {
+                          _: Number.parseInt(__webpack_require__.m_strAppId),
+                          type: "game",
+                          bPreferAssetWithoutOverride: !1,
+                        }),
+                      }),
+                    ],
                   }),
-                ),
-            )
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _.RelatedEvents,
+                    children: (0, _.jsx)(_._, {
+                      clanAccountID: _.clanAccountID,
+                      trackingLocation: 6,
+                      partnerEventStore: _._,
+                      bViewAllShowInfiniteScroll: !0,
+                    }),
+                  }),
+              ],
+            })
           );
         }),
         _ = (0, _._)((_) => {
@@ -1562,107 +1378,103 @@
             _._.accountid != _.steamid.GetAccountID())
           )
             return null;
-          return _.createElement(
-            "div",
-            {
-              className: _.ControlCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.ControlCtn,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ControlsTitle,
-              },
-              (0, _._)("#Broadcaster_Control_title"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#Broadcaster_Control_title"),
+              }),
+              (0, _.jsxs)("div", {
                 className: _.TitleInput,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Options,
-                },
-                _.createElement(_._, {
-                  type: "text",
-                  label: (0, _._)("#Broadcast_title_title"),
-                  onChange: (_) => _(_.currentTarget.value || ""),
-                  placeholder: (0, _._)("#Broadcast_title_placeholder"),
-                  value: _,
-                }),
-                _.createElement(_._, {
-                  type: "text",
-                  label: (0, _._)("#Broadcast_Control_matchid"),
-                  onChange: (_) => _(_.currentTarget.value || ""),
-                  value: _,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: async () => {
-                      _.current && _.current();
-                      const _ = _().CancelToken.source();
-                      _.current = _.cancel;
-                      let _ = await _.Get().UpdateBroadcastSettings(_, _, _);
-                      _.token.reason ||
-                        _(
-                          (0, _._)(
-                            _
-                              ? "#Broadcast_Control_Success"
-                              : "#Broadcast_Control_Failure",
-                          ),
-                        );
-                    },
-                  },
-                  (0, _._)("#Broadcast_save_changes"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#Broadcast_save_title_ttip"),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.Options,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        label: (0, _._)("#Broadcast_title_title"),
+                        onChange: (_) => _(_.currentTarget.value || ""),
+                        placeholder: (0, _._)("#Broadcast_title_placeholder"),
+                        value: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        label: (0, _._)("#Broadcast_Control_matchid"),
+                        onChange: (_) => _(_.currentTarget.value || ""),
+                        value: _,
+                      }),
+                      (0, _.jsxs)(_._, {
+                        onClick: async () => {
+                          _.current && _.current();
+                          const _ = _().CancelToken.source();
+                          _.current = _.cancel;
+                          let _ = await _.Get().UpdateBroadcastSettings(
+                            _,
+                            _,
+                            _,
+                          );
+                          _.token.reason ||
+                            _(
+                              (0, _._)(
+                                _
+                                  ? "#Broadcast_Control_Success"
+                                  : "#Broadcast_Control_Failure",
+                              ),
+                            );
+                        },
+                        children: [
+                          (0, _._)("#Broadcast_save_changes"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)("#Broadcast_save_title_ttip"),
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.StopCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) => {
-                      (0, _._)(
-                        _.createElement(_._, {
-                          strTitle: (0, _._)(
-                            "#Broadcast_Control_StopBroadcast",
-                          ),
-                          strDescription: (0, _._)(
-                            "#EventEditor_GenericAreYouSure",
-                          ),
-                          onOK: async () => {
-                            _.current && _.current();
-                            const _ = _().CancelToken.source();
-                            _.current = _.cancel;
-                            let _ = await _.Get().StopBroadcast(_);
-                            _.token.reason ||
-                              _(
-                                (0, _._)(
-                                  _
-                                    ? "#Broadcast_Control_StopSuccess"
-                                    : "#Broadcast_Control_StopFailure",
-                                ),
-                              );
-                          },
+                  (0, _.jsxs)("div", {
+                    className: _.StopCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: (_) => {
+                          (0, _._)(
+                            (0, _.jsx)(_._, {
+                              strTitle: (0, _._)(
+                                "#Broadcast_Control_StopBroadcast",
+                              ),
+                              strDescription: (0, _._)(
+                                "#EventEditor_GenericAreYouSure",
+                              ),
+                              onOK: async () => {
+                                _.current && _.current();
+                                const _ = _().CancelToken.source();
+                                _.current = _.cancel;
+                                let _ = await _.Get().StopBroadcast(_);
+                                _.token.reason ||
+                                  _(
+                                    (0, _._)(
+                                      _
+                                        ? "#Broadcast_Control_StopSuccess"
+                                        : "#Broadcast_Control_StopFailure",
+                                    ),
+                                  );
+                              },
+                            }),
+                            (0, _._)(_),
+                          );
+                        },
+                        children: (0, _._)("#Broadcast_Control_StopBroadcast"),
+                      }),
+                      Boolean(_) &&
+                        (0, _.jsx)("div", {
+                          children: _,
                         }),
-                        (0, _._)(_),
-                      );
-                    },
-                  },
-                  (0, _._)("#Broadcast_Control_StopBroadcast"),
-                ),
-                Boolean(_) && _.createElement("div", null, _),
-              ),
-            ),
-          );
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         });
       var _ = __webpack_require__("chunkid");
       let _ = {
@@ -1675,29 +1487,27 @@
             _ && _._.InitGlobal().then(() => __webpack_require__(!1));
           }, [_]),
           _
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 position: "center",
                 size: "medium",
               })
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_._, {
-                    path: _.BroadcastWatch(":steamid_or_user_vanity"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        strSteamID: _.match.params.steamid_or_user_vanity,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    component: _._,
-                  }),
-                ),
-              )
+            : (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      path: _.BroadcastWatch(":steamid_or_user_vanity"),
+                      render: (_) =>
+                        (0, _.jsx)(_, {
+                          strSteamID: _.match.params.steamid_or_user_vanity,
+                        }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      component: _._,
+                    }),
+                  ],
+                }),
+              })
         );
       }
     },

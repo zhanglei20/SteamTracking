@@ -2553,6 +2553,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = new Map([
@@ -2575,14 +2576,11 @@
                     "important" == _ && _().Important,
                     "warning" == _ && _().Warning,
                   );
-                return _.createElement(
-                  "div",
-                  {
-                    _: _ || void 0,
-                    className: _,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("div", {
+                  _: _ || void 0,
+                  className: _,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2612,18 +2610,18 @@
                   : "string" == typeof _
                     ? ((_ = _),
                       _
-                        ? _.createElement(_._, {
+                        ? (0, _.jsx)(_._, {
                             className: _().FAQImage,
                             src: _,
                             alt: _,
                           })
                         : ((_ = _.replace("http://", "https://")),
-                          _.createElement("img", {
+                          (0, _.jsx)("img", {
                             className: _().FAQImage,
                             src: _,
                             alt: _,
                           })))
-                    : _.createElement(_._, {
+                    : (0, _.jsx)(_._, {
                         className: _().FAQImage,
                         rgSources: _,
                         alt: _,
@@ -2641,7 +2639,9 @@
                   _._.EREALM == _._.k_ESteamRealmGlobal) ||
                   ("china" == _ && (0, _._)())
                   ? null
-                  : _.createElement(_.Fragment, null, _.children);
+                  : (0, _.jsx)(_.Fragment, {
+                      children: _.children,
+                    });
               },
               autocloses: !1,
             },
@@ -2668,15 +2668,12 @@
               [],
             ),
             _ = _.useRef(new _._(_, _, _._.LANGUAGE));
-          return _.createElement(
-            "div",
-            {
-              className: _().FAQContainer,
-            },
-            _.current.ParseBBCode(_, {
+          return (0, _.jsx)("div", {
+            className: _().FAQContainer,
+            children: _.current.ParseBBCode(_, {
               showErrorInfo: __webpack_require__,
             }),
-          );
+          });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

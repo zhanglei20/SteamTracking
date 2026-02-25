@@ -133,91 +133,76 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            style: _,
-            className: "SVGIcon_Button",
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          style: _,
+          className: "SVGIcon_Button",
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M31.3137 19.5299L10.0583 32.3788C9.77894 32.5477 9.45165 32.6083 9.13395 32.5496C8.81603 32.4909 8.52835 32.3169 8.32083 32.0582C8.11354 31.7995 8 31.4723 8 31.1346V5.4368C8 5.09914 8.11354 4.77196 8.32083 4.51325C8.52833 4.25455 8.81604 4.08049 9.13395 4.02181C9.45165 3.96313 9.77896 4.02377 10.0583 4.19261L31.3137 17.0415C31.593 17.2103 31.8068 17.4769 31.9172 17.7942C32.0276 18.1116 32.0276 18.4598 31.9172 18.7772C31.8068 19.0945 31.593 19.3611 31.3137 19.5299Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            className: "SVGIcon_Button",
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: "SVGIcon_Button",
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M14.3333 30C14.3333 30.5523 13.8856 31 13.3333 31H8C7.44772 31 7 30.5523 7 30V6C7 5.44772 7.44772 5 8 5H13.3333C13.8856 5 14.3333 5.44772 14.3333 6V30ZM29 6C29 5.44772 28.5523 5 28 5H22.6667C22.1144 5 21.6667 5.44772 21.6667 6V30C21.6667 30.5523 22.1144 31 22.6667 31H28C28.5523 31 29 30.5523 29 30V6Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            className: "SVGIcon_Button",
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: "SVGIcon_Button",
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M4 4H14V8H8V14H4V4ZM22 4V8H28V14H32V4H22ZM28 28H22V32H32V22H28V28ZM8 22H4V32H14V28H8V22Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "128",
-            height: "128",
-            viewBox: "0 0 128 128",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "128",
+          height: "128",
+          viewBox: "0 0 128 128",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "128",
-            height: "128",
-            viewBox: "0 0 128 128",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "128",
+          height: "128",
+          viewBox: "0 0 128 128",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -226,6 +211,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -256,26 +242,20 @@
           1 == _
             ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
             : (0, _._)(__webpack_require__);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().TrailerTitle]: !0,
-              [_().Visible]: _,
-            }),
-          },
-          (0, _._)(
+        return (0, _.jsx)("div", {
+          className: (0, _._)({
+            [_().TrailerTitle]: !0,
+            [_().Visible]: _,
+          }),
+          children: (0, _._)(
             "#StoreTrailer_Title_Combiner",
-            _.createElement(
-              "span",
-              {
-                className: _().Category,
-              },
-              _,
-            ),
+            (0, _.jsx)("span", {
+              className: _().Category,
+              children: _,
+            }),
             _,
           ),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -308,6 +288,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -685,14 +666,11 @@
             );
           }, []),
           _ = (0, _._)(_, _);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            ..._,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)("div", {
+          ref: _,
+          ..._,
+          children: __webpack_require__,
+        });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -735,87 +713,78 @@
           })(_),
           _ = (0, _._)(_),
           _ = (0, _._)(_().PlayerControls, _ && _().ShowControls);
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _,
-              ..._,
-              onKeyDown: _,
-              tabIndex: 0,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: (0, _.jsxs)("div", {
+            ref: _,
+            className: _,
+            ..._,
+            onKeyDown: _,
+            tabIndex: 0,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().ControlGroup,
-              },
-              _.createElement(_, {
-                player: _,
-                enabled: _ && !_,
+                children: [
+                  (0, _.jsx)(_, {
+                    player: _,
+                    enabled: _ && !_,
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsxs)(_, {
+                    ref: _,
+                    className: _().LowerControls,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        player: _,
+                        showHoverThumb: !0,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().ButtonRow,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _().LeftGroup,
+                            children: [
+                              (0, _.jsx)(_._, {
+                                player: _,
+                              }),
+                              (0, _.jsx)(_, {
+                                player: _,
+                                refControlsHover: _,
+                              }),
+                              (0, _.jsx)(_._, {
+                                player: _,
+                              }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().RightGroup,
+                            children: [
+                              (0, _.jsx)(_._, {
+                                player: _,
+                              }),
+                              (0, _.jsx)(_._, {}),
+                              (0, _.jsx)(_._, {}),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              _.createElement(_, null),
-              _.createElement(
-                _,
-                {
-                  ref: _,
-                  className: _().LowerControls,
-                },
-                _.createElement(_._, {
-                  player: _,
-                  showHoverThumb: !0,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ButtonRow,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LeftGroup,
-                    },
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                    _.createElement(_, {
-                      player: _,
-                      refControlsHover: _,
-                    }),
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().RightGroup,
-                    },
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                    _.createElement(_._, null),
-                    _.createElement(_._, null),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(_, {
-              player: _,
-              controlsVisible: _,
-              category: __webpack_require__,
-              title: _,
-            }),
-            _.createElement("div", {
-              ref: _,
-              className: _().MenuLayer,
-            }),
-          ),
-        );
+              (0, _.jsx)(_, {
+                player: _,
+                controlsVisible: _,
+                category: __webpack_require__,
+                title: _,
+              }),
+              (0, _.jsx)("div", {
+                ref: _,
+                className: _().MenuLayer,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         let {
@@ -827,16 +796,13 @@
           _ = (0, _._)("once", _, __webpack_require__);
         if (0 == _ || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _,
+          children: (0, _.jsx)(_._, {
             category: _,
             title: _,
           }),
-        );
+        });
       }
       function _(_) {
         let { player: _, enabled: __webpack_require__ } = _,
@@ -898,21 +864,21 @@
             };
           })(_, _),
           _ = (0, _._)(_().BackgroundClick, __webpack_require__ && _().Enabled);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _,
-            ..._,
-          },
-          _.map((_) =>
-            _.createElement(_, {
-              key: `icon_${_.nID}`,
-              event: _,
-              removeEvent: _,
-            }),
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: _,
+          ..._,
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                event: _,
+                removeEvent: _,
+              },
+              `icon_${_.nID}`,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         let { event: _, removeEvent: __webpack_require__ } = _,
@@ -923,20 +889,17 @@
           _ = null;
         return (
           _.eState == _.Play
-            ? (_ = _.createElement(_._, null))
-            : _.eState == _.Pause && (_ = _.createElement(_._, null)),
-          _.createElement(
-            "div",
-            {
-              className: _().Icon,
-              onAnimationEnd: _,
-            },
-            _,
-          )
+            ? (_ = (0, _.jsx)(_._, {}))
+            : _.eState == _.Pause && (_ = (0, _.jsx)(_._, {})),
+          (0, _.jsx)("div", {
+            className: _().Icon,
+            onAnimationEnd: _,
+            children: _,
+          })
         );
       }
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _().BehindControlsFade,
         });
       }
@@ -959,46 +922,39 @@
           })(_);
         _ =
           _ || 0 === _
-            ? _.createElement(_.K9I, null)
+            ? (0, _.jsx)(_.K9I, {})
             : _ < 0.3
-              ? _.createElement(_.a_4, null)
+              ? (0, _.jsx)(_.a_4, {})
               : _ < 0.6
-                ? _.createElement(_.TPi, null)
-                : _.createElement(_._3Z, null);
+                ? (0, _.jsx)(_.TPi, {})
+                : (0, _.jsx)(_._3Z, {});
         let _ = (0, _._)(
           _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
         );
-        return _.createElement(
-          "div",
-          {
-            className: _().VolumeControls,
-            onMouseEnter: _,
-            "data-keepcontrols": !0,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().VolumeControls,
+          onMouseEnter: _,
+          "data-keepcontrols": !0,
+          children: [
+            (0, _.jsx)(_._, {
               onActivate: _,
               tooltip: _,
-            },
-            _,
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+              children: _,
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().VolumeSlider,
-              },
-              _.createElement(_._, {
-                min: 0,
-                max: 1,
-                value: _ ? 0 : _,
-                step: 0.01,
-                onChange: _,
-                dpadStep: 0.1,
+                children: (0, _.jsx)(_._, {
+                  min: 0,
+                  max: 1,
+                  value: _ ? 0 : _,
+                  step: 0.01,
+                  onChange: _,
+                  dpadStep: 0.1,
+                }),
               }),
-            ),
-        );
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -1072,88 +1028,74 @@
           })(_),
           _ = (0, _._)(_().ControlGroup, _ && _().ShowControls),
           _ = (0, _._)(_().CenterControls, !!_ && _().Hide);
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().PlayerControls,
-              ..._,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: (0, _.jsxs)("div", {
+            className: _().PlayerControls,
+            ..._,
+            children: [
+              (0, _.jsxs)("div", {
                 ref: _,
                 className: _,
-              },
-              _.createElement(_, {
-                thumbnail: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    thumbnail: _,
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)("div", {
+                    className: _,
+                    children: (0, _.jsx)(_, {
+                      player: _,
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().LowerControls,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        player: _,
+                        onTouchSeek: _,
+                        showHoverThumb: !1,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().ButtonRow,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().LeftGroup,
+                            children: (0, _.jsx)(_._, {
+                              player: _,
+                            }),
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().RightGroup,
+                            children: [
+                              (0, _.jsx)(_._, {
+                                player: _,
+                              }),
+                              (0, _.jsx)(_._, {
+                                player: _,
+                              }),
+                              (0, _.jsx)(_._, {}),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              _.createElement(_, null),
-              _.createElement(
-                "div",
-                {
-                  className: _,
-                },
-                _.createElement(_, {
-                  player: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().LowerControls,
-                },
-                _.createElement(_._, {
-                  player: _,
-                  onTouchSeek: _,
-                  showHoverThumb: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ButtonRow,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LeftGroup,
-                    },
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().RightGroup,
-                    },
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                    _.createElement(_._, null),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(_, {
-              player: _,
-              controlsVisible: _,
-              category: __webpack_require__,
-              title: _,
-            }),
-            _.createElement("div", {
-              ref: _,
-              className: _().MenuLayer,
-            }),
-          ),
-        );
+              (0, _.jsx)(_, {
+                player: _,
+                controlsVisible: _,
+                category: __webpack_require__,
+                title: _,
+              }),
+              (0, _.jsx)("div", {
+                ref: _,
+                className: _().MenuLayer,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         let {
@@ -1169,19 +1111,16 @@
           _ && !__webpack_require__ && _().FadeIn,
           __webpack_require__ && _().ControlsVisible,
         );
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _,
+          children: (0, _.jsx)(_._, {
             category: _,
             title: _,
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _().GlassBackground,
         });
       }
@@ -1218,32 +1157,26 @@
             backgroundRepeat: "no-repeat",
           };
         }
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _().SeekThumbnail,
-          },
-          _.createElement("div", {
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: _().SeekThumbnail,
+          children: (0, _.jsx)("div", {
             style: _,
             className: _().ThumbnailImage,
           }),
-        );
+        });
       }
       function _(_) {
         let { player: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
-          _ = _ ? _.createElement(_._, null) : _.createElement(_._, null);
-        return _.createElement(
-          "div",
-          {
-            className: _().CenteredPlayToggle,
-            ..._,
-          },
-          _,
-        );
+          _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {});
+        return (0, _.jsx)("div", {
+          className: _().CenteredPlayToggle,
+          ..._,
+          children: _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1320,79 +1253,68 @@
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
           _ = (0, _._)(_().ControlGroup, _ && _().ShowControls);
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().PlayerControls,
-              focusable: !0,
-              onClick: _,
-              onOKActionDescription: (0, _._)(_),
-              onOKButton: _,
-              onSecondaryButton: _,
-              onSecondaryActionDescription: (0, _._)(_),
-              onButtonDown: _,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: (0, _.jsxs)(_._, {
+            className: _().PlayerControls,
+            focusable: !0,
+            onClick: _,
+            onOKActionDescription: (0, _._)(_),
+            onOKButton: _,
+            onSecondaryButton: _,
+            onSecondaryActionDescription: (0, _._)(_),
+            onButtonDown: _,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _,
-              },
-              _.createElement(_, null),
-              _.createElement(
-                "div",
-                {
-                  className: _().LowerControls,
-                },
-                _.createElement(_._, {
-                  player: _,
-                  showHoverThumb: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ButtonRow,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LeftGroup,
-                    },
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().RightGroup,
-                    },
-                    _.createElement(_._, {
-                      player: _,
-                    }),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(_, {
-              player: _,
-              controlsVisible: _,
-              category: __webpack_require__,
-              title: _,
-            }),
-            _.createElement("div", {
-              ref: _,
-              className: _().MenuLayer,
-            }),
-          ),
-        );
+                children: [
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsxs)("div", {
+                    className: _().LowerControls,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        player: _,
+                        showHoverThumb: !1,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().ButtonRow,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _().LeftGroup,
+                            children: [
+                              (0, _.jsx)(_._, {
+                                player: _,
+                              }),
+                              (0, _.jsx)(_._, {
+                                player: _,
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().RightGroup,
+                            children: (0, _.jsx)(_._, {
+                              player: _,
+                            }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                player: _,
+                controlsVisible: _,
+                category: __webpack_require__,
+                title: _,
+              }),
+              (0, _.jsx)("div", {
+                ref: _,
+                className: _().MenuLayer,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         let {
@@ -1404,25 +1326,19 @@
           _ = (0, _._)("standard", _, __webpack_require__);
         if (0 == _ || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().RowLimit,
-            },
-            _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _,
+          children: (0, _.jsx)("div", {
+            className: _().RowLimit,
+            children: (0, _.jsx)(_._, {
               category: _,
               title: _,
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _().BehindControlsFade,
         });
       }
@@ -1432,22 +1348,19 @@
         _ = "responsive_menu_ignore_touch";
       function _(_) {
         return (0, _._)()
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               localContext: !1,
             })
-          : _.createElement(
-              _._,
-              {
-                iosVideoFallback: !0,
-                supportsTheater: !1,
-                supportsFullscreen: !0,
-              },
-              _.createElement(_, {
+          : (0, _.jsx)(_._, {
+              iosVideoFallback: !0,
+              supportsTheater: !1,
+              supportsFullscreen: !0,
+              children: (0, _.jsx)(_, {
                 ..._,
                 localContext: !0,
               }),
-            );
+            });
       }
       function _(_) {
         let {
@@ -1587,40 +1500,39 @@
         let _ = {};
         _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
         let _ = (0, _._)(_().TrailerPlayer, _);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _,
-            "data-trailer-player": !0,
-          },
-          _.createElement("video", {
-            ref: _,
-            style: _,
-            controls: !1,
-            playsInline: !0,
-            "aria-label": _,
-          }),
-          _.createElement(_, {
-            player: _,
-            uiMode: _,
-            category: _,
-            title: _,
-            focus: _,
-          }),
-          _.createElement(_, {
-            player: _,
-          }),
-          !_ &&
-            _.createElement(_, {
-              player: _,
-              screenshot: _,
+        return (0, _.jsxs)("div", {
+          ref: _,
+          className: _,
+          "data-trailer-player": !0,
+          children: [
+            (0, _.jsx)("video", {
+              ref: _,
+              style: _,
+              controls: !1,
+              playsInline: !0,
+              "aria-label": _,
             }),
-          !_ &&
-            _.createElement(_._, {
+            (0, _.jsx)(_, {
+              player: _,
+              uiMode: _,
+              category: _,
+              title: _,
+              focus: _,
+            }),
+            (0, _.jsx)(_, {
               player: _,
             }),
-        );
+            !_ &&
+              (0, _.jsx)(_, {
+                player: _,
+                screenshot: _,
+              }),
+            !_ &&
+              (0, _.jsx)(_._, {
+                player: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         let {
@@ -1639,18 +1551,18 @@
                 ? "gamepad"
                 : "desktop"),
           "touch" == __webpack_require__
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 player: _,
                 category: _,
                 title: _,
               })
             : "gamepad" == __webpack_require__
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   player: _,
                   category: _,
                   title: _,
                 })
-              : _.createElement(_, {
+              : (0, _.jsx)(_, {
                   player: _,
                   category: _,
                   title: _,
@@ -1680,17 +1592,15 @@
             _().LoadingThrobber,
             "fadein" == __webpack_require__ && _().FadeIn,
           );
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _ &&
-            _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _,
+          children:
+            _ &&
+            (0, _.jsx)(_._, {
               size: "large",
               position: "center",
             }),
-        );
+        });
       }
       function _(_) {
         let { player: _, screenshot: __webpack_require__ } = _,
@@ -1713,21 +1623,15 @@
         return (
           __webpack_require__ &&
             (_.backgroundImage = `url('${__webpack_require__}')`),
-          _.createElement(
-            "div",
-            {
-              style: _,
-              className: _().UserInputNeeded,
-              onClick: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().UserInputGlass, _ && _().Animate),
-              },
-              _.createElement(_._, null),
-            ),
-          )
+          (0, _.jsx)("div", {
+            style: _,
+            className: _().UserInputNeeded,
+            onClick: _,
+            children: (0, _.jsx)("div", {
+              className: (0, _._)(_().UserInputGlass, _ && _().Animate),
+              children: (0, _.jsx)(_._, {}),
+            }),
+          })
         );
       }
     },
@@ -1737,7 +1641,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)({});
       function _(_) {
         let {
@@ -1760,13 +1665,10 @@
             }),
             [_, __webpack_require__, _, _, _, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _() {
         return (0, _.useContext)(_);
@@ -2080,6 +1982,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2107,86 +2010,74 @@
             } = _,
             _ = (0, _._)(),
             _ = (0, _._)(_);
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: __webpack_require__,
-              direction: "top",
-              usePointerEvents: !0,
-              bDisabled: _,
-            },
-            _.createElement(
-              "div",
-              {
-                ref: _,
-                className: _().PlaybackButton,
-                ..._,
-                "data-keepcontrols": !0,
-              },
-              _,
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            toolTipContent: __webpack_require__,
+            direction: "top",
+            usePointerEvents: !0,
+            bDisabled: _,
+            children: (0, _.jsx)("div", {
+              ref: _,
+              className: _().PlaybackButton,
+              ..._,
+              "data-keepcontrols": !0,
+              children: _,
+            }),
+          });
         });
       function _(_) {
         let { player: _ } = _,
           [__webpack_require__, _] = (0, _._)(_),
           _ = (0, _._)(__webpack_require__, !1),
           _ = (0, _._)(_, !1);
-        return _.createElement(
-          "div",
-          {
-            className: _().PlaybackTime,
-          },
-          _.createElement("span", null, _),
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().PlaybackTime,
+          children: [
+            (0, _.jsx)("span", {
+              children: _,
+            }),
+            (0, _.jsx)("span", {
               className: _().TimeDash,
-            },
-            "/",
-          ),
-          _.createElement("span", null, _),
-        );
+              children: "/",
+            }),
+            (0, _.jsx)("span", {
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         let _ = (0, _._)(),
           _ = (0, _._)(_, "theater");
         if (!_ || !_.bSupportsTheater) return null;
         let _ = "theater" == _.strMode,
-          _ = _ ? _.createElement(_._, null) : _.createElement(_._, null),
+          _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = (0, _._)(
             _
               ? "#TrailerPlayer_ExitTheater_Tooltip"
               : "#TrailerPlayer_EnterTheater_Tooltip",
           );
-        return _.createElement(
-          _,
-          {
-            onActivate: _,
-            tooltip: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_, {
+          onActivate: _,
+          tooltip: _,
+          children: _,
+        });
       }
       function _(_) {
         let _ = (0, _._)(),
           _ = (0, _._)(_, "fullscreen");
         if (!_ || !_.bSupportsFullscreen) return null;
         let _ = "fullscreen" == _.strMode,
-          _ = _ ? _.createElement(_.JaO, null) : _.createElement(_._, null),
+          _ = _ ? (0, _.jsx)(_.JaO, {}) : (0, _.jsx)(_._, {}),
           _ = (0, _._)(
             _
               ? "#TrailerPlayer_ExitFullScreen_Tooltip"
               : "#TrailerPlayer_FullScreen_Tooltip",
           );
-        return _.createElement(
-          _,
-          {
-            onActivate: _,
-            tooltip: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_, {
+          onActivate: _,
+          tooltip: _,
+          children: _,
+        });
       }
       function _(_) {
         let { player: _ } = _,
@@ -2197,27 +2088,24 @@
             _((_) => !_);
           }, [_]),
           _ = (0, _._)(_().SettingsButton, __webpack_require__ && _().Rotated);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
               ref: _,
               onActivate: _,
               tooltip: (0, _._)("#TrailerPlayer_Settings_Tooltip"),
-            },
-            _.createElement(_.wB_, {
-              className: _,
+              children: (0, _.jsx)(_.wB_, {
+                className: _,
+              }),
             }),
-          ),
-          __webpack_require__ &&
-            _.createElement(_, {
-              player: _,
-              refButton: _,
-              onClose: _,
-            }),
-        );
+            __webpack_require__ &&
+              (0, _.jsx)(_, {
+                player: _,
+                refButton: _,
+                onClose: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         let { player: _, refButton: __webpack_require__, onClose: _ } = _,
@@ -2269,16 +2157,16 @@
                   ? "2160p (4k)"
                   : `${_.height}p`;
             })(_);
-            return _.createElement(
+            return (0, _.jsx)(
               _,
               {
-                key: _._,
                 onClick: () => {
                   _.SetVideoRepresentation(_), _();
                 },
                 checked: _.selected,
+                children: _,
               },
-              _,
+              _._,
             );
           }),
           _ = _.length > 1,
@@ -2288,24 +2176,23 @@
             left: _.nLeft,
             top: _.nTop,
           },
-          _ = _.createElement(
-            "div",
-            {
-              ref: _,
-              style: _,
-              className: _().SettingsMenu,
-            },
-            _ && _,
-            _ &&
+          _ = (0, _.jsxs)("div", {
+            ref: _,
+            style: _,
+            className: _().SettingsMenu,
+            children: [
+              _ && _,
               _ &&
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-            _ &&
-              _.createElement(_, {
-                onClose: _,
-              }),
-          );
+                _ &&
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  onClose: _,
+                }),
+            ],
+          });
         return _.createPortal(_, _.current);
       }
       function _(_) {
@@ -2317,14 +2204,11 @@
               __webpack_require__.m_fnSetAutoplayEnabled(!_),
               _();
           }, [_, _, _]);
-        return _.createElement(
-          _,
-          {
-            onClick: _,
-            checked: _,
-          },
-          (0, _._)("#StoreTrailer_AutoPlayVideos"),
-        );
+        return (0, _.jsx)(_, {
+          onClick: _,
+          checked: _,
+          children: (0, _._)("#StoreTrailer_AutoPlayVideos"),
+        });
       }
       function _(_) {
         let { onClick: _, checked: __webpack_require__, children: _ } = _,
@@ -2334,20 +2218,19 @@
           _ = "#00ccff";
         return (
           _ && ((_ = "#eeeeee"), (_ = "#ffffff")),
-          _.createElement(
-            "div",
-            {
-              className: _,
-              onClick: _,
-              ..._,
-            },
-            _,
-            __webpack_require__ &&
-              _.createElement(_.X4B, {
-                color: _,
-                highlightColor: _,
-              }),
-          )
+          (0, _.jsxs)("div", {
+            className: _,
+            onClick: _,
+            ..._,
+            children: [
+              _,
+              __webpack_require__ &&
+                (0, _.jsx)(_.X4B, {
+                  color: _,
+                  highlightColor: _,
+                }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -2480,44 +2363,42 @@
             width: `${_.toFixed(1)}%`,
           },
           _ = (0, _._)(_().Timeline, _ && _().Hovered);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _,
-            "data-keepcontrols": !!_,
-            onClick: _,
-            onPointerMove: _.onPointerMove,
-            onPointerLeave: _.onPointerLeave,
-            onPointerDown: _.onPointerDown,
-            onLostPointerCapture: _.onLostPointerCapture,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          ref: _,
+          className: _,
+          "data-keepcontrols": !!_,
+          onClick: _,
+          onPointerMove: _.onPointerMove,
+          onPointerLeave: _.onPointerLeave,
+          onPointerDown: _.onPointerDown,
+          onLostPointerCapture: _.onLostPointerCapture,
+          children: [
+            (0, _.jsxs)("div", {
               ref: _,
               className: _().TimelineBar,
               onPointerEnter: _.onPointerEnter,
-            },
-            _.createElement("div", {
-              className: (0, _._)(_().Bar, _().Buffered),
-              style: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().Bar, _().Buffered),
+                  style: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().Bar, _().Played),
+                  style: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().HoverTick),
+                  style: _,
+                }),
+              ],
             }),
-            _.createElement("div", {
-              className: (0, _._)(_().Bar, _().Played),
-              style: _,
+            (0, _.jsx)(_, {
+              refTimeline: _,
+              hoverState: _,
+              showHoverThumb: __webpack_require__,
             }),
-            _.createElement("div", {
-              className: (0, _._)(_().HoverTick),
-              style: _,
-            }),
-          ),
-          _.createElement(_, {
-            refTimeline: _,
-            hoverState: _,
-            showHoverThumb: __webpack_require__,
-          }),
-        );
+          ],
+        });
       }
       function _(_) {
         let {
@@ -2578,26 +2459,22 @@
             backgroundRepeat: "no-repeat",
           };
         }
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            style: _,
-            className: _().Hover,
-          },
-          Boolean(_) &&
-            _.createElement("div", {
-              style: _,
-              className: _().HoverImage,
-            }),
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("div", {
+          ref: _,
+          style: _,
+          className: _().Hover,
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                style: _,
+                className: _().HoverImage,
+              }),
+            (0, _.jsx)("span", {
               className: _().HoverTime,
-            },
-            (0, _._)(__webpack_require__.nPlaybackSeconds, !0),
-          ),
-        );
+              children: (0, _._)(__webpack_require__.nPlaybackSeconds, !0),
+            }),
+          ],
+        });
       }
       function _(_, _, _) {
         let _ = _ - _.left,
@@ -2621,13 +2498,12 @@
             : _ != _._.Invalid &&
               (_ = (0, _._)("#TrailerPlayer_Error_Playback")),
           _
-            ? _.createElement(
-                "div",
-                {
-                  className: _().FatalErrorMessage,
-                },
-                _.createElement("span", null, _),
-              )
+            ? (0, _.jsx)("div", {
+                className: _().FatalErrorMessage,
+                children: (0, _.jsx)("span", {
+                  children: _,
+                }),
+              })
             : null
         );
       }
@@ -2635,62 +2511,49 @@
         let _,
           { player: __webpack_require__ } = _,
           [_, _, _, _] = (0, _._)(__webpack_require__);
-        _ = _ ? _.createElement(_.K9I, null) : _.createElement(_._3Z, null);
+        _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {});
         let _ = (0, _._)(
           _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
         );
-        return _.createElement(
-          _,
-          {
-            onActivate: _,
-            tooltip: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_, {
+          onActivate: _,
+          tooltip: _,
+          children: _,
+        });
       }
       function _(_) {
         let { player: _ } = _,
           _ = (0, _._)(_),
-          _ = _ ? _.createElement(_._, null) : _.createElement(_._, null),
+          _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = (0, _._)(
             _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
           ),
           _ = (0, _._)(_);
-        return _.createElement(
-          _,
-          {
-            onActivate: _,
-            tooltip: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_, {
+          onActivate: _,
+          tooltip: _,
+          children: _,
+        });
       }
       function _(_) {
         let { category: _, title: __webpack_require__ } = _,
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().TitleRow,
-          },
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().TitleRow,
+          children: [
+            (0, _.jsx)("span", {
               className: _().Category,
-            },
-            _,
-          ),
-          _.createElement("span", {
-            className: _().Separator,
-          }),
-          _.createElement(
-            "span",
-            {
+              children: _,
+            }),
+            (0, _.jsx)("span", {
+              className: _().Separator,
+            }),
+            (0, _.jsx)("span", {
               className: _().Title,
-            },
-            __webpack_require__,
-          ),
-        );
+              children: __webpack_require__,
+            }),
+          ],
+        });
       }
       function _(_, _, _) {
         let _ = (0, _._)(_),
@@ -2723,6 +2586,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2833,24 +2697,18 @@
           }),
           [_, _, _, __webpack_require__, _, _],
         );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _(_) {
         let { drop: _, children: __webpack_require__ } = _;
         return _
-          ? _.createElement(
-              _.Provider,
-              {
-                value: null,
-              },
-              __webpack_require__,
-            )
+          ? (0, _.jsx)(_.Provider, {
+              value: null,
+              children: __webpack_require__,
+            })
           : __webpack_require__;
       }
       function _() {

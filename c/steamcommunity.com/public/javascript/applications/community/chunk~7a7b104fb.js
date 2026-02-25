@@ -136,6 +136,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -146,25 +147,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = () =>
-          _.createElement(
-            "div",
-            {
-              className: _().FriendsListInsetShadowCtn,
-            },
-            _.createElement("div", {
+          (0, _.jsx)("div", {
+            className: _().FriendsListInsetShadowCtn,
+            children: (0, _.jsx)("div", {
               className: _().FriendListInsetShadowTop,
             }),
-          ),
+          }),
         _ = () =>
-          _.createElement(
-            "div",
-            {
-              className: _().FriendsListInsetShadowCtn,
-            },
-            _.createElement("div", {
+          (0, _.jsx)("div", {
+            className: _().FriendsListInsetShadowCtn,
+            children: (0, _.jsx)("div", {
               className: _().FriendListInsetShadowBottom,
             }),
-          );
+          });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -183,110 +178,75 @@
       const _ = (_) => {
           const { userType: _, msg: __webpack_require__, presenterInfo: _ } = _;
           if ("presenter" === _)
-            return _.createElement(
-              "span",
-              null,
-              _.createElement(
-                _._,
-                {
-                  name: _.name,
-                  title: _.title,
-                  photo: _.photo,
-                  company: _.company,
-                  bioString: _.bio,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: (0, _._)(_().MessageName, _().MessagePresenter),
-                    href:
-                      _._.COMMUNITY_BASE_URL +
-                      "profiles/" +
-                      __webpack_require__.steamid,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  },
-                  __webpack_require__.persona_name,
-                ),
-              ),
-            );
+            return (0, _.jsx)("span", {
+              children: (0, _.jsx)(_._, {
+                name: _.name,
+                title: _.title,
+                photo: _.photo,
+                company: _.company,
+                bioString: _.bio,
+                children: (0, _.jsx)("a", {
+                  className: (0, _._)(_().MessageName, _().MessagePresenter),
+                  href:
+                    _._.COMMUNITY_BASE_URL +
+                    "profiles/" +
+                    __webpack_require__.steamid,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: __webpack_require__.persona_name,
+                }),
+              }),
+            });
           {
             let _ = null;
             return (
               "broadcaster" === _
                 ? (_ = _().MessageBroadcaster)
                 : "moderator" === _ && (_ = _().MessageModerator),
-              _.createElement(
-                "span",
-                null,
-                _.createElement(
-                  "a",
-                  {
-                    className: (0, _._)(_().MessageName, _),
-                    href:
-                      _._.COMMUNITY_BASE_URL +
-                      "profiles/" +
-                      __webpack_require__.steamid,
-                    "data-miniprofile": "s" + __webpack_require__.steamid,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  },
-                  __webpack_require__.persona_name,
-                ),
-              )
+              (0, _.jsx)("span", {
+                children: (0, _.jsx)("a", {
+                  className: (0, _._)(_().MessageName, _),
+                  href:
+                    _._.COMMUNITY_BASE_URL +
+                    "profiles/" +
+                    __webpack_require__.steamid,
+                  "data-miniprofile": "s" + __webpack_require__.steamid,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: __webpack_require__.persona_name,
+                }),
+              })
             );
           }
         },
         _ = (_) => {
           switch (_.userType) {
             case "presenter":
-              return _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#BroadcastChat_Role_Presenter_ttip",
-                  ),
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _().RoleFlairContainer,
-                  },
-                  _.createElement(_.NCC, null),
-                ),
-              );
+              return (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#BroadcastChat_Role_Presenter_ttip"),
+                children: (0, _.jsx)("span", {
+                  className: _().RoleFlairContainer,
+                  children: (0, _.jsx)(_.NCC, {}),
+                }),
+              });
             case "moderator":
-              return _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#BroadcastChat_Role_Moderatorr_ttip",
-                  ),
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _().RoleFlairContainer,
-                  },
-                  _.createElement(_.$4X, null),
-                ),
-              );
+              return (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#BroadcastChat_Role_Moderatorr_ttip"),
+                children: (0, _.jsx)("span", {
+                  className: _().RoleFlairContainer,
+                  children: (0, _.jsx)(_.$4X, {}),
+                }),
+              });
             case "broadcaster":
-              return _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#BroadcastChat_Role_Broadcaster_ttip",
-                  ),
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _().RoleFlairContainer,
-                  },
-                  _.createElement(_.Gkr, null),
+              return (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)(
+                  "#BroadcastChat_Role_Broadcaster_ttip",
                 ),
-              );
+                children: (0, _.jsx)("span", {
+                  className: _().RoleFlairContainer,
+                  children: (0, _.jsx)(_.Gkr, {}),
+                }),
+              });
             default:
               return null;
           }
@@ -344,11 +304,14 @@
           for (let _ = 0; _ < _.length; _ += 1)
             _ % 2 == 1
               ? _.push(
-                  _.createElement(_._, {
-                    key: _,
-                    emoticon: _[_],
-                    large: !0,
-                  }),
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      emoticon: _[_],
+                      large: !0,
+                    },
+                    _,
+                  ),
                 )
               : _.push(_[_]);
           return _;
@@ -377,22 +340,21 @@
           if (
             ((_._ && _._.is_support) || _ || _
               ? __webpack_require__.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "remove",
                       onSelected: () =>
                         this.m_chat.RemoveUserMessagesServer(
                           _.steamid,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_RemoveMessages"),
                     },
-                    (0, _._)("#BroadcastChat_RemoveMessages"),
+                    "remove",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updatebanh",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -401,13 +363,13 @@
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_half_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_half_Mute"),
+                    "updatebanh",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updateband",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -416,13 +378,13 @@
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_day_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_day_Mute"),
+                    "updateband",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updatebanw",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -431,13 +393,13 @@
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_week_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_week_Mute"),
+                    "updatebanw",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updatebanp",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -446,13 +408,13 @@
                           !0,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_perm_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_perm_Mute"),
+                    "updatebanp",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "removeban",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -462,37 +424,38 @@
                           _.persona_name,
                           !0,
                         ),
+                      children: (0, _._)("#BroadcastChat_Unmute"),
                     },
-                    (0, _._)("#BroadcastChat_Unmute"),
+                    "removeban",
                   ),
                 )
               : this.m_chat.IsUserMutedLocally(_.steamid)
                 ? __webpack_require__.push(
-                    _.createElement(
+                    (0, _.jsx)(
                       _._,
                       {
-                        key: "unmuteuser",
                         onSelected: () =>
                           this.m_chat.UnmuteUserForSession(
                             _.steamid,
                             _.persona_name,
                           ),
+                        children: (0, _._)("#BroadcastChat_UnmuteLocal"),
                       },
-                      (0, _._)("#BroadcastChat_UnmuteLocal"),
+                      "unmuteuser",
                     ),
                   )
                 : __webpack_require__.push(
-                    _.createElement(
+                    (0, _.jsx)(
                       _._,
                       {
-                        key: "muteuser",
                         onSelected: () =>
                           this.m_chat.MuteUserForSession(
                             _.steamid,
                             _.persona_name,
                           ),
+                        children: (0, _._)("#BroadcastChat_MuteLocal"),
                       },
-                      (0, _._)("#BroadcastChat_MuteLocal"),
+                      "muteuser",
                     ),
                   ),
             ((_._ && _._.is_support) ||
@@ -501,58 +464,54 @@
           ) {
             this.m_chat.BIsUserBroadcastModerator(_.steamid)
               ? __webpack_require__.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "removemod",
                       onSelected: () =>
                         this.m_chat.UpdateBroadcastChatModerator(
                           _.steamid,
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_Remove_Moderator"),
                     },
-                    (0, _._)("#BroadcastChat_Remove_Moderator"),
+                    "removemod",
                   ),
                 )
               : __webpack_require__.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "addmod",
                       onSelected: () =>
                         this.m_chat.UpdateBroadcastChatModerator(
                           _.steamid,
                           !0,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_Add_Moderator"),
                     },
-                    (0, _._)("#BroadcastChat_Add_Moderator"),
+                    "addmod",
                   ),
                 );
           }
           return _.length
             ? (0, _._)(
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().SelectedUserNameCtn,
-                    },
-                    (0, _._)("#BroadcastChat_User"),
-                    _.createElement("br", null),
-                    _.createElement(
-                      "span",
-                      {
-                        className: _().SelectedUserName,
-                      },
-                      _.persona_name,
-                    ),
-                  ),
-                  _,
-                ),
+                      children: [
+                        (0, _._)("#BroadcastChat_User"),
+                        (0, _.jsx)("br", {}),
+                        (0, _.jsx)("span", {
+                          className: _().SelectedUserName,
+                          children: _.persona_name,
+                        }),
+                      ],
+                    }),
+                    _,
+                  ],
+                }),
                 _,
               )
             : null;
@@ -585,57 +544,49 @@
                         : "";
                 })(_.steamid, this.m_chat, _)
               : "";
-          return _.createElement(
+          return (0, _.jsxs)(
             "div",
             {
-              key: _.instance_id + "_" + _.client_ts + "_" + _,
               className: this.GetTypeClassName(_),
               onContextMenu: (_) => this.OnContextMenu(_, _),
+              children: [
+                _.type === _._.Chat &&
+                  (0, _.jsx)(_, {
+                    userType: _,
+                  }),
+                _.flair &&
+                  (0, _.jsx)("span", {
+                    className: _().FlairContainer,
+                    children: this.AddLinksEmoticons(_.flair, !1),
+                  }),
+                _.type === _._.Chat &&
+                  (0, _.jsx)(_, {
+                    userType: _,
+                    msg: _,
+                    presenterInfo: _,
+                  }),
+                _.type === _._.Chat &&
+                  this.m_chat.GetBroadcastSteamID() === _.steamid &&
+                  (0, _.jsx)("span", {
+                    className: `${_().MessageNotification} ${_().MessageContents}`,
+                    children: ` (${(0, _._)("#BroadcastChat_Broadcaster")})`,
+                  }),
+                _.type === _._.Chat &&
+                  this.m_chat.m_mapChannelModeratorUsers.get(_.steamid) &&
+                  (0, _.jsx)("span", {
+                    className: `${_().MessageNotification} ${_().MessageContents}`,
+                    children: ` (${(0, _._)("#BroadcastChat_Moderator")})`,
+                  }),
+                (0, _.jsxs)("span", {
+                  className: `${_().MessageContents} ${this.AddLinksEmoticons(_.msg, !1).filter((_) => _ && "string" == typeof _).length ? "" : _().EmoticonsOnly}`,
+                  children: [
+                    _.type === _._.Chat ? " : " : "",
+                    this.FormatMessage(_, this.m_chat.TextFilterStore),
+                  ],
+                }),
+              ],
             },
-            _.type === _._.Chat &&
-              _.createElement(_, {
-                userType: _,
-              }),
-            _.flair &&
-              _.createElement(
-                "span",
-                {
-                  className: _().FlairContainer,
-                },
-                this.AddLinksEmoticons(_.flair, !1),
-              ),
-            _.type === _._.Chat &&
-              _.createElement(_, {
-                userType: _,
-                msg: _,
-                presenterInfo: _,
-              }),
-            _.type === _._.Chat &&
-              this.m_chat.GetBroadcastSteamID() === _.steamid &&
-              _.createElement(
-                "span",
-                {
-                  className: `${_().MessageNotification} ${_().MessageContents}`,
-                },
-                ` (${(0, _._)("#BroadcastChat_Broadcaster")})`,
-              ),
-            _.type === _._.Chat &&
-              this.m_chat.m_mapChannelModeratorUsers.get(_.steamid) &&
-              _.createElement(
-                "span",
-                {
-                  className: `${_().MessageNotification} ${_().MessageContents}`,
-                },
-                ` (${(0, _._)("#BroadcastChat_Moderator")})`,
-              ),
-            _.createElement(
-              "span",
-              {
-                className: `${_().MessageContents} ${this.AddLinksEmoticons(_.msg, !1).filter((_) => _ && "string" == typeof _).length ? "" : _().EmoticonsOnly}`,
-              },
-              _.type === _._.Chat ? " : " : "",
-              this.FormatMessage(_, this.m_chat.TextFilterStore),
-            ),
+            _.instance_id + "_" + _.client_ts + "_" + _,
           );
         }
         render() {
@@ -652,48 +603,44 @@
                 )
               : void 0,
             _ = this.m_chat ? this.m_chat.m_latestAnnouncement : null;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().ChatPanel, "ChatPanel"),
-              style: _
-                ? {
-                    display: "none",
-                  }
-                : void 0,
-            },
-            _.createElement(_._, {
-              latestAnnouncement: _,
-            }),
-            __webpack_require__ &&
-              !!this.m_chat &&
-              _.createElement(_, {
-                oChat: this.m_chat,
-                emoticonStore: this.props.emoticonStore,
-                bPartnerMemberOnlyChat: _,
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_().ChatPanel, "ChatPanel"),
+            style: _
+              ? {
+                  display: "none",
+                }
+              : void 0,
+            children: [
+              (0, _.jsx)(_._, {
+                latestAnnouncement: _,
               }),
-            _.createElement(_, null),
-            _.createElement(
-              "div",
-              {
+              __webpack_require__ &&
+                !!this.m_chat &&
+                (0, _.jsx)(_, {
+                  oChat: this.m_chat,
+                  emoticonStore: this.props.emoticonStore,
+                  bPartnerMemberOnlyChat: _,
+                }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   `${_().ChatMessages} ${_().minHeightZero}`,
                   "ChatMessages",
                 ),
                 onScroll: this.HandleScroll,
                 ref: this.messagesContainer,
-              },
-              _.map((_, _) => this.RenderUserChatLine(_, _, _)),
-            ),
-            _.createElement(_, null),
-            !__webpack_require__ &&
-              !!this.m_chat &&
-              _.createElement(_, {
-                oChat: this.m_chat,
-                emoticonStore: this.props.emoticonStore,
-                bPartnerMemberOnlyChat: _,
+                children: _.map((_, _) => this.RenderUserChatLine(_, _, _)),
               }),
-          );
+              (0, _.jsx)(_, {}),
+              !__webpack_require__ &&
+                !!this.m_chat &&
+                (0, _.jsx)(_, {
+                  oChat: this.m_chat,
+                  emoticonStore: this.props.emoticonStore,
+                  bPartnerMemberOnlyChat: _,
+                }),
+            ],
+          });
         }
       };
       function _(_) {
@@ -706,12 +653,12 @@
           ((null === _._ || void 0 === _._ ? void 0 : _._.logged_in) &&
             (null === _._ || void 0 === _._ ? void 0 : _._.is_partner_member))
           ? (null === _._ || void 0 === _._ ? void 0 : _._.logged_in)
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 oChat: _,
                 emoticonStore: __webpack_require__,
               })
             : null
-          : _.createElement(_, null);
+          : (0, _.jsx)(_, {});
       }
       function _(_) {
         const { oChat: _, emoticonStore: __webpack_require__ } = _,
@@ -736,74 +683,62 @@
           );
         let _ = _ || 0 == _.trim().length,
           _ = (0, _._)(_().chatSubmitButton, 0 == _.length && _().disabled);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ChatEntryCtn, "ChatEntryCtn"),
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().ChatEntry, "ChatEntry"),
-            },
-            _.createElement(
-              "form",
-              {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().ChatEntryCtn, "ChatEntryCtn"),
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().ChatEntry, "ChatEntry"),
+            children: [
+              (0, _.jsxs)("form", {
                 className: `${_().chatEntryControls}`,
-              },
-              _.createElement("textarea", {
-                className: _().chatTextarea,
-                placeholder: (0, _._)("#BroadcastChat_EnterResponse"),
-                onKeyPress: _,
-                onChange: (_) => _(_.target.value),
-                value: _,
-                ref: _,
+                children: [
+                  (0, _.jsx)("textarea", {
+                    className: _().chatTextarea,
+                    placeholder: (0, _._)("#BroadcastChat_EnterResponse"),
+                    onKeyPress: _,
+                    onChange: (_) => _(_.target.value),
+                    value: _,
+                    ref: _,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      nSeconds: _.m_nRateLimitSeconds,
+                      bRateLimited: _.m_bRateLimited,
+                    }),
+                  (0, _.jsx)("button", {
+                    className: _,
+                    title: (0, _._)("#ChatEntryButton_Submit"),
+                    disabled: _,
+                    onClick: () => {
+                      _.SendMessage(_), _("");
+                    },
+                    children: (0, _.jsx)(_.XTb, {}),
+                  }),
+                ],
               }),
-              _ &&
-                _.createElement(_, {
-                  nSeconds: _.m_nRateLimitSeconds,
-                  bRateLimited: _.m_bRateLimited,
-                }),
-              _.createElement(
-                "button",
-                {
-                  className: _,
-                  title: (0, _._)("#ChatEntryButton_Submit"),
-                  disabled: _,
-                  onClick: () => {
-                    _.SendMessage(_), _("");
-                  },
-                },
-                _.createElement(_.XTb, null),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 style: {
                   height: "50px",
                 },
                 className: `${_().chatEntryActionsContainer}`,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _().chatEntryActionsGroup,
-                },
-                _.createElement(_._, {
-                  disabled: !1,
-                  OnEmoticonSelected: _,
-                  rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                  emoticonStore: __webpack_require__,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      disabled: !1,
+                      OnEmoticonSelected: _,
+                      rtLastAckedNewEmoticons: Number.MAX_VALUE,
+                      emoticonStore: __webpack_require__,
+                    }),
+                    (0, _.jsx)(_, {
+                      ..._,
+                      textInputRef: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  ..._,
-                  textInputRef: _,
-                }),
-              ),
-            ),
-          ),
-        );
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         var _;
@@ -820,7 +755,7 @@
             )) || void 0 === _
             ? void 0
             : _.length)
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               disabled: !1,
               OnEmoticonSelected: (_) => {
                 __webpack_require__.UpdateChatMessageFlair(_),
@@ -830,7 +765,7 @@
               emoticonStore: _,
               strFlairGroupID: __webpack_require__.m_strFlairGroupID,
               title: (0, _._)("#ChatEntryButton_Flair"),
-              buttonIcon: _.createElement(_.P7r, null),
+              buttonIcon: (0, _.jsx)(_.P7r, {}),
             })
           : null;
       }
@@ -842,61 +777,50 @@
         (_ = (0, _._)([_._], _));
       class _ extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: _().TimedProgressBarContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().wrapper,
-              },
-              _.createElement("div", {
-                className: `${_().spinner} ${_().pie}`,
-                style: {
-                  animationDuration: `${this.props.nSeconds || 0}s`,
-                },
-              }),
-              _.createElement("div", {
-                className: `${_().filler} ${_().pie}`,
-                style: {
-                  animationDuration: `${this.props.nSeconds || 0}s`,
-                },
-              }),
-              _.createElement("div", {
-                className: _().mask,
-                style: {
-                  animationDuration: `${this.props.nSeconds || 0}s`,
-                },
-              }),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: _().TimedProgressBarContainer,
+            children: (0, _.jsxs)("div", {
+              className: _().wrapper,
+              children: [
+                (0, _.jsx)("div", {
+                  className: `${_().spinner} ${_().pie}`,
+                  style: {
+                    animationDuration: `${this.props.nSeconds || 0}s`,
+                  },
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().filler} ${_().pie}`,
+                  style: {
+                    animationDuration: `${this.props.nSeconds || 0}s`,
+                  },
+                }),
+                (0, _.jsx)("div", {
+                  className: _().mask,
+                  style: {
+                    animationDuration: `${this.props.nSeconds || 0}s`,
+                  },
+                }),
+              ],
+            }),
+          });
         }
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().Description,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().Description,
+          children: [
+            (0, _.jsx)("div", {
               className: _().LogInPrompt,
-            },
-            (0, _._)("#Broadcast_PartnerChat_Login"),
-          ),
-          !_._.logged_in &&
-            _.createElement(
-              _._,
-              {
+              children: (0, _._)("#Broadcast_PartnerChat_Login"),
+            }),
+            !_._.logged_in &&
+              (0, _.jsx)(_._, {
                 onClick: _._,
                 className: (0, _._)(_().SignInButton),
-              },
-              (0, _._)("#Login_SignIn"),
-            ),
-        );
+                children: (0, _._)("#Login_SignIn"),
+              }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -918,11 +842,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { latestAnnouncement: _ } = _;
         return "giveaway_draw" == (null == _ ? void 0 : _.type)
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               latestWinner: _,
             })
           : null;
@@ -960,86 +885,66 @@
             0 && Boolean(_.winners_info[0].persona)
             ? _.winners_info[0].persona
             : (0, _._)("#GA2022_UnknownPersonaName");
-        return _.createElement(
-          _._,
-          {
-            href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
-            className: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().GiveawayWinnerBox]: !0,
-                [_().GiveawayWinnerAnnounced]: _ === _,
-              }),
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
+          className: _,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)({
+              [_().GiveawayWinnerBox]: !0,
+              [_().GiveawayWinnerAnnounced]: _ === _,
+            }),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().GiveawayWinnerBoxLeft,
-              },
-              _.createElement("img", {
-                className: _().GiveawayWinnerArt,
+                children: (0, _.jsx)("img", {
+                  className: _().GiveawayWinnerArt,
+                  src: _,
+                }),
+              }),
+              (0, _.jsxs)("div", {
+                className: _().GiveawayWinnerBoxRight,
+                children: [
+                  Boolean(_ !== _) &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_().GiveawayWinnerText),
+                      children: (0, _._)(
+                        "#GA2022_Congrats_Deck_Unknown",
+                        (0, _.jsx)("br", {}),
+                      ),
+                    }),
+                  Boolean(_ === _) &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().GiveawayWinnerText,
+                        _().GiveawayWinnerAnnounced,
+                      ),
+                      children: (0, _._)(
+                        _
+                          ? "#GA2022_Congrats_Deck_Me"
+                          : "#GA2022_Congrats_Deck_OTher",
+                        _,
+                        (0, _.jsx)("br", {}),
+                      ),
+                    }),
+                  Boolean(_ > 0) &&
+                    (0, _.jsx)("div", {
+                      className: _().GiveawayWinnerCountdown,
+                      children: (0, _._)("#GA2022_Congrats_NextDraw", _),
+                    }),
+                ],
+              }),
+              (0, _.jsx)("img", {
+                className: _().GiveawayWinnerQuestion,
                 src: _,
               }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().GiveawayWinnerBoxRight,
-              },
-              Boolean(_ !== _) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().GiveawayWinnerText),
-                  },
-                  (0, _._)(
-                    "#GA2022_Congrats_Deck_Unknown",
-                    _.createElement("br", null),
-                  ),
-                ),
-              Boolean(_ === _) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _().GiveawayWinnerText,
-                      _().GiveawayWinnerAnnounced,
-                    ),
-                  },
-                  (0, _._)(
-                    _
-                      ? "#GA2022_Congrats_Deck_Me"
-                      : "#GA2022_Congrats_Deck_OTher",
-                    _,
-                    _.createElement("br", null),
-                  ),
-                ),
-              Boolean(_ > 0) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().GiveawayWinnerCountdown,
-                  },
-                  (0, _._)("#GA2022_Congrats_NextDraw", _),
-                ),
-            ),
-            _.createElement("img", {
-              className: _().GiveawayWinnerQuestion,
-              src: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
+              Boolean(_) &&
+                (0, _.jsx)("div", {
                   className: _,
-                },
-                _ ? (0, _._)("#GA2022_YouWonNextSteps") : _,
-              ),
-          ),
-        );
+                  children: _ ? (0, _._)("#GA2022_YouWonNextSteps") : _,
+                }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { gidGiveaway: _, stream: __webpack_require__ } = _,
@@ -1088,7 +993,7 @@
               : (_ = (0, _._)("#GA2022_RegisterToWin"))
             : (_ = (0, _._)("#GA2022_RegisterLoginToWin")),
           _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 latestWinner: _,
                 className: _().InViewerBar,
                 strActionButton: _,

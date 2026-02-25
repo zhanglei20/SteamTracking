@@ -2816,6 +2816,9 @@ body.v6 #footer_nav .popup_menu .hr{
 	color: #c6d4df !important;
 	line-height: 14px;
 }
+.shared_game_rating p.descriptorText .bb_img_ctn {
+	display: inline-block;
+}
 .shared_game_rating .block_title {
 	font-size: 13px;
 	color: #d3d9dd;

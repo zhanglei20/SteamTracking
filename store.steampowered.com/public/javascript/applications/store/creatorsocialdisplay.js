@@ -131,194 +131,194 @@
     55263: (e, t, n) => {
       "use strict";
       n.d(t, {
-        G6: () => s,
+        G6: () => c,
         Gg: () => _,
-        MS: () => E,
+        MS: () => v,
         Ow: () => u,
-        YM: () => v,
+        YM: () => x,
         mZ: () => d,
         t7: () => o,
-        zX: () => p,
+        zX: () => m,
       });
-      var r = n(41735),
-        i = n.n(r),
-        l = n(90626),
-        a = n(84933),
-        c = n(16021);
-      function s(e, t, n, r) {
-        const s = (0, l.useRef)(void 0),
-          o = (0, l.useRef)(void 0),
-          u = (0, a.CH)();
-        s.current = e;
-        const [_, d] = (0, l.useState)(void 0),
+      var i = n(41735),
+        r = n.n(i),
+        s = n(90626),
+        l = n(84933),
+        a = n(16021);
+      function c(e, t, n, i) {
+        const c = (0, s.useRef)(void 0),
+          o = (0, s.useRef)(void 0),
+          u = (0, l.CH)();
+        c.current = e;
+        const [_, d] = (0, s.useState)(void 0),
           {
-            include_assets: m,
-            include_release: p,
-            include_platforms: E,
-            include_all_purchase_options: v,
+            include_assets: p,
+            include_release: m,
+            include_platforms: v,
+            include_all_purchase_options: x,
             include_screenshots: f,
             include_trailers: S,
             include_ratings: k,
             include_tag_count: g,
-            include_reviews: b,
-            include_basic_info: C,
-            include_supported_languages: B,
-            include_full_description: h,
-            include_included_items: I,
-            include_assets_without_overrides: T,
-            apply_user_filters: A,
-            include_links: w,
+            include_reviews: h,
+            include_basic_info: b,
+            include_supported_languages: E,
+            include_full_description: C,
+            include_included_items: B,
+            include_assets_without_overrides: I,
+            apply_user_filters: T,
+            include_links: j,
           } = n;
         if (
-          ((0, l.useEffect)(() => {
+          ((0, s.useEffect)(() => {
             const n = {
-              include_assets: m,
-              include_release: p,
-              include_platforms: E,
-              include_all_purchase_options: v,
+              include_assets: p,
+              include_release: m,
+              include_platforms: v,
+              include_all_purchase_options: x,
               include_screenshots: f,
               include_trailers: S,
               include_ratings: k,
               include_tag_count: g,
-              include_reviews: b,
-              include_basic_info: C,
-              include_supported_languages: B,
-              include_full_description: h,
-              include_included_items: I,
-              include_assets_without_overrides: T,
-              apply_user_filters: A,
-              include_links: w,
+              include_reviews: h,
+              include_basic_info: b,
+              include_supported_languages: E,
+              include_full_description: C,
+              include_included_items: B,
+              include_assets_without_overrides: I,
+              apply_user_filters: T,
+              include_links: j,
             };
-            let l = null;
+            let s = null;
             return (
               !e ||
                 e < 0 ||
-                c.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== _ && r && r == o.current) ||
-                (r !== o.current && (d(void 0), (o.current = r)),
-                (l = i().CancelToken.source()),
-                c.A.Get()
+                a.A.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== _ && i && i == o.current) ||
+                (i !== o.current && (d(void 0), (o.current = i)),
+                (s = r().CancelToken.source()),
+                a.A.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    l?.token.reason || s.current !== e || d(1 == t), u();
+                    s?.token.reason || c.current !== e || d(1 == t), u();
                   })),
-              () => l?.cancel("useStoreItemCache: unmounting")
+              () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, _, m, p, E, v, f, S, k, g, b, C, B, h, I, T, A, w, u]),
+          }, [e, t, i, _, p, m, v, x, f, S, k, g, h, b, E, C, B, I, T, j, u]),
           !e)
         )
           return [null, 2];
         if (!1 === _) return [void 0, 2];
-        if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!c.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const x = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return x ? [x, 3] : [null, 2];
+        if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!a.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+        const A = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return A ? [A, 3] : [null, 2];
       }
       function o(e, t, n) {
-        return s(e, 0, t, n);
+        return c(e, 0, t, n);
       }
       function u(e, t, n) {
-        return s(e, 2, t, n);
+        return c(e, 2, t, n);
       }
       function _(e, t, n) {
-        return s(e, 1, t, n);
+        return c(e, 1, t, n);
       }
       function d(e, t, n) {
-        const [r, i] = s(e, t, n);
-        let l;
-        1 != r?.GetStoreItemType() ||
-          r.GetAssets()?.GetHeaderURL() ||
-          1 != r?.GetIncludedAppIDs().length ||
-          (l = r.GetIncludedAppIDs()[0]);
-        const [a, c] = o(l, n);
-        return l && a?.BIsVisible() ? [a, c] : [r, i];
+        const [i, r] = c(e, t, n);
+        let s;
+        1 != i?.GetStoreItemType() ||
+          i.GetAssets()?.GetHeaderURL() ||
+          1 != i?.GetIncludedAppIDs().length ||
+          (s = i.GetIncludedAppIDs()[0]);
+        const [l, a] = o(s, n);
+        return s && l?.BIsVisible() ? [l, a] : [i, r];
       }
-      function m(e, t, n, r) {
-        const s = (0, a.CH)(),
+      function p(e, t, n, i) {
+        const c = (0, l.CH)(),
           {
             include_assets: o,
             include_release: u,
             include_platforms: _,
             include_all_purchase_options: d,
-            include_screenshots: m,
-            include_trailers: p,
-            include_ratings: E,
-            include_tag_count: v,
+            include_screenshots: p,
+            include_trailers: m,
+            include_ratings: v,
+            include_tag_count: x,
             include_reviews: f,
             include_basic_info: S,
             include_supported_languages: k,
             include_full_description: g,
-            include_included_items: b,
-            include_assets_without_overrides: C,
-            apply_user_filters: B,
-            include_links: h,
+            include_included_items: h,
+            include_assets_without_overrides: b,
+            apply_user_filters: E,
+            include_links: C,
           } = n;
         if (
-          ((0, l.useEffect)(() => {
+          ((0, s.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const n = {
                 include_assets: o,
                 include_release: u,
                 include_platforms: _,
                 include_all_purchase_options: d,
-                include_screenshots: m,
-                include_trailers: p,
-                include_ratings: E,
-                include_tag_count: v,
+                include_screenshots: p,
+                include_trailers: m,
+                include_ratings: v,
+                include_tag_count: x,
                 include_reviews: f,
                 include_basic_info: S,
                 include_supported_languages: k,
                 include_full_description: g,
-                include_included_items: b,
-                include_assets_without_overrides: C,
-                apply_user_filters: B,
-                include_links: h,
+                include_included_items: h,
+                include_assets_without_overrides: b,
+                apply_user_filters: E,
+                include_links: C,
               },
-              r = e.filter(
+              i = e.filter(
                 (e) =>
                   !(
-                    c.A.Get().BHasStoreItem(e, t, n) ||
-                    c.A.Get().BIsStoreItemMissing(e, t)
+                    a.A.Get().BHasStoreItem(e, t, n) ||
+                    a.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == r.length) return;
-            const l = i().CancelToken.source(),
-              a = r.map((e) => c.A.Get().QueueStoreItemRequest(e, t, n));
+            if (0 == i.length) return;
+            const s = r().CancelToken.source(),
+              l = i.map((e) => a.A.Get().QueueStoreItemRequest(e, t, n));
             return (
-              Promise.all(a).then(() => {
-                l.token.reason || s();
+              Promise.all(l).then(() => {
+                s.token.reason || c();
               }),
-              () => l.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, s, o, u, _, d, m, p, E, v, f, S, k, g, b, C, B, h]),
+          }, [e, t, i, c, o, u, _, d, p, m, v, x, f, S, k, g, h, b, E, C]),
           !e)
         )
           return 2;
         if (
           !e.every(
             (e) =>
-              c.A.Get().BHasStoreItem(e, t, n) ||
-              c.A.Get().BIsStoreItemMissing(e, t),
+              a.A.Get().BHasStoreItem(e, t, n) ||
+              a.A.Get().BIsStoreItemMissing(e, t),
           )
         )
           return 1;
         return e.every((e) =>
-          c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
           ? 3
           : 2;
       }
-      function p(e, t, n) {
-        return m(e, 0, t, n);
+      function m(e, t, n) {
+        return p(e, 0, t, n);
       }
-      function E(e, t, n) {
-        return m(e, 2, t, n);
+      function v(e, t, n) {
+        return p(e, 2, t, n);
       }
-      function v() {
-        l.useEffect(
+      function x() {
+        s.useEffect(
           () => (
-            c.A.Get().SetReturnUnavailableItems(!0),
-            () => c.A.Get().SetReturnUnavailableItems(!1)
+            a.A.Get().SetReturnUnavailableItems(!0),
+            () => a.A.Get().SetReturnUnavailableItems(!1)
           ),
           [],
         );
@@ -326,9 +326,10 @@
     },
     18663: (e, t, n) => {
       "use strict";
-      n.d(t, { D1: () => b, lS: () => v, lz: () => k, nK: () => S });
-      var r = n(90626);
-      function i(e) {
+      n.d(t, { D1: () => b, lS: () => f, lz: () => g, nK: () => k });
+      var i = n(7850),
+        r = n(90626);
+      function s(e) {
         switch (e) {
           case "discord_server":
             return 5;
@@ -384,51 +385,47 @@
       var l = n(55263),
         a = n(95695),
         c = n.n(a),
-        s = n(12155),
-        o = n(52038),
-        u = n(61859),
-        _ = n(61336),
-        d = n(78327),
+        o = n(12155),
+        u = n(52038),
+        _ = n(61859),
+        d = n(61336),
+        p = n(78327),
         m = n(32754),
-        p = n(12443),
-        E = n.n(p);
-      function v(e) {
-        const { appid: t } = e;
-        return r.createElement(
-          "div",
-          { className: E().AppSocialLinksCtn },
-          r.createElement(f, { appid: t }),
-        );
-      }
+        v = n(12443),
+        x = n.n(v);
       function f(e) {
+        const { appid: t } = e;
+        return (0, i.jsx)("div", {
+          className: x().AppSocialLinksCtn,
+          children: (0, i.jsx)(S, { appid: t }),
+        });
+      }
+      function S(e) {
         const { appid: t } = e,
           [n] = (0, l.t7)(t, { include_basic_info: !0, include_links: !0 });
         if (!n) return null;
-        const i = n.GetLinks();
-        return i && 0 != i.length && d.TS.IMG_URL
-          ? r.createElement(
-              r.Fragment,
-              null,
-              r.createElement(
-                "div",
-                {
-                  className: (0, o.A)(
+        const r = n.GetLinks();
+        return r && 0 != r.length && p.TS.IMG_URL
+          ? (0, i.jsxs)(i.Fragment, {
+              children: [
+                (0, i.jsx)("div", {
+                  className: (0, u.A)(
                     c().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                },
-                (0, u.we)("#EventDisplay_SocialTitle"),
-              ),
-              r.createElement(b, { id: "" + t, rgSocialMedia: i }),
-            )
+                  children: (0, _.we)("#EventDisplay_SocialTitle"),
+                }),
+                (0, i.jsx)(b, { id: "" + t, rgSocialMedia: r }),
+              ],
+            })
           : null;
       }
-      function S(e) {
+      function k(e) {
         return (0, r.useMemo)(
           () =>
             e
               ? e.map((e) => {
-                  const t = { link_type: i(e.type) };
+                  const t = { link_type: s(e.type) };
                   return (
                     6 == t.link_type || 17 == t.link_type
                       ? (t.text = e.link)
@@ -440,137 +437,133 @@
           [e],
         );
       }
-      function k(e) {
+      function g(e) {
         const { gidClanEvent: t, rgSocial: n } = e,
-          i = S(n);
-        return i && 0 != i.length && d.TS.IMG_URL
-          ? r.createElement(
-              r.Fragment,
-              null,
-              r.createElement(
-                "div",
-                {
-                  className: (0, o.A)(
+          r = k(n);
+        return r && 0 != r.length && p.TS.IMG_URL
+          ? (0, i.jsxs)(i.Fragment, {
+              children: [
+                (0, i.jsx)("div", {
+                  className: (0, u.A)(
                     c().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                },
-                (0, u.we)("#EventDisplay_Sale_SocialTitle"),
-              ),
-              r.createElement(b, { id: t, rgSocialMedia: i }),
-            )
+                  children: (0, _.we)("#EventDisplay_Sale_SocialTitle"),
+                }),
+                (0, i.jsx)(b, { id: t, rgSocialMedia: r }),
+              ],
+            })
           : null;
       }
-      const g = [6, 23, 18, 8, 9, 19, 24];
+      const h = [6, 23, 18, 8, 9, 19, 24];
       function b(e) {
-        const { id: t, rgSocialMedia: n, className: i } = e,
-          l = (0, d.Y2)();
-        return r.createElement(
-          "div",
-          { className: (0, o.A)(E().AppSocialLinks, i) },
-          n
-            .filter((e) => !l || g.includes(e.link_type || 0))
+        const { id: t, rgSocialMedia: n, className: r } = e,
+          s = (0, p.Y2)();
+        return (0, i.jsx)("div", {
+          className: (0, u.A)(x().AppSocialLinks, r),
+          children: n
+            .filter((e) => !s || h.includes(e.link_type || 0))
             .map((e) =>
               e.url
-                ? r.createElement(C, {
-                    key: "app_social_link_" + t + "_" + e.link_type,
-                    social: e,
-                  })
-                : r.createElement(B, {
-                    key:
-                      "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
-                    social: e,
-                  }),
+                ? (0, i.jsx)(
+                    E,
+                    { social: e },
+                    "app_social_link_" + t + "_" + e.link_type,
+                  )
+                : (0, i.jsx)(
+                    C,
+                    { social: e },
+                    "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
+                  ),
             ),
-        );
+        });
+      }
+      function E(e) {
+        const { social: t } = e;
+        return t.url
+          ? (0, i.jsx)("a", {
+              href: (0, d.NT)(t.url, !0),
+              target: p.TS.IN_CLIENT ? void 0 : "_blank",
+              rel: "noopener noreferrer",
+              children: (0, i.jsx)(m.he, {
+                toolTipContent: t.url,
+                children: (0, i.jsx)(B, { social: t }),
+              }),
+            })
+          : null;
       }
       function C(e) {
         const { social: t } = e;
-        return t.url
-          ? r.createElement(
-              "a",
-              {
-                href: (0, _.NT)(t.url, !0),
-                target: d.TS.IN_CLIENT ? void 0 : "_blank",
-                rel: "noopener noreferrer",
-              },
-              r.createElement(
-                m.he,
-                { toolTipContent: t.url },
-                r.createElement(h, { social: t }),
-              ),
-            )
-          : null;
+        return (0, i.jsxs)("div", {
+          className: x().AppSocialLinkWithText,
+          children: [
+            (0, i.jsx)(m.he, {
+              toolTipContent: t.text,
+              children: (0, i.jsx)(B, { social: t }),
+            }),
+            (0, i.jsx)("div", {
+              className: x().AppSocialText,
+              children: t.text,
+            }),
+          ],
+        });
       }
       function B(e) {
         const { social: t } = e;
-        return r.createElement(
-          "div",
-          { className: E().AppSocialLinkWithText },
-          r.createElement(
-            m.he,
-            { toolTipContent: t.text },
-            r.createElement(h, { social: t }),
-          ),
-          r.createElement("div", { className: E().AppSocialText }, t.text),
-        );
-      }
-      function h(e) {
-        const { social: t } = e;
-        return r.createElement(I, {
+        return (0, i.jsx)(I, {
           linkType: t.link_type || 0,
-          className: E().AppSocialLinkIcon,
+          className: x().AppSocialLinkIcon,
         });
       }
       function I(e) {
         const { linkType: t, ...n } = e;
         switch (t) {
           case 1:
-            return r.createElement(s.agV, { ...n });
+            return (0, i.jsx)(o.agV, { ...n });
           case 2:
-            return r.createElement(s.ZnA, { ...n });
+            return (0, i.jsx)(o.ZnA, { ...n });
           case 3:
-            return r.createElement(s.oy, { ...n });
+            return (0, i.jsx)(o.oy, { ...n });
           case 4:
-            return r.createElement(s.ofN, { ...n });
+            return (0, i.jsx)(o.ofN, { ...n });
           case 5:
-            return r.createElement(s.Bki, { ...n });
+            return (0, i.jsx)(o.Bki, { ...n });
           case 6:
           case 18:
           case 23:
-            return r.createElement(s.$vK, { ...n });
+            return (0, i.jsx)(o.$vK, { ...n });
           case 7:
-            return r.createElement(s.OSJ, { ...n });
+            return (0, i.jsx)(o.OSJ, { ...n });
           case 8:
-            return r.createElement(s.nm_, { ...n });
+            return (0, i.jsx)(o.nm_, { ...n });
           case 9:
-            return r.createElement(s.tIO, { ...n });
+            return (0, i.jsx)(o.tIO, { ...n });
           case 10:
-            return r.createElement(s.Vt2, { ...n });
+            return (0, i.jsx)(o.Vt2, { ...n });
           case 11:
-            return r.createElement(s.Vgk, { ...n });
+            return (0, i.jsx)(o.Vgk, { ...n });
           case 12:
-            return r.createElement(s.VSd, { ...n });
+            return (0, i.jsx)(o.VSd, { ...n });
           case 13:
-            return r.createElement(s.ccb, { ...n });
+            return (0, i.jsx)(o.ccb, { ...n });
           case 14:
-            return r.createElement(s.rNt, { ...n });
+            return (0, i.jsx)(o.rNt, { ...n });
           case 15:
-            return r.createElement(s.g$j, { ...n });
+            return (0, i.jsx)(o.g$j, { ...n });
           case 16:
-            return r.createElement(s.BQz, { ...n });
+            return (0, i.jsx)(o.BQz, { ...n });
           case 17:
-            return r.createElement(s.jdP, { ...n });
+            return (0, i.jsx)(o.jdP, { ...n });
           case 19:
-            return r.createElement(s.bKN, { ...n });
+            return (0, i.jsx)(o.bKN, { ...n });
           case 20:
-            return r.createElement(s.sDU, { ...n });
+            return (0, i.jsx)(o.sDU, { ...n });
           case 21:
-            return r.createElement(s.MbF, { ...n });
+            return (0, i.jsx)(o.MbF, { ...n });
           case 22:
-            return r.createElement(s.emH, { ...n });
+            return (0, i.jsx)(o.emH, { ...n });
           case 24:
-            return r.createElement(s.Yoo, { ...n });
+            return (0, i.jsx)(o.Yoo, { ...n });
           case 25:
           case 0:
             return "invalid social media type";
@@ -579,19 +572,19 @@
     },
     44899: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => c });
-      var r = n(90626),
-        i = n(18663),
-        l = n(28194),
-        a = n.n(l);
-      function c(e) {
+      n.r(t), n.d(t, { default: () => a });
+      var i = n(7850),
+        r = n(18663),
+        s = n(28194),
+        l = n.n(s);
+      function a(e) {
         const { clanAccountID: t, items: n } = e,
-          l = (0, i.nK)(n);
-        return l
-          ? r.createElement(i.D1, {
+          s = (0, r.nK)(n);
+        return s
+          ? (0, i.jsx)(r.D1, {
               id: "social_" + t,
-              rgSocialMedia: l,
-              className: a().Ctn,
+              rgSocialMedia: s,
+              className: l().Ctn,
             })
           : null;
       }

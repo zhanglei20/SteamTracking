@@ -2563,6 +2563,7 @@
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = () => "/:anything*/diagdata",
         _ = () => "/:languageCode*/faqs/view/:faqid*",
@@ -2577,9 +2578,32 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        async GetObject(_, _) {
+          try {
+            const _ = await this.GetString(_);
+            return _ ? JSON.parse(_, _) : null;
+          } catch {
+            return null;
+          }
+        }
+        async StoreObject(_, _) {
+          return this.StoreString(_, JSON.stringify(_));
+        }
+      }
+      class _ extends _ {
+        GetString(_) {
+          return Promise.resolve(localStorage.getItem(_));
+        }
+        StoreString(_, _) {
+          return localStorage.setItem(_, _), Promise.resolve();
+        }
+        RemoveObject(_) {
+          return localStorage.removeItem(_), Promise.resolve();
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -5899,7 +5923,7 @@
                 _.add(_),
                   _.has(_) ||
                     ("top_tags" == _
-                      ? (_.include_tag_count = 10)
+                      ? (_.include_tag_count = 20)
                       : "default_info" != _ && (_[_] = !0),
                     _.add(_));
                 let _ = _.get(_);
@@ -6005,7 +6029,7 @@
                       _.has(_) ||
                         ((_ = !0),
                         "top_tags" == _
-                          ? (_.include_tag_count = 10)
+                          ? (_.include_tag_count = 20)
                           : _ && "default_info" != _ && (_[_] = !0));
                     }),
                       _ && _(_, _);
@@ -6223,13 +6247,10 @@
             }),
             [_, _, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -6245,15 +6266,12 @@
           );
         return (
           _.useEffect(() => _._.Initialize(_), [_]),
-          _.createElement(
-            _,
-            {
-              context: _,
-              msDelayBatch: _,
-              legacyCacheStoreItemData: _._.Get().ReadItem,
-            },
-            __webpack_require__,
-          )
+          (0, _.jsx)(_, {
+            context: _,
+            msDelayBatch: _,
+            legacyCacheStoreItemData: _._.Get().ReadItem,
+            children: __webpack_require__,
+          })
         );
       }
       class _ extends _.Component {
@@ -6266,36 +6284,37 @@
             _.getAttributeNames().forEach((_) => {
               __webpack_require__.toLocaleLowerCase().startsWith("data-") &&
                 (_.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     "h1",
                     {
-                      key: "header-" + _,
+                      children: _,
                     },
-                    _,
+                    "header-" + _,
                   ),
                 ),
                 _.push(
-                  _.createElement(_, {
-                    key: "body-" + _,
-                    data: JSON.parse(_.getAttribute(_)),
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      data: JSON.parse(_.getAttribute(_)),
+                    },
+                    "body-" + _,
+                  ),
                 ));
             }),
-            _.createElement("div", null, _)
+            (0, _.jsx)("div", {
+              children: _,
+            })
           );
         }
       }
       class _ extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "pre",
-              null,
-              JSON.stringify(this.props.data, null, 2),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            children: (0, _.jsx)("pre", {
+              children: JSON.stringify(this.props.data, null, 2),
+            }),
+          });
         }
       }
       var _ = __webpack_require__("chunkid"),
@@ -6337,11 +6356,12 @@
             (_[(_.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
             (_[(_.Keyboard = 2)] = "Keyboard"),
             (_[(_.ControllerConfigurator = 3)] = "ControllerConfigurator"),
-            (_[(_._ = 4)] = "VR"),
+            (_[(_.MainVRGamepadUI = 4)] = "MainVRGamepadUI"),
             (_[(_.MainDesktopUI = 5)] = "MainDesktopUI"),
             (_[(_.DesktopLogin = 6)] = "DesktopLogin"),
             (_[(_.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
-            (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher");
+            (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher"),
+            (_[(_.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
         })(_ || (_ = {}));
       const _ = {
         m_unPID: 0,
@@ -7261,13 +7281,10 @@
             () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
             [_],
           ),
-          _.createElement(
-            _.Provider,
-            {
-              value: _.current,
-            },
-            _,
-          )
+          (0, _.jsx)(_.Provider, {
+            value: _.current,
+            children: _,
+          })
         );
       }
       const _ = _.createContext({
@@ -7381,23 +7398,23 @@
         (0, _._)(_.OnMenusChanged, _);
         const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
           _ = _.GetAllMenus();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ && _.createElement(_._, null),
-          _.map((_) =>
-            _.createElement(
-              _._,
-              {
-                key: _.key,
-              },
-              _.createElement(_, {
-                instance: _,
-                browserInfo: _,
-              }),
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ && (0, _.jsx)(_._, {}),
+            _.map((_) =>
+              (0, _.jsx)(
+                _._,
+                {
+                  children: (0, _.jsx)(_, {
+                    instance: _,
+                    browserInfo: _,
+                  }),
+                },
+                _.key,
+              ),
             ),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const {
@@ -7421,32 +7438,26 @@
             [_],
           ),
           _ = _ || _.ReactElement;
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.current
-            ? _.createElement(_, {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: _.current
+            ? (0, _.jsx)(_, {
                 instance: _,
                 browserInfo: __webpack_require__,
                 children: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 instance: _,
                 children: _,
               }),
-        );
+        });
       }
       function _(_) {
         const { instance: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            ..._.position,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)(_._, {
+          ..._.position,
+          children: __webpack_require__,
+        });
       }
       function _(_) {
         const {
@@ -7539,16 +7550,13 @@
           }, [_, _]),
           _
             ? _.createPortal(
-                _.createElement(
-                  _._,
-                  {
-                    ref: _,
-                    ..._.position,
-                    parentWin: _,
-                    popup: _,
-                  },
-                  _,
-                ),
+                (0, _.jsx)(_._, {
+                  ref: _,
+                  ..._.position,
+                  parentWin: _,
+                  popup: _,
+                  children: _,
+                }),
                 _,
               )
             : null
@@ -7595,32 +7603,25 @@
               : (0, _._)(_, "Window.ToggleMaximize") &&
                 _.SteamClient.Window.ToggleMaximize();
           }, [_, __webpack_require__]);
-        return _.createElement(
-          _,
-          {
-            className: (0, _._)(
-              _ ? "restoreButton" : "maximizeButton",
-              "windowControlButton",
-            ),
-            onClick: _,
-          },
-          !_ &&
-            (_ ? _.createElement(_.ZWw, null) : _.createElement(_.hz4, null)),
-        );
+        return (0, _.jsx)(_, {
+          className: (0, _._)(
+            _ ? "restoreButton" : "maximizeButton",
+            "windowControlButton",
+          ),
+          onClick: _,
+          children: !_ && (_ ? (0, _.jsx)(_.ZWw, {}) : (0, _.jsx)(_.hz4, {})),
+        });
       }
       function _(_) {
         const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _.SteamClient.Window.Minimize();
           }, [_]);
-        return _.createElement(
-          _,
-          {
-            className: "minimizeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
-          },
-          !_ && _.createElement(_.Xjb, null),
-        );
+        return (0, _.jsx)(_, {
+          className: "minimizeButton windowControlButton",
+          onClick: __webpack_require__ ?? _,
+          children: !_ && (0, _.jsx)(_.Xjb, {}),
+        });
       }
       function _(_) {
         const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
@@ -7630,14 +7631,11 @@
                 ? _.SteamClient.Window.Close()
                 : _.close());
           }, [_]);
-        return _.createElement(
-          _,
-          {
-            className: "closeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
-          },
-          !_ && _.createElement(_.sED, null),
-        );
+        return (0, _.jsx)(_, {
+          className: "closeButton windowControlButton",
+          onClick: __webpack_require__ ?? _,
+          children: !_ && (0, _.jsx)(_.sED, {}),
+        });
       }
       function _(_) {
         const { className: _, onClick: __webpack_require__, children: _ } = _,
@@ -7648,20 +7646,14 @@
             },
             [__webpack_require__],
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)("title-area-icon", _),
-            onClick: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: "title-area-icon-inner",
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)("title-area-icon", _),
+          onClick: _,
+          children: (0, _.jsx)("div", {
+            className: "title-area-icon-inner",
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -7700,66 +7692,58 @@
               (0, _._)(__webpack_require__, _)
             );
           })(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              "TitleBar",
-              "title-area",
-              _ && "OSX",
-              (_ || _) && "WindowFocus",
-              _,
-            ),
-            style: __webpack_require__,
-          },
-          _.createElement("div", {
-            className: "title-area-highlight",
-          }),
-          _.createElement(
-            "div",
-            {
-              className: "title-area-children",
-            },
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            "TitleBar",
+            "title-area",
+            _ && "OSX",
+            (_ || _) && "WindowFocus",
             _,
           ),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "title-bar-actions extra-actions",
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: "title-bar-actions window-controls",
-                },
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onClose: _,
-                    bOSX: _,
+          style: __webpack_require__,
+          children: [
+            (0, _.jsx)("div", {
+              className: "title-area-highlight",
+            }),
+            (0, _.jsx)("div", {
+              className: "title-area-children",
+              children: _,
+            }),
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: "title-bar-actions extra-actions",
+                      children: _,
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: "title-bar-actions window-controls",
+                    children: [
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          popup: _,
+                          onClose: _,
+                          bOSX: _,
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          popup: _,
+                          onMaximize: _,
+                          bOSX: _,
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          popup: _,
+                          onMinimize: _,
+                          bOSX: _,
+                        }),
+                    ],
                   }),
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onMaximize: _,
-                    bOSX: _,
-                  }),
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onMinimize: _,
-                    bOSX: _,
-                  }),
-              ),
-            ),
-        );
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { Modal: _ } = _,
@@ -7827,34 +7811,27 @@
               : void 0;
         return _
           ? _.createPortal(
-              _.createElement(
-                _,
-                {
-                  ownerWindow: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "PopupFullWindow",
-                    onContextMenu: _._,
-                  },
-                  _.createElement(_, {
-                    hideMin: !0,
-                    hideMax: !0,
-                    popup: _,
-                    hideActions: _,
-                    style: _,
-                  }),
-                  _.createElement(
-                    _,
-                    {
+              (0, _.jsx)(_, {
+                ownerWindow: _,
+                children: (0, _.jsxs)("div", {
+                  className: "PopupFullWindow",
+                  onContextMenu: _._,
+                  children: [
+                    (0, _.jsx)(_, {
+                      hideMin: !0,
+                      hideMax: !0,
+                      popup: _,
+                      hideActions: _,
+                      style: _,
+                    }),
+                    (0, _.jsx)(_, {
                       browserInfo: _.browserContext,
                       bCenterPopupsOnWindow: _.bCenterOnWindow,
-                    },
-                    _.element,
-                  ),
-                ),
-              ),
+                      children: _.element,
+                    }),
+                  ],
+                }),
+              }),
               _,
             )
           : null;
@@ -7883,11 +7860,14 @@
             });
         }, []);
         return __webpack_require__
-          ? _.createElement(_, {
-              key: _.current,
-              onMeasureComplete: _,
-              request: __webpack_require__,
-            })
+          ? (0, _.jsx)(
+              _,
+              {
+                onMeasureComplete: _,
+                request: __webpack_require__,
+              },
+              _.current,
+            )
           : null;
       }
       function _(_) {
@@ -7909,7 +7889,7 @@
           }, [_]),
           _
             ? _.createPortal(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   ..._,
                   elContainer: _,
                 }),
@@ -7946,7 +7926,9 @@
               () => _(void 0)
             );
           }, [_, __webpack_require__, _]),
-          _.createElement(_._, null, _.rctToMeasure)
+          (0, _.jsx)(_._, {
+            children: _.rctToMeasure,
+          })
         );
       }
       var _ = __webpack_require__("chunkid");
@@ -8374,31 +8356,22 @@
             _,
           ),
           _ = !__webpack_require__ || __webpack_require__.visible;
-        return _.createElement(
-          "div",
-          {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
+          children: (0, _.jsx)("div", {
+            ..._,
             className: (0, _._)(
-              _().HoverPositionOuter,
-              _ && _().HoverAboveModal,
+              _().HoverPosition,
+              _ && _ && _().Ready,
+              _ && _().NoSpace,
+              _ && _().EnablePointerEvents,
+              _,
             ),
-          },
-          _.createElement(
-            "div",
-            {
-              ..._,
-              className: (0, _._)(
-                _().HoverPosition,
-                _ && _ && _().Ready,
-                _ && _().NoSpace,
-                _ && _().EnablePointerEvents,
-                _,
-              ),
-              style: _,
-              ref: _,
-            },
-            _,
-          ),
-        );
+            style: _,
+            ref: _,
+            children: _,
+          }),
+        });
       }
       function _(_, _, _, _, _, _, _) {
         const _ = _,
@@ -8459,73 +8432,74 @@
             }),
             [_],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement("div", {
-            ref: __webpack_require__,
-          }),
-          _.children,
-        );
+        return (0, _.jsxs)(_.Provider, {
+          value: _,
+          children: [
+            (0, _.jsx)("div", {
+              ref: __webpack_require__,
+            }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { divProps: _, tooltipProps: __webpack_require__ } = _({
           ..._,
           toolTipContent: _.toolTipContent
-            ? _.createElement(_, null, _(_.toolTipContent))
+            ? (0, _.jsx)(_, {
+                children: _(_.toolTipContent),
+              })
             : null,
         });
-        return _.createElement(
-          _._,
-          {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: _.bNavStop ?? !!_.onClick,
-            ..._,
-          },
-          _.createElement(_, {
-            ...__webpack_require__,
-          }),
-          _.children,
-        );
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ...__webpack_require__,
+            }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { divProps: _, tooltipProps: __webpack_require__ } = _(_);
-        return _.createElement(
-          _._,
-          {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: _.bNavStop ?? !!_.onClick,
-            ..._,
-          },
-          _.createElement(_, {
-            ...__webpack_require__,
-          }),
-          _.children,
-        );
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ...__webpack_require__,
+            }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { children: _ } = _,
           { divProps: __webpack_require__, tooltipProps: _ } = _({
             ..._,
             toolTipContent: _.toolTipContent
-              ? _.createElement(_, null, _(_.toolTipContent))
+              ? (0, _.jsx)(_, {
+                  children: _(_.toolTipContent),
+                })
               : null,
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.cloneElement(_, {
-            ...__webpack_require__,
-            ..._.props,
-          }),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.cloneElement(_, {
+              ...__webpack_require__,
+              ..._.props,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -8597,7 +8571,7 @@
         return "string" == typeof _ ? _._.LocalizeIfToken(_, !0) : _;
       }
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           ..._,
           className: (0, _._)(_().TextToolTip, _.className),
         });
@@ -8628,14 +8602,11 @@
         if (!_ || !__webpack_require__) return null;
         const { targetElement: _ } = _;
         return _.createPortal(
-          _.createElement(
-            _,
-            {
-              target: __webpack_require__,
-              ..._,
-            },
-            _,
-          ),
+          (0, _.jsx)(_, {
+            target: __webpack_require__,
+            ..._,
+            children: _,
+          }),
           _ ?? __webpack_require__.ownerDocument.body,
         );
       }
@@ -8696,14 +8667,14 @@
                     rctActiveContextMenus: _ && _ ? _ : void 0,
                   };
                 return _ instanceof _
-                  ? _.createElement(_, {
+                  ? (0, _.createElement)(_, {
                       ..._,
                       key: _.key,
                       modal: _,
                       Component: _ ?? _,
                     })
                   : _ instanceof _
-                    ? _.createElement(_, {
+                    ? (0, _.createElement)(_, {
                         ..._,
                         key: _.key,
                         modal: _,
@@ -8716,34 +8687,33 @@
                 ..._,
                 display: "none",
               })),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                "div",
-                {
-                  ..._,
-                  style: _,
-                  ref: _,
-                  className: (0, _._)(_.className, "FullModalOverlay"),
-                },
-                _.createElement("div", {
-                  className: "ModalOverlayContent ModalOverlayBackground",
-                }),
-                _,
-              ),
-              _ && _,
-            ),
-            _.createElement(_, {
-              ModalManager: _,
-            }),
-            _.createElement(_, {
-              ModalManager: _,
-            }),
-          )
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsxs)("div", {
+                    ..._,
+                    style: _,
+                    ref: _,
+                    className: (0, _._)(_.className, "FullModalOverlay"),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "ModalOverlayContent ModalOverlayBackground",
+                      }),
+                      _,
+                    ],
+                  }),
+                  _ && _,
+                ],
+              }),
+              (0, _.jsx)(_, {
+                ModalManager: _,
+              }),
+              (0, _.jsx)(_, {
+                ModalManager: _,
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -8762,26 +8732,23 @@
               }
             );
         }, [_, _]);
-        const _ = _.createElement(
-          _._,
-          null,
-          _.createElement("div", {
-            className: (0, _._)(
-              "ModalOverlayContent",
-              _ ? "active" : "inactive",
-            ),
-            ref: _.RefModalElement,
-          }),
-          __webpack_require__,
-        );
+        const _ = (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                "ModalOverlayContent",
+                _ ? "active" : "inactive",
+              ),
+              ref: _.RefModalElement,
+            }),
+            __webpack_require__,
+          ],
+        });
         return _
-          ? _.createElement(
-              _,
-              {
-                active: _,
-              },
-              _,
-            )
+          ? (0, _.jsx)(_, {
+              active: _,
+              children: _,
+            })
           : _;
       }
       function _(_) {
@@ -8794,45 +8761,31 @@
           _ = (0, _._)();
         return (
           (0, _._)(_.ModalUpdatedCallback, _),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              {
-                className: (0, _._)(
-                  "ModalOverlayContent",
-                  __webpack_require__ ? "active" : "inactive",
-                ),
-                active: __webpack_require__,
-                modalKey: _.key,
-              },
-              _,
-              _.element,
-            ),
-          )
+          (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_, {
+              className: (0, _._)(
+                "ModalOverlayContent",
+                __webpack_require__ ? "active" : "inactive",
+              ),
+              active: __webpack_require__,
+              modalKey: _.key,
+              children: [_, _.element],
+            }),
+          })
         );
       }
       function _(_) {
         const { className: _, active: __webpack_require__, children: _ } = _;
-        return _.createElement(
-          _,
-          {
-            active: __webpack_require__,
-          },
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _,
-                tabIndex: -1,
-              },
-              _,
-            ),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          active: __webpack_require__,
+          children: (0, _.jsx)(_, {
+            children: (0, _.jsx)("div", {
+              className: _,
+              tabIndex: -1,
+              children: _,
+            }),
+          }),
+        });
       }
       function _(_) {
         const { active: _, children: __webpack_require__ } = _,
@@ -8845,16 +8798,13 @@
           _.useLayoutEffect(() => {
             _ && _.current.showModal();
           }, [_]),
-          _.createElement(
-            "dialog",
-            {
-              ref: _,
-              className: _.ModalDialog,
-              onClose: () => _(!1),
-              onCancel: (_) => _.preventDefault(),
-            },
-            __webpack_require__,
-          )
+          (0, _.jsx)("dialog", {
+            ref: _,
+            className: _.ModalDialog,
+            onClose: () => _(!1),
+            onCancel: (_) => _.preventDefault(),
+            children: __webpack_require__,
+          })
         );
       }
       function _(_) {
@@ -8862,16 +8812,17 @@
           _ = (0, _._)();
         return (
           (0, _._)(_.LegacyPopupModalCountChangedCallbacks, _),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.legacy_popup_modals.map((_) =>
-              _.createElement(_, {
-                key: _.key,
-                Modal: _,
-              }),
+          (0, _.jsx)(_.Fragment, {
+            children: _.legacy_popup_modals.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  Modal: _,
+                },
+                _.key,
+              ),
             ),
-          )
+          })
         );
       }
       const _ = _.createContext({}),
@@ -8893,13 +8844,13 @@
             } = _,
             _ = _.useRef(void 0);
           _.current || (_.current = new _());
-          let _ = _.createElement(_, {
+          let _ = (0, _.jsx)(_, {
             ..._,
             DialogWrapper: _,
             ModalManager: _.current,
             bUseDialogElement: _,
             bRegisterModalManager: _,
-            rctActiveContextMenus: _.createElement(_, null),
+            rctActiveContextMenus: (0, _.jsx)(_, {}),
           });
           _.bRenderOverlayAtRoot &&
             "undefined" != typeof document &&
@@ -8917,21 +8868,19 @@
             }),
             [_],
           );
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _,
-              {
-                refContextMenuManager: _,
-                bRegisterMenuManager: _,
-              },
-              _.createElement(_._, null, _),
-              _.children,
-            ),
-          );
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsxs)(_, {
+              refContextMenuManager: _,
+              bRegisterMenuManager: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: _,
+                }),
+                _.children,
+              ],
+            }),
+          });
         });
       function _() {
         return _.useContext(_).ModalManager;
@@ -8939,17 +8888,18 @@
       var _ = __webpack_require__("chunkid");
       function _({ config: _, isDynamic: _ }) {
         const _ = _ ? _ : _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          Object.keys(_ || {}).map((_) =>
-            _.createElement(_, {
-              key: _,
-              featureName: _,
-              render: _[_],
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: Object.keys(_ || {}).map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                featureName: _,
+                render: _[_],
+              },
+              _,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const { featureName: _, render: __webpack_require__ } = _,
@@ -8961,18 +8911,19 @@
             [_],
           );
         return _.length
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  featureName: _,
-                  elem: _,
-                  render: __webpack_require__,
-                }),
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    featureName: _,
+                    elem: _,
+                    render: __webpack_require__,
+                  },
+                  _,
+                ),
               ),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -9017,18 +8968,19 @@
               () => _.disconnect()
             );
           }, [_, _]),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.current.map(({ key: _, elem: _ }) =>
-              _.createElement(_, {
-                key: _,
-                elem: _,
-                featureName: _,
-                render: __webpack_require__,
-              }),
+          (0, _.jsx)(_.Fragment, {
+            children: _.current.map(({ key: _, elem: _ }) =>
+              (0, _.jsx)(
+                _,
+                {
+                  elem: _,
+                  featureName: _,
+                  render: __webpack_require__,
+                },
+                _,
+              ),
             ),
-          )
+          })
         );
       }
       function _(_) {
@@ -9056,7 +9008,9 @@
             [__webpack_require__, _],
           );
         return (0, _.createPortal)(
-          _.createElement(_._, null, _(_)),
+          (0, _.jsx)(_._, {
+            children: _(_),
+          }),
           __webpack_require__,
         );
       }
@@ -9068,11 +9022,11 @@
         const _ = (0, _._)();
         return _.pathname.includes("//")
           ? (console.error(`Malformed path: "${_.pathname}"`),
-            _.createElement(_._, {
+            (0, _.jsx)(_._, {
               _: _.pathname.replace(/\/\//g, "/"),
             }))
           : _.redirect
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 push: !0,
                 _: _.redirect || "/",
               })
@@ -9138,6 +9092,7 @@
         }, [_, _, _, _]);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (
@@ -9164,7 +9119,7 @@
       }
       function _(_, _, _) {
         return _.forwardRef(function (_, _) {
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             ..._,
             role: _,
             ..._,
@@ -9210,26 +9165,20 @@
           _ = _ ? _ : _;
         let _ = _;
         return (
-          (_ ??= _ ? _.createElement(_.Jru, null) : void 0),
-          (_ ??= _.createElement(
-            _.Fragment,
-            null,
-            " ",
-            _.createElement(_._VW, null),
-          )),
-          _.createElement(
-            _,
-            {
-              toolTipContent: __webpack_require__,
-              className: (0, _._)(
-                _.HelperTooltip,
-                "HelperTooltip",
-                _ && _.Small,
-                _,
-              ),
-            },
-            _,
-          )
+          (_ ??= _ ? (0, _.jsx)(_.Jru, {}) : void 0),
+          (_ ??= (0, _.jsxs)(_.Fragment, {
+            children: [" ", (0, _.jsx)(_._VW, {})],
+          })),
+          (0, _.jsx)(_, {
+            toolTipContent: __webpack_require__,
+            className: (0, _._)(
+              _.HelperTooltip,
+              "HelperTooltip",
+              _ && _.Small,
+              _,
+            ),
+            children: _,
+          })
         );
       }
       const _ = _.createContext({}),
@@ -9241,36 +9190,35 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = _("ToggleControl", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
       function _(_) {
         const { value: _, onChange: __webpack_require__, disabled: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().Toggle, _ && _().Disabled),
-            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
-          },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: (0, _._)(
-              _().ToggleRail,
-              _().Highlight,
-              _ ? _()._ : _().Off,
-            ),
-          }),
-          _.createElement("div", {
-            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().Toggle, _ && _().Disabled),
+          onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          children: [
+            (0, _.jsx)("div", {
+              className: _().ToggleRail,
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().ToggleRail,
+                _().Highlight,
+                _ ? _()._ : _().Off,
+              ),
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
+            }),
+          ],
+        });
       }
       function _(_) {
         return _.forwardRef(function (_, _) {
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
             className: (0, _._)(_, _.className),
             ref: _,
@@ -9288,7 +9236,7 @@
             _.useEffect(() => {
               _ && _(_);
             }, [_, _]),
-            _.createElement("div", {
+            (0, _.jsx)("div", {
               _: _,
               role: "heading",
               "aria-level": 2,
@@ -9320,7 +9268,7 @@
         _("DialogColumn _DialogLayout");
       function _(_) {
         const _ = _("Content", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -9336,21 +9284,15 @@
             (_.className ? " " + _.className : "");
         return (
           __webpack_require__ && (_ += " _DialogCenterVertically"),
-          _.createElement(
-            "div",
-            {
-              ..._,
-              ref: _,
-              className: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: "DialogContent_InnerWidth",
-              },
-              _,
-            ),
-          )
+          (0, _.jsx)("div", {
+            ..._,
+            ref: _,
+            className: _,
+            children: (0, _.jsx)("div", {
+              className: "DialogContent_InnerWidth",
+              children: _,
+            }),
+          })
         );
       }
       class _ extends _.Component {
@@ -9360,7 +9302,7 @@
             this.props.onSubmit && this.props.onSubmit(_);
         }
         render() {
-          return _.createElement("form", {
+          return (0, _.jsx)("form", {
             ...this.props,
             onSubmit: this.OnSubmit,
           });
@@ -9372,16 +9314,13 @@
           bCenterVertically: __webpack_require__,
           ..._
         } = _;
-        return _.createElement(
-          _,
-          {
-            className: _,
-            bCenterVertically: __webpack_require__,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          className: _,
+          bCenterVertically: __webpack_require__,
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -9390,25 +9329,24 @@
           className: _,
           children: _,
         } = _;
-        return _.createElement(
-          "label",
-          {
-            className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
-          },
-          _ &&
-            _.createElement(
-              _,
-              null,
-              _,
-              " ",
-              __webpack_require__ &&
-                _.createElement(_, {
-                  tooltip: __webpack_require__,
-                }),
-              " ",
-            ),
-          _,
-        );
+        return (0, _.jsxs)("label", {
+          className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
+          children: [
+            _ &&
+              (0, _.jsxs)(_, {
+                children: [
+                  _,
+                  " ",
+                  __webpack_require__ &&
+                    (0, _.jsx)(_, {
+                      tooltip: __webpack_require__,
+                    }),
+                  " ",
+                ],
+              }),
+            _,
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "OnSubmit", null);
       const _ = _.forwardRef(function (_, _) {
@@ -9426,32 +9364,28 @@
                   _.stopPropagation(), _(_);
                 };
             };
-          return _.createElement(
-            _._,
-            {
-              ref: _,
-              onOKActionDescription: _.disabled ? null : void 0,
-              noFocusRing: !!_.strButtonClassName,
-              ..._,
-              className: _,
-              disabled: !1,
-              onClick: _(_.onClick),
-              onPointerDown: _(_.onPointerDown),
-              onPointerUp: _(_.onPointerUp),
-              onPointerCancel: _(_.onPointerCancel),
-              onMouseDown: _(_.onMouseDown),
-              onMouseUp: _(_.onMouseUp),
-              onTouchStart: _(_.onTouchStart),
-              onTouchEnd: _(_.onTouchEnd),
-              onTouchCancel: _(_.onTouchCancel),
-              onSubmit: _(_.onSubmit),
-            },
-            _ && _(),
-            _.children,
-          );
+          return (0, _.jsxs)(_._, {
+            ref: _,
+            onOKActionDescription: _.disabled ? null : void 0,
+            noFocusRing: !!_.strButtonClassName,
+            ..._,
+            className: _,
+            disabled: !1,
+            onClick: _(_.onClick),
+            onPointerDown: _(_.onPointerDown),
+            onPointerUp: _(_.onPointerUp),
+            onPointerCancel: _(_.onPointerCancel),
+            onMouseDown: _(_.onMouseDown),
+            onMouseUp: _(_.onMouseUp),
+            onTouchStart: _(_.onTouchStart),
+            onTouchEnd: _(_.onTouchEnd),
+            onTouchCancel: _(_.onTouchCancel),
+            onSubmit: _(_.onSubmit),
+            children: [_ && _(), _.children],
+          });
         }),
         _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             preferredFocus: !0,
             type: _.onClick ? "button" : "submit",
             ..._,
@@ -9465,7 +9399,7 @@
           });
         }),
         _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             type: "button",
             ..._,
             ref: _,
@@ -9478,7 +9412,7 @@
           });
         });
       _.forwardRef(function (_, _) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           type: "button",
           ..._,
           ref: _,
@@ -9491,7 +9425,7 @@
         });
       }),
         _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             type: "button",
             ..._,
             ref: _,
@@ -9502,7 +9436,7 @@
           });
         }),
         _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             type: "button",
             ..._,
             ref: _,
@@ -9510,65 +9444,46 @@
           });
         });
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            className: _.className,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          className: _.className,
+          children: [
+            (0, _.jsxs)(_, {
               onClick: _.onOK,
               disabled: _.bOKDisabled,
               autoFocus: "primary" == _.focusButton,
-            },
-            _.strOKText || (0, _._)("#Button_Confirm"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
+              children: [_.strOKText || (0, _._)("#Button_Confirm"), " "],
+            }),
+            (0, _.jsx)(_, {
               onClick: _.onCancel,
               disabled: _.bCancelDisabled,
               autoFocus: "secondary" == _.focusButton,
-            },
-            _.strCancelText || (0, _._)("#Button_Cancel"),
-          ),
-        );
+              children: _.strCancelText || (0, _._)("#Button_Cancel"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = _.bOKDisabled ? _ : _,
           _ = _.bOKDisabled ? _ : _;
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          children: [
+            (0, _.jsxs)(_, {
               onClick: _.onOK,
               disabled: _.bOKDisabled,
-            },
-            _.strOKText || (0, _._)("#Button_Confirm"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
+              children: [_.strOKText || (0, _._)("#Button_Confirm"), " "],
+            }),
+            (0, _.jsxs)(_, {
               onClick: _.onUpdate,
               disabled: _.bUpdateDisabled,
-            },
-            _.strUpdateText || (0, _._)("#Button_Update"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
+              children: [_.strUpdateText || (0, _._)("#Button_Update"), " "],
+            }),
+            (0, _.jsx)(_, {
               onClick: _.onCancel,
               disabled: _.bCancelDisabled,
-            },
-            _.strCancelText || (0, _._)("#Button_Cancel"),
-          ),
-        );
+              children: _.strCancelText || (0, _._)("#Button_Cancel"),
+            }),
+          ],
+        });
       }
       class _ extends _.Component {
         constructor(_) {
@@ -9660,71 +9575,62 @@
           return (
             1 == this.state.disabled && (_ += " Disabled"),
             this.props.label
-              ? _.createElement(
-                  _._,
-                  {
-                    role: "checkbox",
-                    "aria-checked": this.checked,
-                    className:
-                      "DialogCheckbox_Container _DialogLayout " +
-                      (this.props.className ? this.props.className : "") +
-                      (this.state.disabled ? " Disabled" : ""),
-                    ...this.GetPanelElementProps(),
-                  },
-                  _.createElement(
-                    "div",
-                    {
+              ? (0, _.jsxs)(_._, {
+                  role: "checkbox",
+                  "aria-checked": this.checked,
+                  className:
+                    "DialogCheckbox_Container _DialogLayout " +
+                    (this.props.className ? this.props.className : "") +
+                    (this.state.disabled ? " Disabled" : ""),
+                  ...this.GetPanelElementProps(),
+                  children: [
+                    (0, _.jsx)("div", {
                       className: _,
-                    },
-                    _.createElement(_.X4B, {
-                      color: this.props.color,
-                      highlightColor: this.props.highlightColor,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggle_Label",
-                    },
-                    "string" == typeof this.props.label &&
-                      _.createElement("span", null, this.props.label),
-                    "string" != typeof this.props.label && this.props.label,
-                    this.props.tooltip &&
-                      _.createElement(_, {
-                        tooltip: this.props.tooltip,
+                      children: (0, _.jsx)(_.X4B, {
+                        color: this.props.color,
+                        highlightColor: this.props.highlightColor,
                       }),
-                  ),
-                  _.createElement("div", {
-                    style: {
-                      clear: "left",
-                    },
-                  }),
-                  this.props.description &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: "DialogToggle_Description",
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: "DialogToggle_Label",
+                      children: [
+                        "string" == typeof this.props.label &&
+                          (0, _.jsx)("span", {
+                            children: this.props.label,
+                          }),
+                        "string" != typeof this.props.label && this.props.label,
+                        this.props.tooltip &&
+                          (0, _.jsx)(_, {
+                            tooltip: this.props.tooltip,
+                          }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      style: {
+                        clear: "left",
                       },
-                      this.props.description,
-                    ),
-                  this.props.children,
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    role: "checkbox",
-                    "aria-checked": this.checked,
-                    className: _,
-                    ...this.GetPanelElementProps(),
-                  },
-                  _.createElement(_.X4B, null),
-                )
+                    }),
+                    this.props.description &&
+                      (0, _.jsx)("div", {
+                        className: "DialogToggle_Description",
+                        children: this.props.description,
+                      }),
+                    this.props.children,
+                  ],
+                })
+              : (0, _.jsx)(_._, {
+                  role: "checkbox",
+                  "aria-checked": this.checked,
+                  className: _,
+                  ...this.GetPanelElementProps(),
+                  children: (0, _.jsx)(_.X4B, {}),
+                })
           );
         }
       }
       _.forwardRef(function (_, _) {
         const _ = _("ToggleField", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ref: _,
           ..._,
         });
@@ -9745,83 +9651,66 @@
             (this.props.className ? this.props.className : "");
           return (
             this.props.disabled && (_ += " Disabled"),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                tabIndex: this.props.tabIndex || 0,
-                onKeyDown: this.OnOffKeyDown,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _,
+              tabIndex: this.props.tabIndex || 0,
+              onKeyDown: this.OnOffKeyDown,
+              children: [
+                (0, _.jsxs)("div", {
                   className: "displayColumn alignSelfCenter",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogToggle_Label",
-                  },
-                  _.createElement("span", null, this.props.label),
-                  this.props.tooltip &&
-                    _.createElement(_, {
-                      tooltip: this.props.tooltip,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: "DialogToggle_Label",
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: this.props.label,
+                        }),
+                        this.props.tooltip &&
+                          (0, _.jsx)(_, {
+                            tooltip: this.props.tooltip,
+                          }),
+                      ],
                     }),
-                ),
-                this.props.description &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggle_Description",
-                    },
-                    this.props.description,
-                  ),
-                this.props.children,
-              ),
-              this.props.useToggleRail
-                ? _.createElement(
-                    "div",
-                    {
+                    this.props.description &&
+                      (0, _.jsx)("div", {
+                        className: "DialogToggle_Description",
+                        children: this.props.description,
+                      }),
+                    this.props.children,
+                  ],
+                }),
+                this.props.useToggleRail
+                  ? (0, _.jsx)("div", {
                       className: "DialogToggleField_NewUIContainer",
-                    },
-                    _.createElement(_, {
-                      onChange: this.OnNewUIToggle,
-                      value: this.checked,
-                    }),
-                  )
-                : _.createElement(
-                    "div",
-                    {
+                      children: (0, _.jsx)(_, {
+                        onChange: this.OnNewUIToggle,
+                        value: this.checked,
+                      }),
+                    })
+                  : (0, _.jsx)("div", {
                       className: "DialogToggleField_Control",
                       onClick: this.Toggle,
-                    },
-                    _.createElement(
-                      _._,
-                      {
+                      children: (0, _.jsxs)(_._, {
                         className: "DialogToggleField_OptionPanel",
                         onOKButton: this.Toggle,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className:
-                            "DialogToggleField_Option Off" +
-                            (this.checked ? "" : " Active"),
-                        },
-                        (0, _._)("#Dialog_Off"),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className:
-                            "DialogToggleField_Option On" +
-                            (this.checked ? " Active" : ""),
-                        },
-                        (0, _._)("#Dialog_On"),
-                      ),
-                    ),
-                  ),
-            )
+                        children: [
+                          (0, _.jsx)("div", {
+                            className:
+                              "DialogToggleField_Option Off" +
+                              (this.checked ? "" : " Active"),
+                            children: (0, _._)("#Dialog_Off"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className:
+                              "DialogToggleField_Option On" +
+                              (this.checked ? " Active" : ""),
+                            children: (0, _._)("#Dialog_On"),
+                          }),
+                        ],
+                      }),
+                    }),
+              ],
+            })
           );
         }
       }
@@ -9971,7 +9860,7 @@
       }
       const _ = _.forwardRef(function (_, _) {
         const _ = _("InputElement", _._);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
           ref: _,
         });
@@ -10145,162 +10034,141 @@
           let _ = {};
           void 0 !== this.state.m_CopiedYPos &&
             (_.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-          let _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
+          let _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_._, {
                 className: "DialogInput_Wrapper _DialogLayout",
                 "flow-children": "row",
                 ref: this.ref,
-              },
-              _.createElement(_, {
-                type: "text",
-                ..._,
-                className: _,
-                ref: this.OnInputRef,
-                onChange: this.OnChanged,
+                children: [
+                  (0, _.jsx)(_, {
+                    type: "text",
+                    ..._,
+                    className: _,
+                    ref: this.OnInputRef,
+                    onChange: this.OnChanged,
+                  }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: "displayRow",
+                      children: [
+                        (0, _.jsx)(_, {
+                          className: "DialogInput_CopyAction Primary",
+                          onClick: this.OnCopyClick,
+                          children: (0, _._)("#Button_Copy"),
+                        }),
+                        (0, _.jsx)("div", {
+                          style: _,
+                          className: _,
+                          children: (0, _._)("#Button_Copied"),
+                        }),
+                      ],
+                    }),
+                  (_ || (_ && _.value)) &&
+                    (0, _.jsx)("div", {
+                      className: "DialogInput_ClearAction",
+                      onClick: this.OnClearClick,
+                      children: (0, _.jsx)(_.sED, {}),
+                    }),
+                  _,
+                ],
               }),
               _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "displayRow",
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      className: "DialogInput_CopyAction Primary",
-                      onClick: this.OnCopyClick,
-                    },
-                    (0, _._)("#Button_Copy"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      style: _,
-                      className: _,
-                    },
-                    (0, _._)("#Button_Copied"),
-                  ),
-                ),
-              (_ || (_ && _.value)) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogInput_ClearAction",
-                    onClick: this.OnClearClick,
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              _,
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                (0, _.jsx)("div", {
                   className: "DialogLabelExplainer",
-                },
-                _,
-              ),
-          );
+                  children: _,
+                }),
+            ],
+          });
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className:
-                    "DialogInputLabelGroup _DialogLayout DialogRequirementLabel",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+            ? (0, _.jsx)("div", {
+                className:
+                  "DialogInputLabelGroup _DialogLayout DialogRequirementLabel",
+                children: (0, _.jsxs)("label", {
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: "DialogLabel",
-                    },
+                      children: [
+                        _,
+                        " ",
+                        this.props.tooltip &&
+                          (0, _.jsx)(_, {
+                            tooltip: this.props.tooltip,
+                          }),
+                        (0, _.jsx)("span", {
+                          className: "DialogInputRequirementLabel",
+                          children: this.props.requiredLabel,
+                        }),
+                        " ",
+                      ],
+                    }),
                     _,
-                    " ",
-                    this.props.tooltip &&
-                      _.createElement(_, {
-                        tooltip: this.props.tooltip,
-                      }),
-                    _.createElement(
-                      "span",
-                      {
-                        className: "DialogInputRequirementLabel",
-                      },
-                      this.props.requiredLabel,
-                    ),
-                    " ",
-                  ),
-                  _,
-                  this.state.m_bNumberBelowMinRange
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_NumberTooSmall"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bNumberAboveMaxRange
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_NumberTooLarge"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsInvalidURL
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeURL"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_strInvalidURLMessage
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        this.state.m_strInvalidURLMessage,
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsInvalidEmail
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeEmail"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsNotNumeric
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeNumber"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bAboveMaxChars
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_TooManyCharacters", _),
-                        " ",
-                      )
-                    : null,
-                ),
-              )
+                    this.state.m_bNumberBelowMinRange
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_NumberTooSmall"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bNumberAboveMaxRange
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_NumberTooLarge"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bIsInvalidURL
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_MustBeURL"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_strInvalidURLMessage
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            this.state.m_strInvalidURLMessage,
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bIsInvalidEmail
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_MustBeEmail"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bIsNotNumeric
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_MustBeNumber"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bAboveMaxChars
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_TooManyCharacters", _),
+                            " ",
+                          ],
+                        })
+                      : null,
+                  ],
+                }),
+              })
             : _;
         }
       }
@@ -10343,71 +10211,58 @@
             children: _,
             ..._
           } = this.props;
-          return _.createElement(
-            "div",
-            {
-              className:
-                "DialogInputLabelGroup _DialogLayout DialogListBuilderInput",
-            },
-            _.createElement(
-              "label",
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+          return (0, _.jsx)("div", {
+            className:
+              "DialogInputLabelGroup _DialogLayout DialogListBuilderInput",
+            children: (0, _.jsxs)("label", {
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
                     className: "DialogLabel",
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
+                    children: _,
+                  }),
+                (0, _.jsx)("div", {
                   className: (0, _._)(
                     "_DialogInputContainer",
                     "DialogTextInputBase",
                     this.m_bFocused && "Active",
                   ),
                   onClick: this.OnBackgroundClick,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsxs)(_._, {
                     className: "DialogListBuilderInput_List",
                     "flow-children": "row",
-                  },
-                  _.Children.map(_, (_, _) =>
-                    _.createElement(
-                      "div",
-                      {
-                        className: "DialogListBuilderInput_ListItem",
-                        key: _,
-                      },
-                      _,
-                    ),
-                  ),
-                  _.createElement(_._, {
-                    type: "text",
-                    ..._,
-                    className:
-                      "DialogListBuilderInput_Input DialogInputPlaceholder",
-                    ref: this.OnInputRef,
-                    onFocus: this.OnInputFocus,
-                    onBlur: this.OnInputBlur,
-                    size: 4,
+                    children: [
+                      _.Children.map(_, (_, _) =>
+                        (0, _.jsx)(
+                          "div",
+                          {
+                            className: "DialogListBuilderInput_ListItem",
+                            children: _,
+                          },
+                          _,
+                        ),
+                      ),
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        ..._,
+                        className:
+                          "DialogListBuilderInput_Input DialogInputPlaceholder",
+                        ref: this.OnInputRef,
+                        onFocus: this.OnInputFocus,
+                        onBlur: this.OnInputBlur,
+                        size: 4,
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
                     className: "DialogLabelExplainer",
-                  },
-                  _,
-                ),
-            ),
-          );
+                    children: _,
+                  }),
+              ],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
@@ -10540,60 +10395,51 @@
           }
           const { label: _, description: _, tooltip: _, ..._ } = this.props,
             _ = this.props.renderValue ?? _;
-          return _.createElement(
-            "div",
-            {
-              className:
-                "DialogSlider_Container _DialogInputContainer _DialogLayout" +
-                (this.props.className ? " " + this.props.className : ""),
-              onKeyDown: this.OnKeyDown,
-              tabIndex: this.props.tabIndex || 0,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            className:
+              "DialogSlider_Container _DialogInputContainer _DialogLayout" +
+              (this.props.className ? " " + this.props.className : ""),
+            onKeyDown: this.OnKeyDown,
+            tabIndex: this.props.tabIndex || 0,
+            children: [
+              _ &&
+                (0, _.jsxs)("div", {
                   className: "DialogLabel",
-                },
-                _,
-                Boolean(_) &&
-                  _.createElement(_, {
-                    tooltip: _,
-                  }),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: [
+                    _,
+                    Boolean(_) &&
+                      (0, _.jsx)(_, {
+                        tooltip: _,
+                      }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
                 className: "DialogSlider_Slider",
                 onMouseDown: this.OnMouseDown,
                 onTouchStart: this.OnTouchStart,
-              },
-              _.createElement("div", {
-                className: "DialogSlider_Value",
-                style: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogSlider_Value",
+                    style: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "DialogSlider_Grabber",
+                    style: _,
+                  }),
+                ],
               }),
-              _.createElement("div", {
-                className: "DialogSlider_Grabber",
-                style: _,
-              }),
-            ),
-            this.props.showValue &&
-              _.createElement(
-                "div",
-                {
+              this.props.showValue &&
+                (0, _.jsx)("div", {
                   className: "DialogLabelExplainer",
-                },
-                _(this.props.value, this.props.valueSuffix),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                  children: _(this.props.value, this.props.valueSuffix),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
                   className: "DialogLabelExplainer",
-                },
-                _,
-              ),
-          );
+                  children: _,
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -10651,7 +10497,7 @@
       }
       function _(_) {
         const _ = _("DropDownField", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -10663,67 +10509,57 @@
           dropDownControlRef: _,
           ..._
         } = _;
-        return _.createElement(
-          _,
-          {
-            label: _,
-            tooltip: __webpack_require__,
-            className: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          label: _,
+          tooltip: __webpack_require__,
+          className: _,
+          children: (0, _.jsx)(_, {
             menuLabel: _,
             ..._,
             ref: _,
           }),
-        );
+        });
       }
       const _ = _.forwardRef(function (_, _) {
-        return _.createElement(
-          _._,
-          {
-            _: _._,
-            focusable: _.focusable,
-            className: (0, _._)(
-              _.className,
-              "DialogDropDown",
-              "_DialogInputContainer",
-              {
-                Active: _.opened,
-                Disabled: _.disabled,
-              },
-            ),
-            tabIndex: _.tabIndex,
-            onClick: _.onClick,
-            onKeyDown: _.onKeyDown,
-            disabled: _.disabled,
-            type: "button",
-            ref: _,
-            noFocusRing: _.noFocusRing,
-            role: _.role ?? "combobox",
-            "aria-controls": _["aria-controls"],
-            "aria-expanded": _.opened,
-            "aria-label": _["aria-label"],
-            "aria-labelledby": _["aria-labelledby"],
-            "aria-describedby": _["aria-describedby"],
-          },
-          _.createElement(
-            "div",
+        return (0, _.jsxs)(_._, {
+          _: _._,
+          focusable: _.focusable,
+          className: (0, _._)(
+            _.className,
+            "DialogDropDown",
+            "_DialogInputContainer",
             {
-              className: "DialogDropDown_CurrentDisplay",
+              Active: _.opened,
+              Disabled: _.disabled,
             },
-            _.children,
           ),
-          !_.disabled &&
-            _.createElement(
-              "div",
-              {
+          tabIndex: _.tabIndex,
+          onClick: _.onClick,
+          onKeyDown: _.onKeyDown,
+          disabled: _.disabled,
+          type: "button",
+          ref: _,
+          noFocusRing: _.noFocusRing,
+          role: _.role ?? "combobox",
+          "aria-controls": _["aria-controls"],
+          "aria-expanded": _.opened,
+          "aria-label": _["aria-label"],
+          "aria-labelledby": _["aria-labelledby"],
+          "aria-describedby": _["aria-describedby"],
+          children: [
+            (0, _.jsx)("div", {
+              className: "DialogDropDown_CurrentDisplay",
+              children: _.children,
+            }),
+            !_.disabled &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(_.arrowClassName, "DialogDropDown_Arrow"),
-              },
-              _.createElement(_.GB9, {
-                role: "presentation",
+                children: (0, _.jsx)(_.GB9, {
+                  role: "presentation",
+                }),
               }),
-            ),
-        );
+          ],
+        });
       });
       class _ extends _.Component {
         static contextType = _;
@@ -10820,7 +10656,7 @@
             },
             _ = this.props.contextMenuPositionOptions?.onCancel;
           (this.m_iMenuInstance = (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               rgOptions: this.props.rgOptions,
               onValueSelected: this.OnValueSelected,
               onCancel: _,
@@ -10869,29 +10705,26 @@
               this.props.renderButton ||
               this.context.DropDownControlButton ||
               _;
-          return _.createElement(
-            _,
-            {
-              focusable: _,
-              disabled: this.props.disabled ?? !1,
-              opened: this.state.bOpened,
-              onClick: this.props.disabled ? void 0 : this.ToggleMenu,
-              onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
-              tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
-              ref: this.OnInputRef,
-              className: this.props.strDropDownButtonClassName,
-              arrowClassName: this.props.arrowClassName,
-              role: "combobox",
-              "aria-controls": this.m_iMenuInstance
-                ? `dropdownmenu_${this.m_iMenuInstance.key}`
-                : void 0,
-              "aria-expanded": this.state.bOpened,
-              "aria-label": this.props["aria-label"],
-              "aria-labelledby": this.props["aria-labelledby"],
-              "aria-describedby": this.props["aria-describedby"],
-            },
-            _,
-          );
+          return (0, _.jsx)(_, {
+            focusable: _,
+            disabled: this.props.disabled ?? !1,
+            opened: this.state.bOpened,
+            onClick: this.props.disabled ? void 0 : this.ToggleMenu,
+            onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
+            tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
+            ref: this.OnInputRef,
+            className: this.props.strDropDownButtonClassName,
+            arrowClassName: this.props.arrowClassName,
+            role: "combobox",
+            "aria-controls": this.m_iMenuInstance
+              ? `dropdownmenu_${this.m_iMenuInstance.key}`
+              : void 0,
+            "aria-expanded": this.state.bOpened,
+            "aria-label": this.props["aria-label"],
+            "aria-labelledby": this.props["aria-labelledby"],
+            "aria-describedby": this.props["aria-describedby"],
+            children: _,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnInputRef", null),
@@ -10903,15 +10736,12 @@
       const _ = _.createContext(null);
       function _(_) {
         const _ = _("DropDownMenu", _);
-        return _.createElement(
-          _.Provider,
-          {
-            value: {},
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_.Provider, {
+          value: {},
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       function _(_, _, _, _) {
         let _;
@@ -10938,47 +10768,53 @@
             },
             [_, _],
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().DialogDropDownMenu,
-              "_DialogInputContainer",
-              _.strDropDownMenuCtnClass,
-            ),
-            onKeyDown: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().DialogDropDownMenu,
+            "_DialogInputContainer",
+            _.strDropDownMenuCtnClass,
+          ),
+          onKeyDown: _,
+          children: (0, _.jsx)(_, {
             rgOptions: _,
             strDropDownItemClassName: __webpack_require__,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { rgOptions: _, ...__webpack_require__ } = _;
         return _.map((_, _) =>
           _(_)
-            ? _.createElement("hr", {
-                key: _,
-                className: (0, _._)(
-                  _().DialogDropDownMenu_Item,
-                  _().DialogDropDownMenu_Separator,
-                ),
-              })
+            ? (0, _.jsx)(
+                "hr",
+                {
+                  className: (0, _._)(
+                    _().DialogDropDownMenu_Item,
+                    _().DialogDropDownMenu_Separator,
+                  ),
+                },
+                _,
+              )
             : _(_)
-              ? _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  rgOptions: _.options,
-                })
-              : _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  option: _,
-                }),
+              ? (0, _.jsx)(
+                  _,
+                  {
+                    ...__webpack_require__,
+                    rgOptions: _.options,
+                  },
+                  _,
+                )
+              : (0, _.jsx)(
+                  _,
+                  {
+                    ...__webpack_require__,
+                    option: _,
+                  },
+                  _,
+                ),
         );
       }
       function _(_) {
@@ -10994,34 +10830,30 @@
             _(_.data);
           }, [_, _]),
           _ = _.data === _;
-        return _.createElement(
-          "button",
-          {
-            type: "button",
-            className: (0, _._)(
-              _().DialogDropDownMenu_Item,
-              __webpack_require__,
-              _.strOptionClass,
-              _ && "ContextMenuAutoFocus",
-            ),
-            onClick: (_) => _(_, _),
-            ref: _ ? _ : void 0,
-            onMouseEnter: _,
-            role: "option",
-            "aria-selected": _,
-          },
-          Boolean(_.tooltip)
-            ? _.createElement(
-                _,
-                {
-                  toolTipContent: _.tooltip,
-                  bTopmost: !0,
-                  className: "TooltipContainer",
-                },
-                _.label,
-              )
-            : _.createElement("div", null, _.label),
-        );
+        return (0, _.jsx)("button", {
+          type: "button",
+          className: (0, _._)(
+            _().DialogDropDownMenu_Item,
+            __webpack_require__,
+            _.strOptionClass,
+            _ && "ContextMenuAutoFocus",
+          ),
+          onClick: (_) => _(_, _),
+          ref: _ ? _ : void 0,
+          onMouseEnter: _,
+          role: "option",
+          "aria-selected": _,
+          children: Boolean(_.tooltip)
+            ? (0, _.jsx)(_, {
+                toolTipContent: _.tooltip,
+                bTopmost: !0,
+                className: "TooltipContainer",
+                children: _.label,
+              })
+            : (0, _.jsx)("div", {
+                children: _.label,
+              }),
+        });
       }
       class _ extends _.Component {
         state = {
@@ -11054,7 +10886,7 @@
                   ]),
                   (_.selectedOption = __webpack_require__))
                 : (_ = [])),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               ..._,
               rgOptions: _,
               onMenuOpened: this.OnMenuOpened,
@@ -11170,43 +11002,46 @@
           let _ = [];
           return (
             _.push(
-              _.createElement(_, {
-                coordinator: this.m_coordinator,
-                key: "dropregion_top",
-                fnBAcceptDraggable: (_) => 0 != _.props.data,
-                fnOnDrop: (_) => this.OnDrop(_.props.data, 0),
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  coordinator: this.m_coordinator,
+                  fnBAcceptDraggable: (_) => 0 != _.props.data,
+                  fnOnDrop: (_) => this.OnDrop(_.props.data, 0),
+                },
+                "dropregion_top",
+              ),
             ),
             _.Children.forEach(this.props.children, (_, _) => {
               const _ = _.props._ || "__list_" + _,
                 _ = _ + 1;
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _,
                   {
                     coordinator: this.m_coordinator,
                     data: _,
-                    key: _,
+                    children: _,
                   },
                   _,
                 ),
               ),
                 _.push(
-                  _.createElement(_, {
-                    coordinator: this.m_coordinator,
-                    key: "dropregion_" + _,
-                    fnBAcceptDraggable: (_) => _.props.data != _,
-                    fnOnDrop: (_) => this.OnDrop(_.props.data, _),
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      coordinator: this.m_coordinator,
+                      fnBAcceptDraggable: (_) => _.props.data != _,
+                      fnOnDrop: (_) => this.OnDrop(_.props.data, _),
+                    },
+                    "dropregion_" + _,
+                  ),
                 );
             }),
-            _.createElement(
-              "div",
-              {
-                className: "DialogReorderableList",
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              className: "DialogReorderableList",
+              children: _,
+            })
           );
         }
       }
@@ -11588,30 +11423,27 @@
                       onMouseDown: this.OnMouseDown,
                       onTouchStart: this.OnTouchStart,
                     }),
-            _.createElement(
-              "div",
-              {
-                ref: this.m_divRef,
-                className: _,
-                ..._,
-                ..._,
-                draggable: __webpack_require__,
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              ref: this.m_divRef,
+              className: _,
+              ..._,
+              ..._,
+              draggable: __webpack_require__,
+              children: _,
+            })
           );
         }
         renderDropGhost() {
           return this.props.fnRenderDropGhost
             ? this.props.fnRenderDropGhost()
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 elContent: this.GetClone(),
               });
         }
         renderDragGhost() {
           return this.props.fnRenderDragGhost
             ? this.props.fnRenderDragGhost()
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 elContent: this.GetClone(),
                 offsetX: this.m_DragInfo.startOffsetX,
                 offsetY: this.m_DragInfo.startOffsetY,
@@ -11646,7 +11478,7 @@
           _ && this.props.elContent && _.appendChild(this.props.elContent);
         }
         render() {
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: "DialogDraggable_DropGhost",
             ref: this.OnRef,
           });
@@ -11674,7 +11506,7 @@
             void 0 === this.state.clientX ||
             void 0 === this.state.clientY
           )
-            return _.createElement("div", null);
+            return (0, _.jsx)("div", {});
           let _ = {
               left: this.state.clientX - (this.props.offsetX || 0),
               top: this.state.clientY - (this.props.offsetY || 0),
@@ -11695,17 +11527,14 @@
               filter: "brightness(" + _ + ")",
             };
           const _ = this.props.className || "DialogDraggable_DragGhost";
-          return _.createElement(
-            "div",
-            {
-              className: _,
-              style: _,
-            },
-            _.createElement("div", {
+          return (0, _.jsx)("div", {
+            className: _,
+            style: _,
+            children: (0, _.jsx)("div", {
               ref: this.OnRef,
               style: _,
             }),
-          );
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnRef", null);
@@ -11784,17 +11613,13 @@
               _ || "DialogDropRegion",
               this.state.bDraggableActive && (_ || "Active"),
             );
-          return _.createElement(
-            _._,
-            {
-              ref: (0, _._)(_, this.m_divRef),
-              className: _,
-              ..._,
-              focusable: void 0 === _ ? !!_.onClick : _,
-            },
-            this.state.dropGhost,
-            _,
-          );
+          return (0, _.jsxs)(_._, {
+            ref: (0, _._)(_, this.m_divRef),
+            className: _,
+            ..._,
+            focusable: void 0 === _ ? !!_.onClick : _,
+            children: [this.state.dropGhost, _],
+          });
         }
       }
       class _ extends _ {
@@ -11859,36 +11684,45 @@
             const _ = _ === _;
             if (_ === _) {
               const _ = _ === _ + 1 || _ === _ - 1;
-              return _.createElement(_, {
-                role: "separator",
-                key: _,
-                bTransparent: _,
-              });
+              return (0, _.jsx)(
+                _,
+                {
+                  role: "separator",
+                  bTransparent: _,
+                },
+                _,
+              );
             }
             if (_ === _)
-              return _.createElement("div", {
-                key: _,
-                className: _().PageListSpacer,
-              });
+              return (0, _.jsx)(
+                "div",
+                {
+                  className: _().PageListSpacer,
+                },
+                _,
+              );
             {
               if (!1 === _.visible) return null;
               const _ =
                   _.identifier || _.title || __webpack_require__.toString(),
                 _ = () => _(_, _);
-              return _.createElement(_, {
-                className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
-                  [_.Active]: _,
-                }),
-                key: _,
-                onClick: _,
-                title: _.title,
-                icon: _.icon,
-                active: _,
-                _: _ + _.identifier,
-                role: "tab",
-                "aria-selected": _,
-                "aria-controls": _ + _.identifier + "_Content",
-              });
+              return (0, _.jsx)(
+                _,
+                {
+                  className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
+                    [_.Active]: _,
+                  }),
+                  onClick: _,
+                  title: _.title,
+                  icon: _.icon,
+                  active: _,
+                  _: _ + _.identifier,
+                  role: "tab",
+                  "aria-selected": _,
+                  "aria-controls": _ + _.identifier + "_Content",
+                },
+                _,
+              );
             }
           });
       }
@@ -11901,60 +11735,56 @@
           onClick: _,
           ..._
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-            ..._,
-          },
-          __webpack_require__
-            ? _.createElement(
-                "div",
-                {
+        return (0, _.jsxs)("div", {
+          className: _,
+          onClick: _,
+          ..._,
+          children: [
+            __webpack_require__
+              ? (0, _.jsx)("div", {
                   className: _().PageListItem_Icon,
-                },
-                __webpack_require__,
-              )
-            : null,
-          _.createElement(
-            "div",
-            {
+                  children: __webpack_require__,
+                })
+              : null,
+            (0, _.jsx)("div", {
               className: _().PageListItem_Title,
               ..._,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
       const _ = _.forwardRef(function (_, _) {
         const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
           _ = _.useContext(_),
           _ = __webpack_require__?.padding ?? "standard";
-        return _.createElement(
-          _,
-          {
-            style: _,
-            className: (0, _._)(
-              _?.PagedSettingsDialog_PageContent,
-              __webpack_require__?.pageClassName,
-              "none" == _ && _?.NoPadding,
-            ),
-            refElem: _,
-            role: "tabpanel",
-            "aria-labelledby": _ + __webpack_require__?.identifier,
-            _: _ + __webpack_require__?.identifier + "_Content",
-          },
-          __webpack_require__?.header,
-          !__webpack_require__?.hideTitle &&
-            _.createElement(_, null, __webpack_require__?.title),
-          _.createElement(_._, null, __webpack_require__?.content),
-        );
+        return (0, _.jsxs)(_, {
+          style: _,
+          className: (0, _._)(
+            _?.PagedSettingsDialog_PageContent,
+            __webpack_require__?.pageClassName,
+            "none" == _ && _?.NoPadding,
+          ),
+          refElem: _,
+          role: "tabpanel",
+          "aria-labelledby": _ + __webpack_require__?.identifier,
+          _: _ + __webpack_require__?.identifier + "_Content",
+          children: [
+            __webpack_require__?.header,
+            !__webpack_require__?.hideTitle &&
+              (0, _.jsx)(_, {
+                children: __webpack_require__?.title,
+              }),
+            (0, _.jsx)(_._, {
+              children: __webpack_require__?.content,
+            }),
+          ],
+        });
       });
       function _(_) {
         const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(__webpack_require__, _().PageListSeparator, {
             [_().Transparent]: _,
           }),
@@ -12051,23 +11881,16 @@
               refForPage: _,
             };
           })();
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  __webpack_require__.PagedSettingsDialog,
-                  _.className,
-                ),
-                ref: _,
-              },
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                __webpack_require__.PagedSettingsDialog,
+                _.className,
+              ),
+              ref: _,
+              children: [
+                (0, _.jsxs)(_._, {
                   className: (0, _._)(
                     __webpack_require__.PagedSettingsDialog_PageListColumn,
                     _.hideList && _().Hidden,
@@ -12079,67 +11902,69 @@
                       _.current?.TakeFocus(_.detail.button);
                   },
                   onFocusWithin: _,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: __webpack_require__.PagedSettingsDialog_Title,
-                    },
-                    _.title,
-                  ),
-                _.topControls && _.createElement("div", null, _.topControls),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      __webpack_require__.PagedSettingsDialog_PageList,
-                      _.disablePageListScrolling &&
-                        __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
-                      _ &&
-                        __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
-                      _.bNoHeaderPadding &&
-                        __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
-                    ),
-                    role: "tablist",
-                    "aria-orientation": "vertical",
-                    navEntryPreferPosition: _._.PREFERRED_CHILD,
-                    ref: _,
-                  },
-                  _.createElement(_, {
-                    stylesheet: __webpack_require__,
-                    pages: _,
-                    iActivePage: _,
-                    onPageSelected: _,
-                    PageListItemComponent: _.PageListItemComponent,
-                    PageListSeparatorComponent: _.PageListSeparatorComponent,
-                  }),
-                ),
-                _.bottomControls &&
-                  _.createElement("div", null, _.bottomControls),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: [
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className:
+                          __webpack_require__.PagedSettingsDialog_Title,
+                        children: _.title,
+                      }),
+                    _.topControls &&
+                      (0, _.jsx)("div", {
+                        children: _.topControls,
+                      }),
+                    (0, _.jsx)(_._, {
+                      className: (0, _._)(
+                        __webpack_require__.PagedSettingsDialog_PageList,
+                        _.disablePageListScrolling &&
+                          __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
+                        _ &&
+                          __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
+                        _.bNoHeaderPadding &&
+                          __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
+                      ),
+                      role: "tablist",
+                      "aria-orientation": "vertical",
+                      navEntryPreferPosition: _._.PREFERRED_CHILD,
+                      ref: _,
+                      children: (0, _.jsx)(_, {
+                        stylesheet: __webpack_require__,
+                        pages: _,
+                        iActivePage: _,
+                        onPageSelected: _,
+                        PageListItemComponent: _.PageListItemComponent,
+                        PageListSeparatorComponent:
+                          _.PageListSeparatorComponent,
+                      }),
+                    }),
+                    _.bottomControls &&
+                      (0, _.jsx)("div", {
+                        children: _.bottomControls,
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
                   className: _,
                   onCancelButton: _,
                   navRef: _,
-                },
-                _.toggleHideList &&
-                  _.createElement(_, {
-                    hideList: _.hideList,
-                    toggleHideList: _.toggleHideList,
-                  }),
-                _.renderPageContent
-                  ? _.renderPageContent(_, _, _)
-                  : _.createElement(_, {
-                      ref: _,
-                      activePage: _,
-                      stylesheet: __webpack_require__,
-                    }),
-              ),
-            ),
-          );
+                  children: [
+                    _.toggleHideList &&
+                      (0, _.jsx)(_, {
+                        hideList: _.hideList,
+                        toggleHideList: _.toggleHideList,
+                      }),
+                    _.renderPageContent
+                      ? _.renderPageContent(_, _, _)
+                      : (0, _.jsx)(_, {
+                          ref: _,
+                          activePage: _,
+                          stylesheet: __webpack_require__,
+                        }),
+                  ],
+                }),
+              ],
+            }),
+          });
         });
       const _ = _.createContext(!1);
       _.memo(function (_) {
@@ -12159,12 +11984,9 @@
           : {
               display: "none",
             };
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_, {
             ref: __webpack_require__,
             style: _,
             activePage: _,
@@ -12173,24 +11995,21 @@
             "aria-labelledby": _ + _.identifier,
             _: _ + _.identifier + "_Content",
           }),
-        );
+        });
       });
       function _(_) {
         const { hideList: _, toggleHideList: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
-            onClick: __webpack_require__,
-          },
-          _
-            ? _.createElement(_.b8_, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
+          onClick: __webpack_require__,
+          children: _
+            ? (0, _.jsx)(_.b8_, {
                 direction: "right",
               })
-            : _.createElement(_.b8_, {
+            : (0, _.jsx)(_.b8_, {
                 direction: "left",
               }),
-        );
+        });
       }
       class _ extends _.Component {
         m_refTextArea = _.createRef();
@@ -12277,7 +12096,7 @@
             nMaxHeight: _,
             ...__webpack_require__
           } = this.props;
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ...__webpack_require__,
             ref: this.m_refTextArea,
             onKeyUp: this.OnKeyUp,
@@ -12299,7 +12118,7 @@
       const _ = _.createContext({});
       function _(_) {
         const _ = _.useContext(_).ModalPosition ?? _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -12325,48 +12144,41 @@
         const _ =
             _.renderContent ||
             ((_) =>
-              _.createElement("div", {
+              (0, _.jsx)("div", {
                 ..._,
               })),
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            !_.hideTopBar &&
-              _.createElement("div", {
-                className: "ModalPosition_TopBar",
-              }),
-            _.onEscKeypress &&
-              !_.bHideCloseIcon &&
-              _.createElement(
-                "div",
-                {
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              !_.hideTopBar &&
+                (0, _.jsx)("div", {
+                  className: "ModalPosition_TopBar",
+                }),
+              _.onEscKeypress &&
+                !_.bHideCloseIcon &&
+                (0, _.jsx)("div", {
                   className: "ModalPosition_Dismiss",
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "closeButton",
                     onClick: (_) => {
                       _.stopPropagation(), _.onEscKeypress();
                     },
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              ),
-            _.createElement(_._, null, _.children),
-          );
-        return _.createElement(
-          "div",
-          {
-            className: _.join(" "),
-            ..._,
-            ref: _,
-          },
-          _({
+                    children: (0, _.jsx)(_.sED, {}),
+                  }),
+                }),
+              (0, _.jsx)(_._, {
+                children: _.children,
+              }),
+            ],
+          });
+        return (0, _.jsx)("div", {
+          className: _.join(" "),
+          ..._,
+          ref: _,
+          children: _({
             className: "ModalPosition_Content",
             children: _,
           }),
-        );
+        });
       }
       async function _(_, _, _) {
         const _ = _(_),
@@ -12432,14 +12244,11 @@
           });
         if (_((_ = _ || _(_)), _) && _ && _) {
           if (_.bHideMainWindowForPopouts) {
-            const _ = _.createElement(
-              _,
-              {
-                className: "Hidden",
-                onEscKeypress: _.props.bDisableBackgroundDismiss ? void 0 : _,
-              },
-              _.createElement("div", null),
-            );
+            const _ = (0, _.jsx)(_, {
+              className: "Hidden",
+              onEscKeypress: _.props.bDisableBackgroundDismiss ? void 0 : _,
+              children: (0, _.jsx)("div", {}),
+            });
             _ = _.ShowModal(_);
           }
           const _ = {
@@ -12485,33 +12294,27 @@
           _ = _.useCallback(async () => {
             _ || (_ && (await _()), _ && _ && _());
           }, [_, _, _, _]);
-        return _.createElement(
-          _,
-          {
-            onEscKeypress: _,
-            className: __webpack_require__,
-            bDestructiveWarning: _,
-            bDisableBackgroundDismiss: _,
-            bHideCloseIcon: _,
-          },
-          _.createElement(
-            _,
-            {
-              role: "dialog",
-              "aria-labelledby": _ || void 0,
-              ..._,
-              classNameContent: (0, _._)(
-                "GenericDialogBase",
-                "GenericConfirmDialog",
-                _ && "DialogContentFullSize",
-                _,
-              ),
-              onSubmit: _,
-              bCenterVertically: !_,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)(_, {
+          onEscKeypress: _,
+          className: __webpack_require__,
+          bDestructiveWarning: _,
+          bDisableBackgroundDismiss: _,
+          bHideCloseIcon: _,
+          children: (0, _.jsx)(_, {
+            role: "dialog",
+            "aria-labelledby": _ || void 0,
+            ..._,
+            classNameContent: (0, _._)(
+              "GenericDialogBase",
+              "GenericConfirmDialog",
+              _ && "DialogContentFullSize",
+              _,
+            ),
+            onSubmit: _,
+            bCenterVertically: !_,
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -12521,23 +12324,19 @@
             ..._
           } = _,
           _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            "aria-labelledby": _ ? _ : "",
-            ..._,
-          },
-          _ &&
-            _.createElement(
-              _,
-              {
+        return (0, _.jsxs)(_, {
+          "aria-labelledby": _ ? _ : "",
+          ..._,
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
                 _: _,
                 className: __webpack_require__,
-              },
-              _,
-            ),
-          _,
-        );
+                children: _,
+              }),
+            _,
+          ],
+        });
       }
       function _(_) {
         function _(_) {
@@ -12560,7 +12359,7 @@
             ..._
           } = _,
           _ = _ || (0, _._)("#Button_Close");
-        let _ = _.createElement(_, {
+        let _ = (0, _.jsx)(_, {
           bOKDisabled: _.bOKDisabled,
           bCancelDisabled: _.bCancelDisabled,
           strOKText: _,
@@ -12571,9 +12370,11 @@
         _
           ? (_ = void 0)
           : _
-            ? (_ = _.createElement(_, null, _))
+            ? (_ = (0, _.jsx)(_, {
+                children: _,
+              }))
             : _ &&
-              (_ = _.createElement(_, {
+              (_ = (0, _.jsx)(_, {
                 bOKDisabled: _.bOKDisabled,
                 bCancelDisabled: _.bCancelDisabled,
                 strOKText: _,
@@ -12586,37 +12387,35 @@
                 bUpdateDisabled: _.bMiddleDisabled,
               }));
         const _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            ..._,
-            title:
-              __webpack_require__ || _.createElement(_.Fragment, null, " "),
-            "aria-describedby": _,
-          },
-          _.createElement(
-            _,
-            {
-              onCancelButton: _(_ || _.onCancel),
-            },
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                "div",
-                {
-                  _: _,
-                  style: {
-                    display: "contents",
-                  },
-                },
-                _,
-              ),
-              _,
-            ),
-            _.createElement(_, null, _),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          ..._,
+          title:
+            __webpack_require__ ||
+            (0, _.jsx)(_.Fragment, {
+              children: " ",
+            }),
+          "aria-describedby": _,
+          children: (0, _.jsxs)(_, {
+            onCancelButton: _(_ || _.onCancel),
+            children: [
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)("div", {
+                    _: _,
+                    style: {
+                      display: "contents",
+                    },
+                    children: _,
+                  }),
+                  _,
+                ],
+              }),
+              (0, _.jsx)(_, {
+                children: _,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const _ = {
@@ -12628,7 +12427,7 @@
           onCancel: () => {},
           ..._,
         };
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -12636,21 +12435,16 @@
         let _ = {
           onOK: () => {},
           onCancel: () => {},
-          strDescription: _.createElement(
-            "span",
-            {
-              style: {
-                whiteSpace: "pre-line",
-              },
+          strDescription: (0, _.jsxs)("span", {
+            style: {
+              whiteSpace: "pre-line",
             },
-            " ",
-            _.strDescription,
-            " ",
-          ),
+            children: [" ", _.strDescription, " "],
+          }),
           bAlertDialog: !0,
           ..._,
         };
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -12716,7 +12510,7 @@
                   (_ = _),
                   (_ = _.ownerWindow ?? window),
                   _(
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       strTitle: _,
                       strDescription: _,
                     }),
@@ -12738,126 +12532,106 @@
             },
             [_],
           );
-        return _.createElement(
-          _._,
-          {
-            focusable: _,
-            noFocusRing: !0,
-            scrollIntoViewWhenChildFocused: !0,
-            onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
-            ref: _,
-            onMouseDown: _ ? void 0 : _,
-            ..._,
-            ..._,
-            navRef: _,
-            className: (0, _._)(
-              _,
-              _().Field,
-              _ && _().Disabled,
-              _ && _().WithFirstRow,
-              _ && _().WithChildrenInline,
-              _ && _().WithChildrenBelow,
-              "center" == _ && _().VerticalAlignCenter,
-              "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
-              !!_ && _().WithDescription,
-              "standard" == _ && _().WithBottomSeparatorStandard,
-              "thick" == _ && _().WithBottomSeparatorThick,
-              "fixed" == _ && _().ChildrenWidthFixed,
-              "max" == _ && _().ChildrenWidthGrow,
-              "standard" == _ && _().ExtraPaddingOnChildrenBelow,
-              "standard" == _ && _().StandardPadding,
-              "compact" == _ && _().CompactPadding,
-              _ && _().Clickable,
-              _ && _().HighlightOnFocus,
-            ),
-            style: {
-              "--indent-level": _,
-            },
+        return (0, _.jsxs)(_._, {
+          focusable: _,
+          noFocusRing: !0,
+          scrollIntoViewWhenChildFocused: !0,
+          onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
+          ref: _,
+          onMouseDown: _ ? void 0 : _,
+          ..._,
+          ..._,
+          navRef: _,
+          className: (0, _._)(
+            _,
+            _().Field,
+            _ && _().Disabled,
+            _ && _().WithFirstRow,
+            _ && _().WithChildrenInline,
+            _ && _().WithChildrenBelow,
+            "center" == _ && _().VerticalAlignCenter,
+            "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
+            !!_ && _().WithDescription,
+            "standard" == _ && _().WithBottomSeparatorStandard,
+            "thick" == _ && _().WithBottomSeparatorThick,
+            "fixed" == _ && _().ChildrenWidthFixed,
+            "max" == _ && _().ChildrenWidthGrow,
+            "standard" == _ && _().ExtraPaddingOnChildrenBelow,
+            "standard" == _ && _().StandardPadding,
+            "compact" == _ && _().CompactPadding,
+            _ && _().Clickable,
+            _ && _().HighlightOnFocus,
+          ),
+          style: {
+            "--indent-level": _,
           },
-          _ &&
-            _.createElement(
-              "div",
-              {
+          children: [
+            _ &&
+              (0, _.jsxs)("div", {
                 className: _().FieldLabelRow,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().FieldLabel,
-                  _: _(__webpack_require__),
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().FieldIcon, _().Front),
-                    },
-                    _,
-                  ),
-                _,
-                _ &&
-                  _.createElement(_, {
-                    tooltip: _,
-                  }),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().FieldChildrenWithIcon,
-                  },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                      },
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().FieldLabel,
+                    _: _(__webpack_require__),
+                    children: [
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_().FieldIcon, _().Front),
+                          children: _,
+                        }),
                       _,
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().FieldChildrenInner,
-                    },
-                    _,
-                  ),
-                ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                      _ &&
+                        (0, _.jsx)(_, {
+                          tooltip: _,
+                        }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _().FieldChildrenWithIcon,
+                      children: [
+                        _ &&
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _().FieldIcon,
+                              _().BeforeChildren,
+                            ),
+                            children: _,
+                          }),
+                        (0, _.jsx)("div", {
+                          className: _().FieldChildrenInner,
+                          children: _,
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            _ &&
+              (0, _.jsxs)("div", {
                 className: _().FieldChildrenWithIcon,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().FieldChildrenInner,
-                },
-                _,
-              ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_().FieldIcon, _().BeforeChildren),
+                      children: _,
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _().FieldChildrenInner,
+                    children: _,
+                  }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().FieldDescription,
                 _: _(__webpack_require__),
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       });
       _.forwardRef(function (_, _) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ref: _,
           accessibilityId: null,
           ..._,
@@ -12885,35 +12659,34 @@
           } = _,
           { refWithValue: _, refForElement: _ } = (0, _._)(_),
           _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            label: __webpack_require__,
-            indentLevel: _,
-            description: _,
-            icon: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenLayout: _ ?? "inline",
-            childrenContainerWidth: _ ?? "min",
-            onMouseDown: (_) => {
-              _.current?.focus(), _.preventDefault();
-            },
-            padding: _,
-            inlineWrap: _,
-            explainer: _,
-            className: _,
-            disabled: _,
-            onActivate: _ ? _ : void 0,
+        return (0, _.jsxs)(_, {
+          accessibilityId: _,
+          label: __webpack_require__,
+          indentLevel: _,
+          description: _,
+          icon: _,
+          bottomSeparator: _,
+          highlightOnFocus: _,
+          childrenLayout: _ ?? "inline",
+          childrenContainerWidth: _ ?? "min",
+          onMouseDown: (_) => {
+            _.current?.focus(), _.preventDefault();
           },
-          _.createElement(_, {
-            accessibilityId: _,
-            ..._,
-            ref: _,
-          }),
-          _,
-        );
+          padding: _,
+          inlineWrap: _,
+          explainer: _,
+          className: _,
+          disabled: _,
+          onActivate: _ ? _ : void 0,
+          children: [
+            (0, _.jsx)(_, {
+              accessibilityId: _,
+              ..._,
+              ref: _,
+            }),
+            _,
+          ],
+        });
       });
       const _ = _.forwardRef(function (_, _) {
           const {
@@ -12951,7 +12724,7 @@
                 _
               );
             })(__webpack_require__, _, _);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ..._,
             ..._,
             disabled: _,
@@ -12970,27 +12743,24 @@
             } = _,
             { refWithValue: _, refForElement: _ } = (0, _._)(_),
             _ = _.useId();
-          return _.createElement(
-            _,
-            {
-              accessibilityId: _,
-              label: __webpack_require__,
-              description: _,
-              icon: _,
-              bottomSeparator: _,
-              highlightOnFocus: _,
-              childrenLayout: _ ?? "inline",
-              childrenContainerWidth: "fixed",
-              onMouseDown: (_) => {
-                _.current?.element?.focus(), _.preventDefault();
-              },
+          return (0, _.jsx)(_, {
+            accessibilityId: _,
+            label: __webpack_require__,
+            description: _,
+            icon: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenLayout: _ ?? "inline",
+            childrenContainerWidth: "fixed",
+            onMouseDown: (_) => {
+              _.current?.element?.focus(), _.preventDefault();
             },
-            _.createElement(_, {
+            children: (0, _.jsx)(_, {
               ..._(_, _),
               ..._,
               ref: _,
             }),
-          );
+          });
         });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -13007,24 +12777,21 @@
             sizeClass: _,
           } = _,
           _ = (0, _._)(_().TransitionGroup, _);
-        return _.createElement(
-          _._,
-          {
-            className: _,
-            appear: !1,
-            enter: _,
-            exit: _,
-          },
-          _.createElement(
+        return (0, _.jsx)(_._, {
+          className: _,
+          appear: !1,
+          enter: _,
+          exit: _,
+          children: (0, _.jsx)(
             _,
             {
-              key: _,
               childrenClasses: __webpack_require__,
               sizeClass: _,
+              children: _,
             },
             _,
           ),
-        );
+        });
       }
       function _(_) {
         const {
@@ -13093,35 +12860,26 @@
           };
         return _.current && !_.current.ownerDocument.defaultView
           ? null
-          : _.createElement(
-              _._,
-              {
-                nodeRef: _,
-                classNames: _,
-                _: !0,
-                timeout: 1e4,
-                addEndListener: _,
-                onEntering: _,
-                onExiting: _,
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
-                  ref: _,
-                  className: (0, _._)(_().ContentWrapper, _, _.base),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _,
-                    fnCanTakeFocus: _,
-                    navKey: _,
-                  },
-                  _.children,
-                ),
-              ),
-            );
+          : (0, _.jsx)(_._, {
+              nodeRef: _,
+              classNames: _,
+              _: !0,
+              timeout: 1e4,
+              addEndListener: _,
+              onEntering: _,
+              onExiting: _,
+              ..._,
+              children: (0, _.jsx)("div", {
+                ref: _,
+                className: (0, _._)(_().ContentWrapper, _.base),
+                children: (0, _.jsx)(_._, {
+                  className: _,
+                  fnCanTakeFocus: _,
+                  navKey: _,
+                  children: _.children,
+                }),
+              }),
+            });
       }
       function _(_, _) {
         return {
@@ -13146,36 +12904,29 @@
         const _ = _.useContext(_),
           _ = (0, _._)().IN_VR,
           { title: _, icon: _, active: _, ..._ } = _;
-        return _.createElement(
-          _._,
-          {
-            preferredFocus: _,
-            navRef: _ && _ ? _ : void 0,
-            noFocusRing: !0,
-            onActivate: _ ? void 0 : _.onClick,
-            onFocus: _ ? void 0 : _.onClick,
-            ..._,
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_._, {
+          preferredFocus: _,
+          navRef: _ && _ ? _ : void 0,
+          noFocusRing: !0,
+          onActivate: _ ? void 0 : _.onClick,
+          onFocus: _ ? void 0 : _.onClick,
+          ..._,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().PageListItem_Icon,
-              },
-              _,
-            ),
-          _.createElement(
-            "div",
-            {
+                children: _,
+              }),
+            (0, _.jsx)("div", {
               className: _().PageListItem_Title,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(__webpack_require__, _().Separator),
           ..._,
         });
@@ -13191,12 +12942,9 @@
         _.useEffect(() => {
           (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
         }, [__webpack_require__, _]);
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_, {
             ..._,
             stylesheet: _(),
             showTitle: _,
@@ -13205,14 +12953,14 @@
             renderPageContent:
               _.renderPageContent ||
               ((_, _, _) =>
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   pages: _.pages,
                   activePage: _,
                   refForPage: _,
                   PageComponent: _,
                 })),
           }),
-        );
+        });
       });
       function _(_) {
         const {
@@ -13271,22 +13019,23 @@
                   ? _.Down
                   : "");
         var _, _;
-        return _.createElement(
-          _,
-          {
-            childrenKey: __webpack_require__?.identifier,
-            childrenClasses: _(_(), _().ContentTransition),
-            directionClass: _,
-            animate: _ != _.None,
-          },
-          __webpack_require__ &&
-            _.createElement(_, {
-              ref: _(__webpack_require__.identifier),
-              key: __webpack_require__.identifier,
-              stylesheet: _(),
-              activePage: __webpack_require__,
-            }),
-        );
+        return (0, _.jsx)(_, {
+          childrenKey: __webpack_require__?.identifier,
+          childrenClasses: _(_(), _().ContentTransition),
+          directionClass: _,
+          animate: _ != _.None,
+          children:
+            __webpack_require__ &&
+            (0, _.jsx)(
+              _,
+              {
+                ref: _(__webpack_require__.identifier),
+                stylesheet: _(),
+                activePage: __webpack_require__,
+              },
+              __webpack_require__.identifier,
+            ),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -13301,12 +13050,9 @@
           } = _,
           _ = _.useId(),
           _ = _.useId();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
               _: _,
               className: (0, _._)(
                 _().DropDownControlButton,
@@ -13315,36 +13061,29 @@
               "aria-labelledby": _ || _,
               ..._,
               ref: _,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().DropDownControlButtonContents,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "DialogDropDown_CurrentDisplay",
-                },
-                _.children,
-              ),
-              _.createElement(_.u49, {
-                direction: "down",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogDropDown_CurrentDisplay",
+                    children: _.children,
+                  }),
+                  (0, _.jsx)(_.u49, {
+                    direction: "down",
+                  }),
+                ],
               }),
-            ),
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 _: _,
                 style: {
                   display: "none",
                 },
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
@@ -13355,34 +13094,28 @@
           _ = _.useCallback(() => {
             _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
           }, []);
-        return _.createElement(
-          _._,
-          {
-            className: __webpack_require__,
-            onOptionsButton: _,
-            onOptionsActionDescription: (0, _._)(
-              _ ? "#Login_HidePassword" : "#Login_ShowPassword",
-            ),
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          className: __webpack_require__,
+          onOptionsButton: _,
+          onOptionsActionDescription: (0, _._)(
+            _ ? "#Login_HidePassword" : "#Login_ShowPassword",
+          ),
+          children: (0, _.jsx)(_, {
             autoComplete: "off",
             ref: _,
-            inlineControls: _.createElement(
-              _,
-              {
-                "aria-label": (0, _._)(
-                  _ ? "#Login_HidePassword" : "#Login_ShowPassword",
-                ),
-                className: _.TogglePasswordVisibilityBtn,
-                onPointerDown: _,
-                onOKButton: _,
-              },
-              _ ? _.createElement(_.rxV, null) : _.createElement(_.ZyV, null),
-            ),
+            inlineControls: (0, _.jsx)(_, {
+              "aria-label": (0, _._)(
+                _ ? "#Login_HidePassword" : "#Login_ShowPassword",
+              ),
+              className: _.TogglePasswordVisibilityBtn,
+              onPointerDown: _,
+              onOKButton: _,
+              children: _ ? (0, _.jsx)(_.rxV, {}) : (0, _.jsx)(_.ZyV, {}),
+            }),
             ..._,
             type: _ ? "text" : "password",
           }),
-        );
+        });
       });
       _.forwardRef(function (_, _) {
         const {
@@ -13395,29 +13128,26 @@
             ..._
           } = _,
           _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            className: _,
-            label: __webpack_require__,
-            description: _,
-            icon: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenContainerWidth: "fixed",
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          accessibilityId: _,
+          className: _,
+          label: __webpack_require__,
+          description: _,
+          icon: _,
+          bottomSeparator: _,
+          highlightOnFocus: _,
+          childrenContainerWidth: "fixed",
+          children: (0, _.jsx)(_, {
             ..._(_, _),
             ..._,
             ref: _,
           }),
-        );
+        });
       });
       _.forwardRef(function (_, _) {
         const { className: __webpack_require__, value: _, ..._ } = _,
           _ = _ ?? "";
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           autoComplete: "off",
           value: _,
           ref: _,
@@ -13619,23 +13349,20 @@
             }),
             [_],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          !__webpack_require__ &&
-            _.createElement(_, {
-              ..._,
-              ..._,
-              refMeasure: _,
-            }),
-          _.createElement(
-            _._.Provider,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !__webpack_require__ &&
+              (0, _.jsx)(_, {
+                ..._,
+                ..._,
+                refMeasure: _,
+              }),
+            (0, _.jsx)(_._.Provider, {
               value: _,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -13650,13 +13377,10 @@
           _ = (0, _._)(),
           _ = (0, _._)(!1);
         return _ || _
-          ? _.createElement(
-              "div",
-              {
-                className: _()(_().FocusRingRoot, _),
-                ref: _,
-              },
-              _.createElement(_, {
+          ? (0, _.jsx)("div", {
+              className: _()(_().FocusRingRoot, _),
+              ref: _,
+              children: (0, _.jsx)(_, {
                 refMeasure: _,
                 className: _()(__webpack_require__, _ && _().DebugFocusRing),
                 bFocusWithin: _ && (_ || _),
@@ -13664,7 +13388,7 @@
                 elContainer: _,
                 bDebug: _,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -13761,7 +13485,7 @@
             return __webpack_require__(), () => cancelAnimationFrame(_);
           }, [_, _, _, _]),
           _ && _
-            ? _.createElement(_, {
+            ? (0, _.createElement)(_, {
                 ..._,
                 key: _,
                 className: _()(_, _ && _().FocusRingOnHiddenItem),
@@ -13785,7 +13509,7 @@
             height: _ + "px",
             width: _ + "px",
           };
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _()(_().FocusRing, _),
           style: _,
         });
@@ -13841,17 +13565,16 @@
             })(),
             _ = (0, _._)(_, _.navRef),
             _ = (0, _._)(_, _);
-          return _.createElement(
-            _._,
-            {
-              ..._,
-              style: _,
-              className: _()(_, _().ScrollPanel, _),
-              ref: _,
-              navRef: _,
-            },
-            _.createElement(_, null, _),
-          );
+          return (0, _.jsx)(_._, {
+            ..._,
+            style: _,
+            className: _()(_, _().ScrollPanel, _),
+            ref: _,
+            navRef: _,
+            children: (0, _.jsx)(_, {
+              children: _,
+            }),
+          });
         }),
         _ = _.forwardRef(function (_, _) {
           const {
@@ -13867,7 +13590,7 @@
               _.useCallback((_) => _.currentTarget != _.target, []),
             ),
             _ = (0, _._)(_, _);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ..._,
             onGamepadDirection: _,
             ref: _,
@@ -13881,21 +13604,18 @@
           onScroll: _,
           ..._
         } = _;
-        return _.createElement(
-          _,
-          {
-            name: __webpack_require__,
-            msScrollRestoreDelay: _,
-            parentOnScroll: _,
-            refDiv: _,
-          },
-          (_, _) =>
-            _.createElement(_, {
+        return (0, _.jsx)(_, {
+          name: __webpack_require__,
+          msScrollRestoreDelay: _,
+          parentOnScroll: _,
+          refDiv: _,
+          children: (_, _) =>
+            (0, _.jsx)(_, {
               ..._,
               onScroll: _,
               ref: _,
             }),
-        );
+        });
       }),
         _.forwardRef(function (_, _) {
           const {
@@ -13904,21 +13624,18 @@
             onScroll: _,
             ..._
           } = _;
-          return _.createElement(
-            _,
-            {
-              name: __webpack_require__,
-              msScrollRestoreDelay: _,
-              parentOnScroll: _,
-              refDiv: _,
-            },
-            (_, _) =>
-              _.createElement(_, {
+          return (0, _.jsx)(_, {
+            name: __webpack_require__,
+            msScrollRestoreDelay: _,
+            parentOnScroll: _,
+            refDiv: _,
+            children: (_, _) =>
+              (0, _.jsx)(_, {
                 ..._,
                 onScroll: _,
                 ref: _,
               }),
-          );
+          });
         });
       function _(_) {
         const {
@@ -13987,7 +13704,7 @@
             onExplicitFocusLevelChanged: __webpack_require__,
           }),
           _ = (0, _._)(_, _);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ..._,
           onOKButton: _,
           onCancelButton: _,
@@ -14015,7 +13732,7 @@
           }),
           _ = (0, _._)(_, _),
           _ = (0, _._)(_, _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
           onOKButton: (_) => _?.(_),
           onCancelButton: _,
@@ -14844,18 +14561,13 @@
         }
         OnContextMenu(_) {
           if (null != this.props.resetValue) {
-            const _ = _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  disabled: !this.CanResetToDefault,
-                  onSelected: this.ResetToDefault,
-                },
-                (0, _._)("#ResetToDefault"),
-              ),
-            );
+            const _ = (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                disabled: !this.CanResetToDefault,
+                onSelected: this.ResetToDefault,
+                children: (0, _._)("#ResetToDefault"),
+              }),
+            });
             (0, _._)(_, _);
           }
         }
@@ -14938,136 +14650,119 @@
                 "SliderHandleContainer",
               )));
           const _ = _(__webpack_require__);
-          return _.createElement(
-            _,
-            {
-              noFocusRing: !0,
-              className: (0, _._)(
-                _().SliderControlPanelGroup,
-                "SliderControlPanelGroup",
-                _,
-              ),
-              navRef: _,
-              onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
-              onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
-              onOKActionDescription: _
-                ? null
-                : (0, _._)("#Slider_AdjustSlider"),
-              focusable: _,
-              childFocusDisabled: _ || !_,
-              onContextMenu: this.OnContextMenu,
-              onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
-              onSecondaryButton: this.CanResetToDefault
-                ? this.ResetToDefault
-                : void 0,
-              onSecondaryActionDescription: this.CanResetToDefault
-                ? (0, _._)("#ResetToDefault")
-                : void 0,
-              actionDescriptionMap: _,
-              "aria-roledescription": (0, _._)("#Slider_Button"),
-              "aria-labelledby": _["aria-labelledby"],
-              "aria-label": _["aria-label"],
-            },
-            _.createElement(
-              _._,
-              {
-                role: "slider",
-                "aria-valuenow": __webpack_require__,
-                "aria-valuetext": _,
-                ..._,
-                className: (0, _._)(
-                  _().SliderControlAndNotches,
-                  _ && _().Disabled,
-                  _ && _().WithDefaultValue,
-                  _ && _ && _().DefaultValueIsColorRange,
-                  _ && _ && "left" == _.side && _().DefaultValueColorLeft,
-                  _ && _ && "left" != _.side && _().DefaultValueColorRight,
-                  !_ && _().ForegroundInvisible,
-                ),
-                focusable: this.isKeyNavTarget,
-                noFocusRing: !0,
-                onFocus: this.OnInnerSliderFocus,
-                onBlur: this.OnInnerSliderBlur,
-                style: {
-                  "--normalized-slider-value": this.normalizedClampedValue,
-                  "--normalized-slider-default-value": _,
-                  "--normalized-slider-origin": _,
-                  "--default-value-track-color": _
-                    ? _.trackForegroundColor
-                    : void 0,
-                  "--slider-extra-notch-padding": _ ?? "0px",
-                },
-                ref: (0, _._)(this.m_refSlider, _),
-                navRef: this.m_navRefSlider,
-                onGamepadDirection: this.OnGamepadDirection,
-                onOKButton: this.BlurInnerSlider,
-                onOKActionDescription: null,
-                onCancelButton: this.BlurInnerSlider,
-                onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SliderControl, "SliderControl"),
-                },
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().SliderTrack,
-                    null != _ && _ && _().SliderHasNotches,
-                    {
-                      [_().SliderTrackDark]: "dark" === _,
-                    },
-                    _,
-                    "SliderTrack",
-                  ),
-                  style: this.props.trackStyleOverride,
-                }),
-                _ &&
-                  _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DefaultValueTickContainer,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().DefaultValueTick,
-                      },
-                      _.createElement(_.u49, {
-                        direction: "down",
-                      }),
-                    ),
-                  ),
-                this.validRange &&
-                  null != __webpack_require__ &&
-                  !isNaN(__webpack_require__) &&
-                  this.showHandle &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _,
-                        ref: this.m_refHandle,
-                      },
-                      "leftparen" == _ && _.createElement(_.Epp, null),
-                      "rightparen" == _ && _.createElement(_.jvG, null),
-                    ),
-                  ),
-              ),
-              _.createElement(_, {
-                notchCount: _,
-                notchLabels: _,
-                sliderValue: this.normalizedClampedValue,
-                notchTicksVisible: _,
-                renderNotch: _,
-              }),
+          return (0, _.jsx)(_, {
+            noFocusRing: !0,
+            className: (0, _._)(
+              _().SliderControlPanelGroup,
+              "SliderControlPanelGroup",
+              _,
             ),
-          );
+            navRef: _,
+            onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
+            onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
+            onOKActionDescription: _ ? null : (0, _._)("#Slider_AdjustSlider"),
+            focusable: _,
+            childFocusDisabled: _ || !_,
+            onContextMenu: this.OnContextMenu,
+            onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
+            onSecondaryButton: this.CanResetToDefault
+              ? this.ResetToDefault
+              : void 0,
+            onSecondaryActionDescription: this.CanResetToDefault
+              ? (0, _._)("#ResetToDefault")
+              : void 0,
+            actionDescriptionMap: _,
+            "aria-roledescription": (0, _._)("#Slider_Button"),
+            "aria-labelledby": _["aria-labelledby"],
+            "aria-label": _["aria-label"],
+            children: (0, _.jsxs)(_._, {
+              role: "slider",
+              "aria-valuenow": __webpack_require__,
+              "aria-valuetext": _,
+              ..._,
+              className: (0, _._)(
+                _().SliderControlAndNotches,
+                _ && _().Disabled,
+                _ && _().WithDefaultValue,
+                _ && _ && _().DefaultValueIsColorRange,
+                _ && _ && "left" == _.side && _().DefaultValueColorLeft,
+                _ && _ && "left" != _.side && _().DefaultValueColorRight,
+                !_ && _().ForegroundInvisible,
+              ),
+              focusable: this.isKeyNavTarget,
+              noFocusRing: !0,
+              onFocus: this.OnInnerSliderFocus,
+              onBlur: this.OnInnerSliderBlur,
+              style: {
+                "--normalized-slider-value": this.normalizedClampedValue,
+                "--normalized-slider-default-value": _,
+                "--normalized-slider-origin": _,
+                "--default-value-track-color": _
+                  ? _.trackForegroundColor
+                  : void 0,
+                "--slider-extra-notch-padding": _ ?? "0px",
+              },
+              ref: (0, _._)(this.m_refSlider, _),
+              navRef: this.m_navRefSlider,
+              onGamepadDirection: this.OnGamepadDirection,
+              onOKButton: this.BlurInnerSlider,
+              onOKActionDescription: null,
+              onCancelButton: this.BlurInnerSlider,
+              onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().SliderControl, "SliderControl"),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().SliderTrack,
+                        null != _ && _ && _().SliderHasNotches,
+                        {
+                          [_().SliderTrackDark]: "dark" === _,
+                        },
+                        _,
+                        "SliderTrack",
+                      ),
+                      style: this.props.trackStyleOverride,
+                    }),
+                    _ &&
+                      _ &&
+                      (0, _.jsx)("div", {
+                        className: _().DefaultValueTickContainer,
+                        children: (0, _.jsx)("div", {
+                          className: _().DefaultValueTick,
+                          children: (0, _.jsx)(_.u49, {
+                            direction: "down",
+                          }),
+                        }),
+                      }),
+                    this.validRange &&
+                      null != __webpack_require__ &&
+                      !isNaN(__webpack_require__) &&
+                      this.showHandle &&
+                      (0, _.jsx)("div", {
+                        className: _,
+                        children: (0, _.jsxs)("div", {
+                          className: _,
+                          ref: this.m_refHandle,
+                          children: [
+                            "leftparen" == _ && (0, _.jsx)(_.Epp, {}),
+                            "rightparen" == _ && (0, _.jsx)(_.jvG, {}),
+                          ],
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  notchCount: _,
+                  notchLabels: _,
+                  sliderValue: this.normalizedClampedValue,
+                  notchTicksVisible: _,
+                  renderNotch: _,
+                }),
+              ],
+            }),
+          });
         }
       }
       function _(_) {
@@ -15086,24 +14781,24 @@
           let _ = _.find((_) => _.notchIndex == _);
           _ && (_ = !0),
             _.push(
-              _.createElement(_, {
-                key: _,
-                notchIndex: _,
-                sliderValue: _,
-                notchLabel: _,
-                notchCount: __webpack_require__,
-                notchTicksVisible: _,
-                renderNotch: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  notchIndex: _,
+                  sliderValue: _,
+                  notchLabel: _,
+                  notchCount: __webpack_require__,
+                  notchTicksVisible: _,
+                  renderNotch: _,
+                },
+                _,
+              ),
             );
         }
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().SliderNotchContainer),
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_().SliderNotchContainer),
+          children: _,
+        });
       }
       function _(_) {
         const _ = _.notchIndex <= (_.notchCount - 1) * _.sliderValue,
@@ -15116,17 +14811,14 @@
             alignRightEnd: _,
             active: _,
           };
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().SliderNotch, _ && _().AlignToEnds),
-          },
-          _.renderNotch
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().SliderNotch, _ && _().AlignToEnds),
+          children: _.renderNotch
             ? _.renderNotch(_)
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 ..._,
               }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -15134,26 +14826,23 @@
           alignRightEnd: __webpack_require__,
           active: _,
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.notchTicksVisible &&
-            _.createElement("div", {
-              className: (0, _._)(_().SliderNotchTick, _ && _().TickActive),
-            }),
-          _.notchLabel &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.notchTicksVisible &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().SliderNotchTick, _ && _().TickActive),
+              }),
+            _.notchLabel &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().SliderNotchLabel,
                   _ && _().AlignToLeft,
                   __webpack_require__ && _().AlignToRight,
                 ),
-              },
-              _.notchLabel?.label,
-            ),
-        );
+                children: _.notchLabel?.label,
+              }),
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "RecomputeSliderBounds", null),
         (0, _._)([_._], _.prototype, "SetDragMode", null),
@@ -15191,25 +14880,19 @@
           ),
           _ = (0, _._)(_),
           _ = (0, _._)(_, _);
-        return _.createElement(
-          "div",
-          {
-            className: _().CompoundSliderSubSliderLabel,
-            ref: _,
-            onMouseDown: _,
-            onTouchStart: _,
-            style: {
-              transform: `translateX(${_}px)`,
-            },
+        return (0, _.jsx)("div", {
+          className: _().CompoundSliderSubSliderLabel,
+          ref: _,
+          onMouseDown: _,
+          onTouchStart: _,
+          style: {
+            transform: `translateX(${_}px)`,
           },
-          _.createElement(
-            "div",
-            {
-              className: _().CompoundSliderSubSliderLabelInternal,
-            },
-            __webpack_require__,
-          ),
-        );
+          children: (0, _.jsx)("div", {
+            className: _().CompoundSliderSubSliderLabelInternal,
+            children: __webpack_require__,
+          }),
+        });
       });
       const _ = _.forwardRef(function (_, _) {
         const {
@@ -15222,35 +14905,34 @@
           navRef: _,
           ..._
         } = _;
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            noFocusRing: !0,
-            className: (0, _._)(_, _().Toggle, {
-              [_().Disabled]: !!_,
-              [_()._]: !!__webpack_require__,
-            }),
-            onClick: () => {
-              if (!_ && _) {
-                const _ = !__webpack_require__;
-                _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
-              }
-            },
-            ref: _,
-            navRef: _,
-            focusable: _,
-            role: "checkbox",
-            "aria-checked": !!__webpack_require__,
+        return (0, _.jsxs)(_._, {
+          ..._,
+          noFocusRing: !0,
+          className: (0, _._)(_, _().Toggle, {
+            [_().Disabled]: !!_,
+            [_()._]: !!__webpack_require__,
+          }),
+          onClick: () => {
+            if (!_ && _) {
+              const _ = !__webpack_require__;
+              _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
+            }
           },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: _().ToggleSwitch,
-          }),
-          _,
-        );
+          ref: _,
+          navRef: _,
+          focusable: _,
+          role: "checkbox",
+          "aria-checked": !!__webpack_require__,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().ToggleRail,
+            }),
+            (0, _.jsx)("div", {
+              className: _().ToggleSwitch,
+            }),
+            _,
+          ],
+        });
       });
       function _(_) {
         const _ = !!_.disabled,
@@ -15258,28 +14940,25 @@
           _._)(_),
           _ = _.useId(),
           { "aria-expanded": _, "aria-controls": _ } = _;
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            className: _.className,
-            disabled: _,
-            label: _.label,
-            icon: _.icon,
-            description: _.description,
-            explainer: _.explainer,
-            explainerTitle: _.explainerTitle,
-            padding: _.padding,
-            bottomSeparator: _.bottomSeparator,
-            highlightOnFocus: _.highlightOnFocus,
-            inlineWrap: "keep-inline",
-            onContextMenu: _.onContextMenu,
-            actionDescriptionMap: __webpack_require__,
-            onClick: _.onClick,
-            indentLevel: _.indentLevel,
-            ..._,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          accessibilityId: _,
+          className: _.className,
+          disabled: _,
+          label: _.label,
+          icon: _.icon,
+          description: _.description,
+          explainer: _.explainer,
+          explainerTitle: _.explainerTitle,
+          padding: _.padding,
+          bottomSeparator: _.bottomSeparator,
+          highlightOnFocus: _.highlightOnFocus,
+          inlineWrap: "keep-inline",
+          onContextMenu: _.onContextMenu,
+          actionDescriptionMap: __webpack_require__,
+          onClick: _.onClick,
+          indentLevel: _.indentLevel,
+          ..._,
+          children: (0, _.jsx)(_, {
             "aria-expanded": _,
             "aria-controls": _,
             ..._(_, _),
@@ -15288,7 +14967,7 @@
             disabled: _,
             navRef: _.navRef,
           }),
-        );
+        });
       }
       function _(_) {
         const { active: _, children: __webpack_require__ } = _,
@@ -15318,17 +14997,16 @@
           !_ || !_)
         )
           return null;
-        let _ = _.createElement(_, null, __webpack_require__);
+        let _ = (0, _.jsx)(_, {
+          children: __webpack_require__,
+        });
         return (
           _ &&
-            (_ = _.createElement(
-              _,
-              {
-                active: _,
-                modalKey: _.current,
-              },
-              _,
-            )),
+            (_ = (0, _.jsx)(_, {
+              active: _,
+              modalKey: _.current,
+              children: _,
+            })),
           _.createPortal(_, _)
         );
       }
@@ -15339,7 +15017,7 @@
             this.props.disabled || _ === this.checked || this.Toggle();
           }
           render() {
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               ...this.props,
               OnToggleChange: this.OnToggleChange,
               checked: this.checked,
@@ -15361,35 +15039,31 @@
           _ = _.useCallback(() => {
             _(__webpack_require__ && _ + 1 >= _ ? 0 : _ + 1);
           }, [_, __webpack_require__, _]);
-        return _.createElement(
-          _,
-          {
-            title: (0, _._)("#SaleTech_Screenshot_Viewer"),
-            bAllowFullSize: !0,
-            bOKDisabled: !0,
-            closeModal: _,
-            bHideCloseIcon: !0,
-            modalClassName: _().PopupScreenshotModal,
-          },
-          _.createElement(_, {
-            index: _,
-            numElements: __webpack_require__?.length || 0,
-            fnForward: _,
-            fnBackwards: _,
-            fnClose: _,
-            bCircular: !0,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().PopupScreenshotContainer,
-            },
-            _.createElement("img", {
-              className: _().PopupScreenshot,
-              src: __webpack_require__?.[_],
+        return (0, _.jsxs)(_, {
+          title: (0, _._)("#SaleTech_Screenshot_Viewer"),
+          bAllowFullSize: !0,
+          bOKDisabled: !0,
+          closeModal: _,
+          bHideCloseIcon: !0,
+          modalClassName: _().PopupScreenshotModal,
+          children: [
+            (0, _.jsx)(_, {
+              index: _,
+              numElements: __webpack_require__?.length || 0,
+              fnForward: _,
+              fnBackwards: _,
+              fnClose: _,
+              bCircular: !0,
             }),
-          ),
-        );
+            (0, _.jsx)("div", {
+              className: _().PopupScreenshotContainer,
+              children: (0, _.jsx)("img", {
+                className: _().PopupScreenshot,
+                src: __webpack_require__?.[_],
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -15407,51 +15081,41 @@
           _("Escape", () => _ && _(), !0, !0),
           _("Esc", () => _ && _(), !0, !0);
         let _ = __webpack_require__ > 1;
-        return _.createElement(
-          "div",
-          {
-            className: _().ButtonCtn,
-          },
-          _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().ButtonIcon,
-                    0 !== _ || _ ? null : _().Disabled,
-                  ),
-                  onClick: _,
-                },
-                _.createElement(_.V5W, {
-                  angle: 270,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().ButtonIcon,
-                    _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
-                  ),
-                  onClick: _,
-                },
-                _.createElement(_.V5W, {
-                  angle: 90,
-                }),
-              ),
-            ),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().ButtonCtn,
+          children: [
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      0 !== _ || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 270,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 90,
+                    }),
+                  }),
+                ],
+              }),
+            (0, _.jsx)("div", {
               className: _().ButtonIcon,
               onClick: _,
-            },
-            _.createElement(_._, null),
-          ),
-        );
+              children: (0, _.jsx)(_._, {}),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -15468,16 +15132,13 @@
           [_, _] = (function () {
             const [_, _] = _.useState(void 0),
               _ = _.useCallback(() => _(void 0), []),
-              _ = _.createElement(
-                _,
-                {
-                  active: void 0 !== _,
-                },
-                _.createElement(_, {
+              _ = (0, _.jsx)(_, {
+                active: void 0 !== _,
+                children: (0, _.jsx)(_, {
                   closeModal: _,
                   rgImageURL: _,
                 }),
-              );
+              });
             return [_, _];
           })();
         return (
@@ -15491,32 +15152,28 @@
             }
           }, [_]),
           _
-            ? _.createElement(
-                "span",
-                {
-                  className: _.PreviewCtn,
-                },
-                _,
-                _.createElement(
-                  "span",
-                  {
+            ? (0, _.jsxs)("span", {
+                className: _.PreviewCtn,
+                children: [
+                  _,
+                  (0, _.jsx)("span", {
                     className: _.SVG,
-                  },
-                  _.createElement(_.YNO, null),
-                ),
-                _.createElement("img", {
-                  ..._,
-                  className: (0, _._)({
-                    ...(_.className && {
-                      [_.className]: !0,
-                    }),
+                    children: (0, _.jsx)(_.YNO, {}),
                   }),
-                  onClick: (_) => {
-                    _.src && _([_.src]);
-                  },
-                }),
-              )
-            : _.createElement("img", {
+                  (0, _.jsx)("img", {
+                    ..._,
+                    className: (0, _._)({
+                      ...(_.className && {
+                        [_.className]: !0,
+                      }),
+                    }),
+                    onClick: (_) => {
+                      _.src && _([_.src]);
+                    },
+                  }),
+                ],
+              })
+            : (0, _.jsx)("img", {
                 ..._,
                 ref: _,
                 onLoad: (_) => {
@@ -15555,20 +15212,23 @@
             crossOrigin: _,
           } = _;
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.ErrorDiv,
-              },
-              _.createElement("p", null, (0, _._)("#Image_ErrorTitle", _)),
-              _.createElement(
-                "ul",
-                null,
-                _.createElement("li", null, (0, _._)("#Image_Error_msg1")),
-              ),
-              _.createElement("p", null, (0, _._)("#Image_Error_suggestion")),
-            )
-          : _.createElement(_, {
+          ? (0, _.jsxs)("div", {
+              className: _.ErrorDiv,
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Image_ErrorTitle", _),
+                }),
+                (0, _.jsx)("ul", {
+                  children: (0, _.jsx)("li", {
+                    children: (0, _._)("#Image_Error_msg1"),
+                  }),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Image_Error_suggestion"),
+                }),
+              ],
+            })
+          : (0, _.jsx)(_, {
               className: _,
               src: _,
               onError: () => __webpack_require__(!0),
@@ -15641,14 +15301,17 @@
             } = this.props,
             _ = this.src,
             _ = this.state.nPropChangeCounter;
-          return _.createElement("img", {
-            key: _,
-            ref: this.m_refImage,
-            ..._,
-            src: _,
-            onError: this.OnImageError,
-            alt: _,
-          });
+          return (0, _.jsx)(
+            "img",
+            {
+              ref: this.m_refImage,
+              ..._,
+              src: _,
+              onError: this.OnImageError,
+              alt: _,
+            },
+            _,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "OnImageError", null);
@@ -16999,165 +16662,140 @@
           return (
             null != this.state.EdgeDown &&
               (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                style: _,
-                ref: this.LinkRegionBoxRef,
-                draggable: !1,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _,
+              style: _,
+              ref: this.LinkRegionBoxRef,
+              draggable: !1,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().LinkRegionGridBox,
-                },
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Top}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.top);
-                  },
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topright);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Left}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.left);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: `${_().LinkRegionEdge} ${_().Middle}`,
-                    onMouseDown: (_) => {
-                      this.OnMouseDown(_, _.middle);
-                    },
-                    draggable: !1,
-                  },
-                  this.props.deleteFn &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionDelete,
-                        onClick: this.HandleDelete,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topleft);
                       },
-                      _.createElement(_.sED, null),
-                    ),
-                  !this.props.bDisableLink &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionSettings,
-                        onClick: this.OnEditLink,
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Top}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.top);
                       },
-                      _.createElement(_.xv8, null),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkText,
-                    },
-                    " ",
-                    this.m_strDescription,
-                    " ",
-                  ),
-                ),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Right}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.right);
-                  },
-                  draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topright);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Left}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.left);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Middle}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.middle);
+                      },
+                      draggable: !1,
+                      children: [
+                        this.props.deleteFn &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionDelete,
+                            onClick: this.HandleDelete,
+                            children: (0, _.jsx)(_.sED, {}),
+                          }),
+                        !this.props.bDisableLink &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionSettings,
+                            onClick: this.OnEditLink,
+                            children: (0, _.jsx)(_.xv8, {}),
+                          }),
+                        (0, _.jsxs)("div", {
+                          className: _().LinkText,
+                          children: [" ", this.m_strDescription, " "],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Right}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.right);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottom);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomright);
+                      },
+                      draggable: !1,
+                    }),
+                  ],
                 }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottom);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomright);
-                  },
-                  draggable: !1,
-                }),
-              ),
-              this.state.bEditingLink &&
-                _.createElement(
-                  "div",
-                  {
+                this.state.bEditingLink &&
+                  (0, _.jsxs)("div", {
                     className: _().LinkRegionInfo,
-                  },
-                  _.createElement(_, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_url",
-                    value: this.state.text_link_url,
-                    label: (0, _._)("#SteamTV_LinkURL"),
-                    placeholder: "https://www.example.com",
-                    onChange: this.OnSetLinkURLChange,
-                    mustBeURL: !0,
+                    children: [
+                      (0, _.jsx)(_, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_url",
+                        value: this.state.text_link_url,
+                        label: (0, _._)("#SteamTV_LinkURL"),
+                        placeholder: "https://www.example.com",
+                        onChange: this.OnSetLinkURLChange,
+                        mustBeURL: !0,
+                      }),
+                      (0, _.jsx)(_, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_description",
+                        value: this.state.text_link_description,
+                        label: (0, _._)("#SteamTV_LinkDescription"),
+                        placeholder: (0, _._)(
+                          "#SteamTV_LinkDescription_Placeholder",
+                        ),
+                        onChange: this.OnSetLinkDescriptionChange,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().LinkRegionButtonContainer,
+                        children: [
+                          (0, _.jsxs)(_, {
+                            disabled: !this.state.valid_link,
+                            onClick: this.OnSaveLink,
+                            children: [" ", (0, _._)("#Button_OK"), " "],
+                          }),
+                          (0, _.jsxs)(_, {
+                            onClick: this.OnEditLink,
+                            children: [" ", (0, _._)("#Button_Cancel")],
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
-                  _.createElement(_, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_description",
-                    value: this.state.text_link_description,
-                    label: (0, _._)("#SteamTV_LinkDescription"),
-                    placeholder: (0, _._)(
-                      "#SteamTV_LinkDescription_Placeholder",
-                    ),
-                    onChange: this.OnSetLinkDescriptionChange,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkRegionButtonContainer,
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        disabled: !this.state.valid_link,
-                        onClick: this.OnSaveLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_OK"),
-                      " ",
-                    ),
-                    _.createElement(
-                      _,
-                      {
-                        onClick: this.OnEditLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_Cancel"),
-                    ),
-                  ),
-                ),
-            )
+              ],
+            })
           );
         }
       };
@@ -17287,88 +16925,71 @@
               800,
               500,
             );
-          return _.createElement(
-            _,
-            {
-              onEscKeypress: this.props.closeModal,
-              bDisableBackgroundDismiss: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
-              },
-              _.createElement(
-                _,
-                null,
-                (0, _._)(
-                  "#ImageUpload_CropModalTitleDims",
-                  this.GetDestWidth(),
-                  this.GetDestHeight(),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_, {
+            onEscKeypress: this.props.closeModal,
+            bDisableBackgroundDismiss: !0,
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)("DialogContent", "_DialogCenterVertically"),
+              children: [
+                (0, _.jsx)(_, {
+                  children: (0, _._)(
+                    "#ImageUpload_CropModalTitleDims",
+                    this.GetDestWidth(),
+                    this.GetDestHeight(),
+                  ),
+                }),
+                (0, _.jsx)("div", {
                   className: (0, _._)("DialogBodyText"),
-                },
-                (0, _._)("#ImageUpload_CropModalDescription"),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#ImageUpload_CropModalDescription"),
+                }),
+                (0, _.jsxs)("div", {
                   className: _.CropImage,
                   style: {
                     width: _.width,
                     height: _.height,
                   },
-                },
-                _.createElement("img", {
-                  style: {
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain",
-                  },
-                  src: this.props.uploadFile.dataUrl,
+                  children: [
+                    (0, _.jsx)("img", {
+                      style: {
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "contain",
+                      },
+                      src: this.props.uploadFile.dataUrl,
+                    }),
+                    (0, _.jsx)(_, {
+                      bLockAspectRatio: !0,
+                      bDisableLink: !0,
+                      index: 0,
+                      updateFn: this.UpdateCrop,
+                      xPosPct: 0,
+                      yPosPct: 0,
+                      widthMinPct: _,
+                      heightMinPct: _,
+                      widthPct: _,
+                      heightPct: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  bLockAspectRatio: !0,
-                  bDisableLink: !0,
-                  index: 0,
-                  updateFn: this.UpdateCrop,
-                  xPosPct: 0,
-                  yPosPct: 0,
-                  widthMinPct: _,
-                  heightMinPct: _,
-                  widthPct: _,
-                  heightPct: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsxs)("div", {
                   className: _.CropPreviewGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CropPreviewLabel,
-                  },
-                  (0, _._)("#ImageUpload_CropPreview"),
-                ),
-                _.createElement("div", {
-                  style: this.GetPreviewWindowStyle(),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.CropPreviewLabel,
+                      children: (0, _._)("#ImageUpload_CropPreview"),
+                    }),
+                    (0, _.jsx)("div", {
+                      style: this.GetPreviewWindowStyle(),
+                    }),
+                  ],
                 }),
-              ),
-              _.createElement(
-                _,
-                {
+                (0, _.jsx)(_, {
                   onClick: this.OnCrop,
-                },
-                (0, _._)("#ImageUpload_CropAndContinue"),
-              ),
-            ),
-          );
+                  children: (0, _._)("#ImageUpload_CropAndContinue"),
+                }),
+              ],
+            }),
+          });
         }
       }
       function _(_) {
@@ -18274,7 +17895,6 @@
       function _() {
         return _._.IN_CLIENT && (0, _._)(_._.LAUNCHER_TYPE);
       }
-      var _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
           className: _,
@@ -18300,41 +17920,31 @@
           void 0 === _ && _.push(_().noString),
           _ && _.push(_),
           _ && _.push(_().Static),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                "center" == _ && _().throbber_center_wrapper,
-                !!_ && _().ThrobberDelayAppear,
-                _ && _().Visible,
-              ),
-            },
-            _ &&
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
               _ &&
-              _.createElement(
-                "div",
-                {
+                _ &&
+                (0, _.jsx)("div", {
                   className: _.join(" "),
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().NewThrobber,
-                  },
-                  _.createElement("img", {
-                    src: (0, _._)(_),
+                    children: (0, _.jsx)("img", {
+                      src: (0, _._)(_),
+                    }),
                   }),
-                ),
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
                   className: _().ThrobberText,
-                },
-                _,
-              ),
-          )
+                  children: _,
+                }),
+            ],
+          })
         );
       });
       _.memo(function (_) {
@@ -18361,43 +17971,35 @@
           void 0 === _ && _.push(_().noString),
           _ && _.push(_),
           _ && _.push(_().Static),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                "center" == _ && _().throbber_center_wrapper,
-                !!_ && _().ThrobberDelayAppear,
-                _ && _().Visible,
-              ),
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _.join(" "),
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: _().Throbber,
-                  },
-                  _.createElement(_, {
-                    className: _().base,
+                    children: [
+                      (0, _.jsx)(_, {
+                        className: _().base,
+                      }),
+                      (0, _.jsx)(_, {
+                        className: _().blur,
+                      }),
+                    ],
                   }),
-                  _.createElement(_, {
-                    className: _().blur,
-                  }),
-                ),
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
                   className: _().ThrobberText,
-                },
-                _,
-              ),
-          )
+                  children: _,
+                }),
+            ],
+          })
         );
       });
       function _(_) {
@@ -18418,233 +18020,234 @@
         let _ = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           _.className && (_ += _.className),
-          _.createElement(
-            "svg",
-            {
-              version: "1.1",
-              _: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: _,
-              _: "0px",
-              _: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            _.createElement(
-              "g",
-              {
+          (0, _.jsxs)("svg", {
+            version: "1.1",
+            _: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: _,
+            _: "0px",
+            _: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, _.jsxs)("g", {
                 className: _().partCircle,
-              },
-              _.createElement("path", {
-                className: _().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M201.432,101.166",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                  }),
+                ],
               }),
-              _.createElement("path", {
-                className: _().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M201.432,101.166",
-              }),
-              _.createElement("path", {
-                className: _().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-              }),
-            ),
-            _.createElement(
-              "g",
-              {
+              (0, _.jsxs)("g", {
                 className: _().mainOutline,
-              },
-              _.createElement("path", {
-                className: _().roundFill,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundFill,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuterOutline,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber01,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber02,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber03,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber04,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber05,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber06,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber07,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber08,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber09,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber10,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber11,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber12,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber13,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber14,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber15,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                ],
               }),
-              _.createElement("path", {
-                className: _().roundOuterOutline,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber01,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber02,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber03,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber04,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber05,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber06,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber07,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber08,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber09,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber10,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber11,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber12,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber13,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber14,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber15,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-            ),
-            _.createElement(
-              "g",
-              {
+              (0, _.jsx)("g", {
                 className: _().bottomCircle,
-              },
-              _.createElement("path", {
-                fill: "#ffffff",
-                _: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                children: (0, _.jsx)("path", {
+                  fill: "#ffffff",
+                  _: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                }),
               }),
-            ),
-            _.createElement(
-              "g",
-              {
+              (0, _.jsx)("g", {
                 className: _().topCircle,
-              },
-              _.createElement("circle", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "161.731",
-                _: "101.274",
-                _: "23.019",
+                children: (0, _.jsx)("circle", {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  _: "161.731",
+                  _: "101.274",
+                  _: "23.019",
+                }),
               }),
-            ),
-          )
+            ],
+          })
+        );
+      }
+      function _(_, _ = 0) {
+        let _;
+        return (
+          _ &&
+            (_ = {
+              maximumFractionDigits: _,
+            }),
+          _ ? _.toLocaleString(_._.GetPreferredLocales(), _) : "" + _
         );
       }
       class _ extends _.Message {
@@ -19567,7 +19170,7 @@
           } = _,
           _ = _(_, _.options),
           _ = (0, _._)(_, _);
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           ref: _,
           ..._,
         });
@@ -19739,37 +19342,31 @@
             (_ && this.m_player.seekTo(0, !0), this.m_player.playVideo());
         }
         render() {
-          return _.createElement(
-            _,
-            {
-              video: this.props.video,
-            },
-            _.createElement(
+          return (0, _.jsx)(_, {
+            video: this.props.video,
+            children: (0, _.jsx)(
               _,
               {
-                key: this.m_strPlayerID,
                 onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
                 ref: this.BindPlayerContainer,
                 className: (0, _._)("YoutubePlayer", this.props.classnames),
+                children: (0, _.jsx)(_, {
+                  className: "YoutubePlayerThrobber",
+                }),
               },
-              _.createElement(_, {
-                className: "YoutubePlayerThrobber",
-              }),
+              this.m_strPlayerID,
             ),
-          );
+          });
         }
       }
       function _(_) {
         const { video: _, children: __webpack_require__ } = _;
         return _("youtube")
           ? __webpack_require__
-          : _.createElement(
-              "a",
-              {
-                href: `https://www.youtube.com/watch?v=${_}`,
-              },
-              (0, _._)("#EventCalendar_WatchYouTubeVideo"),
-            );
+          : (0, _.jsx)("a", {
+              href: `https://www.youtube.com/watch?v=${_}`,
+              children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),
+            });
       }
       (0, _._)([_._], _.prototype, "BindPlayerContainer", null),
         (0, _._)([_._], _.prototype, "OnYoutubeScriptsReady", null),
@@ -19823,91 +19420,67 @@
           const _ = _.title,
             _ = _.views,
             _ = _.description;
-          return _.createElement(
-            "div",
-            {
-              className: _().DynamicLinkBox,
-              onClick: () => _(!1),
-            },
-            _.createElement("img", {
-              className: _().DynamicLink_Preview,
-              src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().DynamicLinkBox,
+            onClick: () => _(!1),
+            children: [
+              (0, _.jsx)("img", {
+                className: _().DynamicLink_Preview,
+                src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
+              }),
+              (0, _.jsxs)("div", {
                 className: _().DynamicLink_Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_Name,
-                },
-                (0, _._)("#EventEditor_YouTubeVideoTitle", _),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_YoutubeViews,
-                },
-                (0, _._)(
-                  "#EventEditor_YouTubeVideoViews",
-                  (function (_, _ = 0) {
-                    let _;
-                    return (
-                      _ &&
-                        (_ = {
-                          maximumFractionDigits: _,
-                        }),
-                      _
-                        ? _.toLocaleString(_._.GetPreferredLocales(), _)
-                        : "" + _
-                    );
-                  })(Number(_)),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Dynamiclink_Content,
-                },
-                _ && _,
-                !_ &&
-                  _.createElement(_, {
-                    size: "medium",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().DynamicLink_Name,
+                    children: (0, _._)("#EventEditor_YouTubeVideoTitle", _),
                   }),
-              ),
-            ),
-          );
+                  (0, _.jsx)("div", {
+                    className: _().DynamicLink_YoutubeViews,
+                    children: (0, _._)(
+                      "#EventEditor_YouTubeVideoViews",
+                      _(Number(_)),
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Dynamiclink_Content,
+                    children: [
+                      _ && _,
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          size: "medium",
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
-        return _.createElement(
-          _,
-          {
-            video: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().PreviewYouTubeVideo, _, _),
-              _: _,
-            },
-            _.createElement("img", {
-              className: _().PlaceholderImg,
-              src:
-                _._.COMMUNITY_CDN_URL +
-                "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-            }),
-            _.createElement(_, {
-              video: _,
-              autoplay: _ ?? !1,
-              startSeconds: _,
-              controls: !0,
-              playsInline: !0,
-              autopause: !0,
-              showFullscreenBtn: !0,
-            }),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          video: _,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().PreviewYouTubeVideo, _, _),
+            _: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _().PlaceholderImg,
+                src:
+                  _._.COMMUNITY_CDN_URL +
+                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+              }),
+              (0, _.jsx)(_, {
+                video: _,
+                autoplay: _ ?? !1,
+                startSeconds: _,
+                controls: !0,
+                playsInline: !0,
+                autopause: !0,
+                showFullscreenBtn: !0,
+              }),
+            ],
+          }),
+        });
       }
       const _ = /^.*youtube[^v]+v=(.{11}).*/,
         _ = /^.*youtu\.be\/(.{11}).*/,
@@ -19955,7 +19528,7 @@
         if ((0, _._)()) return null;
         const _ = _(_);
         return void 0 !== _?.strVideoID
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               videoID: _.strVideoID,
               nStartSeconds: _.nStartSeconds,
               classNameAlign: "",
@@ -20267,12 +19840,6 @@
         nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
-        }
-        get bIsFollowingEnabled() {
-          return !(0, _._)();
-        }
-        get bIsCuratorsEnabled() {
-          return !(0, _._)();
         }
         get bIncludeCurators() {
           return !0;
@@ -22983,8 +22550,8 @@
         }
         BIsGameSourceAllowed(_) {
           return (
-            !(_ === _.k_EFollowing && !_.bIsFollowingEnabled) &&
-            !(_ === _.k_ECurator && !_.bIsCuratorsEnabled) &&
+            (_ !== _.k_EFollowing || _._.EREALM != _._.k_ESteamRealmChina) &&
+            (_ !== _.k_ECurator || _._.EREALM != _._.k_ESteamRealmChina) &&
             this.m_mapGameSources.has(_)
           );
         }
@@ -23315,20 +22882,19 @@
           _ = (0, _._)();
         return (
           _ && _.locale(_),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.format("LT"),
-            _
-              ? _.createElement(
-                  _,
-                  {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _.format("LT"),
+              _
+                ? (0, _.jsx)(_, {
                     toolTipContent: _.format("Z") + ", " + _,
-                  },
-                  _.createElement("span", null, " ", _.zoneAbbr()),
-                )
-              : null,
-          )
+                    children: (0, _.jsxs)("span", {
+                      children: [" ", _.zoneAbbr()],
+                    }),
+                  })
+                : null,
+            ],
+          })
         );
       }
       const _ = (0, _._)((_) => {
@@ -23348,71 +22914,60 @@
                 }
               : _();
           return __webpack_require__
-            ? _.createElement(
-                "span",
-                {
-                  className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
-                },
-                _ && _,
-                _ && _ ? _.createElement("span", null, " ") : void 0,
-                Boolean(_ && _) && _(_, _),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _.DateAndTime,
-                },
-                _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.LocalizedDate,
-                      },
-                      _,
-                    ),
-                    " ",
-                    _.createElement(
-                      "span",
-                      {
-                        className: _._,
-                      },
-                      (0, _._)("#EventDisplay_DateAndTimeCombiner"),
-                    ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LocalizedTime,
-                  },
+            ? (0, _.jsxs)("span", {
+                className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
+                children: [
+                  _ && _,
+                  _ && _
+                    ? (0, _.jsx)("span", {
+                        children: " ",
+                      })
+                    : void 0,
                   Boolean(_ && _) && _(_, _),
-                ),
-              );
+                ],
+              })
+            : (0, _.jsxs)("div", {
+                className: _.DateAndTime,
+                children: [
+                  _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.LocalizedDate,
+                          children: _,
+                        }),
+                        " ",
+                        (0, _.jsx)("span", {
+                          className: _._,
+                          children: (0, _._)(
+                            "#EventDisplay_DateAndTimeCombiner",
+                          ),
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.LocalizedTime,
+                    children: Boolean(_ && _) && _(_, _),
+                  }),
+                ],
+              });
         }),
         _ = (_) => {
-          const _ = _.createElement(
-            "div",
-            {
-              className: _.stylesmodule.DateToolTip,
-            },
-            _.createElement(_, {
+          const _ = (0, _.jsx)("div", {
+            className: _.stylesmodule.DateToolTip,
+            children: (0, _.jsx)(_, {
               dateAndTime: _.rtFullDate,
               bSingleLine: !0,
               stylesmodule: _.stylesmodule,
             }),
-          );
-          return _.createElement(
-            _,
-            {
-              toolTipContent: _,
-              direction: "top",
-              className: _.className,
-              bTopmost: !0,
-            },
-            _.children,
-          );
+          });
+          return (0, _.jsx)(_, {
+            toolTipContent: _,
+            direction: "top",
+            className: _.className,
+            bTopmost: !0,
+            children: _.children,
+          });
         };
       let _ = class extends _.Component {
         render() {
@@ -23428,116 +22983,95 @@
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
           if (null == _ || 0 == _)
-            return _.createElement(
-              "div",
-              {
-                className: _.DateAndTime,
-              },
-              _.createElement(
-                "span",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.DateAndTime,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)("#EventDisplay_TimeRange"),
-              ),
-              (0, _._)("#EventDisplay_TimeDisplayNone"),
-            );
+                  children: (0, _._)("#EventDisplay_TimeRange"),
+                }),
+                (0, _._)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
           let _ = _.GetTimeNowWithOverride();
           if (_)
-            return _.createElement(
-              "div",
-              {
-                className: _.StartDate,
-              },
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.StartDate,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming",
-                ),
-                " ",
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                dateAndTime: _,
-              }),
-            );
+                  children: [
+                    (0, _._)(
+                      _ < _
+                        ? "#EventDisplay_TimeInPast"
+                        : "#EventDisplay_TimeUpcoming",
+                    ),
+                    " ",
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  stylesmodule: _,
+                  dateAndTime: _,
+                }),
+              ],
+            });
           let _ = _ <= _ && _ <= _;
           const _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
-          return _.createElement(
-            "div",
-            {
-              className: _.MultiDateAndTime,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.MultiDateAndTime,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.StartDate,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ >= _
-                    ? "#EventDisplay_TimeBeginsOn"
-                    : _ >= _
-                      ? "#EventDisplay_TimeBeginsOn_Past"
-                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                ),
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                bSingleLine: !0,
-                dateAndTime: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
+                      _ >= _
+                        ? "#EventDisplay_TimeBeginsOn"
+                        : _ >= _
+                          ? "#EventDisplay_TimeBeginsOn_Past"
+                          : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    stylesmodule: _,
+                    bSingleLine: !0,
+                    dateAndTime: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.EndDate,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                bSingleLine: !0,
-                bOnlyTime: _,
-                dateAndTime: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
+                      _ < _
+                        ? "#EventDisplay_TimeEndsOn_Past"
+                        : "#EventDisplay_TimeEndsOn",
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    stylesmodule: _,
+                    bSingleLine: !0,
+                    bOnlyTime: _,
+                    dateAndTime: _,
+                  }),
+                ],
               }),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
+              _ &&
+                (0, _.jsx)("span", {
                   className: _.ActiveEvent,
-                },
-                _.createElement(
-                  "span",
-                  {
+                  children: (0, _.jsx)("span", {
                     className: (0, _._)(
                       _.RightSideTitles,
                       _.ActiveEventCallOut,
                     ),
-                  },
-                  (0, _._)("#Time_Now"),
-                ),
-              ),
-          );
+                    children: (0, _._)("#Time_Now"),
+                  }),
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -23555,170 +23089,120 @@
                 }
               : _();
           if (null == _ || 0 == _)
-            return _.createElement(
-              "div",
-              {
-                className: _.DateAndTime,
-              },
-              _.createElement(
-                "span",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.DateAndTime,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)("#EventDisplay_TimeRange"),
-              ),
-              (0, _._)("#EventDisplay_TimeDisplayNone"),
-            );
+                  children: (0, _._)("#EventDisplay_TimeRange"),
+                }),
+                (0, _._)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
           const _ = _.GetTimeNowWithOverrideAsDate(),
             _ = _.GetTimeNowWithOverride(),
             _ = (0, _._)(new Date(1e3 * _), _),
-            _ = _.createElement(
-              "div",
-              {
-                className: _.ShortDateAndTime,
-              },
-              (0, _._)(_, _),
-            );
-          let _ = _.createElement(
-            _,
-            {
-              rtFullDate: _,
-              stylesmodule: _,
-            },
-            _.createElement(
-              "div",
-              {
+            _ = (0, _.jsx)("div", {
+              className: _.ShortDateAndTime,
+              children: (0, _._)(_, _),
+            });
+          let _ = (0, _.jsxs)(_, {
+            rtFullDate: _,
+            stylesmodule: _,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.RightSideTitles,
-              },
-              (0, _._)(
-                _ < _
-                  ? "#EventDisplay_TimeInPast"
-                  : "#EventDisplay_TimeUpcoming",
-              ),
-            ),
-            _,
-          );
+                children: (0, _._)(
+                  _ < _
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
+                ),
+              }),
+              _,
+            ],
+          });
           if (
             (_ < _ &&
               _ < _ + _._.PerWeek &&
-              (_ = _.createElement(
-                _,
-                {
-                  rtFullDate: _,
-                  stylesmodule: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RightSideTitles,
-                  },
-                  (0, _._)(
+              (_ = (0, _.jsx)(_, {
+                rtFullDate: _,
+                stylesmodule: _,
+                children: (0, _.jsx)("div", {
+                  className: _.RightSideTitles,
+                  children: (0, _._)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     _,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ShortDateAndTime,
-                      },
-                      _(_),
-                      " ",
-                    ),
+                    (0, _.jsxs)("div", {
+                      className: _.ShortDateAndTime,
+                      children: [_(_), " "],
+                    }),
                   ),
-                ),
-              )),
+                }),
+              })),
             __webpack_require__ || null == _ || _ < 1)
           )
             return _;
           const _ = _ <= _ && _ <= _;
           _ &&
-            (_ = _.createElement(
-              _,
-              {
-                rtFullDate: _,
-                className: _.ActiveEvent,
-                stylesmodule: _,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.ActiveEventCallOut,
-                },
-                (0, _._)("#Time_Now"),
-              ),
-            ));
+            (_ = (0, _.jsx)(_, {
+              rtFullDate: _,
+              className: _.ActiveEvent,
+              stylesmodule: _,
+              children: (0, _.jsx)("span", {
+                className: _.ActiveEventCallOut,
+                children: (0, _._)("#Time_Now"),
+              }),
+            }));
           let _ = null;
           const _ = _ ? _ - _ : _ - _;
           if (_ <= _._.PerDay) {
-            const _ = _.createElement(
-              "div",
-              {
-                className: _.ShortDateAndTime,
-              },
-              (0, _._)(_, !0),
-            );
+            const _ = (0, _.jsx)("div", {
+              className: _.ShortDateAndTime,
+              children: (0, _._)(_, !0),
+            });
             _ =
               _ < _
-                ? _.createElement(
-                    "div",
-                    {
-                      className: _.RightSideTitles,
-                    },
-                    (0, _._)("#EventDisplay_TimeEndsOn_Ran"),
-                    _,
-                  )
-                : _.createElement(
-                    "div",
-                    {
-                      className: _.RightSideTitles,
-                    },
-                    (0, _._)(
+                ? (0, _.jsxs)("div", {
+                    className: _.RightSideTitles,
+                    children: [(0, _._)("#EventDisplay_TimeEndsOn_Ran"), _],
+                  })
+                : (0, _.jsx)("div", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
                       _
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       _,
                     ),
-                  );
+                  });
           } else {
             const _ = _.getFullYear() == new Date(1e3 * _).getFullYear();
-            _ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+            _ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)(
+                    _ < _
+                      ? "#EventDisplay_TimeEndsOn_Past"
+                      : "#EventDisplay_TimeEndsOn",
+                  ),
+                }),
+                (0, _.jsx)("div", {
                   className: _.ShortDateAndTime,
-                },
-                (0, _._)(_, _),
-              ),
-            );
+                  children: (0, _._)(_, _),
+                }),
+              ],
+            });
           }
-          const _ = _.createElement(
-            _,
-            {
-              rtFullDate: _,
-              stylesmodule: _,
-            },
-            _,
-          );
-          return _.createElement(
-            "div",
-            {
-              className: _.ShortDateRange,
-            },
-            _,
-            _,
-          );
+          const _ = (0, _.jsx)(_, {
+            rtFullDate: _,
+            stylesmodule: _,
+            children: _,
+          });
+          return (0, _.jsxs)("div", {
+            className: _.ShortDateRange,
+            children: [_, _],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -24014,49 +23498,48 @@
           _ = [];
         for (let _ = 0; _ < _; _++)
           _.push(
-            _.createElement(_._, {
-              noFocusRing: !0,
-              type: "text",
-              maxLength: 1,
-              key: _,
-              ref: (_) => {
-                _.current[_] = _;
-              },
-              onChange: _,
-              onFocus: _,
-              onClick: (_) => _.stopPropagation(),
-              onKeyDown: _,
-              onPaste: _,
-              value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
-              autoComplete: "none",
-              autoFocus: 0 === _ && _,
-              disabled: _ || _,
-              className: _().Input,
-            }),
-          );
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(
-              _().SegmentedCharacterInput,
-              "danger" === _ && _().Danger,
-              _ && _().Disabled,
-              _ && _().BackupCode,
-            ),
-            onClick: _,
-          },
-          _ &&
-            _.createElement(
-              "div",
+            (0, _.jsx)(
+              _._,
               {
-                className: _().Loading,
+                noFocusRing: !0,
+                type: "text",
+                maxLength: 1,
+                ref: (_) => {
+                  _.current[_] = _;
+                },
+                onChange: _,
+                onFocus: _,
+                onClick: (_) => _.stopPropagation(),
+                onKeyDown: _,
+                onPaste: _,
+                value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
+                autoComplete: "none",
+                autoFocus: 0 === _ && _,
+                disabled: _ || _,
+                className: _().Input,
               },
-              _.createElement(_, {
-                size: "small",
-              }),
+              _,
             ),
-          _,
-        );
+          );
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(
+            _().SegmentedCharacterInput,
+            "danger" === _ && _().Danger,
+            _ && _().Disabled,
+            _ && _().BackupCode,
+          ),
+          onClick: _,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().Loading,
+                children: (0, _.jsx)(_, {
+                  size: "small",
+                }),
+              }),
+            _,
+          ],
+        });
       }
       __webpack_require__("chunkid");
       var _,
@@ -30202,16 +29685,13 @@
             type: "image/gif",
           }),
           _ = URL.createObjectURL(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().QRBits, _),
-          },
-          _.createElement("img", {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().QRBits, _),
+          children: (0, _.jsx)("img", {
             className: _().QRImg,
             src: _,
           }),
-        );
+        });
       }
       !(function (_) {
         (_[(_._ = 1)] = "L"),
@@ -30357,13 +29837,13 @@
           _ = 4 === _,
           _ = 3 === _,
           _ = _
-            ? _.createElement(_, null)
+            ? (0, _.jsx)(_, {})
             : _
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   reset: _,
                 })
               : _
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     size: "small",
                   })
                 : null,
@@ -30372,21 +29852,14 @@
           _.refreshInfo?.login_token_id && _(_.refreshInfo.login_token_id);
         }, [_.refreshInfo, _]);
         const _ = 1 !== _._.EUNIVERSE;
-        return _.createElement(
-          "div",
-          {
-            className: _().Column,
-          },
-          _.createElement(
-            "div",
-            {
-              style: {
-                position: "relative",
-              },
+        return (0, _.jsx)("div", {
+          className: _().Column,
+          children: (0, _.jsxs)("div", {
+            style: {
+              position: "relative",
             },
-            _.createElement(
-              _,
-              {
+            children: [
+              (0, _.jsx)(_, {
                 borderWidth: 0,
                 activeBitColor: [21, 23, 28],
                 inactiveBitColor: _ ? [255, 0, 255] : [255, 255, 255],
@@ -30397,32 +29870,26 @@
                   _ && _().Blur,
                   _ && _().NonPublic,
                 ),
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                children: _,
+              }),
+              _ &&
+                (0, _.jsx)("div", {
                   className: _().Overlay,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().Box,
-                  },
-                  _,
-                ),
-              ),
-          ),
-        );
+                    children: _,
+                  }),
+                }),
+            ],
+          }),
+        });
       }
       function _(_) {
         return _.length <= 90 ? _._ : void 0;
       }
       function _(_) {
         const { size: _ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(
             _().Loading,
             "small" == _ && _().Small,
@@ -30432,65 +29899,58 @@
         });
       }
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            onClick: _.reset,
-            className: _().QRFailure,
-          },
-          _.createElement(_, null),
-        );
+        return (0, _.jsx)(_, {
+          onClick: _.reset,
+          className: _().QRFailure,
+          children: (0, _.jsx)(_, {}),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            style: {
-              width: "40px",
-              height: "40px",
-              cursor: "pointer",
-            },
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          style: {
+            width: "40px",
+            height: "40px",
+            cursor: "pointer",
           },
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#fff",
-            strokeWidth: "30",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
-          }),
-          _.createElement("polygon", {
-            points: "147.639,108.361 245.755,10.166 245.834,108.361",
-            fill: "#fff",
-          }),
-        );
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#fff",
+              strokeWidth: "30",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
+            }),
+            (0, _.jsx)("polygon", {
+              points: "147.639,108.361 245.755,10.166 245.834,108.361",
+              fill: "#fff",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            style: {
-              width: "45px",
-              height: "45px",
-            },
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          style: {
+            width: "45px",
+            height: "45px",
           },
-          _.createElement("polyline", {
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("polyline", {
             fill: "none",
             stroke: "#fff",
             strokeWidth: "24",
@@ -30499,21 +29959,18 @@
             strokeMiterlimit: "10",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
           }),
-        );
+        });
       }
       const _ = (0, _.createContext)(!1),
         _ = () => (0, _.useContext)(_);
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().Login,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: _().Login,
+          children: (0, _.jsx)(_, {
             reset: () => window.location.reload(),
             failure: _.Generic,
           }),
-        );
+        });
       }
       function _(_) {
         return (function (_) {
@@ -30560,7 +30017,7 @@
           );
         })(_.redirectUrl)
           ? null
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               ..._,
               creationRedirectUrl: _.redirectUrl,
               onSuccess: (_) => {
@@ -30575,57 +30032,42 @@
       }
       function _(_) {
         const { embedded: _, children: __webpack_require__, ..._ } = _;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Login,
-              },
-              _.createElement(_, {
-                ..._,
-              }),
-              __webpack_require__,
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsxs)("div", {
+              className: _().Login,
+              children: [
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+                __webpack_require__,
+              ],
+            }),
+          }),
+        });
       }
       function _(_) {
         if (_()) return null;
         const { variant: _ } = _;
         return "function" == typeof _
-          ? _.createElement(
-              _,
-              {
-                onClick: _,
-              },
-              (0, _._)("#Login_Help_SignIn"),
-            )
-          : _.createElement(
-              _,
-              {
-                href: `${_._.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
-              },
-              (0, _._)("#Login_Help_SignIn"),
-            );
+          ? (0, _.jsx)(_, {
+              onClick: _,
+              children: (0, _._)("#Login_Help_SignIn"),
+            })
+          : (0, _.jsx)(_, {
+              href: `${_._.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
+              children: (0, _._)("#Login_Help_SignIn"),
+            });
       }
       function _(_) {
         const { variant: _, redirectUrl: __webpack_require__ } = _;
         if ("function" == typeof _)
-          return _.createElement(
-            _,
-            {
-              inline: !0,
-              onClick: _,
-            },
-            (0, _._)("#Login_CreateAccount"),
-          );
+          return (0, _.jsx)(_, {
+            inline: !0,
+            onClick: _,
+            children: (0, _._)("#Login_CreateAccount"),
+          });
         {
           const _ = __webpack_require__
             ? `?redir=${encodeURIComponent(__webpack_require__)}`
@@ -30633,23 +30075,17 @@
           switch (_ ?? "normal") {
             default:
             case "normal":
-              return _.createElement(
-                _,
-                {
-                  inline: !0,
-                  href: `${_._.STORE_BASE_URL}join/${_}`,
-                },
-                (0, _._)("#Login_CreateAccount"),
-              );
+              return (0, _.jsx)(_, {
+                inline: !0,
+                href: `${_._.STORE_BASE_URL}join/${_}`,
+                children: (0, _._)("#Login_CreateAccount"),
+              });
             case "partner":
-              return _.createElement(
-                _,
-                {
-                  inline: !0,
-                  href: `${_._.PARTNER_BASE_URL}${_}`,
-                },
-                (0, _._)("#Login_CreateSteamworksAccount"),
-              );
+              return (0, _.jsx)(_, {
+                inline: !0,
+                href: `${_._.PARTNER_BASE_URL}${_}`,
+                children: (0, _._)("#Login_CreateSteamworksAccount"),
+              });
             case "none":
               return null;
           }
@@ -30673,23 +30109,19 @@
           case "partner":
             _ = "#Login_NoSteamworksAccount";
         }
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().AccountCreation, _ && _().InClient),
-          },
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().AccountCreation, _ && _().InClient),
+          children: [
+            (0, _.jsx)("span", {
               className: _().AccountCreationPrompt,
-            },
-            (0, _._)(_),
-          ),
-          _.createElement(_, {
-            variant: __webpack_require__,
-            redirectUrl: _,
-          }),
-        );
+              children: (0, _._)(_),
+            }),
+            (0, _.jsx)(_, {
+              variant: __webpack_require__,
+              redirectUrl: _,
+            }),
+          ],
+        });
       }
       async function _() {
         const [_, _, __webpack_require__, _] = await Promise.all([
@@ -30817,7 +30249,7 @@
             platform: _,
             autoFocus: _,
             refreshInfo: _,
-            renderSuccess: _ = () => _.createElement(_, null),
+            renderSuccess: _ = () => (0, _.jsx)(_, {}),
             lastResult: _,
             joinLinkVariant: _,
             defaultAccountName: _,
@@ -30848,131 +30280,119 @@
           }),
           _ = _();
         if (null != _ && 1 != _)
-          return _.createElement(
-            "div",
-            {
-              className: _().Login,
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("div", {
+            className: _().Login,
+            children: (0, _.jsx)(_, {
               reset: () => window.location.reload(),
               failure: _.Generic,
               errorReference: _.toString(),
               extendedErrorMessage: _.password.strExtendedErrorMessage,
             }),
-          );
+          });
         const _ = !(0, _._)();
         if (!_.bInPasswordFlow) {
-          const _ = _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().SideBySide, _ && _().Embedded),
-            },
-            _.createElement(_, {
-              strAccountName: _.strAccountName,
-              onAccountNameChange: _.onAccountNameChange,
-              strPassword: _.strPassword,
-              onPasswordChange: _.onPasswordChange,
-              bRememberMe: _.bRememberMe,
-              onRememberMeChange: _.onRememberMeChange,
-              onSubmit: _.onPasswordSubmit,
-              status: _.password.eStatus,
-              autoFocus: _,
-              secureComputer: _,
-              refreshInfo: _.refreshInfo,
-            }),
-            _ &&
-              _.createElement(_, {
-                transport: _,
-                onQRStatusChange: _.onQRStatusChange,
-                onComplete: _.onComplete,
-                platform: _,
-                refreshInfo: _,
+          const _ = (0, _.jsxs)("div", {
+            className: (0, _._)(_().SideBySide, _ && _().Embedded),
+            children: [
+              (0, _.jsx)(_, {
+                strAccountName: _.strAccountName,
+                onAccountNameChange: _.onAccountNameChange,
+                strPassword: _.strPassword,
+                onPasswordChange: _.onPasswordChange,
+                bRememberMe: _.bRememberMe,
+                onRememberMeChange: _.onRememberMeChange,
+                onSubmit: _.onPasswordSubmit,
+                status: _.password.eStatus,
+                autoFocus: _,
+                secureComputer: _,
+                refreshInfo: _.refreshInfo,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_, {
+                  transport: _,
+                  onQRStatusChange: _.onQRStatusChange,
+                  onComplete: _.onComplete,
+                  platform: _,
+                  refreshInfo: _,
+                }),
+            ],
+          });
           if (_) {
             const _ = _._.IN_STEAMUI,
               _ = _ ? _._.LAUNCHER_TYPE : void 0;
-            return _.createElement(
-              _,
-              {
-                className: (0, _._)(_().EmbeddedRoot, _ && _().InClient),
-              },
-              !_ && !1,
-              !_.refreshInfo &&
-                _.createElement(_, {
-                  realm: _._.EREALM,
-                  launcherType: _,
-                  className: _().HeaderLogo,
-                  onBack: _.onBack,
+            return (0, _.jsxs)(_, {
+              className: (0, _._)(_().EmbeddedRoot, _ && _().InClient),
+              children: [
+                !_ && !1,
+                !_.refreshInfo &&
+                  (0, _.jsx)(_, {
+                    realm: _._.EREALM,
+                    launcherType: _,
+                    className: _().HeaderLogo,
+                    onBack: _.onBack,
+                  }),
+                (0, _.jsx)(_, {
+                  refreshInfo: _,
                 }),
-              _.createElement(_, {
-                refreshInfo: _,
-              }),
-              _,
-              _.createElement(
-                "div",
-                {
+                _,
+                (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _().EmbeddedRootFooter,
                     _ && _().InClient,
                   ),
-                },
-                _.createElement(_, {
-                  variant: _.helpLinkVariant,
+                  children: [
+                    (0, _.jsx)(_, {
+                      variant: _.helpLinkVariant,
+                    }),
+                    (0, _.jsx)(_, {
+                      launcherType: _,
+                      variant: _,
+                      redirectUrl: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  launcherType: _,
-                  variant: _,
-                  redirectUrl: _,
-                }),
-              ),
-            );
+              ],
+            });
           }
-          const _ = _.createElement(
-            "div",
-            {
-              style: {
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
-                margin: "8px 16px",
-              },
+          const _ = (0, _.jsxs)("div", {
+            style: {
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              margin: "8px 16px",
             },
-            !1,
-            _.createElement(
-              "div",
-              {
+            children: [
+              !1,
+              (0, _.jsx)("div", {
                 className: _().PrimaryHeader,
-              },
-              _.refreshInfo
-                ? (0, _._)("#Login_RefreshSignIn")
-                : (0, _._)("#Login_SignInTitle"),
-            ),
-            _.createElement(_, {
-              refreshInfo: _.refreshInfo,
-            }),
-          );
-          return _.createElement(
-            _,
-            {
-              title: _,
-            },
-            _ && _.createElement(_, null),
-            _,
-          );
+                children: _.refreshInfo
+                  ? (0, _._)("#Login_RefreshSignIn")
+                  : (0, _._)("#Login_SignInTitle"),
+              }),
+              (0, _.jsx)(_, {
+                refreshInfo: _.refreshInfo,
+              }),
+            ],
+          });
+          return (0, _.jsxs)(_, {
+            title: _,
+            children: [_ && (0, _.jsx)(_, {}), _],
+          });
         }
         const _ = _.password.eStatus;
         switch (_) {
           case 13:
             return _.renderLoading
-              ? _.createElement(_.Fragment, null, _.renderLoading())
-              : _.createElement(_, null);
+              ? (0, _.jsx)(_.Fragment, {
+                  children: _.renderLoading(),
+                })
+              : (0, _.jsx)(_, {});
           case 5:
           case 11:
           case 3:
           case 10:
             const _ = 5 === _ || 11 === _;
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: _ ? "mobile" : "email",
               onSubmitCode: _.password.addCode,
               status: _,
@@ -30984,18 +30404,18 @@
           case 6:
           case 4:
             const _ = 6 === _;
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: _ ? "mobile" : "email",
               accountName: _.password.strAccountName,
               onUseCodeOverride: _.password.useCodeOverride,
               onCodeHelp: _.onCodeHelp,
             });
           case 16:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               reset: _.password.reset,
             });
           case 15:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               reset: _.password.reset,
               failure: _.password.eFailureState,
               onRequestOffline: _.onTryOffline,
@@ -31003,17 +30423,14 @@
               extendedErrorMessage: _.password.strExtendedErrorMessage,
             });
           case 14:
-            return _.createElement(
-              _,
-              {
-                compact: !0,
-              },
-              _(),
-            );
+            return (0, _.jsx)(_, {
+              compact: !0,
+              children: _(),
+            });
           default:
             return (
               _(`Unknown Phase: ${_}`),
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 reset: _.password.reset,
                 failure: _.Generic,
                 onRequestOffline: _.onTryOffline,
@@ -31059,35 +30476,25 @@
           case 84:
             _ = "#Login_RefreshReason_RateLimitExceeded";
         }
-        return _.createElement(
-          "div",
-          {
-            className: _().RefreshReasonContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().RefreshReasonContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().RefreshTitle,
-            },
-            (0, _._)("#Login_RefreshSignIn"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#Login_RefreshSignIn"),
+            }),
+            (0, _.jsx)("div", {
               className: _().RefreshReason,
-            },
-            (0, _._)(_),
-          ),
-        );
+              children: (0, _._)(_),
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().ConfirmCredntialsNag,
-          },
-          (0, _._)("#Login_ConfirmCredentials"),
-        );
+        return (0, _.jsx)("div", {
+          className: _().ConfirmCredntialsNag,
+          children: (0, _._)("#Login_ConfirmCredentials"),
+        });
       }
       function _(_) {
         const {
@@ -31120,82 +30527,75 @@
           _ = 1 === __webpack_require__ || 13 === __webpack_require__,
           _ = 2 === __webpack_require__ && !_,
           _ = _
-            ? _.createElement(_, null, (0, _._)("#Login_CheckCredentials"))
-            : _.createElement(_, null, " "),
+            ? (0, _.jsx)(_, {
+                children: (0, _._)("#Login_CheckCredentials"),
+              })
+            : (0, _.jsx)(_, {
+                children: " ",
+              }),
           _ = _ && !_,
           _ = _ && !!_,
           _ = !!_.refreshInfo;
-        return _.createElement(
-          _,
-          {
-            onSubmit: () => {
-              _().then(() => {
-                _() && _(!1);
-              });
-            },
-            className: _().LoginForm,
+        return (0, _.jsxs)(_, {
+          onSubmit: () => {
+            _().then(() => {
+              _() && _(!1);
+            });
           },
-          _.createElement(_, {
-            tone: _ ? "danger" : void 0,
-            label: _.createElement(
-              _,
-              {
+          className: _().LoginForm,
+          children: [
+            (0, _.jsx)(_, {
+              tone: _ ? "danger" : void 0,
+              label: (0, _.jsx)(_, {
                 highlight: !0,
+                children: (0, _._)("#Login_SignIn_WithAccountName"),
+              }),
+              value: _,
+              onChange: (_) => {
+                _(!0), _(_);
               },
-              (0, _._)("#Login_SignIn_WithAccountName"),
-            ),
-            value: _,
-            onChange: (_) => {
-              _(!0), _(_);
-            },
-            autoFocus: _,
-            disabled: _,
-          }),
-          _.createElement(_, {
-            tone: _ ? "danger" : void 0,
-            label: _.createElement(_, null, (0, _._)("#Login_Password")),
-            value: _,
-            onChange: (_) => {
-              _(!0), _(_);
-            },
-            type: "password",
-            autoFocus: _,
-          }),
-          _
-            ? _.createElement(
-                _,
-                {
+              autoFocus: _,
+              disabled: _,
+            }),
+            (0, _.jsx)(_, {
+              tone: _ ? "danger" : void 0,
+              label: (0, _.jsx)(_, {
+                children: (0, _._)("#Login_Password"),
+              }),
+              value: _,
+              onChange: (_) => {
+                _(!0), _(_);
+              },
+              type: "password",
+              autoFocus: _,
+            }),
+            _
+              ? (0, _.jsx)(_, {
                   toolTipContent: "#Login_RememberMe_Tooltip",
                   direction: "bottom",
-                },
-                _.createElement(_, {
-                  label: (0, _._)("#Login_RememberMe_Short"),
-                  value: _,
-                  onChange: _,
-                }),
-              )
-            : _.createElement(
-                "div",
-                {
+                  children: (0, _.jsx)(_, {
+                    label: (0, _._)("#Login_RememberMe_Short"),
+                    value: _,
+                    onChange: _,
+                  }),
+                })
+              : (0, _.jsx)("div", {
                   className: _().InsecureComputer,
-                },
-                (0, _._)("#Login_InsecureComputer"),
-              ),
-          _.createElement(_, {
-            loading: _,
-            refreshLogin: _,
-          }),
-          _,
-          !_ &&
-            _.createElement(
-              _,
-              {
+                  children: (0, _._)("#Login_InsecureComputer"),
+                }),
+            (0, _.jsx)(_, {
+              loading: _,
+              refreshLogin: _,
+            }),
+            _,
+            !_ &&
+              (0, _.jsx)(_, {
                 href: `${_._.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
                 align: "center",
-              },
-              (0, _._)("#Login_Help_SignIn"),
-            ),
-        );
+                children: (0, _._)("#Login_Help_SignIn"),
+              }),
+          ],
+        });
       }
       const _ = 700;
       function _(_) {
@@ -31206,19 +30606,16 @@
           (0, _._)(_.ownerWindow, "resize", () => {
             _(__webpack_require__());
           }),
-          _.createElement(
-            "div",
-            {
-              className: _().QRSection,
-            },
-            _
-              ? _.createElement(_, {
+          (0, _.jsx)("div", {
+            className: _().QRSection,
+            children: _
+              ? (0, _.jsx)(_, {
                   ..._,
                 })
-              : _.createElement(_, {
+              : (0, _.jsx)(_, {
                   ..._,
                 }),
-          )
+          })
         );
       }
       function _(_) {
@@ -31227,114 +30624,82 @@
           "join/?guest=1&purchaseType=gift&checkout=1&redir=" +
           encodeURIComponent(_.redirectURL);
         _._.STORE_BASE_URL, encodeURIComponent(_.redirectURL);
-        return _.createElement(
-          "div",
-          {
-            className: _().GuestLayout,
-          },
-          _.createElement(
-            _,
-            {
-              compact: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().GuestContainer,
-              },
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)("div", {
+          className: _().GuestLayout,
+          children: (0, _.jsx)(_, {
+            compact: !0,
+            children: (0, _.jsxs)("div", {
+              className: _().GuestContainer,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().GuestText,
-                },
-                (0, _._)(
-                  "#Login_Guest",
-                  _.createElement("a", {
-                    href: `${_}`,
-                    style: {
-                      textDecoration: "underline",
-                    },
-                  }),
-                ),
-              ),
-              _.createElement(
-                "a",
-                {
+                  children: (0, _._)(
+                    "#Login_Guest",
+                    (0, _.jsx)("a", {
+                      href: `${_}`,
+                      style: {
+                        textDecoration: "underline",
+                      },
+                    }),
+                  ),
+                }),
+                (0, _.jsx)("a", {
                   className: _().GuestLink,
                   href: `${_}`,
-                },
-                _.createElement(
-                  "button",
-                  {
+                  children: (0, _.jsx)("button", {
                     className: _().GuestButton,
-                  },
-                  (0, _._)("#Login_GuestContinue"),
-                ),
-              ),
-            ),
-          ),
-        );
+                    children: (0, _._)("#Login_GuestContinue"),
+                  }),
+                }),
+              ],
+            }),
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(!1);
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               bShowHideButton: !0,
               setShowQR: __webpack_require__,
             })
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               setShowQR: __webpack_require__,
             });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().MessagingContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().MessagingContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().MessagingTag,
-            },
-            (0, _._)("#Login_MobileFlow_New"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#Login_MobileFlow_New"),
+            }),
+            (0, _.jsx)("div", {
               className: _().MessagingSubtitle,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _().MessagingSubtitle,
-              },
-              (0, _._)("#Login_MobileFlow_SignIn_ScanQR"),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+                children: (0, _._)("#Login_MobileFlow_SignIn_ScanQR"),
+              }),
+            }),
+            (0, _.jsx)("div", {
               className: _().MessagingButton,
               onClick: () => _.setShowQR(!0),
-            },
-            (0, _._)("#Login_MobileFlow_ShowMeQR_Button"),
-          ),
-          _.createElement(
-            "a",
-            {
+              children: (0, _._)("#Login_MobileFlow_ShowMeQR_Button"),
+            }),
+            (0, _.jsx)("a", {
               href: `${_._.STORE_BASE_URL}mobile`,
               className: _().MessagingLink,
-            },
-            (0, _._)("#Login_JoinBeta_Button"),
-          ),
-        );
+              children: (0, _._)("#Login_JoinBeta_Button"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -31346,55 +30711,42 @@
           bShowHideButton: _ = !1,
           setShowQR: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().QRCodeContainer,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().QRCodeContainer,
+          children: [
+            (0, _.jsx)(_, {
               highlight: !0,
-            },
-            (0, _._)("#Login_SignIn_OrWithQRCode"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _()._,
-            },
-            _.createElement(_, {
-              onStatusChange: _,
-              transport: __webpack_require__,
-              onComplete: _,
-              platform: _,
-              refreshInfo: _,
+              children: (0, _._)("#Login_SignIn_OrWithQRCode"),
             }),
-          ),
-          _ &&
+            (0, _.jsx)("div", {
+              className: _()._,
+              children: (0, _.jsx)(_, {
+                onStatusChange: _,
+                transport: __webpack_require__,
+                onComplete: _,
+                platform: _,
+                refreshInfo: _,
+              }),
+            }),
             _ &&
-            _.createElement(
-              "div",
-              {
+              _ &&
+              (0, _.jsx)("div", {
                 className: _().QRHideLink,
                 onClick: () => _(!1),
-              },
-              (0, _._)("#Button_Hide"),
-            ),
-          _.createElement(
-            "div",
-            {
-              className: _().UseMobileAppForQR,
-            },
-            (0, _._)(
-              "#Login_UseMobileAppForQR_Inline",
-              _.createElement(_, {
-                href: `${_._.STORE_BASE_URL}mobile`,
-                align: "center",
+                children: (0, _._)("#Button_Hide"),
               }),
-            ),
-          ),
-        );
+            (0, _.jsx)("div", {
+              className: _().UseMobileAppForQR,
+              children: (0, _._)(
+                "#Login_UseMobileAppForQR_Inline",
+                (0, _.jsx)(_, {
+                  href: `${_._.STORE_BASE_URL}mobile`,
+                  align: "center",
+                }),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -31405,38 +30757,35 @@
             ..._
           } = _,
           _ = _ ?? (__webpack_require__ ? "danger" : void 0);
-        return _.createElement(
-          "div",
-          {
-            className: _().TextField,
-          },
-          "string" == typeof _ ? _.createElement(_, null, _) : _,
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().TextField,
+          children: [
+            "string" == typeof _
+              ? (0, _.jsx)(_, {
+                  children: _,
+                })
+              : _,
+            (0, _.jsx)(_, {
               type: "error",
-            },
-            __webpack_require__,
-          ),
-          _.createElement(_, {
-            autoFocus: _,
-            tone: _,
-            ..._,
-          }),
-        );
+              children: __webpack_require__,
+            }),
+            (0, _.jsx)(_, {
+              autoFocus: _,
+              tone: _,
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { children: _, highlight: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().FieldLabel,
-              __webpack_require__ && _().Highlight,
-            ),
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().FieldLabel,
+            __webpack_require__ && _().Highlight,
+          ),
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -31448,7 +30797,7 @@
           autoFocus: _,
           disabled: _,
         } = _;
-        return _.createElement("input", {
+        return (0, _.jsx)("input", {
           value: _,
           type: _,
           autoFocus: _,
@@ -31459,112 +30808,87 @@
       }
       function _(_) {
         const { children: _, type: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().FieldHint,
-              "error" === __webpack_require__ && _().Error,
-            ),
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().FieldHint,
+            "error" === __webpack_require__ && _().Error,
+          ),
+          children: _,
+        });
       }
       function _(_) {
         const { label: _, onChange: __webpack_require__, value: _ } = _;
         let _ = () => {
           __webpack_require__ && __webpack_require__(!_);
         };
-        return _.createElement(
-          "div",
-          {
-            className: _().CheckboxField,
-            onClick: _,
-            onKeyPress: (_) => {
-              " " == _.key && (_(), _.preventDefault());
-            },
+        return (0, _.jsxs)("div", {
+          className: _().CheckboxField,
+          onClick: _,
+          onKeyPress: (_) => {
+            " " == _.key && (_(), _.preventDefault());
           },
-          _.createElement(_, {
-            value: _,
-          }),
-          _.createElement(
-            "div",
-            {
+          children: [
+            (0, _.jsx)(_, {
+              value: _,
+            }),
+            (0, _.jsx)("div", {
               className: _().CheckboxFieldLabel,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { value: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            tabIndex: 0,
-            className: _().Checkbox,
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().Check,
-              },
-              _.createElement(_.Jlk, {
+        return (0, _.jsx)("div", {
+          tabIndex: 0,
+          className: _().Checkbox,
+          children:
+            _ &&
+            (0, _.jsx)("div", {
+              className: _().Check,
+              children: (0, _.jsx)(_.Jlk, {
                 strokeWidth: 35,
               }),
-            ),
-        );
+            }),
+        });
       }
       function _(_) {
         const { refreshLogin: _, ...__webpack_require__ } = _;
         return _ && SteamClient.User?.StartShutdown
-          ? _.createElement(_, null)
-          : _.createElement(_, {
+          ? (0, _.jsx)(_, {})
+          : (0, _.jsx)(_, {
               ...__webpack_require__,
             });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().SignInButtonContainer,
-          },
-          _.createElement(
-            _,
-            {
-              ..._,
-            },
-            (0, _._)("#Login_SignIn"),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _().SignInButtonContainer,
+          children: (0, _.jsx)(_, {
+            ..._,
+            children: (0, _._)("#Login_SignIn"),
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().RefreshButtonContainer,
-          },
-          _.createElement(
-            "button",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().RefreshButtonContainer,
+          children: [
+            (0, _.jsx)("button", {
               className: _().SubmitButton,
               type: "submit",
-            },
-            (0, _._)("#Login_SignIn"),
-          ),
-          _.createElement(
-            "button",
-            {
+              children: (0, _._)("#Login_SignIn"),
+            }),
+            (0, _.jsx)("button", {
               className: _().RefreshQuitButton,
               onClick: () => SteamClient.User.StartShutdown(!0),
-            },
-            (0, _._)("#Login_ExitSteam"),
-          ),
-        );
+              children: (0, _._)("#Login_ExitSteam"),
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           type: "submit",
           ..._,
         });
@@ -31578,75 +30902,61 @@
             ..._
           } = _,
           _ = _ || __webpack_require__;
-        return _.createElement(
-          "button",
-          {
-            className: (0, _._)(
-              _().SubmitButton,
-              __webpack_require__ && _().Loading,
-              _,
-            ),
-            disabled: _,
-            ..._,
-          },
-          _,
-          __webpack_require__ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("button", {
+          className: (0, _._)(
+            _().SubmitButton,
+            __webpack_require__ && _().Loading,
+            _,
+          ),
+          disabled: _,
+          ..._,
+          children: [
+            _,
+            __webpack_require__ &&
+              (0, _.jsx)("div", {
                 className: _().LoadingContainer,
-              },
-              _.createElement(_, {
-                size: "small",
+                children: (0, _.jsx)(_, {
+                  size: "small",
+                }),
               }),
-            ),
-        );
+          ],
+        });
       }
       function _(_) {
         const _ = _.children || " ";
-        return _.createElement(
-          "div",
-          {
-            className: _().FormError,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _().FormError,
+          children: _,
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            compact: !0,
-          },
-          _.createElement(
-            _,
-            {
-              alignItems: "center",
-              className: (0, _._)(
-                _().WaitingForTokenContainer,
-                _._.IN_STEAMUI && _().Client,
-              ),
-            },
-            _.createElement(_, {
-              size: "xlarge",
-            }),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().Description),
-              },
-              (0, _._)(
-                _._.IN_STEAMUI
-                  ? "#Login_ConnectingToSteam"
-                  : "#Login_LoadingAccountInfo",
-              ),
+        return (0, _.jsx)(_, {
+          compact: !0,
+          children: (0, _.jsxs)(_, {
+            alignItems: "center",
+            className: (0, _._)(
+              _().WaitingForTokenContainer,
+              _._.IN_STEAMUI && _().Client,
             ),
-          ),
-        );
+            children: [
+              (0, _.jsx)(_, {
+                size: "xlarge",
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().Description),
+                children: (0, _._)(
+                  _._.IN_STEAMUI
+                    ? "#Login_ConnectingToSteam"
+                    : "#Login_LoadingAccountInfo",
+                ),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { size: _ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(
             _().LoadingSpinner,
             "small" == _ && _().Small,
@@ -31656,20 +30966,14 @@
         });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().OfferOffline,
-          },
-          _.createElement(
-            "button",
-            {
-              className: _().OfferOfflineButton,
-              onClick: _.onRequestOffline,
-            },
-            (0, _._)("#Login_GoOffline_Button"),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _().OfferOffline,
+          children: (0, _.jsx)("button", {
+            className: _().OfferOfflineButton,
+            onClick: _.onRequestOffline,
+            children: (0, _._)("#Login_GoOffline_Button"),
+          }),
+        });
       }
       function _(_) {
         const {
@@ -31733,71 +31037,53 @@
             return _;
           })(__webpack_require__, _),
           _ = _._.IN_STEAMUI && __webpack_require__ == _.Network;
-        return _.createElement(
-          _,
-          {
-            compact: !0,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          compact: !0,
+          children: [
+            (0, _.jsxs)(_, {
               alignItems: "center",
               gap: 12,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().FailureTitle,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().FailureDescription,
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().FailureDescription,
-                },
-                (0, _._)("#Login_GoOffline_Description"),
-              ),
-            _.createElement(
-              _,
-              {
-                className: _().FailureButtons,
-              },
-              _.createElement(
-                _,
-                {
-                  className: _().TryAgainButton,
-                  onClick: _,
-                },
-                (0, _._)("#Button_Retry"),
-              ),
-              _ &&
-                _.createElement(_, {
-                  onRequestOffline: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().FailureTitle,
+                  children: _,
                 }),
-            ),
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                (0, _.jsx)("div", {
+                  className: _().FailureDescription,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().FailureDescription,
+                    children: (0, _._)("#Login_GoOffline_Description"),
+                  }),
+                (0, _.jsxs)(_, {
+                  className: _().FailureButtons,
+                  children: [
+                    (0, _.jsx)(_, {
+                      className: _().TryAgainButton,
+                      onClick: _,
+                      children: (0, _._)("#Button_Retry"),
+                    }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        onRequestOffline: _,
+                      }),
+                  ],
+                }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().MutedErrorReference,
-              },
-              (0, _._)("#Login_Error_Reference", _),
-            ),
-        );
+                children: (0, _._)("#Login_Error_Reference", _),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { reset: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           reset: _,
           failure: _.Generic,
         });
@@ -31830,88 +31116,77 @@
         return (
           _
             ? "mobile" === _
-              ? ((_ = _.createElement(_, null)), (_ = "#Login_UseMobileCode"))
-              : ((_ = _.createElement(_, null)), (_ = "#Login_UseEmailCode"))
+              ? ((_ = (0, _.jsx)(_, {})), (_ = "#Login_UseMobileCode"))
+              : ((_ = (0, _.jsx)(_, {})), (_ = "#Login_UseEmailCode"))
             : ((_ =
                 "mobile" === _
-                  ? _.createElement(_, null)
-                  : _.createElement(_, {
+                  ? (0, _.jsx)(_, {})
+                  : (0, _.jsx)(_, {
                       emailAddress: _,
                     })),
               (_ = "#Login_UseBackupCode")),
-          _.createElement(
-            _,
-            {
-              title: _.createElement(_, null),
-              compact: !0,
-            },
-            _.createElement(
-              _,
-              {
-                onSubmit: () => {
-                  _ && _(_);
-                },
+          (0, _.jsx)(_, {
+            title: (0, _.jsx)(_, {}),
+            compact: !0,
+            children: (0, _.jsx)(_, {
+              onSubmit: () => {
+                _ && _(_);
               },
-              _.createElement(
-                _,
-                {
-                  alignItems: "center",
-                  gap: 14,
-                },
-                _.createElement(_, {
-                  type: _,
-                  accountName: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
+              children: (0, _.jsxs)(_, {
+                alignItems: "center",
+                gap: 14,
+                children: [
+                  (0, _.jsx)(_, {
+                    type: _,
+                    accountName: _,
+                  }),
+                  (0, _.jsxs)("div", {
                     className: _().ConfirmationEntryContainer,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      alignItems: "center",
-                      gap: 2,
-                    },
-                    _ &&
-                      _.createElement(
-                        _,
-                        null,
-                        (0, _._)("#Login_IncorrectSteamGuard"),
-                      ),
-                    _.createElement(_, {
-                      key: _,
-                      value: _,
-                      onChange: (_) => {
-                        _ || _(!0), _(_);
-                        const _ = _.join("");
-                        _(_, _) && _(_);
-                      },
-                      tone: _ ? "danger" : void 0,
-                      loading: _,
-                      backupCode: _,
-                    }),
-                  ),
-                  _,
-                ),
-                _ &&
-                  _.createElement(
-                    _,
-                    {
+                    children: [
+                      (0, _.jsxs)(_, {
+                        alignItems: "center",
+                        gap: 2,
+                        children: [
+                          _ &&
+                            (0, _.jsx)(_, {
+                              children: (0, _._)("#Login_IncorrectSteamGuard"),
+                            }),
+                          (0, _.jsx)(
+                            _,
+                            {
+                              value: _,
+                              onChange: (_) => {
+                                _ || _(!0), _(_);
+                                const _ = _.join("");
+                                _(_, _) && _(_);
+                              },
+                              tone: _ ? "danger" : void 0,
+                              loading: _,
+                              backupCode: _,
+                            },
+                            _,
+                          ),
+                        ],
+                      }),
+                      _,
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
                       onClick: () => {
                         _(!_), _([]), __webpack_require__(""), _(_ + 1);
                       },
                       align: "center",
-                    },
-                    (0, _._)(_),
-                  ),
-                _.createElement(_, {
-                  type: _,
-                  onCodeHelp: _.onCodeHelp,
-                }),
-              ),
-            ),
-          )
+                      children: (0, _._)(_),
+                    }),
+                  (0, _.jsx)(_, {
+                    type: _,
+                    onCodeHelp: _.onCodeHelp,
+                  }),
+                ],
+              }),
+            }),
+          })
         );
       }
       function _(_) {
@@ -31924,107 +31199,78 @@
             : ((_ = `${_._.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
               (_ = (0, _._)("#Login_Help_AccessEmail"))),
           _.onCodeHelp
-            ? _.createElement(
-                _,
-                {
-                  onClick: () => _.onCodeHelp(_),
-                  align: "center",
-                },
-                _,
-              )
-            : _.createElement(
-                _,
-                {
-                  href: _,
-                  align: "center",
-                },
-                _,
-              )
+            ? (0, _.jsx)(_, {
+                onClick: () => _.onCodeHelp(_),
+                align: "center",
+                children: _,
+              })
+            : (0, _.jsx)(_, {
+                href: _,
+                align: "center",
+                children: _,
+              })
         );
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            className: _().EnterBackupCodeContainer,
-          },
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_, {
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          className: _().EnterBackupCodeContainer,
+          children: (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsx)("div", {
                 className: _().EnterCodeFromMobile,
-              },
-              (0, _._)("#Login_EnterBackupCode"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#Login_EnterBackupCode"),
+              }),
+              (0, _.jsx)("div", {
                 className: _().Label,
-              },
-              (0, _._)("#Login_EnterBackupCodeDescription"),
-            ),
-          ),
-        );
+                children: (0, _._)("#Login_EnterBackupCodeDescription"),
+              }),
+            ],
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            className: _().EnterCodeFromMobileContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_, {
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          className: _().EnterCodeFromMobileContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().EnterCodeFromMobile,
-            },
-            (0, _._)("#Login_EnterMobileCode"),
-          ),
-          _.createElement(_, {
-            className: _().AwaitingMobileConfIcon,
-          }),
-        );
+              children: (0, _._)("#Login_EnterMobileCode"),
+            }),
+            (0, _.jsx)(_, {
+              className: _().AwaitingMobileConfIcon,
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            className: _().EnterCodeFromEmailContainer,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          className: _().EnterCodeFromEmailContainer,
+          children: [
+            (0, _.jsx)(_, {
               align: "center",
               spacing: 6,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _().EnterCodeFromEmail,
-              },
-              (0, _._)(
-                "#Login_EnterEmailCode",
-                _.createElement(
-                  "span",
-                  {
+                children: (0, _._)(
+                  "#Login_EnterEmailCode",
+                  (0, _.jsx)("span", {
                     className: _().EnterCodeEmailAddress,
-                  },
-                  _.emailAddress,
+                    children: _.emailAddress,
+                  }),
                 ),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            className: _().AwaitingEmailConfIcon,
-          }),
-        );
+              }),
+            }),
+            (0, _.jsx)(_, {
+              className: _().AwaitingEmailConfIcon,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { accountName: _, type: __webpack_require__ } = _,
@@ -32033,110 +31279,89 @@
               ? (0, _._)("#Login_MobileProtectingAccount")
               : (0, _._)("#Login_EmailProtectingAccount"),
           _ = _();
-        return _.createElement(
-          "div",
-          {
-            className: _().ProtectingAccount,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().ProtectingAccount,
+          children: [
+            (0, _.jsx)("div", {
               className: _().Label,
-            },
-            (0, _._)(
-              "#Login_ActiveAccountName",
-              _.createElement(
-                "span",
-                {
+              children: (0, _._)(
+                "#Login_ActiveAccountName",
+                (0, _.jsx)("span", {
                   className: _().AccountName,
-                },
-                _,
+                  children: _,
+                }),
               ),
-            ),
-          ),
-          !_ &&
-            _.createElement(
-              "div",
-              {
+            }),
+            !_ &&
+              (0, _.jsx)("div", {
                 className: _().Description,
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            alignItems: "center",
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ConfirmationContainer,
-            },
-            _.createElement("img", {
-              src: (0, _._)(_),
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_, {
+          alignItems: "center",
+          children: (0, _.jsxs)("div", {
+            className: _().ConfirmationContainer,
+            children: [
+              (0, _.jsx)("img", {
+                src: (0, _._)(_),
+              }),
+              (0, _.jsx)("div", {
                 className: _().AwaitingMobileConfText,
-              },
-              (0, _._)("#Login_AwaitingMobileConfirmation"),
-            ),
-          ),
-        );
+                children: (0, _._)("#Login_AwaitingMobileConfirmation"),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 33 49",
-            fill: "currentColor",
-            className: _.className,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M28 47.1106C29.1046 47.1106 30 46.2151 30 45.1106L30 3.72705C30 2.62248 29.1046 1.72705 28 1.72705L5 1.72705C3.89544 1.72705 3 2.62248 3 3.72705L3 45.1106C3 46.2151 3.89543 47.1106 5 47.1106L28 47.1106ZM5.68119 5.82741L27.3188 5.82741L27.3188 42.7772H5.68119L5.68119 5.82741ZM20.9999 44.944C20.9999 45.3429 20.6766 45.6662 20.2777 45.6662L12.7221 45.6662C12.3233 45.6662 11.9999 45.3429 11.9999 44.944C11.9999 44.5451 12.3233 44.2218 12.7221 44.2218H20.2777C20.6766 44.2218 20.9999 44.5451 20.9999 44.944ZM17.2778 4.44406C17.6767 4.44406 18 4.12071 18 3.72184C18 3.32296 17.6767 2.99962 17.2778 2.99962L15.7222 2.99962C15.3233 2.99962 15 3.32296 15 3.72184C15 4.12071 15.3233 4.44406 15.7222 4.44406L17.2778 4.44406Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M22.2456 22.4164C22.2456 21.6666 22.8127 21.0002 23.6228 21.0002C24.3519 21.0002 25 21.6666 25 22.4164C25 23.1661 24.3519 23.8325 23.6228 23.8325C22.8937 23.8325 22.2456 23.1661 22.2456 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M18.6812 22.4164C18.6812 21.6666 19.2483 21.0002 20.0584 21.0002C20.8685 21.0002 21.5166 21.6666 21.4355 22.4164C21.4355 23.1661 20.8685 23.8325 20.0584 23.8325C19.3293 23.8325 18.6812 23.1661 18.6812 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M15.1977 22.4164C15.1977 21.6666 15.7648 21.0002 16.5749 21.0002C17.304 21.0002 17.9521 21.6666 17.9521 22.4164C17.9521 23.1661 17.385 23.8325 16.5749 23.8325C15.8458 23.8325 15.1977 23.1661 15.1977 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M11.7143 22.4164C11.7143 21.6666 12.2814 21.0002 13.0915 21.0002C13.8206 21.0002 14.4686 21.6666 14.4686 22.4164C14.4686 23.1661 13.9016 23.8325 13.0915 23.8325C12.3624 23.8325 11.7143 23.1661 11.7143 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M8.14983 22.4164C8.14983 21.6666 8.7169 21.0002 9.527 21.0002C10.3371 21.0002 10.9852 21.6666 10.9042 22.4164C10.9042 23.1661 10.3371 23.8325 9.527 23.8325C8.79791 23.8325 8.14983 23.1661 8.14983 22.4164Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 33 49",
+          fill: "currentColor",
+          className: _.className,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M28 47.1106C29.1046 47.1106 30 46.2151 30 45.1106L30 3.72705C30 2.62248 29.1046 1.72705 28 1.72705L5 1.72705C3.89544 1.72705 3 2.62248 3 3.72705L3 45.1106C3 46.2151 3.89543 47.1106 5 47.1106L28 47.1106ZM5.68119 5.82741L27.3188 5.82741L27.3188 42.7772H5.68119L5.68119 5.82741ZM20.9999 44.944C20.9999 45.3429 20.6766 45.6662 20.2777 45.6662L12.7221 45.6662C12.3233 45.6662 11.9999 45.3429 11.9999 44.944C11.9999 44.5451 12.3233 44.2218 12.7221 44.2218H20.2777C20.6766 44.2218 20.9999 44.5451 20.9999 44.944ZM17.2778 4.44406C17.6767 4.44406 18 4.12071 18 3.72184C18 3.32296 17.6767 2.99962 17.2778 2.99962L15.7222 2.99962C15.3233 2.99962 15 3.32296 15 3.72184C15 4.12071 15.3233 4.44406 15.7222 4.44406L17.2778 4.44406Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M22.2456 22.4164C22.2456 21.6666 22.8127 21.0002 23.6228 21.0002C24.3519 21.0002 25 21.6666 25 22.4164C25 23.1661 24.3519 23.8325 23.6228 23.8325C22.8937 23.8325 22.2456 23.1661 22.2456 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M18.6812 22.4164C18.6812 21.6666 19.2483 21.0002 20.0584 21.0002C20.8685 21.0002 21.5166 21.6666 21.4355 22.4164C21.4355 23.1661 20.8685 23.8325 20.0584 23.8325C19.3293 23.8325 18.6812 23.1661 18.6812 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M15.1977 22.4164C15.1977 21.6666 15.7648 21.0002 16.5749 21.0002C17.304 21.0002 17.9521 21.6666 17.9521 22.4164C17.9521 23.1661 17.385 23.8325 16.5749 23.8325C15.8458 23.8325 15.1977 23.1661 15.1977 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M11.7143 22.4164C11.7143 21.6666 12.2814 21.0002 13.0915 21.0002C13.8206 21.0002 14.4686 21.6666 14.4686 22.4164C14.4686 23.1661 13.9016 23.8325 13.0915 23.8325C12.3624 23.8325 11.7143 23.1661 11.7143 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M8.14983 22.4164C8.14983 21.6666 8.7169 21.0002 9.527 21.0002C10.3371 21.0002 10.9852 21.6666 10.9042 22.4164C10.9042 23.1661 10.3371 23.8325 9.527 23.8325C8.79791 23.8325 8.14983 23.1661 8.14983 22.4164Z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 58 56",
-            fill: "none",
-            className: _.className,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          viewBox: "0 0 58 56",
+          fill: "none",
+          className: _.className,
+          children: (0, _.jsx)("path", {
             _: "M57.9352 24.5887C57.8463 24.233 57.8463 23.8774 57.6684 23.5217C57.4017 22.8993 57.046 22.4547 56.5125 22.0101L49.577 16.4083V10.9844C49.577 8.85041 47.8876 7.16098 45.7536 7.16098H38.1956L31.5269 1.73706C30.1042 0.581137 28.0591 0.581137 26.6364 1.73706L19.9677 7.16098H12.4097C10.2757 7.16098 8.58631 8.93932 8.58631 10.9844V16.4083L1.56188 22.0101C1.02838 22.3658 0.672713 22.8993 0.405962 23.5217V23.6106C0.228128 24.1441 0.050293 24.5887 0.050293 25.1222V52.1529C0.050293 53.2199 0.494878 54.1091 1.1173 54.8204C1.82863 55.5318 2.80672 55.8874 3.7848 55.8874H54.0228C55.0898 55.8874 55.979 55.4428 56.6903 54.8204C57.4017 54.1091 57.7573 53.131 57.7573 52.1529V25.1222C57.9352 24.8554 57.9352 24.7665 57.9352 24.5887ZM49.577 19.7872L54.7342 23.9663L49.577 28.9456V19.7872ZM28.148 3.60431C28.4148 3.42648 28.6815 3.24864 28.9483 3.24864C29.3039 3.24864 29.5707 3.33756 29.7485 3.60431L34.0165 7.07207H23.9689L28.148 3.60431ZM10.9871 10.9844C10.9871 10.2731 11.5206 9.73958 12.2319 9.73958H45.6646C46.376 9.73958 46.9095 10.362 46.9095 10.9844V31.4353L46.8206 31.5242L40.2407 37.9262H17.6558L11.076 31.5242L10.9871 31.4353V10.9844ZM8.40848 19.7872V28.9456L3.34022 23.9663L8.40848 19.7872ZM2.62888 51.6194V26.9005L15.2551 39.26L2.62888 51.6194ZM4.49614 53.3088L17.6558 40.5048H40.2407L53.4004 53.3088H4.49614ZM55.3566 51.6194L42.6415 39.1711L55.2677 26.8116V51.6194H55.3566ZM29.0372 35.3476C30.5488 35.3476 31.9715 35.0809 33.3941 34.5474C34.0165 34.2806 34.3722 33.4804 34.1055 32.858C33.8387 32.2355 33.0385 31.8799 32.416 32.1466C31.349 32.5912 30.1931 32.769 29.0372 32.769C27.3478 32.769 25.7473 32.3245 24.4135 31.5242C21.746 29.9237 20.0566 27.0784 20.0566 23.7884C20.0566 18.8091 24.0579 14.8078 29.0372 14.8078C34.0165 14.8078 38.0178 18.8091 38.0178 23.7884V24.4109C38.0178 25.4779 37.2175 26.367 36.0616 26.367C34.9946 26.367 34.1055 25.4779 34.1055 24.4109V23.7884C34.1055 20.9431 31.7936 18.6313 28.9483 18.6313C26.1029 18.6313 23.7911 20.9431 23.7911 23.7884C23.7911 26.6338 26.1029 28.9456 28.9483 28.9456C30.3709 28.9456 31.7047 28.3232 32.5939 27.434C33.3941 28.4121 34.639 28.9456 35.9727 28.9456C38.4624 28.9456 40.5075 26.9894 40.5075 24.4109V23.7884C40.5075 17.3864 35.2614 12.2292 28.9483 12.2292C22.6352 12.2292 17.3891 17.4753 17.3891 23.7884C17.3891 26.7227 18.545 29.4791 20.3233 31.5242C22.5463 33.925 25.5694 35.3476 29.0372 35.3476ZM29.0372 26.367C27.6145 26.367 26.4586 25.2111 26.4586 23.7884C26.4586 22.3658 27.6145 21.2098 29.0372 21.2098C30.4599 21.2098 31.6158 22.3658 31.6158 23.7884C31.5269 25.2111 30.371 26.367 29.0372 26.367Z",
             fill: "#1A99FF",
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -32145,67 +31370,47 @@
             onUseCodeOverride: _,
           } = _,
           _ = _(),
-          _ = _.createElement(_, {
+          _ = (0, _.jsx)(_, {
             type: "mobile",
             onCodeHelp: _.onCodeHelp,
           }),
           _ = _
-            ? _.createElement(
-                "div",
-                {
-                  style: {
-                    paddingBottom: "20px",
-                  },
+            ? (0, _.jsx)("div", {
+                style: {
+                  paddingBottom: "20px",
                 },
-                _.createElement(
-                  _,
-                  {
-                    align: "center",
-                    onClick: _,
-                  },
-                  (0, _._)("#Login_EnterCodeInstead"),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().EnterCodeInsteadLink,
-                },
-                _.createElement(
-                  _,
-                  {
-                    align: "center",
-                    onClick: _,
-                  },
-                  (0, _._)("#Login_EnterCodeInstead"),
-                ),
-              );
-        return _.createElement(
-          _,
-          {
-            title: _.createElement(_, null),
-            compact: !0,
-          },
-          _.createElement(
-            _,
-            {
-              gap: _._.IN_STEAMUI ? 24 : 40,
-            },
-            _.createElement(_, {
-              type: _,
-              accountName: __webpack_require__,
-            }),
-            _.createElement(_, null),
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_, {
+                  align: "center",
+                  onClick: _,
+                  children: (0, _._)("#Login_EnterCodeInstead"),
+                }),
+              })
+            : (0, _.jsx)("div", {
+                className: _().EnterCodeInsteadLink,
+                children: (0, _.jsx)(_, {
+                  align: "center",
+                  onClick: _,
+                  children: (0, _._)("#Login_EnterCodeInstead"),
+                }),
+              });
+        return (0, _.jsx)(_, {
+          title: (0, _.jsx)(_, {}),
+          compact: !0,
+          children: (0, _.jsxs)(_, {
+            gap: _._.IN_STEAMUI ? 24 : 40,
+            children: [
+              (0, _.jsx)(_, {
+                type: _,
+                accountName: __webpack_require__,
+              }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsxs)("div", {
                 className: _().LinkContainer,
-              },
-              _,
-              _,
-            ),
-          ),
-        );
+                children: [_, _],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { children: _, align: __webpack_require__, inline: _ } = _,
@@ -32217,37 +31422,28 @@
           const _ = _._.IN_STEAMUI
             ? `steam://openurl_external/${_.href}`
             : _.href;
-          return _.createElement(
-            "a",
-            {
-              className: _,
-              href: _,
-            },
-            _,
-          );
+          return (0, _.jsx)("a", {
+            className: _,
+            href: _,
+            children: _,
+          });
         }
         {
           const _ = _ ? "span" : "div";
-          return _.createElement(
-            _,
-            {
-              className: _,
-              onClick: _.onClick,
-            },
-            _,
-          );
+          return (0, _.jsx)(_, {
+            className: _,
+            onClick: _.onClick,
+            children: _,
+          });
         }
       }
       function _(_) {
         const { onSubmit: _, children: __webpack_require__, className: _ } = _;
-        return _.createElement(
-          "form",
-          {
-            onSubmit: (_) => (_.preventDefault(), _(), !1),
-            className: _,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)("form", {
+          onSubmit: (_) => (_.preventDefault(), _(), !1),
+          className: _,
+          children: __webpack_require__,
+        });
       }
       function _(_) {
         const {
@@ -32268,14 +31464,11 @@
                 gap: "number" == typeof _ ? `${_}px` : _,
               }
             : void 0;
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            style: _,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _,
+          style: _,
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -32290,18 +31483,15 @@
             justifyContent: __webpack_require__,
             alignItems: _,
           };
-        return _.createElement(
-          "div",
-          {
-            style: _,
-            className: _,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          style: _,
+          className: _,
+          children: _,
+        });
       }
       function _(_) {
         const { onChange: _, backupCode: __webpack_require__, ..._ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           length: _(__webpack_require__),
           backupCode: __webpack_require__,
           onChange: (_) => {
@@ -32317,60 +31507,47 @@
       }
       function _(_) {
         const { children: _, spacing: __webpack_require__ = 0, align: _ } = _;
-        return _.createElement(
-          _,
-          {
-            alignItems: _,
-          },
-          _.Children.map(_, (_, _) =>
+        return (0, _.jsx)(_, {
+          alignItems: _,
+          children: _.Children.map(_, (_, _) =>
             _
-              ? _.createElement(
-                  "div",
-                  {
-                    style:
-                      _ > 0
-                        ? {
-                            paddingTop: `${__webpack_require__}px`,
-                          }
-                        : void 0,
-                  },
-                  _,
-                )
+              ? (0, _.jsx)("div", {
+                  style:
+                    _ > 0
+                      ? {
+                          paddingTop: `${__webpack_require__}px`,
+                        }
+                      : void 0,
+                  children: _,
+                })
               : null,
           ).filter(Boolean),
-        );
+        });
       }
       function _(_) {
         const { title: _, children: __webpack_require__, compact: _ } = _,
           _ = _();
-        return _.createElement(
-          _,
-          {
-            gap: _._.IN_STEAMUI ? 0 : 32,
-            className: (0, _._)(
-              _().StandardLayout,
-              _ && _().Embedded,
-              _ && _().Compact,
-              _._.IN_STEAMUI && "IN_CLIENT",
-            ),
-          },
-          "string" == typeof _
-            ? _.createElement(
-                "div",
-                {
-                  className: _().PrimaryHeader,
-                },
-                _,
-              )
-            : _,
-          _.createElement(
-            "div",
-            {
-              className: _().FormContainer,
-            },
-            __webpack_require__,
+        return (0, _.jsxs)(_, {
+          gap: _._.IN_STEAMUI ? 0 : 32,
+          className: (0, _._)(
+            _().StandardLayout,
+            _ && _().Embedded,
+            _ && _().Compact,
+            _._.IN_STEAMUI && "IN_CLIENT",
           ),
-        );
+          children: [
+            "string" == typeof _
+              ? (0, _.jsx)("div", {
+                  className: _().PrimaryHeader,
+                  children: _,
+                })
+              : _,
+            (0, _.jsx)("div", {
+              className: _().FormContainer,
+              children: __webpack_require__,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -32381,184 +31558,169 @@
           className: _ = _().HeaderLogo,
         } = _;
         return 8 === __webpack_require__
-          ? _.createElement("div", {
+          ? (0, _.jsx)("div", {
               className: _,
             })
-          : _.createElement(
-              "div",
-              {
-                className: _().LogoContainer,
-              },
-              _.createElement(_, {
-                onBack: _.onBack,
-              }),
-              _ !== _._.k_ESteamRealmChina
-                ? _.createElement(_, {
-                    className: _,
-                  })
-                : _.createElement(_, {
-                    className: _,
-                  }),
-              " ",
-            );
+          : (0, _.jsxs)("div", {
+              className: _().LogoContainer,
+              children: [
+                (0, _.jsx)(_, {
+                  onBack: _.onBack,
+                }),
+                _ !== _._.k_ESteamRealmChina
+                  ? (0, _.jsx)(_, {
+                      className: _,
+                    })
+                  : (0, _.jsx)(_, {
+                      className: _,
+                    }),
+                " ",
+              ],
+            });
       }
       function _(_) {
         return _.onBack
-          ? _.createElement(
-              "div",
-              {
-                className: _().BackArrowContainer,
-                onClick: _.onBack,
-              },
-              _.createElement(_.Q38, {
+          ? (0, _.jsx)("div", {
+              className: _().BackArrowContainer,
+              onClick: _.onBack,
+              children: (0, _.jsx)(_.Q38, {
                 className: _().BackArrow,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 153 46",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _.className,
-          },
-          _.createElement("path", {
-            _: "M22.9891 0C10.8429 0 0.93833 9.30396 0 21.1548L12.3547 26.2486C13.3973 25.5209 14.6484 25.1051 16.0037 25.1051C16.108 25.1051 16.2644 25.1051 16.3687 25.1051L21.8944 17.2045C21.8944 17.1525 21.8944 17.1525 21.8944 17.1006C21.8944 12.3186 25.8041 8.42034 30.6 8.42034C35.3959 8.42034 39.3056 12.3186 39.3056 17.1006C39.3056 21.8825 35.3959 25.7808 30.6 25.7808C30.5479 25.7808 30.4436 25.7808 30.3915 25.7808L22.5721 31.3424C22.5721 31.4463 22.5721 31.5503 22.5721 31.6542C22.5721 35.2407 19.6528 38.1514 16.0559 38.1514C12.876 38.1514 10.2695 35.9164 9.64395 32.9017L0.781942 29.2633C3.5448 38.9311 12.4068 46 22.9891 46C35.7087 46 46.0303 35.7085 46.0303 23.026C46.0303 10.2915 35.7087 0 22.9891 0Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M14.44 34.8766L11.625 33.7331C12.1463 34.7726 12.9804 35.6562 14.1272 36.124C16.6294 37.1636 19.4966 35.9681 20.5391 33.4732C21.0604 32.2777 21.0604 30.9263 20.5391 29.7308C20.0178 28.5353 19.0795 27.5997 17.8805 27.08C16.6816 26.5602 15.3783 26.6122 14.2836 27.028L17.2029 28.2235C19.0274 29.0031 19.9136 31.0822 19.1316 32.9014C18.4018 34.7726 16.2645 35.6562 14.44 34.8766Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M36.3857 17.0488C36.3857 13.8782 33.7793 11.2793 30.5994 11.2793C27.4195 11.2793 24.813 13.8782 24.813 17.0488C24.813 20.2194 27.4195 22.8703 30.5994 22.8703C33.7793 22.8703 36.3857 20.2714 36.3857 17.0488ZM26.2205 17.0488C26.2205 14.6578 28.1493 12.6827 30.5994 12.6827C32.9973 12.6827 34.9782 14.6058 34.9782 17.0488C34.9782 19.4397 33.0495 21.3629 30.5994 21.3629C28.2014 21.4149 26.2205 19.4397 26.2205 17.0488Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M70.6879 15.7489L69.1241 18.4517C67.9251 17.6201 66.3091 17.1003 64.9016 17.1003C63.2856 17.1003 62.2951 17.776 62.2951 18.9715C62.2951 20.4269 64.0675 20.7387 66.674 21.6743C69.489 22.6619 71.105 23.8574 71.105 26.4043C71.105 29.9387 68.3421 31.9139 64.3282 31.9139C62.3994 31.9139 60.0014 31.3941 58.229 30.3026L59.3759 27.2879C60.8355 28.0675 62.6079 28.5353 64.1718 28.5353C66.3091 28.5353 67.2995 27.7557 67.2995 26.6122C67.2995 25.3127 65.7878 24.8969 63.2856 24.0653C60.4706 23.1297 58.5418 21.8822 58.5418 19.0235C58.5418 15.8009 61.1483 13.9297 64.8494 13.9297C67.4038 14.0336 69.489 14.8653 70.6879 15.7489Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M82.7305 17.4643V31.6542H79.0815V17.4643H73.8164V14.3457H87.9956V17.4643H82.7305Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M95.6574 17.4124V21.3107H102.643V24.4293H95.6574V28.4836H103.737V31.6022H92.0083V14.3457H103.737V17.4643H95.6574V17.4124Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M111.87 28.2756L110.723 31.6542H106.917L113.434 14.3457H117.083L123.755 31.6542H119.793L118.594 28.2756H111.87ZM115.258 18.4519L112.912 25.3649H117.708L115.258 18.4519Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M142.47 21.0508L137.726 31.1864H135.693L131.001 21.1547V31.7062H127.509V14.3457H131.001L136.84 26.8723L142.47 14.3457H145.963V31.6542H142.47V21.0508Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M153 16.5288C153 18.0361 151.905 18.9197 150.602 18.9197C149.299 18.9197 148.204 17.9841 148.204 16.5288C148.204 15.0214 149.351 14.1378 150.602 14.1378C151.853 14.0858 153 15.0214 153 16.5288ZM148.569 16.5288C148.569 17.7762 149.455 18.5559 150.55 18.5559C151.645 18.5559 152.531 17.7762 152.531 16.5288C152.531 15.2813 151.645 14.5016 150.55 14.5016C149.455 14.5016 148.569 15.2813 148.569 16.5288ZM150.602 15.2813C151.228 15.2813 151.436 15.5932 151.436 15.957C151.436 16.2689 151.228 16.4768 151.019 16.6327L151.593 17.6723H151.123L150.654 16.7367H150.133V17.6723H149.768V15.2813H150.602ZM150.185 16.3728H150.602C150.863 16.3728 151.019 16.2169 151.019 16.009C151.019 15.8011 150.915 15.6451 150.602 15.6451H150.185V16.3728Z",
-            fill: "#E0E1E6",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 153 46",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _.className,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M22.9891 0C10.8429 0 0.93833 9.30396 0 21.1548L12.3547 26.2486C13.3973 25.5209 14.6484 25.1051 16.0037 25.1051C16.108 25.1051 16.2644 25.1051 16.3687 25.1051L21.8944 17.2045C21.8944 17.1525 21.8944 17.1525 21.8944 17.1006C21.8944 12.3186 25.8041 8.42034 30.6 8.42034C35.3959 8.42034 39.3056 12.3186 39.3056 17.1006C39.3056 21.8825 35.3959 25.7808 30.6 25.7808C30.5479 25.7808 30.4436 25.7808 30.3915 25.7808L22.5721 31.3424C22.5721 31.4463 22.5721 31.5503 22.5721 31.6542C22.5721 35.2407 19.6528 38.1514 16.0559 38.1514C12.876 38.1514 10.2695 35.9164 9.64395 32.9017L0.781942 29.2633C3.5448 38.9311 12.4068 46 22.9891 46C35.7087 46 46.0303 35.7085 46.0303 23.026C46.0303 10.2915 35.7087 0 22.9891 0Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M14.44 34.8766L11.625 33.7331C12.1463 34.7726 12.9804 35.6562 14.1272 36.124C16.6294 37.1636 19.4966 35.9681 20.5391 33.4732C21.0604 32.2777 21.0604 30.9263 20.5391 29.7308C20.0178 28.5353 19.0795 27.5997 17.8805 27.08C16.6816 26.5602 15.3783 26.6122 14.2836 27.028L17.2029 28.2235C19.0274 29.0031 19.9136 31.0822 19.1316 32.9014C18.4018 34.7726 16.2645 35.6562 14.44 34.8766Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M36.3857 17.0488C36.3857 13.8782 33.7793 11.2793 30.5994 11.2793C27.4195 11.2793 24.813 13.8782 24.813 17.0488C24.813 20.2194 27.4195 22.8703 30.5994 22.8703C33.7793 22.8703 36.3857 20.2714 36.3857 17.0488ZM26.2205 17.0488C26.2205 14.6578 28.1493 12.6827 30.5994 12.6827C32.9973 12.6827 34.9782 14.6058 34.9782 17.0488C34.9782 19.4397 33.0495 21.3629 30.5994 21.3629C28.2014 21.4149 26.2205 19.4397 26.2205 17.0488Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M70.6879 15.7489L69.1241 18.4517C67.9251 17.6201 66.3091 17.1003 64.9016 17.1003C63.2856 17.1003 62.2951 17.776 62.2951 18.9715C62.2951 20.4269 64.0675 20.7387 66.674 21.6743C69.489 22.6619 71.105 23.8574 71.105 26.4043C71.105 29.9387 68.3421 31.9139 64.3282 31.9139C62.3994 31.9139 60.0014 31.3941 58.229 30.3026L59.3759 27.2879C60.8355 28.0675 62.6079 28.5353 64.1718 28.5353C66.3091 28.5353 67.2995 27.7557 67.2995 26.6122C67.2995 25.3127 65.7878 24.8969 63.2856 24.0653C60.4706 23.1297 58.5418 21.8822 58.5418 19.0235C58.5418 15.8009 61.1483 13.9297 64.8494 13.9297C67.4038 14.0336 69.489 14.8653 70.6879 15.7489Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M82.7305 17.4643V31.6542H79.0815V17.4643H73.8164V14.3457H87.9956V17.4643H82.7305Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M95.6574 17.4124V21.3107H102.643V24.4293H95.6574V28.4836H103.737V31.6022H92.0083V14.3457H103.737V17.4643H95.6574V17.4124Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M111.87 28.2756L110.723 31.6542H106.917L113.434 14.3457H117.083L123.755 31.6542H119.793L118.594 28.2756H111.87ZM115.258 18.4519L112.912 25.3649H117.708L115.258 18.4519Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M142.47 21.0508L137.726 31.1864H135.693L131.001 21.1547V31.7062H127.509V14.3457H131.001L136.84 26.8723L142.47 14.3457H145.963V31.6542H142.47V21.0508Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M153 16.5288C153 18.0361 151.905 18.9197 150.602 18.9197C149.299 18.9197 148.204 17.9841 148.204 16.5288C148.204 15.0214 149.351 14.1378 150.602 14.1378C151.853 14.0858 153 15.0214 153 16.5288ZM148.569 16.5288C148.569 17.7762 149.455 18.5559 150.55 18.5559C151.645 18.5559 152.531 17.7762 152.531 16.5288C152.531 15.2813 151.645 14.5016 150.55 14.5016C149.455 14.5016 148.569 15.2813 148.569 16.5288ZM150.602 15.2813C151.228 15.2813 151.436 15.5932 151.436 15.957C151.436 16.2689 151.228 16.4768 151.019 16.6327L151.593 17.6723H151.123L150.654 16.7367H150.133V17.6723H149.768V15.2813H150.602ZM150.185 16.3728H150.602C150.863 16.3728 151.019 16.2169 151.019 16.009C151.019 15.8011 150.915 15.6451 150.602 15.6451H150.185V16.3728Z",
+              fill: "#E0E1E6",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 232.73 46.07",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _.className,
-            fill: "#E0E1E6",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 232.73 46.07",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _.className,
+          fill: "#E0E1E6",
+          children: [
+            (0, _.jsxs)("g", {
               stroke: "null",
               _: "svg_2",
-            },
-            _.createElement("path", {
-              stroke: "null",
-              _: "svg_3",
-              _: "m21.73862,4.25158c-10.07896,0 -18.33997,7.77507 -19.12529,17.65445l10.28722,4.25199c0.87209,-0.59441 1.92641,-0.94585 3.05883,-0.94585c0.09979,0 0.20392,0.00434 0.30371,0.00868l4.57306,-6.62964c0,-0.03037 0,-0.06074 0,-0.09545c0,-3.99167 3.2454,-7.23707 7.23707,-7.23707c3.99167,0 7.23707,3.2454 7.23707,7.23707c0,3.99167 -3.2454,7.23707 -7.23707,7.23707c-0.0564,0 -0.10847,0 -0.16487,-0.00434l-6.52551,4.65984c0.00434,0.08678 0.00868,0.16921 0.00868,0.25599c0,2.99809 -2.43839,5.43214 -5.43214,5.43214c-2.62929,0 -4.82905,-1.87869 -5.32801,-4.36046l-7.35855,-3.04148c2.27785,8.05709 9.67979,13.96216 18.4658,13.96216c10.59961,0 19.19471,-8.5951 19.19471,-19.19471c0,-10.59527 -8.5951,-19.19037 -19.19471,-19.19037",
+              children: [
+                (0, _.jsx)("path", {
+                  stroke: "null",
+                  _: "svg_3",
+                  _: "m21.73862,4.25158c-10.07896,0 -18.33997,7.77507 -19.12529,17.65445l10.28722,4.25199c0.87209,-0.59441 1.92641,-0.94585 3.05883,-0.94585c0.09979,0 0.20392,0.00434 0.30371,0.00868l4.57306,-6.62964c0,-0.03037 0,-0.06074 0,-0.09545c0,-3.99167 3.2454,-7.23707 7.23707,-7.23707c3.99167,0 7.23707,3.2454 7.23707,7.23707c0,3.99167 -3.2454,7.23707 -7.23707,7.23707c-0.0564,0 -0.10847,0 -0.16487,-0.00434l-6.52551,4.65984c0.00434,0.08678 0.00868,0.16921 0.00868,0.25599c0,2.99809 -2.43839,5.43214 -5.43214,5.43214c-2.62929,0 -4.82905,-1.87869 -5.32801,-4.36046l-7.35855,-3.04148c2.27785,8.05709 9.67979,13.96216 18.4658,13.96216c10.59961,0 19.19471,-8.5951 19.19471,-19.19471c0,-10.59527 -8.5951,-19.19037 -19.19471,-19.19037",
+                }),
+                (0, _.jsx)("path", {
+                  stroke: "null",
+                  _: "svg_4",
+                  _: "m14.64039,33.37339l-2.35595,-0.97622c0.41652,0.86775 1.1411,1.59667 2.09996,2.00017c2.07393,0.86341 4.46459,-0.12149 5.33235,-2.19542c0.41652,-1.00226 0.42086,-2.11298 0.00434,-3.11957c-0.41652,-1.00659 -1.1975,-1.79191 -2.19976,-2.21277c-0.99792,-0.41652 -2.06525,-0.39917 -3.00677,-0.04773l2.43405,1.00659c1.53159,0.6378 2.25182,2.395 1.61836,3.92659c-0.6378,1.53592 -2.395,2.25616 -3.92659,1.61836",
+                }),
+                (0, _.jsx)("path", {
+                  stroke: "null",
+                  _: "svg_5",
+                  _: "m32.89793,18.49576c0,-2.65966 -2.16505,-4.82471 -4.82471,-4.82471c-2.65966,0 -4.82471,2.16505 -4.82471,4.82471c0,2.65966 2.16505,4.82037 4.82471,4.82037c2.65966,0.00434 4.82471,-2.16071 4.82471,-4.82037m-8.4389,-0.00434c0,-2.00017 1.6227,-3.62287 3.62287,-3.62287c2.00017,0 3.62287,1.6227 3.62287,3.62287c0,2.00017 -1.6227,3.62287 -3.62287,3.62287c-2.00017,0 -3.62287,-1.6227 -3.62287,-3.62287",
+                }),
+              ],
             }),
-            _.createElement("path", {
+            (0, _.jsx)("path", {
               stroke: "null",
-              _: "svg_4",
-              _: "m14.64039,33.37339l-2.35595,-0.97622c0.41652,0.86775 1.1411,1.59667 2.09996,2.00017c2.07393,0.86341 4.46459,-0.12149 5.33235,-2.19542c0.41652,-1.00226 0.42086,-2.11298 0.00434,-3.11957c-0.41652,-1.00659 -1.1975,-1.79191 -2.19976,-2.21277c-0.99792,-0.41652 -2.06525,-0.39917 -3.00677,-0.04773l2.43405,1.00659c1.53159,0.6378 2.25182,2.395 1.61836,3.92659c-0.6378,1.53592 -2.395,2.25616 -3.92659,1.61836",
+              _: "svg_6",
+              _: "m46.71333,8.08293c0,2.23529 -1.67014,3.62707 -3.5849,3.62707c-1.91476,0 -3.60177,-1.39178 -3.60177,-3.62707c0,-2.23529 1.68701,-3.6102 3.60177,-3.6102c1.91476,-0.00844 3.5849,1.37491 3.5849,3.6102m-6.64682,0c0,1.90632 1.39178,3.1041 3.05349,3.1041c1.66171,0 3.04505,-1.19778 3.04505,-3.1041c0,-1.91476 -1.38335,-3.09566 -3.04505,-3.09566c-1.65327,0 -3.05349,1.18934 -3.05349,3.09566m3.09566,-1.84728c0.95316,0 1.23152,0.49767 1.23152,1.01221c0,0.48923 -0.29523,0.8182 -0.64106,0.9869l0.83507,1.57736l-0.63263,0l-0.71698,-1.40865l-0.76759,0l0,1.40865l-0.52297,0l0,-3.56803l1.21465,0l0,-0.00844zm-0.69167,1.67858l0.65793,0c0.43019,0 0.70011,-0.27836 0.70011,-0.61576c0,-0.3374 -0.17714,-0.56515 -0.69167,-0.56515l-0.66637,0l0,1.18091z",
             }),
-            _.createElement("path", {
-              stroke: "null",
-              _: "svg_5",
-              _: "m32.89793,18.49576c0,-2.65966 -2.16505,-4.82471 -4.82471,-4.82471c-2.65966,0 -4.82471,2.16505 -4.82471,4.82471c0,2.65966 2.16505,4.82037 4.82471,4.82037c2.65966,0.00434 4.82471,-2.16071 4.82471,-4.82037m-8.4389,-0.00434c0,-2.00017 1.6227,-3.62287 3.62287,-3.62287c2.00017,0 3.62287,1.6227 3.62287,3.62287c0,2.00017 -1.6227,3.62287 -3.62287,3.62287c-2.00017,0 -3.62287,-1.6227 -3.62287,-3.62287",
-            }),
-          ),
-          _.createElement("path", {
-            stroke: "null",
-            _: "svg_6",
-            _: "m46.71333,8.08293c0,2.23529 -1.67014,3.62707 -3.5849,3.62707c-1.91476,0 -3.60177,-1.39178 -3.60177,-3.62707c0,-2.23529 1.68701,-3.6102 3.60177,-3.6102c1.91476,-0.00844 3.5849,1.37491 3.5849,3.6102m-6.64682,0c0,1.90632 1.39178,3.1041 3.05349,3.1041c1.66171,0 3.04505,-1.19778 3.04505,-3.1041c0,-1.91476 -1.38335,-3.09566 -3.04505,-3.09566c-1.65327,0 -3.05349,1.18934 -3.05349,3.09566m3.09566,-1.84728c0.95316,0 1.23152,0.49767 1.23152,1.01221c0,0.48923 -0.29523,0.8182 -0.64106,0.9869l0.83507,1.57736l-0.63263,0l-0.71698,-1.40865l-0.76759,0l0,1.40865l-0.52297,0l0,-3.56803l1.21465,0l0,-0.00844zm-0.69167,1.67858l0.65793,0c0.43019,0 0.70011,-0.27836 0.70011,-0.61576c0,-0.3374 -0.17714,-0.56515 -0.69167,-0.56515l-0.66637,0l0,1.18091z",
-          }),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               _: "svg_7",
-            },
-            _.createElement("path", {
-              _: "svg_8",
-              _: "m77.46999,20.31667c-2.27,6.12 -7.24,10.13 -13.11,12.2c-0.54,-1.12 -1.7,-2.9 -2.65,-3.76c3.6,-1.03 6.95,-3.06 9.14,-5.63l-7.24,0l0,-3.89l10.05,0l0.79,-0.12l3.02,1.2zm-15.02,20.43c1.7,-1.57 3.39,-4.01 4.47,-6l4.22,2.11c-1.2,2.03 -2.73,4.55 -4.34,6.29l-4.35,-2.4zm8.57,-29.9l-8.23,0l0,-4.26l8.23,0l0,-2.28l5.01,0l0,2.28l10.42,0l0,-2.28l5.01,0l0,2.28l8.15,0l0,4.26l-8.15,0l0,2.15l-5.01,0l0,-2.15l-10.42,0l0,2.15l-5.01,0l0,-2.15zm-2.57,19.85l24.53,0l0,4.1l-24.53,0l0,-4.1zm28.71,-9.8c-1.86,1.45 -3.85,2.81 -5.59,3.81c2.52,1.24 5.46,2.19 8.48,2.77c-1.03,0.95 -2.4,2.9 -3.1,4.14c-5.29,-1.41 -10.05,-4.14 -13.44,-7.82l0,1.99c0,2.03 -0.33,2.94 -1.78,3.52c-1.32,0.54 -3.14,0.58 -5.46,0.58c-0.25,-1.2 -0.87,-2.69 -1.41,-3.76c1.37,0.08 2.85,0.08 3.27,0.08c0.46,-0.04 0.62,-0.12 0.62,-0.58l0,-5.83c1.41,-0.62 2.85,-1.45 4.26,-2.32l-14.23,0l0,-3.72l19.28,0l0.99,-0.25l2.98,2.52c-1.9,1.49 -4.18,3.06 -6.58,4.38c0.7,0.79 1.57,1.53 2.52,2.23c1.78,-1.28 3.97,-3.06 5.25,-4.38l3.94,2.64zm-19.11,14.89c0.7,1.99 1.24,4.63 1.28,6.29l-4.88,0.75c0.04,-1.66 -0.37,-4.34 -0.95,-6.41l4.55,-0.63zm8.65,-0.54c1.16,1.86 2.27,4.3 2.61,6l-4.51,1.41c-0.29,-1.65 -1.28,-4.22 -2.36,-6.12l4.26,-1.29zm8.39,-0.54c1.86,1.82 4.05,4.38 5.09,6.21l-4.43,2.07c-0.91,-1.78 -2.98,-4.47 -4.8,-6.37l4.14,-1.91z",
+              children: [
+                (0, _.jsx)("path", {
+                  _: "svg_8",
+                  _: "m77.46999,20.31667c-2.27,6.12 -7.24,10.13 -13.11,12.2c-0.54,-1.12 -1.7,-2.9 -2.65,-3.76c3.6,-1.03 6.95,-3.06 9.14,-5.63l-7.24,0l0,-3.89l10.05,0l0.79,-0.12l3.02,1.2zm-15.02,20.43c1.7,-1.57 3.39,-4.01 4.47,-6l4.22,2.11c-1.2,2.03 -2.73,4.55 -4.34,6.29l-4.35,-2.4zm8.57,-29.9l-8.23,0l0,-4.26l8.23,0l0,-2.28l5.01,0l0,2.28l10.42,0l0,-2.28l5.01,0l0,2.28l8.15,0l0,4.26l-8.15,0l0,2.15l-5.01,0l0,-2.15l-10.42,0l0,2.15l-5.01,0l0,-2.15zm-2.57,19.85l24.53,0l0,4.1l-24.53,0l0,-4.1zm28.71,-9.8c-1.86,1.45 -3.85,2.81 -5.59,3.81c2.52,1.24 5.46,2.19 8.48,2.77c-1.03,0.95 -2.4,2.9 -3.1,4.14c-5.29,-1.41 -10.05,-4.14 -13.44,-7.82l0,1.99c0,2.03 -0.33,2.94 -1.78,3.52c-1.32,0.54 -3.14,0.58 -5.46,0.58c-0.25,-1.2 -0.87,-2.69 -1.41,-3.76c1.37,0.08 2.85,0.08 3.27,0.08c0.46,-0.04 0.62,-0.12 0.62,-0.58l0,-5.83c1.41,-0.62 2.85,-1.45 4.26,-2.32l-14.23,0l0,-3.72l19.28,0l0.99,-0.25l2.98,2.52c-1.9,1.49 -4.18,3.06 -6.58,4.38c0.7,0.79 1.57,1.53 2.52,2.23c1.78,-1.28 3.97,-3.06 5.25,-4.38l3.94,2.64zm-19.11,14.89c0.7,1.99 1.24,4.63 1.28,6.29l-4.88,0.75c0.04,-1.66 -0.37,-4.34 -0.95,-6.41l4.55,-0.63zm8.65,-0.54c1.16,1.86 2.27,4.3 2.61,6l-4.51,1.41c-0.29,-1.65 -1.28,-4.22 -2.36,-6.12l4.26,-1.29zm8.39,-0.54c1.86,1.82 4.05,4.38 5.09,6.21l-4.43,2.07c-0.91,-1.78 -2.98,-4.47 -4.8,-6.37l4.14,-1.91z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_9",
+                  _: "m110.14999,23.78667c-1.57,-1.12 -4.84,-2.9 -7.16,-4.09l2.61,-3.64c2.23,0.91 5.58,2.56 7.32,3.64l-2.77,4.09zm-5.79,15.14c2.03,-3.06 4.92,-8.07 7.16,-12.74l3.72,3.19c-1.94,4.22 -4.34,8.81 -6.58,12.74l-4.3,-3.19zm8.02,-26.02c-1.49,-1.28 -4.67,-3.14 -6.95,-4.38l2.73,-3.56c2.23,1.03 5.46,2.73 7.07,3.93l-2.85,4.01zm7.62,2.15c-0.91,1.32 -1.86,2.48 -2.81,3.52c-0.91,-0.87 -2.85,-2.36 -3.93,-3.02c2.98,-2.69 5.63,-6.99 7.07,-11.34l4.72,1.28c-0.41,0.99 -0.83,2.03 -1.32,3.06l18.08,0l0,4.22l-20.31,0c-0.46,0.74 -0.91,1.45 -1.41,2.15l17.95,0l0,3.97l-18.04,0l0,-3.84zm17.33,6.17c-0.08,10.05 -0.04,17.13 1.41,17.13c0.5,0 0.66,-2.23 0.7,-5.29c0.83,1.08 1.99,2.32 2.9,3.06c-0.33,4.67 -1.12,6.83 -3.97,6.87c-4.96,-0.04 -5.63,-6.87 -5.79,-17.5l-16.59,0l0,-4.3l19.28,0l0,0.04l2.06,0l0,-0.01z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_10",
+                  _: "m182.70999,29.24667l-16.26,0l0,13.65l-5.13,0l0,-13.65l-16.09,0l0,-5.01l16.09,0l0,-12.53l-13.94,0l0,-4.88l32.93,0l0,4.88l-13.86,0l0,12.53l16.26,0l0,5.01zm-28.3,-16.21c1.37,2.65 2.85,6.12 3.31,8.44l-4.8,1.49c-0.41,-2.19 -1.7,-5.83 -3.02,-8.6l4.51,-1.33zm15.35,8.6c1.32,-2.4 2.81,-6.04 3.6,-8.73l5.25,1.32c-1.49,3.19 -3.19,6.54 -4.55,8.65l-4.3,-1.24z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_11",
+                  _: "m212.48999,8.06667c3.81,3.56 8.73,8.65 10.88,12.12l-4.18,3.02c-0.54,-0.91 -1.28,-1.99 -2.15,-3.14c-21.97,1.08 -24.9,1.16 -27.09,1.9c-0.25,-0.99 -1.03,-3.43 -1.61,-4.72c1.08,-0.29 2.07,-1.08 3.43,-2.4c1.45,-1.28 5.96,-6.29 8.77,-11.25l4.96,2.11c-2.61,3.85 -5.87,7.53 -9.02,10.55l16.96,-0.54c-1.61,-1.82 -3.27,-3.56 -4.8,-5.09l3.85,-2.56zm-21.18,16.63l27.88,0l0,18.12l-5.29,0l0,-2.07l-17.54,0l0,2.11l-5.05,0l0,-18.16zm5.04,4.72l0,6.62l17.54,0l0,-6.62l-17.54,0z",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              _: "svg_9",
-              _: "m110.14999,23.78667c-1.57,-1.12 -4.84,-2.9 -7.16,-4.09l2.61,-3.64c2.23,0.91 5.58,2.56 7.32,3.64l-2.77,4.09zm-5.79,15.14c2.03,-3.06 4.92,-8.07 7.16,-12.74l3.72,3.19c-1.94,4.22 -4.34,8.81 -6.58,12.74l-4.3,-3.19zm8.02,-26.02c-1.49,-1.28 -4.67,-3.14 -6.95,-4.38l2.73,-3.56c2.23,1.03 5.46,2.73 7.07,3.93l-2.85,4.01zm7.62,2.15c-0.91,1.32 -1.86,2.48 -2.81,3.52c-0.91,-0.87 -2.85,-2.36 -3.93,-3.02c2.98,-2.69 5.63,-6.99 7.07,-11.34l4.72,1.28c-0.41,0.99 -0.83,2.03 -1.32,3.06l18.08,0l0,4.22l-20.31,0c-0.46,0.74 -0.91,1.45 -1.41,2.15l17.95,0l0,3.97l-18.04,0l0,-3.84zm17.33,6.17c-0.08,10.05 -0.04,17.13 1.41,17.13c0.5,0 0.66,-2.23 0.7,-5.29c0.83,1.08 1.99,2.32 2.9,3.06c-0.33,4.67 -1.12,6.83 -3.97,6.87c-4.96,-0.04 -5.63,-6.87 -5.79,-17.5l-16.59,0l0,-4.3l19.28,0l0,0.04l2.06,0l0,-0.01z",
-            }),
-            _.createElement("path", {
-              _: "svg_10",
-              _: "m182.70999,29.24667l-16.26,0l0,13.65l-5.13,0l0,-13.65l-16.09,0l0,-5.01l16.09,0l0,-12.53l-13.94,0l0,-4.88l32.93,0l0,4.88l-13.86,0l0,12.53l16.26,0l0,5.01zm-28.3,-16.21c1.37,2.65 2.85,6.12 3.31,8.44l-4.8,1.49c-0.41,-2.19 -1.7,-5.83 -3.02,-8.6l4.51,-1.33zm15.35,8.6c1.32,-2.4 2.81,-6.04 3.6,-8.73l5.25,1.32c-1.49,3.19 -3.19,6.54 -4.55,8.65l-4.3,-1.24z",
-            }),
-            _.createElement("path", {
-              _: "svg_11",
-              _: "m212.48999,8.06667c3.81,3.56 8.73,8.65 10.88,12.12l-4.18,3.02c-0.54,-0.91 -1.28,-1.99 -2.15,-3.14c-21.97,1.08 -24.9,1.16 -27.09,1.9c-0.25,-0.99 -1.03,-3.43 -1.61,-4.72c1.08,-0.29 2.07,-1.08 3.43,-2.4c1.45,-1.28 5.96,-6.29 8.77,-11.25l4.96,2.11c-2.61,3.85 -5.87,7.53 -9.02,10.55l16.96,-0.54c-1.61,-1.82 -3.27,-3.56 -4.8,-5.09l3.85,-2.56zm-21.18,16.63l27.88,0l0,18.12l-5.29,0l0,-2.07l-17.54,0l0,2.11l-5.05,0l0,-18.16zm5.04,4.72l0,6.62l17.54,0l0,-6.62l-17.54,0z",
-            }),
-          ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               _: "svg_12",
-            },
-            _.createElement("path", {
-              _: "svg_13",
-              _: "m224.05999,2.64667l-1.2,0l0,-0.43l2.92,0l0,0.43l-1.21,0l0,3.52l-0.52,0l0,-3.52l0.01,0z",
+              children: [
+                (0, _.jsx)("path", {
+                  _: "svg_13",
+                  _: "m224.05999,2.64667l-1.2,0l0,-0.43l2.92,0l0,0.43l-1.21,0l0,3.52l-0.52,0l0,-3.52l0.01,0z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_14",
+                  _: "m229.54999,4.42667c-0.03,-0.55 -0.06,-1.21 -0.06,-1.71l-0.02,0c-0.13,0.46 -0.3,0.96 -0.5,1.5l-0.7,1.92l-0.39,0l-0.64,-1.88c-0.19,-0.56 -0.35,-1.07 -0.46,-1.54l-0.01,0c-0.01,0.49 -0.04,1.15 -0.08,1.75l-0.11,1.69l-0.49,0l0.28,-3.95l0.65,0l0.67,1.91c0.16,0.49 0.3,0.92 0.4,1.33l0.02,0c0.1,-0.4 0.24,-0.83 0.42,-1.33l0.7,-1.91l0.65,0l0.25,3.95l-0.5,0l-0.08,-1.73z",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              _: "svg_14",
-              _: "m229.54999,4.42667c-0.03,-0.55 -0.06,-1.21 -0.06,-1.71l-0.02,0c-0.13,0.46 -0.3,0.96 -0.5,1.5l-0.7,1.92l-0.39,0l-0.64,-1.88c-0.19,-0.56 -0.35,-1.07 -0.46,-1.54l-0.01,0c-0.01,0.49 -0.04,1.15 -0.08,1.75l-0.11,1.69l-0.49,0l0.28,-3.95l0.65,0l0.67,1.91c0.16,0.49 0.3,0.92 0.4,1.33l0.02,0c0.1,-0.4 0.24,-0.83 0.42,-1.33l0.7,-1.91l0.65,0l0.25,3.95l-0.5,0l-0.08,-1.73z",
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            alignItems: "center",
-            justifyContent: "center",
-          },
-          _.createElement(_, null),
-        );
+        return (0, _.jsx)(_, {
+          alignItems: "center",
+          justifyContent: "center",
+          children: (0, _.jsx)(_, {}),
+        });
       }
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            onEscKeypress: _.closeModal,
-            bDisableBackgroundDismiss: !0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          onEscKeypress: _.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, _.jsx)(_, {
             redirectURL: _.redirectURL,
             guestOption: _.guestOption,
           }),
-        );
+        });
       }
       function _(_) {
         const { redirectURL: _, guestOption: __webpack_require__ } = _,
@@ -32566,31 +31728,27 @@
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          "div",
-          null,
-          _
-            ? _.createElement(_, null)
-            : _.createElement(
-                _,
-                {
-                  autoFocus: !0,
-                  transport: _,
-                  platform: 2,
-                  onComplete: (_) => {
-                    _ == _.k_PrimaryDomainFail
-                      ? _(!0)
-                      : window.location.assign(_);
-                  },
-                  redirectUrl: _,
-                  theme: "modal",
+        return (0, _.jsx)("div", {
+          children: _
+            ? (0, _.jsx)(_, {})
+            : (0, _.jsx)(_, {
+                autoFocus: !0,
+                transport: _,
+                platform: 2,
+                onComplete: (_) => {
+                  _ == _.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(_);
                 },
-                __webpack_require__ &&
-                  _.createElement(_, {
+                redirectUrl: _,
+                theme: "modal",
+                children:
+                  __webpack_require__ &&
+                  (0, _.jsx)(_, {
                     redirectURL: _,
                   }),
-              ),
-        );
+              }),
+        });
       }
       var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
@@ -32638,7 +31796,7 @@
               _.stopPropagation(),
               _.preventDefault())
             : _(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
                   strDescription: (0, _._)(
                     "#EventDisplay_Share_NotLoggedIn_Description",
@@ -32646,7 +31804,7 @@
                   strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
                   onOK: () => {
                     _(
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         ownerWin: window,
                         redirectURL: window.location.href,
                       }),
@@ -32661,7 +31819,7 @@
               );
         }
         ShowMenu() {
-          let _ = _.createElement(_, {
+          let _ = (0, _.jsx)(_, {
               ...this.props,
               fnHasReminderSet: (_) => this.BHasSomeNotificationSetting(_),
               fnHidePanel: this.HideMenu,
@@ -32717,47 +31875,37 @@
           return this.props.eventModel.startTime < _ ||
             this.props.eventModel.BIsUnlistedEvent()
             ? null
-            : _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_.ReminderCheckBox]: !0,
-                    [_().ReminderCtn]: !0,
-                    [_.IconMode]: _,
-                    [_.TextMode]: !_,
-                    ReminderSet: _,
-                    RemindMeWidget: !0,
-                  }),
-                  onClick: this.ToggleMenu,
-                  ref: this.m_elDropDownRef,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RemindCheck,
-                    },
-                    _.createElement(_.Jlk, null),
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RemindBell,
-                    },
-                    _.createElement(_.IrQ, null),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ReminderDefault,
-                  },
-                  (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                ),
-                _.createElement("div", {
-                  className: _.ReminderOptions,
+            : (0, _.jsxs)("div", {
+                className: (0, _._)({
+                  [_.ReminderCheckBox]: !0,
+                  [_().ReminderCtn]: !0,
+                  [_.IconMode]: _,
+                  [_.TextMode]: !_,
+                  ReminderSet: _,
+                  RemindMeWidget: !0,
                 }),
-              );
+                onClick: this.ToggleMenu,
+                ref: this.m_elDropDownRef,
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindCheck,
+                      children: (0, _.jsx)(_.Jlk, {}),
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindBell,
+                      children: (0, _.jsx)(_.IrQ, {}),
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderDefault,
+                    children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderOptions,
+                  }),
+                ],
+              });
         }
       };
       function _(_) {
@@ -32788,19 +31936,16 @@
           })(__webpack_require__);
         if (!_)
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ErrorDiv,
-                },
-                (0, _._)(
+            ? (0, _.jsx)("div", {
+                className: _.ErrorDiv,
+                children: (0, _._)(
                   "#EventDidplay_Reminder_EventNotVisible",
                   __webpack_require__,
                 ),
-              )
+              })
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           lang: _,
           ..._,
           eventModel: _,
@@ -32843,22 +31988,19 @@
                         _(_.k_eReminder_MobilePush));
               } catch (_) {
                 _(
-                  _.createElement(
-                    _,
-                    {
-                      strTitle: (0, _._)(
-                        _
-                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                          : "#EventDisplay_Reminder_FollowEvent_Error",
-                      ),
-                      strDescription: (0, _._)(
-                        _
-                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                      ),
-                    },
-                    (0, _._)(_).strErrorMsg,
-                  ),
+                  (0, _.jsx)(_, {
+                    strTitle: (0, _._)(
+                      _
+                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                        : "#EventDisplay_Reminder_FollowEvent_Error",
+                    ),
+                    strDescription: (0, _._)(
+                      _
+                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                    ),
+                    children: (0, _._)(_).strErrorMsg,
+                  }),
                   window,
                 );
               }
@@ -32886,258 +32028,225 @@
           _ = _.BHasValidatedEmail(),
           _ = _.BHasPushNotification(),
           _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.ReminderCheckBox,
                 _ ? _.IconMode : _.TextMode,
                 "RemindMeWidget",
               ),
               onClick: _,
-            },
-            _(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _.RemindCheck,
-                },
-                _.createElement(_.Jlk, null),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.RemindBell,
-                },
-                _.createElement(_.IrQ, null),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ReminderDefault,
-              },
-              (0, _._)("#EventDisplay_Reminder_SetReminder"),
-            ),
-            _.createElement("div", {
-              className: _.ReminderOpennedOptions,
+              children: [
+                _(_) &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindCheck,
+                    children: (0, _.jsx)(_.Jlk, {}),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindBell,
+                    children: (0, _.jsx)(_.IrQ, {}),
+                  }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderDefault,
+                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderOpennedOptions,
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.FlexColumnContainer,
                 _.ReminderBackground,
                 _ && _.ReminderExpandsLeft,
               ),
-            },
-            _ &&
-              _.createElement(_, {
-                className: _.RpcThrobber,
-                size: "xlarge",
-                position: "center",
-              }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.FullStartTime,
-                },
-                (0, _._)(
-                  "#EventDisplay_EventUpcoming_WithDateAndTime",
-                  (0, _._)(
-                    _,
-                    (0, _._)(
-                      new Date(1e3 * _),
-                      _.GetTimeNowWithOverrideAsDate(),
+              children: [
+                _ &&
+                  (0, _.jsx)(_, {
+                    className: _.RpcThrobber,
+                    size: "xlarge",
+                    position: "center",
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.FullStartTime,
+                    children: (0, _._)(
+                      "#EventDisplay_EventUpcoming_WithDateAndTime",
+                      (0, _._)(
+                        _,
+                        (0, _._)(
+                          new Date(1e3 * _),
+                          _.GetTimeNowWithOverrideAsDate(),
+                        ),
+                      ),
+                      _(_, !0),
                     ),
-                  ),
-                  _(_, !0),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ReminderOptionsHeader,
-              },
-              (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-              },
-              _.createElement(
-                _,
-                {
-                  className: _.CheckboxWrapper,
-                  bTopmost: !0,
-                  toolTipContent: (0, _._)(
-                    _
-                      ? "#EventReminder_NotifyByEmail_ttip"
-                      : "#EventReminder_NotifyByEmail_Missing",
-                  ),
-                },
-                _.createElement(_, {
-                  label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                  disabled: !_,
-                  checked: _._.Get().BFollowsEventAndNotifiedBy(
-                    _.clanSteamID,
-                    _.GID,
-                    _._.k_ENotifyFlagByEmail,
-                  ),
-                  onChange: (_) => {
-                    _(_, !1, _._.k_ENotifyFlagByEmail);
-                  },
-                }),
-              ),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.FlexColumnContainer,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "account/",
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      onClick: () => _(_.k_eReminder_EmailUnverified),
-                    },
-                    (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
-                  ),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-              },
-              _.createElement(
-                _,
-                {
-                  className: _.CheckboxWrapper,
-                  bTopmost: !0,
-                  toolTipContent: (0, _._)(
-                    _
-                      ? "#EventReminder_NotifyByMobile_ttip"
-                      : "#EventReminder_NotifyByMobile_Missing",
-                  ),
-                },
-                _.createElement(_, {
-                  label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                  disabled: !_,
-                  checked: _._.Get().BFollowsEventAndNotifiedBy(
-                    _.clanSteamID,
-                    _.GID,
-                    _._.k_ENotifyFlagByPush,
-                  ),
-                  onChange: (_) => {
-                    _(_, !1, _._.k_ENotifyFlagByPush);
-                  },
-                }),
-              ),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.FlexColumnContainer,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      onClick: () => _(_.k_eReminder_MobilePushMissing),
-                    },
-                    (0, _._)("#EventReminder_NotifyByMobile_Install"),
-                  ),
-                ),
-            ),
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+                  }),
+                (0, _.jsx)("div", {
                   className: _.ReminderOptionsHeader,
-                },
-                (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.ReminderCalendarOptions,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    href: _("ics"),
-                    onClick: () => _(_.k_eReminder_CalendarApple),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    target: _._.IN_CLIENT ? void 0 : "_blank",
-                    href: (() => {
-                      const _ = encodeURIComponent(
-                          (() => {
-                            const _ = _.GetNameWithFallback(_);
-                            if (
-                              _.BHasEntityNameForID(
-                                _.appid,
-                                _.clanSteamID.GetAccountID(),
-                              )
-                            )
-                              return `${_.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-                            return _;
+                  children: (0, _._)(
+                    "#EventDisplay_Reminder_GetNotification_Via",
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByEmail_ttip"
+                          : "#EventReminder_NotifyByEmail_Missing",
+                      ),
+                      children: (0, _.jsx)(_, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                        disabled: !_,
+                        checked: _._.Get().BFollowsEventAndNotifiedBy(
+                          _.clanSteamID,
+                          _.GID,
+                          _._.k_ENotifyFlagByEmail,
+                        ),
+                        onChange: (_) => {
+                          _(_, !1, _._.k_ENotifyFlagByEmail);
+                        },
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "account/",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () => _(_.k_eReminder_EmailUnverified),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByEmail_Missing_Add",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByMobile_ttip"
+                          : "#EventReminder_NotifyByMobile_Missing",
+                      ),
+                      children: (0, _.jsx)(_, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
+                        disabled: !_,
+                        checked: _._.Get().BFollowsEventAndNotifiedBy(
+                          _.clanSteamID,
+                          _.GID,
+                          _._.k_ENotifyFlagByPush,
+                        ),
+                        onChange: (_) => {
+                          _(_, !1, _._.k_ENotifyFlagByPush);
+                        },
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () => _(_.k_eReminder_MobilePushMissing),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByMobile_Install",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.ReminderOptionsHeader,
+                      children: (0, _._)(
+                        "#EventDisplay_Reminder_AddToCalendar",
+                      ),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.ReminderCalendarOptions,
+                      children: [
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("ics"),
+                          onClick: () => _(_.k_eReminder_CalendarApple),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_AppleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          href: (() => {
+                            const _ = encodeURIComponent(
+                                (() => {
+                                  const _ = _.GetNameWithFallback(_);
+                                  if (
+                                    _.BHasEntityNameForID(
+                                      _.appid,
+                                      _.clanSteamID.GetAccountID(),
+                                    )
+                                  )
+                                    return `${_.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
+                                  return _;
+                                })(),
+                              ),
+                              _ = encodeURIComponent(
+                                (() => {
+                                  let _ = _.GetSubTitleWithLanguageFallback(_);
+                                  return (
+                                    (_ = _ ? `${_}\n\n\n` : ""),
+                                    `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                                  );
+                                })(),
+                              ),
+                              _ = _.GetStartTimeAndDateUnixSeconds(),
+                              _ = _(_),
+                              _ = _(
+                                _.GetEndTimeAndDateUnixSeconds() ||
+                                  _ + _._.PerHour,
+                              ),
+                              _ =
+                                (_._.IN_CLIENT
+                                  ? "steam://openurl_external/"
+                                  : "") +
+                                `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                            return (0, _._)(_);
                           })(),
-                        ),
-                        _ = encodeURIComponent(
-                          (() => {
-                            let _ = _.GetSubTitleWithLanguageFallback(_);
-                            return (
-                              (_ = _ ? `${_}\n\n\n` : ""),
-                              `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
-                            );
-                          })(),
-                        ),
-                        _ = _.GetStartTimeAndDateUnixSeconds(),
-                        _ = _(_),
-                        _ = _(
-                          _.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour,
-                        ),
-                        _ =
-                          (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
-                          `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-                      return (0, _._)(_);
-                    })(),
-                    onClick: () => _(_.k_eReminder_CalendarGoogle),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    href: _("outlook"),
-                    onClick: () => _(_.k_eReminder_CalendarOutlook),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
-                ),
-              ),
-            ),
-            !1,
-          ),
-        );
+                          onClick: () => _(_.k_eReminder_CalendarGoogle),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_GoogleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("outlook"),
+                          onClick: () => _(_.k_eReminder_CalendarOutlook),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_OutlookCalendar_Short",
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                !1,
+              ],
+            }),
+          ],
+        });
       });
       class _ {
         m_bUserHasVolumePreference = !1;
@@ -33201,52 +32310,51 @@
         (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
         const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
           _ = __webpack_require__.sPoster ? _(__webpack_require__.sPoster) : "";
-        return _.createElement(
-          "video",
-          {
-            width: "100%",
-            height: "auto",
-            autoPlay: _,
-            muted: _,
-            playsInline: !0,
-            controls: _,
-            poster: _,
-            loop: _,
-            crossOrigin: _,
-            onVolumeChange: (_) => {
-              const _ = _.target,
-                _ = _.muted ? 0 : _.volume;
-              _ && _.Get().SetVolumePreference(_);
-            },
-            onPlay: (_) => {
-              const _ = _.target,
-                _ = 0 == _.currentTime,
-                _ = _.Get().BUserHasVolumePreference();
-              if ((_(!0), _))
-                if (_ || _)
-                  _ &&
-                    ((_.volume = _.Get().GetVolumePreference()),
-                    (_.muted = _.Get().BVolumePreferenceMuted()));
-                else {
-                  const _ = _.muted ? 0 : _.volume;
-                  _.Get().SetVolumePreference(_);
-                }
-            },
-            ref: _,
-            className: _,
-            onClick: _,
-            "aria-label": _,
-            style: {
-              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-            },
+        return (0, _.jsxs)("video", {
+          width: "100%",
+          height: "auto",
+          autoPlay: _,
+          muted: _,
+          playsInline: !0,
+          controls: _,
+          poster: _,
+          loop: _,
+          crossOrigin: _,
+          onVolumeChange: (_) => {
+            const _ = _.target,
+              _ = _.muted ? 0 : _.volume;
+            _ && _.Get().SetVolumePreference(_);
           },
-          _.createElement(_, {
-            rgVideoSources: __webpack_require__.rgVideoSources,
-          }),
-          _.createElement(_, {
-            rgVideoTracks: __webpack_require__.rgVideoTracks,
-          }),
-        );
+          onPlay: (_) => {
+            const _ = _.target,
+              _ = 0 == _.currentTime,
+              _ = _.Get().BUserHasVolumePreference();
+            if ((_(!0), _))
+              if (_ || _)
+                _ &&
+                  ((_.volume = _.Get().GetVolumePreference()),
+                  (_.muted = _.Get().BVolumePreferenceMuted()));
+              else {
+                const _ = _.muted ? 0 : _.volume;
+                _.Get().SetVolumePreference(_);
+              }
+          },
+          ref: _,
+          className: _,
+          onClick: _,
+          "aria-label": _,
+          style: {
+            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+          },
+          children: [
+            (0, _.jsx)(_, {
+              rgVideoSources: __webpack_require__.rgVideoSources,
+            }),
+            (0, _.jsx)(_, {
+              rgVideoTracks: __webpack_require__.rgVideoTracks,
+            }),
+          ],
+        });
       });
       function _(_) {
         if (_)
@@ -33264,22 +32372,28 @@
       function _(_) {
         const { rgVideoSources: _ } = _;
         return _.filter((_) => Boolean(_.sURL)).map((_) =>
-          _.createElement("source", {
-            key: _.sURL,
-            src: _(_.sURL),
-            type: _.sFormat,
-          }),
+          (0, _.jsx)(
+            "source",
+            {
+              src: _(_.sURL),
+              type: _.sFormat,
+            },
+            _.sURL,
+          ),
         );
       }
       function _(_) {
         const { rgVideoTracks: _ } = _;
         return _
           ? _.map((_, _) =>
-              _.createElement(_, {
-                key: _,
-                track: _,
-                rgVideoTracks: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  track: _,
+                  rgVideoTracks: _,
+                },
+                _,
+              ),
             )
           : null;
       }
@@ -33300,7 +32414,7 @@
           }
         else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
           return null;
-        return _.createElement("track", {
+        return (0, _.jsx)("track", {
           src: _(_.sURL),
           kind: _.sKind,
           default: _.bDefault,
@@ -33323,13 +32437,10 @@
             "b",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "b",
-                  {
-                    className: _().Bold,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("b", {
+                  className: _().Bold,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33338,13 +32449,10 @@
             "i",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "i",
-                  {
-                    className: (0, _._)(_().Italic, "BB_Italic"),
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("i", {
+                  className: (0, _._)(_().Italic, "BB_Italic"),
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33409,14 +32517,11 @@
                   _.length > 0 &&
                   "#" === _[0] &&
                   (_ = _.substring(1));
-                return _.createElement(
-                  "span",
-                  {
-                    _: _ || void 0,
-                    className: (0, _._)(_().CenterSpan, "BB_Center"),
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("span", {
+                  _: _ || void 0,
+                  className: (0, _._)(_().CenterSpan, "BB_Center"),
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33435,13 +32540,10 @@
             "u",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "u",
-                  {
-                    className: _().Underline,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("u", {
+                  className: _().Underline,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33450,13 +32552,10 @@
             "strike",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "s",
-                  {
-                    className: _().Strike,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("s", {
+                  className: _().Strike,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33469,24 +32568,18 @@
                   _ = _.useCallback(() => {
                     __webpack_require__(!_);
                   }, [_]);
-                return _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(_().Spoiler, _ && _().Revealed),
-                    focusable: !0,
-                    onActivate: _,
-                    onOKActionDescription: (0, _._)(
-                      _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
-                    ),
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().SpoilerText,
-                    },
-                    _.children,
+                return (0, _.jsx)(_._, {
+                  className: (0, _._)(_().Spoiler, _ && _().Revealed),
+                  focusable: !0,
+                  onActivate: _,
+                  onOKActionDescription: (0, _._)(
+                    _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
                   ),
-                );
+                  children: (0, _.jsx)("span", {
+                    className: _().SpoilerText,
+                    children: _.children,
+                  }),
+                });
               },
               autocloses: !1,
             },
@@ -33495,7 +32588,7 @@
             "hr",
             {
               Constructor: function (_) {
-                return _.createElement("hr", {
+                return (0, _.jsx)("hr", {
                   className: _()._,
                 });
               },
@@ -33534,26 +32627,20 @@
                   void 0 === _ ||
                   ("string" == typeof _ && _.length > 0 && "#" == _[0])
                 )
-                  return _.createElement(
-                    "a",
-                    {
-                      href: _ ?? null,
-                      _: _,
-                    },
-                    _.children,
-                  );
-                return _.createElement(
-                  _,
-                  {
-                    className: _,
-                    href: _,
+                  return (0, _.jsx)("a", {
+                    href: _ ?? null,
                     _: _,
-                    style: {
-                      backgroundColor: _,
-                    },
+                    children: _.children,
+                  });
+                return (0, _.jsx)(_, {
+                  className: _,
+                  href: _,
+                  _: _,
+                  style: {
+                    backgroundColor: _,
                   },
-                  _.children,
-                );
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33563,23 +32650,23 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args, "author");
-                return _.createElement(
-                  "blockquote",
-                  {
-                    className: (0, _._)(_().BlockQuote, _.className),
-                  },
-                  !!_ &&
-                    _.createElement(
-                      "div",
-                      {
+                return (0, _.jsxs)("blockquote", {
+                  className: (0, _._)(_().BlockQuote, _.className),
+                  children: [
+                    !!_ &&
+                      (0, _.jsxs)("div", {
                         className: _().QuoteAuthor,
-                      },
-                      (0, _._)("#Bbcode_Originally_Posted_By") + " ",
-                      " ",
-                      _.createElement("b", null, _ + ":"),
-                    ),
-                  _.children,
-                );
+                        children: [
+                          (0, _._)("#Bbcode_Originally_Posted_By") + " ",
+                          " ",
+                          (0, _.jsx)("b", {
+                            children: _ + ":",
+                          }),
+                        ],
+                      }),
+                    _.children,
+                  ],
+                });
               },
               autocloses: !1,
             },
@@ -33588,13 +32675,10 @@
             "pullquote",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "div",
-                  {
-                    className: _().PullQuote,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("div", {
+                  className: _().PullQuote,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33603,13 +32687,10 @@
             "code",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "code",
-                  {
-                    className: _().CodeBlock,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("code", {
+                  className: _().CodeBlock,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33618,13 +32699,10 @@
             "c",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "code",
-                  {
-                    className: _().Code,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("code", {
+                  className: _().Code,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -33633,13 +32711,10 @@
             "list",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "ul",
-                  {
-                    className: (0, _._)(_().List, "bullets"),
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("ul", {
+                  className: (0, _._)(_().List, "bullets"),
+                  children: _.children,
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -33649,13 +32724,10 @@
             "olist",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "ol",
-                  {
-                    className: _().OrderedList,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("ol", {
+                  className: _().OrderedList,
+                  children: _.children,
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -33671,14 +32743,11 @@
                   _.length > 0 &&
                   "#" === _[0] &&
                   (_ = _.substring(1));
-                return _.createElement(
-                  "li",
-                  {
-                    className: _().ListItem,
-                    _: _ || void 0,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("li", {
+                  className: _().ListItem,
+                  _: _ || void 0,
+                  children: _.children,
+                });
               },
               autocloses: !0,
               skipInternalNewline: !0,
@@ -33691,29 +32760,31 @@
                 const _ = _(_.args, "noborder"),
                   _ = _(_.args, "equalcells"),
                   _ = _(_.args, "colwidth");
-                return _.createElement(
-                  "table",
-                  {
-                    className: (0, _._)(
-                      _().Table,
-                      "BB_Table",
-                      _ && _().NoBorder,
-                      _ && _().EqualCells,
-                    ),
-                  },
-                  _ &&
-                    _.createElement(
-                      "colgroup",
-                      null,
-                      _.split(",").map((_, _) =>
-                        _.createElement(_, {
-                          key: _,
-                          width: _,
-                        }),
-                      ),
-                    ),
-                  _.createElement("tbody", null, _.children),
-                );
+                return (0, _.jsxs)("table", {
+                  className: (0, _._)(
+                    _().Table,
+                    "BB_Table",
+                    _ && _().NoBorder,
+                    _ && _().EqualCells,
+                  ),
+                  children: [
+                    _ &&
+                      (0, _.jsx)("colgroup", {
+                        children: _.split(",").map((_, _) =>
+                          (0, _.jsx)(
+                            _,
+                            {
+                              width: _,
+                            },
+                            _,
+                          ),
+                        ),
+                      }),
+                    (0, _.jsx)("tbody", {
+                      children: _.children,
+                    }),
+                  ],
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -33723,13 +32794,10 @@
             "tr",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "tr",
-                  {
-                    className: (0, _._)(_().TableRow, "BB_TableRow"),
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("tr", {
+                  className: (0, _._)(_().TableRow, "BB_TableRow"),
+                  children: _.children,
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -33797,44 +32865,38 @@
                         };
                     }
                   })(_(_.args, "type"), _, _, _);
-                return _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().ExpandSectionBlock]: !0,
-                      [_.style]: null != _.style,
-                      [_().ExpandSectionExpanded]: __webpack_require__,
-                      [_().ExpandSectionCollapsed]: !__webpack_require__,
-                      BBCodeExpanded: __webpack_require__,
-                      BBCodeCollapsed: !__webpack_require__,
-                    }),
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                return (0, _.jsxs)("div", {
+                  className: (0, _._)({
+                    [_().ExpandSectionBlock]: !0,
+                    [_.style]: null != _.style,
+                    [_().ExpandSectionExpanded]: __webpack_require__,
+                    [_().ExpandSectionCollapsed]: !__webpack_require__,
+                    BBCodeExpanded: __webpack_require__,
+                    BBCodeCollapsed: !__webpack_require__,
+                  }),
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().ExpandSectionHeader,
                       onClick: () => _(!__webpack_require__),
-                    },
-                    (0, _._)(__webpack_require__ ? _.expanded : _.collapsed),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().EmbedArrow,
-                      },
-                      _.createElement(_.DK4, {
-                        angle: __webpack_require__ ? 180 : 0,
-                      }),
-                    ),
-                  ),
-                  __webpack_require__ &&
-                    _.createElement(
-                      "div",
-                      {
+                      children: [
+                        (0, _._)(
+                          __webpack_require__ ? _.expanded : _.collapsed,
+                        ),
+                        (0, _.jsx)("div", {
+                          className: _().EmbedArrow,
+                          children: (0, _.jsx)(_.DK4, {
+                            angle: __webpack_require__ ? 180 : 0,
+                          }),
+                        }),
+                      ],
+                    }),
+                    __webpack_require__ &&
+                      (0, _.jsx)("div", {
                         className: _().ExpandSectionBody,
-                      },
-                      _.children,
-                    ),
-                );
+                        children: _.children,
+                      }),
+                  ],
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -33849,13 +32911,13 @@
                     _.context,
                   _ = _(_.args);
                 if (_)
-                  return _.createElement(_, {
+                  return (0, _.jsx)(_, {
                     eventGID: _,
                     bPreviewMode: __webpack_require__,
                   });
                 if (_) {
                   const _ = (0, _._)(_._.LANGUAGE);
-                  return _.createElement(_, {
+                  return (0, _.jsx)(_, {
                     eventModel: _,
                     lang: _,
                   });
@@ -33925,19 +32987,15 @@
                       _.preventDefault();
                   }
                 };
-                return _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      "SaleSectionCalendarEventContainer",
-                      _().CalendarEventContainer,
-                    ),
-                    _: _,
-                  },
-                  _ &&
-                    _.createElement(
-                      "a",
-                      {
+                return (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    "SaleSectionCalendarEventContainer",
+                    _().CalendarEventContainer,
+                  ),
+                  _: _,
+                  children: [
+                    _ &&
+                      (0, _.jsx)("a", {
                         className: (0, _._)(
                           "SaleSectionCalendarEventLink",
                           _().CalendarEventLink,
@@ -33945,24 +33003,18 @@
                         href: _,
                         onClick: _,
                         download: "calendar.ics",
-                      },
-                      "Apple",
-                    ),
-                  _.createElement(
-                    "a",
-                    {
+                        children: "Apple",
+                      }),
+                    (0, _.jsx)("a", {
                       className: (0, _._)(
                         "SaleSectionCalendarEventLink",
                         _().CalendarEventLink,
                       ),
                       href: _,
-                    },
-                    "Google",
-                  ),
-                  _ &&
-                    _.createElement(
-                      "a",
-                      {
+                      children: "Google",
+                    }),
+                    _ &&
+                      (0, _.jsx)("a", {
                         className: (0, _._)(
                           "SaleSectionCalendarEventLink",
                           _().CalendarEventLink,
@@ -33970,10 +33022,10 @@
                         href: _,
                         onClick: _,
                         download: "calendar.ics",
-                      },
-                      "Outlook",
-                    ),
-                );
+                        children: "Outlook",
+                      }),
+                  ],
+                });
               },
               autocloses: !0,
             },
@@ -33985,17 +33037,14 @@
                 const _ = _(_.args),
                   _ = "button" == _(_.args, "style") ? _().LinkButton : null,
                   _ = _ && _(_.args, "buttoncolor");
-                return _.createElement(
-                  _,
-                  {
-                    className: _,
-                    style: {
-                      backgroundColor: _,
-                    },
-                    href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+                return (0, _.jsx)(_, {
+                  className: _,
+                  style: {
+                    backgroundColor: _,
                   },
-                  _.children,
-                );
+                  href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -34005,15 +33054,12 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args);
-                return _.createElement(
-                  "span",
-                  {
-                    style: {
-                      color: _,
-                    },
+                return (0, _.jsx)("span", {
+                  style: {
+                    color: _,
                   },
-                  _.children,
-                );
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -34023,15 +33069,12 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args);
-                return _.createElement(
-                  "span",
-                  {
-                    style: {
-                      backgroundColor: _,
-                    },
+                return (0, _.jsx)("span", {
+                  style: {
+                    backgroundColor: _,
                   },
-                  _.children,
-                );
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -34040,14 +33083,10 @@
             "p",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "p",
-                  {
-                    className: _().Paragraph,
-                  },
-                  _.children,
-                  _.createElement("wbr", null),
-                );
+                return (0, _.jsxs)("p", {
+                  className: _().Paragraph,
+                  children: [_.children, (0, _.jsx)("wbr", {})],
+                });
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -34060,7 +33099,7 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args);
-                return _.createElement(_, {
+                return (0, _.jsx)(_, {
                   video: _,
                   bAutoPlay: !0,
                   bControls: !1,
@@ -34087,7 +33126,7 @@
                   _ = _(_.args, "size"),
                   _ = _(_.args, "seconds"),
                   { sizeStr: _, alignStr: _ } = _(_);
-                return _.createElement(_, {
+                return (0, _.jsx)(_, {
                   videoID: _,
                   nStartSeconds: _ ? Number.parseInt(_) : void 0,
                   classNameAlign: _,
@@ -34110,7 +33149,7 @@
                     let _ = _[0],
                       _ = _[1].toLocaleLowerCase();
                     const { sizeStr: _, alignStr: _ } = _(_);
-                    return _.createElement(_, {
+                    return (0, _.jsx)(_, {
                       videoID: _,
                       classNameAlign: _,
                       classNameSize: _,
@@ -34118,7 +33157,7 @@
                     });
                   }
                 }
-                return _.createElement(_.Fragment, null);
+                return (0, _.jsx)(_.Fragment, {});
               },
               autocloses: !1,
             },
@@ -34163,14 +33202,11 @@
             _.length > 0 &&
             "#" === _[0] &&
             (_ = _.substring(1)),
-          _.createElement(
-            _,
-            {
-              _: _ || void 0,
-              className: (0, _._)(_, _.className),
-            },
-            _.children,
-          )
+          (0, _.jsx)(_, {
+            _: _ || void 0,
+            className: (0, _._)(_, _.className),
+            children: _.children,
+          })
         );
       }
       const _ = (_) => {
@@ -34188,22 +33224,16 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return _.createElement(
-          _,
-          {
-            toolTipContent: _,
-            direction: "top",
-          },
-          _.createElement(
-            _._,
-            {
-              ...__webpack_require__,
-              href: _,
-              rel: _,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)(_, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            ...__webpack_require__,
+            href: _,
+            rel: _,
+            children: _.children,
+          }),
+        });
       };
       function _(_) {
         const { width: _ } = _;
@@ -34214,7 +33244,7 @@
             (_ = {
               width: `${_}px`,
             }),
-          _.createElement("col", {
+          (0, _.jsx)("col", {
             style: _,
           })
         );
@@ -34227,17 +33257,14 @@
         return (
           _ && parseInt(_) > 1 && (_.colSpan = parseInt(_)),
           _ && parseInt(_) > 1 && (_.rowSpan = parseInt(_)),
-          _.createElement(
-            _,
-            {
-              className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
-              ..._,
-              style: _ && {
-                width: _,
-              },
+          (0, _.jsx)(_, {
+            className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
+            ..._,
+            style: _ && {
+              width: _,
             },
-            _.children,
-          )
+            children: _.children,
+          })
         );
       }
       function _(_) {
@@ -34300,7 +33327,7 @@
           _ = "0" !== _ && "off" !== _ && "false" !== _,
           _ = _(_.args, "loop"),
           _ = "0" !== _ && "off" !== _ && "false" !== _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           video: _,
           bAutoPlay: _,
           bControls: _,
@@ -34578,14 +33605,11 @@
         let _ = _;
         return (
           _.toLowerCase().startsWith("http") || (_ = "http://" + _),
-          _.createElement(
-            _,
-            {
-              url: _,
-              event: _,
-            },
-            _ || _,
-          )
+          (0, _.jsx)(_, {
+            url: _,
+            event: _,
+            children: _ || _,
+          })
         );
       }
       const _ = (_) => {
@@ -34612,24 +33636,18 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return _.createElement(
-          _,
-          {
-            toolTipContent: _,
-            direction: "top",
-          },
-          _.createElement(
-            _._,
-            {
-              className: _,
-              href: _,
-              rel: _,
-              _: _._,
-              style: _,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)(_, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            className: _,
+            href: _,
+            rel: _,
+            _: _._,
+            style: _,
+            children: _.children,
+          }),
+        });
       };
       var _ = __webpack_require__("chunkid");
       class _ extends _ {
@@ -34712,14 +33730,11 @@
                     "important" == _ && _().Important,
                     "warning" == _ && _().Warning,
                   );
-                return _.createElement(
-                  "div",
-                  {
-                    _: _ || void 0,
-                    className: _,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("div", {
+                  _: _ || void 0,
+                  className: _,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -34741,7 +33756,7 @@
                   : "string" == typeof _
                     ? ((_ = _),
                       _
-                        ? _.createElement(_, {
+                        ? (0, _.jsx)(_, {
                             className: _().FAQImage,
                             src: _,
                             alt: _,
@@ -34750,12 +33765,12 @@
                             "http://",
                             "https://",
                           )),
-                          _.createElement("img", {
+                          (0, _.jsx)("img", {
                             className: _().FAQImage,
                             src: _,
                             alt: _,
                           })))
-                    : _.createElement(_, {
+                    : (0, _.jsx)(_, {
                         className: _().FAQImage,
                         rgSources: _,
                         alt: _,
@@ -34773,7 +33788,9 @@
                   _._.EREALM == _._.k_ESteamRealmGlobal) ||
                   ("china" == _ && (0, _._)())
                   ? null
-                  : _.createElement(_.Fragment, null, _.children);
+                  : (0, _.jsx)(_.Fragment, {
+                      children: _.children,
+                    });
               },
               autocloses: !1,
             },
@@ -34800,15 +33817,12 @@
               [],
             ),
             _ = _.useRef(new _(_, _, _._.LANGUAGE));
-          return _.createElement(
-            "div",
-            {
-              className: _().FAQContainer,
-            },
-            _.current.ParseBBCode(_, {
+          return (0, _.jsx)("div", {
+            className: _().FAQContainer,
+            children: _.current.ParseBBCode(_, {
               showErrorInfo: __webpack_require__,
             }),
-          );
+          });
         };
       var _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -34828,83 +33842,61 @@
                   behavior: "smooth",
                 });
             }, [_]),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.FAQViewPage, _._.LANGUAGE),
-              },
-              _.createElement(
-                "a",
-                {
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_.FAQViewPage, _._.LANGUAGE),
+              children: [
+                (0, _.jsx)("a", {
                   className: _.SupportTitle,
                   href: `${_._.HELP_BASE_URL}`,
-                },
-                (0, _._)("#FAQViewer_SteamSupport"),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#FAQViewer_SteamSupport"),
+                }),
+                (0, _.jsxs)("div", {
                   className: _.Columns,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.LeftCol),
-                  },
-                  _.createElement("div", {
-                    className: _.TopColorBar,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.FAQTopicCtn,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.FAQTitle,
-                        role: "heading",
-                        "aria-level": 1,
-                      },
-                      _,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.FAQContent,
-                      },
-                      _.createElement(_, {
-                        text: __webpack_require__,
-                        bShowErrorInfo: _,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_.LeftCol),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.TopColorBar,
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.FAQTopicCtn,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.FAQTitle,
+                              role: "heading",
+                              "aria-level": 1,
+                              children: _,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _.FAQContent,
+                              children: (0, _.jsx)(_, {
+                                text: __webpack_require__,
+                                bShowErrorInfo: _,
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.RightCol,
+                      children: (0, _.jsx)("div", {
+                        className: _.SectionCtn,
+                        children: _,
                       }),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RightCol,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SectionCtn,
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            )
+                    }),
+                  ],
+                }),
+              ],
+            })
           );
         },
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _.FAQViewPage,
-            },
-            _.children,
-          );
+          (0, _.jsx)("div", {
+            className: _.FAQViewPage,
+            children: _.children,
+          });
       var _ = __webpack_require__("chunkid");
       const _ = new (_())(
           (_) =>
@@ -34998,34 +33990,30 @@
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
           _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
           _ = _ ? "a" : "span";
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(!_)
-            ? _.createElement(
-                _.Fragment,
-                null,
-                Boolean(!__webpack_require__) &&
-                  _.createElement("span", null, _),
-              )
-            : _.createElement(
-                _,
-                {
-                  href: _ ? _ : void 0,
-                },
-                _.createElement("img", {
-                  className: _.SmallAvatar,
-                  src: _.avatar_url,
-                  "data-miniprofile": "s" + _.ConvertTo64BitString(),
-                }),
-                Boolean(!_) &&
-                  _.createElement(
-                    "span",
-                    null,
-                    _ ? `${_} (${_.persona_name})` : _.persona_name,
-                  ),
-              ),
-        );
+        return (0, _.jsx)(_.Fragment, {
+          children: Boolean(!_)
+            ? (0, _.jsx)(_.Fragment, {
+                children:
+                  Boolean(!__webpack_require__) &&
+                  (0, _.jsx)("span", {
+                    children: _,
+                  }),
+              })
+            : (0, _.jsxs)(_, {
+                href: _ ? _ : void 0,
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.SmallAvatar,
+                    src: _.avatar_url,
+                    "data-miniprofile": "s" + _.ConvertTo64BitString(),
+                  }),
+                  Boolean(!_) &&
+                    (0, _.jsx)("span", {
+                      children: _ ? `${_} (${_.persona_name})` : _.persona_name,
+                    }),
+                ],
+              }),
+        });
       }
       var _,
         _ = __webpack_require__("chunkid");
@@ -35057,27 +34045,21 @@
             return _;
           })(_, __webpack_require__);
         return _.bForceRedirect
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               push: !0,
               _: _,
             })
           : _.bForceAnchor
-            ? _.createElement(
-                "a",
-                {
-                  href: _._.COMMUNITY_BASE_URL.slice(0, -1) + _,
-                  className: _.className,
-                },
-                _.children,
-              )
-            : _.createElement(
-                _._,
-                {
-                  _: _,
-                  className: _.className,
-                },
-                _.children,
-              );
+            ? (0, _.jsx)("a", {
+                href: _._.COMMUNITY_BASE_URL.slice(0, -1) + _,
+                className: _.className,
+                children: _.children,
+              })
+            : (0, _.jsx)(_._, {
+                _: _,
+                className: _.className,
+                children: _.children,
+              });
       };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -35098,56 +34080,45 @@
               );
             })(_.faq_id, _.version, _.language);
           return _.Get().BHasFAQEdit()
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Section, _.ValveOnlyBackground),
-                },
-                _.createElement(
-                  "div",
-                  {
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(_.Section, _.ValveOnlyBackground),
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.TopicHeader,
-                  },
-                  (0, _._)("#FAQViewer_AdminLinks"),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: (0, _._)("#FAQViewer_AdminLinks"),
+                  }),
+                  (0, _.jsx)("div", {
                     className: _.InfoRow,
-                  },
-                  (0, _._)(
-                    "#FAQViewer_Admin_LastUpdate",
-                    __webpack_require__?.author_account_id
-                      ? _.createElement(_, {
-                          accountID: Number.parseInt(
-                            __webpack_require__.author_account_id,
-                          ),
-                        })
-                      : (0, _._)("#FAQViewer_UnknownUser"),
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(_.timestamp) +
-                        "@" +
-                        (0, _._)(_.timestamp, {
-                          bForce24HourClock: !1,
-                        }),
+                    children: (0, _._)(
+                      "#FAQViewer_Admin_LastUpdate",
+                      __webpack_require__?.author_account_id
+                        ? (0, _.jsx)(_, {
+                            accountID: Number.parseInt(
+                              __webpack_require__.author_account_id,
+                            ),
+                          })
+                        : (0, _._)("#FAQViewer_UnknownUser"),
+                      (0, _.jsx)("span", {
+                        children:
+                          (0, _._)(_.timestamp) +
+                          "@" +
+                          (0, _._)(_.timestamp, {
+                            bForce24HourClock: !1,
+                          }),
+                      }),
                     ),
-                  ),
-                ),
-                _.createElement(_, {
-                  faqContent: _,
-                }),
-                _.createElement(
-                  _,
-                  {
+                  }),
+                  (0, _.jsx)(_, {
+                    faqContent: _,
+                  }),
+                  (0, _.jsx)(_, {
                     faqid: _.faq_id,
                     route: _.k_eCommunityEdit,
                     bForceAnchor: !0,
-                  },
-                  (0, _._)("#FAQViewer_GotoEditor"),
-                ),
-              )
+                    children: (0, _._)("#FAQViewer_GotoEditor"),
+                  }),
+                ],
+              })
             : null;
         },
         _ = (_) => {
@@ -35175,128 +34146,104 @@
           )
             return null;
           const _ = __webpack_require__.GetLastSavedDraftVersion(_.language);
-          return _.createElement(
-            "div",
-            {
-              className: _.InfoRow,
-            },
-            (0, _._)(
+          return (0, _.jsx)("div", {
+            className: _.InfoRow,
+            children: (0, _._)(
               "#FAQViewer_DraftNewer",
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 accountID: Number.parseInt(_.author_account_id),
               }),
-              _.createElement(
-                "span",
-                null,
-                (0, _._)(_.timestamp) +
+              (0, _.jsx)("span", {
+                children:
+                  (0, _._)(_.timestamp) +
                   "@" +
                   (0, _._)(_.timestamp, {
                     bForce24HourClock: !1,
                   }),
-              ),
+              }),
             ),
-          );
+          });
         },
         _ = (_) =>
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_.Section, _.NeedHelp),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.LeftCol,
-                },
-                _.createElement(_._VW, {
-                  role: "presentation",
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.RightCol,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.TopicHeader,
-                  },
-                  (0, _._)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#FAQViewer_SideBar_ProblemWithSteam_Desc"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CenterButtonCtn,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.HELP_BASE_URL,
-                      className: _.EditPreviewButton,
-                    },
-                    (0, _._)("#FAQViewer_SideBar_ProblemWithSteam_Link"),
-                  ),
-                ),
-              ),
-            ),
-            !(0, _._)() &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Section, _.CommunityHelp),
-                },
-                _.createElement(
-                  "div",
-                  {
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.LeftCol,
-                  },
-                  _.createElement(_.ROZ, {
-                    role: "presentation",
+                    children: (0, _.jsx)(_._VW, {
+                      role: "presentation",
+                    }),
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                  (0, _.jsxs)("div", {
                     className: _.RightCol,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.TopicHeader,
-                    },
-                    (0, _._)("#FAQViewer_SideBar_CommunityHelp_Title"),
-                  ),
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#FAQViewer_SideBar_CommunityHelp_Desc"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.CenterButtonCtn,
-                    },
-                    _.createElement(
-                      "a",
-                      {
-                        href: _._.COMMUNITY_BASE_URL + "discussions",
-                        className: _.EditPreviewButton,
-                      },
-                      (0, _._)("#FAQViewer_SideBar_CommunityHelp_Link"),
-                    ),
-                  ),
-                ),
-              ),
-          );
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.TopicHeader,
+                        children: (0, _._)(
+                          "#FAQViewer_SideBar_ProblemWithSteam_Title",
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#FAQViewer_SideBar_ProblemWithSteam_Desc",
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.CenterButtonCtn,
+                        children: (0, _.jsx)("a", {
+                          href: _._.HELP_BASE_URL,
+                          className: _.EditPreviewButton,
+                          children: (0, _._)(
+                            "#FAQViewer_SideBar_ProblemWithSteam_Link",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              !(0, _._)() &&
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.Section, _.CommunityHelp),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.LeftCol,
+                      children: (0, _.jsx)(_.ROZ, {
+                        role: "presentation",
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.RightCol,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.TopicHeader,
+                          children: (0, _._)(
+                            "#FAQViewer_SideBar_CommunityHelp_Title",
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          children: (0, _._)(
+                            "#FAQViewer_SideBar_CommunityHelp_Desc",
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.CenterButtonCtn,
+                          children: (0, _.jsx)("a", {
+                            href: _._.COMMUNITY_BASE_URL + "discussions",
+                            className: _.EditPreviewButton,
+                            children: (0, _._)(
+                              "#FAQViewer_SideBar_CommunityHelp_Link",
+                            ),
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+            ],
+          });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
@@ -35310,60 +34257,55 @@
             }, []),
             _
               ? __webpack_require__
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     title: __webpack_require__.title,
                     content: __webpack_require__.content,
                     elSideBars: [
-                      _.createElement(_, {
-                        key: "sidebar",
-                        faqContent: __webpack_require__,
-                      }),
-                      _.createElement(_, {
-                        key: "adminbar",
-                        faqContent: __webpack_require__,
-                      }),
+                      (0, _.jsx)(
+                        _,
+                        {
+                          faqContent: __webpack_require__,
+                        },
+                        "sidebar",
+                      ),
+                      (0, _.jsx)(
+                        _,
+                        {
+                          faqContent: __webpack_require__,
+                        },
+                        "adminbar",
+                      ),
                     ],
                   })
-                : _.createElement(
-                    _,
-                    null,
-                    _.createElement(_, {
+                : (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_, {
                       strError: (0, _._)("#FAQViewer_NoFAQFound"),
                     }),
-                  )
-              : _.createElement(
-                  _,
-                  null,
-                  _.createElement(_, {
+                  })
+              : (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_, {
                     position: "center",
                     size: "xlarge",
                     string: (0, _._)("#Loading"),
                   }),
-                )
+                })
           );
         },
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().ErrorCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: _().ErrorCtn,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().ErrorMsg,
-              },
-              _.strError,
-            ),
-            _.createElement(
-              "a",
-              {
+                children: _.strError,
+              }),
+              (0, _.jsx)("a", {
                 className: _().EscapeLink,
                 href: _._.HELP_BASE_URL,
-              },
-              (0, _._)("#Help_GoToHomepage"),
-            ),
-          );
+                children: (0, _._)("#Help_GoToHomepage"),
+              }),
+            ],
+          });
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -35373,14 +34315,11 @@
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1),
           _ = !!(0, _._)(_());
-        return _.createElement(
-          "div",
-          {
-            className: _ ? void 0 : _.LoginContainer,
-          },
-          _
-            ? _.createElement(_, null)
-            : _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: _ ? void 0 : _.LoginContainer,
+          children: _
+            ? (0, _.jsx)(_, {})
+            : (0, _.jsx)(_, {
                 autoFocus: !0,
                 transport: _,
                 platform: 2,
@@ -35393,7 +34332,7 @@
                 defaultAccountName: __webpack_require__,
                 theme: _ ? "modal" : void 0,
               }),
-        );
+        });
       }
       const _ = _.lazy(() =>
           __webpack_require__
@@ -35401,142 +34340,113 @@
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (_) =>
-          _.createElement(
-            _._,
-            {
-              basename: _(),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().App,
-              },
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _.Suspense,
-                    {
+          (0, _.jsx)(_._, {
+            basename: _(),
+            children: (0, _.jsx)("div", {
+              className: _().App,
+              children: (0, _.jsx)(_, {
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_.Suspense, {
                       fallback: null,
-                    },
-                    _.createElement(_, {
-                      config: {
-                        "green-envelope": () =>
-                          _.createElement(_, {
-                            bResponsiveHeader: !1,
-                            notifications: (0, _._)(
-                              "steam_notifications",
-                              "application_config",
-                            ),
-                          }),
-                        "green-envelope-responsive": () =>
-                          _.createElement(_, {
-                            bResponsiveHeader: !0,
-                            notifications: (0, _._)(
-                              "steam_notifications",
-                              "application_config",
-                            ),
-                          }),
-                      },
-                    }),
-                  ),
-                  _.createElement(
-                    _.Suspense,
-                    {
-                      fallback: null,
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_._, {
-                        exact: !0,
-                        path: _(),
-                        render: (_) =>
-                          _.createElement(_, {
-                            ..._,
-                            key: "diab_data_" + _.match.params.gid,
-                            strConfigID: "application_config",
-                          }),
-                      }),
-                      _.createElement(_._, {
-                        path: _(),
-                        render: (_) =>
-                          _.createElement(_, {
-                            config: {
-                              "faqs-root": () => {
-                                const {
-                                    faqid: _,
-                                    languageCode: __webpack_require__,
-                                  } = _.match.params,
-                                  _ = (function (_) {
-                                    const _ = _?.replace(/-/g, "");
-                                    return 16 == _?.length && _.test(_)
-                                      ? _._.fromString(_, !0, 16).toString()
-                                      : null;
-                                  })(_);
-                                return _.createElement(_, {
-                                  faqid: _,
-                                });
-                              },
-                            },
-                          }),
-                      }),
-                      _.createElement(
-                        _._,
-                        {
-                          path: [..._(), _()],
+                      children: (0, _.jsx)(_, {
+                        config: {
+                          "green-envelope": () =>
+                            (0, _.jsx)(_, {
+                              bResponsiveHeader: !1,
+                              notifications: (0, _._)(
+                                "steam_notifications",
+                                "application_config",
+                              ),
+                            }),
+                          "green-envelope-responsive": () =>
+                            (0, _.jsx)(_, {
+                              bResponsiveHeader: !0,
+                              notifications: (0, _._)(
+                                "steam_notifications",
+                                "application_config",
+                              ),
+                            }),
                         },
-                        _.createElement(_, {
-                          config: {
-                            login: (_) =>
-                              _.createElement(_, {
+                      }),
+                    }),
+                    (0, _.jsx)(_.Suspense, {
+                      fallback: null,
+                      children: (0, _.jsxs)(_._, {
+                        children: [
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _(),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
                                 ..._,
+                                key: "diab_data_" + _.match.params.gid,
+                                strConfigID: "application_config",
                               }),
-                          },
-                        }),
-                      ),
-                      _.createElement(_._, null, _.createElement(_, null)),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _(),
+                            render: (_) =>
+                              (0, _.jsx)(_, {
+                                config: {
+                                  "faqs-root": () => {
+                                    const {
+                                        faqid: _,
+                                        languageCode: __webpack_require__,
+                                      } = _.match.params,
+                                      _ = (function (_) {
+                                        const _ = _?.replace(/-/g, "");
+                                        return 16 == _?.length && _.test(_)
+                                          ? _._.fromString(_, !0, 16).toString()
+                                          : null;
+                                      })(_);
+                                    return (0, _.jsx)(_, {
+                                      faqid: _,
+                                    });
+                                  },
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: [..._(), _()],
+                            children: (0, _.jsx)(_, {
+                              config: {
+                                login: (_) =>
+                                  (0, _.jsx)(_, {
+                                    ..._,
+                                  }),
+                              },
+                            }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_, {}),
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          });
       function _(_) {
         const { children: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            domain: "help.steampowered.com",
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _,
-                  null,
-                  _.createElement(
-                    _,
-                    {
-                      bRenderOverlayAtRoot: !0,
-                      bUsePopups: !1,
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          domain: "help.steampowered.com",
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
+              children: (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_, {
+                    bRenderOverlayAtRoot: !0,
+                    bUsePopups: !1,
+                    children: _,
+                  }),
+                }),
+              }),
+            }),
+          }),
+        });
       }
       function _() {
         const _ = (0, _._)("help_user_config", "application_config");
@@ -35544,27 +34454,21 @@
       }
       function _(_) {
         const _ = (0, _._)(_),
-          _ = (0, _._)(_.useCallback(() => new _._(), [])),
+          _ = (0, _._)(_.useCallback(() => new _(), [])),
           _ = (0, _.useMemo)(
             () => ({
               useActiveAccount: () => _._.steamid,
             }),
             [],
           );
-        return _.createElement(
-          _._,
-          {
-            value: _,
-          },
-          _.createElement(
-            _._,
-            {
-              useActiveSteamInterface: _,
-              useStorage: _,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          value: _,
+          children: (0, _.jsx)(_._, {
+            useActiveSteamInterface: _,
+            useStorage: _,
+            children: _.children,
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _() {
@@ -36134,6 +35038,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return _.createRef();
@@ -36150,7 +35055,7 @@
         }),
         _ = _.forwardRef(function (_, _) {
           const { href: __webpack_require__ = "#", ..._ } = _;
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ref: _,
             href: __webpack_require__,
             ..._,
@@ -36178,6 +35083,7 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(void 0);
@@ -36200,6 +35106,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       _.forwardRef(function (_, _) {
         const {
@@ -36210,6 +35117,7 @@
             enabled: _,
             modal: _,
             virtualFocus: _,
+            historyMode: _,
             parentEmbeddedNavTree: _,
             onGlobalButtonDown: _,
             disableFocusClasses: _,
@@ -36219,30 +35127,28 @@
           } = _,
           { elemProps: _, navOptions: _, gamepadEvents: _ } = (0, _._)(_);
         return (0, _._)()
-          ? _.createElement(
-              _,
-              {
-                navID: __webpack_require__,
-                onActivated: _,
-                onDeactivated: _,
-                navTreeRef: _,
-                enabled: _,
-                modal: _,
-                virtualFocus: _,
-                parentEmbeddedNavTree: _,
-                onGlobalButtonDown: _,
-                disableFocusClasses: _,
-                disabledRoot: _,
-                "flow-children": _,
-                ..._,
-                ..._,
-              },
-              _.createElement("div", {
+          ? (0, _.jsx)(_, {
+              navID: __webpack_require__,
+              onActivated: _,
+              onDeactivated: _,
+              navTreeRef: _,
+              enabled: _,
+              modal: _,
+              virtualFocus: _,
+              historyMode: _,
+              parentEmbeddedNavTree: _,
+              onGlobalButtonDown: _,
+              disableFocusClasses: _,
+              disabledRoot: _,
+              "flow-children": _,
+              ..._,
+              ..._,
+              children: (0, _.jsx)("div", {
                 ..._,
                 ref: _,
               }),
-            )
-          : _.createElement("div", {
+            })
+          : (0, _.jsx)("div", {
               ..._,
               ref: _,
             });
@@ -36338,24 +35244,18 @@
             });
           });
         const _ = (0, _._)(_, _.props.ref);
-        return _.createElement(
-          _,
-          {
-            tree: _ ? null : _,
-            disableFocusClasses: _ || _,
-          },
-          _.createElement(
-            _._.Provider,
-            {
-              value: _ ? null : _.Root,
-            },
-            _.cloneElement(_, {
+        return (0, _.jsx)(_, {
+          tree: _ ? null : _,
+          disableFocusClasses: _ || _,
+          children: (0, _.jsx)(_._.Provider, {
+            value: _ ? null : _.Root,
+            children: _.cloneElement(_, {
               _: _,
               "data-react-nav-root": _,
               ref: _,
             }),
-          ),
-        );
+          }),
+        });
       }
       const _ = _.createContext({
         bActiveTree: !1,
@@ -36392,13 +35292,10 @@
           }),
           [_, __webpack_require__, _, _],
         );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _() {
         return _.useContext(_);
@@ -36410,6 +35307,7 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         focusNavWindow: null,
@@ -36435,6 +35333,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -36763,12 +35662,9 @@
                 bFocusableByDefault: _,
                 className: _()(_.className, "Focusable"),
               }),
-              _.createElement(
-                _.Provider,
-                {
-                  value: _,
-                },
-                _
+              (0, _.jsx)(_.Provider, {
+                value: _,
+                children: _
                   ? _.createElement(
                       _,
                       {
@@ -36778,7 +35674,7 @@
                       _,
                     )
                   : _.createElement(_, _, _),
-              ))
+              }))
             : _.createElement(
                 _,
                 {
@@ -36838,6 +35734,7 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -36922,6 +35819,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -36968,24 +35866,21 @@
             (__webpack_require__ || _.onOKButton) &&
             (_.role ??= "button");
         const _ = (0, _.useContext)(_).Component;
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _
-            ? _.createElement(_, {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: _
+            ? (0, _.jsx)(_, {
                 ..._,
                 divRef: _,
                 node: _,
                 focusClassName: _()(_, "gpfocus"),
                 focusWithinClassName: _()(_, "gpfocuswithin"),
               })
-            : _.createElement("div", {
+            : (0, _.jsx)("div", {
                 ..._,
                 ref: _,
               }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -37155,28 +36050,29 @@
         static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
           return {
             root: _.SerializeNavNode(_, _, __webpack_require__),
-            bHadFocus: _.BFocusWithin(),
+            bHadFocus: _.BFocusWithin() && _.Tree.BIsActiveWithinContext(),
           };
         }
         static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
           let _ = null;
           const [_, _] = _.GetChildren();
+          _.length &&
+            -1 != _ &&
+            _ &&
+            (_ = _.map((_, _) =>
+              _.SerializeNavNode(
+                _,
+                _ == _ || __webpack_require__,
+                __webpack_require__,
+              ),
+            ));
+          const _ = {
+            rgChildren: _,
+          };
           return (
-            _.length &&
-              -1 != _ &&
-              _ &&
-              (_ = _.map((_, _) =>
-                _.SerializeNavNode(
-                  _,
-                  _ == _ || __webpack_require__,
-                  __webpack_require__,
-                ),
-              )),
-            {
-              sNavKey: _.NavKey,
-              iActiveChild: _,
-              rgChildren: _,
-            }
+            _.NavKey && (_.sNavKey = _.NavKey),
+            -1 != _ && (_.iActiveChild = _),
+            _
           );
         }
         static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
@@ -37188,7 +36084,7 @@
           });
         }
         static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
-          const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
+          const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
             ? `[${_.Tree._}]${(function (_) {
@@ -40956,11 +39852,6 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  dx_driver_name: {
-                    _: 13,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
                   adapter_description: {
                     _: 14,
                     _: _._.readString,
@@ -42885,6 +41776,141 @@
         }
         getClassName() {
           return "CCommunity_GetClanAnnouncementVoteForUser_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetClanMetadata_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.is_ogg || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  is_ogg: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  name: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  profile_url: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  appid: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetClanMetadata_Response";
         }
       }
       class _ extends _.Message {
@@ -45479,6 +44505,12 @@
                 ePrivilege: 1,
               },
             );
+          }),
+          (_.GetClanMetadata = function (_, _) {
+            return _.SendMsg("Community.GetClanMetadata#1", (0, _._)(_, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            });
           }),
           (_.GetClanLocGroupImages = function (_, _) {
             return _.SendMsg(
@@ -63760,6 +62792,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       const _ = _.createContext({});
@@ -63782,13 +62815,10 @@
               __webpack_require__.depth,
             ],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _() {
         return _.useContext(_);
@@ -63806,36 +62836,6 @@
           _,
         );
         return _._.AddNavParamToURL(_, _);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      class _ {
-        async GetObject(_, _) {
-          try {
-            const _ = await this.GetString(_);
-            return _ ? JSON.parse(_, _) : null;
-          } catch {
-            return null;
-          }
-        }
-        async StoreObject(_, _) {
-          return this.StoreString(_, JSON.stringify(_));
-        }
-      }
-      class _ extends _ {
-        GetString(_) {
-          return Promise.resolve(localStorage.getItem(_));
-        }
-        StoreString(_, _) {
-          return localStorage.setItem(_, _), Promise.resolve();
-        }
-        RemoveObject(_) {
-          return localStorage.removeItem(_), Promise.resolve();
-        }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -73984,6 +72984,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = Object.seal({
         onMoveUp: _,
@@ -74014,7 +73015,7 @@
           disabled: _,
           ..._
         } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           ..._,
           ref: _,
           className: (0, _._)(
@@ -74079,23 +73080,20 @@
           const _ = this.context.styles ?? _();
           let _ = _ ?? "#Button_Cancel";
           if (1 != this.context.presentation || _)
-            return _.createElement(
-              "div",
-              {
-                ref: _,
-                style: _,
-                ..._,
-                className: (0, _._)(
-                  {
-                    [_.contextMenuContents]: !0,
-                    [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    [_.ForceDesktop]: _,
-                  },
-                  _,
-                ),
-              },
-              _,
-            );
+            return (0, _.jsx)("div", {
+              ref: _,
+              style: _,
+              ..._,
+              className: (0, _._)(
+                {
+                  [_.contextMenuContents]: !0,
+                  [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                  [_.ForceDesktop]: _,
+                },
+                _,
+              ),
+              children: _,
+            });
           {
             const _ = () => {
               _ && _(), this.instance.Hide();
@@ -74104,68 +73102,61 @@
               (_.overflowY = this.instance.BIsSubMenuVisible()
                 ? "hidden"
                 : void 0),
-              _.createElement(
-                _._,
-                {
-                  ..._,
-                  className: (0, _._)(
-                    _.contextMenuContents,
-                    {
-                      [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    },
-                    _,
-                  ),
-                  "flow-children": "column",
-                  onMoveLeft: this.HideIfSubmenu,
-                  onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
-                  style: _,
-                  navEntryPreferPosition: _._.PREFERRED_CHILD,
-                  navRef: this.m_navRef,
-                  ref: _,
-                  role: _,
-                  "aria-labelledby": __webpack_require__ ? _ : void 0,
-                  ..._,
-                },
-                _,
-                __webpack_require__ &&
-                  _.createElement(
-                    "div",
-                    {
+              (0, _.jsxs)(_._, {
+                ..._,
+                className: (0, _._)(
+                  _.contextMenuContents,
+                  {
+                    [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                  },
+                  _,
+                ),
+                "flow-children": "column",
+                onMoveLeft: this.HideIfSubmenu,
+                onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
+                style: _,
+                navEntryPreferPosition: _._.PREFERRED_CHILD,
+                navRef: this.m_navRef,
+                ref: _,
+                role: _,
+                "aria-labelledby": __webpack_require__ ? _ : void 0,
+                ..._,
+                children: [
+                  _,
+                  __webpack_require__ &&
+                    (0, _.jsx)("div", {
                       _: _,
                       style: {
                         display: "none",
                       },
-                    },
-                    __webpack_require__,
-                  ),
-                !this.instance.BIsSubMenu() &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(_, null),
-                    _.createElement(
-                      _,
-                      {
-                        className: _.Cancel,
-                        onSelected: _,
-                      },
-                      (0, _._)(_),
-                    ),
-                    _,
-                  ),
-                this.instance.BIsSubMenuVisible() &&
-                  _.createElement("div", {
-                    className: _.contextMenuFade,
-                    onClick: () => this.instance.HideSubMenu(),
-                  }),
-              )
+                      children: __webpack_require__,
+                    }),
+                  !this.instance.BIsSubMenu() &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_, {}),
+                        (0, _.jsx)(_, {
+                          className: _.Cancel,
+                          onSelected: _,
+                          children: (0, _._)(_),
+                        }),
+                        _,
+                      ],
+                    }),
+                  this.instance.BIsSubMenuVisible() &&
+                    (0, _.jsx)("div", {
+                      className: _.contextMenuFade,
+                      onClick: () => this.instance.HideSubMenu(),
+                    }),
+                ],
+              })
             );
           }
         }
       };
       function _(_) {
         const _ = _.useId();
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           labelId: _,
           ..._,
         });
@@ -74212,50 +73203,44 @@
             } = this.props,
             _ = this.context?.styles ?? _();
           return 1 == this.context.presentation
-            ? _.createElement(
-                _._,
-                {
-                  noFocusRing: !0,
-                  preferredFocus: this.props.selected,
-                  ref: this.m_refDiv,
-                  navRef: this.m_ref,
-                  onMouseEnter: this.OnMouseEnter,
-                  ..._,
-                  className: (0, _._)(
-                    this.props.className,
-                    _.contextMenuItem,
-                    "contextMenuItem",
-                    this.props.disabled && "disabled",
-                    this.props.selected && _.Selected,
-                    "positive" == this.props.tone && _.Positive,
-                    "emphasis" == this.props.tone && _.Emphasis,
-                    "destructive" == this.props.tone && _.Destructive,
-                  ),
-                  focusClassName: _.Focused,
-                  onClick: this.props.disabled ? void 0 : this.OnClick,
-                  focusable: !this.props.disabled,
-                  onOKButton: this.OnOKButton,
-                  onMoveRight: __webpack_require__,
-                  unselectable: this.props.unselectable,
-                  role: _.role ?? "menuitem",
-                  "aria-selected": this.props.selected,
-                },
-                this.props.children,
-              )
-            : _.createElement(
-                _,
-                {
-                  ref: this.m_refDiv,
-                  onMouseEnter: this.OnMouseEnter,
-                  ..._,
-                  onClick: this.OnClick,
-                  unselectable: this.props.unselectable,
-                  className: this.props.className,
-                  role: _.role ?? "menuitem",
-                  "aria-selected": this.props.selected,
-                },
-                this.props.children,
-              );
+            ? (0, _.jsx)(_._, {
+                noFocusRing: !0,
+                preferredFocus: this.props.selected,
+                ref: this.m_refDiv,
+                navRef: this.m_ref,
+                onMouseEnter: this.OnMouseEnter,
+                ..._,
+                className: (0, _._)(
+                  this.props.className,
+                  _.contextMenuItem,
+                  "contextMenuItem",
+                  this.props.disabled && "disabled",
+                  this.props.selected && _.Selected,
+                  "positive" == this.props.tone && _.Positive,
+                  "emphasis" == this.props.tone && _.Emphasis,
+                  "destructive" == this.props.tone && _.Destructive,
+                ),
+                focusClassName: _.Focused,
+                onClick: this.props.disabled ? void 0 : this.OnClick,
+                focusable: !this.props.disabled,
+                onOKButton: this.OnOKButton,
+                onMoveRight: __webpack_require__,
+                unselectable: this.props.unselectable,
+                role: _.role ?? "menuitem",
+                "aria-selected": this.props.selected,
+                children: this.props.children,
+              })
+            : (0, _.jsx)(_, {
+                ref: this.m_refDiv,
+                onMouseEnter: this.OnMouseEnter,
+                ..._,
+                onClick: this.OnClick,
+                unselectable: this.props.unselectable,
+                className: this.props.className,
+                role: _.role ?? "menuitem",
+                "aria-selected": this.props.selected,
+                children: this.props.children,
+              });
         }
       }
       (0, _._)([_._], _.prototype, "OnClick", null),
@@ -74266,7 +73251,7 @@
       _.PureComponent;
       function _(_) {
         const _ = _.useContext(_).styles ?? _();
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _.ContextMenuSeparator,
           role: "separator",
         });
@@ -74308,14 +73293,11 @@
           );
         }
         RenderSubMenu() {
-          return _.createElement(
-            _,
-            {
-              onMouseEnter: this.OnSubMenuMouseEnter,
-              label: this.props.label,
-            },
-            this.props.children,
-          );
+          return (0, _.jsx)(_, {
+            onMouseEnter: this.OnSubMenuMouseEnter,
+            label: this.props.label,
+            children: this.props.children,
+          });
         }
         OnMouseEnter(_) {
           0 == this.context.presentation && this.ShowSubMenu(_.currentTarget);
@@ -74337,33 +73319,26 @@
             ..._
           } = this.props;
           const _ = this.context.styles ?? _();
-          return _.createElement(
-            _,
-            {
-              ..._,
-              ref: this.m_refItem,
-              onClick: this.OnClick,
-              selected: _ && !this.state.bActive,
-              className: (0, _._)(_, _.SubMenu, this.state.bActive && _.active),
-              onMouseEnter: this.OnMouseEnter,
-              bInteractableItem: !0,
-              onMoveRight: () => this.ShowSubMenu(),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_, {
+            ..._,
+            ref: this.m_refItem,
+            onClick: this.OnClick,
+            selected: _ && !this.state.bActive,
+            className: (0, _._)(_, _.SubMenu, this.state.bActive && _.active),
+            onMouseEnter: this.OnMouseEnter,
+            bInteractableItem: !0,
+            onMoveRight: () => this.ShowSubMenu(),
+            children: [
+              (0, _.jsx)("div", {
                 className: _.Label,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _,
+              }),
+              (0, _.jsx)("div", {
                 className: _.Arrow,
-              },
-              _.createElement(_.GB9, null),
-            ),
-          );
+                children: (0, _.jsx)(_.GB9, {}),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnSubMenuMouseEnter", null),
@@ -74682,23 +73657,20 @@
             this.props.instance.visible && this.state.ready && (_ += " ready"),
             (_ += " " + _().ContextMenuPosition),
             this.props.options.bStandalone && (_ += " " + _().Standalone),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                ref: this.BindMenuElement,
-                style: _,
-                onBlur: this.OnBlur,
-                onKeyDown: this.OnKeyDown,
-                tabIndex: 0,
-              },
-              this.props.children,
-            )
+            (0, _.jsx)("div", {
+              className: _,
+              ref: this.BindMenuElement,
+              style: _,
+              onBlur: this.OnBlur,
+              onKeyDown: this.OnKeyDown,
+              tabIndex: 0,
+              children: this.props.children,
+            })
           );
         }
       };
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _().ContextMenuMouseOverlay,
         });
       }
@@ -74723,10 +73695,9 @@
             (_ &&
               _.forEach((_, _) => {
                 _.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _,
                     {
-                      key: `spelling_${_}_${_}`,
                       onSelected: () => {
                         _.setRangeText(_),
                           (function (_, _) {
@@ -74738,8 +73709,9 @@
                           _.focus();
                       },
                       className: _().NoSeparation,
+                      children: _,
                     },
-                    _,
+                    `spelling_${_}_${_}`,
                   ),
                 );
               }),
@@ -74748,17 +73720,17 @@
             const _ = 30;
             (_ = _.trim()),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _,
                   {
-                    key: `addtodictionary_${_}`,
                     onSelected: () =>
                       _.SteamClient.Browser.AddWordToDictionary(_),
+                    children: (0, _._)(
+                      "#ContextMenu_AddToDictionary",
+                      _.length < _ ? _ : _.substring(0, _) + "...",
+                    ),
                   },
-                  (0, _._)(
-                    "#ContextMenu_AddToDictionary",
-                    _.length < _ ? _ : _.substring(0, _) + "...",
-                  ),
+                  `addtodictionary_${_}`,
                 ),
               );
           }
@@ -74766,45 +73738,45 @@
         if (
           ((_.document.queryCommandEnabled("cut") || (_ && _)) &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "cut",
                   onSelected: () => {
                     _.document.execCommand("cut");
                   },
+                  children: (0, _._)("#ContextMenu_Cut"),
                 },
-                (0, _._)("#ContextMenu_Cut"),
+                "cut",
               ),
             ),
           (_.document.queryCommandEnabled("copy") || _) &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "copy",
                   onSelected: () => {
                     _.document.execCommand("copy");
                   },
                   className: _().NoSeparation,
+                  children: (0, _._)("#ContextMenu_Copy"),
                 },
-                (0, _._)("#ContextMenu_Copy"),
+                "copy",
               ),
             ),
           _._.IN_CLIENT &&
             _ &&
             (0, _._)(_, "Browser.Paste") &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "paste",
                   onSelected: () => {
                     _.focus(), _.SteamClient.Browser.Paste();
                   },
                   className: _().NoSeparation,
+                  children: (0, _._)("#ContextMenu_Paste"),
                 },
-                (0, _._)("#ContextMenu_Paste"),
+                "paste",
               ),
             ),
           _._.IN_CLIENT && _._.DEV_MODE)
@@ -74812,43 +73784,44 @@
           const _ = [];
           (0, _._)(_, "Browser.OpenDevTools") &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "opendevtools",
                   onSelected: () => {
                     _.focus(), _.SteamClient.Browser.OpenDevTools();
                   },
+                  children: "Open Dev Tools",
                 },
-                "Open Dev Tools",
+                "opendevtools",
               ),
             ),
             (0, _._)(_, "Browser.InspectElement") &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _,
                   {
-                    key: "inspectelement",
                     onSelected: () => {
                       _.focus(), _.SteamClient.Browser.InspectElement(_, _);
                     },
                     className: _().NoSeparation,
+                    children: "Inspect Element",
                   },
-                  "Inspect Element",
+                  "inspectelement",
                 ),
               ),
             _.length > 0 &&
-              (_.push(
-                _.createElement(_, {
-                  key: "devtools-separator",
-                }),
-              ),
-              _.push(..._));
+              (_.push((0, _.jsx)(_, {}, "devtools-separator")), _.push(..._));
         }
         if (_.length)
-          (0, _._)(_.createElement(_, null, _), _, {
-            bRootContextMenu: !0,
-          });
+          (0, _._)(
+            (0, _.jsx)(_, {
+              children: _,
+            }),
+            _,
+            {
+              bRootContextMenu: !0,
+            },
+          );
         else {
           if (_.shiftKey) return;
           _.preventDefault(), _.stopPropagation();
@@ -74875,16 +73848,15 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return function (_) {
-          return _.createElement(
-            _,
-            null,
-            _.createElement(_, {
+          return (0, _.jsx)(_, {
+            children: (0, _.jsx)(_, {
               ..._,
             }),
-          );
+          });
         };
       }
       class _ extends _.Component {
@@ -74940,13 +73912,13 @@
                 : _
               : _.sm_ErrorReportingStore &&
                   _.sm_ErrorReportingStore.reporting_enabled
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     error: _,
                     identifierHash: _,
                     store: _.sm_ErrorReportingStore,
                     onRefresh: this.Reset,
                   })
-                : _.createElement(_, {
+                : (0, _.jsx)(_, {
                     error: _,
                     onDismiss: this.Reset,
                   })
@@ -74958,26 +73930,29 @@
           let _ = _.error ? _.error.stack : "Stack missing",
             _ = _.info ? _.info.componentStack : "",
             _ = (_.error && _.error.message) || "unknown error";
-          return _.createElement(
-            _,
-            null,
-            _.createElement(_, null, 'Error: "', _, '"'),
-            "   ",
-            _.createElement(
-              "span",
-              {
+          return (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: ['Error: "', _, '"'],
+              }),
+              "   ",
+              (0, _.jsx)("span", {
                 style: {
                   textDecoration: "underline",
                   cursor: "pointer",
                 },
                 onClick: _,
-              },
-              "(x) Dismiss",
-            ),
-            _.createElement("br", null),
-            _.createElement(_, null, _),
-            _.createElement(_, null, "The error occurred while rendering:", _),
-          );
+                children: "(x) Dismiss",
+              }),
+              (0, _.jsx)("br", {}),
+              (0, _.jsx)(_, {
+                children: _,
+              }),
+              (0, _.jsxs)(_, {
+                children: ["The error occurred while rendering:", _],
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const {
@@ -74988,70 +73963,62 @@
             } = _,
             _ = (_.error && _.error.message) || "unknown error",
             _ = `${_.product}_${_.version}_${_}`;
-          return _.createElement(
-            _,
-            null,
-            _.createElement(
-              _,
-              null,
-              "Something went wrong while displaying this content. ",
-              _.createElement(
-                "span",
-                {
-                  style: {
-                    textDecoration: "underline",
-                    cursor: "pointer",
-                  },
-                  onClick: __webpack_require__,
-                },
-                "Refresh",
-              ),
-            ),
-            _.createElement(_, null, "Error Reference: ", _),
-            _.createElement(_, null, _),
-          );
+          return (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: [
+                  "Something went wrong while displaying this content. ",
+                  (0, _.jsx)("span", {
+                    style: {
+                      textDecoration: "underline",
+                      cursor: "pointer",
+                    },
+                    onClick: __webpack_require__,
+                    children: "Refresh",
+                  }),
+                ],
+              }),
+              (0, _.jsxs)(_, {
+                children: ["Error Reference: ", _],
+              }),
+              (0, _.jsx)(_, {
+                children: _,
+              }),
+            ],
+          });
         },
         _ = ({ children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              style: {
-                overflow: "auto",
-                marginLeft: "15px",
-                color: "white",
-                fontSize: "16px",
-                userSelect: "auto",
-                backgroundColor: "black",
-              },
-              className: "ErrorBoundary",
+          (0, _.jsx)("div", {
+            style: {
+              overflow: "auto",
+              marginLeft: "15px",
+              color: "white",
+              fontSize: "16px",
+              userSelect: "auto",
+              backgroundColor: "black",
             },
-            _,
-          ),
+            className: "ErrorBoundary",
+            children: _,
+          }),
         _ = ({ children: _ }) =>
-          _.createElement(
-            "h1",
-            {
-              style: {
-                fontSize: "20px",
-                display: "inline-block",
-                marginTop: "15px",
-                userSelect: "auto",
-              },
+          (0, _.jsx)("h1", {
+            style: {
+              fontSize: "20px",
+              display: "inline-block",
+              marginTop: "15px",
+              userSelect: "auto",
             },
-            _,
-          ),
+            children: _,
+          }),
         _ = ({ children: _ }) =>
-          _.createElement(
-            "pre",
-            {
-              style: {
-                marginTop: "15px",
-                opacity: 0.7,
-                userSelect: "auto",
-              },
+          (0, _.jsx)("pre", {
+            style: {
+              marginTop: "15px",
+              opacity: 0.7,
+              userSelect: "auto",
             },
-            _,
-          );
+            children: _,
+          });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -75079,281 +74046,238 @@
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
           case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M17.98 10.23L3.20996 25H32.75L17.98 10.23Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M17.98 26.54L3.20996 11.77H32.75L17.98 26.54Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M9.82497 18.385L24.595 3.61499L24.595 33.155L9.82497 18.385Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "right":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M26.135 18.385L11.365 33.155L11.365 3.61503L26.135 18.385Z",
                 fill: "currentColor",
               }),
-            );
+            });
         }
       }
       function _(_) {
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
           case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 _: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
               }),
-            );
+            });
           case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 _: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
               }),
-            );
+            });
           case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M14.23 30.75L1.45996 18L14.23 5.20999L17.77 8.74999L8.53996 18L17.77 27.23L14.23 30.75ZM31.77 27.21L22.54 18L31.77 8.76999L28.23 5.20999L15.46 18L28.23 30.75L31.77 27.21Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "right":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M19 30.75L31.77 18L19 5.20999L15.46 8.74999L24.69 18L15.46 27.23L19 30.75ZM1.46002 27.21L10.69 18L1.46002 8.76999L5.00002 5.20999L17.77 18L5.00002 30.75L1.46002 27.21Z",
                 fill: "currentColor",
               }),
-            );
+            });
         }
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M31.7 15.2077C31.703 12.5623 30.94 9.97259 29.5032 7.75136C28.0664 5.53014 26.0172 3.77242 23.6031 2.69048C21.189 1.60855 18.5133 1.24869 15.8992 1.65436C13.2851 2.06002 10.8443 3.21387 8.87163 4.97655C6.89899 6.73922 5.47888 9.03532 4.78281 11.5875C4.08673 14.1397 4.14447 16.8389 4.94905 19.359C5.75363 21.8791 7.27063 24.1124 9.31684 25.7891C11.363 27.4658 13.8509 28.5142 16.48 28.8077V34.5077L27.31 25.2477C28.6947 23.9675 29.7996 22.4147 30.5551 20.6869C31.3106 18.959 31.7004 17.0935 31.7 15.2077ZM15.3 7.06885L16.3075 16.9577H20.1309L21.1039 7.06885H15.3ZM20.6927 22.0125C20.6927 23.3774 19.5862 24.4838 18.2213 24.4838C16.8564 24.4838 15.7499 23.3774 15.7499 22.0125C15.7499 20.6475 16.8564 19.5411 18.2213 19.5411C19.5862 19.5411 20.6927 20.6475 20.6927 22.0125Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { alert: _, urgent: __webpack_require__, ..._ } = _;
         return __webpack_require__
-          ? _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
-                fill: "currentColor",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
-              }),
-              _.createElement("path", {
-                fill: "#FFC82C",
-                _: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
-              }),
-            )
-          : _
-            ? _.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ..._,
-                },
-                _.createElement("path", {
+          ? (0, _.jsxs)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: [
+                (0, _.jsx)("path", {
                   fill: "currentColor",
                   fillRule: "evenodd",
                   clipRule: "evenodd",
                   _: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
                 }),
-                _.createElement("path", {
-                  fill: "#1A9FFF",
+                (0, _.jsx)("path", {
+                  fill: "#FFC82C",
                   _: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
                 }),
-              )
-            : _.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ..._,
-                },
-                _.createElement(
-                  "g",
-                  {
-                    className: "SVGIcon_Notification",
-                  },
-                  _.createElement("path", {
+              ],
+            })
+          : _
+            ? (0, _.jsxs)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ..._,
+                children: [
+                  (0, _.jsx)("path", {
+                    fill: "currentColor",
                     fillRule: "evenodd",
                     clipRule: "evenodd",
-                    _: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
-                    fill: "currentColor",
+                    _: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
                   }),
-                  _.createElement("path", {
-                    className: "SVGIcon_Notification_Uvula",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
-                    fill: "currentColor",
+                  (0, _.jsx)("path", {
+                    fill: "#1A9FFF",
+                    _: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
                   }),
-                ),
-              );
+                ],
+              })
+            : (0, _.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ..._,
+                children: (0, _.jsxs)("g", {
+                  className: "SVGIcon_Notification",
+                  children: [
+                    (0, _.jsx)("path", {
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      _: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+                      fill: "currentColor",
+                    }),
+                    (0, _.jsx)("path", {
+                      className: "SVGIcon_Notification_Uvula",
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      _: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                      fill: "currentColor",
+                    }),
+                  ],
+                }),
+              });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57C28 10 26.5 9 23.94 7.94C20.9843 6.77796 17.7541 6.50244 14.6444 7.14712C11.5346 7.7918 8.68012 9.32875 6.43 11.57L0 18L6.43 24.43C8.10419 26.1042 10.2596 27.5 12.73 28.34ZM18 25C21.866 25 25 21.866 25 18C25 14.134 21.866 11 18 11C14.134 11 11 14.134 11 18C11 21.866 14.134 25 18 25Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M29.57 11.57L24.82 16.32C24.9485 16.8705 25.0089 17.4347 25 18C25 19.8565 24.2625 21.637 22.9497 22.9497C21.637 24.2625 19.8565 25 18 25C17.423 24.9983 16.8486 24.9244 16.29 24.78L12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M28.94 2.94L23.94 7.94C20.9843 6.77797 17.7541 6.50244 14.6444 7.14712C11.5346 7.79181 8.68012 9.32876 6.43 11.57L0 18L6.43 24.43C6.6 24.6 6.79 24.75 6.97 24.91L3.44 28.44L5.56 30.56L31.06 5.06L28.94 2.94ZM11 18C11.0002 16.8706 11.2736 15.7581 11.7969 14.7573C12.3203 13.7565 13.078 12.8971 14.0054 12.2527C14.9328 11.6082 16.0024 11.1977 17.1229 11.0561C18.2434 10.9146 19.3815 11.0463 20.44 11.44L11.44 20.44C11.1493 19.6593 11.0003 18.833 11 18Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M29.57 11.57L24.82 16.32C24.9485 16.8705 25.0089 17.4347 25 18C25 19.8565 24.2625 21.637 22.9497 22.9497C21.637 24.2625 19.8565 25 18 25C17.423 24.9983 16.8486 24.9244 16.29 24.78L12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M28.94 2.94L23.94 7.94C20.9843 6.77797 17.7541 6.50244 14.6444 7.14712C11.5346 7.79181 8.68012 9.32876 6.43 11.57L0 18L6.43 24.43C6.6 24.6 6.79 24.75 6.97 24.91L3.44 28.44L5.56 30.56L31.06 5.06L28.94 2.94ZM11 18C11.0002 16.8706 11.2736 15.7581 11.7969 14.7573C12.3203 13.7565 13.078 12.8971 14.0054 12.2527C14.9328 11.6082 16.0024 11.1977 17.1229 11.0561C18.2434 10.9146 19.3815 11.0463 20.44 11.44L11.44 20.44C11.1493 19.6593 11.0003 18.833 11 18Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "5",
-            height: "19",
-            viewBox: "0 0 5 19",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "5",
+          height: "19",
+          viewBox: "0 0 5 19",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M5 0H3C1.34315 0 0 1.34315 0 3V16C0 17.6569 1.34315 19 3 19H5V0Z",
             fill: "white",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "5",
-            height: "19",
-            viewBox: "0 0 5 19",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "5",
+          height: "19",
+          viewBox: "0 0 5 19",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M0 0H2C3.65685 0 5 1.34315 5 3V16C5 17.6569 3.65685 19 2 19H0V0Z",
             fill: "white",
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -75393,403 +74317,351 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M16.48 35.05V29.35L16.51 29.34C13.4035 28.995 10.5086 27.5974 8.30636 25.3795C6.10411 23.1615 4.72712 20.2568 4.40423 17.1479C4.08134 14.039 4.83199 10.9133 6.53143 8.29011C8.23087 5.66691 10.7768 3.70423 13.7461 2.72822C16.7153 1.7522 19.9292 1.82163 22.8536 2.92496C25.7779 4.02829 28.2367 6.09909 29.8213 8.79322C31.4058 11.4874 32.0208 14.6426 31.564 17.7346C31.1071 20.8266 29.606 23.6692 27.31 25.79L16.48 35.05ZM10.36 15.65L15.77 21.05L25.39 11.43L23 9.04999L15.77 16.28L12.75 13.26L10.36 15.65Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M14 17C15.4706 16.9968 16.9289 17.2682 18.3 17.8C16.5605 19.2553 15.269 21.1737 14.5752 23.333C13.8814 25.4922 13.8137 27.8039 14.38 30H2V29C2 25.8174 3.26428 22.7652 5.51472 20.5147C7.76515 18.2643 10.8174 17 14 17Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M10.6666 2.01118C11.6533 1.35189 12.8133 1 14 1C15.5913 1 17.1174 1.63214 18.2426 2.75736C19.3679 3.88258 20 5.4087 20 7C20 8.18669 19.6481 9.34673 18.9888 10.3334C18.3295 11.3201 17.3925 12.0892 16.2961 12.5433C15.1997 12.9974 13.9933 13.1162 12.8295 12.8847C11.6656 12.6532 10.5965 12.0818 9.75736 11.2426C8.91824 10.4035 8.3468 9.33443 8.11529 8.17054C7.88378 7.00666 8.0026 5.80026 8.45672 4.7039C8.91085 3.60754 9.67988 2.67047 10.6666 2.01118Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M32.5 27C32.5 28.2856 32.1188 29.5423 31.4046 30.6112C30.6903 31.6801 29.6752 32.5132 28.4874 33.0052C27.2997 33.4972 25.9928 33.6259 24.7319 33.3751C23.471 33.1243 22.3128 32.5052 21.4038 31.5962C20.4948 30.6872 19.8757 29.529 19.6249 28.2681C19.3741 27.0072 19.5028 25.7003 19.9948 24.5126C20.4868 23.3248 21.3199 22.3097 22.3888 21.5954C23.4577 20.8812 24.7144 20.5 26 20.5",
-            stroke: "currentColor",
-            strokeWidth: "3",
-          }),
-          _.createElement("path", {
-            _: "M32.7419 20.4742L25.9919 24.3713L25.9919 16.5771L32.7419 20.4742Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M14 17C15.4706 16.9968 16.9289 17.2682 18.3 17.8C16.5605 19.2553 15.269 21.1737 14.5752 23.333C13.8814 25.4922 13.8137 27.8039 14.38 30H2V29C2 25.8174 3.26428 22.7652 5.51472 20.5147C7.76515 18.2643 10.8174 17 14 17Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M10.6666 2.01118C11.6533 1.35189 12.8133 1 14 1C15.5913 1 17.1174 1.63214 18.2426 2.75736C19.3679 3.88258 20 5.4087 20 7C20 8.18669 19.6481 9.34673 18.9888 10.3334C18.3295 11.3201 17.3925 12.0892 16.2961 12.5433C15.1997 12.9974 13.9933 13.1162 12.8295 12.8847C11.6656 12.6532 10.5965 12.0818 9.75736 11.2426C8.91824 10.4035 8.3468 9.33443 8.11529 8.17054C7.88378 7.00666 8.0026 5.80026 8.45672 4.7039C8.91085 3.60754 9.67988 2.67047 10.6666 2.01118Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M32.5 27C32.5 28.2856 32.1188 29.5423 31.4046 30.6112C30.6903 31.6801 29.6752 32.5132 28.4874 33.0052C27.2997 33.4972 25.9928 33.6259 24.7319 33.3751C23.471 33.1243 22.3128 32.5052 21.4038 31.5962C20.4948 30.6872 19.8757 29.529 19.6249 28.2681C19.3741 27.0072 19.5028 25.7003 19.9948 24.5126C20.4868 23.3248 21.3199 22.3097 22.3888 21.5954C23.4577 20.8812 24.7144 20.5 26 20.5",
+              stroke: "currentColor",
+              strokeWidth: "3",
+            }),
+            (0, _.jsx)("path", {
+              _: "M32.7419 20.4742L25.9919 24.3713L25.9919 16.5771L32.7419 20.4742Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M2 7H11V12H2V7ZM2 16H11V23L16 20.9545V31H2V16ZM20 31V20.9545L25 23V16H34V31H20ZM34 12H25V7H34V12ZM22 7H14V19L18 17.3636L22 19V7Z",
           }),
-        );
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 15 23",
-            fill: "none",
-            ..._,
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 15 23",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("g", {
               clipPath: __webpack_require__,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
-            }),
-          ),
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "clipPath",
-              {
-                _: _,
-              },
-              _.createElement("rect", {
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
-                width: "15",
-                height: "23",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("rect", {
+                  fill: "currentColor",
+                  width: "15",
+                  height: "23",
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M18 17.8L4 10.05L18 2.29999L32 10.05L18 17.8ZM18 22.37L7.1 16.37L4 18.05L18 25.8L32 18.05L28.9 16.34L18 22.37ZM18 30.37L7.1 24.37L4 26.05L18 33.8L32 26.05L28.9 24.34L18 30.37Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DownArrowContextMenu",
-            "data-name": "Layer 1",
-            viewBox: "0 0 128 128",
-            _: "0px",
-            _: "0px",
-            ..._,
-          },
-          _.createElement("polygon", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_DownArrowContextMenu",
+          "data-name": "Layer 1",
+          viewBox: "0 0 128 128",
+          _: "0px",
+          _: "0px",
+          ..._,
+          children: (0, _.jsx)("polygon", {
             points:
               "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            style: {
-              transform: `rotate(${_.angle}deg)`,
-            },
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            width: "24.833px",
-            height: "21.917px",
-            viewBox: "0 0 24.833 21.917",
+        return (0, _.jsx)("svg", {
+          style: {
+            transform: `rotate(${_.angle}deg)`,
           },
-          _.createElement("polygon", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          width: "24.833px",
+          height: "21.917px",
+          viewBox: "0 0 24.833 21.917",
+          children: (0, _.jsx)("polygon", {
             points:
               "12.5,14.873 3.302,5.723 1.185,7.848 12.5,19.103 23.814,7.848 21.697,5.723 ",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            fill: "#FFFFFF",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Popout",
-            viewBox: "0 0 8 8",
-            _: "0px",
-            _: "0px",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          fill: "#FFFFFF",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Popout",
+          viewBox: "0 0 8 8",
+          _: "0px",
+          _: "0px",
+          children: (0, _.jsx)("path", {
             _: "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            fill: "#FFFFFF",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_X",
-            version: "1.1",
-            _: "0px",
-            _: "0px",
-            viewBox: "-165 95 100 100",
-            ..._,
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("polygon", {
+        return (0, _.jsx)("svg", {
+          fill: "#FFFFFF",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_X",
+          version: "1.1",
+          _: "0px",
+          _: "0px",
+          viewBox: "-165 95 100 100",
+          ..._,
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("polygon", {
               points:
                 "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const { color: _ = "#FFFFFF", ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(
-              "SVGIcon_Button",
-              "SVGIcon_X_Line",
-              _.className,
-            ),
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            ...__webpack_require__,
-          },
-          _.createElement("line", {
-            fill: "none",
-            stroke: _,
-            strokeWidth: "45",
-            strokeMiterlimit: "10",
-            _: "212",
-            _: "212",
-            _: "44",
-            _: "44",
-          }),
-          _.createElement("line", {
-            fill: "none",
-            stroke: _,
-            strokeWidth: "45",
-            strokeMiterlimit: "10",
-            _: "44",
-            _: "212",
-            _: "212",
-            _: "44",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_X_Line", _.className),
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          ...__webpack_require__,
+          children: [
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: _,
+              strokeWidth: "45",
+              strokeMiterlimit: "10",
+              _: "212",
+              _: "212",
+              _: "44",
+              _: "44",
+            }),
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: _,
+              strokeWidth: "45",
+              strokeMiterlimit: "10",
+              _: "44",
+              _: "212",
+              _: "212",
+              _: "44",
+            }),
+          ],
+        });
       }
       function _(_) {
         return (0, _._)()
-          ? _.createElement(
-              "svg",
-              {
-                width: "36",
-                height: "36",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                ..._,
-              },
-              _.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M5.63604 19.636C7.32387 17.9482 9.61305 17 12 17C12.4664 17 12.9292 17.0362 13.3844 17.1071C13.1338 18.0289 13 18.9988 13 20C13 25.0351 16.383 29.2801 21 30.5859V31H3V26C3 23.6131 3.94821 21.3239 5.63604 19.636ZM14.7779 13.1573C13.9556 13.7068 12.9889 14 12 14C10.6739 14 9.40215 13.4732 8.46447 12.5355C7.52678 11.5979 7 10.3261 7 9C7 8.0111 7.29324 7.0444 7.84265 6.22215C8.39206 5.39991 9.17295 4.75904 10.0866 4.3806C11.0002 4.00217 12.0055 3.90315 12.9755 4.09608C13.9454 4.289 14.8363 4.76521 15.5355 5.46447C16.2348 6.16373 16.711 7.05465 16.9039 8.02455C17.0969 8.99446 16.9978 9.99979 16.6194 10.9134C16.241 11.827 15.6001 12.6079 14.7779 13.1573Z",
-                fill: "currentColor",
-              }),
-              _.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M24 28C28.4183 28 32 24.4183 32 20C32 15.5817 28.4183 12 24 12C19.5817 12 16 15.5817 16 20C16 24.4183 19.5817 28 24 28ZM22.5 21.5V26H25.5V21.5H30V18.5H25.5V14H22.5V18.5H18V21.5H22.5Z",
-                fill: "currentColor",
-              }),
-            )
-          : _.createElement(
-              "svg",
-              {
-                version: "1.1",
-                _: "Layer_1",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: "SVGIcon_Button SVGIcon_AddFriend",
-                _: "0px",
-                _: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "0 0 256 256",
-              },
-              _.createElement(
-                "g",
-                {
+          ? (0, _.jsxs)("svg", {
+              width: "36",
+              height: "36",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              ..._,
+              children: [
+                (0, _.jsx)("path", {
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M5.63604 19.636C7.32387 17.9482 9.61305 17 12 17C12.4664 17 12.9292 17.0362 13.3844 17.1071C13.1338 18.0289 13 18.9988 13 20C13 25.0351 16.383 29.2801 21 30.5859V31H3V26C3 23.6131 3.94821 21.3239 5.63604 19.636ZM14.7779 13.1573C13.9556 13.7068 12.9889 14 12 14C10.6739 14 9.40215 13.4732 8.46447 12.5355C7.52678 11.5979 7 10.3261 7 9C7 8.0111 7.29324 7.0444 7.84265 6.22215C8.39206 5.39991 9.17295 4.75904 10.0866 4.3806C11.0002 4.00217 12.0055 3.90315 12.9755 4.09608C13.9454 4.289 14.8363 4.76521 15.5355 5.46447C16.2348 6.16373 16.711 7.05465 16.9039 8.02455C17.0969 8.99446 16.9978 9.99979 16.6194 10.9134C16.241 11.827 15.6001 12.6079 14.7779 13.1573Z",
+                  fill: "currentColor",
+                }),
+                (0, _.jsx)("path", {
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M24 28C28.4183 28 32 24.4183 32 20C32 15.5817 28.4183 12 24 12C19.5817 12 16 15.5817 16 20C16 24.4183 19.5817 28 24 28ZM22.5 21.5V26H25.5V21.5H30V18.5H25.5V14H22.5V18.5H18V21.5H22.5Z",
+                  fill: "currentColor",
+                }),
+              ],
+            })
+          : (0, _.jsxs)("svg", {
+              version: "1.1",
+              _: "Layer_1",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_AddFriend",
+              _: "0px",
+              _: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+              children: [
+                (0, _.jsx)("g", {
                   className: "friendHead",
                   transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-                },
-                _.createElement("circle", {
-                  _: "86.296",
-                  _: "47.419",
-                  _: "33.526",
-                  fill: "currentcolor",
+                  children: (0, _.jsx)("circle", {
+                    _: "86.296",
+                    _: "47.419",
+                    _: "33.526",
+                    fill: "currentcolor",
+                  }),
                 }),
-              ),
-              _.createElement("path", {
-                className: "friendBody",
-                _: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
-                fill: "currentColor",
-              }),
-              _.createElement("path", {
-                className: "plusCircle",
-                _: "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z",
-                fill: "currentColor",
-              }),
-            );
+                (0, _.jsx)("path", {
+                  className: "friendBody",
+                  _: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
+                  fill: "currentColor",
+                }),
+                (0, _.jsx)("path", {
+                  className: "plusCircle",
+                  _: "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z",
+                  fill: "currentColor",
+                }),
+              ],
+            });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_4",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_FriendRequest",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_4",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_FriendRequest",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("g", {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-            },
-            _.createElement("circle", {
-              _: "85.923",
-              _: "47.419",
-              _: "33.526",
+              children: (0, _.jsx)("circle", {
+                _: "85.923",
+                _: "47.419",
+                _: "33.526",
+              }),
             }),
-          ),
-          _.createElement("path", {
-            className: "friendBody",
-            _: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
-          }),
-          _.createElement("path", {
-            className: "friendBodyFull",
-            _: "M176.504,217.922v-42.624c0-35.443-17.002-64.217-57.483-64.217H106.96h-1.017H94.898 c-40.48,0.001-57.484,28.774-57.484,64.217v42.624c0,0,0,22.197,69.544,22.197C177.521,240.121,176.504,217.922,176.504,217.922z",
-          }),
-          _.createElement("path", {
-            className: "friendArm",
-            _: "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z",
-          }),
-          _.createElement("path", {
-            className: "redCircle",
-            _: "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z",
-          }),
-        );
+            (0, _.jsx)("path", {
+              className: "friendBody",
+              _: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
+            }),
+            (0, _.jsx)("path", {
+              className: "friendBodyFull",
+              _: "M176.504,217.922v-42.624c0-35.443-17.002-64.217-57.483-64.217H106.96h-1.017H94.898 c-40.48,0.001-57.484,28.774-57.484,64.217v42.624c0,0,0,22.197,69.544,22.197C177.521,240.121,176.504,217.922,176.504,217.922z",
+            }),
+            (0, _.jsx)("path", {
+              className: "friendArm",
+              _: "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z",
+            }),
+            (0, _.jsx)("path", {
+              className: "redCircle",
+              _: "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_5",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Paperclip",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_5",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Paperclip",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             fill: "none",
             strokeWidth: "10",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
             _: "M167.768,62.647 l-0.012,123.052c0,24.729-19.334,44.856-43.096,44.866c-23.765-0.006-43.099-20.134-43.096-44.872L81.557,48.851 c0-15.345,14.483-27.827,29.83-27.83c15.342,0.003,27.827,12.488,27.833,27.833l-0.002,139.245 c0.003,6.376-8.546,12.925-14.925,12.925c0,0-13.929-0.166-13.929-12.928l0.003-124.839",
           }),
-        );
+        });
       }
       function _(_) {
         const { color: _ = "#fff", ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Check",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            strokeWidth: "24",
-            stroke: _,
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
-            ...__webpack_require__,
-          },
-          _.createElement("polyline", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Check",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          strokeWidth: "24",
+          stroke: _,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeMiterlimit: "10",
+          ...__webpack_require__,
+          children: (0, _.jsx)("polyline", {
             fill: "none",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
           }),
-        );
+        });
       }
       function _(_) {
         let _ = _.highlightColor || "#00ccff",
@@ -75797,180 +74669,167 @@
         const [_, _] = (0, _._)(),
           [_, _] = (0, _._)(),
           [_] = (0, _.useState)(Math.random().toString());
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DialogCheck",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "linearGradient",
-              {
-                _: _,
-                _: "0%",
-                _: "0%",
-                _: "100%",
-                _: "100%",
-              },
-              _.createElement("stop", {
-                offset: "0%",
-                stopColor: _,
-              }),
-              _.createElement("stop", {
-                offset: "100%",
-                stopColor: _,
-              }),
-            ),
-            _.createElement(
-              "filter",
-              {
-                _: _,
-                _: "0",
-                _: "0",
-                width: "200%",
-                height: "200%",
-              },
-              _.createElement("feOffset", {
-                result: "offOut",
-                _: "SourceAlpha",
-                _: "20",
-                _: "20",
-              }),
-              _.createElement("feGaussianBlur", {
-                result: "blurOut",
-                _: "offOut",
-                stdDeviation: "10",
-              }),
-              _.createElement("feBlend", {
-                _: "SourceGraphic",
-                in2: "blurOut",
-                mode: "normal",
-              }),
-            ),
-          ),
-          _.createElement("path", {
-            fill: "none",
-            stroke: _,
-            strokeWidth: "24",
-            strokeLinecap: "round",
-            strokeLinejoin: "miter",
-            strokeMiterlimit: "10",
-            _: "M206.5,45.25L95,210.75l-45.5-63",
-            strokeDasharray: "365.19 365.19",
-            strokeDashoffset: "0.00",
-          }),
-          _.createElement("path", {
-            fill: "none",
-            opacity: ".2",
-            filter: _,
-            stroke: _,
-            strokeWidth: "24",
-            strokeLinecap: "round",
-            strokeLinejoin: "miter",
-            strokeMiterlimit: "10",
-            _: "M206.5,45.25L95,210.75l-45.5-63",
-            strokeDasharray: "365.19 365.19",
-            strokeDashoffset: "0.00",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_DialogCheck",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsxs)("defs", {
+              children: [
+                (0, _.jsxs)("linearGradient", {
+                  _: _,
+                  _: "0%",
+                  _: "0%",
+                  _: "100%",
+                  _: "100%",
+                  children: [
+                    (0, _.jsx)("stop", {
+                      offset: "0%",
+                      stopColor: _,
+                    }),
+                    (0, _.jsx)("stop", {
+                      offset: "100%",
+                      stopColor: _,
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("filter", {
+                  _: _,
+                  _: "0",
+                  _: "0",
+                  width: "200%",
+                  height: "200%",
+                  children: [
+                    (0, _.jsx)("feOffset", {
+                      result: "offOut",
+                      _: "SourceAlpha",
+                      _: "20",
+                      _: "20",
+                    }),
+                    (0, _.jsx)("feGaussianBlur", {
+                      result: "blurOut",
+                      _: "offOut",
+                      stdDeviation: "10",
+                    }),
+                    (0, _.jsx)("feBlend", {
+                      _: "SourceGraphic",
+                      in2: "blurOut",
+                      mode: "normal",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: _,
+              strokeWidth: "24",
+              strokeLinecap: "round",
+              strokeLinejoin: "miter",
+              strokeMiterlimit: "10",
+              _: "M206.5,45.25L95,210.75l-45.5-63",
+              strokeDasharray: "365.19 365.19",
+              strokeDashoffset: "0.00",
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              opacity: ".2",
+              filter: _,
+              stroke: _,
+              strokeWidth: "24",
+              strokeLinecap: "round",
+              strokeLinejoin: "miter",
+              strokeMiterlimit: "10",
+              _: "M206.5,45.25L95,210.75l-45.5-63",
+              strokeDasharray: "365.19 365.19",
+              strokeDashoffset: "0.00",
+            }),
+          ],
+        });
       }
       function _(_) {
         return (0, _._)()
-          ? _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                className: "SVGIcon_Button SVGIcon_Bell",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+          ? (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_Bell",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 _: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24ZM18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
                 fill: "currentColor",
               }),
-            )
-          : _.createElement(
-              "svg",
-              {
-                version: "1.1",
-                _: "base",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: "SVGIcon_Button SVGIcon_Bell",
-                _: "0px",
-                _: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "0 0 256 256",
-              },
-              _.createElement("path", {
+            })
+          : (0, _.jsx)("svg", {
+              version: "1.1",
+              _: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_Bell",
+              _: "0px",
+              _: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+              children: (0, _.jsx)("path", {
                 _: "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
               }),
-            );
+            });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Maximize",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("rect", {
-            _: "24",
-            _: "42.167",
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "18",
-            strokeMiterlimit: "10",
-            width: "208",
-            height: "171.667",
-          }),
-          _.createElement("line", {
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "42",
-            strokeMiterlimit: "10",
-            _: "24",
-            _: "54.01",
-            _: "232",
-            _: "54.01",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Maximize",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "24",
+              _: "42.167",
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "18",
+              strokeMiterlimit: "10",
+              width: "208",
+              height: "171.667",
+            }),
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "42",
+              strokeMiterlimit: "10",
+              _: "24",
+              _: "54.01",
+              _: "232",
+              _: "54.01",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Minimize",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("line", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Minimize",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("line", {
             fill: "none",
             stroke: "currentColor",
             strokeWidth: "18",
@@ -75980,170 +74839,159 @@
             _: "232",
             _: "209.01",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Restore",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("polyline", {
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "12",
-            strokeMiterlimit: "10",
-            points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
-          }),
-          _.createElement("rect", {
-            _: "24",
-            _: "90.861",
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "18",
-            strokeMiterlimit: "10",
-            width: "149",
-            height: "122.973",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Restore",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("polyline", {
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "12",
+              strokeMiterlimit: "10",
+              points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
+            }),
+            (0, _.jsx)("rect", {
+              _: "24",
+              _: "90.861",
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "18",
+              strokeMiterlimit: "10",
+              width: "149",
+              height: "122.973",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Trade",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            _: "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z",
-          }),
-          _.createElement("path", {
-            _: "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Trade",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            style: {
-              overflow: "visible",
-              width: "100%",
-              height: "100%",
-              maxWidth: "320px",
-              maxHeight: "320px",
-            },
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          style: {
+            overflow: "visible",
+            width: "100%",
+            height: "100%",
+            maxWidth: "320px",
+            maxHeight: "320px",
           },
-          _.createElement(
-            "g",
-            {
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("g", {
               className: "base",
-            },
-            _.createElement("path", {
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              _: "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909",
+              children: (0, _.jsx)("path", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                _: "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909",
+              }),
             }),
-          ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               className: "lines",
-            },
-            _.createElement("path", {
-              className: "line1",
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              _: "M128,68.12v137.197",
+              children: [
+                (0, _.jsx)("path", {
+                  className: "line1",
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  _: "M128,68.12v137.197",
+                }),
+                (0, _.jsx)("path", {
+                  className: "line2",
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  _: "M83.613,68.12 l4.035,137.197",
+                }),
+                (0, _.jsx)("path", {
+                  className: "line3",
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  _: "M172.387,68.12 l-4.035,137.197",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              className: "line2",
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              _: "M83.613,68.12 l4.035,137.197",
-            }),
-            _.createElement("path", {
-              className: "line3",
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              _: "M172.387,68.12 l-4.035,137.197",
-            }),
-          ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               className: "lid",
-            },
-            _.createElement("path", {
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              _: "M27.121,38.577H228.88",
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  _: "M27.121,38.577H228.88",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "none",
+                  strokeWidth: "10",
+                  _: "M87.648,38.577l4.319-10.796c2.072-5.181,8.292-9.379,13.84-9.379h44.386 c5.572,0,11.761,4.18,13.841,9.379l4.319,10.796",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              fill: "none",
-              strokeWidth: "10",
-              _: "M87.648,38.577l4.319-10.796c2.072-5.181,8.292-9.379,13.84-9.379h44.386 c5.572,0,11.761,4.18,13.841,9.379l4.319,10.796",
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { angle: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            style: {
-              transform: `rotate(${_.angle}deg)`,
-            },
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_FlatArrow",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            ...__webpack_require__,
+        return (0, _.jsx)("svg", {
+          style: {
+            transform: `rotate(${_.angle}deg)`,
           },
-          _.createElement("polygon", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_FlatArrow",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          ...__webpack_require__,
+          children: (0, _.jsx)("polygon", {
             points: "13.913,141 128,59 242.087,141 ",
             fill: _.fill || "#ffffff",
           }),
-        );
+        });
       }
       function _(_) {
         let {
@@ -76155,101 +75003,93 @@
         return (0, _._)({
           bSuppressAssert: !0,
         })
-          ? _.createElement(
-              "svg",
-              {
-                className: (0, _._)("SVGIcon_Button", "SVGIcon_FriendIcon", _),
-                viewBox: "0 0 36 36",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                ..._,
-              },
-              _.createElement("path", {
-                _: "M18 17C15.6131 17 13.3239 17.9482 11.636 19.636C9.94821 21.3239 9 23.6131 9 26V31H27V26C27 23.6131 26.0518 21.3239 24.364 19.636C22.6761 17.9482 20.3869 17 18 17ZM18 14C18.9889 14 19.9556 13.7068 20.7779 13.1573C21.6001 12.6079 22.241 11.827 22.6194 10.9134C22.9978 9.99979 23.0969 8.99446 22.9039 8.02455C22.711 7.05465 22.2348 6.16373 21.5355 5.46447C20.8363 4.76521 19.9454 4.289 18.9755 4.09608C18.0055 3.90315 17.0002 4.00217 16.0866 4.3806C15.173 4.75904 14.3921 5.39991 13.8427 6.22215C13.2932 7.0444 13 8.0111 13 9C13 10.3261 13.5268 11.5979 14.4645 12.5355C15.4021 13.4732 16.6739 14 18 14Z",
-                fill: "currentColor",
-              }),
-              _.createElement("path", {
-                className: "WavingArm",
-                opacity: __webpack_require__ ? "1" : "0",
-                _: "M4.67541 11.8555C5.6007 10.8308 7.18156 10.7501 8.20635 11.6754L18.9515 21.3773L15.6007 25.0884L4.85556 15.3865C3.83077 14.4612 3.75011 12.8803 4.67541 11.8555V11.8555Z",
-                fill: "currentColor",
-                strokeWidth: "0",
-              }),
-              _.createElement("path", {
-                opacity: __webpack_require__ ? "1" : "0",
-                _: "M32.3573 11.8876C33.2626 12.93 33.1515 14.509 32.109 15.4144L23.2784 23.083L20 19.3078L28.8305 11.6392C29.873 10.7339 31.452 10.8451 32.3573 11.8876Z",
-                fill: "currentColor",
-                strokeWidth: "0",
-              }),
-            )
-          : _.createElement(
-              "svg",
-              {
-                version: "1.1",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: (0, _._)(
-                  "SVGIcon_Button",
-                  "SVGIcon_FriendIcon",
-                  _ ? " SVGIcon_FriendIcon_Pending" : "",
-                  _,
-                ),
-                _: "0px",
-                _: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "0 0 256 256",
-              },
-              _.createElement(
-                "g",
-                {
-                  className: "Outline",
-                },
-                _.createElement(
-                  "g",
-                  {
-                    transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-                  },
-                  _.createElement("path", {
-                    _: "M102.239,90.394c-22.556,0-40.906-18.351-40.906-40.906c0-22.556,18.35-40.906,40.906-40.906s40.906,18.35,40.906,40.906 C143.145,72.043,124.795,90.394,102.239,90.394z",
-                  }),
-                ),
-                _.createElement("path", {
-                  _: "M127.453,250.212c-30.208,0-52.086-4.188-65.028-12.45c-12.507-7.983-13.141-17.484-13.141-19.308v-41.781 c0-20.554,5.356-38.104,15.489-50.754c11.63-14.519,29.216-22.193,50.858-22.194h23.646c21.643,0,39.229,7.674,50.858,22.193 c10.133,12.65,15.488,30.201,15.488,50.754v41.751c0.011,2.202-0.586,8.058-6.43,14.175 c-11.164,11.687-35.301,17.613-71.732,17.613C127.458,250.212,127.458,250.212,127.453,250.212z",
-                }),
-                _.createElement("path", {
-                  className: "WavingArm",
-                  opacity: _ ? "1" : "0",
-                  _: "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z",
-                }),
-              ),
-              _.createElement(
-                "g",
-                {
-                  className: "foreground",
-                },
-                _.createElement(
-                  "g",
-                  {
-                    transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-                  },
-                  _.createElement("circle", {
-                    fill: "currentColor",
-                    _: "102.239",
-                    _: "49.488",
-                    _: "33.446",
-                  }),
-                ),
-                _.createElement("path", {
+          ? (0, _.jsxs)("svg", {
+              className: (0, _._)("SVGIcon_Button", "SVGIcon_FriendIcon", _),
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              ..._,
+              children: [
+                (0, _.jsx)("path", {
+                  _: "M18 17C15.6131 17 13.3239 17.9482 11.636 19.636C9.94821 21.3239 9 23.6131 9 26V31H27V26C27 23.6131 26.0518 21.3239 24.364 19.636C22.6761 17.9482 20.3869 17 18 17ZM18 14C18.9889 14 19.9556 13.7068 20.7779 13.1573C21.6001 12.6079 22.241 11.827 22.6194 10.9134C22.9978 9.99979 23.0969 8.99446 22.9039 8.02455C22.711 7.05465 22.2348 6.16373 21.5355 5.46447C20.8363 4.76521 19.9454 4.289 18.9755 4.09608C18.0055 3.90315 17.0002 4.00217 16.0866 4.3806C15.173 4.75904 14.3921 5.39991 13.8427 6.22215C13.2932 7.0444 13 8.0111 13 9C13 10.3261 13.5268 11.5979 14.4645 12.5355C15.4021 13.4732 16.6739 14 18 14Z",
                   fill: "currentColor",
-                  _: "M195.624,218.454v-41.781c0-34.743-16.666-62.948-56.347-62.948h-11.822h-0.997h-10.826 c-39.68,0.001-56.348,28.205-56.348,62.948v41.781c0,0,0,21.758,68.169,21.758C196.62,240.214,195.624,218.454,195.624,218.454z",
                 }),
-                _.createElement("path", {
+                (0, _.jsx)("path", {
                   className: "WavingArm",
-                  opacity: _ ? "1" : "0",
-                  _: "M41.167,76.833c6.53-0.734,39.348,39.127,50.007,47.647c10.659,8.52,21.327,16.686,15.16,25.353 s-20.646,16.74-36.167,2.5 s-48.516-48.801-47.167-54S31.599,77.909,41.167,76.833z",
+                  opacity: __webpack_require__ ? "1" : "0",
+                  _: "M4.67541 11.8555C5.6007 10.8308 7.18156 10.7501 8.20635 11.6754L18.9515 21.3773L15.6007 25.0884L4.85556 15.3865C3.83077 14.4612 3.75011 12.8803 4.67541 11.8555V11.8555Z",
+                  fill: "currentColor",
+                  strokeWidth: "0",
                 }),
+                (0, _.jsx)("path", {
+                  opacity: __webpack_require__ ? "1" : "0",
+                  _: "M32.3573 11.8876C33.2626 12.93 33.1515 14.509 32.109 15.4144L23.2784 23.083L20 19.3078L28.8305 11.6392C29.873 10.7339 31.452 10.8451 32.3573 11.8876Z",
+                  fill: "currentColor",
+                  strokeWidth: "0",
+                }),
+              ],
+            })
+          : (0, _.jsxs)("svg", {
+              version: "1.1",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: (0, _._)(
+                "SVGIcon_Button",
+                "SVGIcon_FriendIcon",
+                _ ? " SVGIcon_FriendIcon_Pending" : "",
+                _,
               ),
-            );
+              _: "0px",
+              _: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+              children: [
+                (0, _.jsxs)("g", {
+                  className: "Outline",
+                  children: [
+                    (0, _.jsx)("g", {
+                      transform:
+                        "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
+                      children: (0, _.jsx)("path", {
+                        _: "M102.239,90.394c-22.556,0-40.906-18.351-40.906-40.906c0-22.556,18.35-40.906,40.906-40.906s40.906,18.35,40.906,40.906 C143.145,72.043,124.795,90.394,102.239,90.394z",
+                      }),
+                    }),
+                    (0, _.jsx)("path", {
+                      _: "M127.453,250.212c-30.208,0-52.086-4.188-65.028-12.45c-12.507-7.983-13.141-17.484-13.141-19.308v-41.781 c0-20.554,5.356-38.104,15.489-50.754c11.63-14.519,29.216-22.193,50.858-22.194h23.646c21.643,0,39.229,7.674,50.858,22.193 c10.133,12.65,15.488,30.201,15.488,50.754v41.751c0.011,2.202-0.586,8.058-6.43,14.175 c-11.164,11.687-35.301,17.613-71.732,17.613C127.458,250.212,127.458,250.212,127.453,250.212z",
+                    }),
+                    (0, _.jsx)("path", {
+                      className: "WavingArm",
+                      opacity: _ ? "1" : "0",
+                      _: "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("g", {
+                  className: "foreground",
+                  children: [
+                    (0, _.jsx)("g", {
+                      transform:
+                        "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
+                      children: (0, _.jsx)("circle", {
+                        fill: "currentColor",
+                        _: "102.239",
+                        _: "49.488",
+                        _: "33.446",
+                      }),
+                    }),
+                    (0, _.jsx)("path", {
+                      fill: "currentColor",
+                      _: "M195.624,218.454v-41.781c0-34.743-16.666-62.948-56.347-62.948h-11.822h-0.997h-10.826 c-39.68,0.001-56.348,28.205-56.348,62.948v41.781c0,0,0,21.758,68.169,21.758C196.62,240.214,195.624,218.454,195.624,218.454z",
+                    }),
+                    (0, _.jsx)("path", {
+                      className: "WavingArm",
+                      opacity: _ ? "1" : "0",
+                      _: "M41.167,76.833c6.53-0.734,39.348,39.127,50.007,47.647c10.659,8.52,21.327,16.686,15.16,25.353 s-20.646,16.74-36.167,2.5 s-48.516-48.801-47.167-54S31.599,77.909,41.167,76.833z",
+                    }),
+                  ],
+                }),
+              ],
+            });
       }
       function _(_) {
         const _ = (0, _._)(
@@ -76257,159 +75097,142 @@
           "SVGIcon_SteamLogo",
           _ && _.className,
         );
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            fill: "#FFFFFF",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 256 256",
-            ..._,
-            className: _,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          fill: "#FFFFFF",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 256 256",
+          ..._,
+          className: _,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_5",
-            className: (0, _._)(
-              "SVGIcon_Button SVGIcon_ChatBubble",
-              _().FlipInRTL,
-            ),
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 64 64",
-            role: "presentation",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_5",
+          className: (0, _._)(
+            "SVGIcon_Button SVGIcon_ChatBubble",
+            _().FlipInRTL,
+          ),
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 64 64",
+          role: "presentation",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 100 100",
-            _: "0px",
-            _: "0px",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 100 100",
+          _: "0px",
+          _: "0px",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M2 4V20V24L7 20H24V4H2ZM34 12V32L29 28H12V24H28V12H34Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M33.78 19.22L19.22 33.78L4 18.56V4H18.56L33.78 19.22Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _,
-            ...__webpack_require__,
-            width: "50",
-            height: "50",
-            viewBox: "0 0 50 50",
-            fill: "none",
-          },
-          _.createElement("circle", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _,
+          ...__webpack_require__,
+          width: "50",
+          height: "50",
+          viewBox: "0 0 50 50",
+          fill: "none",
+          children: (0, _.jsx)("circle", {
             fill: "currentColor",
             _: "25",
             _: "25",
             _: "25",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "4 1 24 30",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M16.2114 23.9054C18.1701 23.9054 19.7587 25.494 19.7587 27.4527C19.7587 29.4114 18.1701 31 16.2114 31C14.2526 31 12.6641 29.4114 12.6641 27.4527C12.6641 25.494 14.2527 23.9054 16.2114 23.9054Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M7.01091 9.7964C7.11325 7.49343 8.06952 5.32707 9.69945 3.69779C11.4318 1.96544 13.7608 1 16.2108 1C18.6611 1 20.9899 1.96534 22.7222 3.69779C24.4545 5.42937 25.42 7.75911 25.42 10.2092C25.42 11.8776 24.9663 13.5012 24.109 14.9322C23.2523 16.3624 22.0178 17.5368 20.5477 18.324C20.1242 18.5512 19.761 18.8723 19.5136 19.2866C19.2654 19.7001 19.1616 20.179 19.1616 20.6579V21.3933C19.1616 21.6584 18.9457 21.8743 18.6815 21.8743H13.7404C13.4761 21.8743 13.2602 21.6584 13.2602 21.3933V20.6579C13.2602 19.1043 13.6626 17.5963 14.4611 16.2636C15.2603 14.928 16.4065 13.8673 17.7764 13.1333C18.3057 12.85 18.7488 12.4238 19.0573 11.9085C19.365 11.394 19.5178 10.8078 19.5178 10.2092C19.5178 9.32859 19.1722 8.49295 18.5496 7.87046C17.9264 7.2479 17.0914 6.90227 16.2109 6.90227C15.3303 6.90227 14.4947 7.24788 13.8722 7.87046C13.312 8.43062 12.972 9.16814 12.9131 9.9582L12.8963 10.1818C12.8774 10.4363 12.6643 10.6313 12.4091 10.6271L7.47227 10.5422C7.3377 10.5394 7.22265 10.4889 7.13086 10.3907C7.03828 10.2926 6.99482 10.1748 7.00049 10.0402L7.01104 9.79628L7.01091 9.7964Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "4 1 24 30",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M16.2114 23.9054C18.1701 23.9054 19.7587 25.494 19.7587 27.4527C19.7587 29.4114 18.1701 31 16.2114 31C14.2526 31 12.6641 29.4114 12.6641 27.4527C12.6641 25.494 14.2527 23.9054 16.2114 23.9054Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M7.01091 9.7964C7.11325 7.49343 8.06952 5.32707 9.69945 3.69779C11.4318 1.96544 13.7608 1 16.2108 1C18.6611 1 20.9899 1.96534 22.7222 3.69779C24.4545 5.42937 25.42 7.75911 25.42 10.2092C25.42 11.8776 24.9663 13.5012 24.109 14.9322C23.2523 16.3624 22.0178 17.5368 20.5477 18.324C20.1242 18.5512 19.761 18.8723 19.5136 19.2866C19.2654 19.7001 19.1616 20.179 19.1616 20.6579V21.3933C19.1616 21.6584 18.9457 21.8743 18.6815 21.8743H13.7404C13.4761 21.8743 13.2602 21.6584 13.2602 21.3933V20.6579C13.2602 19.1043 13.6626 17.5963 14.4611 16.2636C15.2603 14.928 16.4065 13.8673 17.7764 13.1333C18.3057 12.85 18.7488 12.4238 19.0573 11.9085C19.365 11.394 19.5178 10.8078 19.5178 10.2092C19.5178 9.32859 19.1722 8.49295 18.5496 7.87046C17.9264 7.2479 17.0914 6.90227 16.2109 6.90227C15.3303 6.90227 14.4947 7.24788 13.8722 7.87046C13.312 8.43062 12.972 9.16814 12.9131 9.9582L12.8963 10.1818C12.8774 10.4363 12.6643 10.6313 12.4091 10.6271L7.47227 10.5422C7.3377 10.5394 7.22265 10.4889 7.13086 10.3907C7.03828 10.2926 6.99482 10.1748 7.00049 10.0402L7.01104 9.79628L7.01091 9.7964Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -76418,6 +75241,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       _.createContext({});
@@ -76440,13 +75264,10 @@
               __webpack_require__.depth,
             ],
           );
-        return _.createElement(
-          _._,
-          {
-            ..._,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: _,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -77502,7 +76323,6 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.Debug = 0)] = "Debug"),
@@ -77554,14 +76374,13 @@
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
         static s_Singleton = null;
-        m_Storage = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
         m_SettingsChangedCallback = new _._();
-        m_bLoading = !1;
+        m_bLoading = !0;
         constructor() {
-          (this.m_Storage = new _._()), this.LoadSettings();
+          this.LoadSettings();
         }
         LogAsLogManager(..._) {
           _(
@@ -77574,13 +76393,14 @@
           );
         }
         async LoadSettings() {
-          (this.m_bLoading = !0),
-            (this.m_bIncludeBacktraceInLog = !!(await this.m_Storage?.GetObject(
-              _.k_IncludeBacktraceInLog_StorageKey,
-            )));
-          const _ = await this.m_Storage?.GetObject(
-            _.k_EnabledLogNames_StorageKey,
+          const _ = (_) => {
+            const _ = localStorage.getItem(_);
+            return _ ? JSON.parse(_) : void 0;
+          };
+          this.m_bIncludeBacktraceInLog = !!_(
+            _.k_IncludeBacktraceInLog_StorageKey,
           );
+          const _ = _(_.k_EnabledLogNames_StorageKey);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -77592,13 +76412,13 @@
           (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
         }
         async SaveSettings() {
-          await this.m_Storage?.StoreObject(
+          localStorage.setItem(
             _.k_EnabledLogNames_StorageKey,
-            Array.from(this.m_setEnabledDebugLogs),
+            JSON.stringify(Array.from(this.m_setEnabledDebugLogs)),
           ),
-            await this.m_Storage?.StoreObject(
+            localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
-              this.m_bIncludeBacktraceInLog,
+              JSON.stringify(this.m_bIncludeBacktraceInLog),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -78375,7 +77195,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 6806), _((_._ = _));
+      return (_ = 4249), _((_._ = _));
       var _;
     });
     _._();

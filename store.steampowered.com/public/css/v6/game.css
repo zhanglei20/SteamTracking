@@ -3100,10 +3100,6 @@ img.package_header {
 	color: #A68C62;
 }
 
-.queue_overflow_ctn {
-	overflow: hidden;
-}
-
 .queue_ctn {
 	position: relative;
     width: 940px;
@@ -3123,8 +3119,8 @@ img.package_header {
 	gap: 6px;
 }
 @media screen and (max-width: 1330px ) {
-	html.responsive .next_in_queue_area {
-		width: 177px;
+	html .next_in_queue_area {
+		width: 200px;
 		height: 32px;
 	}
 }
@@ -3194,6 +3190,7 @@ img.package_header {
 .btn_next_in_queue:hover .next_in_queue_content {
 	background: linear-gradient( to right, #A38855, #EFC266);
 }
+
 
 
 .mature_content_notice {
@@ -3300,11 +3297,11 @@ img.package_header {
 		width: auto;
 	}
 }
-@media screen and (max-width: 600px)
+@media screen and (max-width: 700px)
 {
     html.responsive .next_in_queue_area {
         position: absolute;
-        right: 19px;
+        right: 7px;
         top: 53px;
     }
     html.responsive .queue_controls_description {
@@ -3370,6 +3367,9 @@ img.package_header {
     color: #67c1f5;
 }
 .queue_controls_description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	color: #ffcc6a;
 	font-size: 12px;
 	padding: 6px 225px 6px 16px;
@@ -6745,7 +6745,7 @@ body.v6 .page_content.notes {
     font-size: 10px;
     padding: 1px 3px;
     background: #bf5609;
-	color: #111111;
+    color: #111111;
 }
 .open_in_steam_body {
 	display: flex;

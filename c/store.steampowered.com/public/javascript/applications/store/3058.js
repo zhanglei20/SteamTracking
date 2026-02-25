@@ -181,6 +181,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
@@ -192,81 +193,69 @@
             _ = (_) => {
               __webpack_require__(_), _();
             };
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                onEscKeypress: _,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, null, (0, _._)("#ClanImageChooser_Title")),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "p",
-                      null,
-                      (0, _._)("#ClanImageChooser_Desc"),
-                    ),
-                    _.createElement(_._, {
-                      placeholder: (0, _._)("#ClanImageChooser_Search"),
-                      value: _,
-                      onChange: (_) => _(_.currentTarget.value),
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              onEscKeypress: _,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#ClanImageChooser_Title"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)("p", {
+                          children: (0, _._)("#ClanImageChooser_Desc"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          placeholder: (0, _._)("#ClanImageChooser_Search"),
+                          value: _,
+                          onChange: (_) => _(_.currentTarget.value),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.ImagesOuterContainer,
+                          children: _
+                            ? (0, _.jsx)(_._, {
+                                size: "medium",
+                                string: (0, _._)("#Loading"),
+                              })
+                            : Boolean(_.length > 0)
+                              ? _.map((_) =>
+                                  (0, _.jsx)(
+                                    _,
+                                    {
+                                      clanImage: _,
+                                      searchStringHilight: _,
+                                      fnImageClick: _,
+                                    },
+                                    "ci" + _.image_hash,
+                                  ),
+                                )
+                              : Boolean(0 == _.trim().length)
+                                ? (0, _.jsx)("div", {
+                                    children: (0, _._)(
+                                      "#ClanImageChooser_None",
+                                    ),
+                                  })
+                                : (0, _.jsx)("div", {
+                                    children: (0, _._)(
+                                      "#EventCalendar_GameSearch_NoneFound",
+                                    ),
+                                  }),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ImagesOuterContainer,
-                      },
-                      _
-                        ? _.createElement(_._, {
-                            size: "medium",
-                            string: (0, _._)("#Loading"),
-                          })
-                        : Boolean(_.length > 0)
-                          ? _.map((_) =>
-                              _.createElement(_, {
-                                key: "ci" + _.image_hash,
-                                clanImage: _,
-                                searchStringHilight: _,
-                                fnImageClick: _,
-                              }),
-                            )
-                          : Boolean(0 == _.trim().length)
-                            ? _.createElement(
-                                "div",
-                                null,
-                                (0, _._)("#ClanImageChooser_None"),
-                              )
-                            : _.createElement(
-                                "div",
-                                null,
-                                (0, _._)("#EventCalendar_GameSearch_NoneFound"),
-                              ),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_._, {
                       onClick: _,
-                    },
-                    (0, _._)("#Button_Cancel"),
-                  ),
-                ),
-              ),
-            ),
-          );
+                      children: (0, _._)("#Button_Cancel"),
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          });
         },
         _ = (_) => {
           const {
@@ -276,27 +265,23 @@
           } = _;
           let _ = _.file_name ? _.file_name : "",
             _ = _(__webpack_require__, _, String(_.imageid), _.Hilight);
-          return _.createElement(
-            "div",
-            {
-              className: _.ImageContainer,
-            },
-            _.createElement("div", {
-              className: _.Image,
-              style: {
-                backgroundImage: `url( '${_.thumb_url}' )`,
-              },
-              onDoubleClick: () => _(_),
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.ImageContainer,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.Image,
+                style: {
+                  backgroundImage: `url( '${_.thumb_url}' )`,
+                },
+                onDoubleClick: () => _(_),
+              }),
+              (0, _.jsx)("div", {
                 className: _.ImageFilename,
                 title: _,
-              },
-              _,
-            ),
-          );
+                children: _,
+              }),
+            ],
+          });
         };
       function _(_, _, _, _) {
         let _ = [];
@@ -306,46 +291,46 @@
             let _ = _.indexOf(_, _);
             if (_ < 0) {
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: _ + "_" + String(_),
+                    children: _.substring(_),
                   },
-                  _.substring(_),
+                  _ + "_" + String(_),
                 ),
               );
               break;
             }
             _ < _ &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: _ + "_" + String(_),
+                    children: _.substring(_, _),
                   },
-                  _.substring(_, _),
+                  _ + "_" + String(_),
                 ),
               ),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: _ + "_" + String(_),
                     className: _,
+                    children: _.substr(_, _.length),
                   },
-                  _.substr(_, _.length),
+                  _ + "_" + String(_),
                 ),
               ),
               (_ = _ + _.length);
           }
         } else
           _.push(
-            _.createElement(
+            (0, _.jsx)(
               "span",
               {
-                key: _ + "_null",
+                children: _,
               },
-              _,
+              _ + "_null",
             ),
           );
         return _;
@@ -357,6 +342,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -379,13 +365,13 @@
           } = this.props;
           this.props.bAllowUnsetOption &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 "option",
                 {
-                  key: "langpicker_unset",
                   value: -1,
+                  children: (0, _._)("#language_selection_none"),
                 },
-                (0, _._)("#language_selection_none"),
+                "langpicker_unset",
               ),
             );
           let _ = new Array();
@@ -412,18 +398,18 @@
           for (const _ of _) {
             _.bSupported != _ &&
               (_.push(
-                _.createElement(
+                (0, _.jsx)(
                   "option",
                   {
-                    key: _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
                     className: _().SupportedGroupLabel,
                     disabled: !0,
+                    children: (0, _._)(
+                      _.bSupported
+                        ? "#LanguageGroup_Supported"
+                        : "#LanguageGroup_Unsupported",
+                    ),
                   },
-                  (0, _._)(
-                    _.bSupported
-                      ? "#LanguageGroup_Supported"
-                      : "#LanguageGroup_Unsupported",
-                  ),
+                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
                 ),
               ),
               (_ = _.bSupported));
@@ -442,10 +428,9 @@
                   }),
               ))),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "option",
                   {
-                    key: "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
                     value: _.eLang,
                     className: (0, _._)(
                       {
@@ -455,8 +440,9 @@
                         ? _().SupportedLanguage
                         : _().UnsupportedLanguage,
                     ),
+                    children: _,
                   },
-                  _,
+                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
                 ),
               );
           }
@@ -475,21 +461,15 @@
             strTooltip: __webpack_require__,
           } = this.props;
           let _ = this.GenerateLanguageOptions();
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: __webpack_require__,
-            },
-            _.createElement(
-              "select",
-              {
-                value: _,
-                onChange: this.OnLanguageChange,
-                disabled: _,
-              },
-              _,
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            toolTipContent: __webpack_require__,
+            children: (0, _.jsx)("select", {
+              value: _,
+              onChange: this.OnLanguageChange,
+              disabled: _,
+              children: _,
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnLanguageChange", null),
@@ -502,6 +482,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -527,12 +508,9 @@
         const _ = _.createRef(),
           [__webpack_require__, _] = _.useState(""),
           _ = _.createRef();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().FlexRowContainer, _().linkField),
               onClick: (_) => {
                 _.current &&
@@ -548,50 +526,42 @@
                         console.error("Failed to copy link to clipboard:", _);
                     });
               },
-            },
-            _.createElement(
-              "span",
-              {
-                className: _().LinkInputLabel,
-              },
-              (0, _._)(
-                _.labelOverride ? _.labelOverride : "#EventDisplay_Share_Link",
-              ),
-            ),
-            _.createElement("textarea", {
-              className: _().LinkInput,
-              ref: _,
-              value: _.eventLink,
-              readOnly: !0,
-            }),
-            document.queryCommandSupported("copy") &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                  title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-                  },
-                  _.createElement("img", {
-                    className: _().ClipboardIcon,
-                    src: _._,
+              children: [
+                (0, _.jsx)("span", {
+                  className: _().LinkInputLabel,
+                  children: (0, _._)(
+                    _.labelOverride
+                      ? _.labelOverride
+                      : "#EventDisplay_Share_Link",
+                  ),
+                }),
+                (0, _.jsx)("textarea", {
+                  className: _().LinkInput,
+                  ref: _,
+                  value: _.eventLink,
+                  readOnly: !0,
+                }),
+                document.queryCommandSupported("copy") &&
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().Button, _().Icon, _().LinkButton),
+                    title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                    children: (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                      children: (0, _.jsx)("img", {
+                        className: _().ClipboardIcon,
+                        src: _._,
+                      }),
+                    }),
                   }),
-                ),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+              ],
+            }),
+            (0, _.jsx)("div", {
               ref: _,
               className: _().ClipboardText,
-            },
-            __webpack_require__,
-          ),
-        );
+              children: __webpack_require__,
+            }),
+          ],
+        });
       };
       class _ extends _.Component {
         state = {
@@ -621,7 +591,7 @@
             partnerEventStore: _,
           } = this.props;
           return this.state.bRequireLoginToShare
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
                 strDescription: (0, _._)(
                   "#EventDisplay_Share_NotLoggedIn_Description",
@@ -631,29 +601,26 @@
                 onOK: () => (0, _._)(),
               })
             : this.state.bShareOnSteamDialog
-              ? _.createElement(_._, {
+              ? (0, _.jsx)(_._, {
                   eventLink: _,
                   appid: __webpack_require__,
                   emoticonStore: _,
                   partnerEventStore: _,
                   closeModal: _,
                 })
-              : _.createElement(
-                  _._,
-                  {
-                    strDescription: "",
-                    strTitle: (0, _._)("#Button_Share"),
-                    onCancel: this.props.closeModal,
-                    onOK: this.props.closeModal,
-                    bAlertDialog: !0,
-                    modalClassName: "EventDisplay_Share_Dialog",
-                  },
-                  _.createElement(_, {
+              : (0, _.jsx)(_._, {
+                  strDescription: "",
+                  strTitle: (0, _._)("#Button_Share"),
+                  onCancel: this.props.closeModal,
+                  onOK: this.props.closeModal,
+                  bAlertDialog: !0,
+                  modalClassName: "EventDisplay_Share_Dialog",
+                  children: (0, _.jsx)(_, {
                     eventLink: _,
                     sharePageUrls: _,
                     fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
                   }),
-                );
+                });
         }
       }
       (0, _._)([_._], _.prototype, "ShareOnSteamActivityFeed", null);
@@ -669,140 +636,112 @@
             const _ = new URL(_);
             return _.searchParams.set("l", (0, _._)(_)), _.href;
           }, [_, _]);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().FlexColumnContainer,
-              _().share_controls_ctn,
-            ),
-          },
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().ShareLanguagePicker,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().LanguageLabel,
-                  },
-                  (0, _._)("#EventDisplay_Share_LanguageLabel"),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(_._, {
-                    selectedLang: _,
-                    fnOnLanguageChanged: _,
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().FlexColumnContainer, _().share_controls_ctn),
+          children: [
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().ShareLanguagePicker,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _().LanguageLabel,
+                        children: (0, _._)("#EventDisplay_Share_LanguageLabel"),
+                      }),
+                      (0, _.jsx)("div", {
+                        children: (0, _.jsx)(_._, {
+                          selectedLang: _,
+                          fnOnLanguageChanged: _,
+                        }),
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().FlexRowContainer,
-                    _().ShareButtonContainer,
-                  ),
-                  style: {
-                    flexWrap: "wrap",
-                  },
-                },
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#EventDisplay_Share_OnSteam"),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      onClick: _,
-                      className: (0, _._)(
-                        _().Button,
-                        _().ShareBtn,
-                        _().ShareSteamBtn,
-                      ),
-                    },
-                    _.createElement("img", {
-                      className: _().SteamIcon,
-                      src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=",
-                    }),
-                    _.createElement(
-                      "span",
-                      {
-                        style: {
-                          whiteSpace: "nowrap",
-                        },
-                      },
-                      (0, _._)("#EventDisplay_Share_OnMyStatus"),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().FlexRowContainer,
+                      _().ShareButtonContainer,
                     ),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#EventDisplay_Share_OnFaceBook"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href: __webpack_require__.strFacebookUrl,
-                      className: _().ShareBtn,
+                    style: {
+                      flexWrap: "wrap",
                     },
-                    _.createElement("img", {
-                      className: (0, _._)(_().Button),
-                      src: _._,
-                    }),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#EventDisplay_Share_OnTwitter"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href: __webpack_require__.strTwitterUrl,
-                      className: _().ShareBtn,
-                    },
-                    _.createElement("img", {
-                      className: (0, _._)(_().Button),
-                      src: _._,
-                    }),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#EventDisplay_Share_OnReddit"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href: __webpack_require__.strRedditUrl,
-                      className: _().ShareBtn,
-                    },
-                    _.createElement("img", {
-                      className: (0, _._)(_().Button),
-                      src: _._,
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().Divider,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)("#EventDisplay_Share_OnSteam"),
+                        children: (0, _.jsxs)("div", {
+                          onClick: _,
+                          className: (0, _._)(
+                            _().Button,
+                            _().ShareBtn,
+                            _().ShareSteamBtn,
+                          ),
+                          children: [
+                            (0, _.jsx)("img", {
+                              className: _().SteamIcon,
+                              src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=",
+                            }),
+                            (0, _.jsx)("span", {
+                              style: {
+                                whiteSpace: "nowrap",
+                              },
+                              children: (0, _._)(
+                                "#EventDisplay_Share_OnMyStatus",
+                              ),
+                            }),
+                          ],
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)(
+                          "#EventDisplay_Share_OnFaceBook",
+                        ),
+                        children: (0, _.jsx)(_._, {
+                          href: __webpack_require__.strFacebookUrl,
+                          className: _().ShareBtn,
+                          children: (0, _.jsx)("img", {
+                            className: (0, _._)(_().Button),
+                            src: _._,
+                          }),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)(
+                          "#EventDisplay_Share_OnTwitter",
+                        ),
+                        children: (0, _.jsx)(_._, {
+                          href: __webpack_require__.strTwitterUrl,
+                          className: _().ShareBtn,
+                          children: (0, _.jsx)("img", {
+                            className: (0, _._)(_().Button),
+                            src: _._,
+                          }),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)(
+                          "#EventDisplay_Share_OnReddit",
+                        ),
+                        children: (0, _.jsx)(_._, {
+                          href: __webpack_require__.strRedditUrl,
+                          className: _().ShareBtn,
+                          children: (0, _.jsx)("img", {
+                            className: (0, _._)(_().Button),
+                            src: _._,
+                          }),
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Divider,
+                  }),
+                ],
               }),
-            ),
-          _.createElement(_, {
-            eventLink: _,
-          }),
-        );
+            (0, _.jsx)(_, {
+              eventLink: _,
+            }),
+          ],
+        });
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -811,6 +750,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -995,17 +935,17 @@
                 _ = this.getKey(_),
                 _ = _ === this.state.selectedIndex;
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _,
                   {
-                    key: _,
                     matchKey: _,
                     fnOnClick: this.OnClickSuggestion,
                     fnOnMouseOver: this.OnMouseOverSuggestion,
                     bIsSelected: _,
                     ref: _ ? this.BindSelectedElement : void 0,
+                    children: this.renderMatch(_),
                   },
-                  this.renderMatch(_),
+                  _,
                 ),
               );
             }
@@ -1020,23 +960,16 @@
             if (!_) return null;
             _.push(_);
           }
-          return _.createElement(
-            "div",
-            {
-              className: _().mentionDialogPosition,
-              ref: this.containerRef,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().mentionDialog,
-                tabIndex: 0,
-                onKeyDown: this.OnKeyDown,
-              },
-              this.renderHeader(),
-              _,
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: _().mentionDialogPosition,
+            ref: this.containerRef,
+            children: (0, _.jsxs)("div", {
+              className: _().mentionDialog,
+              tabIndex: 0,
+              onKeyDown: this.OnKeyDown,
+              children: [this.renderHeader(), _],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnKeyDown", null),
@@ -1052,20 +985,17 @@
           this.props.fnOnClick(this.props.matchKey);
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().suggestOption,
-                _().mentionSearchOption,
-                this.props.bIsSelected ? _().selected : "",
-              ),
-              onMouseEnter: this.OnMouseOver,
-              onClick: this.OnClick,
-              ref: this.containerRef,
-            },
-            this.props.children,
-          );
+          return (0, _.jsx)("div", {
+            className: (0, _._)(
+              _().suggestOption,
+              _().mentionSearchOption,
+              this.props.bIsSelected ? _().selected : "",
+            ),
+            onMouseEnter: this.OnMouseOver,
+            onClick: this.OnClick,
+            ref: this.containerRef,
+            children: this.props.children,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnMouseOver", null),
@@ -1084,28 +1014,26 @@
           return _.name;
         }
         renderMatch(_) {
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().EmoticonSuggestion,
-                _.recent ? "Recent" : "",
-              ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Emoticon,
-              },
-              _.createElement(_._, {
-                emoticon: _.name,
-              }),
-              _.new && _.createElement(_._, null),
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _().EmoticonSuggestion,
+              _.recent ? "Recent" : "",
             ),
-            ":",
-            _.name,
-            ":",
-          );
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().Emoticon,
+                children: [
+                  (0, _.jsx)(_._, {
+                    emoticon: _.name,
+                  }),
+                  _.new && (0, _.jsx)(_._, {}),
+                ],
+              }),
+              ":",
+              _.name,
+              ":",
+            ],
+          });
         }
         renderNoMatchMessage() {
           return null;
@@ -1143,34 +1071,33 @@
           return _.name;
         }
         renderMatch(_) {
-          return _.createElement(
+          return (0, _.jsxs)(
             "div",
             {
-              key: _.name,
               className: (0, _._)(_().BBCodeSuggestion),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().BBCode,
+                  children: _.name,
+                }),
+                "[",
+                _.name,
+                "]...[/",
+                _.name,
+                "]",
+              ],
             },
-            _.createElement(
-              "div",
-              {
-                className: _().BBCode,
-              },
-              _.name,
-            ),
-            "[",
             _.name,
-            "]...[/",
-            _.name,
-            "]",
           );
         }
         renderNoMatchMessage() {
-          return _.createElement(
+          return (0, _.jsx)(
             "div",
             {
-              key: "nomatches",
               className: (0, _._)(_().mentionSearchOption, _().noMatches),
+              children: (0, _._)("#Bbcode_No_Match"),
             },
-            (0, _._)("#Bbcode_No_Match"),
+            "nomatches",
           );
         }
         renderTooManyMatchesMessage(_) {
@@ -1322,7 +1249,7 @@
             } = this.props;
           switch (this.state.activeSuggestSearchType) {
             case "Emoticon":
-              _ = _.createElement(_, {
+              _ = (0, _.jsx)(_, {
                 emoticonStore: _,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -1331,7 +1258,7 @@
               });
               break;
             case "BBCode":
-              _ = _.createElement(_, {
+              _ = (0, _.jsx)(_, {
                 supportBBCodes: __webpack_require__,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -1339,19 +1266,19 @@
                 ref: this.BindMentionDialog,
               });
           }
-          return _.createElement(
-            _.Fragment,
-            null,
-            _,
-            _.createElement("textarea", {
-              ..._,
-              ref: this.descTextAreaRef,
-              onKeyDown: this.OnKeyDown,
-              onKeyUp: this.OnKeyPress,
-              onFocus: this.OnFocus,
-              onClick: this.OnClick,
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              (0, _.jsx)("textarea", {
+                ..._,
+                ref: this.descTextAreaRef,
+                onKeyDown: this.OnKeyDown,
+                onKeyUp: this.OnKeyPress,
+                onFocus: this.OnFocus,
+                onClick: this.OnClick,
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "BindMentionDialog", null),
@@ -1435,16 +1362,15 @@
           const _ = _.IsValidAssetType(_);
           (_ = _.error), (_ = _.needsCrop);
         }
-        return _.createElement(
-          _.Fragment,
-          null,
-          _
-            ? _.createElement(_._, {
-                size: "medium",
-                string: (0, _._)("#Loading"),
-              })
-            : Boolean(_) &&
-                _.createElement("div", {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _
+              ? (0, _.jsx)(_._, {
+                  size: "medium",
+                  string: (0, _._)("#Loading"),
+                })
+              : Boolean(_) &&
+                (0, _.jsx)("div", {
                   className: _.Image,
                   style: {
                     backgroundImage: `url( '${_ ? _.dataUrl : _.url}' )`,
@@ -1452,16 +1378,17 @@
                     width: `${_}px`,
                   },
                 }),
-          Boolean(_) && _.createElement("p", null, _),
-          _ &&
-            _.createElement(
-              _._,
-              {
+            Boolean(_) &&
+              (0, _.jsx)("p", {
+                children: _,
+              }),
+            _ &&
+              (0, _.jsx)(_._, {
                 onClick: (_) => {
                   const _ = (0, _._)(_);
                   let _ = _.GetUploadImages()[0];
                   (0, _._)(
-                    _.createElement(_._, {
+                    (0, _.jsx)(_._, {
                       ownerWin: _,
                       uploadFile: _,
                       forceResolution: {
@@ -1473,88 +1400,85 @@
                     _,
                   );
                 },
-              },
-              (0, _._)("#BBCode_ResizeImage"),
-            ),
-          Boolean(_ && _.bCropped) &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#ClanImagePickAndResize_UploadStatus", _.status),
-              ),
-              _
-                ? _.createElement(_._, {
-                    string: (0, _._)("#Uploading"),
-                    size: "small",
-                  })
-                : _.createElement(
-                    _._,
-                    {
-                      onClick: async () => {
-                        _(!0);
-                        try {
-                          const _ = await _.UploadAllImages(_),
-                            _ = Object.values(_);
-                          if (
-                            _ &&
-                            _.length > 0 &&
-                            ((0, _._)(
-                              1 == _.length,
-                              "ClanImagePickForCertainSize expected size 1, got " +
-                                _.length,
-                            ),
-                            _[0].bSuccess)
-                          ) {
-                            const _ = _[0].uploadResult,
-                              _ = _._.GenerateURLFromHashAndExt(
-                                _,
-                                _._.GetHashAndExt(_),
+                children: (0, _._)("#BBCode_ResizeImage"),
+              }),
+            Boolean(_ && _.bCropped) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#ClanImagePickAndResize_UploadStatus",
+                      _.status,
+                    ),
+                  }),
+                  _
+                    ? (0, _.jsx)(_._, {
+                        string: (0, _._)("#Uploading"),
+                        size: "small",
+                      })
+                    : (0, _.jsx)(_._, {
+                        onClick: async () => {
+                          _(!0);
+                          try {
+                            const _ = await _.UploadAllImages(_),
+                              _ = Object.values(_);
+                            if (
+                              _ &&
+                              _.length > 0 &&
+                              ((0, _._)(
+                                1 == _.length,
+                                "ClanImagePickForCertainSize expected size 1, got " +
+                                  _.length,
                               ),
-                              _ = _._.GenerateURLFromHashAndExt(
-                                _,
-                                _._.GetThumbHashAndExt(_),
-                              ),
-                              _ = {
-                                imageid: -11231412,
-                                image_hash: _.image_hash,
-                                thumbnail_hash: _.thumbnail_hash,
-                                file_type: _.file_type,
-                                file_name: _.file_name,
-                                clanAccountID: _.GetAccountID(),
-                                url: _,
-                                thumb_url: _,
-                                uploaded_time: Date.now() / 1e3,
-                              };
-                            _(_), _(_);
+                              _[0].bSuccess)
+                            ) {
+                              const _ = _[0].uploadResult,
+                                _ = _._.GenerateURLFromHashAndExt(
+                                  _,
+                                  _._.GetHashAndExt(_),
+                                ),
+                                _ = _._.GenerateURLFromHashAndExt(
+                                  _,
+                                  _._.GetThumbHashAndExt(_),
+                                ),
+                                _ = {
+                                  imageid: -11231412,
+                                  image_hash: _.image_hash,
+                                  thumbnail_hash: _.thumbnail_hash,
+                                  file_type: _.file_type,
+                                  file_name: _.file_name,
+                                  clanAccountID: _.GetAccountID(),
+                                  url: _,
+                                  thumb_url: _,
+                                  uploaded_time: Date.now() / 1e3,
+                                };
+                              _(_), _(_);
+                            }
+                          } finally {
+                            _(!1);
                           }
-                        } finally {
-                          _(!1);
-                        }
-                      },
-                    },
-                    (0, _._)("#ClanImagePickAndResize_UploadImage"),
-                  ),
-            ),
-          _.createElement(
-            _._,
-            {
+                        },
+                        children: (0, _._)(
+                          "#ClanImagePickAndResize_UploadImage",
+                        ),
+                      }),
+                ],
+              }),
+            (0, _.jsx)(_._, {
               onClick: (_) => {
                 const _ = new _._(_._.CLANSTEAMID);
                 (0, _._)(
-                  _.createElement(_._, {
+                  (0, _.jsx)(_._, {
                     clanSteamID: _,
                     fnImageSelectCallBack: (_) => _(_),
                   }),
                   (0, _._)(_),
                 );
               },
-            },
-            (0, _._)("#BBCode_ChooseImage", _, _),
-          ),
-        );
+              children: (0, _._)("#BBCode_ChooseImage", _, _),
+            }),
+          ],
+        });
       });
       var _,
         _ = __webpack_require__("chunkid");
@@ -1613,32 +1537,27 @@
         }
         render() {
           return this.state.strErrorMsg
-            ? _.createElement(
-                "div",
-                null,
-                this.state.strErrorMsg,
-                _.createElement("br", null),
-                this.state.errorCode,
-              )
+            ? (0, _.jsxs)("div", {
+                children: [
+                  this.state.strErrorMsg,
+                  (0, _.jsx)("br", {}),
+                  this.state.errorCode,
+                ],
+              })
             : "" == this.state.formattingHelp.__html
-              ? _.createElement(_._, null)
-              : _.createElement(
-                  _._,
-                  {
-                    strTitle: (0, _._)(
-                      "#EventEditor_FormattingHelp_GetHelpLink",
-                    ),
-                    strDescription: "",
-                    closeModal: this.props.closeModal,
-                    onOK: this.props.closeModal,
-                    onCancel: this.props.closeModal,
-                    bAlertDialog: !0,
-                    className: "ModernBBStyles",
-                  },
-                  _.createElement("div", {
+              ? (0, _.jsx)(_._, {})
+              : (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#EventEditor_FormattingHelp_GetHelpLink"),
+                  strDescription: "",
+                  closeModal: this.props.closeModal,
+                  onOK: this.props.closeModal,
+                  onCancel: this.props.closeModal,
+                  bAlertDialog: !0,
+                  className: "ModernBBStyles",
+                  children: (0, _.jsx)("div", {
                     dangerouslySetInnerHTML: this.state.formattingHelp,
                   }),
-                );
+                });
         }
       };
       _ = _ = (0, _._)([_._], _);
@@ -1694,55 +1613,52 @@
             : void 0;
         }
         render() {
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              pathToImages:
-                _._.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
-              fnTextareaRef: this.GetTextAreaRef,
-              emoticonStore: this.props.emoticonStore,
-              supportBBCodes: this.props.limitBBCode
-                ? this.props.limitBBCode
-                : _._,
-              bSupportHTMLImport: this.props.bSupportHTMLImport,
-              showFormatHelp: this.props.showFormatHelp,
-              bEmbeddedInDialog: this.props.bEmbeddedInDialog,
-              clanSteamID: this.props.clanSteamID,
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                pathToImages:
+                  _._.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
+                fnTextareaRef: this.GetTextAreaRef,
+                emoticonStore: this.props.emoticonStore,
+                supportBBCodes: this.props.limitBBCode
+                  ? this.props.limitBBCode
+                  : _._,
+                bSupportHTMLImport: this.props.bSupportHTMLImport,
+                showFormatHelp: this.props.showFormatHelp,
+                bEmbeddedInDialog: this.props.bEmbeddedInDialog,
+                clanSteamID: this.props.clanSteamID,
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().DescriptionCtn,
                   _().BBCodeEditorInputStyles,
                   this.state.bShowDragTarget ? _().DragTarget : "",
                   this.props.className ? this.props.className : "",
                 ),
-              },
-              _.createElement(_, {
-                cols: 90,
-                rows: this.props.nOverridesRows || 22,
-                maxLength: 64e3,
-                className: (0, _._)(
-                  _().DefaultEditor,
-                  this.props.classNameForTextArea
-                    ? this.props.classNameForTextArea
-                    : "",
-                ),
-                placeholder: this.props.strPlaceholder,
-                ref: this.descAutoTextAreaRef,
-                value: this.props.fnGetCurText(),
-                onChange: this.props.fnOnTextChange,
-                onDrop: this.OnTextAreaDropListener,
-                emoticonStore: this.props.emoticonStore,
-                fnSetText: this.props.fnSetText,
-                supportBBCodes: this.props.limitBBCode
-                  ? this.props.limitBBCode
-                  : _._,
+                children: (0, _.jsx)(_, {
+                  cols: 90,
+                  rows: this.props.nOverridesRows || 22,
+                  maxLength: 64e3,
+                  className: (0, _._)(
+                    _().DefaultEditor,
+                    this.props.classNameForTextArea
+                      ? this.props.classNameForTextArea
+                      : "",
+                  ),
+                  placeholder: this.props.strPlaceholder,
+                  ref: this.descAutoTextAreaRef,
+                  value: this.props.fnGetCurText(),
+                  onChange: this.props.fnOnTextChange,
+                  onDrop: this.OnTextAreaDropListener,
+                  emoticonStore: this.props.emoticonStore,
+                  fnSetText: this.props.fnSetText,
+                  supportBBCodes: this.props.limitBBCode
+                    ? this.props.limitBBCode
+                    : _._,
+                }),
               }),
-            ),
-          );
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "ClanImageDragListener", null),
@@ -1874,7 +1790,7 @@
         }
         OnAddLink(_) {
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               textareaRef: this.props.fnTextareaRef(),
             }),
             (0, _._)(_),
@@ -1883,7 +1799,7 @@
         ShowHelpDialog(_) {
           this.props.showFormatHelp &&
             (0, _._)(
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 formatType: this.props.showFormatHelp,
               }),
               (0, _._)(_),
@@ -1892,7 +1808,7 @@
         OnConvertHTMLToBBCodeDialog(_) {
           const _ = (0, _._)(_);
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               ownerWindow: _,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -1902,7 +1818,7 @@
         OnOpenYoutubeDialog(_) {
           let _ = _._.IMG_URL + "applications/community/";
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               textareaRef: this.props.fnTextareaRef(),
               pathToImages: _,
             }),
@@ -1911,7 +1827,7 @@
         }
         OnOpenImageDialog(_) {
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               textareaRef: this.props.fnTextareaRef(),
             }),
             (0, _._)(_),
@@ -1919,7 +1835,7 @@
         }
         OnOpenSpeakerDialog(_) {
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -1945,201 +1861,177 @@
           return (
             _ &&
               (_ = _
-                ? _.createElement(
-                    "span",
-                    {
-                      className: (0, _._)("ttip", _().ActionGetHelp),
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: (0, _._)(
-                          "#EventEditor_FormattingHelp_GetHelpLink",
-                        ),
-                      },
-                      _.createElement(
-                        "a",
-                        {
-                          href: _.GetHelpURL(this.props.showFormatHelp, !1),
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                        },
-                        _.createElement("img", {
+                ? (0, _.jsx)("span", {
+                    className: (0, _._)("ttip", _().ActionGetHelp),
+                    children: (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)(
+                        "#EventEditor_FormattingHelp_GetHelpLink",
+                      ),
+                      children: (0, _.jsxs)("a", {
+                        href: _.GetHelpURL(this.props.showFormatHelp, !1),
+                        target: _._.IN_CLIENT ? void 0 : "_blank",
+                        children: [
+                          (0, _.jsx)("img", {
+                            src: _ + "/action_help.png",
+                          }),
+                          " ",
+                          (0, _._)("#EventEditor_FormattingHelp_GetHelpLink"),
+                        ],
+                      }),
+                    }),
+                  })
+                : (0, _.jsx)("span", {
+                    onClick: this.ShowHelpDialog,
+                    className: (0, _._)("ttip", _().ActionGetHelp),
+                    children: (0, _.jsxs)(_._, {
+                      toolTipContent: (0, _._)(
+                        "#EventEditor_FormattingHelp_GetHelpLink",
+                      ),
+                      children: [
+                        (0, _.jsx)("img", {
                           src: _ + "/action_help.png",
                         }),
                         " ",
                         (0, _._)("#EventEditor_FormattingHelp_GetHelpLink"),
-                      ),
-                    ),
-                  )
-                : _.createElement(
-                    "span",
-                    {
-                      onClick: this.ShowHelpDialog,
-                      className: (0, _._)("ttip", _().ActionGetHelp),
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: (0, _._)(
-                          "#EventEditor_FormattingHelp_GetHelpLink",
-                        ),
-                      },
-                      _.createElement("img", {
-                        src: _ + "/action_help.png",
-                      }),
-                      " ",
-                      (0, _._)("#EventEditor_FormattingHelp_GetHelpLink"),
-                    ),
-                  )),
-            _.createElement(
-              "div",
-              {
-                className: _().TextEditorToolBarContainer,
-              },
-              this.BSupports("b") &&
-                _.createElement(_, {
-                  onClick: this.onBold,
-                  tooltip: (0, _._)("#Editor_Bold"),
-                  imgURL: this.props.pathToImages + "/format_bold.png",
-                }),
-              this.BSupports("u") &&
-                _.createElement(_, {
-                  onClick: this.onUnderline,
-                  tooltip: (0, _._)("#Editor_Underline"),
-                  imgURL: this.props.pathToImages + "/format_underline.png",
-                }),
-              this.BSupports("i") &&
-                _.createElement(_, {
-                  onClick: this.onItalics,
-                  tooltip: (0, _._)("#Editor_Italics"),
-                  imgURL: this.props.pathToImages + "/format_italic.png",
-                }),
-              this.BSupports("strike") &&
-                _.createElement(_, {
-                  onClick: this.onStrikeThrough,
-                  tooltip: (0, _._)("#Editor_StrikeThrough"),
-                  imgURL: this.props.pathToImages + "/format_strike.png",
-                }),
-              Boolean(this.BSupports("url") && !_) &&
-                _.createElement(_, {
-                  onClick: this.OnAddLink,
-                  tooltip: (0, _._)("#Editor_Link"),
-                  imgURL: this.props.pathToImages + "/format_link.png",
-                }),
-              this.BSupports("list") &&
-                _.createElement(_, {
-                  onClick: this.onUnorderedList,
-                  tooltip: (0, _._)("#Editor_Unordered"),
-                  imgURL: this.props.pathToImages + "/format_bullet.png",
-                }),
-              this.BSupports("olist") &&
-                _.createElement(_, {
-                  onClick: this.onOrderedList,
-                  tooltip: (0, _._)("#Editor_Ordered"),
-                  imgURL: this.props.pathToImages + "/format_numbered.png",
-                }),
-              this.BSupports("h1") &&
-                _.createElement(_, {
-                  onClick: this.onHeader,
-                  tooltip: (0, _._)("#Editor_Header"),
-                  imgURL: this.props.pathToImages + "/format_header1.png",
-                }),
-              this.BSupports("h2") &&
-                _.createElement(_, {
-                  onClick: this.onHeader2,
-                  tooltip: (0, _._)("#Editor_Header2"),
-                  imgURL: this.props.pathToImages + "/format_header2.png",
-                }),
-              this.BSupports("h3") &&
-                _.createElement(_, {
-                  onClick: this.onHeader3,
-                  tooltip: (0, _._)("#Editor_Header3"),
-                  imgURL: this.props.pathToImages + "/format_header3.png",
-                }),
-              this.BSupports("previewyoutube") &&
-                _.createElement(_, {
-                  onClick: this.OnOpenYoutubeDialog,
-                  tooltip: (0, _._)("#EventEditor_InsertYouTube"),
-                  imgURL:
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==",
-                }),
-              _.createElement(
-                "span",
-                {
-                  className: "ttip",
-                },
-                this.props.emoticonStore &&
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: (0, _._)("#Editor_Emoticon"),
-                    },
-                    _.createElement(_._, {
-                      title: " ",
-                      className: (0, _._)(_().EmoteOuter),
-                      disabled: !1,
-                      OnEmoticonSelected: this.OnEmoticonSelected,
-                      rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                      emoticonStore: this.props.emoticonStore,
-                      useImg: this.props.pathToImages + "/format_emote.png",
-                      contextOptions: {
-                        bOverlapHorizontal: !0,
-                        bDisablePopTop: !0,
-                      },
+                      ],
                     }),
-                  ),
-              ),
-              Boolean(this.BSupports("img") && !_) &&
-                _.createElement(_, {
-                  onClick: this.OnOpenImageDialog,
-                  tooltip: (0, _._)("#EventEditor_InsertImage"),
-                  imgURL: this.props.pathToImages + "/insert_img.png",
+                  })),
+            (0, _.jsxs)("div", {
+              className: _().TextEditorToolBarContainer,
+              children: [
+                this.BSupports("b") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onBold,
+                    tooltip: (0, _._)("#Editor_Bold"),
+                    imgURL: this.props.pathToImages + "/format_bold.png",
+                  }),
+                this.BSupports("u") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onUnderline,
+                    tooltip: (0, _._)("#Editor_Underline"),
+                    imgURL: this.props.pathToImages + "/format_underline.png",
+                  }),
+                this.BSupports("i") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onItalics,
+                    tooltip: (0, _._)("#Editor_Italics"),
+                    imgURL: this.props.pathToImages + "/format_italic.png",
+                  }),
+                this.BSupports("strike") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onStrikeThrough,
+                    tooltip: (0, _._)("#Editor_StrikeThrough"),
+                    imgURL: this.props.pathToImages + "/format_strike.png",
+                  }),
+                Boolean(this.BSupports("url") && !_) &&
+                  (0, _.jsx)(_, {
+                    onClick: this.OnAddLink,
+                    tooltip: (0, _._)("#Editor_Link"),
+                    imgURL: this.props.pathToImages + "/format_link.png",
+                  }),
+                this.BSupports("list") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onUnorderedList,
+                    tooltip: (0, _._)("#Editor_Unordered"),
+                    imgURL: this.props.pathToImages + "/format_bullet.png",
+                  }),
+                this.BSupports("olist") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onOrderedList,
+                    tooltip: (0, _._)("#Editor_Ordered"),
+                    imgURL: this.props.pathToImages + "/format_numbered.png",
+                  }),
+                this.BSupports("h1") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onHeader,
+                    tooltip: (0, _._)("#Editor_Header"),
+                    imgURL: this.props.pathToImages + "/format_header1.png",
+                  }),
+                this.BSupports("h2") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onHeader2,
+                    tooltip: (0, _._)("#Editor_Header2"),
+                    imgURL: this.props.pathToImages + "/format_header2.png",
+                  }),
+                this.BSupports("h3") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.onHeader3,
+                    tooltip: (0, _._)("#Editor_Header3"),
+                    imgURL: this.props.pathToImages + "/format_header3.png",
+                  }),
+                this.BSupports("previewyoutube") &&
+                  (0, _.jsx)(_, {
+                    onClick: this.OnOpenYoutubeDialog,
+                    tooltip: (0, _._)("#EventEditor_InsertYouTube"),
+                    imgURL:
+                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==",
+                  }),
+                (0, _.jsx)("span", {
+                  className: "ttip",
+                  children:
+                    this.props.emoticonStore &&
+                    (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)("#Editor_Emoticon"),
+                      children: (0, _.jsx)(_._, {
+                        title: " ",
+                        className: (0, _._)(_().EmoteOuter),
+                        disabled: !1,
+                        OnEmoticonSelected: this.OnEmoticonSelected,
+                        rtLastAckedNewEmoticons: Number.MAX_VALUE,
+                        emoticonStore: this.props.emoticonStore,
+                        useImg: this.props.pathToImages + "/format_emote.png",
+                        contextOptions: {
+                          bOverlapHorizontal: !0,
+                          bDisablePopTop: !0,
+                        },
+                      }),
+                    }),
                 }),
-              Boolean(
-                _._.is_support &&
-                  this.props.clanSteamID &&
-                  this.BSupports("speaker"),
-              ) &&
-                _.createElement(_, {
-                  onClick: this.OnOpenSpeakerDialog,
-                  tooltip: (0, _._)("#EventEditor_AddSpeaker"),
-                  imgURL: this.props.pathToImages + "/insert_img.png",
-                }),
-              Boolean(__webpack_require__ && !_) &&
-                _.createElement(
-                  _,
-                  {
+                Boolean(this.BSupports("img") && !_) &&
+                  (0, _.jsx)(_, {
+                    onClick: this.OnOpenImageDialog,
+                    tooltip: (0, _._)("#EventEditor_InsertImage"),
+                    imgURL: this.props.pathToImages + "/insert_img.png",
+                  }),
+                Boolean(
+                  _._.is_support &&
+                    this.props.clanSteamID &&
+                    this.BSupports("speaker"),
+                ) &&
+                  (0, _.jsx)(_, {
+                    onClick: this.OnOpenSpeakerDialog,
+                    tooltip: (0, _._)("#EventEditor_AddSpeaker"),
+                    imgURL: this.props.pathToImages + "/insert_img.png",
+                  }),
+                Boolean(__webpack_require__ && !_) &&
+                  (0, _.jsx)(_, {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
                     className: _().ActionImportHTML,
                     tooltip: (0, _._)("#EventEditor_ImportFromHTML_ttip"),
-                  },
-                  (0, _._)("#EventEditor_ImportHTML"),
-                ),
-              _,
-            )
+                    children: (0, _._)("#EventEditor_ImportHTML"),
+                  }),
+                _,
+              ],
+            })
           );
         }
       };
       function _(_) {
-        return _.createElement(
-          "span",
-          {
-            onClick: _.onClick,
-            className: _.className,
-          },
-          _.createElement(
-            _._,
-            {
-              toolTipContent: _.tooltip,
-              className: "ttip",
-            },
-            Boolean(_.imgURL) &&
-              _.createElement("img", {
-                src: _.imgURL,
-              }),
-            _.children,
-          ),
-        );
+        return (0, _.jsx)("span", {
+          onClick: _.onClick,
+          className: _.className,
+          children: (0, _.jsxs)(_._, {
+            toolTipContent: _.tooltip,
+            className: "ttip",
+            children: [
+              Boolean(_.imgURL) &&
+                (0, _.jsx)("img", {
+                  src: _.imgURL,
+                }),
+              _.children,
+            ],
+          }),
+        });
       }
       (0, _._)([_._], _.prototype, "onBold", null),
         (0, _._)([_._], _.prototype, "onItalics", null),
@@ -2220,174 +2112,141 @@
         }
         OnOuterDivClickPassDown(_) {}
         render() {
-          return _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#EventEditor_InsertYouTube"),
-              strDescription: "",
-              closeModal: this.props.closeModal,
-              onCancel: this.props.closeModal,
-              onOK: this.OnYoutubeInsertLink,
-              strOKButtonText: (0, _._)("#EventEditor_InsertYouTube"),
-              className: _().BBCodeEditorInputStyles,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().YouTubeInput,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#EventEditor_InsertYouTube"),
+            strDescription: "",
+            closeModal: this.props.closeModal,
+            onCancel: this.props.closeModal,
+            onOK: this.OnYoutubeInsertLink,
+            strOKButtonText: (0, _._)("#EventEditor_InsertYouTube"),
+            className: _().BBCodeEditorInputStyles,
+            children: (0, _.jsxs)("div", {
+              className: _().YouTubeInput,
+              children: [
+                (0, _.jsx)("div", {
                   className: "DialogInputLabelGroup",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+                  children: (0, _.jsxs)("label", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "DialogLabel",
+                        children: (0, _._)("#EventEditor_InsertYouTube_URL"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "DialogInput_Wrapper",
+                        children: (0, _.jsx)("input", {
+                          className: "DialogInput DialogTextInputBase",
+                          ref: (_) => _ && _.focus(),
+                          type: "text",
+                          value: this.state.youtubeInput,
+                          onChange: this.OnUrlChange,
+                          placeholder: (0, _._)(
+                            "#EventEditor_InsertYouTube_Placholder",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsxs)("div", {
+                  className: "DialogInputLabelGroup",
+                  children: [
+                    (0, _.jsx)("div", {
                       className: "DialogLabel",
-                    },
-                    (0, _._)("#EventEditor_InsertYouTube_URL"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogInput_Wrapper",
-                    },
-                    _.createElement("input", {
-                      className: "DialogInput DialogTextInputBase",
-                      ref: (_) => _ && _.focus(),
-                      type: "text",
-                      value: this.state.youtubeInput,
-                      onChange: this.OnUrlChange,
-                      placeholder: (0, _._)(
-                        "#EventEditor_InsertYouTube_Placholder",
-                      ),
+                      children: (0, _._)("#EventEditor_InsertYouTube_Position"),
                     }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "DialogInputLabelGroup",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogLabel",
-                  },
-                  (0, _._)("#EventEditor_InsertYouTube_Position"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().YouTubePreviewInsertOption,
-                    onClick: this.OnOuterDivClickPassDown,
-                  },
-                  _.createElement("input", {
-                    type: "radio",
-                    name: "YouTubePreviewInsertType",
-                    _: _._.left,
-                    value: _._.left,
-                    checked: this.state.alignment == _._.left,
-                    onChange: this.OnLeftSelected,
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: _._.left,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventEditor_InsertYouTube_Left"),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().YouTubePreviewInsertOption,
-                    onClick: this.OnOuterDivClickPassDown,
-                  },
-                  _.createElement("input", {
-                    type: "radio",
-                    name: "YouTubePreviewInsertType",
-                    _: _._.right,
-                    value: _._.right,
-                    checked: this.state.alignment == _._.right,
-                    onChange: this.OnRightSelected,
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: _._.right,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventEditor_InsertYouTube_Right"),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().YouTubePreviewInsertOption,
-                    onClick: this.OnOuterDivClickPassDown,
-                  },
-                  _.createElement("input", {
-                    type: "radio",
-                    name: "YouTubePreviewInsertType",
-                    _: _._.full,
-                    value: _._.full,
-                    checked: this.state.alignment == _._.full,
-                    onChange: this.OnFullSelected,
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: _._.full,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventEditor_InsertYouTube_Full"),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().YouTubePreviewInsertOption,
-                    onClick: this.OnOuterDivClickPassDown,
-                  },
-                  _.createElement("input", {
-                    type: "radio",
-                    name: "YouTubePreviewInsertType",
-                    _: _._.summary,
-                    value: _._.summary,
-                    checked: this.state.alignment == _._.summary,
-                    onChange: this.OnSummarySelected,
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: _._.summary,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#EventEditor_InsertYouTube_Summary"),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
+                    (0, _.jsxs)("div", {
+                      className: _().YouTubePreviewInsertOption,
+                      onClick: this.OnOuterDivClickPassDown,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "radio",
+                          name: "YouTubePreviewInsertType",
+                          _: _._.left,
+                          value: _._.left,
+                          checked: this.state.alignment == _._.left,
+                          onChange: this.OnLeftSelected,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: _._.left,
+                          children: (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventEditor_InsertYouTube_Left",
+                            ),
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().YouTubePreviewInsertOption,
+                      onClick: this.OnOuterDivClickPassDown,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "radio",
+                          name: "YouTubePreviewInsertType",
+                          _: _._.right,
+                          value: _._.right,
+                          checked: this.state.alignment == _._.right,
+                          onChange: this.OnRightSelected,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: _._.right,
+                          children: (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventEditor_InsertYouTube_Right",
+                            ),
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().YouTubePreviewInsertOption,
+                      onClick: this.OnOuterDivClickPassDown,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "radio",
+                          name: "YouTubePreviewInsertType",
+                          _: _._.full,
+                          value: _._.full,
+                          checked: this.state.alignment == _._.full,
+                          onChange: this.OnFullSelected,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: _._.full,
+                          children: (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventEditor_InsertYouTube_Full",
+                            ),
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().YouTubePreviewInsertOption,
+                      onClick: this.OnOuterDivClickPassDown,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "radio",
+                          name: "YouTubePreviewInsertType",
+                          _: _._.summary,
+                          value: _._.summary,
+                          checked: this.state.alignment == _._.summary,
+                          onChange: this.OnSummarySelected,
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: _._.summary,
+                          children: (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#EventEditor_InsertYouTube_Summary",
+                            ),
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnYoutubeInsertLink", null),
@@ -2441,82 +2300,60 @@
           _.replaceSelection(this.props.textareaRef.current, _);
         }
         render() {
-          return _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#Editor_Link"),
-              strDescription: "",
-              closeModal: this.props.closeModal,
-              onOK: this.onInsertLink,
-              onCancel: this.props.closeModal,
-              strOKButtonText: (0, _._)("#EventEditor_InsertLinkURL"),
-              className: _().BBCodeEditorInputStyles,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().EventEditorLinkInput,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#Editor_Link"),
+            strDescription: "",
+            closeModal: this.props.closeModal,
+            onOK: this.onInsertLink,
+            onCancel: this.props.closeModal,
+            strOKButtonText: (0, _._)("#EventEditor_InsertLinkURL"),
+            className: _().BBCodeEditorInputStyles,
+            children: (0, _.jsxs)("div", {
+              className: _().EventEditorLinkInput,
+              children: [
+                (0, _.jsx)("div", {
                   className: "DialogInputLabelGroup",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogLabel",
-                    },
-                    (0, _._)("#EventEditor_LinkDescription"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogInput_Wrapper",
-                    },
-                    _.createElement("input", {
-                      type: "text",
-                      onChange: this.onLinkTitleUpdate,
-                      value: this.state.textToDisplay,
-                      className: "DialogInput DialogTextInputBase",
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _.jsxs)("label", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "DialogLabel",
+                        children: (0, _._)("#EventEditor_LinkDescription"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "DialogInput_Wrapper",
+                        children: (0, _.jsx)("input", {
+                          type: "text",
+                          onChange: this.onLinkTitleUpdate,
+                          value: this.state.textToDisplay,
+                          className: "DialogInput DialogTextInputBase",
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("div", {
                   className: "DialogInputLabelGroup",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogLabel",
-                    },
-                    (0, _._)("#EventEditor_LinkURL"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogInput_Wrapper",
-                    },
-                    _.createElement("input", {
-                      type: "text",
-                      onChange: this.onLinkURLUpdate,
-                      value: this.state.strURL,
-                      className: "DialogInput DialogTextInputBase",
-                    }),
-                  ),
-                ),
-              ),
-            ),
-          );
+                  children: (0, _.jsxs)("label", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "DialogLabel",
+                        children: (0, _._)("#EventEditor_LinkURL"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "DialogInput_Wrapper",
+                        children: (0, _.jsx)("input", {
+                          type: "text",
+                          onChange: this.onLinkURLUpdate,
+                          value: this.state.strURL,
+                          className: "DialogInput DialogTextInputBase",
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "onLinkTitleUpdate", null),
@@ -2555,94 +2392,70 @@
         }
         render() {
           const { imgURL: _, anchorURL: _ } = this.state;
-          return _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#EventEditor_InsertImage_Title"),
-              strDescription: "",
-              closeModal: this.props.closeModal,
-              onCancel: this.props.closeModal,
-              onOK: this.OnImageInsert,
-              strOKButtonText: (0, _._)("#EventEditor_InsertImage_Title"),
-              className: _().BBCodeEditorInputStyles,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().EventEditorLinkInput,
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#EventEditor_InsertImage_Desc"),
-              ),
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#EventEditor_InsertImage_Title"),
+            strDescription: "",
+            closeModal: this.props.closeModal,
+            onCancel: this.props.closeModal,
+            onOK: this.OnImageInsert,
+            strOKButtonText: (0, _._)("#EventEditor_InsertImage_Title"),
+            className: _().BBCodeEditorInputStyles,
+            children: (0, _.jsxs)("div", {
+              className: _().EventEditorLinkInput,
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#EventEditor_InsertImage_Desc"),
+                }),
+                (0, _.jsx)("div", {
                   className: "DialogInputLabelGroup",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogLabel",
-                    },
-                    (0, _._)("#EventEditor_InsertImage_URL"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogInput_Wrapper",
-                    },
-                    _.createElement("input", {
-                      className: "DialogInput DialogTextInputBase",
-                      type: "text",
-                      value: _,
-                      onChange: this.OnImageURLChange,
-                      placeholder: (0, _._)(
-                        "#EventEditor_InsertImage_Placeholder",
-                      ),
-                      ref: this.refFirstInput,
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _.jsxs)("label", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "DialogLabel",
+                        children: (0, _._)("#EventEditor_InsertImage_URL"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "DialogInput_Wrapper",
+                        children: (0, _.jsx)("input", {
+                          className: "DialogInput DialogTextInputBase",
+                          type: "text",
+                          value: _,
+                          onChange: this.OnImageURLChange,
+                          placeholder: (0, _._)(
+                            "#EventEditor_InsertImage_Placeholder",
+                          ),
+                          ref: this.refFirstInput,
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("div", {
                   className: "DialogInputLabelGroup",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogLabel",
-                    },
-                    (0, _._)("#EventEditor_InsertImage_Anchor"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogInput_Wrapper",
-                    },
-                    _.createElement("input", {
-                      className: "DialogInput DialogTextInputBase",
-                      type: "text",
-                      value: _,
-                      onChange: this.OnAnchorURLChange,
-                      placeholder: (0, _._)(
-                        "#EventEditor_InsertImage_Placeholder",
-                      ),
-                    }),
-                  ),
-                ),
-              ),
-            ),
-          );
+                  children: (0, _.jsxs)("label", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "DialogLabel",
+                        children: (0, _._)("#EventEditor_InsertImage_Anchor"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "DialogInput_Wrapper",
+                        children: (0, _.jsx)("input", {
+                          className: "DialogInput DialogTextInputBase",
+                          type: "text",
+                          value: _,
+                          onChange: this.OnAnchorURLChange,
+                          placeholder: (0, _._)(
+                            "#EventEditor_InsertImage_Placeholder",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnImageInsert", null),
@@ -2659,244 +2472,210 @@
           { data: _ } = (0, _._)(),
           { isLoading: _, data: _ } = (0, _._)(_?.GetAccountID()),
           _ = 0 != _.trim().length && 0 != _.trim().length;
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#EventEditor_AddSpeaker"),
-            strDescription: (0, _._)("#EventEditor_AddSpeaker_Desc"),
-            closeModal: _.closeModal,
-            onCancel: _.closeModal,
-            bOKDisabled: !_,
-            onOK: () => {
-              let _ = `[speaker name="${_.trim()}"`;
-              if (
-                (_.trim().length > 0 && (_ += ` title="${_}"`),
-                _.trim().length > 0 && (_ += ` company="${_}"`),
-                _)
-              ) {
-                _ += ` photo="${_._ + "/" + _.clanAccountID + "/" + _._.GetHashAndExt(_)}"`;
-              }
-              _ && (_ += ` steamid="${_.ConvertTo64BitString()}"`),
-                (_ += `]${_}[/speaker]`),
-                _.replaceSelection(_.textareaRef.current, _);
-            },
-            className: _().BBCodeEditorInputStyles,
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#EventEditor_AddSpeaker"),
+          strDescription: (0, _._)("#EventEditor_AddSpeaker_Desc"),
+          closeModal: _.closeModal,
+          onCancel: _.closeModal,
+          bOKDisabled: !_,
+          onOK: () => {
+            let _ = `[speaker name="${_.trim()}"`;
+            if (
+              (_.trim().length > 0 && (_ += ` title="${_}"`),
+              _.trim().length > 0 && (_ += ` company="${_}"`),
+              _)
+            ) {
+              _ += ` photo="${_._ + "/" + _.clanAccountID + "/" + _._.GetHashAndExt(_)}"`;
+            }
+            _ && (_ += ` steamid="${_.ConvertTo64BitString()}"`),
+              (_ += `]${_}[/speaker]`),
+              _.replaceSelection(_.textareaRef.current, _);
           },
-          _.createElement(
-            "div",
-            {
-              className: _().InsertSpeakerCtn,
-            },
-            _.createElement(_._, {
-              type: "text",
-              label: (0, _._)("#EventEditor_AddSpeaker_Name"),
-              value: _,
-              onChange: (_) => __webpack_require__(_.target.value),
-              focusOnMount: !0,
-            }),
-            _.createElement(
-              "div",
-              {
+          className: _().BBCodeEditorInputStyles,
+          children: (0, _.jsxs)("div", {
+            className: _().InsertSpeakerCtn,
+            children: [
+              (0, _.jsx)(_._, {
+                type: "text",
+                label: (0, _._)("#EventEditor_AddSpeaker_Name"),
+                value: _,
+                onChange: (_) => __webpack_require__(_.target.value),
+                focusOnMount: !0,
+              }),
+              (0, _.jsxs)("div", {
                 className: _().TitleGroup,
-              },
-              _.createElement(_._, {
-                type: "text",
-                label: (0, _._)("#EventEditor_AddSpeaker_Title"),
-                value: _,
-                onChange: (_) => _(_.target.value),
+                children: [
+                  (0, _.jsx)(_._, {
+                    type: "text",
+                    label: (0, _._)("#EventEditor_AddSpeaker_Title"),
+                    value: _,
+                    onChange: (_) => _(_.target.value),
+                  }),
+                  (0, _.jsx)(_._, {
+                    type: "text",
+                    label: (0, _._)("#EventEditor_AddSpeaker_Company"),
+                    value: _,
+                    onChange: (_) => _(_.target.value),
+                  }),
+                ],
               }),
-              _.createElement(_._, {
-                type: "text",
-                label: (0, _._)("#EventEditor_AddSpeaker_Company"),
-                value: _,
-                onChange: (_) => _(_.target.value),
-              }),
-            ),
-            _.createElement(
-              _._,
-              {
+              (0, _.jsx)(_._, {
                 toolTipContent: (0, _._)(
                   "#EventEditor_AssociateSteamAccount_ttip",
                 ),
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: "DialogLabel",
-                },
-                (0, _._)("#EventEditor_AssociateSteamAccount"),
-                " (?)",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _ &&
-                _.createElement(_._, {
-                  string: (0, _._)("#Loading"),
-                  size: "small",
+                  children: [
+                    (0, _._)("#EventEditor_AssociateSteamAccount"),
+                    " (?)",
+                  ],
                 }),
-              Boolean(_) &&
-                _.createElement(
-                  "a",
-                  {
-                    href:
-                      _._.COMMUNITY_BASE_URL +
-                      "profiles/" +
-                      _.ConvertTo64BitString(),
-                    target: "_blank",
-                  },
-                  _
-                    ? _.createElement("img", {
-                        style: {
-                          marginRight: "8px",
-                        },
-                        src: _.avatar_url,
-                      })
-                    : null,
-                  _ ? _.m_strPlayerName : null,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().AssociateRowCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _(new _._(_._.steamid)),
-                  },
-                  (0, _._)("#EventEditor_SteamAccount_addme"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) =>
-                      (0, _._)(
-                        _.createElement(_, {
-                          friends: _,
-                          setSteamID: _,
-                        }),
-                        _,
-                      ),
-                  },
-                  (0, _._)("#EventEditor_SteamAccount_addfriend"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _(void 0),
-                  },
-                  (0, _._)("#EventEditor_SteamAccount_clear"),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      string: (0, _._)("#Loading"),
+                      size: "small",
+                    }),
+                  Boolean(_) &&
+                    (0, _.jsxs)("a", {
+                      href:
+                        _._.COMMUNITY_BASE_URL +
+                        "profiles/" +
+                        _.ConvertTo64BitString(),
+                      target: "_blank",
+                      children: [
+                        _
+                          ? (0, _.jsx)("img", {
+                              style: {
+                                marginRight: "8px",
+                              },
+                              src: _.avatar_url,
+                            })
+                          : null,
+                        _ ? _.m_strPlayerName : null,
+                      ],
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: _().AssociateRowCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: () => _(new _._(_._.steamid)),
+                        children: (0, _._)("#EventEditor_SteamAccount_addme"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: (_) =>
+                          (0, _._)(
+                            (0, _.jsx)(_, {
+                              friends: _,
+                              setSteamID: _,
+                            }),
+                            _,
+                          ),
+                        children: (0, _._)(
+                          "#EventEditor_SteamAccount_addfriend",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: () => _(void 0),
+                        children: (0, _._)("#EventEditor_SteamAccount_clear"),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
                 className: _().PhotoCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "DialogLabel",
-                },
-                (0, _._)("#EventEditor_ChoosePhoto"),
-              ),
-              _.createElement(_, {
-                clanSteamID: _.clanSteamID,
-                inputClanImage: _,
-                setImage: _,
-                nWidth: 184,
-                nHeight: 184,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogLabel",
+                    children: (0, _._)("#EventEditor_ChoosePhoto"),
+                  }),
+                  (0, _.jsx)(_, {
+                    clanSteamID: _.clanSteamID,
+                    inputClanImage: _,
+                    setImage: _,
+                    nWidth: 184,
+                    nHeight: 184,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _().AboutCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "DialogLabel",
-                },
-                (0, _._)("#EventEditor_AddSpeaker_About"),
-              ),
-              _.createElement(_._, {
-                value: _,
-                onChange: (_) => _(_.target.value),
-                rows: 8,
-                cols: 80,
-                nMinHeight: 40,
-                placeholder: (0, _._)(
-                  "#EventEditor_AddSpeaker_About_Placeholder",
-                ),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogLabel",
+                    children: (0, _._)("#EventEditor_AddSpeaker_About"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    value: _,
+                    onChange: (_) => _(_.target.value),
+                    rows: 8,
+                    cols: 80,
+                    nMinHeight: 40,
+                    placeholder: (0, _._)(
+                      "#EventEditor_AddSpeaker_About_Placeholder",
+                    ),
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _().PreviewCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "DialogLabel",
-                },
-                (0, _._)("#Button_Preview"),
-              ),
-              _.createElement(_._, {
-                company: _,
-                name: _,
-                title: _,
-                bioString: _,
-                photo: _ ? _.url : void 0,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogLabel",
+                    children: (0, _._)("#Button_Preview"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    company: _,
+                    name: _,
+                    title: _,
+                    bioString: _,
+                    photo: _ ? _.url : void 0,
+                  }),
+                ],
               }),
-            ),
-          ),
-        );
+            ],
+          }),
+        });
       };
       function _(_) {
         const { friends: _, setSteamID: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().DropDownScroll,
-          },
-          _.map((_) =>
-            _.createElement(_, {
-              key: _,
-              steamid: _,
-              setSteamID: __webpack_require__,
-            }),
+        return (0, _.jsx)("div", {
+          className: _().DropDownScroll,
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                steamid: _,
+                setSteamID: __webpack_require__,
+              },
+              _,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const { steamid: _, setSteamID: __webpack_require__ } = _,
           { data: _ } = (0, _._)(_);
-        return _.createElement(
-          _._,
-          {
-            onSelected: () => __webpack_require__(new _._(_)),
-          },
-          _.createElement(
-            "div",
-            {
-              style: {
-                display: "flex",
-                alignItems: "center",
-              },
+        return (0, _.jsx)(_._, {
+          onSelected: () => __webpack_require__(new _._(_)),
+          children: (0, _.jsxs)("div", {
+            style: {
+              display: "flex",
+              alignItems: "center",
             },
-            _ &&
-              _.createElement("img", {
-                className: _().WhitelistAvatar,
-                src: _.avatar_url,
-              }),
-            _?.m_strPlayerName,
-          ),
-        );
+            children: [
+              _ &&
+                (0, _.jsx)("img", {
+                  className: _().WhitelistAvatar,
+                  src: _.avatar_url,
+                }),
+              _?.m_strPlayerName,
+            ],
+          }),
+        });
       }
       let _ = class extends _.Component {
         m_isMounted = !1;
@@ -2953,7 +2732,7 @@
               })
               .catch((_) => {
                 (0, _._)(
-                  _.createElement(_._, {
+                  (0, _.jsx)(_._, {
                     strTitle: (0, _._)("#EventEditor_ConvertHTML_Error"),
                     strDescription: (0, _._)(
                       "#EventEditor_ConvertHTML_Error_Desc",
@@ -2984,22 +2763,19 @@
         render() {
           const { closeModal: _ } = this.props;
           return this.state.bConverting
-            ? _.createElement(
-                _._,
-                {
-                  strTitle: (0, _._)("#EventEditor_ImportFromHTML"),
-                  strDescription: (0, _._)(
-                    "#EventEditor_ImportFromHTML_ConversionInProgress",
-                  ),
-                  closeModal: _,
-                  bAlertDialog: !0,
-                  onOK: _,
-                  onCancel: _,
-                },
-                _.createElement(_._, null),
-              )
+            ? (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#EventEditor_ImportFromHTML"),
+                strDescription: (0, _._)(
+                  "#EventEditor_ImportFromHTML_ConversionInProgress",
+                ),
+                closeModal: _,
+                bAlertDialog: !0,
+                onOK: _,
+                onCancel: _,
+                children: (0, _.jsx)(_._, {}),
+              })
             : this.state.bFinishedConverting
-              ? _.createElement(_._, {
+              ? (0, _.jsx)(_._, {
                   strTitle: (0, _._)("#EventEditor_ImportFromHTML"),
                   strDescription: (0, _._)(
                     "#EventEditor_ImportFromHTML_ConvertFinished",
@@ -3009,103 +2785,85 @@
                   onOK: _,
                   onCancel: _,
                 })
-              : _.createElement(
-                  _._,
-                  {
-                    title: (0, _._)("#EventEditor_ImportFromHTML"),
-                    onOK: this.OnConvertAndOverriteHTML,
-                    onCancel: _,
-                    className: _().BBCodeEditorInputStyles,
-                  },
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(
-                        "div",
-                        {
+              : (0, _.jsx)(_._, {
+                  title: (0, _._)("#EventEditor_ImportFromHTML"),
+                  onOK: this.OnConvertAndOverriteHTML,
+                  onCancel: _,
+                  className: _().BBCodeEditorInputStyles,
+                  children: (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsxs)("div", {
                           className: (0, _._)(
                             _().FlexColumnContainer,
                             _().ImportHTMLCtn,
                           ),
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().FlexColumnContainer,
-                          },
-                          (0, _._)(
-                            "#EventEditor_ImportFromHTML_ConvertDescription",
-                            _.createElement(
-                              "a",
-                              {
-                                target: _._.IN_CLIENT ? void 0 : "_blank",
-                                href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
-                              },
-                              (0, _._)(
-                                "#EventEditor_ImportFromHTML_ConvertLearn",
-                              ),
-                            ),
-                          ),
-                        ),
-                        _.createElement("textarea", {
-                          value: this.state.strHTMLData,
-                          placeholder: (0, _._)(
-                            "#EventEditor_ImportFromHTML_Instruction",
-                          ),
-                          className: _().ImportHTMLTextArea,
-                          onChange: this.OnTextAreaChange,
-                          ref: (_) => _ && _.focus(),
-                        }),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().ImportHTMLCheckBoxLine,
-                          },
-                          _.createElement("input", {
-                            _: "ImportFromHTMLNewLines",
-                            type: "checkbox",
-                            checked: this.state.bPreserveNewLines,
-                            onChange: this.OnCheckboxChange,
-                          }),
-                          _.createElement(
-                            "label",
-                            {
-                              htmlFor: "ImportFromHTMLNewLines",
-                            },
-                            (0, _._)(
-                              "#EventEditor_ImportFromHTML_PreserveNewlines",
-                            ),
-                            _.createElement(_._, {
-                              tooltip: (0, _._)(
-                                "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().FlexColumnContainer,
+                              children: (0, _._)(
+                                "#EventEditor_ImportFromHTML_ConvertDescription",
+                                (0, _.jsx)("a", {
+                                  target: _._.IN_CLIENT ? void 0 : "_blank",
+                                  href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
+                                  children: (0, _._)(
+                                    "#EventEditor_ImportFromHTML_ConvertLearn",
+                                  ),
+                                }),
                               ),
                             }),
-                          ),
-                        ),
-                        _.createElement(
-                          "div",
-                          null,
-                          (0, _._)(
-                            "#EventEditor_ImportFromHTML_ConvertToBBCode",
-                          ),
-                        ),
-                      ),
-                    ),
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_._, {
-                        onCancel: _,
-                        strOKText: (0, _._)("#Button_Overwrite"),
-                        onUpdate: this.OnConvertAndAppendHTML,
-                        strUpdateText: (0, _._)("#Button_Append"),
+                            (0, _.jsx)("textarea", {
+                              value: this.state.strHTMLData,
+                              placeholder: (0, _._)(
+                                "#EventEditor_ImportFromHTML_Instruction",
+                              ),
+                              className: _().ImportHTMLTextArea,
+                              onChange: this.OnTextAreaChange,
+                              ref: (_) => _ && _.focus(),
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _().ImportHTMLCheckBoxLine,
+                              children: [
+                                (0, _.jsx)("input", {
+                                  _: "ImportFromHTMLNewLines",
+                                  type: "checkbox",
+                                  checked: this.state.bPreserveNewLines,
+                                  onChange: this.OnCheckboxChange,
+                                }),
+                                (0, _.jsxs)("label", {
+                                  htmlFor: "ImportFromHTMLNewLines",
+                                  children: [
+                                    (0, _._)(
+                                      "#EventEditor_ImportFromHTML_PreserveNewlines",
+                                    ),
+                                    (0, _.jsx)(_._, {
+                                      tooltip: (0, _._)(
+                                        "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                            (0, _.jsx)("div", {
+                              children: (0, _._)(
+                                "#EventEditor_ImportFromHTML_ConvertToBBCode",
+                              ),
+                            }),
+                          ],
+                        }),
                       }),
-                    ),
-                  ),
-                );
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          onCancel: _,
+                          strOKText: (0, _._)("#Button_Overwrite"),
+                          onUpdate: this.OnConvertAndAppendHTML,
+                          strUpdateText: (0, _._)("#Button_Append"),
+                        }),
+                      }),
+                    ],
+                  }),
+                });
         }
       };
       (0, _._)([_._], _.prototype, "OnConvertAndOverriteHTML", null),
@@ -3191,118 +2949,103 @@
             }
           };
         return _
-          ? _.createElement(
-              _._,
-              {
-                strDescription: "",
-                strTitle: (0, _._)("#Button_Share"),
-                onCancel: _.closeModal,
-                onOK: _.closeModal,
-                bAlertDialog: !0,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().FlexColumnContainer,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#EventDisplay_Share_OnMyStatus_Details"),
-                ),
-                _.createElement(
-                  "div",
-                  {
+          ? (0, _.jsx)(_._, {
+              strDescription: "",
+              strTitle: (0, _._)("#Button_Share"),
+              onCancel: _.closeModal,
+              onOK: _.closeModal,
+              bAlertDialog: !0,
+              children: (0, _.jsxs)("div", {
+                className: _().FlexColumnContainer,
+                children: [
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#EventDisplay_Share_OnMyStatus_Details",
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
                     className: _().Container,
-                  },
-                  0 == _?.length
-                    ? _.createElement(_._, {
-                        position: "center",
-                      })
-                    : _.createElement("div", null, _),
-                  Boolean(_) &&
-                    _.createElement(
-                      "a",
-                      {
-                        href:
-                          _._.COMMUNITY_BASE_URL +
-                          "profiles/" +
-                          _.ConvertTo64BitString() +
-                          "/home",
-                        target: _._.IN_CLIENT ? void 0 : "_blank",
-                      },
-                      (0, _._)("#EventDisplay_Share_OpenActivityFeed"),
+                    children: [
+                      0 == _?.length
+                        ? (0, _.jsx)(_._, {
+                            position: "center",
+                          })
+                        : (0, _.jsx)("div", {
+                            children: _,
+                          }),
+                      Boolean(_) &&
+                        (0, _.jsx)("a", {
+                          href:
+                            _._.COMMUNITY_BASE_URL +
+                            "profiles/" +
+                            _.ConvertTo64BitString() +
+                            "/home",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          children: (0, _._)(
+                            "#EventDisplay_Share_OpenActivityFeed",
+                          ),
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            })
+          : (0, _.jsx)(_._, {
+              strDescription: "",
+              strTitle: (0, _._)("#Button_Share"),
+              onCancel: _.closeModal,
+              onOK: _,
+              strOKButtonText: (0, _._)("#Button_Post"),
+              children: (0, _.jsxs)("div", {
+                className: _().FlexColumnContainer,
+                children: [
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#EventDisplay_Share_OnMyStatus_Details",
                     ),
-                ),
-              ),
-            )
-          : _.createElement(
-              _._,
-              {
-                strDescription: "",
-                strTitle: (0, _._)("#Button_Share"),
-                onCancel: _.closeModal,
-                onOK: _,
-                strOKButtonText: (0, _._)("#Button_Post"),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().FlexColumnContainer,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#EventDisplay_Share_OnMyStatus_Details"),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                  }),
+                  (0, _.jsxs)("div", {
                     className: (0, _._)(_().Container, _().FlexColumnContainer),
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("img", {
-                      className: _().SmallAvatar,
-                      src: _,
-                      "data-miniprofile": "s" + _._.steamid,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().FlexColumnContainer),
-                      },
-                      _.createElement(_, {
-                        strPlaceholder: (0, _._)(
-                          "#EventDisplay_Share_OnMyStatus_Placeholder",
-                        ),
-                        fnGetCurText: () => _,
-                        fnOnTextChange: (_) => _(_.currentTarget.value),
-                        fnSetText: _,
-                        emoticonStore: _.emoticonStore,
-                        bSupportHTMLImport: !1,
-                        showFormatHelp: "UserStatusPublished",
-                        limitBBCode: _._,
-                        classNameForTextArea: _().ShareDescription,
-                        bEmbeddedInDialog: !0,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("img", {
+                            className: _().SmallAvatar,
+                            src: _,
+                            "data-miniprofile": "s" + _._.steamid,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(_().FlexColumnContainer),
+                            children: (0, _.jsx)(_, {
+                              strPlaceholder: (0, _._)(
+                                "#EventDisplay_Share_OnMyStatus_Placeholder",
+                              ),
+                              fnGetCurText: () => _,
+                              fnOnTextChange: (_) => _(_.currentTarget.value),
+                              fnSetText: _,
+                              emoticonStore: _.emoticonStore,
+                              bSupportHTMLImport: !1,
+                              showFormatHelp: "UserStatusPublished",
+                              limitBBCode: _._,
+                              classNameForTextArea: _().ShareDescription,
+                              bEmbeddedInDialog: !0,
+                            }),
+                          }),
+                        ],
                       }),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ShareLink,
-                    },
-                    _.createElement(_._, {
-                      text: __webpack_require__,
-                      event: null,
-                      partnerEventStore: _.partnerEventStore,
-                    }),
-                  ),
-                ),
-              ),
-            );
+                      (0, _.jsx)("div", {
+                        className: _().ShareLink,
+                        children: (0, _.jsx)(_._, {
+                          text: __webpack_require__,
+                          event: null,
+                          partnerEventStore: _.partnerEventStore,
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            });
       });
     },
   },

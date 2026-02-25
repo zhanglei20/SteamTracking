@@ -1293,6 +1293,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1369,51 +1370,43 @@
           ],
           [],
         );
-        return _.createElement(
-          "div",
-          {
-            className: _().GridHeaderButtons,
-          },
-          _.createElement(_._, {
-            rgOptions: _,
-            selectedOption: _,
-            strDropDownClassName: _().Test,
-            onChange: _,
-            contextMenuPositionOptions: {
-              bMatchWidth: !1,
-            },
-          }),
-          Boolean(_ || _) &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().OptionCtn, _().PriceLowOption),
+        return (0, _.jsxs)("div", {
+          className: _().GridHeaderButtons,
+          children: [
+            (0, _.jsx)(_._, {
+              rgOptions: _,
+              selectedOption: _,
+              strDropDownClassName: _().Test,
+              onChange: _,
+              contextMenuPositionOptions: {
+                bMatchWidth: !1,
               },
-              _.createElement(_._, {
-                checked: _,
-                onChange: _,
-                label: (0, _._)("#PricingDashboard_FilterToLowPrice", _),
-              }),
-            ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().OptionCtn, _().CompactOption),
-            },
-            _.createElement(_._, {
-              checked: _,
-              onChange: __webpack_require__,
-              label: (0, _._)("#PricingDashboard_ShowCompactModeCheckBoxLabel"),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            Boolean(_ || _) &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().OptionCtn, _().PriceLowOption),
+                children: (0, _.jsx)(_._, {
+                  checked: _,
+                  onChange: _,
+                  label: (0, _._)("#PricingDashboard_FilterToLowPrice", _),
+                }),
+              }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().OptionCtn, _().CompactOption),
+              children: (0, _.jsx)(_._, {
+                checked: _,
+                onChange: __webpack_require__,
+                label: (0, _._)(
+                  "#PricingDashboard_ShowCompactModeCheckBoxLabel",
+                ),
+              }),
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(_().OptionCtn),
-            },
-            _.createElement(_._, null),
-          ),
-        );
+              children: (0, _.jsx)(_._, {}),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1430,48 +1423,40 @@
           _ = _._,
           _ = (0, _._)(_),
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().CurrencyHeader,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().CurrencyHeader,
+          children: [
+            (0, _.jsx)(_._, {
               toolTipContent: _,
               direction: "top",
               className: _().CurrencyAbbreviation,
               strTooltipClassname: _().HoverToolTip,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().CurrencyNameCtn,
-              },
-              _,
-              _.createElement(
-                "span",
-                {
-                  className: _().CurrencyName,
-                },
-                _,
-              ),
-            ),
-          ),
-          _ > 0 &&
-            _.createElement(_._, {
-              hoverKey: _,
-              className: _().CurrencyMore,
-              renderHover: () =>
-                _.createElement(_, {
-                  priceKey: _,
-                }),
+                children: [
+                  _,
+                  (0, _.jsx)("span", {
+                    className: _().CurrencyName,
+                    children: _,
+                  }),
+                ],
+              }),
             }),
-        );
+            _ > 0 &&
+              (0, _.jsx)(_._, {
+                hoverKey: _,
+                className: _().CurrencyMore,
+                renderHover: () =>
+                  (0, _.jsx)(_, {
+                    priceKey: _,
+                  }),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { row: _ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           packageID: _.original.packageID,
           bShowCancel: !0,
         });
@@ -1514,15 +1499,12 @@
       function _(_) {
         const _ = (0, _._)(),
           _ = _?.length ?? 0;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().PricingGridCtn, _ > 0 && "PendingVisible"),
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().PricingGridCtn, _ > 0 && "PendingVisible"),
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       const _ = _.memo(function (_) {
         const { packageData: _ } = _,
@@ -1588,116 +1570,98 @@
         return (
           ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
             console.log("Rendering grid", _),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              bCompactMode: __webpack_require__,
-              setCompactMode: _,
-              rgGridData: _,
-              strPackageFilter: _,
-              setPackageFilter: _,
-              bFilterToBelowMinPrice: _,
-              setFilterToBelowMinPrice: _,
-            }),
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                bCompactMode: __webpack_require__,
+                setCompactMode: _,
+                rgGridData: _,
+                strPackageFilter: _,
+                setPackageFilter: _,
+                bFilterToBelowMinPrice: _,
+                setFilterToBelowMinPrice: _,
+              }),
+              (0, _.jsx)("div", {
                 className: _().PricingGridWrapper,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: (0, _._)(
                     _().PricingGrid,
                     __webpack_require__ && "CompactMode",
                   ),
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
-                      fnBLocalChangesExist: _,
-                      fnWarnUser: _,
-                    },
-                    _.createElement(_._, {
-                      ref: _,
-                      className: _()(
-                        _().PricingGridTable,
-                        "noGlobalButtonStyle",
-                      ),
-                      columns: _,
-                      data: _,
-                      getRowKey: (_, _) => _.packageID,
-                      stickyHeader: !0,
-                      nItemHeight: 43,
-                      nHeaderHeight: 63,
-                      overscan: 12,
-                      initialExpanded: !0,
-                      initialSorting: [
-                        {
-                          _: "appName",
-                          desc: !1,
-                        },
-                      ],
-                      initialColumnFilters: [
-                        {
-                          _: "packageName",
-                          value: _,
-                        },
-                      ],
-                      initialGrouping: ["appName"],
-                      initialColumnVisibility: {
-                        packageType: !1,
-                        appids: !1,
-                      },
-                      initialColumnPinning: {
-                        left: [
-                          "packageID",
-                          "appName",
-                          "packageName",
-                          "proposalState",
-                          "USD",
-                        ],
-                      },
-                      onGroupingChange: _,
-                      onVisibleRowsChange: _,
-                      renderGroup: _._,
-                    }),
-                  ),
-                  _.createElement("br", null),
-                ),
-              ),
-            ),
-          )
+                  children: (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        fnBLocalChangesExist: _,
+                        fnWarnUser: _,
+                        children: (0, _.jsx)(_._, {
+                          ref: _,
+                          className: _()(
+                            _().PricingGridTable,
+                            "noGlobalButtonStyle",
+                          ),
+                          columns: _,
+                          data: _,
+                          getRowKey: (_, _) => _.packageID,
+                          stickyHeader: !0,
+                          nItemHeight: 43,
+                          nHeaderHeight: 63,
+                          overscan: 12,
+                          initialExpanded: !0,
+                          initialSorting: [
+                            {
+                              _: "appName",
+                              desc: !1,
+                            },
+                          ],
+                          initialColumnFilters: [
+                            {
+                              _: "packageName",
+                              value: _,
+                            },
+                          ],
+                          initialGrouping: ["appName"],
+                          initialColumnVisibility: {
+                            packageType: !1,
+                            appids: !1,
+                          },
+                          initialColumnPinning: {
+                            left: [
+                              "packageID",
+                              "appName",
+                              "packageName",
+                              "proposalState",
+                              "USD",
+                            ],
+                          },
+                          onGroupingChange: _,
+                          onVisibleRowsChange: _,
+                          renderGroup: _._,
+                        }),
+                      }),
+                      (0, _.jsx)("br", {}),
+                    ],
+                  }),
+                }),
+              }),
+            ],
+          })
         );
       });
       function _(_) {
         const { priceKey: _ } = _,
           _ = (0, _._)(_);
         let _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().PricePopout,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DetailRow,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().DetailLabel,
-                onClick: _,
-              },
-              (0, _._)("#PricingDashboard_RevertAllCurrency", _),
-            ),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _().PricePopout,
+          children: (0, _.jsx)("div", {
+            className: _().DetailRow,
+            children: (0, _.jsx)("div", {
+              className: _().DetailLabel,
+              onClick: _,
+              children: (0, _._)("#PricingDashboard_RevertAllCurrency", _),
+            }),
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -1714,175 +1678,153 @@
           _ = `prices_all_${_}_${_}.csv`,
           _ = `prices_${_}_${_}.csv`,
           _ = 0 == _.length;
-        return _.createElement(
-          _._,
-          {
-            bAllowFullSize: !1,
-            closeModal: _,
-            bAlertDialog: !0,
-            strTitle: (0, _._)("#PricingDashboard_ImportExportHeader"),
-          },
-          (0, _._)("#PricingDashboard_ImportExport_GeneralInstructions"),
-          _.createElement("br", null),
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)(_._, {
+          bAllowFullSize: !1,
+          closeModal: _,
+          bAlertDialog: !0,
+          strTitle: (0, _._)("#PricingDashboard_ImportExportHeader"),
+          children: [
+            (0, _._)("#PricingDashboard_ImportExport_GeneralInstructions"),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("a", {
               href: _._.PARTNER_BASE_URL + "doc/store/pricing/csv",
               target: "_blank",
-            },
-            (0, _._)("#PricingDashboard_ImportExport_DocLink"),
-          ),
-          _.createElement("br", null),
-          _.createElement("br", null),
-          _.createElement(
-            "h3",
-            null,
-            (0, _._)("#PricingDashboard_SubtitleExport"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#PricingDashboard_ImportExport_DocLink"),
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("h3", {
+              children: (0, _._)("#PricingDashboard_SubtitleExport"),
+            }),
+            (0, _.jsx)("div", {
               className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ImportExport_DownloadInstructions"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)(
+                "#PricingDashboard_ImportExport_DownloadInstructions",
+              ),
+            }),
+            (0, _.jsxs)("div", {
               className: _().ButtonRows,
-            },
-            _.length != _.length &&
-              _.createElement(
-                "div",
-                {
+              children: [
+                _.length != _.length &&
+                  (0, _.jsxs)("div", {
+                    className: _().OptionCtn,
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _().OptionDesc,
+                        children: (0, _._)(
+                          "#PricingDashboard_ImportExport_DownloadVisible_Desc",
+                        ),
+                      }),
+                      (0, _.jsxs)(_._, {
+                        className: _().Button,
+                        disabled: _,
+                        onClick: () => _(_, _),
+                        children: [
+                          (0, _._)(
+                            "#PricingDashboard_ImportExport_DownloadVisible_Button",
+                          ),
+                          (0, _.jsx)("span", {
+                            children: (0, _._)(
+                              "#PricingDashboard_PackageCount",
+                              _.length,
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                (0, _.jsxs)("div", {
                   className: _().OptionCtn,
-                },
-                _.createElement(
-                  "span",
-                  {
+                  children: [
+                    (0, _.jsx)("span", {
+                      className: _().OptionDesc,
+                      children: (0, _._)(
+                        "#PricingDashboard_ImportExport_DownloadAll_Desc",
+                      ),
+                    }),
+                    (0, _.jsxs)(_._, {
+                      className: _().Button,
+                      disabled: _,
+                      onClick: () => _(_, _),
+                      children: [
+                        (0, _._)(
+                          "#PricingDashboard_ImportExport_DownloadAll_Button",
+                        ),
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#PricingDashboard_PackageCount",
+                            _.length,
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("h3", {
+              children: (0, _._)("#PricingDashboard_SubtitleImport"),
+            }),
+            (0, _.jsx)("div", {
+              className: _().Instructions,
+              children: (0, _._)(
+                "#PricingDashboard_ImportExport_UploadInstructions",
+              ),
+            }),
+            (0, _.jsx)("div", {
+              className: _().ButtonRows,
+              children: (0, _.jsxs)("div", {
+                className: _().OptionCtn,
+                children: [
+                  (0, _.jsx)("span", {
                     className: _().OptionDesc,
-                  },
-                  (0, _._)(
-                    "#PricingDashboard_ImportExport_DownloadVisible_Desc",
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
+                    children: (0, _._)(
+                      "#PricingDashboard_ImportExport_Upload_Desc",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
                     className: _().Button,
                     disabled: _,
-                    onClick: () => _(_, _),
-                  },
-                  (0, _._)(
-                    "#PricingDashboard_ImportExport_DownloadVisible_Button",
-                  ),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#PricingDashboard_PackageCount", _.length),
-                  ),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _().OptionCtn,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().OptionDesc,
-                },
-                (0, _._)("#PricingDashboard_ImportExport_DownloadAll_Desc"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _().Button,
-                  disabled: _,
-                  onClick: () => _(_, _),
-                },
-                (0, _._)("#PricingDashboard_ImportExport_DownloadAll_Button"),
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#PricingDashboard_PackageCount", _.length),
-                ),
-              ),
-            ),
-          ),
-          _.createElement("br", null),
-          _.createElement("br", null),
-          _.createElement(
-            "h3",
-            null,
-            (0, _._)("#PricingDashboard_SubtitleImport"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ImportExport_UploadInstructions"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().ButtonRows,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().OptionCtn,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().OptionDesc,
-                },
-                (0, _._)("#PricingDashboard_ImportExport_Upload_Desc"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _().Button,
-                  disabled: _,
-                },
-                _.createElement(
-                  "label",
-                  {
-                    className: _().ImportButtonLabel,
-                    htmlFor: "import-price-input",
-                  },
-                  (0, _._)("#PricingDashboard_ImportExport_Upload_Button"),
-                  _.createElement("input", {
-                    _: "import-price-input",
-                    type: "file",
-                    style: {
-                      display: "none",
-                    },
-                    onChange: (_) =>
-                      (async function (_, _) {
-                        if (_.target.files.length >= 1) {
-                          const _ = (0, _._)(_),
-                            _ = _.target.files[0],
-                            _ = await _._.ParseCSVFile(_);
-                          (0, _._)(
-                            _.createElement(_, {
-                              strFilename: _.name,
-                              parseResult: _,
-                            }),
-                            _,
-                          ),
-                            _();
-                        }
-                      })(_, _),
+                    children: (0, _.jsxs)("label", {
+                      className: _().ImportButtonLabel,
+                      htmlFor: "import-price-input",
+                      children: [
+                        (0, _._)(
+                          "#PricingDashboard_ImportExport_Upload_Button",
+                        ),
+                        (0, _.jsx)("input", {
+                          _: "import-price-input",
+                          type: "file",
+                          style: {
+                            display: "none",
+                          },
+                          onChange: (_) =>
+                            (async function (_, _) {
+                              if (_.target.files.length >= 1) {
+                                const _ = (0, _._)(_),
+                                  _ = _.target.files[0],
+                                  _ = await _._.ParseCSVFile(_);
+                                (0, _._)(
+                                  (0, _.jsx)(_, {
+                                    strFilename: _.name,
+                                    parseResult: _,
+                                  }),
+                                  _,
+                                ),
+                                  _();
+                              }
+                            })(_, _),
+                        }),
+                      ],
+                    }),
                   }),
-                ),
-              ),
-            ),
-          ),
-        );
+                ],
+              }),
+            }),
+          ],
+        });
       }
       function _(_, _) {
         const _ = [],
@@ -1949,74 +1891,67 @@
           }, [_, _, _, _]),
           null === _)
         )
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             position: "center",
           });
         const _ = _.length > 0,
           _ = _
             ? (0, _._)("#PackageGrid_SaveChangesDialogButton")
             : (0, _._)("#Button_Close");
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)(
-              "#PricingDashboard_ImportExport_UploadProgressTitle",
-            ),
-            strDescription: (0, _._)(
-              "#PricingDashboard_ImportExport_UploadProgressDetails",
-              _,
-            ),
-            bAlertDialog: !_,
-            strOKButtonText: _,
-            onOK: () => {
-              _ && (0, _._)(_.createElement(_._, null), window);
-            },
-            strCancelButtonText: (0, _._)("#Button_OK"),
-            closeModal: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ParseResultCount,
-            },
-            (0, _._)("#PricingDashboard_ImportExport_UploadResults", _.length),
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)(
+            "#PricingDashboard_ImportExport_UploadProgressTitle",
           ),
-          _ &&
-            (0, _._)(
-              "#PricingDashboard_ImportExport_UploadNextStepInstructions",
-            ),
-          !!_.errors?.length &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().ErrorHeader,
-                },
-                (0, _._)(
-                  "#PricingDashboard_ImportExport_UploadErrorsHeader",
-                  _.errors?.length,
-                ),
+          strDescription: (0, _._)(
+            "#PricingDashboard_ImportExport_UploadProgressDetails",
+            _,
+          ),
+          bAlertDialog: !_,
+          strOKButtonText: _,
+          onOK: () => {
+            _ && (0, _._)((0, _.jsx)(_._, {}), window);
+          },
+          strCancelButtonText: (0, _._)("#Button_OK"),
+          closeModal: _,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().ParseResultCount,
+              children: (0, _._)(
+                "#PricingDashboard_ImportExport_UploadResults",
+                _.length,
               ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ParseErrors,
-                },
-                _.errors.map((_, _) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: `${_.message}-${_}`,
-                      className: _().Error,
-                    },
-                    `${_.row ?? "-"} ${_.message}`,
-                  ),
-                ),
+            }),
+            _ &&
+              (0, _._)(
+                "#PricingDashboard_ImportExport_UploadNextStepInstructions",
               ),
-            ),
-        );
+            !!_.errors?.length &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ErrorHeader,
+                    children: (0, _._)(
+                      "#PricingDashboard_ImportExport_UploadErrorsHeader",
+                      _.errors?.length,
+                    ),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().ParseErrors,
+                    children: _.errors.map((_, _) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _().Error,
+                          children: `${_.row ?? "-"} ${_.message}`,
+                        },
+                        `${_.message}-${_}`,
+                      ),
+                    ),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2032,85 +1967,69 @@
             [_],
           ),
           [_, _, _] = ((0, _._)(_), (0, _._)());
-        return _.createElement(
-          "div",
-          {
-            className: _().DashboardPage,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().DashboardPage,
+          children: [
+            (0, _.jsxs)("div", {
               className: _().DashTitle,
-            },
-            (0, _._)("#PricingDashboard_Title"),
-            _.createElement("div", {
-              className: _().FeedbackLinkCtn,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().ButtonGroup,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                },
-                (0, _._)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  active: _,
-                },
-                _.createElement(_._, {
-                  closeModal: _,
+              children: [
+                (0, _._)("#PricingDashboard_Title"),
+                (0, _.jsx)("div", {
+                  className: _().FeedbackLinkCtn,
                 }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: (_) =>
-                    (0, _._)(_.createElement(_, null), (0, _._)(_)),
-                },
-                (0, _._)("#PricingDashboard_ImportExportButton"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: (_) => (0, _._)(_, _),
-                },
-                (0, _._)("#PricingDashboard_DocumentationButton"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: (_) => (0, _._)(_, _),
-                },
-                (0, _._)("#PricingDashboard_ContactUsButton"),
-              ),
-            ),
-          ),
-          0 == _.length &&
-            _.createElement(
-              "div",
-              {
+                (0, _.jsxs)("div", {
+                  className: _().ButtonGroup,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _._)(
+                        "#PricingDashboard_ApplyGuidelinesDialog_Button",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      active: _,
+                      children: (0, _.jsx)(_._, {
+                        closeModal: _,
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
+                      children: (0, _._)(
+                        "#PricingDashboard_ImportExportButton",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => (0, _._)(_, _),
+                      children: (0, _._)(
+                        "#PricingDashboard_DocumentationButton",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => (0, _._)(_, _),
+                      children: (0, _._)("#PricingDashboard_ContactUsButton"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            0 == _.length &&
+              (0, _.jsx)("div", {
                 className: _().ErrorMessage,
-              },
-              (0, _._)("#PricingDashboard_Error_NoPackages"),
-            ),
-          _.length > 0 &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_, {
-                packageData: _,
+                children: (0, _._)("#PricingDashboard_Error_NoPackages"),
               }),
-              _.createElement(_._, {
-                bReloadPageOnSave: !1,
+            _.length > 0 &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    packageData: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    bReloadPageOnSave: !1,
+                  }),
+                ],
               }),
-            ),
-        );
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2118,40 +2037,33 @@
         PricingDashboard: () => "/dashboard/:publisherid(\\d*)",
       };
       function _(_) {
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                basename: (0, _._)() + "pricing/",
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _._.DiagData(),
-                  render: (_) =>
-                    _.createElement(_._, {
-                      ..._,
-                      strConfigID: "application_config",
-                    }),
-                }),
-                _.createElement(_._, {
-                  path: _.PricingDashboard(),
-                  render: (_) => _.createElement(_, null),
-                }),
-                _.createElement(_._, {
-                  component: _._,
-                }),
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              basename: (0, _._)() + "pricing/",
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    exact: !0,
+                    path: _._.DiagData(),
+                    render: (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                        strConfigID: "application_config",
+                      }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: _.PricingDashboard(),
+                    render: (_) => (0, _.jsx)(_, {}),
+                  }),
+                  (0, _.jsx)(_._, {
+                    component: _._,
+                  }),
+                ],
+              }),
+            }),
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

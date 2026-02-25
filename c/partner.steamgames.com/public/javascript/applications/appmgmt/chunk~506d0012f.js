@@ -29,6 +29,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -53,20 +54,17 @@
             ),
             [_, _],
           );
-        return _.createElement(
-          _._,
-          {
-            ref: __webpack_require__ ? _.measureElement : void 0,
-            "data-index": _,
-            fnScrollIntoViewHandler: _,
-            scrollIntoViewWhenChildFocused: "force",
-            style: {
-              width: "100%",
-              paddingBottom: _,
-            },
+        return (0, _.jsx)(_._, {
+          ref: __webpack_require__ ? _.measureElement : void 0,
+          "data-index": _,
+          fnScrollIntoViewHandler: _,
+          scrollIntoViewWhenChildFocused: "force",
+          style: {
+            width: "100%",
+            paddingBottom: _,
           },
-          _(_),
-        );
+          children: _(_),
+        });
       });
       _.forwardRef(function (_, _) {
         const {
@@ -111,29 +109,26 @@
             initialOffset: _,
             onOffsetChange: _,
           };
-        return _.createElement(
-          _._,
-          {
-            className: _,
-            ref: _,
-            ..._,
-          },
-          _.createElement(
-            _.Suspense,
-            null,
-            "element" === _ &&
-              _.createElement(_, {
-                ..._,
-                nScrollMargin: _ || 0,
-                elScrollable: _,
-              }),
-            "window" === _ &&
-              _.createElement(_, {
-                ..._,
-                nScrollMargin: _,
-              }),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          className: _,
+          ref: _,
+          ..._,
+          children: (0, _.jsxs)(_.Suspense, {
+            children: [
+              "element" === _ &&
+                (0, _.jsx)(_, {
+                  ..._,
+                  nScrollMargin: _ || 0,
+                  elScrollable: _,
+                }),
+              "window" === _ &&
+                (0, _.jsx)(_, {
+                  ..._,
+                  nScrollMargin: _,
+                }),
+            ],
+          }),
+        });
       });
       function _(_) {
         const {
@@ -167,7 +162,7 @@
               _.measure();
             });
           }, [_, _]),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
           })
@@ -212,7 +207,7 @@
               _.measure();
             });
           }, [_, _]),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
           })
@@ -228,40 +223,37 @@
           _ = _.getVirtualItems(),
           _ = _.length ? _[0].start - _.options.scrollMargin : 0,
           _ = Math.max(0, _.getTotalSize());
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "column",
-            navEntryPreferPosition: _._.MAINTAIN_Y,
-            style: {
-              height: `${_}px`,
-              width: "100%",
-              position: "relative",
-            },
+        return (0, _.jsx)(_._, {
+          "flow-children": "column",
+          navEntryPreferPosition: _._.MAINTAIN_Y,
+          style: {
+            height: `${_}px`,
+            width: "100%",
+            position: "relative",
           },
-          _.createElement(
-            "div",
-            {
-              style: {
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                transform: `translateY( ${_}px )`,
-              },
+          children: (0, _.jsx)("div", {
+            style: {
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              transform: `translateY( ${_}px )`,
             },
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.key,
-                virtualizer: _,
-                bDynamic: _,
-                idx: _.index,
-                rowGap: __webpack_require__,
-                renderItem: _,
-              }),
+            children: _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  virtualizer: _,
+                  bDynamic: _,
+                  idx: _.index,
+                  rowGap: __webpack_require__,
+                  renderItem: _,
+                },
+                _.key,
+              ),
             ),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         return (..._) => {
@@ -357,13 +349,10 @@
           }),
           [__webpack_require__],
         );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _.children,
+        });
       }
       const _ = _.forwardRef(function (_, _) {
         const {
@@ -547,63 +536,62 @@
           const _ = _[_.index];
           _?.column.getIsPinned() && (_ += _.size);
         }
-        return _.createElement(
-          _,
-          {
-            table: _,
-            setColumnSizeOverride: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _,
-              ref: _,
-              style: {
-                width: _,
-                height: _,
-                overflow: "element" === _ ? "auto" : void 0,
-                maxWidth: "fit-content",
-                scrollPadding: `${_}px 0 0 ${_}px`,
-              },
+        return (0, _.jsx)(_, {
+          table: _,
+          setColumnSizeOverride: _,
+          children: (0, _.jsx)("div", {
+            className: _,
+            ref: _,
+            style: {
+              width: _,
+              height: _,
+              overflow: "element" === _ ? "auto" : void 0,
+              maxWidth: "fit-content",
+              scrollPadding: `${_}px 0 0 ${_}px`,
             },
-            _.createElement(
-              "div",
-              {
-                role: "table",
-                ref: _,
-                "aria-rowcount": __webpack_require__.length,
-                style: {
-                  minHeight: _,
-                  width: _.getTotalSize(),
-                  "--virtualPos": `${_}px`,
-                  ..._,
-                },
+            children: (0, _.jsxs)("div", {
+              role: "table",
+              ref: _,
+              "aria-rowcount": __webpack_require__.length,
+              style: {
+                minHeight: _,
+                width: _.getTotalSize(),
+                "--virtualPos": `${_}px`,
+                ..._,
               },
-              _.getHeaderGroups().map((_) =>
-                _.createElement(_, {
-                  key: _._,
-                  group: _,
-                  sticky: _,
-                  nHeaderHeight: _,
-                }),
-              ),
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _.key,
-                  row: _[_.index],
-                  size: _.size,
-                  rowVirtualizer: _,
-                  index: _.index,
-                  measureRef: _.measureElement,
-                  scrollContainerRef: _,
-                  nItemHeight: _,
-                  renderGroup: _,
-                  rowEnd: _,
-                }),
-              ),
-            ),
-          ),
-        );
+              children: [
+                _.getHeaderGroups().map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      group: _,
+                      sticky: _,
+                      nHeaderHeight: _,
+                    },
+                    _._,
+                  ),
+                ),
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      row: _[_.index],
+                      size: _.size,
+                      rowVirtualizer: _,
+                      index: _.index,
+                      measureRef: _.measureElement,
+                      scrollContainerRef: _,
+                      nItemHeight: _,
+                      renderGroup: _,
+                      rowEnd: _,
+                    },
+                    _.key,
+                  ),
+                ),
+              ],
+            }),
+          }),
+        });
       });
       function _(_) {
         const _ = _.getIsPinned();
@@ -625,17 +613,14 @@
       }
       function _(_) {
         const { group: _, sticky: __webpack_require__, nHeaderHeight: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            role: "row",
-            className: _()(
-              _().FancyTableRow,
-              _().FancyTableHeader,
-              __webpack_require__ && _().StickyHeader,
-            ),
-          },
-          _.headers.map((_, _) => {
+        return (0, _.jsx)("div", {
+          role: "row",
+          className: _()(
+            _().FancyTableRow,
+            _().FancyTableHeader,
+            __webpack_require__ && _().StickyHeader,
+          ),
+          children: _.headers.map((_, _) => {
             const _ = _.headers[_ - 1],
               _ = {},
               _ = _.column.getIsSorted();
@@ -650,18 +635,21 @@
                 (_.onClick = _.column.getToggleSortingHandler())),
               _.column.columnDef.meta?.strHeaderTooltip &&
                 (_.title = _.column.columnDef.meta?.strHeaderTooltip),
-              _.createElement(_, {
-                key: _._,
-                header: _,
-                prevHeader: _,
-                HeaderElement: _,
-                nHeaderHeight: _,
-                sortDirection: _,
-                conditionalProps: _,
-              })
+              (0, _.jsx)(
+                _,
+                {
+                  header: _,
+                  prevHeader: _,
+                  HeaderElement: _,
+                  nHeaderHeight: _,
+                  sortDirection: _,
+                  conditionalProps: _,
+                },
+                _._,
+              )
             );
           }),
-        );
+        });
       }
       const _ = _.memo(function (_) {
         const {
@@ -673,29 +661,26 @@
           nItemHeight: _,
           renderGroup: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            role: "row",
-            className: _()(
-              _().FancyTableRow,
-              _.getCanExpand() && _().ExpandableRow,
-            ),
-            style: {
-              minHeight: _.getCanExpand() ? void 0 : `${__webpack_require__}px`,
-              transform: "translateY(var(--virtualPos))",
-            },
-            "data-even": _ % 2 == 0,
-            "data-index": _,
-            ref: _,
+        return (0, _.jsx)("div", {
+          role: "row",
+          className: _()(
+            _().FancyTableRow,
+            _.getCanExpand() && _().ExpandableRow,
+          ),
+          style: {
+            minHeight: _.getCanExpand() ? void 0 : `${__webpack_require__}px`,
+            transform: "translateY(var(--virtualPos))",
           },
-          _.createElement(_, {
+          "data-even": _ % 2 == 0,
+          "data-index": _,
+          ref: _,
+          children: (0, _.jsx)(_, {
             row: _,
             rowVirtualizer: _,
             nItemHeight: _,
             renderGroup: _,
           }),
-        );
+        });
       });
       function _(_) {
         const {
@@ -705,41 +690,41 @@
         } = _;
         if (_.getCanExpand()) {
           const _ = _ ?? (() => _.groupingValue);
-          return _.createElement(
-            "button",
-            {
-              className: _().RowGroup,
-              "aria-expanded": _.getIsExpanded(),
-              onClick: _.getToggleExpandedHandler(),
-            },
-            _.createElement("div", {
-              className: _().GroupExpandIndicator,
-            }),
-            _(_),
-          );
+          return (0, _.jsxs)("button", {
+            className: _().RowGroup,
+            "aria-expanded": _.getIsExpanded(),
+            onClick: _.getToggleExpandedHandler(),
+            children: [
+              (0, _.jsx)("div", {
+                className: _().GroupExpandIndicator,
+              }),
+              _(_),
+            ],
+          });
         }
         const _ = __webpack_require__.getVirtualItems(),
           _ = _.getVisibleCells();
         let _,
           _ = 0;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.map((_) => {
+        return (0, _.jsx)(_.Fragment, {
+          children: _.map((_) => {
             const _ = _[_.index],
               _ = _.column.getIsPinned();
             return (
               _ ? (_ += _.size) : void 0 === _ && (_ = _.start),
-              _.createElement(_, {
-                cell: _,
-                key: _._,
-                rowVirtualizer: __webpack_require__,
-                index: _.index,
-                transform: _ ? void 0 : `translateX(${_ - _}px)`,
-              })
+              (0, _.jsx)(
+                _,
+                {
+                  cell: _,
+                  rowVirtualizer: __webpack_require__,
+                  index: _.index,
+                  transform: _ ? void 0 : `translateX(${_ - _}px)`,
+                },
+                _._,
+              )
             );
           }),
-        );
+        });
       }
       function _(_, _) {
         const _ = (0, _.useContext)(_),
@@ -788,11 +773,10 @@
           _ = (0, _.useRef)(null);
         return (
           _(_.column, _),
-          _.createElement(
+          (0, _.jsxs)(
             _,
             {
               role: "columnheader",
-              key: _._,
               ref: _,
               "data-pinned": !!_.column.getIsPinned(),
               className: _()(
@@ -806,36 +790,39 @@
                 ..._(_.column),
               },
               ..._,
+              children: [
+                __webpack_require__?.column.getCanResize() &&
+                  (0, _.jsx)("div", {
+                    role: "presentation",
+                    onDoubleClick: () => __webpack_require__.column.resetSize(),
+                    onMouseDown: __webpack_require__.getResizeHandler(),
+                    onTouchStart: __webpack_require__.getResizeHandler(),
+                    onClick: (_) => _.stopPropagation(),
+                    className: _()(_().ResizeHandle, _().PrevResizeHandle),
+                  }),
+                _.isPlaceholder
+                  ? null
+                  : (0, _._)(_.column.columnDef.header, _.getContext()),
+                _ &&
+                  !_.column.columnDef.meta?.bDisableSortButton &&
+                  (0, _.jsx)("div", {
+                    className: _().SortIndicator,
+                  }),
+                _.column.getCanResize() &&
+                  (0, _.jsx)("div", {
+                    role: "presentation",
+                    onDoubleClick: () => _.column.resetSize(),
+                    onMouseDown: _.getResizeHandler(),
+                    onTouchStart: _.getResizeHandler(),
+                    onClick: (_) => _.stopPropagation(),
+                    className: _()(
+                      _().ResizeHandle,
+                      _.column.getIsResizing() && _().IsResizing,
+                    ),
+                  }),
+              ],
             },
-            __webpack_require__?.column.getCanResize() &&
-              _.createElement("div", {
-                role: "presentation",
-                onDoubleClick: () => __webpack_require__.column.resetSize(),
-                onMouseDown: __webpack_require__.getResizeHandler(),
-                onTouchStart: __webpack_require__.getResizeHandler(),
-                onClick: (_) => _.stopPropagation(),
-                className: _()(_().ResizeHandle, _().PrevResizeHandle),
-              }),
-            _.isPlaceholder
-              ? null
-              : (0, _._)(_.column.columnDef.header, _.getContext()),
-            _ &&
-              !_.column.columnDef.meta?.bDisableSortButton &&
-              _.createElement("div", {
-                className: _().SortIndicator,
-              }),
-            _.column.getCanResize() &&
-              _.createElement("div", {
-                role: "presentation",
-                onDoubleClick: () => _.column.resetSize(),
-                onMouseDown: _.getResizeHandler(),
-                onTouchStart: _.getResizeHandler(),
-                onClick: (_) => _.stopPropagation(),
-                className: _()(
-                  _().ResizeHandle,
-                  _.column.getIsResizing() && _().IsResizing,
-                ),
-              }),
+            _._,
           )
         );
       }
@@ -850,27 +837,24 @@
           _ = (0, _._)(_, __webpack_require__.measure);
         return (
           _(_.column, _),
-          _.createElement(
-            "div",
-            {
-              className: _()(
-                _().FancyTableCell,
-                _.column.columnDef.meta?.cellClassname,
-              ),
-              "data-index": _,
-              "data-table-column-id": _.column._,
-              ref: _,
-              style: {
-                width: `var(--col-${_.column._}-size)`,
-                transform: _,
-                ..._(_.column),
-              },
+          (0, _.jsx)("div", {
+            className: _()(
+              _().FancyTableCell,
+              _.column.columnDef.meta?.cellClassname,
+            ),
+            "data-index": _,
+            "data-table-column-id": _.column._,
+            ref: _,
+            style: {
+              width: `var(--col-${_.column._}-size)`,
+              transform: _,
+              ..._(_.column),
             },
-            _.createElement(_, {
+            children: (0, _.jsx)(_, {
               CellComponent: _.column.columnDef.cell,
               context: _.getContext(),
             }),
-          )
+          })
         );
       }
       const _ = _.memo(

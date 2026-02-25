@@ -4,6 +4,39 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
+        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
+        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
+        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
+        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
+        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
+        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
+        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
+        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
+        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
+        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
+        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
         strMediumWidth: "800px",
         strMaxMobileWidth: "600px",
         MediaContainer: "-ap7mXqcxyhrxn5-5EaM8",
@@ -25,6 +58,17 @@
         VideoLargeContainer: "_3mzKCP4FLx7fUVeKrhZ1nn",
         VideoPopupContainers: "_2LqAoKcZgpOtpoj5_URVNJ",
         VideoLarge: "_3zPl6O67BYIiFOlq7FxlJP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
+        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
+        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
+        Reason: "_2h0GKAYcXRP10ryZHFn79d",
+        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
       };
     },
     chunkid: (module) => {
@@ -125,6 +169,152 @@
         TextBottom: "_3-KPIEC01O5ncvCQdfuTum",
         ButtonContainer: "_10sC9pDV-gUZWLDMtbWFpZ",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            bShowAsMuted: __webpack_require__,
+            bHidePrice: _,
+            bShowInLibraryInsteadOfPrice: _,
+            bHidePlatforms: _,
+            strClassName: _,
+            creatorAccountID: _,
+            bShowName: _,
+            onlyOneDiscountPct: _,
+            bShowAddToCart: _,
+            bShowWishlistButton: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!1),
+          { data: _ } = (0, _._)(_);
+        if (
+          ((0, _.useEffect)(() => {
+            _.current && _(_.current.offsetWidth < 370);
+          }, [_]),
+          !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
+        )
+          return null;
+        const _ = Boolean(_ && 0 == _?.item_type),
+          _ = Boolean(!_ && !_ && !_ && _ && _);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsxs)("div", {
+                ref: _,
+                className: (0, _._)(
+                  _().CapsuleBottomBar,
+                  "CapsuleBottomBar",
+                  __webpack_require__ && _().Muted,
+                  _,
+                ),
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      creatorAccountID: _,
+                      ..._,
+                    }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      className: (0, _._)(
+                        _().MaxActionButtonWidth,
+                        _().AddToCartButton,
+                      ),
+                    }),
+                  _ &&
+                    "appid" in _ &&
+                    (0, _.jsx)(_._, {
+                      appid: _.appid,
+                      className: (0, _._)(
+                        _().MaxActionButtonWidth,
+                        _().AddToWishlistButton,
+                      ),
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      bMinimizePlatforms: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)("span", {
+                      className: _().BottomBarPriceInfo,
+                      children: (0, _.jsx)(_._, {
+                        _: _,
+                        bShowInLibrary: _,
+                        onlyOneDiscountPct: _,
+                      }),
+                    }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                _: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
+        return __webpack_require__?.name
+          ? (0, _.jsx)("div", {
+              className: _().CapsuleName,
+              children: __webpack_require__.name,
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            creatorAccountID: _,
+            bShowAsMuted: __webpack_require__,
+            strClassName: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              creatorid: _,
+            }),
+            [_],
+          ),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(_?.clan_avatar, "Medium"),
+          _ = _.name || "";
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().BottomCreatorRow,
+            __webpack_require__ && _().Muted,
+            _,
+          ),
+          children: [
+            (0, _.jsx)("img", {
+              className: (0, _._)(_().CreatorLogo),
+              src: _,
+              alt: _,
+            }),
+            (0, _.jsx)("span", {
+              className: _().CreatorName,
+              children: _,
+            }),
+          ],
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3662,6 +3852,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -3693,26 +3884,25 @@
             );
           }, [__webpack_require__]);
         return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().SaleTagBlockCtn, "SaleTagBlockCtn"),
-              },
-              Boolean(_?.length > 0)
-                ? _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().TagBox, _().Categories),
-                    },
-                    _.map((_) =>
-                      _.createElement(_, {
-                        key: "cat_" + _,
-                        categoryID: _,
-                      }),
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(_().SaleTagBlockCtn, "SaleTagBlockCtn"),
+              children: Boolean(_?.length > 0)
+                ? (0, _.jsx)("div", {
+                    className: (0, _._)(_().TagBox, _().Categories),
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          categoryID: _,
+                        },
+                        "cat_" + _,
+                      ),
                     ),
-                  )
-                : _.createElement("div", null, (0, _._)("#Broadcast_None")),
-            )
+                  })
+                : (0, _.jsx)("div", {
+                    children: (0, _._)("#Broadcast_None"),
+                  }),
+            })
           : null;
       }
       class _ {
@@ -3732,24 +3922,18 @@
         const { categoryID: _ } = _,
           _ = _.Get().m_rgCategories.find((_) => _.categoryid == _);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _().Category,
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: _.name,
-                },
-                _.createElement("div", {
+          ? (0, _.jsx)("div", {
+              className: _().Category,
+              children: (0, _.jsx)(_._, {
+                toolTipContent: _.name,
+                children: (0, _.jsx)("div", {
                   className: _().CategoryIcon,
                   style: {
                     background: `url(${_._.STORE_CDN_URL}/public/images/${_.image_path}) no-repeat center center/cover`,
                   },
                 }),
-              ),
-            )
+              }),
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid");
@@ -3767,17 +3951,14 @@
             _ && (__webpack_require__ ? _(!0) : _((_) => !_));
           }, [_, __webpack_require__]);
         if (!_)
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().HilightGrid, _().MediaContainer),
-            },
-            _.createElement(_._, {
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_().HilightGrid, _().MediaContainer),
+            children: (0, _.jsx)(_._, {
               size: "medium",
             }),
-          );
+          });
         const _ = _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               trailer: _,
               bPlayVideo: _,
               fnTogglePlayTrailer: _,
@@ -3785,32 +3966,31 @@
           : null;
         return _ ||
           (_ && _.all_ages_screenshots && _.all_ages_screenshots.length > 0)
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HilightGrid, _().MediaContainer),
-              },
-              _.createElement(_, {
-                elFeaturedInCenter: _,
-                storeItemScreenshots: _,
-                trailer: _,
-                _: _,
-                name: _.name || "",
-              }),
-              Boolean(__webpack_require__)
-                ? _.createElement(_, {
-                    _: _,
-                    bShowModal: _,
-                    hideModal: () => _(!1),
-                  })
-                : _.createElement(_, {
-                    name: _.name || "",
-                    trailer: _,
-                    bPlayVideo: _,
-                    fnTogglePlayTrailer: _,
-                    bControls: !0,
-                  }),
-            )
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_().HilightGrid, _().MediaContainer),
+              children: [
+                (0, _.jsx)(_, {
+                  elFeaturedInCenter: _,
+                  storeItemScreenshots: _,
+                  trailer: _,
+                  _: _,
+                  name: _.name || "",
+                }),
+                Boolean(__webpack_require__)
+                  ? (0, _.jsx)(_, {
+                      _: _,
+                      bShowModal: _,
+                      hideModal: () => _(!1),
+                    })
+                  : (0, _.jsx)(_, {
+                      name: _.name || "",
+                      trailer: _,
+                      bPlayVideo: _,
+                      fnTogglePlayTrailer: _,
+                      bControls: !0,
+                    }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -3824,14 +4004,11 @@
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(_);
         return _ && _ && _
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
-              },
-              _.createElement(_, {
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
+              children: (0, _.jsx)(_, {
                 _: _,
-                elFeaturedInCenter: _.createElement(_, {
+                elFeaturedInCenter: (0, _.jsx)(_, {
                   _: _,
                   bUseAssetWithoutOverride: Boolean(_),
                   fnOnClickButton: __webpack_require__,
@@ -3843,16 +4020,13 @@
                 bNoScreenShotModals: !0,
                 name: _.name || "",
               }),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
-              },
-              _.createElement(_._, {
+            })
+          : (0, _.jsx)("div", {
+              className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
+              children: (0, _.jsx)(_._, {
                 size: "medium",
               }),
-            );
+            });
       }
       function _(_) {
         const {
@@ -3877,29 +4051,35 @@
         _ &&
           _ &&
           (_.push(
-            _.createElement(_, {
-              key: "trail_thumb_",
-              trailer: _,
-              bPlayVideo: !1,
-              fnTogglePlayTrailer: () => {},
-              onMouseEnter: () => _(0),
-              onMouseLeave: () => {
-                const _ = _.current;
-                _ && _(_.currentTime);
+            (0, _.jsx)(
+              _,
+              {
+                trailer: _,
+                bPlayVideo: !1,
+                fnTogglePlayTrailer: () => {},
+                onMouseEnter: () => _(0),
+                onMouseLeave: () => {
+                  const _ = _.current;
+                  _ && _(_.currentTime);
+                },
               },
-            }),
+              "trail_thumb_",
+            ),
           ),
           _.push(
-            _.createElement(_, {
-              key: "trail_inline",
-              ref: _,
-              name: _,
-              trailer: _,
-              bControls: !1,
-              bPlayVideo: !0,
-              startTime: _,
-              fnTogglePlayTrailer: () => {},
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                ref: _,
+                name: _,
+                trailer: _,
+                bControls: !1,
+                bPlayVideo: !0,
+                startTime: _,
+                fnTogglePlayTrailer: () => {},
+              },
+              "trail_inline",
+            ),
           ));
         const _ = (
           _ ? _?.all_ages_screenshots : _?.mature_content_screenshots
@@ -3911,43 +4091,43 @@
                 _ = (0, _._)(_, "full"),
                 _ = _.length;
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "div",
                   {
-                    key: _ + "_small_" + _,
                     className: (0, _._)({
                       [_().ThumbnailCtn]: !0,
                       [_().ThumbnialClickable]: !_,
                     }),
-                  },
-                  _.createElement("img", {
-                    src: _,
-                    onClick: _
-                      ? void 0
-                      : () => {
-                          const _ = [...(_ || [])];
-                          if (_.length > 0) {
-                            for (let _ = 0; _ < _; ++_) {
-                              const _ = _.shift();
-                              _ && _.push(_);
+                    children: (0, _.jsx)("img", {
+                      src: _,
+                      onClick: _
+                        ? void 0
+                        : () => {
+                            const _ = [...(_ || [])];
+                            if (_.length > 0) {
+                              for (let _ = 0; _ < _; ++_) {
+                                const _ = _.shift();
+                                _ && _.push(_);
+                              }
+                              _(_.map((_) => (0, _._)(_, "full")));
                             }
-                            _(_.map((_) => (0, _._)(_, "full")));
-                          }
-                        },
-                    onMouseEnter: () => _(_),
-                  }),
+                          },
+                      onMouseEnter: () => _(_),
+                    }),
+                  },
+                  _ + "_small_" + _,
                 ),
               ),
                 _.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     "div",
                     {
-                      key: _ + "_big_" + _,
                       className: _().ScreenshotDisplayCtn,
+                      children: (0, _.jsx)("img", {
+                        src: _,
+                      }),
                     },
-                    _.createElement("img", {
-                      src: _,
-                    }),
+                    _ + "_big_" + _,
                   ),
                 );
             }
@@ -3959,35 +4139,38 @@
           _ = Array.from({
             length: Math.max(0, 3 - _.length),
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsx)("div", {
               className: _ || _().MainMediaCtn,
-            },
-            Boolean(_ && (-1 === _ || void 0 === _))
-              ? _.createElement(_.Fragment, null, _)
-              : _.createElement(_.Fragment, null, void 0 !== _ && _[_]),
-          ),
-          Boolean(_.length > 0) &&
-            _.createElement(
-              "div",
-              {
+              children: Boolean(_ && (-1 === _ || void 0 === _))
+                ? (0, _.jsx)(_.Fragment, {
+                    children: _,
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: void 0 !== _ && _[_],
+                  }),
+            }),
+            Boolean(_.length > 0) &&
+              (0, _.jsxs)("div", {
                 className: _().ScreenshotThumbnailRow,
                 onMouseLeave: () => _(-1),
-              },
-              _,
-              _.map((_, _) =>
-                _.createElement("div", {
-                  key: `app_${(0, _._)(__webpack_require__)}_${_}`,
-                  className: _().ThumbnailCtn,
-                }),
-              ),
-            ),
-        );
+                children: [
+                  _,
+                  _.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _().ThumbnailCtn,
+                      },
+                      `app_${(0, _._)(__webpack_require__)}_${_}`,
+                    ),
+                  ),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4018,22 +4201,18 @@
         )
           return null;
         let _ = (0, _._)(_().VideoLargeContainer, _ && _().videoPlaying);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-          },
-          _.createElement(_._, {
-            name: __webpack_require__,
-            trailerCategory: _.trailer_category,
-            trailerDisplay: 1,
-            mouseOver: !1,
-          }),
-          Boolean(_ && _.microtrailer) &&
-            _.createElement(
-              "video",
-              {
+        return (0, _.jsxs)("div", {
+          className: _,
+          onClick: _,
+          children: [
+            (0, _.jsx)(_._, {
+              name: __webpack_require__,
+              trailerCategory: _.trailer_category,
+              trailerDisplay: 1,
+              mouseOver: !1,
+            }),
+            Boolean(_ && _.microtrailer) &&
+              (0, _.jsx)("video", {
                 className: _().VideoLarge,
                 ref: _,
                 controls: _,
@@ -4041,26 +4220,26 @@
                 loop: !0,
                 muted: !0,
                 poster: null != _ && _ > 0 ? void 0 : _.screenshot_full,
-              },
-              _.microtrailer?.map((_) =>
-                _._.IN_CLIENT && "video/mp4" == _.type
-                  ? null
-                  : _.createElement("source", {
-                      key: _.filename,
-                      src: (0, _._)(_, _.filename || ""),
-                      type: _.type,
-                    }),
-              ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: _.microtrailer?.map((_) =>
+                  _._.IN_CLIENT && "video/mp4" == _.type
+                    ? null
+                    : (0, _.jsx)(
+                        "source",
+                        {
+                          src: (0, _._)(_, _.filename || ""),
+                          type: _.type,
+                        },
+                        _.filename,
+                      ),
+                ),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 onClick: _,
-              },
-              _.createElement(_.sED, null),
-            ),
-        );
+                children: (0, _.jsx)(_.sED, {}),
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4086,54 +4265,41 @@
         const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
         return 0 == _?.length
           ? null
-          : _.createElement(
-              _._,
-              {
-                active: __webpack_require__,
-              },
-              _.createElement(
-                _._,
-                {
-                  "aria-labelledby": (0, _._)(_, _),
-                  bAllowFullSize: !0,
-                  bOKDisabled: !0,
-                  closeModal: _,
-                },
-                _.createElement(
-                  "div",
-                  {
+          : (0, _.jsx)(_._, {
+              active: __webpack_require__,
+              children: (0, _.jsxs)(_._, {
+                "aria-labelledby": (0, _._)(_, _),
+                bAllowFullSize: !0,
+                bOKDisabled: !0,
+                closeModal: _,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _().VideoPopupContainers,
-                  },
-                  _.createElement(_._, {
-                    dashManifests: _ || [],
-                    hlsManifest: (_.length > 0 && _?.[0]) || "",
-                    screenshot: (0, _._)(_),
-                    altText: _.trailer_name,
-                    muteWhenAutoplayBlocked: !0,
+                    children: (0, _.jsx)(_._, {
+                      dashManifests: _ || [],
+                      hlsManifest: (_.length > 0 && _?.[0]) || "",
+                      screenshot: (0, _._)(_),
+                      altText: _.trailer_name,
+                      muteWhenAutoplayBlocked: !0,
+                    }),
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                  (0, _.jsx)("div", {
                     _: _,
                     style: {
                       display: "none",
                     },
-                  },
-                  _?.name || "",
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: _?.name || "",
+                  }),
+                  (0, _.jsx)("div", {
                     _: _,
                     style: {
                       display: "none",
                     },
-                  },
-                  _.trailer_name,
-                ),
-              ),
-            );
+                    children: _.trailer_name,
+                  }),
+                ],
+              }),
+            });
       }
       function _(_) {
         const {
@@ -4143,29 +4309,25 @@
           onMouseEnter: _,
           onMouseLeave: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().VideoThumbnail]: !_,
-              [_().videoPlaying]: _,
-              [_().ThumbnailCtn]: !0,
-            }),
-            onClick: __webpack_require__,
-            onMouseEnter: _,
-            onMouseLeave: _,
-          },
-          _.createElement("img", {
-            src: (0, _._)(_),
+        return (0, _.jsxs)("div", {
+          className: (0, _._)({
+            [_().VideoThumbnail]: !_,
+            [_().videoPlaying]: _,
+            [_().ThumbnailCtn]: !0,
           }),
-          _.createElement(
-            "div",
-            {
+          onClick: __webpack_require__,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          children: [
+            (0, _.jsx)("img", {
+              src: (0, _._)(_),
+            }),
+            (0, _.jsx)("div", {
               className: _().VideoPlayButton,
-            },
-            _.createElement(_.jGG, null),
-          ),
-        );
+              children: (0, _.jsx)(_.jGG, {}),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4180,51 +4342,347 @@
           { data: _ } = (0, _._)(_);
         if (!_ || !_ || !_) return null;
         const _ = (0, _._)(_, "main_capsule");
-        return _.createElement(
-          _._,
-          {
-            focusable: !0,
-            noFocusRing: !0,
-            className: _().MainCapsuleWithHover,
-            ..._,
-            onActivate: __webpack_require__,
-          },
-          _.createElement("img", {
-            className: _().MainCapsule,
-            src: _,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          focusable: !0,
+          noFocusRing: !0,
+          className: _().MainCapsuleWithHover,
+          ..._,
+          onActivate: __webpack_require__,
+          children: [
+            (0, _.jsx)("img", {
+              className: _().MainCapsule,
+              src: _,
+            }),
+            (0, _.jsxs)("div", {
               className: _().AppDetails,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().GameName),
-              },
-              _.name || "",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ShortDesc,
-              },
-              _.short_description,
-              " ",
-            ),
-            _.createElement(_._, {
-              rgTagIDs: _ ? _.map((_) => _.tagid || 0) : [],
-              instanceNum: 0,
-              bLargeText: !0,
-              bHideTitle: !0,
-              bNoStoreLinks: !0,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().GameName),
+                  children: _.name || "",
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().ShortDesc,
+                  children: [_.short_description, " "],
+                }),
+                (0, _.jsx)(_._, {
+                  rgTagIDs: _ ? _.slice(0, 10).map((_) => _.tagid || 0) : [],
+                  instanceNum: 0,
+                  bLargeText: !0,
+                  bHideTitle: !0,
+                  bNoStoreLinks: !0,
+                }),
+                (0, _.jsx)(_, {
+                  _: _,
+                }),
+              ],
             }),
-            _.createElement(_, {
-              _: _,
-            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "capsule_index_";
+      function _(_) {
+        const {
+            capsule: _,
+            bShowParentApp: __webpack_require__,
+            elElementToAppendToHover: _,
+            index: _,
+            navKey: _,
+            bHideStoreHover: _,
+            onlyOneDiscountPct: _,
+            bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          [_] = (0, _._)(
+            __webpack_require__ ? _?.GetParentAppID() : void 0,
+            _._,
           ),
+          _ = (0, _._)(_);
+        if (!_) return null;
+        const _ = Boolean(_),
+          _ = (0, _.jsx)(_, {
+            ..._,
+            strExtraParams: _.strExtraParams,
+            info: _,
+            bIsHovered: _,
+            bHasParentAppToDisplay: _,
+            onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: _,
+          });
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)({
+            [_().OuterCapsuleContainer]: !0,
+            [_ + _]: 0 == _,
+          }),
+          navEntryPreferPosition: _._.PREFERRED_CHILD,
+          navKey: _,
+          children: [
+            (0, _.jsxs)(_._, {
+              appid: _.GetAppID(),
+              children: [
+                Boolean(_)
+                  ? (0, _.jsx)("div", {
+                      onMouseEnter: () => _(!0),
+                      onMouseLeave: () => _(!1),
+                      children: _,
+                    })
+                  : (0, _.jsx)(_._, {
+                      className: _().CapsuleContainer,
+                      _: _,
+                      elElementToAppend: _.elElementToAppendToHover,
+                      bShowDemoButton: _.bShowDemoButton,
+                      bPreferDemoStorePage: _.bPreferDemoStorePage,
+                      bShowDeckCompatibilityDialog:
+                        _.bShowDeckCompatibilityDialog,
+                      bHidePrice: _.bHidePrice,
+                      bUseSubscriptionLayout: _.bUseSubscriptionLayout,
+                      strExtraParams: _.strExtraParams,
+                      nCreatorAccountID: _.creatorAccountID,
+                      nWidthMultiplier: _.nWidthMultiplier,
+                      bShowIgnoreButton: _.bShowIgnoreButton,
+                      bShowDescription: _.bShowDescriptionInHover,
+                      children: _,
+                    }),
+                Boolean(_) &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: _,
+                  }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                strExtraParams: _.strExtraParams,
+                parentStoreItem: _,
+                childAppType: _.GetAppType(),
+                bPreferDemoStorePage: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            strExtraParams: _,
+            parentStoreItem: __webpack_require__,
+            childAppType: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          _ = (0, _._)(__webpack_require__),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return _
+          ? (0, _.jsx)(_._, {
+              className: _().CapsuleParentInfo,
+              ...(0, _._)(_, _, _, _, _),
+              children: (0, _.jsxs)(_._, {
+                appid: __webpack_require__.GetAppID(),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ParentType,
+                    children: (0, _._)(
+                      11 == _
+                        ? "#SalePage_ParentApp_SoundTrack"
+                        : "#SalePage_ParentApp_DLC",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    _: _,
+                    strExtraParams: _,
+                    children: (0, _.jsx)("img", {
+                      loading: "lazy",
+                      className: _.AppCapsuleImage,
+                      alt: __webpack_require__.GetName(),
+                      src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
+                      ...(0, _._)(),
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            info: _,
+            bHideStatusBanners: __webpack_require__,
+            strExtraParams: _,
+            index: _,
+            imageType: _,
+            bHasParentAppToDisplay: _,
+            bIsHovered: _,
+            strDoubleCapsuleMessage: _,
+            bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
+            bPreferAssetWithoutOverride: _,
+          } = _,
+          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(
+          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
         );
+        let _;
+        "overrideNavigation" in _ &&
+          (_ = (_) => (
+            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
+          ));
+        const _ = Boolean(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_().TwoWidthCtn]: _,
+              }),
+              children: [
+                (0, _.jsxs)(_._, {
+                  href: _ ? void 0 : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
+                  className: (0, _._)({
+                    [_().TwoWidthCapsule]: _,
+                  }),
+                  preferredFocus: _,
+                  onClick: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      appids: _,
+                      hide_status_banners: __webpack_require__,
+                      show_early_access: _.bShowEarlyAccessBanner,
+                    }),
+                    "none" != _ &&
+                      (0, _.jsx)(_._, {
+                        imageType: _,
+                        _: _,
+                        bPreferAssetWithoutOverride: _,
+                      }),
+                    (0, _.jsx)(_._, {
+                      _: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      active: _,
+                      bIsHoverMode: !0,
+                    }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().TwoWidthSideInfo,
+                      "TwoWidthSideInfo",
+                    ),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().Reason,
+                        children: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().StoreSaleItemRelease,
+                        children: (0, _.jsx)("span", {
+                          children: _.GetFormattedSteamReleaseDate(),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        bHideTitle: !0,
+                        rgTagIDs: _.GetTagIDs(),
+                        instanceNum: _,
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            info: _,
+            bHidePriceIfOwned: __webpack_require__,
+            bHideStatusBanners: _,
+            bUseSubscriptionLayout: _,
+            elElementToAppendToHover: _,
+            bHidePrice: _,
+            bHidePlatforms: _,
+            creatorAccountID: _,
+            bIsHovered: _,
+            onlyOneDiscountPct: _,
+            strDoubleCapsuleMessage: _,
+          } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = _ && !_;
+        if (_ && _ && 0 == _.item_type && _.appid)
+          return (0, _.jsx)(_._, {
+            appid: _.appid,
+            bIsMuted: _,
+          });
+        if (_) return null;
+        const _ = Boolean(_ && __webpack_require__),
+          _ = Boolean(_);
+        return (0, _.jsx)(_._, {
+          _: _,
+          bShowAsMuted: _,
+          bHidePrice: _,
+          bShowInLibraryInsteadOfPrice: _,
+          bHidePlatforms: _,
+          creatorAccountID: _,
+          bShowName: _.bShowName,
+          onlyOneDiscountPct: _,
+          bShowWishlistButton: Boolean(_),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4235,6 +4693,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
@@ -4256,17 +4715,16 @@
             }),
             [_, __webpack_require__, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _ &&
-            _.createElement(_, {
-              strLegalText: _,
-            }),
-          _.children,
-        );
+        return (0, _.jsxs)(_.Provider, {
+          value: _,
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                strLegalText: _,
+              }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { strLegalText: _ } = _,
@@ -4483,6 +4941,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         if (!_ || !_.path) return null;
@@ -4501,7 +4960,7 @@
             path: _,
           }),
           _ = __webpack_require__.GetLocalizedAltText(_);
-        return _.createElement("img", {
+        return (0, _.jsx)("img", {
           alt: _,
           ..._,
           src: _,
@@ -4536,21 +4995,20 @@
         return (
           (0, _._)(document, "visibilitychange", _),
           (0, _.useEffect)(() => _(), [_]),
-          _.createElement(
-            "video",
-            {
-              ..._,
-              ref: _,
-            },
-            _.createElement("source", {
-              src: _,
-              type: "video/webm",
-            }),
-            _.createElement("source", {
-              src: _,
-              type: "video/mp4",
-            }),
-          )
+          (0, _.jsxs)("video", {
+            ..._,
+            ref: _,
+            children: [
+              (0, _.jsx)("source", {
+                src: _,
+                type: "video/webm",
+              }),
+              (0, _.jsx)("source", {
+                src: _,
+                type: "video/mp4",
+              }),
+            ],
+          })
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -4562,32 +5020,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        (0, _._)();
-        const _ = _._.accountid;
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                if (!_) return new Set();
-                const _ = await (async function (_, _) {
-                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgFollowedApps || [];
-                })(0, _);
-                return new Set(_);
-              },
-              staleTime: 6e5,
-            };
-          })(0, _),
-        );
-      }
-      function _(_) {
-        return ["AccountFollowApps", _ ?? 0];
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4596,28 +5028,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.All,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.MessageContent,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _.All,
+          children: (0, _.jsx)("div", {
+            className: _.MessageContent,
+            children: _.children,
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.MessageBody,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: _.MessageBody,
+          children: _.children,
+        });
       }
       function _(_) {
         const {
@@ -4629,21 +5052,19 @@
           [_, _] = __webpack_require__
             ? _.GetTemplateBackgroundImage()
             : _.GetTemplateImage();
-        return _.createElement(
-          _._,
-          {
-            focusable: !0,
-            noFocusRing: !0,
-            className: (0, _._)(_.MessageImage, _ && _.IsBlur),
-            onActivate: _,
-          },
-          _ &&
-            _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          focusable: !0,
+          noFocusRing: !0,
+          className: (0, _._)(_.MessageImage, _ && _.IsBlur),
+          onActivate: _,
+          children:
+            _ &&
+            (0, _.jsx)(_, {
               message: _,
               path: _,
               eLanguage: _,
             }),
-        );
+        });
       }
       function _(_) {
         const { fnOnClick: _ } = _,
@@ -4656,20 +5077,14 @@
             _ == _,
             `GameAnimatedImageViaVideo mismatch fallback languages eLang ${_} mp4 ${_} webm ${_}`,
           ),
-          _.createElement(
-            "div",
-            {
-              className: _.VideoImageContainer,
-            },
-            _.createElement(
-              _._,
-              {
-                focusable: !0,
-                noFocusRing: !0,
-                className: (0, _._)(_.MessageImage),
-                onActivate: _,
-              },
-              _.createElement(_, {
+          (0, _.jsx)("div", {
+            className: _.VideoImageContainer,
+            children: (0, _.jsx)(_._, {
+              focusable: !0,
+              noFocusRing: !0,
+              className: (0, _._)(_.MessageImage),
+              onActivate: _,
+              children: (0, _.jsx)(_, {
                 muted: !0,
                 autoPlay: !0,
                 controls: !1,
@@ -4679,23 +5094,20 @@
                 webmPath: _,
                 language: _._.IN_CLIENT ? _ : _,
               }),
-            ),
-          )
+            }),
+          })
         );
       }
       function _(_) {
         const { storeItem: _ } = _,
           _ = _.GetAssets().GetMainCapsuleURL();
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.MessageImage, _.GameImage, _.IsBlur),
-              },
-              _.createElement("img", {
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(_.MessageImage, _.GameImage, _.IsBlur),
+              children: (0, _.jsx)("img", {
                 src: _,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -4716,10 +5128,7 @@
           _ = (0, _._)(_),
           { bIsOwned: _ } = (0, _._)(_),
           _ = (0, _._)(_.GetAppID()),
-          _ = (function (_) {
-            const { data: _ } = _();
-            return void 0 === _ || null == _ ? void 0 : _.has(_);
-          })(_.GetAppID()),
+          _ = (0, _._)(_.GetAppID()),
           _ = (0, _._)(_.GetAppID()),
           _ = (0, _.useMemo)(() => {
             if (
@@ -4739,122 +5148,98 @@
             ? `steam://open/games/details/${_.GetID()}`
             : `steam://nav/games/details/${_.GetID()}`);
         const _ = (0, _._)(_, 4, _);
-        return _.createElement(
-          "div",
-          {
-            className: _.BaseCtn,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.BaseCtn,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.CapsuleCtn,
               onClick: _,
-            },
-            _.createElement(_._, {
-              _: _,
-              bPreferLibrary: !0,
-              bPreferAssetWithoutOverride: _,
+              children: (0, _.jsx)(_._, {
+                _: _,
+                bPreferLibrary: !0,
+                bPreferAssetWithoutOverride: _,
+              }),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: _.DescCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.GameNameCtn,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.GameName,
-                  onClick: _,
-                },
-                _.GetName(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.LibraryDetails,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                  className: (0, _._)(_.Button, _.ViewInLibrary),
-                },
-                (0, _._)(
-                  _
-                    ? "#EventDisplay_ViewInLibrary"
-                    : "#EventDisplay_ViewStorePage",
-                ),
-              ),
-              !_ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.PlayDetailCtn,
-                    },
-                    _ &&
-                      _.createElement(
-                        "span",
-                        null,
-                        (0, _._)("#EventDisplay_OnWishlist"),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.GameNameCtn,
+                  children: (0, _.jsx)(_._, {
+                    className: _.GameName,
+                    onClick: _,
+                    children: _.GetName(),
+                  }),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.LibraryDetails,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      className: (0, _._)(_.Button, _.ViewInLibrary),
+                      children: (0, _._)(
+                        _
+                          ? "#EventDisplay_ViewInLibrary"
+                          : "#EventDisplay_ViewStorePage",
                       ),
+                    }),
                     !_ &&
-                      _ &&
-                      _.createElement(
-                        "span",
-                        null,
-                        (0, _._)("#EventDisplay_Follow"),
-                      ),
-                  ),
-                ),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  Boolean(_?.rtime_last_played) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.PlayDetailCtn,
-                      },
-                      _.createElement(
-                        "span",
-                        null,
-                        (0, _._)("#MarketingMessages_DLC_lastplayed"),
-                      ),
-                      (0, _._)(_.rtime_last_played),
-                    ),
-                  Boolean(_?.playtime_forever) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.PlayDetailCtn,
-                      },
-                      _.createElement(
-                        "span",
-                        null,
-                        (0, _._)("#MarketingMessages_DLC_hours"),
-                      ),
-                      (0, _._)(_.playtime_forever),
-                    ),
-                ),
-            ),
-          ),
-        );
+                      (0, _.jsx)(_.Fragment, {
+                        children: (0, _.jsxs)("div", {
+                          className: _.PlayDetailCtn,
+                          children: [
+                            _ &&
+                              (0, _.jsx)("span", {
+                                children: (0, _._)("#EventDisplay_OnWishlist"),
+                              }),
+                            !_ &&
+                              _ &&
+                              (0, _.jsx)("span", {
+                                children: (0, _._)("#EventDisplay_Follow"),
+                              }),
+                          ],
+                        }),
+                      }),
+                    _ &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          Boolean(_?.rtime_last_played) &&
+                            (0, _.jsxs)("div", {
+                              className: _.PlayDetailCtn,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#MarketingMessages_DLC_lastplayed",
+                                  ),
+                                }),
+                                (0, _._)(_.rtime_last_played),
+                              ],
+                            }),
+                          Boolean(_?.playtime_forever) &&
+                            (0, _.jsxs)("div", {
+                              className: _.PlayDetailCtn,
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#MarketingMessages_DLC_hours",
+                                  ),
+                                }),
+                                (0, _._)(_.playtime_forever),
+                              ],
+                            }),
+                        ],
+                      }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = _(),
           _ = (0, _._)(_.GetTemplateVars().linkurl, 2);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           bHidePrice: _.bHidePrice,
           fnOnClickButton: _,
         });
@@ -4868,30 +5253,28 @@
             Boolean(_.GetTemplateVars().hide_price),
           ]),
           _ = Boolean(_ || _);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.MessageFooter, !1),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.MessageFooter, !1),
+          children: [
+            (0, _.jsxs)("div", {
               className: _.ButtonAndPriceCtn,
-            },
-            _.createElement(
-              _._,
-              {
-                focusable: !0,
-                noFocusRing: !0,
-                className: _.Btn,
-                onActivate: __webpack_require__,
-              },
-              _,
-            ),
-            Boolean(!_) && _.createElement(_._, null, _.createElement(_, null)),
-          ),
-          _.createElement(_, null),
-        );
+              children: [
+                (0, _.jsx)(_._, {
+                  focusable: !0,
+                  noFocusRing: !0,
+                  className: _.Btn,
+                  onActivate: __webpack_require__,
+                  children: _,
+                }),
+                Boolean(!_) &&
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {}),
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_, {}),
+          ],
+        });
       }
       function _() {
         const _ = _().associated_item,
@@ -4899,17 +5282,14 @@
         return _ &&
           _.GetBestPurchaseOption() &&
           _.GetBestPurchaseOption().formatted_final_price
-          ? _.createElement(
-              "div",
-              {
-                className: _.MessagePriceCtn,
-              },
-              _.createElement(_._, {
+          ? (0, _.jsx)("div", {
+              className: _.MessagePriceCtn,
+              children: (0, _.jsx)(_._, {
                 _: _,
                 bHidePrePurchase: !0,
               }),
-            )
-          : _.createElement("div", {
+            })
+          : (0, _.jsx)("div", {
               className: _.NoPrice,
             });
       }
@@ -4917,7 +5297,7 @@
         const _ = _();
         return (0, _._)()
           ? null
-          : _.createElement("div", {
+          : (0, _.jsx)("div", {
               className: _.Legal,
               dangerouslySetInnerHTML: {
                 __html: _.GetLegalHTML(),
@@ -4944,38 +5324,35 @@
           _ = _.associated_item.GetStorePageURL(),
           _ = _(_, _, 1),
           _ = _(_, _, 2);
-        return _.createElement(
-          _._,
-          {
-            submethod: "partner_event",
-          },
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              storeItem: _.associated_item,
-            }),
-            _.createElement(
-              _,
-              null,
-              _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          submethod: "partner_event",
+          children: (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsx)(_, {
                 storeItem: _.associated_item,
-                bPreview: _,
-                bPreferAssetWithoutOverride: !1,
               }),
-              _.createElement(_, {
-                message: _,
-                eventModel: _,
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_, {
+                    storeItem: _.associated_item,
+                    bPreview: _,
+                    bPreferAssetWithoutOverride: !1,
+                  }),
+                  (0, _.jsx)(_, {
+                    message: _,
+                    eventModel: _,
+                    fnOnClickButton: _,
+                    bUseAnimated: __webpack_require__,
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                bHidePrice: !0,
                 fnOnClickButton: _,
-                bUseAnimated: __webpack_require__,
               }),
-            ),
-            _.createElement(_, {
-              bHidePrice: !0,
-              fnOnClickButton: _,
-            }),
-          ),
-        );
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -4986,46 +5363,38 @@
           } = _,
           [_, _] = _.GetTemplateImage(),
           _ = (0, _._)(_._.LANGUAGE);
-        return _.createElement(
-          "div",
-          {
-            className: _().UpdateEventCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().UpdateEventCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _().EventType,
-            },
-            (0, _._)("#MarketingMessages_MajorUpdate"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#MarketingMessages_MajorUpdate"),
+            }),
+            (0, _.jsx)("div", {
               className: _().EventTitle,
-            },
-            _?.GetNameWithFallback(_),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: _?.GetNameWithFallback(_),
+            }),
+            (0, _.jsxs)(_._, {
               focusable: !0,
               noFocusRing: !0,
               className: (0, _._)(_().EventImage),
               onActivate: __webpack_require__,
-            },
-            _ &&
-              !_ &&
-              _.createElement(_, {
-                message: _,
-                path: _,
-                eLanguage: _,
-              }),
-            _ &&
-              _.createElement(_, {
-                fnOnClick: __webpack_require__,
-              }),
-          ),
-        );
+              children: [
+                _ &&
+                  !_ &&
+                  (0, _.jsx)(_, {
+                    message: _,
+                    path: _,
+                    eLanguage: _,
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    fnOnClick: __webpack_require__,
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_, _, _) {
         let _ = (0, _._)(_?.appid),
@@ -5044,6 +5413,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -5107,193 +5477,158 @@
                 );
             }
           }, [_, _]),
-          _.createElement(
-            _._,
-            {
-              submethod: "dlc_override",
-            },
-            _.createElement(
-              _,
-              null,
-              _.createElement(_, {
-                storeItem: _.associated_item,
-              }),
-              _.createElement(
-                _,
-                null,
-                _.createElement(_, {
+          (0, _.jsx)(_._, {
+            submethod: "dlc_override",
+            children: (0, _.jsxs)(_, {
+              children: [
+                (0, _.jsx)(_, {
                   storeItem: _.associated_item,
-                  bPreview: _,
-                  bPreferAssetWithoutOverride: !1,
                 }),
-                _.createElement(_, {
-                  rgDLCSaleCapsules: _,
-                  messageType: __webpack_require__.GetType(),
+                (0, _.jsxs)(_, {
+                  children: [
+                    (0, _.jsx)(_, {
+                      storeItem: _.associated_item,
+                      bPreview: _,
+                      bPreferAssetWithoutOverride: !1,
+                    }),
+                    (0, _.jsx)(_, {
+                      rgDLCSaleCapsules: _,
+                      messageType: __webpack_require__.GetType(),
+                    }),
+                  ],
                 }),
-              ),
-              _.createElement(_, {
-                bHidePrice: !0,
-              }),
-            ),
-          )
+                (0, _.jsx)(_, {
+                  bHidePrice: !0,
+                }),
+              ],
+            }),
+          })
         );
       }
       function _(_) {
         const { messageType: _, itemCount: __webpack_require__ } = _,
           _ = _._.GetTypeAsLocalizedString(_);
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)("div", {
                 className: _.Type,
-              },
-              _,
-            ),
-          1 == __webpack_require__
-            ? _.createElement(
-                "div",
-                {
+                children: _,
+              }),
+            1 == __webpack_require__
+              ? (0, _.jsx)("div", {
                   className: _.DealDesc,
-                },
-                (0, _._)("#MarketingMessages_DLC_desc_singular"),
-              )
-            : _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#MarketingMessages_DLC_desc_singular"),
+                })
+              : (0, _.jsx)("div", {
                   className: _.DealDesc,
-                },
-                (0, _._)("#MarketingMessages_DLC_desc"),
-              ),
-        );
+                  children: (0, _._)("#MarketingMessages_DLC_desc"),
+                }),
+          ],
+        });
       }
       function _(_) {
         const { rgDLCSaleCapsules: _, messageType: __webpack_require__ } = _;
         return _.length >= 4
-          ? _.createElement(
-              "div",
-              {
-                className: _.DlcCtn,
-              },
-              _.createElement(_, {
-                messageType: __webpack_require__,
-              }),
-              _.createElement(_, {
-                first: _[0],
-                second: _[1],
-              }),
-              _.createElement(_, {
-                first: _[2],
-                second: _[3],
-              }),
-            )
-          : _.length >= 3
-            ? _.createElement(
-                "div",
-                {
-                  className: _.DlcCtn,
-                },
-                _.createElement(_, {
+          ? (0, _.jsxs)("div", {
+              className: _.DlcCtn,
+              children: [
+                (0, _.jsx)(_, {
                   messageType: __webpack_require__,
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OneItemRow,
-                  },
-                  _.createElement(_, {
-                    _: _[0]._,
-                    type: _[0].type,
-                  }),
-                ),
-                _.createElement(_, {
-                  first: _[1],
-                  second: _[2],
+                (0, _.jsx)(_, {
+                  first: _[0],
+                  second: _[1],
                 }),
-              )
-            : _.length >= 2
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.DlcCtn,
-                  },
-                  _.createElement(_, {
+                (0, _.jsx)(_, {
+                  first: _[2],
+                  second: _[3],
+                }),
+              ],
+            })
+          : _.length >= 3
+            ? (0, _.jsxs)("div", {
+                className: _.DlcCtn,
+                children: [
+                  (0, _.jsx)(_, {
                     messageType: __webpack_require__,
                   }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OneItemRow,
-                    },
-                    _.createElement(_, {
+                  (0, _.jsx)("div", {
+                    className: _.OneItemRow,
+                    children: (0, _.jsx)(_, {
                       _: _[0]._,
                       type: _[0].type,
                     }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OneItemRow,
-                    },
-                    _.createElement(_, {
-                      _: _[1]._,
-                      type: _[1].type,
-                    }),
-                  ),
-                )
-              : _.length >= 1
-                ? _.createElement(
-                    "div",
-                    {
-                      className: _.DlcCtn,
-                    },
-                    _.createElement(_, {
+                  }),
+                  (0, _.jsx)(_, {
+                    first: _[1],
+                    second: _[2],
+                  }),
+                ],
+              })
+            : _.length >= 2
+              ? (0, _.jsxs)("div", {
+                  className: _.DlcCtn,
+                  children: [
+                    (0, _.jsx)(_, {
                       messageType: __webpack_require__,
-                      itemCount: _.length,
                     }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.OneBigItem,
-                      },
-                      _.createElement(_, {
-                        capsule: _[0],
-                        imageType: "main",
+                    (0, _.jsx)("div", {
+                      className: _.OneItemRow,
+                      children: (0, _.jsx)(_, {
+                        _: _[0]._,
+                        type: _[0].type,
                       }),
-                    ),
-                  )
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.OneItemRow,
+                      children: (0, _.jsx)(_, {
+                        _: _[1]._,
+                        type: _[1].type,
+                      }),
+                    }),
+                  ],
+                })
+              : _.length >= 1
+                ? (0, _.jsxs)("div", {
+                    className: _.DlcCtn,
+                    children: [
+                      (0, _.jsx)(_, {
+                        messageType: __webpack_require__,
+                        itemCount: _.length,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.OneBigItem,
+                        children: (0, _.jsx)(_, {
+                          capsule: _[0],
+                          imageType: "main",
+                        }),
+                      }),
+                    ],
+                  })
                 : null;
       }
       function _(_) {
         const { first: _, second: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.TwoCapsuleRow,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.TwoCapsuleRow,
+          children: [
+            (0, _.jsx)("div", {
               className: _.DlcCtn,
-            },
-            _.createElement(_, {
-              capsule: _,
-              imageType: "header",
+              children: (0, _.jsx)(_, {
+                capsule: _,
+                imageType: "header",
+              }),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _.DlcCtn,
-            },
-            _.createElement(_, {
-              capsule: __webpack_require__,
-              imageType: "header",
+              children: (0, _.jsx)(_, {
+                capsule: __webpack_require__,
+                imageType: "header",
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
       function _(_, _) {
         const [__webpack_require__] = (0, _._)(_, (0, _._)(_), {
@@ -5310,7 +5645,7 @@
         const { capsule: _, imageType: __webpack_require__ } = _;
         return (
           (_.overrideNavigation = _(_._, _.type)),
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             capsule: _,
             imageType: __webpack_require__,
             bShowParentApp: !1,
@@ -5322,7 +5657,7 @@
       function _(_) {
         const { _: _, type: __webpack_require__ } = _,
           _ = _(_, __webpack_require__);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           _: _,
           type: __webpack_require__,
           fnOnClickOverride: _,
@@ -5342,44 +5677,40 @@
         (0, _._)(_);
         const _ = (0, _._)(_.GetTemplateVars().linkurl, 1),
           _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            focusable: !0,
-            noFocusRing: !0,
-            onActivate: (_) =>
-              !_ && _.GetFeaturedVideoAutoPlay() ? _(_) : _(!0),
-            className: _.PosterCtn,
-          },
-          __webpack_require__
-            ? _.createElement(
-                "video",
-                {
-                  controls: !_.GetFeaturedVideoLoop(),
-                  ref: _,
-                  muted: !0,
-                  autoPlay: !0,
-                  className: _.Video,
-                  loop: _.GetFeaturedVideoLoop(),
-                  crossOrigin: "dev" == _._.WEB_UNIVERSE ? void 0 : "anonymous",
-                },
-                _.createElement("source", {
-                  src: (0, _._)(_.GetFeaturedVideoWebMURL()),
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  _.createElement("source", {
-                    src: (0, _._)(_.GetFeaturedVideoMP4URL()),
-                    type: "video/mp4",
+        return (0, _.jsx)(_._, {
+          focusable: !0,
+          noFocusRing: !0,
+          onActivate: (_) =>
+            !_ && _.GetFeaturedVideoAutoPlay() ? _(_) : _(!0),
+          className: _.PosterCtn,
+          children: __webpack_require__
+            ? (0, _.jsxs)("video", {
+                controls: !_.GetFeaturedVideoLoop(),
+                ref: _,
+                muted: !0,
+                autoPlay: !0,
+                className: _.Video,
+                loop: _.GetFeaturedVideoLoop(),
+                crossOrigin: "dev" == _._.WEB_UNIVERSE ? void 0 : "anonymous",
+                children: [
+                  (0, _.jsx)("source", {
+                    src: (0, _._)(_.GetFeaturedVideoWebMURL()),
+                    type: "video/webm",
                   }),
-                _.createElement(_, {
-                  message: _,
-                }),
-              )
-            : _.createElement(_, {
+                  Boolean(!_._.IN_CLIENT) &&
+                    (0, _.jsx)("source", {
+                      src: (0, _._)(_.GetFeaturedVideoMP4URL()),
+                      type: "video/mp4",
+                    }),
+                  (0, _.jsx)(_, {
+                    message: _,
+                  }),
+                ],
+              })
+            : (0, _.jsx)(_, {
                 message: _,
               }),
-        );
+        });
       }
       function _(_) {
         const { message: _ } = _,
@@ -5389,15 +5720,15 @@
             type: "file",
             path: _,
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("img", {
-            src: _,
-            className: _.Poster,
-          }),
-          _.createElement(_.IOc, null),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("img", {
+              src: _,
+              className: _.Poster,
+            }),
+            (0, _.jsx)(_.IOc, {}),
+          ],
+        });
       }
       function _(_) {
         const { message: _ } = _,
@@ -5415,20 +5746,25 @@
                     path: _,
                   });
                 _.push(
-                  _.createElement("track", {
-                    key: _._ + " " + _,
-                    src: _,
-                    kind: "subtitles",
-                    srcLang: (0, _._)(_),
-                    default: _._.LANGUAGE == _,
-                    label: (0, _._)("#language_selection_" + (0, _._)(_)),
-                  }),
+                  (0, _.jsx)(
+                    "track",
+                    {
+                      src: _,
+                      kind: "subtitles",
+                      srcLang: (0, _._)(_),
+                      default: _._.LANGUAGE == _,
+                      label: (0, _._)("#language_selection_" + (0, _._)(_)),
+                    },
+                    _._ + " " + _,
+                  ),
                 );
               }
             }
             return _;
           }, [_]);
-        return _.createElement(_.Fragment, null, _);
+        return (0, _.jsx)(_.Fragment, {
+          children: _,
+        });
       }
       function _(_) {
         const { bLowBandwidthMode: _ } = _,
@@ -5437,50 +5773,44 @@
             !_ &&
             "featured_video" ===
               __webpack_require__.GetTemplateVars().custom_display;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              isBackgroundBlur: !0,
-              bOverrideUseBackgroundImage: _,
-            }),
-            _.createElement(
-              _,
-              null,
-              _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsx)(_, {
+                isBackgroundBlur: !0,
                 bOverrideUseBackgroundImage: _,
               }),
-              Boolean(_) && _.createElement(_, null),
-            ),
-            _.createElement(_, null),
-          ),
-        );
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_, {
+                    bOverrideUseBackgroundImage: _,
+                  }),
+                  Boolean(_) && (0, _.jsx)(_, {}),
+                ],
+              }),
+              (0, _.jsx)(_, {}),
+            ],
+          }),
+        });
       }
       function _(_) {
         const _ = _(),
           _ = (0, _._)(_.GetTemplateVars().linkurl, 6);
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              isBackgroundBlur: !0,
-            }),
-            _.createElement(
-              _,
-              null,
-              _.createElement(_, {
-                fnOnClick: _,
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsx)(_, {
+                isBackgroundBlur: !0,
               }),
-            ),
-            _.createElement(_, null),
-          ),
-        );
+              (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
+                  fnOnClick: _,
+                }),
+              }),
+              (0, _.jsx)(_, {}),
+            ],
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5494,63 +5824,50 @@
           _ = (0, _._)(_.GetTemplateVars().linkurl, 5),
           _ = _.associated_item,
           _ = (0, _._)(_);
-        return _.createElement(
-          _._,
-          {
-            submethod: "mm-auto-render",
-          },
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              storeItem: _,
-            }),
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_._, {
+          submethod: "mm-auto-render",
+          children: (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsx)(_, {
+                storeItem: _,
+              }),
+              (0, _.jsx)(_, {
+                children: (0, _.jsxs)("div", {
                   className: _.AutoRenderContents,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.TitleContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.TypeTitle,
-                    },
-                    _._.GetTypeAsLocalizedString(_.GetType()),
-                  ),
-                  _.createElement(_, {
-                    message: _,
-                    storeItem: _,
-                  }),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    appid: _.GetAppID(),
-                  },
-                  _.createElement(_._, {
-                    _: _,
-                    fnOnClickButton: _,
-                    bLowBandwidthMode: __webpack_require__,
-                    bUseAssetWithoutOverride:
-                      _.GetAutoRenderWithoutAssetOverrides(),
-                  }),
-                ),
-              ),
-            ),
-            _.createElement(_, {
-              bHidePrice: _.GetTemplateVars().hide_price,
-              fnOnClickButton: _,
-            }),
-          ),
-        );
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.TitleContainer,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.TypeTitle,
+                          children: _._.GetTypeAsLocalizedString(_.GetType()),
+                        }),
+                        (0, _.jsx)(_, {
+                          message: _,
+                          storeItem: _,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      appid: _.GetAppID(),
+                      children: (0, _.jsx)(_._, {
+                        _: _,
+                        fnOnClickButton: _,
+                        bLowBandwidthMode: __webpack_require__,
+                        bUseAssetWithoutOverride:
+                          _.GetAutoRenderWithoutAssetOverrides(),
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+              (0, _.jsx)(_, {
+                bHidePrice: _.GetTemplateVars().hide_price,
+                fnOnClickButton: _,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { message: _, storeItem: __webpack_require__ } = _,
@@ -5558,13 +5875,10 @@
           [_] = (0, _._)("locale");
         if (14 == _.GetType()) {
           if (__webpack_require__?.GetFreeWeekendPlayTextOverride())
-            return _.createElement(
-              "div",
-              {
-                className: _.TypeSubTitle,
-              },
-              __webpack_require__?.GetFreeWeekendPlayTextOverride(),
-            );
+            return (0, _.jsx)("div", {
+              className: _.TypeSubTitle,
+              children: __webpack_require__?.GetFreeWeekendPlayTextOverride(),
+            });
           if (__webpack_require__?.GetFreeWeekendEnd()) {
             _ && _._.SetPreferredLocales([_]);
             const _ = _ || Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -5575,31 +5889,22 @@
                 ? `UTC${_.unix(_)._(_).format("Z").replace(":00", "")}`
                 : _,
               _ = (0, _._)(_.unix(), !1, _, _);
-            return _.createElement(
-              "div",
-              {
-                className: _.TypeSubTitle,
-              },
-              (0, _._)("#msg_free_play_until", _),
-            );
-          }
-          return _.createElement(
-            "div",
-            {
+            return (0, _.jsx)("div", {
               className: _.TypeSubTitle,
-            },
-            (0, _._)("#msg_free_play_weekend"),
-          );
+              children: (0, _._)("#msg_free_play_until", _),
+            });
+          }
+          return (0, _.jsx)("div", {
+            className: _.TypeSubTitle,
+            children: (0, _._)("#msg_free_play_weekend"),
+          });
         }
         const _ = _.GetTemplateVars()?.autorender_subtitle_token;
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.TypeSubTitle,
-              },
-              (0, _._)(_),
-            )
+          ? (0, _.jsx)("div", {
+              className: _.TypeSubTitle,
+              children: (0, _._)(_),
+            })
           : null;
       }
       const _ = _.createContext(null);
@@ -5614,23 +5919,17 @@
           _.useEffect(() => {
             _ && _(_.GetLegalHTML());
           }, [_, _, _]),
-          _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _.Suspense,
-              {
-                fallback: null,
-              },
-              _.createElement(_, {
+          (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_.Suspense, {
+              fallback: null,
+              children: (0, _.jsx)(_, {
                 message: _,
                 active: _,
                 preview: __webpack_require__,
               }),
-            ),
-          )
+            }),
+          })
         );
       }
       const _ = _.lazy(() =>
@@ -5649,31 +5948,31 @@
           const _ = Number((0, _._)(_.GetTemplateVars().custom_display || ""));
           return isNaN(_)
             ? null
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 active: __webpack_require__,
                 year: _,
               });
         }
         switch (_.GetTemplateVars().custom_display) {
           case "dlc_override":
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               bPreview: _,
             });
           case "partner_event":
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               bPreview: _,
               bUseAnimated: (0, _._)(_, _, _),
             });
           case "mm_auto_render":
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               bPreview: _,
               bLowBandwidthMode: _,
             });
         }
         return "image" === _.GetTemplateType()
           ? (0, _._)(_, _, _)
-            ? _.createElement(_, null)
-            : _.createElement(_, {
+            ? (0, _.jsx)(_, {})
+            : (0, _.jsx)(_, {
                 bLowBandwidthMode: _,
               })
           : null;
@@ -5687,6 +5986,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5729,40 +6029,32 @@
           }, [_, _, _, _]),
           _)
         )
-          return _.createElement(
-            _,
-            null,
-            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-          );
+          return (0, _.jsx)(_, {
+            children: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+          });
         if (_)
-          return _.createElement(
-            _,
-            null,
-            (0, _._)("#MarketingMessages_NoneAvailable"),
-          );
+          return (0, _.jsx)(_, {
+            children: (0, _._)("#MarketingMessages_NoneAvailable"),
+          });
         const _ = _.bIncludeSeenMessages ? _ : _?.slice(0, _);
-        return _.createElement(
-          "div",
-          {
-            className: _.MessageListPage,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.MessageListPage,
+          children: [
+            (0, _.jsx)("div", {
               className: _.MessageListScroll,
-            },
-            _.createElement(_, {
-              MarketingMessagesStore: _,
-              rgMessages: _,
-              iActiveMessage: _,
+              children: (0, _.jsx)(_, {
+                MarketingMessagesStore: _,
+                rgMessages: _,
+                iActiveMessage: _,
+              }),
             }),
-          ),
-          _.createElement(_, {
-            cMessages: _?.length,
-            iMessage: _,
-            setMessage: _,
-          }),
-        );
+            (0, _.jsx)(_, {
+              cMessages: _?.length,
+              iMessage: _,
+              setMessage: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5771,32 +6063,29 @@
           iActiveMessage: _,
         } = _;
         return __webpack_require__
-          ? _.createElement(
-              "div",
-              {
-                className: _.MessageListContainer,
-              },
-              __webpack_require__?.map((_, _) =>
-                _.createElement(_, {
-                  key: _._,
-                  displayIndex: _,
-                  message: _,
-                  MarketingMessagesStore: _,
-                  active: _ == _,
-                  next: _ == _ + 1 || _ == _ - 1,
-                }),
+          ? (0, _.jsx)("div", {
+              className: _.MessageListContainer,
+              children: __webpack_require__?.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    displayIndex: _,
+                    message: _,
+                    MarketingMessagesStore: _,
+                    active: _ == _,
+                    next: _ == _ + 1 || _ == _ - 1,
+                  },
+                  _._,
+                ),
               ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.MessageListContainer, _.Loading),
-              },
-              _.createElement(_._, {
+            })
+          : (0, _.jsx)("div", {
+              className: (0, _._)(_.MessageListContainer, _.Loading),
+              children: (0, _.jsx)(_._, {
                 size: "xxlarge",
                 msDelayAppear: 500,
               }),
-            );
+            });
       }
       function _(_) {
         const {
@@ -5815,73 +6104,60 @@
           _ = [];
         for (let _ = 0; _ < _; _++)
           _.push(
-            _.createElement(_, {
-              key: _,
-              active: _ == __webpack_require__,
-              iMessage: _,
-              setMessage: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                active: _ == __webpack_require__,
+                iMessage: _,
+                setMessage: _,
+              },
+              _,
+            ),
           );
         const _ = __webpack_require__ > 0 ? _ : void 0,
           _ = __webpack_require__ < _ - 1 ? _ : void 0;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("div", {
-            className: _.CarouselSpacer,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              className: _.CarouselSpacer,
+            }),
+            (0, _.jsx)("div", {
               className: _.CarouselBar,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _.Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.LeftArrow, _ && _.Active),
-                  onClick: _,
-                },
-                _.createElement(_.l8x, {
-                  angle: 180,
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Spacer,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.LeftArrow, _ && _.Active),
+                    onClick: _,
+                    children: (0, _.jsx)(_.l8x, {
+                      angle: 180,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Spacer,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.PipContainer,
+                    children: (0, _.jsx)("div", {
+                      className: _.Pips,
+                      children: _,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Spacer,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.LeftArrow, _ && _.Active),
+                    onClick: _,
+                    children: (0, _.jsx)(_.l8x, {
+                      angle: 0,
+                    }),
+                  }),
+                ],
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.PipContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Pips,
-                  },
-                  _,
-                ),
-              ),
-              _.createElement("div", {
-                className: _.Spacer,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.LeftArrow, _ && _.Active),
-                  onClick: _,
-                },
-                _.createElement(_.l8x, {
-                  angle: 0,
-                }),
-              ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const { active: _, iMessage: __webpack_require__, setMessage: _ } = _,
@@ -5889,7 +6165,7 @@
             () => _(__webpack_require__),
             [_, __webpack_require__],
           );
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_.Pip, _ && _.Active),
           onClick: _,
         });
@@ -5905,37 +6181,36 @@
         return (
           (0, _._)(_.MarketingMessagePage),
           _
-            ? _.createElement(
-                _,
-                null,
-                (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-              )
+            ? (0, _.jsx)(_, {
+                children: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+              })
             : _.params.messageid
               ? _
-                ? _.createElement(_._, {
+                ? (0, _.jsx)(_._, {
                     message: _,
                     preview: __webpack_require__,
                   })
                 : null
-              : _.createElement(
-                  _,
-                  null,
-                  (0, _._)("#MarketingMessages_NoneAvailable"),
-                )
+              : (0, _.jsx)(_, {
+                  children: (0, _._)("#MarketingMessages_NoneAvailable"),
+                })
         );
       }
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            style: {
-              maxWidth: "400px",
-              margin: "0 auto",
-            },
+        return (0, _.jsxs)(_._, {
+          style: {
+            maxWidth: "400px",
+            margin: "0 auto",
           },
-          _.createElement(_._, null, (0, _._)("#Error_Generic"), " "),
-          _.createElement(_._, null, _.children),
-        );
+          children: [
+            (0, _.jsxs)(_._, {
+              children: [(0, _._)("#Error_Generic"), " "],
+            }),
+            (0, _.jsx)(_._, {
+              children: _.children,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5966,34 +6241,25 @@
           exitActive: _.ExitActive,
           exitDone: _.ExitDone,
         };
-        return _.createElement(
-          _._,
-          {
-            _: _,
-            nodeRef: _,
-            classNames: _,
-            timeout: 300,
-            mountOnEnter: !_,
-            unmountOnExit: !_,
-          },
-          _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.MessageWrapper, _ && _.Active),
-                ref: _,
-              },
-              _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          _: _,
+          nodeRef: _,
+          classNames: _,
+          timeout: 300,
+          mountOnEnter: !_,
+          unmountOnExit: !_,
+          children: (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)("div", {
+              className: (0, _._)(_.MessageWrapper, _ && _.Active),
+              ref: _,
+              children: (0, _.jsx)(_._, {
                 message: _,
                 active: _,
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -6055,6 +6321,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         prioritized_list: !1,
@@ -6072,14 +6339,10 @@
             __webpack_require__({});
           }, [_]),
           _
-            ? _.createElement(
-                _.Provider,
-                {
-                  value: _,
-                },
-                _.children,
-                " ",
-              )
+            ? (0, _.jsxs)(_.Provider, {
+                value: _,
+                children: [_.children, " "],
+              })
             : null
         );
       }
@@ -6125,61 +6388,43 @@
           );
         })();
         return _
-          ? _.createElement(
-              _._,
-              {
-                domain: "store.steampowered.com",
-                controller: "message",
-                method: "default",
-              },
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      _._,
-                      {
+          ? (0, _.jsx)(_._, {
+              domain: "store.steampowered.com",
+              controller: "message",
+              method: "default",
+              children: (0, _.jsx)(_, {
+                children: (0, _.jsx)(_._, {
+                  children: (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _.jsx)(_._, {
                         path: `${_.List()}`,
-                      },
-                      _.createElement(_._, {
-                        MarketingMessagesStore: _,
+                        children: (0, _.jsx)(_._, {
+                          MarketingMessagesStore: _,
+                        }),
                       }),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
+                      (0, _.jsx)(_._, {
                         path: `${_.MessagePreview(":messageid")}`,
-                      },
-                      _.createElement(_._, {
-                        MarketingMessagesStore: _,
-                        preview: !0,
+                        children: (0, _.jsx)(_._, {
+                          MarketingMessagesStore: _,
+                          preview: !0,
+                        }),
                       }),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
+                      (0, _.jsx)(_._, {
                         path: `${_.Message(":messageid")}`,
-                      },
-                      _.createElement(_._, {
-                        MarketingMessagesStore: _,
+                        children: (0, _.jsx)(_._, {
+                          MarketingMessagesStore: _,
+                        }),
                       }),
-                    ),
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_._, {
-                        _: `${_.List()}`,
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          _: `${_.List()}`,
+                        }),
                       }),
-                    ),
-                  ),
-                ),
-              ),
-            )
+                    ],
+                  }),
+                }),
+              }),
+            })
           : null;
       }
       let _;

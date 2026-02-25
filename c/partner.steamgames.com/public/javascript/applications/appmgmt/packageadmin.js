@@ -7,6 +7,10 @@
         NewPrice: "_3xrKIJ4u3oGwIbDNHLiE3U",
         HigherPrice: "rdMe4z7G3RiS3aOmPBXjp",
         LowerPrice: "HFkBG6GEWlzLQZ3MWCZfy",
+        FlexColGroup: "_98APa3FIHhT6HoHQPTdP-",
+        CurrentPrice: "_2GBqA5FVPnXDKN337UQTQF",
+        PriceUpdateOptionsGroup: "_29xcvKUrOD3qIkctp2Fo_N",
+        FreeSettingCtn: "_1kDnDjWEynufWnYI9AFl3l",
       };
     },
     chunkid: (module) => {
@@ -170,21 +174,26 @@
         const _ = _.getValue(),
           _ = (0, _._)(_),
           _ = _.Localize(`#Region_Pricing_Tooltip_${_}`);
-        return _.createElement(
-          "span",
-          null,
-          _,
-          " ",
-          _.createElement(_._, {
-            tooltip: _,
-          }),
-        );
+        return (0, _.jsxs)("span", {
+          children: [
+            _,
+            " ",
+            (0, _.jsx)(_._, {
+              tooltip: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -195,7 +204,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -326,9 +337,7 @@
         if (_[_]) return _[_]();
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return -1 != _.getValue() && _.getValue()
           ? (0, _._)(_.getValue(), _.row.original.eCurrencyCode)
@@ -338,17 +347,14 @@
         const _ = _.row.original;
         if (-1 == _.nProposedPrice || !_.nProposedPrice) return "--";
         const _ = !_.nPublishedPrice;
-        return _.createElement(
-          "span",
-          {
-            className: (0, _._)({
-              [_().NewPrice]: _,
-              [_().HigherPrice]: !_ && _.nProposedPrice > _.nPublishedPrice,
-              [_().LowerPrice]: !_ && _.nProposedPrice < _.nPublishedPrice,
-            }),
-          },
-          (0, _._)(_.nProposedPrice, _.eCurrencyCode),
-        );
+        return (0, _.jsx)("span", {
+          className: (0, _._)({
+            [_().NewPrice]: _,
+            [_().HigherPrice]: !_ && _.nProposedPrice > _.nPublishedPrice,
+            [_().LowerPrice]: !_ && _.nProposedPrice < _.nPublishedPrice,
+          }),
+          children: (0, _._)(_.nProposedPrice, _.eCurrencyCode),
+        });
       }
       function _(_) {
         return (
@@ -360,6 +366,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { nPackageID: _ } = _,
@@ -368,36 +375,23 @@
           _ = (0, _._)(_),
           [_, _] = (0, _.useState)(!1);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().ToolbarInfo, _().Visible),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Buttons,
-                },
-                _.createElement(_._, {
-                  packageID: _,
-                  bShowCancel: !1,
-                }),
-                _.createElement(
-                  _._,
-                  {
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(_().ToolbarInfo, _().Visible),
+              children: (0, _.jsxs)("div", {
+                className: _().Buttons,
+                children: [
+                  (0, _.jsx)(_._, {
+                    packageID: _,
+                    bShowCancel: !1,
+                  }),
+                  (0, _.jsx)(_._, {
                     onClick: _,
                     className: (0, _._)(_().Button),
-                  },
-                  (0, _._)("#PricingDashboard_CancelPriceProposal"),
-                ),
-                _.createElement(
-                  _._,
-                  {
+                    children: (0, _._)("#PricingDashboard_CancelPriceProposal"),
+                  }),
+                  (0, _.jsx)(_._, {
                     active: _,
-                  },
-                  _.createElement(
-                    _._,
-                    {
+                    children: (0, _.jsx)(_._, {
                       strTitle: (0, _._)(
                         "#PricingDashboard_CancelPriceProposal",
                       ),
@@ -406,49 +400,45 @@
                       onOK: async () => {
                         _(!0), await _(), _(!1), window.location.reload();
                       },
-                    },
-                    _ &&
-                      _.createElement(_._, {
-                        string: (0, _._)("#ImageUpload_Processing"),
-                      }),
-                  ),
-                ),
-              ),
-            )
+                      children:
+                        _ &&
+                        (0, _.jsx)(_._, {
+                          string: (0, _._)("#ImageUpload_Processing"),
+                        }),
+                    }),
+                  }),
+                ],
+              }),
+            })
           : null;
       }
       const _ = (0, _._)();
       function _(_) {
-        const { packageID: _ } = _,
+        const { nPackageID: _, appids: __webpack_require__ } = _,
           _ = (0, _._)();
         (0, _._)(_);
         const _ = (0, _._)();
-        return "dev" !== _._.WEB_UNIVERSE
-          ? null
-          : _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  fnBLocalChangesExist: _,
-                  fnWarnUser: _,
-                },
-                _.createElement(_, {
-                  nPackageID: Number.parseInt(_),
-                }),
-              ),
-            );
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_._, {
+            fnBLocalChangesExist: _,
+            fnWarnUser: _,
+            children: (0, _.jsx)(_, {
+              nPackageID: Number.parseInt(_),
+              appids: __webpack_require__.map(Number.parseInt),
+            }),
+          }),
+        });
       }
       function _(_) {
-        const { nPackageID: _ } = _,
+        const { nPackageID: _, appids: __webpack_require__ } = _,
           _ = (0, _._)(),
           {
             rgCurrencyRows: _,
             rgRegionRows: _,
             rgCountryOverrideRows: _,
-          } = (function (_, _) {
-            const _ = (0, _._)();
+          } = (function (_, _, _) {
+            const _ = (0, _._)(),
+              _ = (0, _._)();
             return (0, _.useMemo)(() => {
               let _ = new Array(),
                 _ = new Array(),
@@ -477,6 +467,8 @@
                     nProposedPrice: _,
                     nLocalPrice: _,
                     nSuggestedPrice: _,
+                    bCanSetToFree: !!_,
+                    appids: _,
                   });
                 }
                 for (
@@ -508,6 +500,8 @@
                     nProposedPrice: _,
                     nLocalPrice: _,
                     nSuggestedPrice: _,
+                    bCanSetToFree: !1,
+                    appids: _,
                   });
                 }
                 const _ = (0, _._)(_);
@@ -530,6 +524,8 @@
                       nProposedPrice: _,
                       nLocalPrice: (0, _._)(_, _),
                       nSuggestedPrice: void 0,
+                      bCanSetToFree: !1,
+                      appids: _,
                     });
                   });
               }
@@ -538,8 +534,8 @@
                 rgRegionRows: _,
                 rgCountryOverrideRows: _,
               };
-            }, [_, _, _]);
-          })(_, _),
+            }, [_, _, _, _, _]);
+          })(_, _, __webpack_require__),
           _ = !!(0, _._)(_);
         (0, _.useEffect)(() => {
           (0, _._)([_]);
@@ -547,71 +543,52 @@
         const _ = [
           _.accessor("nPublishedPrice", {
             header: (0, _._)("#PackagePricing_Col_CurPrice"),
-            size: 200,
+            meta: {
+              cellClassname: _()(_().CurrentPrice),
+            },
+            size: 150,
             cell: _,
           }),
           _.accessor(_ ? "nProposedPrice" : "strPriceKey", {
             header: (0, _._)("#PackagePricing_Col_Proposal"),
-            size: 200,
+            size: 280,
             cell: _ ? _ : _._,
           }),
         ];
         return 0 == _.length || 0 == _.length
           ? null
-          : _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_._, null),
-              !_ &&
-                _.createElement(_, {
-                  nPackageID: _,
-                  oPricingGuideline: _,
-                }),
-              _.createElement(_._, {
-                data: _,
-                className: _()(_().DefaultFancyTable, _().NoColumnBorders),
-                columns: [
-                  _.accessor("eCurrencyCode", {
-                    header: (0, _._)("#PackagePricing_Col_Currency"),
-                    size: 200,
-                    cell: _,
+          : (0, _.jsxs)(_.Fragment, {
+              children: [
+                !_ &&
+                  (0, _.jsxs)(_._, {
+                    paddingBottom: "4",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        size: "4",
+                        children: (0, _._)(
+                          "#PricingDashboard_ApplyGuidelinesDialog_Context",
+                        ),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().PriceUpdateOptionsGroup,
+                        children: [
+                          (0, _.jsx)(_._, {}),
+                          (0, _.jsx)(_, {
+                            nPackageID: _,
+                            oPricingGuideline: _,
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
-                  ..._,
-                ],
-                getRowKey: (_, _) => `${_.eCurrencyCode}`,
-                nItemHeight: 20,
-                stickyHeader: !0,
-              }),
-              _.createElement(_._, {
-                data: _,
-                className: _()(_().DefaultFancyTable, _().NoColumnBorders),
-                columns: [
-                  _.accessor("eRegionCode", {
-                    header: (0, _._)("#PackagePricing_Col_Region"),
-                    size: 200,
-                    cell: _,
-                  }),
-                  _.accessor("eCurrencyCode", {
-                    header: (0, _._)("#PackagePricing_Col_Currency"),
-                    size: 200,
-                    cell: _,
-                  }),
-                  ..._,
-                ],
-                getRowKey: (_, _) => `${_.eRegionCode}`,
-                nItemHeight: 20,
-                stickyHeader: !0,
-              }),
-              _.length > 0 &&
-                _.createElement(_._, {
+                (0, _.jsx)(_._, {
                   data: _,
-                  className: _()(_().DefaultFancyTable, _().NoColumnBorders),
+                  className: _()(
+                    _().DefaultFancyTable,
+                    _().NoColumnBorders,
+                    _().PackagePricingContext,
+                  ),
                   columns: [
-                    _.accessor("strCountryOverride", {
-                      header: (0, _._)("#PackagePricing_Col_Country"),
-                      size: 200,
-                      cell: _,
-                    }),
                     _.accessor("eCurrencyCode", {
                       header: (0, _._)("#PackagePricing_Col_Currency"),
                       size: 200,
@@ -619,17 +596,67 @@
                     }),
                     ..._,
                   ],
-                  getRowKey: (_, _) => `${_.strCountryOverride}`,
+                  getRowKey: (_, _) => `${_.eCurrencyCode}`,
                   nItemHeight: 20,
                   stickyHeader: !0,
                 }),
-              _.createElement(_._, {
-                bReloadPageOnSave: !0,
-              }),
-              _.createElement(_, {
-                nPackageID: _,
-              }),
-            );
+                (0, _.jsx)(_._, {
+                  data: _,
+                  className: _()(
+                    _().DefaultFancyTable,
+                    _().NoColumnBorders,
+                    _().PackagePricingContext,
+                  ),
+                  columns: [
+                    _.accessor("eRegionCode", {
+                      header: (0, _._)("#PackagePricing_Col_Region"),
+                      size: 200,
+                      cell: _,
+                    }),
+                    _.accessor("eCurrencyCode", {
+                      header: (0, _._)("#PackagePricing_Col_Currency"),
+                      size: 100,
+                      cell: _,
+                    }),
+                    ..._,
+                  ],
+                  getRowKey: (_, _) => `${_.eRegionCode}`,
+                  nItemHeight: 20,
+                  stickyHeader: !0,
+                }),
+                _.length > 0 &&
+                  (0, _.jsx)(_._, {
+                    data: _,
+                    className: _()(
+                      _().DefaultFancyTable,
+                      _().NoColumnBorders,
+                      _().PackagePricingContext,
+                    ),
+                    columns: [
+                      _.accessor("strCountryOverride", {
+                        header: (0, _._)("#PackagePricing_Col_Country"),
+                        size: 200,
+                        cell: _,
+                      }),
+                      _.accessor("eCurrencyCode", {
+                        header: (0, _._)("#PackagePricing_Col_Currency"),
+                        size: 100,
+                        cell: _,
+                      }),
+                      ..._,
+                    ],
+                    getRowKey: (_, _) => `${_.strCountryOverride}`,
+                    nItemHeight: 20,
+                    stickyHeader: !0,
+                  }),
+                (0, _.jsx)(_._, {
+                  bReloadPageOnSave: !0,
+                }),
+                (0, _.jsx)(_, {
+                  nPackageID: _,
+                }),
+              ],
+            });
       }
       function _(_) {
         const { nPackageID: _, oPricingGuideline: __webpack_require__ } = _,
@@ -677,55 +704,47 @@
           [_, _, _] = (0, _._)(),
           _ = (0, _._)();
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
                   onClick: _,
-                },
-                (0, _._)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  active: _,
-                },
-                _.createElement(_._, {
-                  closeModal: _,
-                  fnOnApply: _,
+                  children: (0, _._)(
+                    "#PricingDashboard_ApplyGuidelinesDialog_Button",
+                  ),
                 }),
-              ),
-            )
+                (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_._, {
+                    closeModal: _,
+                    fnOnApply: _,
+                    singlePackage: !0,
+                  }),
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
                 path: _.PriceEdit(":packageid"),
-              },
-              _.createElement(_._, {
-                config: {
-                  "packageadmin-price-editor": (_) =>
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                },
+                children: (0, _.jsx)(_._, {
+                  config: {
+                    "packageadmin-price-editor": (_) =>
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                  },
+                }),
               }),
-            ),
-            _.createElement(_._, {
-              component: _._,
-            }),
-          ),
-        );
+              (0, _.jsx)(_._, {
+                component: _._,
+              }),
+            ],
+          }),
+        });
       }
     },
   },

@@ -55,19 +55,20 @@
     },
     34181: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => F, D: () => w });
+      r.d(t, { A: () => j, D: () => h });
       var i = r(34629),
+        s = r(7850),
         a = r(90626),
-        s = r(75844),
-        n = r(61859),
-        c = r(22837),
+        n = r(75844),
+        c = r(61859),
+        o = r(22837),
         l = r(10622),
-        o = r(52038),
-        m = r(56420),
-        u = r.n(m);
-      let d = class extends a.Component {
+        m = r(52038),
+        u = r(56420),
+        d = r.n(u);
+      let g = class extends a.Component {
         static get hoverClass() {
-          return u().hoverParent;
+          return d().hoverParent;
         }
         render() {
           const {
@@ -75,372 +76,334 @@
             animating: t,
             className: r,
             size: i,
-            dim: s,
+            dim: a,
             ...n
           } = this.props;
           let c = "";
           return (
-            "medium" == i ? (c = u().Medium) : "large" == i && (c = u().Large),
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
-                  u().SnoozeContainer,
-                  e.online_state,
-                  r,
-                  t && u().animating,
-                  c,
-                  s && u().Dim,
-                ),
-                ...n,
-              },
-              a.createElement(
-                "div",
-                { "data-text": "Z", className: (0, o.A)(u().SnoozeZ, u().Z1) },
-                "Z",
+            "medium" == i ? (c = d().Medium) : "large" == i && (c = d().Large),
+            (0, s.jsxs)("div", {
+              className: (0, m.A)(
+                d().SnoozeContainer,
+                e.online_state,
+                r,
+                t && d().animating,
+                c,
+                a && d().Dim,
               ),
-              a.createElement(
-                "div",
-                { "data-text": "Z", className: (0, o.A)(u().SnoozeZ, u().Z2) },
-                "Z",
-              ),
-              a.createElement(
-                "div",
-                { "data-text": "Z", className: (0, o.A)(u().SnoozeZ, u().Z3) },
-                "Z",
-              ),
-            )
+              ...n,
+              children: [
+                (0, s.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, m.A)(d().SnoozeZ, d().Z1),
+                  children: "Z",
+                }),
+                (0, s.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, m.A)(d().SnoozeZ, d().Z2),
+                  children: "Z",
+                }),
+                (0, s.jsx)("div", {
+                  "data-text": "Z",
+                  className: (0, m.A)(d().SnoozeZ, d().Z3),
+                  children: "Z",
+                }),
+              ],
+            })
           );
         }
       };
-      d = (0, i.Cg)([s.PA], d);
-      var g = r(12155),
-        B = r(70342),
-        y = r.n(B),
-        M = r(97232);
-      const f = (0, s.PA)((e) => {
+      g = (0, i.Cg)([n.PA], g);
+      var B = r(12155),
+        y = r(70342),
+        M = r.n(y),
+        f = r(97232);
+      const b = (0, n.PA)((e) => {
         const { persona: t, className: r, ...i } = e;
         if (!t) return null;
         if (!t.is_online) return null;
-        const s = t.HasStateFlag(512),
-          c = t.HasStateFlag(2048),
-          m = 544 == t.m_eGamingDeviceType,
-          u = 545 == t.m_eGamingDeviceType,
-          d = !m && !u && !c && t.HasStateFlag(1024);
-        return a.createElement(
-          a.Fragment,
-          null,
-          s &&
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
+        const n = t.HasStateFlag(512),
+          o = t.HasStateFlag(2048),
+          u = 544 == t.m_eGamingDeviceType,
+          d = 545 == t.m_eGamingDeviceType,
+          g = !u && !d && !o && t.HasStateFlag(1024);
+        return (0, s.jsxs)(a.Fragment, {
+          children: [
+            n &&
+              (0, s.jsx)("div", {
+                className: (0, m.A)(
                   r,
-                  y().PersonaStatusIcon,
-                  y().MobilePhoneIcon,
+                  M().PersonaStatusIcon,
+                  M().MobilePhoneIcon,
                   (0, l.rO)(t),
                 ),
-                title: (0, n.we)("#Platform_Hint_Mobile"),
+                title: (0, c.we)("#Platform_Hint_Mobile"),
                 ...i,
-              },
-              a.createElement(M.rf, null),
-            ),
-          c &&
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
+                children: (0, s.jsx)(f.rf, {}),
+              }),
+            o &&
+              (0, s.jsx)("div", {
+                className: (0, m.A)(
                   r,
-                  y().PersonaStatusIcon,
-                  y().VRIcon,
+                  M().PersonaStatusIcon,
+                  M().VRIcon,
                   (0, l.rO)(t),
                 ),
-                title: (0, n.we)("#Platform_Hint_VR"),
+                title: (0, c.we)("#Platform_Hint_VR"),
                 ...i,
-              },
-              a.createElement(g.MUh, null),
-            ),
-          d &&
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
+                children: (0, s.jsx)(B.MUh, {}),
+              }),
+            g &&
+              (0, s.jsx)("div", {
+                className: (0, m.A)(
                   r,
-                  y().PersonaStatusIcon,
-                  y().BigPictureIcon,
+                  M().PersonaStatusIcon,
+                  M().BigPictureIcon,
                   (0, l.rO)(t),
                 ),
-                title: (0, n.we)("#Platform_Hint_BigPicture"),
+                title: (0, c.we)("#Platform_Hint_BigPicture"),
                 ...i,
-              },
-              a.createElement(g.bPr, null),
-            ),
-          m &&
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
+                children: (0, s.jsx)(B.bPr, {}),
+              }),
+            u &&
+              (0, s.jsx)("div", {
+                className: (0, m.A)(
                   r,
-                  y().PersonaStatusIcon,
-                  y().SteamDeckIcon,
+                  M().PersonaStatusIcon,
+                  M().SteamDeckIcon,
                   (0, l.rO)(t),
                 ),
-                title: (0, n.we)("#Platform_Hint_SteamDeck"),
+                title: (0, c.we)("#Platform_Hint_SteamDeck"),
                 ...i,
-              },
-              a.createElement(g.DQe, null),
-            ),
-          u &&
-            a.createElement(
-              "div",
-              {
-                className: (0, o.A)(
+                children: (0, s.jsx)(B.DQe, {}),
+              }),
+            d &&
+              (0, s.jsx)("div", {
+                className: (0, m.A)(
                   r,
-                  y().PersonaStatusIcon,
-                  y().SteamDeckIcon,
+                  M().PersonaStatusIcon,
+                  M().SteamDeckIcon,
                   (0, l.rO)(t),
                 ),
-                title: (0, n.we)("#Platform_Hint_LegionGoS"),
+                title: (0, c.we)("#Platform_Hint_LegionGoS"),
                 ...i,
-              },
-              a.createElement(g.DQe, null),
-            ),
-        );
+                children: (0, s.jsx)(B.DQe, {}),
+              }),
+          ],
+        });
       });
-      var b = r(18828),
-        _ = r.n(b),
-        p = r(78327);
-      function z(e) {
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement(
-            "span",
-            { className: _().partyBeaconJoin },
-            (0, n.we)("#User_WantsToPlay"),
-          ),
-          " – ",
-          e.persona.GetCurrentGameName(),
-        );
+      var _ = r(18828),
+        p = r.n(_),
+        z = r(78327);
+      function w(e) {
+        return (0, s.jsxs)(a.Fragment, {
+          children: [
+            (0, s.jsx)("span", {
+              className: p().partyBeaconJoin,
+              children: (0, c.we)("#User_WantsToPlay"),
+            }),
+            " – ",
+            e.persona.GetCurrentGameName(),
+          ],
+        });
       }
-      let w = class extends a.Component {
+      let h = class extends a.Component {
         render() {
           const {
             className: e,
             onContextMenu: t,
             persona: r,
             eFriendRelationship: i,
-            bIsSelf: s,
-            bParenthesizeNicknames: m,
+            bIsSelf: a,
+            bParenthesizeNicknames: n,
             strNickname: u,
-            bCompactView: B,
+            bCompactView: d,
             bHideGameName: y,
             bHideEnhancedRichPresenceLabel: M,
-            bHideSnooze: b,
-            bHideStatus: w,
-            renderStatus: F,
-            renderRichPresence: S,
-            bHidePersona: h,
-            bDNDSet: v,
-            bHasPartyBeacon: N,
-            bHasGamePrivacy: R,
-            bNoMask: I,
-            bEllipsisName: j,
-            ...W
+            bHideSnooze: f,
+            bHideStatus: _,
+            renderStatus: h,
+            renderRichPresence: j,
+            bHidePersona: F,
+            bDNDSet: S,
+            bHasPartyBeacon: v,
+            bHasGamePrivacy: N,
+            bNoMask: R,
+            bEllipsisName: I,
+            ...x
           } = this.props;
-          let O = null,
+          let W = null,
+            O = null,
             P = null,
-            C = null,
-            T = [
+            C = [
               e,
-              _().personaNameAndStatusLabel,
+              p().personaNameAndStatusLabel,
               (0, l.rO)(r),
-              B && _().compactView,
-              I && _().NoMask,
+              d && p().compactView,
+              R && p().NoMask,
             ];
-          N || r.has_public_party_beacon
-            ? (P = a.createElement(z, { persona: r }))
-            : (0, c.aP)(i)
-              ? ((P = (0, n.we)("#PersonaStateBlocked")), T.push(_().blocked))
+          v || r.has_public_party_beacon
+            ? (O = (0, s.jsx)(w, { persona: r }))
+            : (0, o.aP)(i)
+              ? ((O = (0, c.we)("#PersonaStateBlocked")), C.push(p().blocked))
               : r.is_ingame
-                ? ((P =
-                    !r.is_in_nonsteam_game || s || (0, c.S$)(i)
+                ? ((O =
+                    !r.is_in_nonsteam_game || a || (0, o.S$)(i)
                       ? r.GetCurrentGameName()
-                      : (0, n.we)("#PersonaStateInNonSteamGame")),
-                  s || h
-                    ? s &&
+                      : (0, c.we)("#PersonaStateInNonSteamGame")),
+                  a || F
+                    ? a &&
                       r.is_awayOrSnooze &&
-                      (C = (0, n.we)("#PersonaStateAway"))
-                    : (C = r.GetCurrentGameRichPresence()))
+                      (P = (0, c.we)("#PersonaStateAway"))
+                    : (P = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (P = (0, n.we)("#PersonaStateWatchingBroadcast")),
-            P || (P = r.GetLocalizedOnlineStatus()),
-            F && (P = F());
-          let E = !h && !b;
-          !1 === b && (E = !0),
-            r.is_awayOrSnooze && E && (O = a.createElement(d, { persona: r }));
+                  (O = (0, c.we)("#PersonaStateWatchingBroadcast")),
+            O || (O = r.GetLocalizedOnlineStatus()),
+            h && (O = h());
+          let T = !F && !f;
+          !1 === f && (T = !0),
+            r.is_awayOrSnooze && T && (W = (0, s.jsx)(g, { persona: r }));
           let L = null;
           t
-            ? (L = a.createElement(
-                "div",
-                { className: "ContextMenuButton", onClick: t },
-                a.createElement(g.GB9, null),
-              ))
-            : T.push(_().noContextMenu),
-            h && T.push(_().hidePersona),
-            S && (C = S()),
-            (!y && C) || T.push(_().twoLine);
-          const G = !r.is_ingame && !w,
-            q = !M && C,
-            k = P && (!y || !q),
-            x = (0, c.ID)(p.TS.LAUNCHER_TYPE);
-          let A = u && !m,
-            U = A ? u : r.m_strPlayerName,
-            D = !h && (k || G) && q;
-          return a.createElement(
-            "div",
-            { ...W, className: (0, o.A)(...T), onContextMenu: t },
-            a.createElement(
-              "div",
-              { className: (0, o.A)(_().statusAndName, D && _().threeLines) },
-              a.createElement(
-                "div",
-                { className: (0, o.A)(_().playerName, j && _().EllipsisName) },
-                U || " ",
-                m &&
-                  u &&
-                  a.createElement(
-                    "span",
-                    { className: _().playerNickname },
-                    "(",
-                    u,
-                    ")",
-                  ),
-              ),
-              v &&
-                a.createElement(
-                  "div",
-                  {
-                    className: _().DNDContainer,
-                    title: (0, n.we)("#User_ToggleDoNotDisturb"),
-                  },
-                  a.createElement(g.Aj0, null),
-                ),
-              A &&
-                a.createElement(
-                  "span",
-                  {
-                    className: _().playerNicknameBracket,
-                    title: (0, n.we)("#isNickname"),
-                  },
-                  " *",
-                ),
-              a.createElement(f, { persona: r }),
-              O,
-              (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
-                x &&
-                a.createElement(
-                  "div",
-                  {
-                    className: _().PendingPersona,
-                    title: (0, n.we)("#SteamChina_PendingPersonaName"),
-                  },
-                  a.createElement(g.zD7, null),
-                ),
-              L,
-            ),
-            !h &&
-              a.createElement(
-                "div",
-                { className: _().richPresenceContainer },
-                (k || G) &&
-                  a.createElement(
-                    "div",
-                    {
-                      className: (0, o.A)(
-                        _().gameName,
-                        D && _().threeLines,
-                        _().richPresenceLabel,
-                        "no-drag",
-                      ),
-                    },
-                    R &&
-                      a.createElement(
-                        "div",
-                        {
-                          className: _().gameIsPrivateIcon,
-                          title: (0, n.we)("#User_GameInfoHidden"),
-                        },
-                        a.createElement(g.jZl, null),
-                      ),
-                    P,
-                  ),
-                q &&
-                  a.createElement(
-                    "div",
-                    { className: (0, o.A)(_().richPresenceLabel, "no-drag") },
-                    C,
-                    " ",
-                  ),
-              ),
-          );
+            ? (L = (0, s.jsx)("div", {
+                className: "ContextMenuButton",
+                onClick: t,
+                children: (0, s.jsx)(B.GB9, {}),
+              }))
+            : C.push(p().noContextMenu),
+            F && C.push(p().hidePersona),
+            j && (P = j()),
+            (!y && P) || C.push(p().twoLine);
+          const G = !r.is_ingame && !_,
+            q = !M && P,
+            k = O && (!y || !q),
+            A = (0, o.ID)(z.TS.LAUNCHER_TYPE);
+          let U = u && !n,
+            D = U ? u : r.m_strPlayerName,
+            H = !F && (k || G) && q;
+          return (0, s.jsxs)("div", {
+            ...x,
+            className: (0, m.A)(...C),
+            onContextMenu: t,
+            children: [
+              (0, s.jsxs)("div", {
+                className: (0, m.A)(p().statusAndName, H && p().threeLines),
+                children: [
+                  (0, s.jsxs)("div", {
+                    className: (0, m.A)(p().playerName, I && p().EllipsisName),
+                    children: [
+                      D || " ",
+                      n &&
+                        u &&
+                        (0, s.jsxs)("span", {
+                          className: p().playerNickname,
+                          children: ["(", u, ")"],
+                        }),
+                    ],
+                  }),
+                  S &&
+                    (0, s.jsx)("div", {
+                      className: p().DNDContainer,
+                      title: (0, c.we)("#User_ToggleDoNotDisturb"),
+                      children: (0, s.jsx)(B.Aj0, {}),
+                    }),
+                  U &&
+                    (0, s.jsx)("span", {
+                      className: p().playerNicknameBracket,
+                      title: (0, c.we)("#isNickname"),
+                      children: " *",
+                    }),
+                  (0, s.jsx)(b, { persona: r }),
+                  W,
+                  (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
+                    A &&
+                    (0, s.jsx)("div", {
+                      className: p().PendingPersona,
+                      title: (0, c.we)("#SteamChina_PendingPersonaName"),
+                      children: (0, s.jsx)(B.zD7, {}),
+                    }),
+                  L,
+                ],
+              }),
+              !F &&
+                (0, s.jsxs)("div", {
+                  className: p().richPresenceContainer,
+                  children: [
+                    (k || G) &&
+                      (0, s.jsxs)("div", {
+                        className: (0, m.A)(
+                          p().gameName,
+                          H && p().threeLines,
+                          p().richPresenceLabel,
+                          "no-drag",
+                        ),
+                        children: [
+                          N &&
+                            (0, s.jsx)("div", {
+                              className: p().gameIsPrivateIcon,
+                              title: (0, c.we)("#User_GameInfoHidden"),
+                              children: (0, s.jsx)(B.jZl, {}),
+                            }),
+                          O,
+                        ],
+                      }),
+                    q &&
+                      (0, s.jsxs)("div", {
+                        className: (0, m.A)(p().richPresenceLabel, "no-drag"),
+                        children: [P, " "],
+                      }),
+                  ],
+                }),
+            ],
+          });
         }
       };
-      w = (0, i.Cg)([s.PA], w);
-      const F = (0, s.PA)((e) => {
+      h = (0, i.Cg)([n.PA], h);
+      const j = (0, n.PA)((e) => {
         const {
           persona: t,
           bParenthesizeNicknames: r,
           strNickname: i,
-          bIgnorePersonaStatus: s,
+          bIgnorePersonaStatus: a,
           bDisableColoring: n,
           className: c,
-          ...m
+          ...o
         } = e;
         let u = i && !r ? i : t.m_strPlayerName;
-        return a.createElement(
-          "span",
-          {
-            ...m,
-            className: (0, o.A)(
-              c,
-              n && _().DisableColoring,
-              !s && (0, l.rO)(t),
-            ),
-          },
-          a.createElement(
-            "span",
-            { className: _().playerName },
-            u || " ",
-            r &&
-              i &&
-              a.createElement(
-                "span",
-                { className: _().playerNickname },
-                "(",
-                i,
-                ")",
-              ),
-          ),
-        );
+        return (0, s.jsx)("span", {
+          ...o,
+          className: (0, m.A)(c, n && p().DisableColoring, !a && (0, l.rO)(t)),
+          children: (0, s.jsxs)("span", {
+            className: p().playerName,
+            children: [
+              u || " ",
+              r &&
+                i &&
+                (0, s.jsxs)("span", {
+                  className: p().playerNickname,
+                  children: ["(", i, ")"],
+                }),
+            ],
+          }),
+        });
       });
     },
     26505: (e, t, r) => {
       "use strict";
       r.d(t, {
-        M8: () => C,
-        d0: () => I,
-        Dv: () => j,
+        M8: () => P,
+        d0: () => R,
+        Dv: () => I,
         Nd: () => L,
-        EW: () => O,
+        EW: () => W,
       });
       var i,
-        a,
-        s = r(68950),
+        s,
+        a = r(68950),
         n = r(23809),
         c = r(75233),
-        l = r(80902),
-        o = r(56545),
+        o = r(80902),
+        l = r(56545),
         m = r(17720),
         u = r(80613),
         d = r.n(u),
@@ -983,6 +946,95 @@
           return "CFriendsList_SetFavorites_Request";
         }
       }
+      class h extends u.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), u.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new h();
+        }
+        static deserializeBinary(e) {
+          let t = new (d().BinaryReader)(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (d().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (d().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_SetFavorites_Response";
+        }
+      }
+      class j extends u.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            j.prototype.favorites || g.Sg(j.M()),
+            u.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
+                fields: { favorites: { n: 1, c: _, r: !0, q: !0 } },
+              }),
+            j.sm_m
+          );
+        }
+        static MBF() {
+          return j.sm_mbf || (j.sm_mbf = g.w0(j.M())), j.sm_mbf;
+        }
+        toObject(e = !1) {
+          return j.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return g.BT(j.M(), e, t);
+        }
+        static fromObject(e) {
+          return g.Uq(j.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (d().BinaryReader)(e),
+            r = new j();
+          return j.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return g.zj(j.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (d().BinaryWriter)();
+          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          g.i0(j.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (d().BinaryWriter)();
+          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_FavoritesChanged_Notification";
+        }
+      }
       class F extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -1015,25 +1067,22 @@
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsList_SetFavorites_Response";
+          return "CFriendsList_GetFriendsList_Request";
         }
       }
       class S extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            S.prototype.favorites || g.Sg(S.M()),
-            u.Message.initialize(this, e, 0, -1, [1], null);
+            S.prototype.friendslist || g.Sg(S.M()),
+            u.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
             S.sm_m ||
-              (S.sm_m = {
-                proto: S,
-                fields: { favorites: { n: 1, c: _, r: !0, q: !0 } },
-              }),
+              (S.sm_m = { proto: S, fields: { friendslist: { n: 1, c: B } } }),
             S.sm_m
           );
         }
@@ -1069,98 +1118,12 @@
           return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CFriendsList_FavoritesChanged_Notification";
-        }
-      }
-      class h extends u.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), u.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new h();
-        }
-        static deserializeBinary(e) {
-          let t = new (d().BinaryReader)(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (d().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (d().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFriendsList_Request";
-        }
-      }
-      class v extends u.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            v.prototype.friendslist || g.Sg(v.M()),
-            u.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            v.sm_m ||
-              (v.sm_m = { proto: v, fields: { friendslist: { n: 1, c: B } } }),
-            v.sm_m
-          );
-        }
-        static MBF() {
-          return v.sm_mbf || (v.sm_mbf = g.w0(v.M())), v.sm_mbf;
-        }
-        toObject(e = !1) {
-          return v.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return g.BT(v.M(), e, t);
-        }
-        static fromObject(e) {
-          return g.Uq(v.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (d().BinaryReader)(e),
-            r = new v();
-          return v.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return g.zj(v.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (d().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          g.i0(v.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (d().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CFriendsList_GetFriendsList_Response";
         }
       }
       !(function (e) {
         (e.GetCategories = function (e, t) {
-          return e.SendMsg("FriendsList.GetCategories#1", (0, o.I8)(f, t), b, {
+          return e.SendMsg("FriendsList.GetCategories#1", (0, l.I8)(f, t), b, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
@@ -1168,19 +1131,19 @@
           (e.GetFriendsList = function (e, t) {
             return e.SendMsg(
               "FriendsList.GetFriendsList#1",
-              (0, o.I8)(h, t),
-              v,
+              (0, l.I8)(F, t),
+              S,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.GetFavorites#1", (0, o.I8)(p, t), z, {
+            return e.SendMsg("FriendsList.GetFavorites#1", (0, l.I8)(p, t), z, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.SetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.SetFavorites#1", (0, o.I8)(w, t), F, {
+            return e.SendMsg("FriendsList.SetFavorites#1", (0, l.I8)(w, t), h, {
               ePrivilege: 1,
             });
           });
@@ -1188,28 +1151,28 @@
         (function (e) {
           e.FavoritesChangedHandler = {
             name: "FriendsListClient.FavoritesChanged#1",
-            request: S,
+            request: j,
           };
-        })(a || (a = {}));
-      var N = r(37735),
-        R = r(14336);
-      function I(e) {
+        })(s || (s = {}));
+      var v = r(37735),
+        N = r(14336);
+      function R(e) {
         const t = (0, n.KV)(),
-          r = (0, s.LH)(),
-          i = (0, R.tb)(),
-          a = (0, c.jE)();
-        let o = { loadNicknames: !1, loadFavorites: !1, ...e };
-        return (0, l.I)({
-          queryKey: ["FriendsList", r, o],
+          r = (0, a.LH)(),
+          i = (0, N.tb)(),
+          s = (0, c.jE)();
+        let l = { loadNicknames: !1, loadFavorites: !1, ...e };
+        return (0, o.I)({
+          queryKey: ["FriendsList", r, l],
           queryFn: async () => {
-            const e = a.fetchQuery(W(t, r)),
-              s = o.loadNicknames ? a.fetchQuery(P(t, r)) : void 0,
-              n = o.loadFavorites ? a.fetchQuery(T(t, r)) : void 0,
+            const e = s.fetchQuery(x(t, r)),
+              a = l.loadNicknames ? s.fetchQuery(O(t, r)) : void 0,
+              n = l.loadFavorites ? s.fetchQuery(C(t, r)) : void 0,
               c = await e,
-              l = new Map(c.map((e) => [e, a.fetchQuery((0, R.mK)(i, t, e))]));
+              o = new Map(c.map((e) => [e, s.fetchQuery((0, N.mK)(i, t, e))]));
             let u;
-            if (s) {
-              const e = (await s).nicknames;
+            if (a) {
+              const e = (await a).nicknames;
               u = new Map(e.map((e) => [e.accountid, e.nickname]));
             }
             const d = new Set(await (n ?? Promise.resolve([])));
@@ -1217,7 +1180,7 @@
               await Promise.all(
                 c.map(async (e) => {
                   const t = new m.b(e).GetAccountID(),
-                    r = { accountid: t, persona: await l.get(e) };
+                    r = { accountid: t, persona: await o.get(e) };
                   return (
                     d.has(t) && (r.is_favorite = !0),
                     u && u.has(t) && (r.nickname = u.get(t)),
@@ -1230,16 +1193,16 @@
           staleTime: 12e4,
         });
       }
-      function j() {
+      function I() {
         const e = (0, n.KV)(),
-          t = (0, s.LH)();
-        return (0, l.I)(W(e, t));
+          t = (0, a.LH)();
+        return (0, o.I)(x(e, t));
       }
-      function W(e, t) {
+      function x(e, t) {
         return {
           queryKey: ["GetFriendsList", t],
           queryFn: async () => {
-            const t = o.w.Init(h),
+            const t = l.w.Init(F),
               r = await i.GetFriendsList(e, t);
             return r
               .Body()
@@ -1257,13 +1220,13 @@
           },
         };
       }
-      function O() {
+      function W() {
         const e = (0, n.KV)(),
-          t = (0, s.LH)();
-        return (0, l.I)({
+          t = (0, a.LH)();
+        return (0, o.I)({
           queryKey: ["GetIgnoredAccounts", t],
           queryFn: async () => {
-            const t = o.w.Init(h),
+            const t = l.w.Init(F),
               r = await i.GetFriendsList(e, t);
             return r
               .Body()
@@ -1281,31 +1244,31 @@
           },
         });
       }
-      function P(e, t) {
+      function O(e, t) {
         return {
           queryKey: ["GetFriendNicknameList", t],
           queryFn: async () => {
-            const t = o.w.Init(N.dN);
-            return (await N.xt.GetNicknameList(e, t)).Body().toObject();
+            const t = l.w.Init(v.dN);
+            return (await v.xt.GetNicknameList(e, t)).Body().toObject();
           },
         };
       }
-      function C(e = {}) {
+      function P(e = {}) {
         return (function (e = {}) {
           const t = (0, n.KV)(),
-            r = (0, s.LH)();
-          return (0, l.I)({ ...P(t, r), ...e });
+            r = (0, a.LH)();
+          return (0, o.I)({ ...O(t, r), ...e });
         })({
           ...e,
           select: (e) =>
             new Map(e.nicknames.map((e) => [e.accountid, e.nickname])),
         });
       }
-      function T(e, t) {
+      function C(e, t) {
         return {
           queryKey: ["GetFriendFavorites", t],
           queryFn: async () => {
-            const t = o.w.Init(p),
+            const t = l.w.Init(p),
               r = (await i.GetFavorites(e, t)).Body().toObject();
             return r.favorites
               ?.filter((e) => e.accountid)
@@ -1313,10 +1276,10 @@
           },
         };
       }
-      async function E(e, t) {
-        const r = o.w.Init(N.tl);
+      async function T(e, t) {
+        const r = l.w.Init(v.tl);
         r.Body().set_appid(t);
-        const i = await N.xt.GetFriendsGameplayInfo(e, r);
+        const i = await v.xt.GetFriendsGameplayInfo(e, r);
         return (
           i.BSuccess() ||
             console.warn(`Failed to get gameplay info: ${i.GetEResult()}`),
@@ -1325,33 +1288,31 @@
       }
       function L(e, t = {}) {
         const r = (0, n.KV)(),
-          i = (0, s.LH)();
-        return (0, l.I)({
+          i = (0, a.LH)();
+        return (0, o.I)({
           queryKey: [`GameplayInfo_${i}_${e}`],
-          queryFn: async () => await E(r, e),
+          queryFn: async () => await T(r, e),
           ...t,
         });
       }
     },
     97232: (e, t, r) => {
       "use strict";
-      r.d(t, { Jl: () => c, nl: () => o, rf: () => l });
-      var i = r(90626),
-        a = r(12155),
-        s = r(4869),
+      r.d(t, { Jl: () => c, nl: () => l, rf: () => o });
+      var i = r(7850),
+        s = r(12155),
+        a = r(4869),
         n = r(78327);
       function c(e) {
         return (0, n.Qn)()
-          ? i.createElement(s.MGO, { ...e })
-          : i.createElement(a.Jlk, { ...e });
-      }
-      function l() {
-        return i.createElement(a.rfv, null);
+          ? (0, i.jsx)(a.MGO, { ...e })
+          : (0, i.jsx)(s.Jlk, { ...e });
       }
       function o() {
-        return (0, n.Qn)()
-          ? i.createElement(s.nl, null)
-          : i.createElement(a.jZW, null);
+        return (0, i.jsx)(s.rfv, {});
+      }
+      function l() {
+        return (0, n.Qn)() ? (0, i.jsx)(a.nl, {}) : (0, i.jsx)(s.jZW, {});
       }
     },
   },

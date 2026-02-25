@@ -48,7 +48,7 @@ function UpdateBanState( id, bBan )
 				{
 					ShowWithFade($('banned_' + id));
 					$J('#item_' + id).addClass('banned');
-			}
+				}
 				else
 				{
 					$J('#item_' + id).removeClass('banned');
@@ -58,7 +58,7 @@ function UpdateBanState( id, bBan )
 	};
 	new Ajax.Request(
 		'https://steamcommunity.com/sharedfiles/ban',
-		options
+	options
 	);
 }
 

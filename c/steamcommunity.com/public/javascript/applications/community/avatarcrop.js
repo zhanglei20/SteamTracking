@@ -17,6 +17,7 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -83,33 +84,26 @@
           _.useImperativeHandle(_, () => ({
             getBlob: _,
           })),
-          _.createElement(
-            "div",
-            {
-              className: _.AvatarCrop,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.AvatarCropBound,
-              },
-              _.createElement("img", {
-                ref: _,
-                className: _.AvatarCropImg,
-              }),
-              _.createElement(
-                "div",
-                {
+          (0, _.jsx)("div", {
+            className: _.AvatarCrop,
+            children: (0, _.jsxs)("div", {
+              className: _.AvatarCropBound,
+              children: [
+                (0, _.jsx)("img", {
+                  ref: _,
+                  className: _.AvatarCropImg,
+                }),
+                (0, _.jsx)("div", {
                   ref: _,
                   className: _.AvatarLoading,
                   style: {
                     display: __webpack_require__ ? "" : "none",
                   },
-                },
-                (0, _._)("#Loading"),
-              ),
-            ),
-          )
+                  children: (0, _._)("#Loading"),
+                }),
+              ],
+            }),
+          })
         );
       });
       async function _(_, _) {

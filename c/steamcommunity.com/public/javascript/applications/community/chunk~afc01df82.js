@@ -236,6 +236,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           editModel: null,
@@ -259,24 +260,18 @@
               setClanImagesV2: _,
             };
           })();
-        return _.createElement(
-          _.Provider,
-          {
-            value: {
-              ..._,
-              editModel: __webpack_require__,
-              bClanImagesV2: _,
-              setClanImagesV2: _,
-            },
+        return (0, _.jsx)(_.Provider, {
+          value: {
+            ..._,
+            editModel: __webpack_require__,
+            bClanImagesV2: _,
+            setClanImagesV2: _,
           },
-          _.createElement(
-            _._,
-            {
-              location: 1,
-            },
-            _,
-          ),
-        );
+          children: (0, _.jsx)(_._, {
+            location: 1,
+            children: _,
+          }),
+        });
       }
       function _() {
         return _.useContext(_).editModel;
@@ -300,6 +295,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -388,197 +384,188 @@
             height: _.height,
           },
           _ = _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_));
-        return _.createElement(
-          _._,
-          {
-            bAllowFullSize: !0,
-            title: (0, _._)("#ImagePickerLoc_Title"),
-            onCancel: _,
-            closeModal: _,
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_._, {
+          bAllowFullSize: !0,
+          title: (0, _._)("#ImagePickerLoc_Title"),
+          onCancel: _,
+          closeModal: _,
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)("div", {
                   className: _().FlexRowContainer,
-                },
-                _.createElement(
-                  "span",
-                  {
+                  children: (0, _.jsxs)("span", {
                     className: _().FlexColumnContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#ImagePickerLoc_Default"),
-                    _.createElement(_._, {
-                      tooltip: (0, _._)("#ImagePickerLoc_Default_Hint"),
-                    }),
-                  ),
-                  _.createElement("img", {
-                    className: _.TitleImg,
-                    src: _,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _._)("#ImagePickerLoc_Default"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)("#ImagePickerLoc_Default_Hint"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("img", {
+                        className: _.TitleImg,
+                        src: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        children: _.file_name + _ + " - " + _,
+                      }),
+                    ],
                   }),
-                  _.createElement("div", null, _.file_name + _ + " - " + _),
-                ),
-              ),
-              !_ &&
-                _.createElement(_._, {
-                  position: "center",
-                  string: (0, _._)("#Loading"),
                 }),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_._, {
-                    clanSteamID: _,
-                    rgSupportArtwork: [],
-                    localizedPrimaryImage: _,
-                    forceResolution: _,
-                    bAllowPreviousClanImageSelection: !0,
-                    fnSetImageURL: _,
-                    rgRealmList: _,
+                !_ &&
+                  (0, _.jsx)(_._, {
+                    position: "center",
+                    string: (0, _._)("#Loading"),
                   }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ArtworkBar,
-                    },
-                    _.createElement(_._, {
-                      clanSteamID: _,
-                      eventModel: void 0,
-                      artworkType: "localized_image_group",
-                      title: (0, _._)("#ImagePickerLoc_Title"),
-                      realms: _,
-                      fnLangHasData: _,
-                      appid: __webpack_require__,
-                      fnGetImageHashAndExt: _,
-                      fnSetImageURL: _,
-                      partnerEventStore: _,
-                    }),
-                  ),
-                ),
-            ),
-          ),
-        );
+                _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        clanSteamID: _,
+                        rgSupportArtwork: [],
+                        localizedPrimaryImage: _,
+                        forceResolution: _,
+                        bAllowPreviousClanImageSelection: !0,
+                        fnSetImageURL: _,
+                        rgRealmList: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.ArtworkBar,
+                        children: (0, _.jsx)(_._, {
+                          clanSteamID: _,
+                          eventModel: void 0,
+                          artworkType: "localized_image_group",
+                          title: (0, _._)("#ImagePickerLoc_Title"),
+                          realms: _,
+                          fnLangHasData: _,
+                          appid: __webpack_require__,
+                          fnGetImageHashAndExt: _,
+                          fnSetImageURL: _,
+                          partnerEventStore: _,
+                        }),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+          }),
+        });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = (0, _.useRef)(null);
-        return (
-          (0, _.useEffect)(() => {
-            var _;
-            null === (_ = _.current) || void 0 === _ || _.showModal();
-            const _ = document.body.style.overflow;
-            return (
-              (document.body.style.overflow = "hidden"),
-              () => {
-                document.body.style.overflow = _;
-              }
-            );
-          }, []),
-          _.createElement(
-            "dialog",
-            {
-              ref: _,
-              className: _().LightboxDialog,
-              onClose: (_) => _.onCloseRequest(_),
-              onKeyDown: (_) => {
-                "ArrowRight" === _.key && _.nextSrc
-                  ? _.onMoveNextRequest(_)
-                  : "ArrowLeft" === _.key &&
-                    _.prevSrc &&
-                    _.onMovePrevRequest(_);
-              },
-            },
+        (0, _.useEffect)(() => {
+          var _;
+          null === (_ = _.current) || void 0 === _ || _.showModal();
+          const _ = document.body.style.overflow;
+          return (
+            (document.body.style.overflow = "hidden"),
+            () => {
+              document.body.style.overflow = _;
+            }
+          );
+        }, []);
+        const _ =
+            "string" == typeof _.prevSrc
+              ? (0, _.jsx)("img", {
+                  src: _.prevSrc,
+                })
+              : _.prevSrc,
+          _ =
+            "string" == typeof _.mainSrc
+              ? (0, _.jsx)("img", {
+                  src: _.mainSrc,
+                })
+              : _.mainSrc,
+          _ =
+            "string" == typeof _.nextSrc
+              ? (0, _.jsx)("img", {
+                  src: _.nextSrc,
+                })
+              : _.nextSrc;
+        return (0, _.jsxs)("dialog", {
+          ref: _,
+          className: _().LightboxDialog,
+          onClose: (_) => _.onCloseRequest(_),
+          onKeyDown: (_) => {
+            "ArrowRight" === _.key && _.nextSrc
+              ? _.onMoveNextRequest(_)
+              : "ArrowLeft" === _.key && _.prevSrc && _.onMovePrevRequest(_);
+          },
+          children: [
             _.prevSrc &&
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
                   className: (0, _._)(
                     _().LightboxImageContainer,
                     _().LightboxPrevImage,
                   ),
-                  key: _.prevSrc,
+                  children: _,
                 },
-                _.createElement("img", {
-                  src: _.prevSrc,
-                }),
+                "lb-" + (null == _ ? void 0 : _.key),
               ),
-            _.createElement(
+            (0, _.jsx)(
               "div",
               {
                 className: (0, _._)(
                   _().LightboxImageContainer,
                   _().LightboxMainImage,
                 ),
-                key: _.mainSrc,
                 onClick: (_) => {
                   "IMG" !== _.target.nodeName && _.onCloseRequest(_);
                 },
+                children: _,
               },
-              _.createElement("img", {
-                src: _.mainSrc,
-              }),
+              "lb-" + _.key,
             ),
             _.nextSrc &&
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
                   className: (0, _._)(
                     _().LightboxImageContainer,
                     _().LightboxNextImage,
                   ),
-                  key: _.nextSrc,
+                  children: _,
                 },
-                _.createElement("img", {
-                  key: _.nextSrc,
-                  src: _.nextSrc,
-                }),
+                "lb-" + (null == _ ? void 0 : _.key),
               ),
-            _.createElement(
-              "div",
-              {
-                className: _().LightboxToolbar,
-              },
-              _.createElement(
-                "span",
-                {
+            (0, _.jsxs)("div", {
+              className: _().LightboxToolbar,
+              children: [
+                (0, _.jsx)("span", {
                   className: _().LightboxImageTitle,
-                },
-                _.imageTitle,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().LightboxToolbarButtons,
-                },
-                _.toolbarButtons,
-                _.createElement("button", {
-                  className: _().LightboxCloseButton,
-                  onClick: _.onCloseRequest,
+                  children: _.imageTitle,
                 }),
-              ),
-            ),
+                (0, _.jsxs)("div", {
+                  className: _().LightboxToolbarButtons,
+                  children: [
+                    _.toolbarButtons,
+                    (0, _.jsx)("button", {
+                      className: _().LightboxCloseButton,
+                      onClick: _.onCloseRequest,
+                    }),
+                  ],
+                }),
+              ],
+            }),
             _.prevSrc &&
-              _.createElement("button", {
+              (0, _.jsx)("button", {
                 className: _().LightboxLeftButton,
                 onClick: _.onMovePrevRequest,
               }),
             _.nextSrc &&
-              _.createElement("button", {
+              (0, _.jsx)("button", {
                 className: _().LightboxRightButton,
                 onClick: _.onMoveNextRequest,
               }),
-          )
-        );
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       let _ = 1;
@@ -653,149 +640,153 @@
             }
           };
         if (_)
-          return _.createElement(
-            "div",
-            null,
-            _.createElement("div", null, (0, _._)("#Error_Message")),
-            _.createElement("div", null, _),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)("div", {
+                children: (0, _._)("#Error_Message"),
+              }),
+              (0, _.jsx)("div", {
+                children: _,
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().Button),
                 onClick: _,
-              },
-              (0, _._)("#Button_Retry"),
-            ),
-          );
+                children: (0, _._)("#Button_Retry"),
+              }),
+            ],
+          });
         if (_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             position: "center",
             string: (0, _._)("#Loading"),
           });
         let _ = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().PickerContainer),
-          },
-          _.createElement(_._, {
-            fnSetImageSearch: (_) => _(_),
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().PickerContainer),
+          children: [
+            (0, _.jsx)(_._, {
+              fnSetImageSearch: (_) => _(_),
+            }),
+            (0, _.jsx)("div", {
               className: _().ImagesContainer,
-            },
-            _.createElement(_._, {
-              clanAccountID: _.GetAccountID(),
-              fileNameSearch: _,
-              imageInsertCallBack: _,
-              fnOnExpandImage: (_) => {
-                if (_ && _) {
-                  let _ = _._.GetFilteredClanImages(_, _.trim().toLowerCase()),
-                    _ = __webpack_require__.findIndex(
-                      (_, _, _) => _.imageid == _.imageid,
-                    );
-                  _ >= 0 && (_(_), _(_));
-                }
-              },
-              InternalOpenLocalizeImageGroup: (_) => {
-                (0, _._)(
-                  _.createElement(_, {
-                    primaryLocalizedImage: _,
-                    appid: __webpack_require__,
-                    clanSteamID: _,
-                    fnSetImageURL: _,
-                    rgRealmList: _,
-                    fnLangHasData: _,
-                    fnGetImageHash: _,
-                    partnerEventStore: _,
-                  }),
-                  window,
-                );
-              },
-            }),
-          ),
-          _ > 0 &&
-            _.createElement(_, {
-              key: "clanimageuploaderview" + _,
-              uploader: _,
-              onDismiss: () => {
-                _(_), _(null);
-              },
-            }),
-          !_ &&
-            _.createElement(_._, {
-              onDropFiles: async (_) => {
-                if (_ && _.length > 0) {
-                  const _ = _ ? new _._(_, null) : new _._(_, null);
-                  _(_);
-                  let _ = !0,
-                    _ = Array.from(_);
-                  for (let _ = 0; _ && _ < _.length; _++) {
-                    let _ = _[_];
-                    (_ = await __webpack_require__.AddImage(_, 0)),
-                      _ ||
-                        (console.error(
-                          "ClanImagePicker.OnDropFiles: failed on i=" +
-                            _ +
-                            " file=" +
-                            _.name,
-                        ),
-                        (0, _._)(
-                          _.createElement(_._, {
-                            strDescription: (0, _._)(
-                              "#ImagePicker_Error",
-                              _.name,
-                            ),
-                          }),
-                          window,
-                        ));
+              children: (0, _.jsx)(_._, {
+                clanAccountID: _.GetAccountID(),
+                fileNameSearch: _,
+                imageInsertCallBack: _,
+                fnOnExpandImage: (_) => {
+                  if (_ && _) {
+                    let _ = _._.GetFilteredClanImages(
+                        _,
+                        _.trim().toLowerCase(),
+                      ),
+                      _ = __webpack_require__.findIndex(
+                        (_, _, _) => _.imageid == _.imageid,
+                      );
+                    _ >= 0 && (_(_), _(_));
                   }
-                  return (
-                    _ && (_(""), _(++_), __webpack_require__.UploadAllImages()),
-                    _
+                },
+                InternalOpenLocalizeImageGroup: (_) => {
+                  (0, _._)(
+                    (0, _.jsx)(_, {
+                      primaryLocalizedImage: _,
+                      appid: __webpack_require__,
+                      clanSteamID: _,
+                      fnSetImageURL: _,
+                      rgRealmList: _,
+                      fnLangHasData: _,
+                      fnGetImageHash: _,
+                      partnerEventStore: _,
+                    }),
+                    window,
                   );
-                }
-                return !1;
-              },
+                },
+              }),
             }),
-          null != _ &&
-            _.createElement(_, {
-              mainSrc: _[_].url,
-              imageTitle: _[_].file_name,
-              nextSrc: _ < _.length - 1 ? _[_ + 1].url : void 0,
-              prevSrc: _ > 0 ? _[_ - 1].url : void 0,
-              onMoveNextRequest: () => _(_ + 1),
-              onMovePrevRequest: () => _(_ - 1),
-              onCloseRequest: _,
-              toolbarButtons: [
-                _.createElement(
-                  "button",
-                  {
-                    key: "fullsize",
-                    className: _().Full,
-                    onClick: () => {
-                      _(_._.k_eInsertFullImage);
-                    },
+            _ > 0 &&
+              (0, _.jsx)(
+                _,
+                {
+                  uploader: _,
+                  onDismiss: () => {
+                    _(_), _(null);
                   },
-                  (0, _._)("#ImagePicker_FullSize"),
-                ),
-                _.createElement(
-                  "button",
-                  {
-                    key: "thumbnail",
-                    className: _().Full,
-                    onClick: () => {
-                      _(_._.k_eInsertThumbnail);
+                },
+                "clanimageuploaderview" + _,
+              ),
+            !_ &&
+              (0, _.jsx)(_._, {
+                onDropFiles: async (_) => {
+                  if (_ && _.length > 0) {
+                    const _ = _ ? new _._(_, null) : new _._(_, null);
+                    _(_);
+                    let _ = !0,
+                      _ = Array.from(_);
+                    for (let _ = 0; _ && _ < _.length; _++) {
+                      let _ = _[_];
+                      (_ = await __webpack_require__.AddImage(_, 0)),
+                        _ ||
+                          (console.error(
+                            "ClanImagePicker.OnDropFiles: failed on i=" +
+                              _ +
+                              " file=" +
+                              _.name,
+                          ),
+                          (0, _._)(
+                            (0, _.jsx)(_._, {
+                              strDescription: (0, _._)(
+                                "#ImagePicker_Error",
+                                _.name,
+                              ),
+                            }),
+                            window,
+                          ));
+                    }
+                    return (
+                      _ &&
+                        (_(""), _(++_), __webpack_require__.UploadAllImages()),
+                      _
+                    );
+                  }
+                  return !1;
+                },
+              }),
+            null != _ &&
+              (0, _.jsx)(_, {
+                mainSrc: _[_].url,
+                imageTitle: _[_].file_name,
+                nextSrc: _ < _.length - 1 ? _[_ + 1].url : void 0,
+                prevSrc: _ > 0 ? _[_ - 1].url : void 0,
+                onMoveNextRequest: () => _(_ + 1),
+                onMovePrevRequest: () => _(_ - 1),
+                onCloseRequest: _,
+                toolbarButtons: [
+                  (0, _.jsx)(
+                    "button",
+                    {
+                      className: _().Full,
+                      onClick: () => {
+                        _(_._.k_eInsertFullImage);
+                      },
+                      children: (0, _._)("#ImagePicker_FullSize"),
                     },
-                  },
-                  (0, _._)("#ImagePicker_Thumbnail"),
-                ),
-              ],
-            }),
-          _.createElement(_, null),
-        );
+                    "fullsize",
+                  ),
+                  (0, _.jsx)(
+                    "button",
+                    {
+                      className: _().Full,
+                      onClick: () => {
+                        _(_._.k_eInsertThumbnail);
+                      },
+                      children: (0, _._)("#ImagePicker_Thumbnail"),
+                    },
+                    "thumbnail",
+                  ),
+                ],
+              }),
+            (0, _.jsx)(_, {}),
+          ],
+        });
       });
       function _(_) {
         const {
@@ -803,18 +794,17 @@
           bClanImagesV2Allowed: __webpack_require__,
           setClanImagesV2: _,
         } = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__ &&
+        return (0, _.jsx)(_.Fragment, {
+          children:
+            __webpack_require__ &&
             _ &&
-            _.createElement(_._, {
+            (0, _.jsx)(_._, {
               className: _().EnableClanImagesV2,
               label: "New media conversion",
               checked: _,
               onChange: (_) => _(_),
             }),
-        );
+        });
       }
       function _(_) {
         const { uploader: _, onDismiss: __webpack_require__ } = _,
@@ -823,90 +813,66 @@
             !_.BAllDone() && !_.BHasError(),
           ]),
           _ = _.GetLastErrorFile();
-        return _.createElement(
-          "div",
-          {
-            className: _().UploaderContainer,
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().UploaderRunning,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().UploaderDesc,
-                },
-                (0, _._)(
-                  "#ImageUpload_Desc",
-                  _.GetCompletedFiles(),
-                  _.GetTotalFiles(),
-                ),
-              ),
-              _.createElement(
-                "button",
-                {
-                  className: "DialogButton",
-                  onClick: () => {
-                    _.CancelAllUploads(), __webpack_require__();
-                  },
-                },
-                (0, _._)("#Button_Cancel"),
-              ),
-            ),
-          _.BHasError() &&
+        return (0, _.jsxs)("div", {
+          className: _().UploaderContainer,
+          children: [
             _ &&
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
+                className: _().UploaderRunning,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().UploaderDesc,
+                    children: (0, _._)(
+                      "#ImageUpload_Desc",
+                      _.GetCompletedFiles(),
+                      _.GetTotalFiles(),
+                    ),
+                  }),
+                  (0, _.jsx)("button", {
+                    className: "DialogButton",
+                    onClick: () => {
+                      _.CancelAllUploads(), __webpack_require__();
+                    },
+                    children: (0, _._)("#Button_Cancel"),
+                  }),
+                ],
+              }),
+            _.BHasError() &&
+              _ &&
+              (0, _.jsxs)("div", {
                 className: _().UploadMessageAndButtonsContainer,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().UploadError,
-                },
-                (0, _._)(
-                  "#ImageUpload_Error",
-                  _.file.name,
-                  _.status,
-                  _.message,
-                ),
-              ),
-              _.createElement(
-                "button",
-                {
-                  className: _().UploadButtonCancel,
-                  onClick: __webpack_require__,
-                },
-                (0, _._)("#Button_Cancel"),
-              ),
-              _.createElement(
-                "button",
-                {
-                  className: _().UploadButtonRetry,
-                  onClick: () => _.RetryAllFailedUploads(),
-                },
-                (0, _._)("#Button_Retry"),
-              ),
-            ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().UploadError,
+                    children: (0, _._)(
+                      "#ImageUpload_Error",
+                      _.file.name,
+                      _.status,
+                      _.message,
+                    ),
+                  }),
+                  (0, _.jsx)("button", {
+                    className: _().UploadButtonCancel,
+                    onClick: __webpack_require__,
+                    children: (0, _._)("#Button_Cancel"),
+                  }),
+                  (0, _.jsx)("button", {
+                    className: _().UploadButtonRetry,
+                    onClick: () => _.RetryAllFailedUploads(),
+                    children: (0, _._)("#Button_Retry"),
+                  }),
+                ],
+              }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
                 className: _().UploadMessageAndButtonsContainer,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().UploadSuccess,
-                },
-                (0, _._)("#ImageUpload_Success"),
-              ),
-            ),
-        );
+                  children: (0, _._)("#ImageUpload_Success"),
+                }),
+              }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -956,24 +922,11 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -988,7 +941,20 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1075,86 +1041,72 @@
             ),
             _)
           )
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               position: "center",
               size: "medium",
             });
-          if (0 == _.length) return _.createElement("div", null);
+          if (0 == _.length) return (0, _.jsx)("div", {});
           const _ = _._.GetClanInfoByClanAccountID(_);
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().OtherEventsCtn, "OtherEventsCtn"),
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)(_().OtherEventsCtn, "OtherEventsCtn"),
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().EventSectionTitleCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _().EventSectionTitle,
-                      "EventSectionTitle",
-                    ),
-                  },
-                  (0, _._)("#EventBrowse_MoreEventsTitle", _.group_name),
-                  " ",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventSectionSpacer,
-                  },
-                  " ",
-                ),
-                _
-                  ? _.createElement(
-                      "div",
-                      {
-                        className: _().EventSectionMoreBtn,
-                        onClick: () => _(!0),
-                      },
-                      (0, _._)("#EventBrowse_MoreEventsBtn"),
-                    )
-                  : _.createElement(
-                      _._,
-                      {
-                        eventModel: _[0],
-                        route: _._.k_eViewWebSiteHub,
-                        className: _().EventSectionMoreBtn,
-                      },
-                      (0, _._)("#EventBrowse_MoreEventsBtn"),
-                    ),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(
+                        _().EventSectionTitle,
+                        "EventSectionTitle",
+                      ),
+                      children: [
+                        (0, _._)("#EventBrowse_MoreEventsTitle", _.group_name),
+                        " ",
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().EventSectionSpacer,
+                      children: " ",
+                    }),
+                    _
+                      ? (0, _.jsx)("div", {
+                          className: _().EventSectionMoreBtn,
+                          onClick: () => _(!0),
+                          children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                        })
+                      : (0, _.jsx)(_._, {
+                          eventModel: _[0],
+                          route: _._.k_eViewWebSiteHub,
+                          className: _().EventSectionMoreBtn,
+                          children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                        }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
                   className: _().OtherEvents,
                   "flow-children": "column",
                   navEntryPreferPosition: _._.PREFERRED_CHILD,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: _.AnnouncementGID,
-                    event: _,
-                  }),
-                ),
-              ),
-              Boolean(_) &&
-                _.createElement(_._, {
-                  appid: _[0].appid,
-                  clanSteamID: _,
-                  announcementGID: _[0].AnnouncementGID,
-                  closeModal: () => _(!1),
-                  partnerEventStore: _,
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        event: _,
+                      },
+                      _.AnnouncementGID,
+                    ),
+                  ),
                 }),
-            ),
-          );
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    appid: _[0].appid,
+                    clanSteamID: _,
+                    announcementGID: _[0].AnnouncementGID,
+                    closeModal: () => _(!1),
+                    partnerEventStore: _,
+                  }),
+              ],
+            }),
+          });
         }),
         _ = 30;
       function _(_) {
@@ -1197,7 +1149,7 @@
                   src: _,
                 };
         if (!_)
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: _().OtherEvents_EventCtn,
           });
         const _ = (0, _._)().GetStoreInitializationTimestamp().getTime() / 1e3,
@@ -1205,12 +1157,9 @@
         let _ = _;
         return (
           _ && (_.length > _ || _.length > _) && (_ = void 0),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_._, {
                 className: (0, _._)(
                   _().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
@@ -1220,179 +1169,145 @@
                 route: _ || _._.k_eView,
                 onClick: _,
                 preferredFocus: !0,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().EventSummaryContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventSummaryType,
-                  },
-                  _,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventSummaryText,
-                  },
-                  _,
-                ),
-              ),
-              _.createElement("div", {
-                className: _().OtherEvents_BGImage,
-                style: {
-                  backgroundColor: "#ffffff",
-                  backgroundImage: _ ? `url(${(0, _._)(_)})` : "none",
-                },
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().OtherEvents_ContentCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _().OtherEvents_MainImageCtn,
-                      _ && _().MaskImages,
-                    ),
-                  },
-                  _.createElement("img", {
-                    ..._,
-                    className: _().OtherEvents_MainImage,
-                    alt: "",
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().OtherEvents_TextCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().OtherEvents_TextTitle,
-                    },
-                    _,
-                  ),
-                  Boolean(_) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().OtherEvents_SubTitle,
-                      },
-                      _,
-                    ),
-                  Boolean(_ > _)
-                    ? _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(_().UpcomingCtn, "UpcomingCtn"),
-                        },
-                        _.createElement(_._, {
-                          bSingleLine: !0,
-                          dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
-                        }),
-                      )
-                    : _.createElement(_._, {
-                        bSingleLine: !0,
-                        bOnlyDate: !0,
-                        dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().EventSummaryContainer,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().EventSummaryType,
+                        children: _,
                       }),
-                ),
-              ),
-            ),
-            Boolean(_ && _.appid) &&
-              _.createElement(_, {
-                appid: _.appid,
-                bHidePrice: _,
+                      (0, _.jsx)("div", {
+                        className: _().EventSummaryText,
+                        children: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().OtherEvents_BGImage,
+                    style: {
+                      backgroundColor: "#ffffff",
+                      backgroundImage: _ ? `url(${(0, _._)(_)})` : "none",
+                    },
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().OtherEvents_ContentCtn,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().OtherEvents_MainImageCtn,
+                          _ && _().MaskImages,
+                        ),
+                        children: (0, _.jsx)("img", {
+                          ..._,
+                          className: _().OtherEvents_MainImage,
+                          alt: "",
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().OtherEvents_TextCtn,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().OtherEvents_TextTitle,
+                            children: _,
+                          }),
+                          Boolean(_) &&
+                            (0, _.jsx)("div", {
+                              className: _().OtherEvents_SubTitle,
+                              children: _,
+                            }),
+                          Boolean(_ > _)
+                            ? (0, _.jsx)("div", {
+                                className: (0, _._)(
+                                  _().UpcomingCtn,
+                                  "UpcomingCtn",
+                                ),
+                                children: (0, _.jsx)(_._, {
+                                  bSingleLine: !0,
+                                  dateAndTime:
+                                    _.GetStartTimeAndDateUnixSeconds(),
+                                }),
+                              })
+                            : (0, _.jsx)(_._, {
+                                bSingleLine: !0,
+                                bOnlyDate: !0,
+                                dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                              }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
               }),
-          )
+              Boolean(_ && _.appid) &&
+                (0, _.jsx)(_, {
+                  appid: _.appid,
+                  bHidePrice: _,
+                }),
+            ],
+          })
         );
       }
       function _(_) {
         const { appid: _, bHidePrice: __webpack_require__ } = _,
-          [_] = (0, _._)(_, _._),
           _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)();
         if (!_ || !_) return null;
-        const _ = _.GetBestPurchaseOption(),
-          _ = null == _ ? void 0 : _.hide_discount_pct_for_compliance;
-        return _.createElement(
-          _._,
-          {
-            appID: _,
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_().AppCapsuleCtn, "AppCapsuleCtn"),
-              ...(0, _._)(_, _, _, !1),
-            },
-            _.createElement(
-              _._,
-              {
-                item: {
-                  type: "game",
-                  _: _,
-                },
+        const _ = _ && _.hide_discount_pct_for_compliance;
+        return (0, _.jsx)(_._, {
+          appID: _,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_().AppCapsuleCtn, "AppCapsuleCtn"),
+            ...(0, _._)(_, _, _, !1),
+            children: [
+              (0, _.jsx)(_._, {
+                _: _,
                 hoverProps: {
                   direction: "overlay",
                   style: {
                     minWidth: "320px",
                   },
                 },
-              },
-              _.createElement("img", {
-                className: (0, _._)(_().AppCapsuleImage, _().CapsuleShadow),
-                src: _.GetAssets().GetSmallCapsuleURL(),
-                alt: _.GetName(),
+                children: (0, _.jsx)("img", {
+                  className: (0, _._)(_().AppCapsuleImage, _().CapsuleShadow),
+                  src: (0, _._)(_, "small_capsule"),
+                  alt: _.name,
+                }),
               }),
-            ),
-            Boolean(!__webpack_require__ && !_.BIsFree()) &&
-              _.createElement(
-                "span",
-                {
+              Boolean(!__webpack_require__ && !_.is_free) &&
+                (0, _.jsxs)("span", {
                   className: (0, _._)(
                     _().AppCapsulePrice,
                     Boolean(null == _ ? void 0 : _.discount_pct)
                       ? _().Discounted
                       : "",
                   ),
-                },
-                Boolean((null == _ ? void 0 : _.discount_pct) && _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DiscountIconCtn,
-                    },
-                    _.createElement(_.XH_, null),
-                  ),
-                Boolean((null == _ ? void 0 : _.discount_pct) && !_) &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().StoreSaleDiscountBox,
-                    },
-                    `-${null == _ ? void 0 : _.discount_pct}%`,
-                  ),
-                Boolean(_.final_price_in_cents) &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().StoreSalePriceBox,
-                    },
-                    _.formatted_final_price,
-                  ),
-              ),
-          ),
-        );
+                  children: [
+                    Boolean((null == _ ? void 0 : _.discount_pct) && _) &&
+                      (0, _.jsx)("div", {
+                        className: _().DiscountIconCtn,
+                        children: (0, _.jsx)(_.XH_, {}),
+                      }),
+                    Boolean((null == _ ? void 0 : _.discount_pct) && !_) &&
+                      (0, _.jsx)("span", {
+                        className: _().StoreSaleDiscountBox,
+                        children: `-${null == _ ? void 0 : _.discount_pct}%`,
+                      }),
+                    _ &&
+                      _.final_price_in_cents &&
+                      (0, _.jsx)("span", {
+                        className: _().StoreSalePriceBox,
+                        children: _.formatted_final_price,
+                      }),
+                  ],
+                }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -1414,66 +1329,51 @@
               : [void 0, void 0, void 0],
           );
         return _
-          ? _.createElement(
-              _._,
-              {
-                className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
-                eventModel: _,
-                route: _._.k_eView,
-                onClick: _,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_._, {
+              className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
+              eventModel: _,
+              route: _._.k_eView,
+              onClick: _,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().OtherEvents_ContentCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: (0, _._)(
                       _().OtherEvents_MainImageCtn,
                       _ && _().MaskImages,
                     ),
-                  },
-                  _.createElement("img", {
-                    src: _,
-                    className: _().OtherEvents_MainImage,
-                    alt: "",
+                    children: (0, _.jsx)("img", {
+                      src: _,
+                      className: _().OtherEvents_MainImage,
+                      alt: "",
+                    }),
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                }),
+                (0, _.jsxs)("div", {
                   className: _().OtherEvents_TextCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().HorizontalDescriptionCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().HorizontalDescription,
-                    },
-                    _,
-                  ),
-                  _.createElement(_._, {
-                    bSingleLine: !0,
-                    dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().HorizontalTitle,
-                  },
-                  _,
-                ),
-              ),
-            )
-          : _.createElement("div", {
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().HorizontalDescriptionCtn,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().HorizontalDescription,
+                          children: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          bSingleLine: !0,
+                          dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().HorizontalTitle,
+                      children: _,
+                    }),
+                  ],
+                }),
+              ],
+            })
+          : (0, _.jsx)("div", {
               className: _().OtherEvents_EventCtn,
             });
       }
@@ -1495,6 +1395,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1537,7 +1438,7 @@
                   let _ = (0, _._)(_);
                   console.error("AddExistingClanImage: " + _.strErrorMsg, _),
                     (0, _._)(
-                      _.createElement(_._, {
+                      (0, _.jsx)(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
                           null !== (_ = _.strErrorMsg) && void 0 !== _ ? _ : "",
@@ -1556,28 +1457,34 @@
               _
                 ? [
                     [
-                      _.createElement(_._, {
-                        key: "clanartworkpicker",
-                        clanSteamID: _,
-                        OnClanImageSelected: _,
-                      }),
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          clanSteamID: _,
+                          OnClanImageSelected: _,
+                        },
+                        "clanartworkpicker",
+                      ),
                     ],
                   ]
                 : null,
             [_, _, _],
           );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ..._,
           imageUploader: _,
           rgRealmList: _,
           elAdditonalButtons: _
             ? [
-                _.createElement(_._, {
-                  key: "throbbing",
-                  position: "center",
-                  size: "medium",
-                  string: (0, _._)("#Loading"),
-                }),
+                (0, _.jsx)(
+                  _._,
+                  {
+                    position: "center",
+                    size: "medium",
+                    string: (0, _._)("#Loading"),
+                  },
+                  "throbbing",
+                ),
               ]
             : _,
           fnUploadComplete: (_) => {
@@ -1620,6 +1527,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1644,25 +1552,25 @@
           showImageActions: _ = !0,
           InternalOpenLocalizeImageGroup: _,
         } = _;
-        return _.createElement(
-          _,
-          {
-            clanAccountID: __webpack_require__,
-            fileNameSearch: _,
-          },
-          (_, _) =>
+        return (0, _.jsx)(_, {
+          clanAccountID: __webpack_require__,
+          fileNameSearch: _,
+          children: (_, _) =>
             _.map((_) =>
-              _.createElement(_, {
-                key: _.imageid,
-                clanImage: _,
-                searchStringHilight: _,
-                imageInsertCallBack: _,
-                showImageActions: _,
-                fnOnOpenLocalizedImageGroup: _,
-                OnImageClick: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  clanImage: _,
+                  searchStringHilight: _,
+                  imageInsertCallBack: _,
+                  showImageActions: _,
+                  fnOnOpenLocalizedImageGroup: _,
+                  OnImageClick: _,
+                },
+                _.imageid,
+              ),
             ),
-        );
+        });
       });
       function _(_) {
         const {
@@ -1677,32 +1585,33 @@
           const _ = _._.InitFromClanID(_);
           let _ = _._.GetLoadState(_);
           return _ && _.loaded
-            ? _.createElement(
+            ? (0, _.jsx)(
                 "div",
                 {
-                  key: "ImagePicker_Result",
                   className: _().ResultNotification,
+                  children:
+                    _.length > 0
+                      ? (0, _._)("#ImagePicker_EmptySearch")
+                      : (0, _._)("#ImagePicker_Empty"),
                 },
-                _.length > 0
-                  ? (0, _._)("#ImagePicker_EmptySearch")
-                  : (0, _._)("#ImagePicker_Empty"),
+                "ImagePicker_Result",
               )
             : _ && _.errMsg
-              ? _.createElement(
+              ? (0, _.jsx)(
                   "div",
                   {
-                    key: "ImagePicker_Result",
                     className: _().ErrorCode,
+                    children: (0, _._)("#ImagePicker_Error", _.errMsg),
                   },
-                  (0, _._)("#ImagePicker_Error", _.errMsg),
+                  "ImagePicker_Result",
                 )
-              : _.createElement(
+              : (0, _.jsx)(
                   "div",
                   {
-                    key: "ImagePicker_Result",
                     className: _().ResultNotification,
+                    children: (0, _._)("#Loading"),
                   },
-                  (0, _._)("#Loading"),
+                  "ImagePicker_Result",
                 );
         }
         return _(_, _);
@@ -1714,28 +1623,25 @@
           onImageSelected: _,
           selectedItem: _,
         } = _;
-        return _.createElement(
-          _,
-          {
-            clanAccountID: _,
-            fileNameSearch: __webpack_require__,
-          },
-          (_) =>
-            _.createElement(
-              "div",
-              {
-                className: _().ClanImageGrid,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _.imageid,
-                  clanImage: _,
-                  selected: _ == _,
-                  onImageSelected: _,
-                }),
+        return (0, _.jsx)(_, {
+          clanAccountID: _,
+          fileNameSearch: __webpack_require__,
+          children: (_) =>
+            (0, _.jsx)("div", {
+              className: _().ClanImageGrid,
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    clanImage: _,
+                    selected: _ == _,
+                    onImageSelected: _,
+                  },
+                  _.imageid,
+                ),
               ),
-            ),
-        );
+            }),
+        });
       }
       function _(_) {
         const {
@@ -1751,14 +1657,13 @@
           _ = (_) => {
             console.log("ClanImageWrapper on delete error: " + _),
               (0, _._)(
-                _.createElement(
-                  _._,
-                  {
-                    strTitle: (0, _._)("#Error_FailureNotice"),
-                    strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
-                  },
-                  _.createElement("p", null, _),
-                ),
+                (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#Error_FailureNotice"),
+                  strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
+                  children: (0, _.jsx)("p", {
+                    children: _,
+                  }),
+                }),
                 window,
               );
           },
@@ -1782,21 +1687,14 @@
           _ = _ && !_ && !_,
           _ = _ && !_ && _,
           _ = _ && !_ && !_;
-        return _.createElement(
-          _._,
-          {
-            placeholderHeight: "100vh",
-            className: _().ImageWrapperContainer,
-            rootMargin: "0px 0px 100% 0px",
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ImageButton,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          placeholderHeight: "100vh",
+          className: _().ImageWrapperContainer,
+          rootMargin: "0px 0px 100% 0px",
+          children: (0, _.jsxs)("div", {
+            className: _().ImageButton,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().ImageWrapper,
                 style: {
                   backgroundImage: _ ? "" : `url( '${_.thumb_url}' )`,
@@ -1819,106 +1717,84 @@
                 onClick: () => {
                   _ && _(_);
                 },
-              },
-              _.createElement(_, {
-                clanImage: _,
-                className: _().VideoBackground,
+                children: (0, _.jsx)(_, {
+                  clanImage: _,
+                  className: _().VideoBackground,
+                }),
               }),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
+              _ &&
+                (0, _.jsx)("span", {
                   className: _().Full,
                   onClick: _,
-                },
-                (0, _._)("#ImagePicker_FullSize"),
-              ),
-            _ &&
-              _.createElement(_._, {
-                size: "medium",
-                className: _().FloatingThrobber,
-              }),
-            _ &&
-              _.createElement(
-                "span",
-                {
+                  children: (0, _._)("#ImagePicker_FullSize"),
+                }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  size: "medium",
+                  className: _().FloatingThrobber,
+                }),
+              _ &&
+                (0, _.jsx)("span", {
                   className: _().Thumb,
                   onClick: () => _(_, _._.k_eInsertThumbnail),
-                },
-                (0, _._)("#ImagePicker_Thumbnail"),
-              ),
-            _ &&
+                  children: (0, _._)("#ImagePicker_Thumbnail"),
+                }),
               _ &&
-              _.createElement(_, {
-                bDeleting: _,
-                clanImage: _,
-                fnOnOpenLocalizedImageGroup: _,
-              }),
-            _ &&
-              _.createElement(
-                "span",
-                {
+                _ &&
+                (0, _.jsx)(_, {
+                  bDeleting: _,
+                  clanImage: _,
+                  fnOnOpenLocalizedImageGroup: _,
+                }),
+              _ &&
+                (0, _.jsx)("span", {
                   className: _().Full,
                   onClick: () => _(_, _._.k_eInsertVideo),
-                },
-                (0, _._)("#ImagePicker_Video"),
-              ),
-            !_ &&
-              _.createElement(
-                "span",
-                {
+                  children: (0, _._)("#ImagePicker_Video"),
+                }),
+              !_ &&
+                (0, _.jsx)("span", {
                   className: _().Delete,
                   onClick: (_) => {
                     var _, _;
                     (0, _._)(
-                      _.createElement(
-                        _._,
-                        {
-                          strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
-                          strDescription: "",
-                          onOK: _,
-                          onCancel: _,
-                          closeModal: _,
-                        },
-                        _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(
-                            "div",
-                            null,
-                            (0, _._)(
-                              "#ImagePicker_DeleteAreYouSure",
-                              null !== (_ = _.file_name) && void 0 !== _
-                                ? _
-                                : "",
-                            ),
-                          ),
-                          _.createElement("br", null),
-                          _.createElement("br", null),
-                          _.createElement(
-                            "div",
-                            null,
-                            (0, _._)("#ImagePicker_DeleteWarning"),
-                          ),
-                        ),
-                      ),
+                      (0, _.jsx)(_._, {
+                        strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
+                        strDescription: "",
+                        onOK: _,
+                        onCancel: _,
+                        closeModal: _,
+                        children: (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)("div", {
+                              children: (0, _._)(
+                                "#ImagePicker_DeleteAreYouSure",
+                                null !== (_ = _.file_name) && void 0 !== _
+                                  ? _
+                                  : "",
+                              ),
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("div", {
+                              children: (0, _._)("#ImagePicker_DeleteWarning"),
+                            }),
+                          ],
+                        }),
+                      }),
                       null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
                     );
                   },
-                },
-                _.createElement("img", null),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: (0, _.jsx)("img", {}),
+                }),
+              (0, _.jsx)("div", {
                 className: _().ImageWrapperFilename,
                 title: _,
-              },
-              _,
-            ),
-          ),
-        );
+                children: _,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -1929,32 +1805,26 @@
           _ = (0, _._)(_.clanAccountID);
         return _ || !_.valve_admin
           ? null
-          : _.createElement(
-              "span",
-              {
-                className: (0, _._)(_().Localized, _().ValveOnlyBackground),
-                onClick: () =>
-                  null == __webpack_require__ ? void 0 : __webpack_require__(_),
-              },
-              "(VO) " + (0, _._)("#ImagePicker_Localized"),
-            );
+          : (0, _.jsx)("span", {
+              className: (0, _._)(_().Localized, _().ValveOnlyBackground),
+              onClick: () =>
+                null == __webpack_require__ ? void 0 : __webpack_require__(_),
+              children: "(VO) " + (0, _._)("#ImagePicker_Localized"),
+            });
       }
       function _(_) {
         const { clanImage: _, className: __webpack_require__ } = _;
         return _._.BIsClanImageVideo(_)
-          ? _.createElement(
-              "video",
-              {
-                autoPlay: !0,
-                loop: !0,
-                muted: !0,
-                className: __webpack_require__,
-              },
-              _.createElement("source", {
+          ? (0, _.jsx)("video", {
+              autoPlay: !0,
+              loop: !0,
+              muted: !0,
+              className: __webpack_require__,
+              children: (0, _.jsx)("source", {
                 src: _.url,
                 type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -1963,36 +1833,29 @@
           onImageSelected: __webpack_require__,
           selected: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ClanImageGridItem, _ && _().Selected),
-            onClick: () => __webpack_require__(_, !1),
-            onDoubleClick: () => __webpack_require__(_, !0),
-            title: _.file_name,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().ClanImageGridItem, _ && _().Selected),
+          onClick: () => __webpack_require__(_, !1),
+          onDoubleClick: () => __webpack_require__(_, !0),
+          title: _.file_name,
+          children: [
+            (0, _.jsx)("div", {
               className: _().ImgCtn,
-            },
-            _._.BIsClanImageVideo(_)
-              ? _.createElement(_, {
-                  clanImage: _,
-                })
-              : _.createElement("img", {
-                  src: _.url,
-                  loading: "lazy",
-                }),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _._.BIsClanImageVideo(_)
+                ? (0, _.jsx)(_, {
+                    clanImage: _,
+                  })
+                : (0, _.jsx)("img", {
+                    src: _.url,
+                    loading: "lazy",
+                  }),
+            }),
+            (0, _.jsx)("div", {
               className: _().Name,
-            },
-            _.file_name,
-          ),
-        );
+              children: _.file_name,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2008,70 +1871,61 @@
             [_, __webpack_require__],
           ),
           [_, _] = _.useState("");
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#ImagePicker_Images"),
-            strDescription: (0, _._)("#ImagePicker_DoubleClickToSelect"),
-            bAlertDialog: !0,
-            onOK: __webpack_require__,
-            onCancel: __webpack_require__,
-          },
-          _.createElement(_._, {
-            fnSetImageSearch: _,
-          }),
-          _.createElement(_, {
-            clanAccountID: _.GetAccountID(),
-            fileNameSearch: _,
-            imageInsertCallBack: _,
-            showImageActions: !1,
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)("#ImagePicker_Images"),
+          strDescription: (0, _._)("#ImagePicker_DoubleClickToSelect"),
+          bAlertDialog: !0,
+          onOK: __webpack_require__,
+          onCancel: __webpack_require__,
+          children: [
+            (0, _.jsx)(_._, {
+              fnSetImageSearch: _,
+            }),
+            (0, _.jsx)(_, {
+              clanAccountID: _.GetAccountID(),
+              fileNameSearch: _,
+              imageInsertCallBack: _,
+              showImageActions: !1,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { clanSteamID: _, OnClanImageSelected: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().ImageUploadBar,
-          },
-          _.createElement(
-            "label",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().ImageUploadBar,
+          children: [
+            (0, _.jsxs)("label", {
               htmlFor: "clanimagedialog",
-            },
-            _.createElement(
-              "span",
-              null,
-              (0, _._)("#ImagePicker_PreviousImages"),
-              " ",
-            ),
-            _.createElement(
-              "span",
-              {
-                className: _().SelectImageButton,
-              },
-              (0, _._)("#ImagePicker_PreviousImages2"),
-            ),
-          ),
-          _.createElement("input", {
-            style: {
-              display: "none",
-            },
-            _: "clanimagedialog",
-            type: "button",
-            onClick: (_) => {
-              var _;
-              (0, _._)(
-                _.createElement(_, {
-                  clanSteamID: _,
-                  OnClanImageSelected: __webpack_require__,
+              children: [
+                (0, _.jsxs)("span", {
+                  children: [(0, _._)("#ImagePicker_PreviousImages"), " "],
                 }),
-                null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
-              );
-            },
-          }),
-        );
+                (0, _.jsx)("span", {
+                  className: _().SelectImageButton,
+                  children: (0, _._)("#ImagePicker_PreviousImages2"),
+                }),
+              ],
+            }),
+            (0, _.jsx)("input", {
+              style: {
+                display: "none",
+              },
+              _: "clanimagedialog",
+              type: "button",
+              onClick: (_) => {
+                var _;
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    clanSteamID: _,
+                    OnClanImageSelected: __webpack_require__,
+                  }),
+                  null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
+                );
+              },
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2097,50 +1951,39 @@
             accept: "image/png, image/jpeg, image/gif, image/webp",
             multiple: !0,
           });
-        return _.createElement(
-          "div",
-          {
-            ..._,
-            className: (0, _._)(
-              _ ? _().DragAndDropContainerDragging : _().DragAndDropContainer,
-              "DragAndDropContainer",
-            ),
-          },
-          Boolean(__webpack_require__) && __webpack_require__(),
-          _.createElement(
-            "div",
-            null,
-            _ || (0, _._)("#ImagePicker_DragAndDrop"),
+        return (0, _.jsxs)("div", {
+          ..._,
+          className: (0, _._)(
+            _ ? _().DragAndDropContainerDragging : _().DragAndDropContainer,
+            "DragAndDropContainer",
           ),
-          _.createElement(
-            "div",
-            {
+          children: [
+            Boolean(__webpack_require__) && __webpack_require__(),
+            (0, _.jsx)("div", {
+              children: _ || (0, _._)("#ImagePicker_DragAndDrop"),
+            }),
+            (0, _.jsxs)("div", {
               className: _().ImageUploadBar,
-            },
+              children: [
+                _,
+                (0, _.jsxs)("label", {
+                  onClick: _,
+                  children: [
+                    (0, _.jsxs)("span", {
+                      children: [(0, _._)("#ImagePicker_OrBrowse"), " "],
+                    }),
+                    (0, _.jsx)("span", {
+                      className: _().SelectImageButton,
+                      children: (0, _._)("#selectimage_select_file"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
             _,
-            _.createElement(
-              "label",
-              {
-                onClick: _,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#ImagePicker_OrBrowse"),
-                " ",
-              ),
-              _.createElement(
-                "span",
-                {
-                  className: _().SelectImageButton,
-                },
-                (0, _._)("#selectimage_select_file"),
-              ),
-            ),
-          ),
-          _,
-          _.children,
-        );
+            _.children,
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2150,16 +1993,14 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { fnSetImageSearch: _ } = _,
           _ = (0, _.useRef)(null);
-        return _.createElement(
-          "div",
-          {
-            className: _.PickerTitle,
-          },
-          _.createElement("input", {
+        return (0, _.jsx)("div", {
+          className: _.PickerTitle,
+          children: (0, _.jsx)("input", {
             ref: _,
             className: _.SearchInput,
             type: "text",
@@ -2169,7 +2010,7 @@
               "Escape" == _.key && (_(""), _.current && (_.current.value = ""));
             },
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2180,6 +2021,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2237,7 +2079,7 @@
                           _.name,
                       ),
                       (0, _._)(
-                        _.createElement(_._, {
+                        (0, _.jsx)(_._, {
                           strDescription: (0, _._)(
                             "#ImagePicker_Error",
                             _.name,
@@ -2252,7 +2094,7 @@
                     _,
                   ),
                     (0, _._)(
-                      _.createElement(_._, {
+                      (0, _.jsx)(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
                           null !== (_ = _.strErrorMsg) && void 0 !== _ ? _ : "",
@@ -2271,12 +2113,12 @@
               _ instanceof Array
                 ? _
                 : [
-                    _.createElement(
+                    (0, _.jsx)(
                       _.Fragment,
                       {
-                        key: "elAdditonalButtons",
+                        children: _,
                       },
-                      _,
+                      "elAdditonalButtons",
                     ),
                   ],
             [_],
@@ -2287,40 +2129,37 @@
             _: _.language,
           })),
         );
-        return _.createElement(
-          _._,
-          {
-            onDropFiles: _,
-            elAdditonalButtons: _,
-            elOverrideDragAndDropText: _,
-          },
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_._, {
+          onDropFiles: _,
+          elAdditonalButtons: _,
+          elOverrideDragAndDropText: _,
+          children: [
+            (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsx)("div", {
                 className: _().UploadPreviewCtn,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      asset: _,
+                      forceResolution: _,
+                      fnOnRemove: () => _.DeleteUploadImage(_),
+                      languageRealms: _,
+                    },
+                    "arttabupload_" + _.filename + "_" + _.uploadTime,
+                  ),
+                ),
+              }),
+            }),
+            (0, _.jsx)(_, {
+              imageUploader: _,
+              fnOnUploadImageRequested: async () => {
+                const _ = await _.UploadAllImages(_);
+                null == __webpack_require__ || __webpack_require__(_);
               },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "arttabupload_" + _.filename + "_" + _.uploadTime,
-                  asset: _,
-                  forceResolution: _,
-                  fnOnRemove: () => _.DeleteUploadImage(_),
-                  languageRealms: _,
-                }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            imageUploader: _,
-            fnOnUploadImageRequested: async () => {
-              const _ = await _.UploadAllImages(_);
-              null == __webpack_require__ || __webpack_require__(_);
-            },
-          }),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2335,53 +2174,49 @@
               "uploading" == _.status ||
               "processing" == _.status,
           );
-        return _.createElement(
-          "div",
-          {
-            style: {
-              display: "flex",
-            },
-            className: _().UploadPreviewButtonsCtn,
+        return (0, _.jsxs)("div", {
+          style: {
+            display: "flex",
           },
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
+          className: _().UploadPreviewButtonsCtn,
+          children: [
+            Boolean(_.length) &&
+              (0, _.jsx)(_._, {
                 style: {
                   margin: "8px",
                 },
                 onClick: __webpack_require__,
                 disabled: !_,
-              },
-              (0, _._)("#ImageUpload_Upload"),
-            ),
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#ImageUpload_Upload"),
+              }),
+            Boolean(_.length) &&
+              (0, _.jsx)(_._, {
                 style: {
                   margin: "8px",
                 },
                 onClick: _.ClearImages,
                 disabled: _,
-              },
-              (0, _._)("#ImageUpload_Clear"),
-            ),
-        );
+                children: (0, _._)("#ImageUpload_Clear"),
+              }),
+          ],
+        });
       }
       function _(_, _, _, _, _) {
         let _ = new Array();
         return (
           _.GetUploadImages().forEach((_) => {
             _.push(
-              _.createElement(_, {
-                key: _ + _.file + "_" + _.uploadTime,
-                asset: _,
-                forceResolution: _,
-                forceFileType: _,
-                fnOnRemove: () => _.DeleteUploadImage(_),
-                languageRealms: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  asset: _,
+                  forceResolution: _,
+                  forceFileType: _,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                },
+                _ + _.file + "_" + _.uploadTime,
+              ),
             );
           }),
           _
@@ -2470,112 +2305,95 @@
             null === (_ = null == _ ? void 0 : _[0]) || void 0 === _
               ? void 0
               : _.data);
-        return _.createElement(
-          "div",
-          {
-            className: _().UploadPreview,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().UploadPreview,
+          children: [
+            (0, _.jsx)("div", {
               className: _().UploadPreviewDelete,
               onClick: () => _(_),
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(_, {
-            asset: _,
-          }),
-          _ &&
-            _.createElement(_._, {
-              strDropDownClassName: _().DropDownScroll,
-              rgOptions: _,
-              selectedOption: _.language,
-              onChange: (_) => (_.language = _.data),
-              disabled: !_,
+              children: (0, _.jsx)(_.sED, {}),
             }),
-          _ &&
-            (null == _ ? void 0 : _.length) > 1 &&
-            _.createElement(_._, {
-              label: _.GetImageOptionLabel(),
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) => _.SetCurrentImageOption(_.data),
-              disabled: !_,
+            (0, _.jsx)(_, {
+              asset: _,
             }),
-          _ &&
-            (null === (_ = _.warnings) || void 0 === _
-              ? void 0
-              : _.map((_, _) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: `warning${_}`,
-                      className: _().UploadPreviewWarning,
-                    },
-                    _,
-                  ),
-                )),
-          _ &&
-            (null === (_ = _.messages) || void 0 === _
-              ? void 0
-              : _.map((_, _) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: `message${_}`,
-                      className: _().UploadPreviewMessage,
-                    },
-                    _,
-                  ),
-                )),
-          _.createElement(
-            "div",
-            {
+            _ &&
+              (0, _.jsx)(_._, {
+                strDropDownClassName: _().DropDownScroll,
+                rgOptions: _,
+                selectedOption: _.language,
+                onChange: (_) => (_.language = _.data),
+                disabled: !_,
+              }),
+            _ &&
+              (null == _ ? void 0 : _.length) > 1 &&
+              (0, _.jsx)(_._, {
+                label: _.GetImageOptionLabel(),
+                rgOptions: _,
+                selectedOption: _,
+                onChange: (_) => _.SetCurrentImageOption(_.data),
+                disabled: !_,
+              }),
+            _ &&
+              (null === (_ = _.warnings) || void 0 === _
+                ? void 0
+                : _.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _().UploadPreviewWarning,
+                        children: _,
+                      },
+                      `warning${_}`,
+                    ),
+                  )),
+            _ &&
+              (null === (_ = _.messages) || void 0 === _
+                ? void 0
+                : _.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _().UploadPreviewMessage,
+                        children: _,
+                      },
+                      `message${_}`,
+                    ),
+                  )),
+            (0, _.jsxs)("div", {
               className: (0, _._)({
                 [_().FlexColumnContainer]: !0,
                 [_().UploadPreviewError]: "failed" == _.status,
               }),
-            },
-            _,
-            (0, _._)(_.status) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().FlexCenter,
-                },
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                _,
+                (0, _._)(_.status) &&
+                  (0, _.jsx)("div", {
+                    className: _().FlexCenter,
+                    children: (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  }),
+              ],
+            }),
+            (0, _.jsx)("div", {
               className: _().UploadPreviewError,
-            },
-            _.message,
-          ),
-          _ &&
-            _.error &&
-            _.createElement(
-              "div",
-              {
+              children: _.message,
+            }),
+            _ &&
+              _.error &&
+              (0, _.jsx)("div", {
                 className: _().UploadPreviewError,
-              },
-              _.error,
-            ),
-          _ &&
-            _.needsCrop &&
-            _.createElement(
-              _._,
-              {
+                children: _.error,
+              }),
+            _ &&
+              _.needsCrop &&
+              (0, _.jsx)(_._, {
                 onClick: () =>
                   ((_) => {
                     if (_ instanceof _._) {
                       _.ResetImage();
                       const _ = window,
-                        _ = _.createElement(_._, {
+                        _ = (0, _.jsx)(_._, {
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
@@ -2591,90 +2409,67 @@
                         JSON.stringify(_.GetCurrentImageOption()),
                       );
                   })(_),
-              },
-              (0, _._)("#ImageUpload_OpenEditor"),
-            ),
-        );
+                children: (0, _._)("#ImageUpload_OpenEditor"),
+              }),
+          ],
+        });
       });
       function _(_) {
         const { asset: _ } = _;
         return _.BIsVideo()
-          ? _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      asset: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              _.createElement(
-                "span",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().PreviewImgCtn,
+              onClick: (_) =>
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    asset: _,
+                  }),
+                  (0, _._)(_),
+                ),
+              children: [
+                (0, _.jsxs)("span", {
                   className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-              _.createElement(
-                "video",
-                {
+                  children: [_.width, " x ", _.height],
+                }),
+                (0, _.jsx)("video", {
                   height: 120,
                   controls: !1,
                   autoPlay: !0,
                   loop: !0,
                   muted: !0,
-                },
-                _.createElement("source", {
-                  src: _.dataUrl,
+                  children: (0, _.jsx)("source", {
+                    src: _.dataUrl,
+                  }),
                 }),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                style: {
-                  backgroundImage: `url(${_.dataUrl})`,
-                },
+              ],
+            })
+          : (0, _.jsx)("div", {
+              className: _().PreviewImgCtn,
+              style: {
+                backgroundImage: `url(${_.dataUrl})`,
               },
-              _.createElement(
-                "span",
-                {
-                  className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-            );
+              children: (0, _.jsxs)("span", {
+                className: _().PreviewImgInfo,
+                children: [_.width, " x ", _.height],
+              }),
+            });
       }
       function _(_) {
         const { asset: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            closeModal: __webpack_require__,
-            bAllowFullSize: !0,
-          },
-          _.createElement(
-            "video",
-            {
-              controls: !0,
-              autoPlay: !0,
-              loop: !0,
-              muted: !0,
-            },
-            _.createElement("source", {
+        return (0, _.jsx)(_._, {
+          bAlertDialog: !0,
+          closeModal: __webpack_require__,
+          bAllowFullSize: !0,
+          children: (0, _.jsx)("video", {
+            controls: !0,
+            autoPlay: !0,
+            loop: !0,
+            muted: !0,
+            children: (0, _.jsx)("source", {
               src: _.dataUrl,
             }),
-          ),
-        );
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2684,6 +2479,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2769,94 +2565,74 @@
                 )),
           _ && (_ = _(_));
         const _ = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().MajorEvent_Ctn,
-              ref: _.containerRef,
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  _().AppDetailsSpotlightContainer,
-                  _().MajorEventContainer,
-                ),
-                onActivate: _,
-                focusable: !0,
-              },
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsx)("div", {
+            className: _().MajorEvent_Ctn,
+            ref: _.containerRef,
+            children: (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                _().AppDetailsSpotlightContainer,
+                _().MajorEventContainer,
+              ),
+              onActivate: _,
+              focusable: !0,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().MajorEventBackground,
-                },
-                _.createElement(_._, {
-                  className: _().MajorEventImageBackgroundBlur,
-                  rgSources: _,
-                  onIncrementalError: (_, _, _) => _ && _(_),
+                  children: (0, _.jsx)(_._, {
+                    className: _().MajorEventImageBackgroundBlur,
+                    rgSources: _,
+                    onIncrementalError: (_, _, _) => _ && _(_),
+                  }),
                 }),
-              ),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsxs)("div", {
                   className: _().MajorEventImageContainer,
-                },
-                _.createElement(_._, {
-                  className: _().MajorEventImage,
-                  rgSources: _,
-                  onIncrementalError: (_, _, _) => _ && _(_),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _().MajorEventImage,
+                      rgSources: _,
+                      onIncrementalError: (_, _, _) => _ && _(_),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().MajorEventImageTemplate,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().MajoreEventImageContentContainer,
+                      children:
+                        _ &&
+                        (0, _.jsxs)("div", {
+                          className: _().MajorEventContent,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              className: _().MajorEventSpotlightBackground,
+                              rgSources: _,
+                              onIncrementalError: (_, _, _) => _ && _(_),
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _().MajorEventTextCtn,
+                              children: [
+                                (0, _.jsx)("div", {
+                                  className: _().MajorEventTitle,
+                                  children: _,
+                                }),
+                                (0, _.jsx)("div", {
+                                  className: _().MajorEventSummary,
+                                  children: _,
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                    }),
+                  ],
                 }),
-                _.createElement("div", {
-                  className: _().MajorEventImageTemplate,
+                (0, _.jsx)("div", {
+                  className: _().BottomShadow,
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().MajoreEventImageContentContainer,
-                  },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().MajorEventContent,
-                      },
-                      _.createElement(_._, {
-                        className: _().MajorEventSpotlightBackground,
-                        rgSources: _,
-                        onIncrementalError: (_, _, _) => _ && _(_),
-                      }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().MajorEventTextCtn,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().MajorEventTitle,
-                          },
-                          _,
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().MajorEventSummary,
-                          },
-                          _,
-                        ),
-                      ),
-                    ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().BottomShadow,
-              }),
-            ),
-          ),
-        );
+              ],
+            }),
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -2886,139 +2662,136 @@
             : "",
           [_] = (0, _._)(() => [_(_, _)]);
         return 0 == _
-          ? _.createElement(
-              "div",
-              {
-                className: _().ImagePreviewContainer,
-              },
-              "capsule" === _ &&
-                _.createElement(_, {
-                  imgURL: _._.IMG_URL + "events/defaults/default_img_cover.jpg",
-                  eventModel: _,
+          ? (0, _.jsxs)("div", {
+              className: _().ImagePreviewContainer,
+              children: [
+                "capsule" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL:
+                      _._.IMG_URL + "events/defaults/default_img_cover.jpg",
+                    eventModel: _,
+                  }),
+                "background" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL:
+                      _._.IMG_URL + "events/defaults/default_img_header.jpg",
+                    lang: __webpack_require__,
+                    eventModel: _,
+                    partnerEventStore: _,
+                  }),
+                Boolean(
+                  [
+                    "spotlight",
+                    "localized_store_app_spotlight",
+                    "localized_store_app_spotlight_mobile",
+                  ].includes(_),
+                ) &&
+                  (0, _.jsx)(_, {
+                    langOverride: __webpack_require__,
+                    artworkType: _,
+                    eventModel: _,
+                  }),
+                (0, _.jsx)("div", {
+                  children: (0, _._)("#EventEditor_ArtworkMissing"),
                 }),
-              "background" === _ &&
-                _.createElement(_, {
-                  imgURL:
-                    _._.IMG_URL + "events/defaults/default_img_header.jpg",
-                  lang: __webpack_require__,
-                  eventModel: _,
-                  partnerEventStore: _,
-                }),
-              Boolean(
-                [
-                  "spotlight",
-                  "localized_store_app_spotlight",
-                  "localized_store_app_spotlight_mobile",
-                ].includes(_),
-              ) &&
-                _.createElement(_, {
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              className: _().ImagePreviewContainer,
+              children: [
+                "capsule" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    eventModel: _,
+                    langOverride: __webpack_require__,
+                  }),
+                "background" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    lang: __webpack_require__,
+                    eventModel: _,
+                    partnerEventStore: _,
+                  }),
+                "spotlight" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    event: _,
+                    lang: __webpack_require__,
+                  }),
+                "localized_store_app_spotlight" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    event: _,
+                    lang: __webpack_require__,
+                  }),
+                "localized_store_app_spotlight_mobile" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    event: _,
+                    lang: __webpack_require__,
+                  }),
+                ("broadcast_left" === _ || "broadcast_right" === _) &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    side: "broadcast_right" === _ ? "right" : "left",
+                  }),
+                "sale_header" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "sale_overlay" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                _._.includes(_) &&
+                  (0, _.jsx)("img", {
+                    className: _.PreviewImg,
+                    src:
+                      null !==
+                        (_ = _._.GetLocalizedImageGroupForEditAsURL(
+                          _,
+                          __webpack_require__,
+                        )) && void 0 !== _
+                        ? _
+                        : void 0,
+                  }),
+                "product_banner" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "product_mobile_banner" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "sale_logo" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "bestofyear_banner" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "bestofyear_banner_mobile" === _ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                (0, _.jsx)(_._, {
                   langOverride: __webpack_require__,
-                  artworkType: _,
-                  eventModel: _,
+                  clanSteamID: _,
+                  fnOnLanguagePreviewChange: _,
+                  fnOnRemoveImage: _,
+                  fnOnArtworkLangChange: _,
+                  realms: _,
+                  fnLangHasData: _,
+                  fnGetImageHash: (_) => {
+                    var _;
+                    return (0, _._)(
+                      null !== (_ = _(_, _)) && void 0 !== _ ? _ : "",
+                    );
+                  },
                 }),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventEditor_ArtworkMissing"),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().ImagePreviewContainer,
-              },
-              "capsule" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  eventModel: _,
-                  langOverride: __webpack_require__,
-                }),
-              "background" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  lang: __webpack_require__,
-                  eventModel: _,
-                  partnerEventStore: _,
-                }),
-              "spotlight" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: __webpack_require__,
-                }),
-              "localized_store_app_spotlight" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: __webpack_require__,
-                }),
-              "localized_store_app_spotlight_mobile" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: __webpack_require__,
-                }),
-              ("broadcast_left" === _ || "broadcast_right" === _) &&
-                _.createElement(_, {
-                  imgURL: _,
-                  side: "broadcast_right" === _ ? "right" : "left",
-                }),
-              "sale_header" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "sale_overlay" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              _._.includes(_) &&
-                _.createElement("img", {
-                  className: _.PreviewImg,
-                  src:
-                    null !==
-                      (_ = _._.GetLocalizedImageGroupForEditAsURL(
-                        _,
-                        __webpack_require__,
-                      )) && void 0 !== _
-                      ? _
-                      : void 0,
-                }),
-              "product_banner" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "product_mobile_banner" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "sale_logo" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "bestofyear_banner" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "bestofyear_banner_mobile" === _ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              _.createElement(_._, {
-                langOverride: __webpack_require__,
-                clanSteamID: _,
-                fnOnLanguagePreviewChange: _,
-                fnOnRemoveImage: _,
-                fnOnArtworkLangChange: _,
-                realms: _,
-                fnLangHasData: _,
-                fnGetImageHash: (_) => {
-                  var _;
-                  return (0, _._)(
-                    null !== (_ = _(_, _)) && void 0 !== _ ? _ : "",
-                  );
-                },
-              }),
-            );
+              ],
+            });
       }
       function _(_) {
         const {
@@ -3072,7 +2845,7 @@
               ),
             [_.height, _.width, _],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           lang: __webpack_require__,
           imgURL: _,
           event: _,
@@ -3085,20 +2858,17 @@
             langOverride: _,
           } = _,
           _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            style: {
-              display: "flex",
-              width: "304px",
-            },
+        return (0, _.jsx)("div", {
+          style: {
+            display: "flex",
+            width: "304px",
           },
-          _.createElement(_._, {
+          children: (0, _.jsx)(_._, {
             event: __webpack_require__,
             imageURLOverride: _,
             langOverride: null != _ ? _ : _,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -3114,7 +2884,7 @@
             __webpack_require__.AnnouncementGID,
           ]);
         let _ = _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               text: _ || "",
               partnerEventStore: _,
               showErrorInfo: !1,
@@ -3122,112 +2892,85 @@
               languageOverride: _._.Get().GetCurEditLanguage(),
             })
           : (0, _._)("#selectimage_display_event_body");
-        return _.createElement(
-          "div",
-          {
-            className: _().MultipleExampleContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().MultipleExampleContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().ExampleSectionTitle,
-            },
-            (0, _._)("#selectimage_preview_title_1"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#selectimage_preview_title_1"),
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(_().DetailPageExample, "DetailPageExample"),
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().DetailExample,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().MainImageCtn,
-                },
-                _.createElement("img", {
-                  src: _.imgURL,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ExampleBodyPosition,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ExampleContentCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextTitle,
-                    },
-                    _ || (0, _._)("#selectimage_display_event_title"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextSubTitle,
-                    },
-                    _ || (0, _._)("#selectimage_display_event_subtitle"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextBody,
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          12 != _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("div", {
-                className: _().ExampleSpacer,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().ExampleSectionTitle,
-                },
-                (0, _._)("#selectimage_preview_title_2"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().DetailPageExample,
-                    "DetailPageExample",
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DetailExample2,
-                  },
-                  _.createElement(_._, {
-                    key: _,
-                    event: __webpack_require__,
-                    emoticonStore: _._,
-                    partnerEventStore: _,
-                    headerClassnames: "editor",
-                    langOverride: _,
-                    bDisableBroadcastPlayer: !0,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MainImageCtn,
+                    children: (0, _.jsx)("img", {
+                      src: _.imgURL,
+                    }),
                   }),
-                ),
-              ),
-            ),
-        );
+                  (0, _.jsx)("div", {
+                    className: _().ExampleBodyPosition,
+                    children: (0, _.jsxs)("div", {
+                      className: _().ExampleContentCtn,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().TextTitle,
+                          children:
+                            _ || (0, _._)("#selectimage_display_event_title"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().TextSubTitle,
+                          children:
+                            _ ||
+                            (0, _._)("#selectimage_display_event_subtitle"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().TextBody,
+                          children: _,
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              }),
+            }),
+            12 != _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ExampleSpacer,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().ExampleSectionTitle,
+                    children: (0, _._)("#selectimage_preview_title_2"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().DetailPageExample,
+                      "DetailPageExample",
+                    ),
+                    children: (0, _.jsx)("div", {
+                      className: _().DetailExample2,
+                      children: (0, _.jsx)(
+                        _._,
+                        {
+                          event: __webpack_require__,
+                          emoticonStore: _._,
+                          partnerEventStore: _,
+                          headerClassnames: "editor",
+                          langOverride: _,
+                          bDisableBroadcastPlayer: !0,
+                        },
+                        _,
+                      ),
+                    }),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       const _ = (_) => {
           var _;
@@ -3240,81 +2983,72 @@
               null === (_ = __webpack_require__.GetAssets()) || void 0 === _
                 ? void 0
                 : _.GetCommunityIconURL();
-          return _.createElement(
-            "div",
-            {
-              className: _().SpotlightExample,
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("div", {
+            className: _().SpotlightExample,
+            children: (0, _.jsx)(_, {
               event: _.event,
               strDisplayName: null != _ ? _ : "",
               gameIconUrl: _,
               spotlightURLOverride: _.imgURL,
               langOverride: _.lang,
             }),
-          );
+          });
         },
         _ = (_) => {
           const _ = [
-            _.createElement("img", {
-              key: "img",
-              src: _.imgURL,
-            }),
-            _.createElement("div", {
-              key: "video",
-              className: _().BroadcastPreview,
-            }),
+            (0, _.jsx)(
+              "img",
+              {
+                src: _.imgURL,
+              },
+              "img",
+            ),
+            (0, _.jsx)(
+              "div",
+              {
+                className: _().BroadcastPreview,
+              },
+              "video",
+            ),
           ];
           return (
             "right" === _.side && _.reverse(),
-            _.createElement(
-              "div",
-              {
-                className: _().BroadcastPreviewContainer,
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              className: _().BroadcastPreviewContainer,
+              children: _,
+            })
           );
         },
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: _().SaleHeaderPreviewContainer,
+            children: (0, _.jsx)("img", {
               style: {
                 width: "100%",
               },
               src: _.imgURL,
             }),
-          ),
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: _().SaleHeaderPreviewContainer,
+            children: (0, _.jsx)("img", {
               style: {
                 width: "100%",
               },
               src: _.imgURL,
             }),
-          ),
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: _().SaleHeaderPreviewContainer,
+            children: (0, _.jsx)("img", {
               style: {
                 width: "100%",
               },
               src: _.imgURL,
             }),
-          );
+          });
       function _(_, _) {
         var _, _;
         let _ = 0;
@@ -3353,545 +3087,465 @@
           _ = 36 == _;
         let _ = null;
         _ === _.k_Required
-          ? (_ = _.createElement(
-              "span",
-              {
-                style: {
-                  color: "#C6512B",
-                },
+          ? (_ = (0, _.jsx)("span", {
+              style: {
+                color: "#C6512B",
               },
-              (0, _._)("#EventEditor_Required"),
-            ))
+              children: (0, _._)("#EventEditor_Required"),
+            }))
           : _ === _.k_Suggested
-            ? (_ = _.createElement(
-                "span",
-                {
-                  style: {
-                    color: "#D7BC86",
-                  },
+            ? (_ = (0, _.jsx)("span", {
+                style: {
+                  color: "#D7BC86",
                 },
-                (0, _._)("#EventEditor_Suggested"),
-              ))
+                children: (0, _._)("#EventEditor_Suggested"),
+              }))
             : _ === _.k_Requested &&
-              (_ = _.createElement(
-                "span",
-                {
-                  style: {
-                    color: "#D7BC86",
-                  },
+              (_ = (0, _.jsx)("span", {
+                style: {
+                  color: "#D7BC86",
                 },
-                (0, _._)("#EventEditor_Requested"),
-              ));
+                children: (0, _._)("#EventEditor_Requested"),
+              }));
         let _ = null;
         "capsule" === _
           ? (_ = _
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_design_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_creatorhome_1"),
-                  ),
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_usage_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_creatorhome_2"),
-                  ),
-                )
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  Boolean(_) &&
-                    _.createElement(
-                      "div",
-                      {
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_design_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_creatorhome_1"),
+                      ],
+                    }),
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_usage_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_creatorhome_2"),
+                      ],
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    Boolean(_) &&
+                      (0, _.jsxs)("div", {
                         className: _().HighlightBox,
-                      },
-                      _.createElement(
-                        "p",
-                        null,
-                        (0, _._)("#PartnerEvent_MM_ArtworkTip"),
-                      ),
-                      _.createElement(
-                        "p",
-                        null,
-                        _.createElement(
-                          "a",
-                          {
-                            href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
-                          },
-                          (0, _._)("#PartnerEvent_MM_LearnMore"),
-                        ),
-                      ),
-                    ),
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_design_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_1"),
-                  ),
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_usage_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_2"),
-                  ),
-                ))
+                        children: [
+                          (0, _.jsx)("p", {
+                            children: (0, _._)("#PartnerEvent_MM_ArtworkTip"),
+                          }),
+                          (0, _.jsx)("p", {
+                            children: (0, _.jsx)("a", {
+                              href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+                              children: (0, _._)("#PartnerEvent_MM_LearnMore"),
+                            }),
+                          }),
+                        ],
+                      }),
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_design_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_1"),
+                      ],
+                    }),
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_usage_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_2"),
+                      ],
+                    }),
+                  ],
+                }))
           : "background" === _
-            ? (_ = _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "p",
-                  null,
-                  _.createElement(
-                    "strong",
-                    null,
-                    (0, _._)("#selectimage_tip_design_title"),
-                  ),
-                  ": ",
-                  (0, _._)("#selectimage_tip_background_1"),
-                ),
-              ))
-            : "spotlight" === _ || "localized_store_app_spotlight" === _
-              ? (_ = _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_usage_title"),
-                    ),
+            ? (_ = (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)("p", {
+                  children: [
+                    (0, _.jsx)("strong", {
+                      children: (0, _._)("#selectimage_tip_design_title"),
+                    }),
                     ": ",
-                    (0, _._)("#selectimage_tip_store_spotlight_1"),
-                  ),
-                ))
-              : "localized_store_app_spotlight_mobile" === _
-                ? (_ = _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "p",
-                      null,
-                      _.createElement(
-                        "strong",
-                        null,
-                        (0, _._)("#selectimage_tip_usage_title"),
-                      ),
+                    (0, _._)("#selectimage_tip_background_1"),
+                  ],
+                }),
+              }))
+            : "spotlight" === _ || "localized_store_app_spotlight" === _
+              ? (_ = (0, _.jsx)(_.Fragment, {
+                  children: (0, _.jsxs)("p", {
+                    children: [
+                      (0, _.jsx)("strong", {
+                        children: (0, _._)("#selectimage_tip_usage_title"),
+                      }),
                       ": ",
-                      (0, _._)("#selectimage_tip_store_mobile_spotlight"),
-                    ),
-                  ))
+                      (0, _._)("#selectimage_tip_store_spotlight_1"),
+                    ],
+                  }),
+                }))
+              : "localized_store_app_spotlight_mobile" === _
+                ? (_ = (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_usage_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_store_mobile_spotlight"),
+                      ],
+                    }),
+                  }))
                 : "broadcast_left" === _ || "broadcast_right" === _
-                  ? (_ = _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(
-                        "p",
-                        null,
-                        (0, _._)("#selectimage_tip_broadcast_1"),
-                      ),
-                    ))
+                  ? (_ = (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsx)("p", {
+                        children: (0, _._)("#selectimage_tip_broadcast_1"),
+                      }),
+                    }))
                   : "sale_header" === _
-                    ? (_ = _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "div",
-                          {
+                    ? (_ = (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("div", {
                             className: _().EventElementRequired,
-                          },
-                          (0, _._)("#selectimage_tip_required_title"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          _.createElement(
-                            "b",
-                            null,
-                            (0, _._)("#selectimage_tip_usage_title"),
-                          ),
-                          ": ",
-                          (0, _._)("#selectimage_tip_sale_header_1"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          _.createElement(
-                            "b",
-                            null,
-                            (0, _._)("#selectimage_tip_design_title"),
-                          ),
-                          ": ",
-                          (0, _._)("#selectimage_tip_sale_header_2"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          (0, _._)("#selectimage_tip_sale_header_4"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          _.createElement(
-                            "b",
-                            null,
-                            (0, _._)("#selectimage_tip_template_title"),
-                          ),
-                          ": ",
-                          _.createElement(
-                            "a",
-                            {
-                              href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
-                            },
-                            (0, _._)("#selectimage_tip_sale_header_3"),
-                          ),
-                        ),
-                        _.createElement("br", null),
-                      ))
+                            children: (0, _._)(
+                              "#selectimage_tip_required_title",
+                            ),
+                          }),
+                          (0, _.jsxs)("p", {
+                            children: [
+                              (0, _.jsx)("b", {
+                                children: (0, _._)(
+                                  "#selectimage_tip_usage_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, _._)("#selectimage_tip_sale_header_1"),
+                            ],
+                          }),
+                          (0, _.jsxs)("p", {
+                            children: [
+                              (0, _.jsx)("b", {
+                                children: (0, _._)(
+                                  "#selectimage_tip_design_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, _._)("#selectimage_tip_sale_header_2"),
+                            ],
+                          }),
+                          (0, _.jsx)("p", {
+                            children: (0, _._)(
+                              "#selectimage_tip_sale_header_4",
+                            ),
+                          }),
+                          (0, _.jsxs)("p", {
+                            children: [
+                              (0, _.jsx)("b", {
+                                children: (0, _._)(
+                                  "#selectimage_tip_template_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, _.jsx)("a", {
+                                href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
+                                children: (0, _._)(
+                                  "#selectimage_tip_sale_header_3",
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("br", {}),
+                        ],
+                      }))
                     : "hero" === _
                       ? _ &&
-                        (_ = _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(
-                            "p",
-                            null,
-                            (0, _._)("#selectimage_tip_hero_1"),
-                          ),
-                          !Boolean(
-                            null === (_ = _.GetAssets()) || void 0 === _
-                              ? void 0
-                              : _.GetLibraryHeroURL(),
-                          ) &&
-                            _.createElement(
-                              "p",
-                              {
+                        (_ = (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)("p", {
+                              children: (0, _._)("#selectimage_tip_hero_1"),
+                            }),
+                            !Boolean(
+                              null === (_ = _.GetAssets()) || void 0 === _
+                                ? void 0
+                                : _.GetLibraryHeroURL(),
+                            ) &&
+                              (0, _.jsx)("p", {
                                 className: _.ErrorStylesBackground,
-                              },
-                              (0, _._)("#EventEdtior_ArtworkType_hero_warning"),
-                            ),
-                        ))
+                                children: (0, _._)(
+                                  "#EventEdtior_ArtworkType_hero_warning",
+                                ),
+                              }),
+                          ],
+                        }))
                       : (_ =
                           "localized_image_group" === _ ||
                           "link_capsule" === _ ||
                           "sale_section_title" === _ ||
                           "schedule_track_art" === _ ||
                           "localized_background_art" === _
-                            ? _.createElement(
-                                _.Fragment,
-                                null,
-                                _.createElement(
-                                  "p",
-                                  null,
-                                  (0, _._)("#ImagePickerLoc_Desc"),
-                                ),
-                                _.createElement(
-                                  "p",
-                                  null,
-                                  (0, _._)(
-                                    "#ImagePickerLoc_Files",
-                                    _.createElement(
-                                      "a",
-                                      {
+                            ? (0, _.jsxs)(_.Fragment, {
+                                children: [
+                                  (0, _.jsx)("p", {
+                                    children: (0, _._)("#ImagePickerLoc_Desc"),
+                                  }),
+                                  (0, _.jsx)("p", {
+                                    children: (0, _._)(
+                                      "#ImagePickerLoc_Files",
+                                      (0, _.jsx)("a", {
                                         href: _,
                                         target: _._.IN_CLIENT
                                           ? void 0
                                           : "_blank",
-                                      },
-                                      (0, _._)("#ImagePickerLoc_URL"),
+                                        children: (0, _._)(
+                                          "#ImagePickerLoc_URL",
+                                        ),
+                                      }),
                                     ),
-                                  ),
-                                ),
-                              )
+                                  }),
+                                ],
+                              })
                             : "product_banner" === _
-                              ? _.createElement(
-                                  _.Fragment,
-                                  null,
-                                  _.createElement(
-                                    "div",
-                                    {
+                              ? (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    (0, _.jsx)("div", {
                                       className: _().EventElementOptional,
-                                    },
-                                    (0, _._)("#selectimage_tip_optional_title"),
-                                  ),
-                                  _.createElement(
-                                    "p",
-                                    null,
-                                    _.createElement(
-                                      "b",
-                                      null,
-                                      (0, _._)("#selectimage_tip_usage_title"),
-                                    ),
-                                    ": ",
-                                    (0, _._)(
-                                      "#selectimage_tip_sale_product_banner",
-                                    ),
-                                  ),
-                                )
+                                      children: (0, _._)(
+                                        "#selectimage_tip_optional_title",
+                                      ),
+                                    }),
+                                    (0, _.jsxs)("p", {
+                                      children: [
+                                        (0, _.jsx)("b", {
+                                          children: (0, _._)(
+                                            "#selectimage_tip_usage_title",
+                                          ),
+                                        }),
+                                        ": ",
+                                        (0, _._)(
+                                          "#selectimage_tip_sale_product_banner",
+                                        ),
+                                      ],
+                                    }),
+                                  ],
+                                })
                               : "product_mobile_banner" === _ ||
                                   "product_banner_override" === _ ||
                                   "product_mobile_banner_override" === _
-                                ? _.createElement(
-                                    _.Fragment,
-                                    null,
-                                    _.createElement(
-                                      "div",
-                                      {
+                                ? (0, _.jsxs)(_.Fragment, {
+                                    children: [
+                                      (0, _.jsx)("div", {
                                         className: _().EventElementOptional,
-                                      },
-                                      (0, _._)(
-                                        "#selectimage_tip_optional_title",
-                                      ),
-                                    ),
-                                    _.createElement(
-                                      "p",
-                                      null,
-                                      _.createElement(
-                                        "b",
-                                        null,
-                                        (0, _._)(
-                                          "#selectimage_tip_usage_title",
+                                        children: (0, _._)(
+                                          "#selectimage_tip_optional_title",
                                         ),
-                                      ),
-                                      ": ",
-                                      (0, _._)(
-                                        "#selectimage_tip_sale_product_banner",
-                                      ),
-                                      "product_mobile_banner" === _ &&
-                                        _.createElement(
-                                          "span",
-                                          null,
-                                          "  ",
+                                      }),
+                                      (0, _.jsxs)("p", {
+                                        children: [
+                                          (0, _.jsx)("b", {
+                                            children: (0, _._)(
+                                              "#selectimage_tip_usage_title",
+                                            ),
+                                          }),
+                                          ": ",
                                           (0, _._)(
-                                            "#selectimage_tip_sale_product_banner_mobile",
+                                            "#selectimage_tip_sale_product_banner",
                                           ),
-                                        ),
-                                    ),
-                                  )
+                                          "product_mobile_banner" === _ &&
+                                            (0, _.jsxs)("span", {
+                                              children: [
+                                                "  ",
+                                                (0, _._)(
+                                                  "#selectimage_tip_sale_product_banner_mobile",
+                                                ),
+                                              ],
+                                            }),
+                                        ],
+                                      }),
+                                    ],
+                                  })
                                 : "tab_bar_background" === _
-                                  ? _.createElement(
-                                      _.Fragment,
-                                      null,
-                                      _.createElement(
-                                        "p",
-                                        null,
-                                        _.createElement(
-                                          "strong",
-                                          null,
-                                          (0, _._)(
-                                            "#selectimage_tip_design_title",
-                                          ),
-                                        ),
-                                        ":",
-                                        (0, _._)(
-                                          "#Sale_Tabs_Background_Design",
-                                        ),
-                                      ),
-                                      _.createElement(
-                                        "p",
-                                        null,
-                                        _.createElement(
-                                          "strong",
-                                          null,
-                                          (0, _._)(
-                                            "#selectimage_tip_usage_title",
-                                          ),
-                                        ),
-                                        ":",
-                                        (0, _._)("#Sale_Tabs_Background_Usage"),
-                                      ),
-                                    )
+                                  ? (0, _.jsxs)(_.Fragment, {
+                                      children: [
+                                        (0, _.jsxs)("p", {
+                                          children: [
+                                            (0, _.jsx)("strong", {
+                                              children: (0, _._)(
+                                                "#selectimage_tip_design_title",
+                                              ),
+                                            }),
+                                            ":",
+                                            (0, _._)(
+                                              "#Sale_Tabs_Background_Design",
+                                            ),
+                                          ],
+                                        }),
+                                        (0, _.jsxs)("p", {
+                                          children: [
+                                            (0, _.jsx)("strong", {
+                                              children: (0, _._)(
+                                                "#selectimage_tip_usage_title",
+                                              ),
+                                            }),
+                                            ":",
+                                            (0, _._)(
+                                              "#Sale_Tabs_Background_Usage",
+                                            ),
+                                          ],
+                                        }),
+                                      ],
+                                    })
                                   : "sale_logo" === _
-                                    ? _.createElement(
-                                        _.Fragment,
-                                        null,
-                                        _.createElement(
-                                          "div",
-                                          {
+                                    ? (0, _.jsxs)(_.Fragment, {
+                                        children: [
+                                          (0, _.jsx)("div", {
                                             className: _().EventElementOptional,
-                                          },
-                                          (0, _._)(
-                                            "#selectimage_tip_optional_title",
-                                          ),
-                                        ),
-                                        _.createElement(
-                                          "p",
-                                          null,
-                                          _.createElement(
-                                            "b",
-                                            null,
-                                            (0, _._)(
-                                              "#selectimage_tip_usage_title",
+                                            children: (0, _._)(
+                                              "#selectimage_tip_optional_title",
                                             ),
-                                          ),
-                                          ": ",
-                                          (0, _._)("#selectimage_tip_pageLogo"),
-                                        ),
-                                      )
-                                    : _.createElement(
-                                        _.Fragment,
-                                        null,
-                                        _.createElement(
-                                          "div",
-                                          {
+                                          }),
+                                          (0, _.jsxs)("p", {
+                                            children: [
+                                              (0, _.jsx)("b", {
+                                                children: (0, _._)(
+                                                  "#selectimage_tip_usage_title",
+                                                ),
+                                              }),
+                                              ": ",
+                                              (0, _._)(
+                                                "#selectimage_tip_pageLogo",
+                                              ),
+                                            ],
+                                          }),
+                                        ],
+                                      })
+                                    : (0, _.jsxs)(_.Fragment, {
+                                        children: [
+                                          (0, _.jsx)("div", {
                                             className: _().EventElementRequired,
-                                          },
-                                          (0, _._)(
-                                            "#selectimage_tip_required_title",
-                                          ),
-                                        ),
-                                        _.createElement(
-                                          "p",
-                                          null,
-                                          _.createElement(
-                                            "b",
-                                            null,
-                                            (0, _._)(
-                                              "#selectimage_tip_usage_title",
+                                            children: (0, _._)(
+                                              "#selectimage_tip_required_title",
                                             ),
-                                          ),
-                                          ": ",
-                                          (0, _._)(
-                                            "#selectimage_tip_bestofyear",
-                                          ),
-                                        ),
-                                      ));
+                                          }),
+                                          (0, _.jsxs)("p", {
+                                            children: [
+                                              (0, _.jsx)("b", {
+                                                children: (0, _._)(
+                                                  "#selectimage_tip_usage_title",
+                                                ),
+                                              }),
+                                              ": ",
+                                              (0, _._)(
+                                                "#selectimage_tip_bestofyear",
+                                              ),
+                                            ],
+                                          }),
+                                        ],
+                                      }));
         const _ = _._[_.artworkType].width,
           _ = _._[_.artworkType].height;
-        return _.createElement(
-          "div",
-          {
-            _: _._,
-            className: _().ArtworkSelectorContainer,
-          },
-          Boolean(_.title) &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("div", {
+          _: _._,
+          className: _().ArtworkSelectorContainer,
+          children: [
+            Boolean(_.title) &&
+              (0, _.jsxs)("div", {
                 className: _().Title,
                 onDoubleClick: _,
-              },
-              _.title,
-              _.createElement("span", null, " "),
-              _,
-              _ &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: (0, _._)(
-                        _.bIsMinimized
-                          ? "#Sale_Section_Maximize_Tooltip"
-                          : "#Sale_Section_Minimize_Tooltip",
-                      ),
-                    },
-                    _.bIsMinimized
-                      ? _.createElement(_.hz4, null)
-                      : _.createElement(_.Xjb, null),
-                  ),
-                ),
-            ),
-          !_.bIsMinimized &&
-            _.createElement(
-              "div",
-              {
+                children: [
+                  _.title,
+                  (0, _.jsx)("span", {
+                    children: " ",
+                  }),
+                  _,
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)(
+                          _.bIsMinimized
+                            ? "#Sale_Section_Maximize_Tooltip"
+                            : "#Sale_Section_Minimize_Tooltip",
+                        ),
+                        children: _.bIsMinimized
+                          ? (0, _.jsx)(_.hz4, {})
+                          : (0, _.jsx)(_.Xjb, {}),
+                      }),
+                    }),
+                ],
+              }),
+            !_.bIsMinimized &&
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().SelectImageBlock, _().Tips),
-              },
-              _,
-              Boolean(_ && _) &&
-                _.createElement(
-                  "p",
-                  null,
-                  _.createElement(
-                    "b",
-                    null,
-                    (0, _._)("#selectimage_tip_dimensions_title"),
-                  ),
-                  ": ",
-                  (0, _._)("#selectimage_tip1", (0, _._)(_), (0, _._)(_)),
-                ),
-              Boolean(_.strWarning) &&
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "p",
-                    {
-                      className: _.WarningStylesWithIcon,
-                    },
-                    _.strWarning,
-                  ),
-                ),
-              _.elEventArtworkExample,
-              " ",
-              _.createElement("br", null),
-              _.elAdditionalControls,
-              Boolean(_.fnRemoveAllArtwork) &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) => {
-                      var _;
-                      (0, _._)(
-                        _.createElement(_, {
-                          fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                children: [
+                  _,
+                  Boolean(_ && _) &&
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("b", {
+                          children: (0, _._)(
+                            "#selectimage_tip_dimensions_title",
+                          ),
                         }),
-                        null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
-                      );
-                    },
-                  },
-                  (0, _._)("#Sale_RemoveAll"),
-                ),
-            ),
-          !_.bIsMinimized &&
-            _.createElement(_, {
-              clanSteamID: _.clanSteamID,
-              title: null !== (_ = _.title) && void 0 !== _ ? _ : "",
-              eventModel: _,
-              artworkType: _.artworkType,
-              realms: _,
-              appid: _,
-              fnGetImageHashAndExt: _,
-              fnSetImageURL: _,
-              fnLangHasData: _,
-              partnerEventStore: _,
-            }),
-        );
+                        ": ",
+                        (0, _._)("#selectimage_tip1", (0, _._)(_), (0, _._)(_)),
+                      ],
+                    }),
+                  Boolean(_.strWarning) &&
+                    (0, _.jsx)("div", {
+                      children: (0, _.jsx)("p", {
+                        className: _.WarningStylesWithIcon,
+                        children: _.strWarning,
+                      }),
+                    }),
+                  _.elEventArtworkExample,
+                  " ",
+                  (0, _.jsx)("br", {}),
+                  _.elAdditionalControls,
+                  Boolean(_.fnRemoveAllArtwork) &&
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => {
+                        var _;
+                        (0, _._)(
+                          (0, _.jsx)(_, {
+                            fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                          }),
+                          null !== (_ = (0, _._)(_)) && void 0 !== _
+                            ? _
+                            : window,
+                        );
+                      },
+                      children: (0, _._)("#Sale_RemoveAll"),
+                    }),
+                ],
+              }),
+            !_.bIsMinimized &&
+              (0, _.jsx)(_, {
+                clanSteamID: _.clanSteamID,
+                title: null !== (_ = _.title) && void 0 !== _ ? _ : "",
+                eventModel: _,
+                artworkType: _.artworkType,
+                realms: _,
+                appid: _,
+                fnGetImageHashAndExt: _,
+                fnSetImageURL: _,
+                fnLangHasData: _,
+                partnerEventStore: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { fnRemoveAllArtwork: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           strTitle: (0, _._)("#Sale_RemoveAll"),
           strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
           onOK: () => {
@@ -3950,66 +3604,55 @@
             [_, _, _, _],
           );
         return "hero" === _
-          ? _.createElement(
-              "div",
-              {
-                style: {
-                  padding: "16px",
-                },
+          ? (0, _.jsx)("div", {
+              style: {
+                padding: "16px",
               },
-              _.createElement(
-                _._,
-                {
-                  style: {
-                    textTransform: "uppercase",
-                    width: "200px",
-                  },
-                  onClick: () =>
-                    window.open(
-                      `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_}?activetab=tab_graphicalassets`,
-                    ),
+              children: (0, _.jsx)(_._, {
+                style: {
+                  textTransform: "uppercase",
+                  width: "200px",
                 },
-                (0, _._)("#ImageUpload_EditHeroImage"),
-              ),
-            )
-          : _.createElement(
-              "div",
-              null,
-              _.createElement(_, {
-                list: _,
-                fnOnArtworkLanguageChange: _,
-                realms: __webpack_require__,
-                fnLangHasData: _,
+                onClick: () =>
+                  window.open(
+                    `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_}?activetab=tab_graphicalassets`,
+                  ),
+                children: (0, _._)("#ImageUpload_EditHeroImage"),
               }),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
+            })
+          : (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)(_, {
+                  list: _,
+                  fnOnArtworkLanguageChange: _,
+                  realms: __webpack_require__,
+                  fnLangHasData: _,
+                }),
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)("div", {
                     className: (0, _._)(
                       _().SelectImageBlock,
                       _().MainPreviewBlock,
                     ),
-                  },
-                  _.createElement(_, {
-                    eventModel: _,
-                    clanSteamID: _,
-                    fnOnLanguagePreviewChange: (_) => {
-                      _ != _ && _(_);
-                    },
-                    langOverride: _,
-                    fnOnArtworkLangChange: _ ? null : _,
-                    artworkType: _,
-                    fnOnRemoveImage: _ ? null : (_) => _(_, null, _),
-                    realms: __webpack_require__,
-                    fnLangHasData: _,
-                    fnGetImageHashAndExt: _,
-                    partnerEventStore: _,
+                    children: (0, _.jsx)(_, {
+                      eventModel: _,
+                      clanSteamID: _,
+                      fnOnLanguagePreviewChange: (_) => {
+                        _ != _ && _(_);
+                      },
+                      langOverride: _,
+                      fnOnArtworkLangChange: _ ? null : _,
+                      artworkType: _,
+                      fnOnRemoveImage: _ ? null : (_) => _(_, null, _),
+                      realms: __webpack_require__,
+                      fnLangHasData: _,
+                      fnGetImageHashAndExt: _,
+                      partnerEventStore: _,
+                    }),
                   }),
-                ),
-              ),
-            );
+                }),
+              ],
+            });
       }
       !(function (_) {
         (_[(_.k_None = 0)] = "k_None"),
@@ -4025,7 +3668,7 @@
             fnLangHasData: _,
           } = this.props;
           (0, _._)(
-            _.createElement(_._, {
+            (0, _.jsx)(_._, {
               clanImage: _,
               lang: _,
               fnOnArtworkLangChange: __webpack_require__,
@@ -4044,28 +3687,27 @@
               const { clanImage: _, lang: _ } = _;
               let _ = (0, _._)("#Language_" + (0, _._)(_));
               _.push(
-                _.createElement(
+                (0, _.jsxs)(
                   "div",
                   {
-                    key: "img_lang_" + _.clanImage.imageid + "_" + _,
                     className: _().FlexRowContainer,
+                    children: [
+                      (0, _.jsx)("span", {
+                        children: (0, _._)(
+                          "#ImageUpload_Success_Mapping",
+                          null !== (_ = _.file_name) && void 0 !== _ ? _ : "",
+                          _,
+                        ),
+                      }),
+                      (0, _.jsx)("a", {
+                        onClick: () => this.ShowLangChangeDialog(_, _),
+                        children: (0, _._)(
+                          "#ImageUpload_Success_Mapping_Change",
+                        ),
+                      }),
+                    ],
                   },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)(
-                      "#ImageUpload_Success_Mapping",
-                      null !== (_ = _.file_name) && void 0 !== _ ? _ : "",
-                      _,
-                    ),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      onClick: () => this.ShowLangChangeDialog(_, _),
-                    },
-                    (0, _._)("#ImageUpload_Success_Mapping_Change"),
-                  ),
+                  "img_lang_" + _.clanImage.imageid + "_" + _,
                 ),
               );
             }),
@@ -4074,15 +3716,12 @@
         }
         render() {
           const { list: _ } = this.props;
-          if (!_ || 0 == _.length) return _.createElement("div", null);
+          if (!_ || 0 == _.length) return (0, _.jsx)("div", {});
           let _ = this.GenerateImageMappings();
-          return _.createElement(
-            "div",
-            {
-              className: _().UploadSuccess,
-            },
-            _,
-          );
+          return (0, _.jsx)("div", {
+            className: _().UploadSuccess,
+            children: _,
+          });
         }
       };
       (0, _._)([_._], _.prototype, "ShowLangChangeDialog", null),
@@ -4094,6 +3733,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4149,57 +3789,49 @@
             );
           }, [__webpack_require__]),
           [_, _, _] = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: _().SelectImageLanguagesCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().SelectImageLanguagesCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _().SelectImageTitle,
-            },
-            (0, _._)("#selectimage_uploaded_languages"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().LanguageListContainer,
-            },
-            _.map((_) =>
-              _.createElement(_, {
-                key: "lang_select_" + _.GetAccountID() + " " + _.strLang,
-                langData: _,
-                ..._,
-              }),
-            ),
-          ),
-          !!_ &&
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-              },
-              (0, _._)("#Sale_RemoveAll"),
-              _.createElement(_._, {
-                tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
-              }),
-            ),
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(_._, {
-              strTitle: (0, _._)("#Dialog_AreYouSure"),
-              strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
-              closeModal: _,
-              onOK: () => {
-                for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
-              },
+              children: (0, _._)("#selectimage_uploaded_languages"),
             }),
-          ),
-        );
+            (0, _.jsx)("div", {
+              className: _().LanguageListContainer,
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    langData: _,
+                    ..._,
+                  },
+                  "lang_select_" + _.GetAccountID() + " " + _.strLang,
+                ),
+              ),
+            }),
+            !!_ &&
+              (0, _.jsxs)(_._, {
+                onClick: _,
+                children: [
+                  (0, _._)("#Sale_RemoveAll"),
+                  (0, _.jsx)(_._, {
+                    tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
+                  }),
+                ],
+              }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#Dialog_AreYouSure"),
+                strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
+                closeModal: _,
+                onOK: () => {
+                  for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
+                },
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4232,54 +3864,43 @@
               [_, _]
             );
           });
-        return _.createElement(
-          "div",
-          {
-            _: __webpack_require__.strLang,
-            className: _().LanguageContainer,
-            onClick: (_) => {
-              let _ = (0, _._)(_.currentTarget._);
-              _(_);
-            },
+        return (0, _.jsxs)("div", {
+          _: __webpack_require__.strLang,
+          className: _().LanguageContainer,
+          onClick: (_) => {
+            let _ = (0, _._)(_.currentTarget._);
+            _(_);
           },
-          _.createElement(
-            "div",
-            {
+          children: [
+            (0, _.jsx)("div", {
               className: _,
-            },
-            __webpack_require__.locLang,
-          ),
-          _.createElement(
-            "span",
-            {
+              children: __webpack_require__.locLang,
+            }),
+            (0, _.jsxs)("span", {
               className: _().LanguageOptions,
-            },
-            Boolean(_) &&
-              _.createElement(
-                "a",
-                {
-                  href: _,
-                  target: "_blank",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#selectimage_viewimage_ttip"),
-                  },
-                  _.YNO(),
-                ),
-              ),
-            !!_ &&
-              _.createElement(_, {
-                ..._,
-              }),
-            !!_ &&
-              _.createElement(_, {
-                fnOnRemoveImage: _,
-                langData: __webpack_require__,
-              }),
-          ),
-        );
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)("a", {
+                    href: _,
+                    target: "_blank",
+                    children: (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)("#selectimage_viewimage_ttip"),
+                      children: _.YNO(),
+                    }),
+                  }),
+                !!_ &&
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                !!_ &&
+                  (0, _.jsx)(_, {
+                    fnOnRemoveImage: _,
+                    langData: __webpack_require__,
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4300,80 +3921,64 @@
             return _._.GetClanImageByImageHash(_, _);
           });
         if (_)
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
                 toolTipContent: (0, _._)("#selectimage_reassign_image_ttip"),
-              },
-              _.createElement("img", {
-                "data-lang": __webpack_require__.lang,
-                src: _,
-                onClick: () => _(),
-              }),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  active: _,
-                },
-                _.createElement(_._, {
-                  clanImage: _,
-                  lang: __webpack_require__.lang,
-                  fnOnArtworkLangChange: _,
-                  fnLangHasData: _,
-                  realms: _,
-                  closeModal: _,
+                children: (0, _.jsx)("img", {
+                  "data-lang": __webpack_require__.lang,
+                  src: _,
+                  onClick: () => _(),
                 }),
-              ),
-            ),
-          );
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_._, {
+                    clanImage: _,
+                    lang: __webpack_require__.lang,
+                    fnOnArtworkLangChange: _,
+                    fnLangHasData: _,
+                    realms: _,
+                    closeModal: _,
+                  }),
+                }),
+              }),
+            ],
+          });
         console.error("image does not exists on server");
       }
       function _(_) {
         const { fnOnRemoveImage: _, langData: __webpack_require__ } = _,
           [_, _, _] = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#selectimage_delete_image_ttip"),
-            },
-            _.createElement("img", {
-              "data-lang": __webpack_require__.lang,
-              src: _._,
-              onClick: _,
-            }),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(_._, {
-                strTitle: (0, _._)("#selectimage_remove_image"),
-                strDescription: (0, _._)(
-                  "#selectimage_remove_details",
-                  (0, _._)("#Language_" + (0, _._)(__webpack_require__.lang)),
-                ),
-                onOK: () => {
-                  _(__webpack_require__.lang);
-                },
-                closeModal: _,
+              children: (0, _.jsx)("img", {
+                "data-lang": __webpack_require__.lang,
+                src: _._,
+                onClick: _,
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#selectimage_remove_image"),
+                  strDescription: (0, _._)(
+                    "#selectimage_remove_details",
+                    (0, _._)("#Language_" + (0, _._)(__webpack_require__.lang)),
+                  ),
+                  onOK: () => {
+                    _(__webpack_require__.lang);
+                  },
+                  closeModal: _,
+                }),
+              }),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4382,6 +3987,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4411,38 +4017,31 @@
               null !== (_ = _._.GetHashAndExt(_)) && void 0 !== _ ? _ : "",
             );
           });
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#selectimage_change_artwork_lang_title"),
-            strDescription: (0, _._)("#selectimage_change_artworl_lang_desc"),
-            onOK: () => (null == _ ? void 0 : _(_, _, _)),
-            onCancel: __webpack_require__,
-            closeModal: __webpack_require__,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().FlexColumnContainer, _().ReassignCtn),
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#selectimage_change_artwork_lang_title"),
+          strDescription: (0, _._)("#selectimage_change_artworl_lang_desc"),
+          onOK: () => (null == _ ? void 0 : _(_, _, _)),
+          onCancel: __webpack_require__,
+          closeModal: __webpack_require__,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().FlexColumnContainer, _().ReassignCtn),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().ImagePreviewContainer,
-              },
-              _.createElement("img", {
-                className: _().ArtworkPreview,
-                src: _,
+                children: (0, _.jsx)("img", {
+                  className: _().ArtworkPreview,
+                  src: _,
+                }),
               }),
-            ),
-            _.createElement(_._, {
-              selectedLang: _,
-              fnLangHasData: _,
-              fnOnLanguageChanged: _,
-              realms: _,
-            }),
-          ),
-        );
+              (0, _.jsx)(_._, {
+                selectedLang: _,
+                fnLangHasData: _,
+                fnOnLanguageChanged: _,
+                realms: _,
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4451,6 +4050,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -4564,34 +4164,30 @@
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
           _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
           _ = _ ? "a" : "span";
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(!_)
-            ? _.createElement(
-                _.Fragment,
-                null,
-                Boolean(!__webpack_require__) &&
-                  _.createElement("span", null, _),
-              )
-            : _.createElement(
-                _,
-                {
-                  href: _ ? _ : void 0,
-                },
-                _.createElement("img", {
-                  className: _.SmallAvatar,
-                  src: _.avatar_url,
-                  "data-miniprofile": "s" + _.ConvertTo64BitString(),
-                }),
-                Boolean(!_) &&
-                  _.createElement(
-                    "span",
-                    null,
-                    _ ? `${_} (${_.persona_name})` : _.persona_name,
-                  ),
-              ),
-        );
+        return (0, _.jsx)(_.Fragment, {
+          children: Boolean(!_)
+            ? (0, _.jsx)(_.Fragment, {
+                children:
+                  Boolean(!__webpack_require__) &&
+                  (0, _.jsx)("span", {
+                    children: _,
+                  }),
+              })
+            : (0, _.jsxs)(_, {
+                href: _ ? _ : void 0,
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.SmallAvatar,
+                    src: _.avatar_url,
+                    "data-miniprofile": "s" + _.ConvertTo64BitString(),
+                  }),
+                  Boolean(!_) &&
+                    (0, _.jsx)("span", {
+                      children: _ ? `${_} (${_.persona_name})` : _.persona_name,
+                    }),
+                ],
+              }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4612,19 +4208,16 @@
       function _(_) {
         const { clanSteamID: _, _: __webpack_require__ } = _;
         return _(_, _.requireAdmin)
-          ? _.createElement(
-              "div",
-              {
-                _: __webpack_require__,
-                className: (0, _._)(
-                  _.className,
-                  _.requireAdmin
-                    ? _.ValveOnlyAdminBackground
-                    : _.ValveOnlyBackground,
-                ),
-              },
-              _.children,
-            )
+          ? (0, _.jsx)("div", {
+              _: __webpack_require__,
+              className: (0, _._)(
+                _.className,
+                _.requireAdmin
+                  ? _.ValveOnlyAdminBackground
+                  : _.ValveOnlyBackground,
+              ),
+              children: _.children,
+            })
           : null;
       }
     },
@@ -4637,6 +4230,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -4651,21 +4245,18 @@
           _ = _.useCallback(() => _.current.click(), []);
         return [
           _.createPortal(
-            _.createElement(
-              "form",
-              {
-                onSubmit: _,
-                style: {
-                  display: "none",
-                },
+            (0, _.jsx)("form", {
+              onSubmit: _,
+              style: {
+                display: "none",
               },
-              _.createElement("input", {
+              children: (0, _.jsx)("input", {
                 ..._,
                 type: "file",
                 ref: _,
                 onChange: _,
               }),
-            ),
+            }),
             window.document.body,
           ),
           _,

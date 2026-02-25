@@ -25,7 +25,7 @@
         hU: () => _,
         k_: () => C,
         lk: () => P,
-        nR: () => T,
+        nR: () => j,
         q3: () => c,
         vn: () => p,
       });
@@ -1394,18 +1394,18 @@
           return "CClanFAQS_GetFAQVersion_Response";
         }
       }
-      class T extends a.Message {
+      class j extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            T.prototype.steamid || n.Sg(T.M()),
+            j.prototype.steamid || n.Sg(j.M()),
             a.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
                 fields: {
                   steamid: {
                     n: 1,
@@ -1417,61 +1417,6 @@
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
-                },
-              }),
-            T.sm_m
-          );
-        }
-        static MBF() {
-          return T.sm_mbf || (T.sm_mbf = n.w0(T.M())), T.sm_mbf;
-        }
-        toObject(e = !1) {
-          return T.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(T.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(T.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new T();
-          return T.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(T.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(T.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClanFAQS_GetAllDrafts_Request";
-        }
-      }
-      class j extends a.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            j.prototype.summary || n.Sg(j.M()),
-            a.Message.initialize(this, e, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
-                fields: {
-                  summary: { n: 1, c: o },
-                  draft: { n: 2, c: u, r: !0, q: !0 },
                 },
               }),
             j.sm_m
@@ -1507,6 +1452,61 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQS_GetAllDrafts_Request";
+        }
+      }
+      class T extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            T.prototype.summary || n.Sg(T.M()),
+            a.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            T.sm_m ||
+              (T.sm_m = {
+                proto: T,
+                fields: {
+                  summary: { n: 1, c: o },
+                  draft: { n: 2, c: u, r: !0, q: !0 },
+                },
+              }),
+            T.sm_m
+          );
+        }
+        static MBF() {
+          return T.sm_mbf || (T.sm_mbf = n.w0(T.M())), T.sm_mbf;
+        }
+        toObject(e = !1) {
+          return T.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(T.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(T.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new T();
+          return T.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(T.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(T.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClanFAQS_GetAllDrafts_Response";
@@ -2325,7 +2325,7 @@
             });
           }),
           (e.GetAllDrafts = function (e, t) {
-            return e.SendMsg("ClanFAQS.GetAllDrafts#1", (0, l.I8)(T, t), j, {
+            return e.SendMsg("ClanFAQS.GetAllDrafts#1", (0, l.I8)(j, t), T, {
               ePrivilege: 1,
             });
           }),
@@ -2380,45 +2380,46 @@
     },
     17909: (e, t, r) => {
       "use strict";
-      r.d(t, { u: () => p });
-      var i = r(90626),
-        a = r(2160),
-        s = r(26296),
-        n = r(3088),
-        l = r(52038),
-        o = r(78327),
-        m = r(52967),
-        u = r(42780),
-        c = r(59952),
-        d = r(87540),
-        g = r(16516),
-        B = r.n(g),
-        _ = r(74410);
-      const f = new Map([
-          ...Array.from(c.W4.entries()),
-          ...Array.from(c.N2.entries()),
+      r.d(t, { u: () => y });
+      var i = r(7850),
+        a = r(90626),
+        s = r(2160),
+        n = r(26296),
+        l = r(3088),
+        o = r(52038),
+        m = r(78327),
+        u = r(52967),
+        c = r(42780),
+        d = r(59952),
+        g = r(87540),
+        B = r(16516),
+        _ = r.n(B),
+        f = r(74410);
+      const p = new Map([
+          ...Array.from(d.W4.entries()),
+          ...Array.from(d.N2.entries()),
           [
             "section",
             {
               Constructor: function (e) {
-                let t = (0, c.j$)(e.args, "id");
+                let t = (0, d.j$)(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
                   "#" === t[0] &&
                   (t = t.substring(1));
-                const r = (0, c.j$)(e.args, "style"),
-                  a = (0, l.A)(
-                    B().Section,
-                    "note" == r && B().Note,
-                    "important" == r && B().Important,
-                    "warning" == r && B().Warning,
+                const r = (0, d.j$)(e.args, "style"),
+                  a = (0, o.A)(
+                    _().Section,
+                    "note" == r && _().Note,
+                    "important" == r && _().Important,
+                    "warning" == r && _().Warning,
                   );
-                return i.createElement(
-                  "div",
-                  { id: t || void 0, className: a },
-                  e.children,
-                );
+                return (0, i.jsx)("div", {
+                  id: t || void 0,
+                  className: a,
+                  children: e.children,
+                });
               },
               autocloses: !1,
             },
@@ -2428,7 +2429,7 @@
             {
               Constructor: function (e) {
                 var t, r, a;
-                const { showErrorInfo: l } = e.context;
+                const { showErrorInfo: s } = e.context;
                 let o =
                   null === (t = null == e ? void 0 : e.children) || void 0 === t
                     ? void 0
@@ -2442,25 +2443,25 @@
                     null === (a = null == e ? void 0 : e.args) || void 0 === a
                       ? void 0
                       : a.alt,
-                  u = (0, c.z5)(o, e.language);
+                  u = (0, d.z5)(o, e.language);
                 return null == u
                   ? null
                   : "string" == typeof u
                     ? ((o = u),
-                      l
-                        ? i.createElement(s.i, {
-                            className: B().FAQImage,
+                      s
+                        ? (0, i.jsx)(n.i, {
+                            className: _().FAQImage,
                             src: o,
                             alt: m,
                           })
                         : ((o = o.replace("http://", "https://")),
-                          i.createElement("img", {
-                            className: B().FAQImage,
+                          (0, i.jsx)("img", {
+                            className: _().FAQImage,
                             src: o,
                             alt: m,
                           })))
-                    : i.createElement(n.c, {
-                        className: B().FAQImage,
+                    : (0, i.jsx)(l.c, {
+                        className: _().FAQImage,
                         rgSources: u,
                         alt: m,
                       });
@@ -2472,29 +2473,29 @@
             "exclude_realm",
             {
               Constructor: function (e) {
-                const t = (0, c.j$)(e.args);
+                const t = (0, d.j$)(e.args);
                 return ("global" == t &&
-                  o.TS.EREALM == a.TU.k_ESteamRealmGlobal) ||
-                  ("china" == t && (0, o.Y2)())
+                  m.TS.EREALM == s.TU.k_ESteamRealmGlobal) ||
+                  ("china" == t && (0, m.Y2)())
                   ? null
-                  : i.createElement(i.Fragment, null, e.children);
+                  : (0, i.jsx)(i.Fragment, { children: e.children });
               },
               autocloses: !1,
             },
           ],
         ]),
-        p = (e) => {
+        y = (e) => {
           const { text: t, bShowErrorInfo: r } = e,
-            a = i.useCallback(
+            s = a.useCallback(
               (e) =>
-                new d.gL(
-                  new d.pH(
-                    new u.OJ(new u.R8(), 0),
+                new g.gL(
+                  new g.pH(
+                    new c.OJ(new c.R8(), 0),
                     e,
                     [
                       {
                         urlRegExp: /youtu.be|youtube.com/i,
-                        fnBBComponent: _.j6,
+                        fnBBComponent: f.j6,
                       },
                     ],
                     {},
@@ -2503,12 +2504,11 @@
                 ),
               [],
             ),
-            s = i.useRef(new m.B(f, a, o.TS.LANGUAGE));
-          return i.createElement(
-            "div",
-            { className: B().FAQContainer },
-            s.current.ParseBBCode(t, { showErrorInfo: r }),
-          );
+            n = a.useRef(new u.B(p, s, m.TS.LANGUAGE));
+          return (0, i.jsx)("div", {
+            className: _().FAQContainer,
+            children: n.current.ParseBBCode(t, { showErrorInfo: r }),
+          });
         };
     },
     87231: (e, t, r) => {

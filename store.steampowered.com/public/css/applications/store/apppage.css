@@ -1736,6 +1736,70 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
     background-position: top;
   }
 }
+@media (min-width: 1024px) {
+  .jGiY7rrZh0o9qrh7XNnZU {
+    width: 100%;
+  }
+}
+.jGiY7rrZh0o9qrh7XNnZU .carousel__slider-tray {
+  gap: 12px;
+}
+.jGiY7rrZh0o9qrh7XNnZU.ScrollSnapCarousel {
+  height: 168px;
+}
+._292IWiCTro5jiTmIxiDfyc {
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 910px) {
+  ._292IWiCTro5jiTmIxiDfyc {
+    min-width: 250px;
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
+.BasicUI ._292IWiCTro5jiTmIxiDfyc {
+  min-width: 250px;
+  margin-left: unset;
+  margin-right: unset;
+}
+._292IWiCTro5jiTmIxiDfyc._1mQ-hKJYGkL9gG76spf6uy {
+  position: relative;
+}
+._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
+  width: calc(200% + 12px);
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+}
+@media screen and (max-width: 910px) {
+  ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
+    width: 250px;
+  }
+  ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
+    display: none;
+  }
+}
+.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
+  width: 250px;
+}
+.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
+  display: none;
+}
+._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U a {
+  z-index: 1;
+}
+._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .CapsuleBottomBar {
+  z-index: 2;
+  padding-left: 5px;
+}
+._292IWiCTro5jiTmIxiDfyc._1tX6f_kWb07D_qLWgL7-Ah {
+  background-color: #80808040;
+}
+._1SnxJyZ5foWgNRCNLmKm6H {
+  white-space: nowrap;
+}
 ._1FFwlWIoDrtb0qdN9YUwHs {
   overflow: hidden !important;
   scrollbar-gutter: stable;
@@ -1849,6 +1913,54 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   color: #0e141b;
   font-weight: 600;
 }
+.c-TDTqD2D5mBLfTqn3fSV {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  border-radius: 2px;
+  background: radial-gradient(ellipse at top right, #949494, #414141);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.BasicUI .c-TDTqD2D5mBLfTqn3fSV {
+  display: none;
+}
+.c-TDTqD2D5mBLfTqn3fSV svg {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  display: block;
+  fill: #fff;
+  color: #fff;
+}
+.c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi {
+  color: transparent;
+  width: 0;
+  height: 0;
+  padding: 7px 0;
+  transition: padding-right .2s ease-out;
+  font-size: 13px;
+}
+.c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi._2XN3sBlgsLE3n5WrKOkWxi {
+  filter: opacity(50%);
+}
+html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
+.c-TDTqD2D5mBLfTqn3fSV:hover ._2PmgMkPwEgmuCJVZLTGSPi {
+  color: #fff;
+  width: auto;
+  height: auto;
+  padding-right: 8px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
+  .c-TDTqD2D5mBLfTqn3fSV:hover ._2PmgMkPwEgmuCJVZLTGSPi {
+    display: none;
+  }
+}
 .GWWacIf04lQysYMFJma0A {
   background: radial-gradient(
     100% 80% at 64% 95%,
@@ -1908,70 +2020,6 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
 ._2LTFl4ZFuL1BeNbqYPExWv .chkuqox_QD6U5ID_AHTLk {
   display: inline;
   margin-left: 8px;
-}
-@media (min-width: 1024px) {
-  .jGiY7rrZh0o9qrh7XNnZU {
-    width: 100%;
-  }
-}
-.jGiY7rrZh0o9qrh7XNnZU .carousel__slider-tray {
-  gap: 12px;
-}
-.jGiY7rrZh0o9qrh7XNnZU.ScrollSnapCarousel {
-  height: 168px;
-}
-._292IWiCTro5jiTmIxiDfyc {
-  margin-left: auto;
-  margin-right: auto;
-  flex-shrink: 0;
-}
-@media screen and (max-width: 910px) {
-  ._292IWiCTro5jiTmIxiDfyc {
-    min-width: 250px;
-    margin-left: unset;
-    margin-right: unset;
-  }
-}
-.BasicUI ._292IWiCTro5jiTmIxiDfyc {
-  min-width: 250px;
-  margin-left: unset;
-  margin-right: unset;
-}
-._292IWiCTro5jiTmIxiDfyc._1mQ-hKJYGkL9gG76spf6uy {
-  position: relative;
-}
-._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
-  width: calc(200% + 12px);
-  height: 100%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  border-radius: 3px;
-}
-@media screen and (max-width: 910px) {
-  ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
-    width: 250px;
-  }
-  ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
-    display: none;
-  }
-}
-.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
-  width: 250px;
-}
-.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
-  display: none;
-}
-._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U a {
-  z-index: 1;
-}
-._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .CapsuleBottomBar {
-  z-index: 2;
-  padding-left: 5px;
-}
-._292IWiCTro5jiTmIxiDfyc._1tX6f_kWb07D_qLWgL7-Ah {
-  background-color: #80808040;
-}
-._1SnxJyZ5foWgNRCNLmKm6H {
-  white-space: nowrap;
 }
 .BwHJdoHlv8wy5OypqL_b7 {
   position: relative;
@@ -3375,6 +3423,16 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
 }
 ._1DLGHwAfYnbFVIwbZjO2cn {
   color: var(--text-color, var(--color-blue-10));
+  box-sizing: border-box;
+  font-size: var(--font-size, var(--default-font-size));
+  line-height: var(--line-height, var(--default-line-height));
+  letter-spacing: var(--letter-spacing, var(--default-letter-spacing));
+}
+._1DLGHwAfYnbFVIwbZjO2cn:where(._1FVRWG5uD8VhzoEiOZWrEo) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
 :where(._3ASRyX4FTT_eMM5S5yrkwK) {
   text-decoration: underline;

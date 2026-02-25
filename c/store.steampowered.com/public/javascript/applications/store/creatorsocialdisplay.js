@@ -332,7 +332,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
           case "discord_server":
@@ -399,15 +400,12 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { appid: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().AppSocialLinksCtn,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: _().AppSocialLinksCtn,
+          children: (0, _.jsx)(_, {
             appid: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { appid: _ } = _,
@@ -418,24 +416,21 @@
         if (!__webpack_require__) return null;
         const _ = __webpack_require__.GetLinks();
         return _ && 0 != _.length && _._.IMG_URL
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: (0, _._)(
                     _().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                },
-                (0, _._)("#EventDisplay_SocialTitle"),
-              ),
-              _.createElement(_, {
-                _: "" + _,
-                rgSocialMedia: _,
-              }),
-            )
+                  children: (0, _._)("#EventDisplay_SocialTitle"),
+                }),
+                (0, _.jsx)(_, {
+                  _: "" + _,
+                  rgSocialMedia: _,
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -461,101 +456,87 @@
         const { gidClanEvent: _, rgSocial: __webpack_require__ } = _,
           _ = _(__webpack_require__);
         return _ && 0 != _.length && _._.IMG_URL
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: (0, _._)(
                     _().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                },
-                (0, _._)("#EventDisplay_Sale_SocialTitle"),
-              ),
-              _.createElement(_, {
-                _: _,
-                rgSocialMedia: _,
-              }),
-            )
+                  children: (0, _._)("#EventDisplay_Sale_SocialTitle"),
+                }),
+                (0, _.jsx)(_, {
+                  _: _,
+                  rgSocialMedia: _,
+                }),
+              ],
+            })
           : null;
       }
       const _ = [6, 23, 18, 8, 9, 19, 24];
       function _(_) {
         const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _,
           _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().AppSocialLinks, _),
-          },
-          __webpack_require__
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().AppSocialLinks, _),
+          children: __webpack_require__
             .filter((_) => !_ || _.includes(_.link_type || 0))
             .map((_) =>
               _.url
-                ? _.createElement(_, {
-                    key: "app_social_link_" + _ + "_" + _.link_type,
-                    social: _,
-                  })
-                : _.createElement(_, {
-                    key:
-                      "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
-                    social: _,
-                  }),
+                ? (0, _.jsx)(
+                    _,
+                    {
+                      social: _,
+                    },
+                    "app_social_link_" + _ + "_" + _.link_type,
+                  )
+                : (0, _.jsx)(
+                    _,
+                    {
+                      social: _,
+                    },
+                    "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
+                  ),
             ),
-        );
+        });
       }
       function _(_) {
         const { social: _ } = _;
         return _.url
-          ? _.createElement(
-              "a",
-              {
-                href: (0, _._)(_.url, !0),
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-                rel: "noopener noreferrer",
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: _.url,
-                },
-                _.createElement(_, {
+          ? (0, _.jsx)("a", {
+              href: (0, _._)(_.url, !0),
+              target: _._.IN_CLIENT ? void 0 : "_blank",
+              rel: "noopener noreferrer",
+              children: (0, _.jsx)(_._, {
+                toolTipContent: _.url,
+                children: (0, _.jsx)(_, {
                   social: _,
                 }),
-              ),
-            )
+              }),
+            })
           : null;
       }
       function _(_) {
         const { social: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().AppSocialLinkWithText,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().AppSocialLinkWithText,
+          children: [
+            (0, _.jsx)(_._, {
               toolTipContent: _.text,
-            },
-            _.createElement(_, {
-              social: _,
+              children: (0, _.jsx)(_, {
+                social: _,
+              }),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _().AppSocialText,
-            },
-            _.text,
-          ),
-        );
+              children: _.text,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { social: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           linkType: _.link_type || 0,
           className: _().AppSocialLinkIcon,
         });
@@ -564,93 +545,93 @@
         const { linkType: _, ...__webpack_require__ } = _;
         switch (_) {
           case 1:
-            return _.createElement(_.agV, {
+            return (0, _.jsx)(_.agV, {
               ...__webpack_require__,
             });
           case 2:
-            return _.createElement(_.ZnA, {
+            return (0, _.jsx)(_.ZnA, {
               ...__webpack_require__,
             });
           case 3:
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               ...__webpack_require__,
             });
           case 4:
-            return _.createElement(_.ofN, {
+            return (0, _.jsx)(_.ofN, {
               ...__webpack_require__,
             });
           case 5:
-            return _.createElement(_.Bki, {
+            return (0, _.jsx)(_.Bki, {
               ...__webpack_require__,
             });
           case 6:
           case 18:
           case 23:
-            return _.createElement(_.$vK, {
+            return (0, _.jsx)(_.$vK, {
               ...__webpack_require__,
             });
           case 7:
-            return _.createElement(_.OSJ, {
+            return (0, _.jsx)(_.OSJ, {
               ...__webpack_require__,
             });
           case 8:
-            return _.createElement(_.nm_, {
+            return (0, _.jsx)(_.nm_, {
               ...__webpack_require__,
             });
           case 9:
-            return _.createElement(_.tIO, {
+            return (0, _.jsx)(_.tIO, {
               ...__webpack_require__,
             });
           case 10:
-            return _.createElement(_.Vt2, {
+            return (0, _.jsx)(_.Vt2, {
               ...__webpack_require__,
             });
           case 11:
-            return _.createElement(_.Vgk, {
+            return (0, _.jsx)(_.Vgk, {
               ...__webpack_require__,
             });
           case 12:
-            return _.createElement(_.VSd, {
+            return (0, _.jsx)(_.VSd, {
               ...__webpack_require__,
             });
           case 13:
-            return _.createElement(_.ccb, {
+            return (0, _.jsx)(_.ccb, {
               ...__webpack_require__,
             });
           case 14:
-            return _.createElement(_.rNt, {
+            return (0, _.jsx)(_.rNt, {
               ...__webpack_require__,
             });
           case 15:
-            return _.createElement(_.g$j, {
+            return (0, _.jsx)(_.g$j, {
               ...__webpack_require__,
             });
           case 16:
-            return _.createElement(_.BQz, {
+            return (0, _.jsx)(_.BQz, {
               ...__webpack_require__,
             });
           case 17:
-            return _.createElement(_.jdP, {
+            return (0, _.jsx)(_.jdP, {
               ...__webpack_require__,
             });
           case 19:
-            return _.createElement(_.bKN, {
+            return (0, _.jsx)(_.bKN, {
               ...__webpack_require__,
             });
           case 20:
-            return _.createElement(_.sDU, {
+            return (0, _.jsx)(_.sDU, {
               ...__webpack_require__,
             });
           case 21:
-            return _.createElement(_.MbF, {
+            return (0, _.jsx)(_.MbF, {
               ...__webpack_require__,
             });
           case 22:
-            return _.createElement(_.emH, {
+            return (0, _.jsx)(_.emH, {
               ...__webpack_require__,
             });
           case 24:
-            return _.createElement(_.Yoo, {
+            return (0, _.jsx)(_.Yoo, {
               ...__webpack_require__,
             });
           case 25:
@@ -673,7 +654,7 @@
         const { clanAccountID: _, items: __webpack_require__ } = _,
           _ = (0, _._)(__webpack_require__);
         return _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               _: "social_" + _,
               rgSocialMedia: _,
               className: _().Ctn,

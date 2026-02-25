@@ -10,6 +10,7 @@
     chunkid: (module) => {
       module.exports = {
         AppHeader: "cCoovA8rihPiT1IZ33Cr_",
+        CapsuleSizer: "_2VmId746Rg7Ldjg3_0jDSl",
         TitleGroup: "_2y18Xvy_xifENXqdmY3D9y",
         SubTitle: "v_Vos0f8oAH9Im5Z1b9UU",
         Title: "_3BjnxsXuurq9OScWV1Esvf",
@@ -281,88 +282,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        let _;
-        if ("string" == typeof _) _ = _;
-        else if ("location" in _) _ = _.location.search;
-        else {
-          if (!("search" in _)) return;
-          _ = _.search;
-        }
-        const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
-        if (_.has(_)) {
-          const _ = _.getAll(_);
-          return _[_.length - 1];
-        }
-      }
-      function _(_, _, _, _ = !1) {
-        const _ = new URLSearchParams(_.location.search.substring(1));
-        if (null != _ && null != _) {
-          if (_.get(_) == _) return;
-          _.set(_, _);
-        } else {
-          if (!_.has(_)) return;
-          _.delete(_);
-        }
-        _
-          ? _.replace(`?${_.toString()}`, {
-              ..._.location.state,
-            })
-          : _.push(`?${_.toString()}`);
-      }
-      function _(_, _, _) {
-        _(_, _, _, !0);
-      }
-      function _(_, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _.useMemo)(() => {
-            const _ = _(_.search, _);
-            return null != _ && null != _
-              ? null != _ && null != _
-                ? "boolean" == typeof _
-                  ? _.constructor("false" !== _)
-                  : _.constructor(_)
-                : _
-              : _;
-          }, [_.search, _, _]),
-          _ = (0, _.useCallback)(
-            (_, _ = !1) => {
-              _(_, _, null != _ && null != _ ? String(_) : null, _);
-            },
-            [_, _],
-          );
-        return [_, _];
-      }
-      function _(_, _, __webpack_require__ = !1) {
-        const _ = new URLSearchParams(_.location.search.substring(1));
-        for (const _ in _)
-          if (_.hasOwnProperty(_)) {
-            const _ = _[_];
-            _.delete(_), null != _ && null != _ && _.append(_, _);
-          }
-        _
-          ? _.replace(`?${_.toString()}`, {
-              ..._.location.state,
-            })
-          : _.push(`?${_.toString()}`);
-      }
-      function _(_, _) {
-        _(_, _, !0);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -377,19 +296,15 @@
             type: __webpack_require__,
           }),
           { data: _ } = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().SaleItemBrowserRow,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().SaleItemBrowserRow,
+          children: (0, _.jsx)(_._, {
             ..._,
-            bLoadShortDescription: !0,
             bShowReviewSummary: !0,
             bShowDemoButton: _.bShowDemoButton || 1 == _?.type,
             bPreferDemoStorePage: _.bPreferDemoStorePage,
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -400,8 +315,8 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
@@ -413,30 +328,24 @@
           (0, _._)(_, "library_hero") ??
           (0, _._)(_, "raw_page_background");
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: _().BackgroundImageCtn,
-                },
-                _.createElement("img", {
-                  src: _,
-                  alt: __webpack_require__.name,
+                  children: (0, _.jsx)("img", {
+                    src: _,
+                    alt: __webpack_require__.name,
+                  }),
                 }),
-              ),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsx)("div", {
                   className: _().BackgroundImageBlurCtn,
-                },
-                _.createElement("img", {
-                  src: _,
-                  alt: __webpack_require__.name,
+                  children: (0, _.jsx)("img", {
+                    src: _,
+                    alt: __webpack_require__.name,
+                  }),
                 }),
-              ),
-            )
+              ],
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid"),
@@ -454,59 +363,49 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _().AppHeader,
-              },
-              _.createElement(
-                _._,
-                {
-                  _: _,
-                  hoverClassName: _().PreviewItem,
-                },
-                _ &&
-                  _.createElement("img", {
-                    src: (0, _._)(_, "header"),
-                    alt: _.name || "",
+          ? (0, _.jsxs)("div", {
+              className: _().AppHeader,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().CapsuleSizer,
+                  children: (0, _.jsx)(_._, {
+                    _: _,
+                    children:
+                      _ &&
+                      (0, _.jsx)("img", {
+                        src: (0, _._)(_, "header"),
+                        alt: _.name || "",
+                      }),
                   }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().TitleGroup,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SubTitle,
-                    },
-                    _,
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Title,
-                  },
-                  _.name || "",
-                ),
-                _.createElement(_._, {
-                  _: _,
                 }),
-              ),
-              Boolean(__webpack_require__) &&
-                _.createElement(
-                  "div",
-                  {
+                (0, _.jsxs)("div", {
+                  className: _().TitleGroup,
+                  children: [
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().SubTitle,
+                        children: _,
+                      }),
+                    (0, _.jsx)("div", {
+                      className: _().Title,
+                      children: _.name || "",
+                    }),
+                    (0, _.jsx)(_._, {
+                      _: _,
+                    }),
+                  ],
+                }),
+                Boolean(__webpack_require__) &&
+                  (0, _.jsx)("div", {
                     className: _().SortOptions,
-                  },
-                  __webpack_require__,
-                ),
-            )
+                    children: __webpack_require__,
+                  }),
+              ],
+            })
           : null;
       }
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -538,19 +437,14 @@
                 window.history.replaceState({}, "", _);
             }
           }, [_]),
-          _.createElement(
-            _._,
-            {
-              method: "bundlelist",
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
+          (0, _.jsx)(_._, {
+            method: "bundlelist",
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
                 storeItem: _,
               }),
-            ),
-          )
+            }),
+          })
         );
       }
       function _(_) {
@@ -621,139 +515,122 @@
             return null;
           })(_);
         return _ && _
-          ? _.createElement(
-              "div",
-              {
-                className: _().Ctn,
-              },
-              _.createElement(_, {
-                _: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)("page_content"),
-                },
-                _.createElement(_, {
-                  appid: _.GetAppID(),
-                  elPageSort: _.createElement(_, {
-                    eBundleSort: _,
-                    fnSetSort: _,
-                  }),
-                  strPageSubTitle: (0, _._)("#BundleList_SubTitle"),
+          ? (0, _.jsxs)("div", {
+              className: _().Ctn,
+              children: [
+                (0, _.jsx)(_, {
+                  _: _,
                 }),
-                _.rgCompleteTheSetBundleIDList?.length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().BundlesInLibrary,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Title,
-                      },
-                      (0, _._)("#BundleList_CompleteTheSet"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Subtitle,
-                      },
-                      (0, _._)("#BundleList_CompleteTheSetSubtitle"),
-                    ),
-                    _.createElement(_, {
-                      appId: _.GetAppID(),
-                      rgBundleIDs: _.rgCompleteTheSetBundleIDList,
+                (0, _.jsxs)("div", {
+                  className: (0, _._)("page_content"),
+                  children: [
+                    (0, _.jsx)(_, {
+                      appid: _.GetAppID(),
+                      elPageSort: (0, _.jsx)(_, {
+                        eBundleSort: _,
+                        fnSetSort: _,
+                      }),
+                      strPageSubTitle: (0, _._)("#BundleList_SubTitle"),
                     }),
-                  ),
-                _.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().BundlesInLibrary,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Title,
-                      },
-                      (0, _._)("#BundleList_MustPurchaseAsSet"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Subtitle,
-                      },
-                      (0, _._)("#BundleList_MustPurchaseAsSetSubtitle"),
-                    ),
-                    _.createElement(_, {
-                      appId: _.GetAppID(),
-                      rgBundleIDs: _.rgMustPurchaseTogetherBundleIDList,
-                    }),
-                  ),
-                _.rgOwnedBundleIDList?.length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().BundlesInLibrary,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Title,
-                      },
-                      (0, _._)("#BundleList_AllInLibrary"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Subtitle,
-                      },
-                      (0, _._)("#BundleList_AllInLibrarySubtitle"),
-                    ),
-                    _.createElement(_, {
-                      appId: _.GetAppID(),
-                      rgBundleIDs: _.rgOwnedBundleIDList,
-                    }),
-                  ),
-              ),
-            )
-          : _.createElement(_._, {
+                    _.rgCompleteTheSetBundleIDList?.length > 0 &&
+                      (0, _.jsxs)("div", {
+                        className: _().BundlesInLibrary,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().Title,
+                            children: (0, _._)("#BundleList_CompleteTheSet"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().Subtitle,
+                            children: (0, _._)(
+                              "#BundleList_CompleteTheSetSubtitle",
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            appId: _.GetAppID(),
+                            bundleSort: _,
+                            rgBundleIDs: _.rgCompleteTheSetBundleIDList,
+                          }),
+                        ],
+                      }),
+                    _.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
+                      (0, _.jsxs)("div", {
+                        className: _().BundlesInLibrary,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().Title,
+                            children: (0, _._)("#BundleList_MustPurchaseAsSet"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().Subtitle,
+                            children: (0, _._)(
+                              "#BundleList_MustPurchaseAsSetSubtitle",
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            appId: _.GetAppID(),
+                            bundleSort: _,
+                            rgBundleIDs: _.rgMustPurchaseTogetherBundleIDList,
+                          }),
+                        ],
+                      }),
+                    _.rgOwnedBundleIDList?.length > 0 &&
+                      (0, _.jsxs)("div", {
+                        className: _().BundlesInLibrary,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().Title,
+                            children: (0, _._)("#BundleList_AllInLibrary"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().Subtitle,
+                            children: (0, _._)(
+                              "#BundleList_AllInLibrarySubtitle",
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            appId: _.GetAppID(),
+                            bundleSort: _,
+                            rgBundleIDs: _.rgOwnedBundleIDList,
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+              ],
+            })
+          : (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
               position: "center",
             });
       }
       function _(_) {
-        const { rgBundleIDs: _, appId: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().BundlesList,
-          },
-          _.map((_) =>
-            _.createElement(_, {
-              key: "bundleDisplay_" + _,
-              bundleId: _,
-              appId: __webpack_require__,
-            }),
+        const { rgBundleIDs: _, bundleSort: __webpack_require__, appId: _ } = _;
+        return (0, _.jsx)("div", {
+          className: _().BundlesList,
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                bundleId: _,
+                appId: _,
+              },
+              "bundleDisplay_" + _,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const { bundleId: _, appId: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().BundleRow,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().BundleRow,
+          children: (0, _.jsx)(_._, {
             _: _,
             type: "bundle",
             bShowDeckCompatibilityDialog: !1,
             bPreferAssetWithoutOverride: !1,
           }),
-        );
+        });
       }
       function _(_) {
         const { eBundleSort: _, fnSetSort: __webpack_require__ } = _,
@@ -770,16 +647,12 @@
             ],
             [],
           );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           selectedOption: _,
           renderButtonValue: (_) =>
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#BundleList_SortBy"),
-              " ",
-              _,
-            ),
+            (0, _.jsxs)("div", {
+              children: [(0, _._)("#BundleList_SortBy"), " ", _],
+            }),
           rgOptions: _,
           strDefaultLabel: (0, _._)("#BundleList_SortBy"),
           onChange: ({ data: _ }) => __webpack_require__(_),

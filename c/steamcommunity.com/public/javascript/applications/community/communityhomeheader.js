@@ -41,6 +41,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -61,53 +62,41 @@
           (0, _.useEffect)(() => {
             _.current && _.current.TakeFocus();
           }, []),
-          _.createElement(
-            _._,
-            {
-              navID: "CommunityHomeHeader",
-            },
-            _.createElement(
-              _._,
-              {
-                navRef: _,
-                className: _().CommunityHomeHeader,
-              },
-              _.createElement(
-                "div",
-                {
+          (0, _.jsx)(_._, {
+            navID: "CommunityHomeHeader",
+            children: (0, _.jsxs)(_._, {
+              navRef: _,
+              className: _().CommunityHomeHeader,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().CommunityHomeHeaderTitleSection,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().CommunityHomeHeaderTitle,
-                    },
-                    (0, _._)("#Community_Home_Header_Title"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().CommunityHomeHeaderSubtitle,
-                    },
-                    (0, _._)("#Community_Home_Header_Subtitle"),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _().AddFriendBtn,
-                    href: `${_._.COMMUNITY_BASE_URL}search/users/`,
-                  },
-                  (0, _._)("#Community_Home_Header_AddFriend_Button"),
-                ),
-              ),
-              _.createElement(_, null),
-              _.createElement(_, null),
-            ),
-          )
+                  children: [
+                    (0, _.jsxs)("div", {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().CommunityHomeHeaderTitle,
+                          children: (0, _._)("#Community_Home_Header_Title"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().CommunityHomeHeaderSubtitle,
+                          children: (0, _._)("#Community_Home_Header_Subtitle"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _().AddFriendBtn,
+                      href: `${_._.COMMUNITY_BASE_URL}search/users/`,
+                      children: (0, _._)(
+                        "#Community_Home_Header_AddFriend_Button",
+                      ),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_, {}),
+                (0, _.jsx)(_, {}),
+              ],
+            }),
+          })
         );
       }
       function _() {
@@ -145,89 +134,80 @@
             };
           })();
         if (_.isLoading) return null;
-        return _.createElement(
-          "div",
-          {
-            className: _().CommunityHomeHeaderContent,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().CommunityHomeHeaderContent,
+          children: [
+            (0, _.jsxs)(_._, {
               className: _().AppHubsCtn,
-            },
-            _.createElement(_, {
-              appShortcuts: _.data.personalAppIds,
-              sectionTitle: (0, _._)("#Community_Home_Header_GameHubs_ForYou"),
-              withDivider: _.data.popularAppIds.length > 0,
+              children: [
+                (0, _.jsx)(_, {
+                  appShortcuts: _.data.personalAppIds,
+                  sectionTitle: (0, _._)(
+                    "#Community_Home_Header_GameHubs_ForYou",
+                  ),
+                  withDivider: _.data.popularAppIds.length > 0,
+                }),
+                (0, _.jsx)(_, {
+                  appShortcuts: _.data.popularAppIds,
+                  sectionTitle: (0, _._)(
+                    "#Community_Home_Header_GameHubs_Popular",
+                  ),
+                }),
+              ],
             }),
-            _.createElement(_, {
-              appShortcuts: _.data.popularAppIds,
-              sectionTitle: (0, _._)("#Community_Home_Header_GameHubs_Popular"),
-            }),
-          ),
-          _.createElement(
-            _._,
-            {
+            (0, _.jsxs)(_._, {
               onFocus: () => _(!0),
               onBlur: (_) => {
                 _.currentTarget.contains(_.relatedTarget) || _(!1);
               },
               className: _().Search,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _().SearchBar,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().InputContainer,
-                },
-                _.createElement(_._, {
-                  onChange: async (_) => {
-                    _(_.target.value);
-                    const _ = await (async function (_) {
-                      const _ = `${_._.COMMUNITY_BASE_URL}actions/SearchApps/${_}`;
-                      return (await _().get(_)).data;
-                    })(_.target.value);
-                    _(_);
-                  },
-                  value: _,
-                  className: _().Input,
-                  placeholder: (0, _._)(
-                    "#Community_Home_Header_FindGame_Placeholder",
-                  ),
+              children: [
+                (0, _.jsxs)(_._, {
+                  className: _().SearchBar,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().InputContainer,
+                      children: (0, _.jsx)(_._, {
+                        onChange: async (_) => {
+                          _(_.target.value);
+                          const _ = await (async function (_) {
+                            const _ = `${_._.COMMUNITY_BASE_URL}actions/SearchApps/${_}`;
+                            return (await _().get(_)).data;
+                          })(_.target.value);
+                          _(_);
+                        },
+                        value: _,
+                        className: _().Input,
+                        placeholder: (0, _._)(
+                          "#Community_Home_Header_FindGame_Placeholder",
+                        ),
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().SearchIcon,
+                      children: (0, _.jsx)(_.eSy, {}),
+                    }),
+                  ],
                 }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SearchIcon,
-                },
-                _.createElement(_.eSy, null),
-              ),
-            ),
-            _ &&
-              _.createElement(
-                _._,
-                {
-                  className: _().SearchResultsCtn,
-                },
-                __webpack_require__.map((_) =>
-                  _.createElement(
-                    _._,
-                    {
-                      href: `${_._.COMMUNITY_BASE_URL}app/${_.appid}`,
-                      key: _.appid,
-                      className: _().SearchResult,
-                    },
-                    _.name,
-                  ),
-                ),
-              ),
-          ),
-        );
+                _ &&
+                  (0, _.jsx)(_._, {
+                    className: _().SearchResultsCtn,
+                    children: __webpack_require__.map((_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          href: `${_._.COMMUNITY_BASE_URL}app/${_.appid}`,
+                          className: _().SearchResult,
+                          children: _.name,
+                        },
+                        _.appid,
+                      ),
+                    ),
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -236,51 +216,44 @@
           withDivider: _,
         } = _;
         return _ && _.length
-          ? _.createElement(
-              "div",
-              {
-                className: _().AppHubShortcutsCtn,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().AppHubShortcutsCtn,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().AppHubTitle,
-                },
-                __webpack_require__,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: __webpack_require__,
+                }),
+                (0, _.jsx)("div", {
                   "flow-children": "row",
                   className: (0, _._)(
                     _().AppHubShortcutLinks,
                     _ ? _().Divider : null,
                   ),
-                },
-                _.map((_, _) =>
-                  _.createElement(_, {
-                    key: _,
-                    appId: _,
-                  }),
-                ),
-              ),
-            )
+                  children: _.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        appId: _,
+                      },
+                      _,
+                    ),
+                  ),
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
         const _ = _._.Get().GetApp(_.appId);
         return _
-          ? _.createElement(
-              _._,
-              {
-                className: _().ShortcutLink,
-                href: `${_._.COMMUNITY_BASE_URL}app/${_.appId}`,
-              },
-              _.createElement("img", {
+          ? (0, _.jsx)(_._, {
+              className: _().ShortcutLink,
+              href: `${_._.COMMUNITY_BASE_URL}app/${_.appId}`,
+              children: (0, _.jsx)("img", {
                 className: _().ShortcutImage,
                 src: _.GetAssets().GetLibraryCapsuleURL(),
               }),
-            )
+            })
           : null;
       }
       const _ = "subsection",
@@ -289,18 +262,18 @@
         const _ = (0, _._)(),
           _ = (0, _._)(_, _),
           _ = (0, _._)(_, _);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_, {
-            activeTab: _,
-            activeSort: _,
-          }),
-          _.createElement(_, {
-            activeTab: _,
-            activeSort: _,
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_, {
+              activeTab: _,
+              activeSort: _,
+            }),
+            (0, _.jsx)(_, {
+              activeTab: _,
+              activeSort: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { activeTab: _, activeSort: __webpack_require__ } = _,
@@ -313,14 +286,11 @@
               _.current.scrollBy(_ - window.innerWidth, 0);
           }
         }, [null == _ ? void 0 : _.current]);
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "row",
-            className: _().TabContainer,
-            ref: _,
-          },
-          [
+        return (0, _.jsx)(_._, {
+          "flow-children": "row",
+          className: _().TabContainer,
+          ref: _,
+          children: [
             {
               label: "#Community_Home_Header_Filter_All",
               _: "",
@@ -362,61 +332,57 @@
               _ = _._ ? `${_}=${_._}` : "",
               _ = __webpack_require__ ? `${_}=${__webpack_require__}` : "",
               _ = `${_._.COMMUNITY_BASE_URL}${_ || _ ? "?" : ""}${_}${_ ? "&" : ""}${_}`;
-            return _.createElement(
+            return (0, _.jsx)(
               _._,
               {
                 _: _._,
                 href: _,
-                key: _._,
                 className: (0, _._)(_().Tab, _ ? _().ActiveTab : null),
+                children: (0, _._)(_.label),
               },
-              (0, _._)(_.label),
+              _._,
             );
           }),
-        );
+        });
       }
       function _(_) {
         const { activeTab: _, activeSort: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "row",
-            className: _().SortContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          "flow-children": "row",
+          className: _().SortContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().SortIcon,
-            },
-            _.createElement(_.LPs, null),
-          ),
-          [
-            {
-              label: "#Community_Home_Header_BrowseFilter_Popular",
-              _: "",
-            },
-            {
-              label: "#Community_Home_Header_BrowseFilter_Recent",
-              _: "mostrecent",
-            },
-          ].map((_, _) => {
-            const _ = __webpack_require__
-                ? __webpack_require__ === _._
-                : 0 === _,
-              _ = _ ? `${_}=${_}` : "",
-              _ = _._ ? `${_}=${_._}` : "",
-              _ = `${_._.COMMUNITY_BASE_URL}${_ || _ ? "?" : ""}${_}${_ ? "&" : ""}${_}`;
-            return _.createElement(
-              _._,
+              children: (0, _.jsx)(_.LPs, {}),
+            }),
+            [
               {
-                href: _,
-                key: _._,
-                className: (0, _._)(_().Sort, _ ? _().ActiveSort : null),
+                label: "#Community_Home_Header_BrowseFilter_Popular",
+                _: "",
               },
-              (0, _._)(_.label),
-            );
-          }),
-        );
+              {
+                label: "#Community_Home_Header_BrowseFilter_Recent",
+                _: "mostrecent",
+              },
+            ].map((_, _) => {
+              const _ = __webpack_require__
+                  ? __webpack_require__ === _._
+                  : 0 === _,
+                _ = _ ? `${_}=${_}` : "",
+                _ = _._ ? `${_}=${_._}` : "",
+                _ = `${_._.COMMUNITY_BASE_URL}${_ || _ ? "?" : ""}${_}${_ ? "&" : ""}${_}`;
+              return (0, _.jsx)(
+                _._,
+                {
+                  href: _,
+                  className: (0, _._)(_().Sort, _ ? _().ActiveSort : null),
+                  children: (0, _._)(_.label),
+                },
+                _._,
+              );
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -430,132 +396,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "FocusNavHistoryID",
-        _ = new _._("FocusHistory").Debug;
-      function _(_) {
-        const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
-          _ = (function (_ = 2) {
-            const _ = (0, _._)(),
-              _ = _.useRef(void 0),
-              _ = (0, _._)(),
-              _ = _._.IN_STEAMUI,
-              _ = (null == _ ? void 0 : _.state) && _.state[_],
-              _ = _.useRef(void 0),
-              [_, _] = _.useState(_);
-            return (
-              _.useLayoutEffect(() => {
-                if (!_.current) return;
-                const _ = _.current;
-                return _.Node().Tree.WindowContext.FocusChangedCallbacks.Register(
-                  (_, _, _) => {
-                    const _ = _.location;
-                    let _ = _.state && _.state[_];
-                    _ ||
-                      ((_ = _ ? `State_${_.key}` : `State_${_.Node().Tree._}`),
-                      (_.current = _),
-                      _.replace({
-                        ..._,
-                        state: {
-                          ..._.state,
-                          [_]: _,
-                        },
-                      })),
-                      _.current == _ &&
-                        (_
-                          ? _.SaveState(_)
-                          : window.history.replaceState(
-                              {
-                                ...window.history.state,
-                                [_]: (0, _._)(_.Node()),
-                              },
-                              "",
-                            ));
-                  },
-                ).Unregister;
-              }, [_, _]),
-              _.useLayoutEffect(() => {
-                if (_.current && _.current != _) {
-                  if (!_) return void _(void 0);
-                  const _ = _.current.NavTree().DeferredFocus;
-                  _.SuppressFocus(),
-                    _(
-                      `Start restoring history for ${_} in tree ${_.current.NavTree()._}, suppressing focus`,
-                    );
-                  const _ = window.setTimeout(() => {
-                    _(_);
-                  }, _);
-                  return () => {
-                    window.clearTimeout(_), _.ExecuteQueuedFocus();
-                  };
-                }
-              }, [_, _]),
-              _.useEffect(() => {
-                var _;
-                if (!_ || !_.current) return;
-                const _ = _
-                    ? null
-                    : null === (_ = window.history.state) || void 0 === _
-                      ? void 0
-                      : _[_],
-                  _ = _.current.NavTree().DeferredFocus;
-                let _ = !1;
-                _
-                  ? (_ = _.current.RestoreState(_, 1))
-                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
-                  _(
-                    `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
-                  ),
-                  _ ? _.Reset() : _.ExecuteQueuedFocus(),
-                  (_.current = _);
-              }, [_, _, _]),
-              _
-            );
-          })(__webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navRef: _,
-          },
-          _,
-        );
-      }
       const _ = _.forwardRef(function (_, _) {
         const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
           _ = _.useRef(void 0),
           _ = (0, _._)(_, _),
           _ = (0, _._)(),
           _ = (0, _._)("__nav_tree_root");
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navTreeRef: _,
-            ref: _,
-            parentEmbeddedNavTree: _,
-            disabledRoot: !_,
-          },
-          _.createElement(
-            _,
-            {
-              style: {
-                display: "contents",
-              },
-            },
-            _.createElement(
-              _._,
-              {
-                disableFocusRing: !_,
-              },
-              __webpack_require__,
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          ..._,
+          navTreeRef: _,
+          ref: _,
+          parentEmbeddedNavTree: _,
+          disabledRoot: !_,
+          historyMode: "navigationapi",
+          children: (0, _.jsx)(_._, {
+            disableFocusRing: !_,
+            children: __webpack_require__,
+          }),
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {

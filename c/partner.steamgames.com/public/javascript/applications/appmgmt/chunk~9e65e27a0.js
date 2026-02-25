@@ -976,7 +976,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -999,102 +1003,93 @@
             [_],
           );
         return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DashTitleBar,
-                  },
-                  _.createElement("h1", null, "Theme Sale Planning Dashboard"),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ButtonGroup,
-                    },
-                    Boolean(!_) &&
-                      _.createElement(
-                        _._,
-                        {
-                          onClick: () => __webpack_require__(!0),
-                        },
-                        "Load ",
-                        _._,
-                        " Days of Sale Summaries",
-                      ),
-                    _.createElement(_, null),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DashDescription,
-                  },
-                  _.createElement(
-                    "ul",
-                    null,
-                    _.createElement(
-                      "li",
-                      null,
-                      "Themes are currently make from all of the categories that are defined on this",
-                      " ",
-                      _.createElement(
-                        "a",
-                        {
-                          href: `${_._.PARTNER_BASE_URL}admin/store/contenthub/categories`,
-                        },
-                        "categories editor page.",
-                      ),
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      "Hubs with more than ",
-                      _,
-                      " games are called out as 'too big'.",
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      "Sales rank shown for individual games is long-term and includes all sources of revenue.",
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      "Revenue shown is computed over the past 45 days and only using base games package revenue (a technical limitation for now) ",
-                    ),
-                  ),
-                ),
-              ),
-              _.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  category: _,
-                  bSaleSummary: _,
+          ? (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.DashTitleBar,
+                      children: [
+                        (0, _.jsx)("h1", {
+                          children: "Theme Sale Planning Dashboard",
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _.ButtonGroup,
+                          children: [
+                            Boolean(!_) &&
+                              (0, _.jsxs)(_._, {
+                                onClick: () => __webpack_require__(!0),
+                                children: [
+                                  "Load ",
+                                  _._,
+                                  " Days of Sale Summaries",
+                                ],
+                              }),
+                            (0, _.jsx)(_, {}),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.DashDescription,
+                      children: (0, _.jsxs)("ul", {
+                        children: [
+                          (0, _.jsxs)("li", {
+                            children: [
+                              "Themes are currently make from all of the categories that are defined on this",
+                              " ",
+                              (0, _.jsx)("a", {
+                                href: `${_._.PARTNER_BASE_URL}admin/store/contenthub/categories`,
+                                children: "categories editor page.",
+                              }),
+                            ],
+                          }),
+                          (0, _.jsxs)("li", {
+                            children: [
+                              "Hubs with more than ",
+                              _,
+                              " games are called out as 'too big'.",
+                            ],
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "Sales rank shown for individual games is long-term and includes all sources of revenue.",
+                          }),
+                          (0, _.jsx)("li", {
+                            children:
+                              "Revenue shown is computed over the past 45 days and only using base games package revenue (a technical limitation for now) ",
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
                 }),
-              ),
-            )
-          : _.createElement(_._, {
+                _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      category: _,
+                      bSaleSummary: _,
+                    },
+                    _,
+                  ),
+                ),
+              ],
+            })
+          : (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
             });
       }
       function _(_) {
         const { category: _, bSaleSummary: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            placeholderHeight: 250,
-            rootMargin: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          placeholderHeight: 250,
+          rootMargin: _,
+          children: (0, _.jsx)(_, {
             category: _,
             bSaleSummary: __webpack_require__,
           }),
-        );
+        });
       }
       function _(_) {
         const { nTotalGames: _ } = _;
@@ -1105,106 +1100,86 @@
             : _ > _
               ? ((_ = _.SizeColorBig), (_ = "Too big"))
               : ((_ = _.SizeColorSmall), (_ = "Too small")),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.ThemeSize, _),
-            },
-            (0, _._)(_),
-            " games ( ",
-            _,
-            ")",
-          )
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.ThemeSize, _),
+            children: [(0, _._)(_), " games ( ", _, ")"],
+          })
         );
       }
       function _(_) {
         const { category: _, bSaleSummary: __webpack_require__ } = _,
           { rgTopApps: _, nTotalGames: _ } = (0, _._)(_),
           _ = _ > 500 && _ <= _;
-        return _.createElement(
-          "div",
-          {
-            className: _.ThemeRow,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ThemeRow,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.ThemeDefinitionCtn,
-            },
-            _.createElement(
-              "a",
-              {
-                href: `${_._.STORE_BASE_URL}category/${_.handle}`,
-                className: _.ThemeTitle,
-              },
-              _.loc_token ? (0, _._)(_.loc_token) : _.handle,
-            ),
-            _.createElement(_, {
-              nTotalGames: _,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.SaleStats,
-              },
-              Boolean(__webpack_require__ && _) &&
-                _.createElement(_, {
-                  category: _,
+              children: [
+                (0, _.jsx)("a", {
+                  href: `${_._.STORE_BASE_URL}category/${_.handle}`,
+                  className: _.ThemeTitle,
+                  children: _.loc_token ? (0, _._)(_.loc_token) : _.handle,
                 }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+                (0, _.jsx)(_, {
+                  nTotalGames: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.SaleStats,
+                  children:
+                    Boolean(__webpack_require__ && _) &&
+                    (0, _.jsx)(_, {
+                      category: _,
+                    }),
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _.TopGamesCtn,
-            },
-            _.createElement("div", null, "Top 10 Games non-F2P:"),
-            _.createElement(
-              "div",
-              {
-                className: _.GamesRow,
-              },
-              _?.slice(0, 10).map((_) =>
-                _.createElement(_, {
-                  key: _.appid,
-                  info: _,
-                  category: _,
-                  bSaleSummary: __webpack_require__ && _,
+              children: [
+                (0, _.jsx)("div", {
+                  children: "Top 10 Games non-F2P:",
                 }),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.ThemeDetails,
-            },
-            "handle: ",
-            _.handle,
-            _.createElement(_, {
-              category: _,
+                (0, _.jsx)("div", {
+                  className: _.GamesRow,
+                  children: _?.slice(0, 10).map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        info: _,
+                        category: _,
+                        bSaleSummary: __webpack_require__ && _,
+                      },
+                      _.appid,
+                    ),
+                  ),
+                }),
+              ],
             }),
-          ),
-        );
+            (0, _.jsxs)("div", {
+              className: _.ThemeDetails,
+              children: [
+                "handle: ",
+                _.handle,
+                (0, _.jsx)(_, {
+                  category: _,
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { info: _, bSaleSummary: __webpack_require__ } = _,
-          [_] = (0, _._)(_.appid, {
-            include_assets: !0,
-          });
-        return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.GameItem,
-              },
-              _.createElement(
-                _._,
-                {
-                  item: {
-                    type: "game",
-                    _: _.appid,
-                  },
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _ && _
+          ? (0, _.jsxs)("div", {
+              className: _.GameItem,
+              children: [
+                (0, _.jsx)(_._, {
+                  _: _,
                   hoverProps: {
                     direction: "overlay",
                     style: {
@@ -1213,128 +1188,127 @@
                     },
                   },
                   className: _.GameImage,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    href: _.GetStorePageURL(),
-                  },
-                  _.createElement("img", {
-                    src: _.GetAssets().GetHeaderURL(),
+                  children: (0, _.jsx)("a", {
+                    href: (0, _._)(_),
+                    children: (0, _.jsx)("img", {
+                      src: (0, _._)(_, "header"),
+                      alt: _.name,
+                    }),
                   }),
-                ),
-              ),
-              _.createElement("div", null, " Rank: ", _.long_term_sale_rank),
-              Boolean(__webpack_require__) &&
-                _.createElement(_, {
-                  ..._,
                 }),
-            )
-          : _.createElement(
-              "div",
-              null,
-              "Loading appid: ",
-              _.appid,
-              " with rank: ",
-              _.long_term_sale_rank,
-            );
+                (0, _.jsxs)("div", {
+                  children: [" Rank: ", _.long_term_sale_rank],
+                }),
+                Boolean(__webpack_require__) &&
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              children: [
+                "Loading appid: ",
+                _.appid,
+                " with rank: ",
+                _.long_term_sale_rank,
+              ],
+            });
       }
       function _(_) {
         const { info: _, category: __webpack_require__ } = _,
           _ = (0, _._)(_.appid),
           _ = (0, _._)(__webpack_require__);
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              null,
-              " ",
-              "$",
-              (0, _._)(Math.floor(_.gross_sales_usd / 100)),
-            ),
-          Boolean(_ && _?.gross_sales_usd) &&
-            _.createElement(
-              "div",
-              null,
-              "( ",
-              ((_.gross_sales_usd / _.gross_sales_usd) * 100).toFixed(2),
-              "% of hub )",
-            ),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            Boolean(_) &&
+              (0, _.jsxs)("div", {
+                children: [
+                  " ",
+                  "$",
+                  (0, _._)(Math.floor(_.gross_sales_usd / 100)),
+                ],
+              }),
+            Boolean(_ && _?.gross_sales_usd) &&
+              (0, _.jsxs)("div", {
+                children: [
+                  "( ",
+                  ((_.gross_sales_usd / _.gross_sales_usd) * 100).toFixed(2),
+                  "% of hub )",
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { mapStoreTags: _, mapStoreCategories: __webpack_require__ } = (0,
           _._)(),
           { category: _ } = _;
         return _ && __webpack_require__ && (_.any || _.must || _.mustnot)
-          ? _.createElement(
-              "div",
-              {
-                className: _.ThemeTags,
-              },
-              Boolean(_.must) &&
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.TagsMustTitle,
-                    },
-                    "Must:",
-                  ),
-                  " ",
-                  _.must?.map((_) =>
-                    _.createElement(_, {
-                      key: _.type + "_" + _._ + "_" + _.handle,
-                      type: _.type,
-                      _: _._,
-                    }),
-                  ),
-                ),
-              Boolean(_.any) &&
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.TagsOrTitle,
-                    },
-                    "Any:",
-                  ),
-                  " ",
-                  _.any?.map((_) =>
-                    _.createElement(_, {
-                      key: _.type + "_" + _._ + "_" + _.handle,
-                      type: _.type,
-                      _: _._,
-                    }),
-                  ),
-                ),
-              Boolean(_.mustnot) &&
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.TagsNotTitle,
-                    },
-                    "Must Not:",
-                  ),
-                  " ",
-                  _.mustnot?.map((_) =>
-                    _.createElement(_, {
-                      key: _.type + "_" + _._ + "_" + _.handle,
-                      type: _.type,
-                      _: _._,
-                    }),
-                  ),
-                ),
-            )
+          ? (0, _.jsxs)("div", {
+              className: _.ThemeTags,
+              children: [
+                Boolean(_.must) &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.TagsMustTitle,
+                        children: "Must:",
+                      }),
+                      " ",
+                      _.must?.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            type: _.type,
+                            _: _._,
+                          },
+                          _.type + "_" + _._ + "_" + _.handle,
+                        ),
+                      ),
+                    ],
+                  }),
+                Boolean(_.any) &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.TagsOrTitle,
+                        children: "Any:",
+                      }),
+                      " ",
+                      _.any?.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            type: _.type,
+                            _: _._,
+                          },
+                          _.type + "_" + _._ + "_" + _.handle,
+                        ),
+                      ),
+                    ],
+                  }),
+                Boolean(_.mustnot) &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.TagsNotTitle,
+                        children: "Must Not:",
+                      }),
+                      " ",
+                      _.mustnot?.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            type: _.type,
+                            _: _._,
+                          },
+                          _.type + "_" + _._ + "_" + _.handle,
+                        ),
+                      ),
+                    ],
+                  }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -1342,105 +1316,92 @@
           _._)(),
           { type: _, _: _ } = _;
         return "tagids" == _
-          ? _.createElement(
-              "span",
-              null,
-              _.has(_) ? _.get(_).name : "tagid: " + _,
-              ", ",
-            )
-          : _.createElement(
-              "span",
-              null,
-              __webpack_require__.has(_)
-                ? __webpack_require__.get(_).name
-                : "category id: " + _,
-              ", ",
-            );
+          ? (0, _.jsxs)("span", {
+              children: [_.has(_) ? _.get(_).name : "tagid: " + _, ", "],
+            })
+          : (0, _.jsxs)("span", {
+              children: [
+                __webpack_require__.has(_)
+                  ? __webpack_require__.get(_).name
+                  : "category id: " + _,
+                ", ",
+              ],
+            });
       }
       function _(_) {
         const { saleSummary: _, topAppSummary: __webpack_require__ } = _;
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.ThemeRevenueCtn,
-              },
-              _.createElement(
-                "table",
-                null,
-                _.createElement(
-                  "tbody",
-                  null,
-                  _.createElement(
-                    "tr",
-                    null,
-                    _.createElement(
-                      "td",
-                      null,
-                      "Total: ",
-                      _.createElement("br", null),
-                      "$",
-                      (0, _._)(Math.floor(_.gross_sales_usd / 100)),
-                    ),
-                    _.createElement(
-                      "td",
-                      null,
-                      "Per Day: ",
-                      _.createElement("br", null),
-                      "$",
-                      (0, _._)(Math.floor(_.gross_sales_usd / (100 * _._))),
-                    ),
-                    _.createElement(
-                      "td",
-                      null,
-                      "Total Units: ",
-                      _.createElement("br", null),
-                      (0, _._)(_.gross_units_sold),
-                    ),
-                    _.createElement(
-                      "td",
-                      null,
-                      "Units Per Day: ",
-                      _.createElement("br", null),
-                      (0, _._)(Math.floor(_.gross_units_sold / _._)),
-                    ),
-                    Boolean(_.gross_sales_usd > 0) &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "td",
-                          null,
-                          "Top ",
-                          _._,
-                          " Apps: ",
-                          _.createElement("br", null),
-                          _.createElement(
-                            "span",
-                            {
-                              className:
-                                (__webpack_require__.gross_sales_usd /
-                                  _.gross_sales_usd) *
-                                  100 >
-                                90
-                                  ? _.SizeColorBig
-                                  : _.SizeColorSweet,
-                            },
-                            (
-                              (__webpack_require__.gross_sales_usd /
-                                _.gross_sales_usd) *
-                              100
-                            ).toFixed(2),
-                            "%",
-                          ),
-                          " of revenue",
-                        ),
-                      ),
-                  ),
-                ),
-              ),
-            )
-          : _.createElement(_._, {
+          ? (0, _.jsx)("div", {
+              className: _.ThemeRevenueCtn,
+              children: (0, _.jsx)("table", {
+                children: (0, _.jsx)("tbody", {
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsxs)("td", {
+                        children: [
+                          "Total: ",
+                          (0, _.jsx)("br", {}),
+                          "$",
+                          (0, _._)(Math.floor(_.gross_sales_usd / 100)),
+                        ],
+                      }),
+                      (0, _.jsxs)("td", {
+                        children: [
+                          "Per Day: ",
+                          (0, _.jsx)("br", {}),
+                          "$",
+                          (0, _._)(Math.floor(_.gross_sales_usd / (100 * _._))),
+                        ],
+                      }),
+                      (0, _.jsxs)("td", {
+                        children: [
+                          "Total Units: ",
+                          (0, _.jsx)("br", {}),
+                          (0, _._)(_.gross_units_sold),
+                        ],
+                      }),
+                      (0, _.jsxs)("td", {
+                        children: [
+                          "Units Per Day: ",
+                          (0, _.jsx)("br", {}),
+                          (0, _._)(Math.floor(_.gross_units_sold / _._)),
+                        ],
+                      }),
+                      Boolean(_.gross_sales_usd > 0) &&
+                        (0, _.jsx)(_.Fragment, {
+                          children: (0, _.jsxs)("td", {
+                            children: [
+                              "Top ",
+                              _._,
+                              " Apps: ",
+                              (0, _.jsx)("br", {}),
+                              (0, _.jsxs)("span", {
+                                className:
+                                  (__webpack_require__.gross_sales_usd /
+                                    _.gross_sales_usd) *
+                                    100 >
+                                  90
+                                    ? _.SizeColorBig
+                                    : _.SizeColorSweet,
+                                children: [
+                                  (
+                                    (__webpack_require__.gross_sales_usd /
+                                      _.gross_sales_usd) *
+                                    100
+                                  ).toFixed(2),
+                                  "%",
+                                ],
+                              }),
+                              " of revenue",
+                            ],
+                          }),
+                        }),
+                    ],
+                  }),
+                }),
+              }),
+            })
+          : (0, _.jsx)(_._, {
               position: "center",
               string: "Loading Sale Info",
             });
@@ -1449,26 +1410,23 @@
         const { category: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           saleSummary: _,
           topAppSummary: _,
         });
       }
       function _(_) {
         const _ = (0, _._)();
-        return _.createElement(
-          "a",
-          {
-            href: `data:application/octet-stream,${encodeURIComponent(
-              _().unparse({
-                data: _,
-                fields: Object.keys(_ ? _[0] : {}),
-              }),
-            )}`,
-            download: "theme_sale_stats.csv",
-          },
-          "Export CSV",
-        );
+        return (0, _.jsx)("a", {
+          href: `data:application/octet-stream,${encodeURIComponent(
+            _().unparse({
+              data: _,
+              fields: Object.keys(_ ? _[0] : {}),
+            }),
+          )}`,
+          download: "theme_sale_stats.csv",
+          children: "Export CSV",
+        });
       }
     },
   },

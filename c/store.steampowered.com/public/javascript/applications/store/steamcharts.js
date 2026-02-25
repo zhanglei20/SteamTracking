@@ -408,6 +408,8 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PageSection: "_2zGFBNA2sjyPFRzONZhG5T",
         SectionTitle: "_1tl1EVPXDe0Ga87Od2OapL",
         ChartPage: "_2txZN03Rksb3SHqYeOt75B",
@@ -828,6 +830,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
@@ -839,81 +842,69 @@
             _ = (_) => {
               __webpack_require__(_), _();
             };
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                onEscKeypress: _,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, null, (0, _._)("#ClanImageChooser_Title")),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "p",
-                      null,
-                      (0, _._)("#ClanImageChooser_Desc"),
-                    ),
-                    _.createElement(_._, {
-                      placeholder: (0, _._)("#ClanImageChooser_Search"),
-                      value: _,
-                      onChange: (_) => _(_.currentTarget.value),
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              onEscKeypress: _,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#ClanImageChooser_Title"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)("p", {
+                          children: (0, _._)("#ClanImageChooser_Desc"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          placeholder: (0, _._)("#ClanImageChooser_Search"),
+                          value: _,
+                          onChange: (_) => _(_.currentTarget.value),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.ImagesOuterContainer,
+                          children: _
+                            ? (0, _.jsx)(_._, {
+                                size: "medium",
+                                string: (0, _._)("#Loading"),
+                              })
+                            : Boolean(_.length > 0)
+                              ? _.map((_) =>
+                                  (0, _.jsx)(
+                                    _,
+                                    {
+                                      clanImage: _,
+                                      searchStringHilight: _,
+                                      fnImageClick: _,
+                                    },
+                                    "ci" + _.image_hash,
+                                  ),
+                                )
+                              : Boolean(0 == _.trim().length)
+                                ? (0, _.jsx)("div", {
+                                    children: (0, _._)(
+                                      "#ClanImageChooser_None",
+                                    ),
+                                  })
+                                : (0, _.jsx)("div", {
+                                    children: (0, _._)(
+                                      "#EventCalendar_GameSearch_NoneFound",
+                                    ),
+                                  }),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ImagesOuterContainer,
-                      },
-                      _
-                        ? _.createElement(_._, {
-                            size: "medium",
-                            string: (0, _._)("#Loading"),
-                          })
-                        : Boolean(_.length > 0)
-                          ? _.map((_) =>
-                              _.createElement(_, {
-                                key: "ci" + _.image_hash,
-                                clanImage: _,
-                                searchStringHilight: _,
-                                fnImageClick: _,
-                              }),
-                            )
-                          : Boolean(0 == _.trim().length)
-                            ? _.createElement(
-                                "div",
-                                null,
-                                (0, _._)("#ClanImageChooser_None"),
-                              )
-                            : _.createElement(
-                                "div",
-                                null,
-                                (0, _._)("#EventCalendar_GameSearch_NoneFound"),
-                              ),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_._, {
                       onClick: _,
-                    },
-                    (0, _._)("#Button_Cancel"),
-                  ),
-                ),
-              ),
-            ),
-          );
+                      children: (0, _._)("#Button_Cancel"),
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          });
         },
         _ = (_) => {
           const {
@@ -923,27 +914,23 @@
           } = _;
           let _ = _.file_name ? _.file_name : "",
             _ = _(__webpack_require__, _, String(_.imageid), _.Hilight);
-          return _.createElement(
-            "div",
-            {
-              className: _.ImageContainer,
-            },
-            _.createElement("div", {
-              className: _.Image,
-              style: {
-                backgroundImage: `url( '${_.thumb_url}' )`,
-              },
-              onDoubleClick: () => _(_),
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.ImageContainer,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.Image,
+                style: {
+                  backgroundImage: `url( '${_.thumb_url}' )`,
+                },
+                onDoubleClick: () => _(_),
+              }),
+              (0, _.jsx)("div", {
                 className: _.ImageFilename,
                 title: _,
-              },
-              _,
-            ),
-          );
+                children: _,
+              }),
+            ],
+          });
         };
       function _(_, _, _, _) {
         let _ = [];
@@ -953,46 +940,46 @@
             let _ = _.indexOf(_, _);
             if (_ < 0) {
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: _ + "_" + String(_),
+                    children: _.substring(_),
                   },
-                  _.substring(_),
+                  _ + "_" + String(_),
                 ),
               );
               break;
             }
             _ < _ &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: _ + "_" + String(_),
+                    children: _.substring(_, _),
                   },
-                  _.substring(_, _),
+                  _ + "_" + String(_),
                 ),
               ),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: _ + "_" + String(_),
                     className: _,
+                    children: _.substr(_, _.length),
                   },
-                  _.substr(_, _.length),
+                  _ + "_" + String(_),
                 ),
               ),
               (_ = _ + _.length);
           }
         } else
           _.push(
-            _.createElement(
+            (0, _.jsx)(
               "span",
               {
-                key: _ + "_null",
+                children: _,
               },
-              _,
+              _ + "_null",
             ),
           );
         return _;
@@ -1004,6 +991,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1026,13 +1014,13 @@
           } = this.props;
           this.props.bAllowUnsetOption &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 "option",
                 {
-                  key: "langpicker_unset",
                   value: -1,
+                  children: (0, _._)("#language_selection_none"),
                 },
-                (0, _._)("#language_selection_none"),
+                "langpicker_unset",
               ),
             );
           let _ = new Array();
@@ -1059,18 +1047,18 @@
           for (const _ of _) {
             _.bSupported != _ &&
               (_.push(
-                _.createElement(
+                (0, _.jsx)(
                   "option",
                   {
-                    key: _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
                     className: _().SupportedGroupLabel,
                     disabled: !0,
+                    children: (0, _._)(
+                      _.bSupported
+                        ? "#LanguageGroup_Supported"
+                        : "#LanguageGroup_Unsupported",
+                    ),
                   },
-                  (0, _._)(
-                    _.bSupported
-                      ? "#LanguageGroup_Supported"
-                      : "#LanguageGroup_Unsupported",
-                  ),
+                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
                 ),
               ),
               (_ = _.bSupported));
@@ -1089,10 +1077,9 @@
                   }),
               ))),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "option",
                   {
-                    key: "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
                     value: _.eLang,
                     className: (0, _._)(
                       {
@@ -1102,8 +1089,9 @@
                         ? _().SupportedLanguage
                         : _().UnsupportedLanguage,
                     ),
+                    children: _,
                   },
-                  _,
+                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
                 ),
               );
           }
@@ -1122,21 +1110,15 @@
             strTooltip: __webpack_require__,
           } = this.props;
           let _ = this.GenerateLanguageOptions();
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: __webpack_require__,
-            },
-            _.createElement(
-              "select",
-              {
-                value: _,
-                onChange: this.OnLanguageChange,
-                disabled: _,
-              },
-              _,
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            toolTipContent: __webpack_require__,
+            children: (0, _.jsx)("select", {
+              value: _,
+              onChange: this.OnLanguageChange,
+              disabled: _,
+              children: _,
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnLanguageChange", null),
@@ -1148,6 +1130,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1284,15 +1267,15 @@
             (_) => _.background_id == _.groupID,
           );
         }
-        return _.createElement(
+        return (0, _.jsx)(
           _,
           {
             eventModel: _,
-            key: "background_group_" + _.groupID,
             displayDef: _,
             derivedGroupInfo: _.derivedGroupInfo,
+            children: _.elSaleSections,
           },
-          _.elSaleSections,
+          "background_group_" + _.groupID,
         );
       }
       function _(_) {
@@ -1312,7 +1295,10 @@
           _ = (0, _._)(_);
         if (!__webpack_require__ || 0 == __webpack_require__.length)
           return null;
-        if (!_) return _.createElement(_.Fragment, null, __webpack_require__);
+        if (!_)
+          return (0, _.jsx)(_.Fragment, {
+            children: __webpack_require__,
+          });
         let _;
         if (_.localized_background_art) {
           const _ = (0, _._)(_),
@@ -1358,15 +1344,12 @@
             backgroundColor: _ ? _.background_color1 : void 0,
             overflowY: "hidden",
           };
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            style: _,
-            _: "background_group_" + _.background_id,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          ref: _,
+          style: _,
+          _: "background_group_" + _.background_id,
+          children: _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1379,16 +1362,13 @@
       function _(_) {
         const { strURL: _ } = _;
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.MenuBackgroundReflection,
-              },
-              _.createElement("img", {
+          ? (0, _.jsx)("div", {
+              className: _.MenuBackgroundReflection,
+              children: (0, _.jsx)("img", {
                 alt: "",
                 src: _,
               }),
-            )
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid"),
@@ -1409,46 +1389,40 @@
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useRef)(null);
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)({
-              [_().SubMenuOuterCtn]: !0,
-              [_().isOpen]: _,
-            }),
-            onMouseEnter: () => {
-              _.current && window.clearTimeout(_.current), _(!0);
-            },
-            onMouseLeave: () => {
-              _.current && window.clearTimeout(_.current),
-                (_.current = window.setTimeout(() => _(!1), 180));
-            },
+        return (0, _.jsx)(_._, {
+          className: (0, _._)({
+            [_().SubMenuOuterCtn]: !0,
+            [_().isOpen]: _,
+          }),
+          onMouseEnter: () => {
+            _.current && window.clearTimeout(_.current), _(!0);
           },
-          _.createElement(
-            "div",
-            {
-              className: _().SubMenuCtn,
-              style: {
-                ...(0, _._)(__webpack_require__, _, _),
-              },
+          onMouseLeave: () => {
+            _.current && window.clearTimeout(_.current),
+              (_.current = window.setTimeout(() => _(!1), 180));
+          },
+          children: (0, _.jsx)("div", {
+            className: _().SubMenuCtn,
+            style: {
+              ...(0, _._)(__webpack_require__, _, _),
             },
-            __webpack_require__.menu_items.map((_) =>
-              _.createElement(
+            children: __webpack_require__.menu_items.map((_) =>
+              (0, _.jsx)(
                 "div",
                 {
-                  key: "submenuitem" + _.unique_id,
                   className: _().SubMenuItemCtn,
+                  children: (0, _.jsx)(_, {
+                    language: _,
+                    mainItem: _,
+                    subMenu: __webpack_require__,
+                    clanAccountID: _.clanSteamID.GetAccountID(),
+                  }),
                 },
-                _.createElement(_, {
-                  language: _,
-                  mainItem: _,
-                  subMenu: __webpack_require__,
-                  clanAccountID: _.clanSteamID.GetAccountID(),
-                }),
+                "submenuitem" + _.unique_id,
               ),
             ),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const {
@@ -1473,37 +1447,30 @@
           _
             ? (_ = _.selected_label_color || _)
             : _ && (_ = _.hover_label_color || _),
-          _.createElement(
-            _._,
-            {
-              className: _().SubMenuItemText,
-              style: {
-                color: _,
-              },
-              href: _,
-              onMouseEnter: () => _(!0),
-              onMouseLeave: () => _(!1),
+          (0, _.jsxs)(_._, {
+            className: _().SubMenuItemText,
+            style: {
+              color: _,
             },
-            _.createElement(
-              "div",
-              {
+            href: _,
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().TextLabel,
-              },
-              _,
-            ),
-            Boolean(_) &&
-              _.createElement(
-                "span",
-                {
+                children: _,
+              }),
+              Boolean(_) &&
+                (0, _.jsx)("span", {
                   className: _().ImageWrapper,
-                },
-                _.createElement("img", {
-                  src: (0, _._)(_, _),
-                  alt: _,
-                  className: _().SubMenuImage,
+                  children: (0, _.jsx)("img", {
+                    src: (0, _._)(_, _),
+                    alt: _,
+                    className: _().SubMenuImage,
+                  }),
                 }),
-              ),
-          )
+            ],
+          })
         );
       }
       function _(_, _) {
@@ -1520,20 +1487,19 @@
         const { event: _, broadcastEmbedContext: __webpack_require__ } = _,
           _ = Boolean(_?.jsondata?.broadcast_display_wide_player),
           _ = Boolean(_?.jsondata?.broadcast_dispaly_wide_player_allow_chat);
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(
-            _.BEventCanShowBroadcastWidget() &&
-              _.BSaleShowBroadcastAtTopOfPage(),
-          ) &&
-            _.createElement(_._, {
+        return (0, _.jsx)(_.Fragment, {
+          children:
+            Boolean(
+              _.BEventCanShowBroadcastWidget() &&
+                _.BSaleShowBroadcastAtTopOfPage(),
+            ) &&
+            (0, _.jsx)(_._, {
               event: _,
               broadcastEmbedContext: __webpack_require__,
               bWideBroadcastDisplay: _,
               bWideBroadcastPermitChat: _,
             }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -1541,7 +1507,7 @@
           fnOnChangeDayIndex: __webpack_require__,
           addtionalAdminButtons: _,
         } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           eventModel: _,
           fnOnUpdateSaleDayIndex: __webpack_require__,
           addtionalAdminButtons: _,
@@ -1557,41 +1523,38 @@
             ((_ = _._.Get().GetSalePageBackgroundWEBM()),
             (_ = _._.Get().GetSalePageBackgroundMP4())),
           Boolean(_ || _)
-            ? _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  "video",
-                  {
-                    loop: !0,
-                    muted: !0,
-                    autoPlay: !0,
-                    playsInline: !0,
-                    className: (0, _._)(
-                      _().SaleBackground,
-                      _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
-                      "SaleBackground",
-                      _().fullscreen_bg_video,
-                    ),
-                    style: {
-                      backgroundColor: __webpack_require__
-                        ? _.jsondata.sale_background_color
-                        : void 0,
-                    },
+            ? (0, _.jsx)(_._, {
+                children: (0, _.jsxs)("video", {
+                  loop: !0,
+                  muted: !0,
+                  autoPlay: !0,
+                  playsInline: !0,
+                  className: (0, _._)(
+                    _().SaleBackground,
+                    _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
+                    "SaleBackground",
+                    _().fullscreen_bg_video,
+                  ),
+                  style: {
+                    backgroundColor: __webpack_require__
+                      ? _.jsondata.sale_background_color
+                      : void 0,
                   },
-                  _ &&
-                    _.createElement("source", {
-                      src: _,
-                      type: "video/webm",
-                    }),
-                  _ &&
-                    !_._.IN_CLIENT &&
-                    _.createElement("source", {
-                      src: _,
-                      type: "video/mp4",
-                    }),
-                ),
-              )
+                  children: [
+                    _ &&
+                      (0, _.jsx)("source", {
+                        src: _,
+                        type: "video/webm",
+                      }),
+                    _ &&
+                      !_._.IN_CLIENT &&
+                      (0, _.jsx)("source", {
+                        src: _,
+                        type: "video/mp4",
+                      }),
+                  ],
+                }),
+              })
             : null
         );
       }
@@ -1628,30 +1591,24 @@
             _.jsondata.item_source_type === _._.k_EContentHub &&
             (_.jsondata.sale_vanity_id.includes("contenthubsalepage_") || _),
           _ = _ ? `url(${_})` : null;
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(_)
-            ? _.createElement(_, {
-                event: _,
-                language: __webpack_require__,
-                bIsPreview: _,
-                subMenu: _,
-              })
-            : _.createElement(_, {
-                strURL: _,
-              }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            Boolean(_)
+              ? (0, _.jsx)(_, {
+                  event: _,
+                  language: __webpack_require__,
+                  bIsPreview: _,
+                  subMenu: _,
+                })
+              : (0, _.jsx)(_, {
+                  strURL: _,
+                }),
+            (0, _.jsx)("div", {
               className: (0, _._)({
                 SaleBackgroundCtn: !0,
                 ContentHubSalePage: _,
               }),
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
                   "SaleCustomCSS",
@@ -1665,34 +1622,38 @@
                   backgroundColor: _.jsondata.sale_background_color,
                 },
                 ref: _,
-              },
-              _ && "coverBlur" == _.jsondata.sale_background_repeat
-                ? _.createElement("img", {
-                    className: (0, _._)(
-                      _().SalePageBackground,
-                      _().BackgroundImage,
-                      _().Blur,
-                    ),
-                    src: _,
-                  })
-                : _.createElement("div", {
-                    className: (0, _._)(
-                      _().SalePageBackground,
-                      _().BackgroundImage,
-                    ),
-                    style: {
-                      backgroundImage: _,
-                      backgroundRepeat: _.jsondata.sale_background_repeat,
-                    },
+                children: [
+                  _ && "coverBlur" == _.jsondata.sale_background_repeat
+                    ? (0, _.jsx)("img", {
+                        className: (0, _._)(
+                          _().SalePageBackground,
+                          _().BackgroundImage,
+                          _().Blur,
+                        ),
+                        src: _,
+                      })
+                    : (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().SalePageBackground,
+                          _().BackgroundImage,
+                        ),
+                        style: {
+                          backgroundImage: _,
+                          backgroundRepeat: _.jsondata.sale_background_repeat,
+                        },
+                      }),
+                  (0, _.jsx)(_, {
+                    event: _,
+                    bIsPreview: _,
                   }),
-              _.createElement(_, {
-                event: _,
-                bIsPreview: _,
+                  (0, _.jsx)(_.Fragment, {
+                    children: _,
+                  }),
+                ],
               }),
-              _.createElement(_.Fragment, null, _),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1708,31 +1669,25 @@
           ]);
         return _?.length > 0
           ? _
-            ? _.createElement(
-                "a",
-                {
-                  className: _().SalePageLogoCtn,
-                  href: _._.STORE_BASE_URL + _,
-                },
-                _.createElement("img", {
+            ? (0, _.jsx)("a", {
+                className: _().SalePageLogoCtn,
+                href: _._.STORE_BASE_URL + _,
+                children: (0, _.jsx)("img", {
                   src: _.GetImageURLWithFallback(
                     "sale_logo",
                     __webpack_require__,
                   ),
                 }),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
-                },
-                _.createElement("img", {
+              })
+            : (0, _.jsx)("div", {
+                className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
+                children: (0, _.jsx)("img", {
                   src: _.GetImageURLWithFallback(
                     "sale_logo",
                     __webpack_require__,
                   ),
                 }),
-              )
+              })
           : null;
       }
       var _ = __webpack_require__("chunkid"),
@@ -1830,42 +1785,36 @@
               }
             else alert((0, _._)("#Sale_EyeDropperError"));
           }, [__webpack_require__]);
-        return _.createElement(
-          "div",
-          null,
-          Boolean(_) && _.createElement(_._, null, _),
-          _.createElement(_._, {
-            onChange: (_) => {
-              const _ = (function (_) {
-                return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
-              })(_);
-              _(_), __webpack_require__(_);
-            },
-            color: _,
-            disableAlpha: _,
-            className: _().ColorPickerCtn,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().EyeDropperCtn,
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+        return (0, _.jsxs)("div", {
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              onChange: (_) => {
+                const _ = (function (_) {
+                  return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
+                })(_);
+                _(_), __webpack_require__(_);
               },
-              _.createElement(
-                _._,
-                {
+              color: _,
+              disableAlpha: _,
+              className: _().ColorPickerCtn,
+            }),
+            (0, _.jsx)("div", {
+              className: _().EyeDropperCtn,
+              children: (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                children: (0, _.jsx)(_._, {
                   className: _().EyeDropperBtn,
                   onClick: _,
-                },
-                _.createElement(_.O7b, null),
-              ),
-            ),
-          ),
-        );
+                  children: (0, _.jsx)(_.O7b, {}),
+                }),
+              }),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1935,21 +1884,18 @@
               _ = _.useCallback(() => _.current.click(), []);
             return [
               _.createPortal(
-                _.createElement(
-                  "form",
-                  {
-                    onSubmit: _,
-                    style: {
-                      display: "none",
-                    },
+                (0, _.jsx)("form", {
+                  onSubmit: _,
+                  style: {
+                    display: "none",
                   },
-                  _.createElement("input", {
+                  children: (0, _.jsx)("input", {
                     ..._,
                     type: "file",
                     ref: _,
                     onChange: _,
                   }),
-                ),
+                }),
                 window.document.body,
               ),
               _,
@@ -1958,50 +1904,39 @@
             accept: "image/png, image/jpeg, image/gif, image/webp",
             multiple: !0,
           });
-        return _.createElement(
-          "div",
-          {
-            ..._,
-            className: (0, _._)(
-              _ ? _().DragAndDropContainerDragging : _().DragAndDropContainer,
-              "DragAndDropContainer",
-            ),
-          },
-          Boolean(__webpack_require__) && __webpack_require__(),
-          _.createElement(
-            "div",
-            null,
-            _ || (0, _._)("#ImagePicker_DragAndDrop"),
+        return (0, _.jsxs)("div", {
+          ..._,
+          className: (0, _._)(
+            _ ? _().DragAndDropContainerDragging : _().DragAndDropContainer,
+            "DragAndDropContainer",
           ),
-          _.createElement(
-            "div",
-            {
+          children: [
+            Boolean(__webpack_require__) && __webpack_require__(),
+            (0, _.jsx)("div", {
+              children: _ || (0, _._)("#ImagePicker_DragAndDrop"),
+            }),
+            (0, _.jsxs)("div", {
               className: _().ImageUploadBar,
-            },
+              children: [
+                _,
+                (0, _.jsxs)("label", {
+                  onClick: _,
+                  children: [
+                    (0, _.jsxs)("span", {
+                      children: [(0, _._)("#ImagePicker_OrBrowse"), " "],
+                    }),
+                    (0, _.jsx)("span", {
+                      className: _().SelectImageButton,
+                      children: (0, _._)("#selectimage_select_file"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
             _,
-            _.createElement(
-              "label",
-              {
-                onClick: _,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#ImagePicker_OrBrowse"),
-                " ",
-              ),
-              _.createElement(
-                "span",
-                {
-                  className: _().SelectImageButton,
-                },
-                (0, _._)("#selectimage_select_file"),
-              ),
-            ),
-          ),
-          _,
-          _.children,
-        );
+            _.children,
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2038,7 +1973,7 @@
                           _.name,
                       ),
                       (0, _._)(
-                        _.createElement(_._, {
+                        (0, _.jsx)(_._, {
                           strDescription: (0, _._)(
                             "#ImagePicker_Error",
                             _.name,
@@ -2053,7 +1988,7 @@
                     _,
                   ),
                     (0, _._)(
-                      _.createElement(_._, {
+                      (0, _.jsx)(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
                           _.strErrorMsg ?? "",
@@ -2072,12 +2007,12 @@
               _ instanceof Array
                 ? _
                 : [
-                    _.createElement(
+                    (0, _.jsx)(
                       _.Fragment,
                       {
-                        key: "elAdditonalButtons",
+                        children: _,
                       },
-                      _,
+                      "elAdditonalButtons",
                     ),
                   ],
             [_],
@@ -2088,40 +2023,37 @@
             _: _.language,
           })),
         );
-        return _.createElement(
-          _,
-          {
-            onDropFiles: _,
-            elAdditonalButtons: _,
-            elOverrideDragAndDropText: _,
-          },
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_, {
+          onDropFiles: _,
+          elAdditonalButtons: _,
+          elOverrideDragAndDropText: _,
+          children: [
+            (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsx)("div", {
                 className: _().UploadPreviewCtn,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      asset: _,
+                      forceResolution: _,
+                      fnOnRemove: () => _.DeleteUploadImage(_),
+                      languageRealms: _,
+                    },
+                    "arttabupload_" + _.filename + "_" + _.uploadTime,
+                  ),
+                ),
+              }),
+            }),
+            (0, _.jsx)(_, {
+              imageUploader: _,
+              fnOnUploadImageRequested: async () => {
+                const _ = await _.UploadAllImages(_);
+                __webpack_require__?.(_);
               },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "arttabupload_" + _.filename + "_" + _.uploadTime,
-                  asset: _,
-                  forceResolution: _,
-                  fnOnRemove: () => _.DeleteUploadImage(_),
-                  languageRealms: _,
-                }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            imageUploader: _,
-            fnOnUploadImageRequested: async () => {
-              const _ = await _.UploadAllImages(_);
-              __webpack_require__?.(_);
-            },
-          }),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2136,39 +2068,32 @@
               "uploading" == _.status ||
               "processing" == _.status,
           );
-        return _.createElement(
-          "div",
-          {
-            style: {
-              display: "flex",
-            },
-            className: _().UploadPreviewButtonsCtn,
+        return (0, _.jsxs)("div", {
+          style: {
+            display: "flex",
           },
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
+          className: _().UploadPreviewButtonsCtn,
+          children: [
+            Boolean(_.length) &&
+              (0, _.jsx)(_._, {
                 style: {
                   margin: "8px",
                 },
                 onClick: __webpack_require__,
                 disabled: !_,
-              },
-              (0, _._)("#ImageUpload_Upload"),
-            ),
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#ImageUpload_Upload"),
+              }),
+            Boolean(_.length) &&
+              (0, _.jsx)(_._, {
                 style: {
                   margin: "8px",
                 },
                 onClick: _.ClearImages,
                 disabled: _,
-              },
-              (0, _._)("#ImageUpload_Clear"),
-            ),
-        );
+                children: (0, _._)("#ImageUpload_Clear"),
+              }),
+          ],
+        });
       }
       const _ = (0, _._)(function (_) {
         const {
@@ -2239,108 +2164,91 @@
         const _ = _.GetCurrentImageOption();
         _ && (_ = _?.find((_) => _.data.sKey == _.sKey)?.data);
         _ || (_ = _?.[0]?.data);
-        return _.createElement(
-          "div",
-          {
-            className: _().UploadPreview,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().UploadPreview,
+          children: [
+            (0, _.jsx)("div", {
               className: _().UploadPreviewDelete,
               onClick: () => __webpack_require__(_),
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(_, {
-            asset: _,
-          }),
-          _ &&
-            _.createElement(_._, {
-              strDropDownClassName: _().DropDownScroll,
-              rgOptions: _,
-              selectedOption: _.language,
-              onChange: (_) => (_.language = _.data),
-              disabled: !_,
+              children: (0, _.jsx)(_.sED, {}),
             }),
-          _ &&
-            _?.length > 1 &&
-            _.createElement(_._, {
-              label: _.GetImageOptionLabel(),
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) => _.SetCurrentImageOption(_.data),
-              disabled: !_,
+            (0, _.jsx)(_, {
+              asset: _,
             }),
-          _ &&
-            _.warnings?.map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: `warning${_}`,
-                  className: _().UploadPreviewWarning,
-                },
-                _,
+            _ &&
+              (0, _.jsx)(_._, {
+                strDropDownClassName: _().DropDownScroll,
+                rgOptions: _,
+                selectedOption: _.language,
+                onChange: (_) => (_.language = _.data),
+                disabled: !_,
+              }),
+            _ &&
+              _?.length > 1 &&
+              (0, _.jsx)(_._, {
+                label: _.GetImageOptionLabel(),
+                rgOptions: _,
+                selectedOption: _,
+                onChange: (_) => _.SetCurrentImageOption(_.data),
+                disabled: !_,
+              }),
+            _ &&
+              _.warnings?.map((_, _) =>
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().UploadPreviewWarning,
+                    children: _,
+                  },
+                  `warning${_}`,
+                ),
               ),
-            ),
-          _ &&
-            _.messages?.map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: `message${_}`,
-                  className: _().UploadPreviewMessage,
-                },
-                _,
+            _ &&
+              _.messages?.map((_, _) =>
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().UploadPreviewMessage,
+                    children: _,
+                  },
+                  `message${_}`,
+                ),
               ),
-            ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: (0, _._)({
                 [_().FlexColumnContainer]: !0,
                 [_().UploadPreviewError]: "failed" == _.status,
               }),
-            },
-            _,
-            (0, _._)(_.status) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().FlexCenter,
-                },
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                _,
+                (0, _._)(_.status) &&
+                  (0, _.jsx)("div", {
+                    className: _().FlexCenter,
+                    children: (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  }),
+              ],
+            }),
+            (0, _.jsx)("div", {
               className: _().UploadPreviewError,
-            },
-            _.message,
-          ),
-          _ &&
-            _.error &&
-            _.createElement(
-              "div",
-              {
+              children: _.message,
+            }),
+            _ &&
+              _.error &&
+              (0, _.jsx)("div", {
                 className: _().UploadPreviewError,
-              },
-              _.error,
-            ),
-          _ &&
-            _.needsCrop &&
-            _.createElement(
-              _._,
-              {
+                children: _.error,
+              }),
+            _ &&
+              _.needsCrop &&
+              (0, _.jsx)(_._, {
                 onClick: () =>
                   ((_) => {
                     if (_ instanceof _._) {
                       _.ResetImage();
                       const _ = window,
-                        _ = _.createElement(_._, {
+                        _ = (0, _.jsx)(_._, {
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
@@ -2356,90 +2264,67 @@
                         JSON.stringify(_.GetCurrentImageOption()),
                       );
                   })(_),
-              },
-              (0, _._)("#ImageUpload_OpenEditor"),
-            ),
-        );
+                children: (0, _._)("#ImageUpload_OpenEditor"),
+              }),
+          ],
+        });
       });
       function _(_) {
         const { asset: _ } = _;
         return _.BIsVideo()
-          ? _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      asset: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              _.createElement(
-                "span",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().PreviewImgCtn,
+              onClick: (_) =>
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    asset: _,
+                  }),
+                  (0, _._)(_),
+                ),
+              children: [
+                (0, _.jsxs)("span", {
                   className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-              _.createElement(
-                "video",
-                {
+                  children: [_.width, " x ", _.height],
+                }),
+                (0, _.jsx)("video", {
                   height: 120,
                   controls: !1,
                   autoPlay: !0,
                   loop: !0,
                   muted: !0,
-                },
-                _.createElement("source", {
-                  src: _.dataUrl,
+                  children: (0, _.jsx)("source", {
+                    src: _.dataUrl,
+                  }),
                 }),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                style: {
-                  backgroundImage: `url(${_.dataUrl})`,
-                },
+              ],
+            })
+          : (0, _.jsx)("div", {
+              className: _().PreviewImgCtn,
+              style: {
+                backgroundImage: `url(${_.dataUrl})`,
               },
-              _.createElement(
-                "span",
-                {
-                  className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-            );
+              children: (0, _.jsxs)("span", {
+                className: _().PreviewImgInfo,
+                children: [_.width, " x ", _.height],
+              }),
+            });
       }
       function _(_) {
         const { asset: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            closeModal: __webpack_require__,
-            bAllowFullSize: !0,
-          },
-          _.createElement(
-            "video",
-            {
-              controls: !0,
-              autoPlay: !0,
-              loop: !0,
-              muted: !0,
-            },
-            _.createElement("source", {
+        return (0, _.jsx)(_._, {
+          bAlertDialog: !0,
+          closeModal: __webpack_require__,
+          bAllowFullSize: !0,
+          children: (0, _.jsx)("video", {
+            controls: !0,
+            autoPlay: !0,
+            loop: !0,
+            muted: !0,
+            children: (0, _.jsx)("source", {
               src: _.dataUrl,
             }),
-          ),
-        );
+          }),
+        });
       }
       var _;
       !(function (_) {
@@ -2457,12 +2342,9 @@
       function _(_) {
         const { fnSetImageSearch: _ } = _,
           _ = (0, _.useRef)(null);
-        return _.createElement(
-          "div",
-          {
-            className: _.PickerTitle,
-          },
-          _.createElement("input", {
+        return (0, _.jsx)("div", {
+          className: _.PickerTitle,
+          children: (0, _.jsx)("input", {
             ref: _,
             className: _.SearchInput,
             type: "text",
@@ -2472,7 +2354,7 @@
               "Escape" == _.key && (_(""), _.current && (_.current.value = ""));
             },
           }),
-        );
+        });
       }
       const _ = _.memo(function (_) {
         const {
@@ -2483,25 +2365,25 @@
           showImageActions: _ = !0,
           InternalOpenLocalizeImageGroup: _,
         } = _;
-        return _.createElement(
-          _,
-          {
-            clanAccountID: __webpack_require__,
-            fileNameSearch: _,
-          },
-          (_, _) =>
+        return (0, _.jsx)(_, {
+          clanAccountID: __webpack_require__,
+          fileNameSearch: _,
+          children: (_, _) =>
             _.map((_) =>
-              _.createElement(_, {
-                key: _.imageid,
-                clanImage: _,
-                searchStringHilight: _,
-                imageInsertCallBack: _,
-                showImageActions: _,
-                fnOnOpenLocalizedImageGroup: _,
-                OnImageClick: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  clanImage: _,
+                  searchStringHilight: _,
+                  imageInsertCallBack: _,
+                  showImageActions: _,
+                  fnOnOpenLocalizedImageGroup: _,
+                  OnImageClick: _,
+                },
+                _.imageid,
+              ),
             ),
-        );
+        });
       });
       function _(_) {
         const {
@@ -2516,32 +2398,33 @@
           const _ = _._.InitFromClanID(_);
           let _ = _._.GetLoadState(_);
           return _ && _.loaded
-            ? _.createElement(
+            ? (0, _.jsx)(
                 "div",
                 {
-                  key: "ImagePicker_Result",
                   className: _().ResultNotification,
+                  children:
+                    _.length > 0
+                      ? (0, _._)("#ImagePicker_EmptySearch")
+                      : (0, _._)("#ImagePicker_Empty"),
                 },
-                _.length > 0
-                  ? (0, _._)("#ImagePicker_EmptySearch")
-                  : (0, _._)("#ImagePicker_Empty"),
+                "ImagePicker_Result",
               )
             : _ && _.errMsg
-              ? _.createElement(
+              ? (0, _.jsx)(
                   "div",
                   {
-                    key: "ImagePicker_Result",
                     className: _().ErrorCode,
+                    children: (0, _._)("#ImagePicker_Error", _.errMsg),
                   },
-                  (0, _._)("#ImagePicker_Error", _.errMsg),
+                  "ImagePicker_Result",
                 )
-              : _.createElement(
+              : (0, _.jsx)(
                   "div",
                   {
-                    key: "ImagePicker_Result",
                     className: _().ResultNotification,
+                    children: (0, _._)("#Loading"),
                   },
-                  (0, _._)("#Loading"),
+                  "ImagePicker_Result",
                 );
         }
         return _(_, _);
@@ -2560,14 +2443,13 @@
           _ = (_) => {
             console.log("ClanImageWrapper on delete error: " + _),
               (0, _._)(
-                _.createElement(
-                  _._,
-                  {
-                    strTitle: (0, _._)("#Error_FailureNotice"),
-                    strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
-                  },
-                  _.createElement("p", null, _),
-                ),
+                (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#Error_FailureNotice"),
+                  strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
+                  children: (0, _.jsx)("p", {
+                    children: _,
+                  }),
+                }),
                 window,
               );
           },
@@ -2591,21 +2473,14 @@
           _ = _ && !_ && !_,
           _ = _ && !_ && _,
           _ = _ && !_ && !_;
-        return _.createElement(
-          _._,
-          {
-            placeholderHeight: "100vh",
-            className: _().ImageWrapperContainer,
-            rootMargin: "0px 0px 100% 0px",
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ImageButton,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          placeholderHeight: "100vh",
+          className: _().ImageWrapperContainer,
+          rootMargin: "0px 0px 100% 0px",
+          children: (0, _.jsxs)("div", {
+            className: _().ImageButton,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().ImageWrapper,
                 style: {
                   backgroundImage: _ ? "" : `url( '${_.thumb_url}' )`,
@@ -2628,103 +2503,81 @@
                 onClick: () => {
                   _ && _(_);
                 },
-              },
-              _.createElement(_, {
-                clanImage: _,
-                className: _().VideoBackground,
+                children: (0, _.jsx)(_, {
+                  clanImage: _,
+                  className: _().VideoBackground,
+                }),
               }),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
+              _ &&
+                (0, _.jsx)("span", {
                   className: _().Full,
                   onClick: _,
-                },
-                (0, _._)("#ImagePicker_FullSize"),
-              ),
-            _ &&
-              _.createElement(_._, {
-                size: "medium",
-                className: _().FloatingThrobber,
-              }),
-            _ &&
-              _.createElement(
-                "span",
-                {
+                  children: (0, _._)("#ImagePicker_FullSize"),
+                }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  size: "medium",
+                  className: _().FloatingThrobber,
+                }),
+              _ &&
+                (0, _.jsx)("span", {
                   className: _().Thumb,
                   onClick: () => _(_, _.k_eInsertThumbnail),
-                },
-                (0, _._)("#ImagePicker_Thumbnail"),
-              ),
-            _ &&
+                  children: (0, _._)("#ImagePicker_Thumbnail"),
+                }),
               _ &&
-              _.createElement(_, {
-                bDeleting: _,
-                clanImage: _,
-                fnOnOpenLocalizedImageGroup: _,
-              }),
-            _ &&
-              _.createElement(
-                "span",
-                {
+                _ &&
+                (0, _.jsx)(_, {
+                  bDeleting: _,
+                  clanImage: _,
+                  fnOnOpenLocalizedImageGroup: _,
+                }),
+              _ &&
+                (0, _.jsx)("span", {
                   className: _().Full,
                   onClick: () => _(_, _.k_eInsertVideo),
-                },
-                (0, _._)("#ImagePicker_Video"),
-              ),
-            !_ &&
-              _.createElement(
-                "span",
-                {
+                  children: (0, _._)("#ImagePicker_Video"),
+                }),
+              !_ &&
+                (0, _.jsx)("span", {
                   className: _().Delete,
                   onClick: (_) => {
                     (0, _._)(
-                      _.createElement(
-                        _._,
-                        {
-                          strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
-                          strDescription: "",
-                          onOK: _,
-                          onCancel: _,
-                          closeModal: _,
-                        },
-                        _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(
-                            "div",
-                            null,
-                            (0, _._)(
-                              "#ImagePicker_DeleteAreYouSure",
-                              _.file_name ?? "",
-                            ),
-                          ),
-                          _.createElement("br", null),
-                          _.createElement("br", null),
-                          _.createElement(
-                            "div",
-                            null,
-                            (0, _._)("#ImagePicker_DeleteWarning"),
-                          ),
-                        ),
-                      ),
+                      (0, _.jsx)(_._, {
+                        strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
+                        strDescription: "",
+                        onOK: _,
+                        onCancel: _,
+                        closeModal: _,
+                        children: (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)("div", {
+                              children: (0, _._)(
+                                "#ImagePicker_DeleteAreYouSure",
+                                _.file_name ?? "",
+                              ),
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("div", {
+                              children: (0, _._)("#ImagePicker_DeleteWarning"),
+                            }),
+                          ],
+                        }),
+                      }),
                       (0, _._)(_) ?? window,
                     );
                   },
-                },
-                _.createElement("img", null),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: (0, _.jsx)("img", {}),
+                }),
+              (0, _.jsx)("div", {
                 className: _().ImageWrapperFilename,
                 title: _,
-              },
-              _,
-            ),
-          ),
-        );
+                children: _,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -2735,31 +2588,25 @@
           _ = (0, _._)(_.clanAccountID);
         return _ || !_.valve_admin
           ? null
-          : _.createElement(
-              "span",
-              {
-                className: (0, _._)(_().Localized, _().ValveOnlyBackground),
-                onClick: () => __webpack_require__?.(_),
-              },
-              "(VO) " + (0, _._)("#ImagePicker_Localized"),
-            );
+          : (0, _.jsx)("span", {
+              className: (0, _._)(_().Localized, _().ValveOnlyBackground),
+              onClick: () => __webpack_require__?.(_),
+              children: "(VO) " + (0, _._)("#ImagePicker_Localized"),
+            });
       }
       function _(_) {
         const { clanImage: _, className: __webpack_require__ } = _;
         return _._.BIsClanImageVideo(_)
-          ? _.createElement(
-              "video",
-              {
-                autoPlay: !0,
-                loop: !0,
-                muted: !0,
-                className: __webpack_require__,
-              },
-              _.createElement("source", {
+          ? (0, _.jsx)("video", {
+              autoPlay: !0,
+              loop: !0,
+              muted: !0,
+              className: __webpack_require__,
+              children: (0, _.jsx)("source", {
                 src: _.url,
                 type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -2775,69 +2622,60 @@
             [_, __webpack_require__],
           ),
           [_, _] = _.useState("");
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#ImagePicker_Images"),
-            strDescription: (0, _._)("#ImagePicker_DoubleClickToSelect"),
-            bAlertDialog: !0,
-            onOK: __webpack_require__,
-            onCancel: __webpack_require__,
-          },
-          _.createElement(_, {
-            fnSetImageSearch: _,
-          }),
-          _.createElement(_, {
-            clanAccountID: _.GetAccountID(),
-            fileNameSearch: _,
-            imageInsertCallBack: _,
-            showImageActions: !1,
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)("#ImagePicker_Images"),
+          strDescription: (0, _._)("#ImagePicker_DoubleClickToSelect"),
+          bAlertDialog: !0,
+          onOK: __webpack_require__,
+          onCancel: __webpack_require__,
+          children: [
+            (0, _.jsx)(_, {
+              fnSetImageSearch: _,
+            }),
+            (0, _.jsx)(_, {
+              clanAccountID: _.GetAccountID(),
+              fileNameSearch: _,
+              imageInsertCallBack: _,
+              showImageActions: !1,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { clanSteamID: _, OnClanImageSelected: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().ImageUploadBar,
-          },
-          _.createElement(
-            "label",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().ImageUploadBar,
+          children: [
+            (0, _.jsxs)("label", {
               htmlFor: "clanimagedialog",
-            },
-            _.createElement(
-              "span",
-              null,
-              (0, _._)("#ImagePicker_PreviousImages"),
-              " ",
-            ),
-            _.createElement(
-              "span",
-              {
-                className: _().SelectImageButton,
-              },
-              (0, _._)("#ImagePicker_PreviousImages2"),
-            ),
-          ),
-          _.createElement("input", {
-            style: {
-              display: "none",
-            },
-            _: "clanimagedialog",
-            type: "button",
-            onClick: (_) => {
-              (0, _._)(
-                _.createElement(_, {
-                  clanSteamID: _,
-                  OnClanImageSelected: __webpack_require__,
+              children: [
+                (0, _.jsxs)("span", {
+                  children: [(0, _._)("#ImagePicker_PreviousImages"), " "],
                 }),
-                (0, _._)(_) ?? window,
-              );
-            },
-          }),
-        );
+                (0, _.jsx)("span", {
+                  className: _().SelectImageButton,
+                  children: (0, _._)("#ImagePicker_PreviousImages2"),
+                }),
+              ],
+            }),
+            (0, _.jsx)("input", {
+              style: {
+                display: "none",
+              },
+              _: "clanimagedialog",
+              type: "button",
+              onClick: (_) => {
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    clanSteamID: _,
+                    OnClanImageSelected: __webpack_require__,
+                  }),
+                  (0, _._)(_) ?? window,
+                );
+              },
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2864,7 +2702,7 @@
                   let _ = (0, _._)(_);
                   console.error("AddExistingClanImage: " + _.strErrorMsg, _),
                     (0, _._)(
-                      _.createElement(_._, {
+                      (0, _.jsx)(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
                           _.strErrorMsg ?? "",
@@ -2883,28 +2721,34 @@
               _
                 ? [
                     [
-                      _.createElement(_, {
-                        key: "clanartworkpicker",
-                        clanSteamID: _,
-                        OnClanImageSelected: _,
-                      }),
+                      (0, _.jsx)(
+                        _,
+                        {
+                          clanSteamID: _,
+                          OnClanImageSelected: _,
+                        },
+                        "clanartworkpicker",
+                      ),
                     ],
                   ]
                 : null,
             [_, _, _],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
           imageUploader: _,
           rgRealmList: _,
           elAdditonalButtons: _
             ? [
-                _.createElement(_._, {
-                  key: "throbbing",
-                  position: "center",
-                  size: "medium",
-                  string: (0, _._)("#Loading"),
-                }),
+                (0, _.jsx)(
+                  _._,
+                  {
+                    position: "center",
+                    size: "medium",
+                    string: (0, _._)("#Loading"),
+                  },
+                  "throbbing",
+                ),
               ]
             : _,
           fnUploadComplete: (_) => {
@@ -2946,38 +2790,31 @@
           _ = (0, _._)(() =>
             _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_) ?? ""),
           );
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#selectimage_change_artwork_lang_title"),
-            strDescription: (0, _._)("#selectimage_change_artworl_lang_desc"),
-            onOK: () => _?.(_, _, _),
-            onCancel: __webpack_require__,
-            closeModal: __webpack_require__,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().FlexColumnContainer, _().ReassignCtn),
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#selectimage_change_artwork_lang_title"),
+          strDescription: (0, _._)("#selectimage_change_artworl_lang_desc"),
+          onOK: () => _?.(_, _, _),
+          onCancel: __webpack_require__,
+          closeModal: __webpack_require__,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().FlexColumnContainer, _().ReassignCtn),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().ImagePreviewContainer,
-              },
-              _.createElement("img", {
-                className: _().ArtworkPreview,
-                src: _,
+                children: (0, _.jsx)("img", {
+                  className: _().ArtworkPreview,
+                  src: _,
+                }),
               }),
-            ),
-            _.createElement(_._, {
-              selectedLang: _,
-              fnLangHasData: _,
-              fnOnLanguageChanged: _,
-              realms: _,
-            }),
-          ),
-        );
+              (0, _.jsx)(_._, {
+                selectedLang: _,
+                fnLangHasData: _,
+                fnOnLanguageChanged: _,
+                realms: _,
+              }),
+            ],
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -3028,57 +2865,49 @@
             );
           }, [__webpack_require__]),
           [_, _, _] = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: _().SelectImageLanguagesCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().SelectImageLanguagesCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _().SelectImageTitle,
-            },
-            (0, _._)("#selectimage_uploaded_languages"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().LanguageListContainer,
-            },
-            _.map((_) =>
-              _.createElement(_, {
-                key: "lang_select_" + _.GetAccountID() + " " + _.strLang,
-                langData: _,
-                ..._,
-              }),
-            ),
-          ),
-          !!_ &&
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-              },
-              (0, _._)("#Sale_RemoveAll"),
-              _.createElement(_._, {
-                tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
-              }),
-            ),
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(_._, {
-              strTitle: (0, _._)("#Dialog_AreYouSure"),
-              strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
-              closeModal: _,
-              onOK: () => {
-                for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
-              },
+              children: (0, _._)("#selectimage_uploaded_languages"),
             }),
-          ),
-        );
+            (0, _.jsx)("div", {
+              className: _().LanguageListContainer,
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    langData: _,
+                    ..._,
+                  },
+                  "lang_select_" + _.GetAccountID() + " " + _.strLang,
+                ),
+              ),
+            }),
+            !!_ &&
+              (0, _.jsxs)(_._, {
+                onClick: _,
+                children: [
+                  (0, _._)("#Sale_RemoveAll"),
+                  (0, _.jsx)(_._, {
+                    tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
+                  }),
+                ],
+              }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#Dialog_AreYouSure"),
+                strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
+                closeModal: _,
+                onOK: () => {
+                  for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
+                },
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3111,54 +2940,43 @@
               [_, _]
             );
           });
-        return _.createElement(
-          "div",
-          {
-            _: __webpack_require__.strLang,
-            className: _().LanguageContainer,
-            onClick: (_) => {
-              let _ = (0, _._)(_.currentTarget._);
-              _(_);
-            },
+        return (0, _.jsxs)("div", {
+          _: __webpack_require__.strLang,
+          className: _().LanguageContainer,
+          onClick: (_) => {
+            let _ = (0, _._)(_.currentTarget._);
+            _(_);
           },
-          _.createElement(
-            "div",
-            {
+          children: [
+            (0, _.jsx)("div", {
               className: _,
-            },
-            __webpack_require__.locLang,
-          ),
-          _.createElement(
-            "span",
-            {
+              children: __webpack_require__.locLang,
+            }),
+            (0, _.jsxs)("span", {
               className: _().LanguageOptions,
-            },
-            Boolean(_) &&
-              _.createElement(
-                "a",
-                {
-                  href: _,
-                  target: "_blank",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#selectimage_viewimage_ttip"),
-                  },
-                  _.YNO(),
-                ),
-              ),
-            !!_ &&
-              _.createElement(_, {
-                ..._,
-              }),
-            !!_ &&
-              _.createElement(_, {
-                fnOnRemoveImage: _,
-                langData: __webpack_require__,
-              }),
-          ),
-        );
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)("a", {
+                    href: _,
+                    target: "_blank",
+                    children: (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)("#selectimage_viewimage_ttip"),
+                      children: _.YNO(),
+                    }),
+                  }),
+                !!_ &&
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                !!_ &&
+                  (0, _.jsx)(_, {
+                    fnOnRemoveImage: _,
+                    langData: __webpack_require__,
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3179,80 +2997,64 @@
             return _._.GetClanImageByImageHash(_, _);
           });
         if (_)
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
                 toolTipContent: (0, _._)("#selectimage_reassign_image_ttip"),
-              },
-              _.createElement("img", {
-                "data-lang": __webpack_require__.lang,
-                src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=",
-                onClick: () => _(),
-              }),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  active: _,
-                },
-                _.createElement(_, {
-                  clanImage: _,
-                  lang: __webpack_require__.lang,
-                  fnOnArtworkLangChange: _,
-                  fnLangHasData: _,
-                  realms: _,
-                  closeModal: _,
+                children: (0, _.jsx)("img", {
+                  "data-lang": __webpack_require__.lang,
+                  src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=",
+                  onClick: () => _(),
                 }),
-              ),
-            ),
-          );
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_, {
+                    clanImage: _,
+                    lang: __webpack_require__.lang,
+                    fnOnArtworkLangChange: _,
+                    fnLangHasData: _,
+                    realms: _,
+                    closeModal: _,
+                  }),
+                }),
+              }),
+            ],
+          });
         console.error("image does not exists on server");
       }
       function _(_) {
         const { fnOnRemoveImage: _, langData: __webpack_require__ } = _,
           [_, _, _] = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#selectimage_delete_image_ttip"),
-            },
-            _.createElement("img", {
-              "data-lang": __webpack_require__.lang,
-              src: _._,
-              onClick: _,
-            }),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(_._, {
-                strTitle: (0, _._)("#selectimage_remove_image"),
-                strDescription: (0, _._)(
-                  "#selectimage_remove_details",
-                  (0, _._)("#Language_" + (0, _._)(__webpack_require__.lang)),
-                ),
-                onOK: () => {
-                  _(__webpack_require__.lang);
-                },
-                closeModal: _,
+              children: (0, _.jsx)("img", {
+                "data-lang": __webpack_require__.lang,
+                src: _._,
+                onClick: _,
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_._, {
+                  strTitle: (0, _._)("#selectimage_remove_image"),
+                  strDescription: (0, _._)(
+                    "#selectimage_remove_details",
+                    (0, _._)("#Language_" + (0, _._)(__webpack_require__.lang)),
+                  ),
+                  onOK: () => {
+                    _(__webpack_require__.lang);
+                  },
+                  closeModal: _,
+                }),
+              }),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3304,94 +3106,74 @@
                 )),
           _ && (_ = _(_));
         const _ = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().MajorEvent_Ctn,
-              ref: _.containerRef,
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  _().AppDetailsSpotlightContainer,
-                  _().MajorEventContainer,
-                ),
-                onActivate: _,
-                focusable: !0,
-              },
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsx)("div", {
+            className: _().MajorEvent_Ctn,
+            ref: _.containerRef,
+            children: (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                _().AppDetailsSpotlightContainer,
+                _().MajorEventContainer,
+              ),
+              onActivate: _,
+              focusable: !0,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().MajorEventBackground,
-                },
-                _.createElement(_._, {
-                  className: _().MajorEventImageBackgroundBlur,
-                  rgSources: _,
-                  onIncrementalError: (_, _, _) => _ && _(_),
+                  children: (0, _.jsx)(_._, {
+                    className: _().MajorEventImageBackgroundBlur,
+                    rgSources: _,
+                    onIncrementalError: (_, _, _) => _ && _(_),
+                  }),
                 }),
-              ),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsxs)("div", {
                   className: _().MajorEventImageContainer,
-                },
-                _.createElement(_._, {
-                  className: _().MajorEventImage,
-                  rgSources: _,
-                  onIncrementalError: (_, _, _) => _ && _(_),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _().MajorEventImage,
+                      rgSources: _,
+                      onIncrementalError: (_, _, _) => _ && _(_),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().MajorEventImageTemplate,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().MajoreEventImageContentContainer,
+                      children:
+                        _ &&
+                        (0, _.jsxs)("div", {
+                          className: _().MajorEventContent,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              className: _().MajorEventSpotlightBackground,
+                              rgSources: _,
+                              onIncrementalError: (_, _, _) => _ && _(_),
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _().MajorEventTextCtn,
+                              children: [
+                                (0, _.jsx)("div", {
+                                  className: _().MajorEventTitle,
+                                  children: _,
+                                }),
+                                (0, _.jsx)("div", {
+                                  className: _().MajorEventSummary,
+                                  children: _,
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                    }),
+                  ],
                 }),
-                _.createElement("div", {
-                  className: _().MajorEventImageTemplate,
+                (0, _.jsx)("div", {
+                  className: _().BottomShadow,
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().MajoreEventImageContentContainer,
-                  },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().MajorEventContent,
-                      },
-                      _.createElement(_._, {
-                        className: _().MajorEventSpotlightBackground,
-                        rgSources: _,
-                        onIncrementalError: (_, _, _) => _ && _(_),
-                      }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().MajorEventTextCtn,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().MajorEventTitle,
-                          },
-                          _,
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().MajorEventSummary,
-                          },
-                          _,
-                        ),
-                      ),
-                    ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().BottomShadow,
-              }),
-            ),
-          ),
-        );
+              ],
+            }),
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -3413,131 +3195,129 @@
           _ = _ ? _._.GenerateURLFromHashAndExtAndLang(_, _, _._.full, _) : "",
           [_] = (0, _._)(() => [_(__webpack_require__, _)]);
         return 0 == _
-          ? _.createElement(
-              "div",
-              {
-                className: _().ImagePreviewContainer,
-              },
-              "capsule" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _._.IMG_URL + "events/defaults/default_img_cover.jpg",
-                  eventModel: _,
+          ? (0, _.jsxs)("div", {
+              className: _().ImagePreviewContainer,
+              children: [
+                "capsule" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL:
+                      _._.IMG_URL + "events/defaults/default_img_cover.jpg",
+                    eventModel: _,
+                  }),
+                "background" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL:
+                      _._.IMG_URL + "events/defaults/default_img_header.jpg",
+                    lang: _,
+                    eventModel: _,
+                    partnerEventStore: _,
+                  }),
+                Boolean(
+                  [
+                    "spotlight",
+                    "localized_store_app_spotlight",
+                    "localized_store_app_spotlight_mobile",
+                  ].includes(__webpack_require__),
+                ) &&
+                  (0, _.jsx)(_, {
+                    langOverride: _,
+                    artworkType: __webpack_require__,
+                    eventModel: _,
+                  }),
+                (0, _.jsx)("div", {
+                  children: (0, _._)("#EventEditor_ArtworkMissing"),
                 }),
-              "background" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL:
-                    _._.IMG_URL + "events/defaults/default_img_header.jpg",
-                  lang: _,
-                  eventModel: _,
-                  partnerEventStore: _,
-                }),
-              Boolean(
-                [
-                  "spotlight",
-                  "localized_store_app_spotlight",
-                  "localized_store_app_spotlight_mobile",
-                ].includes(__webpack_require__),
-              ) &&
-                _.createElement(_, {
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              className: _().ImagePreviewContainer,
+              children: [
+                "capsule" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    eventModel: _,
+                    langOverride: _,
+                  }),
+                "background" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    lang: _,
+                    eventModel: _,
+                    partnerEventStore: _,
+                  }),
+                "spotlight" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    event: _,
+                    lang: _,
+                  }),
+                "localized_store_app_spotlight" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    event: _,
+                    lang: _,
+                  }),
+                "localized_store_app_spotlight_mobile" ===
+                  __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    event: _,
+                    lang: _,
+                  }),
+                ("broadcast_left" === __webpack_require__ ||
+                  "broadcast_right" === __webpack_require__) &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                    side:
+                      "broadcast_right" === __webpack_require__
+                        ? "right"
+                        : "left",
+                  }),
+                "sale_header" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "sale_overlay" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                _._.includes(__webpack_require__) &&
+                  (0, _.jsx)("img", {
+                    className: _.PreviewImg,
+                    src: _._.GetLocalizedImageGroupForEditAsURL(_, _) ?? void 0,
+                  }),
+                "product_banner" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "product_mobile_banner" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "sale_logo" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "bestofyear_banner" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                "bestofyear_banner_mobile" === __webpack_require__ &&
+                  (0, _.jsx)(_, {
+                    imgURL: _,
+                  }),
+                (0, _.jsx)(_, {
                   langOverride: _,
-                  artworkType: __webpack_require__,
-                  eventModel: _,
+                  clanSteamID: _,
+                  fnOnLanguagePreviewChange: _,
+                  fnOnRemoveImage: _,
+                  fnOnArtworkLangChange: _,
+                  realms: _,
+                  fnLangHasData: _,
+                  fnGetImageHash: (_) => _(_(__webpack_require__, _) ?? ""),
                 }),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventEditor_ArtworkMissing"),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().ImagePreviewContainer,
-              },
-              "capsule" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  eventModel: _,
-                  langOverride: _,
-                }),
-              "background" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  lang: _,
-                  eventModel: _,
-                  partnerEventStore: _,
-                }),
-              "spotlight" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: _,
-                }),
-              "localized_store_app_spotlight" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: _,
-                }),
-              "localized_store_app_spotlight_mobile" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: _,
-                }),
-              ("broadcast_left" === __webpack_require__ ||
-                "broadcast_right" === __webpack_require__) &&
-                _.createElement(_, {
-                  imgURL: _,
-                  side:
-                    "broadcast_right" === __webpack_require__
-                      ? "right"
-                      : "left",
-                }),
-              "sale_header" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "sale_overlay" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              _._.includes(__webpack_require__) &&
-                _.createElement("img", {
-                  className: _.PreviewImg,
-                  src: _._.GetLocalizedImageGroupForEditAsURL(_, _) ?? void 0,
-                }),
-              "product_banner" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "product_mobile_banner" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "sale_logo" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "bestofyear_banner" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "bestofyear_banner_mobile" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              _.createElement(_, {
-                langOverride: _,
-                clanSteamID: _,
-                fnOnLanguagePreviewChange: _,
-                fnOnRemoveImage: _,
-                fnOnArtworkLangChange: _,
-                realms: _,
-                fnLangHasData: _,
-                fnGetImageHash: (_) => _(_(__webpack_require__, _) ?? ""),
-              }),
-            );
+              ],
+            });
       }
       function _(_) {
         const {
@@ -3591,7 +3371,7 @@
               ),
             [_.height, _.width, _],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           lang: __webpack_require__,
           imgURL: _,
           event: _,
@@ -3604,20 +3384,17 @@
             langOverride: _,
           } = _,
           _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            style: {
-              display: "flex",
-              width: "304px",
-            },
+        return (0, _.jsx)("div", {
+          style: {
+            display: "flex",
+            width: "304px",
           },
-          _.createElement(_._, {
+          children: (0, _.jsx)(_._, {
             event: __webpack_require__,
             imageURLOverride: _,
             langOverride: _ ?? _,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -3633,7 +3410,7 @@
             __webpack_require__.AnnouncementGID,
           ]);
         let _ = _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               text: _ || "",
               partnerEventStore: _,
               showErrorInfo: !1,
@@ -3641,112 +3418,85 @@
               languageOverride: _._.Get().GetCurEditLanguage(),
             })
           : (0, _._)("#selectimage_display_event_body");
-        return _.createElement(
-          "div",
-          {
-            className: _().MultipleExampleContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().MultipleExampleContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().ExampleSectionTitle,
-            },
-            (0, _._)("#selectimage_preview_title_1"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#selectimage_preview_title_1"),
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(_().DetailPageExample, "DetailPageExample"),
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().DetailExample,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().MainImageCtn,
-                },
-                _.createElement("img", {
-                  src: _.imgURL,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ExampleBodyPosition,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ExampleContentCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextTitle,
-                    },
-                    _ || (0, _._)("#selectimage_display_event_title"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextSubTitle,
-                    },
-                    _ || (0, _._)("#selectimage_display_event_subtitle"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextBody,
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          12 != _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("div", {
-                className: _().ExampleSpacer,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().ExampleSectionTitle,
-                },
-                (0, _._)("#selectimage_preview_title_2"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().DetailPageExample,
-                    "DetailPageExample",
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DetailExample2,
-                  },
-                  _.createElement(_._, {
-                    key: _,
-                    event: __webpack_require__,
-                    emoticonStore: _._,
-                    partnerEventStore: _,
-                    headerClassnames: "editor",
-                    langOverride: _,
-                    bDisableBroadcastPlayer: !0,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().MainImageCtn,
+                    children: (0, _.jsx)("img", {
+                      src: _.imgURL,
+                    }),
                   }),
-                ),
-              ),
-            ),
-        );
+                  (0, _.jsx)("div", {
+                    className: _().ExampleBodyPosition,
+                    children: (0, _.jsxs)("div", {
+                      className: _().ExampleContentCtn,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().TextTitle,
+                          children:
+                            _ || (0, _._)("#selectimage_display_event_title"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().TextSubTitle,
+                          children:
+                            _ ||
+                            (0, _._)("#selectimage_display_event_subtitle"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().TextBody,
+                          children: _,
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              }),
+            }),
+            12 != _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ExampleSpacer,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().ExampleSectionTitle,
+                    children: (0, _._)("#selectimage_preview_title_2"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().DetailPageExample,
+                      "DetailPageExample",
+                    ),
+                    children: (0, _.jsx)("div", {
+                      className: _().DetailExample2,
+                      children: (0, _.jsx)(
+                        _._,
+                        {
+                          event: __webpack_require__,
+                          emoticonStore: _._,
+                          partnerEventStore: _,
+                          headerClassnames: "editor",
+                          langOverride: _,
+                          bDisableBroadcastPlayer: !0,
+                        },
+                        _,
+                      ),
+                    }),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       const _ = (_) => {
           const [_] = (0, _._)(_.event.appid, {
@@ -3755,81 +3505,72 @@
           if (!_) return null;
           const _ = _.GetName(),
             _ = _.GetAssets()?.GetCommunityIconURL();
-          return _.createElement(
-            "div",
-            {
-              className: _().SpotlightExample,
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("div", {
+            className: _().SpotlightExample,
+            children: (0, _.jsx)(_, {
               event: _.event,
               strDisplayName: _ ?? "",
               gameIconUrl: _,
               spotlightURLOverride: _.imgURL,
               langOverride: _.lang,
             }),
-          );
+          });
         },
         _ = (_) => {
           const _ = [
-            _.createElement("img", {
-              key: "img",
-              src: _.imgURL,
-            }),
-            _.createElement("div", {
-              key: "video",
-              className: _().BroadcastPreview,
-            }),
+            (0, _.jsx)(
+              "img",
+              {
+                src: _.imgURL,
+              },
+              "img",
+            ),
+            (0, _.jsx)(
+              "div",
+              {
+                className: _().BroadcastPreview,
+              },
+              "video",
+            ),
           ];
           return (
             "right" === _.side && _.reverse(),
-            _.createElement(
-              "div",
-              {
-                className: _().BroadcastPreviewContainer,
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              className: _().BroadcastPreviewContainer,
+              children: _,
+            })
           );
         },
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: _().SaleHeaderPreviewContainer,
+            children: (0, _.jsx)("img", {
               style: {
                 width: "100%",
               },
               src: _.imgURL,
             }),
-          ),
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: _().SaleHeaderPreviewContainer,
+            children: (0, _.jsx)("img", {
               style: {
                 width: "100%",
               },
               src: _.imgURL,
             }),
-          ),
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: _().SaleHeaderPreviewContainer,
+            children: (0, _.jsx)("img", {
               style: {
                 width: "100%",
               },
               src: _.imgURL,
             }),
-          );
+          });
       function _(_, _) {
         let _ = 0;
         for (let _ = 0; _ < 31; ++_) (_(_, _)?.length ?? 0) > 0 && (_ += 1);
@@ -3859,540 +3600,458 @@
           _ = 36 == _;
         let _ = null;
         __webpack_require__ === _.k_Required
-          ? (_ = _.createElement(
-              "span",
-              {
-                style: {
-                  color: "#C6512B",
-                },
+          ? (_ = (0, _.jsx)("span", {
+              style: {
+                color: "#C6512B",
               },
-              (0, _._)("#EventEditor_Required"),
-            ))
+              children: (0, _._)("#EventEditor_Required"),
+            }))
           : __webpack_require__ === _.k_Suggested
-            ? (_ = _.createElement(
-                "span",
-                {
-                  style: {
-                    color: "#D7BC86",
-                  },
+            ? (_ = (0, _.jsx)("span", {
+                style: {
+                  color: "#D7BC86",
                 },
-                (0, _._)("#EventEditor_Suggested"),
-              ))
+                children: (0, _._)("#EventEditor_Suggested"),
+              }))
             : __webpack_require__ === _.k_Requested &&
-              (_ = _.createElement(
-                "span",
-                {
-                  style: {
-                    color: "#D7BC86",
-                  },
+              (_ = (0, _.jsx)("span", {
+                style: {
+                  color: "#D7BC86",
                 },
-                (0, _._)("#EventEditor_Requested"),
-              ));
+                children: (0, _._)("#EventEditor_Requested"),
+              }));
         let _ = null;
         "capsule" === _
           ? (_ = _
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_design_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_creatorhome_1"),
-                  ),
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_usage_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_creatorhome_2"),
-                  ),
-                )
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  Boolean(_) &&
-                    _.createElement(
-                      "div",
-                      {
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_design_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_creatorhome_1"),
+                      ],
+                    }),
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_usage_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_creatorhome_2"),
+                      ],
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    Boolean(_) &&
+                      (0, _.jsxs)("div", {
                         className: _().HighlightBox,
-                      },
-                      _.createElement(
-                        "p",
-                        null,
-                        (0, _._)("#PartnerEvent_MM_ArtworkTip"),
-                      ),
-                      _.createElement(
-                        "p",
-                        null,
-                        _.createElement(
-                          "a",
-                          {
-                            href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
-                          },
-                          (0, _._)("#PartnerEvent_MM_LearnMore"),
-                        ),
-                      ),
-                    ),
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_design_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_1"),
-                  ),
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_usage_title"),
-                    ),
-                    ": ",
-                    (0, _._)("#selectimage_tip_capsule_2"),
-                  ),
-                ))
+                        children: [
+                          (0, _.jsx)("p", {
+                            children: (0, _._)("#PartnerEvent_MM_ArtworkTip"),
+                          }),
+                          (0, _.jsx)("p", {
+                            children: (0, _.jsx)("a", {
+                              href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+                              children: (0, _._)("#PartnerEvent_MM_LearnMore"),
+                            }),
+                          }),
+                        ],
+                      }),
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_design_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_1"),
+                      ],
+                    }),
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_usage_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_capsule_2"),
+                      ],
+                    }),
+                  ],
+                }))
           : "background" === _
-            ? (_ = _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "p",
-                  null,
-                  _.createElement(
-                    "strong",
-                    null,
-                    (0, _._)("#selectimage_tip_design_title"),
-                  ),
-                  ": ",
-                  (0, _._)("#selectimage_tip_background_1"),
-                ),
-              ))
-            : "spotlight" === _ || "localized_store_app_spotlight" === _
-              ? (_ = _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "p",
-                    null,
-                    _.createElement(
-                      "strong",
-                      null,
-                      (0, _._)("#selectimage_tip_usage_title"),
-                    ),
+            ? (_ = (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)("p", {
+                  children: [
+                    (0, _.jsx)("strong", {
+                      children: (0, _._)("#selectimage_tip_design_title"),
+                    }),
                     ": ",
-                    (0, _._)("#selectimage_tip_store_spotlight_1"),
-                  ),
-                ))
-              : "localized_store_app_spotlight_mobile" === _
-                ? (_ = _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "p",
-                      null,
-                      _.createElement(
-                        "strong",
-                        null,
-                        (0, _._)("#selectimage_tip_usage_title"),
-                      ),
+                    (0, _._)("#selectimage_tip_background_1"),
+                  ],
+                }),
+              }))
+            : "spotlight" === _ || "localized_store_app_spotlight" === _
+              ? (_ = (0, _.jsx)(_.Fragment, {
+                  children: (0, _.jsxs)("p", {
+                    children: [
+                      (0, _.jsx)("strong", {
+                        children: (0, _._)("#selectimage_tip_usage_title"),
+                      }),
                       ": ",
-                      (0, _._)("#selectimage_tip_store_mobile_spotlight"),
-                    ),
-                  ))
+                      (0, _._)("#selectimage_tip_store_spotlight_1"),
+                    ],
+                  }),
+                }))
+              : "localized_store_app_spotlight_mobile" === _
+                ? (_ = (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("strong", {
+                          children: (0, _._)("#selectimage_tip_usage_title"),
+                        }),
+                        ": ",
+                        (0, _._)("#selectimage_tip_store_mobile_spotlight"),
+                      ],
+                    }),
+                  }))
                 : "broadcast_left" === _ || "broadcast_right" === _
-                  ? (_ = _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(
-                        "p",
-                        null,
-                        (0, _._)("#selectimage_tip_broadcast_1"),
-                      ),
-                    ))
+                  ? (_ = (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsx)("p", {
+                        children: (0, _._)("#selectimage_tip_broadcast_1"),
+                      }),
+                    }))
                   : "sale_header" === _
-                    ? (_ = _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "div",
-                          {
+                    ? (_ = (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("div", {
                             className: _().EventElementRequired,
-                          },
-                          (0, _._)("#selectimage_tip_required_title"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          _.createElement(
-                            "b",
-                            null,
-                            (0, _._)("#selectimage_tip_usage_title"),
-                          ),
-                          ": ",
-                          (0, _._)("#selectimage_tip_sale_header_1"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          _.createElement(
-                            "b",
-                            null,
-                            (0, _._)("#selectimage_tip_design_title"),
-                          ),
-                          ": ",
-                          (0, _._)("#selectimage_tip_sale_header_2"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          (0, _._)("#selectimage_tip_sale_header_4"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
-                          _.createElement(
-                            "b",
-                            null,
-                            (0, _._)("#selectimage_tip_template_title"),
-                          ),
-                          ": ",
-                          _.createElement(
-                            "a",
-                            {
-                              href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
-                            },
-                            (0, _._)("#selectimage_tip_sale_header_3"),
-                          ),
-                        ),
-                        _.createElement("br", null),
-                      ))
+                            children: (0, _._)(
+                              "#selectimage_tip_required_title",
+                            ),
+                          }),
+                          (0, _.jsxs)("p", {
+                            children: [
+                              (0, _.jsx)("b", {
+                                children: (0, _._)(
+                                  "#selectimage_tip_usage_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, _._)("#selectimage_tip_sale_header_1"),
+                            ],
+                          }),
+                          (0, _.jsxs)("p", {
+                            children: [
+                              (0, _.jsx)("b", {
+                                children: (0, _._)(
+                                  "#selectimage_tip_design_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, _._)("#selectimage_tip_sale_header_2"),
+                            ],
+                          }),
+                          (0, _.jsx)("p", {
+                            children: (0, _._)(
+                              "#selectimage_tip_sale_header_4",
+                            ),
+                          }),
+                          (0, _.jsxs)("p", {
+                            children: [
+                              (0, _.jsx)("b", {
+                                children: (0, _._)(
+                                  "#selectimage_tip_template_title",
+                                ),
+                              }),
+                              ": ",
+                              (0, _.jsx)("a", {
+                                href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
+                                children: (0, _._)(
+                                  "#selectimage_tip_sale_header_3",
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("br", {}),
+                        ],
+                      }))
                     : "hero" === _
                       ? _ &&
-                        (_ = _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(
-                            "p",
-                            null,
-                            (0, _._)("#selectimage_tip_hero_1"),
-                          ),
-                          !Boolean(_.GetAssets()?.GetLibraryHeroURL()) &&
-                            _.createElement(
-                              "p",
-                              {
+                        (_ = (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)("p", {
+                              children: (0, _._)("#selectimage_tip_hero_1"),
+                            }),
+                            !Boolean(_.GetAssets()?.GetLibraryHeroURL()) &&
+                              (0, _.jsx)("p", {
                                 className: _.ErrorStylesBackground,
-                              },
-                              (0, _._)("#EventEdtior_ArtworkType_hero_warning"),
-                            ),
-                        ))
+                                children: (0, _._)(
+                                  "#EventEdtior_ArtworkType_hero_warning",
+                                ),
+                              }),
+                          ],
+                        }))
                       : (_ =
                           "localized_image_group" === _ ||
                           "link_capsule" === _ ||
                           "sale_section_title" === _ ||
                           "schedule_track_art" === _ ||
                           "localized_background_art" === _
-                            ? _.createElement(
-                                _.Fragment,
-                                null,
-                                _.createElement(
-                                  "p",
-                                  null,
-                                  (0, _._)("#ImagePickerLoc_Desc"),
-                                ),
-                                _.createElement(
-                                  "p",
-                                  null,
-                                  (0, _._)(
-                                    "#ImagePickerLoc_Files",
-                                    _.createElement(
-                                      "a",
-                                      {
+                            ? (0, _.jsxs)(_.Fragment, {
+                                children: [
+                                  (0, _.jsx)("p", {
+                                    children: (0, _._)("#ImagePickerLoc_Desc"),
+                                  }),
+                                  (0, _.jsx)("p", {
+                                    children: (0, _._)(
+                                      "#ImagePickerLoc_Files",
+                                      (0, _.jsx)("a", {
                                         href: "https://partner.steamgames.com/doc/store/localization#supported_languages",
                                         target: _._.IN_CLIENT
                                           ? void 0
                                           : "_blank",
-                                      },
-                                      (0, _._)("#ImagePickerLoc_URL"),
+                                        children: (0, _._)(
+                                          "#ImagePickerLoc_URL",
+                                        ),
+                                      }),
                                     ),
-                                  ),
-                                ),
-                              )
+                                  }),
+                                ],
+                              })
                             : "product_banner" === _
-                              ? _.createElement(
-                                  _.Fragment,
-                                  null,
-                                  _.createElement(
-                                    "div",
-                                    {
+                              ? (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    (0, _.jsx)("div", {
                                       className: _().EventElementOptional,
-                                    },
-                                    (0, _._)("#selectimage_tip_optional_title"),
-                                  ),
-                                  _.createElement(
-                                    "p",
-                                    null,
-                                    _.createElement(
-                                      "b",
-                                      null,
-                                      (0, _._)("#selectimage_tip_usage_title"),
-                                    ),
-                                    ": ",
-                                    (0, _._)(
-                                      "#selectimage_tip_sale_product_banner",
-                                    ),
-                                  ),
-                                )
+                                      children: (0, _._)(
+                                        "#selectimage_tip_optional_title",
+                                      ),
+                                    }),
+                                    (0, _.jsxs)("p", {
+                                      children: [
+                                        (0, _.jsx)("b", {
+                                          children: (0, _._)(
+                                            "#selectimage_tip_usage_title",
+                                          ),
+                                        }),
+                                        ": ",
+                                        (0, _._)(
+                                          "#selectimage_tip_sale_product_banner",
+                                        ),
+                                      ],
+                                    }),
+                                  ],
+                                })
                               : "product_mobile_banner" === _ ||
                                   "product_banner_override" === _ ||
                                   "product_mobile_banner_override" === _
-                                ? _.createElement(
-                                    _.Fragment,
-                                    null,
-                                    _.createElement(
-                                      "div",
-                                      {
+                                ? (0, _.jsxs)(_.Fragment, {
+                                    children: [
+                                      (0, _.jsx)("div", {
                                         className: _().EventElementOptional,
-                                      },
-                                      (0, _._)(
-                                        "#selectimage_tip_optional_title",
-                                      ),
-                                    ),
-                                    _.createElement(
-                                      "p",
-                                      null,
-                                      _.createElement(
-                                        "b",
-                                        null,
-                                        (0, _._)(
-                                          "#selectimage_tip_usage_title",
+                                        children: (0, _._)(
+                                          "#selectimage_tip_optional_title",
                                         ),
-                                      ),
-                                      ": ",
-                                      (0, _._)(
-                                        "#selectimage_tip_sale_product_banner",
-                                      ),
-                                      "product_mobile_banner" === _ &&
-                                        _.createElement(
-                                          "span",
-                                          null,
-                                          "  ",
+                                      }),
+                                      (0, _.jsxs)("p", {
+                                        children: [
+                                          (0, _.jsx)("b", {
+                                            children: (0, _._)(
+                                              "#selectimage_tip_usage_title",
+                                            ),
+                                          }),
+                                          ": ",
                                           (0, _._)(
-                                            "#selectimage_tip_sale_product_banner_mobile",
+                                            "#selectimage_tip_sale_product_banner",
                                           ),
-                                        ),
-                                    ),
-                                  )
+                                          "product_mobile_banner" === _ &&
+                                            (0, _.jsxs)("span", {
+                                              children: [
+                                                "  ",
+                                                (0, _._)(
+                                                  "#selectimage_tip_sale_product_banner_mobile",
+                                                ),
+                                              ],
+                                            }),
+                                        ],
+                                      }),
+                                    ],
+                                  })
                                 : "tab_bar_background" === _
-                                  ? _.createElement(
-                                      _.Fragment,
-                                      null,
-                                      _.createElement(
-                                        "p",
-                                        null,
-                                        _.createElement(
-                                          "strong",
-                                          null,
-                                          (0, _._)(
-                                            "#selectimage_tip_design_title",
-                                          ),
-                                        ),
-                                        ":",
-                                        (0, _._)(
-                                          "#Sale_Tabs_Background_Design",
-                                        ),
-                                      ),
-                                      _.createElement(
-                                        "p",
-                                        null,
-                                        _.createElement(
-                                          "strong",
-                                          null,
-                                          (0, _._)(
-                                            "#selectimage_tip_usage_title",
-                                          ),
-                                        ),
-                                        ":",
-                                        (0, _._)("#Sale_Tabs_Background_Usage"),
-                                      ),
-                                    )
+                                  ? (0, _.jsxs)(_.Fragment, {
+                                      children: [
+                                        (0, _.jsxs)("p", {
+                                          children: [
+                                            (0, _.jsx)("strong", {
+                                              children: (0, _._)(
+                                                "#selectimage_tip_design_title",
+                                              ),
+                                            }),
+                                            ":",
+                                            (0, _._)(
+                                              "#Sale_Tabs_Background_Design",
+                                            ),
+                                          ],
+                                        }),
+                                        (0, _.jsxs)("p", {
+                                          children: [
+                                            (0, _.jsx)("strong", {
+                                              children: (0, _._)(
+                                                "#selectimage_tip_usage_title",
+                                              ),
+                                            }),
+                                            ":",
+                                            (0, _._)(
+                                              "#Sale_Tabs_Background_Usage",
+                                            ),
+                                          ],
+                                        }),
+                                      ],
+                                    })
                                   : "sale_logo" === _
-                                    ? _.createElement(
-                                        _.Fragment,
-                                        null,
-                                        _.createElement(
-                                          "div",
-                                          {
+                                    ? (0, _.jsxs)(_.Fragment, {
+                                        children: [
+                                          (0, _.jsx)("div", {
                                             className: _().EventElementOptional,
-                                          },
-                                          (0, _._)(
-                                            "#selectimage_tip_optional_title",
-                                          ),
-                                        ),
-                                        _.createElement(
-                                          "p",
-                                          null,
-                                          _.createElement(
-                                            "b",
-                                            null,
-                                            (0, _._)(
-                                              "#selectimage_tip_usage_title",
+                                            children: (0, _._)(
+                                              "#selectimage_tip_optional_title",
                                             ),
-                                          ),
-                                          ": ",
-                                          (0, _._)("#selectimage_tip_pageLogo"),
-                                        ),
-                                      )
-                                    : _.createElement(
-                                        _.Fragment,
-                                        null,
-                                        _.createElement(
-                                          "div",
-                                          {
+                                          }),
+                                          (0, _.jsxs)("p", {
+                                            children: [
+                                              (0, _.jsx)("b", {
+                                                children: (0, _._)(
+                                                  "#selectimage_tip_usage_title",
+                                                ),
+                                              }),
+                                              ": ",
+                                              (0, _._)(
+                                                "#selectimage_tip_pageLogo",
+                                              ),
+                                            ],
+                                          }),
+                                        ],
+                                      })
+                                    : (0, _.jsxs)(_.Fragment, {
+                                        children: [
+                                          (0, _.jsx)("div", {
                                             className: _().EventElementRequired,
-                                          },
-                                          (0, _._)(
-                                            "#selectimage_tip_required_title",
-                                          ),
-                                        ),
-                                        _.createElement(
-                                          "p",
-                                          null,
-                                          _.createElement(
-                                            "b",
-                                            null,
-                                            (0, _._)(
-                                              "#selectimage_tip_usage_title",
+                                            children: (0, _._)(
+                                              "#selectimage_tip_required_title",
                                             ),
-                                          ),
-                                          ": ",
-                                          (0, _._)(
-                                            "#selectimage_tip_bestofyear",
-                                          ),
-                                        ),
-                                      ));
+                                          }),
+                                          (0, _.jsxs)("p", {
+                                            children: [
+                                              (0, _.jsx)("b", {
+                                                children: (0, _._)(
+                                                  "#selectimage_tip_usage_title",
+                                                ),
+                                              }),
+                                              ": ",
+                                              (0, _._)(
+                                                "#selectimage_tip_bestofyear",
+                                              ),
+                                            ],
+                                          }),
+                                        ],
+                                      }));
         const _ = _._[_.artworkType].width,
           _ = _._[_.artworkType].height;
-        return _.createElement(
-          "div",
-          {
-            _: _._,
-            className: _().ArtworkSelectorContainer,
-          },
-          Boolean(_.title) &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("div", {
+          _: _._,
+          className: _().ArtworkSelectorContainer,
+          children: [
+            Boolean(_.title) &&
+              (0, _.jsxs)("div", {
                 className: _().Title,
                 onDoubleClick: _,
-              },
-              _.title,
-              _.createElement("span", null, " "),
-              _,
-              _ &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: (0, _._)(
-                        _.bIsMinimized
-                          ? "#Sale_Section_Maximize_Tooltip"
-                          : "#Sale_Section_Minimize_Tooltip",
-                      ),
-                    },
-                    _.bIsMinimized
-                      ? _.createElement(_.hz4, null)
-                      : _.createElement(_.Xjb, null),
-                  ),
-                ),
-            ),
-          !_.bIsMinimized &&
-            _.createElement(
-              "div",
-              {
+                children: [
+                  _.title,
+                  (0, _.jsx)("span", {
+                    children: " ",
+                  }),
+                  _,
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)(
+                          _.bIsMinimized
+                            ? "#Sale_Section_Maximize_Tooltip"
+                            : "#Sale_Section_Minimize_Tooltip",
+                        ),
+                        children: _.bIsMinimized
+                          ? (0, _.jsx)(_.hz4, {})
+                          : (0, _.jsx)(_.Xjb, {}),
+                      }),
+                    }),
+                ],
+              }),
+            !_.bIsMinimized &&
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().SelectImageBlock, _().Tips),
-              },
-              _,
-              Boolean(_ && _) &&
-                _.createElement(
-                  "p",
-                  null,
-                  _.createElement(
-                    "b",
-                    null,
-                    (0, _._)("#selectimage_tip_dimensions_title"),
-                  ),
-                  ": ",
-                  (0, _._)("#selectimage_tip1", (0, _._)(_), (0, _._)(_)),
-                ),
-              Boolean(_.strWarning) &&
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "p",
-                    {
-                      className: _.WarningStylesWithIcon,
-                    },
-                    _.strWarning,
-                  ),
-                ),
-              _.elEventArtworkExample,
-              " ",
-              _.createElement("br", null),
-              _.elAdditionalControls,
-              Boolean(_.fnRemoveAllArtwork) &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) => {
-                      (0, _._)(
-                        _.createElement(_, {
-                          fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                children: [
+                  _,
+                  Boolean(_ && _) &&
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)("b", {
+                          children: (0, _._)(
+                            "#selectimage_tip_dimensions_title",
+                          ),
                         }),
-                        (0, _._)(_) ?? window,
-                      );
-                    },
-                  },
-                  (0, _._)("#Sale_RemoveAll"),
-                ),
-            ),
-          !_.bIsMinimized &&
-            _.createElement(_, {
-              clanSteamID: _.clanSteamID,
-              title: _.title ?? "",
-              eventModel: _,
-              artworkType: _.artworkType,
-              realms: _,
-              appid: _,
-              fnGetImageHashAndExt: _,
-              fnSetImageURL: _,
-              fnLangHasData: _,
-              partnerEventStore: _,
-            }),
-        );
+                        ": ",
+                        (0, _._)("#selectimage_tip1", (0, _._)(_), (0, _._)(_)),
+                      ],
+                    }),
+                  Boolean(_.strWarning) &&
+                    (0, _.jsx)("div", {
+                      children: (0, _.jsx)("p", {
+                        className: _.WarningStylesWithIcon,
+                        children: _.strWarning,
+                      }),
+                    }),
+                  _.elEventArtworkExample,
+                  " ",
+                  (0, _.jsx)("br", {}),
+                  _.elAdditionalControls,
+                  Boolean(_.fnRemoveAllArtwork) &&
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => {
+                        (0, _._)(
+                          (0, _.jsx)(_, {
+                            fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                          }),
+                          (0, _._)(_) ?? window,
+                        );
+                      },
+                      children: (0, _._)("#Sale_RemoveAll"),
+                    }),
+                ],
+              }),
+            !_.bIsMinimized &&
+              (0, _.jsx)(_, {
+                clanSteamID: _.clanSteamID,
+                title: _.title ?? "",
+                eventModel: _,
+                artworkType: _.artworkType,
+                realms: _,
+                appid: _,
+                fnGetImageHashAndExt: _,
+                fnSetImageURL: _,
+                fnLangHasData: _,
+                partnerEventStore: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { fnRemoveAllArtwork: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           strTitle: (0, _._)("#Sale_RemoveAll"),
           strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
           onOK: () => {
@@ -4448,66 +4107,55 @@
             [_, _, _, _],
           );
         return "hero" === _
-          ? _.createElement(
-              "div",
-              {
-                style: {
-                  padding: "16px",
-                },
+          ? (0, _.jsx)("div", {
+              style: {
+                padding: "16px",
               },
-              _.createElement(
-                _._,
-                {
-                  style: {
-                    textTransform: "uppercase",
-                    width: "200px",
-                  },
-                  onClick: () =>
-                    window.open(
-                      `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_}?activetab=tab_graphicalassets`,
-                    ),
+              children: (0, _.jsx)(_._, {
+                style: {
+                  textTransform: "uppercase",
+                  width: "200px",
                 },
-                (0, _._)("#ImageUpload_EditHeroImage"),
-              ),
-            )
-          : _.createElement(
-              "div",
-              null,
-              _.createElement(_, {
-                list: _,
-                fnOnArtworkLanguageChange: _,
-                realms: __webpack_require__,
-                fnLangHasData: _,
+                onClick: () =>
+                  window.open(
+                    `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_}?activetab=tab_graphicalassets`,
+                  ),
+                children: (0, _._)("#ImageUpload_EditHeroImage"),
               }),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
+            })
+          : (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)(_, {
+                  list: _,
+                  fnOnArtworkLanguageChange: _,
+                  realms: __webpack_require__,
+                  fnLangHasData: _,
+                }),
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)("div", {
                     className: (0, _._)(
                       _().SelectImageBlock,
                       _().MainPreviewBlock,
                     ),
-                  },
-                  _.createElement(_, {
-                    eventModel: _,
-                    clanSteamID: _,
-                    fnOnLanguagePreviewChange: (_) => {
-                      _ != _ && _(_);
-                    },
-                    langOverride: _,
-                    fnOnArtworkLangChange: _ ? null : _,
-                    artworkType: _,
-                    fnOnRemoveImage: _ ? null : (_) => _(_, null, _),
-                    realms: __webpack_require__,
-                    fnLangHasData: _,
-                    fnGetImageHashAndExt: _,
-                    partnerEventStore: _,
+                    children: (0, _.jsx)(_, {
+                      eventModel: _,
+                      clanSteamID: _,
+                      fnOnLanguagePreviewChange: (_) => {
+                        _ != _ && _(_);
+                      },
+                      langOverride: _,
+                      fnOnArtworkLangChange: _ ? null : _,
+                      artworkType: _,
+                      fnOnRemoveImage: _ ? null : (_) => _(_, null, _),
+                      realms: __webpack_require__,
+                      fnLangHasData: _,
+                      fnGetImageHashAndExt: _,
+                      partnerEventStore: _,
+                    }),
                   }),
-                ),
-              ),
-            );
+                }),
+              ],
+            });
       }
       !(function (_) {
         (_[(_.k_None = 0)] = "k_None"),
@@ -4523,7 +4171,7 @@
             fnLangHasData: _,
           } = this.props;
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               clanImage: _,
               lang: _,
               fnOnArtworkLangChange: __webpack_require__,
@@ -4541,29 +4189,28 @@
               const { clanImage: __webpack_require__, lang: _ } = _;
               let _ = (0, _._)("#Language_" + (0, _._)(_));
               _.push(
-                _.createElement(
+                (0, _.jsxs)(
                   "div",
                   {
-                    key: "img_lang_" + _.clanImage.imageid + "_" + _,
                     className: _().FlexRowContainer,
+                    children: [
+                      (0, _.jsx)("span", {
+                        children: (0, _._)(
+                          "#ImageUpload_Success_Mapping",
+                          __webpack_require__.file_name ?? "",
+                          _,
+                        ),
+                      }),
+                      (0, _.jsx)("a", {
+                        onClick: () =>
+                          this.ShowLangChangeDialog(__webpack_require__, _),
+                        children: (0, _._)(
+                          "#ImageUpload_Success_Mapping_Change",
+                        ),
+                      }),
+                    ],
                   },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)(
-                      "#ImageUpload_Success_Mapping",
-                      __webpack_require__.file_name ?? "",
-                      _,
-                    ),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      onClick: () =>
-                        this.ShowLangChangeDialog(__webpack_require__, _),
-                    },
-                    (0, _._)("#ImageUpload_Success_Mapping_Change"),
-                  ),
+                  "img_lang_" + _.clanImage.imageid + "_" + _,
                 ),
               );
             }),
@@ -4572,15 +4219,12 @@
         }
         render() {
           const { list: _ } = this.props;
-          if (!_ || 0 == _.length) return _.createElement("div", null);
+          if (!_ || 0 == _.length) return (0, _.jsx)("div", {});
           let _ = this.GenerateImageMappings();
-          return _.createElement(
-            "div",
-            {
-              className: _().UploadSuccess,
-            },
-            _,
-          );
+          return (0, _.jsx)("div", {
+            className: _().UploadSuccess,
+            children: _,
+          });
         }
       };
       (0, _._)([_._], _.prototype, "ShowLangChangeDialog", null),
@@ -4637,73 +4281,72 @@
               _ = _?.localized_images[_];
             return _ ? _.split("/").pop() : _;
           }, []);
-        return _.createElement(
-          _._,
-          {
-            onCancel: _,
-            closeModal: _,
-            bDisableBackgroundDismiss: !0,
-            bAllowFullSize: !0,
-            className: (0, _._)(_.NotTooWideModal, _.ImageManageDialog),
-            strTitle: _.strLocalizedTitle || (0, _._)("#ImagePickerLoc_Title"),
-            strDescription: _.strLocalizedDescription,
-            bOKDisabled: _ > 0,
-            onOK: () => {
-              const _ = _._.GetLocalizedImageGroupForEdit();
-              for (let _ = 0; _ < 31; ++_) {
-                const _ = _?.localized_images[_];
-                if (_) {
-                  const _ = __webpack_require__.split("/").pop() || "";
-                  _(
-                    _,
-                    {
-                      image_hash: _(_),
-                      clanAccountID: _,
-                      file_type: (0, _._)(_) ?? 0,
-                      imageid: 0,
-                    },
-                    _,
-                  );
-                } else _(_, null, _);
-              }
-              _._.ClearImageGroup(), _.onOK ? _.onOK() : _?.();
-            },
-            strOKButtonText:
-              _ > 0 ? (0, _._)("#ImagePickerLoc_DismissWarning") : void 0,
+        return (0, _.jsxs)(_._, {
+          onCancel: _,
+          closeModal: _,
+          bDisableBackgroundDismiss: !0,
+          bAllowFullSize: !0,
+          className: (0, _._)(_.NotTooWideModal, _.ImageManageDialog),
+          strTitle: _.strLocalizedTitle || (0, _._)("#ImagePickerLoc_Title"),
+          strDescription: _.strLocalizedDescription,
+          bOKDisabled: _ > 0,
+          onOK: () => {
+            const _ = _._.GetLocalizedImageGroupForEdit();
+            for (let _ = 0; _ < 31; ++_) {
+              const _ = _?.localized_images[_];
+              if (_) {
+                const _ = __webpack_require__.split("/").pop() || "";
+                _(
+                  _,
+                  {
+                    image_hash: _(_),
+                    clanAccountID: _,
+                    file_type: (0, _._)(_) ?? 0,
+                    imageid: 0,
+                  },
+                  _,
+                );
+              } else _(_, null, _);
+            }
+            _._.ClearImageGroup(), _.onOK ? _.onOK() : _?.();
           },
-          Boolean(!_)
-            ? _.createElement(_._, {
-                size: "medium",
-                position: "center",
-                string: (0, _._)("#Loading"),
-              })
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  clanSteamID: _,
-                  rgSupportArtwork: [_],
-                  fnSetImageURL: _,
-                  bAllowPreviousClanImageSelection: !1,
-                  rgRealmList: _ ?? [],
-                  uploaderOverride: _,
+          strOKButtonText:
+            _ > 0 ? (0, _._)("#ImagePickerLoc_DismissWarning") : void 0,
+          children: [
+            Boolean(!_)
+              ? (0, _.jsx)(_._, {
+                  size: "medium",
+                  position: "center",
+                  string: (0, _._)("#Loading"),
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_, {
+                      clanSteamID: _,
+                      rgSupportArtwork: [_],
+                      fnSetImageURL: _,
+                      bAllowPreviousClanImageSelection: !1,
+                      rgRealmList: _ ?? [],
+                      uploaderOverride: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      clanSteamID: _,
+                      eventModel: _,
+                      artworkType: _,
+                      title: null,
+                      appid: __webpack_require__,
+                      realms: _,
+                      fnRemoveAllArtwork: () => _._.ClearImageGroup(),
+                      fnSetImageURL: _,
+                      fnGetImageHashAndExt: _,
+                      fnLangHasData: _,
+                      partnerEventStore: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  clanSteamID: _,
-                  eventModel: _,
-                  artworkType: _,
-                  title: null,
-                  appid: __webpack_require__,
-                  realms: _,
-                  fnRemoveAllArtwork: () => _._.ClearImageGroup(),
-                  fnSetImageURL: _,
-                  fnGetImageHashAndExt: _,
-                  fnLangHasData: _,
-                  partnerEventStore: _,
-                }),
-              ),
-          _.children,
-        );
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4737,21 +4380,23 @@
               _
             );
           }, []);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, null, _ || (0, _._)("#EventEditor_Tile_Title")),
-          _.createElement(_._, {
-            strDropDownClassName: _.DropDownScroll,
-            rgOptions: _,
-            selectedOption: _ || "no-repeat",
-            onChange: (_) => __webpack_require__(_.data),
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: _ || (0, _._)("#EventEditor_Tile_Title"),
+            }),
+            (0, _.jsx)(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              rgOptions: _,
+              selectedOption: _ || "no-repeat",
+              onChange: (_) => __webpack_require__(_.data),
               bDisableMouseOverlay: !0,
-            },
-          }),
-        );
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -4781,237 +4426,210 @@
               return _;
             })(_.localized_background_art ?? {}),
           );
-        return _.createElement(
-          _,
-          {
-            strLocalizedTitle: (0, _._)("#BackgroundGroups_Configure"),
-            strLocalizedDescription: (0, _._)("#BackgroundGroups_DialogDesc"),
-            appid: _.appid,
-            eventModel: _,
-            clanSteamID: _.clanSteamID,
-            closeModal: _,
-            partnerEventStore: _._,
-            artworkType: "localized_background_art",
-            realms: _,
-            loc_images: _,
-            fnLangHasData: (_) => Boolean(_[_]),
-            fnGetImageHash: (_, _) => _[_],
-            fnSetImageURL: async (_, _, _) => {
-              _((_) => {
-                const _ = {
-                    ..._.localized_background_art,
-                  },
-                  _ = _._.GetHashAndExt(_);
-                return (
-                  _ ? (_[(0, _._)(_)] = _) : delete _[(0, _._)(_)],
-                  {
-                    ..._,
-                    localized_background_art: _,
-                  }
-                );
-              });
-            },
-            onOK: () => {
-              _(
-                (_) => (
-                  _(_),
-                  _ && setTimeout(_, 1),
-                  {
-                    ..._,
-                  }
-                ),
-              );
-            },
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ConfDialogOptions,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ImageOptions,
-              },
-              _.createElement(_, {
-                setting: _,
-                fnUpdateSetting: (_) => {
-                  _(
-                    "no-repeat" !== _
-                      ? {
-                          ..._,
-                          repeat_setting: _,
-                          scaling_setting: "auto",
-                        }
-                      : {
-                          ..._,
-                          repeat_setting: _,
-                        },
-                  );
+        return (0, _.jsx)(_, {
+          strLocalizedTitle: (0, _._)("#BackgroundGroups_Configure"),
+          strLocalizedDescription: (0, _._)("#BackgroundGroups_DialogDesc"),
+          appid: _.appid,
+          eventModel: _,
+          clanSteamID: _.clanSteamID,
+          closeModal: _,
+          partnerEventStore: _._,
+          artworkType: "localized_background_art",
+          realms: _,
+          loc_images: _,
+          fnLangHasData: (_) => Boolean(_[_]),
+          fnGetImageHash: (_, _) => _[_],
+          fnSetImageURL: async (_, _, _) => {
+            _((_) => {
+              const _ = {
+                  ..._.localized_background_art,
                 },
-                label: (0, _._)("#BackgroundGroups_Repeating"),
-              }),
-              _.createElement(_, {
-                scaling_setting: _ ?? "contain",
-                disable: "no-repeat" !== _,
-                fnUpdateSetting: (_) =>
-                  _({
-                    ..._,
-                    scaling_setting: _,
-                  }),
-              }),
-              Boolean("cover" != _) &&
-                _.createElement(_, {
-                  position_settings: _,
-                  fnUpdateSetting: (_) =>
-                    _({
-                      ..._,
-                      position_setting: _,
-                    }),
-                }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ColorOptions,
-              },
-              _.createElement(_._, null, (0, _._)("#BackgroundGroups_Color")),
-              _.createElement(
-                "div",
+                _ = _._.GetHashAndExt(_);
+              return (
+                _ ? (_[(0, _._)(_)] = _) : delete _[(0, _._)(_)],
                 {
-                  className: _().ColorCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    style: {
-                      backgroundColor: _,
-                    },
-                    onClick: (_) => {
-                      (0, _._)(
-                        _.createElement(_, {
-                          color: _ ?? "",
-                          setColor: (_) =>
-                            _({
+                  ..._,
+                  localized_background_art: _,
+                }
+              );
+            });
+          },
+          onOK: () => {
+            _(
+              (_) => (
+                _(_),
+                _ && setTimeout(_, 1),
+                {
+                  ..._,
+                }
+              ),
+            );
+          },
+          children: (0, _.jsxs)("div", {
+            className: _().ConfDialogOptions,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().ImageOptions,
+                children: [
+                  (0, _.jsx)(_, {
+                    setting: _,
+                    fnUpdateSetting: (_) => {
+                      _(
+                        "no-repeat" !== _
+                          ? {
                               ..._,
-                              background_color1: _,
-                            }),
-                        }),
-                        (0, _._)(_) ?? window,
+                              repeat_setting: _,
+                              scaling_setting: "auto",
+                            }
+                          : {
+                              ..._,
+                              repeat_setting: _,
+                            },
                       );
                     },
-                  },
-                  (0, _._)(
-                    void 0 === _
-                      ? "#BackgroundGroups_ColorNum_unset"
-                      : "#BackgroundGroups_ColorNum",
-                    1,
-                  ),
-                ),
-                " ",
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () =>
+                    label: (0, _._)("#BackgroundGroups_Repeating"),
+                  }),
+                  (0, _.jsx)(_, {
+                    scaling_setting: _ ?? "contain",
+                    disable: "no-repeat" !== _,
+                    fnUpdateSetting: (_) =>
                       _({
                         ..._,
-                        background_color1: void 0,
+                        scaling_setting: _,
                       }),
-                  },
-                  (0, _._)("#BackgroundGroups_Color_Clear"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SwapColorsCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () =>
-                      _({
-                        ..._,
-                        background_color1: _,
-                        background_color2: _,
-                      }),
-                  },
-                  (0, _._)("#BackgroundGroups_Color_Swap"),
-                ),
-              ),
-              Boolean("single-color" !== _) &&
-                _.createElement(
-                  "div",
-                  {
+                  }),
+                  Boolean("cover" != _) &&
+                    (0, _.jsx)(_, {
+                      position_settings: _,
+                      fnUpdateSetting: (_) =>
+                        _({
+                          ..._,
+                          position_setting: _,
+                        }),
+                    }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().ColorOptions,
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#BackgroundGroups_Color"),
+                  }),
+                  (0, _.jsxs)("div", {
                     className: _().ColorCtn,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      style: {
-                        backgroundColor: _,
-                      },
-                      onClick: (_) => {
-                        (0, _._)(
-                          _.createElement(_, {
-                            color: _ ?? "",
-                            setColor: (_) =>
-                              _({
-                                ..._,
-                                background_color2: _,
-                              }),
+                    children: [
+                      (0, _.jsx)(_._, {
+                        style: {
+                          backgroundColor: _,
+                        },
+                        onClick: (_) => {
+                          (0, _._)(
+                            (0, _.jsx)(_, {
+                              color: _ ?? "",
+                              setColor: (_) =>
+                                _({
+                                  ..._,
+                                  background_color1: _,
+                                }),
+                            }),
+                            (0, _._)(_) ?? window,
+                          );
+                        },
+                        children: (0, _._)(
+                          void 0 === _
+                            ? "#BackgroundGroups_ColorNum_unset"
+                            : "#BackgroundGroups_ColorNum",
+                          1,
+                        ),
+                      }),
+                      " ",
+                      (0, _.jsx)(_._, {
+                        onClick: () =>
+                          _({
+                            ..._,
+                            background_color1: void 0,
                           }),
-                          (0, _._)(_) ?? window,
-                        );
-                      },
-                    },
-                    (0, _._)(
-                      void 0 === _
-                        ? "#BackgroundGroups_ColorNum_unset"
-                        : "#BackgroundGroups_ColorNum",
-                      2,
-                    ),
-                  ),
-                  " ",
-                  _.createElement(
-                    _._,
-                    {
+                        children: (0, _._)("#BackgroundGroups_Color_Clear"),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SwapColorsCtn,
+                    children: (0, _.jsx)(_._, {
                       onClick: () =>
                         _({
                           ..._,
-                          background_color2: void 0,
+                          background_color1: _,
+                          background_color2: _,
                         }),
-                    },
-                    (0, _._)("#BackgroundGroups_Color_Clear"),
-                  ),
-                ),
-              _.createElement(_, {
-                gradient: _ ?? "top-to-bottom",
-                fnUpdateSetting: (_) =>
-                  _({
-                    ..._,
-                    gradient_setting: _,
+                      children: (0, _._)("#BackgroundGroups_Color_Swap"),
+                    }),
                   }),
+                  Boolean("single-color" !== _) &&
+                    (0, _.jsxs)("div", {
+                      className: _().ColorCtn,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          style: {
+                            backgroundColor: _,
+                          },
+                          onClick: (_) => {
+                            (0, _._)(
+                              (0, _.jsx)(_, {
+                                color: _ ?? "",
+                                setColor: (_) =>
+                                  _({
+                                    ..._,
+                                    background_color2: _,
+                                  }),
+                              }),
+                              (0, _._)(_) ?? window,
+                            );
+                          },
+                          children: (0, _._)(
+                            void 0 === _
+                              ? "#BackgroundGroups_ColorNum_unset"
+                              : "#BackgroundGroups_ColorNum",
+                            2,
+                          ),
+                        }),
+                        " ",
+                        (0, _.jsx)(_._, {
+                          onClick: () =>
+                            _({
+                              ..._,
+                              background_color2: void 0,
+                            }),
+                          children: (0, _._)("#BackgroundGroups_Color_Clear"),
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)(_, {
+                    gradient: _ ?? "top-to-bottom",
+                    fnUpdateSetting: (_) =>
+                      _({
+                        ..._,
+                        gradient_setting: _,
+                      }),
+                  }),
+                ],
               }),
-            ),
-          ),
-        );
+            ],
+          }),
+        });
       }
       function _(_) {
         const { closeModal: _, color: __webpack_require__, setColor: _ } = _,
           [_, _] = (0, _.useState)(__webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#Button_Color"),
-            closeModal: _,
-            onOK: () => _(_),
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#Button_Color"),
+          closeModal: _,
+          onOK: () => _(_),
+          children: (0, _.jsx)(_, {
             onChange: (_) => _(_),
             color: _,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -5038,26 +4656,24 @@
               _
             );
           }, []);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _ || (0, _._)("#BackgroundGroups_Scaling"),
-          ),
-          _.createElement(_._, {
-            strDropDownClassName: _.DropDownScroll,
-            disabled: _,
-            rgOptions: _,
-            selectedOption: _ || "cover",
-            onChange: (_) => __webpack_require__(_.data),
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: _ || (0, _._)("#BackgroundGroups_Scaling"),
+            }),
+            (0, _.jsx)(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              disabled: _,
+              rgOptions: _,
+              selectedOption: _ || "cover",
+              onChange: (_) => __webpack_require__(_.data),
               bDisableMouseOverlay: !0,
-            },
-          }),
-        );
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5083,25 +4699,23 @@
               _
             );
           }, []);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _ || (0, _._)("#EventEditor_ColorSetting_Title"),
-          ),
-          _.createElement(_._, {
-            strDropDownClassName: _.DropDownScroll,
-            rgOptions: _,
-            selectedOption: _ || "top-to-bottom",
-            onChange: (_) => __webpack_require__(_.data),
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: _ || (0, _._)("#EventEditor_ColorSetting_Title"),
+            }),
+            (0, _.jsx)(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              rgOptions: _,
+              selectedOption: _ || "top-to-bottom",
+              onChange: (_) => __webpack_require__(_.data),
               bDisableMouseOverlay: !0,
-            },
-          }),
-        );
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5135,25 +4749,23 @@
               _
             );
           }, []);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _ || (0, _._)("#BackgroundGroups_Position"),
-          ),
-          _.createElement(_._, {
-            strDropDownClassName: _.DropDownScroll,
-            rgOptions: _,
-            selectedOption: _ || "unset",
-            onChange: (_) => __webpack_require__(_.data),
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: _ || (0, _._)("#BackgroundGroups_Position"),
+            }),
+            (0, _.jsx)(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              rgOptions: _,
+              selectedOption: _ || "unset",
+              onChange: (_) => __webpack_require__(_.data),
               bDisableMouseOverlay: !0,
-            },
-          }),
-        );
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5165,75 +4777,68 @@
           [_, _] = (0, _.useState)(_.BIsBackgroundImageEnabled()),
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(() => _.GetSalePageLastCoverSectionUntilEnd());
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().Ctn, _ && _.ValveOnlyBackground),
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              label: (0, _._)("#BackgroundGroups_Setting"),
-              checked: _,
-              onChange: (_) => {
-                _(_), _.SetBackgroundImageEnabled(_);
-              },
-            }),
-            _
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_._, {
-                    label: (0, _._)("#BackgroundGroups_EditMode"),
-                    tooltip: (0, _._)("#BackgroundGroups_EditMode_ttip"),
-                    checked: __webpack_require__,
-                    onChange: _,
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().Ctn, _ && _.ValveOnlyBackground),
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#BackgroundGroups_Setting"),
+                checked: _,
+                onChange: (_) => {
+                  _(_), _.SetBackgroundImageEnabled(_);
+                },
+              }),
+              _
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        label: (0, _._)("#BackgroundGroups_EditMode"),
+                        tooltip: (0, _._)("#BackgroundGroups_EditMode_ttip"),
+                        checked: __webpack_require__,
+                        onChange: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        label: (0, _._)("#BackgroundGroups_ExtendToEnd"),
+                        tooltip: (0, _._)("#BackgroundGroups_ExtendToEnd_ttip"),
+                        checked: _,
+                        onChange: (_) =>
+                          _.SetSalePageLastCoverSectionUntilEnd(_),
+                      }),
+                      (0, _.jsx)("hr", {}),
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _._)(
+                          "#BackgroundGroups_ClearAllSettings",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        active: _,
+                        children: (0, _.jsx)(_._, {
+                          strTitle: (0, _._)("#EventEditor_GenericAreYouSure"),
+                          strDescription: (0, _._)(
+                            "#BackgroundGroups_ClearAllSettings_Desc",
+                          ),
+                          bDestructiveWarning: !0,
+                          onOK: () => {
+                            _.ClearAllBackgroundImageGroupSettings(), _(!1);
+                          },
+                          closeModal: _,
+                        }),
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)("p", {
+                    children: (0, _._)("#BackgroundGroups_Desc"),
                   }),
-                  _.createElement(_._, {
-                    label: (0, _._)("#BackgroundGroups_ExtendToEnd"),
-                    tooltip: (0, _._)("#BackgroundGroups_ExtendToEnd_ttip"),
-                    checked: _,
-                    onChange: (_) => _.SetSalePageLastCoverSectionUntilEnd(_),
-                  }),
-                  _.createElement("hr", null),
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: _,
-                    },
-                    (0, _._)("#BackgroundGroups_ClearAllSettings"),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      active: _,
-                    },
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#EventEditor_GenericAreYouSure"),
-                      strDescription: (0, _._)(
-                        "#BackgroundGroups_ClearAllSettings_Desc",
-                      ),
-                      bDestructiveWarning: !0,
-                      onOK: () => {
-                        _.ClearAllBackgroundImageGroupSettings(), _(!1);
-                      },
-                      closeModal: _,
-                    }),
-                  ),
-                )
-              : _.createElement("p", null, (0, _._)("#BackgroundGroups_Desc")),
-            _.createElement("br", null),
-            _.createElement(
-              "a",
-              {
+              (0, _.jsx)("br", {}),
+              (0, _.jsx)("a", {
                 href: `${_._.PARTNER_BASE_URL}doc/marketing/event_tools/sales/groups`,
                 target: "_blank",
-              },
-              (0, _._)("#EventGeneric_SeeDocs"),
-            ),
-          ),
-        );
+                children: (0, _._)("#EventGeneric_SeeDocs"),
+              }),
+            ],
+          }),
+        });
       }
       const _ = _.forwardRef(function (_, _) {
         const {
@@ -5278,168 +4883,135 @@
             _.nSaleSectionLastIndex,
           );
         }
-        return _.createElement(
-          _._,
-          {
-            bStartMinimized: !1,
-            title: (0, _._)(
-              null != _
-                ? "#BackgroundGroups_Sale_Tab_GroupNum"
-                : "#BackgroundGroups_Sale_GroupNum",
-              _ + 1,
-            ),
-            className: _.classNameHeader,
-          },
-          _.createElement(
-            "div",
-            {
-              ref: _,
-            },
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-              },
-              (0, _._)("#BackgroundGroups_Configure"),
-            ),
-            _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(_, {
-                imgGroup: _,
-                closeModal: _,
-                eventModel: _,
-                fnUpdateImageGroup: (_) =>
-                  null != _
-                    ? _.SetTabBackgroundGroup(_, _, _)
-                    : _.SetSalePageBackgroundGroup(_, _),
-              }),
-            ),
-            _.createElement("br", null),
-            _.createElement(
-              "div",
-              {
-                className: _().EditorTitle,
-              },
-              (0, _._)("#BackgroundGroups_ContentTitle"),
-            ),
-            _.createElement(
-              "ul",
-              null,
-              _.map((_) =>
-                _.createElement(
-                  "li",
-                  {
-                    key: "li_" + _,
-                  },
-                  (0, _._)(
-                    3,
-                    _.GetSaleSectionByID(_),
-                    _,
-                    _,
-                    _.GetSaleSectionIndexByID(_),
-                  ),
-                ),
-              ),
-              Boolean(_) &&
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)("#BackgroundGroups_EndOfList"),
-                ),
-            ),
-            !!_ &&
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    null != _
-                      ? _.SetTabBackgroundGroup(_, _, {
-                          ..._,
-                          num_sections: _.num_sections - 1,
-                        })
-                      : _.SetSalePageBackgroundGroup(_, {
-                          ..._,
-                          num_sections: _.num_sections - 1,
-                        }),
-                },
-                (0, _._)("#BackgroundGroups_Reduce", _),
-              ),
-            !!_ &&
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    null != _
-                      ? _.SetTabBackgroundGroup(_, _, {
-                          ..._,
-                          num_sections: _.num_sections + 1,
-                        })
-                      : _.SetSalePageBackgroundGroup(_, {
-                          ..._,
-                          num_sections: _.num_sections + 1,
-                        }),
-                },
-                (0, _._)("#BackgroundGroups_Extend", _),
-              ),
-            Boolean(_ > 0) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("hr", null),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  (0, _._)("#BackgroundGroups_RemoveThisGroup"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    active: _,
-                  },
-                  _.createElement(_._, {
-                    strTitle: (0, _._)("#Dialog_AreYouSure"),
-                    bDestructiveWarning: !0,
-                    strDescription: (0, _._)(
-                      "#BackgroundGroups_RemoveThisGroup_Desc",
-                    ),
-                    onOK: () =>
-                      null != _
-                        ? _.RemoveTabBackgroundGroup(_, _)
-                        : _.RemoveSalePageBackgroundGroup(_),
-                    closeModal: _,
-                  }),
-                ),
-              ),
+        return (0, _.jsx)(_._, {
+          bStartMinimized: !1,
+          title: (0, _._)(
+            null != _
+              ? "#BackgroundGroups_Sale_Tab_GroupNum"
+              : "#BackgroundGroups_Sale_GroupNum",
+            _ + 1,
           ),
-        );
+          className: _.classNameHeader,
+          children: (0, _.jsxs)("div", {
+            ref: _,
+            children: [
+              (0, _.jsx)(_._, {
+                onClick: _,
+                children: (0, _._)("#BackgroundGroups_Configure"),
+              }),
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_, {
+                  imgGroup: _,
+                  closeModal: _,
+                  eventModel: _,
+                  fnUpdateImageGroup: (_) =>
+                    null != _
+                      ? _.SetTabBackgroundGroup(_, _, _)
+                      : _.SetSalePageBackgroundGroup(_, _),
+                }),
+              }),
+              (0, _.jsx)("br", {}),
+              (0, _.jsx)("div", {
+                className: _().EditorTitle,
+                children: (0, _._)("#BackgroundGroups_ContentTitle"),
+              }),
+              (0, _.jsxs)("ul", {
+                children: [
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      "li",
+                      {
+                        children: (0, _._)(
+                          3,
+                          _.GetSaleSectionByID(_),
+                          _,
+                          _,
+                          _.GetSaleSectionIndexByID(_),
+                        ),
+                      },
+                      "li_" + _,
+                    ),
+                  ),
+                  Boolean(_) &&
+                    (0, _.jsx)("li", {
+                      children: (0, _._)("#BackgroundGroups_EndOfList"),
+                    }),
+                ],
+              }),
+              !!_ &&
+                (0, _.jsx)(_._, {
+                  onClick: () =>
+                    null != _
+                      ? _.SetTabBackgroundGroup(_, _, {
+                          ..._,
+                          num_sections: _.num_sections - 1,
+                        })
+                      : _.SetSalePageBackgroundGroup(_, {
+                          ..._,
+                          num_sections: _.num_sections - 1,
+                        }),
+                  children: (0, _._)("#BackgroundGroups_Reduce", _),
+                }),
+              !!_ &&
+                (0, _.jsx)(_._, {
+                  onClick: () =>
+                    null != _
+                      ? _.SetTabBackgroundGroup(_, _, {
+                          ..._,
+                          num_sections: _.num_sections + 1,
+                        })
+                      : _.SetSalePageBackgroundGroup(_, {
+                          ..._,
+                          num_sections: _.num_sections + 1,
+                        }),
+                  children: (0, _._)("#BackgroundGroups_Extend", _),
+                }),
+              Boolean(_ > 0) &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("hr", {}),
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _._)("#BackgroundGroups_RemoveThisGroup"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      active: _,
+                      children: (0, _.jsx)(_._, {
+                        strTitle: (0, _._)("#Dialog_AreYouSure"),
+                        bDestructiveWarning: !0,
+                        strDescription: (0, _._)(
+                          "#BackgroundGroups_RemoveThisGroup_Desc",
+                        ),
+                        onOK: () =>
+                          null != _
+                            ? _.RemoveTabBackgroundGroup(_, _)
+                            : _.RemoveSalePageBackgroundGroup(_),
+                        closeModal: _,
+                      }),
+                    }),
+                  ],
+                }),
+            ],
+          }),
+        });
       });
       function _(_) {
         const { backgroundImageEditModel: _, nTabID: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().CtnEditor,
-          },
-          _.createElement(
-            _._,
-            {
-              onClick: (_) =>
-                __webpack_require__ && __webpack_require__ >= 0
-                  ? _.AddTabBackgroundGroup(__webpack_require__)
-                  : _.AddSalePageBackgroundGroup(),
-            },
-            (0, _._)(
+        return (0, _.jsx)("div", {
+          className: _().CtnEditor,
+          children: (0, _.jsx)(_._, {
+            onClick: (_) =>
+              __webpack_require__ && __webpack_require__ >= 0
+                ? _.AddTabBackgroundGroup(__webpack_require__)
+                : _.AddSalePageBackgroundGroup(),
+            children: (0, _._)(
               __webpack_require__ && __webpack_require__ >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const {
@@ -5451,12 +5023,12 @@
           _ = _.mapFirstSectionToGroup.get(__webpack_require__);
         return __webpack_require__ == _.nFirstSaleSectionIDWithoutGroup ||
           __webpack_require__ == _.nFirstTabSectionIDWithoutGroup
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               backgroundImageEditModel: _,
               nTabID: _,
             })
           : _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 ..._,
                 groupID: _,
               })
@@ -5479,13 +5051,10 @@
         (0, _.useEffect)(() => {
           if (!_) return;
           const _ = (0, _._)(
-            _.createElement(
-              _._,
-              {
-                bAlertDialog: !0,
-                closeModal: () => _(!1),
-              },
-              _.createElement(_, {
+            (0, _.jsx)(_._, {
+              bAlertDialog: !0,
+              closeModal: () => _(!1),
+              children: (0, _.jsx)(_, {
                 backgroundImageEditModel: _,
                 groupIndex: _,
                 imgGroup: _,
@@ -5493,7 +5062,7 @@
                 eventModel: _.GetEventModel(),
                 nTabIndex: __webpack_require__,
               }),
-            ),
+            }),
             window,
           );
           return () => {
@@ -5506,29 +5075,25 @@
             _(_);
           }, []),
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().CtnEditor,
-            ref: _,
-          },
-          Boolean(_ && _ && _ > _) &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)("div", {
+          className: _().CtnEditor,
+          ref: _,
+          children: [
+            Boolean(_ && _ && _ > _) &&
+              (0, _.jsx)(_._, {
                 onClick: (_) => _(!0),
-              },
-              (0, _._)("#BackgroundGroups_EditBackgroundGroup"),
-            ),
-          _.createElement(_, {
-            backgroundImageEditModel: _,
-            groupIndex: _,
-            imgGroup: _,
-            imgGroupDerivedMapping: _,
-            eventModel: _.GetEventModel(),
-            nTabIndex: __webpack_require__,
-          }),
-        );
+                children: (0, _._)("#BackgroundGroups_EditBackgroundGroup"),
+              }),
+            (0, _.jsx)(_, {
+              backgroundImageEditModel: _,
+              groupIndex: _,
+              imgGroup: _,
+              imgGroupDerivedMapping: _,
+              eventModel: _.GetEventModel(),
+              nTabIndex: __webpack_require__,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -5538,16 +5103,13 @@
         (0, _.useEffect)(() => {
           if (!__webpack_require__) return;
           const _ = (0, _._)(
-            _.createElement(
-              _._,
-              {
-                bAlertDialog: !0,
-                closeModal: () => _(!1),
-              },
-              _.createElement(_, {
+            (0, _.jsx)(_._, {
+              bAlertDialog: !0,
+              closeModal: () => _(!1),
+              children: (0, _.jsx)(_, {
                 ..._,
               }),
-            ),
+            }),
             window,
           );
           return () => {
@@ -5564,24 +5126,20 @@
             _(_);
           }, []),
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().CtnEditor, _().TabCtn),
-            ref: _,
-          },
-          Boolean(_ && _ && _ > _) &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().CtnEditor, _().TabCtn),
+          ref: _,
+          children: [
+            Boolean(_ && _ && _ > _) &&
+              (0, _.jsx)(_._, {
                 onClick: (_) => _(!0),
-              },
-              (0, _._)("#BackgroundGroups_EditBackgroundGroup"),
-            ),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
+                children: (0, _._)("#BackgroundGroups_EditBackgroundGroup"),
+              }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5596,37 +5154,37 @@
             __webpack_require__.selectedTabBackgroundDef,
             _.GetEventModel(),
           ]);
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(_._, {
-            label: (0, _._)("#BackgroundGroups_TaSetting"),
-            checked: _,
-            onChange: (_) => {
-              _(_.SetTabEnabled(_, _));
-            },
-          }),
-          Boolean(_) &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_._, {
-                label: (0, _._)("#BackgroundGroups_ExtendToEnd"),
-                tooltip: (0, _._)("#BackgroundGroups_ExtendToEnd_Tab_ttip"),
-                checked: _,
-                onChange: (_) => _.SetTabLastCoverSectionUntilEnd(_, _),
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_._, {
+              label: (0, _._)("#BackgroundGroups_TaSetting"),
+              checked: _,
+              onChange: (_) => {
+                _(_.SetTabEnabled(_, _));
+              },
+            }),
+            Boolean(_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    label: (0, _._)("#BackgroundGroups_ExtendToEnd"),
+                    tooltip: (0, _._)("#BackgroundGroups_ExtendToEnd_Tab_ttip"),
+                    checked: _,
+                    onChange: (_) => _.SetTabLastCoverSectionUntilEnd(_, _),
+                  }),
+                  (0, _.jsx)(_, {
+                    backgroundImageEditModel: _,
+                    groupIndex: 0,
+                    imgGroup: (_ || _)?.groups[0],
+                    imgGroupDerivedMapping: __webpack_require__,
+                    eventModel: _,
+                    nTabIndex: _,
+                    classNameHeader: _().TabHeader,
+                  }),
+                ],
               }),
-              _.createElement(_, {
-                backgroundImageEditModel: _,
-                groupIndex: 0,
-                imgGroup: (_ || _)?.groups[0],
-                imgGroupDerivedMapping: __webpack_require__,
-                eventModel: _,
-                nTabIndex: _,
-                classNameHeader: _().TabHeader,
-              }),
-            ),
-        );
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5639,63 +5197,59 @@
         if (!_ || 0 == _.length) return null;
         const _ = (0, _._)(_._.LANGUAGE);
         return 1 == _.length
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().PresenterDisclaimer,
-                  "PresenterDisclaimer",
-                ),
-              },
-              (0, _._)(
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().PresenterDisclaimer,
+                "PresenterDisclaimer",
+              ),
+              children: (0, _._)(
                 "#SalePresented_By",
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   presentor: _[0],
                   lang: _,
                 }),
               ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().PresenterDisclaimer,
-                  "PresenterDisclaimer",
-                ),
-              },
-              (0, _._)(
+            })
+          : (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().PresenterDisclaimer,
+                "PresenterDisclaimer",
+              ),
+              children: (0, _._)(
                 "#SalePresented_By_Multi",
                 _.slice(0, _.length - 1).map((_, _) =>
-                  _.createElement(
+                  (0, _.jsxs)(
                     _.Fragment,
                     {
-                      key: _.url,
+                      children: [
+                        (0, _.jsx)(_, {
+                          presentor: _,
+                          lang: _,
+                        }),
+                        Boolean(_.length > 2) && ", ",
+                      ],
                     },
-                    _.createElement(_, {
-                      presentor: _,
-                      lang: _,
-                    }),
-                    Boolean(_.length > 2) && ", ",
+                    _.url,
                   ),
                 ),
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   presentor: _[_.length - 1],
                   lang: _,
                 }),
               ),
-            );
+            });
       }
       function _(_) {
         const { presentor: _, lang: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            href: (0, _._)(_.url),
-            bUseLinkFilter: !0,
-            className: _().PresenterLabel,
-          },
-          _._.GetWithFallback(_.localized_presenter_name, __webpack_require__),
-        );
+        return (0, _.jsx)(_._, {
+          href: (0, _._)(_.url),
+          bUseLinkFilter: !0,
+          className: _().PresenterLabel,
+          children: _._.GetWithFallback(
+            _.localized_presenter_name,
+            __webpack_require__,
+          ),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5809,42 +5363,30 @@
               : _._.EPreviewMode_Disabled,
             _ = _ || 36 != __webpack_require__.GetEventType(),
             _ = (0, _._)(__webpack_require__.clanSteamID);
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                eventModel: __webpack_require__,
-                language: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  location: _ ? 2 : 0,
-                },
-                _.createElement(
-                  _,
-                  {
-                    event: __webpack_require__,
-                    language: _,
-                    bIsPreview: _,
-                  },
-                  _ && _.createElement(_._, null),
-                  _.createElement(_, {
-                    eventModel: __webpack_require__,
-                  }),
-                  Boolean(_) &&
-                    (_ || _) &&
-                    _.createElement(_, {
-                      backgroundImageEditModel: _,
-                      bBackgroundImgGroupEditMode: _,
-                      fnSetBackgroundImgGroupEditMode: _,
-                      bShowAsValveOnly: !_,
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              eventModel: __webpack_require__,
+              language: _,
+              children: (0, _.jsx)(_._, {
+                location: _ ? 2 : 0,
+                children: (0, _.jsxs)(_, {
+                  event: __webpack_require__,
+                  language: _,
+                  bIsPreview: _,
+                  children: [
+                    _ && (0, _.jsx)(_._, {}),
+                    (0, _.jsx)(_, {
+                      eventModel: __webpack_require__,
                     }),
-                  _.createElement(
-                    "div",
-                    {
+                    Boolean(_) &&
+                      (_ || _) &&
+                      (0, _.jsx)(_, {
+                        backgroundImageEditModel: _,
+                        bBackgroundImgGroupEditMode: _,
+                        fnSetBackgroundImgGroupEditMode: _,
+                        bShowAsValveOnly: !_,
+                      }),
+                    (0, _.jsxs)("div", {
                       className: (0, _._)({
                         [_().SaleOuterContainer]: !0,
                         [_().SaleOuterTopMargin]: _,
@@ -5861,58 +5403,57 @@
                         : {
                             marginTop: `${_ || 0}px`,
                           },
-                    },
-                    _.createElement(_, {
-                      eventModel: __webpack_require__,
-                      language: _,
+                      children: [
+                        (0, _.jsx)(_, {
+                          eventModel: __webpack_require__,
+                          language: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          rgPresenters:
+                            __webpack_require__.jsondata.sale_presenters,
+                        }),
+                        (0, _.jsx)(_, {
+                          event: __webpack_require__,
+                          broadcastEmbedContext: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          ePreviewMode: _,
+                          event: __webpack_require__,
+                          backgroundImageEditModel: _,
+                          language: _,
+                          promotionName: _,
+                          nSaleDayIndex: _,
+                          broadcastEmbedContext: _,
+                          selectedTab: _,
+                        }),
+                        !_ &&
+                          (0, _.jsx)(_, {
+                            event: __webpack_require__,
+                            addtionalAdminButtons: _,
+                            fnOnChangeDayIndex: (_) => {
+                              _ != _ &&
+                                ((__webpack_require__.m_overrideCurrentDay = _),
+                                _(_));
+                            },
+                          }),
+                      ],
                     }),
-                    _.createElement(_, {
-                      rgPresenters:
-                        __webpack_require__.jsondata.sale_presenters,
-                    }),
-                    _.createElement(_, {
-                      event: __webpack_require__,
-                      broadcastEmbedContext: _,
-                    }),
-                    _.createElement(_, {
-                      ePreviewMode: _,
-                      event: __webpack_require__,
-                      backgroundImageEditModel: _,
-                      language: _,
-                      promotionName: _,
-                      nSaleDayIndex: _,
-                      broadcastEmbedContext: _,
-                      selectedTab: _,
-                    }),
-                    !_ &&
-                      _.createElement(_, {
-                        event: __webpack_require__,
-                        addtionalAdminButtons: _,
-                        fnOnChangeDayIndex: (_) => {
-                          _ != _ &&
-                            ((__webpack_require__.m_overrideCurrentDay = _),
-                            _(_));
-                        },
-                      }),
-                  ),
-                ),
-              ),
-            ),
-          );
+                  ],
+                }),
+              }),
+            }),
+          });
         }
-        return _.createElement(
-          "div",
-          {
-            className: _().FlexCenter,
-            style: {
-              height: "500px",
-            },
+        return (0, _.jsx)("div", {
+          className: _().FlexCenter,
+          style: {
+            height: "500px",
           },
-          _.createElement(_._, {
+          children: (0, _.jsx)(_._, {
             size: "medium",
             string: (0, _._)("#Loading"),
           }),
-        );
+        });
       }
       const _ = (0, _._)(function (_) {
         const {
@@ -5976,7 +5517,7 @@
           if (_);
           else if ((0, _._)(_) && !_._.logged_in)
             _ ||
-              ((_ = _.createElement(_._, {
+              ((_ = (0, _.jsx)(_._, {
                 section: _,
                 event: _,
                 language: __webpack_require__,
@@ -5992,7 +5533,7 @@
                 activeTab: _,
                 elements: [],
               }),
-              (_ = _.createElement(_._, {
+              (_ = (0, _.jsx)(_._, {
                 ..._,
                 section: _,
                 activeTab: _,
@@ -6005,17 +5546,13 @@
               }));
           }
           _ &&
-            (_ = _.createElement(
-              _,
-              {
-                nSectionID: _.unique_id,
-              },
-              _,
-            ));
-          let _ = _.createElement(
+            (_ = (0, _.jsx)(_, {
+              nSectionID: _.unique_id,
+              children: _,
+            }));
+          let _ = (0, _.jsx)(
             _,
             {
-              key: "SaleSectionIndex_" + _.unique_id + "_" + _,
               section: _,
               nActiveTabID: _[_.length - 1].activeTab.GetActiveTabUniqueID(),
               saleSectionIndex: _,
@@ -6023,8 +5560,9 @@
               salePageBackgroundDerivedConfig: _,
               backgroundImageEditModel: _,
               bExpanded: _,
+              children: _,
             },
-            _,
+            "SaleSectionIndex_" + _.unique_id + "_" + _,
           );
           const _ = _.mapSectionToGroup.get(_.unique_id);
           _ &&
@@ -6045,16 +5583,16 @@
             (_[_.length - 1].elements.push(_(_, _, _?.GetActiveTabUniqueID())),
             (_ = null));
         const _ = _.map((_, _) =>
-            _.createElement(
+            (0, _.jsx)(
               "div",
               {
-                key: "TabSection_" + _,
                 className: (0, _._)(
                   _().SaleSectionTabListContainer,
                   "SaleSectionTabListContainer",
                 ),
+                children: _.elements,
               },
-              _.elements,
+              "TabSection_" + _,
             ),
           ),
           _ = (0, _.useRef)(null),
@@ -6064,17 +5602,15 @@
             (_.current = (0, _._)(_.current, "y") ?? document.documentElement);
         }, []);
         const _ = (0, _._)(_, "smooth");
-        return _.createElement(
-          _._,
-          {
-            ref: _,
-            className: _().SaleSectionListContainer,
-            onGamepadDirection: _,
-            focusable: !1,
-            focusableIfEmpty: !0,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          ref: _,
+          className: _().SaleSectionListContainer,
+          onGamepadDirection: _,
+          focusable: !1,
+          focusableIfEmpty: !0,
+          navKey: "SaleSectionListContainer",
+          children: _,
+        });
       });
       function _(_) {
         const {
@@ -6083,15 +5619,14 @@
           children: _,
         } = _;
         return _
-          ? _.createElement(
-              _,
-              {
-                visibility_by_door_index_state: _,
-                door_index_visibility: __webpack_require__,
-              },
-              _,
-            )
-          : _.createElement(_.Fragment, null, _);
+          ? (0, _.jsx)(_, {
+              visibility_by_door_index_state: _,
+              door_index_visibility: __webpack_require__,
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
       }
       function _(_) {
         const {
@@ -6103,7 +5638,9 @@
         return ("hide_when_open_door_index" == _ && _) ||
           ("show_when_open_door_index" == _ && !_)
           ? null
-          : _.createElement(_.Fragment, null, _);
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
       }
       function _({ children: _, onChange: _ }) {
         _.useRef(null);
@@ -6129,86 +5666,69 @@
           _ = "tabs" != _.section_type,
           [_, _] = (0, _.useState)(!0);
         return _
-          ? _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _,
-                {
-                  visibility_by_door_index_state:
-                    _.visibility_by_door_index_state,
-                  door_index_visibility: _.door_index_visibility,
-                },
-                _
-                  ? _.createElement(
-                      _._,
-                      {
-                        navKey: _,
-                        _: _,
-                        className: (0, _._)({
-                          [_().SaleSectionCtn]: !0,
-                          SaleSectionCtn: !0,
-                          [_.section_type]: !0,
-                          [_.internal_section_data?.internal_type || ""]: !0,
-                          expanded: _,
-                          [_.single_item_style || ""]: !0,
-                          [_().SaleSectionBackgroundImageGroupEdit]:
-                            _ == _._.EPreviewMode_EditBackground,
-                          [_().NoTopPadding]: _.collapse_header_space,
-                        }),
-                      },
-                      Boolean(_ === _._.EPreviewMode_EditBackground)
-                        ? _.createElement(
-                            _.Fragment,
-                            null,
-                            _,
-                            _.createElement(_, {
-                              nSectionUniqueID:
-                                _.unique_id || __webpack_require__,
-                              nTabID: _,
-                              salePageBackgroundDerivedConfig: _,
-                              backgroundImageEditModel: _,
-                            }),
-                          )
-                        : _.createElement(
-                            _,
-                            {
-                              onChange: _,
-                            },
-                            _,
-                          ),
-                    )
-                  : _.createElement(
-                      _.Fragment,
-                      null,
-                      Boolean(_ === _._.EPreviewMode_EditBackground)
-                        ? _.createElement(
-                            "div",
-                            {
-                              _: _,
-                              className: (0, _._)({
-                                [_().SaleSectionCtn]: !0,
-                                [_().SaleSectionBackgroundImageGroupEdit]: !0,
-                                [_().NoTopPadding]: _.collapse_header_space,
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
+                visibility_by_door_index_state:
+                  _.visibility_by_door_index_state,
+                door_index_visibility: _.door_index_visibility,
+                children: _
+                  ? (0, _.jsx)(_._, {
+                      navKey: _,
+                      _: _,
+                      className: (0, _._)({
+                        [_().SaleSectionCtn]: !0,
+                        SaleSectionCtn: !0,
+                        [_.section_type]: !0,
+                        [_.internal_section_data?.internal_type || ""]: !0,
+                        expanded: _,
+                        [_.single_item_style || ""]: !0,
+                        [_().SaleSectionBackgroundImageGroupEdit]:
+                          _ == _._.EPreviewMode_EditBackground,
+                        [_().NoTopPadding]: _.collapse_header_space,
+                      }),
+                      children: Boolean(_ === _._.EPreviewMode_EditBackground)
+                        ? (0, _.jsxs)(_.Fragment, {
+                            children: [
+                              _,
+                              (0, _.jsx)(_, {
+                                nSectionUniqueID:
+                                  _.unique_id || __webpack_require__,
+                                nTabID: _,
+                                salePageBackgroundDerivedConfig: _,
+                                backgroundImageEditModel: _,
                               }),
-                            },
-                            _,
-                            _.createElement(_, {
-                              backgroundImageEditModel: _,
-                              nTabID: _,
-                              imgGroupDerivedMapping: _,
+                            ],
+                          })
+                        : (0, _.jsx)(_, {
+                            onChange: _,
+                            children: _,
+                          }),
+                    })
+                  : (0, _.jsx)(_.Fragment, {
+                      children: Boolean(_ === _._.EPreviewMode_EditBackground)
+                        ? (0, _.jsxs)("div", {
+                            _: _,
+                            className: (0, _._)({
+                              [_().SaleSectionCtn]: !0,
+                              [_().SaleSectionBackgroundImageGroupEdit]: !0,
+                              [_().NoTopPadding]: _.collapse_header_space,
                             }),
-                          )
-                        : _.createElement(
-                            _,
-                            {
-                              onChange: _,
-                            },
-                            _,
-                          ),
-                    ),
-              ),
-            )
+                            children: [
+                              _,
+                              (0, _.jsx)(_, {
+                                backgroundImageEditModel: _,
+                                nTabID: _,
+                                imgGroupDerivedMapping: _,
+                              }),
+                            ],
+                          })
+                        : (0, _.jsx)(_, {
+                            onChange: _,
+                            children: _,
+                          }),
+                    }),
+              }),
+            })
           : null;
       }
       function _(_) {
@@ -6223,37 +5743,30 @@
           _ = _.useRef(void 0);
         return (
           (0, _._)((_) => _ == _ && (_.current?.scrollIntoView(), _(!0), !0)),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: (0, _._)(
-                _().SaleSectionLivePreview,
-                _ && _().Hover,
-                _ && _().JumpedTo,
-              ),
-              onAnimationEnd: () => _(!1),
-              onMouseEnter: () => _(!0),
-              onMouseLeave: () => _(!1),
-            },
-            _ &&
-              _.createElement(
-                _._,
-                {
+          (0, _.jsxs)("div", {
+            ref: _,
+            className: (0, _._)(
+              _().SaleSectionLivePreview,
+              _ && _().Hover,
+              _ && _().JumpedTo,
+            ),
+            onAnimationEnd: () => _(!1),
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+            children: [
+              _ &&
+                (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)("#Sale_SaleEditor_JumpTo_ttip"),
                   direction: "top",
-                },
-                _.createElement(
-                  "button",
-                  {
+                  children: (0, _.jsx)("button", {
                     className: _().JumpToButton,
                     onClick: () => _._.Get().JumpToSection(_),
-                  },
-                  _.createElement(_.ffu, null),
-                ),
-              ),
-            __webpack_require__,
-          )
+                    children: (0, _.jsx)(_.ffu, {}),
+                  }),
+                }),
+              __webpack_require__,
+            ],
+          })
         );
       }
       function _(_) {
@@ -6274,45 +5787,36 @@
             _.push((0, _._)("#Sale_SaleEventIsHidden_ContentHub_Preview")),
           _.BIsVisibleEvent() && 0 == _.length
             ? void 0
-            : _.createElement(
-                "div",
-                {
-                  className: _().SalePageHiddenWarning,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  !_.BIsVisibleEvent() &&
-                    _.createElement(
-                      "div",
-                      {
+            : (0, _.jsx)("div", {
+                className: _().SalePageHiddenWarning,
+                children: (0, _.jsxs)("div", {
+                  children: [
+                    !_.BIsVisibleEvent() &&
+                      (0, _.jsx)("div", {
                         className: _().WarningText,
-                      },
-                      (0, _._)("#Sale_SaleEventIsHidden"),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
+                        children: (0, _._)("#Sale_SaleEventIsHidden"),
+                      }),
+                    _.length > 0 &&
+                      (0, _.jsxs)("div", {
                         className: _().WarningText,
-                      },
-                      (0, _._)("#Sale_SaleEventIsHidden_Reason", _.length),
-                      _.createElement(
-                        "ul",
-                        null,
-                        _.map((_) =>
-                          _.createElement(
-                            "li",
-                            {
-                              key: _,
-                            },
-                            _,
-                          ),
-                        ),
-                      ),
-                    ),
-                ),
-              )
+                        children: [
+                          (0, _._)("#Sale_SaleEventIsHidden_Reason", _.length),
+                          (0, _.jsx)("ul", {
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                "li",
+                                {
+                                  children: _,
+                                },
+                                _,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+              })
         );
       }
     },
@@ -6328,7 +5832,7 @@
       function _(_) {
         const { navigate: _, onClick: __webpack_require__, ..._ } = _,
           { target: _ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ..._,
           onClick: (_) => {
             try {
@@ -6347,13 +5851,13 @@
         });
       }
       function _(_) {
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           component: _,
           ..._,
         });
       }
       function _(_) {
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           component: _,
           ..._,
         });
@@ -6365,6 +5869,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6411,7 +5916,7 @@
               ref: _ && !_ ? _ : void 0,
             };
           })(_);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -6422,6 +5927,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6442,73 +5948,67 @@
             elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _,
                 _.SectionTitleHeader,
                 _.required_title,
                 "SectionTitleHeader",
               ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.CollapsableSectionTitle,
-                  "EventEditorTextTitle",
-                ),
-              },
-              _,
-              Boolean(__webpack_require__) &&
-                _.createElement(_._, {
-                  tooltip: __webpack_require__,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.CollapsableSectionTitle,
+                    "EventEditorTextTitle",
+                  ),
+                  children: [
+                    _,
+                    Boolean(__webpack_require__) &&
+                      (0, _.jsx)(_._, {
+                        tooltip: __webpack_require__,
+                      }),
+                  ],
                 }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SectionTitleButtons,
-              },
-              _,
-              _.createElement(_, {
-                bIsMinimized: _,
-                fnToggleMinimize: _,
+                (0, _.jsxs)("div", {
+                  className: _.SectionTitleButtons,
+                  children: [
+                    _,
+                    (0, _.jsx)(_, {
+                      bIsMinimized: _,
+                      fnToggleMinimize: _,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            !_ &&
+              (0, _.jsx)(_._, {
+                children: _,
               }),
-            ),
-          ),
-          !_ && _.createElement(_._, null, _),
-        );
+          ],
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
-        return _.createElement(
-          _,
-          {
-            ..._,
-            getMinimized: () => _,
-            toggleMinimized: () => __webpack_require__(!_),
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_, {
+          ..._,
+          getMinimized: () => _,
+          toggleMinimized: () => __webpack_require__(!_),
+          children: _.children,
+        });
       }
       function _(_) {
         const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return _.createElement(
-          _._,
-          {
-            "data-tooltip-text": (0, _._)(_),
-            onClick: __webpack_require__,
-          },
-          _.bIsMinimized
-            ? _.createElement(_.hz4, null)
-            : _.createElement(_.Xjb, null),
-        );
+        return (0, _.jsx)(_._, {
+          "data-tooltip-text": (0, _._)(_),
+          onClick: __webpack_require__,
+          children: _.bIsMinimized
+            ? (0, _.jsx)(_.hz4, {})
+            : (0, _.jsx)(_.Xjb, {}),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -6555,6 +6055,7 @@
           default: () => _,
         });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7645,7 +7146,7 @@
             }),
             (0, _.useCallback)(
               (_, _) => {
-                const _ = _.createElement(_, {
+                const _ = (0, _.jsx)(_, {
                   ..._,
                 });
                 (0, _._)(_, _, _);
@@ -7653,26 +7154,20 @@
               [_],
             ));
         var _;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().CalendarBtn),
-              onClick: (_) =>
-                __webpack_require__(_, {
-                  bDisableMouseOverlay: !0,
-                  bAlwaysOnTop: !0,
-                }),
-            },
-            _.createElement(_.VvS, {
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_().CalendarBtn),
+            onClick: (_) =>
+              __webpack_require__(_, {
+                bDisableMouseOverlay: !0,
+                bAlwaysOnTop: !0,
+              }),
+            children: (0, _.jsx)(_.VvS, {
               color: "#c6d4df",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const {
@@ -7720,25 +7215,16 @@
             }
             return _()().clone().locale("YearMonthPickerContextMenu");
           }, []);
-        return _.createElement(
-          _._,
-          {
-            refInstance: _,
-          },
-          _.createElement(
-            _._,
-            {
-              onSelected: () => {},
-              className: _().PickerContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                onClick: (_) => {
-                  _.preventDefault(), _.stopPropagation();
-                },
+        return (0, _.jsx)(_._, {
+          refInstance: _,
+          children: (0, _.jsx)(_._, {
+            onSelected: () => {},
+            className: _().PickerContainer,
+            children: (0, _.jsx)("div", {
+              onClick: (_) => {
+                _.preventDefault(), _.stopPropagation();
               },
-              _.createElement(_(), {
+              children: (0, _.jsx)(_(), {
                 ref: _,
                 value: _,
                 onChange: _,
@@ -7749,9 +7235,9 @@
                 input: !1,
                 locale: "YearMonthPickerContextMenu",
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7776,56 +7262,50 @@
               .map((_) => _._.Get().GetApp(_))
               .filter(Boolean);
           }, [_]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: (0, _._)({
                 [_().ImagesCtn]: !0,
                 [_().TallCapsules]: _,
                 [_().BlurCapsules]: _,
                 [_().AnnualChart]: !_,
               }),
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _().AllImagesCtn,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().AllImages,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: (0, _._)({
                       [_().ImageTint]: !0,
                       [`Month${_}`]: !0,
                       [_().Wide2]: _.length <= 10,
                       [_().Wide3]: _.length <= 20,
                     }),
-                  },
-                  _.map((_, _) =>
-                    _
-                      ? _.createElement("img", {
-                          key: "bg_" + _.GetAppID() + "+" + _,
-                          src: _.GetAssets().GetHeroCapsuleURL(),
-                        })
-                      : _.createElement("img", {
-                          key: "bg_" + _.GetAppID() + "+" + _,
-                          src: _.GetAssets().GetHeaderURL(),
-                        }),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          __webpack_require__,
-        );
+                    children: _.map((_, _) =>
+                      _
+                        ? (0, _.jsx)(
+                            "img",
+                            {
+                              src: _.GetAssets().GetHeroCapsuleURL(),
+                            },
+                            "bg_" + _.GetAppID() + "+" + _,
+                          )
+                        : (0, _.jsx)(
+                            "img",
+                            {
+                              src: _.GetAssets().GetHeaderURL(),
+                            },
+                            "bg_" + _.GetAppID() + "+" + _,
+                          ),
+                    ),
+                  }),
+                }),
+              }),
+            }),
+            __webpack_require__,
+          ],
+        });
       }
       function _(_) {
         const _ = new Date(_ > 1e12 ? _ : 1e3 * _),
@@ -8116,18 +7596,15 @@
           _ = (0, _._)();
         return !_ || _
           ? null === _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ErrorStylesWithIcon,
-                },
-                (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-              )
-            : _.createElement(_._, {
+            ? (0, _.jsx)("div", {
+                className: _.ErrorStylesWithIcon,
+                children: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+              })
+            : (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 position: "center",
               })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               eventModel: _,
               language: _,
               bIsPreview: !1,
@@ -8206,12 +7683,10 @@
           Math.floor(_.getTime() / 1e3) > _ ||
           _.getFullYear() < _ ||
           (_.getFullYear() == _ && _.getMonth() < _)
-          ? _.createElement(
-              "div",
-              null,
-              (0, _._)("#DateTimePicker_Fallback_Invalid_DateTime"),
-            )
-          : _.createElement(_, {
+          ? (0, _.jsx)("div", {
+              children: (0, _._)("#DateTimePicker_Fallback_Invalid_DateTime"),
+            })
+          : (0, _.jsx)(_, {
               TopMonthlyReleasesStore: __webpack_require__,
               nMonth: _.getMonth(),
               nYear: _.getFullYear(),
@@ -8310,66 +7785,57 @@
           _(_, _, _, _),
           _ && 1 != _ && _ && null != _ && _
             ? 0 == _.length
-              ? _.createElement(
-                  _._,
-                  {
-                    className: _().ChartPage,
-                  },
-                  _.createElement(_, {
-                    nMonth: _,
-                    nYear: __webpack_require__,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().NoticeBox,
-                    },
-                    (0, _._)(
-                      _.bSQLError
-                        ? "#Error_ErrorCommunicatingWithNetwork"
-                        : "#SteamCharts_NewMonth_NoRelease",
-                    ),
-                  ),
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    className: _().ChartPage,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      rgAppIDs: _,
-                      nMonth: _,
-                      bBlurCapsules: !0,
-                    },
-                    _.createElement(_, {
+              ? (0, _.jsxs)(_._, {
+                  className: _().ChartPage,
+                  children: [
+                    (0, _.jsx)(_, {
                       nMonth: _,
                       nYear: __webpack_require__,
                     }),
-                  ),
-                  _.createElement(_, {
-                    promotionName: _,
-                    rgFilteredCombinedAppsAndDLC: _,
-                    rgFilteredAppIDByTier: _,
-                    rgFilteredDLCsAppIDs: _,
-                    facets: _,
-                  }),
-                )
-            : _.createElement(
-                _._,
-                {
+                    (0, _.jsx)("div", {
+                      className: _().NoticeBox,
+                      children: (0, _._)(
+                        _.bSQLError
+                          ? "#Error_ErrorCommunicatingWithNetwork"
+                          : "#SteamCharts_NewMonth_NoRelease",
+                      ),
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_._, {
                   className: _().ChartPage,
-                },
-                _.createElement(_, {
-                  nMonth: _,
-                  nYear: __webpack_require__,
-                }),
-                _.createElement(_._, {
-                  string: (0, _._)("#Loading"),
-                  position: "center",
-                }),
-              )
+                  children: [
+                    (0, _.jsx)(_, {
+                      rgAppIDs: _,
+                      nMonth: _,
+                      bBlurCapsules: !0,
+                      children: (0, _.jsx)(_, {
+                        nMonth: _,
+                        nYear: __webpack_require__,
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      promotionName: _,
+                      rgFilteredCombinedAppsAndDLC: _,
+                      rgFilteredAppIDByTier: _,
+                      rgFilteredDLCsAppIDs: _,
+                      facets: _,
+                    }),
+                  ],
+                })
+            : (0, _.jsxs)(_._, {
+                className: _().ChartPage,
+                children: [
+                  (0, _.jsx)(_, {
+                    nMonth: _,
+                    nYear: __webpack_require__,
+                  }),
+                  (0, _.jsx)(_._, {
+                    string: (0, _._)("#Loading"),
+                    position: "center",
+                  }),
+                ],
+              })
         );
       }
       function _(_, _) {
@@ -8414,136 +7880,98 @@
           (0, _._)("Left", () => _(!1), !0, !0),
           (0, _._)("ArrowRight", () => _(!0), !0, !0),
           (0, _._)("Right", () => _(!0), !0, !0),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-              },
-              _.createElement("h1", null, _(_, __webpack_require__)),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().PageSubtitle),
-              },
-              (0, _._)("#SteamCharts_Monthly_SubTitle", _(__webpack_require__)),
-              _.createElement("br", null),
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#SteamCharts_Monthly_PublishSchedule"),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(_().ChartRangeCtn),
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: _(_, _),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().ChartNavCtn]: !0,
-                      [_().Disabled]: !_,
-                    }),
-                  },
-                  _
-                    ? _.createElement(
-                        _._,
-                        {
-                          _: _ ? _.TopNewReleases(_) : void 0,
-                          className: _().ChartNavHitArea,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().ChartNavPrev,
-                          },
-                          " ",
-                        ),
-                      )
-                    : _.createElement(
-                        "div",
-                        {
-                          className: _().ChartNavHitArea,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().ChartNavPrev,
-                          },
-                          " ",
-                        ),
-                      ),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: _(_, _),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().ChartNavCtn]: !0,
-                      [_().Disabled]: !_,
-                    }),
-                  },
-                  _
-                    ? _.createElement(
-                        _._,
-                        {
-                          _: _.TopNewReleases(_),
-                          className: _().ChartNavHitArea,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().ChartNavNext,
-                          },
-                          " ",
-                        ),
-                      )
-                    : _.createElement(
-                        "div",
-                        {
-                          className: _().ChartNavHitArea,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().ChartNavNext,
-                          },
-                          " ",
-                        ),
-                      ),
-                ),
-              ),
-              _.createElement(_, {
-                toolTipContent: (0, _._)("#SteamCharts_Monthly_Calendar"),
-                minDate: _,
-                maxDate: _(_),
-                value: Math.floor(
-                  new Date(__webpack_require__, _, 15, 12, 0, 0).getTime() /
-                    1e3,
-                ),
-                fnOnUpdate: (_) => {
-                  const _ = new Date(1e3 * _),
-                    _ = _(_.getFullYear(), _.getMonth());
-                  _.push(_.TopNewReleases(_));
-                },
+                children: (0, _.jsx)("h1", {
+                  children: _(_, __webpack_require__),
+                }),
               }),
-            ),
-          )
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_().PageSubtitle),
+                children: [
+                  (0, _._)(
+                    "#SteamCharts_Monthly_SubTitle",
+                    _(__webpack_require__),
+                  ),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("span", {
+                    children: (0, _._)("#SteamCharts_Monthly_PublishSchedule"),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(_().ChartRangeCtn),
+                children: [
+                  (0, _.jsx)(_._, {
+                    toolTipContent: _(_, _),
+                    children: (0, _.jsx)("div", {
+                      className: (0, _._)({
+                        [_().ChartNavCtn]: !0,
+                        [_().Disabled]: !_,
+                      }),
+                      children: _
+                        ? (0, _.jsx)(_._, {
+                            _: _ ? _.TopNewReleases(_) : void 0,
+                            className: _().ChartNavHitArea,
+                            children: (0, _.jsx)("div", {
+                              className: _().ChartNavPrev,
+                              children: " ",
+                            }),
+                          })
+                        : (0, _.jsx)("div", {
+                            className: _().ChartNavHitArea,
+                            children: (0, _.jsx)("div", {
+                              className: _().ChartNavPrev,
+                              children: " ",
+                            }),
+                          }),
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    toolTipContent: _(_, _),
+                    children: (0, _.jsx)("div", {
+                      className: (0, _._)({
+                        [_().ChartNavCtn]: !0,
+                        [_().Disabled]: !_,
+                      }),
+                      children: _
+                        ? (0, _.jsx)(_._, {
+                            _: _.TopNewReleases(_),
+                            className: _().ChartNavHitArea,
+                            children: (0, _.jsx)("div", {
+                              className: _().ChartNavNext,
+                              children: " ",
+                            }),
+                          })
+                        : (0, _.jsx)("div", {
+                            className: _().ChartNavHitArea,
+                            children: (0, _.jsx)("div", {
+                              className: _().ChartNavNext,
+                              children: " ",
+                            }),
+                          }),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    toolTipContent: (0, _._)("#SteamCharts_Monthly_Calendar"),
+                    minDate: _,
+                    maxDate: _(_),
+                    value: Math.floor(
+                      new Date(__webpack_require__, _, 15, 12, 0, 0).getTime() /
+                        1e3,
+                    ),
+                    fnOnUpdate: (_) => {
+                      const _ = new Date(1e3 * _),
+                        _ = _(_.getFullYear(), _.getMonth());
+                      _.push(_.TopNewReleases(_));
+                    },
+                  }),
+                ],
+              }),
+            ],
+          })
         );
       }
       const _ = 2,
@@ -8604,6 +8032,14 @@
         );
       }
       function _(_) {
+        return (0, _._)(
+          "#SteamCharts_TopSellers_WeeklyRangeShort",
+          (0, _._)(_, {
+            timeZone: "UTC",
+          }),
+        );
+      }
+      function _(_) {
         if (!_) return "";
         const _ = new Date(1e3 * _);
         return `${_.getUTCFullYear()}-${_.getUTCMonth() + 1}-${_.getUTCDate()}`;
@@ -8658,182 +8094,152 @@
       const _ = _.memo((_) => {
           const _ = _();
           return _.isLoading
-            ? _.createElement("div", {
+            ? (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().ChartContainerPlaceholder,
                   _().Placeholder,
                 ),
               })
             : _.data
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _().ChartContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+              ? (0, _.jsxs)("div", {
+                  className: _().ChartContainer,
+                  children: [
+                    (0, _.jsx)("div", {
                       className: _().Chart,
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_, {
-                        Data: _.data,
+                      children: (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_, {
+                          Data: _.data,
+                        }),
                       }),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
+                    }),
+                    (0, _.jsxs)("div", {
                       className: _().Stats,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().PeakStats,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatsTitle,
-                        },
-                        (0, _._)(_.data.peak),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatSubtitle,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            className: _().Concurrent,
-                          },
-                          (0, _._)("#SteamCharts_Graph_PeakConcurrent"),
-                        ),
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().CurrentStats,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatsTitle,
-                        },
-                        (0, _._)(_.data.current),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatSubtitle,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            className: _().Now,
-                          },
-                          (0, _._)("#SteamCharts_Graph_OnlineNow"),
-                        ),
-                      ),
-                    ),
-                  ),
-                )
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _().PeakStats,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().StatsTitle,
+                              children: (0, _._)(_.data.peak),
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().StatSubtitle,
+                              children: (0, _.jsx)("span", {
+                                className: _().Concurrent,
+                                children: (0, _._)(
+                                  "#SteamCharts_Graph_PeakConcurrent",
+                                ),
+                              }),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().CurrentStats,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().StatsTitle,
+                              children: (0, _._)(_.data.current),
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().StatSubtitle,
+                              children: (0, _.jsx)("span", {
+                                className: _().Now,
+                                children: (0, _._)(
+                                  "#SteamCharts_Graph_OnlineNow",
+                                ),
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                })
               : null;
         }),
         _ = _.memo((_) => {
           const { Data: _ } = _;
-          return _.createElement(
-            _._,
-            {
-              width: "100%",
-              height: "100%",
-            },
-            _.createElement(
-              _._,
-              {
-                data: _.history,
-                margin: {
-                  top: 25,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                },
-                barGap: 10,
+          return (0, _.jsx)(_._, {
+            width: "100%",
+            height: "100%",
+            children: (0, _.jsxs)(_._, {
+              data: _.history,
+              margin: {
+                top: 25,
+                left: 0,
+                right: 0,
+                bottom: 0,
               },
-              _.createElement(
-                "defs",
-                null,
-                _.createElement(
-                  "linearGradient",
-                  {
+              barGap: 10,
+              children: [
+                (0, _.jsx)("defs", {
+                  children: (0, _.jsxs)("linearGradient", {
                     _: "bar_linear",
                     _: "0",
                     _: "0",
                     _: "0",
                     _: "1",
+                    children: [
+                      (0, _.jsx)("stop", {
+                        stopColor: "#1A9FFF",
+                      }),
+                      (0, _.jsx)("stop", {
+                        offset: "0.01",
+                        stopColor: "#1A9FFF",
+                      }),
+                      (0, _.jsx)("stop", {
+                        offset: "0.0101",
+                        stopColor: "#1A9FFF",
+                        stopOpacity: "0.5",
+                      }),
+                      (0, _.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "#30363D",
+                        stopOpacity: "0.5",
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  vertical: !1,
+                  stroke: "#a0aab6",
+                }),
+                (0, _.jsx)(_._, {
+                  tickFormatter: _._,
+                  tick: {
+                    fill: "white",
                   },
-                  _.createElement("stop", {
-                    stopColor: "#1A9FFF",
-                  }),
-                  _.createElement("stop", {
-                    offset: "0.01",
-                    stopColor: "#1A9FFF",
-                  }),
-                  _.createElement("stop", {
-                    offset: "0.0101",
-                    stopColor: "#1A9FFF",
-                    stopOpacity: "0.5",
-                  }),
-                  _.createElement("stop", {
-                    offset: "1",
-                    stopColor: "#30363D",
-                    stopOpacity: "0.5",
-                  }),
-                ),
-              ),
-              _.createElement(_._, {
-                vertical: !1,
-                stroke: "#a0aab6",
-              }),
-              _.createElement(_._, {
-                tickFormatter: _._,
-                tick: {
-                  fill: "white",
-                },
-                axisLine: !1,
-              }),
-              _.createElement(_._, {
-                content: _.createElement(_, null),
-              }),
-              _.createElement(_._, {
-                dataKey: "users",
-                barSize: 2,
-                fill: "url( #bar_linear )",
-              }),
-              _.createElement(_._, {
-                _: _.peak,
-                stroke: "#82FF01",
-                strokeDasharray: "6",
-              }),
-            ),
-          );
+                  axisLine: !1,
+                }),
+                (0, _.jsx)(_._, {
+                  content: (0, _.jsx)(_, {}),
+                }),
+                (0, _.jsx)(_._, {
+                  dataKey: "users",
+                  barSize: 2,
+                  fill: "url( #bar_linear )",
+                }),
+                (0, _.jsx)(_._, {
+                  _: _.peak,
+                  stroke: "#82FF01",
+                  strokeDasharray: "6",
+                }),
+              ],
+            }),
+          });
         });
       function _({ active: _, payload: _ }) {
         if (_ && _ && _.length) {
           const _ = _[0].payload;
-          return _.createElement(
-            _._,
-            null,
-            (0, _._)(
+          return (0, _.jsx)(_._, {
+            children: (0, _._)(
               "#SteamCharts_OverviewGraph_Tooltip_OnlineAt",
-              _.createElement("b", null, (0, _._)(_.users)),
+              (0, _.jsx)("b", {
+                children: (0, _._)(_.users),
+              }),
               _.date.toLocaleString((0, _._)()),
             ),
-          );
+          });
         }
         return null;
       }
@@ -8846,222 +8252,156 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { SteamCharts: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            title: (0, _._)(
-              "#SteamCharts_Menu_SteamCharts",
-              (0, _._)("#SteamCharts_Menu_Charts"),
-            ),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().PageContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-              },
-              _.createElement(
-                "h1",
-                null,
-                (0, _._)("#SteamCharts_PageTitle_Overview"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PageSubtitle,
-              },
-              (0, _._)("#SteamCharts_PageSubTitle_Overview"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().PageSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionTitle,
-                },
-                (0, _._)("#SteamCharts_OverviewGraph_Title_PlayersOnline"),
-              ),
-              _.createElement(_._, null, _.createElement(_, null)),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(_().PageSection, _().SideBySideCharts),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Chart,
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
-                      feature: "topsellers",
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        SteamCharts: _,
-                        name: (0, _._)(
-                          "#SteamCharts_OverviewGraph_Title_TopSellers",
-                        ),
-                        strTopItemDesc: (0, _._)(
-                          "#SteamCharts_OverviewGraph_Desc_TopSelling",
-                        ),
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          className: _().ChartMoreBtn,
-                          _: _.TopSelling(_._.COUNTRY),
-                        },
-                        (0, _._)(
-                          "#SteamCharts_OverviewGraph_Button_TopSelling",
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Chart,
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
-                      feature: "mostplayed",
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        SteamCharts: _,
-                        name: (0, _._)(
-                          "#SteamCharts_OverviewGraph_Title_MostPlayed",
-                        ),
-                        strTopItemDesc: (0, _._)(
-                          "#SteamCharts_OverviewGraph_Desc_MostPlayed",
-                        ),
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          className: _().ChartMoreBtn,
-                          _: _.MostPlayed(),
-                        },
-                        (0, _._)(
-                          "#SteamCharts_OverviewGraph_Button_MostPlayed",
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(_().PageSection, _().SideBySideCharts),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Chart,
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    TopSellersStore: _.TopSellersStore,
-                  }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().Chart, _().Monthly),
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    TopMonthlyReleasesStore: _.TopMonthlyReleasesStore,
-                  }),
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
-                  TopYearlyReleasesStore: _.TopYearlyReleasesStore,
-                }),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().PageSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionTitle,
-                },
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)("#SteamCharts_Overview_Title_More"),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _().MoreLinksCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    href: `${_._.STORE_BASE_URL}hwsurvey/`,
-                  },
-                  (0, _._)("#SteamCharts_Overview_Link_Hardware"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    href: `${_._.STORE_BASE_URL}stats/content/`,
-                  },
-                  (0, _._)("#SteamCharts_Overview_Link_Download"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    href: `${_._.STORE_BASE_URL}stats/support/`,
-                  },
-                  (0, _._)("#SteamCharts_Overview_Link_Support"),
-                ),
-              ),
-            ),
+        return (0, _.jsx)(_._, {
+          title: (0, _._)(
+            "#SteamCharts_Menu_SteamCharts",
+            (0, _._)("#SteamCharts_Menu_Charts"),
           ),
-        );
+          children: (0, _.jsxs)(_._, {
+            className: _().PageContainer,
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
+                children: (0, _.jsx)("h1", {
+                  children: (0, _._)("#SteamCharts_PageTitle_Overview"),
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: _().PageSubtitle,
+                children: (0, _._)("#SteamCharts_PageSubTitle_Overview"),
+              }),
+              (0, _.jsxs)(_._, {
+                className: _().PageSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().SectionTitle,
+                    children: (0, _._)(
+                      "#SteamCharts_OverviewGraph_Title_PlayersOnline",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {}),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(_().PageSection, _().SideBySideCharts),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Chart,
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        feature: "topsellers",
+                        children: (0, _.jsx)(_, {
+                          SteamCharts: _,
+                          name: (0, _._)(
+                            "#SteamCharts_OverviewGraph_Title_TopSellers",
+                          ),
+                          strTopItemDesc: (0, _._)(
+                            "#SteamCharts_OverviewGraph_Desc_TopSelling",
+                          ),
+                          children: (0, _.jsx)(_._, {
+                            className: _().ChartMoreBtn,
+                            _: _.TopSelling(_._.COUNTRY),
+                            children: (0, _._)(
+                              "#SteamCharts_OverviewGraph_Button_TopSelling",
+                            ),
+                          }),
+                        }),
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Chart,
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        feature: "mostplayed",
+                        children: (0, _.jsx)(_, {
+                          SteamCharts: _,
+                          name: (0, _._)(
+                            "#SteamCharts_OverviewGraph_Title_MostPlayed",
+                          ),
+                          strTopItemDesc: (0, _._)(
+                            "#SteamCharts_OverviewGraph_Desc_MostPlayed",
+                          ),
+                          children: (0, _.jsx)(_._, {
+                            className: _().ChartMoreBtn,
+                            _: _.MostPlayed(),
+                            children: (0, _._)(
+                              "#SteamCharts_OverviewGraph_Button_MostPlayed",
+                            ),
+                          }),
+                        }),
+                      }),
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(_().PageSection, _().SideBySideCharts),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Chart,
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
+                        TopSellersStore: _.TopSellersStore,
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().Chart, _().Monthly),
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
+                        TopMonthlyReleasesStore: _.TopMonthlyReleasesStore,
+                      }),
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_, {
+                    TopYearlyReleasesStore: _.TopYearlyReleasesStore,
+                  }),
+                }),
+              }),
+              (0, _.jsxs)(_._, {
+                className: _().PageSection,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().SectionTitle,
+                    children: (0, _.jsx)("b", {
+                      children: (0, _._)("#SteamCharts_Overview_Title_More"),
+                    }),
+                  }),
+                  (0, _.jsxs)(_._, {
+                    className: _().MoreLinksCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        href: `${_._.STORE_BASE_URL}hwsurvey/`,
+                        children: (0, _._)(
+                          "#SteamCharts_Overview_Link_Hardware",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        href: `${_._.STORE_BASE_URL}stats/content/`,
+                        children: (0, _._)(
+                          "#SteamCharts_Overview_Link_Download",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        href: `${_._.STORE_BASE_URL}stats/support/`,
+                        children: (0, _._)(
+                          "#SteamCharts_Overview_Link_Support",
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -9072,57 +8412,51 @@
           } = _,
           { data: _ } = (0, _._)(..._.GetRealTimeTopSellersQuery());
         if (!_ || !_.GetItems().length)
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: (0, _._)(_().OverviewChartPlaceholder, _().Placeholder),
           });
         const [_, ..._] = _.GetItems();
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsxs)("div", {
               className: _().SectionTitle,
-            },
-            " ",
-            __webpack_require__,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: [" ", __webpack_require__],
+            }),
+            (0, _.jsxs)(_._, {
               className: _().ChartItemsCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().TopItem,
-              },
-              _.createElement(
-                _._,
-                {
-                  item: _,
-                },
-                _.createElement("img", {
-                  className: _().Capsule,
-                  src: _.GetAssets().GetMainCapsuleURL(),
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().TopItem,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      item: _,
+                      children: (0, _.jsx)("img", {
+                        className: _().Capsule,
+                        src: _.GetAssets().GetMainCapsuleURL(),
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      rank: 1,
+                      item: _,
+                      itemDesc: _,
+                    }),
+                  ],
                 }),
-              ),
-              _.createElement(_, {
-                rank: 1,
-                item: _,
-                itemDesc: _,
-              }),
-            ),
-            _.slice(0, 4).map((_, _) =>
-              _.createElement(_, {
-                key: _.GetUniqueID(),
-                rank: _ + 2,
-                item: _,
-              }),
-            ),
-            _,
-          ),
-        );
+                _.slice(0, 4).map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      rank: _ + 2,
+                      item: _,
+                    },
+                    _.GetUniqueID(),
+                  ),
+                ),
+                _,
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -9133,60 +8467,56 @@
           } = _,
           _ = _(_.MostPlayedStore);
         if (!_ || _.isLoading)
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: (0, _._)(_().OverviewChartPlaceholder, _().Placeholder),
           });
         const [_, ..._] = _.data.rgRanks;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsxs)("div", {
               className: _().SectionTitle,
-            },
-            " ",
-            __webpack_require__,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: [" ", __webpack_require__],
+            }),
+            (0, _.jsxs)(_._, {
               className: _().ChartItemsCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().TopItem,
-              },
-              _.createElement(
-                _._,
-                {
-                  item: _.Item,
-                },
-                _.createElement("img", {
-                  className: _().Capsule,
-                  src: _.Item.GetAssets().GetMainCapsuleURL(),
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().TopItem,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      item: _.Item,
+                      children: (0, _.jsx)("img", {
+                        className: _().Capsule,
+                        src: _.Item.GetAssets().GetMainCapsuleURL(),
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      rank: 1,
+                      item: _.Item,
+                      itemDesc: _,
+                      addData: (0, _._)(_.nConcurrentInGame),
+                      addDataDesc: (0, _._)(
+                        "#SteamCharts_OverviewGraph_Desc_InGame",
+                      ),
+                    }),
+                  ],
                 }),
-              ),
-              _.createElement(_, {
-                rank: 1,
-                item: _.Item,
-                itemDesc: _,
-                addData: (0, _._)(_.nConcurrentInGame),
-                addDataDesc: (0, _._)("#SteamCharts_OverviewGraph_Desc_InGame"),
-              }),
-            ),
-            _.slice(0, 4).map((_, _) =>
-              _.createElement(_, {
-                key: _.Item.GetUniqueID(),
-                rank: _ + 2,
-                item: _.Item,
-                addData: (0, _._)(_.nConcurrentInGame),
-              }),
-            ),
-            _,
-          ),
-        );
+                _.slice(0, 4).map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      rank: _ + 2,
+                      item: _.Item,
+                      addData: (0, _._)(_.nConcurrentInGame),
+                    },
+                    _.Item.GetUniqueID(),
+                  ),
+                ),
+                _,
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -9196,65 +8526,50 @@
           addData: _,
           addDataDesc: _,
         } = _;
-        return _.createElement(
+        return (0, _.jsxs)(
           _._,
           {
-            key: __webpack_require__.GetUniqueID(),
             className: _().ItemRow,
             item: __webpack_require__,
             depth: _,
             component: _._,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().Rank,
+                children: _,
+              }),
+              (0, _.jsxs)("div", {
+                className: _().ItemNameCtn,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ItemName,
+                    children: __webpack_require__.GetName(),
+                  }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().ItemDesc,
+                      children: _,
+                    }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().TopReason,
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().AddData,
+                      children: _,
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().AddDataDesc,
+                      children: _,
+                    }),
+                ],
+              }),
+            ],
           },
-          _.createElement(
-            "div",
-            {
-              className: _().Rank,
-            },
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().ItemNameCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ItemName,
-              },
-              __webpack_require__.GetName(),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ItemDesc,
-                },
-                _,
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().TopReason,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().AddData,
-                },
-                _,
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().AddDataDesc,
-                },
-                _,
-              ),
-          ),
+          __webpack_require__.GetUniqueID(),
         );
       }
       function _(_) {
@@ -9267,21 +8582,18 @@
             const { rtCurrentWeek: _ } = _(_, _);
             return _(_, _, _, _, __webpack_require__);
           })(_, _._.COUNTRY);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           name: __webpack_require__
             ? (0, _._)(__webpack_require__.rtWeekStart)
             : "",
           range: (0, _._)("#SteamCharts_Overview_Title_Weekly"),
           rgItems: __webpack_require__?.rgRanks.map((_) => _.Item),
           renderLink: () =>
-            _.createElement(
-              _._,
-              {
-                className: _().ImageButtonLink,
-                _: _.TopSellers(_(_._.COUNTRY), _(_.GetCurrentWeek())),
-              },
-              (0, _._)("#SteamCharts_TopSellers_PageTitle"),
-            ),
+            (0, _.jsx)(_._, {
+              className: _().ImageButtonLink,
+              _: _.TopSellers(_(_._.COUNTRY), _(_.GetCurrentWeek())),
+              children: (0, _._)("#SteamCharts_TopSellers_PageTitle"),
+            }),
         });
       }
       function _(_) {
@@ -9299,19 +8611,16 @@
             () => (_ ? _.map((_) => _._.Get().GetApp(_)).filter(Boolean) : []),
             [_],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           name: (0, _._)(_),
           range: (0, _._)("#SteamCharts_Overview_Title_Monthly"),
           rgItems: _,
           renderLink: () =>
-            _.createElement(
-              _._,
-              {
-                className: _().ImageButtonLink,
-                _: _,
-              },
-              (0, _._)("#SteamCharts_Overview_Title_MonthlyTop"),
-            ),
+            (0, _.jsx)(_._, {
+              className: _().ImageButtonLink,
+              _: _,
+              children: (0, _._)("#SteamCharts_Overview_Title_MonthlyTop"),
+            }),
         });
       }
       const _ = 9;
@@ -9340,40 +8649,40 @@
               _[5],
             ];
           }, [_]);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
               className: _().SectionTitle,
-            },
-            _.createElement("b", null, __webpack_require__),
-            " ",
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                (0, _.jsx)("b", {
+                  children: __webpack_require__,
+                }),
+                " ",
+                _,
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _().ImageButtonCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ImageGridCtn,
-              },
-              _.map(
-                (_, _) =>
-                  _ &&
-                  _.createElement("img", {
-                    key: `${_.GetUniqueID()}-${_}`,
-                    src: _.GetAssets().GetHeaderURL(),
-                  }),
-              ),
-            ),
-            _(),
-          ),
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ImageGridCtn,
+                  children: _.map(
+                    (_, _) =>
+                      _ &&
+                      (0, _.jsx)(
+                        "img",
+                        {
+                          src: _.GetAssets().GetHeaderURL(),
+                        },
+                        `${_.GetUniqueID()}-${_}`,
+                      ),
+                  ),
+                }),
+                _(),
+              ],
+            }),
+          ],
+        });
       }
       const _ = {
         include_assets: !0,
@@ -9395,49 +8704,38 @@
           _.top_combined_app_and_dlc_releases &&
           0 != _.top_combined_app_and_dlc_releases.length &&
           3 == _
-          ? _.createElement(
-              "div",
-              {
-                className: _().PageSection,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().PageSection,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().SectionTitle,
-                },
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)("#SteamCharts_Overview_Title_Yearly"),
-                ),
-                " ",
-                _,
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: (0, _._)("#SteamCharts_Overview_Title_Yearly"),
+                    }),
+                    " ",
+                    _,
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
                   _: _.BestOfYear("" + _),
                   className: _().BestOfYearButton,
-                },
-                _.createElement(_, {
-                  rgAppIDs: _,
+                  children: [
+                    (0, _.jsx)(_, {
+                      rgAppIDs: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().Headline,
+                      children: (0, _._)("#SteamCharts_Yearly_Title", _),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().Subtitle,
+                      children: (0, _._)("#SteamCharts_Yearly_BannerDesc"),
+                    }),
+                  ],
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Headline,
-                  },
-                  (0, _._)("#SteamCharts_Yearly_Title", _),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Subtitle,
-                  },
-                  (0, _._)("#SteamCharts_Yearly_BannerDesc"),
-                ),
-              ),
-            )
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -9446,20 +8744,20 @@
             () => _.map((_) => _._.Get().GetApp(_)).filter(Boolean),
             [_],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _().ImageGrid,
-          },
-          __webpack_require__.slice(0, 20).map((_, _) =>
+        return (0, _.jsx)("div", {
+          className: _().ImageGrid,
+          children: __webpack_require__.slice(0, 20).map((_, _) =>
             _ && _.GetAssets().GetHeroCapsuleURL()?.trim().length > 0
-              ? _.createElement("img", {
-                  key: `${_.GetUniqueID()}-${_}`,
-                  src: _.GetAssets().GetHeroCapsuleURL(),
-                })
+              ? (0, _.jsx)(
+                  "img",
+                  {
+                    src: _.GetAssets().GetHeroCapsuleURL(),
+                  },
+                  `${_.GetUniqueID()}-${_}`,
+                )
               : "",
           ),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9482,150 +8780,114 @@
           }),
           [_],
         );
-        return _.createElement(
-          _._,
-          {
-            navID: "SteamChartsShell",
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().SteamChartsRootPanel,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          navID: "SteamChartsShell",
+          children: (0, _.jsxs)(_._, {
+            className: _().SteamChartsRootPanel,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().SteamChartsRootPosition,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().AlignWithMenu,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsxs)(_._, {
                     className: _().SteamChartsMenu,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _().MenuGroup,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().MenuLinks,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          _: _.Overview(),
-                          exact: !0,
-                          activeClassName: _().ActiveLink,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            className: (0, _._)(_().MenuItemIcon),
-                          },
-                          _.createElement(_.ww0, null),
-                        ),
-                        (0, _._)("#SteamCharts_Menu_Overview"),
-                      ),
-                    ),
-                  ),
-                  _.createElement(_._, null, _.createElement(_, null)),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_, {
-                      TopSellersStore: _,
-                    }),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_, {
-                      TopMonthlyReleasesStore: _,
-                    }),
-                  ),
-                  _.createElement(_._, null, _.createElement(_, null)),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _().MenuGroup,
+                        children: (0, _.jsx)("div", {
+                          className: _().MenuLinks,
+                          children: (0, _.jsxs)(_._, {
+                            _: _.Overview(),
+                            exact: !0,
+                            activeClassName: _().ActiveLink,
+                            children: [
+                              (0, _.jsx)("span", {
+                                className: (0, _._)(_().MenuItemIcon),
+                                children: (0, _.jsx)(_.ww0, {}),
+                              }),
+                              (0, _._)("#SteamCharts_Menu_Overview"),
+                            ],
+                          }),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_, {}),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_, {
+                          TopSellersStore: _,
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_, {
+                          TopMonthlyReleasesStore: _,
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_, {}),
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().SteamChartsShell, "SteamChartsShell"),
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().SteamChartsContent,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     defaultOptions: _,
-                  },
-                  _.createElement(_._, null, _),
-                ),
-              ),
-            ),
-          ),
-        );
+                    children: (0, _.jsx)(_._, {
+                      children: _,
+                    }),
+                  }),
+                }),
+              }),
+            ],
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          _._,
-          {
-            className: _().MenuGroup,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: _().MenuGroup,
+          children: [
+            (0, _.jsx)("div", {
               className: _().MenuHeader,
-            },
-            (0, _._)("#SteamCharts_Menu_LiveCharts"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#SteamCharts_Menu_LiveCharts"),
+            }),
+            (0, _.jsxs)(_._, {
               className: _().MenuLinks,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _().MenuItemIcon,
-                _: _.TopSelling(_._.COUNTRY),
-                activeClassName: _().ActiveLink,
-              },
-              _.createElement(_.t1X, null),
-              (0, _._)("#SteamCharts_Menu_TopSelling"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().MenuItemIcon,
-                _: _.MostPlayed(),
-                activeClassName: _().ActiveLink,
-              },
-              _.createElement(_.N3h, null),
-              (0, _._)("#SteamCharts_Menu_MostPlayed"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().MenuItemIcon,
-                _: _.MostPlayedOnSteamDeck(),
-                activeClassName: _().ActiveLink,
-              },
-              _.createElement(_.lRD, null),
-              (0, _._)("#SteamCharts_Menu_MostPlayedOnDeck"),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsxs)(_._, {
+                  className: _().MenuItemIcon,
+                  _: _.TopSelling(_._.COUNTRY),
+                  activeClassName: _().ActiveLink,
+                  children: [
+                    (0, _.jsx)(_.t1X, {}),
+                    (0, _._)("#SteamCharts_Menu_TopSelling"),
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
+                  className: _().MenuItemIcon,
+                  _: _.MostPlayed(),
+                  activeClassName: _().ActiveLink,
+                  children: [
+                    (0, _.jsx)(_.N3h, {}),
+                    (0, _._)("#SteamCharts_Menu_MostPlayed"),
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
+                  className: _().MenuItemIcon,
+                  _: _.MostPlayedOnSteamDeck(),
+                  activeClassName: _().ActiveLink,
+                  children: [
+                    (0, _.jsx)(_.lRD, {}),
+                    (0, _._)("#SteamCharts_Menu_MostPlayedOnDeck"),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { TopSellersStore: _ } = _,
@@ -9642,143 +8904,119 @@
         for (let _ = 0; _ < 3; _++) {
           const _ = _ - 60 * _ * 60 * 24 * 7;
           _.push(
-            _.createElement(
+            (0, _.jsxs)(
               _._,
               {
                 _: _.TopSellers(_, _(_)),
-                key: _,
                 activeClassName: _().ActiveLink,
                 fnCanTakeFocus: _._,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: (0, _._)(_().MenuItemIcon),
+                    children: (0, _.jsx)(_.VvS, {
+                      color: "#C3D3D8",
+                    }),
+                  }),
+                  (0, _._)(_, {
+                    timeZone: "UTC",
+                  }),
+                ],
               },
-              _.createElement(
-                "span",
-                {
-                  className: (0, _._)(_().MenuItemIcon),
-                },
-                _.createElement(_.VvS, {
-                  color: "#C3D3D8",
-                }),
-              ),
-              (0, _._)(_, {
-                timeZone: "UTC",
-              }),
+              _,
             ),
           );
         }
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().MenuGroup, _().Weekly),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().MenuGroup, _().Weekly),
+          children: [
+            (0, _.jsx)("div", {
               className: _().MenuHeader,
-            },
-            (0, _._)("#SteamCharts_Menu_WeeklyCharts"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#SteamCharts_Menu_WeeklyCharts"),
+            }),
+            (0, _.jsx)(_._, {
               className: _().MenuLinks,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = _((0, _._)()),
           _ = [_, _ - 2592e3, _ - 5184e3];
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().MenuGroup, _().Monthly),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().MenuGroup, _().Monthly),
+          children: [
+            (0, _.jsx)("div", {
               className: _().MenuHeader,
-            },
-            (0, _._)("#SteamCharts_Menu_MonthlyCharts"),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _().MenuLinks,
-            },
-            __webpack_require__.map((_) => {
-              const _ = new Date(1e3 * _),
-                _ = _(_.getFullYear(), _.getMonth()),
-                _ = _.TopNewReleases(_),
-                _ = Boolean(window.location.pathname === _);
-              return _.createElement(
-                _._,
-                {
-                  className: _ ? _().ActiveLink : "",
-                  _: _,
-                  key: "month_" + _,
-                  fnCanTakeFocus: _._,
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: (0, _._)(_().MenuItemIcon),
-                  },
-                  _.createElement(_.VvS, {
-                    color: "#C3D3D8",
-                  }),
-                ),
-                (0, _._)(_),
-              );
+              children: (0, _._)("#SteamCharts_Menu_MonthlyCharts"),
             }),
-          ),
-        );
+            (0, _.jsx)(_._, {
+              className: _().MenuLinks,
+              children: __webpack_require__.map((_) => {
+                const _ = new Date(1e3 * _),
+                  _ = _(_.getFullYear(), _.getMonth()),
+                  _ = _.TopNewReleases(_),
+                  _ = Boolean(window.location.pathname === _);
+                return (0, _.jsxs)(
+                  _._,
+                  {
+                    className: _ ? _().ActiveLink : "",
+                    _: _,
+                    fnCanTakeFocus: _._,
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: (0, _._)(_().MenuItemIcon),
+                        children: (0, _.jsx)(_.VvS, {
+                          color: "#C3D3D8",
+                        }),
+                      }),
+                      (0, _._)(_),
+                    ],
+                  },
+                  "month_" + _,
+                );
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _._)(),
           _ = (0, _.useMemo)(() => _(_, 3), [_]);
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().MenuGroup, _().Monthly),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().MenuGroup, _().Monthly),
+          children: [
+            (0, _.jsx)("div", {
               className: _().MenuHeader,
-            },
-            (0, _._)("#SteamCharts_Menu_YearlyCharts"),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _().MenuLinks,
-            },
-            __webpack_require__.map((_) => {
-              const _ = _.BestOfYear("" + _),
-                _ = window.location.pathname === _;
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  className: (0, _._)(_ ? _().ActiveLink : ""),
-                  _: _,
-                  fnCanTakeFocus: _._,
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: (0, _._)(_().MenuItemIcon),
-                  },
-                  _.createElement(_.VvS, {
-                    color: "#C3D3D8",
-                  }),
-                ),
-                _,
-              );
+              children: (0, _._)("#SteamCharts_Menu_YearlyCharts"),
             }),
-          ),
-        );
+            (0, _.jsx)(_._, {
+              className: _().MenuLinks,
+              children: __webpack_require__.map((_) => {
+                const _ = _.BestOfYear("" + _),
+                  _ = window.location.pathname === _;
+                return (0, _.jsxs)(
+                  _._,
+                  {
+                    className: (0, _._)(_ ? _().ActiveLink : ""),
+                    _: _,
+                    fnCanTakeFocus: _._,
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: (0, _._)(_().MenuItemIcon),
+                        children: (0, _.jsx)(_.VvS, {
+                          color: "#C3D3D8",
+                        }),
+                      }),
+                      _,
+                    ],
+                  },
+                  _,
+                );
+              }),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -9814,111 +9052,81 @@
           },
           staleTime: 9e5,
         });
-        return _.createElement(
-          _._,
-          {
-            title: (0, _._)("#SteamCharts_SupportStats"),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ChartPage,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          title: (0, _._)("#SteamCharts_SupportStats"),
+          children: (0, _.jsxs)("div", {
+            className: _().ChartPage,
+            children: [
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-              },
-              _.createElement(
-                "h1",
-                null,
-                (0, _._)("#SteamCharts_SupportStats"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PageSubtitle,
-              },
-              _.createElement(_, {
-                rtLastUpdated: _.data?.rtLastUpdated,
+                children: (0, _.jsx)("h1", {
+                  children: (0, _._)("#SteamCharts_SupportStats"),
+                }),
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
+                className: _().PageSubtitle,
+                children: (0, _.jsx)(_, {
+                  rtLastUpdated: _.data?.rtLastUpdated,
+                }),
+              }),
+              (0, _.jsx)("div", {
                 className: _().PageSection,
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)(
-                  "#SupportStats_Header_Desc",
-                  _.createElement("a", {
-                    href: "http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549",
-                  }),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#SupportStats_Header_Desc",
+                    (0, _.jsx)("a", {
+                      href: "http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549",
+                    }),
+                  ),
+                }),
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().PageSection),
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: (0, _._)(_().SectionTitle),
-                },
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)("#SupportStats_RequestsAndBacklog_Title"),
-                ),
-                " ",
-                (0, _._)("#SuportStats_MostRecent90Days"),
-                _.createElement(_._, null, _.createElement(_, null)),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: (0, _._)(
+                        "#SupportStats_RequestsAndBacklog_Title",
+                      ),
+                    }),
+                    " ",
+                    (0, _._)("#SuportStats_MostRecent90Days"),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {}),
+                    }),
+                  ],
+                }),
+              }),
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().PageSection),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SectionTitle),
-                },
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)("#SupportStats_RecentSupportActivity_Title"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().CategoryBlock),
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    SupportStats: _.data,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().SectionTitle),
+                    children: (0, _.jsx)("b", {
+                      children: (0, _._)(
+                        "#SupportStats_RecentSupportActivity_Title",
+                      ),
+                    }),
                   }),
-                ),
-              ),
-            ),
-          ),
-        );
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().CategoryBlock),
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
+                        SupportStats: _.data,
+                      }),
+                    }),
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       const _ = _.memo(function (_) {
         const _ = new Date(1e3 * _.rtLastUpdated);
-        return _.createElement(
-          "span",
-          null,
-          (0, _._)(
+        return (0, _.jsx)("span", {
+          children: (0, _._)(
             "#SupportStats_Header_Title_Updated",
             _.rtLastUpdated
               ? _.toLocaleString(_._.GetPreferredLocales(), {
@@ -9931,7 +9139,7 @@
                 })
               : "",
           ),
-        );
+        });
       });
       function _() {
         const _ = (0, _._)({
@@ -9966,85 +9174,82 @@
           },
           staleTime: 216e5,
         });
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().HelpRequestChartContainer,
-              !_.data && _().Placeholder,
-            ),
-          },
-          _.data &&
-            _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().HelpRequestChartContainer,
+            !_.data && _().Placeholder,
+          ),
+          children:
+            _.data &&
+            (0, _.jsx)(_, {
               ChartData: _.data,
             }),
-        );
+        });
       }
       const _ = _.memo(function (_) {
         const { ChartData: _ } = _,
           { rgSeries: __webpack_require__, data: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            width: "100%",
-            height: "100%",
-          },
-          _.createElement(
-            _,
-            {
-              data: _,
-              margin: {
-                top: 20,
-                left: 30,
-                right: 30,
-                bottom: 0,
-              },
+        return (0, _.jsx)(_._, {
+          width: "100%",
+          height: "100%",
+          children: (0, _.jsxs)(_, {
+            data: _,
+            margin: {
+              top: 20,
+              left: 30,
+              right: 30,
+              bottom: 0,
             },
-            _.createElement(_._, {
-              dataKey: "date",
-              tickFormatter: _,
-              interval: 7,
-            }),
-            _.createElement(_._, {
-              type: "number",
-              tickFormatter: _._,
-            }),
-            _.createElement(_._, {
-              content: _.createElement(_, null),
-            }),
-            _.createElement(_._, null),
-            __webpack_require__.map((_) =>
-              _.createElement(_._, {
-                key: _.dataKey,
-                type: "monotone",
-                dataKey: _.dataKey,
-                stroke: _.color,
-                dot: !1,
+            children: [
+              (0, _.jsx)(_._, {
+                dataKey: "date",
+                tickFormatter: _,
+                interval: 7,
               }),
-            ),
-          ),
-        );
+              (0, _.jsx)(_._, {
+                type: "number",
+                tickFormatter: _._,
+              }),
+              (0, _.jsx)(_._, {
+                content: (0, _.jsx)(_, {}),
+              }),
+              (0, _.jsx)(_._, {}),
+              __webpack_require__.map((_) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    type: "monotone",
+                    dataKey: _.dataKey,
+                    stroke: _.color,
+                    dot: !1,
+                  },
+                  _.dataKey,
+                ),
+              ),
+            ],
+          }),
+        });
       });
       function _(_) {
         const { active: _, payload: __webpack_require__ } = _;
         if (_ && __webpack_require__ && __webpack_require__.length) {
           const { date: _, ..._ } = __webpack_require__[0].payload;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement("div", null, _(_), ":"),
-            Object.keys(_).map((_) =>
-              _.createElement(
-                "div",
-                {
-                  key: _,
-                },
-                _,
-                ": ",
-                (0, _._)(_[_]),
+          return (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsxs)("div", {
+                children: [_(_), ":"],
+              }),
+              Object.keys(_).map((_) =>
+                (0, _.jsxs)(
+                  "div",
+                  {
+                    children: [_, ": ", (0, _._)(_[_])],
+                  },
+                  _,
+                ),
               ),
-            ),
-          );
+            ],
+          });
         }
         return null;
       }
@@ -10057,102 +9262,76 @@
       function _(_) {
         const _ = _.SupportStats?.rgReportData;
         return _
-          ? _.createElement(
-              "table",
-              {
-                className: _().ChartTable,
-              },
-              _.createElement(
-                "thead",
-                {
+          ? (0, _.jsxs)("table", {
+              className: _().ChartTable,
+              children: [
+                (0, _.jsx)("thead", {
                   className: _().ColumnHeaders,
-                },
-                _.createElement(
-                  "tr",
-                  null,
-                  _.createElement(
-                    "th",
-                    {
-                      className: _().Category,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#SupportStats_TicketsByCategory"),
-                    ),
-                  ),
-                  _.createElement(
-                    "th",
-                    {
-                      className: _().Submitted24h,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#SupportStats_TicketsLast24Hours"),
-                    ),
-                  ),
-                  _.createElement(
-                    "th",
-                    {
-                      className: _().ResponseTimes,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#SupportStats_TimeToResponse"),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "tbody",
-                null,
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: _.name,
-                    row: _,
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        className: _().Category,
+                        children: (0, _.jsx)("span", {
+                          children: (0, _._)("#SupportStats_TicketsByCategory"),
+                        }),
+                      }),
+                      (0, _.jsx)("th", {
+                        className: _().Submitted24h,
+                        children: (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#SupportStats_TicketsLast24Hours",
+                          ),
+                        }),
+                      }),
+                      (0, _.jsx)("th", {
+                        className: _().ResponseTimes,
+                        children: (0, _.jsx)("span", {
+                          children: (0, _._)("#SupportStats_TimeToResponse"),
+                        }),
+                      }),
+                    ],
                   }),
-                ),
-              ),
-            )
-          : _.createElement("div", {
+                }),
+                (0, _.jsx)("tbody", {
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        row: _,
+                      },
+                      _.name,
+                    ),
+                  ),
+                }),
+              ],
+            })
+          : (0, _.jsx)("div", {
               className: (0, _._)(_().Placeholder, _().Placeholder),
             });
       }
       function _(_) {
         const { row: _ } = _;
-        return _.createElement(
-          "tr",
-          {
-            className: (0, _._)(_().TableRow, _().TableRow),
-          },
-          _.createElement(
-            "td",
-            {
+        return (0, _.jsxs)("tr", {
+          className: (0, _._)(_().TableRow, _().TableRow),
+          children: [
+            (0, _.jsx)("td", {
               className: _().Category,
-            },
-            _.name,
-          ),
-          _.createElement(
-            "td",
-            {
+              children: _.name,
+            }),
+            (0, _.jsx)("td", {
               className: _().Submitted24h,
-            },
-            (0, _._)(_.last24),
-          ),
-          _.createElement(
-            "td",
-            {
+              children: (0, _._)(_.last24),
+            }),
+            (0, _.jsx)("td", {
               className: _().ResponseTimes,
-            },
-            (0, _._)(
-              "#SupportStats_RecentWaitTimeData",
-              _(_["30pct"]),
-              _(_["90pct"]),
-            ),
-          ),
-        );
+              children: (0, _._)(
+                "#SupportStats_RecentWaitTimeData",
+                _(_["30pct"]),
+                _(_["90pct"]),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         return (0, _._)(_, {
@@ -10169,30 +9348,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { Item: _ } = _,
           _ = (0, _._)(_),
           _ = _.BIsVisible() && !_;
-        return _.createElement(
-          _._,
-          {
-            item: _,
-            feature: "topchartlist",
-            className: _().TopChartItem,
-            component: _._,
-          },
-          _
-            ? _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          item: _,
+          feature: "topchartlist",
+          className: _().TopChartItem,
+          component: _._,
+          children: _
+            ? (0, _.jsx)(_, {
                 Item: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 strName: _.GetName(),
                 bExcludedByPreferences: _,
               }),
-        );
+        });
       }
       function _(_) {
         const { Item: _ } = _,
@@ -10200,183 +9374,142 @@
           _ = (0, _._)(_),
           { bIsOwned: _ } = (0, _._)(_),
           _ = (0, _._)(_);
-        return _.createElement(
-          _.Fragment,
-          null,
-          (_ || _) &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (_ || _) &&
+              (0, _.jsx)("div", {
                 className: _().CapsuleDecorator,
-              },
-              _.createElement(
-                "span",
-                {
+                children: (0, _.jsxs)("span", {
                   className: (0, _._)(_().Banner),
-                },
-                _
-                  ? _.createElement(_.oQr, {
-                      className: _().LinesImg,
-                    })
-                  : _.createElement(_.qnF, {
-                      className: _().LinesImg,
+                  children: [
+                    _
+                      ? (0, _.jsx)(_.oQr, {
+                          className: _().LinesImg,
+                        })
+                      : (0, _.jsx)(_.qnF, {
+                          className: _().LinesImg,
+                        }),
+                    (0, _.jsx)("div", {
+                      className: _().BannerText,
+                      children: (0, _._)(
+                        _ ? "#Sale_InLibrary" : "#Sale_OnWishlist",
+                      ),
                     }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().BannerText,
-                  },
-                  (0, _._)(_ ? "#Sale_InLibrary" : "#Sale_OnWishlist"),
-                ),
-              ),
-            ),
-          _.createElement("img", {
-            className: _().CapsuleArt,
-            src: _.GetAssets().GetSmallCapsuleURL(),
-          }),
-          _.createElement(
-            "div",
-            {
+                  ],
+                }),
+              }),
+            (0, _.jsx)("img", {
+              className: _().CapsuleArt,
+              src: _.GetAssets().GetSmallCapsuleURL(),
+            }),
+            (0, _.jsx)("div", {
               className: _().GameName,
-            },
-            _.GetName(),
-          ),
-        );
+              children: _.GetName(),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { strName: _, bExcludedByPreferences: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().GameName,
-          },
-          _ || (0, _._)("#SteamCharts_UnknownGameTitle"),
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().GameName,
+          children: [
+            _ || (0, _._)("#SteamCharts_UnknownGameTitle"),
+            (0, _.jsx)("span", {
               className: _().GameUnavailable,
-            },
-            __webpack_require__
-              ? (0, _._)("#SteamCharts_BlockedByPreferences")
-              : (0, _._)("#SteamCharts_UnavailableCountryRestriction"),
-          ),
-        );
+              children: __webpack_require__
+                ? (0, _._)("#SteamCharts_BlockedByPreferences")
+                : (0, _._)("#SteamCharts_UnavailableCountryRestriction"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { children: _, mostPlayedOption: __webpack_require__ } = _;
-        return _.createElement(
-          "table",
-          {
-            className: _().ChartTable,
-          },
-          _.createElement(
-            "thead",
-            {
+        return (0, _.jsxs)("table", {
+          className: _().ChartTable,
+          children: [
+            (0, _.jsx)("thead", {
               className: _().ColumnHeaders,
-            },
-            _.createElement(
-              "tr",
-              null,
-              _.createElement("th", {
-                className: _().HoverCell,
+              children: (0, _.jsxs)("tr", {
+                children: [
+                  (0, _.jsx)("th", {
+                    className: _().HoverCell,
+                  }),
+                  (0, _.jsx)("th", {
+                    className: _().Rank,
+                    colSpan: 2,
+                    children: (0, _.jsx)("span", {
+                      children: (0, _._)("#SteamCharts_TopSellers_TableRank"),
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    className: (0, _._)(_().RightCell, _().Price),
+                    children: (0, _._)("#SteamCharts_TopSellers_TablePrice"),
+                  }),
+                  (0, _.jsx)(_, {
+                    mostPlayedOption: __webpack_require__,
+                  }),
+                  (0, _.jsx)("th", {
+                    className: (0, _._)(_().RightCell, _().PeakInGame),
+                    children: (0, _.jsxs)(_._, {
+                      className: _().Tooltip,
+                      toolTipContent: (0, _._)(
+                        "#SteamCharts_TopSellers_TablePeakInGame_Tooltip",
+                      ),
+                      direction: "top",
+                      children: [
+                        (0, _._)("#SteamCharts_TopSellers_TablePeakInGame"),
+                        " ",
+                        (0, _.jsx)(_._VW, {}),
+                      ],
+                    }),
+                  }),
+                ],
               }),
-              _.createElement(
-                "th",
-                {
-                  className: _().Rank,
-                  colSpan: 2,
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#SteamCharts_TopSellers_TableRank"),
-                ),
-              ),
-              _.createElement(
-                "th",
-                {
-                  className: (0, _._)(_().RightCell, _().Price),
-                },
-                (0, _._)("#SteamCharts_TopSellers_TablePrice"),
-              ),
-              _.createElement(_, {
-                mostPlayedOption: __webpack_require__,
-              }),
-              _.createElement(
-                "th",
-                {
-                  className: (0, _._)(_().RightCell, _().PeakInGame),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Tooltip,
-                    toolTipContent: (0, _._)(
-                      "#SteamCharts_TopSellers_TablePeakInGame_Tooltip",
-                    ),
-                    direction: "top",
-                  },
-                  (0, _._)("#SteamCharts_TopSellers_TablePeakInGame"),
-                  " ",
-                  _.createElement(_._VW, null),
-                ),
-              ),
-            ),
-          ),
-          _.createElement(
-            "tbody",
-            {
+            }),
+            (0, _.jsx)("tbody", {
               className: _().ListRowsCtn,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         return _.mostPlayedOption === _.DailyActiveUsers
-          ? _.createElement(
-              "th",
-              {
-                className: _().Change,
-                align: "right",
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _().Tooltip,
-                  toolTipContent: (0, _._)(
-                    "#SteamCharts_TopSellers_TableChangeTooltip",
-                  ),
-                  direction: "top",
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#SteamCharts_TopSellers_TableChange"),
+          ? (0, _.jsx)("th", {
+              className: _().Change,
+              align: "right",
+              children: (0, _.jsxs)(_._, {
+                className: _().Tooltip,
+                toolTipContent: (0, _._)(
+                  "#SteamCharts_TopSellers_TableChangeTooltip",
                 ),
-                " ",
-                _.createElement(_._VW, null),
-              ),
-            )
-          : _.createElement(
-              "th",
-              {
-                className: (0, _._)(_().RightCell, _().Concurrent),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _().Tooltip,
-                  toolTipContent: (0, _._)(
-                    "#SteamCharts_TopSellers_TableCurrentPlayersTooltip",
-                  ),
-                  direction: "top",
-                },
-                (0, _._)("#SteamCharts_TopSellers_TableCurrentPlayers"),
-                " ",
-                _.createElement(_._VW, null),
-              ),
-            );
+                direction: "top",
+                children: [
+                  (0, _.jsx)("span", {
+                    children: (0, _._)("#SteamCharts_TopSellers_TableChange"),
+                  }),
+                  " ",
+                  (0, _.jsx)(_._VW, {}),
+                ],
+              }),
+            })
+          : (0, _.jsx)("th", {
+              className: (0, _._)(_().RightCell, _().Concurrent),
+              children: (0, _.jsxs)(_._, {
+                className: _().Tooltip,
+                toolTipContent: (0, _._)(
+                  "#SteamCharts_TopSellers_TableCurrentPlayersTooltip",
+                ),
+                direction: "top",
+                children: [
+                  (0, _._)("#SteamCharts_TopSellers_TableCurrentPlayers"),
+                  " ",
+                  (0, _.jsx)(_._VW, {}),
+                ],
+              }),
+            });
       }
       function _(_) {
         const {
@@ -10386,28 +9519,16 @@
             renderOptionBasedCell: _,
           } = _,
           _ = (0, _._)(__webpack_require__),
-          _ = {
-            _: __webpack_require__.GetAppID() || __webpack_require__.GetID(),
-            type: (0, _._)(
-              __webpack_require__?.GetStoreItemType(),
-              __webpack_require__?.GetAppType(),
-            ),
-          },
-          _ = (0, _._)(_);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "td",
-            {
+          _ = (0, _._)(__webpack_require__);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("td", {
               className: _().HoverCell,
-            },
-            !_ &&
-              _.createElement(
-                _._,
-                {
+              children:
+                !_ &&
+                (0, _.jsx)(_._, {
                   className: _().HoverSource,
-                  item: _,
+                  _: _,
                   hoverProps: {
                     direction: "right",
                     nBodyAlignment: 0,
@@ -10417,55 +9538,40 @@
                       height: "250px",
                     },
                   },
-                },
-                _.createElement("div", {
-                  className: _().HoverMask,
+                  children: (0, _.jsx)("div", {
+                    className: _().HoverMask,
+                  }),
                 }),
-              ),
-          ),
-          _.createElement(
-            "td",
-            {
+            }),
+            (0, _.jsx)("td", {
               className: _().RankCell,
-            },
-            _,
-          ),
-          _.createElement(
-            "td",
-            {
+              children: _,
+            }),
+            (0, _.jsx)("td", {
               className: (0, _._)(
                 _().CapsuleCell,
                 !__webpack_require__.BIsVisible() && _().Unavailable,
               ),
-            },
-            _.createElement(_, {
-              Item: __webpack_require__,
-            }),
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _().PriceCell,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PriceWidget,
-              },
-              _.createElement(_._, {
-                _: _,
+              children: (0, _.jsx)(_, {
+                Item: __webpack_require__,
               }),
-            ),
-          ),
-          _(),
-          _.createElement(
-            "td",
-            {
+            }),
+            (0, _.jsx)("td", {
+              className: _().PriceCell,
+              children: (0, _.jsx)("div", {
+                className: _().PriceWidget,
+                children: (0, _.jsx)(_._, {
+                  _: _,
+                }),
+              }),
+            }),
+            _(),
+            (0, _.jsx)("td", {
               className: _().PeakInGameCell,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { rank: _ } = _,
@@ -10478,52 +9584,41 @@
           _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(_.GetStorePageURL(), _);
-        return _.createElement(
-          "tr",
-          {
-            onClick: () => (window.location.href = _),
-            className: _().TableRow,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("tr", {
+          onClick: () => (window.location.href = _),
+          className: _().TableRow,
+          children: (0, _.jsx)(_, {
             nRank: __webpack_require__,
             Item: _,
             strPeakInGame: _,
             renderOptionBasedCell: () =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 nRank: __webpack_require__,
                 nRankLastWeek: _,
               }),
           }),
-        );
+        });
       }
       function _(_) {
         const { nRank: _, nRankLastWeek: __webpack_require__ } = _,
           { direction: _, symbol: _ } = _(__webpack_require__, _);
-        return _.createElement(
-          "td",
-          {
-            className: (0, _._)(_().ChangeCell, _),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().Tooltip,
-              toolTipContent: (0, _._)("#SteamCharts_TopSellers_ChangeTooltip"),
-              direction: "top",
-            },
-            __webpack_require__ &&
+        return (0, _.jsx)("td", {
+          className: (0, _._)(_().ChangeCell, _),
+          children: (0, _.jsx)(_._, {
+            className: _().Tooltip,
+            toolTipContent: (0, _._)("#SteamCharts_TopSellers_ChangeTooltip"),
+            direction: "top",
+            children:
+              __webpack_require__ &&
               __webpack_require__ > 0 &&
               __webpack_require__ <= 100
-              ? `${_} ${Math.abs(__webpack_require__ - _)}`
-              : _.createElement(
-                  "span",
-                  {
+                ? `${_} ${Math.abs(__webpack_require__ - _)}`
+                : (0, _.jsx)("span", {
                     className: _().ListWeeksDebut,
-                  },
-                  (0, _._)("#SteamCharts_TopSellers_TableNew"),
-                ),
-          ),
-        );
+                    children: (0, _._)("#SteamCharts_TopSellers_TableNew"),
+                  }),
+          }),
+        });
       }
       function _(_) {
         const { rank: _ } = _,
@@ -10537,31 +9632,25 @@
           _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(_.GetStorePageURL(), _);
-        return _.createElement(
-          "tr",
-          {
-            onClick: () => (window.location.href = _),
-            className: _().TableRow,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("tr", {
+          onClick: () => (window.location.href = _),
+          className: _().TableRow,
+          children: (0, _.jsx)(_, {
             nRank: __webpack_require__,
             Item: _,
             strPeakInGame: _,
             renderOptionBasedCell: () =>
-              _.createElement(
-                "td",
-                {
-                  className: (0, _._)(_().ConcurrentCell),
-                },
-                _,
-              ),
+              (0, _.jsx)("td", {
+                className: (0, _._)(_().ConcurrentCell),
+                children: _,
+              }),
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { src: _ } = _;
-        return _.createElement("img", {
+        return (0, _.jsx)("img", {
           src: _,
           className: _().ChartTopGameBackground,
         });
@@ -10569,53 +9658,41 @@
       function _(_) {
         const { MostPlayedStore: _ } = _,
           [__webpack_require__, _] = _.useState(_.ConcurrentUsers);
-        return _.createElement(
-          _._,
-          {
-            title: (0, _._)("#SteamCharts_Menu_MostPlayed"),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().ChartPage,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          title: (0, _._)("#SteamCharts_Menu_MostPlayed"),
+          children: (0, _.jsxs)(_._, {
+            className: _().ChartPage,
+            children: [
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-              },
-              _.createElement(
-                "h1",
-                null,
-                (0, _._)("#SteamCharts_Menu_MostPlayed"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PageSubtitle,
-              },
-              (0, _._)("#SteamCharts_Menu_MostPlayed_Subtitle"),
-              _.createElement(_, {
-                selected: __webpack_require__,
-                setOptionState: _,
+                children: (0, _.jsx)("h1", {
+                  children: (0, _._)("#SteamCharts_Menu_MostPlayed"),
+                }),
               }),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().ChartPlaceholder,
-              },
-              __webpack_require__ === _.DailyActiveUsers
-                ? _.createElement(_, {
-                    MostPlayedStore: _,
-                  })
-                : _.createElement(_, {
-                    MostPlayedStore: _,
+              (0, _.jsxs)("div", {
+                className: _().PageSubtitle,
+                children: [
+                  (0, _._)("#SteamCharts_Menu_MostPlayed_Subtitle"),
+                  (0, _.jsx)(_, {
+                    selected: __webpack_require__,
+                    setOptionState: _,
                   }),
-            ),
-          ),
-        );
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                className: _().ChartPlaceholder,
+                children:
+                  __webpack_require__ === _.DailyActiveUsers
+                    ? (0, _.jsx)(_, {
+                        MostPlayedStore: _,
+                      })
+                    : (0, _.jsx)(_, {
+                        MostPlayedStore: _,
+                      }),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { selected: _, setOptionState: __webpack_require__ } = _,
@@ -10629,25 +9706,19 @@
               label: (0, _._)("#SteamCharts_Menu_ByDailyActiveUsersSubtitle"),
             },
           ];
-        return _.createElement(
-          "div",
-          {
-            className: _().MostPlayedOptionsControl,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DropDownContainer,
-            },
-            _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().MostPlayedOptionsControl,
+          children: (0, _.jsx)("div", {
+            className: _().DropDownContainer,
+            children: (0, _.jsx)(_._, {
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => {
                 __webpack_require__(_.data);
               },
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const { MostPlayedStore: _ } = _,
@@ -10659,15 +9730,15 @@
             });
           })(_);
         if (_.isLoading)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             position: "center",
           });
         if (_.isError)
-          return _.createElement(
-            "div",
-            null,
-            _.createElement("h3", null, "Error loading  most played"),
-          );
+          return (0, _.jsx)("div", {
+            children: (0, _.jsx)("h3", {
+              children: "Error loading  most played",
+            }),
+          });
         if (!_.data) return null;
         const _ = _.data.rgRanks[0]?.Item;
         let _;
@@ -10677,45 +9748,45 @@
               _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
                 ? _.GetAssets().GetLibraryHeroURL()
                 : _.GetAssets().GetPageBackgroundURL()),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              src: _,
-            }),
-            _.createElement(
-              _,
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                src: _,
+              }),
+              (0, _.jsx)(_, {
                 mostPlayedOption: _.DailyActiveUsers,
-              },
-              _.data.rgRanks.map((_, _) =>
-                _.createElement(_, {
-                  key: _.Item?.GetUniqueID() || _,
-                  rank: {
-                    nRank: _ + 1,
-                    Item: _.Item,
-                    nRankLastWeek: _.nRankLastWeek,
-                    nPeakInGame: _.nPeakInGame,
-                  },
-                }),
-              ),
-            ),
-          )
+                children: _.data.rgRanks.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      rank: {
+                        nRank: _ + 1,
+                        Item: _.Item,
+                        nRankLastWeek: _.nRankLastWeek,
+                        nPeakInGame: _.nPeakInGame,
+                      },
+                    },
+                    _.Item?.GetUniqueID() || _,
+                  ),
+                ),
+              }),
+            ],
+          })
         );
       }
       function _(_) {
         const { MostPlayedStore: _ } = _,
           _ = _(_);
         if (_.isLoading)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             position: "center",
           });
         if (_.isError)
-          return _.createElement(
-            "div",
-            null,
-            _.createElement("h3", null, "Error loading most played"),
-          );
+          return (0, _.jsx)("div", {
+            children: (0, _.jsx)("h3", {
+              children: "Error loading most played",
+            }),
+          });
         if (!_.data) return null;
         const _ = _.data.rgRanks[0]?.Item;
         let _;
@@ -10725,135 +9796,111 @@
               _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
                 ? _.GetAssets().GetLibraryHeroURL()
                 : _.GetAssets().GetPageBackgroundURL()),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              src: _,
-            }),
-            _.createElement(
-              _,
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                src: _,
+              }),
+              (0, _.jsx)(_, {
                 mostPlayedOption: _.ConcurrentUsers,
-              },
-              _.data.rgRanks.map((_, _) =>
-                _.createElement(_, {
-                  key: _.Item?.GetUniqueID() || _,
-                  rank: {
-                    nRank: _ + 1,
-                    Item: _.Item,
-                    nConcurrentInGame: _.nConcurrentInGame,
-                    nPeakInGame: _.nPeakInGame,
-                  },
-                }),
-              ),
-            ),
-          )
+                children: _.data.rgRanks.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      rank: {
+                        nRank: _ + 1,
+                        Item: _.Item,
+                        nConcurrentInGame: _.nConcurrentInGame,
+                        nPeakInGame: _.nPeakInGame,
+                      },
+                    },
+                    _.Item?.GetUniqueID() || _,
+                  ),
+                ),
+              }),
+            ],
+          })
         );
       }
       function _(_) {
         const { children: _ } = _;
-        return _.createElement(
-          "table",
-          {
-            className: _().ChartTable,
-          },
-          _.createElement(
-            "thead",
-            {
+        return (0, _.jsxs)("table", {
+          className: _().ChartTable,
+          children: [
+            (0, _.jsx)("thead", {
               className: _().ColumnHeaders,
-            },
-            _.createElement(
-              "tr",
-              null,
-              _.createElement("th", {
-                className: _().HoverCell,
+              children: (0, _.jsxs)("tr", {
+                children: [
+                  (0, _.jsx)("th", {
+                    className: _().HoverCell,
+                  }),
+                  (0, _.jsx)("th", {
+                    className: _().Rank,
+                    colSpan: 2,
+                    children: (0, _.jsx)("span", {
+                      children: (0, _._)("#SteamCharts_TopSellers_TableRank"),
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    className: (0, _._)(_().RightCell, _().Price),
+                    children: (0, _.jsxs)(_._, {
+                      className: _().Tooltip,
+                      toolTipContent: (0, _._)(
+                        "#SteamCharts_TopSellers_TablePriceTooltip",
+                      ),
+                      direction: "top",
+                      children: [
+                        (0, _._)("#SteamCharts_TopSellers_TablePrice"),
+                        " ",
+                        (0, _.jsx)(_._VW, {}),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    className: _().Change,
+                    align: "right",
+                    children: (0, _.jsxs)(_._, {
+                      className: _().Tooltip,
+                      toolTipContent: (0, _._)(
+                        "#SteamCharts_TopSellers_TableChangeTooltip",
+                      ),
+                      direction: "top",
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#SteamCharts_TopSellers_TableChange",
+                          ),
+                        }),
+                        " ",
+                        (0, _.jsx)(_._VW, {}),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    className: _().Weeks,
+                    align: "right",
+                    children: (0, _.jsxs)(_._, {
+                      className: _().Tooltip,
+                      toolTipContent: (0, _._)(
+                        "#SteamCharts_TopSellers_TableWeeksTooltip",
+                      ),
+                      direction: "top",
+                      children: [
+                        (0, _._)("#SteamCharts_TopSellers_TableWeeks"),
+                        " ",
+                        (0, _.jsx)(_._VW, {}),
+                      ],
+                    }),
+                  }),
+                ],
               }),
-              _.createElement(
-                "th",
-                {
-                  className: _().Rank,
-                  colSpan: 2,
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#SteamCharts_TopSellers_TableRank"),
-                ),
-              ),
-              _.createElement(
-                "th",
-                {
-                  className: (0, _._)(_().RightCell, _().Price),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Tooltip,
-                    toolTipContent: (0, _._)(
-                      "#SteamCharts_TopSellers_TablePriceTooltip",
-                    ),
-                    direction: "top",
-                  },
-                  (0, _._)("#SteamCharts_TopSellers_TablePrice"),
-                  " ",
-                  _.createElement(_._VW, null),
-                ),
-              ),
-              _.createElement(
-                "th",
-                {
-                  className: _().Change,
-                  align: "right",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Tooltip,
-                    toolTipContent: (0, _._)(
-                      "#SteamCharts_TopSellers_TableChangeTooltip",
-                    ),
-                    direction: "top",
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#SteamCharts_TopSellers_TableChange"),
-                  ),
-                  " ",
-                  _.createElement(_._VW, null),
-                ),
-              ),
-              _.createElement(
-                "th",
-                {
-                  className: _().Weeks,
-                  align: "right",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Tooltip,
-                    toolTipContent: (0, _._)(
-                      "#SteamCharts_TopSellers_TableWeeksTooltip",
-                    ),
-                    direction: "top",
-                  },
-                  (0, _._)("#SteamCharts_TopSellers_TableWeeks"),
-                  " ",
-                  _.createElement(_._VW, null),
-                ),
-              ),
-            ),
-          ),
-          _.createElement(
-            "tbody",
-            {
+            }),
+            (0, _.jsx)("tbody", {
               className: _().ListRowsCtn,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { rank: _ } = _,
@@ -10872,28 +9919,18 @@
         _.BIsFree()
           ? (_ = (0, _._)("#SteamCharts_TopSellers_TableFree"))
           : _ && (_ = _.formatted_final_price);
-        const _ = (0, _._)(_),
-          _ = {
-            _: _.GetAppID() || _.GetID(),
-            type: (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
-          };
-        return _.createElement(
-          "tr",
-          {
-            className: _().TableRow,
-            onClick: () => (window.location.href = _),
-          },
-          _.createElement(
-            "td",
-            {
+        const _ = (0, _._)(_);
+        return (0, _.jsxs)("tr", {
+          className: _().TableRow,
+          onClick: () => (window.location.href = _),
+          children: [
+            (0, _.jsx)("td", {
               className: _().HoverCell,
-            },
-            !_ &&
-              _.createElement(
-                _._,
-                {
+              children:
+                !_ &&
+                (0, _.jsx)(_._, {
                   className: _().HoverSource,
-                  item: _,
+                  _: _,
                   hoverProps: {
                     direction: "right",
                     nBodyAlignment: 0,
@@ -10903,65 +9940,47 @@
                       height: "250px",
                     },
                   },
-                },
-                _.createElement("div", {
-                  className: _().HoverMask,
+                  children: (0, _.jsx)("div", {
+                    className: _().HoverMask,
+                  }),
                 }),
-              ),
-          ),
-          _.createElement(
-            "td",
-            {
+            }),
+            (0, _.jsx)("td", {
               className: _().RankCell,
-            },
-            __webpack_require__,
-          ),
-          _.createElement(
-            "td",
-            {
+              children: __webpack_require__,
+            }),
+            (0, _.jsx)("td", {
               className: (0, _._)(
                 _().CapsuleCell,
                 !_.BIsVisible() && _().Unavailable,
               ),
-            },
-            _.createElement(_, {
-              Item: _,
-            }),
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _().PriceCell,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PriceWidget,
-              },
-              _.createElement(_._, {
-                _: _,
+              children: (0, _.jsx)(_, {
+                Item: _,
               }),
-            ),
-          ),
-          _.createElement(_, {
-            rank: _,
-          }),
-          _.createElement(
-            "td",
-            {
+            }),
+            (0, _.jsx)("td", {
+              className: _().PriceCell,
+              children: (0, _.jsx)("div", {
+                className: _().PriceWidget,
+                children: (0, _.jsx)(_._, {
+                  _: _,
+                }),
+              }),
+            }),
+            (0, _.jsx)(_, {
+              rank: _,
+            }),
+            (0, _.jsx)("td", {
               className: _().WeeksCell,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 className: _().Tooltip,
                 toolTipContent: (0, _._)("#SteamCharts_TopSellers_NumTooltip"),
                 direction: "top",
-              },
-              _,
-            ),
-          ),
-        );
+                children: _,
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { rank: _ } = _,
@@ -10973,37 +9992,25 @@
             _ && _ <= 100
               ? `${_} ${Math.abs(_ - __webpack_require__)}`
               : _
-                ? _.createElement(
-                    "span",
-                    {
-                      className: _().ListWeeksDebut,
-                    },
-                    (0, _._)("#SteamCharts_TopSellers_TableNew"),
-                  )
-                : _.createElement(
-                    "span",
-                    {
-                      className: _().ListWeeksReturning,
-                    },
-                    (0, _._)("#SteamCharts_TopSellers_TableReturning"),
-                  )),
-          _.createElement(
-            "td",
-            {
-              className: (0, _._)(_().ChangeCell, _),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _().Tooltip,
-                toolTipContent: (0, _._)(
-                  "#SteamCharts_TopSellers_ChangeTooltip",
-                ),
-                direction: "top",
-              },
-              _,
-            ),
-          )
+                ? (0, _.jsx)("span", {
+                    className: _().ListWeeksDebut,
+                    children: (0, _._)("#SteamCharts_TopSellers_TableNew"),
+                  })
+                : (0, _.jsx)("span", {
+                    className: _().ListWeeksReturning,
+                    children: (0, _._)(
+                      "#SteamCharts_TopSellers_TableReturning",
+                    ),
+                  })),
+          (0, _.jsx)("td", {
+            className: (0, _._)(_().ChangeCell, _),
+            children: (0, _.jsx)(_._, {
+              className: _().Tooltip,
+              toolTipContent: (0, _._)("#SteamCharts_TopSellers_ChangeTooltip"),
+              direction: "top",
+              children: _,
+            }),
+          })
         );
       }
       function _(_) {
@@ -11026,23 +10033,17 @@
             ],
             [_],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _().CountryControl,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DropDownContainer,
-            },
-            _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().CountryControl,
+          children: (0, _.jsx)("div", {
+            className: _().DropDownContainer,
+            children: (0, _.jsx)(_._, {
               rgOptions: _,
               selectedOption: __webpack_require__,
               onChange: _,
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const { TopSellersStore: _, overrideCountry: __webpack_require__ } = _,
@@ -11057,61 +10058,45 @@
           ),
           { rtCurrentWeek: _, bCountryListInitialized: _ } = _(_, _._.COUNTRY),
           _ = _(_, _, __webpack_require__, _.TopSelling);
-        return _.createElement(
-          _._,
-          {
-            title: (0, _._)("#SteamCharts_Menu_TopSelling"),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().ChartPage,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          title: (0, _._)("#SteamCharts_Menu_TopSelling"),
+          children: (0, _.jsxs)(_._, {
+            className: _().ChartPage,
+            children: [
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-              },
-              _.createElement(
-                "h1",
-                null,
-                (0, _._)("#SteamCharts_Menu_TopSelling"),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
-                  TopSellersStore: _,
-                  strCountryCode: _,
-                  onCountryCodeChanged: _,
-                }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PageSubtitle,
-              },
-              (0, _._)("#SteamCharts_Menu_TopSelling_Subtitle"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().ChartPlaceholder,
-              },
-              _.createElement(
-                _._,
-                null,
-                _ &&
-                  _ &&
-                  _.createElement(_, {
-                    TopSellersStore: _,
-                    overrideCountry: _,
+                children: [
+                  (0, _.jsx)("h1", {
+                    children: (0, _._)("#SteamCharts_Menu_TopSelling"),
                   }),
-              ),
-            ),
-          ),
-        );
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {
+                      TopSellersStore: _,
+                      strCountryCode: _,
+                      onCountryCodeChanged: _,
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _().PageSubtitle,
+                children: (0, _._)("#SteamCharts_Menu_TopSelling_Subtitle"),
+              }),
+              (0, _.jsx)(_._, {
+                className: _().ChartPlaceholder,
+                children: (0, _.jsx)(_._, {
+                  children:
+                    _ &&
+                    _ &&
+                    (0, _.jsx)(_, {
+                      TopSellersStore: _,
+                      overrideCountry: _,
+                    }),
+                }),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { TopSellersStore: _, overrideCountry: __webpack_require__ } = _,
@@ -11157,7 +10142,7 @@
           );
         if (!_)
           return "loading" === _ || _.isLoading
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 position: "center",
               })
             : null;
@@ -11169,43 +10154,35 @@
               _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
                 ? _.GetAssets().GetLibraryHeroURL()
                 : _.GetAssets().GetPageBackgroundURL()),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              src: _,
-            }),
-            _.createElement(
-              _,
-              null,
-              _.map((_) =>
-                _.createElement(
-                  _._,
-                  {
-                    key: _.nRank,
-                  },
-                  _.createElement(_, {
-                    rank: _,
-                  }),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                src: _,
+              }),
+              (0, _.jsx)(_, {
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      children: (0, _.jsx)(_, {
+                        rank: _,
+                      }),
+                    },
+                    _.nRank,
+                  ),
                 ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              }),
+              (0, _.jsx)("div", {
                 className: _().BrowseTopSellersButton,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   onClick: () => {
                     window.location.href = `${_._.STORE_BASE_URL}search/?filter=${__webpack_require__ ? "topsellers" : "globaltopsellers"}`;
                   },
-                },
-                (0, _._)("#SteamCharts_TopSellers_Browse"),
-              ),
-            ),
-          )
+                  children: (0, _._)("#SteamCharts_TopSellers_Browse"),
+                }),
+              }),
+            ],
+          })
         );
       }
       var _ = __webpack_require__("chunkid");
@@ -11243,78 +10220,61 @@
             _ && !_ && _.replace(_.TopSellers(_, _(_)));
           }, [_, _, _, _, _]),
           _ && _ && _
-            ? _.createElement(
-                _._,
-                {
-                  title:
-                    (0, _._)("#SteamCharts_TopSellers_PageTitle") +
-                    " - " +
-                    _(_),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().ChartPage,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+            ? (0, _.jsx)(_._, {
+                title:
+                  (0, _._)("#SteamCharts_TopSellers_PageTitle") + " - " + _(_),
+                children: (0, _.jsxs)(_._, {
+                  className: _().ChartPage,
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                    },
-                    _.createElement(
-                      "h1",
-                      null,
-                      (0, _._)("#SteamCharts_TopSellers_PageTitle"),
-                    ),
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_, {
-                        TopSellersStore: _,
-                        rtWeekStart: _,
-                        strCountryCode: _,
-                      }),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().PageSubtitle,
-                    },
-                    (0, _._)("#SteamCharts_TopSellers_PageSubTitle"),
-                    " ",
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#SteamCharts_TopSellers_PageSubTitle_subtext"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_, {
-                      rtWeekStart: _,
-                      strCountryCode: _,
-                      rtMaxWeekStart: _.GetCurrentWeek(),
+                      children: [
+                        (0, _.jsx)("h1", {
+                          children: (0, _._)(
+                            "#SteamCharts_TopSellers_PageTitle",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_, {
+                            TopSellersStore: _,
+                            rtWeekStart: _,
+                            strCountryCode: _,
+                          }),
+                        }),
+                      ],
                     }),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      className: _().ChartPlaceholder,
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_, {
-                        TopSellersStore: _,
+                    (0, _.jsxs)("div", {
+                      className: _().PageSubtitle,
+                      children: [
+                        (0, _._)("#SteamCharts_TopSellers_PageSubTitle"),
+                        " ",
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#SteamCharts_TopSellers_PageSubTitle_subtext",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
                         rtWeekStart: _,
                         strCountryCode: _,
+                        rtMaxWeekStart: _.GetCurrentWeek(),
                       }),
-                    ),
-                  ),
-                ),
-              )
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _().ChartPlaceholder,
+                      children: (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_, {
+                          TopSellersStore: _,
+                          rtWeekStart: _,
+                          strCountryCode: _,
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+              })
             : null
         );
       }
@@ -11333,78 +10293,46 @@
               : _.TopSellers(_(__webpack_require__), _(_ - _))),
           (_ =
             _ >= _ ? void 0 : _.TopSellers(_(__webpack_require__), _(_ + _))),
-          _.createElement(
-            _._,
-            {
-              className: _().ChartRangeCtn,
-            },
-            _.createElement(
-              _,
-              {
+          (0, _.jsxs)(_._, {
+            className: _().ChartRangeCtn,
+            children: [
+              (0, _.jsx)(_, {
                 strLink: _,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().ChartNavPrev,
-                },
-                " ",
-              ),
-            ),
-            _.createElement(
-              _,
-              {
+                  children: " ",
+                }),
+              }),
+              (0, _.jsx)(_, {
                 strLink: _,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().ChartNavNext,
-                },
-                " ",
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                  children: " ",
+                }),
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().ChartRangeText, _().LongDate),
-              },
-              _(_),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _(_),
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(_().ChartRangeText, _().ShortDate),
-              },
-              (function (_) {
-                return (0, _._)(
-                  "#SteamCharts_TopSellers_WeeklyRangeShort",
-                  (0, _._)(_, {
-                    timeZone: "UTC",
-                  }),
-                );
-              })(_),
-            ),
-          )
+                children: _(_),
+              }),
+            ],
+          })
         );
       }
       function _(_) {
         const { strLink: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ChartNavCtn, _ ? "" : _().Disabled),
-          },
-          _.createElement(
-            _._,
-            {
-              _: _ ?? _.Overview(),
-              onClick: _ ? void 0 : (_) => _.preventDefault(),
-              className: _().ChartNavHitArea,
-            },
-            __webpack_require__,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().ChartNavCtn, _ ? "" : _().Disabled),
+          children: (0, _.jsx)(_._, {
+            _: _ ?? _.Overview(),
+            onClick: _ ? void 0 : (_) => _.preventDefault(),
+            className: _().ChartNavHitArea,
+            children: __webpack_require__,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -11434,23 +10362,17 @@
             },
             [_, _],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _().CountryControl,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DropDownContainer,
-            },
-            _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().CountryControl,
+          children: (0, _.jsx)("div", {
+            className: _().DropDownContainer,
+            children: (0, _.jsx)(_._, {
               rgOptions: _,
               selectedOption: __webpack_require__,
               onChange: _,
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const {
@@ -11467,57 +10389,50 @@
           ),
           _ = _.useCallback(() => _(!0), [_]);
         return "error" === _
-          ? _.createElement(
-              "div",
-              null,
-              _.createElement("h3", null, "Error loading top sellers"),
-            )
-          : _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_, {
-                TopSellers: _,
+          ? (0, _.jsx)("div", {
+              children: (0, _.jsx)("h3", {
+                children: "Error loading top sellers",
               }),
-              _ &&
-                _.createElement(
-                  _,
-                  null,
-                  _.rgRanks.map((_) =>
-                    _.createElement(
-                      _._,
-                      {
-                        key: _.nRank,
-                      },
-                      _.createElement(_, {
-                        rank: _,
-                      }),
-                    ),
-                  ),
-                ),
-              20 === _?.rgRanks?.length &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().WeeklyFooterControls,
-                  },
-                  ((!_ && "loaded" == _) || (_ && "loading" == _)) &&
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: _,
-                        disabled: "loading" == _,
-                      },
-                      (0, _._)(
-                        "#SteamCharts_TopSellers_SeeAllNTopSellers",
-                        100,
+            })
+          : (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  TopSellers: _,
+                }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    children: _.rgRanks.map((_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          children: (0, _.jsx)(_, {
+                            rank: _,
+                          }),
+                        },
+                        _.nRank,
                       ),
                     ),
-                ),
-              "loading" == _ &&
-                _.createElement(_._, {
-                  position: "center",
-                }),
-            );
+                  }),
+                20 === _?.rgRanks?.length &&
+                  (0, _.jsx)("div", {
+                    className: _().WeeklyFooterControls,
+                    children:
+                      ((!_ && "loaded" == _) || (_ && "loading" == _)) &&
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        disabled: "loading" == _,
+                        children: (0, _._)(
+                          "#SteamCharts_TopSellers_SeeAllNTopSellers",
+                          100,
+                        ),
+                      }),
+                  }),
+                "loading" == _ &&
+                  (0, _.jsx)(_._, {
+                    position: "center",
+                  }),
+              ],
+            });
       }
       const _ = _.memo((_) => {
         const { TopSellers: _ } = _,
@@ -11532,7 +10447,7 @@
                 : _.Item.GetAssets().GetPageBackgroundURL());
         }
         return _.current
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               src: _.current,
             })
           : null;
@@ -11570,118 +10485,95 @@
           _ =
             _._.BASE_URL_STORE_CDN_ASSETS +
             `steamdeck/steamdeck_promo_0${_}.png?v=4`;
-        return _.createElement(
-          _._,
-          {
-            title: (0, _._)("#SteamCharts_MostPlayedDeck_Title"),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().ChartPage,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          title: (0, _._)("#SteamCharts_MostPlayedDeck_Title"),
+          children: (0, _.jsxs)(_._, {
+            className: _().ChartPage,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().TopSectionFlex,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().TopSectionCol,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-                  },
-                  _.createElement(
-                    "h1",
-                    null,
-                    (0, _._)("#SteamCharts_MostPlayedDeck_Title"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().PageSubtitle, _().TopDeckSubtitle),
-                  },
-                  (0, _._)("#SteamCharts_MostPlayedDeck_Subtitle"),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SteamDeckChartDropdown,
-                    },
-                    _.createElement(_, {
-                      selected: __webpack_require__,
-                    }),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DeckChartDateRange,
-                  },
-                  _,
-                ),
-              ),
-              _.createElement(
-                "a",
-                {
-                  href: "https://store.steampowered.com/app/1675200/Steam_Deck/?utm_source=steamdeckcharts",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().SteamDeckBanner, _().TopSectionCol),
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().TopSectionCol,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
+                        children: (0, _.jsx)("h1", {
+                          children: (0, _._)(
+                            "#SteamCharts_MostPlayedDeck_Title",
+                          ),
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().PageSubtitle,
+                          _().TopDeckSubtitle,
+                        ),
+                        children: [
+                          (0, _._)("#SteamCharts_MostPlayedDeck_Subtitle"),
+                          (0, _.jsx)("div", {
+                            className: _().SteamDeckChartDropdown,
+                            children: (0, _.jsx)(_, {
+                              selected: __webpack_require__,
+                            }),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().DeckChartDateRange,
+                        children: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("a", {
+                    href: "https://store.steampowered.com/app/1675200/Steam_Deck/?utm_source=steamdeckcharts",
+                    children: (0, _.jsxs)("div", {
                       className: (0, _._)(
-                        _().SteamDeckImage,
+                        _().SteamDeckBanner,
                         _().TopSectionCol,
                       ),
-                    },
-                    _.createElement("img", {
-                      src: _,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(
+                            _().SteamDeckImage,
+                            _().TopSectionCol,
+                          ),
+                          children: (0, _.jsx)("img", {
+                            src: _,
+                          }),
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().SteamDeckBannerWords,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().SteamDeckBannerTitle,
+                              children: (0, _._)(
+                                "#SteamCharts_SteamDeckPromo_Title",
+                              ),
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().SteamDeckBannerDesc,
+                              children: (0, _._)(
+                                "#SteamCharts_SteamDeckPromo_Desc",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
                     }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SteamDeckBannerWords,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().SteamDeckBannerTitle,
-                      },
-                      (0, _._)("#SteamCharts_SteamDeckPromo_Title"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().SteamDeckBannerDesc,
-                      },
-                      (0, _._)("#SteamCharts_SteamDeckPromo_Desc"),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().ChartPlaceholder,
-              },
-              _.createElement(_, {
-                MostPlayedOnDeckStore: _,
-                eTopPlayedPeriod: _,
+                  }),
+                ],
               }),
-            ),
-          ),
-        );
+              (0, _.jsx)(_._, {
+                className: _().ChartPlaceholder,
+                children: (0, _.jsx)(_, {
+                  MostPlayedOnDeckStore: _,
+                  eTopPlayedPeriod: _,
+                }),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { selected: _ } = _,
@@ -11706,23 +10598,17 @@
             },
             [_],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _().MostPlayedOptionsControl,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DropDownContainer,
-            },
-            _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().MostPlayedOptionsControl,
+          children: (0, _.jsx)("div", {
+            className: _().DropDownContainer,
+            children: (0, _.jsx)(_._, {
               rgOptions: _,
               selectedOption: _ ?? "pastweek",
               onChange: _,
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const {
@@ -11737,19 +10623,15 @@
             });
           })(_, __webpack_require__);
         if (_.isLoading)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             position: "center",
           });
         if (_.isError)
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "h3",
-              null,
-              "Error loading  most played on Steam Deck",
-            ),
-          );
+          return (0, _.jsx)("div", {
+            children: (0, _.jsx)("h3", {
+              children: "Error loading  most played on Steam Deck",
+            }),
+          });
         if (!_.data) return null;
         const _ = _.data.rgRanks[0]?.Item;
         let _;
@@ -11759,29 +10641,29 @@
               _.GetAssets().GetLibraryHeroURL()?.trim().length > 0
                 ? _.GetAssets().GetLibraryHeroURL()
                 : _.GetAssets().GetPageBackgroundURL()),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              src: _,
-            }),
-            _.createElement(
-              _,
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                src: _,
+              }),
+              (0, _.jsx)(_, {
                 eTopPlayedPeriod: __webpack_require__,
-              },
-              _.data.rgRanks.map((_, _) =>
-                _.createElement(_, {
-                  key: _.Item?.GetUniqueID() || _,
-                  rank: {
-                    nRank: _ + 1,
-                    Item: _.Item,
-                    nRankLastPeriod: _.nRankLastPeriod,
-                  },
-                }),
-              ),
-            ),
-          )
+                children: _.data.rgRanks.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      rank: {
+                        nRank: _ + 1,
+                        Item: _.Item,
+                        nRankLastPeriod: _.nRankLastPeriod,
+                      },
+                    },
+                    _.Item?.GetUniqueID() || _,
+                  ),
+                ),
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -11796,138 +10678,102 @@
           case 3:
             _ = (0, _._)("#SteamCharts_MostPlayedDeck_TableChangeYear_Tooltip");
         }
-        return _.createElement(
-          "table",
-          {
-            className: _().ChartTable,
-          },
-          _.createElement(
-            "thead",
-            {
+        return (0, _.jsxs)("table", {
+          className: _().ChartTable,
+          children: [
+            (0, _.jsx)("thead", {
               className: _().ColumnHeaders,
-            },
-            _.createElement(
-              "tr",
-              null,
-              _.createElement("th", {
-                className: _().HoverCell,
+              children: (0, _.jsxs)("tr", {
+                children: [
+                  (0, _.jsx)("th", {
+                    className: _().HoverCell,
+                  }),
+                  (0, _.jsx)("th", {
+                    className: _().Rank,
+                    colSpan: 2,
+                    children: (0, _.jsx)("span", {
+                      children: (0, _._)("#SteamCharts_TopSellers_TableRank"),
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    className: (0, _._)(_().RightCell, _().Price),
+                    children: (0, _._)("#SteamCharts_TopSellers_TablePrice"),
+                  }),
+                  (0, _.jsx)("th", {
+                    className: _().Change,
+                    align: "right",
+                    children: (0, _.jsxs)(_._, {
+                      className: _().Tooltip,
+                      toolTipContent: _,
+                      direction: "top",
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#SteamCharts_TopSellers_TableChange",
+                          ),
+                        }),
+                        " ",
+                        (0, _.jsx)(_._VW, {}),
+                      ],
+                    }),
+                  }),
+                  (0, _.jsx)("th", {
+                    className: _().Change,
+                    align: "right",
+                    children: (0, _.jsxs)(_._, {
+                      className: _().Tooltip,
+                      toolTipContent: (0, _._)(
+                        "#SteamCharts_MostPlayedDeck_TableDeckVerified_Tooltip",
+                      ),
+                      direction: "top",
+                      children: [
+                        (0, _._)(
+                          "#SteamCharts_MostPlayedDeck_TableDeckVerified",
+                        ),
+                        " ",
+                        (0, _.jsx)(_._VW, {}),
+                      ],
+                    }),
+                  }),
+                ],
               }),
-              _.createElement(
-                "th",
-                {
-                  className: _().Rank,
-                  colSpan: 2,
-                },
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#SteamCharts_TopSellers_TableRank"),
-                ),
-              ),
-              _.createElement(
-                "th",
-                {
-                  className: (0, _._)(_().RightCell, _().Price),
-                },
-                (0, _._)("#SteamCharts_TopSellers_TablePrice"),
-              ),
-              _.createElement(
-                "th",
-                {
-                  className: _().Change,
-                  align: "right",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Tooltip,
-                    toolTipContent: _,
-                    direction: "top",
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#SteamCharts_TopSellers_TableChange"),
-                  ),
-                  " ",
-                  _.createElement(_._VW, null),
-                ),
-              ),
-              _.createElement(
-                "th",
-                {
-                  className: _().Change,
-                  align: "right",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Tooltip,
-                    toolTipContent: (0, _._)(
-                      "#SteamCharts_MostPlayedDeck_TableDeckVerified_Tooltip",
-                    ),
-                    direction: "top",
-                  },
-                  (0, _._)("#SteamCharts_MostPlayedDeck_TableDeckVerified"),
-                  " ",
-                  _.createElement(_._VW, null),
-                ),
-              ),
-            ),
-          ),
-          _.createElement(
-            "tbody",
-            {
+            }),
+            (0, _.jsx)("tbody", {
               className: _().ListRowsCtn,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { rank: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_.Item.GetStorePageURL(), _);
-        return _.createElement(
-          "tr",
-          {
-            onClick: () => (window.location.href = _),
-            className: _().TableRow,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("tr", {
+          onClick: () => (window.location.href = _),
+          className: _().TableRow,
+          children: (0, _.jsx)(_, {
             rank: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { rank: _ } = _,
           _ = _.Item,
           _ = (0, _._)(_),
-          _ = {
-            _: __webpack_require__.GetAppID() || __webpack_require__.GetID(),
-            type: (0, _._)(
-              __webpack_require__?.GetStoreItemType(),
-              __webpack_require__?.GetAppType(),
-            ),
-          },
           _ = (0, _._)(_),
           _ = (0, _._)(
             __webpack_require__.GetPlatforms().steam_deck_compat_category,
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "td",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("td", {
               className: _().HoverCell,
-            },
-            !_ &&
-              _.createElement(
-                _._,
-                {
+              children:
+                !_ &&
+                (0, _.jsx)(_._, {
                   className: _().HoverSource,
-                  item: _,
+                  _: _,
                   hoverProps: {
                     direction: "right",
                     nBodyAlignment: 0,
@@ -11937,58 +10783,43 @@
                       height: "250px",
                     },
                   },
-                },
-                _.createElement("div", {
-                  className: _().HoverMask,
+                  children: (0, _.jsx)("div", {
+                    className: _().HoverMask,
+                  }),
                 }),
-              ),
-          ),
-          _.createElement(
-            "td",
-            {
+            }),
+            (0, _.jsx)("td", {
               className: _().RankCell,
-            },
-            _.nRank,
-          ),
-          _.createElement(
-            "td",
-            {
+              children: _.nRank,
+            }),
+            (0, _.jsx)("td", {
               className: (0, _._)(
                 _().CapsuleCell,
                 !__webpack_require__.BIsVisible() && _().Unavailable,
               ),
-            },
-            _.createElement(_, {
-              Item: _,
-            }),
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _().PriceCell,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PriceWidget,
-              },
-              _.createElement(_._, {
-                _: _,
+              children: (0, _.jsx)(_, {
+                Item: _,
               }),
-            ),
-          ),
-          _.createElement(_, {
-            nRank: _.nRank,
-            nRankLastWeek: _.nRankLastPeriod,
-          }),
-          _.createElement(
-            "td",
-            {
+            }),
+            (0, _.jsx)("td", {
+              className: _().PriceCell,
+              children: (0, _.jsx)("div", {
+                className: _().PriceWidget,
+                children: (0, _.jsx)(_._, {
+                  _: _,
+                }),
+              }),
+            }),
+            (0, _.jsx)(_, {
+              nRank: _.nRank,
+              nRankLastWeek: _.nRankLastPeriod,
+            }),
+            (0, _.jsx)("td", {
               className: _().ChangeCell,
-            },
-            _.createElement(_, null),
-          ),
-        );
+              children: (0, _.jsx)(_, {}),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -12122,18 +10953,15 @@
           _ = (0, _._)();
         return !_ || _
           ? null === _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ErrorStylesWithIcon,
-                },
-                (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-              )
-            : _.createElement(_._, {
+            ? (0, _.jsx)("div", {
+                className: _.ErrorStylesWithIcon,
+                children: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+              })
+            : (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 position: "center",
               })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               eventModel: _,
               language: _,
               bIsPreview: !1,
@@ -12147,16 +10975,14 @@
           _ = Number.parseInt(_),
           _ = (0, _._)();
         return _(_, _, !0)
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               nYear: _,
               TopYearlyReleasesStore: __webpack_require__,
             })
           : (_.replace(_.Overview()),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#SteamCharts_Yearly_Unavailable"),
-            ));
+            (0, _.jsx)("div", {
+              children: (0, _._)("#SteamCharts_Yearly_Unavailable"),
+            }));
       }
       const _ = {
         ..._._,
@@ -12338,57 +11164,50 @@
           _(_, _, _?.[0]?.rgFilteredDLCsAppIDs, _),
           _ && 1 != _ && _ && null != _ && _
             ? 0 == _.length
-              ? _.createElement(
-                  _._,
-                  {
-                    className: _().ChartPage,
-                  },
-                  _.createElement(_, {
-                    nYear: _,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
+              ? (0, _.jsxs)(_._, {
+                  className: _().ChartPage,
+                  children: [
+                    (0, _.jsx)(_, {
+                      nYear: _,
+                    }),
+                    (0, _.jsx)("div", {
                       className: _().NoticeBox,
-                    },
-                    (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-                  ),
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    className: _().ChartPage,
-                  },
-                  _.createElement(
-                    _,
-                    {
+                      children: (0, _._)(
+                        "#Error_ErrorCommunicatingWithNetwork",
+                      ),
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_._, {
+                  className: _().ChartPage,
+                  children: [
+                    (0, _.jsx)(_, {
                       rgAppIDs: _[0].rgFilteredCombinedAppsAndDLC,
                       bTallCapsule: !0,
                       bBlurCapsules: !1,
-                    },
-                    _.createElement(_, {
-                      nYear: _,
+                      children: (0, _.jsx)(_, {
+                        nYear: _,
+                      }),
                     }),
-                  ),
-                  _.createElement(_, {
-                    facets: _,
+                    (0, _.jsx)(_, {
+                      facets: _,
+                      nYear: _,
+                      rgTabsData: _,
+                    }),
+                  ],
+                })
+            : (0, _.jsxs)(_._, {
+                className: _().ChartPage,
+                children: [
+                  (0, _.jsx)(_, {
                     nYear: _,
-                    rgTabsData: _,
                   }),
-                )
-            : _.createElement(
-                _._,
-                {
-                  className: _().ChartPage,
-                },
-                _.createElement(_, {
-                  nYear: _,
-                }),
-                _.createElement(_._, {
-                  string: (0, _._)("#Loading"),
-                  position: "center",
-                }),
-              )
+                  (0, _.jsx)(_._, {
+                    string: (0, _._)("#Loading"),
+                    position: "center",
+                  }),
+                ],
+              })
         );
       }
       function _(_) {
@@ -12415,137 +11234,90 @@
           (0, _._)("ArrowRight", () => _(!0), !0, !0),
           (0, _._)("Right", () => _(!0), !0, !0);
         const _ = 1 != _ ? `?tab=${_}` : "";
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: _().YearlyHeaderCtn,
-            },
-            _.createElement(
-              "svg",
-              {
-                viewBox: "0 0 100 100",
-                className: _().Triangle,
-              },
-              _.createElement("polygon", {
-                points: "50,35 100,100 0,100",
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-              },
-              _.createElement(
-                "h1",
-                null,
-                (0, _._)("#SteamCharts_Yearly_Title", _),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().PageSubtitle),
-              },
-              (0, _._)("#SteamCharts_Yearly_SubTitle", 100),
-              _.createElement("br", null),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: [
+                (0, _.jsx)("svg", {
+                  viewBox: "0 0 100 100",
+                  className: _().Triangle,
+                  children: (0, _.jsx)("polygon", {
+                    points: "50,35 100,100 0,100",
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
+                  children: (0, _.jsx)("h1", {
+                    children: (0, _._)("#SteamCharts_Yearly_Title", _),
+                  }),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().PageSubtitle),
+                  children: [
+                    (0, _._)("#SteamCharts_Yearly_SubTitle", 100),
+                    (0, _.jsx)("br", {}),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsxs)(_._, {
               className: (0, _._)(_().ChartRangeCtn, _().AnnualChart),
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#SteamCharts_Yearly_Title", _),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_().ChartNavCtn]: !0,
-                    [_().Disabled]: !_,
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)("#SteamCharts_Yearly_Title", _),
+                  children: (0, _.jsx)("div", {
+                    className: (0, _._)({
+                      [_().ChartNavCtn]: !0,
+                      [_().Disabled]: !_,
+                    }),
+                    children: _
+                      ? (0, _.jsx)(_._, {
+                          _: _.BestOfYear("" + _) + _,
+                          className: _().ChartNavHitArea,
+                          children: (0, _.jsx)("div", {
+                            className: _().ChartNavPrev,
+                            children: " ",
+                          }),
+                        })
+                      : (0, _.jsx)("div", {
+                          className: _().ChartNavHitArea,
+                          children: (0, _.jsx)("div", {
+                            className: _().ChartNavPrev,
+                            children: " ",
+                          }),
+                        }),
                   }),
-                },
-                _
-                  ? _.createElement(
-                      _._,
-                      {
-                        _: _.BestOfYear("" + _) + _,
-                        className: _().ChartNavHitArea,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ChartNavPrev,
-                        },
-                        " ",
-                      ),
-                    )
-                  : _.createElement(
-                      "div",
-                      {
-                        className: _().ChartNavHitArea,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ChartNavPrev,
-                        },
-                        " ",
-                      ),
-                    ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#SteamCharts_Yearly_Title", _),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_().ChartNavCtn]: !0,
-                    [_().Disabled]: !_,
+                }),
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)("#SteamCharts_Yearly_Title", _),
+                  children: (0, _.jsx)("div", {
+                    className: (0, _._)({
+                      [_().ChartNavCtn]: !0,
+                      [_().Disabled]: !_,
+                    }),
+                    children: _
+                      ? (0, _.jsx)(_._, {
+                          _: _.BestOfYear("" + _) + _,
+                          className: _().ChartNavHitArea,
+                          children: (0, _.jsx)("div", {
+                            className: _().ChartNavNext,
+                            children: " ",
+                          }),
+                        })
+                      : (0, _.jsx)("div", {
+                          className: _().ChartNavHitArea,
+                          children: (0, _.jsx)("div", {
+                            className: _().ChartNavNext,
+                            children: " ",
+                          }),
+                        }),
                   }),
-                },
-                _
-                  ? _.createElement(
-                      _._,
-                      {
-                        _: _.BestOfYear("" + _) + _,
-                        className: _().ChartNavHitArea,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ChartNavNext,
-                        },
-                        " ",
-                      ),
-                    )
-                  : _.createElement(
-                      "div",
-                      {
-                        className: _().ChartNavHitArea,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ChartNavNext,
-                        },
-                        " ",
-                      ),
-                    ),
-              ),
-            ),
-          ),
-        );
+                }),
+              ],
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       const _ = {
@@ -12584,203 +11356,150 @@
             TopMonthlyReleasesStore: _,
             TopYearlyReleasesStore: _,
           } = _;
-        return _.createElement(
-          _,
-          {
-            TopSellersStore: _,
-            SteamInterface: _,
-            DynamicUserStore: _,
-            TopMonthlyReleasesStore: _,
-          },
-          _.createElement(_, null),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_, {
+          TopSellersStore: _,
+          SteamInterface: _,
+          DynamicUserStore: _,
+          TopMonthlyReleasesStore: _,
+          children: [
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)(_._, {
               domain: "store.steampowered.com",
               controller: "steamcharts",
-            },
-            _.createElement(
-              _.Suspense,
-              {
+              children: (0, _.jsx)(_.Suspense, {
                 fallback: null,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    path: `${_.MostPlayed()}`,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      method: "mostplayed",
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_, {
-                        MostPlayedStore: _,
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      path: `${_.MostPlayed()}`,
+                      children: (0, _.jsx)(_._, {
+                        method: "mostplayed",
+                        children: (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_, {
+                            MostPlayedStore: _,
+                          }),
+                        }),
                       }),
-                    ),
-                  ),
-                ),
-                _.createElement(_._, {
-                  path: `${_.TopSelling(":country?")}`,
-                  render: (_) =>
-                    _.createElement(
-                      _._,
-                      {
-                        method: "topselling",
-                      },
-                      _.createElement(
-                        _._,
-                        null,
-                        _.createElement(_, {
-                          TopSellersStore: _,
-                          overrideCountry: _.match.params.country,
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: `${_.TopSelling(":country?")}`,
+                      render: (_) =>
+                        (0, _.jsx)(_._, {
+                          method: "topselling",
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_, {
+                              TopSellersStore: _,
+                              overrideCountry: _.match.params.country,
+                            }),
+                          }),
                         }),
-                      ),
-                    ),
-                }),
-                _.createElement(_._, {
-                  path: `${_.TopSellers(":country?", ":week?")}`,
-                  render: (_) =>
-                    _.createElement(
-                      _._,
-                      {
-                        method: "weeklytopsellers",
-                      },
-                      _.createElement(
-                        _._,
-                        null,
-                        _.createElement(_, {
-                          TopSellersStore: _,
-                          week: _.match.params.week,
-                          country: _.match.params.country,
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: `${_.TopSellers(":country?", ":week?")}`,
+                      render: (_) =>
+                        (0, _.jsx)(_._, {
+                          method: "weeklytopsellers",
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_, {
+                              TopSellersStore: _,
+                              week: _.match.params.week,
+                              country: _.match.params.country,
+                            }),
+                          }),
                         }),
-                      ),
-                    ),
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    path: `${_.Overview()}`,
-                    exact: !0,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      method: "overview",
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_, {
-                        SteamCharts: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: `${_.Overview()}`,
+                      exact: !0,
+                      children: (0, _.jsx)(_._, {
+                        method: "overview",
+                        children: (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_, {
+                            SteamCharts: _,
+                          }),
+                        }),
                       }),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    path: `${_.SupportStats()}`,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      method: "supportstats",
-                    },
-                    _.createElement(_._, null, _.createElement(_, null)),
-                  ),
-                ),
-                _.createElement(_._, {
-                  path: `${_.TopNewReleases(":salePagename")}`,
-                  render: (_) => {
-                    const {
-                      match: {
-                        params: { salePagename: _ },
-                      },
-                    } = _;
-                    return _.createElement(
-                      _._,
-                      {
-                        method: "monthlytopreleases",
-                      },
-                      _.createElement(
-                        _._,
-                        null,
-                        _.createElement(_, {
-                          salePageName: _,
-                          TopMonthlyReleasesStore: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: `${_.SupportStats()}`,
+                      children: (0, _.jsx)(_._, {
+                        method: "supportstats",
+                        children: (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_, {}),
                         }),
-                      ),
-                    );
-                  },
-                }),
-                _.createElement(_._, {
-                  path: `${_.BestOfYear(":salePagename")}`,
-                  render: (_) => {
-                    const {
-                      match: {
-                        params: { salePagename: _ },
-                      },
-                    } = _;
-                    return _.createElement(
-                      _._,
-                      {
-                        method: "bestofyear",
-                      },
-                      _.createElement(
-                        _._,
-                        null,
-                        _.createElement(_, {
-                          salePageName: _,
-                          TopYearlyReleasesStore: _,
-                        }),
-                      ),
-                    );
-                  },
-                }),
-                _.createElement(_._, {
-                  path: `${_.MostPlayedOnSteamDeck(":timeperiod?")}`,
-                  render: (_) => {
-                    const {
-                      match: {
-                        params: { timeperiod: _ },
-                      },
-                    } = _;
-                    return _.createElement(
-                      _._,
-                      {
-                        method: "mostplayedondeck",
-                      },
-                      _.createElement(
-                        _._,
-                        null,
-                        _.createElement(_, {
-                          MostPlayedOnDeckStore: _,
-                          strTimePeriod: _,
-                        }),
-                      ),
-                    );
-                  },
-                }),
-                _.createElement(
-                  _._,
-                  null,
-                  "dev" == _._.WEB_UNIVERSE
-                    ? _.createElement(_._, null)
-                    : _.createElement(_._, {
-                        _: `${_.Overview()}`,
                       }),
-                ),
-              ),
-            ),
-          ),
-        );
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: `${_.TopNewReleases(":salePagename")}`,
+                      render: (_) => {
+                        const {
+                          match: {
+                            params: { salePagename: _ },
+                          },
+                        } = _;
+                        return (0, _.jsx)(_._, {
+                          method: "monthlytopreleases",
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_, {
+                              salePageName: _,
+                              TopMonthlyReleasesStore: _,
+                            }),
+                          }),
+                        });
+                      },
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: `${_.BestOfYear(":salePagename")}`,
+                      render: (_) => {
+                        const {
+                          match: {
+                            params: { salePagename: _ },
+                          },
+                        } = _;
+                        return (0, _.jsx)(_._, {
+                          method: "bestofyear",
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_, {
+                              salePageName: _,
+                              TopYearlyReleasesStore: _,
+                            }),
+                          }),
+                        });
+                      },
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: `${_.MostPlayedOnSteamDeck(":timeperiod?")}`,
+                      render: (_) => {
+                        const {
+                          match: {
+                            params: { timeperiod: _ },
+                          },
+                        } = _;
+                        return (0, _.jsx)(_._, {
+                          method: "mostplayedondeck",
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_, {
+                              MostPlayedOnDeckStore: _,
+                              strTimePeriod: _,
+                            }),
+                          }),
+                        });
+                      },
+                    }),
+                    (0, _.jsx)(_._, {
+                      children:
+                        "dev" == _._.WEB_UNIVERSE
+                          ? (0, _.jsx)(_._, {})
+                          : (0, _.jsx)(_._, {
+                              _: `${_.Overview()}`,
+                            }),
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _() {
         const { pathname: _ } = (0, _._)();

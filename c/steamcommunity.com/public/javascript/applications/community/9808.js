@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "My Active Orders",
 	"MyOrders_Heading_Sell": "Sell Orders",
 	"MyOrders_Heading_Buy": "Buy Orders",
+	"MyOrders_Heading_MyPurchaseOffers": "Buying - My Offers",
+	"MyOrders_Heading_MyListings": "Selling - My Listings",
 	"MyOrders_FailedToLoad": "There was a problem loading order data for this item.",
 	"MyOrders_NoActiveOrders_Item": "You have no active orders for this item.",
 	"MyOrders_NoBuyOrders_Item": "You have no active buy orders for this item.",

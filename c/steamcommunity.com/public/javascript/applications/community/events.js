@@ -22,9 +22,10 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) =>
-        _.createElement(_._, {
+        (0, _.createElement)(_._, {
           ..._,
           key: _.match.params.oldAnnouncementGID,
           bClearDirty: !0,
@@ -125,7 +126,7 @@
         render() {
           const { bPreventDismiss: _ } = this.props;
           return this.state.bShowModal
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 appid: this.state.appid,
                 announcementGID: this.state.announcementGID,
                 clanSteamID: this.state.clanSteamID,
@@ -136,10 +137,10 @@
                 bPrimaryPageFeature: _,
               })
             : this.state.bLoadedLandingState
-              ? _.createElement(_._, {
+              ? (0, _.jsx)(_._, {
                   string: (0, _._)("#Loading"),
                 })
-              : _.createElement("div", null);
+              : (0, _.jsx)("div", {});
         }
       };
       (0, _._)([_._], _.prototype, "HideModal", null), (_ = (0, _._)([_._], _));
@@ -293,96 +294,86 @@
               ? this.state.last_update_event.announcement_gid
               : void 0,
             { strClassName: _ } = this.props;
-          return _.createElement(
-            _._,
-            {
-              className: _,
-            },
-            this.state.bShowModal &&
-              _.createElement(_, {
-                ...this.props,
-                announcementGID:
-                  this.state.announcementGID ||
-                  (null === (_ = this.state.modalInitialEvent) || void 0 === _
-                    ? void 0
-                    : _.AnnouncementGID),
-                eventModel: this.state.modalInitialEvent,
-                closeModal: this.CloseModal,
-              }),
-            _ &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "h2",
-                  null,
-                  (0, _._)("#EventBrowse_RecentEvents"),
-                ),
-                !(null === (_ = this.context) || void 0 === _
-                  ? void 0
-                  : _.IN_GAMEPADUI) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SectionButtonCtn,
-                    },
-                    this.props.bViewAllShowInfiniteScroll
-                      ? _.createElement(
-                          _._,
-                          {
-                            className: _.SectionButton,
-                            onClick: () => this.ShowModal(_[0]),
-                          },
-                          (0, _._)("#EventBrowse_MoreEventsBtn"),
-                        )
-                      : _.createElement(
-                          _._,
-                          {
-                            eventModel: _[0],
-                            route: _._.k_eViewWebSiteHub,
-                            className: _.SectionButton,
-                          },
-                          (0, _._)("#EventBrowse_MoreEventsBtn"),
-                        ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.EventsSummariesCtn,
-                  },
-                  _.slice(0, _).map((_) => {
-                    const _ =
-                      1 === _.length && window.screen.width > 500 ? _._ : _._;
-                    return _.createElement(_, {
-                      key: _.GID,
-                      event: _,
-                      onClick: (_) => {
-                        this.ShowModal(_),
-                          _.stopPropagation(),
-                          _.preventDefault();
-                      },
-                    });
-                  }),
-                ),
-              ),
-            Boolean(_ && _) &&
-              _.createElement(_, {
-                nUpdateTime: this.state.last_update_event.rtime,
-                announcementGID: _,
-                onClick: this.ShowLatestUpdateModal,
-              }),
-            Boolean(
+          return (0, _.jsxs)(_._, {
+            className: _,
+            children: [
+              this.state.bShowModal &&
+                (0, _.jsx)(_, {
+                  ...this.props,
+                  announcementGID:
+                    this.state.announcementGID ||
+                    (null === (_ = this.state.modalInitialEvent) || void 0 === _
+                      ? void 0
+                      : _.AnnouncementGID),
+                  eventModel: this.state.modalInitialEvent,
+                  closeModal: this.CloseModal,
+                }),
               _ &&
-                !_ &&
-                !(null === (_ = this.context) || void 0 === _
-                  ? void 0
-                  : _.IN_GAMEPADUI),
-            ) &&
-              _.createElement(_, {
-                nUpdateTime: this.state.last_update_event.rtime,
-                onClick: this.ShowLatestUpdateModal,
-              }),
-          );
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("h2", {
+                      children: (0, _._)("#EventBrowse_RecentEvents"),
+                    }),
+                    !(null === (_ = this.context) || void 0 === _
+                      ? void 0
+                      : _.IN_GAMEPADUI) &&
+                      (0, _.jsx)("div", {
+                        className: _.SectionButtonCtn,
+                        children: this.props.bViewAllShowInfiniteScroll
+                          ? (0, _.jsx)(_._, {
+                              className: _.SectionButton,
+                              onClick: () => this.ShowModal(_[0]),
+                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                            })
+                          : (0, _.jsx)(_._, {
+                              eventModel: _[0],
+                              route: _._.k_eViewWebSiteHub,
+                              className: _.SectionButton,
+                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                            }),
+                      }),
+                    (0, _.jsx)("div", {
+                      className: _.EventsSummariesCtn,
+                      children: _.slice(0, _).map((_) => {
+                        const _ =
+                          1 === _.length && window.screen.width > 500
+                            ? _._
+                            : _._;
+                        return (0, _.jsx)(
+                          _,
+                          {
+                            event: _,
+                            onClick: (_) => {
+                              this.ShowModal(_),
+                                _.stopPropagation(),
+                                _.preventDefault();
+                            },
+                          },
+                          _.GID,
+                        );
+                      }),
+                    }),
+                  ],
+                }),
+              Boolean(_ && _) &&
+                (0, _.jsx)(_, {
+                  nUpdateTime: this.state.last_update_event.rtime,
+                  announcementGID: _,
+                  onClick: this.ShowLatestUpdateModal,
+                }),
+              Boolean(
+                _ &&
+                  !_ &&
+                  !(null === (_ = this.context) || void 0 === _
+                    ? void 0
+                    : _.IN_GAMEPADUI),
+              ) &&
+                (0, _.jsx)(_, {
+                  nUpdateTime: this.state.last_update_event.rtime,
+                  onClick: this.ShowLatestUpdateModal,
+                }),
+            ],
+          });
         }
       }
       function _(_) {
@@ -395,7 +386,7 @@
             closeModal: _,
           } = _,
           _ = (0, _._)();
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           className: _ ? void 0 : _.StoreHeaderAdjust,
           eventClassName: _ ? _.GamePadUIWidthAdjust : void 0,
           appid: _,
@@ -407,32 +398,25 @@
         });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.LatestUpdateButtonCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.LatestUpdateButtonCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _.LatestUpdateIcon,
-            },
-            _.createElement(_.UTF, {
-              role: "presentation",
+              children: (0, _.jsx)(_.UTF, {
+                role: "presentation",
+              }),
             }),
-          ),
-          _.createElement(
-            _._,
-            {
+            (0, _.jsx)(_._, {
               className: _.LatestUpdateButton,
               onClick: _.onClick,
-            },
-            (0, _._)(
-              "#EventBrowse_LatestUpdateTime_Button",
-              (0, _._)(_.nUpdateTime),
-            ),
-          ),
-        );
+              children: (0, _._)(
+                "#EventBrowse_LatestUpdateTime_Button",
+                (0, _._)(_.nUpdateTime),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -447,42 +431,31 @@
             null == _ || _(), _.stopPropagation(), _.preventDefault();
           },
           _ = window.screen.width > 500 ? _._ : _._;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "h2",
-            null,
-            (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
-          ),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("h2", {
+              children: (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
+            }),
+            (0, _.jsx)("div", {
               className: _.SectionButtonCtn,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _.SectionButton,
                 onClick: _,
-              },
-              (0, _._)("#EventBrowse_ViewLatestUpdate"),
-            ),
-          ),
-          Boolean(_) &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
+              }),
+            }),
+            Boolean(_) &&
+              (0, _.jsx)(_._, {
                 className: _.EventsSummariesCtn,
                 "flow-children": "column",
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
-              },
-              _.createElement(_, {
-                event: _,
-                onClick: _,
+                children: (0, _.jsx)(_, {
+                  event: _,
+                  onClick: _,
+                }),
               }),
-            ),
-        );
+          ],
+        });
       }
       (_.contextType = _._),
         (0, _._)([_._], _.prototype, "ShowModal", null),
@@ -496,13 +469,10 @@
           let _ = _._.GetTimeNowWithOverrideAsDate(),
             _ = new Date(_.setUTCHours(0, 0, 0, 0) - 15552e6),
             _ = Math.floor(__webpack_require__.getTime() / 1e3);
-          return _.createElement(
-            "div",
-            {
-              className:
-                "detailBox altFooter greenlight_home_box section announcements_row",
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("div", {
+            className:
+              "detailBox altFooter greenlight_home_box section announcements_row",
+            children: (0, _.jsx)(_, {
               appid: _,
               partnerEventStore: _._,
               event_customization: {
@@ -513,7 +483,7 @@
               trackingLocation: 6,
               bViewAllShowInfiniteScroll: !0,
             }),
-          );
+          });
         }
       }
       function _(_) {
@@ -528,71 +498,71 @@
           }, []),
           _
             ? null
-            : _.createElement(
-                _._.Provider,
-                {
-                  value: {
-                    bCanUseLink: !0,
-                  },
+            : (0, _.jsx)(_._.Provider, {
+                value: {
+                  bCanUseLink: !0,
                 },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.ViewEventDetails(
-                      ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)",
-                    ),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Listing(":appid_or_vanity_str"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        key: "InfScroll_NoDismissApp_" + _.match.params.appid,
-                        ..._,
-                        bPreventDismiss: !0,
-                        trackingLocation: 6,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.WorkshopHub(":appid(\\d+)"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        appid: +_.match.params.appid,
-                        key: "Workshop" + _.match.params.appid,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    path: _._.AppHub(":appid"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: "InfScroll_App_" + _.match.params.appid,
-                        trackingLocation: 6,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    path: _._.GroupHub(":group_vanity"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: "InfScroll_App_" + _.match.params.group_vanity,
-                        trackingLocation: 6,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    component: _._,
-                  }),
-                ),
-              )
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: _._.ViewEventDetails(
+                        ":appid_or_vanity_str",
+                        ":oldAnnouncementGID(\\d+)",
+                      ),
+                      render: (_) =>
+                        (0, _.jsx)(_, {
+                          ..._,
+                        }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: _._.Listing(":appid_or_vanity_str"),
+                      render: (_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            ..._,
+                            bPreventDismiss: !0,
+                            trackingLocation: 6,
+                          },
+                          "InfScroll_NoDismissApp_" + _.match.params.appid,
+                        ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: _._.WorkshopHub(":appid(\\d+)"),
+                      render: (_) =>
+                        (0, _.createElement)(_, {
+                          ..._,
+                          appid: +_.match.params.appid,
+                          key: "Workshop" + _.match.params.appid,
+                        }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: _._.AppHub(":appid"),
+                      render: (_) =>
+                        (0, _.createElement)(_, {
+                          ..._,
+                          key: "InfScroll_App_" + _.match.params.appid,
+                          trackingLocation: 6,
+                        }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: _._.GroupHub(":group_vanity"),
+                      render: (_) =>
+                        (0, _.createElement)(_, {
+                          ..._,
+                          key: "InfScroll_App_" + _.match.params.group_vanity,
+                          trackingLocation: 6,
+                        }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      component: _._,
+                    }),
+                  ],
+                }),
+              })
         );
       }
     },

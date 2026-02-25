@@ -213,6 +213,7 @@ ${COMMUNITY_BASE_URL}gid/${}/ajaxgetlastupdatetimeforpartnerevent
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetpartnereventpermissions/
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetsalesectionstats?event_gid=${}
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetvanityandclanid/
+${COMMUNITY_BASE_URL}gid/${}/ajaxgetvanityandclanid/?origin=${origin}
 ${COMMUNITY_BASE_URL}gid/${}/ajaxrollbackevent
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetlocalization/${}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetmyvote/${AnnouncementGID}
@@ -287,6 +288,8 @@ ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
+${COMMUNITY_BASE_URL}my/reportedcontent/${subject_type}-${subject_group_id}-${subject_id}
+${COMMUNITY_BASE_URL}my/reportedcontent/${}-${}-${}
 ${COMMUNITY_BASE_URL}my/tradehistory
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappbranches
@@ -383,6 +386,7 @@ ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/image/${icon_url}
 ${COMMUNITY_CDN_URL}economy/image/${}/330x192
+${COMMUNITY_CDN_URL}economy/item/${}/${}/${}?${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
@@ -1190,6 +1194,7 @@ ${PARTNER_BASE_URL}steamml/get_schema_details?appid=${}&schemaid=${}&sessionid=$
 ${PARTNER_BASE_URL}steamml/get_schemas?appid=${}&includesteammlapp=${}&sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}store/ajaxpackagesave/${}
 ${PARTNER_BASE_URL}store/ajaxpublishpackages
+${PARTNER_BASE_URL}store/ajaxupdatef2pstore
 ${PARTNER_BASE_URL}store/packagelanding/${package_id}
 ${PARTNER_BASE_URL}store/packagelanding/${packageid}
 ${PARTNER_BASE_URL}store/packagelanding/${}
@@ -1264,6 +1269,7 @@ ${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
 ${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}
 ${STORE_BASE_URL}account/familymanagement?tab=requests
 ${STORE_BASE_URL}account/gatedaccess?appid=${appid}
+${STORE_BASE_URL}account/gatedaccess?appid=${}
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
 ${STORE_BASE_URL}account/notinterested
@@ -1335,6 +1341,7 @@ ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
 ${STORE_BASE_URL}curator/${clanAccountID}/sale/${strVanity}
+${STORE_BASE_URL}curator/${creator_clan_id}/
 ${STORE_BASE_URL}curator/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxcheckfornews
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxmanagerssfeed
@@ -1344,6 +1351,7 @@ ${STORE_BASE_URL}curator/${}/admin/ajaxgetlistdetails
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetrecbyapps
 ${STORE_BASE_URL}curator/${}/admin/manage_rss/
 ${STORE_BASE_URL}curator/${}/ajaxgetcreatorhomeinfo
+${STORE_BASE_URL}curator/${}/ajaxgetcreatorhomeinfo/?${}
 ${STORE_BASE_URL}curator/${}/sale/${sale_vanity_id}
 ${STORE_BASE_URL}curator/${}/sale/${}
 ${STORE_BASE_URL}curator/0/ajaxsearchcurators
@@ -1353,6 +1361,7 @@ ${STORE_BASE_URL}curators/ajaxfindcuratorlists
 ${STORE_BASE_URL}curators/ajaxgetmycuratorsalelists
 ${STORE_BASE_URL}data_outbound
 ${STORE_BASE_URL}developer/${m_strVanity}/
+${STORE_BASE_URL}developer/${vanity}/
 ${STORE_BASE_URL}digitalgiftcards/
 ${STORE_BASE_URL}dlc/${}
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
@@ -1397,6 +1406,7 @@ ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
+${STORE_BASE_URL}franchise/${vanity}/
 ${STORE_BASE_URL}freelicense/addfreelicense
 ${STORE_BASE_URL}friends/recommendgame
 ${STORE_BASE_URL}fwlink?id=gamerecordingintro
@@ -1489,6 +1499,7 @@ ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}public/shared/images/award_icon_blue.svg
 ${STORE_BASE_URL}publisher/${m_strVanity}/
+${STORE_BASE_URL}publisher/${vanity}/
 ${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}recommender/
@@ -1611,6 +1622,7 @@ ${STORE_ITEM_BASE_URL}steam/apps/${}/portrait.png
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${STORE_URL}app/730/CounterStrike_2/
+${SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915
 ${URL}${URL}
 ${URL}${}
 ${VIDEO_CDN_URL}/store_trailers/${}
@@ -1974,6 +1986,7 @@ ${url}${g_strActiveURL}
 ${url}${location}
 ${url}${m_URL}
 ${url}${question ? "?" : "&"}${uri}
+${url}${strURL}
 ${url}${url}
 ${url}${}
 ${url}/
@@ -2440,6 +2453,7 @@ https://partner.steamgames.com/bundles/view/${itemID}?activetab=tab_graphicalass
 https://partner.steamgames.com/contentdescriptors/ajaxdiscardchanges/${appid}/
 https://partner.steamgames.com/contentdescriptors/ajaxfinishsurvey/${appid}/
 https://partner.steamgames.com/contentdescriptors/ajaxsavesurvey/${appid}/
+https://partner.steamgames.com/contentdescriptors/editsurvey/${appid}/
 https://partner.steamgames.com/contentdescriptors/editsurvey/${appid}/${surveyid}
 https://partner.steamgames.com/contentdescriptors/listsurveys/${appid}/
 https://partner.steamgames.com/creatorhome/ajaxprecacheapps

@@ -85,6 +85,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -109,42 +110,36 @@
               }
             else alert((0, _._)("#Sale_EyeDropperError"));
           }, [__webpack_require__]);
-        return _.createElement(
-          "div",
-          null,
-          Boolean(_) && _.createElement(_._, null, _),
-          _.createElement(_._, {
-            onChange: (_) => {
-              const _ = (function (_) {
-                return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
-              })(_);
-              _(_), __webpack_require__(_);
-            },
-            color: _,
-            disableAlpha: _,
-            className: _().ColorPickerCtn,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().EyeDropperCtn,
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+        return (0, _.jsxs)("div", {
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              onChange: (_) => {
+                const _ = (function (_) {
+                  return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
+                })(_);
+                _(_), __webpack_require__(_);
               },
-              _.createElement(
-                _._,
-                {
+              color: _,
+              disableAlpha: _,
+              className: _().ColorPickerCtn,
+            }),
+            (0, _.jsx)("div", {
+              className: _().EyeDropperCtn,
+              children: (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                children: (0, _.jsx)(_._, {
                   className: _().EyeDropperBtn,
                   onClick: _,
-                },
-                _.createElement(_.O7b, null),
-              ),
-            ),
-          ),
-        );
+                  children: (0, _.jsx)(_.O7b, {}),
+                }),
+              }),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -154,6 +149,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -179,50 +175,39 @@
             accept: "image/png, image/jpeg, image/gif, image/webp",
             multiple: !0,
           });
-        return _.createElement(
-          "div",
-          {
-            ..._,
-            className: (0, _._)(
-              _ ? _().DragAndDropContainerDragging : _().DragAndDropContainer,
-              "DragAndDropContainer",
-            ),
-          },
-          Boolean(__webpack_require__) && __webpack_require__(),
-          _.createElement(
-            "div",
-            null,
-            _ || (0, _._)("#ImagePicker_DragAndDrop"),
+        return (0, _.jsxs)("div", {
+          ..._,
+          className: (0, _._)(
+            _ ? _().DragAndDropContainerDragging : _().DragAndDropContainer,
+            "DragAndDropContainer",
           ),
-          _.createElement(
-            "div",
-            {
+          children: [
+            Boolean(__webpack_require__) && __webpack_require__(),
+            (0, _.jsx)("div", {
+              children: _ || (0, _._)("#ImagePicker_DragAndDrop"),
+            }),
+            (0, _.jsxs)("div", {
               className: _().ImageUploadBar,
-            },
+              children: [
+                _,
+                (0, _.jsxs)("label", {
+                  onClick: _,
+                  children: [
+                    (0, _.jsxs)("span", {
+                      children: [(0, _._)("#ImagePicker_OrBrowse"), " "],
+                    }),
+                    (0, _.jsx)("span", {
+                      className: _().SelectImageButton,
+                      children: (0, _._)("#selectimage_select_file"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
             _,
-            _.createElement(
-              "label",
-              {
-                onClick: _,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#ImagePicker_OrBrowse"),
-                " ",
-              ),
-              _.createElement(
-                "span",
-                {
-                  className: _().SelectImageButton,
-                },
-                (0, _._)("#selectimage_select_file"),
-              ),
-            ),
-          ),
-          _,
-          _.children,
-        );
+            _.children,
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -269,7 +254,7 @@
                           _.name,
                       ),
                       (0, _._)(
-                        _.createElement(_._, {
+                        (0, _.jsx)(_._, {
                           strDescription: (0, _._)(
                             "#ImagePicker_Error",
                             _.name,
@@ -284,7 +269,7 @@
                     _,
                   ),
                     (0, _._)(
-                      _.createElement(_._, {
+                      (0, _.jsx)(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
                           _.strErrorMsg ?? "",
@@ -303,12 +288,12 @@
               _ instanceof Array
                 ? _
                 : [
-                    _.createElement(
+                    (0, _.jsx)(
                       _.Fragment,
                       {
-                        key: "elAdditonalButtons",
+                        children: _,
                       },
-                      _,
+                      "elAdditonalButtons",
                     ),
                   ],
             [_],
@@ -319,40 +304,37 @@
             _: _.language,
           })),
         );
-        return _.createElement(
-          _,
-          {
-            onDropFiles: _,
-            elAdditonalButtons: _,
-            elOverrideDragAndDropText: _,
-          },
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_, {
+          onDropFiles: _,
+          elAdditonalButtons: _,
+          elOverrideDragAndDropText: _,
+          children: [
+            (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsx)("div", {
                 className: _().UploadPreviewCtn,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      asset: _,
+                      forceResolution: _,
+                      fnOnRemove: () => _.DeleteUploadImage(_),
+                      languageRealms: _,
+                    },
+                    "arttabupload_" + _.filename + "_" + _.uploadTime,
+                  ),
+                ),
+              }),
+            }),
+            (0, _.jsx)(_, {
+              imageUploader: _,
+              fnOnUploadImageRequested: async () => {
+                const _ = await _.UploadAllImages(_);
+                __webpack_require__?.(_);
               },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "arttabupload_" + _.filename + "_" + _.uploadTime,
-                  asset: _,
-                  forceResolution: _,
-                  fnOnRemove: () => _.DeleteUploadImage(_),
-                  languageRealms: _,
-                }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            imageUploader: _,
-            fnOnUploadImageRequested: async () => {
-              const _ = await _.UploadAllImages(_);
-              __webpack_require__?.(_);
-            },
-          }),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -367,39 +349,32 @@
               "uploading" == _.status ||
               "processing" == _.status,
           );
-        return _.createElement(
-          "div",
-          {
-            style: {
-              display: "flex",
-            },
-            className: _().UploadPreviewButtonsCtn,
+        return (0, _.jsxs)("div", {
+          style: {
+            display: "flex",
           },
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
+          className: _().UploadPreviewButtonsCtn,
+          children: [
+            Boolean(_.length) &&
+              (0, _.jsx)(_._, {
                 style: {
                   margin: "8px",
                 },
                 onClick: __webpack_require__,
                 disabled: !_,
-              },
-              (0, _._)("#ImageUpload_Upload"),
-            ),
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#ImageUpload_Upload"),
+              }),
+            Boolean(_.length) &&
+              (0, _.jsx)(_._, {
                 style: {
                   margin: "8px",
                 },
                 onClick: _.ClearImages,
                 disabled: _,
-              },
-              (0, _._)("#ImageUpload_Clear"),
-            ),
-        );
+                children: (0, _._)("#ImageUpload_Clear"),
+              }),
+          ],
+        });
       }
       const _ = (0, _._)(function (_) {
         const {
@@ -447,108 +422,91 @@
         const _ = _.GetCurrentImageOption();
         _ && (_ = _?.find((_) => _.data.sKey == _.sKey)?.data);
         _ || (_ = _?.[0]?.data);
-        return _.createElement(
-          "div",
-          {
-            className: _().UploadPreview,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().UploadPreview,
+          children: [
+            (0, _.jsx)("div", {
               className: _().UploadPreviewDelete,
               onClick: () => __webpack_require__(_),
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(_, {
-            asset: _,
-          }),
-          _ &&
-            _.createElement(_._, {
-              strDropDownClassName: _().DropDownScroll,
-              rgOptions: _,
-              selectedOption: _.language,
-              onChange: (_) => (_.language = _.data),
-              disabled: !_,
+              children: (0, _.jsx)(_.sED, {}),
             }),
-          _ &&
-            _?.length > 1 &&
-            _.createElement(_._, {
-              label: _.GetImageOptionLabel(),
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) => _.SetCurrentImageOption(_.data),
-              disabled: !_,
+            (0, _.jsx)(_, {
+              asset: _,
             }),
-          _ &&
-            _.warnings?.map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: `warning${_}`,
-                  className: _().UploadPreviewWarning,
-                },
-                _,
+            _ &&
+              (0, _.jsx)(_._, {
+                strDropDownClassName: _().DropDownScroll,
+                rgOptions: _,
+                selectedOption: _.language,
+                onChange: (_) => (_.language = _.data),
+                disabled: !_,
+              }),
+            _ &&
+              _?.length > 1 &&
+              (0, _.jsx)(_._, {
+                label: _.GetImageOptionLabel(),
+                rgOptions: _,
+                selectedOption: _,
+                onChange: (_) => _.SetCurrentImageOption(_.data),
+                disabled: !_,
+              }),
+            _ &&
+              _.warnings?.map((_, _) =>
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().UploadPreviewWarning,
+                    children: _,
+                  },
+                  `warning${_}`,
+                ),
               ),
-            ),
-          _ &&
-            _.messages?.map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: `message${_}`,
-                  className: _().UploadPreviewMessage,
-                },
-                _,
+            _ &&
+              _.messages?.map((_, _) =>
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _().UploadPreviewMessage,
+                    children: _,
+                  },
+                  `message${_}`,
+                ),
               ),
-            ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: (0, _._)({
                 [_().FlexColumnContainer]: !0,
                 [_().UploadPreviewError]: "failed" == _.status,
               }),
-            },
-            _,
-            (0, _._)(_.status) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().FlexCenter,
-                },
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                _,
+                (0, _._)(_.status) &&
+                  (0, _.jsx)("div", {
+                    className: _().FlexCenter,
+                    children: (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  }),
+              ],
+            }),
+            (0, _.jsx)("div", {
               className: _().UploadPreviewError,
-            },
-            _.message,
-          ),
-          _ &&
-            _.error &&
-            _.createElement(
-              "div",
-              {
+              children: _.message,
+            }),
+            _ &&
+              _.error &&
+              (0, _.jsx)("div", {
                 className: _().UploadPreviewError,
-              },
-              _.error,
-            ),
-          _ &&
-            _.needsCrop &&
-            _.createElement(
-              _._,
-              {
+                children: _.error,
+              }),
+            _ &&
+              _.needsCrop &&
+              (0, _.jsx)(_._, {
                 onClick: () =>
                   ((_) => {
                     if (_ instanceof _._) {
                       _.ResetImage();
                       const _ = window,
-                        _ = _.createElement(_._, {
+                        _ = (0, _.jsx)(_._, {
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
@@ -564,90 +522,67 @@
                         JSON.stringify(_.GetCurrentImageOption()),
                       );
                   })(_),
-              },
-              (0, _._)("#ImageUpload_OpenEditor"),
-            ),
-        );
+                children: (0, _._)("#ImageUpload_OpenEditor"),
+              }),
+          ],
+        });
       });
       function _(_) {
         const { asset: _ } = _;
         return _.BIsVideo()
-          ? _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      asset: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              _.createElement(
-                "span",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().PreviewImgCtn,
+              onClick: (_) =>
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    asset: _,
+                  }),
+                  (0, _._)(_),
+                ),
+              children: [
+                (0, _.jsxs)("span", {
                   className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-              _.createElement(
-                "video",
-                {
+                  children: [_.width, " x ", _.height],
+                }),
+                (0, _.jsx)("video", {
                   height: 120,
                   controls: !1,
                   autoPlay: !0,
                   loop: !0,
                   muted: !0,
-                },
-                _.createElement("source", {
-                  src: _.dataUrl,
+                  children: (0, _.jsx)("source", {
+                    src: _.dataUrl,
+                  }),
                 }),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                style: {
-                  backgroundImage: `url(${_.dataUrl})`,
-                },
+              ],
+            })
+          : (0, _.jsx)("div", {
+              className: _().PreviewImgCtn,
+              style: {
+                backgroundImage: `url(${_.dataUrl})`,
               },
-              _.createElement(
-                "span",
-                {
-                  className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-            );
+              children: (0, _.jsxs)("span", {
+                className: _().PreviewImgInfo,
+                children: [_.width, " x ", _.height],
+              }),
+            });
       }
       function _(_) {
         const { asset: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            closeModal: __webpack_require__,
-            bAllowFullSize: !0,
-          },
-          _.createElement(
-            "video",
-            {
-              controls: !0,
-              autoPlay: !0,
-              loop: !0,
-              muted: !0,
-            },
-            _.createElement("source", {
+        return (0, _.jsx)(_._, {
+          bAlertDialog: !0,
+          closeModal: __webpack_require__,
+          bAllowFullSize: !0,
+          children: (0, _.jsx)("video", {
+            controls: !0,
+            autoPlay: !0,
+            loop: !0,
+            muted: !0,
+            children: (0, _.jsx)("source", {
               src: _.dataUrl,
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const _ = [],
@@ -678,6 +613,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -825,146 +761,132 @@
             },
             _,
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().EventTimeSection, _),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().EventTimeSection, _),
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().EventTimeTitle, "DialogLabel"),
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: _,
-                direction: "top",
-              },
-              Boolean(_) && _.createElement("span", null, _),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().DateErrorCtn,
-                },
-                _.createElement("img", {
-                  src: _._,
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: _,
+                  direction: "top",
+                  children:
+                    Boolean(_) &&
+                    (0, _.jsx)("span", {
+                      children: _,
+                    }),
                 }),
-                _,
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+                _ &&
+                  (0, _.jsxs)("span", {
+                    className: _().DateErrorCtn,
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _._,
+                      }),
+                      _,
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _().FlexRowContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                timeFormat: !1,
-                value: null != _ ? _ : _,
-                isValidDate: (_) =>
-                  !_ &&
-                  (function (_, _, _, _) {
-                    const _ = _().unix(_).hour(0).seconds(0).minute(0);
-                    let _ = _.unix() >= _.unix();
-                    if (_ && _ && _ >= _) {
-                      const _ = _().unix(_).hour(23).minute(59).seconds(59);
-                      _ = _.unix() <= _.unix();
-                    }
-                    _ &&
-                      _ &&
-                      ((0 != _.weekday() && 6 != _.weekday()) || (_ = !1));
-                    return _;
-                  })(__webpack_require__, _, _, _),
-                initialValue: _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
-                  className: (0, _._)(
-                    _().DateWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().InputBorder, _().TimeBlock),
+                  children: [
+                    (0, _.jsx)(_(), {
+                      onChange: _,
+                      timeFormat: !1,
+                      value: null != _ ? _ : _,
+                      isValidDate: (_) =>
+                        !_ &&
+                        (function (_, _, _, _) {
+                          const _ = _().unix(_).hour(0).seconds(0).minute(0);
+                          let _ = _.unix() >= _.unix();
+                          if (_ && _ && _ >= _) {
+                            const _ = _()
+                              .unix(_)
+                              .hour(23)
+                              .minute(59)
+                              .seconds(59);
+                            _ = _.unix() <= _.unix();
+                          }
+                          _ &&
+                            _ &&
+                            ((0 != _.weekday() && 6 != _.weekday()) ||
+                              (_ = !1));
+                          return _;
+                        })(__webpack_require__, _, _, _),
+                      initialValue: _,
+                      inputProps: {
+                        placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
+                        className: (0, _._)(
+                          _().DateWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: _,
+                        onChange: (_) => _(_.currentTarget.value),
+                        onBlur: (_) => _(_.currentTarget.value),
+                      },
+                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().PacificTimeHint,
+                        children: _.format("L"),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().InputBorder, _().TimeBlock),
+                  children: [
+                    (0, _.jsx)(_(), {
+                      onChange: _,
+                      dateFormat: !1,
+                      timeFormat: _,
+                      timeConstraints: _,
+                      value: null != _ ? _ : _,
+                      inputProps: {
+                        placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
+                        className: (0, _._)(
+                          _().TimeWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: _,
+                        onChange: (_) => _(_.currentTarget.value),
+                        onBlur: (_) => _(_.currentTarget.value),
+                      },
+                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().PacificTimeHint,
+                        children: _.format("LT"),
+                      }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().TimeZone,
+                        children: _.zoneAbbr(),
+                      }),
+                      !!_ &&
+                        (0, _.jsx)("div", {
+                          className: _().TimeZone,
+                          children: _.zoneAbbr(),
+                        }),
+                    ],
+                  }),
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                children: (0, _._)("#DateTimePicker_DateTime_Fixed"),
               }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("L"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                dateFormat: !1,
-                timeFormat: _,
-                timeConstraints: _,
-                value: null != _ ? _ : _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
-                  className: (0, _._)(
-                    _().TimeWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
-              }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("LT"),
-                ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TimeZone,
-                  },
-                  _.zoneAbbr(),
-                ),
-                !!_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TimeZone,
-                    },
-                    _.zoneAbbr(),
-                  ),
-              ),
-          ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DateTimePicker_DateTime_Fixed"),
-            ),
-        );
+          ],
+        });
       }
       function _(_, _, _) {
         const [_, _] = _.useState(!1);
@@ -1013,6 +935,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = _.useRef(void 0),
@@ -1026,21 +949,18 @@
           _ = _.useCallback(() => _.current.click(), []);
         return [
           _.createPortal(
-            _.createElement(
-              "form",
-              {
-                onSubmit: _,
-                style: {
-                  display: "none",
-                },
+            (0, _.jsx)("form", {
+              onSubmit: _,
+              style: {
+                display: "none",
               },
-              _.createElement("input", {
+              children: (0, _.jsx)("input", {
                 ..._,
                 type: "file",
                 ref: _,
                 onChange: _,
               }),
-            ),
+            }),
             window.document.body,
           ),
           _,

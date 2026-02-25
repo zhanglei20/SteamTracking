@@ -18,6 +18,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -45,92 +46,74 @@
         )
           return null;
         const _ = _?.length > 0;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-            className: _().ShoppingCartModal,
-            onDismiss: _,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          active: !0,
+          className: _().ShoppingCartModal,
+          onDismiss: _,
+          children: [
+            (0, _.jsx)("div", {
               className: _().ShoppingCartHeader,
-            },
-            (0, _._)(_ ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart"),
-          ),
-          _.createElement(_._, {
-            lineItems: _,
-            cartValidation: _,
-          }),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)(
+                _ ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
+              ),
+            }),
+            (0, _.jsx)(_._, {
+              lineItems: _,
+              cartValidation: _,
+            }),
+            (0, _.jsxs)(_._, {
               className: _().ShoppingCartModalBtns,
-            },
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-              },
-              (0, _._)("#Cart_ContinueShopping"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().OpenCartBtn,
-                onClick: () => (window.location.href = _),
-              },
-              (0, _._)("#Cart_ViewMyCart", _.data?.line_items.length),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  children: (0, _._)("#Cart_ContinueShopping"),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _().OpenCartBtn,
+                  onClick: () => (window.location.href = _),
+                  children: (0, _._)(
+                    "#Cart_ViewMyCart",
+                    _.data?.line_items.length,
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { active: _, result: __webpack_require__, onDismiss: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            active: _,
-            onDismiss: _,
-          },
-          _.createElement(_._, null, (0, _._)("#Error_Generic")),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          active: _,
+          onDismiss: _,
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#Error_Generic"),
+            }),
+            (0, _.jsxs)("div", {
               className: _().ErrorModalContent,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ErrorModalMessage,
-              },
-              (0, _._)("#Cart_ErrorUpdating"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ErrorModalCode,
-              },
-              __webpack_require__
-                ? (0, _._)("#Cart_ErrorCode", __webpack_require__)
-                : "",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ErrorModalBottom,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                },
-                (0, _._)("#Button_Close"),
-              ),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ErrorModalMessage,
+                  children: (0, _._)("#Cart_ErrorUpdating"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().ErrorModalCode,
+                  children: __webpack_require__
+                    ? (0, _._)("#Cart_ErrorCode", __webpack_require__)
+                    : "",
+                }),
+                (0, _.jsx)("div", {
+                  className: _().ErrorModalBottom,
+                  children: (0, _.jsx)(_._, {
+                    onClick: _,
+                    children: (0, _._)("#Button_Close"),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
     },
   },

@@ -75,133 +75,128 @@
         RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
       };
     },
-    64046: (e, t, a) => {
+    64046: (e, n, a) => {
       "use strict";
-      a.d(t, { s: () => d });
-      var n = a(90626),
-        r = a(43465),
-        l = a(16676),
+      a.d(n, { s: () => u });
+      var t = a(7850),
+        i = a(90626),
+        s = a(43465),
+        r = a(16676),
         o = a(4869),
-        i = a(32754),
-        s = a(61859),
+        l = a(32754),
+        d = a(61859),
         c = a(57361),
         m = a.n(c);
-      function d(e) {
-        const { color: t, onChange: a, strTitle: c, disableAlpha: d } = e,
-          [u, g] = (0, n.useState)(() => t || "rgba(255, 255, 255, 1)"),
-          p = (0, n.useCallback)(async () => {
+      function u(e) {
+        const { color: n, onChange: a, strTitle: c, disableAlpha: u } = e,
+          [g, p] = (0, i.useState)(() => n || "rgba(255, 255, 255, 1)"),
+          h = (0, i.useCallback)(async () => {
             if ("EyeDropper" in window)
               try {
                 const e = new window.EyeDropper(),
-                  t = await e.open(),
-                  n = (function (e) {
-                    const t = parseInt(e.slice(1), 16);
-                    return `rgba(${(t >> 16) & 255}, ${(t >> 8) & 255}, ${255 & t}, 1)`;
-                  })(t.sRGBHex);
-                g(n), a(n);
+                  n = await e.open(),
+                  t = (function (e) {
+                    const n = parseInt(e.slice(1), 16);
+                    return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${255 & n}, 1)`;
+                  })(n.sRGBHex);
+                p(t), a(t);
               } catch (e) {
-                console.warn((0, s.we)("#Sale_EyeDropperFailed"), e);
+                console.warn((0, d.we)("#Sale_EyeDropperFailed"), e);
               }
-            else alert((0, s.we)("#Sale_EyeDropperError"));
+            else alert((0, d.we)("#Sale_EyeDropperError"));
           }, [a]);
-        return n.createElement(
-          "div",
-          null,
-          Boolean(c) && n.createElement(l.JU, null, c),
-          n.createElement(r.xk, {
-            onChange: (e) => {
-              const t = (function (e) {
-                return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
-              })(e);
-              g(t), a(t);
-            },
-            color: u,
-            disableAlpha: d,
-            className: m().ColorPickerCtn,
-          }),
-          n.createElement(
-            "div",
-            { className: m().EyeDropperCtn },
-            n.createElement(
-              i.Gq,
-              { toolTipContent: (0, s.we)("#Sale_BackgroundColorPicker") },
-              n.createElement(
-                l.$n,
-                { className: m().EyeDropperBtn, onClick: p },
-                n.createElement(o.O7b, null),
-              ),
-            ),
-          ),
-        );
+        return (0, t.jsxs)("div", {
+          children: [
+            Boolean(c) && (0, t.jsx)(r.JU, { children: c }),
+            (0, t.jsx)(s.xk, {
+              onChange: (e) => {
+                const n = (function (e) {
+                  return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
+                })(e);
+                p(n), a(n);
+              },
+              color: g,
+              disableAlpha: u,
+              className: m().ColorPickerCtn,
+            }),
+            (0, t.jsx)("div", {
+              className: m().EyeDropperCtn,
+              children: (0, t.jsx)(l.Gq, {
+                toolTipContent: (0, d.we)("#Sale_BackgroundColorPicker"),
+                children: (0, t.jsx)(r.$n, {
+                  className: m().EyeDropperBtn,
+                  onClick: h,
+                  children: (0, t.jsx)(o.O7b, {}),
+                }),
+              }),
+            }),
+          ],
+        });
       }
     },
-    42027: (e, t, a) => {
+    42027: (e, n, a) => {
       "use strict";
-      a.d(t, { Gr: () => G, O9: () => x });
-      var n = a(65946),
-        r = a(75844),
-        l = a(90626),
+      a.d(n, { Gr: () => G, O9: () => k });
+      var t = a(7850),
+        i = a(65946),
+        s = a(75844),
+        r = a(90626),
         o = a(22837),
-        i = a(2160),
-        s = a(64953),
+        l = a(2160),
+        d = a(64953),
         c = a(69343),
         m = a(63556),
-        d = a(16676),
-        u = a(52038),
-        g = a(61859),
-        p = a(27650),
-        E = a(71647),
-        f = a.n(E);
+        u = a(16676),
+        g = a(52038),
+        p = a(61859),
+        h = a(27650),
+        x = a(71647),
+        f = a.n(x);
       function w(e) {
         const {
-            onDropFiles: t,
+            onDropFiles: n,
             renderDesciption: a,
-            elAdditonalButtons: n,
-            elOverrideDragAndDropText: r,
+            elAdditonalButtons: i,
+            elOverrideDragAndDropText: s,
           } = e,
-          [o, i] = (0, p.hk)(t),
-          [s, c] = (0, p.Ss)(t, {
+          [r, o] = (0, h.hk)(n),
+          [l, d] = (0, h.Ss)(n, {
             accept: "image/png, image/jpeg, image/gif, image/webp",
             multiple: !0,
           });
-        return l.createElement(
-          "div",
-          {
-            ...o,
-            className: (0, u.A)(
-              i ? f().DragAndDropContainerDragging : f().DragAndDropContainer,
-              "DragAndDropContainer",
-            ),
-          },
-          Boolean(a) && a(),
-          l.createElement(
-            "div",
-            null,
-            r || (0, g.we)("#ImagePicker_DragAndDrop"),
+        return (0, t.jsxs)("div", {
+          ...r,
+          className: (0, g.A)(
+            o ? f().DragAndDropContainerDragging : f().DragAndDropContainer,
+            "DragAndDropContainer",
           ),
-          l.createElement(
-            "div",
-            { className: f().ImageUploadBar },
-            s,
-            l.createElement(
-              "label",
-              { onClick: c },
-              l.createElement(
-                "span",
-                null,
-                (0, g.we)("#ImagePicker_OrBrowse"),
-                " ",
-              ),
-              l.createElement(
-                "span",
-                { className: f().SelectImageButton },
-                (0, g.we)("#selectimage_select_file"),
-              ),
-            ),
-          ),
-          n,
-          e.children,
-        );
+          children: [
+            Boolean(a) && a(),
+            (0, t.jsx)("div", {
+              children: s || (0, p.we)("#ImagePicker_DragAndDrop"),
+            }),
+            (0, t.jsxs)("div", {
+              className: f().ImageUploadBar,
+              children: [
+                l,
+                (0, t.jsxs)("label", {
+                  onClick: d,
+                  children: [
+                    (0, t.jsxs)("span", {
+                      children: [(0, p.we)("#ImagePicker_OrBrowse"), " "],
+                    }),
+                    (0, t.jsx)("span", {
+                      className: f().SelectImageButton,
+                      children: (0, p.we)("#selectimage_select_file"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            i,
+            e.children,
+          ],
+        });
       }
       var v = a(95695),
         D = a.n(v),
@@ -210,434 +205,419 @@
         T = a(64641),
         A = a.n(T),
         _ = a(12155),
-        h = a(22797),
+        j = a(22797),
         b = a(68797),
         y = a(56011),
         P = a(66331),
         U = a(27344),
-        k = a.n(U),
+        E = a.n(U),
         S = a(78511);
-      function x(e) {
+      function k(e) {
         const {
-            imageUploader: t,
+            imageUploader: n,
             fnUploadComplete: a,
-            elOverrideDragAndDropText: r,
+            elOverrideDragAndDropText: s,
             forceResolution: o,
-            elAdditonalButtons: i,
-            rgRealmList: s,
+            elAdditonalButtons: l,
+            rgRealmList: d,
           } = e,
-          [d, u] = (0, n.q3)(() => [
-            t.GetUploadImages(),
+          [u, g] = (0, i.q3)(() => [
+            n.GetUploadImages(),
             m.O.Get().GetCurEditLanguage(),
           ]),
-          p = l.useCallback(
+          h = r.useCallback(
             async (e) => {
               let a = Array.from(e),
-                n = !0;
+                i = !0;
               for (let e = 0; e < a.length; e++) {
-                const r = a[e],
-                  { language: o } = (0, c.jj)(r?.name, u);
+                const s = a[e],
+                  { language: r } = (0, c.jj)(s?.name, g);
                 try {
-                  const a = (0, c.PD)(o, u, s);
-                  (n = await t.AddImageForLanguage(r, a)),
-                    n ||
+                  const a = (0, c.PD)(r, g, d);
+                  (i = await n.AddImageForLanguage(s, a)),
+                    i ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
                           e +
                           " file=" +
-                          r.name,
+                          s.name,
                       ),
                       (0, C.pg)(
-                        l.createElement(I.KG, {
-                          strDescription: (0, g.we)(
+                        (0, t.jsx)(I.KG, {
+                          strDescription: (0, p.we)(
                             "#ImagePicker_Error",
-                            r.name,
+                            s.name,
                           ),
                         }),
                         window,
                       ));
                 } catch (e) {
-                  let t = (0, b.H)(e);
+                  let n = (0, b.H)(e);
                   console.error(
-                    "ImageUploaderPanel.OnDropFiles: " + t.strErrorMsg,
-                    t,
+                    "ImageUploaderPanel.OnDropFiles: " + n.strErrorMsg,
+                    n,
                   ),
                     (0, C.pg)(
-                      l.createElement(I.KG, {
-                        strDescription: (0, g.we)(
+                      (0, t.jsx)(I.KG, {
+                        strDescription: (0, p.we)(
                           "#EventError_Code",
-                          t.strErrorMsg ?? "",
+                          n.strErrorMsg ?? "",
                         ),
                       }),
                       window,
                     );
                 }
               }
-              return n;
+              return i;
             },
-            [u, t, s],
+            [g, n, d],
           ),
-          E = l.useMemo(
+          x = r.useMemo(
             () =>
-              i instanceof Array
-                ? i
+              l instanceof Array
+                ? l
                 : [
-                    l.createElement(
-                      l.Fragment,
-                      { key: "elAdditonalButtons" },
-                      i,
+                    (0, t.jsx)(
+                      r.Fragment,
+                      { children: l },
+                      "elAdditonalButtons",
                     ),
                   ],
-            [i],
+            [l],
           );
-        (0, n.q3)(() =>
-          d.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
+        (0, i.q3)(() =>
+          u.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
         );
-        return l.createElement(
-          w,
-          {
-            onDropFiles: p,
-            elAdditonalButtons: E,
-            elOverrideDragAndDropText: r,
-          },
-          l.createElement(
-            l.Fragment,
-            null,
-            l.createElement(
-              "div",
-              { className: k().UploadPreviewCtn },
-              d.map((e) =>
-                l.createElement(N, {
-                  key: "arttabupload_" + e.filename + "_" + e.uploadTime,
-                  asset: e,
-                  forceResolution: o,
-                  fnOnRemove: () => t.DeleteUploadImage(e),
-                  languageRealms: s,
-                }),
-              ),
-            ),
-          ),
-          l.createElement(B, {
-            imageUploader: t,
-            fnOnUploadImageRequested: async () => {
-              const e = await t.UploadAllImages(o);
-              a?.(e);
-            },
-          }),
-        );
+        return (0, t.jsxs)(w, {
+          onDropFiles: h,
+          elAdditonalButtons: x,
+          elOverrideDragAndDropText: s,
+          children: [
+            (0, t.jsx)(r.Fragment, {
+              children: (0, t.jsx)("div", {
+                className: E().UploadPreviewCtn,
+                children: u.map((e) =>
+                  (0, t.jsx)(
+                    N,
+                    {
+                      asset: e,
+                      forceResolution: o,
+                      fnOnRemove: () => n.DeleteUploadImage(e),
+                      languageRealms: d,
+                    },
+                    "arttabupload_" + e.filename + "_" + e.uploadTime,
+                  ),
+                ),
+              }),
+            }),
+            (0, t.jsx)(B, {
+              imageUploader: n,
+              fnOnUploadImageRequested: async () => {
+                const e = await n.UploadAllImages(o);
+                a?.(e);
+              },
+            }),
+          ],
+        });
       }
       function B(e) {
-        const { imageUploader: t, fnOnUploadImageRequested: a } = e,
-          [r] = (0, n.q3)(() => [t.GetUploadImages()]),
-          o = r.some((e) => "pending" == e.status),
-          i = r.some(
+        const { imageUploader: n, fnOnUploadImageRequested: a } = e,
+          [s] = (0, i.q3)(() => [n.GetUploadImages()]),
+          r = s.some((e) => "pending" == e.status),
+          o = s.some(
             (e) =>
               "waiting" == e.status ||
               "uploading" == e.status ||
               "processing" == e.status,
           );
-        return l.createElement(
-          "div",
-          {
-            style: { display: "flex" },
-            className: k().UploadPreviewButtonsCtn,
-          },
-          Boolean(r.length) &&
-            l.createElement(
-              d.$n,
-              { style: { margin: "8px" }, onClick: a, disabled: !o },
-              (0, g.we)("#ImageUpload_Upload"),
-            ),
-          Boolean(r.length) &&
-            l.createElement(
-              d.$n,
-              { style: { margin: "8px" }, onClick: t.ClearImages, disabled: i },
-              (0, g.we)("#ImageUpload_Clear"),
-            ),
-        );
-      }
-      const N = (0, r.PA)(function (e) {
-        const { asset: t, fnOnRemove: a, languageRealms: n } = e,
-          r = t.ImageOptions?.map((e) => {
-            let a,
-              n,
-              r = e?.fnGetLabelText();
-            e.bEnforceDimensions && (r += ` - ${e.width}x${e.height}`),
-              e.bDeprecated &&
-                ((r += ` ${(0, g.we)("#ImageUpload_Deprecated")}`),
-                (a = (0, g.we)("#ImageUpload_Deprecated_ttip"))),
-              (t.BIsOriginalMinimumDimensions(e) &&
-                t.FileTypeMatchesImageTypes(e)) ||
-                (n = k().ImageDimensionTooSmall);
-            return { label: r, data: e, strOptionClass: n, tooltip: a };
-          }).filter((e) => !e.data.bHiddenFromDropdown),
-          o = {
-            pending: (0, g.we)("#ImageUpload_Pending"),
-            waiting: (0, g.we)("#ImageUpload_Waiting"),
-            uploading: (0, g.we)("#ImageUpload_Uploading"),
-            processing: (0, g.we)("#ImageUpload_Processing"),
-            success: (0, g.we)("#ImageUpload_SuccessCard"),
-            failed: (0, g.we)("#ImageUpload_Failed"),
-          },
-          c = t.BSupportsLanguages()
-            ? G(g.A0.GetLanguageListForRealms(n ?? [i.TU.k_ESteamRealmGlobal]))
-            : null,
-          m = t.IsValidAssetType(e.forceResolution, e.forceFileType),
-          p = "pending" == t.status;
-        let E = o[t.status];
-        "pending" == t.status &&
-          (m.needsCrop
-            ? (E = (0, g.we)("#ImageUpload_NeedsCrop"))
-            : m.error && (E = (0, g.we)("#ImageUpload_Invalid")));
-        let f;
-        const w = t.GetCurrentImageOption();
-        w && (f = r?.find((e) => e.data.sKey == w.sKey)?.data);
-        f || (f = r?.[0]?.data);
-        return l.createElement(
-          "div",
-          { className: k().UploadPreview },
-          l.createElement(
-            "div",
-            { className: k().UploadPreviewDelete, onClick: () => a(t) },
-            l.createElement(_.sED, null),
-          ),
-          l.createElement(O, { asset: t }),
-          c &&
-            l.createElement(d.m, {
-              strDropDownClassName: D().DropDownScroll,
-              rgOptions: c,
-              selectedOption: t.language,
-              onChange: (e) => (t.language = e.data),
-              disabled: !p,
-            }),
-          r &&
-            r?.length > 1 &&
-            l.createElement(d.m, {
-              label: t.GetImageOptionLabel(),
-              rgOptions: r,
-              selectedOption: f,
-              onChange: (e) => t.SetCurrentImageOption(e.data),
-              disabled: !p,
-            }),
-          p &&
-            m.warnings?.map((e, t) =>
-              l.createElement(
-                "div",
-                { key: `warning${t}`, className: k().UploadPreviewWarning },
-                e,
-              ),
-            ),
-          p &&
-            m.messages?.map((e, t) =>
-              l.createElement(
-                "div",
-                { key: `message${t}`, className: k().UploadPreviewMessage },
-                e,
-              ),
-            ),
-          l.createElement(
-            "div",
-            {
-              className: (0, u.A)({
-                [D().FlexColumnContainer]: !0,
-                [k().UploadPreviewError]: "failed" == t.status,
+        return (0, t.jsxs)("div", {
+          style: { display: "flex" },
+          className: E().UploadPreviewButtonsCtn,
+          children: [
+            Boolean(s.length) &&
+              (0, t.jsx)(u.$n, {
+                style: { margin: "8px" },
+                onClick: a,
+                disabled: !r,
+                children: (0, p.we)("#ImageUpload_Upload"),
               }),
-            },
-            E,
-            (0, S.o)(t.status) &&
-              l.createElement(
-                "div",
-                { className: A().FlexCenter },
-                l.createElement(h.t, { size: "small" }),
+            Boolean(s.length) &&
+              (0, t.jsx)(u.$n, {
+                style: { margin: "8px" },
+                onClick: n.ClearImages,
+                disabled: o,
+                children: (0, p.we)("#ImageUpload_Clear"),
+              }),
+          ],
+        });
+      }
+      const N = (0, s.PA)(function (e) {
+        const { asset: n, fnOnRemove: a, languageRealms: i } = e,
+          s = n.ImageOptions?.map((e) => {
+            let a,
+              t,
+              i = e?.fnGetLabelText();
+            e.bEnforceDimensions && (i += ` - ${e.width}x${e.height}`),
+              e.bDeprecated &&
+                ((i += ` ${(0, p.we)("#ImageUpload_Deprecated")}`),
+                (a = (0, p.we)("#ImageUpload_Deprecated_ttip"))),
+              (n.BIsOriginalMinimumDimensions(e) &&
+                n.FileTypeMatchesImageTypes(e)) ||
+                (t = E().ImageDimensionTooSmall);
+            return { label: i, data: e, strOptionClass: t, tooltip: a };
+          }).filter((e) => !e.data.bHiddenFromDropdown),
+          r = {
+            pending: (0, p.we)("#ImageUpload_Pending"),
+            waiting: (0, p.we)("#ImageUpload_Waiting"),
+            uploading: (0, p.we)("#ImageUpload_Uploading"),
+            processing: (0, p.we)("#ImageUpload_Processing"),
+            success: (0, p.we)("#ImageUpload_SuccessCard"),
+            failed: (0, p.we)("#ImageUpload_Failed"),
+          },
+          o = n.BSupportsLanguages()
+            ? G(p.A0.GetLanguageListForRealms(i ?? [l.TU.k_ESteamRealmGlobal]))
+            : null,
+          c = n.IsValidAssetType(e.forceResolution, e.forceFileType),
+          m = "pending" == n.status;
+        let h = r[n.status];
+        "pending" == n.status &&
+          (c.needsCrop
+            ? (h = (0, p.we)("#ImageUpload_NeedsCrop"))
+            : c.error && (h = (0, p.we)("#ImageUpload_Invalid")));
+        let x;
+        const f = n.GetCurrentImageOption();
+        f && (x = s?.find((e) => e.data.sKey == f.sKey)?.data);
+        x || (x = s?.[0]?.data);
+        return (0, t.jsxs)("div", {
+          className: E().UploadPreview,
+          children: [
+            (0, t.jsx)("div", {
+              className: E().UploadPreviewDelete,
+              onClick: () => a(n),
+              children: (0, t.jsx)(_.sED, {}),
+            }),
+            (0, t.jsx)(O, { asset: n }),
+            o &&
+              (0, t.jsx)(u.m, {
+                strDropDownClassName: D().DropDownScroll,
+                rgOptions: o,
+                selectedOption: n.language,
+                onChange: (e) => (n.language = e.data),
+                disabled: !m,
+              }),
+            s &&
+              s?.length > 1 &&
+              (0, t.jsx)(u.m, {
+                label: n.GetImageOptionLabel(),
+                rgOptions: s,
+                selectedOption: x,
+                onChange: (e) => n.SetCurrentImageOption(e.data),
+                disabled: !m,
+              }),
+            m &&
+              c.warnings?.map((e, n) =>
+                (0, t.jsx)(
+                  "div",
+                  { className: E().UploadPreviewWarning, children: e },
+                  `warning${n}`,
+                ),
               ),
-          ),
-          l.createElement(
-            "div",
-            { className: k().UploadPreviewError },
-            t.message,
-          ),
-          p &&
-            m.error &&
-            l.createElement(
-              "div",
-              { className: k().UploadPreviewError },
-              m.error,
-            ),
-          p &&
-            m.needsCrop &&
-            l.createElement(
-              d.jn,
-              {
+            m &&
+              c.messages?.map((e, n) =>
+                (0, t.jsx)(
+                  "div",
+                  { className: E().UploadPreviewMessage, children: e },
+                  `message${n}`,
+                ),
+              ),
+            (0, t.jsxs)("div", {
+              className: (0, g.A)({
+                [D().FlexColumnContainer]: !0,
+                [E().UploadPreviewError]: "failed" == n.status,
+              }),
+              children: [
+                h,
+                (0, S.o)(n.status) &&
+                  (0, t.jsx)("div", {
+                    className: A().FlexCenter,
+                    children: (0, t.jsx)(j.t, { size: "small" }),
+                  }),
+              ],
+            }),
+            (0, t.jsx)("div", {
+              className: E().UploadPreviewError,
+              children: n.message,
+            }),
+            m &&
+              c.error &&
+              (0, t.jsx)("div", {
+                className: E().UploadPreviewError,
+                children: c.error,
+              }),
+            m &&
+              c.needsCrop &&
+              (0, t.jsx)(u.jn, {
                 onClick: () =>
-                  ((t) => {
-                    if (t instanceof s.M7) {
-                      t.ResetImage();
+                  ((n) => {
+                    if (n instanceof d.M7) {
+                      n.ResetImage();
                       const a = window,
-                        n = l.createElement(P.q, {
+                        i = (0, t.jsx)(P.q, {
                           ownerWin: a,
-                          uploadFile: t,
+                          uploadFile: n,
                           forceResolution: e.forceResolution,
                           fileType: e.forceFileType || 3,
                         });
-                      (0, C.HT)(n, a, "CropModal", {
-                        strTitle: (0, g.we)("#ImageUpload_CropModalTitle"),
+                      (0, C.HT)(i, a, "CropModal", {
+                        strTitle: (0, p.we)("#ImageUpload_CropModalTitle"),
                       });
                     } else
                       console.log(
                         "ImageUploadEmbeddedDialog trying to crop non image",
-                        t.fileType,
-                        JSON.stringify(t.GetCurrentImageOption()),
+                        n.fileType,
+                        JSON.stringify(n.GetCurrentImageOption()),
                       );
-                  })(t),
-              },
-              (0, g.we)("#ImageUpload_OpenEditor"),
-            ),
-        );
+                  })(n),
+                children: (0, p.we)("#ImageUpload_OpenEditor"),
+              }),
+          ],
+        });
       });
       function O(e) {
-        const { asset: t } = e;
-        return t.BIsVideo()
-          ? l.createElement(
-              "div",
-              {
-                className: k().PreviewImgCtn,
-                onClick: (e) =>
-                  (0, C.pg)(l.createElement(F, { asset: t }), (0, y.uX)(e)),
-              },
-              l.createElement(
-                "span",
-                { className: k().PreviewImgInfo },
-                t.width,
-                " x ",
-                t.height,
-              ),
-              l.createElement(
-                "video",
-                {
+        const { asset: n } = e;
+        return n.BIsVideo()
+          ? (0, t.jsxs)("div", {
+              className: E().PreviewImgCtn,
+              onClick: (e) =>
+                (0, C.pg)((0, t.jsx)(F, { asset: n }), (0, y.uX)(e)),
+              children: [
+                (0, t.jsxs)("span", {
+                  className: E().PreviewImgInfo,
+                  children: [n.width, " x ", n.height],
+                }),
+                (0, t.jsx)("video", {
                   height: 120,
                   controls: !1,
                   autoPlay: !0,
                   loop: !0,
                   muted: !0,
-                },
-                l.createElement("source", { src: t.dataUrl }),
-              ),
-            )
-          : l.createElement(
-              "div",
-              {
-                className: k().PreviewImgCtn,
-                style: { backgroundImage: `url(${t.dataUrl})` },
-              },
-              l.createElement(
-                "span",
-                { className: k().PreviewImgInfo },
-                t.width,
-                " x ",
-                t.height,
-              ),
-            );
+                  children: (0, t.jsx)("source", { src: n.dataUrl }),
+                }),
+              ],
+            })
+          : (0, t.jsx)("div", {
+              className: E().PreviewImgCtn,
+              style: { backgroundImage: `url(${n.dataUrl})` },
+              children: (0, t.jsxs)("span", {
+                className: E().PreviewImgInfo,
+                children: [n.width, " x ", n.height],
+              }),
+            });
       }
       function F(e) {
-        const { asset: t, closeModal: a } = e;
-        return l.createElement(
-          I.o0,
-          { bAlertDialog: !0, closeModal: a, bAllowFullSize: !0 },
-          l.createElement(
-            "video",
-            { controls: !0, autoPlay: !0, loop: !0, muted: !0 },
-            l.createElement("source", { src: t.dataUrl }),
-          ),
-        );
+        const { asset: n, closeModal: a } = e;
+        return (0, t.jsx)(I.o0, {
+          bAlertDialog: !0,
+          closeModal: a,
+          bAllowFullSize: !0,
+          children: (0, t.jsx)("video", {
+            controls: !0,
+            autoPlay: !0,
+            loop: !0,
+            muted: !0,
+            children: (0, t.jsx)("source", { src: n.dataUrl }),
+          }),
+        });
       }
       function G(e) {
-        const t = [],
+        const n = [],
           a = new Array();
-        for (const t of e) {
-          if (25 == t) continue;
-          const e = (0, g.we)("#Language_" + (0, o.Lg)(t));
-          a.push({ label: e, data: t });
+        for (const n of e) {
+          if (25 == n) continue;
+          const e = (0, p.we)("#Language_" + (0, o.Lg)(n));
+          a.push({ label: e, data: n });
         }
         return (
-          a.sort((e, t) => e.label.localeCompare(t.label)),
-          a.forEach((e) => t.push({ label: e.label, data: e.data })),
+          a.sort((e, n) => e.label.localeCompare(n.label)),
+          a.forEach((e) => n.push({ label: e.label, data: e.data })),
           a
         );
       }
     },
-    99637: (e, t, a) => {
+    99637: (e, n, a) => {
       "use strict";
-      a.d(t, { K: () => D });
-      var n = a(90626),
-        r = a(92298),
-        l = a.n(r),
+      a.d(n, { K: () => D });
+      var t = a(7850),
+        i = a(90626),
+        s = a(92298),
+        r = a.n(s),
         o = a(44894),
-        i = a(44165),
-        s = a(95695),
-        c = a.n(s),
+        l = a(44165),
+        d = a(95695),
+        c = a.n(d),
         m = a(52038),
-        d = a(61859),
-        u = a(32754),
-        g = a(12916),
-        p = a.n(g),
-        E = a(87937),
-        f = a.n(E);
+        u = a(61859),
+        g = a(32754),
+        p = a(12916),
+        h = a.n(p),
+        x = a(87937),
+        f = a.n(x);
       const w = "hh:mm a",
         v = "HH:mm";
       function D(e) {
         const {
-          nLatestTime: t,
+          nLatestTime: n,
           nEarliestTime: a,
-          fnGetTimeToUpdate: r,
-          onError: s,
-          strAlsoShowTimeZone: g,
-          disabled: E,
+          fnGetTimeToUpdate: s,
+          onError: d,
+          strAlsoShowTimeZone: p,
+          disabled: x,
           bNoDefaultDate: D,
           className: A,
           strDescToolTip: _,
-          strDescription: h,
+          strDescription: j,
           bShowTimeZone: b,
           strInvalidDateTimeLocalizedMsg: y,
           fnIsValidDateTime: P,
           bWeekdaysOnly: U,
-          fnSetTimeToUpdate: k,
+          fnSetTimeToUpdate: E,
           bForce24HourFormat: S,
         } = e;
-        let x =
+        let k =
           (function () {
             const e = f()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
           })() || S
             ? v
             : w;
-        const B = r(),
-          [N, O] = n.useState(B > 0 ? f()(1e3 * B) : null),
-          [F, G] = n.useState(),
-          [R, L] = n.useState(),
-          W = (function (e, t, a, r, l) {
-            const o = r && r(),
-              i = t && !C(t).isValid(),
-              s = e && !T(e).isValid();
-            let c = null;
-            (s || i || "string" == typeof o || !1 === o) &&
-              ((c = (0, d.we)(
+        const B = s(),
+          [N, O] = i.useState(B > 0 ? f()(1e3 * B) : null),
+          [F, G] = i.useState(),
+          [R, L] = i.useState(),
+          W = (function (e, n, a, t, s) {
+            const r = t && t(),
+              o = n && !C(n).isValid(),
+              l = e && !T(e).isValid();
+            let d = null;
+            (l || o || "string" == typeof r || !1 === r) &&
+              ((d = (0, u.we)(
                 a || "#DateTimePicker_Fallback_Invalid_DateTime",
               )),
-              s
-                ? (c = (0, d.we)("#DateTimePicker_Time_CannotParse"))
-                : i
-                  ? (c = (0, d.we)("#DateTimePicker_Date_CannotParse"))
-                  : "string" == typeof o && (c = o));
+              l
+                ? (d = (0, u.we)("#DateTimePicker_Time_CannotParse"))
+                : o
+                  ? (d = (0, u.we)("#DateTimePicker_Date_CannotParse"))
+                  : "string" == typeof r && (d = r));
             return (
-              n.useEffect(() => {
-                l && l(c);
-              }, [c, l]),
-              c
+              i.useEffect(() => {
+                s && s(d);
+              }, [d, s]),
+              d
             );
-          })(F, R, y, P, s),
-          M = !s && W;
+          })(F, R, y, P, d),
+          M = !d && W;
         let V, Z;
-        if (t && a && t == a && a > i.HD.GetTimeNowWithOverride()) {
+        if (n && a && n == a && a > l.HD.GetTimeNowWithOverride()) {
           const e = f().unix(a);
           (V = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
@@ -645,193 +625,195 @@
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (x = v);
+            (k = v);
         }
         B || !a || D || (Z = f().unix(a));
         const Y = f().tz.guess(),
           H = f().unix(B).tz(Y),
-          J = !!g && Y != g && f().unix(B).tz(g),
+          J = !!p && Y != p && f().unix(B).tz(p),
           {
             fnOnInput: q,
             fnOnInputBlur: z,
-            fnOnChange: j,
+            fnOnChange: Q,
           } = I(
             C,
             (e) => {
-              if (E) return;
+              if (x) return;
               L(null);
-              const t = r(),
-                a = f().unix(t || i.HD.GetTimeNowWithOverride());
+              const n = s(),
+                a = f().unix(n || l.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(a.hour()),
                 e.minute(a.minute()),
                 e.second(0),
-                k(e.unix()),
+                E(e.unix()),
                 O(e);
             },
             L,
           ),
           {
-            fnOnInput: Q,
-            fnOnInputBlur: K,
-            fnOnChange: X,
+            fnOnInput: K,
+            fnOnInputBlur: X,
+            fnOnChange: $,
           } = I(
             T,
             (e) => {
-              if (E) return;
+              if (x) return;
               G(null);
-              let t = r(),
-                n = 0;
-              if (t) {
-                const a = f().unix(t);
+              let n = s(),
+                t = 0;
+              if (n) {
+                const a = f().unix(n);
                 (e = e.clone()).year(a.year()),
                   e.month(a.month()),
                   e.date(a.date()),
-                  (n = e.unix());
+                  (t = e.unix());
               } else {
-                n =
+                t =
                   f().unix(a).hour(0).second(0).minutes(0).unix() +
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              k(n), O(f().unix(n));
+              E(t), O(f().unix(t));
             },
             G,
           );
-        return n.createElement(
-          "div",
-          { className: (0, m.A)(p().EventTimeSection, A) },
-          n.createElement(
-            "div",
-            { className: (0, m.A)(p().EventTimeTitle, "DialogLabel") },
-            n.createElement(
-              u.he,
-              { toolTipContent: _, direction: "top" },
-              Boolean(h) && n.createElement("span", null, h),
-            ),
-            M &&
-              n.createElement(
-                "span",
-                { className: p().DateErrorCtn },
-                n.createElement("img", { src: o.A }),
-                M,
-              ),
-          ),
-          n.createElement(
-            "div",
-            { className: c().FlexRowContainer },
-            n.createElement(
-              "div",
-              { className: (0, m.A)(c().InputBorder, p().TimeBlock) },
-              n.createElement(l(), {
-                onChange: j,
-                timeFormat: !1,
-                value: null != R ? R : N,
-                isValidDate: (e) =>
-                  !E &&
-                  (function (e, t, a, n) {
-                    const r = f().unix(e).hour(0).seconds(0).minute(0);
-                    let l = n.unix() >= r.unix();
-                    if (l && t && t >= e) {
-                      const e = f().unix(t).hour(23).minute(59).seconds(59);
-                      l = n.unix() <= e.unix();
-                    }
-                    l &&
-                      a &&
-                      ((0 != n.weekday() && 6 != n.weekday()) || (l = !1));
-                    return l;
-                  })(a, t, U, e),
-                initialValue: Z,
-                inputProps: {
-                  placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
-                  className: (0, m.A)(
-                    p().DateWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: E,
-                  onChange: (e) => q(e.currentTarget.value),
-                  onBlur: (e) => z(e.currentTarget.value),
-                },
+        return (0, t.jsxs)("div", {
+          className: (0, m.A)(h().EventTimeSection, A),
+          children: [
+            (0, t.jsxs)("div", {
+              className: (0, m.A)(h().EventTimeTitle, "DialogLabel"),
+              children: [
+                (0, t.jsx)(g.he, {
+                  toolTipContent: _,
+                  direction: "top",
+                  children: Boolean(j) && (0, t.jsx)("span", { children: j }),
+                }),
+                M &&
+                  (0, t.jsxs)("span", {
+                    className: h().DateErrorCtn,
+                    children: [(0, t.jsx)("img", { src: o.A }), M],
+                  }),
+              ],
+            }),
+            (0, t.jsxs)("div", {
+              className: c().FlexRowContainer,
+              children: [
+                (0, t.jsxs)("div", {
+                  className: (0, m.A)(c().InputBorder, h().TimeBlock),
+                  children: [
+                    (0, t.jsx)(r(), {
+                      onChange: Q,
+                      timeFormat: !1,
+                      value: null != R ? R : N,
+                      isValidDate: (e) =>
+                        !x &&
+                        (function (e, n, a, t) {
+                          const i = f().unix(e).hour(0).seconds(0).minute(0);
+                          let s = t.unix() >= i.unix();
+                          if (s && n && n >= e) {
+                            const e = f()
+                              .unix(n)
+                              .hour(23)
+                              .minute(59)
+                              .seconds(59);
+                            s = t.unix() <= e.unix();
+                          }
+                          s &&
+                            a &&
+                            ((0 != t.weekday() && 6 != t.weekday()) ||
+                              (s = !1));
+                          return s;
+                        })(a, n, U, e),
+                      initialValue: Z,
+                      inputProps: {
+                        placeholder: (0, u.we)("#DateTimePicker_Enter_Date"),
+                        className: (0, m.A)(
+                          h().DateWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: x,
+                        onChange: (e) => q(e.currentTarget.value),
+                        onBlur: (e) => z(e.currentTarget.value),
+                      },
+                    }),
+                    !!J &&
+                      (0, t.jsx)("div", {
+                        className: h().PacificTimeHint,
+                        children: J.format("L"),
+                      }),
+                  ],
+                }),
+                (0, t.jsxs)("div", {
+                  className: (0, m.A)(c().InputBorder, h().TimeBlock),
+                  children: [
+                    (0, t.jsx)(r(), {
+                      onChange: $,
+                      dateFormat: !1,
+                      timeFormat: k,
+                      timeConstraints: V,
+                      value: null != F ? F : N,
+                      inputProps: {
+                        placeholder: (0, u.we)("#DateTimePicker_Enter_Time"),
+                        className: (0, m.A)(
+                          h().TimeWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: x,
+                        onChange: (e) => K(e.currentTarget.value),
+                        onBlur: (e) => X(e.currentTarget.value),
+                      },
+                    }),
+                    !!J &&
+                      (0, t.jsx)("div", {
+                        className: h().PacificTimeHint,
+                        children: J.format("LT"),
+                      }),
+                  ],
+                }),
+                b &&
+                  (0, t.jsxs)("div", {
+                    children: [
+                      (0, t.jsx)("div", {
+                        className: h().TimeZone,
+                        children: H.zoneAbbr(),
+                      }),
+                      !!J &&
+                        (0, t.jsx)("div", {
+                          className: h().TimeZone,
+                          children: J.zoneAbbr(),
+                        }),
+                    ],
+                  }),
+              ],
+            }),
+            Boolean(V) &&
+              (0, t.jsx)("div", {
+                children: (0, u.we)("#DateTimePicker_DateTime_Fixed"),
               }),
-              !!J &&
-                n.createElement(
-                  "div",
-                  { className: p().PacificTimeHint },
-                  J.format("L"),
-                ),
-            ),
-            n.createElement(
-              "div",
-              { className: (0, m.A)(c().InputBorder, p().TimeBlock) },
-              n.createElement(l(), {
-                onChange: X,
-                dateFormat: !1,
-                timeFormat: x,
-                timeConstraints: V,
-                value: null != F ? F : N,
-                inputProps: {
-                  placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
-                  className: (0, m.A)(
-                    p().TimeWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: E,
-                  onChange: (e) => Q(e.currentTarget.value),
-                  onBlur: (e) => K(e.currentTarget.value),
-                },
-              }),
-              !!J &&
-                n.createElement(
-                  "div",
-                  { className: p().PacificTimeHint },
-                  J.format("LT"),
-                ),
-            ),
-            b &&
-              n.createElement(
-                "div",
-                null,
-                n.createElement(
-                  "div",
-                  { className: p().TimeZone },
-                  H.zoneAbbr(),
-                ),
-                !!J &&
-                  n.createElement(
-                    "div",
-                    { className: p().TimeZone },
-                    J.zoneAbbr(),
-                  ),
-              ),
-          ),
-          Boolean(V) &&
-            n.createElement(
-              "div",
-              null,
-              (0, d.we)("#DateTimePicker_DateTime_Fixed"),
-            ),
-        );
+          ],
+        });
       }
-      function I(e, t, a) {
-        const [r, l] = n.useState(!1);
+      function I(e, n, a) {
+        const [t, s] = i.useState(!1);
         return {
           fnOnInput: (e) => {
-            a(e), l(!0);
+            a(e), s(!0);
           },
           fnOnInputBlur: (a) => {
-            if (r) {
-              const n = e(a);
-              n.isValid() && t(n);
+            if (t) {
+              const t = e(a);
+              t.isValid() && n(t);
             }
-            l(!1);
+            s(!1);
           },
           fnOnChange: (a) => {
-            if (!r)
+            if (!t)
               if ("string" == typeof a) {
-                const n = e(a);
-                n.isValid() && t(n);
-              } else t(a);
+                const t = e(a);
+                t.isValid() && n(t);
+              } else n(a);
           },
         };
       }
@@ -840,8 +822,8 @@
           e,
           (function () {
             const e = f()("2025-01-14").format("L").split(/[-/.]/),
-              t = e.indexOf("14");
-            return e.indexOf("01") < t;
+              n = e.indexOf("14");
+            return e.indexOf("01") < n;
           })()
             ? "M/D/YYYY"
             : "D/M/YYYY",
@@ -852,75 +834,76 @@
         return f()(e, [w, v], !1);
       }
     },
-    27650: (e, t, a) => {
+    27650: (e, n, a) => {
       "use strict";
-      a.d(t, { Ss: () => o, hk: () => i });
-      var n = a(90626),
-        r = a(72739),
-        l = a(56011);
-      function o(e, t) {
-        const a = n.useRef(void 0),
-          l = n.useCallback(
-            (t) => {
-              t.currentTarget.files.length > 0 &&
-                (e(t.currentTarget.files), (t.currentTarget.value = ""));
+      a.d(n, { Ss: () => o, hk: () => l });
+      var t = a(7850),
+        i = a(90626),
+        s = a(72739),
+        r = a(56011);
+      function o(e, n) {
+        const a = i.useRef(void 0),
+          r = i.useCallback(
+            (n) => {
+              n.currentTarget.files.length > 0 &&
+                (e(n.currentTarget.files), (n.currentTarget.value = ""));
             },
             [e],
           ),
-          o = n.useCallback(() => a.current.click(), []);
+          o = i.useCallback(() => a.current.click(), []);
         return [
-          r.createPortal(
-            n.createElement(
-              "form",
-              { onSubmit: s, style: { display: "none" } },
-              n.createElement("input", {
-                ...t,
+          s.createPortal(
+            (0, t.jsx)("form", {
+              onSubmit: d,
+              style: { display: "none" },
+              children: (0, t.jsx)("input", {
+                ...n,
                 type: "file",
                 ref: a,
-                onChange: l,
+                onChange: r,
               }),
-            ),
+            }),
             window.document.body,
           ),
           o,
         ];
       }
-      function i(e) {
-        const [t, a] = n.useState(!1);
+      function l(e) {
+        const [n, a] = i.useState(!1);
         return [
           {
-            onDragEnter: n.useCallback((e) => {
+            onDragEnter: i.useCallback((e) => {
               ((e.dataTransfer.files && e.dataTransfer.files[0]) ||
                 (e.dataTransfer.types && "Files" == e.dataTransfer.types[0])) &&
                 a(!0);
             }, []),
-            onDragLeave: n.useCallback((e) => {
-              l.NO(e) && a(!1);
+            onDragLeave: i.useCallback((e) => {
+              r.NO(e) && a(!1);
             }, []),
-            onDragEnd: n.useCallback(() => a(!1), []),
-            onDragOver: t ? s : void 0,
-            onDrop: n.useCallback(
-              (t) => {
-                t.dataTransfer.files?.length &&
-                  (e(t.dataTransfer.files, t),
-                  t.preventDefault(),
-                  t.stopPropagation()),
+            onDragEnd: i.useCallback(() => a(!1), []),
+            onDragOver: n ? d : void 0,
+            onDrop: i.useCallback(
+              (n) => {
+                n.dataTransfer.files?.length &&
+                  (e(n.dataTransfer.files, n),
+                  n.preventDefault(),
+                  n.stopPropagation()),
                   a(!1);
               },
               [e],
             ),
           },
-          t,
+          n,
         ];
       }
-      function s(e) {
+      function d(e) {
         e.preventDefault();
       }
     },
-    44894: (e, t, a) => {
+    44894: (e, n, a) => {
       "use strict";
-      a.d(t, { A: () => n });
-      const n =
+      a.d(n, { A: () => t });
+      const t =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },

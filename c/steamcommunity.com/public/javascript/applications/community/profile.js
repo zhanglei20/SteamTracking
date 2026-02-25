@@ -285,6 +285,7 @@
           ProfileEditRoutes: () => _,
           default: () => _,
         });
+      var _ = __webpack_require__("chunkid");
       let _ = {
         ProfileURL: "",
       };
@@ -371,48 +372,37 @@
           const { community_data: _ } = this.props;
           let _ = _ && _.favorite_badge;
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().miniProfileFeaturedContainer,
-                    this.props.className,
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().favoriteBadgeIcon,
-                  },
-                  _.createElement("img", {
-                    src: _.icon,
-                    className: _().badgeIcon,
-                  }),
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _().miniProfileFeaturedContainer,
+                  this.props.className,
                 ),
-                _.createElement(
-                  "div",
-                  {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().favoriteBadgeIcon,
+                    children: (0, _.jsx)("img", {
+                      src: _.icon,
+                      className: _().badgeIcon,
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
                     className: (0, _._)(
                       _().featuredLabels,
                       _().favoriteBadgeDescription,
                     ),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().featuredTitle,
-                    },
-                    _.name,
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().featuredSubTitle,
-                    },
-                    (0, _._)("#Hover_BadgeXP", _._),
-                  ),
-                ),
-              )
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().featuredTitle,
+                        children: _.name,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().featuredSubTitle,
+                        children: (0, _._)("#Hover_BadgeXP", _._),
+                      }),
+                    ],
+                  }),
+                ],
+              })
             : null;
         }
       };
@@ -421,38 +411,25 @@
         render() {
           const { community_data: _, className: _ } = this.props;
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().miniProfileFeaturedContainer, _),
-                },
-                _.createElement(
-                  "div",
-                  {
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(_().miniProfileFeaturedContainer, _),
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.level_class,
-                  },
-                  _.createElement(
-                    "span",
-                    {
+                    children: (0, _.jsx)("span", {
                       className: _().friendPlayerLevelNum,
-                    },
-                    _.level,
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                      children: _.level,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
                     className: _().featuredLabels,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                    children: (0, _.jsx)("div", {
                       className: _().featuredTitle,
-                    },
-                    (0, _._)("#Hover_SteamLevel") + " ",
-                  ),
-                ),
-              )
+                      children: (0, _._)("#Hover_SteamLevel") + " ",
+                    }),
+                  }),
+                ],
+              })
             : null;
         }
       };
@@ -462,54 +439,46 @@
           var _;
           let _ = this.props.persona,
             _ = this.props.community_data;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().miniProfileGameContainer,
-                this.props.className,
-              ),
-            },
-            (null === (_ = null == _ ? void 0 : _.in_game) || void 0 === _
-              ? void 0
-              : _.logo) &&
-              _.createElement("img", {
-                className: _().gameLogo,
-                src: _.in_game.logo,
-              }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _().miniProfileGameContainer,
+              this.props.className,
+            ),
+            children: [
+              (null === (_ = null == _ ? void 0 : _.in_game) || void 0 === _
+                ? void 0
+                : _.logo) &&
+                (0, _.jsx)("img", {
+                  className: _().gameLogo,
+                  src: _.in_game.logo,
+                }),
+              (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _().gameContent,
                   _().persona,
                   _().ingame,
                   _().ellipsis,
                 ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().gameState,
-                },
-                (0, _._)(
-                  _.is_in_nonsteam_game
-                    ? "#PersonaStateInNonSteamGame"
-                    : "#PersonaStateInGame",
-                ),
-              ),
-              this.props.persona.GetCurrentGameName(),
-              this.props.persona.HasCurrentGameRichPresence() &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().richPresence,
-                  },
-                  this.props.persona.GetCurrentGameRichPresence(),
-                ),
-              this.props.in_game_section_additional,
-            ),
-          );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().gameState,
+                    children: (0, _._)(
+                      _.is_in_nonsteam_game
+                        ? "#PersonaStateInNonSteamGame"
+                        : "#PersonaStateInGame",
+                    ),
+                  }),
+                  this.props.persona.GetCurrentGameName(),
+                  this.props.persona.HasCurrentGameRichPresence() &&
+                    (0, _.jsx)("div", {
+                      className: _().richPresence,
+                      children: this.props.persona.GetCurrentGameRichPresence(),
+                    }),
+                  this.props.in_game_section_additional,
+                ],
+              }),
+            ],
+          });
         }
       };
       function _(_) {
@@ -524,7 +493,7 @@
               ? void 0
               : _.GetHeaderURL();
         return _
-          ? _.createElement("img", {
+          ? (0, _.jsx)("img", {
               className: _().gameLogo,
               src: _,
             })
@@ -538,52 +507,41 @@
             _ = this.props.broadcast_description;
           return (
             _ && ((_ = (0, _._)("#PersonaStateWatchingBroadcast")), (_ = _)),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().miniProfileGameContainer,
-                  this.props.className,
-                ),
-              },
-              this.props.persona.m_broadcastAppId &&
-                _.createElement(_, {
-                  appID: this.props.persona.m_broadcastAppId,
-                }),
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().miniProfileGameContainer,
+                this.props.className,
+              ),
+              children: [
+                this.props.persona.m_broadcastAppId &&
+                  (0, _.jsx)(_, {
+                    appID: this.props.persona.m_broadcastAppId,
+                  }),
+                (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _().gameContent,
                     _().persona,
                     _().watchingbroadcast,
                     _().ellipsis,
                   ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().gameState,
-                  },
-                  _,
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().richPresence,
-                    },
-                    _,
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().watchingbroadcastThumbnail,
-                  },
-                  this.props.broadcast_thumbnail,
-                ),
-              ),
-            )
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().gameState,
+                      children: _,
+                    }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().richPresence,
+                        children: _,
+                      }),
+                    (0, _.jsx)("div", {
+                      className: _().watchingbroadcastThumbnail,
+                      children: this.props.broadcast_thumbnail,
+                    }),
+                  ],
+                }),
+              ],
+            })
           );
         }
       };
@@ -616,13 +574,13 @@
           let _,
             _ = _().miniProfileContent;
           _.is_ingame
-            ? (_ = _.createElement(_, {
+            ? (_ = (0, _.jsx)(_, {
                 ...this.props,
                 community_data: _,
                 className: _ ? _().miniProfileBackdropBlur : void 0,
               }))
             : _.is_watchingbroadcast
-              ? (_ = _.createElement(_, {
+              ? (_ = (0, _.jsx)(_, {
                   ...this.props,
                   className: _ ? _().miniProfileBackdropBlur : void 0,
                 }))
@@ -637,216 +595,171 @@
             _ = _.is_awayOrSnooze;
           return (
             (_ = _
-              ? _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+              ? (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().personaAndIcons,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().personaName, _().nickName),
-                      },
-                      _.createElement(
-                        "div",
-                        {
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(_().personaName, _().nickName),
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().personaNameLabel,
+                              children: this.props.nickname,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().playerNicknameBracket,
+                              title: (0, _._)("#isNickname"),
+                              children: "*",
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)(_._, {
+                          persona: _,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().personaName, _().hasNickname),
+                      children: [
+                        "( ",
+                        (0, _.jsx)("div", {
                           className: _().personaNameLabel,
-                        },
-                        this.props.nickname,
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().playerNicknameBracket,
-                          title: (0, _._)("#isNickname"),
-                        },
-                        "*",
-                      ),
-                    ),
-                    _.createElement(_._, {
+                          children: _.m_strPlayerName,
+                        }),
+                        " )",
+                      ],
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)("div", {
+                  className: _().personaAndIcons,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().personaName,
+                      children: (0, _.jsx)("div", {
+                        className: _().personaNameLabel,
+                        children: _.m_strPlayerName,
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
                       persona: _,
                     }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().personaName, _().hasNickname),
-                    },
-                    "( ",
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().personaNameLabel,
-                      },
-                      _.m_strPlayerName,
-                    ),
-                    " )",
-                  ),
-                )
-              : _.createElement(
-                  "div",
-                  {
-                    className: _().personaAndIcons,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().personaName,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().personaNameLabel,
-                      },
-                      _.m_strPlayerName,
-                    ),
-                  ),
-                  _.createElement(_._, {
-                    persona: _,
-                  }),
-                )),
+                  ],
+                })),
             2 == this.props.friend_relationship && (_ = !0),
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
+            (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsx)(
                 "div",
                 {
-                  key: _.GetAccountID(),
                   className: (0, _._)(this.props.className, _().miniProfile),
                   ..._,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: _,
-                  },
-                  _.createElement(_, {
-                    community_data: _,
-                    persona: _,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().miniProfileHeader,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(
-                          _().miniProfilePlayer,
-                          _.online_state,
-                          _ && _().isAway,
-                          (0, _._)(_),
-                        ),
-                      },
-                      _.createElement(_, {
-                        persona: this.props.persona,
+                    children: [
+                      (0, _.jsx)(_, {
                         community_data: _,
+                        persona: _,
                       }),
-                      _ &&
-                        _.createElement(_._, {
-                          persona: _,
-                          animating: !0,
-                          className: _().SnoozeContainer,
-                          size: "large",
-                        }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().playerContent,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().playerName,
-                          },
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().persona,
-                            },
-                            _,
-                            _ &&
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().awayStatusLabel,
-                                },
-                                (0, _._)("#PersonaStateAway"),
-                              ),
-                            !_.is_online &&
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().awayStatusLabel,
-                                },
-                                this.props.persona.GetLocalizedOnlineStatus(),
-                              ),
-                            "online" == _.online_state &&
-                              !_ &&
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().awayStatusLabel,
-                                },
-                                (0, _._)("#PersonaStateOnline"),
-                              ),
-                            !_ &&
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().miniProfileNotFriends,
-                                },
-                                _
-                                  ? (0, _._)(
-                                      "#Friend_Menu_NotAFriendRequesting",
-                                    )
-                                  : (0, _._)("#Friend_Menu_NotAFriendLabel"),
-                              ),
-                            _ &&
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().miniProfileBlocked,
-                                },
-                                (0, _._)("#PersonaStateBlocked"),
-                              ),
+                      (0, _.jsx)("div", {
+                        className: _().miniProfileHeader,
+                        children: (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            _().miniProfilePlayer,
+                            _.online_state,
+                            _ && _().isAway,
+                            (0, _._)(_),
                           ),
+                          children: [
+                            (0, _.jsx)(_, {
+                              persona: this.props.persona,
+                              community_data: _,
+                            }),
+                            _ &&
+                              (0, _.jsx)(_._, {
+                                persona: _,
+                                animating: !0,
+                                className: _().SnoozeContainer,
+                                size: "large",
+                              }),
+                            (0, _.jsx)("div", {
+                              className: _().playerContent,
+                              children: (0, _.jsx)("div", {
+                                className: _().playerName,
+                                children: (0, _.jsxs)("div", {
+                                  className: _().persona,
+                                  children: [
+                                    _,
+                                    _ &&
+                                      (0, _.jsx)("div", {
+                                        className: _().awayStatusLabel,
+                                        children: (0, _._)("#PersonaStateAway"),
+                                      }),
+                                    !_.is_online &&
+                                      (0, _.jsx)("div", {
+                                        className: _().awayStatusLabel,
+                                        children:
+                                          this.props.persona.GetLocalizedOnlineStatus(),
+                                      }),
+                                    "online" == _.online_state &&
+                                      !_ &&
+                                      (0, _.jsx)("div", {
+                                        className: _().awayStatusLabel,
+                                        children: (0, _._)(
+                                          "#PersonaStateOnline",
+                                        ),
+                                      }),
+                                    !_ &&
+                                      (0, _.jsx)("div", {
+                                        className: _().miniProfileNotFriends,
+                                        children: _
+                                          ? (0, _._)(
+                                              "#Friend_Menu_NotAFriendRequesting",
+                                            )
+                                          : (0, _._)(
+                                              "#Friend_Menu_NotAFriendLabel",
+                                            ),
+                                      }),
+                                    _ &&
+                                      (0, _.jsx)("div", {
+                                        className: _().miniProfileBlocked,
+                                        children: (0, _._)(
+                                          "#PersonaStateBlocked",
+                                        ),
+                                      }),
+                                  ],
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                      }),
+                      _,
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().miniProfileBottom,
+                          _ && _().miniProfileBackdropBlur,
                         ),
-                      ),
-                    ),
-                  ),
-                  _,
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().miniProfileBottom,
-                        _ && _().miniProfileBackdropBlur,
-                      ),
-                    },
-                    _.createElement(_, {
-                      community_data: _,
-                    }),
-                    _.createElement(_, {
-                      community_data: _,
-                    }),
-                  ),
-                  _,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().mutualFriends,
-                    },
-                    this.props.mutual_friends,
-                  ),
-                ),
+                        children: [
+                          (0, _.jsx)(_, {
+                            community_data: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            community_data: _,
+                          }),
+                        ],
+                      }),
+                      _,
+                      (0, _.jsx)("div", {
+                        className: _().mutualFriends,
+                        children: this.props.mutual_friends,
+                      }),
+                    ],
+                  }),
+                },
+                _.GetAccountID(),
               ),
-            )
+            })
           );
         }
       };
@@ -855,56 +768,49 @@
           if (_ && _.profile_background) {
             const { image: _, ...__webpack_require__ } = _.profile_background;
             if (Object.keys(__webpack_require__).length)
-              return _.createElement(
+              return (0, _.jsx)(
                 "div",
                 {
                   className: _().miniProfileVideoBackgroundContainer,
-                  key:
-                    __webpack_require__["video/webm"] ||
-                    __webpack_require__["video/mp4"] ||
-                    "image",
-                },
-                _.createElement(
-                  "video",
-                  {
+                  children: (0, _.jsx)("video", {
                     className: _().miniProfileVideoBackground,
                     playsInline: !0,
                     muted: !0,
                     autoPlay: !0,
                     loop: !0,
                     poster: _,
-                  },
-                  Object.keys(__webpack_require__).map((_) =>
-                    _.createElement("source", {
-                      key: _,
-                      src: __webpack_require__[_],
-                      type: _,
-                    }),
-                  ),
-                ),
+                    children: Object.keys(__webpack_require__).map((_) =>
+                      (0, _.jsx)(
+                        "source",
+                        {
+                          src: __webpack_require__[_],
+                          type: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  }),
+                },
+                __webpack_require__["video/webm"] ||
+                  __webpack_require__["video/mp4"] ||
+                  "image",
               );
             if (_)
-              return _.createElement(
-                "div",
-                {
-                  className: _().miniProfileVideoBackgroundContainer,
-                },
-                _.createElement("img", {
+              return (0, _.jsx)("div", {
+                className: _().miniProfileVideoBackgroundContainer,
+                children: (0, _.jsx)("img", {
                   className: _().miniProfileVideoBackground,
                   src: _,
                 }),
-              );
+              });
           }
-          return _.createElement(
-            "div",
-            {
-              className: _().miniProfileBackground,
-            },
-            _.createElement("img", {
+          return (0, _.jsx)("div", {
+            className: _().miniProfileBackground,
+            children: (0, _.jsx)("img", {
               className: _().miniProfileBackgroundBlur,
               src: _.avatar_url,
             }),
-          );
+          });
         },
         _ = (_) => {
           const {
@@ -916,7 +822,7 @@
             _ =
               __webpack_require__ &&
               __webpack_require__.avatar_frame &&
-              _.createElement("img", {
+              (0, _.jsx)("img", {
                 src: __webpack_require__.avatar_frame,
                 className: _().Frame,
               }),
@@ -927,24 +833,18 @@
               className: _().playerAvatar,
             };
           return _
-            ? _.createElement(
-                _._,
-                {
-                  ..._,
-                  strAvatarURL: _,
-                  ..._,
-                },
-                _,
-              )
-            : _.createElement(
-                _._,
-                {
-                  persona: _,
-                  ..._,
-                  ..._,
-                },
-                _,
-              );
+            ? (0, _.jsx)(_._, {
+                ..._,
+                strAvatarURL: _,
+                ..._,
+                children: _,
+              })
+            : (0, _.jsx)(_._, {
+                persona: _,
+                ..._,
+                ..._,
+                children: _,
+              });
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2563,49 +2463,37 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
       const _ = ({ title: _, className: _, children: __webpack_require__ }) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.ProfileBox, _),
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.ProfileBox, _),
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ProfileBoxTitle,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _,
+              }),
+              (0, _.jsx)("div", {
                 className: _.ProfileBoxContent,
-              },
-              _.createElement(_._, null, __webpack_require__),
-            ),
-          ),
+                children: (0, _.jsx)(_._, {
+                  children: __webpack_require__,
+                }),
+              }),
+            ],
+          }),
         _ = ({ onSave: _, onCancel: _, disabled: __webpack_require__ }) =>
-          _.createElement(
-            _._,
-            {
-              className: _.SaveCancelButtons,
-              "flow-children": "row-reverse",
-            },
-            _.createElement(
-              _._,
-              {
+          (0, _.jsxs)(_._, {
+            className: _.SaveCancelButtons,
+            "flow-children": "row-reverse",
+            children: [
+              (0, _.jsx)(_._, {
                 onClick: _,
                 disabled: __webpack_require__,
-              },
-              (0, _._)("#Button_Save"),
-            ),
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#Button_Save"),
+              }),
+              (0, _.jsx)(_._, {
                 onClick: _,
-              },
-              (0, _._)("#Button_Cancel"),
-            ),
-          );
+                children: (0, _._)("#Button_Cancel"),
+              }),
+            ],
+          });
       function _(_) {
         return (0, _._)(_).replace(/%s/g, "");
       }
@@ -2651,51 +2539,46 @@
               ..._
             } = this.props,
             { activeItem: _, bSaving: _ } = this.state;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.PickerPreviewDialog, __webpack_require__),
-            },
-            _.createElement(_._, {
-              when: !_.fnIsSameItem(_, this.props.ActiveItem),
-              message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
-            }),
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(_.PickerPreviewDialog, __webpack_require__),
+            children: [
+              (0, _.jsx)(_._, {
+                when: !_.fnIsSameItem(_, this.props.ActiveItem),
+                message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
+              }),
+              (0, _.jsxs)(_._, {
                 className: _.PickerPreviewBody,
                 "flow-children": "column",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.PickerPreview,
-                },
-                _.createElement(_._, null, _(_)),
-              ),
-              _ && _.createElement(_._, null, _),
-              _.createElement(
-                "div",
-                {
-                  className: _.PickerPreviewItems,
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    ..._,
-                    onItemSelected: this.OnItemSelected,
-                    activeItem: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.PickerPreview,
+                    children: (0, _.jsx)(_._, {
+                      children: _(_),
+                    }),
                   }),
-                ),
-              ),
-              _.createElement(_, {
-                onSave: this.CommitChanges,
-                onCancel: this.RevertChanges,
-                disabled: _,
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      children: _,
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.PickerPreviewItems,
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
+                        ..._,
+                        onItemSelected: this.OnItemSelected,
+                        activeItem: _,
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    onSave: this.CommitChanges,
+                    onCancel: this.RevertChanges,
+                    disabled: _,
+                  }),
+                ],
               }),
-            ),
-          );
+            ],
+          });
         }
       }
       function _(_) {
@@ -2804,89 +2687,75 @@
             function (_, _) {
               return _ == _;
             };
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.ItemPicker, _),
-              ref: this.m_refRootDiv,
-              style: _,
-              "flow-children": "column",
-            },
-            __webpack_require__ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(_.ItemPicker, _),
+            ref: this.m_refRootDiv,
+            style: _,
+            "flow-children": "column",
+            children: [
+              __webpack_require__ &&
+                (0, _.jsx)("div", {
                   className: _.ItemPickeFilter,
-                },
-                _.createElement(_._, {
-                  value: _,
-                  label: (0, _._)("#ItemPicker_Filter"),
-                  onChange: this.OnSearchChange,
+                  children: (0, _.jsx)(_._, {
+                    value: _,
+                    label: (0, _._)("#ItemPicker_Filter"),
+                    onChange: this.OnSearchChange,
+                  }),
                 }),
-              ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 className: _.ItemPickerCtn,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   className: _.ItemPickerList,
                   "flow-children": "grid",
-                },
-                this.m_rgSearchableItems.map((_) =>
-                  _ && !_(_)
-                    ? null
-                    : _.item
-                      ? _.createElement(
-                          _._,
-                          {
-                            key: _.key,
-                          },
-                          _.createElement(_, {
-                            Item: _.item,
-                            onSelected: _.OnSelected,
-                            active: _ && _(_.item, _),
-                          }),
-                        )
-                      : _.createElement(
-                          _._,
-                          {
-                            key: _.key,
-                          },
-                          _({
-                            onSelected: _.OnSelected,
-                            active: !_,
-                          }),
-                        ),
-                ),
-              ),
-            ),
-          );
+                  children: this.m_rgSearchableItems.map((_) =>
+                    _ && !_(_)
+                      ? null
+                      : _.item
+                        ? (0, _.jsx)(
+                            _._,
+                            {
+                              children: (0, _.jsx)(_, {
+                                Item: _.item,
+                                onSelected: _.OnSelected,
+                                active: _ && _(_.item, _),
+                              }),
+                            },
+                            _.key,
+                          )
+                        : (0, _.jsx)(
+                            _._,
+                            {
+                              children: _({
+                                onSelected: _.OnSelected,
+                                active: !_,
+                              }),
+                            },
+                            _.key,
+                          ),
+                  ),
+                }),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnSearchChange", null);
       const _ = ({ strHTMLError: _ }) =>
           _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.HTMLErrorBox,
-                },
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)("#Error_Generic_Label"),
-                  " ",
-                ),
-                _.createElement("span", {
-                  className: _.HTMLError,
-                  dangerouslySetInnerHTML: {
-                    __html: _,
-                  },
-                }),
-              )
+            ? (0, _.jsxs)("div", {
+                className: _.HTMLErrorBox,
+                children: [
+                  (0, _.jsxs)("b", {
+                    children: [(0, _._)("#Error_Generic_Label"), " "],
+                  }),
+                  (0, _.jsx)("span", {
+                    className: _.HTMLError,
+                    dangerouslySetInnerHTML: {
+                      __html: _,
+                    },
+                  }),
+                ],
+              })
             : null,
         _ = ({
           strCooldownLabel: _,
@@ -2894,65 +2763,59 @@
           strCooldownDescHTML: __webpack_require__,
           children: _,
         }) => {
-          if (!_) return _.createElement(_.Fragment, null, _);
+          if (!_)
+            return (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
           const _ = Math.max(0, _ - Date.now() / 1e3);
-          return _.createElement(
-            "div",
-            {
-              className: _.CooldownNotice,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.CooldownNotice,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.HTMLErrorBox,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.ErrorMessage,
-                },
-                _,
-                " ",
-                (0, _._)(_, {
-                  eSuffix: _._.None,
-                  bForceSingleUnits: !0,
-                }),
-                " ",
-              ),
-              _.createElement("div", {
-                dangerouslySetInnerHTML: {
-                  __html: __webpack_require__,
-                },
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.ErrorMessage,
+                    children: [
+                      _,
+                      " ",
+                      (0, _._)(_, {
+                        eSuffix: _._.None,
+                        bForceSingleUnits: !0,
+                      }),
+                      " ",
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    dangerouslySetInnerHTML: {
+                      __html: __webpack_require__,
+                    },
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 className: _.DisabledInputCtn,
-              },
-              _,
-            ),
-          );
+                children: _,
+              }),
+            ],
+          });
         };
       function _(_) {
         const { image: _, onSelected: __webpack_require__, className: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
-        return _.createElement(
-          _._,
-          {
-            className: _,
-            onGamepadFocus: () => _(!0),
-            onGamepadBlur: () => _(!1),
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-            onActivate: () => __webpack_require__(_),
-          },
-          _.createElement("img", {
+        return (0, _.jsx)(_._, {
+          className: _,
+          onGamepadFocus: () => _(!0),
+          onGamepadBlur: () => _(!1),
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
+          onActivate: () => __webpack_require__(_),
+          children: (0, _.jsx)("img", {
             src: _ || _ || _ ? _(_) : _(_),
             loading: "lazy",
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
@@ -3024,110 +2887,98 @@
             fnOnCollapse: _,
           } = this.props;
           if (_)
-            return _.createElement(
-              "div",
-              {
-                className: _.AvatarCollection,
-              },
-              _.createElement(
-                _,
-                null,
-                (0, _._)("#Profile_Edit_Avatar_YourAvatars"),
-              ),
-              _.createElement(_, {
-                rgAnimatedAvatars: this.m_rgAvatars,
-                OGGAvatars: __webpack_require__,
-                AvatarHistory: _,
-                onSelectAnimatedAvatar: this.SelectAnimatedAvatar,
-                onSelectOGGAvatar: this.SelectOGGAvatar,
-                onSelectPreviousAvatar: this.SelectPreviousAvatar,
-              }),
-            );
+            return (0, _.jsxs)("div", {
+              className: _.AvatarCollection,
+              children: [
+                (0, _.jsx)(_, {
+                  children: (0, _._)("#Profile_Edit_Avatar_YourAvatars"),
+                }),
+                (0, _.jsx)(_, {
+                  rgAnimatedAvatars: this.m_rgAvatars,
+                  OGGAvatars: __webpack_require__,
+                  AvatarHistory: _,
+                  onSelectAnimatedAvatar: this.SelectAnimatedAvatar,
+                  onSelectOGGAvatar: this.SelectOGGAvatar,
+                  onSelectPreviousAvatar: this.SelectPreviousAvatar,
+                }),
+              ],
+            });
           {
             let _ = this.GetTopAvatars();
-            return _.createElement(
-              "div",
-              {
-                className: _.AvatarCollection,
-              },
-              _.createElement(
-                _,
-                null,
-                (0, _._)("#Profile_Edit_Avatar_YourAvatars"),
-              ),
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.AvatarCollection,
+              children: [
+                (0, _.jsx)(_, {
+                  children: (0, _._)("#Profile_Edit_Avatar_YourAvatars"),
+                }),
+                (0, _.jsx)("div", {
                   className: _.AvatarCollectionSingleRowWrapper,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     className: _.AvatarCollectionSingleRow,
                     "flow-children": "row",
-                  },
-                  _.map((_) =>
-                    "communityitemid" in _
-                      ? _.createElement(
-                          _.Fragment,
-                          {
-                            key: _.communityitemid,
-                          },
-                          _.createElement(_, {
-                            avatar: _,
-                            onSelected: this.SelectAnimatedAvatar,
-                            large: !0,
-                          }),
-                          _.createElement("div", {
-                            className: _.AvatarRowSpacer,
-                          }),
-                        )
-                      : "timestamp" in _
-                        ? _.createElement(
+                    children: _.map((_) =>
+                      "communityitemid" in _
+                        ? (0, _.jsxs)(
                             _.Fragment,
                             {
-                              key: _.avatar_hash,
+                              children: [
+                                (0, _.jsx)(_, {
+                                  avatar: _,
+                                  onSelected: this.SelectAnimatedAvatar,
+                                  large: !0,
+                                }),
+                                (0, _.jsx)("div", {
+                                  className: _.AvatarRowSpacer,
+                                }),
+                              ],
                             },
-                            _.createElement(_, {
-                              hash: _.avatar_hash,
-                              onSelected: this.SelectPreviousAvatar,
-                              large: !0,
-                            }),
-                            _.createElement("div", {
-                              className: _.AvatarRowSpacer,
-                            }),
+                            _.communityitemid,
                           )
-                        : _.createElement(
-                            _.Fragment,
-                            {
-                              key: _.avatar_hash,
-                            },
-                            _.createElement(_, {
-                              hash: _.avatar_hash,
-                              onSelected: this.SelectOGGAvatar,
-                              large: !0,
-                            }),
-                            _.createElement("div", {
-                              className: _.AvatarRowSpacer,
-                            }),
-                          ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                        : "timestamp" in _
+                          ? (0, _.jsxs)(
+                              _.Fragment,
+                              {
+                                children: [
+                                  (0, _.jsx)(_, {
+                                    hash: _.avatar_hash,
+                                    onSelected: this.SelectPreviousAvatar,
+                                    large: !0,
+                                  }),
+                                  (0, _.jsx)("div", {
+                                    className: _.AvatarRowSpacer,
+                                  }),
+                                ],
+                              },
+                              _.avatar_hash,
+                            )
+                          : (0, _.jsxs)(
+                              _.Fragment,
+                              {
+                                children: [
+                                  (0, _.jsx)(_, {
+                                    hash: _.avatar_hash,
+                                    onSelected: this.SelectOGGAvatar,
+                                    large: !0,
+                                  }),
+                                  (0, _.jsx)("div", {
+                                    className: _.AvatarRowSpacer,
+                                  }),
+                                ],
+                              },
+                              _.avatar_hash,
+                            ),
+                    ),
+                  }),
+                }),
+                (0, _.jsx)("div", {
                   className: _.ExpandButtonContainer,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     onClick: _,
-                  },
-                  (0, _._)("#Profile_Edit_Avatar_SeeAll"),
-                ),
-              ),
-            );
+                    children: (0, _._)("#Profile_Edit_Avatar_SeeAll"),
+                  }),
+                }),
+              ],
+            });
           }
         }
       };
@@ -3137,44 +2988,35 @@
         (_ = (0, _._)([_._], _));
       const _ = _,
         _ = ({ children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: _.AvatarCollectionHeader,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.AvatarCollectionName,
-              },
-              _,
-            ),
-          );
+          (0, _.jsx)("div", {
+            className: _.AvatarCollectionHeader,
+            children: (0, _.jsx)("div", {
+              className: _.AvatarCollectionName,
+              children: _,
+            }),
+          });
       function _(_) {
         const { avatar: _, onSelected: __webpack_require__, large: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           image: _,
           onSelected: __webpack_require__,
           className: (0, _._)(_.AvatarPreview, _.Animated, _ && _.Large),
         });
       }
       const _ = ({ hash: _, onSelected: _, large: __webpack_require__ }) =>
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.AvatarPreview,
-                _.Static,
-                __webpack_require__ && _.Large,
-              ),
-              onClick: () => _(_),
-              onActivate: () => _(_),
-            },
-            _.createElement("img", {
+          (0, _.jsx)(_._, {
+            className: (0, _._)(
+              _.AvatarPreview,
+              _.Static,
+              __webpack_require__ && _.Large,
+            ),
+            onClick: () => _(_),
+            onActivate: () => _(_),
+            children: (0, _.jsx)("img", {
               src: (0, _._)(_, __webpack_require__ ? "full" : "medium"),
               loading: "lazy",
             }),
-          ),
+          }),
         _ = (0, _._)(
           ({
             rgAnimatedAvatars: _,
@@ -3186,93 +3028,86 @@
           }) => {
             let _ = __webpack_require__.GetAvatarHistory(),
               _ = [..._.GetRecentGameAvatars(), ..._.GetOwnedGameAvatars()];
-            return _.createElement(
-              _._,
-              {
-                "flow-children": "column",
-              },
-              _.createElement(_, {
-                rgAnimatedAvatars: _,
-                onSelected: _,
-              }),
-              _.createElement(_, {
-                rgAvatars: _,
-                onSelected: _,
-              }),
-              _.createElement(_, {
-                OGGAvatars: _,
-                rgAvatars: _,
-                onSelected: _,
-                title: (0, _._)("#Profile_Edit_YourGameAvatars"),
-              }),
-              _.length < 20 &&
-                _.createElement(_, {
-                  OGGAvatars: _,
-                  rgAvatars: _.GetOtherGameAvatars(),
+            return (0, _.jsxs)(_._, {
+              "flow-children": "column",
+              children: [
+                (0, _.jsx)(_, {
+                  rgAnimatedAvatars: _,
                   onSelected: _,
-                  title: (0, _._)("#Profile_Edit_MoreGameAvatars"),
                 }),
-            );
+                (0, _.jsx)(_, {
+                  rgAvatars: _,
+                  onSelected: _,
+                }),
+                (0, _.jsx)(_, {
+                  OGGAvatars: _,
+                  rgAvatars: _,
+                  onSelected: _,
+                  title: (0, _._)("#Profile_Edit_YourGameAvatars"),
+                }),
+                _.length < 20 &&
+                  (0, _.jsx)(_, {
+                    OGGAvatars: _,
+                    rgAvatars: _.GetOtherGameAvatars(),
+                    onSelected: _,
+                    title: (0, _._)("#Profile_Edit_MoreGameAvatars"),
+                  }),
+              ],
+            });
           },
         ),
         _ = ({ rgAnimatedAvatars: _, onSelected: _ }) =>
           _.length
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.CollectionGroup, _.Primary),
-                },
-                _.createElement(
-                  "div",
-                  {
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(_.CollectionGroup, _.Primary),
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.Title,
-                  },
-                  (0, _._)("#Profile_Edit_PurchasedFromRewardsStore"),
-                ),
-                _.createElement(
-                  _._,
-                  {
+                    children: (0, _._)(
+                      "#Profile_Edit_PurchasedFromRewardsStore",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
                     className: _.CollectionGroupAvatars,
                     "flow-children": "grid",
-                  },
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: _.communityitemid,
-                      avatar: _,
-                      onSelected: _,
-                    }),
-                  ),
-                ),
-              )
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          avatar: _,
+                          onSelected: _,
+                        },
+                        _.communityitemid,
+                      ),
+                    ),
+                  }),
+                ],
+              })
             : null,
         _ = (0, _._)(({ rgAvatars: _, onSelected: _ }) =>
           _.length
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.CollectionGroup, _.Primary),
-                },
-                _.createElement(
-                  "div",
-                  {
+            ? (0, _.jsxs)("div", {
+                className: (0, _._)(_.CollectionGroup, _.Primary),
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.Title,
-                  },
-                  (0, _._)("#Profile_Edit_YourPreviousAvatars"),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: (0, _._)("#Profile_Edit_YourPreviousAvatars"),
+                  }),
+                  (0, _.jsx)("div", {
                     className: _.CollectionGroupAvatars,
-                  },
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: _.avatar_hash,
-                      hash: _.avatar_hash,
-                      onSelected: _,
-                    }),
-                  ),
-                ),
-              )
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          hash: _.avatar_hash,
+                          onSelected: _,
+                        },
+                        _.avatar_hash,
+                      ),
+                    ),
+                  }),
+                ],
+              })
             : null,
         );
       function _(_) {
@@ -3283,27 +3118,26 @@
           title: _,
         } = _;
         return _.length
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.CollectionGroup, _.Primary),
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_.CollectionGroup, _.Primary),
+              children: [
+                (0, _.jsx)("div", {
                   className: _.Title,
-                },
-                _,
-              ),
-              _.map((_) =>
-                _.createElement(_, {
-                  OGGAvatars: __webpack_require__,
-                  key: _.appid,
-                  game: _,
-                  onSelected: _,
+                  children: _,
                 }),
-              ),
-            )
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      OGGAvatars: __webpack_require__,
+                      game: _,
+                      onSelected: _,
+                    },
+                    _.appid,
+                  ),
+                ),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -3330,50 +3164,44 @@
               ? _.avatars
               : _.avatars.slice(0, 5);
         const _ = _.avatar_count - _.length;
-        return _.createElement(
-          "div",
-          {
-            className: _.CollectionGroup,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.CollectionGroup,
+          children: [
+            (0, _.jsx)("div", {
               className: _.Title,
-            },
-            _.name,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: _.name,
+            }),
+            (0, _.jsxs)(_._, {
               className: _.CollectionGroupAvatars,
               "flow-children": "grid",
-            },
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.avatar_hash,
-                hash: _.avatar_hash,
-                onSelected: __webpack_require__,
-              }),
-            ),
-            (!_ || _) &&
-              _ > 0 &&
-              _.createElement(
-                _._,
-                {
-                  type: "button",
-                  className: (0, _._)(
-                    _.AvatarPreview,
-                    _.ExpandAvatarsButton,
-                    _.Static,
+              children: [
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      hash: _.avatar_hash,
+                      onSelected: __webpack_require__,
+                    },
+                    _.avatar_hash,
                   ),
-                  disabled: _,
-                  onClick: _ ? void 0 : () => _(!0),
-                },
-                "+",
-                (0, _._)(_),
-              ),
-          ),
-        );
+                ),
+                (!_ || _) &&
+                  _ > 0 &&
+                  (0, _.jsxs)(_._, {
+                    type: "button",
+                    className: (0, _._)(
+                      _.AvatarPreview,
+                      _.ExpandAvatarsButton,
+                      _.Static,
+                    ),
+                    disabled: _,
+                    onClick: _ ? void 0 : () => _(!0),
+                    children: ["+", (0, _._)(_)],
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       class _ extends _.Component {
         constructor() {
@@ -3402,105 +3230,87 @@
             fnOnCollapse: _,
           } = this.props;
           if (_)
-            return _.createElement(
-              "div",
-              {
-                className: _.AvatarCollection,
-              },
-              _.createElement(
-                _,
-                null,
-                (0, _._)("#Profile_Edit_Avatar_YourFrames"),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
-                  rgFrames: this.m_rgFrames,
-                  ProfileItems: _,
-                  onSelected: this.SelectFrame,
+            return (0, _.jsxs)("div", {
+              className: _.AvatarCollection,
+              children: [
+                (0, _.jsx)(_, {
+                  children: (0, _._)("#Profile_Edit_Avatar_YourFrames"),
                 }),
-              ),
-            );
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_, {
+                    rgFrames: this.m_rgFrames,
+                    ProfileItems: _,
+                    onSelected: this.SelectFrame,
+                  }),
+                }),
+              ],
+            });
           {
             let _ = this.m_rgFrames.slice(0, 2),
               _ = this.m_rgFrames.length > 2;
-            return _.createElement(
-              _._,
-              {
-                className: _.AvatarCollection,
-                "flow-children": "column",
-              },
-              _.createElement(
-                _,
-                null,
-                (0, _._)("#Profile_Edit_Avatar_YourFrames"),
-              ),
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)(_._, {
+              className: _.AvatarCollection,
+              "flow-children": "column",
+              children: [
+                (0, _.jsx)(_, {
+                  children: (0, _._)("#Profile_Edit_Avatar_YourFrames"),
+                }),
+                (0, _.jsx)("div", {
                   className: _.AvatarCollectionSingleRowWrapper,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsxs)(_._, {
                     className: (0, _._)(
                       _.AvatarCollectionSingleRow,
                       _.ThreeColumns,
                     ),
                     "flow-children": "row",
-                  },
-                  _.createElement(_, {
-                    onSelected: this.SelectFrame,
-                    large: !0,
-                    ProfileItems: _,
+                    children: [
+                      (0, _.jsx)(_, {
+                        onSelected: this.SelectFrame,
+                        large: !0,
+                        ProfileItems: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.AvatarRowSpacer,
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: _.map((_) =>
+                          (0, _.jsxs)(
+                            _.Fragment,
+                            {
+                              children: [
+                                (0, _.jsx)(_, {
+                                  frame: _,
+                                  onSelected: this.SelectFrame,
+                                  large: !0,
+                                }),
+                                (0, _.jsx)("div", {
+                                  className: _.AvatarRowSpacer,
+                                }),
+                              ],
+                            },
+                            _.communityitemid,
+                          ),
+                        ),
+                      }),
+                    ],
                   }),
-                  _.createElement("div", {
-                    className: _.AvatarRowSpacer,
-                  }),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: _.communityitemid,
-                        },
-                        _.createElement(_, {
-                          frame: _,
-                          onSelected: this.SelectFrame,
-                          large: !0,
-                        }),
-                        _.createElement("div", {
-                          className: _.AvatarRowSpacer,
-                        }),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _.ExpandButtonContainer,
-                  },
-                  _.createElement(
-                    _._,
-                    {
+                    children: (0, _.jsx)(_._, {
                       onClick: __webpack_require__,
-                    },
-                    (0, _._)("#Profile_Edit_Avatar_SeeAll"),
-                  ),
-                ),
-            );
+                      children: (0, _._)("#Profile_Edit_Avatar_SeeAll"),
+                    }),
+                  }),
+              ],
+            });
           }
         }
       }
       function _(_) {
         const { frame: _, onSelected: __webpack_require__, large: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           image: _,
           onSelected: __webpack_require__,
           className: (0, _._)(_.FramePreview, _ && _.Large),
@@ -3511,39 +3321,30 @@
           ({ onSelected: _, ProfileItems: _, large: __webpack_require__ }) => {
             let _ = _.GetProfileModifierAvatarFrameURL();
             return _
-              ? _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.FramePreview,
-                      __webpack_require__ && _.Large,
-                    ),
-                    onActivate: () => _(null),
-                  },
-                  _.createElement("img", {
+              ? (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _.FramePreview,
+                    __webpack_require__ && _.Large,
+                  ),
+                  onActivate: () => _(null),
+                  children: (0, _.jsx)("img", {
                     src: _,
                   }),
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.FramePreview,
-                      __webpack_require__ && _.Large,
-                      _.DefaultAvatarFramePreview,
-                    ),
-                    onActivate: () => _(null),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.DefaultAvatarFrame,
-                    },
-                    _.createElement("div", {
+                })
+              : (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _.FramePreview,
+                    __webpack_require__ && _.Large,
+                    _.DefaultAvatarFramePreview,
+                  ),
+                  onActivate: () => _(null),
+                  children: (0, _.jsx)("div", {
+                    className: _.DefaultAvatarFrame,
+                    children: (0, _.jsx)("div", {
                       className: _.DefaultAvatarFrameContent,
                     }),
-                  ),
-                );
+                  }),
+                });
           },
         ),
         _ = ({
@@ -3551,37 +3352,35 @@
           ProfileItems: _,
           onSelected: __webpack_require__,
         }) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.CollectionGroup, _.Primary),
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.CollectionGroup, _.Primary),
+            children: [
+              (0, _.jsx)("div", {
                 className: _.Title,
-              },
-              (0, _._)("#Profile_Edit_PurchasedFromRewardsStore"),
-            ),
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#Profile_Edit_PurchasedFromRewardsStore"),
+              }),
+              (0, _.jsxs)(_._, {
                 className: _.CollectionGroupAvatars,
                 "flow-children": "grid",
-              },
-              _.createElement(_, {
-                onSelected: __webpack_require__,
-                ProfileItems: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    onSelected: __webpack_require__,
+                    ProfileItems: _,
+                  }),
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        frame: _,
+                        onSelected: __webpack_require__,
+                      },
+                      _.communityitemid,
+                    ),
+                  ),
+                ],
               }),
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _.communityitemid,
-                  frame: _,
-                  onSelected: __webpack_require__,
-                }),
-              ),
-            ),
-          ),
+            ],
+          }),
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -3591,7 +3390,7 @@
         _ = !0;
       let _ = class extends _.Component {
         render() {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ...this.props,
           });
         }
@@ -3627,7 +3426,7 @@
         render() {
           const { Profile: _, ProfileItems: _ } = this.props;
           return _.createPortal(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               Profile: _,
               ProfileItems: _,
             }),
@@ -3766,102 +3565,93 @@
               AvatarHistory: _,
               fnOnCollapse: this.Reset,
             };
-          return _.createElement(
-            _._,
-            {
-              className: _.AvatarDialog,
-            },
-            _.createElement(_._, {
-              when: _.BIsAvatarUncomitted(),
-              message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
-            }),
-            _.createElement(
-              _._,
-              {
-                "flow-children": "column",
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.AvatarDialogBody,
-                  "flow-children": "column",
-                },
-                _.createElement(_._, null, (0, _._)("#Profile_FieldAvatar")),
-                _.createElement(
-                  _._,
-                  null,
-                  (0, _._)("#Profile_Edit_Avatar_Instructions"),
-                ),
-                _.createElement(_, {
-                  strHTMLError: this.state.bHTMLError
-                    ? (0, _._)("#ConnectionTrouble_FailedToConnect")
-                    : "",
-                }),
-                _.createElement(
-                  _,
-                  {
-                    Profile: _,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AvatarDialogTop,
-                    },
-                    _.createElement(_, {
-                      Profile: _,
-                      ProfileItems: _,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AvatarDialogUploadArea,
-                      },
-                      _.createElement(_, {
-                        OnAvatarSelected: this.OnUploadSelected,
-                        disabled: this.state.bSaving,
-                        strError: this.state.strUploadError,
-                      }),
-                      _.createElement(
-                        "div",
-                        null,
-                        (0, _._)("#Profile_Edit_Avatar_UploadInstructions"),
-                      ),
-                    ),
-                  ),
-                  _ &&
-                    _.createElement(
-                      _.Suspense,
-                      {
-                        fallback: null,
-                      },
-                      _.createElement(_, {
-                        imageData: _,
-                        ref: this.cropRef,
-                      }),
-                    ),
-                  !_ &&
-                    !_ &&
-                    _.createElement(_, {
-                      ..._,
-                      bExpanded: _,
-                      fnOnExpand: this.OnShowAllAvatarsClicked,
-                    }),
-                  !_ &&
-                    !_ &&
-                    _.createElement(_, {
-                      ..._,
-                      bExpanded: _,
-                      fnOnExpand: this.OnShowAllFramesClicked,
-                    }),
-                ),
-              ),
-              _.createElement(_, {
-                onSave: this.OnSave,
-                onCancel: this.RevertChanges,
-                disabled: _ || _.BIsAvatarChangeOnCooldown(),
+          return (0, _.jsxs)(_._, {
+            className: _.AvatarDialog,
+            children: [
+              (0, _.jsx)(_._, {
+                when: _.BIsAvatarUncomitted(),
+                message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
               }),
-            ),
-          );
+              (0, _.jsxs)(_._, {
+                "flow-children": "column",
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: _.AvatarDialogBody,
+                    "flow-children": "column",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        children: (0, _._)("#Profile_FieldAvatar"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        children: (0, _._)("#Profile_Edit_Avatar_Instructions"),
+                      }),
+                      (0, _.jsx)(_, {
+                        strHTMLError: this.state.bHTMLError
+                          ? (0, _._)("#ConnectionTrouble_FailedToConnect")
+                          : "",
+                      }),
+                      (0, _.jsxs)(_, {
+                        Profile: _,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.AvatarDialogTop,
+                            children: [
+                              (0, _.jsx)(_, {
+                                Profile: _,
+                                ProfileItems: _,
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _.AvatarDialogUploadArea,
+                                children: [
+                                  (0, _.jsx)(_, {
+                                    OnAvatarSelected: this.OnUploadSelected,
+                                    disabled: this.state.bSaving,
+                                    strError: this.state.strUploadError,
+                                  }),
+                                  (0, _.jsx)("div", {
+                                    children: (0, _._)(
+                                      "#Profile_Edit_Avatar_UploadInstructions",
+                                    ),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                          _ &&
+                            (0, _.jsx)(_.Suspense, {
+                              fallback: null,
+                              children: (0, _.jsx)(_, {
+                                imageData: _,
+                                ref: this.cropRef,
+                              }),
+                            }),
+                          !_ &&
+                            !_ &&
+                            (0, _.jsx)(_, {
+                              ..._,
+                              bExpanded: _,
+                              fnOnExpand: this.OnShowAllAvatarsClicked,
+                            }),
+                          !_ &&
+                            !_ &&
+                            (0, _.jsx)(_, {
+                              ..._,
+                              bExpanded: _,
+                              fnOnExpand: this.OnShowAllFramesClicked,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    onSave: this.OnSave,
+                    onCancel: this.RevertChanges,
+                    disabled: _ || _.BIsAvatarChangeOnCooldown(),
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnUploadSelected", null),
@@ -3874,19 +3664,18 @@
         (0, _._)([_._], _.prototype, "CommitChanges", null);
       const _ = ({ Profile: _, children: _ }) =>
         _.BIsAvatarChangeOnCooldown()
-          ? _.createElement(
-              _,
-              {
-                rtCooldownEnd: _.GetAvatarChangeCooldownEndRTime(),
-                strCooldownLabel: (0, _._)("#Profile_AvatarUploadingBanned"),
-                strCooldownDescHTML: (0, _._)(
-                  "#Profile_AvatarUploadingBanned_Desc",
-                  _.k_strAvatarCooldownSupportURL,
-                ),
-              },
-              _,
-            )
-          : _.createElement(_.Fragment, null, _);
+          ? (0, _.jsx)(_, {
+              rtCooldownEnd: _.GetAvatarChangeCooldownEndRTime(),
+              strCooldownLabel: (0, _._)("#Profile_AvatarUploadingBanned"),
+              strCooldownDescHTML: (0, _._)(
+                "#Profile_AvatarUploadingBanned_Desc",
+                _.k_strAvatarCooldownSupportURL,
+              ),
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
       function _(_, _, _, _) {
         return _
           ? (null == _ ? void 0 : _.disableAnimation)
@@ -3903,33 +3692,32 @@
           let _ = null;
           return (
             _ ? (_ = _.GetProfileModifierAvatarFrameURL()) : _ && (_ = _(_)),
-            _.createElement(
-              "div",
-              {
-                className: _.AvatarRow,
-              },
-              _.createElement(_, {
-                sizeClassName: _.Large,
-                sizePx: 184,
-                avatarURL: _(_, _, "full"),
-                frameURL: _,
-                isGolden: !!_,
-              }),
-              _.createElement(_, {
-                sizeClassName: _.Medium,
-                sizePx: 64,
-                avatarURL: _(_, _, "medium"),
-                frameURL: _,
-                isGolden: !!_,
-              }),
-              _.createElement(_, {
-                sizeClassName: _.Small,
-                sizePx: 32,
-                avatarURL: _(_, _, "small"),
-                frameURL: _,
-                isGolden: !!_,
-              }),
-            )
+            (0, _.jsxs)("div", {
+              className: _.AvatarRow,
+              children: [
+                (0, _.jsx)(_, {
+                  sizeClassName: _.Large,
+                  sizePx: 184,
+                  avatarURL: _(_, _, "full"),
+                  frameURL: _,
+                  isGolden: !!_,
+                }),
+                (0, _.jsx)(_, {
+                  sizeClassName: _.Medium,
+                  sizePx: 64,
+                  avatarURL: _(_, _, "medium"),
+                  frameURL: _,
+                  isGolden: !!_,
+                }),
+                (0, _.jsx)(_, {
+                  sizeClassName: _.Small,
+                  sizePx: 32,
+                  avatarURL: _(_, _, "small"),
+                  frameURL: _,
+                  isGolden: !!_,
+                }),
+              ],
+            })
           );
         }),
         _ = ({
@@ -3939,46 +3727,37 @@
           frameURL: _,
           isGolden: _,
         }) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Avatar, _),
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.Avatar, _),
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.AvatarImgCtn,
-              },
-              _.createElement("div", {
-                className: _.AvatarCropPreview,
-              }),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.AvatarFrame,
-                  },
-                  _.createElement("img", {
-                    src: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.AvatarCropPreview,
                   }),
-                ),
-              _ &&
-                _.createElement("div", {
-                  className: "goldenAvatarOverlay",
-                }),
-              _.createElement("img", {
-                src: __webpack_require__,
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.AvatarFrame,
+                      children: (0, _.jsx)("img", {
+                        src: _,
+                      }),
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: "goldenAvatarOverlay",
+                    }),
+                  (0, _.jsx)("img", {
+                    src: __webpack_require__,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.size,
-              },
-              _,
-              "px",
-            ),
-          );
+                children: [_, "px"],
+              }),
+            ],
+          });
       function _(_) {
         const {
             OnAvatarSelected: _,
@@ -3994,35 +3773,29 @@
               _[0].type.startsWith("image/") &&
               (_(_[0]), (_.current.value = null));
           }, [_]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("input", {
-            type: "file",
-            accept: "image/*",
-            style: {
-              display: "none",
-            },
-            ref: _,
-            onInput: _,
-          }),
-          !!_ &&
-            _.createElement(
-              "div",
-              {
-                className: _.Error,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("input", {
+              type: "file",
+              accept: "image/*",
+              style: {
+                display: "none",
               },
-              _,
-            ),
-          _.createElement(
-            _._,
-            {
+              ref: _,
+              onInput: _,
+            }),
+            !!_ &&
+              (0, _.jsx)("div", {
+                className: _.Error,
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
               onClick: () => _.current.click(),
               disabled: __webpack_require__,
-            },
-            (0, _._)("#Profile_UploadAvatar"),
-          ),
-        );
+              children: (0, _._)("#Profile_UploadAvatar"),
+            }),
+          ],
+        });
       }
       const _ = (0, _._)(({ Profile: _, ProfileItems: _ }) => {
         const _ = _(
@@ -4036,31 +3809,24 @@
           !_ && _.GetCommittedEquippedProfileModifier()
             ? (_ = _.GetProfileModifierAvatarFrameURL())
             : _ && (_ = _(_)),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Avatar, _.Medium),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.AvatarImgCtn,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+          (0, _.jsx)("div", {
+            className: (0, _._)(_.Avatar, _.Medium),
+            children: (0, _.jsxs)("div", {
+              className: _.AvatarImgCtn,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _.AvatarFrame,
-                  },
-                  _.createElement("img", {
-                    src: _,
+                    children: (0, _.jsx)("img", {
+                      src: _,
+                    }),
                   }),
-                ),
-              _.createElement("img", {
-                src: _,
-              }),
-            ),
-          )
+                (0, _.jsx)("img", {
+                  src: _,
+                }),
+              ],
+            }),
+          })
         );
       });
       var _ = __webpack_require__("chunkid"),
@@ -4070,19 +3836,19 @@
         const {
           Profile: { Location: _ },
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            LocationStore: _,
-          }),
-          _.createElement(_, {
-            LocationStore: _,
-          }),
-          _.createElement(_, {
-            LocationStore: _,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              LocationStore: _,
+            }),
+            (0, _.jsx)(_, {
+              LocationStore: _,
+            }),
+            (0, _.jsx)(_, {
+              LocationStore: _,
+            }),
+          ],
+        });
       }
       async function _(_, _) {
         const _ = await _();
@@ -4151,28 +3917,28 @@
           },
           [_],
         );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("input", {
-            type: "hidden",
-            name: "country",
-            value: __webpack_require__ || "",
-          }),
-          _.createElement(_._, {
-            contextMenuPositionOptions: {
-              bDisablePopTop: !0,
-            },
-            label: (0, _._)("#Profile_FieldCountry"),
-            rgOptions: _.data,
-            selectedOption: null == _ ? void 0 : _.data,
-            controlled: !0,
-            disabled: _.isFetching,
-            onChange: _,
-            strDefaultLabel: _ || (0, _._)("#Profile_LocationDoNotDisplay"),
-            tooltip: _("#Profile_DescriptionLocation"),
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("input", {
+              type: "hidden",
+              name: "country",
+              value: __webpack_require__ || "",
+            }),
+            (0, _.jsx)(_._, {
+              contextMenuPositionOptions: {
+                bDisablePopTop: !0,
+              },
+              label: (0, _._)("#Profile_FieldCountry"),
+              rgOptions: _.data,
+              selectedOption: null == _ ? void 0 : _.data,
+              controlled: !0,
+              disabled: _.isFetching,
+              onChange: _,
+              strDefaultLabel: _ || (0, _._)("#Profile_LocationDoNotDisplay"),
+              tooltip: _("#Profile_DescriptionLocation"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { LocationStore: _ } = _,
@@ -4232,29 +3998,29 @@
             [_],
           ),
           _ = _ && !_.isError;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("input", {
-            type: "hidden",
-            name: "state",
-            value: __webpack_require__ || "",
-          }),
-          _ &&
-            _.createElement(_._, {
-              contextMenuPositionOptions: {
-                bDisablePopTop: !0,
-              },
-              label: (0, _._)("#Profile_FieldState"),
-              rgOptions: _.data,
-              selectedOption: null == _ ? void 0 : _.data,
-              controlled: !0,
-              disabled: _.isFetching,
-              onChange: _,
-              strDefaultLabel: _ || (0, _._)("#Profile_LocationDoNotDisplay"),
-              tooltip: _("#Profile_DescriptionLocation"),
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("input", {
+              type: "hidden",
+              name: "state",
+              value: __webpack_require__ || "",
             }),
-        );
+            _ &&
+              (0, _.jsx)(_._, {
+                contextMenuPositionOptions: {
+                  bDisablePopTop: !0,
+                },
+                label: (0, _._)("#Profile_FieldState"),
+                rgOptions: _.data,
+                selectedOption: null == _ ? void 0 : _.data,
+                controlled: !0,
+                disabled: _.isFetching,
+                onChange: _,
+                strDefaultLabel: _ || (0, _._)("#Profile_LocationDoNotDisplay"),
+                tooltip: _("#Profile_DescriptionLocation"),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { LocationStore: _ } = _,
@@ -4316,29 +4082,29 @@
             [_],
           ),
           _ = _ && !_.isError;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("input", {
-            type: "hidden",
-            name: "city",
-            value: __webpack_require__ || "",
-          }),
-          _ &&
-            _.createElement(_._, {
-              contextMenuPositionOptions: {
-                bDisablePopTop: !0,
-              },
-              label: (0, _._)("#Profile_FieldCity"),
-              rgOptions: _.data,
-              selectedOption: null == _ ? void 0 : _.data,
-              controlled: !0,
-              disabled: _.isFetching,
-              onChange: _,
-              strDefaultLabel: _ || (0, _._)("#Profile_LocationDoNotDisplay"),
-              tooltip: _("#Profile_DescriptionLocation"),
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("input", {
+              type: "hidden",
+              name: "city",
+              value: __webpack_require__ || "",
             }),
-        );
+            _ &&
+              (0, _.jsx)(_._, {
+                contextMenuPositionOptions: {
+                  bDisablePopTop: !0,
+                },
+                label: (0, _._)("#Profile_FieldCity"),
+                rgOptions: _.data,
+                selectedOption: null == _ ? void 0 : _.data,
+                controlled: !0,
+                disabled: _.isFetching,
+                onChange: _,
+                strDefaultLabel: _ || (0, _._)("#Profile_LocationDoNotDisplay"),
+                tooltip: _("#Profile_DescriptionLocation"),
+              }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4386,59 +4152,51 @@
         render() {
           const { EmoticonStore: _, Profile: _ } = this.props,
             { strSummary: __webpack_require__ } = this.state;
-          return _.createElement(
-            _,
-            {
-              Profile: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.summaryContainer,
-              },
-              _.createElement(_._, {
-                nMinHeight: 40,
-                name: "summary",
-                rows: 3,
-                cols: 40,
-                onChange: this.OnChange,
-                className: _.summaryTextArea,
-                value: __webpack_require__,
-                ref: this.m_refTextInput,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.formattingButtons,
-                },
-                _.createElement(_._, {
-                  className: _.formattingButton,
-                  disabled: !1,
-                  OnEmoticonSelected: this.InsertEmoticon,
-                  emoticonStore: _,
+          return (0, _.jsx)(_, {
+            Profile: _,
+            children: (0, _.jsxs)("div", {
+              className: _.summaryContainer,
+              children: [
+                (0, _.jsx)(_._, {
+                  nMinHeight: 40,
+                  name: "summary",
+                  rows: 3,
+                  cols: 40,
+                  onChange: this.OnChange,
+                  className: _.summaryTextArea,
+                  value: __webpack_require__,
+                  ref: this.m_refTextInput,
                 }),
-              ),
-            ),
-          );
+                (0, _.jsx)("div", {
+                  className: _.formattingButtons,
+                  children: (0, _.jsx)(_._, {
+                    className: _.formattingButton,
+                    disabled: !1,
+                    OnEmoticonSelected: this.InsertEmoticon,
+                    emoticonStore: _,
+                  }),
+                }),
+              ],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnChange", null),
         (0, _._)([_._], _.prototype, "InsertEmoticon", null);
       const _ = ({ Profile: _, children: _ }) =>
         _.BIsProfileSummaryChangeOnCooldown()
-          ? _.createElement(
-              _,
-              {
-                rtCooldownEnd: _.GetProfileSummaryCooldownEndRTime(),
-                strCooldownLabel: (0, _._)("#Profile_ProfileSummaryCooldown"),
-                strCooldownDescHTML: (0, _._)(
-                  "#Profile_ProfileSummaryCooldown_Desc",
-                  _.k_strProfileSummaryCooldownSupportURL,
-                ),
-              },
-              _,
-            )
-          : _.createElement(_.Fragment, null, _);
+          ? (0, _.jsx)(_, {
+              rtCooldownEnd: _.GetProfileSummaryCooldownEndRTime(),
+              strCooldownLabel: (0, _._)("#Profile_ProfileSummaryCooldown"),
+              strCooldownDescHTML: (0, _._)(
+                "#Profile_ProfileSummaryCooldown_Desc",
+                _.k_strProfileSummaryCooldownSupportURL,
+              ),
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
       var _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -4482,135 +4240,122 @@
         render() {
           const { Profile: _, EmoticonStore: _ } = this.props,
             { bSaving: __webpack_require__, strHTMLError: _ } = this.state;
-          return _.createElement(
-            _._,
-            {
-              "flow-children": "column",
-              navEntryPreferPosition: _._.MAINTAIN_Y,
-            },
-            _.createElement(
-              "form",
-              {
-                method: "POST",
-                action: `${_.ProfileURL}edit/info`,
-                onSubmit: this.OnSubmit,
-              },
-              _.createElement("input", {
-                type: "hidden",
-                name: "sessionID",
-                value: _._.SESSIONID,
-              }),
-              _.createElement("input", {
-                type: "hidden",
-                name: "type",
-                value: "profileSave",
-              }),
-              _.createElement("input", {
-                type: "hidden",
-                name: "weblink_1_title",
-                value: "",
-              }),
-              _.createElement("input", {
-                type: "hidden",
-                name: "weblink_1_url",
-                value: "",
-              }),
-              _.createElement("input", {
-                type: "hidden",
-                name: "weblink_2_title",
-                value: "",
-              }),
-              _.createElement("input", {
-                type: "hidden",
-                name: "weblink_2_url",
-                value: "",
-              }),
-              _.createElement("input", {
-                type: "hidden",
-                name: "weblink_3_title",
-                value: "",
-              }),
-              _.createElement("input", {
-                type: "hidden",
-                name: "weblink_3_url",
-                value: "",
-              }),
-              _.createElement(_._, null, (0, _._)("#Profile_About")),
-              _.createElement(_._, null, _.createElement(_, null)),
-              _.createElement(_, {
-                strHTMLError: _,
-              }),
-              _.createElement(
-                _,
-                {
+          return (0, _.jsx)(_._, {
+            "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
+            children: (0, _.jsxs)("form", {
+              method: "POST",
+              action: `${_.ProfileURL}edit/info`,
+              onSubmit: this.OnSubmit,
+              children: [
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "sessionID",
+                  value: _._.SESSIONID,
+                }),
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "type",
+                  value: "profileSave",
+                }),
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "weblink_1_title",
+                  value: "",
+                }),
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "weblink_1_url",
+                  value: "",
+                }),
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "weblink_2_title",
+                  value: "",
+                }),
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "weblink_2_url",
+                  value: "",
+                }),
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "weblink_3_title",
+                  value: "",
+                }),
+                (0, _.jsx)("input", {
+                  type: "hidden",
+                  name: "weblink_3_url",
+                  value: "",
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#Profile_About"),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_, {}),
+                }),
+                (0, _.jsx)(_, {
+                  strHTMLError: _,
+                }),
+                (0, _.jsxs)(_, {
                   title: (0, _._)("#Profile_Edit_BasicInfo"),
-                },
-                _.createElement(_, {
-                  Profile: _,
+                  children: [
+                    (0, _.jsx)(_, {
+                      Profile: _,
+                    }),
+                    !(0, _._)(_._.EREALM) &&
+                      (0, _.jsx)(_, {
+                        Profile: _,
+                      }),
+                  ],
                 }),
                 !(0, _._)(_._.EREALM) &&
-                  _.createElement(_, {
-                    Profile: _,
-                  }),
-              ),
-              !(0, _._)(_._.EREALM) &&
-                _.createElement(
-                  _,
-                  {
+                  (0, _.jsx)(_, {
                     title: (0, _._)("#Profile_Edit_Location"),
-                  },
-                  _.createElement(_, {
-                    Profile: _,
+                    children: (0, _.jsx)(_, {
+                      Profile: _,
+                    }),
                   }),
-                ),
-              !(0, _._)(_._.EREALM) &&
-                _.createElement(
-                  _,
-                  {
+                !(0, _._)(_._.EREALM) &&
+                  (0, _.jsx)(_, {
                     title: (0, _._)("#Profile_FieldSummary"),
-                  },
-                  _.createElement(_, {
-                    Profile: _,
-                    EmoticonStore: _,
+                    children: (0, _.jsx)(_, {
+                      Profile: _,
+                      EmoticonStore: _,
+                    }),
                   }),
-                ),
-              !(0, _._)(_._.EREALM) &&
-                _.createElement(
-                  _,
-                  {
+                !(0, _._)(_._.EREALM) &&
+                  (0, _.jsx)(_, {
                     title: (0, _._)("#Profile_Edit_Preferences"),
-                  },
-                  _.createElement(_, {
-                    Profile: _,
+                    children: (0, _.jsx)(_, {
+                      Profile: _,
+                    }),
                   }),
-                ),
-              _.createElement(_, {
-                onCancel: this.RevertChanges,
-                disabled: __webpack_require__,
-              }),
-            ),
-          );
+                (0, _.jsx)(_, {
+                  onCancel: this.RevertChanges,
+                  disabled: __webpack_require__,
+                }),
+              ],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnSubmit", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null);
       class _ extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            {
-              style: {
-                display: "block",
-              },
+          return (0, _.jsx)("div", {
+            style: {
+              display: "block",
             },
-            _.createElement(_._, {
+            children: (0, _.jsx)(_._, {
               text: (0, _._)(
                 (0, _._)(_._.EREALM)
                   ? "#Profile_Edit_About_Instructions_SteamChina"
                   : "#Profile_Edit_About_Instructions",
               ),
             }),
-          );
+          });
         }
       }
       let _ = class extends _.Component {
@@ -4622,44 +4367,42 @@
         }
         render() {
           const { Profile: _ } = this.props;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_, {
                 Profile: _,
-              },
-              _.createElement(_._, {
-                label: (0, _._)("#Profile_FieldProfileName"),
-                disabled: _.BIsPersonaNameChangeOnCooldown(),
-                name: "personaName",
-                value: _.GetPersonaName(),
-                onChange: this.OnPersonaNameChange,
+                children: [
+                  (0, _.jsx)(_._, {
+                    label: (0, _._)("#Profile_FieldProfileName"),
+                    disabled: _.BIsPersonaNameChangeOnCooldown(),
+                    name: "personaName",
+                    value: _.GetPersonaName(),
+                    onChange: this.OnPersonaNameChange,
+                  }),
+                  (0, _.jsx)(_, {
+                    Profile: _,
+                  }),
+                ],
               }),
-              _.createElement(_, {
-                Profile: _,
-              }),
-            ),
-            !(0, _._)(_._.EREALM) &&
-              _.createElement(
-                _,
-                {
+              !(0, _._)(_._.EREALM) &&
+                (0, _.jsxs)(_, {
                   Profile: _,
-                },
-                _.createElement(_._, {
-                  label: (0, _._)("#Profile_FieldRealName"),
-                  disabled: _.BIsProfileSummaryChangeOnCooldown(),
-                  tooltip: _("#Profile_DescriptionRealName"),
-                  name: "real_name",
-                  value: _.GetRealName(),
-                  onChange: this.OnRealNameChange,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      label: (0, _._)("#Profile_FieldRealName"),
+                      disabled: _.BIsProfileSummaryChangeOnCooldown(),
+                      tooltip: _("#Profile_DescriptionRealName"),
+                      name: "real_name",
+                      value: _.GetRealName(),
+                      onChange: this.OnRealNameChange,
+                    }),
+                    (0, _.jsx)(_, {
+                      Profile: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  Profile: _,
-                }),
-              ),
-          );
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnPersonaNameChange", null),
@@ -4667,69 +4410,61 @@
         (_ = (0, _._)([_._], _));
       const _ = ({ Profile: _, children: _ }) =>
         _.BIsPersonaNameChangeOnCooldown()
-          ? _.createElement(
-              _,
-              {
-                rtCooldownEnd: _.GetPersonaNameCooldownEndRTime(),
-                strCooldownLabel: (0, _._)("#Profile_PersonaNameCooldown"),
-                strCooldownDescHTML: (0, _._)(
-                  "#Profile_PersonaNameCooldown_Desc",
-                  _.k_strPersonaNameCooldownSupportURL,
-                ),
-              },
-              _,
-            )
-          : _.createElement(_.Fragment, null, _);
+          ? (0, _.jsx)(_, {
+              rtCooldownEnd: _.GetPersonaNameCooldownEndRTime(),
+              strCooldownLabel: (0, _._)("#Profile_PersonaNameCooldown"),
+              strCooldownDescHTML: (0, _._)(
+                "#Profile_PersonaNameCooldown_Desc",
+                _.k_strPersonaNameCooldownSupportURL,
+              ),
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
       class _ extends _.Component {
         render() {
           const { Profile: _ } = this.props;
           return _.HasFilteredPersonaName()
-            ? _.createElement(
-                "div",
-                {
-                  className: _.FilteredNameWarning,
-                },
-                (0, _._)(
+            ? (0, _.jsx)("div", {
+                className: _.FilteredNameWarning,
+                children: (0, _._)(
                   "#Profile_PersonaNameFiltered",
-                  _.createElement("a", {
+                  (0, _.jsx)("a", {
                     href: _.k_strNameFilteredSupportURL,
                   }),
                 ),
-              )
+              })
             : null;
         }
       }
       const _ = ({ Profile: _, children: _ }) =>
         _.BIsProfileSummaryChangeOnCooldown()
-          ? _.createElement(
-              _,
-              {
-                rtCooldownEnd: _.GetProfileSummaryCooldownEndRTime(),
-                strCooldownLabel: (0, _._)("#Profile_RealNameCooldown"),
-                strCooldownDescHTML: (0, _._)(
-                  "#Profile_RealNameCooldown_Desc",
-                  _.k_strPersonaNameCooldownSupportURL,
-                ),
-              },
-              _,
-            )
-          : _.createElement(_.Fragment, null, _);
+          ? (0, _.jsx)(_, {
+              rtCooldownEnd: _.GetProfileSummaryCooldownEndRTime(),
+              strCooldownLabel: (0, _._)("#Profile_RealNameCooldown"),
+              strCooldownDescHTML: (0, _._)(
+                "#Profile_RealNameCooldown_Desc",
+                _.k_strPersonaNameCooldownSupportURL,
+              ),
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
       class _ extends _.Component {
         render() {
           const { Profile: _ } = this.props;
           return _.HasFilteredRealName()
-            ? _.createElement(
-                "div",
-                {
-                  className: _.FilteredNameWarning,
-                },
-                (0, _._)(
+            ? (0, _.jsx)("div", {
+                className: _.FilteredNameWarning,
+                children: (0, _._)(
                   "#Profile_RealNameFiltered",
-                  _.createElement("a", {
+                  (0, _.jsx)("a", {
                     href: _.k_strNameFilteredSupportURL,
                   }),
                 ),
-              )
+              })
             : null;
         }
       }
@@ -4739,10 +4474,8 @@
         }
         render() {
           const { Profile: _ } = this.props;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_._, {
+          return (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsx)(_._, {
               label: (0, _._)("#Profile_FieldCustomURL"),
               tooltip: _("#Profile_DescriptionCustomURL"),
               name: "customURL",
@@ -4753,7 +4486,7 @@
                 _.GetConstructedURL(),
               ),
             }),
-          );
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnProfileURLChange", null),
@@ -4785,20 +4518,20 @@
         render() {
           const { Profile: _ } = this.props,
             _ = _.GetPreferences();
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(_._, {
-              label: (0, _._)("#Profile_Preferences_HideProfileAwards"),
-              checked: _.hide_profile_awards,
-              onChange: this.OnProfileAwardsCheckboxChecked,
-            }),
-            _.createElement("input", {
-              type: "hidden",
-              name: "hide_profile_awards",
-              value: _.hide_profile_awards ? 1 : 0,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#Profile_Preferences_HideProfileAwards"),
+                checked: _.hide_profile_awards,
+                onChange: this.OnProfileAwardsCheckboxChecked,
+              }),
+              (0, _.jsx)("input", {
+                type: "hidden",
+                name: "hide_profile_awards",
+                value: _.hide_profile_awards ? 1 : 0,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnProfileAwardsCheckboxChecked", null),
@@ -4841,54 +4574,47 @@
           const { Badges: _ } = this.props,
             { bSaving: _, strHTMLError: __webpack_require__ } = this.state;
           let _ = _.FavoriteBadge;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                "flow-children": "column",
-              },
-              _.createElement(_._, {
-                when: _.BFavoriteBadgeUncomitted(),
-                message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
-              }),
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#Profile_Edit_FavoriteBadge"),
-              ),
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#Profile_Edit_Badge_Instructions"),
-              ),
-              _.createElement(_, {
-                strHTMLError: __webpack_require__,
-              }),
-              _ &&
-                _.createElement(_, {
-                  badge: _,
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              "flow-children": "column",
+              children: [
+                (0, _.jsx)(_._, {
+                  when: _.BFavoriteBadgeUncomitted(),
+                  message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
                 }),
-              !_ &&
-                _.createElement(_, {
-                  count: _.Badges.length,
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#Profile_Edit_FavoriteBadge"),
                 }),
-              _.createElement(_, {
-                getSearchFields: _,
-                getItems: async () => _.Badges,
-                onItemSelected: (_) => {
-                  _.SetFavoriteBadge(_);
-                },
-                ItemComponent: _,
-              }),
-              _.createElement(_, {
-                onSave: this.CommitFavoriteBadge,
-                onCancel: this.RevertFavoriteBadge,
-                disabled: _,
-              }),
-            ),
-          );
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#Profile_Edit_Badge_Instructions"),
+                }),
+                (0, _.jsx)(_, {
+                  strHTMLError: __webpack_require__,
+                }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    badge: _,
+                  }),
+                !_ &&
+                  (0, _.jsx)(_, {
+                    count: _.Badges.length,
+                  }),
+                (0, _.jsx)(_, {
+                  getSearchFields: _,
+                  getItems: async () => _.Badges,
+                  onItemSelected: (_) => {
+                    _.SetFavoriteBadge(_);
+                  },
+                  ItemComponent: _,
+                }),
+                (0, _.jsx)(_, {
+                  onSave: this.CommitFavoriteBadge,
+                  onCancel: this.RevertFavoriteBadge,
+                  disabled: _,
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "CommitFavoriteBadge", null),
@@ -4896,108 +4622,81 @@
         (_ = (0, _._)([_._], _));
       const _ = _,
         _ = ({ badge: _, children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Badge, _.FavoriteBadge),
-            },
-            _.createElement("img", {
-              className: _.BadgeImage,
-              src: _.GetIconURL(),
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.BadgeDetails,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.BadgeName,
-                },
-                _.GetName(),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.GameName,
-                },
-                _.GetGameName(),
-              ),
-            ),
-          ),
-        _ = ({ count: _, children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Badge, _.FavoriteBadge),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.BadgeImageNone,
-              },
-              _.createElement("img", {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.Badge, _.FavoriteBadge),
+            children: [
+              (0, _.jsx)("img", {
                 className: _.BadgeImage,
-                src: `${_._.COMMUNITY_CDN_URL}public/images/trans.gif`,
+                src: _.GetIconURL(),
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.BadgeDetails,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.BadgeName,
-                },
-                "None selected",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.GameName,
-                },
-                `${_} badges available`,
-              ),
-            ),
-          ),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.BadgeName,
+                    children: _.GetName(),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.GameName,
+                    children: _.GetGameName(),
+                  }),
+                ],
+              }),
+            ],
+          }),
+        _ = ({ count: _, children: _ }) =>
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.Badge, _.FavoriteBadge),
+            children: [
+              (0, _.jsx)("div", {
+                className: _.BadgeImageNone,
+                children: (0, _.jsx)("img", {
+                  className: _.BadgeImage,
+                  src: `${_._.COMMUNITY_CDN_URL}public/images/trans.gif`,
+                }),
+              }),
+              (0, _.jsxs)("div", {
+                className: _.BadgeDetails,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.BadgeName,
+                    children: "None selected",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.GameName,
+                    children: `${_} badges available`,
+                  }),
+                ],
+              }),
+            ],
+          }),
         _ = (_) => [_.GetName(), _.GetGameName()],
         _ = ({ Item: _, onSelected: _ }) => {
           const _ = _;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.Badge, _.BadgeOption),
-              onActivate: _,
-            },
-            _.createElement("img", {
-              className: _.BadgeImage,
-              src: __webpack_require__.GetIconURL(),
-              loading: "lazy",
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(_.Badge, _.BadgeOption),
+            onActivate: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _.BadgeImage,
+                src: __webpack_require__.GetIconURL(),
+                loading: "lazy",
+              }),
+              (0, _.jsxs)("div", {
                 className: _.BadgeDetails,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.BadgeName,
-                },
-                __webpack_require__.GetName(),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.GameName,
-                },
-                __webpack_require__.GetGameName(),
-              ),
-            ),
-          );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.BadgeName,
+                    children: __webpack_require__.GetName(),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.GameName,
+                    children: __webpack_require__.GetGameName(),
+                  }),
+                ],
+              }),
+            ],
+          });
         };
       var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
@@ -5039,44 +4738,43 @@
             { bSaving: _, strHTMLError: __webpack_require__ } = this.state,
             _ = _.GroupList,
             _ = _.PrimaryGroup;
-          return _.createElement(
-            _._,
-            {
-              "flow-children": "column",
-            },
-            _.createElement(_._, {
-              when: _.BPrimaryGroupUncomitted(),
-              message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
-            }),
-            _.createElement(_._, null, (0, _._)("#Profile_Edit_FavoriteGroup")),
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#Profile_Edit_Group_Instructions"),
-            ),
-            _.createElement(_, {
-              strHTMLError: __webpack_require__,
-            }),
-            _ &&
-              _.createElement(_, {
-                group: _,
+          return (0, _.jsxs)(_._, {
+            "flow-children": "column",
+            children: [
+              (0, _.jsx)(_._, {
+                when: _.BPrimaryGroupUncomitted(),
+                message: (0, _._)("#Profile_Edit_UnsavedChangesWarning"),
               }),
-            _.createElement(_, {
-              getSearchFields: _,
-              getItems: async () => (
-                await _.BWaitForUserGroups(), _.GetUserGroups()
-              ),
-              onItemSelected: (_) => {
-                _.SetPrimaryGroup(_);
-              },
-              ItemComponent: _,
-            }),
-            _.createElement(_, {
-              onSave: this.CommitFavoriteGroup,
-              onCancel: this.RevertFavoriteGroup,
-              disabled: _,
-            }),
-          );
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Profile_Edit_FavoriteGroup"),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Profile_Edit_Group_Instructions"),
+              }),
+              (0, _.jsx)(_, {
+                strHTMLError: __webpack_require__,
+              }),
+              _ &&
+                (0, _.jsx)(_, {
+                  group: _,
+                }),
+              (0, _.jsx)(_, {
+                getSearchFields: _,
+                getItems: async () => (
+                  await _.BWaitForUserGroups(), _.GetUserGroups()
+                ),
+                onItemSelected: (_) => {
+                  _.SetPrimaryGroup(_);
+                },
+                ItemComponent: _,
+              }),
+              (0, _.jsx)(_, {
+                onSave: this.CommitFavoriteGroup,
+                onCancel: this.RevertFavoriteGroup,
+                disabled: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "CommitFavoriteGroup", null),
@@ -5084,93 +4782,76 @@
         (_ = (0, _._)([_._], _));
       const _ = _,
         _ = ({ group: _, children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Group, _.FavoriteGroup),
-            },
-            _.createElement("img", {
-              className: _.GroupAvatar,
-              src: _.GetAvatarURL("full"),
-            }),
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.Group, _.FavoriteGroup),
+            children: [
+              (0, _.jsx)("img", {
+                className: _.GroupAvatar,
+                src: _.GetAvatarURL("full"),
+              }),
+              (0, _.jsx)("div", {
                 className: _.GroupDetails,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _.GroupName,
-                },
-                _.GetName(),
-              ),
-            ),
-          ),
+                  children: _.GetName(),
+                }),
+              }),
+            ],
+          }),
         _ = (_) => [_.GetName()],
         _ = ({ Item: _, onSelected: _ }) => {
           const _ = _;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.Group, _.GroupOption),
-              onActivate: _,
-            },
-            _.createElement("img", {
-              className: _.GroupAvatar,
-              src: __webpack_require__.GetAvatarURL("full"),
-              loading: "lazy",
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(_.Group, _.GroupOption),
+            onActivate: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _.GroupAvatar,
+                src: __webpack_require__.GetAvatarURL("full"),
+                loading: "lazy",
+              }),
+              (0, _.jsx)("div", {
                 className: _.GroupDetails,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _.GroupName,
-                },
-                __webpack_require__.GetName(),
-              ),
-            ),
-          );
+                  children: __webpack_require__.GetName(),
+                }),
+              }),
+            ],
+          });
         };
       var _ = __webpack_require__("chunkid");
       const _ = ({ Item: _, small: _ }) => {
           let _ = _(_, _);
           return 0 == Object.keys(_).length
             ? null
-            : _.createElement(
-                "video",
-                {
-                  loop: !0,
-                  preload: "none",
-                  muted: !0,
-                  autoPlay: !0,
-                  playsInline: !0,
-                },
-                Object.keys(_).map((_) =>
-                  _.createElement("source", {
-                    key: _,
-                    src: _[_],
-                    type: _,
-                  }),
+            : (0, _.jsx)("video", {
+                loop: !0,
+                preload: "none",
+                muted: !0,
+                autoPlay: !0,
+                playsInline: !0,
+                children: Object.keys(_).map((_) =>
+                  (0, _.jsx)(
+                    "source",
+                    {
+                      src: _[_],
+                      type: _,
+                    },
+                    _,
+                  ),
                 ),
-              );
+              });
         },
         _ = ({ Background: _, className: _, small: __webpack_require__ }) =>
           _
-            ? _.createElement(
-                "div",
-                {
-                  className: _,
-                },
-                _.createElement(_, {
+            ? (0, _.jsx)("div", {
+                className: _,
+                children: (0, _.jsx)(_, {
                   Item: _,
                   small: __webpack_require__,
                 }),
-              )
+              })
             : null;
       function _(_) {
         _.currentTarget.querySelector("video").play();
@@ -5196,22 +4877,22 @@
               MiniProfileOverrideData: _,
             } = _,
             { MiniProfileData: _, PersonaState: _ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_._, null, (0, _._)("#Profile_Edit_MiniProfile")),
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#Profile_Edit_MiniProfile_Instructions"),
-            ),
-            _.createElement(_, {
-              ProfileItems: __webpack_require__,
-              Profile: _,
-              MiniProfileOverrideData: _,
-              onDismiss: this.RevertChanges,
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Profile_Edit_MiniProfile"),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Profile_Edit_MiniProfile_Instructions"),
+              }),
+              (0, _.jsx)(_, {
+                ProfileItems: __webpack_require__,
+                Profile: _,
+                MiniProfileOverrideData: _,
+                onDismiss: this.RevertChanges,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "RevertChanges", null),
@@ -5227,7 +4908,7 @@
             let _ = _.GetEquippedProfileModifier();
             return (
               _ && !_.BIsLegacyGoldenProfile(_.appid) && (_ = null),
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 fnRevertChanges: _,
                 getSearchFields: _,
                 getItems: () => _.GetOwnedMiniProfileBackgrounds(),
@@ -5237,7 +4918,7 @@
                 ),
                 ItemComponent: _,
                 RenderDefaultComponent: ({ onSelected: _, active: _ }) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     onSelected: _,
                     active: _,
                     Modifier: _,
@@ -5245,7 +4926,7 @@
                 ActiveItem: _.GetEquippedMiniProfileBackground(),
                 fnIsSameItem: _,
                 fnRenderPreview: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     MiniProfileBackground: _,
                     Profile: _,
                     ProfileItems: _,
@@ -5272,15 +4953,10 @@
             let _ = _.GetProfileModifierMiniProfileBackground();
             _ && (_.image = _);
           }
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _.MiniProfileDialogPreviewCtn,
-              },
-              _.createElement(_, {
+          return (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsx)("div", {
+              className: _.MiniProfileDialogPreviewCtn,
+              children: (0, _.jsx)(_, {
                 persona: _,
                 className: _.MiniProfilePreview,
                 data_loader: _,
@@ -5289,8 +4965,8 @@
                   profile_background: _,
                 },
               }),
-            ),
-          );
+            }),
+          });
         },
         _ = ({
           Item: _,
@@ -5300,63 +4976,51 @@
         }) => {
           let _ = _(_),
             _ = Object.keys(_).length > 0;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.MiniProfileBackgroundOption,
-                _ && _.WithVideo,
-                _ && _.Active,
-              ),
-              onActivate: _,
-              onMouseEnter: _ ? _ : void 0,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _.MiniProfileBackgroundOption,
+              _ && _.WithVideo,
+              _ && _.Active,
+            ),
+            onActivate: _,
+            onMouseEnter: _ ? _ : void 0,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.Preview,
-              },
-              _.createElement("img", {
-                src: _(_),
-                loading: "lazy",
-              }),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PreviewVideo,
-                  },
-                  _.createElement(_, {
-                    Item: _,
+                children: [
+                  (0, _.jsx)("img", {
+                    src: _(_),
+                    loading: "lazy",
                   }),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.PreviewVideo,
+                      children: (0, _.jsx)(_, {
+                        Item: _,
+                      }),
+                    }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
                 className: _.Details,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Title,
-                  },
-                  _.item_title,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.App,
-                  },
-                  _.app_name,
-                ),
-              ),
-              __webpack_require__,
-            ),
-          );
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.Title,
+                        children: _.item_title,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.App,
+                        children: _.app_name,
+                      }),
+                    ],
+                  }),
+                  __webpack_require__,
+                ],
+              }),
+            ],
+          });
         },
         _ = ({
           Modifier: _,
@@ -5365,266 +5029,224 @@
           active: _,
         }) =>
           _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 Item: _,
                 onSelected: _,
                 active: _,
               })
-            : _.createElement(
-                _._,
-                {
-                  className: (0, _._)(
-                    _.MiniProfileBackgroundOption,
-                    _ && _.Active,
-                  ),
-                  onClick: _,
-                  onActivate: _,
-                },
-                _.createElement(
-                  "div",
-                  {
+            : (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  _.MiniProfileBackgroundOption,
+                  _ && _.Active,
+                ),
+                onClick: _,
+                onActivate: _,
+                children: [
+                  (0, _.jsx)("div", {
                     className: (0, _._)(_.Preview, _.BlankBackground),
-                  },
-                  _.createElement("img", {
-                    src: `${_._.COMMUNITY_CDN_URL}public/images/trans.gif`,
-                    loading: "lazy",
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Details,
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Title,
-                      },
-                      (0, _._)("#Profile_Edit_DefaultBlankBackground"),
-                    ),
-                    _.createElement("div", {
-                      className: _.App,
+                    children: (0, _.jsx)("img", {
+                      src: `${_._.COMMUNITY_CDN_URL}public/images/trans.gif`,
+                      loading: "lazy",
                     }),
-                  ),
-                  __webpack_require__,
-                ),
-              );
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.Details,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.Title,
+                            children: (0, _._)(
+                              "#Profile_Edit_DefaultBlankBackground",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.App,
+                          }),
+                        ],
+                      }),
+                      __webpack_require__,
+                    ],
+                  }),
+                ],
+              });
       var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         render() {
           let _ = this.props.PrivacyStore;
-          return _.createElement(
-            _._,
-            {
-              className: "ProfilePrivacyRoot",
-              "flow-children": "column",
-              navEntryPreferPosition: _._.MAINTAIN_Y,
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_._, {
+            className: "ProfilePrivacyRoot",
+            "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
+            children: [
+              (0, _.jsx)(_, {
                 PrivacyStore: _,
                 strLabel: (0, _._)("#ProfilePrivacy_BasicDetails"),
                 strReadOnlySetting: _(3),
-              },
-              (0, _._)("#ProfilePrivacy_BasicDetails_Desc"),
-            ),
-            _.createElement("div", {
-              className: "ProfilePrivacyHR",
-            }),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#ProfilePrivacy_BasicDetails_Desc"),
+              }),
+              (0, _.jsx)("div", {
+                className: "ProfilePrivacyHR",
+              }),
+              (0, _.jsxs)(_, {
                 PrivacyStore: _,
                 strLabel: (0, _._)("#ProfilePrivacy_Profile"),
                 PrivacyKey: "PrivacyProfile",
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#ProfilePrivacy_Profile_Desc"),
-              ),
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#ProfilePrivacy_Profile_Desc2"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#ProfilePrivacy_Profile_Desc"),
+                  }),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#ProfilePrivacy_Profile_Desc2"),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
                 className: "ProfilePrivacyRoot_Indent",
-              },
-              _.createElement(
-                _,
-                {
-                  PrivacyStore: _,
-                  strLabel: (0, _._)("#ProfilePrivacy_GameLibrary"),
-                  PrivacyKey: "PrivacyOwnedGames",
-                  LimitPrivacyKey: "PrivacyProfile",
-                },
-                (0, _._)("#ProfilePrivacy_GameLibrary_Desc"),
-                1 != _.GetPrivacySetting("PrivacyOwnedGames") &&
-                  _.createElement(
-                    _,
-                    {
-                      PrivacyStore: _,
-                      PrivacyKey: "PrivacyPlaytime",
-                      LimitPrivacyKey: "PrivacyOwnedGames",
-                    },
-                    (0, _._)("#ProfilePrivacy_Playtime"),
-                  ),
-              ),
-              _.createElement("div", {
-                className: "ProfilePrivacyHR",
-              }),
-              _.createElement(
-                _,
-                {
-                  PrivacyStore: _,
-                  strLabel: (0, _._)("#ProfilePrivacy_FriendsList"),
-                  PrivacyKey: "PrivacyFriendsList",
-                  LimitPrivacyKey: "PrivacyProfile",
-                },
-                (0, _._)("#ProfilePrivacy_FriendsList_Desc"),
-              ),
-              _.createElement("div", {
-                className: "ProfilePrivacyHR",
-              }),
-              _.createElement(
-                _,
-                {
-                  PrivacyStore: _,
-                  strLabel: (0, _._)("#ProfilePrivacy_Inventory"),
-                  PrivacyKey: "PrivacyInventory",
-                  LimitPrivacyKey: "PrivacyProfile",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    "flow-children": "row",
-                  },
-                  (0, _._)(
-                    "#ProfilePrivacy_Inventory_Desc",
-                    _.createElement(
-                      _._,
-                      {
-                        href: _.ProfileURL + "inventory/",
-                      },
-                      (0, _._)("#ProfilePrivacy_Inventory_Inventory"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        href: _.ProfileURL + "inventory/#753_6",
-                      },
-                      (0, _._)("#ProfilePrivacy_Inventory_TradingCards"),
-                    ),
-                  ),
-                ),
-                1 != _.GetPrivacySetting("PrivacyInventory") &&
-                  _.createElement(
-                    _,
-                    {
-                      PrivacyStore: _,
-                      PrivacyKey: "PrivacyInventoryGifts",
-                      LimitPrivacyKey: "PrivacyInventory",
-                    },
-                    (0, _._)("#ProfilePrivacy_Gifts"),
-                  ),
-              ),
-              _.createElement("div", {
-                className: "ProfilePrivacyHR",
-              }),
-              _.createElement(
-                _,
-                null,
-                (0, _._)("#ProfilePrivacy_Comments"),
-                ":",
-                _.createElement(_, {
-                  PrivacyStore: _,
-                }),
-              ),
-              !(0, _._)(_._.EREALM) &&
-                _.createElement("div", {
-                  className: "ProfilePrivacyHR",
-                }),
-              !(0, _._)(_._.EREALM) &&
-                _.createElement(
-                  _,
-                  {
+                children: [
+                  (0, _.jsxs)(_, {
                     PrivacyStore: _,
-                    strLabel: (0, _._)("#ProfilePrivacy_UGC"),
-                    strReadOnlySetting: (0, _._)("#Privacy_PerItem"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      "flow-children": "row",
-                    },
-                    (0, _._)(
-                      "#ProfilePrivacy_UGC_Desc",
-                      _.createElement(
-                        _._,
-                        {
-                          href: _.ProfileURL + "screenshots/",
-                        },
-                        (0, _._)("#ProfilePrivacy_UGC_Desc_Screenshots"),
-                      ),
-                      _.createElement(
-                        _._,
-                        {
-                          href: _.ProfileURL + "myworkshopfiles/",
-                        },
-                        (0, _._)("#ProfilePrivacy_UGC_Desc_WorkshopItems"),
-                      ),
-                    ),
-                  ),
-                ),
-            ),
-          );
+                    strLabel: (0, _._)("#ProfilePrivacy_GameLibrary"),
+                    PrivacyKey: "PrivacyOwnedGames",
+                    LimitPrivacyKey: "PrivacyProfile",
+                    children: [
+                      (0, _._)("#ProfilePrivacy_GameLibrary_Desc"),
+                      1 != _.GetPrivacySetting("PrivacyOwnedGames") &&
+                        (0, _.jsx)(_, {
+                          PrivacyStore: _,
+                          PrivacyKey: "PrivacyPlaytime",
+                          LimitPrivacyKey: "PrivacyOwnedGames",
+                          children: (0, _._)("#ProfilePrivacy_Playtime"),
+                        }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "ProfilePrivacyHR",
+                  }),
+                  (0, _.jsx)(_, {
+                    PrivacyStore: _,
+                    strLabel: (0, _._)("#ProfilePrivacy_FriendsList"),
+                    PrivacyKey: "PrivacyFriendsList",
+                    LimitPrivacyKey: "PrivacyProfile",
+                    children: (0, _._)("#ProfilePrivacy_FriendsList_Desc"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "ProfilePrivacyHR",
+                  }),
+                  (0, _.jsxs)(_, {
+                    PrivacyStore: _,
+                    strLabel: (0, _._)("#ProfilePrivacy_Inventory"),
+                    PrivacyKey: "PrivacyInventory",
+                    LimitPrivacyKey: "PrivacyProfile",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        "flow-children": "row",
+                        children: (0, _._)(
+                          "#ProfilePrivacy_Inventory_Desc",
+                          (0, _.jsx)(_._, {
+                            href: _.ProfileURL + "inventory/",
+                            children: (0, _._)(
+                              "#ProfilePrivacy_Inventory_Inventory",
+                            ),
+                          }),
+                          (0, _.jsx)(_._, {
+                            href: _.ProfileURL + "inventory/#753_6",
+                            children: (0, _._)(
+                              "#ProfilePrivacy_Inventory_TradingCards",
+                            ),
+                          }),
+                        ),
+                      }),
+                      1 != _.GetPrivacySetting("PrivacyInventory") &&
+                        (0, _.jsx)(_, {
+                          PrivacyStore: _,
+                          PrivacyKey: "PrivacyInventoryGifts",
+                          LimitPrivacyKey: "PrivacyInventory",
+                          children: (0, _._)("#ProfilePrivacy_Gifts"),
+                        }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "ProfilePrivacyHR",
+                  }),
+                  (0, _.jsxs)(_, {
+                    children: [
+                      (0, _._)("#ProfilePrivacy_Comments"),
+                      ":",
+                      (0, _.jsx)(_, {
+                        PrivacyStore: _,
+                      }),
+                    ],
+                  }),
+                  !(0, _._)(_._.EREALM) &&
+                    (0, _.jsx)("div", {
+                      className: "ProfilePrivacyHR",
+                    }),
+                  !(0, _._)(_._.EREALM) &&
+                    (0, _.jsx)(_, {
+                      PrivacyStore: _,
+                      strLabel: (0, _._)("#ProfilePrivacy_UGC"),
+                      strReadOnlySetting: (0, _._)("#Privacy_PerItem"),
+                      children: (0, _.jsx)(_._, {
+                        "flow-children": "row",
+                        children: (0, _._)(
+                          "#ProfilePrivacy_UGC_Desc",
+                          (0, _.jsx)(_._, {
+                            href: _.ProfileURL + "screenshots/",
+                            children: (0, _._)(
+                              "#ProfilePrivacy_UGC_Desc_Screenshots",
+                            ),
+                          }),
+                          (0, _.jsx)(_._, {
+                            href: _.ProfileURL + "myworkshopfiles/",
+                            children: (0, _._)(
+                              "#ProfilePrivacy_UGC_Desc_WorkshopItems",
+                            ),
+                          }),
+                        ),
+                      }),
+                    }),
+                ],
+              }),
+            ],
+          });
         }
       };
       function _(_) {
         let _;
         return (
           (_ = _.strReadOnlySetting
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 strLabel: _.strReadOnlySetting,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 PrivacyStore: _.PrivacyStore,
                 PrivacyKey: _.PrivacyKey,
                 LimitPrivacyKey: _.LimitPrivacyKey,
               })),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, null, _.strLabel, ":", _),
-            _.createElement(_, null, _.children),
-          )
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: [_.strLabel, ":", _],
+              }),
+              (0, _.jsx)(_, {
+                children: _.children,
+              }),
+            ],
+          })
         );
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: "ProfilePrivacyHeader",
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: "ProfilePrivacyHeader",
+          children: _.children,
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: "ProfilePrivacyDesc",
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: "ProfilePrivacyDesc",
+          children: _.children,
+        });
       }
       _ = (0, _._)([_._], _);
       const _ = (0, _._)(function (_) {
@@ -5663,47 +5285,38 @@
             _ = null != _ ? _ : 3;
           return _.filter((_) => _ >= _.data);
         })(_());
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            strDropDownButtonClassName: "ProfilePrivacyDropDown",
-            bMatchWidth: !1,
-            rgOptions: _,
-            onChange: (_) => _(_.data),
-            selectedOption: _,
-          }),
-          _.createElement(_, {
-            eSaveState: _.GetSaveState(__webpack_require__),
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              strDropDownButtonClassName: "ProfilePrivacyDropDown",
+              bMatchWidth: !1,
+              rgOptions: _,
+              onChange: (_) => _(_.data),
+              selectedOption: _,
+            }),
+            (0, _.jsx)(_, {
+              eSaveState: _.GetSaveState(__webpack_require__),
+            }),
+          ],
+        });
       });
       function _(_) {
         switch (_.eSaveState) {
           case 1:
-            return _.createElement(
-              "div",
-              {
-                className: "PrivacySaveNotice Saving",
-              },
-              (0, _._)("#Shared_Saving"),
-            );
+            return (0, _.jsx)("div", {
+              className: "PrivacySaveNotice Saving",
+              children: (0, _._)("#Shared_Saving"),
+            });
           case 3:
-            return _.createElement(
-              "div",
-              {
-                className: "PrivacySaveNotice Error",
-              },
-              (0, _._)("#Error_Error"),
-            );
+            return (0, _.jsx)("div", {
+              className: "PrivacySaveNotice Error",
+              children: (0, _._)("#Error_Error"),
+            });
           case 2:
-            return _.createElement(
-              "div",
-              {
-                className: "PrivacySaveNotice Saved",
-              },
-              (0, _._)("#Shared_Saved"),
-            );
+            return (0, _.jsx)("div", {
+              className: "PrivacySaveNotice Saved",
+              children: (0, _._)("#Shared_Saved"),
+            });
           default:
             return null;
         }
@@ -5723,29 +5336,23 @@
             [_, __webpack_require__, _],
           );
         let _ = 1 == (0, _._)(() => _.GetPrivacySetting(__webpack_require__));
-        return _.createElement(
-          "div",
-          {
-            className: "ProfilePrivacyCheckbox",
-          },
-          _.createElement(
-            "label",
-            null,
-            _.createElement(_._, {
-              className: "ProfilePrivacyCheckbox_Input",
-              type: "checkbox",
-              checked: _,
-              onChange: _,
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: "ProfilePrivacyCheckbox",
+          children: (0, _.jsxs)("label", {
+            children: [
+              (0, _.jsx)(_._, {
+                className: "ProfilePrivacyCheckbox_Input",
+                type: "checkbox",
+                checked: _,
+                onChange: _,
+              }),
+              (0, _.jsx)("div", {
                 className: "ProfilePrivacyCheckbox_Desc",
-              },
-              _,
-            ),
-          ),
-        );
+                children: _,
+              }),
+            ],
+          }),
+        });
       }
       let _ = class extends _.Component {
         constructor(_) {
@@ -5799,30 +5406,27 @@
               _ = null != _ ? _ : 3;
             return _.filter((_) => _ >= _.data);
           })(_);
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_._, {
-              strDropDownButtonClassName: "ProfilePrivacyDropDown",
-              rgOptions: _,
-              bMatchWidth: !1,
-              onChange: (_) => this.OnSettingChanged(_.data),
-              selectedOption: _,
-            }),
-            _.createElement(_, {
-              eSaveState: this.props.PrivacyStore.GetCommentSaveState(),
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                strDropDownButtonClassName: "ProfilePrivacyDropDown",
+                rgOptions: _,
+                bMatchWidth: !1,
+                onChange: (_) => this.OnSettingChanged(_.data),
+                selectedOption: _,
+              }),
+              (0, _.jsx)(_, {
+                eSaveState: this.props.PrivacyStore.GetCommentSaveState(),
+              }),
+            ],
+          });
         }
       };
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: "ProfilePrivacyDropDown readonly",
-          },
-          _.strLabel,
-        );
+        return (0, _.jsx)("div", {
+          className: "ProfilePrivacyDropDown readonly",
+          children: _.strLabel,
+        });
       }
       (0, _._)([_._], _.prototype, "OnSettingChanged", null),
         (_ = (0, _._)([_._], _));
@@ -5839,377 +5443,374 @@
           _ || (_ = "Default"), (_ += "Theme");
           const [_, _] = (0, _._)(),
             [_, _] = (0, _._)();
-          return _.createElement(
-            "svg",
-            {
-              width: _ || "401",
-              height: __webpack_require__ || "399",
-              viewBox: "0 0 401 399",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, _._)(_, _.ProfilePreview, _[_]),
-            },
-            _.createElement("rect", {
-              _: "13",
-              width: "401",
-              height: "386",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "0.5",
-              _: "13.5",
-              width: "400",
-              height: "385",
-              stroke: "black",
-              strokeOpacity: "0.5",
-            }),
-            _.createElement("rect", {
-              _: "26",
-              _: "33",
-              width: "61",
-              height: "61",
-              _: "10",
-              fill: "#272B30",
-            }),
-            _.createElement("path", {
-              _: "M57.0246 64.052C63.4696 64.052 68.6942 58.8273 68.6942 52.3823C68.6942 45.9373 63.4696 40.7126 57.0246 40.7126C50.5796 40.7126 45.3549 45.9373 45.3549 52.3823C45.3549 58.8273 50.5796 64.052 57.0246 64.052Z",
-              fill: "#444A51",
-            }),
-            _.createElement("path", {
-              _: "M77.4319 72.8873C76.6734 68.1167 70.0792 66.5175 65.3744 65.0024C63.1235 66.918 60.2118 68.0792 57.0246 68.0792C53.8374 68.0792 50.9262 66.918 48.6753 65.0024C43.97 66.5175 37.3763 68.1167 36.6172 72.8873C35.2667 81.3728 47.8848 86.2873 57.0246 86.2873C66.1648 86.2873 78.7825 81.3728 77.4319 72.8873Z",
-              fill: "#444A51",
-            }),
-            _.createElement("rect", {
-              _: "299",
-              _: "50",
-              width: "91",
-              height: "31.882",
-              _: "3",
-              fill: "#272B30",
-            }),
-            _.createElement("rect", {
-              _: "299",
-              _: "87",
-              width: "44",
-              height: "10",
-              _: "3",
-              fill: "#272B30",
-            }),
-            _.createElement("rect", {
-              _: "346",
-              _: "87",
-              width: "44",
-              height: "10",
-              _: "3",
-              fill: "#272B30",
-            }),
-            _.createElement("rect", {
-              _: "299",
-              _: "104.091",
-              width: "91",
-              height: "240.254",
-              _: "3",
-              fill: "#272B30",
-            }),
-            _.createElement("rect", {
-              _: "103",
-              _: "57",
-              width: "82",
-              height: "6",
-              _: "3",
-              fill: "#444A51",
-            }),
-            _.createElement("rect", {
-              _: "103",
-              _: "67",
-              width: "82",
-              height: "6",
-              _: "3",
-              fill: "#444A51",
-            }),
-            _.createElement("rect", {
-              _: "26",
-              _: "117.755",
-              width: "260",
-              height: "87.6755",
-              _: "3",
-              fill: "#272B30",
-            }),
-            _.createElement("rect", {
-              _: "32",
-              _: "182.755",
-              width: "246",
-              height: "17",
-              _: "3",
-              fill: "#262B31",
-            }),
-            _.createElement("rect", {
-              _: "37",
-              _: "185.755",
-              width: "21",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "37",
-              _: "192.755",
-              width: "12",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "71",
-              _: "185.755",
-              width: "21",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "71",
-              _: "192.755",
-              width: "12",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("path", {
-              _: "M26 120.755C26 119.098 27.3431 117.755 29 117.755H283C284.657 117.755 286 119.098 286 120.755V131.755H26V120.755Z",
-              fill: "#444A51",
-            }),
-            _.createElement("rect", {
-              _: "35",
-              _: "120.755",
-              width: "37",
-              height: "7",
-              _: "3",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "103",
-              _: "38.0502",
-              width: "57",
-              height: "11.3864",
-              _: "3",
-              fill: "#4F555C",
-            }),
-            _.createElement("rect", {
-              _: "299",
-              _: "32",
-              width: "35",
-              height: "11",
-              _: "3",
-              fill: "#4F555C",
-            }),
-            _.createElement("rect", {
-              _: "26",
-              _: "214.54",
-              width: "260",
-              height: "167.381",
-              _: "3",
-              fill: "#272B30",
-            }),
-            _.createElement("rect", {
-              _: "32",
-              _: "358.54",
-              width: "246",
-              height: "17",
-              _: "3",
-              fill: "#262B31",
-            }),
-            _.createElement("rect", {
-              _: "37",
-              _: "361.54",
-              width: "21",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "37",
-              _: "368.54",
-              width: "12",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "71",
-              _: "361.54",
-              width: "21",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "71",
-              _: "368.54",
-              width: "12",
-              height: "4",
-              _: "2",
-              fill: "#373C42",
-            }),
-            _.createElement("path", {
-              _: "M26 217.54C26 215.883 27.3431 214.54 29 214.54H283C284.657 214.54 286 215.883 286 217.54V228.54H26V217.54Z",
-              fill: "#444A51",
-            }),
-            _.createElement("rect", {
-              _: "35",
-              _: "217.54",
-              width: "37",
-              height: "7",
-              _: "3",
-              fill: "#373C42",
-            }),
-            _.createElement("circle", {
-              _: "347.5",
-              _: "37.5",
-              _: "8.5",
-              stroke: "#4F555C",
-              strokeWidth: "2",
-            }),
-            _.createElement("rect", {
-              _: "41",
-              _: "144",
-              width: "31",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "36",
-              _: "241",
-              width: "111",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "36",
-              _: "283",
-              width: "111",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "161",
-              _: "241",
-              width: "111",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "161",
-              _: "283",
-              width: "111",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "91",
-              _: "144",
-              width: "31",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "141",
-              _: "144",
-              width: "31",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "191",
-              _: "144",
-              width: "31",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "241",
-              _: "144",
-              width: "31",
-              height: "31",
-              _: "5",
-              fill: "#373C42",
-            }),
-            _.createElement("rect", {
-              _: "13",
-              width: "401",
-              height: "382",
-              fill: "var(--gradient-background)",
-              fillOpacity: "0.23",
-              className: _.ThemeBackground,
-            }),
-            _.createElement("rect", {
-              _: "13",
-              width: "401",
-              height: "382",
-              fill: _,
-              className: _.PaintRadial0,
-            }),
-            _.createElement("rect", {
-              _: "13",
-              width: "401",
-              height: "382",
-              fill: _,
-              className: _.PaintRadial1,
-            }),
-            _.createElement(
-              "defs",
-              null,
-              _.createElement(
-                "radialGradient",
-                {
-                  _: _,
-                  _: "0",
-                  _: "0",
-                  _: "1",
-                  gradientUnits: "userSpaceOnUse",
-                  gradientTransform:
-                    "translate(11 126) rotate(9.77175) scale(182.65 191.735)",
-                },
-                _.createElement("stop", {
-                  stopColor: "var(--gradient-left)",
-                }),
-                _.createElement("stop", {
-                  offset: "1",
-                  stopColor: "var(--gradient-background-left)",
-                  stopOpacity: "0",
-                }),
-              ),
-              _.createElement(
-                "radialGradient",
-                {
-                  _: _,
-                  _: "0",
-                  _: "0",
-                  _: "1",
-                  gradientUnits: "userSpaceOnUse",
-                  gradientTransform:
-                    "translate(385 148) rotate(-164.809) scale(312.935 328.499)",
-                },
-                _.createElement("stop", {
-                  offset: "0.348958",
-                  stopColor: "var(--gradient-right)",
-                }),
-                _.createElement("stop", {
-                  offset: "1",
-                  stopColor: "var(--gradient-background-right)",
-                  stopOpacity: "0",
-                }),
-              ),
-            ),
-          );
+          return (0, _.jsxs)("svg", {
+            width: _ || "401",
+            height: __webpack_require__ || "399",
+            viewBox: "0 0 401 399",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_, _.ProfilePreview, _[_]),
+            children: [
+              (0, _.jsx)("rect", {
+                _: "13",
+                width: "401",
+                height: "386",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "0.5",
+                _: "13.5",
+                width: "400",
+                height: "385",
+                stroke: "black",
+                strokeOpacity: "0.5",
+              }),
+              (0, _.jsx)("rect", {
+                _: "26",
+                _: "33",
+                width: "61",
+                height: "61",
+                _: "10",
+                fill: "#272B30",
+              }),
+              (0, _.jsx)("path", {
+                _: "M57.0246 64.052C63.4696 64.052 68.6942 58.8273 68.6942 52.3823C68.6942 45.9373 63.4696 40.7126 57.0246 40.7126C50.5796 40.7126 45.3549 45.9373 45.3549 52.3823C45.3549 58.8273 50.5796 64.052 57.0246 64.052Z",
+                fill: "#444A51",
+              }),
+              (0, _.jsx)("path", {
+                _: "M77.4319 72.8873C76.6734 68.1167 70.0792 66.5175 65.3744 65.0024C63.1235 66.918 60.2118 68.0792 57.0246 68.0792C53.8374 68.0792 50.9262 66.918 48.6753 65.0024C43.97 66.5175 37.3763 68.1167 36.6172 72.8873C35.2667 81.3728 47.8848 86.2873 57.0246 86.2873C66.1648 86.2873 78.7825 81.3728 77.4319 72.8873Z",
+                fill: "#444A51",
+              }),
+              (0, _.jsx)("rect", {
+                _: "299",
+                _: "50",
+                width: "91",
+                height: "31.882",
+                _: "3",
+                fill: "#272B30",
+              }),
+              (0, _.jsx)("rect", {
+                _: "299",
+                _: "87",
+                width: "44",
+                height: "10",
+                _: "3",
+                fill: "#272B30",
+              }),
+              (0, _.jsx)("rect", {
+                _: "346",
+                _: "87",
+                width: "44",
+                height: "10",
+                _: "3",
+                fill: "#272B30",
+              }),
+              (0, _.jsx)("rect", {
+                _: "299",
+                _: "104.091",
+                width: "91",
+                height: "240.254",
+                _: "3",
+                fill: "#272B30",
+              }),
+              (0, _.jsx)("rect", {
+                _: "103",
+                _: "57",
+                width: "82",
+                height: "6",
+                _: "3",
+                fill: "#444A51",
+              }),
+              (0, _.jsx)("rect", {
+                _: "103",
+                _: "67",
+                width: "82",
+                height: "6",
+                _: "3",
+                fill: "#444A51",
+              }),
+              (0, _.jsx)("rect", {
+                _: "26",
+                _: "117.755",
+                width: "260",
+                height: "87.6755",
+                _: "3",
+                fill: "#272B30",
+              }),
+              (0, _.jsx)("rect", {
+                _: "32",
+                _: "182.755",
+                width: "246",
+                height: "17",
+                _: "3",
+                fill: "#262B31",
+              }),
+              (0, _.jsx)("rect", {
+                _: "37",
+                _: "185.755",
+                width: "21",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "37",
+                _: "192.755",
+                width: "12",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "71",
+                _: "185.755",
+                width: "21",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "71",
+                _: "192.755",
+                width: "12",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("path", {
+                _: "M26 120.755C26 119.098 27.3431 117.755 29 117.755H283C284.657 117.755 286 119.098 286 120.755V131.755H26V120.755Z",
+                fill: "#444A51",
+              }),
+              (0, _.jsx)("rect", {
+                _: "35",
+                _: "120.755",
+                width: "37",
+                height: "7",
+                _: "3",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "103",
+                _: "38.0502",
+                width: "57",
+                height: "11.3864",
+                _: "3",
+                fill: "#4F555C",
+              }),
+              (0, _.jsx)("rect", {
+                _: "299",
+                _: "32",
+                width: "35",
+                height: "11",
+                _: "3",
+                fill: "#4F555C",
+              }),
+              (0, _.jsx)("rect", {
+                _: "26",
+                _: "214.54",
+                width: "260",
+                height: "167.381",
+                _: "3",
+                fill: "#272B30",
+              }),
+              (0, _.jsx)("rect", {
+                _: "32",
+                _: "358.54",
+                width: "246",
+                height: "17",
+                _: "3",
+                fill: "#262B31",
+              }),
+              (0, _.jsx)("rect", {
+                _: "37",
+                _: "361.54",
+                width: "21",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "37",
+                _: "368.54",
+                width: "12",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "71",
+                _: "361.54",
+                width: "21",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "71",
+                _: "368.54",
+                width: "12",
+                height: "4",
+                _: "2",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("path", {
+                _: "M26 217.54C26 215.883 27.3431 214.54 29 214.54H283C284.657 214.54 286 215.883 286 217.54V228.54H26V217.54Z",
+                fill: "#444A51",
+              }),
+              (0, _.jsx)("rect", {
+                _: "35",
+                _: "217.54",
+                width: "37",
+                height: "7",
+                _: "3",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("circle", {
+                _: "347.5",
+                _: "37.5",
+                _: "8.5",
+                stroke: "#4F555C",
+                strokeWidth: "2",
+              }),
+              (0, _.jsx)("rect", {
+                _: "41",
+                _: "144",
+                width: "31",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "36",
+                _: "241",
+                width: "111",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "36",
+                _: "283",
+                width: "111",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "161",
+                _: "241",
+                width: "111",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "161",
+                _: "283",
+                width: "111",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "91",
+                _: "144",
+                width: "31",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "141",
+                _: "144",
+                width: "31",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "191",
+                _: "144",
+                width: "31",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "241",
+                _: "144",
+                width: "31",
+                height: "31",
+                _: "5",
+                fill: "#373C42",
+              }),
+              (0, _.jsx)("rect", {
+                _: "13",
+                width: "401",
+                height: "382",
+                fill: "var(--gradient-background)",
+                fillOpacity: "0.23",
+                className: _.ThemeBackground,
+              }),
+              (0, _.jsx)("rect", {
+                _: "13",
+                width: "401",
+                height: "382",
+                fill: _,
+                className: _.PaintRadial0,
+              }),
+              (0, _.jsx)("rect", {
+                _: "13",
+                width: "401",
+                height: "382",
+                fill: _,
+                className: _.PaintRadial1,
+              }),
+              (0, _.jsxs)("defs", {
+                children: [
+                  (0, _.jsxs)("radialGradient", {
+                    _: _,
+                    _: "0",
+                    _: "0",
+                    _: "1",
+                    gradientUnits: "userSpaceOnUse",
+                    gradientTransform:
+                      "translate(11 126) rotate(9.77175) scale(182.65 191.735)",
+                    children: [
+                      (0, _.jsx)("stop", {
+                        stopColor: "var(--gradient-left)",
+                      }),
+                      (0, _.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "var(--gradient-background-left)",
+                        stopOpacity: "0",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("radialGradient", {
+                    _: _,
+                    _: "0",
+                    _: "0",
+                    _: "1",
+                    gradientUnits: "userSpaceOnUse",
+                    gradientTransform:
+                      "translate(385 148) rotate(-164.809) scale(312.935 328.499)",
+                    children: [
+                      (0, _.jsx)("stop", {
+                        offset: "0.348958",
+                        stopColor: "var(--gradient-right)",
+                      }),
+                      (0, _.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "var(--gradient-background-right)",
+                        stopOpacity: "0",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         },
         _ = (0, _._)(
           ({ ProfileItems: _, Background: _, theme: __webpack_require__ }) => {
@@ -6226,53 +5827,42 @@
                   backgroundRepeat: "repeat",
                   backgroundSize: "125px 125px",
                 }),
-              _.createElement(
-                "div",
-                {
-                  style: _,
-                  className: _.ProfilePagePreviewCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
+              (0, _.jsxs)("div", {
+                style: _,
+                className: _.ProfilePagePreviewCtn,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.BackgroundPosition,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                    children: (0, _.jsxs)("div", {
                       className: (0, _._)(_.Background, _ && _.FullScreen),
-                    },
-                    !_ &&
-                      !_ &&
-                      _.createElement("img", {
-                        src: _,
-                      }),
-                    _ &&
-                      _.createElement(_, {
-                        Background: _,
-                        className: "",
-                      }),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ProfilePreviewPosition,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ProfilePreviewCtn,
-                    },
-                    _.createElement(_, {
-                      className: _.ProfilePreview,
-                      width: "50%",
-                      height: "auto",
-                      theme: __webpack_require__,
+                      children: [
+                        !_ &&
+                          !_ &&
+                          (0, _.jsx)("img", {
+                            src: _,
+                          }),
+                        _ &&
+                          (0, _.jsx)(_, {
+                            Background: _,
+                            className: "",
+                          }),
+                      ],
                     }),
-                  ),
-                ),
-              )
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ProfilePreviewPosition,
+                    children: (0, _.jsx)("div", {
+                      className: _.ProfilePreviewCtn,
+                      children: (0, _.jsx)(_, {
+                        className: _.ProfilePreview,
+                        width: "50%",
+                        height: "auto",
+                        theme: __webpack_require__,
+                      }),
+                    }),
+                  }),
+                ],
+              })
             );
           },
         );
@@ -6301,44 +5891,39 @@
           let _ = _.GetEquippedProfileModifier();
           return (
             _ && !_.BIsLegacyGoldenProfile(_.appid) && (_ = null),
-            _.createElement(
-              _._,
-              {
-                "flow-children": "column",
-              },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#Profile_Edit_ChooseBackground"),
-              ),
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#Profile_Edit_Background_Instructions"),
-              ),
-              _.createElement(_, {
-                className: _.BackgroundPickerPage,
-                getSearchFields: _,
-                getItems: () => _.GetOwnedBackgrounds(),
-                fnCommitChanges: this.CommitChanges,
-                fnRevertChanges: this.RevertChanges,
-                ItemComponent: _,
-                RenderDefaultComponent: ({ onSelected: _, active: _ }) =>
-                  _.createElement(_, {
-                    Modifier: _,
-                    onSelected: _,
-                    active: _,
-                  }),
-                ActiveItem: _.GetEquippedBackground(),
-                fnIsSameItem: _,
-                fnRenderPreview: (_) =>
-                  _.createElement(_, {
-                    Background: _,
-                    ProfileItems: _,
-                    theme: _.ActiveTheme.theme_id,
-                  }),
-              }),
-            )
+            (0, _.jsxs)(_._, {
+              "flow-children": "column",
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#Profile_Edit_ChooseBackground"),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#Profile_Edit_Background_Instructions"),
+                }),
+                (0, _.jsx)(_, {
+                  className: _.BackgroundPickerPage,
+                  getSearchFields: _,
+                  getItems: () => _.GetOwnedBackgrounds(),
+                  fnCommitChanges: this.CommitChanges,
+                  fnRevertChanges: this.RevertChanges,
+                  ItemComponent: _,
+                  RenderDefaultComponent: ({ onSelected: _, active: _ }) =>
+                    (0, _.jsx)(_, {
+                      Modifier: _,
+                      onSelected: _,
+                      active: _,
+                    }),
+                  ActiveItem: _.GetEquippedBackground(),
+                  fnIsSameItem: _,
+                  fnRenderPreview: (_) =>
+                    (0, _.jsx)(_, {
+                      Background: _,
+                      ProfileItems: _,
+                      theme: _.ActiveTheme.theme_id,
+                    }),
+                }),
+              ],
+            })
           );
         }
       };
@@ -6352,12 +5937,9 @@
           flag: __webpack_require__,
           onSelect: _,
         }) =>
-          _.createElement(
-            "div",
-            {
-              className: _.ProfileBackgroundEquipOption,
-            },
-            _.createElement(_._, {
+          (0, _.jsx)("div", {
+            className: _.ProfileBackgroundEquipOption,
+            children: (0, _.jsx)(_._, {
               checked: _ == __webpack_require__,
               disabled: _ == __webpack_require__,
               onChange: (_) => {
@@ -6365,7 +5947,7 @@
               },
               label: _,
             }),
-          );
+          });
       let _ = class extends _.Component {
         OnChange(_) {
           this.props.ProfileItems.SetEquippedBackgroundFlags(_);
@@ -6374,77 +5956,69 @@
           let { Background: _, ProfileItems: _ } = this.props;
           const _ = !_ || (null == _ ? void 0 : _.tiled),
             _ = _.GetEquippedBackgroundFlags();
-          let _ = _.createElement(_, {
+          let _ = (0, _.jsx)(_, {
               flag: 1,
               currentFlag: _,
               onSelect: this.OnChange,
               label: (0, _._)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
             }),
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               flag: 0,
               currentFlag: _,
               onSelect: this.OnChange,
               label: (0, _._)("#Profile_Edit_BackgroundEquipFlag_OriginalSize"),
             });
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.ProfileBackgroundEquipOptions,
-                _ && _.HideEquipOptions,
-              ),
-            },
-            _,
-            _,
-          );
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _.ProfileBackgroundEquipOptions,
+              _ && _.HideEquipOptions,
+            ),
+            children: [_, _],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnChange", null), (_ = (0, _._)([_._], _));
       const _ = (0, _._)(
           ({ Background: _, ProfileItems: _, theme: __webpack_require__ }) =>
-            _.createElement(
-              "div",
-              null,
-              _.createElement(_, {
-                Background: _,
-                ProfileItems: _,
-                key: _ && _.communityitemid,
-                theme: __webpack_require__,
-              }),
-              _.createElement(_, {
-                ProfileItems: _,
-                Background: _,
-              }),
-            ),
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)(
+                  _,
+                  {
+                    Background: _,
+                    ProfileItems: _,
+                    theme: __webpack_require__,
+                  },
+                  _ && _.communityitemid,
+                ),
+                (0, _.jsx)(_, {
+                  ProfileItems: _,
+                  Background: _,
+                }),
+              ],
+            }),
         ),
         _ = ({ Background: _, children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: _.Details,
-            },
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _
-                  ? _.item_title
-                  : (0, _._)("#Profile_Edit_DefaultBlankBackground"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.App,
-                },
-                _ && _.app_name,
-              ),
-            ),
-            _,
-          ),
+          (0, _.jsxs)("div", {
+            className: _.Details,
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Title,
+                    children: _
+                      ? _.item_title
+                      : (0, _._)("#Profile_Edit_DefaultBlankBackground"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.App,
+                    children: _ && _.app_name,
+                  }),
+                ],
+              }),
+              _,
+            ],
+          }),
         _ = ({
           Item: _,
           onSelected: _,
@@ -6452,43 +6026,38 @@
           children: _,
         }) => {
           let _ = !!_.movie_webm;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.BackgroundOption,
-                _ && _.WithVideo,
-                __webpack_require__ && _.Active,
-              ),
-              onClick: _,
-              onActivate: _,
-              onGamepadFocus: _ ? _ : void 0,
-              onMouseEnter: _ ? _ : void 0,
-              focusable: !0,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _.BackgroundOption,
+              _ && _.WithVideo,
+              __webpack_require__ && _.Active,
+            ),
+            onClick: _,
+            onActivate: _,
+            onGamepadFocus: _ ? _ : void 0,
+            onMouseEnter: _ ? _ : void 0,
+            focusable: !0,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.Preview,
-              },
-              _.createElement("img", {
-                src: _(_),
-                loading: "lazy",
+                children: [
+                  (0, _.jsx)("img", {
+                    src: _(_),
+                    loading: "lazy",
+                  }),
+                  (0, _.jsx)(_, {
+                    Background: _,
+                    className: _.PreviewVideo,
+                    small: !0,
+                  }),
+                ],
               }),
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 Background: _,
-                className: _.PreviewVideo,
-                small: !0,
+                children: _,
               }),
-            ),
-            _.createElement(
-              _,
-              {
-                Background: _,
-              },
-              _,
-            ),
-          );
+            ],
+          });
         },
         _ = ({
           onSelected: _,
@@ -6497,37 +6066,30 @@
           children: _,
         }) =>
           _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 Item: _,
                 onSelected: _,
                 active: __webpack_require__,
               })
-            : _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.BackgroundOption,
-                    __webpack_require__ && _.Active,
-                  ),
-                  onClick: _,
-                },
-                _.createElement(
-                  "div",
-                  {
+            : (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _.BackgroundOption,
+                  __webpack_require__ && _.Active,
+                ),
+                onClick: _,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.Preview,
-                  },
-                  _.createElement("img", {
-                    src: _(null),
+                    children: (0, _.jsx)("img", {
+                      src: _(null),
+                    }),
                   }),
-                ),
-                _.createElement(
-                  _,
-                  {
+                  (0, _.jsx)(_, {
                     Background: null,
-                  },
-                  _,
-                ),
-              );
+                    children: _,
+                  }),
+                ],
+              });
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -6535,20 +6097,17 @@
           name: __webpack_require__ = "GamepadWebRoot",
           ..._
         } = _;
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navID: __webpack_require__,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          ..._,
+          navID: __webpack_require__,
+          children: _,
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { navigate: _, onClick: __webpack_require__, ..._ } = _,
           { target: _ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ..._,
           onClick: (_) => {
             try {
@@ -6567,7 +6126,7 @@
         });
       }
       function _(_) {
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           component: _,
           ..._,
         });
@@ -6580,36 +6139,29 @@
           linksAvailable: _,
           children: _,
         } = _;
-        return _.createElement(
-          _,
-          {
-            name: "ProfileEditShell",
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                className: _.Shell,
-                "flow-children": "row",
-                navEntryPreferPosition: _._.FIRST,
-              },
-              _.createElement(_, {
-                root: _,
-                currentPath: __webpack_require__,
-                linksAvailable: _,
-              }),
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_, {
+          name: "ProfileEditShell",
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              className: _.Shell,
+              "flow-children": "row",
+              navEntryPreferPosition: _._.FIRST,
+              children: [
+                (0, _.jsx)(_, {
+                  root: _,
+                  currentPath: __webpack_require__,
+                  linksAvailable: _,
+                }),
+                (0, _.jsx)("div", {
                   className: _.PageContent,
-                },
-                _.createElement(_._, null, _),
-              ),
-            ),
-          ),
-        );
+                  children: (0, _.jsx)(_._, {
+                    children: _,
+                  }),
+                }),
+              ],
+            }),
+          }),
+        });
       }
       const _ = ({
           root: _,
@@ -6622,131 +6174,88 @@
             },
             _ = _,
             _ = (0, _._)();
-          return _.createElement(
-            _._,
-            {
-              className: _.Navigation,
-              "flow-children": "column",
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            className: _.Navigation,
+            "flow-children": "column",
+            children: [
+              (0, _.jsx)("div", {
                 className: _.BackToProfileCtn,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   href: _.ProfileURL,
-                },
-                (0, _._)("#Profile_ReturnToYourProfile"),
-              ),
-            ),
-            _.createElement("div", {
-              className: _.ProfileEditLine,
-            }),
-            _.createElement(
-              _,
-              {
+                  children: (0, _._)("#Profile_ReturnToYourProfile"),
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: _.ProfileEditLine,
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.Info(),
-              },
-              (0, _._)("#Profile_Edit_BasicInfo"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Profile_Edit_BasicInfo"),
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.Avatar(),
-              },
-              (0, _._)("#Profile_FieldAvatar"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Profile_FieldAvatar"),
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.Background(),
-              },
-              (0, _._)("#Profile_FieldProfileBackground"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Profile_FieldProfileBackground"),
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.MiniProfile(),
-              },
-              (0, _._)("#Profile_Edit_MiniProfile"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Profile_Edit_MiniProfile"),
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.Theme(),
-              },
-              (0, _._)("#Profile_Edit_Theme"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Profile_Edit_Theme"),
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.ProfileModifier(),
                 fnVisible: __webpack_require__.ProfileModifierAvailable,
-              },
-              (0, _._)("#Profile_Edit_ProfileModifier"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Profile_Edit_ProfileModifier"),
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.FavoriteBadge(),
                 fnVisible: __webpack_require__.BadgesAvailable,
-              },
-              (0, _._)("#Profile_Edit_FavoriteBadge"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Profile_Edit_FavoriteBadge"),
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.FavoriteGroup(),
                 fnVisible: __webpack_require__.GroupsAvailable,
-              },
-              (0, _._)("#Profile_Edit_FavoriteGroup"),
-            ),
-            !_ &&
-              _.createElement(
-                _,
-                {
+                children: (0, _._)("#Profile_Edit_FavoriteGroup"),
+              }),
+              !_ &&
+                (0, _.jsx)(_, {
                   ..._,
                   _: _.Showcases(),
                   fnVisible: __webpack_require__.ShowcasesAvailable,
-                },
-                (0, _._)("#Profile_Edit_FeaturedShowcase"),
-              ),
-            _.createElement("div", {
-              className: _.ProfileEditLine,
-            }),
-            _.createElement(
-              _,
-              {
+                  children: (0, _._)("#Profile_Edit_FeaturedShowcase"),
+                }),
+              (0, _.jsx)("div", {
+                className: _.ProfileEditLine,
+              }),
+              (0, _.jsx)(_, {
                 ..._,
                 _: _.Privacy(),
-              },
-              (0, _._)("#Profile_EditPrivacySettings"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#Profile_EditPrivacySettings"),
+              }),
+              (0, _.jsx)("div", {
                 className: _.ProfileEditStoreLink,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   className: (0, _._)(_.ExternalLink),
                   href: `${_._.STORE_BASE_URL}points/`,
-                },
-                (0, _._)("#SteamPointsShop"),
-              ),
-            ),
-          );
+                  children: (0, _._)("#SteamPointsShop"),
+                }),
+              }),
+            ],
+          });
         },
         _ = (0, _._)(
           ({
@@ -6765,20 +6274,13 @@
             let _;
             return (
               _ && (_ = (_) => _.preventDefault()),
-              _.createElement(
-                _,
-                {
-                  className: (0, _._)(
-                    _.NavLink,
-                    _ && _.Active,
-                    _ && _.Disabled,
-                  ),
-                  _: _,
-                  onClick: _,
-                  title: _,
-                },
-                _,
-              )
+              (0, _.jsx)(_, {
+                className: (0, _._)(_.NavLink, _ && _.Active, _ && _.Disabled),
+                _: _,
+                onClick: _,
+                title: _,
+                children: _,
+              })
             );
           },
         );
@@ -6803,7 +6305,7 @@
         render() {
           const { ProfileItems: _ } = this.props;
           return _.BHasAnyProfileModifiers()
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 active: this.state.bDialogActive,
                 ProfileItems: _,
                 onDismiss: this.HideDialog,
@@ -6818,7 +6320,7 @@
         _ = (0, _._)(({ ProfileItems: _ }) => {
           let _ = _.GetProfileModifierCSSURL();
           return _
-            ? _.createElement("link", {
+            ? (0, _.jsx)("link", {
                 rel: "stylesheet",
                 type: "text/css",
                 href: _,
@@ -6833,34 +6335,25 @@
               ? _.item_title
               : (0, _._)("#Profile_Edit_DefaultBlankBackground"),
             _ = _ ? _.app_name : "";
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _.ProfileModifierBody,
-              },
-              _.createElement("img", {
-                className: _.GoldenProfileItemImage,
-                src: _,
-              }),
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsxs)("div", {
+              className: _.ProfileModifierBody,
+              children: [
+                (0, _.jsx)("img", {
+                  className: _.GoldenProfileItemImage,
+                  src: _,
+                }),
+                (0, _.jsx)("div", {
                   className: _.GoldenProfileTitle,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   className: _.GoldenProfileApp,
-                },
-                _,
-              ),
-            ),
-          );
+                  children: _,
+                }),
+              ],
+            }),
+          });
         };
       let _ = class extends _.Component {
         OnDismiss() {
@@ -6869,41 +6362,39 @@
         }
         render() {
           const { ProfileItems: _ } = this.props;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#Profile_Edit_ProfileModifier"),
-            ),
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#Profile_Edit_ProfileModifier_Instructions"),
-            ),
-            _.createElement(_, {
-              fnRevertChanges: this.OnDismiss,
-              getSearchFields: _,
-              getItems: () => _.GetOwnedProfileModifiers(),
-              fnCommitChanges: async (_) => (
-                _.SetEquippedProfileModifier(_),
-                _.CommitProfileModifierChanges()
-              ),
-              ItemComponent: _,
-              RenderDefaultComponent: ({ onSelected: _, active: _ }) =>
-                _.createElement(_, {
-                  onSelected: _,
-                  active: _,
-                }),
-              ActiveItem: _.GetEquippedProfileModifier(),
-              fnIsSameItem: _,
-              fnRenderPreview: (_) =>
-                _.createElement(_, {
-                  ProfileModifier: _,
-                }),
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Profile_Edit_ProfileModifier"),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _._)(
+                  "#Profile_Edit_ProfileModifier_Instructions",
+                ),
+              }),
+              (0, _.jsx)(_, {
+                fnRevertChanges: this.OnDismiss,
+                getSearchFields: _,
+                getItems: () => _.GetOwnedProfileModifiers(),
+                fnCommitChanges: async (_) => (
+                  _.SetEquippedProfileModifier(_),
+                  _.CommitProfileModifierChanges()
+                ),
+                ItemComponent: _,
+                RenderDefaultComponent: ({ onSelected: _, active: _ }) =>
+                  (0, _.jsx)(_, {
+                    onSelected: _,
+                    active: _,
+                  }),
+                ActiveItem: _.GetEquippedProfileModifier(),
+                fnIsSameItem: _,
+                fnRenderPreview: (_) =>
+                  (0, _.jsx)(_, {
+                    ProfileModifier: _,
+                  }),
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnDismiss", null), (_ = (0, _._)([_._], _));
@@ -6913,90 +6404,71 @@
           children: __webpack_require__,
           active: _,
         }) =>
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.ProfileModifierOption, _ && _.Active),
-              onActivate: _,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_._, {
+            className: (0, _._)(_.ProfileModifierOption, _ && _.Active),
+            onActivate: _,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.Preview,
-              },
-              _.createElement("img", {
-                src: _(_),
-                loading: "lazy",
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Details,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Title,
-                  },
-                  _.item_title,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.App,
-                  },
-                  _.app_name,
-                ),
-              ),
-              __webpack_require__,
-            ),
-          ),
-        _ = ({ onSelected: _, children: _, active: __webpack_require__ }) =>
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.ProfileModifierOption,
-                __webpack_require__ && _.Active,
-              ),
-              onActivate: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Preview, _.BlankBackground),
-              },
-              _.createElement("img", {
-                src: `${_._.COMMUNITY_CDN_URL}public/images/trans.gif`,
-                loading: "lazy",
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Details,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Title,
-                  },
-                  (0, _._)("#ProfileModifier_DisabledTitle"),
-                ),
-                _.createElement("div", {
-                  className: _.App,
+                children: (0, _.jsx)("img", {
+                  src: _(_),
+                  loading: "lazy",
                 }),
-              ),
-              _,
+              }),
+              (0, _.jsxs)("div", {
+                className: _.Details,
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.Title,
+                        children: _.item_title,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.App,
+                        children: _.app_name,
+                      }),
+                    ],
+                  }),
+                  __webpack_require__,
+                ],
+              }),
+            ],
+          }),
+        _ = ({ onSelected: _, children: _, active: __webpack_require__ }) =>
+          (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _.ProfileModifierOption,
+              __webpack_require__ && _.Active,
             ),
-          );
+            onActivate: _,
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.Preview, _.BlankBackground),
+                children: (0, _.jsx)("img", {
+                  src: `${_._.COMMUNITY_CDN_URL}public/images/trans.gif`,
+                  loading: "lazy",
+                }),
+              }),
+              (0, _.jsxs)("div", {
+                className: _.Details,
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.Title,
+                        children: (0, _._)("#ProfileModifier_DisabledTitle"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.App,
+                      }),
+                    ],
+                  }),
+                  _,
+                ],
+              }),
+            ],
+          });
       var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor() {
@@ -7035,36 +6507,36 @@
         render() {
           const { ProfileTheme: _, ProfileItems: _ } = this.props;
           let _ = !!_.GetEquippedProfileModifier();
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_._, null, (0, _._)("#Profile_Edit_Theme")),
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#Profile_Edit_Theme_Instructions"),
-            ),
-            _.createElement(_, {
-              strHTMLError: this.state.strHTMLError,
-            }),
-            _ && _.createElement(_, null),
-            _.createElement(_, {
-              getSearchFields: null,
-              ActiveItem: _.ActiveTheme,
-              getItems: async () => _.AvailableThemes,
-              fnCommitChanges: this.CommitChanges,
-              fnRevertChanges: this.RevertChanges,
-              fnRenderPreview: (_) =>
-                _.createElement(_, {
-                  Theme: _,
-                  ProfileItems: _,
-                }),
-              fnIsSameItem: _,
-              ItemComponent: _,
-              classNameItemPicker: _.ProfileThemePicker,
-              className: (0, _._)(_ && _.ThemePickerDisabled),
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Profile_Edit_Theme"),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Profile_Edit_Theme_Instructions"),
+              }),
+              (0, _.jsx)(_, {
+                strHTMLError: this.state.strHTMLError,
+              }),
+              _ && (0, _.jsx)(_, {}),
+              (0, _.jsx)(_, {
+                getSearchFields: null,
+                ActiveItem: _.ActiveTheme,
+                getItems: async () => _.AvailableThemes,
+                fnCommitChanges: this.CommitChanges,
+                fnRevertChanges: this.RevertChanges,
+                fnRenderPreview: (_) =>
+                  (0, _.jsx)(_, {
+                    Theme: _,
+                    ProfileItems: _,
+                  }),
+                fnIsSameItem: _,
+                ItemComponent: _,
+                classNameItemPicker: _.ProfileThemePicker,
+                className: (0, _._)(_ && _.ThemePickerDisabled),
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "CommitChanges", null),
@@ -7078,26 +6550,20 @@
               "string" == typeof _
                 ? _ + "Theme"
                 : ((null == _ ? void 0 : _.theme_id) || "Default") + "Theme"),
-            _.createElement(
-              "div",
-              {
-                className: _[_],
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              className: _[_],
+              children: _,
+            })
           );
         },
         _ = (0, _._)(({ Theme: _, ProfileItems: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: _.ProfileThemePreviewCtn,
-            },
-            _.createElement(_, {
+          (0, _.jsx)("div", {
+            className: _.ProfileThemePreviewCtn,
+            children: (0, _.jsx)(_, {
               ProfileItems: _,
               theme: _.theme_id,
             }),
-          ),
+          }),
         ),
         _ = (_, _) => (_ && _.theme_id) === (_ && _.theme_id),
         _ = ({
@@ -7108,132 +6574,115 @@
         }) => {
           const _ = _.theme_id + "Theme",
             _ = `ThemeOption${_}`;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.ProfileTheme,
-                _ && _.Option,
-                __webpack_require__ && _.Active,
-                _[_],
-              ),
-              onActivate: _,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _.ProfileTheme,
+              _ && _.Option,
+              __webpack_require__ && _.Active,
+              _[_],
+            ),
+            onActivate: _,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.PreviewCtn,
-              },
-              _.createElement(
-                "svg",
-                {
+                children: (0, _.jsxs)("svg", {
                   className: (0, _._)(_.Preview),
                   viewBox: "0 0 382 382",
                   width: "100%",
                   height: "100%",
-                },
-                _.createElement("rect", {
-                  width: "382",
-                  height: "382",
-                  fill: "var(--edit-background)",
-                  className: _.EditBackground,
-                }),
-                _.createElement("rect", {
-                  width: "382",
-                  height: "382",
-                  fill: "var(--gradient-background)",
-                  fillOpacity: "0.23",
-                  className: _.ThemeBackground,
-                }),
-                _.createElement("rect", {
-                  width: "382",
-                  height: "382",
-                  fill: `url(#${_}paint0_radial)`,
-                  className: _.PaintRadial0,
-                }),
-                _.createElement("rect", {
-                  width: "382",
-                  height: "382",
-                  fill: `url(#${_}paint1_radial)`,
-                  className: _.PaintRadial1,
-                }),
-                _.createElement(
-                  "defs",
-                  null,
-                  _.createElement(
-                    "radialGradient",
-                    {
-                      _: `${_}paint0_radial`,
-                      _: "0",
-                      _: "0",
-                      _: "1",
-                      gradientUnits: "userSpaceOnUse",
-                      gradientTransform:
-                        "translate(11 126) rotate(9.77175) scale(182.65 191.735)",
-                    },
-                    _.createElement("stop", {
-                      stopColor: "var(--gradient-left)",
+                  children: [
+                    (0, _.jsx)("rect", {
+                      width: "382",
+                      height: "382",
+                      fill: "var(--edit-background)",
+                      className: _.EditBackground,
                     }),
-                    _.createElement("stop", {
-                      offset: "1",
-                      stopColor: "var(--gradient-background-left)",
-                      stopOpacity: "0",
+                    (0, _.jsx)("rect", {
+                      width: "382",
+                      height: "382",
+                      fill: "var(--gradient-background)",
+                      fillOpacity: "0.23",
+                      className: _.ThemeBackground,
                     }),
-                  ),
-                  _.createElement(
-                    "radialGradient",
-                    {
-                      _: `${_}paint1_radial`,
-                      _: "0",
-                      _: "0",
-                      _: "1",
-                      gradientUnits: "userSpaceOnUse",
-                      gradientTransform:
-                        "translate(385 148) rotate(-164.809) scale(312.935 328.499)",
-                    },
-                    _.createElement("stop", {
-                      offset: "0.348958",
-                      stopColor: "var(--gradient-right)",
+                    (0, _.jsx)("rect", {
+                      width: "382",
+                      height: "382",
+                      fill: `url(#${_}paint0_radial)`,
+                      className: _.PaintRadial0,
                     }),
-                    _.createElement("stop", {
-                      offset: "1",
-                      stopColor: "var(--gradient-background-right)",
-                      stopOpacity: "0",
+                    (0, _.jsx)("rect", {
+                      width: "382",
+                      height: "382",
+                      fill: `url(#${_}paint1_radial)`,
+                      className: _.PaintRadial1,
                     }),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                    (0, _.jsxs)("defs", {
+                      children: [
+                        (0, _.jsxs)("radialGradient", {
+                          _: `${_}paint0_radial`,
+                          _: "0",
+                          _: "0",
+                          _: "1",
+                          gradientUnits: "userSpaceOnUse",
+                          gradientTransform:
+                            "translate(11 126) rotate(9.77175) scale(182.65 191.735)",
+                          children: [
+                            (0, _.jsx)("stop", {
+                              stopColor: "var(--gradient-left)",
+                            }),
+                            (0, _.jsx)("stop", {
+                              offset: "1",
+                              stopColor: "var(--gradient-background-left)",
+                              stopOpacity: "0",
+                            }),
+                          ],
+                        }),
+                        (0, _.jsxs)("radialGradient", {
+                          _: `${_}paint1_radial`,
+                          _: "0",
+                          _: "0",
+                          _: "1",
+                          gradientUnits: "userSpaceOnUse",
+                          gradientTransform:
+                            "translate(385 148) rotate(-164.809) scale(312.935 328.499)",
+                          children: [
+                            (0, _.jsx)("stop", {
+                              offset: "0.348958",
+                              stopColor: "var(--gradient-right)",
+                            }),
+                            (0, _.jsx)("stop", {
+                              offset: "1",
+                              stopColor: "var(--gradient-background-right)",
+                              stopOpacity: "0",
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+              (0, _.jsxs)("div", {
                 className: _.Details,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _.title,
-              ),
-              _,
-            ),
-          );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Title,
+                    children: _.title,
+                  }),
+                  _,
+                ],
+              }),
+            ],
+          });
         },
         _ = ({ children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: _.ThemesDisabledNotice,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Notice,
-              },
-              (0, _._)("#Profile_Edit_GoldenProfileOverridesTheme"),
-            ),
-          );
+          (0, _.jsx)("div", {
+            className: _.ThemesDisabledNotice,
+            children: (0, _.jsx)("div", {
+              className: _.Notice,
+              children: (0, _._)("#Profile_Edit_GoldenProfileOverridesTheme"),
+            }),
+          });
       class _ extends _.Component {
         constructor() {
           super(...arguments),
@@ -7274,43 +6723,35 @@
         render() {
           const { bSaving: _, strHTMLError: _ } = this.state,
             { ProfileTheme: __webpack_require__ } = this.props;
-          return _.createElement(
-            _,
-            {
-              Theme: __webpack_require__.ActiveTheme,
-            },
-            _.createElement(
-              "form",
-              {
-                onSubmit: this.OnSubmit,
-              },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#Profile_Edit_FeaturedShowcase"),
-              ),
-              _.createElement(
-                _._,
-                null,
-                (0, _._)(
-                  "#Profile_Edit_Showcase_Instructions",
-                  _.createElement("a", {
-                    href: _._.STORE_BASE_URL + "points/shop/profileshowcases",
-                  }),
-                ),
-              ),
-              _.createElement(_, {
-                strHTMLError: _,
-              }),
-              _.createElement("div", {
-                ref: this.m_refDiv,
-              }),
-              _.createElement(_, {
-                onCancel: this.RevertChanges,
-                disabled: _,
-              }),
-            ),
-          );
+          return (0, _.jsx)(_, {
+            Theme: __webpack_require__.ActiveTheme,
+            children: (0, _.jsxs)("form", {
+              onSubmit: this.OnSubmit,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#Profile_Edit_FeaturedShowcase"),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _._)(
+                    "#Profile_Edit_Showcase_Instructions",
+                    (0, _.jsx)("a", {
+                      href: _._.STORE_BASE_URL + "points/shop/profileshowcases",
+                    }),
+                  ),
+                }),
+                (0, _.jsx)(_, {
+                  strHTMLError: _,
+                }),
+                (0, _.jsx)("div", {
+                  ref: this.m_refDiv,
+                }),
+                (0, _.jsx)(_, {
+                  onCancel: this.RevertChanges,
+                  disabled: _,
+                }),
+              ],
+            }),
+          });
         }
       }
       let _, _, _;
@@ -7364,138 +6805,103 @@
               (!_.GroupList.BGroupsLoaded() || _.GroupList.BHasAnyGroups()),
             ShowcasesAvailable: () => null != _,
           };
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            ProfileItems: _,
-          }),
-          _.createElement(_, {
-            Profile: _,
-          }),
-          _.createElement(_, {
-            Profile: _,
-            ProfileItems: _,
-          }),
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              ProfileItems: _,
+            }),
+            (0, _.jsx)(_, {
+              Profile: _,
+            }),
+            (0, _.jsx)(_, {
+              Profile: _,
+              ProfileItems: _,
+            }),
+            (0, _.jsx)(_, {
               root: _,
               currentPath: _.location.pathname,
               linksAvailable: _,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.Info()}`,
-                },
-                _.createElement(_, {
-                  Profile: _,
-                  EmoticonStore: _,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.Avatar()}`,
-                },
-                _.createElement(_, {
-                  Profile: _,
-                  ProfileItems: _,
-                  OGGAvatars: _.OGGAvatarStore,
-                  AvatarHistory: _.AvatarHistory,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.Background()}`,
-                },
-                _.createElement(_, {
-                  ProfileTheme: _,
-                  ProfileItems: _,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.MiniProfile()}`,
-                },
-                _.createElement(_, {
-                  ProfileEdit: _,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.Theme()}`,
-                },
-                _.createElement(_, {
-                  ProfileTheme: _,
-                  ProfileItems: _,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.ProfileModifier()}`,
-                },
-                _.createElement(_, {
-                  ProfileItems: _,
-                }),
-              ),
-              !(0, _._)(_._.EREALM) &&
-                _.createElement(
-                  _._,
-                  {
-                    path: `${_}${_.FavoriteBadge()}`,
-                  },
-                  _.createElement(_, {
-                    Badges: _.ProfileBadges,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.Info()}`,
+                    children: (0, _.jsx)(_, {
+                      Profile: _,
+                      EmoticonStore: _,
+                    }),
                   }),
-                ),
-              !(0, _._)(_._.EREALM) &&
-                _.createElement(
-                  _._,
-                  {
-                    path: `${_}${_.FavoriteGroup()}`,
-                  },
-                  _.createElement(_, {
-                    Profile: _,
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.Avatar()}`,
+                    children: (0, _.jsx)(_, {
+                      Profile: _,
+                      ProfileItems: _,
+                      OGGAvatars: _.OGGAvatarStore,
+                      AvatarHistory: _.AvatarHistory,
+                    }),
                   }),
-                ),
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.Privacy()}`,
-                },
-                _.createElement(_, {
-                  PrivacyStore: _.ProfilePrivacy,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  path: `${_}${_.Showcases()}`,
-                },
-                _.createElement(_, {
-                  elShowcases: _,
-                  ProfileTheme: _,
-                }),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  _: `${_}${_.Info()}`,
-                }),
-              ),
-            ),
-          ),
-        );
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.Background()}`,
+                    children: (0, _.jsx)(_, {
+                      ProfileTheme: _,
+                      ProfileItems: _,
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.MiniProfile()}`,
+                    children: (0, _.jsx)(_, {
+                      ProfileEdit: _,
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.Theme()}`,
+                    children: (0, _.jsx)(_, {
+                      ProfileTheme: _,
+                      ProfileItems: _,
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.ProfileModifier()}`,
+                    children: (0, _.jsx)(_, {
+                      ProfileItems: _,
+                    }),
+                  }),
+                  !(0, _._)(_._.EREALM) &&
+                    (0, _.jsx)(_._, {
+                      path: `${_}${_.FavoriteBadge()}`,
+                      children: (0, _.jsx)(_, {
+                        Badges: _.ProfileBadges,
+                      }),
+                    }),
+                  !(0, _._)(_._.EREALM) &&
+                    (0, _.jsx)(_._, {
+                      path: `${_}${_.FavoriteGroup()}`,
+                      children: (0, _.jsx)(_, {
+                        Profile: _,
+                      }),
+                    }),
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.Privacy()}`,
+                    children: (0, _.jsx)(_, {
+                      PrivacyStore: _.ProfilePrivacy,
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: `${_}${_.Showcases()}`,
+                    children: (0, _.jsx)(_, {
+                      elShowcases: _,
+                      ProfileTheme: _,
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_._, {
+                      _: `${_}${_.Info()}`,
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "OnSubmit", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null);
@@ -7521,47 +6927,45 @@
           Showcases: () => "/showcases",
         };
       function _(_) {
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          children: (0, _.jsx)(_._, {
             targetType: 3,
           }),
-        );
+        });
       }
       function _(_) {
         const _ = _.match.path;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(_._, {
-            path: `${_}/${_.ProfileEdit()}`,
-            render: (_) =>
-              _.createElement(_, {
-                ..._,
-              }),
-          }),
-          _.createElement(_._, {
-            path: `${_}`,
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "profile-rewards": () =>
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                  "ugc-file-content-moderation-report-dialog": (_) =>
-                    _.createElement(_._, {
-                      ..._,
-                    }),
-                  "comment-content-moderation-report-dialog": (_) =>
-                    _.createElement(_._, {
-                      ..._,
-                    }),
-                },
-              }),
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_._, {
+              path: `${_}/${_.ProfileEdit()}`,
+              render: (_) =>
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              path: `${_}`,
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "profile-rewards": () =>
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                    "ugc-file-content-moderation-report-dialog": (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                      }),
+                    "comment-content-moderation-report-dialog": (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                      }),
+                  },
+                }),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -7575,132 +6979,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "FocusNavHistoryID",
-        _ = new _._("FocusHistory").Debug;
-      function _(_) {
-        const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
-          _ = (function (_ = 2) {
-            const _ = (0, _._)(),
-              _ = _.useRef(void 0),
-              _ = (0, _._)(),
-              _ = _._.IN_STEAMUI,
-              _ = (null == _ ? void 0 : _.state) && _.state[_],
-              _ = _.useRef(void 0),
-              [_, _] = _.useState(_);
-            return (
-              _.useLayoutEffect(() => {
-                if (!_.current) return;
-                const _ = _.current;
-                return _.Node().Tree.WindowContext.FocusChangedCallbacks.Register(
-                  (_, _, _) => {
-                    const _ = _.location;
-                    let _ = _.state && _.state[_];
-                    _ ||
-                      ((_ = _ ? `State_${_.key}` : `State_${_.Node().Tree._}`),
-                      (_.current = _),
-                      _.replace({
-                        ..._,
-                        state: {
-                          ..._.state,
-                          [_]: _,
-                        },
-                      })),
-                      _.current == _ &&
-                        (_
-                          ? _.SaveState(_)
-                          : window.history.replaceState(
-                              {
-                                ...window.history.state,
-                                [_]: (0, _._)(_.Node()),
-                              },
-                              "",
-                            ));
-                  },
-                ).Unregister;
-              }, [_, _]),
-              _.useLayoutEffect(() => {
-                if (_.current && _.current != _) {
-                  if (!_) return void _(void 0);
-                  const _ = _.current.NavTree().DeferredFocus;
-                  _.SuppressFocus(),
-                    _(
-                      `Start restoring history for ${_} in tree ${_.current.NavTree()._}, suppressing focus`,
-                    );
-                  const _ = window.setTimeout(() => {
-                    _(_);
-                  }, _);
-                  return () => {
-                    window.clearTimeout(_), _.ExecuteQueuedFocus();
-                  };
-                }
-              }, [_, _]),
-              _.useEffect(() => {
-                var _;
-                if (!_ || !_.current) return;
-                const _ = _
-                    ? null
-                    : null === (_ = window.history.state) || void 0 === _
-                      ? void 0
-                      : _[_],
-                  _ = _.current.NavTree().DeferredFocus;
-                let _ = !1;
-                _
-                  ? (_ = _.current.RestoreState(_, 1))
-                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
-                  _(
-                    `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
-                  ),
-                  _ ? _.Reset() : _.ExecuteQueuedFocus(),
-                  (_.current = _);
-              }, [_, _, _]),
-              _
-            );
-          })(__webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navRef: _,
-          },
-          _,
-        );
-      }
       const _ = _.forwardRef(function (_, _) {
         const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
           _ = _.useRef(void 0),
           _ = (0, _._)(_, _),
           _ = (0, _._)(),
           _ = (0, _._)("__nav_tree_root");
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navTreeRef: _,
-            ref: _,
-            parentEmbeddedNavTree: _,
-            disabledRoot: !_,
-          },
-          _.createElement(
-            _,
-            {
-              style: {
-                display: "contents",
-              },
-            },
-            _.createElement(
-              _._,
-              {
-                disableFocusRing: !_,
-              },
-              __webpack_require__,
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          ..._,
+          navTreeRef: _,
+          ref: _,
+          parentEmbeddedNavTree: _,
+          disabledRoot: !_,
+          historyMode: "navigationapi",
+          children: (0, _.jsx)(_._, {
+            disableFocusRing: !_,
+            children: __webpack_require__,
+          }),
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {

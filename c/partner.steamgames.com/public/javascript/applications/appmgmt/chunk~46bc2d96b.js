@@ -2877,6 +2877,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2908,13 +2909,10 @@
             }),
             [__webpack_require__, _, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _(_) {
         const { row: _ } = _,
@@ -2929,7 +2927,7 @@
           _ = _
             ? (0, _._)("#PackageGrid_VisitPackageDiscount_Tooltip_Error")
             : (0, _._)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           className: _,
           toolTip: _,
           ..._,
@@ -2947,7 +2945,7 @@
           _ = _
             ? (0, _._)("#PackageGrid_VisitPackagePricing_Tooltip_Error")
             : (0, _._)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           className: _,
           toolTip: _,
           showUnreleased: !0,
@@ -2957,23 +2955,24 @@
       function _(_) {
         const { column: _ } = _,
           [__webpack_require__, _] = (0, _.useState)(_.getFilterValue() ?? "");
-        return _.createElement(
-          "div",
-          {
-            className: _().PackageNameHeader,
-          },
-          (0, _._)("#PackageGrid_Column_PackageName"),
-          _.createElement("input", {
-            placeholder: (0, _._)("#PackageGrid_PackageNameFilterInputPrompt"),
-            value: __webpack_require__,
-            onChange: (_) => {
-              _(_.target.value.toString()),
-                (0, _.startTransition)(() =>
-                  _.column.setFilterValue(_.target.value.toString()),
-                );
-            },
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: _().PackageNameHeader,
+          children: [
+            (0, _._)("#PackageGrid_Column_PackageName"),
+            (0, _.jsx)("input", {
+              placeholder: (0, _._)(
+                "#PackageGrid_PackageNameFilterInputPrompt",
+              ),
+              value: __webpack_require__,
+              onChange: (_) => {
+                _(_.target.value.toString()),
+                  (0, _.startTransition)(() =>
+                    _.column.setFilterValue(_.target.value.toString()),
+                  );
+              },
+            }),
+          ],
+        });
       }
       function _(_) {
         const { fnBLocalChangesExist: _, fnWarnUser: __webpack_require__ } =
@@ -2982,49 +2981,41 @@
           _ = _.original.packageID,
           _ =
             _.getValue() ??
-            _.createElement(
-              "span",
-              {
-                className: _().UnknownValue,
-              },
-              " ",
-              (0, _._)("#PackageGrid_PackageID", _),
-            );
-        return _.createElement(
-          _,
-          {
-            fnBLocalChangesExist: _,
-            fnWarnUser: __webpack_require__,
-            href: `${_._.PARTNER_BASE_URL}store/packagelanding/${_}`,
-            strToolTip: _,
-            strClassName: _,
-          },
-          _.createElement(_.eTF, {
-            color: "rgb(194, 45, 0)",
-            className: _().PriceWarningBad,
-          }),
-          _.showUnreleased &&
-            !("released" in _.original && _.original.released) &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#PackageGrid_PackageUnpublishedTooltip",
-                  ),
-                },
-                _.createElement(_.ZyV, {
-                  width: "14px",
-                  height: "14px",
-                }),
-              ),
-              "  ",
-            ),
-          " ",
-          _,
-        );
+            (0, _.jsxs)("span", {
+              className: _().UnknownValue,
+              children: [" ", (0, _._)("#PackageGrid_PackageID", _)],
+            });
+        return (0, _.jsxs)(_, {
+          fnBLocalChangesExist: _,
+          fnWarnUser: __webpack_require__,
+          href: `${_._.PARTNER_BASE_URL}store/packagelanding/${_}`,
+          strToolTip: _,
+          strClassName: _,
+          children: [
+            (0, _.jsx)(_.eTF, {
+              color: "rgb(194, 45, 0)",
+              className: _().PriceWarningBad,
+            }),
+            _.showUnreleased &&
+              !("released" in _.original && _.original.released) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    toolTipContent: (0, _._)(
+                      "#PackageGrid_PackageUnpublishedTooltip",
+                    ),
+                    children: (0, _.jsx)(_.ZyV, {
+                      width: "14px",
+                      height: "14px",
+                    }),
+                  }),
+                  "  ",
+                ],
+              }),
+            " ",
+            _,
+          ],
+        });
       }
       function _() {
         return _.useMemo(
@@ -3034,7 +3025,7 @@
             enableSorting: !1,
             size: 90,
             cell: (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 ..._,
                 toolTip: (0, _._)("#PackageGrid_Column_PackageID_ttip"),
               }),
@@ -3104,16 +3095,13 @@
           _ = _.original.appids,
           _ = _?.length ?? 0,
           _ = _.original.packageID;
-        return _.createElement(
-          _,
-          {
-            fnBLocalChangesExist: __webpack_require__,
-            fnWarnUser: _,
-            href: `${_._.PARTNER_BASE_URL}store/packagelanding/${_}`,
-            strToolTip: (0, _._)("#PackageGrid_VisitPackagePricing_Tooltip"),
-          },
-          1 == _ ? "1 appid" : _ + " appids",
-        );
+        return (0, _.jsx)(_, {
+          fnBLocalChangesExist: __webpack_require__,
+          fnWarnUser: _,
+          href: `${_._.PARTNER_BASE_URL}store/packagelanding/${_}`,
+          strToolTip: (0, _._)("#PackageGrid_VisitPackagePricing_Tooltip"),
+          children: 1 == _ ? "1 appid" : _ + " appids",
+        });
       }
       function _() {
         return _.useMemo(
@@ -3135,29 +3123,24 @@
       function _(_) {
         const _ = _.groupingValue,
           _ = (0, _._)("#PackageGrid_NoBaseGameFoundForPackage");
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ === _
-            ? _.createElement(
-                "span",
-                {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ === _
+              ? (0, _.jsxs)("span", {
                   title: (0, _._)("#PackageGrid_NoBaseGameExplanation"),
-                },
-                _,
-                " (?)",
-              )
-            : _,
-          _.createElement(
-            "span",
-            {
+                  children: [_, " (?)"],
+                })
+              : _,
+            (0, _.jsxs)("span", {
               className: _().RowItemCount,
-            },
-            "(",
-            (0, _._)("#PackageGrid_PackageCount", _.subRows.length),
-            ")",
-          ),
-        );
+              children: [
+                "(",
+                (0, _._)("#PackageGrid_PackageCount", _.subRows.length),
+                ")",
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3168,23 +3151,17 @@
           strToolTip: _,
           strClassName: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-            className: _,
-          },
-          _.createElement(
-            "a",
-            {
-              onClick: (_) => {
-                _() && (_.preventDefault(), __webpack_require__(_, _));
-              },
-              href: _,
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          className: _,
+          children: (0, _.jsx)("a", {
+            onClick: (_) => {
+              _() && (_.preventDefault(), __webpack_require__(_, _));
             },
-            _,
-          ),
-        );
+            href: _,
+            children: _,
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

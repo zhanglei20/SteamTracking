@@ -221,6 +221,107 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        if (_) {
+          if ("appid" in _) return "app";
+          if ("bundleid" in _) return "bundle";
+          if ("packageid" in _) return "sub";
+        }
+      }
+      function _(_) {
+        const {
+            _: _,
+            hoverClassName: __webpack_require__,
+            fnGetIDOverride: _,
+            fnHoverState: _,
+            children: _,
+          } = _,
+          _ = _.useRef(null),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _(_);
+              _ &&
+                (_ && _(!0),
+                window.GameHover &&
+                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
+                    type: _,
+                    _: (0, _._)(_)._,
+                    _: 1,
+                  }));
+            },
+            [_, _, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(_) &&
+                (_ && _.relatedTarget && _(!1),
+                window.HideGameHover &&
+                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
+            },
+            [_, _, _],
+          );
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: __webpack_require__,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          onFocus: _,
+          onBlur: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
+            strExtraParams: __webpack_require__,
+            fnOnClickOverride: _,
+            strOverrideURL: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(
+            _ ||
+              (_ && "creatorid" in _
+                ? (0, _._)(
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )
+                : (0, _._)(
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )),
+          );
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            className: _.className,
+            href: _ ? void 0 : _,
+            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+            rel: "noopener noreferrer",
+            onClick: _,
+            children: _.children,
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           BroadcastEmbeddablePopoutHeader: () => _,
@@ -229,6 +330,7 @@
       var _,
         _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -14191,25 +14293,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = () =>
-          _.createElement(
-            "div",
-            {
-              className: _().FriendsListInsetShadowCtn,
-            },
-            _.createElement("div", {
+          (0, _.jsx)("div", {
+            className: _().FriendsListInsetShadowCtn,
+            children: (0, _.jsx)("div", {
               className: _().FriendListInsetShadowTop,
             }),
-          ),
+          }),
         _ = () =>
-          _.createElement(
-            "div",
-            {
-              className: _().FriendsListInsetShadowCtn,
-            },
-            _.createElement("div", {
+          (0, _.jsx)("div", {
+            className: _().FriendsListInsetShadowCtn,
+            children: (0, _.jsx)("div", {
               className: _().FriendListInsetShadowBottom,
             }),
-          );
+          });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -14447,7 +14543,7 @@
       function _(_) {
         const { latestAnnouncement: _ } = _;
         return "giveaway_draw" == _?.type
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               latestWinner: _,
             })
           : null;
@@ -14478,86 +14574,66 @@
           _.winners_info?.length > 0 && Boolean(_.winners_info[0].persona)
             ? _.winners_info[0].persona
             : (0, _._)("#GA2022_UnknownPersonaName");
-        return _.createElement(
-          _._,
-          {
-            href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
-            className: __webpack_require__,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().GiveawayWinnerBox]: !0,
-                [_().GiveawayWinnerAnnounced]: _ === _,
-              }),
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
+          className: __webpack_require__,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)({
+              [_().GiveawayWinnerBox]: !0,
+              [_().GiveawayWinnerAnnounced]: _ === _,
+            }),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().GiveawayWinnerBoxLeft,
-              },
-              _.createElement("img", {
-                className: _().GiveawayWinnerArt,
+                children: (0, _.jsx)("img", {
+                  className: _().GiveawayWinnerArt,
+                  src: _,
+                }),
+              }),
+              (0, _.jsxs)("div", {
+                className: _().GiveawayWinnerBoxRight,
+                children: [
+                  Boolean(_ !== _) &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_().GiveawayWinnerText),
+                      children: (0, _._)(
+                        "#GA2022_Congrats_Deck_Unknown",
+                        (0, _.jsx)("br", {}),
+                      ),
+                    }),
+                  Boolean(_ === _) &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().GiveawayWinnerText,
+                        _().GiveawayWinnerAnnounced,
+                      ),
+                      children: (0, _._)(
+                        _
+                          ? "#GA2022_Congrats_Deck_Me"
+                          : "#GA2022_Congrats_Deck_OTher",
+                        _,
+                        (0, _.jsx)("br", {}),
+                      ),
+                    }),
+                  Boolean(_ > 0) &&
+                    (0, _.jsx)("div", {
+                      className: _().GiveawayWinnerCountdown,
+                      children: (0, _._)("#GA2022_Congrats_NextDraw", _),
+                    }),
+                ],
+              }),
+              (0, _.jsx)("img", {
+                className: _().GiveawayWinnerQuestion,
                 src: _,
               }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().GiveawayWinnerBoxRight,
-              },
-              Boolean(_ !== _) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().GiveawayWinnerText),
-                  },
-                  (0, _._)(
-                    "#GA2022_Congrats_Deck_Unknown",
-                    _.createElement("br", null),
-                  ),
-                ),
-              Boolean(_ === _) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _().GiveawayWinnerText,
-                      _().GiveawayWinnerAnnounced,
-                    ),
-                  },
-                  (0, _._)(
-                    _
-                      ? "#GA2022_Congrats_Deck_Me"
-                      : "#GA2022_Congrats_Deck_OTher",
-                    _,
-                    _.createElement("br", null),
-                  ),
-                ),
-              Boolean(_ > 0) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().GiveawayWinnerCountdown,
-                  },
-                  (0, _._)("#GA2022_Congrats_NextDraw", _),
-                ),
-            ),
-            _.createElement("img", {
-              className: _().GiveawayWinnerQuestion,
-              src: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
+              Boolean(_) &&
+                (0, _.jsx)("div", {
                   className: _,
-                },
-                _ ? (0, _._)("#GA2022_YouWonNextSteps") : _,
-              ),
-          ),
-        );
+                  children: _ ? (0, _._)("#GA2022_YouWonNextSteps") : _,
+                }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { gidGiveaway: _, stream: __webpack_require__ } = _,
@@ -14597,7 +14673,7 @@
               : (_ = (0, _._)("#GA2022_RegisterToWin"))
             : (_ = (0, _._)("#GA2022_RegisterLoginToWin")),
           _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 latestWinner: _,
                 className: _().InViewerBar,
                 strActionButton: _,
@@ -14615,110 +14691,75 @@
       const _ = (_) => {
           const { userType: _, msg: __webpack_require__, presenterInfo: _ } = _;
           if ("presenter" === _)
-            return _.createElement(
-              "span",
-              null,
-              _.createElement(
-                _._,
-                {
-                  name: _.name,
-                  title: _.title,
-                  photo: _.photo,
-                  company: _.company,
-                  bioString: _.bio,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: (0, _._)(_().MessageName, _().MessagePresenter),
-                    href:
-                      _._.COMMUNITY_BASE_URL +
-                      "profiles/" +
-                      __webpack_require__.steamid,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  },
-                  __webpack_require__.persona_name,
-                ),
-              ),
-            );
+            return (0, _.jsx)("span", {
+              children: (0, _.jsx)(_._, {
+                name: _.name,
+                title: _.title,
+                photo: _.photo,
+                company: _.company,
+                bioString: _.bio,
+                children: (0, _.jsx)("a", {
+                  className: (0, _._)(_().MessageName, _().MessagePresenter),
+                  href:
+                    _._.COMMUNITY_BASE_URL +
+                    "profiles/" +
+                    __webpack_require__.steamid,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: __webpack_require__.persona_name,
+                }),
+              }),
+            });
           {
             let _ = null;
             return (
               "broadcaster" === _
                 ? (_ = _().MessageBroadcaster)
                 : "moderator" === _ && (_ = _().MessageModerator),
-              _.createElement(
-                "span",
-                null,
-                _.createElement(
-                  "a",
-                  {
-                    className: (0, _._)(_().MessageName, _),
-                    href:
-                      _._.COMMUNITY_BASE_URL +
-                      "profiles/" +
-                      __webpack_require__.steamid,
-                    "data-miniprofile": "s" + __webpack_require__.steamid,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  },
-                  __webpack_require__.persona_name,
-                ),
-              )
+              (0, _.jsx)("span", {
+                children: (0, _.jsx)("a", {
+                  className: (0, _._)(_().MessageName, _),
+                  href:
+                    _._.COMMUNITY_BASE_URL +
+                    "profiles/" +
+                    __webpack_require__.steamid,
+                  "data-miniprofile": "s" + __webpack_require__.steamid,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: __webpack_require__.persona_name,
+                }),
+              })
             );
           }
         },
         _ = (_) => {
           switch (_.userType) {
             case "presenter":
-              return _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#BroadcastChat_Role_Presenter_ttip",
-                  ),
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _().RoleFlairContainer,
-                  },
-                  _.createElement(_.NCC, null),
-                ),
-              );
+              return (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#BroadcastChat_Role_Presenter_ttip"),
+                children: (0, _.jsx)("span", {
+                  className: _().RoleFlairContainer,
+                  children: (0, _.jsx)(_.NCC, {}),
+                }),
+              });
             case "moderator":
-              return _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#BroadcastChat_Role_Moderatorr_ttip",
-                  ),
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _().RoleFlairContainer,
-                  },
-                  _.createElement(_.$4X, null),
-                ),
-              );
+              return (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#BroadcastChat_Role_Moderatorr_ttip"),
+                children: (0, _.jsx)("span", {
+                  className: _().RoleFlairContainer,
+                  children: (0, _.jsx)(_.$4X, {}),
+                }),
+              });
             case "broadcaster":
-              return _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#BroadcastChat_Role_Broadcaster_ttip",
-                  ),
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _().RoleFlairContainer,
-                  },
-                  _.createElement(_.Gkr, null),
+              return (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)(
+                  "#BroadcastChat_Role_Broadcaster_ttip",
                 ),
-              );
+                children: (0, _.jsx)("span", {
+                  className: _().RoleFlairContainer,
+                  children: (0, _.jsx)(_.Gkr, {}),
+                }),
+              });
             default:
               return null;
           }
@@ -14775,11 +14816,14 @@
           for (let _ = 0; _ < _.length; _ += 1)
             _ % 2 == 1
               ? _.push(
-                  _.createElement(_._, {
-                    key: _,
-                    emoticon: _[_],
-                    large: !0,
-                  }),
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      emoticon: _[_],
+                      large: !0,
+                    },
+                    _,
+                  ),
                 )
               : _.push(_[_]);
           return _;
@@ -14808,22 +14852,21 @@
           if (
             ((_._ && _._.is_support) || _ || _
               ? __webpack_require__.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "remove",
                       onSelected: () =>
                         this.m_chat.RemoveUserMessagesServer(
                           _.steamid,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_RemoveMessages"),
                     },
-                    (0, _._)("#BroadcastChat_RemoveMessages"),
+                    "remove",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updatebanh",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -14832,13 +14875,13 @@
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_half_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_half_Mute"),
+                    "updatebanh",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updateband",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -14847,13 +14890,13 @@
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_day_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_day_Mute"),
+                    "updateband",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updatebanw",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -14862,13 +14905,13 @@
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_week_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_week_Mute"),
+                    "updatebanw",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "updatebanp",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -14877,13 +14920,13 @@
                           !0,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_perm_Mute"),
                     },
-                    (0, _._)("#BroadcastChat_perm_Mute"),
+                    "updatebanp",
                   ),
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "removeban",
                       onSelected: () =>
                         this.m_chat.UpdateUserChatBan(
                           _.steamid,
@@ -14893,37 +14936,38 @@
                           _.persona_name,
                           !0,
                         ),
+                      children: (0, _._)("#BroadcastChat_Unmute"),
                     },
-                    (0, _._)("#BroadcastChat_Unmute"),
+                    "removeban",
                   ),
                 )
               : this.m_chat.IsUserMutedLocally(_.steamid)
                 ? __webpack_require__.push(
-                    _.createElement(
+                    (0, _.jsx)(
                       _._,
                       {
-                        key: "unmuteuser",
                         onSelected: () =>
                           this.m_chat.UnmuteUserForSession(
                             _.steamid,
                             _.persona_name,
                           ),
+                        children: (0, _._)("#BroadcastChat_UnmuteLocal"),
                       },
-                      (0, _._)("#BroadcastChat_UnmuteLocal"),
+                      "unmuteuser",
                     ),
                   )
                 : __webpack_require__.push(
-                    _.createElement(
+                    (0, _.jsx)(
                       _._,
                       {
-                        key: "muteuser",
                         onSelected: () =>
                           this.m_chat.MuteUserForSession(
                             _.steamid,
                             _.persona_name,
                           ),
+                        children: (0, _._)("#BroadcastChat_MuteLocal"),
                       },
-                      (0, _._)("#BroadcastChat_MuteLocal"),
+                      "muteuser",
                     ),
                   ),
             ((_._ && _._.is_support) ||
@@ -14932,58 +14976,54 @@
           ) {
             this.m_chat.BIsUserBroadcastModerator(_.steamid)
               ? __webpack_require__.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "removemod",
                       onSelected: () =>
                         this.m_chat.UpdateBroadcastChatModerator(
                           _.steamid,
                           !1,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_Remove_Moderator"),
                     },
-                    (0, _._)("#BroadcastChat_Remove_Moderator"),
+                    "removemod",
                   ),
                 )
               : __webpack_require__.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: "addmod",
                       onSelected: () =>
                         this.m_chat.UpdateBroadcastChatModerator(
                           _.steamid,
                           !0,
                           _.persona_name,
                         ),
+                      children: (0, _._)("#BroadcastChat_Add_Moderator"),
                     },
-                    (0, _._)("#BroadcastChat_Add_Moderator"),
+                    "addmod",
                   ),
                 );
           }
           return _.length
             ? (0, _._)(
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().SelectedUserNameCtn,
-                    },
-                    (0, _._)("#BroadcastChat_User"),
-                    _.createElement("br", null),
-                    _.createElement(
-                      "span",
-                      {
-                        className: _().SelectedUserName,
-                      },
-                      _.persona_name,
-                    ),
-                  ),
-                  _,
-                ),
+                      children: [
+                        (0, _._)("#BroadcastChat_User"),
+                        (0, _.jsx)("br", {}),
+                        (0, _.jsx)("span", {
+                          className: _().SelectedUserName,
+                          children: _.persona_name,
+                        }),
+                      ],
+                    }),
+                    _,
+                  ],
+                }),
                 _,
               )
             : null;
@@ -15016,57 +15056,49 @@
                         : "";
                 })(_.steamid, this.m_chat, _)
               : "";
-          return _.createElement(
+          return (0, _.jsxs)(
             "div",
             {
-              key: _.instance_id + "_" + _.client_ts + "_" + _,
               className: this.GetTypeClassName(_),
               onContextMenu: (_) => this.OnContextMenu(_, _),
+              children: [
+                _.type === _._.Chat &&
+                  (0, _.jsx)(_, {
+                    userType: _,
+                  }),
+                _.flair &&
+                  (0, _.jsx)("span", {
+                    className: _().FlairContainer,
+                    children: this.AddLinksEmoticons(_.flair, !1),
+                  }),
+                _.type === _._.Chat &&
+                  (0, _.jsx)(_, {
+                    userType: _,
+                    msg: _,
+                    presenterInfo: _,
+                  }),
+                _.type === _._.Chat &&
+                  this.m_chat.GetBroadcastSteamID() === _.steamid &&
+                  (0, _.jsx)("span", {
+                    className: `${_().MessageNotification} ${_().MessageContents}`,
+                    children: ` (${(0, _._)("#BroadcastChat_Broadcaster")})`,
+                  }),
+                _.type === _._.Chat &&
+                  this.m_chat.m_mapChannelModeratorUsers.get(_.steamid) &&
+                  (0, _.jsx)("span", {
+                    className: `${_().MessageNotification} ${_().MessageContents}`,
+                    children: ` (${(0, _._)("#BroadcastChat_Moderator")})`,
+                  }),
+                (0, _.jsxs)("span", {
+                  className: `${_().MessageContents} ${this.AddLinksEmoticons(_.msg, !1).filter((_) => _ && "string" == typeof _).length ? "" : _().EmoticonsOnly}`,
+                  children: [
+                    _.type === _._.Chat ? " : " : "",
+                    this.FormatMessage(_, this.m_chat.TextFilterStore),
+                  ],
+                }),
+              ],
             },
-            _.type === _._.Chat &&
-              _.createElement(_, {
-                userType: _,
-              }),
-            _.flair &&
-              _.createElement(
-                "span",
-                {
-                  className: _().FlairContainer,
-                },
-                this.AddLinksEmoticons(_.flair, !1),
-              ),
-            _.type === _._.Chat &&
-              _.createElement(_, {
-                userType: _,
-                msg: _,
-                presenterInfo: _,
-              }),
-            _.type === _._.Chat &&
-              this.m_chat.GetBroadcastSteamID() === _.steamid &&
-              _.createElement(
-                "span",
-                {
-                  className: `${_().MessageNotification} ${_().MessageContents}`,
-                },
-                ` (${(0, _._)("#BroadcastChat_Broadcaster")})`,
-              ),
-            _.type === _._.Chat &&
-              this.m_chat.m_mapChannelModeratorUsers.get(_.steamid) &&
-              _.createElement(
-                "span",
-                {
-                  className: `${_().MessageNotification} ${_().MessageContents}`,
-                },
-                ` (${(0, _._)("#BroadcastChat_Moderator")})`,
-              ),
-            _.createElement(
-              "span",
-              {
-                className: `${_().MessageContents} ${this.AddLinksEmoticons(_.msg, !1).filter((_) => _ && "string" == typeof _).length ? "" : _().EmoticonsOnly}`,
-              },
-              _.type === _._.Chat ? " : " : "",
-              this.FormatMessage(_, this.m_chat.TextFilterStore),
-            ),
+            _.instance_id + "_" + _.client_ts + "_" + _,
           );
         }
         render() {
@@ -15083,48 +15115,44 @@
                 )
               : void 0,
             _ = this.m_chat ? this.m_chat.m_latestAnnouncement : null;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().ChatPanel, "ChatPanel"),
-              style: _
-                ? {
-                    display: "none",
-                  }
-                : void 0,
-            },
-            _.createElement(_, {
-              latestAnnouncement: _,
-            }),
-            __webpack_require__ &&
-              !!this.m_chat &&
-              _.createElement(_, {
-                oChat: this.m_chat,
-                emoticonStore: this.props.emoticonStore,
-                bPartnerMemberOnlyChat: _,
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_().ChatPanel, "ChatPanel"),
+            style: _
+              ? {
+                  display: "none",
+                }
+              : void 0,
+            children: [
+              (0, _.jsx)(_, {
+                latestAnnouncement: _,
               }),
-            _.createElement(_, null),
-            _.createElement(
-              "div",
-              {
+              __webpack_require__ &&
+                !!this.m_chat &&
+                (0, _.jsx)(_, {
+                  oChat: this.m_chat,
+                  emoticonStore: this.props.emoticonStore,
+                  bPartnerMemberOnlyChat: _,
+                }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   `${_().ChatMessages} ${_().minHeightZero}`,
                   "ChatMessages",
                 ),
                 onScroll: this.HandleScroll,
                 ref: this.messagesContainer,
-              },
-              _.map((_, _) => this.RenderUserChatLine(_, _, _)),
-            ),
-            _.createElement(_, null),
-            !__webpack_require__ &&
-              !!this.m_chat &&
-              _.createElement(_, {
-                oChat: this.m_chat,
-                emoticonStore: this.props.emoticonStore,
-                bPartnerMemberOnlyChat: _,
+                children: _.map((_, _) => this.RenderUserChatLine(_, _, _)),
               }),
-          );
+              (0, _.jsx)(_, {}),
+              !__webpack_require__ &&
+                !!this.m_chat &&
+                (0, _.jsx)(_, {
+                  oChat: this.m_chat,
+                  emoticonStore: this.props.emoticonStore,
+                  bPartnerMemberOnlyChat: _,
+                }),
+            ],
+          });
         }
       };
       function _(_) {
@@ -15135,12 +15163,12 @@
         } = _;
         return !_ || (_._?.logged_in && _._?.is_partner_member)
           ? _._?.logged_in
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 oChat: _,
                 emoticonStore: __webpack_require__,
               })
             : null
-          : _.createElement(_, null);
+          : (0, _.jsx)(_, {});
       }
       function _(_) {
         const { oChat: _, emoticonStore: __webpack_require__ } = _,
@@ -15164,74 +15192,62 @@
           );
         let _ = _ || 0 == _.trim().length,
           _ = (0, _._)(_().chatSubmitButton, 0 == _.length && _().disabled);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ChatEntryCtn, "ChatEntryCtn"),
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().ChatEntry, "ChatEntry"),
-            },
-            _.createElement(
-              "form",
-              {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().ChatEntryCtn, "ChatEntryCtn"),
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().ChatEntry, "ChatEntry"),
+            children: [
+              (0, _.jsxs)("form", {
                 className: `${_().chatEntryControls}`,
-              },
-              _.createElement("textarea", {
-                className: _().chatTextarea,
-                placeholder: (0, _._)("#BroadcastChat_EnterResponse"),
-                onKeyPress: _,
-                onChange: (_) => _(_.target.value),
-                value: _,
-                ref: _,
+                children: [
+                  (0, _.jsx)("textarea", {
+                    className: _().chatTextarea,
+                    placeholder: (0, _._)("#BroadcastChat_EnterResponse"),
+                    onKeyPress: _,
+                    onChange: (_) => _(_.target.value),
+                    value: _,
+                    ref: _,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      nSeconds: _.m_nRateLimitSeconds,
+                      bRateLimited: _.m_bRateLimited,
+                    }),
+                  (0, _.jsx)("button", {
+                    className: _,
+                    title: (0, _._)("#ChatEntryButton_Submit"),
+                    disabled: _,
+                    onClick: () => {
+                      _.SendMessage(_), _("");
+                    },
+                    children: (0, _.jsx)(_.XTb, {}),
+                  }),
+                ],
               }),
-              _ &&
-                _.createElement(_, {
-                  nSeconds: _.m_nRateLimitSeconds,
-                  bRateLimited: _.m_bRateLimited,
-                }),
-              _.createElement(
-                "button",
-                {
-                  className: _,
-                  title: (0, _._)("#ChatEntryButton_Submit"),
-                  disabled: _,
-                  onClick: () => {
-                    _.SendMessage(_), _("");
-                  },
-                },
-                _.createElement(_.XTb, null),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 style: {
                   height: "50px",
                 },
                 className: `${_().chatEntryActionsContainer}`,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _().chatEntryActionsGroup,
-                },
-                _.createElement(_._, {
-                  disabled: !1,
-                  OnEmoticonSelected: _,
-                  rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                  emoticonStore: __webpack_require__,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      disabled: !1,
+                      OnEmoticonSelected: _,
+                      rtLastAckedNewEmoticons: Number.MAX_VALUE,
+                      emoticonStore: __webpack_require__,
+                    }),
+                    (0, _.jsx)(_, {
+                      ..._,
+                      textInputRef: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  ..._,
-                  textInputRef: _,
-                }),
-              ),
-            ),
-          ),
-        );
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -15242,7 +15258,7 @@
         return _.m_strFlairGroupID &&
           __webpack_require__.flair_list &&
           __webpack_require__.GetFlairListByGroupID(_.m_strFlairGroupID)?.length
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               disabled: !1,
               OnEmoticonSelected: (_) => {
                 _.UpdateChatMessageFlair(_), _?.current && _.current.focus();
@@ -15251,7 +15267,7 @@
               emoticonStore: __webpack_require__,
               strFlairGroupID: _.m_strFlairGroupID,
               title: (0, _._)("#ChatEntryButton_Flair"),
-              buttonIcon: _.createElement(_.P7r, null),
+              buttonIcon: (0, _.jsx)(_.P7r, {}),
             })
           : null;
       }
@@ -15263,61 +15279,50 @@
         (_ = (0, _._)([_._], _));
       class _ extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: _().TimedProgressBarContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().wrapper,
-              },
-              _.createElement("div", {
-                className: `${_().spinner} ${_().pie}`,
-                style: {
-                  animationDuration: `${this.props.nSeconds || 0}s`,
-                },
-              }),
-              _.createElement("div", {
-                className: `${_().filler} ${_().pie}`,
-                style: {
-                  animationDuration: `${this.props.nSeconds || 0}s`,
-                },
-              }),
-              _.createElement("div", {
-                className: _().mask,
-                style: {
-                  animationDuration: `${this.props.nSeconds || 0}s`,
-                },
-              }),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: _().TimedProgressBarContainer,
+            children: (0, _.jsxs)("div", {
+              className: _().wrapper,
+              children: [
+                (0, _.jsx)("div", {
+                  className: `${_().spinner} ${_().pie}`,
+                  style: {
+                    animationDuration: `${this.props.nSeconds || 0}s`,
+                  },
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().filler} ${_().pie}`,
+                  style: {
+                    animationDuration: `${this.props.nSeconds || 0}s`,
+                  },
+                }),
+                (0, _.jsx)("div", {
+                  className: _().mask,
+                  style: {
+                    animationDuration: `${this.props.nSeconds || 0}s`,
+                  },
+                }),
+              ],
+            }),
+          });
         }
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().Description,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().Description,
+          children: [
+            (0, _.jsx)("div", {
               className: _().LogInPrompt,
-            },
-            (0, _._)("#Broadcast_PartnerChat_Login"),
-          ),
-          !_._.logged_in &&
-            _.createElement(
-              _._,
-              {
+              children: (0, _._)("#Broadcast_PartnerChat_Login"),
+            }),
+            !_._.logged_in &&
+              (0, _.jsx)(_._, {
                 onClick: _._,
                 className: (0, _._)(_().SignInButton),
-              },
-              (0, _._)("#Login_SignIn"),
-            ),
-        );
+                children: (0, _._)("#Login_SignIn"),
+              }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15353,94 +15358,69 @@
           _ = _().StoreSaleWidgetImage_mini,
           _ = _().StoreSaleImage_mini;
         if (null == _)
-          return _.createElement(
-            "div",
-            {
-              className: _,
-            },
-            _.createElement(_._, {
+          return (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)(_._, {
               size: "medium",
             }),
-          );
+          });
         if (null == _ || !_.name)
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: _.StoreSaleWidgetEmptyContainer,
           });
         const _ = 8 != _.type,
           _ = (0, _._)((0, _._)(_), _);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            (0, _.jsx)("a", {
               href: _,
               target: _._.IN_CLIENT ? void 0 : "_blank",
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 _: _,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _,
-                },
-                _ &&
-                  _.createElement("img", {
-                    className: _,
-                    src: (0, _._)(_, "small_capsule"),
-                    alt: _.name,
-                  }),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.StoreSaleBroadcastWidgetRight,
-            },
-            _.createElement(
-              "a",
-              {
-                href: _,
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-              },
-              _.createElement(
-                _._,
-                {
-                  _: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _.StoreSaleWidgetTitle,
-                      "StoreSaleWidgetTitle",
-                    ),
-                  },
-                  _.name,
-                ),
-              ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.StoreSaleWidgetRelease,
-                },
-                (0, _._)(_),
-              ),
-            Boolean(_) &&
-              _.createElement(_._, {
-                _: _,
-                bShowDemoButton: !0,
+                  children:
+                    _ &&
+                    (0, _.jsx)("img", {
+                      className: _,
+                      src: (0, _._)(_, "small_capsule"),
+                      alt: _.name,
+                    }),
+                }),
               }),
-          ),
-        );
+            }),
+            (0, _.jsxs)("div", {
+              className: _.StoreSaleBroadcastWidgetRight,
+              children: [
+                (0, _.jsx)("a", {
+                  href: _,
+                  target: _._.IN_CLIENT ? void 0 : "_blank",
+                  children: (0, _.jsx)(_._, {
+                    _: _,
+                    children: (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _.StoreSaleWidgetTitle,
+                        "StoreSaleWidgetTitle",
+                      ),
+                      children: _.name,
+                    }),
+                  }),
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.StoreSaleWidgetRelease,
+                    children: (0, _._)(_),
+                  }),
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    _: _,
+                    bShowDemoButton: !0,
+                  }),
+              ],
+            }),
+          ],
+        });
       });
       function _() {
         let _ = window.GetUsabilityTracker;
@@ -15963,40 +15943,36 @@
           _.jsondata.broadcast_item_drops_details_clan_accountid +
           "/partnerevents/view/" +
           _.jsondata.broadcast_item_drops_details_event_gid;
-        return _.createElement(
-          "div",
-          {
-            className: _().item_drop_ctn,
-          },
-          _.createElement(
-            "div",
-            null,
-            (0, _._)(
-              _.GetName().length > 0
-                ? _.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
-                  0
-                  ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
-                  : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
-                : _.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
+        return (0, _.jsx)("div", {
+          className: _().item_drop_ctn,
+          children: (0, _.jsxs)("div", {
+            children: [
+              (0, _._)(
+                _.GetName().length > 0
+                  ? _.jsondata.broadcast_item_drops_min_watch_time_minutes %
+                      60 ==
                     0
-                  ? "#SalePage_WatchForDrop_Hours_Developer"
-                  : "#SalePage_WatchForDrop_Minutes_Developer",
-              _.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
-                ? _.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
-                : _.jsondata.broadcast_item_drops_min_watch_time_minutes,
-              _.GetName(),
-            ),
-            Boolean(_.jsondata.broadcast_item_drops_details_clan_accountid) &&
-              _.createElement(
-                "a",
-                {
+                    ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
+                    : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
+                  : _.jsondata.broadcast_item_drops_min_watch_time_minutes %
+                        60 ==
+                      0
+                    ? "#SalePage_WatchForDrop_Hours_Developer"
+                    : "#SalePage_WatchForDrop_Minutes_Developer",
+                _.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
+                  ? _.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
+                  : _.jsondata.broadcast_item_drops_min_watch_time_minutes,
+                _.GetName(),
+              ),
+              Boolean(_.jsondata.broadcast_item_drops_details_clan_accountid) &&
+                (0, _.jsx)("a", {
                   href: _,
                   target: _._.IN_CLIENT ? "" : "_blank",
-                },
-                (0, _._)("#SalePage_WatchForDrop_LearnMore"),
-              ),
-          ),
-        );
+                  children: (0, _._)("#SalePage_WatchForDrop_LearnMore"),
+                }),
+            ],
+          }),
+        });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -16009,23 +15985,22 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { steamid: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            strDescription: "",
-            strTitle: (0, _._)("#Button_Share"),
-            onCancel: __webpack_require__,
-            onOK: __webpack_require__,
-            bAlertDialog: !0,
-            modalClassName: "EventDisplay_Share_Dialog",
-          },
-          _.createElement(_, {
-            steamid: _,
-          }),
-          _.createElement(_, {
-            steamid: _,
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          strDescription: "",
+          strTitle: (0, _._)("#Button_Share"),
+          onCancel: __webpack_require__,
+          onOK: __webpack_require__,
+          bAlertDialog: !0,
+          modalClassName: "EventDisplay_Share_Dialog",
+          children: [
+            (0, _.jsx)(_, {
+              steamid: _,
+            }),
+            (0, _.jsx)(_, {
+              steamid: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { steamid: _ } = _,
@@ -16037,63 +16012,44 @@
               strRedditUrl: _ + "?site=reddit",
             };
           })(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().FlexRowContainer, _().share_controls_ctn),
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().FlexRowContainer, _().share_controls_ctn),
+          children: [
+            (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#EventDisplay_Share_OnFaceBook"),
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 href: _.strFacebookUrl,
                 className: _().ShareBtn,
-              },
-              _.createElement("img", {
-                className: (0, _._)(_().Button),
-                src: _._,
+                children: (0, _.jsx)("img", {
+                  className: (0, _._)(_().Button),
+                  src: _._,
+                }),
               }),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
+            }),
+            (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#EventDisplay_Share_OnTwitter"),
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 href: _.strTwitterUrl,
                 className: _().ShareBtn,
-              },
-              _.createElement("img", {
-                className: (0, _._)(_().Button),
-                src: _._,
+                children: (0, _.jsx)("img", {
+                  className: (0, _._)(_().Button),
+                  src: _._,
+                }),
               }),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
+            }),
+            (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#EventDisplay_Share_OnReddit"),
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 href: _.strRedditUrl,
                 className: _().ShareBtn,
-              },
-              _.createElement("img", {
-                className: (0, _._)(_().Button),
-                src: _._,
+                children: (0, _.jsx)("img", {
+                  className: (0, _._)(_().Button),
+                  src: _._,
+                }),
               }),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const { steamid: _ } = _,
@@ -16116,55 +16072,42 @@
             [_],
           ),
           _ = _._.COMMUNITY_BASE_URL + "broadcast/watch/" + _;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().FlexRowContainer, _().linkField),
               onClick: _,
-            },
-            _.createElement(
-              "span",
-              {
-                className: _().LinkInputLabel,
-              },
-              (0, _._)("#EventDisplay_Share_Link"),
-            ),
-            _.createElement("textarea", {
-              className: _().LinkInput,
-              ref: _,
-              value: _,
-              readOnly: !0,
-            }),
-            Boolean(document.queryCommandSupported("copy")) &&
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                  },
-                  _.createElement("img", {
-                    className: _().ClipboardIcon,
-                    src: _._,
+              children: [
+                (0, _.jsx)("span", {
+                  className: _().LinkInputLabel,
+                  children: (0, _._)("#EventDisplay_Share_Link"),
+                }),
+                (0, _.jsx)("textarea", {
+                  className: _().LinkInput,
+                  ref: _,
+                  value: _,
+                  readOnly: !0,
+                }),
+                Boolean(document.queryCommandSupported("copy")) &&
+                  (0, _.jsx)(_._, {
+                    toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                    children: (0, _.jsx)("div", {
+                      className: (0, _._)(_().Button, _().Icon, _().LinkButton),
+                      children: (0, _.jsx)("img", {
+                        className: _().ClipboardIcon,
+                        src: _._,
+                      }),
+                    }),
                   }),
-                ),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+              ],
+            }),
+            (0, _.jsx)("div", {
               ref: _,
               className: _().ClipboardText,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16210,7 +16153,7 @@
           const _ = (0, _._)();
           return !(0, _._)() && !_;
         })()
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
             })
           : null;
@@ -16329,14 +16272,20 @@
           if (this.props.bWidePlayer) return _;
           const _ = _.Get().GetConcurrentStreams(this.props) > 1;
           let _ = _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID,
-            _ = _.createElement(_, {
-              key: "right" + _,
-              ImgUrl: _.right_panel,
-            }),
-            _ = _.createElement(_, {
-              key: "left" + _,
-              ImgUrl: _.left_panel,
-            });
+            _ = (0, _.jsx)(
+              _,
+              {
+                ImgUrl: _.right_panel,
+              },
+              "right" + _,
+            ),
+            _ = (0, _.jsx)(
+              _,
+              {
+                ImgUrl: _.left_panel,
+              },
+              "left" + _,
+            );
           if (_ < 11) {
             const _ = _.GetAppIDListForBroadcasterSteamID(_.steamid);
             _ && 1 === _.length && (_ = _[0]);
@@ -16351,24 +16300,30 @@
             ) ||
               (this.props.event &&
                 this.props.event.jsondata.broadcast_force_banner) ||
-              ((_ = _.createElement(_, {
-                key: "mini" + _.accountid,
-                appid: _,
-              })),
+              ((_ = (0, _.jsx)(
+                _,
+                {
+                  appid: _,
+                },
+                "mini" + _.accountid,
+              )),
               (_.bRightPanelArtworkOrEmpty = !1)),
             _ && !_
-              ? ((_.leftPanel = _.createElement(_, {
-                  broadcastEmbedContext: this.props,
-                  key: "selector" + _,
-                  curStream: _,
-                  onStreamSelect: this.onStreamSelect,
-                  fnFilterStreams: this.props.fnFilterStreams,
-                  bShowCapsuleArt: this.props.bShowCapsuleArt,
-                })),
+              ? ((_.leftPanel = (0, _.jsx)(
+                  _,
+                  {
+                    broadcastEmbedContext: this.props,
+                    curStream: _,
+                    onStreamSelect: this.onStreamSelect,
+                    fnFilterStreams: this.props.fnFilterStreams,
+                    bShowCapsuleArt: this.props.bShowCapsuleArt,
+                  },
+                  "selector" + _,
+                )),
                 (_.rightPanel = _))
               : _
-                ? ((_.leftPanel = _.createElement("div", null)),
-                  (_.rightPanel = _.createElement(_, {
+                ? ((_.leftPanel = (0, _.jsx)("div", {})),
+                  (_.rightPanel = (0, _.jsx)(_, {
                     stream: _,
                     orientation: "rightside",
                   })),
@@ -16415,148 +16370,123 @@
             const _ = () => {
               _.nAppIDVOD && this.PlayNextNonVOD(), this.props.fnOnVideoEnd?.();
             };
-            return _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: "broadcast_embed_top_ctn_trgt",
-                  style: this.state.style,
-                },
-                _.createElement(
-                  "div",
-                  {
+            return (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)("div", {
+                className: "broadcast_embed_top_ctn_trgt",
+                style: this.state.style,
+                children: [
+                  (0, _.jsxs)("div", {
                     className: (0, _._)({
                       [_().bordered_container]: !0,
                       [_().Event]: Boolean(__webpack_require__),
                       broadcast_brd_ctn_trgt: !0,
                     }),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().bordered_title,
-                        "bordered_title_trgt",
-                      ),
-                    },
-                    _.createElement(_._, null),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().streamTitle,
-                      },
-                      _,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().bordered_corner_container,
-                      },
-                      Boolean(!this.state.bExpanded) &&
-                        _.createElement(
-                          _._,
-                          {
-                            toolTipContent: (0, _._)(
-                              "#StoreBroadcast_Change_store_Broadcast_settings",
-                            ),
-                          },
-                          _.createElement("div", {
-                            className: _().broadcast_settings_icon,
-                            onClick: () =>
-                              window.open(
-                                `${_._.STORE_BASE_URL}account/preferences/#store_broadcast_settings`,
-                              ),
-                          }),
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().bordered_title,
+                          "bordered_title_trgt",
                         ),
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent: (0, _._)(
-                            "#StoreBroadcast_Hide_Tooltip",
-                          ),
-                        },
-                        _.createElement("div", {
-                          className: this.state.bExpanded
-                            ? _().bordered_corner_expanded
-                            : _().bordered_corner_shrinked,
-                          onClick: this.ToggleBroadcastExpandShrink,
-                        }),
-                      ),
-                    ),
-                    Boolean(_.gamedata_subtitle) &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().bordered_subtitle,
-                        },
-                        _.gamedata_subtitle,
-                      ),
-                  ),
-                  Boolean(this.state.bExpanded) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)({
-                          [_().container]: !0,
-                          embeddable_ctn_trgt: !0,
-                          multistream: _,
-                          broadcast_right_panel_simple:
-                            _.bRightPanelArtworkOrEmpty,
-                          broadcast_chat_expanded: _,
-                        }),
-                        style: {
-                          ...this.state.innerStyle,
-                        },
-                        onTransitionEnd: this.OnShrinkTransitionEnd,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().LeftPanelCtn,
-                        },
-                        _.leftPanel,
-                      ),
-                      _.createElement(_, {
-                        stream: _,
-                        bStartMuted: this.state.bStartMuted,
-                        fnRenderBroadcastContext: _,
-                        fnOnVideoEnd: _,
-                        bWidePlayer: this.props.bWidePlayer,
+                        children: [
+                          (0, _.jsx)(_._, {}),
+                          (0, _.jsx)("div", {
+                            className: _().streamTitle,
+                            children: _,
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _().bordered_corner_container,
+                            children: [
+                              Boolean(!this.state.bExpanded) &&
+                                (0, _.jsx)(_._, {
+                                  toolTipContent: (0, _._)(
+                                    "#StoreBroadcast_Change_store_Broadcast_settings",
+                                  ),
+                                  children: (0, _.jsx)("div", {
+                                    className: _().broadcast_settings_icon,
+                                    onClick: () =>
+                                      window.open(
+                                        `${_._.STORE_BASE_URL}account/preferences/#store_broadcast_settings`,
+                                      ),
+                                  }),
+                                }),
+                              (0, _.jsx)(_._, {
+                                toolTipContent: (0, _._)(
+                                  "#StoreBroadcast_Hide_Tooltip",
+                                ),
+                                children: (0, _.jsx)("div", {
+                                  className: this.state.bExpanded
+                                    ? _().bordered_corner_expanded
+                                    : _().bordered_corner_shrinked,
+                                  onClick: this.ToggleBroadcastExpandShrink,
+                                }),
+                              }),
+                            ],
+                          }),
+                          Boolean(_.gamedata_subtitle) &&
+                            (0, _.jsx)("div", {
+                              className: _().bordered_subtitle,
+                              children: _.gamedata_subtitle,
+                            }),
+                        ],
                       }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().RightPanelCtn,
-                        },
-                        _.rightPanel,
-                      ),
                       Boolean(this.state.bExpanded) &&
-                        _.createElement(_, {
-                          stream: _,
-                          bMultistream: _,
-                          chatAnnouncementGivewayGID: _.rightPanel
-                            ? void 0
-                            : this.props.chat_announcement_giveaway,
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)({
+                            [_().container]: !0,
+                            embeddable_ctn_trgt: !0,
+                            multistream: _,
+                            broadcast_right_panel_simple:
+                              _.bRightPanelArtworkOrEmpty,
+                            broadcast_chat_expanded: _,
+                          }),
+                          style: {
+                            ...this.state.innerStyle,
+                          },
+                          onTransitionEnd: this.OnShrinkTransitionEnd,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().LeftPanelCtn,
+                              children: _.leftPanel,
+                            }),
+                            (0, _.jsx)(_, {
+                              stream: _,
+                              bStartMuted: this.state.bStartMuted,
+                              fnRenderBroadcastContext: _,
+                              fnOnVideoEnd: _,
+                              bWidePlayer: this.props.bWidePlayer,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().RightPanelCtn,
+                              children: _.rightPanel,
+                            }),
+                            Boolean(this.state.bExpanded) &&
+                              (0, _.jsx)(_, {
+                                stream: _,
+                                bMultistream: _,
+                                chatAnnouncementGivewayGID: _.rightPanel
+                                  ? void 0
+                                  : this.props.chat_announcement_giveaway,
+                              }),
+                          ],
                         }),
-                    ),
-                ),
-                Boolean(
-                  __webpack_require__ &&
-                    __webpack_require__.jsondata &&
-                    __webpack_require__.jsondata.broadcast_item_drops_enabled,
-                ) &&
-                  _.createElement(_, {
-                    event: __webpack_require__,
+                    ],
                   }),
-                _.createElement("div", {
-                  className: _().clear_div,
-                }),
-              ),
-            );
+                  Boolean(
+                    __webpack_require__ &&
+                      __webpack_require__.jsondata &&
+                      __webpack_require__.jsondata.broadcast_item_drops_enabled,
+                  ) &&
+                    (0, _.jsx)(_, {
+                      event: __webpack_require__,
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _().clear_div,
+                  }),
+                ],
+              }),
+            });
           }
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: "NoBroadcastAvailable",
           });
         }
@@ -16602,56 +16532,46 @@
             });
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: _().wrapper,
-            },
-            _.createElement(
-              _._,
-              {
-                onEnter: this.OnEnter,
-                onLeave: this.OnLeave,
-                onIntersectionChange: (_) => {
-                  _.isIntersecting || this.OnLeave();
-                },
-                className: (0, _._)({
-                  [_().video_placeholder]: !0,
-                  video_placeholder_trgt: !0,
-                  [_().WidePlayer]: this.props.bWidePlayer,
-                }),
-                ref: this.m_iVideoContainerRef,
+          return (0, _.jsx)("div", {
+            className: _().wrapper,
+            children: (0, _.jsx)(_._, {
+              onEnter: this.OnEnter,
+              onLeave: this.OnLeave,
+              onIntersectionChange: (_) => {
+                _.isIntersecting || this.OnLeave();
               },
-              _.createElement(
-                "div",
-                {
-                  className: this.state.bPopout
-                    ? _().broadcast_floating
-                    : _().video_container,
-                },
-                this.state.bPopout &&
-                  _.createElement(_, {
-                    steamIDBroadcast: this.props.stream.steamid,
-                    OnPreventPopup: this.CloseBroadcastPopup,
-                  }),
-                _.createElement(
-                  "div",
-                  {
+              className: (0, _._)({
+                [_().video_placeholder]: !0,
+                video_placeholder_trgt: !0,
+                [_().WidePlayer]: this.props.bWidePlayer,
+              }),
+              ref: this.m_iVideoContainerRef,
+              children: (0, _.jsxs)("div", {
+                className: this.state.bPopout
+                  ? _().broadcast_floating
+                  : _().video_container,
+                children: [
+                  this.state.bPopout &&
+                    (0, _.jsx)(_, {
+                      steamIDBroadcast: this.props.stream.steamid,
+                      OnPreventPopup: this.CloseBroadcastPopup,
+                    }),
+                  (0, _.jsx)("div", {
                     className: _().BroadcastPlayerContainer,
-                  },
-                  _.createElement(_.default, {
-                    steamIDBroadcast: this.props.stream.steamid,
-                    watchLocation: 6,
-                    bStartMuted: this.props.bStartMuted,
-                    fnRenderBroadcastContext:
-                      this.props.fnRenderBroadcastContext,
-                    fnOnVideoEnd: this.props.fnOnVideoEnd,
-                    nAppIDVOD: this.props.stream.nAppIDVOD,
+                    children: (0, _.jsx)(_.default, {
+                      steamIDBroadcast: this.props.stream.steamid,
+                      watchLocation: 6,
+                      bStartMuted: this.props.bStartMuted,
+                      fnRenderBroadcastContext:
+                        this.props.fnRenderBroadcastContext,
+                      fnOnVideoEnd: this.props.fnOnVideoEnd,
+                      nAppIDVOD: this.props.stream.nAppIDVOD,
+                    }),
                   }),
-                ),
-              ),
-            ),
-          );
+                ],
+              }),
+            }),
+          });
         }
       }
       function _(_) {
@@ -16672,32 +16592,23 @@
               navigator.userAgent.indexOf("Valve Steam GameOverlay") >= 0 ||
               navigator.userAgent.indexOf("Valve Steam Tenfoot") >= 0) &&
               (_ = "steam://openurl/" + _),
-            _.createElement(
-              "a",
-              {
-                href: _,
-              },
-              (0, _._)("#Broadcast_Embed_Watch_With_Frieds_SteamTV"),
-            )
+            (0, _.jsx)("a", {
+              href: _,
+              children: (0, _._)("#Broadcast_Embed_Watch_With_Frieds_SteamTV"),
+            })
           );
         }
         {
           const _ =
             _._.COMMUNITY_BASE_URL + "broadcast/watch/" + __webpack_require__;
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: (0, _._)("#BroadcastWatch_View_Broadcast_Page"),
-            },
-            _.createElement(
-              "a",
-              {
-                href: _,
-                className: _().external_link,
-              },
-              _.createElement(_.GrD, null),
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            toolTipContent: (0, _._)("#BroadcastWatch_View_Broadcast_Page"),
+            children: (0, _.jsx)("a", {
+              href: _,
+              className: _().external_link,
+              children: (0, _.jsx)(_.GrD, {}),
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "CloseBroadcastPopup", null),
@@ -16730,114 +16641,88 @@
               _._.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                 .m_nViewerCount,
           );
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().viewer_bar, "viewer_bar"),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_().viewer_bar, "viewer_bar"),
+            children: [
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().viewer_count, "viewer_count"),
-              },
-              _.createElement(_.y_e, null),
-              (0, _._)(_),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().viewer_links, "viewer_links"),
-              },
-              Boolean(_ && !_ && this.props.bMultistream) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().chat_link,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: "#",
-                      className: _().ChatToggle,
-                      onClick: this.OnToggleChat,
-                    },
-                    (0, _._)("#sale_three_section_show_streams"),
-                  ),
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().chat_link,
-                  },
-                  _.createElement(_.ROZ, null),
-                  _.createElement(
-                    "a",
-                    {
-                      href: "#",
-                      className: _().ChatToggle,
-                      onClick: this.OnToggleChat,
-                    },
-                    (0, _._)(
-                      _
-                        ? "#sale_three_section_show_chat"
-                        : "#sale_three_section_hide_chat",
-                    ),
-                  ),
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().chat_link,
-                  },
-                  _.createElement(_.SYj, null),
-                  _.createElement(
-                    "a",
-                    {
-                      href: "#",
-                      className: _().ChatToggle,
-                      onClick: (_) =>
-                        (0, _._)(
-                          _.createElement(_, {
-                            steamid: this.props.stream.steamid,
-                          }),
-                          (0, _._)(_),
-                        ),
-                    },
-                    (0, _._)("#Broadcast_ShareBroadcast"),
-                  ),
-                ),
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)(
-                    "#StoreBroadcast_Change_store_Broadcast_settings",
-                  ),
-                },
-                _.createElement(
-                  "a",
-                  {
-                    href:
-                      _._.STORE_BASE_URL +
-                      "account/preferences/#store_broadcast_settings",
-                    target: _._.IN_CLIENT ? void 0 : "_blank",
-                    className: _().settings_link,
-                  },
-                  _.createElement(_.wB_, null),
-                ),
-              ),
-              _ &&
-                _.createElement(_, {
-                  ...this.props,
-                }),
-            ),
-            Boolean(this.props.chatAnnouncementGivewayGID) &&
-              _.createElement(_, {
-                gidGiveaway: this.props.chatAnnouncementGivewayGID,
-                stream: this.props.stream,
+                children: [(0, _.jsx)(_.y_e, {}), (0, _._)(_)],
               }),
-          );
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_().viewer_links, "viewer_links"),
+                children: [
+                  Boolean(_ && !_ && this.props.bMultistream) &&
+                    (0, _.jsx)("div", {
+                      className: _().chat_link,
+                      children: (0, _.jsx)("a", {
+                        href: "#",
+                        className: _().ChatToggle,
+                        onClick: this.OnToggleChat,
+                        children: (0, _._)("#sale_three_section_show_streams"),
+                      }),
+                    }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _().chat_link,
+                      children: [
+                        (0, _.jsx)(_.ROZ, {}),
+                        (0, _.jsx)("a", {
+                          href: "#",
+                          className: _().ChatToggle,
+                          onClick: this.OnToggleChat,
+                          children: (0, _._)(
+                            _
+                              ? "#sale_three_section_show_chat"
+                              : "#sale_three_section_hide_chat",
+                          ),
+                        }),
+                      ],
+                    }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _().chat_link,
+                      children: [
+                        (0, _.jsx)(_.SYj, {}),
+                        (0, _.jsx)("a", {
+                          href: "#",
+                          className: _().ChatToggle,
+                          onClick: (_) =>
+                            (0, _._)(
+                              (0, _.jsx)(_, {
+                                steamid: this.props.stream.steamid,
+                              }),
+                              (0, _._)(_),
+                            ),
+                          children: (0, _._)("#Broadcast_ShareBroadcast"),
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)(_._, {
+                    toolTipContent: (0, _._)(
+                      "#StoreBroadcast_Change_store_Broadcast_settings",
+                    ),
+                    children: (0, _.jsx)("a", {
+                      href:
+                        _._.STORE_BASE_URL +
+                        "account/preferences/#store_broadcast_settings",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                      className: _().settings_link,
+                      children: (0, _.jsx)(_.wB_, {}),
+                    }),
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      ...this.props,
+                    }),
+                ],
+              }),
+              Boolean(this.props.chatAnnouncementGivewayGID) &&
+                (0, _.jsx)(_, {
+                  gidGiveaway: this.props.chatAnnouncementGivewayGID,
+                  stream: this.props.stream,
+                }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnToggleChat", null),
@@ -16846,21 +16731,20 @@
       class _ extends _.Component {
         render() {
           let _ = this.props.ImgUrl;
-          return _.createElement(
-            "div",
-            {
-              className: _().SidePanelBackground,
-            },
-            _ &&
-              _.createElement("img", {
-                className: _().side_panels,
-                src: this.props.ImgUrl,
-              }),
-            !_ &&
-              _.createElement("div", {
-                className: _().side_panels,
-              }),
-          );
+          return (0, _.jsxs)("div", {
+            className: _().SidePanelBackground,
+            children: [
+              _ &&
+                (0, _.jsx)("img", {
+                  className: _().side_panels,
+                  src: this.props.ImgUrl,
+                }),
+              !_ &&
+                (0, _.jsx)("div", {
+                  className: _().side_panels,
+                }),
+            ],
+          });
         }
       }
       const _ = (0, _._)((_) => {
@@ -16869,42 +16753,29 @@
         _ = _ != _._ ? _ : 0;
         const _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: [_().PopOutVideoTitleBar, _().NoSeslect].join(" "),
-          },
-          Boolean(_)
-            ? _.createElement(
-                _._,
-                {
+        return (0, _.jsxs)("div", {
+          className: [_().PopOutVideoTitleBar, _().NoSeslect].join(" "),
+          children: [
+            Boolean(_)
+              ? (0, _.jsx)(_._, {
                   _: _,
                   className: _().PopOutVideoTitleText,
-                },
-                (0, _._)("#StoreBroadcast_Detault_popout_Title"),
-              )
-            : _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#StoreBroadcast_Detault_popout_Title"),
+                })
+              : (0, _.jsx)("div", {
                   className: _().PopOutVideoTitleText,
-                },
-                (0, _._)("#StoreBroadcast_Detault_popout_Title"),
-              ),
-          _.createElement(
-            _._,
-            {
+                  children: (0, _._)("#StoreBroadcast_Detault_popout_Title"),
+                }),
+            (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#StoreBroadcast_close_broadcast_popup"),
-            },
-            _.createElement(
-              "button",
-              {
+              children: (0, _.jsx)("button", {
                 className: _().PopOutVideoCloseButton,
                 onClick: _.OnPreventPopup,
-              },
-              _.createElement(_._, null),
-            ),
-          ),
-        );
+                children: (0, _.jsx)(_._, {}),
+              }),
+            }),
+          ],
+        });
       });
       function _(_, _) {
         const _ = _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID,
@@ -16961,33 +16832,30 @@
                 });
             }
           }, [_, _, _.accountid, _]),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: (0, _._)({
-                [_().side_panels]: !0,
-                side_panels: !0,
-                [_().multistream]: !0,
-                [_().scrollingstreams]: _.length > 3,
-              }),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().MultiStreamCtn,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _.accountid ?? _.steamid,
-                  stream: _,
-                  bSelected: _.accountid == _.accountid,
-                  onStreamSelect: __webpack_require__,
-                  bShowCapsuleArt: _,
-                }),
+          (0, _.jsx)("div", {
+            ref: _,
+            className: (0, _._)({
+              [_().side_panels]: !0,
+              side_panels: !0,
+              [_().multistream]: !0,
+              [_().scrollingstreams]: _.length > 3,
+            }),
+            children: (0, _.jsx)("div", {
+              className: _().MultiStreamCtn,
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    stream: _,
+                    bSelected: _.accountid == _.accountid,
+                    onStreamSelect: __webpack_require__,
+                    bShowCapsuleArt: _,
+                  },
+                  _.accountid ?? _.steamid,
+                ),
               ),
-            ),
-          )
+            }),
+          })
         );
       }
       function _(_) {
@@ -17009,60 +16877,47 @@
           _ = Number.parseInt("" + _.viewer_count),
           _ = !Number.isNaN(_),
           _ = !!_.nAppIDVOD && _?.name;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().stream_icon_and_viewer_container]: !0,
-              [_().stream_featured]:
-                _.current_selection_priority == _._.k_eFeatured,
-              [_().display_capsule_art]: Boolean(_),
-            }),
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)({
+            [_().stream_icon_and_viewer_container]: !0,
+            [_().stream_featured]:
+              _.current_selection_priority == _._.k_eFeatured,
+            [_().display_capsule_art]: Boolean(_),
+          }),
+          children: [
+            (0, _.jsx)(_._, {
               _: _,
               hoverClassName: _().StreamCapsule,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _().stream_icon_container,
                   __webpack_require__ && _().stream_selected,
                 ),
                 onClick: () => _ && _(_),
                 rootMargin: "100px 0px 100px 0px",
-              },
-              _.createElement(_, {
-                strThumbnail: _.thumbnail_http_address,
-                bSelected: __webpack_require__,
-                strCapsuleArtURL: _,
+                children: (0, _.jsx)(_, {
+                  strThumbnail: _.thumbnail_http_address,
+                  bSelected: __webpack_require__,
+                  strCapsuleArtURL: _,
+                }),
               }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(_().viewer_count, !_ && _().vod_title),
-            },
-            _
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_.y_e, null),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ViewerNum,
-                    },
-                    (0, _._)(_),
-                  ),
-                )
-              : _,
-          ),
-        );
+              children: _
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_.y_e, {}),
+                      (0, _.jsx)("div", {
+                        className: _().ViewerNum,
+                        children: (0, _._)(_),
+                      }),
+                    ],
+                  })
+                : _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -17073,20 +16928,20 @@
           _ = _ ? _().stream_icon_selected : _().stream_icon;
         if (_) {
           const _ = [_];
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement("img", {
-              className: (0, _._)(_, _().stream_icon_hide_on_hover),
-              src: _,
-            }),
-            _.createElement(_._, {
-              className: (0, _._)(_, _().stream_icon_show_on_hover),
-              srcs: _,
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("img", {
+                className: (0, _._)(_, _().stream_icon_hide_on_hover),
+                src: _,
+              }),
+              (0, _.jsx)(_._, {
+                className: (0, _._)(_, _().stream_icon_show_on_hover),
+                srcs: _,
+              }),
+            ],
+          });
         }
-        return _.createElement("img", {
+        return (0, _.jsx)("img", {
           className: _,
           src: __webpack_require__,
         });
@@ -17100,28 +16955,22 @@
           ]),
           _ = (0, _._)(() => _.steamid);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)({
-                  [_().chat_below_container]: _,
-                  [_().chat_rightside_container]: !_,
-                  [_().store_chat_ctn]: !0,
-                }),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().ChatContainer,
-                },
-                _.createElement(_, {
+          ? (0, _.jsx)("div", {
+              className: (0, _._)({
+                [_().chat_below_container]: _,
+                [_().chat_rightside_container]: !_,
+                [_().store_chat_ctn]: !0,
+              }),
+              children: (0, _.jsx)("div", {
+                className: _().ChatContainer,
+                children: (0, _.jsx)(_, {
                   emoticonStore: _,
                   watchLocation: 6,
                   steamID: _,
                   broadcastID: _,
                 }),
-              ),
-            )
+              }),
+            })
           : null;
       }
     },
@@ -17226,6 +17075,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 500;
       class _ extends _.Component {
@@ -17243,24 +17093,21 @@
             ...(_ || {}),
             transitionDuration: __webpack_require__ / 1e3 + "s",
           };
-          return _.createElement(
-            _._,
-            {
-              ..._,
-              className: (0, _._)("crossfade", _),
-            },
-            _.createElement(
+          return (0, _.jsx)(_._, {
+            ..._,
+            className: (0, _._)("crossfade", _),
+            children: (0, _.jsx)(
               _._,
               {
                 nodeRef: _,
                 classNames: "crossfade-anim",
                 timeout: __webpack_require__,
-                key: _(),
                 style: _,
+                children: _,
               },
-              _,
+              _(),
             ),
-          );
+          });
         }
       }
       function _(_) {
@@ -17269,19 +17116,16 @@
             backgroundImage: `url(${_})`,
           },
           _ = _.useRef(null);
-        return _.createElement(
-          _,
-          {
-            style: _,
-            keyExtractor: () => _,
-            childRef: _,
-            ...__webpack_require__,
-          },
-          _.createElement("div", {
+        return (0, _.jsx)(_, {
+          style: _,
+          keyExtractor: () => _,
+          childRef: _,
+          ...__webpack_require__,
+          children: (0, _.jsx)("div", {
             ref: _,
             className: "crossfade-img",
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17301,13 +17145,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: "STV_ReplayBanner",
-          },
-          (0, _._)("#DASHPlayerControls_IsReplay"),
-        );
+        return (0, _.jsx)("div", {
+          className: "STV_ReplayBanner",
+          children: (0, _._)("#DASHPlayerControls_IsReplay"),
+        });
       }
       const _ = (0, _._)((_) => {
         let _ = _.video;
@@ -17323,43 +17164,36 @@
         if (_ && _ != _._.Error && _.GetUserInputNeeded()) return null;
         if (_ == _._.Ready) return null;
         let _ = _ == _._.Loading;
-        return _.createElement(
-          "div",
-          {
-            className: "BroadcastVideoWatchState",
-            style: {
-              filter: "hue-rotate(40deg)",
-            },
+        return (0, _.jsxs)("div", {
+          className: "BroadcastVideoWatchState",
+          style: {
+            filter: "hue-rotate(40deg)",
           },
-          _ && _.createElement(_._, null),
-          !_ &&
-            _.createElement(
-              "div",
-              {
+          children: [
+            _ && (0, _.jsx)(_._, {}),
+            !_ &&
+              (0, _.jsx)("div", {
                 className: "BroadcastVideoWatchState_Text",
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       });
       class _ extends _.Component {
         OnClick() {
           _._.UserInputClickVideo(this.props.video);
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastVideoUserInputNeeded",
-              onClick: this.OnClick,
-            },
-            _.createElement(_.jGG, null),
-            _.createElement(
-              "span",
-              null,
-              (0, _._)("#DASHPlayerControls_ClickToPlay"),
-            ),
-          );
+          return (0, _.jsxs)("div", {
+            className: "BroadcastVideoUserInputNeeded",
+            onClick: this.OnClick,
+            children: [
+              (0, _.jsx)(_.jGG, {}),
+              (0, _.jsx)("span", {
+                children: (0, _._)("#DASHPlayerControls_ClickToPlay"),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnClick", null);
@@ -17372,127 +17206,99 @@
         }
         render() {
           let _ = this.props.stats;
-          return _.createElement(
-            "div",
-            {
-              className: "dash_video_stats",
-            },
-            _.createElement(
-              "button",
-              {
+          return (0, _.jsxs)("div", {
+            className: "dash_video_stats",
+            children: [
+              (0, _.jsx)("button", {
                 className: "dash_stat_close_button",
                 onClick: this.HideStats,
-              },
-              _.createElement(_.sED, null),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BufferingResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBufferingResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_PlaybackResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPlaybackResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_HtmlResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetHTMLVideoResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_ContentServer"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetContentServerToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_StallEvents"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetStalledEventsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_FailedDownloads"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetFailedDownloadsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_TimeToFirstFrame"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetTimeToFirstFrameToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_PlaybackRate"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPlaybackRateForDisplay(),
-              ),
-            ),
-            _.createElement(_, {
-              stats: _,
-            }),
-          );
+                children: (0, _.jsx)(_.sED, {}),
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BufferingResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBufferingResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_PlaybackResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPlaybackResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_HtmlResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetHTMLVideoResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_ContentServer"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetContentServerToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_StallEvents"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetStalledEventsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_FailedDownloads"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetFailedDownloadsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_TimeToFirstFrame"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetTimeToFirstFrameToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_PlaybackRate"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPlaybackRateForDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                stats: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "HideStats", null), (_ = (0, _._)([_._], _));
@@ -17519,20 +17325,19 @@
                   ? _.GetBufferedVideoSegmentForDisplay(_)
                   : _.GetBufferedAudioSegmentForDisplay(_);
               __webpack_require__.push(
-                _.createElement(
+                (0, _.jsxs)(
                   "div",
                   {
-                    key: _ + _,
+                    children: [
+                      _,
+                      " ",
+                      (0, _.jsx)("span", {
+                        className: "videoStatsValue",
+                        children: _,
+                      }),
+                    ],
                   },
-                  _,
-                  " ",
-                  _.createElement(
-                    "span",
-                    {
-                      className: "videoStatsValue",
-                    },
-                    _,
-                  ),
+                  _ + _,
                 ),
               );
             }
@@ -17543,12 +17348,12 @@
                 : "#DASHPlayerStats_AudioNoRangeInformation",
             );
             __webpack_require__.push(
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
-                  key: _ + "none",
+                  children: _,
                 },
-                _,
+                _ + "none",
               ),
             );
           }
@@ -17556,173 +17361,134 @@
         }
         render() {
           let _ = this.props.stats;
-          return _.createElement(
-            "div",
-            {
-              className: "dash_video_quick_stats",
-            },
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BytesReceived"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBytesReceivedToDisplay(),
-              ),
-            ),
-            this.props.stats.BHasFrameInformation() &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#DASHPlayerStats_DroppedFrames"),
-                " ",
-                _.createElement(
-                  "span",
-                  {
+          return (0, _.jsxs)("div", {
+            className: "dash_video_quick_stats",
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BytesReceived"),
+                  " ",
+                  (0, _.jsx)("span", {
                     className: "videoStatsValue",
-                  },
-                  _.GetDroppedFramesToDisplay(),
-                ),
-              ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_VideoBuffered"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetVideoBufferedToDisplay(),
-                " ",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_AudioBuffered"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetAudioBufferedToDisplay(),
-                " ",
-              ),
-            ),
-            this.createBufferedRange(!0),
-            this.createBufferedRange(!1),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthRequired"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwidthRequiredToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthVideo"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwithVideoToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthNums"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwidthStatsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_DownloadNums"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetDownloadTimeStatsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_ActiveDownloads"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetActiveDownloadsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_VideoDownloadProgress"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetVideoDownloadProgressToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_DroppingFrames"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPersistentFrameDropsForDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_CurrentFPS"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetCurrentFPSForDisplay(),
-              ),
-            ),
-          );
+                    children: _.GetBytesReceivedToDisplay(),
+                  }),
+                ],
+              }),
+              this.props.stats.BHasFrameInformation() &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#DASHPlayerStats_DroppedFrames"),
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: "videoStatsValue",
+                      children: _.GetDroppedFramesToDisplay(),
+                    }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_VideoBuffered"),
+                  " ",
+                  (0, _.jsxs)("span", {
+                    className: "videoStatsValue",
+                    children: [_.GetVideoBufferedToDisplay(), " "],
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_AudioBuffered"),
+                  " ",
+                  (0, _.jsxs)("span", {
+                    className: "videoStatsValue",
+                    children: [_.GetAudioBufferedToDisplay(), " "],
+                  }),
+                ],
+              }),
+              this.createBufferedRange(!0),
+              this.createBufferedRange(!1),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthRequired"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwidthRequiredToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthVideo"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwithVideoToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthNums"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwidthStatsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_DownloadNums"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetDownloadTimeStatsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_ActiveDownloads"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetActiveDownloadsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_VideoDownloadProgress"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetVideoDownloadProgressToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_DroppingFrames"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPersistentFrameDropsForDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_CurrentFPS"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetCurrentFPSForDisplay(),
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -17808,19 +17574,21 @@
           let _,
             _,
             _ = 0,
-            _ = _.createElement("div", {
-              key: "separator",
-              className: "settingsMenuSeparator",
-            });
+            _ = (0, _.jsx)(
+              "div",
+              {
+                className: "settingsMenuSeparator",
+              },
+              "separator",
+            );
           if (
             (this.state.bSettingsOpen &&
               ((_ = !0),
               (_ = this.props.video.GetVideoRepresentations()),
               (_ = _.map((_) =>
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: _._,
                     onClick: () => {
                       this.props.video.SetVideoRepresentation(_),
                         this.setState({
@@ -17828,20 +17596,23 @@
                         });
                     },
                     bChecked: _.selected,
+                    children: _.displayName,
                   },
-                  _.displayName,
+                  _._,
                 ),
               )),
               _.push(_),
               _.push(
-                _.createElement(
+                (0, _.jsxs)(
                   _._,
                   {
-                    key: "statsToggle",
                     onClick: this.OnShowStats,
+                    children: [
+                      (0, _._)("#Broadcast_VideoContext_ToggleStats"),
+                      "\t",
+                    ],
                   },
-                  (0, _._)("#Broadcast_VideoContext_ToggleStats"),
-                  "\t",
+                  "statsToggle",
                 ),
               ),
               (_ = 0 - (21 * _.length + 32))),
@@ -17850,10 +17621,9 @@
             (_ = !0),
               (_ = []),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: "none",
                     onClick: () => {
                       this.props.video.SetSubtitles(null),
                         this.setState({
@@ -17862,17 +17632,17 @@
                     },
                     className: "NoSubtitles",
                     bChecked: !1,
+                    children: (0, _._)("#Broadcast_None"),
                   },
-                  (0, _._)("#Broadcast_None"),
+                  "none",
                 ),
               );
             for (let _ = 0; _ < this.props.video.ListSubtitles().length; _++) {
               const _ = this.props.video.ListSubtitles()[_];
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: _.language,
                     onClick: () => {
                       this.props.video.SetSubtitles(_.language),
                         this.setState({
@@ -17880,8 +17650,9 @@
                         });
                     },
                     bChecked: "showing" === _.mode,
+                    children: _.label,
                   },
-                  _.label,
+                  _.language,
                 ),
               );
             }
@@ -17889,51 +17660,41 @@
           }
           const _ =
             this.props.video.BHasPlayer() && this.props.video.BHasTimedText();
-          return _.createElement(
-            "div",
-            {
-              className: "STV_BroadcastSettings",
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            className: "STV_BroadcastSettings",
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className:
                     "videoControlButton" + (_ ? " ClosedCaptionsActive" : ""),
                   onClick: this.OnSubtitlesClick,
                   ref: this.m_elSubtitlesButton,
-                },
-                _.createElement(_.N8C, null),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: (0, _.jsx)(_.N8C, {}),
+                }),
+              (0, _.jsx)("div", {
                 className:
                   "videoControlButton VideoSettings " +
                   (_ ? " VideoSettingsOpen" : ""),
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
-              },
-              _.createElement(_.wB_, null),
-            ),
-            _.createElement(_, {
-              video: __webpack_require__,
-            }),
-            _ &&
-              _.map((_) =>
-                _.createElement(
-                  "div",
-                  {
-                    key: _.key,
-                    className: "videoControlButton videoControlFitWidth",
-                  },
-                  _,
+                children: (0, _.jsx)(_.wB_, {}),
+              }),
+              (0, _.jsx)(_, {
+                video: __webpack_require__,
+              }),
+              _ &&
+                _.map((_) =>
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: "videoControlButton videoControlFitWidth",
+                      children: _,
+                    },
+                    _.key,
+                  ),
                 ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+              _ &&
+                (0, _.jsx)("div", {
                   ref: this.BindSettingsPanel,
                   className: "STV_BroadcastSettingsPanel",
                   style: {
@@ -17941,19 +17702,13 @@
                     top: this.m_SettingsButtonPos[1],
                     marginTop: _,
                   },
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                  },
-                  _,
-                ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                    children: _,
+                  }),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
                   ref: this.m_elSubtitlesPanel,
                   className: "STV_BroadcastSettingsPanel SubtitlesMenu",
                   style: {
@@ -17962,16 +17717,13 @@
                     top: this.m_SubtitlesButtonPos[1],
                     marginTop: _,
                   },
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                  },
-                  _,
-                ),
-              ),
-          );
+                    children: _,
+                  }),
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnVideoControlClick", null),
@@ -18033,32 +17785,25 @@
           return (
             this.m_bShowSlider && (_ += " ShowVolumeSlider"),
             _ && (_ += " muted"),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                onMouseEnter: this.OnMouseEnter,
-                onMouseLeave: this.OnMouseLeave,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "BroadcastVolumeControl_FixedLayout",
-                },
-                _.createElement(
-                  "div",
-                  {
+            (0, _.jsx)("div", {
+              className: _,
+              onMouseEnter: this.OnMouseEnter,
+              onMouseLeave: this.OnMouseLeave,
+              children: (0, _.jsxs)("div", {
+                className: "BroadcastVolumeControl_FixedLayout",
+                children: [
+                  (0, _.jsx)("div", {
                     className: _,
                     onClick: this.ToggleMute,
-                  },
-                  _.createElement(_.fSs, null),
-                ),
-                _.createElement(_, {
-                  video: _,
-                  onDrag: this.OnChildDrag,
-                }),
-              ),
-            )
+                    children: (0, _.jsx)(_.fSs, {}),
+                  }),
+                  (0, _.jsx)(_, {
+                    video: _,
+                    onDrag: this.OnChildDrag,
+                  }),
+                ],
+              }),
+            })
           );
         }
       };
@@ -18127,24 +17872,23 @@
             _ = {
               width: `${_}%`,
             };
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastVolumeSlider",
-              onMouseDown: this.OnMouseDown,
-            },
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Track",
-            }),
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Fill",
-              style: _,
-            }),
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Thumb",
-              style: _,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            className: "BroadcastVolumeSlider",
+            onMouseDown: this.OnMouseDown,
+            children: [
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Track",
+              }),
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Fill",
+                style: _,
+              }),
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Thumb",
+                style: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -18349,7 +18093,9 @@
         OnContextMenu(_) {
           this.state.bFullscreen ||
             ((0, _._)(
-              _.createElement(_._, null, this.GetContextMenuItems()),
+              (0, _.jsx)(_._, {
+                children: this.GetContextMenuItems(),
+              }),
               _,
             ),
             _.preventDefault());
@@ -18377,31 +18123,31 @@
           let _ = _.GetBroadcastInfo();
           return (
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "togglestats",
                   bChecked: this.state.bShowStats,
                   onSelected: (_) => {
                     this.ToggleStatsView(_);
                   },
+                  children: (0, _._)("#Broadcast_VideoContext_ToggleStats"),
                 },
-                (0, _._)("#Broadcast_VideoContext_ToggleStats"),
+                "togglestats",
               ),
             ),
             _ &&
               "0" != _.m_strAppId &&
               Number.parseInt(_.m_strAppId) != _._ &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: "visitstore",
                     onSelected: (_) => {
                       this.ShowStorePage(_);
                     },
+                    children: (0, _._)("#Broadcast_VideoContext_OpenStore"),
                   },
-                  (0, _._)("#Broadcast_VideoContext_OpenStore"),
+                  "visitstore",
                 ),
               ),
             _
@@ -18459,108 +18205,110 @@
             !this.state.bFullscreen &&
               this.props.onTheaterMode &&
               _.push(
-                _.createElement("div", {
-                  key: "ChatPosToggle ChatTheaterToggle",
-                  onClick: this.props.onTheaterMode,
-                  title: (0, _._)("#Broadcast_View_Theater"),
-                  className: "BroadcastTheaterToggle",
-                }),
+                (0, _.jsx)(
+                  "div",
+                  {
+                    onClick: this.props.onTheaterMode,
+                    title: (0, _._)("#Broadcast_View_Theater"),
+                    className: "BroadcastTheaterToggle",
+                  },
+                  "ChatPosToggle ChatTheaterToggle",
+                ),
               ),
             _.push(
-              _.createElement("div", {
-                key: "FullscreenToggle",
-                title: (0, _._)("#Broadcast_View_Fullscreen"),
-                onClick: this.OnToggleFullscreen,
-                className: "BroadcastFullscreenToggle",
-              }),
+              (0, _.jsx)(
+                "div",
+                {
+                  title: (0, _._)("#Broadcast_View_Fullscreen"),
+                  onClick: this.OnToggleFullscreen,
+                  className: "BroadcastFullscreenToggle",
+                },
+                "FullscreenToggle",
+              ),
             );
           const _ = _ && !this.BHideVideoControls(),
             _ = _ && !this.state.bFullscreen,
             _ =
               this.props.fnRenderBroadcastContext &&
               this.props.fnRenderBroadcastContext();
-          return _.createElement(
-            "div",
-            {
-              ref: this.BindBroadcastPlayerRef,
-              className: _,
-              onMouseMove: this.OnMouseMove,
-              onClick: this.OnMouseMove,
-              onMouseLeave: this.OnMouseLeave,
-              onContextMenu: this.OnContextMenu,
-              onMouseDown: this.OnMouseDown,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            ref: this.BindBroadcastPlayerRef,
+            className: _,
+            onMouseMove: this.OnMouseMove,
+            onClick: this.OnMouseMove,
+            onMouseLeave: this.OnMouseLeave,
+            onContextMenu: this.OnContextMenu,
+            onMouseDown: this.OnMouseDown,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _().BroadcastContext,
-                },
-                _,
-              ),
-            _ && _.createElement(_, null),
-            this.props.showVideoBackgroundBlur &&
-              _.createElement(_._, {
-                className: "videoBlur",
-                elementRef: this.m_elVideo,
-                updateRate: 33,
-                width: 320,
-                height: 180,
-                reductionFactor: 10,
-                blurAmount: 5,
+                  children: _,
+                }),
+              _ && (0, _.jsx)(_, {}),
+              this.props.showVideoBackgroundBlur &&
+                (0, _.jsx)(_._, {
+                  className: "videoBlur",
+                  elementRef: this.m_elVideo,
+                  updateRate: 33,
+                  width: 320,
+                  height: 180,
+                  reductionFactor: 10,
+                  blurAmount: 5,
+                }),
+              (0, _.jsx)("video", {
+                className: "videoSrc",
+                ref: this.BindVideoRef,
+                muted: this.props.bMuted ?? !0,
+                autoPlay: !0,
+                playsInline: !0,
+                controls: !1,
+                onVolumeChange: this.props.fnVolumeChanged,
+                onClick: this.props.fnVideoClick,
               }),
-            _.createElement("video", {
-              className: "videoSrc",
-              ref: this.BindVideoRef,
-              muted: this.props.bMuted ?? !0,
-              autoPlay: !0,
-              playsInline: !0,
-              controls: !1,
-              onVolumeChange: this.props.fnVolumeChanged,
-              onClick: this.props.fnVideoClick,
-            }),
-            this.props.linkRegions
-              ? _.createElement(_, {
-                  linkRegions: this.props.linkRegions,
-                  editMode: this.props.editMode,
-                  onSaveLinkRegions: this.props.onSaveLinkRegions,
-                })
-              : null,
-            this.props.linkElement,
-            _ &&
-              _.createElement("img", {
-                loading: "lazy",
-                className: (0, _._)(
-                  _().BroadcastPlaceholderImg,
-                  "BroadcastPlaceholderImg",
-                ),
-                src: this.state.strInitialCapsuleImageUrl,
-              }),
-            _ &&
-              _.createElement(_, {
-                video: _,
-                actions: _,
-                onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
-                onShowStats: this.ToggleStatsView,
-                bIncludeClipEditor: this.props.bIncludeClipEditor,
-              }),
-            _ &&
-              _.createElement(_, {
-                onClick: this.props.onRequestClose,
-              }),
-            _ &&
-              _.createElement(_, {
-                stats: _.GetDASHPlayerStats(),
-                closeStats: this.CloseStats,
-              }),
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(_, {
+              this.props.linkRegions
+                ? (0, _.jsx)(_, {
+                    linkRegions: this.props.linkRegions,
+                    editMode: this.props.editMode,
+                    onSaveLinkRegions: this.props.onSaveLinkRegions,
+                  })
+                : null,
+              this.props.linkElement,
+              _ &&
+                (0, _.jsx)("img", {
+                  loading: "lazy",
+                  className: (0, _._)(
+                    _().BroadcastPlaceholderImg,
+                    "BroadcastPlaceholderImg",
+                  ),
+                  src: this.state.strInitialCapsuleImageUrl,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                  actions: _,
+                  onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
+                  onShowStats: this.ToggleStatsView,
+                  bIncludeClipEditor: this.props.bIncludeClipEditor,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  onClick: this.props.onRequestClose,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  stats: _.GetDASHPlayerStats(),
+                  closeStats: this.CloseStats,
+                }),
+              (0, _.jsx)(_, {
                 video: _,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "BindBroadcastPlayerRef", null),
@@ -18585,62 +18333,56 @@
           const { video: _ } = this.props;
           if (!_) return null;
           let _ = _.has_segments;
-          return _.createElement(
-            "div",
-            {
-              className: "videoControls",
-            },
-            _.createElement(_, {
-              steamID: this.props.video.GetBroadcastSteamID(),
-              bHideThumbnail: !0,
-              bVerticalBroadcastChat: !0,
-              onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: "videoControlsBottom" + (_ ? "" : " noSegments"),
-              },
-              _.createElement(_, {
-                video: _,
-                bIncludeClipEditor: this.props.bIncludeClipEditor,
+          return (0, _.jsxs)("div", {
+            className: "videoControls",
+            children: [
+              (0, _.jsx)(_, {
+                steamID: this.props.video.GetBroadcastSteamID(),
+                bHideThumbnail: !0,
+                bVerticalBroadcastChat: !0,
+                onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
               }),
-              _.createElement(
-                "div",
-                {
-                  className: "STV_BroadcastController",
-                },
-                _.createElement("div", {
-                  className: "videoControlsButtons LeftSpacer",
-                }),
-                _.createElement(_, {
-                  video: _,
-                }),
-                _.createElement(_, {
-                  video: _,
-                }),
-                _.createElement(_, {
-                  video: _,
-                  actions: this.props.actions,
-                  onShowStats: this.props.onShowStats,
-                }),
-              ),
-            ),
-          );
+              (0, _.jsxs)("div", {
+                className: "videoControlsBottom" + (_ ? "" : " noSegments"),
+                children: [
+                  (0, _.jsx)(_, {
+                    video: _,
+                    bIncludeClipEditor: this.props.bIncludeClipEditor,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "STV_BroadcastController",
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "videoControlsButtons LeftSpacer",
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                        actions: this.props.actions,
+                        onShowStats: this.props.onShowStats,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
       class _ extends _.PureComponent {
         render() {
           return this.props.onClick
-            ? _.createElement(
-                "div",
-                {
-                  className: "STV_BroadcastClose",
-                  onClick: this.props.onClick,
-                },
-                _.createElement(_.sED, null),
-              )
+            ? (0, _.jsx)("div", {
+                className: "STV_BroadcastClose",
+                onClick: this.props.onClick,
+                children: (0, _.jsx)(_.sED, {}),
+              })
             : null;
         }
       }
@@ -18654,64 +18396,55 @@
         render() {
           let _ = this.props.video,
             _ = _.CanSeek();
-          return _.createElement(
-            "div",
-            {
-              className: "videoControlsButtons PlayControls",
-            },
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "videoControlButton videoControlJump controlFlip",
-                  onClick: this.OnJumpBackward,
-                },
-                _.createElement(_.tID, {
-                  bHidePostArrow: !0,
-                  bHidePreArrow: !0,
-                  bShowJumpAheadBox: !0,
-                  bFlipHorizontal: !0,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: "jumpAheadValue",
-                  },
-                  _,
-                ),
-              ),
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "videoControlButton videoControlJump",
-                  onClick: this.OnJumpForward,
-                },
-                _.createElement(_.tID, {
-                  bHidePostArrow: !0,
-                  bHidePreArrow: !0,
-                  bShowJumpAheadBox: !0,
-                  bFlipHorizontal: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: "jumpAheadValue",
-                  },
-                  _,
-                ),
-              ),
-            _ &&
-              _.createElement(_, {
+          return (0, _.jsxs)("div", {
+            className: "videoControlsButtons PlayControls",
+            children: [
+              (0, _.jsx)(_, {
                 video: _,
               }),
-          );
+              _ &&
+                (0, _.jsxs)("div", {
+                  className: "videoControlButton videoControlJump controlFlip",
+                  onClick: this.OnJumpBackward,
+                  children: [
+                    (0, _.jsx)(_.tID, {
+                      bHidePostArrow: !0,
+                      bHidePreArrow: !0,
+                      bShowJumpAheadBox: !0,
+                      bFlipHorizontal: !0,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "jumpAheadValue",
+                      children: _,
+                    }),
+                  ],
+                }),
+              (0, _.jsx)(_, {
+                video: _,
+              }),
+              _ &&
+                (0, _.jsxs)("div", {
+                  className: "videoControlButton videoControlJump",
+                  onClick: this.OnJumpForward,
+                  children: [
+                    (0, _.jsx)(_.tID, {
+                      bHidePostArrow: !0,
+                      bHidePreArrow: !0,
+                      bShowJumpAheadBox: !0,
+                      bFlipHorizontal: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "jumpAheadValue",
+                      children: _,
+                    }),
+                  ],
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnJumpBackward", null),
@@ -18719,39 +18452,34 @@
       const _ = (0, _._)((_) => {
         if (_.video.IsBroadcastClip() || _.video.IsBroadcastVOD()) return null;
         let _ = _.video.IsOnLiveEdge();
-        return _.createElement(
-          "div",
-          {
-            className: "videoControlsButtons GoLive",
-          },
-          _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton videoControlGoLive" +
-                (_ ? " isLiveEdge" : ""),
-              onClick: _
-                ? null
-                : (_) => {
-                    _.video.JumpToLiveEdge();
-                  },
-            },
-            _.createElement(_.tID, {
-              bHidePreArrow: !0,
-              bHidePostArrow: !0,
-              bFlipHorizontal: !1,
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: "videoControlsButtons GoLive",
+          children: (0, _.jsxs)("div", {
+            className:
+              "videoControlButton videoControlGoLive" +
+              (_ ? " isLiveEdge" : ""),
+            onClick: _
+              ? null
+              : (_) => {
+                  _.video.JumpToLiveEdge();
+                },
+            children: [
+              (0, _.jsx)(_.tID, {
+                bHidePreArrow: !0,
+                bHidePostArrow: !0,
+                bFlipHorizontal: !1,
+              }),
+              (0, _.jsx)("div", {
                 className: "jumpGoLive",
-              },
-              (0, _._)(
-                _ ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive",
-              ),
-            ),
-          ),
-        );
+                children: (0, _._)(
+                  _
+                    ? "#DASHPlayerControls_IsLive"
+                    : "#DASHPlayerControls_GoLive",
+                ),
+              }),
+            ],
+          }),
+        });
       });
       let _ = class extends _.Component {
         OnTogglePlayPause() {
@@ -18759,14 +18487,11 @@
         }
         render() {
           let _ = this.props.video.IsPaused();
-          return _.createElement(
-            "div",
-            {
-              className: "videoControlButton buttonPlayPause",
-              onClick: this.OnTogglePlayPause,
-            },
-            _ ? _.createElement(_.jGG, null) : _.createElement(_.vRz, null),
-          );
+          return (0, _.jsx)("div", {
+            className: "videoControlButton buttonPlayPause",
+            onClick: this.OnTogglePlayPause,
+            children: _ ? (0, _.jsx)(_.jGG, {}) : (0, _.jsx)(_.vRz, {}),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnTogglePlayPause", null),
@@ -18795,20 +18520,17 @@
         }
         render() {
           let _ = this.props.video.BHasMarkersOrSegments();
-          return _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton jumpToMarker controlFlip" +
-                (_ ? "" : " noMarkersOrSegments") +
-                (this.has_previous_marker ? "" : " noMarkersInDirection"),
-              onClick: this.OnJumpToPreviousMarkerClicked,
-            },
-            _.createElement(_.tID, {
+          return (0, _.jsx)("div", {
+            className:
+              "videoControlButton jumpToMarker controlFlip" +
+              (_ ? "" : " noMarkersOrSegments") +
+              (this.has_previous_marker ? "" : " noMarkersInDirection"),
+            onClick: this.OnJumpToPreviousMarkerClicked,
+            children: (0, _.jsx)(_.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !0,
             }),
-          );
+          });
         }
       };
       (0, _._)([_._], _.prototype, "video", void 0),
@@ -18839,20 +18561,17 @@
         }
         render() {
           let _ = this.props.video.BHasMarkersOrSegments();
-          return _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton jumpToMarker" +
-                (_ ? "" : " noMarkersOrSegments") +
-                (this.has_next_marker ? "" : " noMarkersInDirection"),
-              onClick: this.OnJumpToNextMarkerClicked,
-            },
-            _.createElement(_.tID, {
+          return (0, _.jsx)("div", {
+            className:
+              "videoControlButton jumpToMarker" +
+              (_ ? "" : " noMarkersOrSegments") +
+              (this.has_next_marker ? "" : " noMarkersInDirection"),
+            onClick: this.OnJumpToNextMarkerClicked,
+            children: (0, _.jsx)(_.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !1,
             }),
-          );
+          });
         }
       };
       (0, _._)([_._], _.prototype, "video", void 0),
@@ -18860,26 +18579,20 @@
         (0, _._)([_._], _.prototype, "OnJumpToNextMarkerClicked", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) =>
-        _.createElement(
-          "div",
-          {
-            className: "timelineMarker",
-            title: _.label,
-            style: {
-              left: _.pos + "%",
-            },
-            onMouseEnter: () => _.onMouseEnter(_.pos),
-            onMouseLeave: _.onMouseLeave,
-            onMouseDown: _.onMouseDown ? _.onMouseDown : void 0,
+        (0, _.jsx)("div", {
+          className: "timelineMarker",
+          title: _.label,
+          style: {
+            left: _.pos + "%",
           },
-          _.createElement(
-            "div",
-            {
-              className: "timelineMarkerIcon",
-            },
-            _.createElement(_.Dp6, null),
-          ),
-        );
+          onMouseEnter: () => _.onMouseEnter(_.pos),
+          onMouseLeave: _.onMouseLeave,
+          onMouseDown: _.onMouseDown ? _.onMouseDown : void 0,
+          children: (0, _.jsx)("div", {
+            className: "timelineMarkerIcon",
+            children: (0, _.jsx)(_.Dp6, {}),
+          }),
+        });
       function _(_) {
         let _ = _.startPos,
           _ = _.endPos,
@@ -18887,40 +18600,36 @@
           _ = 1;
         return (
           _ < 0 && ((_ = (_ - _) / 10), (_ = 0), (_ = " hideFront")),
-          _.createElement(
-            "div",
-            {
-              className: "STV_timelineSegment" + _,
-              style: {
-                left: _ + "%",
-                width: _ - _ + "%",
-                opacity: _,
-              },
-              onClick: _.onClick,
+          (0, _.jsxs)("div", {
+            className: "STV_timelineSegment" + _,
+            style: {
+              left: _ + "%",
+              width: _ - _ + "%",
+              opacity: _,
             },
-            _.createElement("div", {
-              className: "STV_timelineSegmentFrontFill",
-              style: {
-                borderColor: "rgb(" + _.color + ")",
-              },
-            }),
-            _.createElement(
-              "div",
-              {
+            onClick: _.onClick,
+            children: [
+              (0, _.jsx)("div", {
+                className: "STV_timelineSegmentFrontFill",
+                style: {
+                  borderColor: "rgb(" + _.color + ")",
+                },
+              }),
+              (0, _.jsx)("div", {
                 className: "STV_timelineSegmentLabel",
                 style: {
                   color: "rgb(" + _.color + ")",
                 },
-              },
-              _.label,
-            ),
-            _.createElement("div", {
-              className: "STV_timelineSegmentBackFill",
-              style: {
-                borderColor: "rgb(" + _.color + ")",
-              },
-            }),
-          )
+                children: _.label,
+              }),
+              (0, _.jsx)("div", {
+                className: "STV_timelineSegmentBackFill",
+                style: {
+                  borderColor: "rgb(" + _.color + ")",
+                },
+              }),
+            ],
+          })
         );
       }
       let _ = class extends _.Component {
@@ -19088,13 +18797,16 @@
             _ < 0 ||
               _ > 100 ||
               _.push(
-                _.createElement(_, {
-                  key: _,
-                  pos: _,
-                  label: _.strTemplateName,
-                  onMouseEnter: this.OnMarkerMouseEnter,
-                  onMouseLeave: this.OnMarkerMouseLeave,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    pos: _,
+                    label: _.strTemplateName,
+                    onMouseEnter: this.OnMarkerMouseEnter,
+                    onMouseLeave: this.OnMarkerMouseLeave,
+                  },
+                  _,
+                ),
               );
           });
           let _ = [];
@@ -19104,14 +18816,17 @@
             let _ = _.GetPercentOffsetFromTime(_.nTimeEnd, _._.Timeline);
             _ < 0 ||
               _.push(
-                _.createElement(_, {
-                  key: _,
-                  startPos: _,
-                  endPos: _,
-                  label: _.strTemplateName,
-                  color: _.color,
-                  onClick: (_) => this.OnSegmentClick(_.nTimeStart),
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    startPos: _,
+                    endPos: _,
+                    label: _.strTemplateName,
+                    color: _.color,
+                    onClick: (_) => this.OnSegmentClick(_.nTimeStart),
+                  },
+                  _,
+                ),
               );
           });
           const _ = _.GetPercentOffsetFromTime(
@@ -19121,141 +18836,120 @@
             _ = _.GetPercentOffsetFromTime(_.m_editorEndTime, _._.Timeline),
             _ = this.props.bIncludeClipEditor
               ? [
-                  _.createElement(_, {
-                    key: "start",
-                    pos: _,
-                    label: (0, _._)("#DASHPlayerControls_Start"),
-                    onMouseEnter: this.OnMarkerMouseEnter,
-                    onMouseLeave: this.OnMarkerMouseLeave,
-                    onMouseDown: (_) => this.OnMouseDown(_, "start"),
-                  }),
-                  _.createElement(_, {
-                    key: "end",
-                    pos: _,
-                    label: (0, _._)("#DASHPlayerControls_End"),
-                    onMouseEnter: this.OnMarkerMouseEnter,
-                    onMouseLeave: this.OnMarkerMouseLeave,
-                    onMouseDown: (_) => this.OnMouseDown(_, "end"),
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      pos: _,
+                      label: (0, _._)("#DASHPlayerControls_Start"),
+                      onMouseEnter: this.OnMarkerMouseEnter,
+                      onMouseLeave: this.OnMarkerMouseLeave,
+                      onMouseDown: (_) => this.OnMouseDown(_, "start"),
+                    },
+                    "start",
+                  ),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      pos: _,
+                      label: (0, _._)("#DASHPlayerControls_End"),
+                      onMouseEnter: this.OnMarkerMouseEnter,
+                      onMouseLeave: this.OnMarkerMouseLeave,
+                      onMouseDown: (_) => this.OnMouseDown(_, "end"),
+                    },
+                    "end",
+                  ),
                 ]
               : [];
-          return _.createElement(
-            "div",
-            {
-              className: "videoTimelineMain",
-              tabIndex: 0,
-              onKeyDown: this.OnKeyDown,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: "videoTimelineMain",
+            tabIndex: 0,
+            onKeyDown: this.OnKeyDown,
+            children: (0, _.jsxs)("div", {
+              className: _,
+              children: [
+                (0, _.jsx)("div", {
                   className: "DialogLabel",
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   className: "STV_timelineSegmentsContainer",
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   onMouseDown: this.OnMouseDown,
                   onMouseMove: this.OnMouseHoverMove,
                   onMouseLeave: this.OnMouseHoverLeave,
                   ref: this.m_elSlider,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: "VideoTimelineSlider",
-                  },
-                  _.createElement("div", {
-                    className: "STV_timelineValue",
-                    style: _,
-                  }),
-                  _.createElement("div", {
-                    className: "STV_timelineGhostValue",
-                    style: _,
-                  }),
-                  _.createElement("div", {
-                    className: "STV_timelineNoVideo",
-                    style: _,
-                  }),
-                  _,
-                  _,
-                  Boolean(this.state.hoverX) &&
-                    _.createElement(
-                      "div",
-                      {
-                        key: "grabbertime",
-                        style: {
-                          position: "absolute",
-                          left: this.state.hoverX - 75,
-                          bottom: "30px",
-                        },
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          style: {
-                            position: "relative",
-                            display: "flex",
-                            justifyContent: "center",
-                          },
-                        },
-                        this.state.thumbnailURL &&
-                          _.createElement("img", {
-                            style: {
-                              width: "150px",
-                            },
-                            src: this.state.thumbnailURL,
-                          }),
-                        _.createElement(
-                          "span",
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineValue",
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineGhostValue",
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineNoVideo",
+                        style: _,
+                      }),
+                      _,
+                      _,
+                      Boolean(this.state.hoverX) &&
+                        (0, _.jsx)(
+                          "div",
                           {
-                            className: "STV_timelineGrabberValue",
                             style: {
                               position: "absolute",
-                              bottom: "4px",
+                              left: this.state.hoverX - 75,
+                              bottom: "30px",
                             },
+                            children: (0, _.jsxs)("div", {
+                              style: {
+                                position: "relative",
+                                display: "flex",
+                                justifyContent: "center",
+                              },
+                              children: [
+                                this.state.thumbnailURL &&
+                                  (0, _.jsx)("img", {
+                                    style: {
+                                      width: "150px",
+                                    },
+                                    src: this.state.thumbnailURL,
+                                  }),
+                                (0, _.jsx)("span", {
+                                  className: "STV_timelineGrabberValue",
+                                  style: {
+                                    position: "absolute",
+                                    bottom: "4px",
+                                  },
+                                  children: _,
+                                }),
+                              ],
+                            }),
                           },
-                          _,
+                          "grabbertime",
                         ),
-                      ),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "STV_timelineGrabber_Wrapper",
-                      style: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: "STV_timelineGrabber" + _,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: "STV_timelineGrabberArrow",
-                        },
-                        _.createElement(_.apU, null),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineGrabber_Wrapper",
+                        style: _,
+                        children: (0, _.jsx)("div", {
+                          className: "STV_timelineGrabber" + _,
+                          children: (0, _.jsx)("div", {
+                            className: "STV_timelineGrabberArrow",
+                            children: (0, _.jsx)(_.apU, {}),
+                          }),
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -19290,7 +18984,7 @@
         RenderStreamSwitcher() {
           const _ = this.props.steamID;
           return _._.stream[_]
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 value: _,
                 options: _._.stream,
                 onChange: this.props.onLocalStreamChange,
@@ -19312,96 +19006,78 @@
             this.props.bVerticalBroadcastChat &&
             _ &&
             _._.gidEvent;
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastDetails",
-            },
-            !this.props.bHideThumbnail &&
-              _.createElement(_, {
-                className: "broadcastDetailsThumbBlur",
-                src: _.m_strThumbnailUrl,
-                draggable: !1,
-                duration: 2500,
-              }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastDetails",
+            children: [
+              !this.props.bHideThumbnail &&
+                (0, _.jsx)(_, {
+                  className: "broadcastDetailsThumbBlur",
+                  src: _.m_strThumbnailUrl,
+                  draggable: !1,
+                  duration: 2500,
+                }),
+              (0, _.jsxs)("div", {
                 className: "BroadcastDetailsHeader",
-              },
-              _ &&
-                _.m_strAppTitle &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "displayColumn",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: "Info",
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        className: "AppTitle",
-                      },
-                      _.m_strAppTitle,
-                    ),
-                    _.m_strTitle &&
-                      _.createElement(
-                        "span",
-                        {
-                          className: "BroadcastTitle",
-                        },
-                        " - ",
-                        _.m_strTitle,
-                      ),
-                    this.props.onLocalStreamChange &&
-                      this.RenderStreamSwitcher(),
-                  ),
+                children: [
                   _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: "BroadcastDetailsHeader_ViewerCount",
-                      },
-                      _.createElement(_.y_e, null),
-                      (0, _._)("#Broadcast_ViewerCount", _),
-                    ),
-                ),
+                    _.m_strAppTitle &&
+                    (0, _.jsxs)("div", {
+                      className: "displayColumn",
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: "Info",
+                          children: [
+                            (0, _.jsx)("span", {
+                              className: "AppTitle",
+                              children: _.m_strAppTitle,
+                            }),
+                            _.m_strTitle &&
+                              (0, _.jsxs)("span", {
+                                className: "BroadcastTitle",
+                                children: [" - ", _.m_strTitle],
+                              }),
+                            this.props.onLocalStreamChange &&
+                              this.RenderStreamSwitcher(),
+                          ],
+                        }),
+                        _ &&
+                          (0, _.jsxs)("div", {
+                            className: "BroadcastDetailsHeader_ViewerCount",
+                            children: [
+                              (0, _.jsx)(_.y_e, {}),
+                              (0, _._)("#Broadcast_ViewerCount", _),
+                            ],
+                          }),
+                      ],
+                    }),
+                  _ &&
+                    this.props.onOpenLinkInNewWindow &&
+                    (0, _.jsx)("div", {
+                      className: "Actions",
+                      children: (0, _.jsx)("div", {
+                        onClick: (_) =>
+                          this.props.onOpenLinkInNewWindow(_, _._.link),
+                        className: "BroadcastLink",
+                        children: _._.linkName,
+                      }),
+                    }),
+                ],
+              }),
               _ &&
-                this.props.onOpenLinkInNewWindow &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "Actions",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      onClick: (_) =>
-                        this.props.onOpenLinkInNewWindow(_, _._.link),
-                      className: "BroadcastLink",
-                    },
-                    _._.linkName,
-                  ),
-                ),
-            ),
-            _ &&
-              _.createElement(_._, {
-                gidEvent: _._.gidEvent,
-              }),
-            _ &&
-              _.createElement(_._, {
-                _:
-                  _._.bValid && _._.stream && _._.stream[_.m_steamIDBroadcast]
-                    ? _._.appID
-                    : parseInt(_.m_strAppId),
-                type: "game",
-                bPreferAssetWithoutOverride: !1,
-              }),
-          );
+                (0, _.jsx)(_._, {
+                  gidEvent: _._.gidEvent,
+                }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  _:
+                    _._.bValid && _._.stream && _._.stream[_.m_steamIDBroadcast]
+                      ? _._.appID
+                      : parseInt(_.m_strAppId),
+                  type: "game",
+                  bPreferAssetWithoutOverride: !1,
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -19413,36 +19089,39 @@
               onChange: _,
             } = this.props,
             _ = Object.keys(_).map((_) =>
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: _,
                   onSelected: () => _(_),
                   bChecked: _ === __webpack_require__,
+                  children: (0, _._)(_[_]),
                 },
-                (0, _._)(_[_]),
+                _,
               ),
             );
-          (0, _._)(_.createElement(_._, null, _), _);
+          (0, _._)(
+            (0, _.jsx)(_._, {
+              children: _,
+            }),
+            _,
+          );
         }
         render() {
           const { value: _, options: _ } = this.props,
             _ = _[_];
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastLanguage",
-              onClick: this.showContextMenu,
-            },
-            _.createElement("span", null, " - ", (0, _._)(_)),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastLanguage",
+            onClick: this.showContextMenu,
+            children: [
+              (0, _.jsxs)("span", {
+                children: [" - ", (0, _._)(_)],
+              }),
+              (0, _.jsx)("div", {
                 className: "ContextMenuButton",
-              },
-              _.createElement(_.GB9, null),
-            ),
-          );
+                children: (0, _.jsx)(_.GB9, {}),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "showContextMenu", null);
@@ -19530,87 +19209,73 @@
             );
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: "LinkOverlayContainer",
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "LinkOverlayContainer",
+            children: [
+              (0, _.jsxs)("div", {
                 className: "LinkOverlayValidRegion",
-              },
-              !this.props.editMode && this.props.linkRegions
-                ? this.props.linkRegions.map((_) => {
-                    const _ = (0, _._)(_.url);
-                    return _.createElement(
-                      _._,
-                      {
-                        key: _.link_index,
-                        href: _.url,
-                        bForceExternal: _,
-                        bUseLinkFilter: _,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: "LinkRegion",
-                          style: {
-                            left: _.left + "%",
-                            top: _.top + "%",
-                            width: _.width + "%",
-                            height: _.height + "%",
-                          },
-                        },
-                        _.createElement(
-                          "div",
+                children: [
+                  !this.props.editMode && this.props.linkRegions
+                    ? this.props.linkRegions.map((_) => {
+                        const _ = (0, _._)(_.url);
+                        return (0, _.jsx)(
+                          _._,
                           {
-                            className: "LinkRegionText",
+                            href: _.url,
+                            bForceExternal: _,
+                            bUseLinkFilter: _,
+                            children: (0, _.jsx)("div", {
+                              className: "LinkRegion",
+                              style: {
+                                left: _.left + "%",
+                                top: _.top + "%",
+                                width: _.width + "%",
+                                height: _.height + "%",
+                              },
+                              children: (0, _.jsxs)("div", {
+                                className: "LinkRegionText",
+                                children: [_.link_description, " "],
+                              }),
+                            }),
                           },
-                          _.link_description,
-                          " ",
-                        ),
+                          _.link_index,
+                        );
+                      })
+                    : null,
+                  this.props.editMode &&
+                    this.state.sizableRegion.map((_, _) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          index: _,
+                          deleteFn: this.DeleteRegion,
+                          updateFn: this.UpdatePanel,
+                          xPosPct: _.xPosPct,
+                          yPosPct: _.yPosPct,
+                          widthPct: _.widthPct,
+                          heightPct: _.heightPct,
+                          link_url: _.link_url,
+                          link_description: _.link_description,
+                        },
+                        100 * _ + _.xPosPct,
                       ),
-                    );
-                  })
-                : null,
-              this.props.editMode &&
-                this.state.sizableRegion.map((_, _) =>
-                  _.createElement(_._, {
-                    key: 100 * _ + _.xPosPct,
-                    index: _,
-                    deleteFn: this.DeleteRegion,
-                    updateFn: this.UpdatePanel,
-                    xPosPct: _.xPosPct,
-                    yPosPct: _.yPosPct,
-                    widthPct: _.widthPct,
-                    heightPct: _.heightPct,
-                    link_url: _.link_url,
-                    link_description: _.link_description,
-                  }),
-                ),
-              this.props.editMode &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "AddLinkRegion",
-                    onClick: this.AddLinkRegion,
-                  },
-                  (0, _._)("#SteamTV_AddLinkRegion"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
+                    ),
+                  this.props.editMode &&
+                    (0, _.jsx)("div", {
+                      className: "AddLinkRegion",
+                      onClick: this.AddLinkRegion,
+                      children: (0, _._)("#SteamTV_AddLinkRegion"),
+                    }),
+                ],
+              }),
+              (0, _.jsx)("div", {
                 className: "LinkOverlayInvalidRegion",
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#SteamTV_LinkRegionReserved"),
-              ),
-            ),
-          );
+                children: (0, _.jsx)("div", {
+                  children: (0, _._)("#SteamTV_LinkRegionReserved"),
+                }),
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "AddLinkRegion", null),
@@ -21360,6 +21025,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         m_elCanvas;
@@ -21406,7 +21072,7 @@
           _(), (this.m_bSetupComplete = !0);
         }
         render() {
-          return _.createElement("canvas", {
+          return (0, _.jsx)("canvas", {
             _: this.props._,
             className: this.props.className,
             ref: this.BindCanvasRef,
@@ -21434,6 +21100,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -21450,7 +21117,7 @@
           let _ = null;
           if (
             ((_ = _
-              ? _.createElement(_._, {
+              ? (0, _.jsx)(_._, {
                   emoticonStore: this.props.emoticonStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   onEmoticonSelected: (_) =>
@@ -21462,12 +21129,12 @@
               : __webpack_require__ &&
                   _.flair_list &&
                   _.GetFlairListByGroupID(__webpack_require__)?.length > 0
-                ? _.createElement(_._, {
+                ? (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })
-                : _.createElement(_._, {
+                : (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
@@ -21513,52 +21180,38 @@
             _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
             __webpack_require__ && _.push("ttip"),
             _
-              ? _.createElement(
-                  _._,
-                  {
-                    onClick: this.OnEmoticonClick,
-                    onOKActionDescription: (0, _._)(
-                      "#ChatEntryButton_Emoticon",
-                    ),
-                    focusable: !0,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: __webpack_require__,
-                    },
-                    _.createElement("img", {
+              ? (0, _.jsx)(_._, {
+                  onClick: this.OnEmoticonClick,
+                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
+                  focusable: !0,
+                  children: (0, _.jsx)(_._, {
+                    toolTipContent: __webpack_require__,
+                    children: (0, _.jsx)("img", {
                       src: this.props.useImg,
                       className: (0, _._)(..._),
                       title:
                         this.props.title ||
                         (0, _._)("#ChatEntryButton_Emoticon"),
                     }),
-                  ),
-                )
+                  }),
+                })
               : (_.push(_().chatSubmitButton, _().EmoticonPickerButton),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(..._),
-                    onOKActionDescription: (0, _._)(
-                      "#ChatEntryButton_Emoticon",
-                    ),
-                    type: "button",
-                    onClick: this.OnEmoticonClick,
-                    title:
-                      this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
-                    disabled: _,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: __webpack_require__,
-                    },
-                    this.props.buttonIcon || _.createElement(_._, null),
-                    _ && _.createElement(_._, null),
-                  ),
-                ))
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(..._),
+                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
+                  type: "button",
+                  onClick: this.OnEmoticonClick,
+                  title:
+                    this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
+                  disabled: _,
+                  children: (0, _.jsxs)(_._, {
+                    toolTipContent: __webpack_require__,
+                    children: [
+                      this.props.buttonIcon || (0, _.jsx)(_._, {}),
+                      _ && (0, _.jsx)(_._, {}),
+                    ],
+                  }),
+                }))
           );
         }
       };
@@ -21575,6 +21228,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -21618,70 +21272,60 @@
                       });
                 }
               : void 0;
-          return _.createElement(
-            _._,
-            {
-              className: _.Picker,
-              onButtonDown: _,
-            },
-            _ && _.createElement(_, null, this.RenderTabs()),
-            _,
-          );
+          return (0, _.jsxs)(_._, {
+            className: _.Picker,
+            onButtonDown: _,
+            children: [
+              _ &&
+                (0, _.jsx)(_, {
+                  children: this.RenderTabs(),
+                }),
+              _,
+            ],
+          });
         }
         RenderTabs() {
           return this.props.config.map(({ renderTab: _ }, _) => {
             const _ = this.state.activeIndex === _;
-            return _.createElement(
+            return (0, _.jsx)(
               _,
               {
-                key: _,
                 active: _,
                 onClick: () =>
                   this.setState({
                     activeIndex: _,
                   }),
+                children: _(_),
               },
-              _(_),
+              _,
             );
           });
         }
       }
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            className: _.Tabs,
-            "flow-children": "row",
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_._, {
+          className: _.Tabs,
+          "flow-children": "row",
+          children: _.children,
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.Content,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: _.Content,
+          children: _.children,
+        });
       }
       function _(_) {
         const { active: _, children: __webpack_require__, onClick: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.Tab, _ && _.Active),
-            focusClassName: _.Focus,
-            onActivate: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.TabContent, _ && _.Active),
-            },
-            __webpack_require__,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_.Tab, _ && _.Active),
+          focusClassName: _.Focus,
+          onActivate: _,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_.TabContent, _ && _.Active),
+            children: __webpack_require__,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -21692,28 +21336,25 @@
           renderEmpty: _,
         } = _;
         let _ = _.map((_, _) =>
-          _.createElement(
+          (0, _.jsx)(
             _._,
             {
-              key: _(_),
               className: _.Item,
               onActivate: () => _(_[_]),
               autoFocus: 0 === _,
               focusClassName: _.Focus,
+              children: __webpack_require__(_[_]),
             },
-            __webpack_require__(_[_]),
+            _(_),
           ),
         );
         return (
           0 === _.length && _ && (_ = _()),
-          _.createElement(
-            _._,
-            {
-              "flow-children": "grid",
-              className: _.ItemList,
-            },
-            _,
-          )
+          (0, _.jsx)(_._, {
+            "flow-children": "grid",
+            className: _.ItemList,
+            children: _,
+          })
         );
       }
       function _(_) {
@@ -21724,28 +21365,23 @@
           onSubmit: _,
           ..._
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              _,
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_, {
                 title: _,
-              },
-              _.createElement(_, {
-                ..._,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
               }),
-            ),
-          ),
-          _.createElement(_, {
-            value: _,
-            onChange: __webpack_require__,
-            onSubmit: _,
-          }),
-        );
+            }),
+            (0, _.jsx)(_, {
+              value: _,
+              onChange: __webpack_require__,
+              onSubmit: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -21754,69 +21390,56 @@
           sections: _,
           title: _,
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            null,
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.SectionedPageTitle,
-                },
-                _,
-              ),
-            _.map(({ title: _, ..._ }) =>
-              _.createElement(
-                _,
-                {
-                  title: _,
-                  key: _,
-                },
-                _.createElement(_, {
-                  ..._,
-                }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            value: __webpack_require__,
-            onChange: _,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_, {
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.SectionedPageTitle,
+                    children: _,
+                  }),
+                _.map(({ title: _, ..._ }) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      title: _,
+                      children: (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                    },
+                    _,
+                  ),
+                ),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              value: __webpack_require__,
+              onChange: _,
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.Section,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.Section,
+          children: [
+            (0, _.jsx)("div", {
               className: _.SectionTitle,
-            },
-            _.title,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _.title,
+            }),
+            (0, _.jsx)("div", {
               className: _.SectionContent,
-            },
-            _.children,
-          ),
-        );
+              children: _.children,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { value: _, onChange: __webpack_require__, onSubmit: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.FilterInputContainer,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _.FilterInputContainer,
+          children: (0, _.jsx)(_._, {
             type: "text",
             placeholder: (0, _._)("#AddonPicker_Search"),
             className: _.FilterInput,
@@ -21824,11 +21447,11 @@
             onChange: (_) => __webpack_require__(_.target.value),
             onSubmit: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_, _.AddonPickerMessage),
           ...__webpack_require__,
         });
@@ -21874,44 +21497,36 @@
           _(_) &&
             _.push({
               renderTab: (_) =>
-                _.createElement(
-                  "span",
-                  {
-                    title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                    className: (0, _._)(
-                      _().PickerTab,
-                      _().Clock,
-                      _ && _().ActiveTab,
-                    ),
-                  },
-                  _.createElement(_, null),
-                ),
+                (0, _.jsx)("span", {
+                  title: (0, _._)("#AddonPicker_RecentlyUsed"),
+                  className: (0, _._)(
+                    _().PickerTab,
+                    _().Clock,
+                    _ && _().ActiveTab,
+                  ),
+                  children: (0, _.jsx)(_, {}),
+                }),
               renderContent: () =>
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   store: _,
                   onEmoticonSelect: (_) => _(_.name),
                   onStickerSelect: (_) => _(_.name),
                   flairGroupID: _,
                 }),
             }),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_, {
+          (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               config: [
                 ..._,
                 {
                   renderTab: (_) =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Emoticons"),
+                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: _,
                       onItemSelect: (_) => _(_.name),
                       flairGroupID: _,
@@ -21919,32 +21534,26 @@
                 },
                 {
                   renderTab: (_) =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Stickers"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Stickers"),
+                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: _,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
                 {
                   renderTab: (_) =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_RoomEffects"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_RoomEffects"),
+                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: _,
                       effectSettings: __webpack_require__,
                       onItemSelect: (_) => _(_.name),
@@ -21952,7 +21561,7 @@
                 },
               ],
             }),
-          )
+          })
         );
       });
       let _ = class extends _.Component {
@@ -21985,47 +21594,36 @@
             _(_) &&
               _.push({
                 renderTab: (_) =>
-                  _.createElement(
-                    "span",
-                    {
-                      title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                      className: (0, _._)(
-                        _().PickerTab,
-                        _().Clock,
-                        _ && _().ActiveTab,
-                      ),
-                    },
-                    _.createElement(_, null),
-                  ),
+                  (0, _.jsx)("span", {
+                    title: (0, _._)("#AddonPicker_RecentlyUsed"),
+                    className: (0, _._)(
+                      _().PickerTab,
+                      _().Clock,
+                      _ && _().ActiveTab,
+                    ),
+                    children: (0, _.jsx)(_, {}),
+                  }),
                 renderContent: () =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     store: _,
                     onEmoticonSelect: (_) => _(_.name),
                     onStickerSelect: (_) => __webpack_require__(_.name),
                     flairGroupID: _,
                   }),
               }),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
                 config: [
                   ..._,
                   {
                     renderTab: (_) =>
-                      _.createElement(
-                        "span",
-                        {
-                          title: (0, _._)("#AddonPicker_Emoticons"),
-                          className: (0, _._)(
-                            _().PickerTab,
-                            _ && _().ActiveTab,
-                          ),
-                        },
-                        _.createElement(_, null),
-                      ),
+                      (0, _.jsx)("span", {
+                        title: (0, _._)("#AddonPicker_Emoticons"),
+                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                        children: (0, _.jsx)(_, {}),
+                      }),
                     renderContent: () =>
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         store: _,
                         onItemSelect: (_) => _(_.name),
                         flairGroupID: _,
@@ -22033,26 +21631,20 @@
                   },
                   {
                     renderTab: (_) =>
-                      _.createElement(
-                        "span",
-                        {
-                          title: (0, _._)("#AddonPicker_Stickers"),
-                          className: (0, _._)(
-                            _().PickerTab,
-                            _ && _().ActiveTab,
-                          ),
-                        },
-                        _.createElement(_, null),
-                      ),
+                      (0, _.jsx)("span", {
+                        title: (0, _._)("#AddonPicker_Stickers"),
+                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                        children: (0, _.jsx)(_, {}),
+                      }),
                     renderContent: () =>
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         store: _,
                         onItemSelect: (_) => __webpack_require__(_.name),
                       }),
                   },
                 ],
               }),
-            )
+            })
           );
         }
       };
@@ -22076,23 +21668,18 @@
           this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
         }
         render() {
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(_, {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               config: [
                 {
                   renderTab: () =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: _().PickerTab,
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Emoticons"),
+                      className: _().PickerTab,
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: this.props.emoticonStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
@@ -22100,7 +21687,7 @@
                 },
               ],
             }),
-          );
+          });
         }
       }
       class _ extends _.Component {
@@ -22122,23 +21709,18 @@
           this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
         }
         render() {
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(_, {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               config: [
                 {
                   renderTab: () =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: _().PickerTab,
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Emoticons"),
+                      className: _().PickerTab,
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: this.props.emoticonStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
@@ -22146,7 +21728,7 @@
                 },
               ],
             }),
-          );
+          });
         }
       }
       class _ extends _.Component {
@@ -22168,21 +21750,19 @@
                 items: _._.FilterEmoticons(_(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     emoticon: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
-                  _.createElement(
-                    _,
-                    null,
-                    _
+                  (0, _.jsx)(_, {
+                    children: _
                       ? (0, _._)("#AddonPicker_NoResults")
                       : (0, _._)(
                           "#AddonPicker_NoRecent",
                           (0, _._)("#AddonPicker_Emoticons"),
                         ),
-                  ),
+                  }),
               }),
             _(_).length &&
               _.push({
@@ -22190,23 +21770,21 @@
                 items: _._.FilterStickers(_(_), _),
                 onItemSelect: __webpack_require__,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     sticker: _,
                   }),
                 keyExtractor: ({ name: _ }) => _,
                 renderEmpty: () =>
-                  _.createElement(
-                    _,
-                    null,
-                    _
+                  (0, _.jsx)(_, {
+                    children: _
                       ? (0, _._)("#AddonPicker_NoResults")
                       : (0, _._)(
                           "#AddonPicker_NoRecent",
                           (0, _._)("#AddonPicker_Stickers"),
                         ),
-                  ),
+                  }),
               }),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               onFilterChange: (_) =>
                 this.setState({
                   filter: _,
@@ -22233,12 +21811,12 @@
                 ? _.GetFlairListByGroupID(__webpack_require__)
                 : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
             items: _,
             onItemSelect: _,
             renderItem: (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 emoticon: _,
               }),
             keyExtractor: (_) => _.name,
@@ -22250,45 +21828,39 @@
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
               _
-                ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
-                : _.createElement(_, null),
+                ? (0, _.jsx)(_, {
+                    children: (0, _._)("#AddonPicker_NoResults"),
+                  })
+                : (0, _.jsx)(_, {}),
           });
         }
       }
       function _() {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            null,
-            (0, _._)(
-              "#AddonPicker_NoneOwned",
-              (0, _._)("#AddonPicker_Emoticons"),
-            ),
-          ),
-          _.createElement(
-            _,
-            null,
-            (0, _._)(
-              "#AddonPicker_AcquireAtPointsShopOrMarket",
-              _.createElement(
-                _._,
-                {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              children: (0, _._)(
+                "#AddonPicker_NoneOwned",
+                (0, _._)("#AddonPicker_Emoticons"),
+              ),
+            }),
+            (0, _.jsx)(_, {
+              children: (0, _._)(
+                "#AddonPicker_AcquireAtPointsShopOrMarket",
+                (0, _.jsx)(_._, {
                   href: `${_._.STORE_BASE_URL}points/shop/c/emoticons`,
-                },
-                (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
+                }),
+                (0, _.jsx)(_._, {
                   href: `${_._.COMMUNITY_BASE_URL}market`,
-                },
-                (0, _._)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
+                  children: (0, _._)(
+                    "#AddonPicker_AcquireAtPointsShopOrMarket_Link",
+                  ),
+                }),
               ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       class _ extends _.Component {
         state = {
@@ -22298,12 +21870,12 @@
           const { store: _, onItemSelect: _ } = this.props,
             { filter: __webpack_require__ } = this.state,
             _ = _._.FilterStickers(_.GetStickerList(), __webpack_require__);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_StickerHeading"),
             items: _,
             onItemSelect: _,
             renderItem: (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 sticker: _,
               }),
             keyExtractor: ({ name: _ }) => _,
@@ -22315,33 +21887,30 @@
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
               __webpack_require__
-                ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
-                : _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_NoneOwned",
-                        (0, _._)("#AddonPicker_Stickers"),
-                      ),
-                    ),
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_AcquireAtPointsShop",
-                        _.createElement(
-                          _._,
-                          {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/stickers`,
-                          },
-                          (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
+                ? (0, _.jsx)(_, {
+                    children: (0, _._)("#AddonPicker_NoResults"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_NoneOwned",
+                          (0, _._)("#AddonPicker_Stickers"),
                         ),
-                      ),
-                    ),
-                  ),
+                      }),
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_AcquireAtPointsShop",
+                          (0, _.jsx)(_._, {
+                            href: `${_._.STORE_BASE_URL}points/shop/c/stickers`,
+                            children: (0, _._)(
+                              "#AddonPicker_AcquireAtPointsShop_Link",
+                            ),
+                          }),
+                        ),
+                      }),
+                    ],
+                  }),
           });
         }
       }
@@ -22357,12 +21926,12 @@
             } = this.props,
             { filter: _ } = this.state,
             _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_EffectHeading"),
             items: _,
             onItemSelect: __webpack_require__,
             renderItem: (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 effect: _,
                 roomEffectSettings: _,
               }),
@@ -22375,33 +21944,30 @@
             onSubmit: () => __webpack_require__(_[0]),
             renderEmpty: () =>
               _
-                ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
-                : _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_NoneOwned",
-                        (0, _._)("#AddonPicker_RoomEffects"),
-                      ),
-                    ),
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_AcquireAtPointsShop",
-                        _.createElement(
-                          _._,
-                          {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/chateffects`,
-                          },
-                          (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
+                ? (0, _.jsx)(_, {
+                    children: (0, _._)("#AddonPicker_NoResults"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_NoneOwned",
+                          (0, _._)("#AddonPicker_RoomEffects"),
                         ),
-                      ),
-                    ),
-                  ),
+                      }),
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_AcquireAtPointsShop",
+                          (0, _.jsx)(_._, {
+                            href: `${_._.STORE_BASE_URL}points/shop/c/chateffects`,
+                            children: (0, _._)(
+                              "#AddonPicker_AcquireAtPointsShop_Link",
+                            ),
+                          }),
+                        ),
+                      }),
+                    ],
+                  }),
           });
         }
       }
@@ -22424,23 +21990,21 @@
                 items: _._.FilterEmoticons(_(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     emoticon: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
-                  _.createElement(
-                    _,
-                    null,
-                    _
+                  (0, _.jsx)(_, {
+                    children: _
                       ? (0, _._)("#AddonPicker_NoResults")
                       : (0, _._)(
                           "#AddonPicker_NoRecent",
                           (0, _._)("#AddonPicker_Emoticons"),
                         ),
-                  ),
+                  }),
               }),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               onFilterChange: (_) =>
                 this.setState({
                   filter: _,
@@ -22453,18 +22017,16 @@
                   items: _._.FilterStickers(_.emoticon_list, _).slice(0, 1e3),
                   onItemSelect: _,
                   renderItem: (_) =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       emoticon: _,
                     }),
                   keyExtractor: (_) => _.name,
                   renderEmpty: () =>
                     _
-                      ? _.createElement(
-                          _,
-                          null,
-                          (0, _._)("#AddonPicker_NoResults"),
-                        )
-                      : _.createElement(_, null),
+                      ? (0, _.jsx)(_, {
+                          children: (0, _._)("#AddonPicker_NoResults"),
+                        })
+                      : (0, _.jsx)(_, {}),
                 },
               ],
             })
@@ -22483,7 +22045,7 @@
               flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state;
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             onFilterChange: (_) =>
               this.setState({
                 filter: _,
@@ -22498,18 +22060,16 @@
                 ),
                 onItemSelect: _,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     emoticon: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
                   _
-                    ? _.createElement(
-                        _,
-                        null,
-                        (0, _._)("#AddonPicker_NoResults"),
-                      )
-                    : _.createElement(_, null),
+                    ? (0, _.jsx)(_, {
+                        children: (0, _._)("#AddonPicker_NoResults"),
+                      })
+                    : (0, _.jsx)(_, {}),
               },
             ],
           });
@@ -22519,17 +22079,16 @@
       const _ = (_) => {
         const { emoticon: _, large: __webpack_require__ } = _,
           _ = !_.last_used && _.time_received;
-        return _.createElement(
-          "div",
-          {
-            className: _().EmoticonItem,
-          },
-          _.createElement(_._, {
-            emoticon: _.name,
-            large: __webpack_require__,
-          }),
-          _ && _.createElement(_, null),
-        );
+        return (0, _.jsxs)("div", {
+          className: _().EmoticonItem,
+          children: [
+            (0, _.jsx)(_._, {
+              emoticon: _.name,
+              large: __webpack_require__,
+            }),
+            _ && (0, _.jsx)(_, {}),
+          ],
+        });
       };
       class _ extends _.Component {
         state = {
@@ -22543,41 +22102,40 @@
               ...__webpack_require__
             } = this.props,
             _ = _(_._.COMMUNITY_CDN_URL, _.name);
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_ref,
-              className: (0, _._)(_, _().StickerButton),
-              onMouseOver: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onFocus: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onMouseLeave: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              onBlur: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              ...__webpack_require__,
-            },
-            _.createElement("img", {
-              style: {
-                width: "100%",
-              },
-              src: _,
-            }),
-            this.state.showHover &&
-              _.createElement(_, {
-                target: this.m_ref.current,
-                sticker: _,
+          return (0, _.jsxs)("div", {
+            ref: this.m_ref,
+            className: (0, _._)(_, _().StickerButton),
+            onMouseOver: () =>
+              this.setState({
+                showHover: !0,
               }),
-          );
+            onFocus: () =>
+              this.setState({
+                showHover: !0,
+              }),
+            onMouseLeave: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            onBlur: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            ...__webpack_require__,
+            children: [
+              (0, _.jsx)("img", {
+                style: {
+                  width: "100%",
+                },
+                src: _,
+              }),
+              this.state.showHover &&
+                (0, _.jsx)(_, {
+                  target: this.m_ref.current,
+                  sticker: _,
+                }),
+            ],
+          });
         }
       }
       const _ = (0, _._)((_) => {
@@ -22586,18 +22144,15 @@
             sticker: { name: __webpack_require__, appid: _ },
           } = _,
           [_] = (0, _._)(_, {});
-        return _.createElement(
-          _._,
-          {
-            target: _,
-            title: __webpack_require__,
-            subtitle: _?.GetName(),
-          },
-          _.createElement("img", {
+        return (0, _.jsx)(_._, {
+          target: _,
+          title: __webpack_require__,
+          subtitle: _?.GetName(),
+          children: (0, _.jsx)("img", {
             src: _(_._.COMMUNITY_CDN_URL, __webpack_require__),
             className: _().StickerHoverSticker,
           }),
-        );
+        });
       });
       class _ extends _.Component {
         state = {
@@ -22612,37 +22167,36 @@
               ..._
             } = this.props,
             _ = _[_.name];
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_ref,
-              onMouseOver: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onFocus: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onMouseLeave: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              onBlur: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              className: (0, _._)(__webpack_require__, _().EffectButton),
-              ..._,
-            },
-            _.renderEffectIcon(),
-            this.state.showHover &&
-              _.createElement(_, {
-                target: this.m_ref.current,
-                effect: _,
-                roomEffectSettings: _,
+          return (0, _.jsxs)("div", {
+            ref: this.m_ref,
+            onMouseOver: () =>
+              this.setState({
+                showHover: !0,
               }),
-          );
+            onFocus: () =>
+              this.setState({
+                showHover: !0,
+              }),
+            onMouseLeave: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            onBlur: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            className: (0, _._)(__webpack_require__, _().EffectButton),
+            ..._,
+            children: [
+              _.renderEffectIcon(),
+              this.state.showHover &&
+                (0, _.jsx)(_, {
+                  target: this.m_ref.current,
+                  effect: _,
+                  roomEffectSettings: _,
+                }),
+            ],
+          });
         }
       }
       const _ = (0, _._)((_) => {
@@ -22653,138 +22207,121 @@
           } = _,
           _ = _[__webpack_require__],
           [_] = (0, _._)(_, {});
-        return _.createElement(
-          _._,
-          {
-            target: _,
-            title: __webpack_require__,
-            subtitle: _?.GetName(),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().EffectHoverEffect,
-            },
-            _.renderEffectIcon(),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          target: _,
+          title: __webpack_require__,
+          subtitle: _?.GetName(),
+          children: (0, _.jsx)("div", {
+            className: _().EffectHoverEffect,
+            children: _.renderEffectIcon(),
+          }),
+        });
       });
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().NewEmoticonIndicator,
-          },
-          _.createElement("div", {
+        return (0, _.jsx)("div", {
+          className: _().NewEmoticonIndicator,
+          children: (0, _.jsx)("div", {
             className: _().NewEmoticonCircle,
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M21 29H22.1875V31H19L21 29Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M29 22.1875V21L31 19V22.1875H29Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M21 29H22.1875V31H19L21 29Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M29 22.1875V21L31 19V22.1875H29Z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM9.00001 15C9.00001 14.4067 9.17595 13.8266 9.5056 13.3333C9.83524 12.8399 10.3038 12.4554 10.852 12.2284C11.4001 12.0013 12.0033 11.9419 12.5853 12.0576C13.1672 12.1734 13.7018 12.4591 14.1213 12.8787C14.5409 13.2982 14.8266 13.8328 14.9424 14.4147C15.0581 14.9967 14.9987 15.5999 14.7716 16.1481C14.5446 16.6962 14.1601 17.1648 13.6667 17.4944C13.1734 17.8241 12.5934 18 12 18C11.2044 18 10.4413 17.6839 9.87869 17.1213C9.31608 16.5587 9.00001 15.7956 9.00001 15ZM24 18C23.4067 18 22.8266 17.8241 22.3333 17.4944C21.8399 17.1648 21.4554 16.6962 21.2284 16.1481C21.0013 15.5999 20.9419 14.9967 21.0576 14.4147C21.1734 13.8328 21.4591 13.2982 21.8787 12.8787C22.2982 12.4591 22.8328 12.1734 23.4147 12.0576C23.9967 11.9419 24.5999 12.0013 25.1481 12.2284C25.6962 12.4554 26.1648 12.8399 26.4944 13.3333C26.8241 13.8266 27 14.4067 27 15C27 15.7956 26.6839 16.5587 26.1213 17.1213C25.5587 17.6839 24.7957 18 24 18ZM26.3149 23.6788C26.7672 22.8295 27 21.9193 27 21H18H9C9 21.9193 9.23279 22.8295 9.68508 23.6788C10.1374 24.5281 10.8003 25.2997 11.636 25.9497C12.4718 26.5998 13.4639 27.1154 14.5558 27.4672C15.6478 27.8189 16.8181 28 18 28C19.1819 28 20.3522 27.8189 21.4442 27.4672C22.5361 27.1154 23.5282 26.5998 24.364 25.9497C25.1997 25.2997 25.8626 24.5281 26.3149 23.6788Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
-            version: "1.1",
-            _: "0px",
-            _: "0px",
-            width: "20px",
-            height: "20px",
-            viewBox: "0 0 24 24",
-            ...__webpack_require__,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
+          version: "1.1",
+          _: "0px",
+          _: "0px",
+          width: "20px",
+          height: "20px",
+          viewBox: "0 0 24 24",
+          ...__webpack_require__,
+          children: (0, _.jsx)("path", {
             _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -22793,6 +22330,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -22827,21 +22365,20 @@
             return [null, null];
           }, [_]);
         return _?.length > 0 && _?.length > 0
-          ? _.createElement(
-              "a",
-              {
-                href: (0, _._)(__webpack_require__.GetSaleURL()),
-                className: _.Link,
-              },
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Big),
-              }),
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Mobile),
-              }),
-            )
+          ? (0, _.jsxs)("a", {
+              href: (0, _._)(__webpack_require__.GetSaleURL()),
+              className: _.Link,
+              children: [
+                (0, _.jsx)("img", {
+                  src: _,
+                  className: (0, _._)(_.Banner, _.Big),
+                }),
+                (0, _.jsx)("img", {
+                  src: _,
+                  className: (0, _._)(_.Banner, _.Mobile),
+                }),
+              ],
+            })
           : null;
       }
     },

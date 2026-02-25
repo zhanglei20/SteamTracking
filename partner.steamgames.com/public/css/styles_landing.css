@@ -1311,11 +1311,11 @@ h2.incomplete {
 		width: 550px;
 	}
 
-input {
+input:where(:not(.noOpinionatedGlobalStyles input)) {
 	border-radius: 2px;
 }
 
-input[type="text"]:disabled {
+input[type="text"]:disabled:where(:not(.noOpinionatedGlobalStyles input[type="text"])) {
 	font-style: italic;
 	background-color: rgba(0,0,0,0.5);
 }

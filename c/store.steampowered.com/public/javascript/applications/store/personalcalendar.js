@@ -3,7 +3,7 @@
   {
     chunkid: (module) => {
       module.exports = {
-        TextInput: "_3UJsjqCfOxuT5SoqLekeha",
+        TextEntry: "_1vE-LsK6l_D_5yjbywZV1p",
       };
     },
     chunkid: (module) => {
@@ -130,14 +130,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
           {
+            value: _,
+            onTextChange: _,
+            onChange: _,
+            radius: _,
             variant: _,
             size: _,
             beforeContent: _,
@@ -145,42 +150,29 @@
             inputRef: _,
             ref: _,
             ..._
-          } = __webpack_require__;
-        return _.createElement(
-          _._,
-          {
-            ref: _,
+          } = __webpack_require__,
+          _ = {
             ..._,
             variant: _,
             size: _,
+            radius: _,
             beforeContent: _,
             afterContent: _,
-            cursor: "text",
-          },
-          _.createElement(_, {
             ref: _,
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-          value: _,
-          onTextChange: __webpack_require__,
-          onChange: _,
-          className: _,
-          ref: _,
-          ..._
-        } = _;
-        return _.createElement("input", {
-          ref: _,
-          type: "text",
+          };
+        return (0, _.jsx)(_._, {
+          cursor: "text",
           ..._,
-          className: _()(_.Reset, _.TextInput, _),
-          value: _ || "",
-          onChange: (_) => {
-            __webpack_require__(_.target.value), _ && _(_);
-          },
+          children: (0, _.jsx)("input", {
+            ref: _,
+            type: "text",
+            ..._,
+            className: _()(_.Reset, _.TextEntry),
+            value: _ || "",
+            onChange: (_) => {
+              _(_.target.value), _ && _(_);
+            },
+          }),
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -225,47 +217,45 @@
               }),
               _ =
                 _.value && _
-                  ? _.createElement(_._, {
+                  ? (0, _.jsx)(_._, {
                       onClick: () => _.onTextChange(""),
                       cursor: "pointer",
                       hitSlop: !0,
                     })
                   : void 0;
-            return _.createElement(
-              _.Root,
-              {
-                state: _,
-              },
-              _.createElement(_.TextInput, {
-                ..._,
-                afterContent: _,
-              }),
-              _.createElement(
-                _.Suggestions,
-                null,
-                _.map((_, _) =>
-                  _.createElement(
-                    _.Suggestion,
-                    {
-                      key: _ + _,
-                      value: _,
-                    },
-                    _,
+            return (0, _.jsxs)(_.Root, {
+              state: _,
+              children: [
+                (0, _.jsx)(_.TextInput, {
+                  ..._,
+                  afterContent: _,
+                }),
+                (0, _.jsx)(_.Suggestions, {
+                  children: _.map((_, _) =>
+                    (0, _.jsx)(
+                      _.Suggestion,
+                      {
+                        value: _,
+                        children: _,
+                      },
+                      _ + _,
+                    ),
                   ),
-                ),
-              ),
-            );
+                }),
+              ],
+            });
           },
           {
             Root: function (_) {
               const {
                   children: _,
                   placement: __webpack_require__ = "bottom-end",
+                  popoverWidth: _ = "dropdown",
                   ..._
                 } = _,
                 _ = (0, _._)({
                   ..._.state,
-                  width: "dropdown",
+                  width: _,
                   placement: __webpack_require__,
                   gutter: "4",
                   interactions: {
@@ -275,19 +265,13 @@
                   role: "combobox",
                   scroll: !0,
                 });
-              return _.createElement(
-                _.Provider,
-                {
-                  value: _,
-                },
-                _.createElement(
-                  _._.Root,
-                  {
-                    state: _,
-                  },
-                  _,
-                ),
-              );
+              return (0, _.jsx)(_.Provider, {
+                value: _,
+                children: (0, _.jsx)(_._.Root, {
+                  state: _,
+                  children: _,
+                }),
+              });
             },
             TextInput: function (_) {
               const {
@@ -301,10 +285,8 @@
                   },
                 } = _("<Autocomplete.TextInput>"),
                 _ = (0, _.useRef)(null);
-              return _.createElement(
-                _._.Anchor,
-                null,
-                _.createElement(_, {
+              return (0, _.jsx)(_._.Anchor, {
+                children: (0, _.jsx)(_, {
                   ..._,
                   inputRef: _,
                   onTextChange: _,
@@ -326,10 +308,10 @@
                   },
                   role: "combobox",
                 }),
-              );
+              });
             },
             Suggestions: function (_) {
-              return _.createElement(_._.Positioner, {
+              return (0, _.jsx)(_._.Positioner, {
                 ..._,
                 returnFocus: !1,
               });
@@ -344,16 +326,13 @@
                     onSuggestionSelected: _,
                   },
                 } = _("<Autocomplete.TextInput>");
-              return _.createElement(
-                _._.Item,
-                {
-                  onSelect: (_) => {
-                    _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
-                  },
-                  ..._,
+              return (0, _.jsx)(_._.Item, {
+                onSelect: (_) => {
+                  _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
                 },
-                __webpack_require__,
-              );
+                ..._,
+                children: __webpack_require__,
+              });
             },
           },
         ),
@@ -394,44 +373,33 @@
       };
       function _(_) {
         const { count: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarHeader,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.PersonalCalendarHeader,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.PersonalCalendarTitle,
-            },
-            (0, _._)("#PersonalCalendar_Title"),
-          ),
-          "number" == typeof _ &&
-            _.createElement(
-              _._,
-              {
+              children: (0, _._)("#PersonalCalendar_Title"),
+            }),
+            "number" == typeof _ &&
+              (0, _.jsx)(_._, {
                 className: _.PersonalCalendarDescription,
-              },
-              (0, _._)("#PersonalCalendar_Description", _),
-            ),
-        );
+                children: (0, _._)("#PersonalCalendar_Description", _),
+              }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarLoginPrompt,
-          },
-          (0, _._)("#PersonalCalendar_LoginPrompt"),
-          _.createElement(
-            "button",
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.PersonalCalendarLoginPrompt,
+          children: [
+            (0, _._)("#PersonalCalendar_LoginPrompt"),
+            (0, _.jsx)("button", {
               onClick: _._,
               className: _.LoginButton,
-            },
-            (0, _._)("#Login_SignIn"),
-          ),
-        );
+              children: (0, _._)("#Login_SignIn"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -441,97 +409,86 @@
           userTags: _,
           maxResultsToShow: _,
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               className: _.SteamLabsBanner,
-            },
-            (0, _._)(
-              "#PersonalCalendar_SteamLabs",
-              _.createElement("a", {
-                href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
-              }),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _.Options,
-            },
-            _.createElement(_, {
-              userTags: _,
-              tagMap: _,
-              selectedTag: _.selectedTag,
-              onChange: (_) =>
-                __webpack_require__({
-                  ..._,
-                  selectedTag: _,
+              children: (0, _._)(
+                "#PersonalCalendar_SteamLabs",
+                (0, _.jsx)("a", {
+                  href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
                 }),
+              ),
             }),
-            _.createElement(_, {
-              count: _.cResultsToShow,
-              onChange: (_) => {
-                localStorage.setItem(_, _.toString()),
-                  __webpack_require__({
-                    ..._,
-                    cResultsToShow: _,
-                  });
-              },
-              max: _,
-            }),
-            _.createElement(_, {
-              wishlistDisplay: _.wishlistDisplay,
-              onChange: (_) => {
-                localStorage.setItem(_, _.toString()),
-                  __webpack_require__({
-                    ..._,
-                    wishlistDisplay: _,
-                  });
-              },
-              disabled: !_.usesWishlists,
-            }),
-            _.createElement(
-              _._,
-              {
-                className: _.HideOwnedSelector,
-              },
-              _.createElement(
-                _._,
-                {
-                  checked: _.bHideOwned,
+            (0, _.jsxs)(_._, {
+              className: _.Options,
+              children: [
+                (0, _.jsx)(_, {
+                  userTags: _,
+                  tagMap: _,
+                  selectedTag: _.selectedTag,
+                  onChange: (_) =>
+                    __webpack_require__({
+                      ..._,
+                      selectedTag: _,
+                    }),
+                }),
+                (0, _.jsx)(_, {
+                  count: _.cResultsToShow,
                   onChange: (_) => {
-                    localStorage.setItem(_, _ ? "1" : "0"),
+                    localStorage.setItem(_, _.toString()),
                       __webpack_require__({
                         ..._,
-                        bHideOwned: _,
+                        cResultsToShow: _,
                       });
                   },
-                },
-                (0, _._)("#PersonalCalendar_HideOwned"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  checked: _.bHideEarlyAccess,
+                  max: _,
+                }),
+                (0, _.jsx)(_, {
+                  wishlistDisplay: _.wishlistDisplay,
                   onChange: (_) => {
-                    localStorage.setItem(_, _ ? "1" : "0"),
+                    localStorage.setItem(_, _.toString()),
                       __webpack_require__({
                         ..._,
-                        bHideEarlyAccess: _,
+                        wishlistDisplay: _,
                       });
                   },
-                  "data-tooltip-text": (0, _._)(
-                    "#PersonalCalendar_HideEATooltip",
-                  ),
-                },
-                (0, _._)("#PersonalCalendar_HideEarlyAccess"),
-              ),
-            ),
-          ),
-        );
+                  disabled: !_.usesWishlists,
+                }),
+                (0, _.jsxs)(_._, {
+                  className: _.HideOwnedSelector,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      checked: _.bHideOwned,
+                      onChange: (_) => {
+                        localStorage.setItem(_, _ ? "1" : "0"),
+                          __webpack_require__({
+                            ..._,
+                            bHideOwned: _,
+                          });
+                      },
+                      children: (0, _._)("#PersonalCalendar_HideOwned"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      checked: _.bHideEarlyAccess,
+                      onChange: (_) => {
+                        localStorage.setItem(_, _ ? "1" : "0"),
+                          __webpack_require__({
+                            ..._,
+                            bHideEarlyAccess: _,
+                          });
+                      },
+                      "data-tooltip-text": (0, _._)(
+                        "#PersonalCalendar_HideEATooltip",
+                      ),
+                      children: (0, _._)("#PersonalCalendar_HideEarlyAccess"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -562,37 +519,35 @@
               tagStringMap: _,
             };
           }, [__webpack_require__, _, _]);
-        return _.createElement(
-          _._,
-          {
-            className: _.TagSelector,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.TagSelector,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.Title,
-            },
-            (0, _._)("#PersonalCalendar_TagSelector"),
-          ),
-          _.createElement(_, {
-            suggestions: _,
-            onSuggestionSelected: (_) =>
-              ((_) => {
-                _(_?.get(_.toLocaleLowerCase()) ?? 0);
-              })(_),
-            value: _,
-            onTextChange: (_) =>
-              ((_) => {
-                "" === _.trim() && _
-                  ? _(0)
-                  : _.has(_.toLocaleLowerCase()) &&
-                    _(_.get(_.toLocaleLowerCase())),
-                  _(_);
-              })(_),
-            clearable: !0,
-            placeholder: (0, _._)("#PersonalCalendar_TagSelector_Placeholder"),
-          }),
-        );
+              children: (0, _._)("#PersonalCalendar_TagSelector"),
+            }),
+            (0, _.jsx)(_, {
+              suggestions: _,
+              onSuggestionSelected: (_) =>
+                ((_) => {
+                  _(_?.get(_.toLocaleLowerCase()) ?? 0);
+                })(_),
+              value: _,
+              onTextChange: (_) =>
+                ((_) => {
+                  "" === _.trim() && _
+                    ? _(0)
+                    : _.has(_.toLocaleLowerCase()) &&
+                      _(_.get(_.toLocaleLowerCase())),
+                    _(_);
+                })(_),
+              clearable: !0,
+              placeholder: (0, _._)(
+                "#PersonalCalendar_TagSelector_Placeholder",
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { count: _, onChange: __webpack_require__, max: _ } = _,
@@ -606,25 +561,21 @@
               ? __webpack_require__("chunkid")
               : __webpack_require__(_[_.length - 1])));
         const _ = _.map((_) => _.toString());
-        return _.createElement(
-          _._,
-          {
-            className: _.ResultCountSelector,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.ResultCountSelector,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.Title,
-            },
-            (0, _._)("#PersonalCalendar_ResultCountSelector"),
-          ),
-          _.createElement(_._, {
-            options: _,
-            value: _.toString(),
-            onValueChange: (_) => __webpack_require__(parseInt(_)),
-            radius: "sm",
-          }),
-        );
+              children: (0, _._)("#PersonalCalendar_ResultCountSelector"),
+            }),
+            (0, _.jsx)(_._, {
+              options: _,
+              value: _.toString(),
+              onValueChange: (_) => __webpack_require__(parseInt(_)),
+              radius: "sm",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { wishlistDisplay: _, onChange: __webpack_require__ } = _,
@@ -639,46 +590,39 @@
             }
           },
           _ = [_(_.Show), _(_.Hide), _(_.Only)];
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(
-              _.ResultCountSelector,
-              _.disabled && _.Disabled,
-            ),
-            "data-tooltip-text": _.disabled
-              ? (0, _._)("#PersonalCalendar_IgnoringWishlists")
-              : void 0,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_.ResultCountSelector, _.disabled && _.Disabled),
+          "data-tooltip-text": _.disabled
+            ? (0, _._)("#PersonalCalendar_IgnoringWishlists")
+            : void 0,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.Title,
-            },
-            (0, _._)("#PersonalCalendar_Wishlisted"),
-          ),
-          _.createElement(_._, {
-            options: _,
-            value: _(_),
-            onValueChange: (_) =>
-              _.disabled
-                ? () => {}
-                : __webpack_require__(
-                    ((_) => {
-                      switch (_) {
-                        case (0, _._)("#PersonalCalendar_WishlistShow"):
-                          return _.Show;
-                        case (0, _._)("#PersonalCalendar_WishlistHide"):
-                          return _.Hide;
-                        case (0, _._)("#PersonalCalendar_WishlistOnly"):
-                          return _.Only;
-                      }
-                      return _.Show;
-                    })(_),
-                  ),
-            radius: "sm",
-          }),
-        );
+              children: (0, _._)("#PersonalCalendar_Wishlisted"),
+            }),
+            (0, _.jsx)(_._, {
+              options: _,
+              value: _(_),
+              onValueChange: (_) =>
+                _.disabled
+                  ? () => {}
+                  : __webpack_require__(
+                      ((_) => {
+                        switch (_) {
+                          case (0, _._)("#PersonalCalendar_WishlistShow"):
+                            return _.Show;
+                          case (0, _._)("#PersonalCalendar_WishlistHide"):
+                            return _.Hide;
+                          case (0, _._)("#PersonalCalendar_WishlistOnly"):
+                            return _.Only;
+                        }
+                        return _.Show;
+                      })(_),
+                    ),
+              radius: "sm",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { games: _ } = _,
@@ -686,44 +630,37 @@
             (0, _._)(() =>
               _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
             ) ?? [];
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarSection,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.PersonalCalendarSection,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.SectionHeader,
-            },
-            (0, _._)("#PersonalCalendar_LastMonthGames"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#PersonalCalendar_LastMonthGames"),
+            }),
+            (0, _.jsx)(_._, {
               className: (0, _._)(_.GameList, _.Month),
-            },
-            __webpack_require__.slice(0, 16).map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: _.appid,
-                  className: _.AppEntry,
-                },
-                _.createElement(_._, {
-                  capsule: {
-                    _: _.appid,
+              children: __webpack_require__.slice(0, 16).map((_) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    className: _.AppEntry,
+                    children: (0, _.jsx)(_._, {
+                      capsule: {
+                        _: _.appid,
+                      },
+                      imageType: "header",
+                      bShowEarlyAccessBanner: !1,
+                      bShowIgnoreButton: !0,
+                      bShowDescriptionInHover: !0,
+                      bPreferAssetWithoutOverride: !1,
+                    }),
                   },
-                  imageType: "header",
-                  bShowEarlyAccessBanner: !0,
-                  bShowIgnoreButton: !0,
-                  bShowDescriptionInHover: !0,
-                  bPreferAssetWithoutOverride: !1,
-                }),
+                  _.appid,
+                ),
               ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const { games: _ } = _,
@@ -731,44 +668,37 @@
             (0, _._)(() =>
               _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
             ) ?? [];
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarSection,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.PersonalCalendarSection,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.SectionHeader,
-            },
-            (0, _._)("#PersonalCalendar_LastWeekGames"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#PersonalCalendar_LastWeekGames"),
+            }),
+            (0, _.jsx)(_._, {
               className: (0, _._)(_.GameList, _.Week),
-            },
-            __webpack_require__.slice(0, 12).map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: _.appid,
-                  className: _.AppEntry,
-                },
-                _.createElement(_._, {
-                  capsule: {
-                    _: _.appid,
+              children: __webpack_require__.slice(0, 12).map((_) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    className: _.AppEntry,
+                    children: (0, _.jsx)(_._, {
+                      capsule: {
+                        _: _.appid,
+                      },
+                      imageType: "header",
+                      bShowEarlyAccessBanner: !1,
+                      bShowIgnoreButton: !0,
+                      bShowDescriptionInHover: !0,
+                      bPreferAssetWithoutOverride: !1,
+                    }),
                   },
-                  imageType: "header",
-                  bShowEarlyAccessBanner: !0,
-                  bShowIgnoreButton: !0,
-                  bShowDescriptionInHover: !0,
-                  bPreferAssetWithoutOverride: !1,
-                }),
+                  _.appid,
+                ),
               ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -778,88 +708,83 @@
             includeSaturday: _,
           } = _,
           [_, _] = _.useState(9999);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
               className: (0, _._)(
                 _.PersonalCalendarSection,
                 _.Calendar,
                 _ && _.IncludeSaturday,
               ),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.SectionHeader,
-              },
-              (0, _._)("#PersonalCalendar_Upcoming"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(_.Week, _ && _.IncludeSaturday),
-              },
-              _?.[0].map((_, _) =>
-                0 == _
-                  ? null
-                  : _ || 6 != _
-                    ? _.createElement(_, {
-                        key: `WeekHeader_${_}`,
-                        timestamp: _,
-                      })
-                    : null,
-              ),
-            ),
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: `Week_${_}`,
-                dayTimestamps: _,
-                appReleasesByDay: __webpack_require__,
-                todayTimestamp: _,
-                maxGames: _,
-                includeSaturday: _,
-              }),
-            ),
-            9999 != _ &&
-              _.createElement(
-                _._,
-                {
-                  className: _.ShowAllButton,
-                  onClick: () => _(9999),
-                },
-                (0, _._)("#PersonalCalendar_ShowAll"),
-              ),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.SectionHeader,
+                  children: (0, _._)("#PersonalCalendar_Upcoming"),
+                }),
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(_.Week, _ && _.IncludeSaturday),
+                  children: _?.[0].map((_, _) =>
+                    0 == _
+                      ? null
+                      : _ || 6 != _
+                        ? (0, _.jsx)(
+                            _,
+                            {
+                              timestamp: _,
+                            },
+                            `WeekHeader_${_}`,
+                          )
+                        : null,
+                  ),
+                }),
+                _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      dayTimestamps: _,
+                      appReleasesByDay: __webpack_require__,
+                      todayTimestamp: _,
+                      maxGames: _,
+                      includeSaturday: _,
+                    },
+                    `Week_${_}`,
+                  ),
+                ),
+                9999 != _ &&
+                  (0, _.jsx)(_._, {
+                    className: _.ShowAllButton,
+                    onClick: () => _(9999),
+                    children: (0, _._)("#PersonalCalendar_ShowAll"),
+                  }),
+              ],
+            }),
+            (0, _.jsxs)(_._, {
               className: (0, _._)(
                 _.PersonalCalendarSection,
                 _.LinearCalendar,
                 _ && _.IncludeSaturday,
               ),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.SectionHeader,
-              },
-              (0, _._)("#PersonalCalendar_Upcoming"),
-            ),
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: `WeekLinear_${_}`,
-                dayTimestamps: _,
-                appReleasesByDay: __webpack_require__,
-                todayTimestamp: _,
-                maxGames: _,
-              }),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.SectionHeader,
+                  children: (0, _._)("#PersonalCalendar_Upcoming"),
+                }),
+                _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      dayTimestamps: _,
+                      appReleasesByDay: __webpack_require__,
+                      todayTimestamp: _,
+                      maxGames: _,
+                    },
+                    `WeekLinear_${_}`,
+                  ),
+                ),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
@@ -868,13 +793,10 @@
             weekday: "long",
           },
         );
-        return _.createElement(
-          _._,
-          {
-            className: _.DayOfWeekHeader,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          className: _.DayOfWeekHeader,
+          children: _,
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(_.maxGames);
@@ -890,27 +812,27 @@
               ),
             )
           : 0;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.Week, _.includeSaturday && _.IncludeSaturday),
-          },
-          _.dayTimestamps.map((_, _) =>
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_.Week, _.includeSaturday && _.IncludeSaturday),
+          children: _.dayTimestamps.map((_, _) =>
             0 == _
               ? null
               : _.includeSaturday || 6 != _
-                ? _.createElement(_, {
-                    key: _,
-                    timestamp: _,
-                    appsToday: _.appReleasesByDay[_],
-                    firstTimestamp: _.todayTimestamp,
-                    maxGames: Math.max(_.maxGames, _),
-                    setMaxGames: __webpack_require__,
-                    maxNumGamesInWeek: _,
-                  })
+                ? (0, _.jsx)(
+                    _,
+                    {
+                      timestamp: _,
+                      appsToday: _.appReleasesByDay[_],
+                      firstTimestamp: _.todayTimestamp,
+                      maxGames: Math.max(_.maxGames, _),
+                      setMaxGames: __webpack_require__,
+                      maxNumGamesInWeek: _,
+                    },
+                    _,
+                  )
                 : null,
           ),
-        );
+        });
       }
       function _(_) {
         if (_.todayTimestamp > Math.max(..._.dayTimestamps)) return null;
@@ -926,38 +848,32 @@
             _._.GetPreferredLocales(),
             _,
           );
-        return _.createElement(
-          _._,
-          {
-            className: _.WeekLinear,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.WeekLinear,
+          children: [
+            (0, _.jsxs)(_._, {
               className: _.LinearHeader,
-            },
-            _,
-            " - ",
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: [_, " - ", _],
+            }),
+            (0, _.jsx)(_._, {
               className: _.LinearDayList,
-            },
-            _.dayTimestamps?.map((_) =>
-              _.createElement(_, {
-                key: _,
-                timestamp: _,
-                appsToday: _.appReleasesByDay[_],
-                firstTimestamp: _.todayTimestamp,
-                maxGames: 9999,
-                setMaxGames: () => null,
-                maxNumGamesInWeek: 9999,
-              }),
-            ),
-          ),
-        );
+              children: _.dayTimestamps?.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    timestamp: _,
+                    appsToday: _.appReleasesByDay[_],
+                    firstTimestamp: _.todayTimestamp,
+                    maxGames: 9999,
+                    setMaxGames: () => null,
+                    maxNumGamesInWeek: 9999,
+                  },
+                  _,
+                ),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
@@ -983,58 +899,53 @@
             _.appsToday?.length <= Math.floor(_.maxNumGamesInWeek / 2)
               ? "library"
               : "main";
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.Day, _ && _.Today),
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_.Day, _ && _.Today),
+          children: [
+            (0, _.jsx)(_._, {
               className: _.DateHeader,
-            },
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: _,
+            }),
+            (0, _.jsxs)(_._, {
               className: _.GameList,
-            },
-            _?.map((_, _) =>
-              _.createElement(
-                _._,
-                {
-                  key: _.appid,
-                  className: _.CalendarAppEntry,
-                },
-                _.createElement(_._, {
-                  capsule: {
-                    _: _.appid,
-                  },
-                  imageType: _,
-                  nWidthMultiplier: 2,
-                  bShowName: !1,
-                  bHidePlatforms: !0,
-                  bHidePrice: !0,
-                  bShowEarlyAccessBanner: !0,
-                  bShowIgnoreButton: !0,
-                  bShowDescriptionInHover: !0,
-                  bPreferAssetWithoutOverride: !1,
-                }),
-              ),
-            ),
-            !_ &&
-              _ < _.appsToday?.length &&
-              _.createElement(
-                _._,
-                {
-                  className: _.ShowMoreButton,
-                  onClick: () => _.setMaxGames(_.appsToday.length),
-                },
-                (0, _._)("#PersonalCalendar_ShowMore", _.appsToday.length),
-              ),
-          ),
-        );
+              children: [
+                _?.map((_, _) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      className: _.CalendarAppEntry,
+                      children: (0, _.jsx)(_._, {
+                        capsule: {
+                          _: _.appid,
+                        },
+                        imageType: _,
+                        nWidthMultiplier: 2,
+                        bShowName: !1,
+                        bHidePlatforms: !0,
+                        bHidePrice: !0,
+                        bShowEarlyAccessBanner: !1,
+                        bShowIgnoreButton: !0,
+                        bShowDescriptionInHover: !0,
+                        bPreferAssetWithoutOverride: !1,
+                      }),
+                    },
+                    _.appid,
+                  ),
+                ),
+                !_ &&
+                  _ < _.appsToday?.length &&
+                  (0, _.jsx)(_._, {
+                    className: _.ShowMoreButton,
+                    onClick: () => _.setMaxGames(_.appsToday.length),
+                    children: (0, _._)(
+                      "#PersonalCalendar_ShowMore",
+                      _.appsToday.length,
+                    ),
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
@@ -1053,53 +964,46 @@
             ) ?? [];
         return _.timestamp < _
           ? null
-          : _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  _.DayLinear,
-                  _ && _.Today,
-                  !_.appsToday?.length && _.Empty,
-                ),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.DayTitle,
-                },
-                _,
+          : (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                _.DayLinear,
+                _ && _.Today,
+                !_.appsToday?.length && _.Empty,
               ),
-              _.appsToday?.length &&
-                _.createElement(
-                  _._,
-                  {
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.DayTitle,
+                  children: _,
+                }),
+                _.appsToday?.length &&
+                  (0, _.jsx)(_._, {
                     className: _.LinearDayAppList,
-                  },
-                  _?.map((_) =>
-                    _.createElement(
-                      _._,
-                      {
-                        key: _.appid,
-                        className: _.LinearCalendarAppEntry,
-                      },
-                      _.createElement(_._, {
-                        capsule: {
-                          _: _.appid,
+                    children: _?.map((_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          className: _.LinearCalendarAppEntry,
+                          children: (0, _.jsx)(_._, {
+                            capsule: {
+                              _: _.appid,
+                            },
+                            imageType: "library",
+                            nWidthMultiplier: 2,
+                            bShowName: !1,
+                            bHidePlatforms: !0,
+                            bHidePrice: !0,
+                            bHideStatusBanners: !0,
+                            bShowIgnoreButton: !0,
+                            bShowDescriptionInHover: !0,
+                            bPreferAssetWithoutOverride: !1,
+                          }),
                         },
-                        imageType: "library",
-                        nWidthMultiplier: 2,
-                        bShowName: !1,
-                        bHidePlatforms: !0,
-                        bHidePrice: !0,
-                        bHideStatusBanners: !0,
-                        bShowIgnoreButton: !0,
-                        bShowDescriptionInHover: !0,
-                        bPreferAssetWithoutOverride: !1,
-                      }),
+                        _.appid,
+                      ),
                     ),
-                  ),
-                ),
-            );
+                  }),
+              ],
+            });
       }
       const _ = () => {
         const { data: _ } = (0, _._)(_._.LANGUAGE),
@@ -1202,87 +1106,73 @@
             _,
           ]);
         return _.data && !_._.logged_in
-          ? _.createElement(
-              _._,
-              {
-                className: _.PersonalCalendarLoginPrompt,
-              },
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)(_._, {
+              className: _.PersonalCalendarLoginPrompt,
+              children: [
+                (0, _.jsx)(_._, {
                   className: _.Text,
-                },
-                (0, _._)("#PersonalCalendar_LoginPrompt"),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)("#PersonalCalendar_LoginPrompt"),
+                }),
+                (0, _.jsx)(_._, {
                   className: (0, _._)(_.LoginButton),
                   onClick: _._,
-                },
-                _.createElement("span", null, (0, _._)("#LoginButton")),
-              ),
-            )
-          : _.createElement(
-              _._,
-              {
-                controller: "personalcalendar",
-                method: "default",
-                feature: "capsule",
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.PersonalCalendarApp,
-                      _.isFetching && _.Refreshing,
-                    ),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.PersonalCalendarContainer,
-                    },
-                    _.createElement(_, {
-                      count: _.data ? _.cResultsToShow : void 0,
-                    }),
-                    !_._.steamid && _.createElement(_, null),
-                    _.data &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(_, {
-                          state: _,
-                          onChange: __webpack_require__,
-                          tagMap: _,
-                          userTags: _,
-                          maxResultsToShow: _,
-                          usesWishlists: _,
-                        }),
-                        _.length > 0 &&
-                          _.createElement(_, {
-                            games: _,
-                            includeSaturday: _,
-                          }),
-                        _.length > 0 &&
-                          _.createElement(_, {
-                            games: _,
-                            includeSaturday: _,
-                          }),
-                        _.createElement(_, {
-                          dayWeekTimestamps: _,
-                          appReleasesByDay: _,
-                          todayTimestamp: _,
-                          includeSaturday: _,
-                        }),
-                      ),
+                  children: (0, _.jsx)("span", {
+                    children: (0, _._)("#LoginButton"),
+                  }),
+                }),
+              ],
+            })
+          : (0, _.jsx)(_._, {
+              controller: "personalcalendar",
+              method: "default",
+              feature: "capsule",
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _.PersonalCalendarApp,
+                    _.isFetching && _.Refreshing,
                   ),
-                ),
-              ),
-            );
+                  children: (0, _.jsxs)(_._, {
+                    className: _.PersonalCalendarContainer,
+                    children: [
+                      (0, _.jsx)(_, {
+                        count: _.data ? _.cResultsToShow : void 0,
+                      }),
+                      !_._.steamid && (0, _.jsx)(_, {}),
+                      _.data &&
+                        (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)(_, {
+                              state: _,
+                              onChange: __webpack_require__,
+                              tagMap: _,
+                              userTags: _,
+                              maxResultsToShow: _,
+                              usesWishlists: _,
+                            }),
+                            _.length > 0 &&
+                              (0, _.jsx)(_, {
+                                games: _,
+                                includeSaturday: _,
+                              }),
+                            _.length > 0 &&
+                              (0, _.jsx)(_, {
+                                games: _,
+                                includeSaturday: _,
+                              }),
+                            (0, _.jsx)(_, {
+                              dayWeekTimestamps: _,
+                              appReleasesByDay: _,
+                              todayTimestamp: _,
+                              includeSaturday: _,
+                            }),
+                          ],
+                        }),
+                    ],
+                  }),
+                }),
+              }),
+            });
       };
     },
   },

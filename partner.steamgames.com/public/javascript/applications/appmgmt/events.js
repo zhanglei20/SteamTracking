@@ -30,64 +30,65 @@
         FailedButton: "soZLp0uToUv-yRJFwckG9",
       };
     },
-    76483: (e, t, a) => {
+    76483: (e, t, n) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => I });
-      var n = a(41735),
-        i = a.n(n),
-        l = a(90626),
-        r = a(22837),
-        s = a(2160),
-        o = a(4807),
-        c = a(17720),
-        d = a(68033),
-        u = a(6205),
-        m = a(16676),
-        g = a(84811),
-        p = a(63232),
-        h = a(1909),
-        E = a(25228),
-        _ = a(9154),
-        S = a(738),
-        B = a(22797),
-        f = a(62490),
-        P = a(52038),
-        w = a(61859),
-        N = a(87669),
-        v = a(68797),
-        T = a(78327),
-        b = a(58962);
-      function L(e, t, a) {
-        const n = e && e.length > a ? [...e] : (0, f.$Y)(e || [], a + 1, "");
-        return (n[a] = t), n;
+      n.r(t), n.d(t, { default: () => G });
+      var i = n(7850),
+        a = n(41735),
+        s = n.n(a),
+        r = n(90626),
+        l = n(22837),
+        o = n(2160),
+        d = n(4807),
+        c = n(17720),
+        u = n(68033),
+        h = n(6205),
+        g = n(16676),
+        m = n(84811),
+        p = n(63232),
+        _ = n(1909),
+        S = n(25228),
+        B = n(9154),
+        x = n(738),
+        f = n(22797),
+        P = n(62490),
+        j = n(52038),
+        w = n(61859),
+        N = n(87669),
+        v = n(68797),
+        T = n(78327),
+        b = n(58962);
+      function L(e, t, n) {
+        const i = e && e.length > n ? [...e] : (0, P.$Y)(e || [], n + 1, "");
+        return (i[n] = t), i;
       }
-      function C(e, t) {
+      function E(e, t) {
         return (e && e.length > t && e[t]) || "";
       }
-      function D(e, t) {
-        let a = !1,
-          n = !1;
-        for (let i = 0; i < 31; i++) {
-          const l = C(e, i).trim(),
-            s = C(t, i).trim();
-          if (!l && !s) continue;
-          const c = (0, w.we)("#Language_" + (0, r.Lg)(i));
-          if (((a = !0), !l))
-            return (0, w.we)("#BuildNotes_Error_MissingTitle", c);
-          if (!s) return (0, w.we)("#BuildNotes_Error_MissingDescription", c);
-          if (l.length > o.dm)
-            return (0, w.we)("#BuildNotes_Error_TitleTooLong", c);
-          if (s.length > 32768)
-            return (0, w.we)("#BuildNotes_Error_DescriptionTooLong", c);
-          0 === i && (n = !0);
+      function C(e, t) {
+        let n = !1,
+          i = !1;
+        for (let a = 0; a < 31; a++) {
+          const s = E(e, a).trim(),
+            r = E(t, a).trim();
+          if (!s && !r) continue;
+          const o = (0, w.we)("#Language_" + (0, l.Lg)(a));
+          if (((n = !0), !s))
+            return (0, w.we)("#BuildNotes_Error_MissingTitle", o);
+          if (!r) return (0, w.we)("#BuildNotes_Error_MissingDescription", o);
+          if (s.length > d.dm)
+            return (0, w.we)("#BuildNotes_Error_TitleTooLong", o);
+          if (r.length > 32768)
+            return (0, w.we)("#BuildNotes_Error_DescriptionTooLong", o);
+          0 === a && (i = !0);
         }
-        return a
-          ? n
+        return n
+          ? i
             ? null
             : (0, w.we)("#BuildNotes_Error_NoEnglishProvided")
           : (0, w.we)("#BuildNotes_Error_NoLanguagesProvided");
       }
-      class G {
+      class D {
         m_nBuildVersion;
         m_bSteamChina;
         m_strBuildBranch;
@@ -95,7 +96,7 @@
         static Get() {
           return (
             this.s_Singleton ||
-              ((this.s_Singleton = new G()), this.s_Singleton.Init()),
+              ((this.s_Singleton = new D()), this.s_Singleton.Init()),
             this.s_Singleton
           );
         }
@@ -122,395 +123,390 @@
           return this.m_strBuildBranch;
         }
       }
-      function I(e) {
-        const [t, a] = l.useState(0),
-          [n, r] = l.useState(null),
-          [d, u] = l.useState(null),
-          [p, h] = l.useState(null),
-          [E, _] = l.useState("editing"),
-          [S, B] = l.useState(null);
-        if (!G.Get().BShouldShowPatchNotesEditor()) return null;
-        const f = (e) => a(e),
-          P = (e) => Boolean(C(n, e) || C(d, e)),
-          N = G.Get().BCanSubmitSteamChinaPatchNotes()
-            ? [s.TU.k_ESteamRealmChina, s.TU.k_ESteamRealmGlobal]
-            : [s.TU.k_ESteamRealmGlobal],
-          I = D(n, d),
+      function G(e) {
+        const [t, n] = r.useState(0),
+          [a, l] = r.useState(null),
+          [u, h] = r.useState(null),
+          [p, _] = r.useState(null),
+          [S, B] = r.useState("editing"),
+          [x, f] = r.useState(null);
+        if (!D.Get().BShouldShowPatchNotesEditor()) return null;
+        const P = (e) => n(e),
+          j = (e) => Boolean(E(a, e) || E(u, e)),
+          N = D.Get().BCanSubmitSteamChinaPatchNotes()
+            ? [o.TU.k_ESteamRealmChina, o.TU.k_ESteamRealmGlobal]
+            : [o.TU.k_ESteamRealmGlobal],
+          G = C(a, u),
           U =
             T.TS.COMMUNITY_BASE_URL +
             "ogg/" +
             e.appId +
             "/partnerevents/create/";
-        return l.createElement(
-          g.tH,
-          null,
-          l.createElement(
-            "div",
-            { className: b.BuildNoteCtn },
-            l.createElement(
-              "div",
-              { className: b.BuildTitle },
-              (0, w.we)(
-                "#BuildNotes_Title",
-                G.Get().GetPostedBuildVersion(),
-                G.Get().GetBuildBranch() || "default",
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: b.SplitPanel },
-              l.createElement(
-                "div",
-                { className: b.DescriptionPanel },
-                l.createElement(
-                  "div",
-                  { className: b.BuildSubTitle },
-                  (0, w.we)("#BuildNotes_SubTitle"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: b.InfoText },
-                  (0, w.we)("#BuildNotes_Desc1"),
-                ),
-                l.createElement(
-                  "div",
-                  { className: b.InfoText },
-                  (0, w.PP)("#BuildNotes_Desc2"),
-                ),
-                l.createElement(
-                  "a",
-                  { href: U },
-                  l.createElement(
-                    m.$n,
-                    null,
-                    (0, w.we)("#BuildNotes_OpenFullEditor"),
+        return (0, i.jsxs)(m.tH, {
+          children: [
+            (0, i.jsxs)("div", {
+              className: b.BuildNoteCtn,
+              children: [
+                (0, i.jsx)("div", {
+                  className: b.BuildTitle,
+                  children: (0, w.we)(
+                    "#BuildNotes_Title",
+                    D.Get().GetPostedBuildVersion(),
+                    D.Get().GetBuildBranch() || "default",
                   ),
-                ),
-              ),
-              "editing" === E &&
-                l.createElement(y, {
-                  sError: I,
-                  eLanguage: t,
-                  realms: N,
-                  fnHasLanguage: P,
-                  fnSetLanguage: f,
-                  fnGetTitle: (e) => C(n, e),
-                  fnSetTitle: (e, t) => r(L(n, t, e)),
-                  fnGetDescription: (e) => C(d, e),
-                  fnSetDescription: (e, t) => u(L(d, t, e)),
-                  fnOnPreviewEvent: () =>
-                    h(
-                      (function (e, t) {
-                        let a = new o.lh();
-                        (a.GID = "PreviewPartnerEventRow_0"),
-                          (a.clanSteamID = new c.b(T.iA.steamid)),
-                          (a.postTime = Date.now() / 1e3),
-                          (a.startTime = Date.now() / 1e3),
-                          (a.type = 12);
-                        for (let n = 0; n < 31; n++)
-                          a.name.set(n, C(e, n)), a.description.set(n, C(t, n));
-                        return a;
-                      })(n, d),
-                    ),
-                  fnApplyLoc: (e, t) => {
-                    const a = new Array();
-                    let i = n,
-                      l = d;
-                    for (const n of t) {
-                      const t = e.GetLocalization("Title", n) || "",
-                        r = e.GetLocalization("Description", n) || "";
-                      (t || r) && a.push(n),
-                        t && (i = L(i, t, n)),
-                        r && (l = L(l, r, n));
-                    }
-                    return r(i), u(l), a;
-                  },
                 }),
-              "submitting" === E && l.createElement(R, null),
-              "failed" === E &&
-                l.createElement(x, { fnOnReturnToEditor: () => _("editing") }),
-              "submitted" === E &&
-                l.createElement(A, { appId: e.appId, eventGid: S }),
-            ),
-          ),
-          Boolean(p && "editing" === E) &&
-            l.createElement(O, {
-              event: p,
-              eLanguage: t,
-              realms: N,
-              fnOnClose: () => h(null),
-              fnOnSubmitEvent: async () => {
-                h(null), _("submitting");
-                const t = await (async function (e, t, a) {
-                  if (D(t, a)) return null;
-                  const n = Boolean(C(t, 29).trim()),
-                    l = new FormData();
-                  l.append("sessionid", T.TS.SESSIONID),
-                    l.append("appid", "" + e),
-                    l.append("post_steam_china", "" + n),
-                    l.append("titles", JSON.stringify(t)),
-                    l.append("descriptions", JSON.stringify(a)),
-                    l.append("build_id", "" + G.Get().GetPostedBuildVersion()),
-                    l.append("build_branch", G.Get().GetBuildBranch());
-                  const r =
-                    T.TS.PARTNER_BASE_URL +
-                    "partnerevents/ajaxpublishpatchnotes";
-                  try {
-                    const e = await i().post(r, l, { withCredentials: !0 });
-                    if (1 == e?.data?.success) return e.data;
-                    console.error(
-                      "buildpatchnotes: OnSubmitCreateEvent error code  " +
-                        e?.data?.success +
-                        " msg: " +
-                        e?.data?.msg,
-                    );
-                  } catch (e) {
-                    const t = (0, v.H)(e);
-                    console.error(
-                      "buildpatchnotes: OnSubmitCreateEvent " + t.strErrorMsg,
-                      t,
-                    );
-                  }
-                  return null;
-                })(e.appId, n, d);
-                t
-                  ? (B(t.clan_event_gid),
-                    (function () {
-                      const e = new URLSearchParams(window.location.search);
-                      e.delete("submittedbuild"), e.delete("buildbranch");
-                      const t = e.toString(),
-                        a =
-                          window.location.origin +
-                          window.location.pathname +
-                          (t ? "?" + t : "") +
-                          window.location.hash;
-                      window.history.replaceState({}, "", a);
-                    })(),
-                    _("submitted"))
-                  : _("failed");
-              },
-              fnHasLanguage: P,
-              fnSetLanguage: f,
+                (0, i.jsxs)("div", {
+                  className: b.SplitPanel,
+                  children: [
+                    (0, i.jsxs)("div", {
+                      className: b.DescriptionPanel,
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: b.BuildSubTitle,
+                          children: (0, w.we)("#BuildNotes_SubTitle"),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: b.InfoText,
+                          children: (0, w.we)("#BuildNotes_Desc1"),
+                        }),
+                        (0, i.jsx)("div", {
+                          className: b.InfoText,
+                          children: (0, w.PP)("#BuildNotes_Desc2"),
+                        }),
+                        (0, i.jsx)("a", {
+                          href: U,
+                          children: (0, i.jsx)(g.$n, {
+                            children: (0, w.we)("#BuildNotes_OpenFullEditor"),
+                          }),
+                        }),
+                      ],
+                    }),
+                    "editing" === S &&
+                      (0, i.jsx)(I, {
+                        sError: G,
+                        eLanguage: t,
+                        realms: N,
+                        fnHasLanguage: j,
+                        fnSetLanguage: P,
+                        fnGetTitle: (e) => E(a, e),
+                        fnSetTitle: (e, t) => l(L(a, t, e)),
+                        fnGetDescription: (e) => E(u, e),
+                        fnSetDescription: (e, t) => h(L(u, t, e)),
+                        fnOnPreviewEvent: () =>
+                          _(
+                            (function (e, t) {
+                              let n = new d.lh();
+                              (n.GID = "PreviewPartnerEventRow_0"),
+                                (n.clanSteamID = new c.b(T.iA.steamid)),
+                                (n.postTime = Date.now() / 1e3),
+                                (n.startTime = Date.now() / 1e3),
+                                (n.type = 12);
+                              for (let i = 0; i < 31; i++)
+                                n.name.set(i, E(e, i)),
+                                  n.description.set(i, E(t, i));
+                              return n;
+                            })(a, u),
+                          ),
+                        fnApplyLoc: (e, t) => {
+                          const n = new Array();
+                          let i = a,
+                            s = u;
+                          for (const a of t) {
+                            const t = e.GetLocalization("Title", a) || "",
+                              r = e.GetLocalization("Description", a) || "";
+                            (t || r) && n.push(a),
+                              t && (i = L(i, t, a)),
+                              r && (s = L(s, r, a));
+                          }
+                          return l(i), h(s), n;
+                        },
+                      }),
+                    "submitting" === S && (0, i.jsx)(O, {}),
+                    "failed" === S &&
+                      (0, i.jsx)(R, { fnOnReturnToEditor: () => B("editing") }),
+                    "submitted" === S &&
+                      (0, i.jsx)(A, { appId: e.appId, eventGid: x }),
+                  ],
+                }),
+              ],
             }),
-        );
+            Boolean(p && "editing" === S) &&
+              (0, i.jsx)(y, {
+                event: p,
+                eLanguage: t,
+                realms: N,
+                fnOnClose: () => _(null),
+                fnOnSubmitEvent: async () => {
+                  _(null), B("submitting");
+                  const t = await (async function (e, t, n) {
+                    if (C(t, n)) return null;
+                    const i = Boolean(E(t, 29).trim()),
+                      a = new FormData();
+                    a.append("sessionid", T.TS.SESSIONID),
+                      a.append("appid", "" + e),
+                      a.append("post_steam_china", "" + i),
+                      a.append("titles", JSON.stringify(t)),
+                      a.append("descriptions", JSON.stringify(n)),
+                      a.append(
+                        "build_id",
+                        "" + D.Get().GetPostedBuildVersion(),
+                      ),
+                      a.append("build_branch", D.Get().GetBuildBranch());
+                    const r =
+                      T.TS.PARTNER_BASE_URL +
+                      "partnerevents/ajaxpublishpatchnotes";
+                    try {
+                      const e = await s().post(r, a, { withCredentials: !0 });
+                      if (1 == e?.data?.success) return e.data;
+                      console.error(
+                        "buildpatchnotes: OnSubmitCreateEvent error code  " +
+                          e?.data?.success +
+                          " msg: " +
+                          e?.data?.msg,
+                      );
+                    } catch (e) {
+                      const t = (0, v.H)(e);
+                      console.error(
+                        "buildpatchnotes: OnSubmitCreateEvent " + t.strErrorMsg,
+                        t,
+                      );
+                    }
+                    return null;
+                  })(e.appId, a, u);
+                  t
+                    ? (f(t.clan_event_gid),
+                      (function () {
+                        const e = new URLSearchParams(window.location.search);
+                        e.delete("submittedbuild"), e.delete("buildbranch");
+                        const t = e.toString(),
+                          n =
+                            window.location.origin +
+                            window.location.pathname +
+                            (t ? "?" + t : "") +
+                            window.location.hash;
+                        window.history.replaceState({}, "", n);
+                      })(),
+                      B("submitted"))
+                    : B("failed");
+                },
+                fnHasLanguage: j,
+                fnSetLanguage: P,
+              }),
+          ],
+        });
       }
-      const y = (e) => {
+      const I = (e) => {
           const {
             sError: t,
-            eLanguage: a,
-            realms: n,
-            fnHasLanguage: i,
+            eLanguage: n,
+            realms: a,
+            fnHasLanguage: s,
             fnSetLanguage: r,
-            fnGetTitle: c,
-            fnSetTitle: g,
-            fnGetDescription: p,
-            fnSetDescription: _,
+            fnGetTitle: l,
+            fnSetTitle: c,
+            fnGetDescription: m,
+            fnSetDescription: p,
             fnOnPreviewEvent: B,
             fnApplyLoc: f,
           } = e;
           let P = "";
-          if (n.includes(s.TU.k_ESteamRealmChina)) {
-            const e = "" !== c(29).trim();
+          if (a.includes(o.TU.k_ESteamRealmChina)) {
+            const e = "" !== l(29).trim();
             P = (0, w.we)(
               e
                 ? "#BuildNotes_SteamChina_Provided"
                 : "#BuildNotes_SteamChina_NotProvided",
             );
           }
-          return l.createElement(
-            "div",
-            { className: b.RightPanel },
-            l.createElement(
-              "div",
-              { className: b.EditTopBar },
-              l.createElement(
-                "div",
-                { className: b.EditTitle },
-                (0, w.we)("#BuildNotes_PatchnotesTitle"),
-              ),
-              l.createElement(
-                "div",
-                { className: b.LangPicker },
-                l.createElement(
-                  m.$n,
-                  {
-                    onClick: () => {
-                      const e = new N.G(),
-                        t = (0, w.we)("#BuildNotes_SampleTitle"),
-                        a = (0, w.we)("#BuildNotes_SampleDescription");
-                      for (let n = 0; n < 31; n++)
-                        e.SetLocalization("Title", n, t),
-                          e.SetLocalization("Description", n, a);
-                      (0, S.pg)(
-                        l.createElement(E.zZ, {
-                          sampleLocData: e,
-                          sampleFilename: "patchnote_loc_sample",
-                          fnOnImportLocData: f,
-                        }),
-                        window,
-                      );
-                    },
-                  },
-                  (0, w.we)("#BuildNotes_ImportLocalization"),
-                ),
-                l.createElement(h.Ng, {
-                  selectedLang: a,
-                  fnOnLanguageChanged: r,
-                  fnLangHasData: i,
-                  realms: n,
-                }),
-              ),
-            ),
-            l.createElement(m.pd, {
-              value: c(a),
-              placeholder: (0, w.we)("#BuildNotes_TitlePlaceholder"),
-              onChange: (e) => g(a, e.currentTarget.value),
-              maxLength: o.dm,
-            }),
-            l.createElement(
-              "div",
-              { className: b.EditTitle },
-              (0, w.we)("#BuildNotes_PatchnotesDesc"),
-            ),
-            l.createElement(u.I, {
-              fnGetCurText: () => p(a),
-              fnOnTextChange: (e) => _(a, e.currentTarget.value),
-              fnSetText: (e) => _(a, e),
-              strPlaceholder: (0, w.we)("#BuildNotes_DescPlaceholder"),
-              emoticonStore: d.A,
-              bSupportHTMLImport: !0,
-              showFormatHelp: "PartnerEvents",
-              classNameForTextArea: b.BBCodeEditor,
-            }),
-            l.createElement(
-              "div",
-              { className: b.SubmitButtonCtn },
-              !Boolean(t) &&
-                l.createElement(
-                  m.jn,
-                  { onClick: B },
-                  (0, w.we)("#BuildNotes_Preview"),
-                ),
-              Boolean(t) &&
-                l.createElement("div", { className: b.ErrorMsg }, t),
-              Boolean(!t && P) &&
-                l.createElement("div", { className: b.SteamChinaMsg }, P),
-            ),
-          );
+          return (0, i.jsxs)("div", {
+            className: b.RightPanel,
+            children: [
+              (0, i.jsxs)("div", {
+                className: b.EditTopBar,
+                children: [
+                  (0, i.jsx)("div", {
+                    className: b.EditTitle,
+                    children: (0, w.we)("#BuildNotes_PatchnotesTitle"),
+                  }),
+                  (0, i.jsxs)("div", {
+                    className: b.LangPicker,
+                    children: [
+                      (0, i.jsx)(g.$n, {
+                        onClick: () => {
+                          const e = new N.G(),
+                            t = (0, w.we)("#BuildNotes_SampleTitle"),
+                            n = (0, w.we)("#BuildNotes_SampleDescription");
+                          for (let i = 0; i < 31; i++)
+                            e.SetLocalization("Title", i, t),
+                              e.SetLocalization("Description", i, n);
+                          (0, x.pg)(
+                            (0, i.jsx)(S.zZ, {
+                              sampleLocData: e,
+                              sampleFilename: "patchnote_loc_sample",
+                              fnOnImportLocData: f,
+                            }),
+                            window,
+                          );
+                        },
+                        children: (0, w.we)("#BuildNotes_ImportLocalization"),
+                      }),
+                      (0, i.jsx)(_.Ng, {
+                        selectedLang: n,
+                        fnOnLanguageChanged: r,
+                        fnLangHasData: s,
+                        realms: a,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, i.jsx)(g.pd, {
+                value: l(n),
+                placeholder: (0, w.we)("#BuildNotes_TitlePlaceholder"),
+                onChange: (e) => c(n, e.currentTarget.value),
+                maxLength: d.dm,
+              }),
+              (0, i.jsx)("div", {
+                className: b.EditTitle,
+                children: (0, w.we)("#BuildNotes_PatchnotesDesc"),
+              }),
+              (0, i.jsx)(h.I, {
+                fnGetCurText: () => m(n),
+                fnOnTextChange: (e) => p(n, e.currentTarget.value),
+                fnSetText: (e) => p(n, e),
+                strPlaceholder: (0, w.we)("#BuildNotes_DescPlaceholder"),
+                emoticonStore: u.A,
+                bSupportHTMLImport: !0,
+                showFormatHelp: "PartnerEvents",
+                classNameForTextArea: b.BBCodeEditor,
+              }),
+              (0, i.jsxs)("div", {
+                className: b.SubmitButtonCtn,
+                children: [
+                  !Boolean(t) &&
+                    (0, i.jsx)(g.jn, {
+                      onClick: B,
+                      children: (0, w.we)("#BuildNotes_Preview"),
+                    }),
+                  Boolean(t) &&
+                    (0, i.jsx)("div", { className: b.ErrorMsg, children: t }),
+                  Boolean(!t && P) &&
+                    (0, i.jsx)("div", {
+                      className: b.SteamChinaMsg,
+                      children: P,
+                    }),
+                ],
+              }),
+            ],
+          });
         },
-        O = (e) => {
+        y = (e) => {
           const {
             event: t,
-            eLanguage: a,
-            realms: n,
-            fnOnClose: i,
+            eLanguage: n,
+            realms: a,
+            fnOnClose: s,
             fnOnSubmitEvent: r,
-            fnHasLanguage: s,
+            fnHasLanguage: l,
             fnSetLanguage: o,
           } = e;
-          return l.createElement(
-            _.of,
-            null,
-            l.createElement(
-              "div",
-              { className: b.PreviewHeader },
-              l.createElement(h.Ng, {
-                selectedLang: a,
-                fnOnLanguageChanged: o,
-                fnFilterLanguage: s,
-                realms: n,
+          return (0, i.jsxs)(B.of, {
+            children: [
+              (0, i.jsxs)("div", {
+                className: b.PreviewHeader,
+                children: [
+                  (0, i.jsx)(_.Ng, {
+                    selectedLang: n,
+                    fnOnLanguageChanged: o,
+                    fnFilterLanguage: l,
+                    realms: a,
+                  }),
+                  (0, i.jsxs)("div", {
+                    className: b.SubmitButtonCtn,
+                    children: [
+                      (0, i.jsx)(g.$n, {
+                        onClick: s,
+                        children: (0, w.we)("#BuildNotes_Close"),
+                      }),
+                      (0, i.jsx)(g.jn, {
+                        onClick: r,
+                        children: (0, w.we)("#BuildNotes_PostNotes"),
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              l.createElement(
-                "div",
-                { className: b.SubmitButtonCtn },
-                l.createElement(
-                  m.$n,
-                  { onClick: i },
-                  (0, w.we)("#BuildNotes_Close"),
-                ),
-                l.createElement(
-                  m.jn,
-                  { onClick: r },
-                  (0, w.we)("#BuildNotes_PostNotes"),
-                ),
-              ),
-            ),
-            l.createElement(
-              "div",
-              null,
-              l.createElement(p.H, {
-                event: t,
-                fnClose: i,
-                langOverride: a,
-                isPreview: !0,
+              (0, i.jsx)("div", {
+                children: (0, i.jsx)(p.H, {
+                  event: t,
+                  fnClose: s,
+                  langOverride: n,
+                  isPreview: !0,
+                }),
               }),
-            ),
-          );
+            ],
+          });
         },
+        O = (e) =>
+          (0, i.jsxs)("div", {
+            className: (0, j.A)(b.RightPanel, b.SubmitPanel),
+            children: [
+              (0, i.jsx)(f.t, { className: b.SubmitThrobber }),
+              (0, i.jsx)("div", {
+                className: b.SubmitText,
+                children: (0, w.we)("#BuildNotes_Submitting"),
+              }),
+            ],
+          }),
         R = (e) =>
-          l.createElement(
-            "div",
-            { className: (0, P.A)(b.RightPanel, b.SubmitPanel) },
-            l.createElement(B.t, { className: b.SubmitThrobber }),
-            l.createElement(
-              "div",
-              { className: b.SubmitText },
-              (0, w.we)("#BuildNotes_Submitting"),
-            ),
-          ),
-        x = (e) =>
-          l.createElement(
-            "div",
-            { className: (0, P.A)(b.RightPanel, b.FailedPanel) },
-            l.createElement(
-              "div",
-              { className: b.FailedText },
-              (0, w.we)("#BuildNotes_FailedDescription"),
-            ),
-            l.createElement(
-              "div",
-              { className: b.FailedButton },
-              l.createElement(
-                m.$n,
-                { onClick: e.fnOnReturnToEditor },
-                (0, w.we)("#BuildNotes_ReturnToEditor"),
-              ),
-            ),
-          ),
+          (0, i.jsxs)("div", {
+            className: (0, j.A)(b.RightPanel, b.FailedPanel),
+            children: [
+              (0, i.jsx)("div", {
+                className: b.FailedText,
+                children: (0, w.we)("#BuildNotes_FailedDescription"),
+              }),
+              (0, i.jsx)("div", {
+                className: b.FailedButton,
+                children: (0, i.jsx)(g.$n, {
+                  onClick: e.fnOnReturnToEditor,
+                  children: (0, w.we)("#BuildNotes_ReturnToEditor"),
+                }),
+              }),
+            ],
+          }),
         A = (e) => {
-          const { appId: t, eventGid: a } = e,
-            n = `${T.TS.STORE_BASE_URL}news/app/${t}/view/${a}`;
-          return l.createElement(
-            "div",
-            { className: (0, P.A)(b.RightPanel, b.SuccessPanel) },
-            l.createElement(
-              "div",
-              { className: b.SuccessText },
-              (0, w.we)("#BuildNotes_Success"),
-            ),
-            l.createElement(
-              "a",
-              { href: n, className: b.ViewEventButton },
-              l.createElement(
-                m.$n,
-                null,
-                (0, w.we)("#BuildNotes_ViewPublished"),
-              ),
-            ),
-          );
+          const { appId: t, eventGid: n } = e,
+            a = `${T.TS.STORE_BASE_URL}news/app/${t}/view/${n}`;
+          return (0, i.jsxs)("div", {
+            className: (0, j.A)(b.RightPanel, b.SuccessPanel),
+            children: [
+              (0, i.jsx)("div", {
+                className: b.SuccessText,
+                children: (0, w.we)("#BuildNotes_Success"),
+              }),
+              (0, i.jsx)("a", {
+                href: a,
+                className: b.ViewEventButton,
+                children: (0, i.jsx)(g.$n, {
+                  children: (0, w.we)("#BuildNotes_ViewPublished"),
+                }),
+              }),
+            ],
+          });
         };
     },
-    90197: (e, t, a) => {
+    90197: (e, t, n) => {
       "use strict";
-      a.r(t), a.d(t, { SaleRoutes: () => S, default: () => B });
-      var n = a(97058),
-        i = a(43527),
-        l = a(90626),
-        r = a(17083),
-        s = a(92757),
-        o = a(14932),
-        c = a(78327);
-      class d {
+      n.r(t), n.d(t, { SaleRoutes: () => B, default: () => x });
+      var i = n(7850),
+        a = n(97058),
+        s = n(43527),
+        r = n(17083),
+        l = n(92757),
+        o = n(14932),
+        d = n(78327);
+      class c {
         static s_PageStore;
         m_mapSalePage = new Map();
         m_rgUnmigratedSalesPage = new Array();
@@ -525,12 +521,12 @@
         }
         static Get() {
           return (
-            d.s_PageStore || ((d.s_PageStore = new d()), d.s_PageStore.Init()),
-            d.s_PageStore
+            c.s_PageStore || ((c.s_PageStore = new c()), c.s_PageStore.Init()),
+            c.s_PageStore
           );
         }
         Init() {
-          let e = (0, c.Tc)("old_sale_pages", "application_config");
+          let e = (0, d.Tc)("old_sale_pages", "application_config");
           this.ValidateStoreDefault(e) &&
             e.forEach((e) => {
               this.m_mapSalePage.set(e.pageid, e),
@@ -550,117 +546,103 @@
           );
         }
       }
-      var u = a(76684),
-        m = a(22797),
-        g = a(14446);
+      var u = n(76684),
+        h = n(22797),
+        g = n(14446);
+      function m(e) {
+        return (0, i.jsxs)("div", {
+          children: [
+            (0, i.jsx)("h2", { children: "Unmigrated Sales Pages" }),
+            (0, i.jsx)("hr", {}),
+            c
+              .Get()
+              .GetUnmigratedSalesPages()
+              .map((e) => (0, i.jsx)(p, { pageid: e.pageid }, e.pageid)),
+          ],
+        });
+      }
       function p(e) {
-        return l.createElement(
-          "div",
-          null,
-          l.createElement("h2", null, "Unmigrated Sales Pages"),
-          l.createElement("hr", null),
-          d
-            .Get()
-            .GetUnmigratedSalesPages()
-            .map((e) =>
-              l.createElement(h, { key: e.pageid, pageid: e.pageid }),
-            ),
-        );
+        let t = c.Get().GetPageByID(e.pageid);
+        return (0, i.jsxs)("div", {
+          children: [
+            (0, i.jsx)("div", { children: t.pageid }),
+            (0, i.jsx)(r.N_, {
+              to: B.SaleMigrationPageDebug(t.pageid),
+              children: "Debug Data",
+            }),
+          ],
+        });
       }
-      function h(e) {
-        let t = d.Get().GetPageByID(e.pageid);
-        return l.createElement(
-          "div",
-          null,
-          l.createElement("div", null, t.pageid),
-          l.createElement(
-            r.N_,
-            { to: S.SaleMigrationPageDebug(t.pageid) },
-            "Debug Data",
-          ),
-        );
-      }
-      function E(e) {
+      function _(e) {
         const { pageid: t } = e,
-          a = d.Get().GetPageByID(t),
-          n = (0, g.gS)(a.accountid);
-        return n
-          ? l.createElement(
-              "div",
-              null,
-              l.createElement(
-                r.N_,
-                { to: S.SaleMigrationTool() },
-                "< Return to Migration Toolset",
-              ),
-              l.createElement("h2", null, "Debug: ", e.pageid),
-              l.createElement("hr", null),
-              l.createElement("div", null, "Name: ", a.display_name),
-              l.createElement(
-                "div",
-                null,
-                "Creator: ",
-                a.accountid,
-                " - ",
-                n.persona,
-              ),
-              l.createElement(
-                "div",
-                null,
-                "Last Modified: ",
-                a.last_modified,
-                Boolean(0 != a.last_modified) &&
-                  l.createElement(u.K4, {
-                    dateAndTime: a.last_modified,
-                    bSingleLine: !0,
-                  }),
-              ),
-              l.createElement("h1", null, "Sale Page Body Raw"),
-              l.createElement(o.G, { data: a }),
-            )
-          : l.createElement(m.t, { string: "Loading User Info" });
+          n = c.Get().GetPageByID(t),
+          a = (0, g.gS)(n.accountid);
+        return a
+          ? (0, i.jsxs)("div", {
+              children: [
+                (0, i.jsx)(r.N_, {
+                  to: B.SaleMigrationTool(),
+                  children: "< Return to Migration Toolset",
+                }),
+                (0, i.jsxs)("h2", { children: ["Debug: ", e.pageid] }),
+                (0, i.jsx)("hr", {}),
+                (0, i.jsxs)("div", { children: ["Name: ", n.display_name] }),
+                (0, i.jsxs)("div", {
+                  children: ["Creator: ", n.accountid, " - ", a.persona],
+                }),
+                (0, i.jsxs)("div", {
+                  children: [
+                    "Last Modified: ",
+                    n.last_modified,
+                    Boolean(0 != n.last_modified) &&
+                      (0, i.jsx)(u.K4, {
+                        dateAndTime: n.last_modified,
+                        bSingleLine: !0,
+                      }),
+                  ],
+                }),
+                (0, i.jsx)("h1", { children: "Sale Page Body Raw" }),
+                (0, i.jsx)(o.G, { data: n }),
+              ],
+            })
+          : (0, i.jsx)(h.t, { string: "Loading User Info" });
       }
-      var _ = a(34667);
-      const S = {
+      var S = n(34667);
+      const B = {
         SaleDashboardView: () => "/(dashboard)?/",
         SaleMigrationTool: () => "/migration/",
         SaleMigrationPageDebug: (e) => `/migration/debug/${e}/`,
       };
-      function B(e) {
-        return l.createElement(
-          r.Kd,
-          { basename: (0, i.C)() + "sales/" },
-          l.createElement(
-            s.dO,
-            null,
-            l.createElement(s.qh, {
-              exact: !0,
-              path: i.B.DiagData(),
-              render: (e) =>
-                l.createElement(o.z, {
-                  ...e,
-                  strConfigID: "application_config",
-                }),
-            }),
-            l.createElement(s.qh, {
-              exact: !0,
-              path: S.SaleDashboardView(),
-              component: _.h,
-            }),
-            l.createElement(s.qh, {
-              exact: !0,
-              path: S.SaleMigrationTool(),
-              component: p,
-            }),
-            l.createElement(s.qh, {
-              exact: !0,
-              path: S.SaleMigrationPageDebug(":pageid"),
-              render: (e) =>
-                l.createElement(E, { pageid: e.match.params.pageid }),
-            }),
-            l.createElement(s.qh, { component: n.a }),
-          ),
-        );
+      function x(e) {
+        return (0, i.jsx)(r.Kd, {
+          basename: (0, s.C)() + "sales/",
+          children: (0, i.jsxs)(l.dO, {
+            children: [
+              (0, i.jsx)(l.qh, {
+                exact: !0,
+                path: s.B.DiagData(),
+                render: (e) =>
+                  (0, i.jsx)(o.z, { ...e, strConfigID: "application_config" }),
+              }),
+              (0, i.jsx)(l.qh, {
+                exact: !0,
+                path: B.SaleDashboardView(),
+                component: S.h,
+              }),
+              (0, i.jsx)(l.qh, {
+                exact: !0,
+                path: B.SaleMigrationTool(),
+                component: m,
+              }),
+              (0, i.jsx)(l.qh, {
+                exact: !0,
+                path: B.SaleMigrationPageDebug(":pageid"),
+                render: (e) => (0, i.jsx)(_, { pageid: e.match.params.pageid }),
+              }),
+              (0, i.jsx)(l.qh, { component: a.a }),
+            ],
+          }),
+        });
       }
     },
   },

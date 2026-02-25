@@ -26,7 +26,7 @@
           }
         }
         return _
-          ? _.createElement(_.default, {
+          ? (0, _.jsx)(_.default, {
               results: _,
               bIncludeSteamOS: !0,
             })

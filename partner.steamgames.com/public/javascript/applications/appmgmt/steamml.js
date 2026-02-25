@@ -87,65 +87,66 @@
         DeleteLink: "_2lI41nfrJhWqIcuoYAfdcC",
       };
     },
-    30899: (e, t, a) => {
+    30899: (e, a, t) => {
       "use strict";
-      a.r(t), a.d(t, { SteamMLRoutes: () => B, default: () => R });
-      var m,
-        s = a(43527),
-        l = a(90626),
-        n = a(17083),
-        c = a(92757),
-        r = a(64642),
-        i = a(14947),
-        o = a(34629),
-        d = a(78327),
-        p = a(41735),
-        S = a.n(p);
+      t.r(a), t.d(a, { SteamMLRoutes: () => w, default: () => B });
+      var s,
+        i = t(7850),
+        l = t(43527),
+        n = t(90626),
+        c = t(17083),
+        r = t(92757),
+        m = t(64642),
+        d = t(14947),
+        o = t(34629),
+        h = t(78327),
+        p = t(41735),
+        S = t.n(p);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
           (e[(e.Valid = 2)] = "Valid"),
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
-      })(m || (m = {}));
-      class h {
+      })(s || (s = {}));
+      class u {
         constructor() {
-          (0, i.Gn)(this);
+          (0, d.Gn)(this);
         }
-        getData(e, t, a) {
-          const s = this.eState == m.Pending || this.eState == m.Rerequest;
+        getData(e, a, t) {
+          const i = this.eState == s.Pending || this.eState == s.Rerequest;
           return (
             this.isExpired() &&
-              !s &&
-              ((this.eState = m.Pending),
-              t()
-                .then((s) => {
-                  if (this.eState == m.Rerequest)
-                    return this.expireData(), void this.getData(e, t, a);
-                  (this.data = a ? a(s) : s),
-                    s
-                      ? (this.delayNewData(e), (this.eState = m.Valid))
-                      : (this.eState = m.Failed);
+              !i &&
+              ((this.eState = s.Pending),
+              a()
+                .then((i) => {
+                  if (this.eState == s.Rerequest)
+                    return this.expireData(), void this.getData(e, a, t);
+                  (this.data = t ? t(i) : i),
+                    i
+                      ? (this.delayNewData(e), (this.eState = s.Valid))
+                      : (this.eState = s.Failed);
                 })
                 .catch((e) => {
-                  (this.data = a(void 0)), (this.eState = m.Failed);
+                  (this.data = t(void 0)), (this.eState = s.Failed);
                 })),
             this.data
           );
         }
         clearData() {
-          (this.eState = m.Unrequested),
+          (this.eState = s.Unrequested),
             (this.data = null),
             (this.nExpirationTime = 0);
         }
         setDataPending() {
-          this.eState = m.Pending;
+          this.eState = s.Pending;
         }
         isDataPending() {
-          return this.eState == m.Pending;
+          return this.eState == s.Pending;
         }
-        setData(e, t) {
-          (this.data = t), this.delayNewData(e), (this.eState = m.Valid);
+        setData(e, a) {
+          (this.data = a), this.delayNewData(e), (this.eState = s.Valid);
         }
         expireData() {
           this.nExpirationTime = 0;
@@ -157,33 +158,33 @@
         delayNewData(e) {
           if (e <= 0) this.nExpirationTime = Number.MAX_SAFE_INTEGER;
           else {
-            const t = Date.now() / 1e3;
-            this.nExpirationTime = t + e;
+            const a = Date.now() / 1e3;
+            this.nExpirationTime = a + e;
           }
         }
         rerequestDataIfPending() {
-          this.eState == m.Pending && (this.eState = m.Rerequest);
+          this.eState == s.Pending && (this.eState = s.Rerequest);
         }
         getCachedData() {
           return this.data;
         }
         data = void 0;
-        eState = m.Unrequested;
+        eState = s.Unrequested;
         nExpirationTime = 0;
       }
-      (0, o.Cg)([i.sH], h.prototype, "data", void 0),
-        (0, o.Cg)([i.sH], h.prototype, "nExpirationTime", void 0);
-      class E {
+      (0, o.Cg)([d.sH], u.prototype, "data", void 0),
+        (0, o.Cg)([d.sH], u.prototype, "nExpirationTime", void 0);
+      class N {
         constructor() {
-          (0, i.Gn)(this);
+          (0, d.Gn)(this);
         }
         getAsyncDataWrapper(e) {
-          let t;
+          let a;
           return (
             this.m_mapKeyToDataWrapper.has(e)
-              ? (t = this.m_mapKeyToDataWrapper.get(e))
-              : ((t = new h()), this.m_mapKeyToDataWrapper.set(e, t)),
-            t
+              ? (a = this.m_mapKeyToDataWrapper.get(e))
+              : ((a = new u()), this.m_mapKeyToDataWrapper.set(e, a)),
+            a
           );
         }
         clearKey(e) {
@@ -198,50 +199,50 @@
         }
         getAllElementsAndKeys() {
           let e = [],
-            t = this.m_mapKeyToDataWrapper.entries(),
-            a = t.next();
-          for (; !a.done; )
-            e.push({ key: a.value[0], data: a.value[1].getCachedData() }),
-              (a = t.next());
+            a = this.m_mapKeyToDataWrapper.entries(),
+            t = a.next();
+          for (; !t.done; )
+            e.push({ key: t.value[0], data: t.value[1].getCachedData() }),
+              (t = a.next());
           return e;
         }
         m_mapKeyToDataWrapper = new Map();
       }
-      (0, o.Cg)([i.sH], E.prototype, "m_mapKeyToDataWrapper", void 0);
-      class u {
+      (0, o.Cg)([d.sH], N.prototype, "m_mapKeyToDataWrapper", void 0);
+      class x {
         constructor() {
-          (0, i.Gn)(this);
+          (0, d.Gn)(this);
         }
         static s_SteamMLStore;
-        m_asyncSchemaList = new E();
-        m_asyncSchemaDetails = new E();
-        m_asyncProblemList = new h();
-        m_asyncProblemDetails = new E();
+        m_asyncSchemaList = new N();
+        m_asyncSchemaDetails = new N();
+        m_asyncProblemList = new u();
+        m_asyncProblemDetails = new N();
         static Get() {
           return (
-            u.s_SteamMLStore ||
-              ((u.s_SteamMLStore = new u()), u.s_SteamMLStore.Init()),
-            u.s_SteamMLStore
+            x.s_SteamMLStore ||
+              ((x.s_SteamMLStore = new x()), x.s_SteamMLStore.Init()),
+            x.s_SteamMLStore
           );
         }
         Init() {}
-        GetSchemaList(e, t) {
-          const a = e + "_" + t;
-          return this.m_asyncSchemaList.getAsyncDataWrapper(a).getData(
+        GetSchemaList(e, a) {
+          const t = e + "_" + a;
+          return this.m_asyncSchemaList.getAsyncDataWrapper(t).getData(
             30,
             async () =>
               await S().get(
-                `${d.TS.PARTNER_BASE_URL}steamml/get_schemas?appid=${e}&includesteammlapp=${t}&sessionid=${d.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_schemas?appid=${e}&includesteammlapp=${a}&sessionid=${h.TS.SESSIONID}`,
               ),
             (e) => e.data.schemas,
           );
         }
-        GetSchemaDetails(e, t) {
-          return this.m_asyncSchemaDetails.getAsyncDataWrapper(t).getData(
+        GetSchemaDetails(e, a) {
+          return this.m_asyncSchemaDetails.getAsyncDataWrapper(a).getData(
             30,
             async () =>
               await S().get(
-                `${d.TS.PARTNER_BASE_URL}steamml/get_schema_details?appid=${e}&schemaid=${t}&sessionid=${d.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_schema_details?appid=${e}&schemaid=${a}&sessionid=${h.TS.SESSIONID}`,
               ),
             (e) => JSON.parse(e.data.schema_description_json),
           );
@@ -251,7 +252,7 @@
             30,
             async () =>
               await S().get(
-                `${d.TS.PARTNER_BASE_URL}steamml/get_problems?sessionid=${d.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_problems?sessionid=${h.TS.SESSIONID}`,
               ),
             (e) => e.data.problems,
           );
@@ -261,150 +262,166 @@
             30,
             async () =>
               await S().get(
-                `${d.TS.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${e}&sessionid=${d.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${e}&sessionid=${h.TS.SESSIONID}`,
               ),
             (e) => e.data.problem,
           );
         }
-        CreateProblem(e, t, a) {
-          let m = new FormData();
+        CreateProblem(e, a, t) {
+          let s = new FormData();
           return (
-            m.append("sessionid", d.TS.SESSIONID),
-            m.append("name", e),
-            m.append("description", t),
-            m.append("schemaids", a.join(",")),
+            s.append("sessionid", h.TS.SESSIONID),
+            s.append("name", e),
+            s.append("description", a),
+            s.append("schemaids", t.join(",")),
             S()
-              .post(`${d.TS.PARTNER_BASE_URL}steamml/create_problem`, m)
+              .post(`${h.TS.PARTNER_BASE_URL}steamml/create_problem`, s)
               .then(() => {
                 this.m_asyncProblemList.clearData();
               })
           );
         }
-        EditProblemName(e, t) {
-          let a = new FormData();
-          a.append("name", t), this.EditProblem(e, a);
+        EditProblemName(e, a) {
+          let t = new FormData();
+          t.append("name", a), this.EditProblem(e, t);
         }
-        EditProblemDesc(e, t) {
-          let a = new FormData();
-          a.append("description", t), this.EditProblem(e, a);
+        EditProblemDesc(e, a) {
+          let t = new FormData();
+          t.append("description", a), this.EditProblem(e, t);
         }
-        EditProblemSchemas(e, t) {
-          let a = new FormData();
-          a.append("schemaids", t.join(",")), this.EditProblem(e, a);
+        EditProblemSchemas(e, a) {
+          let t = new FormData();
+          t.append("schemaids", a.join(",")), this.EditProblem(e, t);
         }
-        EditProblem(e, t) {
+        EditProblem(e, a) {
           return (
-            t.append("sessionid", d.TS.SESSIONID),
-            t.append("problemid", e.toString()),
+            a.append("sessionid", h.TS.SESSIONID),
+            a.append("problemid", e.toString()),
             S()
-              .post(`${d.TS.PARTNER_BASE_URL}steamml/edit_problem`, t)
+              .post(`${h.TS.PARTNER_BASE_URL}steamml/edit_problem`, a)
               .then(() => {
                 this.m_asyncProblemDetails.getAsyncDataWrapper(e).expireData();
               })
           );
         }
         DeleteProblem(e) {
-          let t = new FormData();
+          let a = new FormData();
           return (
-            t.append("sessionid", d.TS.SESSIONID),
-            t.append("problemid", e.toString()),
+            a.append("sessionid", h.TS.SESSIONID),
+            a.append("problemid", e.toString()),
             S()
-              .post(`${d.TS.PARTNER_BASE_URL}steamml/delete_problem`, t)
+              .post(`${h.TS.PARTNER_BASE_URL}steamml/delete_problem`, a)
               .then(() => {
                 this.m_asyncProblemList.clearData();
               })
           );
         }
       }
-      (0, o.Cg)([i.sH], u.prototype, "m_asyncSchemaList", void 0),
-        (0, o.Cg)([i.sH], u.prototype, "m_asyncSchemaDetails", void 0),
-        (0, o.Cg)([i.sH], u.prototype, "m_asyncProblemList", void 0),
-        (0, o.Cg)([i.sH], u.prototype, "m_asyncProblemDetails", void 0),
-        (0, o.Cg)([i.XI], u.prototype, "Init", null);
-      var N = a(75844),
-        D = a(52038),
-        _ = a(6083);
-      const v = (0, N.PA)((e) => {
-        const t = "0" == (0, c.g)().schemaid,
-          a = [
+      (0, o.Cg)([d.sH], x.prototype, "m_asyncSchemaList", void 0),
+        (0, o.Cg)([d.sH], x.prototype, "m_asyncSchemaDetails", void 0),
+        (0, o.Cg)([d.sH], x.prototype, "m_asyncProblemList", void 0),
+        (0, o.Cg)([d.sH], x.prototype, "m_asyncProblemDetails", void 0),
+        (0, o.Cg)([d.XI], x.prototype, "Init", null);
+      var D = t(75844),
+        _ = t(52038),
+        v = t(6083);
+      const b = (0, D.PA)((e) => {
+        const a = "0" == (0, r.g)().schemaid,
+          t = [
             { label: "816 - Dota Beta", value: "816" },
             { label: "570 - Dota", value: "570" },
             { label: "730 - CS:GO", value: "730" },
             { label: "1015410 - SteamML", value: "1015410" },
           ],
-          [m, s] = (0, l.useState)(a[0].value);
-        if (!t) return null;
-        const i = u.Get().GetSchemaList(parseInt(m), !0);
-        if (!i) return null;
+          [s, l] = (0, n.useState)(t[0].value);
+        if (!a) return null;
+        const d = x.Get().GetSchemaList(parseInt(s), !0);
+        if (!d) return null;
         let o = [];
-        for (const e of i)
+        for (const e of d)
           o.push(
-            l.createElement(
-              n.N_,
+            (0, i.jsxs)(
+              c.N_,
               {
-                to: B.SteamMLSchemas(e.appid, e.schemaid),
-                className: r.SchemaElement,
-                key: e.schemaid,
+                to: w.SteamMLSchemas(e.appid, e.schemaid),
+                className: m.SchemaElement,
+                children: [
+                  (0, i.jsxs)("div", {
+                    className: m.HorizontalSection,
+                    children: [
+                      (0, i.jsx)("div", {
+                        className: m.SchemaName,
+                        children: e.name,
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: m.SchemaID,
+                        children: [
+                          (0, i.jsx)("span", {
+                            className: m.Label,
+                            children: "Schema ID",
+                          }),
+                          " ",
+                          e.schemaid,
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, i.jsxs)("div", {
+                    className: m.AppID,
+                    children: ["AppID ", e.appid],
+                  }),
+                  (0, i.jsxs)("div", {
+                    className: m.HorizontalSection,
+                    children: [
+                      (0, i.jsxs)("div", {
+                        className: m.RowCount,
+                        children: [
+                          (0, i.jsx)("span", {
+                            className: m.Label,
+                            children: "Rows:",
+                          }),
+                          " ",
+                          e.row_count,
+                        ],
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: m.KeepCount,
+                        children: [
+                          (0, i.jsx)("span", {
+                            className: m.Label,
+                            children: "Keep Count:",
+                          }),
+                          " ",
+                          (0, v.D)(e.keep_count),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
               },
-              l.createElement(
-                "div",
-                { className: r.HorizontalSection },
-                l.createElement("div", { className: r.SchemaName }, e.name),
-                l.createElement(
-                  "div",
-                  { className: r.SchemaID },
-                  l.createElement("span", { className: r.Label }, "Schema ID"),
-                  " ",
-                  e.schemaid,
-                ),
-              ),
-              l.createElement("div", { className: r.AppID }, "AppID ", e.appid),
-              l.createElement(
-                "div",
-                { className: r.HorizontalSection },
-                l.createElement(
-                  "div",
-                  { className: r.RowCount },
-                  l.createElement("span", { className: r.Label }, "Rows:"),
-                  " ",
-                  e.row_count,
-                ),
-                l.createElement(
-                  "div",
-                  { className: r.KeepCount },
-                  l.createElement(
-                    "span",
-                    { className: r.Label },
-                    "Keep Count:",
-                  ),
-                  " ",
-                  (0, _.D)(e.keep_count),
-                ),
-              ),
+              e.schemaid,
             ),
           );
-        return l.createElement(
-          "div",
-          { className: r.SchemaList },
-          l.createElement(
-            "select",
-            {
-              className: r.SelectAppID,
-              value: m,
-              onChange: (e) => s(e.target.value),
-            },
-            a.map((e) =>
-              l.createElement(
-                "option",
-                { key: e.value, value: e.value },
-                e.label,
+        return (0, i.jsxs)("div", {
+          className: m.SchemaList,
+          children: [
+            (0, i.jsx)("select", {
+              className: m.SelectAppID,
+              value: s,
+              onChange: (e) => l(e.target.value),
+              children: t.map((e) =>
+                (0, i.jsx)(
+                  "option",
+                  { value: e.value, children: e.label },
+                  e.value,
+                ),
               ),
-            ),
-          ),
-          o,
-        );
+            }),
+            o,
+          ],
+        });
       });
-      function b(e) {
+      function j(e) {
         switch (e) {
           case 1:
             return "int32";
@@ -421,458 +438,459 @@
         }
         return "";
       }
-      function y(e) {
+      function P(e) {
         switch (e) {
           case 1:
-            return r.TypeInt32;
+            return m.TypeInt32;
           case 2:
-            return r.TypeInt64;
+            return m.TypeInt64;
           case 3:
-            return r.TypeBool;
+            return m.TypeBool;
           case 4:
-            return r.TypeFloat;
+            return m.TypeFloat;
           case 5:
-            return r.TypeEnum;
+            return m.TypeEnum;
           case 6:
-            return r.TypeTimestamp;
+            return m.TypeTimestamp;
         }
         return "";
       }
-      function P(e, t, a) {
-        let m;
-        const s = t.indexOf(e.name),
-          n = -1 == s && !e.count;
+      function y(e, a, t) {
+        let s;
+        const l = a.indexOf(e.name),
+          n = -1 == l && !e.count;
         return (
           e.structure
-            ? (m = l.createElement(
-                "div",
-                {
-                  className: (0, D.A)(
-                    r.SchemaDetailsElement,
-                    r.SchemaDetailsStruct,
-                  ),
-                },
-                !e.count &&
-                  l.createElement(
-                    "div",
-                    {
-                      className: r.SchemaDetailsStructRow,
+            ? (s = (0, i.jsxs)("div", {
+                className: (0, _.A)(
+                  m.SchemaDetailsElement,
+                  m.SchemaDetailsStruct,
+                ),
+                children: [
+                  !e.count &&
+                    (0, i.jsxs)("div", {
+                      className: m.SchemaDetailsStructRow,
                       onClick: () => {
-                        a(
+                        t(
                           n
-                            ? [...t, e.name]
-                            : t.slice(0, s).concat(t.slice(s + 1)),
+                            ? [...a, e.name]
+                            : a.slice(0, l).concat(a.slice(l + 1)),
                         );
                       },
-                    },
-                    l.createElement(
-                      "div",
-                      { className: (0, D.A)(n && r.Collapsed, r.CollapseIcon) },
-                      "▼",
-                    ),
-                    l.createElement(
-                      "div",
-                      { className: r.SchemaDetailsElementBody },
-                      l.createElement(
-                        "div",
-                        { className: r.ElementName },
-                        e.name,
-                      ),
-                      l.createElement(
-                        "div",
-                        { className: r.TypeName },
-                        "STRUCT",
-                      ),
-                    ),
-                  ),
-                e.structure.member.map((e) =>
-                  l.createElement(
-                    "div",
-                    {
-                      className: (0, D.A)(
-                        n && r.IndentCollapsed,
-                        r.StructIndent,
-                      ),
-                      key: e.name,
-                    },
-                    P(e, t, a),
-                  ),
-                ),
-              ))
-            : e.array && e.array.primitive
-              ? (m = l.createElement(
-                  "div",
-                  {
-                    className: (0, D.A)(
-                      r.SchemaDetailsElement,
-                      r.SchemaDetailsArray,
-                    ),
-                  },
-                  l.createElement(
-                    "div",
-                    {
-                      className: (0, D.A)(
-                        r.SchemaDetailsElementBody,
-                        y(e.array.primitive.type_info.type),
-                      ),
-                    },
-                    l.createElement(
-                      "div",
-                      { className: r.ElementName },
-                      e.name,
-                    ),
-                    l.createElement(
-                      "div",
-                      { className: r.TypeName },
-                      b(e.array.primitive.type_info.type),
-                      " [",
-                      e.array.max_length,
-                      "]",
-                    ),
-                  ),
-                ))
-              : e.array && e.array.structure
-                ? (m = l.createElement(
-                    "div",
-                    {
-                      className: (0, D.A)(
-                        r.SchemaDetailsElement,
-                        r.SchemaDetailsArray,
-                      ),
-                    },
-                    !e.count &&
-                      l.createElement(
-                        "div",
-                        {
-                          className: r.SchemaDetailsStructRow,
-                          onClick: () => {
-                            a(
-                              n
-                                ? [...t, e.name]
-                                : t.slice(0, s).concat(t.slice(s + 1)),
-                            );
-                          },
-                        },
-                        l.createElement(
-                          "div",
-                          {
-                            className: (0, D.A)(
-                              n && r.Collapsed,
-                              r.CollapseIcon,
-                            ),
-                          },
-                          "▼",
-                        ),
-                        l.createElement(
-                          "div",
-                          { className: r.SchemaDetailsElementBody },
-                          l.createElement(
-                            "div",
-                            { className: r.ElementName },
-                            e.name,
-                          ),
-                          l.createElement(
-                            "div",
-                            { className: r.TypeName },
-                            "STRUCT [",
-                            e.array.max_length,
-                            "]",
-                          ),
-                        ),
-                      ),
-                    e.array.structure.member.map((e) =>
-                      l.createElement(
-                        "div",
-                        {
-                          className: (0, D.A)(
-                            n && r.IndentCollapsed,
-                            r.StructIndent,
-                          ),
-                          key: e.name,
-                        },
-                        P(e, t, a),
-                      ),
-                    ),
-                  ))
-                : e.primitive &&
-                  (m = l.createElement(
-                    "div",
-                    {
-                      className: (0, D.A)(
-                        r.SchemaDetailsElement,
-                        r.SchemaDetailsArray,
-                      ),
-                    },
-                    l.createElement(
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: (0, _.A)(n && m.Collapsed, m.CollapseIcon),
+                          children: "▼",
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: m.SchemaDetailsElementBody,
+                          children: [
+                            (0, i.jsx)("div", {
+                              className: m.ElementName,
+                              children: e.name,
+                            }),
+                            (0, i.jsx)("div", {
+                              className: m.TypeName,
+                              children: "STRUCT",
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  e.structure.member.map((e) =>
+                    (0, i.jsx)(
                       "div",
                       {
-                        className: (0, D.A)(
-                          r.SchemaDetailsElementBody,
-                          y(e.primitive.type_info.type),
+                        className: (0, _.A)(
+                          n && m.IndentCollapsed,
+                          m.StructIndent,
                         ),
+                        children: y(e, a, t),
                       },
-                      l.createElement(
-                        "div",
-                        { className: r.ElementName },
-                        e.name,
-                      ),
-                      l.createElement(
-                        "div",
-                        { className: r.TypeName },
-                        b(e.primitive.type_info.type),
-                      ),
+                      e.name,
                     ),
-                  )),
-          m
+                  ),
+                ],
+              }))
+            : e.array && e.array.primitive
+              ? (s = (0, i.jsx)("div", {
+                  className: (0, _.A)(
+                    m.SchemaDetailsElement,
+                    m.SchemaDetailsArray,
+                  ),
+                  children: (0, i.jsxs)("div", {
+                    className: (0, _.A)(
+                      m.SchemaDetailsElementBody,
+                      P(e.array.primitive.type_info.type),
+                    ),
+                    children: [
+                      (0, i.jsx)("div", {
+                        className: m.ElementName,
+                        children: e.name,
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: m.TypeName,
+                        children: [
+                          j(e.array.primitive.type_info.type),
+                          " [",
+                          e.array.max_length,
+                          "]",
+                        ],
+                      }),
+                    ],
+                  }),
+                }))
+              : e.array && e.array.structure
+                ? (s = (0, i.jsxs)("div", {
+                    className: (0, _.A)(
+                      m.SchemaDetailsElement,
+                      m.SchemaDetailsArray,
+                    ),
+                    children: [
+                      !e.count &&
+                        (0, i.jsxs)("div", {
+                          className: m.SchemaDetailsStructRow,
+                          onClick: () => {
+                            t(
+                              n
+                                ? [...a, e.name]
+                                : a.slice(0, l).concat(a.slice(l + 1)),
+                            );
+                          },
+                          children: [
+                            (0, i.jsx)("div", {
+                              className: (0, _.A)(
+                                n && m.Collapsed,
+                                m.CollapseIcon,
+                              ),
+                              children: "▼",
+                            }),
+                            (0, i.jsxs)("div", {
+                              className: m.SchemaDetailsElementBody,
+                              children: [
+                                (0, i.jsx)("div", {
+                                  className: m.ElementName,
+                                  children: e.name,
+                                }),
+                                (0, i.jsxs)("div", {
+                                  className: m.TypeName,
+                                  children: [
+                                    "STRUCT [",
+                                    e.array.max_length,
+                                    "]",
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      e.array.structure.member.map((e) =>
+                        (0, i.jsx)(
+                          "div",
+                          {
+                            className: (0, _.A)(
+                              n && m.IndentCollapsed,
+                              m.StructIndent,
+                            ),
+                            children: y(e, a, t),
+                          },
+                          e.name,
+                        ),
+                      ),
+                    ],
+                  }))
+                : e.primitive &&
+                  (s = (0, i.jsx)("div", {
+                    className: (0, _.A)(
+                      m.SchemaDetailsElement,
+                      m.SchemaDetailsArray,
+                    ),
+                    children: (0, i.jsxs)("div", {
+                      className: (0, _.A)(
+                        m.SchemaDetailsElementBody,
+                        P(e.primitive.type_info.type),
+                      ),
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: m.ElementName,
+                          children: e.name,
+                        }),
+                        (0, i.jsx)("div", {
+                          className: m.TypeName,
+                          children: j(e.primitive.type_info.type),
+                        }),
+                      ],
+                    }),
+                  })),
+          s
         );
       }
-      const L = (0, N.PA)((e) => {
-          const t = (0, c.g)(),
-            a = "0" == t.schemaid,
-            [m, s] = (0, l.useState)([]);
-          if (a) return null;
-          const o = u.Get().GetSchemaDetails(parseInt(t.appid), t.schemaid);
+      const L = (0, D.PA)((e) => {
+          const a = (0, r.g)(),
+            t = "0" == a.schemaid,
+            [s, l] = (0, n.useState)([]);
+          if (t) return null;
+          const o = x.Get().GetSchemaDetails(parseInt(a.appid), a.schemaid);
           return o
-            ? (console.log((0, i.HO)(o)),
-              l.createElement(
-                "div",
-                { className: r.SchemaDetails },
-                l.createElement(
-                  n.N_,
-                  { to: B.SteamMLSchemas("0"), className: r.Back },
-                  "<< BACK",
-                ),
-                l.createElement(
-                  "div",
-                  { className: r.SchemaDetailsHeader },
-                  l.createElement(
-                    "div",
-                    { className: r.SchemaDetailsTitle },
-                    l.createElement(
-                      "div",
-                      { className: r.SchemaDetailsName },
-                      "SCHEMA ",
-                      o.name,
-                    ),
-                    l.createElement(
-                      "div",
-                      { className: r.SchemaDetailsSchemaID },
-                      t.schemaid,
-                    ),
-                  ),
-                ),
-                l.createElement(
-                  "div",
-                  { className: r.SchemaDetailsElements },
-                  P(o, m, s),
-                ),
-              ))
+            ? (console.log((0, d.HO)(o)),
+              (0, i.jsxs)("div", {
+                className: m.SchemaDetails,
+                children: [
+                  (0, i.jsx)(c.N_, {
+                    to: w.SteamMLSchemas("0"),
+                    className: m.Back,
+                    children: "<< BACK",
+                  }),
+                  (0, i.jsx)("div", {
+                    className: m.SchemaDetailsHeader,
+                    children: (0, i.jsxs)("div", {
+                      className: m.SchemaDetailsTitle,
+                      children: [
+                        (0, i.jsxs)("div", {
+                          className: m.SchemaDetailsName,
+                          children: ["SCHEMA ", o.name],
+                        }),
+                        (0, i.jsx)("div", {
+                          className: m.SchemaDetailsSchemaID,
+                          children: a.schemaid,
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, i.jsx)("div", {
+                    className: m.SchemaDetailsElements,
+                    children: y(o, s, l),
+                  }),
+                ],
+              }))
             : null;
         }),
-        g = (0, N.PA)((e) =>
-          l.createElement(
-            "div",
-            { className: r.SchemaPage },
-            l.createElement(v, null),
-            l.createElement(L, null),
-          ),
+        g = (0, D.PA)((e) =>
+          (0, i.jsxs)("div", {
+            className: m.SchemaPage,
+            children: [(0, i.jsx)(b, {}), (0, i.jsx)(L, {})],
+          }),
         ),
-        C = (e) =>
-          l.createElement(
-            "div",
-            {
-              className: (0, D.A)(
-                r.SteamMLButton,
-                e.acceptStyle && r.AcceptButton,
-                e.cancelStyle && r.CancelButton,
-                e.disabled && r.Disabled,
-              ),
-              style: { minWidth: e.minWidth },
-              onClick: (t) => {
-                e.disabled || (e.onClick(), t.stopPropagation());
-              },
+        E = (e) =>
+          (0, i.jsx)("div", {
+            className: (0, _.A)(
+              m.SteamMLButton,
+              e.acceptStyle && m.AcceptButton,
+              e.cancelStyle && m.CancelButton,
+              e.disabled && m.Disabled,
+            ),
+            style: { minWidth: e.minWidth },
+            onClick: (a) => {
+              e.disabled || (e.onClick(), a.stopPropagation());
             },
-            l.createElement("div", { className: r.Inner }, e.children),
-          ),
-        I = ({ problem: e }) => (
-          console.log((0, i.HO)(e)),
-          l.createElement(
-            n.N_,
-            { to: B.SteamMLProblems(e.problemid), className: r.ProblemEntry },
-            l.createElement("div", { className: r.ProblemName }, e.name),
-            !e.active &&
-              l.createElement("div", { className: r.Inactive }, "Inactive"),
-            l.createElement(
-              "div",
-              { className: r.ProblemDescription },
-              e.problem_description,
-            ),
-            l.createElement("div", { className: r.ProblemID }, e.problemid),
-            l.createElement(
-              "div",
-              { className: r.Dates },
-              l.createElement(
-                "div",
-                { className: r.CreatedDate },
-                "Created ",
-                new Date(1e3 * e.create_time).toLocaleDateString(["en-us"]),
-              ),
-              l.createElement(
-                "div",
-                { className: r.UpdatedDate },
-                "Last modified ",
-                new Date(1e3 * e.update_time).toLocaleDateString(["en-us"]),
-              ),
-            ),
-          )
+            children: (0, i.jsx)("div", {
+              className: m.Inner,
+              children: e.children,
+            }),
+          }),
+        C = ({ problem: e }) => (
+          console.log((0, d.HO)(e)),
+          (0, i.jsxs)(c.N_, {
+            to: w.SteamMLProblems(e.problemid),
+            className: m.ProblemEntry,
+            children: [
+              (0, i.jsx)("div", { className: m.ProblemName, children: e.name }),
+              !e.active &&
+                (0, i.jsx)("div", {
+                  className: m.Inactive,
+                  children: "Inactive",
+                }),
+              (0, i.jsx)("div", {
+                className: m.ProblemDescription,
+                children: e.problem_description,
+              }),
+              (0, i.jsx)("div", {
+                className: m.ProblemID,
+                children: e.problemid,
+              }),
+              (0, i.jsxs)("div", {
+                className: m.Dates,
+                children: [
+                  (0, i.jsxs)("div", {
+                    className: m.CreatedDate,
+                    children: [
+                      "Created ",
+                      new Date(1e3 * e.create_time).toLocaleDateString([
+                        "en-us",
+                      ]),
+                    ],
+                  }),
+                  (0, i.jsxs)("div", {
+                    className: m.UpdatedDate,
+                    children: [
+                      "Last modified ",
+                      new Date(1e3 * e.update_time).toLocaleDateString([
+                        "en-us",
+                      ]),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          })
         ),
-        T = (e) => {
-          const [t, a] = (0, l.useState)(!1),
-            [m, s] = (0, l.useState)(""),
-            [n, c] = (0, l.useState)(""),
-            [i, o] = (0, l.useState)([]),
-            p = u
+        I = (e) => {
+          const [a, t] = (0, n.useState)(!1),
+            [s, l] = (0, n.useState)(""),
+            [c, r] = (0, n.useState)(""),
+            [d, o] = (0, n.useState)([]),
+            p = x
               .Get()
               .GetSchemaList(0, !0)
-              ?.sort((e, t) => (e.name < t.name ? -1 : 1)),
-            S = p?.filter((e, t, a) => 0 == t || e.name != a[t - 1].name),
-            h = m.length > 0 && n.length > 0 && i.length > 0;
-          return l.createElement(
-            "div",
-            {
-              className: (0, D.A)(
-                r.AddNewProblem,
-                !t && r.IsPrompt,
-                t && r.IsHeader,
-              ),
-              onClick: () => a(!0),
-            },
-            l.createElement(
-              "div",
-              { className: r.NewProblemHeader },
-              l.createElement("img", {
-                className: r.PlusSymbol,
-                src: `${d.TS.IMG_URL}webui/storeadmin/plus.png`,
+              ?.sort((e, a) => (e.name < a.name ? -1 : 1)),
+            S = p?.filter((e, a, t) => 0 == a || e.name != t[a - 1].name),
+            u = s.length > 0 && c.length > 0 && d.length > 0;
+          return (0, i.jsxs)("div", {
+            className: (0, _.A)(
+              m.AddNewProblem,
+              !a && m.IsPrompt,
+              a && m.IsHeader,
+            ),
+            onClick: () => t(!0),
+            children: [
+              (0, i.jsxs)("div", {
+                className: m.NewProblemHeader,
+                children: [
+                  (0, i.jsx)("img", {
+                    className: m.PlusSymbol,
+                    src: `${h.TS.IMG_URL}webui/storeadmin/plus.png`,
+                  }),
+                  (0, i.jsx)("div", {
+                    className: m.AddProblemHeader,
+                    children: "Add New Problem" + (a ? "" : "?"),
+                  }),
+                ],
               }),
-              l.createElement(
-                "div",
-                { className: r.AddProblemHeader },
-                "Add New Problem" + (t ? "" : "?"),
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: r.NewProblemDescription },
-              l.createElement(
-                "div",
-                { className: r.LabelValue },
-                l.createElement("div", { className: r.Label }, "Name"),
-                l.createElement("input", {
-                  className: r.Value,
-                  type: "text",
-                  value: m,
-                  onChange: (e) => s(e.target.value),
-                }),
-              ),
-              l.createElement(
-                "div",
-                { className: r.LabelValue },
-                l.createElement("div", { className: r.Label }, "Description"),
-                l.createElement("input", {
-                  className: r.Value,
-                  type: "text",
-                  value: n,
-                  onChange: (e) => c(e.target.value),
-                }),
-              ),
-              S &&
-                l.createElement(
-                  "div",
-                  { className: r.SchemaListContainer },
-                  l.createElement(
-                    "div",
-                    { className: r.SchemaSelectListTitle },
-                    "Select Schemas to Include",
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: r.SchemaSelectList },
-                    S.map((e) => {
-                      const t = -1 != i.indexOf(e.schemaid);
-                      return l.createElement(
-                        "div",
-                        {
-                          key: e.schemaid,
-                          className: (0, D.A)(r.SchemaOption, t && r.Selected),
-                          onClick: () =>
-                            o(
-                              t
-                                ? i.filter((t) => t != e.schemaid)
-                                : i.concat(e.schemaid),
-                            ),
-                        },
-                        e.name,
-                      );
+              (0, i.jsxs)("div", {
+                className: m.NewProblemDescription,
+                children: [
+                  (0, i.jsxs)("div", {
+                    className: m.LabelValue,
+                    children: [
+                      (0, i.jsx)("div", {
+                        className: m.Label,
+                        children: "Name",
+                      }),
+                      (0, i.jsx)("input", {
+                        className: m.Value,
+                        type: "text",
+                        value: s,
+                        onChange: (e) => l(e.target.value),
+                      }),
+                    ],
+                  }),
+                  (0, i.jsxs)("div", {
+                    className: m.LabelValue,
+                    children: [
+                      (0, i.jsx)("div", {
+                        className: m.Label,
+                        children: "Description",
+                      }),
+                      (0, i.jsx)("input", {
+                        className: m.Value,
+                        type: "text",
+                        value: c,
+                        onChange: (e) => r(e.target.value),
+                      }),
+                    ],
+                  }),
+                  S &&
+                    (0, i.jsxs)("div", {
+                      className: m.SchemaListContainer,
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: m.SchemaSelectListTitle,
+                          children: "Select Schemas to Include",
+                        }),
+                        (0, i.jsx)("div", {
+                          className: m.SchemaSelectList,
+                          children: S.map((e) => {
+                            const a = -1 != d.indexOf(e.schemaid);
+                            return (0, i.jsx)(
+                              "div",
+                              {
+                                className: (0, _.A)(
+                                  m.SchemaOption,
+                                  a && m.Selected,
+                                ),
+                                onClick: () =>
+                                  o(
+                                    a
+                                      ? d.filter((a) => a != e.schemaid)
+                                      : d.concat(e.schemaid),
+                                  ),
+                                children: e.name,
+                              },
+                              e.schemaid,
+                            );
+                          }),
+                        }),
+                      ],
                     }),
-                  ),
-                ),
-              l.createElement(
-                "div",
-                { className: r.ButtonContainer },
-                l.createElement(
-                  C,
-                  {
-                    acceptStyle: !0,
-                    minWidth: 100,
-                    disabled: !h,
-                    onClick: () => h && void u.Get().CreateProblem(m, n, i),
-                  },
-                  "Create",
-                ),
-                l.createElement(
-                  C,
-                  { cancelStyle: !0, minWidth: 100, onClick: () => a(!1) },
-                  "Cancel",
-                ),
-              ),
-            ),
-          );
+                  (0, i.jsxs)("div", {
+                    className: m.ButtonContainer,
+                    children: [
+                      (0, i.jsx)(E, {
+                        acceptStyle: !0,
+                        minWidth: 100,
+                        disabled: !u,
+                        onClick: () => u && void x.Get().CreateProblem(s, c, d),
+                        children: "Create",
+                      }),
+                      (0, i.jsx)(E, {
+                        cancelStyle: !0,
+                        minWidth: 100,
+                        onClick: () => t(!1),
+                        children: "Cancel",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         },
-        A = (0, N.PA)(({ schemaid: e }) => {
-          const t = u.Get().GetSchemaList(0, !0);
-          let a;
-          if (t) {
-            const m = t.filter((t) => t.schemaid == e);
-            m.length > 0 && (a = m[0]);
+        T = (0, D.PA)(({ schemaid: e }) => {
+          const a = x.Get().GetSchemaList(0, !0);
+          let t;
+          if (a) {
+            const s = a.filter((a) => a.schemaid == e);
+            s.length > 0 && (t = s[0]);
           }
-          return l.createElement(
-            "div",
-            { className: r.SchemaElement },
-            a && l.createElement("div", { className: r.SchemaName }, a.name),
-          );
+          return (0, i.jsx)("div", {
+            className: m.SchemaElement,
+            children:
+              t &&
+              (0, i.jsx)("div", { className: m.SchemaName, children: t.name }),
+          });
         }),
-        f = (0, N.PA)(({ problem: e }) => {
-          const [t, a] = (0, l.useState)(!1),
-            [m, s] = (0, l.useState)(e.name),
-            [i, o] = (0, l.useState)(!1),
-            [d, p] = (0, l.useState)(e.problem_description),
-            [S, h] = (0, l.useState)(!1),
-            [E, N] = (0, l.useState)(e.schemaid),
-            _ = (0, c.W6)(),
-            v = (0, l.useRef)(null),
-            b = (0, l.useRef)(null),
-            y = parseInt(e.problemid),
-            P = u
+        A = (0, D.PA)(({ problem: e }) => {
+          const [a, t] = (0, n.useState)(!1),
+            [s, l] = (0, n.useState)(e.name),
+            [d, o] = (0, n.useState)(!1),
+            [h, p] = (0, n.useState)(e.problem_description),
+            [S, u] = (0, n.useState)(!1),
+            [N, D] = (0, n.useState)(e.schemaid),
+            v = (0, r.W6)(),
+            b = (0, n.useRef)(null),
+            j = (0, n.useRef)(null),
+            P = parseInt(e.problemid),
+            y = x
               .Get()
               .GetSchemaList(0, !0)
               ?.slice()
-              .sort((e, t) => (e.name < t.name ? -1 : 1)),
-            L = P?.filter((e, t, a) => 0 == t || e.name != a[t - 1].name);
+              .sort((e, a) => (e.name < a.name ? -1 : 1)),
+            L = y?.filter((e, a, t) => 0 == a || e.name != t[a - 1].name);
           var g;
           (g = () => {
-            I(), T(), p(e.problem_description), o(!1);
+            C(), I(), p(e.problem_description), o(!1);
           }),
-            (0, l.useEffect)(() => {
+            (0, n.useEffect)(() => {
               const e = (e) => {
                 27 === e.keyCode && g();
               };
@@ -883,315 +901,298 @@
                 }
               );
             }, [g]);
-          const I = () => {
-              s(e.name), a(!1);
+          const C = () => {
+              l(e.name), t(!1);
             },
-            T = () => {
+            I = () => {
               p(e.problem_description), o(!1);
             },
-            f = () => {
-              N(e.schemaid), h(!1);
+            A = () => {
+              D(e.schemaid), u(!1);
             };
           return (
-            t && v.current.focus(),
-            i && b.current.focus(),
-            l.createElement(
-              "div",
-              { className: r.ProblemDetails },
-              l.createElement(
-                n.N_,
-                { to: B.SteamMLProblems(0), className: r.BackButton },
-                "<< BACK ",
-              ),
-              l.createElement(
-                "div",
-                { className: r.ProblemDetailsHeaderContainer },
-                l.createElement(
-                  "div",
-                  {
-                    className: (0, D.A)(r.ProblemName, t && r.Hidden),
-                    onClick: (e) => (T(), f(), void a(!0)),
-                  },
-                  e.name,
-                ),
-                l.createElement(
-                  "form",
-                  {
-                    className: t ? void 0 : r.Hidden,
-                    onSubmit: (t) => {
-                      u.Get().EditProblemName(y, m),
-                        (e.name = m),
-                        a(!1),
-                        t.preventDefault();
-                    },
-                  },
-                  l.createElement("input", {
-                    ref: v,
-                    className: r.ProblemNameEditing,
-                    type: "text",
-                    value: m,
-                    onBlur: () => I(),
-                    onFocus: (e) => e.target.select(),
-                    onChange: (e) => s(e.target.value),
-                  }),
-                ),
-                l.createElement(
-                  "div",
-                  {
-                    className: (0, D.A)(r.ProblemDescription, i && r.Hidden),
-                    onClick: (e) => (I(), f(), void o(!0)),
-                  },
-                  e.problem_description,
-                ),
-                l.createElement(
-                  "form",
-                  {
-                    className: i ? void 0 : r.Hidden,
-                    onSubmit: (t) => {
-                      u.Get().EditProblemDesc(y, d),
-                        (e.problem_description = d),
-                        o(!1),
-                        t.preventDefault();
-                    },
-                  },
-                  l.createElement("input", {
-                    ref: b,
-                    className: r.ProblemDescEditing,
-                    type: "text",
-                    value: d,
-                    onBlur: () => T(),
-                    onFocus: (e) => e.target.select(),
-                    onChange: (e) => p(e.target.value),
-                  }),
-                ),
-                l.createElement("div", { className: r.ProblemID }, e.problemid),
-                l.createElement(
-                  "div",
-                  { className: r.Dates },
-                  l.createElement(
-                    "div",
-                    { className: r.CreatedDate },
-                    "Created ",
-                    new Date(1e3 * e.create_time).toLocaleDateString(["en-us"]),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: r.UpdatedDate },
-                    "Last modified ",
-                    new Date(1e3 * e.update_time).toLocaleDateString(["en-us"]),
-                  ),
-                ),
-              ),
-              l.createElement(
-                "div",
-                { className: r.SchemaListContainer },
-                l.createElement(
-                  "div",
-                  { className: r.SchemaListHeader },
-                  "Schemas:",
-                ),
-                l.createElement(
-                  "div",
-                  {
-                    className: r.SchemaListEdit,
-                    onClick: () => (I(), T(), void h(!0)),
-                  },
-                  "Edit",
-                ),
-                l.createElement(
-                  "div",
-                  { className: (0, D.A)(r.SchemaList, S && r.Hidden) },
-                  e.schemaid.map((e) =>
-                    l.createElement(A, { key: e, schemaid: e }),
-                  ),
-                ),
-                l.createElement(
-                  "div",
-                  {
-                    className: (0, D.A)(
-                      r.SchemaSelectList,
-                      (!S || !L) && r.Hidden,
-                    ),
-                  },
-                  L &&
-                    L.map((e) => {
-                      const t = -1 != E.indexOf(e.schemaid);
-                      return l.createElement(
-                        "div",
-                        {
-                          key: e.schemaid,
-                          className: (0, D.A)(r.SchemaOption, t && r.Selected),
-                          onClick: () =>
-                            N(
-                              t
-                                ? E.filter((t) => t != e.schemaid)
-                                : E.concat(e.schemaid),
-                            ),
-                        },
-                        e.name,
-                      );
+            a && b.current.focus(),
+            d && j.current.focus(),
+            (0, i.jsxs)("div", {
+              className: m.ProblemDetails,
+              children: [
+                (0, i.jsx)(c.N_, {
+                  to: w.SteamMLProblems(0),
+                  className: m.BackButton,
+                  children: "<< BACK ",
+                }),
+                (0, i.jsxs)("div", {
+                  className: m.ProblemDetailsHeaderContainer,
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: (0, _.A)(m.ProblemName, a && m.Hidden),
+                      onClick: (e) => (I(), A(), void t(!0)),
+                      children: e.name,
                     }),
-                ),
-                S &&
-                  l.createElement(
-                    "div",
-                    { className: r.ButtonContainer },
-                    l.createElement(
-                      C,
-                      {
-                        minWidth: 100,
-                        acceptStyle: !0,
-                        disabled: 0 == E.length,
-                        onClick: () => (
-                          u.Get().EditProblemSchemas(y, E),
-                          (e.schemaid = E),
-                          void h(!1)
-                        ),
+                    (0, i.jsx)("form", {
+                      className: a ? void 0 : m.Hidden,
+                      onSubmit: (a) => {
+                        x.Get().EditProblemName(P, s),
+                          (e.name = s),
+                          t(!1),
+                          a.preventDefault();
                       },
-                      "Accept",
-                    ),
-                    l.createElement(
-                      C,
-                      { minWidth: 100, cancelStyle: !0, onClick: () => f() },
-                      "Cancel",
-                    ),
-                  ),
-                l.createElement(
-                  "div",
-                  {
-                    className: (0, D.A)(r.DeleteLink, S && r.Hidden),
-                    onClick: () => (
-                      u.Get().DeleteProblem(y),
-                      void _.push(B.SteamMLProblems(0))
-                    ),
-                  },
-                  "Delete Problem",
-                ),
-              ),
-            )
+                      children: (0, i.jsx)("input", {
+                        ref: b,
+                        className: m.ProblemNameEditing,
+                        type: "text",
+                        value: s,
+                        onBlur: () => C(),
+                        onFocus: (e) => e.target.select(),
+                        onChange: (e) => l(e.target.value),
+                      }),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, _.A)(m.ProblemDescription, d && m.Hidden),
+                      onClick: (e) => (C(), A(), void o(!0)),
+                      children: e.problem_description,
+                    }),
+                    (0, i.jsx)("form", {
+                      className: d ? void 0 : m.Hidden,
+                      onSubmit: (a) => {
+                        x.Get().EditProblemDesc(P, h),
+                          (e.problem_description = h),
+                          o(!1),
+                          a.preventDefault();
+                      },
+                      children: (0, i.jsx)("input", {
+                        ref: j,
+                        className: m.ProblemDescEditing,
+                        type: "text",
+                        value: h,
+                        onBlur: () => I(),
+                        onFocus: (e) => e.target.select(),
+                        onChange: (e) => p(e.target.value),
+                      }),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: m.ProblemID,
+                      children: e.problemid,
+                    }),
+                    (0, i.jsxs)("div", {
+                      className: m.Dates,
+                      children: [
+                        (0, i.jsxs)("div", {
+                          className: m.CreatedDate,
+                          children: [
+                            "Created ",
+                            new Date(1e3 * e.create_time).toLocaleDateString([
+                              "en-us",
+                            ]),
+                          ],
+                        }),
+                        (0, i.jsxs)("div", {
+                          className: m.UpdatedDate,
+                          children: [
+                            "Last modified ",
+                            new Date(1e3 * e.update_time).toLocaleDateString([
+                              "en-us",
+                            ]),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, i.jsxs)("div", {
+                  className: m.SchemaListContainer,
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: m.SchemaListHeader,
+                      children: "Schemas:",
+                    }),
+                    (0, i.jsx)("div", {
+                      className: m.SchemaListEdit,
+                      onClick: () => (C(), I(), void u(!0)),
+                      children: "Edit",
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, _.A)(m.SchemaList, S && m.Hidden),
+                      children: e.schemaid.map((e) =>
+                        (0, i.jsx)(T, { schemaid: e }, e),
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, _.A)(
+                        m.SchemaSelectList,
+                        (!S || !L) && m.Hidden,
+                      ),
+                      children:
+                        L &&
+                        L.map((e) => {
+                          const a = -1 != N.indexOf(e.schemaid);
+                          return (0, i.jsx)(
+                            "div",
+                            {
+                              className: (0, _.A)(
+                                m.SchemaOption,
+                                a && m.Selected,
+                              ),
+                              onClick: () =>
+                                D(
+                                  a
+                                    ? N.filter((a) => a != e.schemaid)
+                                    : N.concat(e.schemaid),
+                                ),
+                              children: e.name,
+                            },
+                            e.schemaid,
+                          );
+                        }),
+                    }),
+                    S &&
+                      (0, i.jsxs)("div", {
+                        className: m.ButtonContainer,
+                        children: [
+                          (0, i.jsx)(E, {
+                            minWidth: 100,
+                            acceptStyle: !0,
+                            disabled: 0 == N.length,
+                            onClick: () => (
+                              x.Get().EditProblemSchemas(P, N),
+                              (e.schemaid = N),
+                              void u(!1)
+                            ),
+                            children: "Accept",
+                          }),
+                          (0, i.jsx)(E, {
+                            minWidth: 100,
+                            cancelStyle: !0,
+                            onClick: () => A(),
+                            children: "Cancel",
+                          }),
+                        ],
+                      }),
+                    (0, i.jsx)("div", {
+                      className: (0, _.A)(m.DeleteLink, S && m.Hidden),
+                      onClick: () => (
+                        x.Get().DeleteProblem(P),
+                        void v.push(w.SteamMLProblems(0))
+                      ),
+                      children: "Delete Problem",
+                    }),
+                  ],
+                }),
+              ],
+            })
           );
         }),
-        w = (0, N.PA)((e) => {
-          const t = (0, c.g)(),
-            a = "0" == t.problemid;
-          let m, s;
+        f = (0, D.PA)((e) => {
+          const a = (0, r.g)(),
+            t = "0" == a.problemid;
+          let s, l;
           return (
-            a
-              ? (m = u.Get().GetProblemList())
-              : (s = u.Get().GetProblemDetails(parseInt(t.problemid))),
-            l.createElement(
-              "div",
-              { className: r.ProblemPage },
-              a &&
-                m &&
-                l.createElement(
-                  "div",
-                  { className: r.ProblemListContainer },
-                  m.map((e) =>
-                    l.createElement(I, { key: e.problemid, problem: e }),
-                  ),
-                  0 == m.length &&
-                    l.createElement(
-                      "div",
-                      { className: r.NoProblems },
-                      "No Existing Problems",
-                    ),
-                  l.createElement(T, null),
-                ),
-              !a &&
-                s &&
-                l.createElement(
-                  "div",
-                  { className: r.ProblemDetails },
-                  l.createElement(f, { problem: s }),
-                ),
-            )
+            t
+              ? (s = x.Get().GetProblemList())
+              : (l = x.Get().GetProblemDetails(parseInt(a.problemid))),
+            (0, i.jsxs)("div", {
+              className: m.ProblemPage,
+              children: [
+                t &&
+                  s &&
+                  (0, i.jsxs)("div", {
+                    className: m.ProblemListContainer,
+                    children: [
+                      s.map((e) => (0, i.jsx)(C, { problem: e }, e.problemid)),
+                      0 == s.length &&
+                        (0, i.jsx)("div", {
+                          className: m.NoProblems,
+                          children: "No Existing Problems",
+                        }),
+                      (0, i.jsx)(I, {}),
+                    ],
+                  }),
+                !t &&
+                  l &&
+                  (0, i.jsx)("div", {
+                    className: m.ProblemDetails,
+                    children: (0, i.jsx)(A, { problem: l }),
+                  }),
+              ],
+            })
           );
         }),
-        B = {
+        w = {
           SteamMLBase: () => "steamml",
-          SteamMLSchemas: (e, t) => `/schemas/${e ?? "0"}/${t ?? "0"}`,
+          SteamMLSchemas: (e, a) => `/schemas/${e ?? "0"}/${a ?? "0"}`,
           SteamMLModels: () => "/models",
           SteamMLProblems: (e) => `/problems/${e ?? "0"}`,
         };
-      class R extends l.Component {
+      class B extends n.Component {
         render() {
-          return l.createElement(
-            "div",
-            { className: r.Background },
-            l.createElement(
-              n.Kd,
-              { basename: (0, s.C)() + B.SteamMLBase() },
-              l.createElement(k, null),
-              l.createElement(
-                c.dO,
-                null,
-                l.createElement(c.qh, {
-                  exact: !0,
-                  path: B.SteamMLSchemas(":appid", ":schemaid"),
-                  component: g,
+          return (0, i.jsx)("div", {
+            className: m.Background,
+            children: (0, i.jsxs)(c.Kd, {
+              basename: (0, l.C)() + w.SteamMLBase(),
+              children: [
+                (0, i.jsx)(R, {}),
+                (0, i.jsxs)(r.dO, {
+                  children: [
+                    (0, i.jsx)(r.qh, {
+                      exact: !0,
+                      path: w.SteamMLSchemas(":appid", ":schemaid"),
+                      component: g,
+                    }),
+                    (0, i.jsx)(r.qh, {
+                      exact: !0,
+                      path: w.SteamMLModels(),
+                      component: k,
+                    }),
+                    (0, i.jsx)(r.qh, {
+                      exact: !0,
+                      path: w.SteamMLProblems(":problemid"),
+                      component: f,
+                    }),
+                    (0, i.jsx)(r.qh, {
+                      exact: !0,
+                      path: "/",
+                      children: (0, i.jsx)(r.rd, { to: w.SteamMLSchemas() }),
+                    }),
+                  ],
                 }),
-                l.createElement(c.qh, {
-                  exact: !0,
-                  path: B.SteamMLModels(),
-                  component: x,
-                }),
-                l.createElement(c.qh, {
-                  exact: !0,
-                  path: B.SteamMLProblems(":problemid"),
-                  component: w,
-                }),
-                l.createElement(
-                  c.qh,
-                  { exact: !0, path: "/" },
-                  l.createElement(c.rd, { to: B.SteamMLSchemas() }),
-                ),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         }
       }
-      const k = (e) => {
-          const t = (0, c.zy)(),
-            a = (0, c.B6)(t.pathname, {
-              path: B.SteamMLSchemas(":appid", ":schemaid"),
+      const R = (e) => {
+          const a = (0, r.zy)(),
+            t = (0, r.B6)(a.pathname, {
+              path: w.SteamMLSchemas(":appid", ":schemaid"),
               exact: !0,
             }),
-            m = (0, c.B6)(t.pathname, { path: B.SteamMLModels(), exact: !0 }),
-            s = (0, c.B6)(t.pathname, {
-              path: B.SteamMLProblems(":problemid"),
+            s = (0, r.B6)(a.pathname, { path: w.SteamMLModels(), exact: !0 }),
+            l = (0, r.B6)(a.pathname, {
+              path: w.SteamMLProblems(":problemid"),
               exact: !0,
             });
-          return l.createElement(
-            "div",
-            { className: r.Header },
-            l.createElement(
-              n.N_,
-              {
-                to: B.SteamMLSchemas(),
-                className: (0, D.A)(r.HeaderOption, a && r.Selected),
-              },
-              "SCHEMAS",
-            ),
-            l.createElement(
-              n.N_,
-              {
-                to: B.SteamMLModels(),
-                className: (0, D.A)(r.HeaderOption, m && r.Selected),
-              },
-              "MODELS",
-            ),
-            l.createElement(
-              n.N_,
-              {
-                to: B.SteamMLProblems(),
-                className: (0, D.A)(r.HeaderOption, s && r.Selected),
-              },
-              "PROBLEMS",
-            ),
-          );
+          return (0, i.jsxs)("div", {
+            className: m.Header,
+            children: [
+              (0, i.jsx)(c.N_, {
+                to: w.SteamMLSchemas(),
+                className: (0, _.A)(m.HeaderOption, t && m.Selected),
+                children: "SCHEMAS",
+              }),
+              (0, i.jsx)(c.N_, {
+                to: w.SteamMLModels(),
+                className: (0, _.A)(m.HeaderOption, s && m.Selected),
+                children: "MODELS",
+              }),
+              (0, i.jsx)(c.N_, {
+                to: w.SteamMLProblems(),
+                className: (0, _.A)(m.HeaderOption, l && m.Selected),
+                children: "PROBLEMS",
+              }),
+            ],
+          });
         },
-        x = (e) => l.createElement("div", null, "MODEL PAGE");
+        k = (e) => (0, i.jsx)("div", { children: "MODEL PAGE" });
     },
   },
 ]);

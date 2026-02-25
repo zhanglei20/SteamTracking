@@ -5860,6 +5860,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         static GetScrollableClassname() {
@@ -5951,14 +5952,11 @@
             horizontal: _,
             ..._
           } = this.props;
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_refElement,
-              ..._,
-            },
-            this.props.children,
-          );
+          return (0, _.jsx)("div", {
+            ref: this.m_refElement,
+            ..._,
+            children: this.props.children,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnIntersection", null);

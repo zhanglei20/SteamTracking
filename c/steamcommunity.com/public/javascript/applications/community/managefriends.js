@@ -35,7 +35,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(_._, null);
+        return (0, _.jsx)(_._, {});
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -69,6 +69,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -265,181 +266,135 @@
         }
         render() {
           const _ = _._.short_url + "/" + this.state.invite_token;
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)("div", {
                 className: _().HeaderBlock,
-              },
-              (0, _._)("#ManageFriends_AddAFriend"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().Background,
-              },
-              _.createElement(
-                "h1",
-                {
-                  className: _().Heading,
-                },
-                (0, _._)("#ManageFriends_YourFriendCode"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().CopyContainer,
-                },
-                _.createElement(
-                  "h1",
-                  {
-                    className: _().Text,
-                  },
-                  _._.accountid,
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    autoFocus: !0,
-                    className: _().Button,
-                    onClick: () =>
-                      this.OnCopy("friend_code", String(_._.accountid)),
-                  },
-                  this.state.friend_code_copied
-                    ? (0, _._)("#ManageFriends_Copied")
-                    : (0, _._)("#ManageFriends_Copy"),
-                ),
-              ),
-              _.createElement(
-                "p",
-                {
-                  className: _().Body,
-                },
-                (0, _._)("#ManageFriends_EnterFriendCode"),
-              ),
-              _.createElement(_, {
-                onButtonClick: this.OnAddFriend,
-                buttonText: (0, _._)("#ManageFriends_SendInvite"),
-                bDisableForSelf: !0,
-                bDisableForFriends: !0,
-                bShowStatus: !0,
+                children: (0, _._)("#ManageFriends_AddAFriend"),
               }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().DimBackground,
-              },
-              _.createElement(
-                "h1",
-                {
-                  className: _().Heading,
-                },
-                (0, _._)("#ManageFriends_OrSendQuickInvite"),
-              ),
-              _.createElement(
-                "p",
-                {
-                  className: _().Body,
-                },
-                (0, _._)("#ManageFriends_QuickInviteDescription"),
-              ),
-              _.createElement(
-                "p",
-                {
-                  className: _().Body,
-                },
-                (0, _._)("#ManageFriends_QuickInviteNote"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().CopyContainer,
-                },
-                Boolean(this.state.invite_token) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Link,
-                    },
-                    _,
-                  ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Button,
-                    onClick: () => this.OnCopy("invite", _),
-                  },
-                  this.state.invite_copied
-                    ? (0, _._)("#ManageFriends_Copied")
-                    : (0, _._)("#ManageFriends_Copy"),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _().GenerateLinkButton,
-                  onClick: this.OnCreateInviteLink,
-                },
-                (0, _._)("#ManageFriends_CreateInviteLink"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _().Background,
-              },
-              _.createElement(
-                "h1",
-                {
-                  className: _().Heading,
-                },
-                (0, _._)("#ManageFriends_OrSearch"),
-              ),
-              _.createElement("br", null),
-              _.createElement(
-                "div",
-                {
-                  style: {
-                    display: "flex",
-                    alignItems: "center",
-                    maxWidth: "598px",
-                    position: "relative",
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    style: {
-                      width: "100%",
-                    },
-                  },
-                  _.createElement(_._, {
-                    className: _().Input,
-                    onKeyDown: this.OnSearchKeyDown,
-                    value: this.state.input_search,
-                    onChange: this.OnSearchChange,
-                    placeholder: (0, _._)("#ManageFriends_EnterProfileName"),
+                children: [
+                  (0, _.jsx)("h1", {
+                    className: _().Heading,
+                    children: (0, _._)("#ManageFriends_YourFriendCode"),
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    _: "searchIcon",
+                  (0, _.jsxs)("div", {
+                    className: _().CopyContainer,
+                    children: [
+                      (0, _.jsx)("h1", {
+                        className: _().Text,
+                        children: _._.accountid,
+                      }),
+                      (0, _.jsx)(_._, {
+                        autoFocus: !0,
+                        className: _().Button,
+                        onClick: () =>
+                          this.OnCopy("friend_code", String(_._.accountid)),
+                        children: this.state.friend_code_copied
+                          ? (0, _._)("#ManageFriends_Copied")
+                          : (0, _._)("#ManageFriends_Copy"),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("p", {
+                    className: _().Body,
+                    children: (0, _._)("#ManageFriends_EnterFriendCode"),
+                  }),
+                  (0, _.jsx)(_, {
+                    onButtonClick: this.OnAddFriend,
+                    buttonText: (0, _._)("#ManageFriends_SendInvite"),
+                    bDisableForSelf: !0,
+                    bDisableForFriends: !0,
+                    bShowStatus: !0,
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().DimBackground,
+                children: [
+                  (0, _.jsx)("h1", {
+                    className: _().Heading,
+                    children: (0, _._)("#ManageFriends_OrSendQuickInvite"),
+                  }),
+                  (0, _.jsx)("p", {
+                    className: _().Body,
+                    children: (0, _._)("#ManageFriends_QuickInviteDescription"),
+                  }),
+                  (0, _.jsx)("p", {
+                    className: _().Body,
+                    children: (0, _._)("#ManageFriends_QuickInviteNote"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().CopyContainer,
+                    children: [
+                      Boolean(this.state.invite_token) &&
+                        (0, _.jsx)("div", {
+                          className: _().Link,
+                          children: _,
+                        }),
+                      (0, _.jsx)(_._, {
+                        className: _().Button,
+                        onClick: () => this.OnCopy("invite", _),
+                        children: this.state.invite_copied
+                          ? (0, _._)("#ManageFriends_Copied")
+                          : (0, _._)("#ManageFriends_Copy"),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _().GenerateLinkButton,
+                    onClick: this.OnCreateInviteLink,
+                    children: (0, _._)("#ManageFriends_CreateInviteLink"),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().Background,
+                children: [
+                  (0, _.jsx)("h1", {
+                    className: _().Heading,
+                    children: (0, _._)("#ManageFriends_OrSearch"),
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsxs)("div", {
                     style: {
-                      position: "absolute",
-                      right: "10px",
-                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      maxWidth: "598px",
+                      position: "relative",
                     },
-                    onClick: this.OnSearchSubmit,
-                  },
-                  _.createElement(_.eSy, null),
-                ),
-              ),
-            ),
-          );
+                    children: [
+                      (0, _.jsx)("div", {
+                        style: {
+                          width: "100%",
+                        },
+                        children: (0, _.jsx)(_._, {
+                          className: _().Input,
+                          onKeyDown: this.OnSearchKeyDown,
+                          value: this.state.input_search,
+                          onChange: this.OnSearchChange,
+                          placeholder: (0, _._)(
+                            "#ManageFriends_EnterProfileName",
+                          ),
+                        }),
+                      }),
+                      (0, _.jsx)("div", {
+                        _: "searchIcon",
+                        style: {
+                          position: "absolute",
+                          right: "10px",
+                          cursor: "pointer",
+                        },
+                        onClick: this.OnSearchSubmit,
+                        children: (0, _.jsx)(_.eSy, {}),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnCreateInviteLink", null),
@@ -518,38 +473,31 @@
               });
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: _().FriendCodeSelector,
-            },
-            _.createElement(_._, {
-              className: _().Input,
-              value: this.state.input_friend_code,
-              onChange: this.OnFriendCodeChange,
-              placeholder: (0, _._)(
-                "#ManageFriends_EnterFriendCodePlaceholder",
-              ),
-            }),
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)("div", {
+            className: _().FriendCodeSelector,
+            children: [
+              (0, _.jsx)(_._, {
+                className: _().Input,
+                value: this.state.input_friend_code,
+                onChange: this.OnFriendCodeChange,
+                placeholder: (0, _._)(
+                  "#ManageFriends_EnterFriendCodePlaceholder",
+                ),
+              }),
+              (0, _.jsx)(_, {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
                 bShowStatus: this.props.bShowStatus,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   className: _().SendInviteButton,
                   onClick: () =>
                     this.OnActionClick(this.state.searchResult.steamid),
                   disabled: this.state.disable_send_invite,
-                },
-                this.props.buttonText,
-              ),
-            ),
-          );
+                  children: this.props.buttonText,
+                }),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnFriendCodeChange", null),
@@ -564,124 +512,103 @@
           } = _,
           _ = (0, _._)();
         return Boolean(_)
-          ? _.createElement(
-              "div",
-              {
-                className: _().ProfileCard,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().ProfileCard,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().UserContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Image,
-                  },
-                  _.createElement("img", {
-                    style: {
-                      width: "100%",
-                      height: "100%",
-                    },
-                    src: _.avatar_url_full,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ProfileContent,
-                  },
-                  _.createElement(
-                    "h1",
-                    {
-                      className: _().Heading,
-                    },
-                    _.persona_name,
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ProfileLink,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        target: _ ? void 0 : "_blank",
-                        href: _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid,
-                      },
-                      (0, _._)("#ManageFriends_ProfileLink"),
-                    ),
-                    _.createElement("br", null),
-                    _.createElement(
-                      "span",
-                      {
-                        className: _().Body,
-                      },
-                      _.real_name,
-                      _.createElement("br", null),
-                      `${_.city}${_.city ? "," : ""} ${_.state}${_.state ? "," : ""} ${_.country}`,
-                    ),
-                  ),
-                ),
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().Image,
+                      children: (0, _.jsx)("img", {
+                        style: {
+                          width: "100%",
+                          height: "100%",
+                        },
+                        src: _.avatar_url_full,
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().ProfileContent,
+                      children: [
+                        (0, _.jsx)("h1", {
+                          className: _().Heading,
+                          children: _.persona_name,
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().ProfileLink,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              target: _ ? void 0 : "_blank",
+                              href:
+                                _._.COMMUNITY_BASE_URL +
+                                "profiles/" +
+                                _.steamid,
+                              children: (0, _._)("#ManageFriends_ProfileLink"),
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsxs)("span", {
+                              className: _().Body,
+                              children: [
+                                _.real_name,
+                                (0, _.jsx)("br", {}),
+                                `${_.city}${_.city ? "," : ""} ${_.state}${_.state ? "," : ""} ${_.country}`,
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    _,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
                   className: _().ProfileLink,
-                },
-                _.is_friend &&
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#ManageFriends_IsFriend"),
-                  ),
-                0 != _.friends_in_common &&
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      _._,
-                      {
-                        target: _ ? void 0 : "_blank",
-                        href:
-                          _._.COMMUNITY_BASE_URL +
-                          "profiles/" +
-                          _.steamid +
-                          "/friendscommon",
-                      },
-                      1 === _.friends_in_common
-                        ? (0, _._)(
-                            "#ManageFriends_FriendsInCommonSingular",
-                            _.friends_in_common,
-                          )
-                        : (0, _._)(
-                            "#ManageFriends_FriendsInCommon",
-                            _.friends_in_common,
-                          ),
-                    ),
-                  ),
-                _ &&
-                  "failure" === __webpack_require__ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Failure,
-                    },
-                    (0, _._)("#ManageFriends_InviteFailure"),
-                  ),
-                _ &&
-                  "success" === __webpack_require__ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Success,
-                    },
-                    (0, _._)("#ManageFriends_InviteSuccess", _.persona_name),
-                  ),
-              ),
-            )
+                  children: [
+                    _.is_friend &&
+                      (0, _.jsx)("div", {
+                        children: (0, _._)("#ManageFriends_IsFriend"),
+                      }),
+                    0 != _.friends_in_common &&
+                      (0, _.jsx)("div", {
+                        children: (0, _.jsx)(_._, {
+                          target: _ ? void 0 : "_blank",
+                          href:
+                            _._.COMMUNITY_BASE_URL +
+                            "profiles/" +
+                            _.steamid +
+                            "/friendscommon",
+                          children:
+                            1 === _.friends_in_common
+                              ? (0, _._)(
+                                  "#ManageFriends_FriendsInCommonSingular",
+                                  _.friends_in_common,
+                                )
+                              : (0, _._)(
+                                  "#ManageFriends_FriendsInCommon",
+                                  _.friends_in_common,
+                                ),
+                        }),
+                      }),
+                    _ &&
+                      "failure" === __webpack_require__ &&
+                      (0, _.jsx)("div", {
+                        className: _().Failure,
+                        children: (0, _._)("#ManageFriends_InviteFailure"),
+                      }),
+                    _ &&
+                      "success" === __webpack_require__ &&
+                      (0, _.jsx)("div", {
+                        className: _().Success,
+                        children: (0, _._)(
+                          "#ManageFriends_InviteSuccess",
+                          _.persona_name,
+                        ),
+                      }),
+                  ],
+                }),
+              ],
+            })
           : null;
       };
     },

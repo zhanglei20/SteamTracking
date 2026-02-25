@@ -164,7 +164,7 @@ function FinishSurvey( appid )
 
 			var dialog = ShowAlertDialog( 'Success!', 'Your changes have been successfully published to Steam. It may take a few minutes before your Store Page has been updated.' );
 			dialog.done( function() {
-				top.location.href = 'https://partner.steamgames.com/contentdescriptors/listsurveys/' + appid + '/';
+				top.location.href = 'https://partner.steamgames.com/contentdescriptors/editsurvey/' + appid + '/';
 			});
 		}
 		else

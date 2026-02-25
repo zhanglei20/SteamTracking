@@ -25,12 +25,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
           __webpack_require__._ +
           "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching",
         _ = (_) =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             ..._,
             onClick: (_) =>
               (0, _._)(
@@ -41,7 +42,7 @@
               ),
           }),
         _ = (_) =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             ..._,
             onClick: (_) =>
               (0, _._)(
@@ -52,21 +53,18 @@
               ),
           }),
         _ = (_) =>
-          _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              paddingTop: "small",
-              className: _.PageContainer,
-            },
-            _.createElement("img", {
+          (0, _.jsx)(_._, {
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingTop: "small",
+            className: _.PageContainer,
+            children: (0, _.jsx)("img", {
               src: _,
               className: _.ProfileShowcaseHeaderImage,
             }),
-          ),
+          }),
         _ = (_) => {
           const {
             point_cost: _,
@@ -84,30 +82,27 @@
           let _ = __webpack_require__.map((_) => {
             const _ = _.get(_),
               _ = _ + 1;
-            return _.createElement(_, {
-              key: _,
-              point_cost: _,
-              customization_type: _,
-              current_level: _,
-              desired_level: _,
-            });
-          });
-          return _.createElement(
-            _._,
-            {
-              className: _.PageItemsContainer,
-              itemClassName: _.PageItemsContainerChildren,
-              spacing: "xlarge",
-            },
-            _.createElement(
-              _._,
+            return (0, _.jsx)(
+              _,
               {
-                title: (0, _._)("#ProfileShowcases_Upgrades_Title"),
-                subtitle: (0, _._)("#ProfileShowcases_Upgrades_Subtitle"),
+                point_cost: _,
+                customization_type: _,
+                current_level: _,
+                desired_level: _,
               },
               _,
-            ),
-          );
+            );
+          });
+          return (0, _.jsx)(_._, {
+            className: _.PageItemsContainer,
+            itemClassName: _.PageItemsContainerChildren,
+            spacing: "xlarge",
+            children: (0, _.jsx)(_._, {
+              title: (0, _._)("#ProfileShowcases_Upgrades_Title"),
+              subtitle: (0, _._)("#ProfileShowcases_Upgrades_Subtitle"),
+              children: _,
+            }),
+          });
         },
         _ = (_) => {
           const {
@@ -130,30 +125,27 @@
                 _.set(_.customization_type, _.level);
               });
           let _ = __webpack_require__.map((_) =>
-            _.createElement(_, {
-              key: _,
-              point_cost: _,
-              current_level: _.get(_),
-              customization_type: _,
-              purchased_count: _.get(_),
-            }),
-          );
-          return _.createElement(
-            _._,
-            {
-              className: _.PageItemsContainer,
-              itemClassName: _.PageItemsContainerChildren,
-              spacing: "xlarge",
-            },
-            _.createElement(
-              _._,
+            (0, _.jsx)(
+              _,
               {
-                title: (0, _._)("#ProfileShowcases_Slots_Title"),
-                subtitle: (0, _._)("#ProfileShowcases_Slots_Subtitle"),
+                point_cost: _,
+                current_level: _.get(_),
+                customization_type: _,
+                purchased_count: _.get(_),
               },
               _,
             ),
           );
+          return (0, _.jsx)(_._, {
+            className: _.PageItemsContainer,
+            itemClassName: _.PageItemsContainerChildren,
+            spacing: "xlarge",
+            children: (0, _.jsx)(_._, {
+              title: (0, _._)("#ProfileShowcases_Slots_Title"),
+              subtitle: (0, _._)("#ProfileShowcases_Slots_Subtitle"),
+              children: _,
+            }),
+          });
         };
       let _ = class extends _.Component {
         render() {
@@ -163,38 +155,33 @@
             _ = _._.Get().GetPurchasableProfileShowcaseSlotCost(),
             _ = _._.Get().GetPurchasableProfileShowcaseSlots(),
             _ = _._.Get().GetPurchasedProfileCustomizations();
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                className: _.PageItemsContainer,
-                itemClassName: _.PageItemsContainerChildren,
-                spacing: "xlarge",
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(_._, {
-                  title: (0, _._)("#ShopPageTitle_ProfileShowcases"),
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              className: _.PageItemsContainer,
+              itemClassName: _.PageItemsContainerChildren,
+              spacing: "xlarge",
+              children: [
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)(_._, {
+                    title: (0, _._)("#ShopPageTitle_ProfileShowcases"),
+                  }),
                 }),
-              ),
-              _.createElement(_, null),
-              _.createElement(_, {
-                point_cost: _,
-                upgradable_showcases: _,
-                purchased_upgrades: _,
-              }),
-              _.createElement(_, {
-                point_cost: _,
-                purchasable_showcases: _,
-                purchased_showcases: _,
-                purchased_upgrades: _,
-              }),
-              this.props.children,
-            ),
-          );
+                (0, _.jsx)(_, {}),
+                (0, _.jsx)(_, {
+                  point_cost: _,
+                  upgradable_showcases: _,
+                  purchased_upgrades: _,
+                }),
+                (0, _.jsx)(_, {
+                  point_cost: _,
+                  purchasable_showcases: _,
+                  purchased_showcases: _,
+                  purchased_upgrades: _,
+                }),
+                this.props.children,
+              ],
+            }),
+          });
         }
       };
       _ = (0, _._)([_._], _);

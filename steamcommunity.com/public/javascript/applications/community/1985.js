@@ -11,170 +11,172 @@
         ShareLink: "_1WTiWXO3q8jMnJc_cPKJbE",
       };
     },
-    5618: (e, t, a) => {
+    5618: (e, t, s) => {
       "use strict";
-      a.d(t, { V: () => L });
-      var n = a(90626),
-        M = a(61859),
-        s = a(52038),
-        i = a(95695),
-        r = a.n(i),
-        l = a(14256),
-        c = a.n(l),
-        o = a(32754),
-        N = a(96715);
-      const L = (e) => {
-        const t = n.createRef(),
-          [a, i] = n.useState(""),
-          l = n.createRef();
-        return n.createElement(
-          "div",
-          null,
-          n.createElement(
-            "div",
-            {
-              className: (0, s.A)(r().FlexRowContainer, c().linkField),
+      s.d(t, { V: () => j });
+      var n = s(7850),
+        M = s(90626),
+        i = s(61859),
+        a = s(52038),
+        r = s(95695),
+        o = s.n(r),
+        N = s(14256),
+        c = s.n(N),
+        l = s(32754),
+        L = s(96715);
+      const j = (e) => {
+        const t = M.createRef(),
+          [s, r] = M.useState(""),
+          N = M.createRef();
+        return (0, n.jsxs)("div", {
+          children: [
+            (0, n.jsxs)("div", {
+              className: (0, a.A)(o().FlexRowContainer, c().linkField),
               onClick: (e) => {
                 t.current &&
                   t.current.ownerDocument.defaultView.navigator.clipboard
                     .writeText(t.current.value)
                     .then((e) => {
-                      i((0, M.we)("#EventDisplay_Share_CopiedToClipboard"));
+                      r((0, i.we)("#EventDisplay_Share_CopiedToClipboard"));
                     })
                     .catch((e) => {
-                      i(
-                        (0, M.we)(
+                      r(
+                        (0, i.we)(
                           "#EventDisplay_Share_FailedToCopyToClipboard",
                         ),
                       ),
                         console.error("Failed to copy link to clipboard:", e);
                     });
               },
-            },
-            n.createElement(
-              "span",
-              { className: c().LinkInputLabel },
-              (0, M.we)(
-                e.labelOverride ? e.labelOverride : "#EventDisplay_Share_Link",
-              ),
-            ),
-            n.createElement("textarea", {
-              className: c().LinkInput,
-              ref: t,
-              value: e.eventLink,
-              readOnly: !0,
-            }),
-            document.queryCommandSupported("copy") &&
-              n.createElement(
-                "div",
-                {
-                  className: (0, s.A)(r().Button, r().Icon, c().LinkButton),
-                  title: (0, M.we)("#ToolTip_CopyLinkToClipboard"),
-                },
-                n.createElement(
-                  o.he,
-                  { toolTipContent: (0, M.we)("#ToolTip_CopyLinkToClipboard") },
-                  n.createElement("img", {
-                    className: c().ClipboardIcon,
-                    src: N.A,
+              children: [
+                (0, n.jsx)("span", {
+                  className: c().LinkInputLabel,
+                  children: (0, i.we)(
+                    e.labelOverride
+                      ? e.labelOverride
+                      : "#EventDisplay_Share_Link",
+                  ),
+                }),
+                (0, n.jsx)("textarea", {
+                  className: c().LinkInput,
+                  ref: t,
+                  value: e.eventLink,
+                  readOnly: !0,
+                }),
+                document.queryCommandSupported("copy") &&
+                  (0, n.jsx)("div", {
+                    className: (0, a.A)(o().Button, o().Icon, c().LinkButton),
+                    title: (0, i.we)("#ToolTip_CopyLinkToClipboard"),
+                    children: (0, n.jsx)(l.he, {
+                      toolTipContent: (0, i.we)("#ToolTip_CopyLinkToClipboard"),
+                      children: (0, n.jsx)("img", {
+                        className: c().ClipboardIcon,
+                        src: L.A,
+                      }),
+                    }),
                   }),
-                ),
-              ),
-          ),
-          n.createElement("div", { ref: l, className: c().ClipboardText }, a),
-        );
+              ],
+            }),
+            (0, n.jsx)("div", {
+              ref: N,
+              className: c().ClipboardText,
+              children: s,
+            }),
+          ],
+        });
       };
     },
-    61985: (e, t, a) => {
+    61985: (e, t, s) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Z });
-      var n = a(34629),
-        M = a(90626),
-        s = a(22837),
-        i = a(95695),
-        r = a.n(i),
-        l = a(82477),
-        c = a(52038),
-        o = a(61859),
-        N = a(73745),
-        L = a(78327);
-      var u = a(10886),
-        T = a(19654),
-        D = a(3209),
-        E = a(9154),
-        j = a(32754),
-        w = a(51272),
-        S = a(14256),
-        y = a.n(S),
-        m = a(1909),
-        d = a(41735),
-        z = a.n(d),
-        C = a(75844),
-        I = a(79821),
-        g = a(56545),
-        x = a(51006),
-        p = a(17720),
-        O = a(37735),
-        v = a(9239),
-        A = a(68797),
-        k = a(22797),
-        h = a(94429),
-        U = a(86244),
-        b = a.n(U),
-        Q = a(41471);
-      const _ = (0, C.PA)((e) => {
-        const { appid: t, eventLink: a } = e,
-          n = M.useRef(null),
-          { data: s } = (0, Q.js)(L.iA.steamid),
-          [i, l] = M.useState(""),
-          [N, u] = M.useState(!1),
-          [T, D] = M.useState(""),
-          [j, w] = M.useState(!1);
-        M.useEffect(
+      s.r(t), s.d(t, { default: () => G });
+      var n = s(34629),
+        M = s(7850),
+        i = s(90626),
+        a = s(22837),
+        r = s(95695),
+        o = s.n(r),
+        N = s(82477),
+        c = s(52038),
+        l = s(61859),
+        L = s(73745),
+        j = s(78327);
+      var T = s(10886),
+        u = s(19654),
+        D = s(3209),
+        d = s(9154),
+        x = s(32754),
+        w = s(51272),
+        S = s(14256),
+        y = s.n(S),
+        z = s(1909),
+        C = s(41735),
+        I = s.n(C),
+        E = s(75844),
+        g = s(79821),
+        h = s(56545),
+        p = s(51006),
+        m = s(17720),
+        O = s(37735),
+        v = s(9239),
+        A = s(68797),
+        k = s(22797),
+        U = s(94429),
+        b = s(86244),
+        Q = s.n(b),
+        _ = s(41471);
+      const Y = (0, E.PA)((e) => {
+        const { appid: t, eventLink: s } = e,
+          n = i.useRef(null),
+          { data: a } = (0, _.js)(j.iA.steamid),
+          [r, N] = i.useState(""),
+          [L, T] = i.useState(!1),
+          [u, D] = i.useState(""),
+          [x, w] = i.useState(!1);
+        i.useEffect(
           () => () =>
             n.current &&
             n.current("ShareEventOnFriendsActivityFeed: unmounting"),
           [],
         );
-        const S = s ? s.avatar_url : null,
-          y = p.b.InitFromAccountID(L.iA.accountid),
-          m = async () => {
+        const S = a ? a.avatar_url : null,
+          y = m.b.InitFromAccountID(j.iA.accountid),
+          z = async () => {
             var e, M;
             n.current &&
               n.current("ShareEventOnFriendsActivityFeed: cancel previous...");
-            const s = z().CancelToken.source();
-            (n.current = s.cancel), u(!0);
-            let r = i;
-            0 != r.trim().length && (r += "\n\n"), (r += a);
-            const l =
-              L.TS.COMMUNITY_BASE_URL +
+            const i = I().CancelToken.source();
+            (n.current = i.cancel), T(!0);
+            let a = r;
+            0 != a.trim().length && (a += "\n\n"), (a += s);
+            const o =
+              j.TS.COMMUNITY_BASE_URL +
               "profiles/" +
               y.ConvertTo64BitString() +
               "/ajaxpostuserstatus";
             try {
-              if (L.TS.IN_STEAMUI) {
-                let e = g.w.Init(O.kV);
-                e.Body().set_appid(t), e.Body().set_status_text(r);
-                let a = await O.xt.PostStatusToFriends(
-                  x.Vw.CMInterface.GetServiceTransport(),
+              if (j.TS.IN_STEAMUI) {
+                let e = h.w.Init(O.kV);
+                e.Body().set_appid(t), e.Body().set_status_text(a);
+                let s = await O.xt.PostStatusToFriends(
+                  p.Vw.CMInterface.GetServiceTransport(),
                   e,
                 );
-                if (1 != a.GetEResult()) {
+                if (1 != s.GetEResult()) {
                   const e =
-                    (0, o.we)("#EventDisplay_Share_Failure") +
+                    (0, l.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
-                    a.GetEResult();
+                    s.GetEResult();
                   return (
-                    console.error(e, !s.token.reason),
-                    void (s.token.reason || D(e))
+                    console.error(e, !i.token.reason),
+                    void (i.token.reason || D(e))
                   );
                 }
               } else {
-                const a = new FormData();
-                a.append("appid", "" + t),
-                  a.append("status_text", r),
-                  a.append("sessionid", L.TS.SESSIONID);
-                const n = await z().post(l, a, { withCredentials: !0 });
+                const s = new FormData();
+                s.append("appid", "" + t),
+                  s.append("status_text", a),
+                  s.append("sessionid", j.TS.SESSIONID);
+                const n = await I().post(o, s, { withCredentials: !0 });
                 if (
                   200 != n.status ||
                   1 !=
@@ -183,130 +185,123 @@
                       : e.success)
                 ) {
                   const e =
-                    (0, o.we)("#EventDisplay_Share_Failure") +
+                    (0, l.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
                     (null === (M = null == n ? void 0 : n.data) || void 0 === M
                       ? void 0
                       : M.message);
-                  return console.error(e), void (s.token.reason || D(e));
+                  return console.error(e), void (i.token.reason || D(e));
                 }
               }
-              s.token.reason ||
-                (w(!0), D((0, o.we)("#EventDisplay_Share_Success")));
+              i.token.reason ||
+                (w(!0), D((0, l.we)("#EventDisplay_Share_Success")));
             } catch (e) {
               const t = (0, A.H)(e),
-                a =
-                  (0, o.we)("#EventDisplay_Share_Failure") +
+                s =
+                  (0, l.we)("#EventDisplay_Share_Failure") +
                   "\n\n" +
                   t.strErrorMsg;
-              s.token.reason || D(a), console.error(a);
+              i.token.reason || D(s), console.error(s);
             }
           };
-        return N
-          ? M.createElement(
-              E.o0,
-              {
-                strDescription: "",
-                strTitle: (0, o.we)("#Button_Share"),
-                onCancel: e.closeModal,
-                onOK: e.closeModal,
-                bAlertDialog: !0,
-              },
-              M.createElement(
-                "div",
-                { className: r().FlexColumnContainer },
-                M.createElement(
-                  "div",
-                  null,
-                  (0, o.we)("#EventDisplay_Share_OnMyStatus_Details"),
-                ),
-                M.createElement(
-                  "div",
-                  { className: b().Container },
-                  0 == (null == T ? void 0 : T.length)
-                    ? M.createElement(k.t, { position: "center" })
-                    : M.createElement("div", null, T),
-                  Boolean(j) &&
-                    M.createElement(
-                      "a",
-                      {
-                        href:
-                          L.TS.COMMUNITY_BASE_URL +
-                          "profiles/" +
-                          y.ConvertTo64BitString() +
-                          "/home",
-                        target: L.TS.IN_CLIENT ? void 0 : "_blank",
-                      },
-                      (0, o.we)("#EventDisplay_Share_OpenActivityFeed"),
+        return L
+          ? (0, M.jsx)(d.o0, {
+              strDescription: "",
+              strTitle: (0, l.we)("#Button_Share"),
+              onCancel: e.closeModal,
+              onOK: e.closeModal,
+              bAlertDialog: !0,
+              children: (0, M.jsxs)("div", {
+                className: o().FlexColumnContainer,
+                children: [
+                  (0, M.jsx)("div", {
+                    children: (0, l.we)(
+                      "#EventDisplay_Share_OnMyStatus_Details",
                     ),
-                ),
-              ),
-            )
-          : M.createElement(
-              E.o0,
-              {
-                strDescription: "",
-                strTitle: (0, o.we)("#Button_Share"),
-                onCancel: e.closeModal,
-                onOK: m,
-                strOKButtonText: (0, o.we)("#Button_Post"),
-              },
-              M.createElement(
-                "div",
-                { className: r().FlexColumnContainer },
-                M.createElement(
-                  "div",
-                  null,
-                  (0, o.we)("#EventDisplay_Share_OnMyStatus_Details"),
-                ),
-                M.createElement(
-                  "div",
-                  {
-                    className: (0, c.A)(b().Container, r().FlexColumnContainer),
-                  },
-                  M.createElement(
-                    "div",
-                    null,
-                    M.createElement("img", {
-                      className: b().SmallAvatar,
-                      src: S,
-                      "data-miniprofile": "s" + L.iA.steamid,
-                    }),
-                    M.createElement(
-                      "div",
-                      { className: (0, c.A)(r().FlexColumnContainer) },
-                      M.createElement(v.I, {
-                        strPlaceholder: (0, o.we)(
-                          "#EventDisplay_Share_OnMyStatus_Placeholder",
-                        ),
-                        fnGetCurText: () => i,
-                        fnOnTextChange: (e) => l(e.currentTarget.value),
-                        fnSetText: l,
-                        emoticonStore: e.emoticonStore,
-                        bSupportHTMLImport: !1,
-                        showFormatHelp: "UserStatusPublished",
-                        limitBBCode: I.iH,
-                        classNameForTextArea: b().ShareDescription,
-                        bEmbeddedInDialog: !0,
+                  }),
+                  (0, M.jsxs)("div", {
+                    className: Q().Container,
+                    children: [
+                      0 == (null == u ? void 0 : u.length)
+                        ? (0, M.jsx)(k.t, { position: "center" })
+                        : (0, M.jsx)("div", { children: u }),
+                      Boolean(x) &&
+                        (0, M.jsx)("a", {
+                          href:
+                            j.TS.COMMUNITY_BASE_URL +
+                            "profiles/" +
+                            y.ConvertTo64BitString() +
+                            "/home",
+                          target: j.TS.IN_CLIENT ? void 0 : "_blank",
+                          children: (0, l.we)(
+                            "#EventDisplay_Share_OpenActivityFeed",
+                          ),
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            })
+          : (0, M.jsx)(d.o0, {
+              strDescription: "",
+              strTitle: (0, l.we)("#Button_Share"),
+              onCancel: e.closeModal,
+              onOK: z,
+              strOKButtonText: (0, l.we)("#Button_Post"),
+              children: (0, M.jsxs)("div", {
+                className: o().FlexColumnContainer,
+                children: [
+                  (0, M.jsx)("div", {
+                    children: (0, l.we)(
+                      "#EventDisplay_Share_OnMyStatus_Details",
+                    ),
+                  }),
+                  (0, M.jsxs)("div", {
+                    className: (0, c.A)(Q().Container, o().FlexColumnContainer),
+                    children: [
+                      (0, M.jsxs)("div", {
+                        children: [
+                          (0, M.jsx)("img", {
+                            className: Q().SmallAvatar,
+                            src: S,
+                            "data-miniprofile": "s" + j.iA.steamid,
+                          }),
+                          (0, M.jsx)("div", {
+                            className: (0, c.A)(o().FlexColumnContainer),
+                            children: (0, M.jsx)(v.I, {
+                              strPlaceholder: (0, l.we)(
+                                "#EventDisplay_Share_OnMyStatus_Placeholder",
+                              ),
+                              fnGetCurText: () => r,
+                              fnOnTextChange: (e) => N(e.currentTarget.value),
+                              fnSetText: N,
+                              emoticonStore: e.emoticonStore,
+                              bSupportHTMLImport: !1,
+                              showFormatHelp: "UserStatusPublished",
+                              limitBBCode: g.iH,
+                              classNameForTextArea: Q().ShareDescription,
+                              bEmbeddedInDialog: !0,
+                            }),
+                          }),
+                        ],
                       }),
-                    ),
-                  ),
-                  M.createElement(
-                    "div",
-                    { className: b().ShareLink },
-                    M.createElement(h.fh, {
-                      text: a,
-                      event: null,
-                      partnerEventStore: e.partnerEventStore,
-                    }),
-                  ),
-                ),
-              ),
-            );
+                      (0, M.jsx)("div", {
+                        className: Q().ShareLink,
+                        children: (0, M.jsx)(U.fh, {
+                          text: s,
+                          event: null,
+                          partnerEventStore: e.partnerEventStore,
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            });
       });
-      var Y = a(68255),
-        B = a(5618);
-      class Z extends M.Component {
+      var B = s(68255),
+        Z = s(5618);
+      class G extends i.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -315,9 +310,9 @@
             });
         }
         ShareOnSteamActivityFeed() {
-          L.iA.logged_in
+          j.iA.logged_in
             ? this.setState({ bShareOnSteamDialog: !0 })
-            : L.TS.IN_CLIENT
+            : j.TS.IN_CLIENT
               ? console.log(
                   "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
                 )
@@ -327,180 +322,172 @@
           const {
             eventLink: e,
             sharePageUrls: t,
-            appid: a,
+            appid: s,
             closeModal: n,
-            emoticonStore: s,
-            partnerEventStore: i,
+            emoticonStore: i,
+            partnerEventStore: a,
           } = this.props;
           return this.state.bRequireLoginToShare
-            ? M.createElement(E.o0, {
-                strTitle: (0, o.we)("#EventDisplay_Share_NotLoggedIn"),
-                strDescription: (0, o.we)(
+            ? (0, M.jsx)(d.o0, {
+                strTitle: (0, l.we)("#EventDisplay_Share_NotLoggedIn"),
+                strDescription: (0, l.we)(
                   "#EventDisplay_Share_NotLoggedIn_Description",
                 ),
-                strOKButtonText: (0, o.we)("#MobileLogin_SignIn"),
+                strOKButtonText: (0, l.we)("#MobileLogin_SignIn"),
                 onCancel: this.props.closeModal,
-                onOK: () => (0, l.vg)(),
+                onOK: () => (0, N.vg)(),
               })
             : this.state.bShareOnSteamDialog
-              ? M.createElement(_, {
+              ? (0, M.jsx)(Y, {
                   eventLink: e,
-                  appid: a,
-                  emoticonStore: s,
-                  partnerEventStore: i,
+                  appid: s,
+                  emoticonStore: i,
+                  partnerEventStore: a,
                   closeModal: n,
                 })
-              : M.createElement(
-                  E.o0,
-                  {
-                    strDescription: "",
-                    strTitle: (0, o.we)("#Button_Share"),
-                    onCancel: this.props.closeModal,
-                    onOK: this.props.closeModal,
-                    bAlertDialog: !0,
-                    modalClassName: "EventDisplay_Share_Dialog",
-                  },
-                  M.createElement(G, {
+              : (0, M.jsx)(d.o0, {
+                  strDescription: "",
+                  strTitle: (0, l.we)("#Button_Share"),
+                  onCancel: this.props.closeModal,
+                  onOK: this.props.closeModal,
+                  bAlertDialog: !0,
+                  modalClassName: "EventDisplay_Share_Dialog",
+                  children: (0, M.jsx)(F, {
                     eventLink: e,
                     sharePageUrls: t,
                     fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
                   }),
-                );
+                });
         }
       }
-      (0, n.Cg)([N.oI], Z.prototype, "ShareOnSteamActivityFeed", null);
-      const G = (e) => {
+      (0, n.Cg)([L.oI], G.prototype, "ShareOnSteamActivityFeed", null);
+      const F = (e) => {
         const {
             eventLink: t,
-            sharePageUrls: a,
+            sharePageUrls: s,
             fnShareOnSteamActivityFeed: n,
           } = e,
-          i = (0, L.Y2)(),
-          [l, N] = (0, M.useState)((0, s.sf)(L.TS.LANGUAGE)),
-          E = (0, M.useMemo)(() => {
+          r = (0, j.Y2)(),
+          [N, L] = (0, i.useState)((0, a.sf)(j.TS.LANGUAGE)),
+          d = (0, i.useMemo)(() => {
             const e = new URL(t);
-            return e.searchParams.set("l", (0, s.Lg)(l)), e.href;
-          }, [l, t]);
-        return M.createElement(
-          "div",
-          {
-            className: (0, c.A)(
-              r().FlexColumnContainer,
-              y().share_controls_ctn,
-            ),
-          },
-          !i &&
-            M.createElement(
-              M.Fragment,
-              null,
-              M.createElement(
-                "div",
-                { className: y().ShareLanguagePicker },
-                M.createElement(
-                  Y.JU,
-                  { className: y().LanguageLabel },
-                  (0, o.we)("#EventDisplay_Share_LanguageLabel"),
-                ),
-                M.createElement(
-                  "div",
-                  null,
-                  M.createElement(m.Ng, {
-                    selectedLang: l,
-                    fnOnLanguageChanged: N,
+            return e.searchParams.set("l", (0, a.Lg)(N)), e.href;
+          }, [N, t]);
+        return (0, M.jsxs)("div", {
+          className: (0, c.A)(o().FlexColumnContainer, y().share_controls_ctn),
+          children: [
+            !r &&
+              (0, M.jsxs)(M.Fragment, {
+                children: [
+                  (0, M.jsxs)("div", {
+                    className: y().ShareLanguagePicker,
+                    children: [
+                      (0, M.jsx)(B.JU, {
+                        className: y().LanguageLabel,
+                        children: (0, l.we)(
+                          "#EventDisplay_Share_LanguageLabel",
+                        ),
+                      }),
+                      (0, M.jsx)("div", {
+                        children: (0, M.jsx)(z.Ng, {
+                          selectedLang: N,
+                          fnOnLanguageChanged: L,
+                        }),
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              M.createElement(
-                "div",
-                {
-                  className: (0, c.A)(
-                    r().FlexRowContainer,
-                    y().ShareButtonContainer,
-                  ),
-                  style: { flexWrap: "wrap" },
-                },
-                M.createElement(
-                  j.he,
-                  { toolTipContent: (0, o.we)("#EventDisplay_Share_OnSteam") },
-                  M.createElement(
-                    "div",
-                    {
-                      onClick: n,
-                      className: (0, c.A)(
-                        r().Button,
-                        y().ShareBtn,
-                        y().ShareSteamBtn,
-                      ),
-                    },
-                    M.createElement("img", {
-                      className: y().SteamIcon,
-                      src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=",
-                    }),
-                    M.createElement(
-                      "span",
-                      { style: { whiteSpace: "nowrap" } },
-                      (0, o.we)("#EventDisplay_Share_OnMyStatus"),
+                  (0, M.jsxs)("div", {
+                    className: (0, c.A)(
+                      o().FlexRowContainer,
+                      y().ShareButtonContainer,
                     ),
-                  ),
-                ),
-                M.createElement(
-                  j.he,
-                  {
-                    toolTipContent: (0, o.we)("#EventDisplay_Share_OnFaceBook"),
-                  },
-                  M.createElement(
-                    w.uU,
-                    { href: a.strFacebookUrl, className: y().ShareBtn },
-                    M.createElement("img", {
-                      className: (0, c.A)(r().Button),
-                      src: u.A,
-                    }),
-                  ),
-                ),
-                M.createElement(
-                  j.he,
-                  {
-                    toolTipContent: (0, o.we)("#EventDisplay_Share_OnTwitter"),
-                  },
-                  M.createElement(
-                    w.uU,
-                    { href: a.strTwitterUrl, className: y().ShareBtn },
-                    M.createElement("img", {
-                      className: (0, c.A)(r().Button),
-                      src: D.A,
-                    }),
-                  ),
-                ),
-                M.createElement(
-                  j.he,
-                  { toolTipContent: (0, o.we)("#EventDisplay_Share_OnReddit") },
-                  M.createElement(
-                    w.uU,
-                    { href: a.strRedditUrl, className: y().ShareBtn },
-                    M.createElement("img", {
-                      className: (0, c.A)(r().Button),
-                      src: T.A,
-                    }),
-                  ),
-                ),
-              ),
-              M.createElement("div", { className: r().Divider }),
-            ),
-          M.createElement(B.V, { eventLink: E }),
-        );
+                    style: { flexWrap: "wrap" },
+                    children: [
+                      (0, M.jsx)(x.he, {
+                        toolTipContent: (0, l.we)(
+                          "#EventDisplay_Share_OnSteam",
+                        ),
+                        children: (0, M.jsxs)("div", {
+                          onClick: n,
+                          className: (0, c.A)(
+                            o().Button,
+                            y().ShareBtn,
+                            y().ShareSteamBtn,
+                          ),
+                          children: [
+                            (0, M.jsx)("img", {
+                              className: y().SteamIcon,
+                              src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=",
+                            }),
+                            (0, M.jsx)("span", {
+                              style: { whiteSpace: "nowrap" },
+                              children: (0, l.we)(
+                                "#EventDisplay_Share_OnMyStatus",
+                              ),
+                            }),
+                          ],
+                        }),
+                      }),
+                      (0, M.jsx)(x.he, {
+                        toolTipContent: (0, l.we)(
+                          "#EventDisplay_Share_OnFaceBook",
+                        ),
+                        children: (0, M.jsx)(w.uU, {
+                          href: s.strFacebookUrl,
+                          className: y().ShareBtn,
+                          children: (0, M.jsx)("img", {
+                            className: (0, c.A)(o().Button),
+                            src: T.A,
+                          }),
+                        }),
+                      }),
+                      (0, M.jsx)(x.he, {
+                        toolTipContent: (0, l.we)(
+                          "#EventDisplay_Share_OnTwitter",
+                        ),
+                        children: (0, M.jsx)(w.uU, {
+                          href: s.strTwitterUrl,
+                          className: y().ShareBtn,
+                          children: (0, M.jsx)("img", {
+                            className: (0, c.A)(o().Button),
+                            src: D.A,
+                          }),
+                        }),
+                      }),
+                      (0, M.jsx)(x.he, {
+                        toolTipContent: (0, l.we)(
+                          "#EventDisplay_Share_OnReddit",
+                        ),
+                        children: (0, M.jsx)(w.uU, {
+                          href: s.strRedditUrl,
+                          className: y().ShareBtn,
+                          children: (0, M.jsx)("img", {
+                            className: (0, c.A)(o().Button),
+                            src: u.A,
+                          }),
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, M.jsx)("div", { className: o().Divider }),
+                ],
+              }),
+            (0, M.jsx)(Z.V, { eventLink: d }),
+          ],
+        });
       };
     },
-    96715: (e, t, a) => {
+    96715: (e, t, s) => {
       "use strict";
-      a.d(t, { A: () => n });
+      s.d(t, { A: () => n });
       const n =
         "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDE4MDEuNSAxNDAwIDE0MDkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAxODAxLjUgMTQwMCAxNDA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggaWQ9Imljb25tb25zdHItbGluay0xXzFfIiBmaWxsPSIjRkZGRkZGIiBkPSJNMzYyLjM1MywyMzEwLjU4OGMxNDguMjM1LTE0OC4yMzUsMzg3LjA2LTE0OC4yMzUsNTI3LjA2LDAKCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NAoJYy00MS4xNzcsOC4yMzUtNzQuMTE4LDI0LjcwNi05OC44MjMsNDkuNDExbC0yNDcuMDU5LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy03NC4xMTgsMTk3LjY0NiwwLDI4MAoJYzc0LjExOCw3NC4xMTcsMTk3LjY0Nyw3NC4xMTcsMjgwLDBsMCwwbDc0LjExOC03NC4xMThjNzQuMTE3LDI0LjcwNiwxNDguMjM1LDQxLjE3NywyMjIuMzUzLDMyLjk0MWwtMTcyLjk0LDE3Mi45NDEKCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4egoJIE03NTcuNjQ2LDE5MDcuMDU5TDU5Mi45NDEsMjA4MGM3NC4xMTctOC4yMzUsMTQ4LjIzNSw4LjIzNSwyMTQuMTE3LDMyLjk0MWw3NC4xMTgtNzQuMTE4Yzc0LjExNy03NC4xMTcsMTk3LjY0Ni03NC4xMTcsMjgwLDAKCWM4Mi4zNTMsNzQuMTE4LDc0LjExNywxOTcuNjQ3LDAsMjgwbC0yNTUuMjk0LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy0xOTcuNjQ3LDc0LjExNy0yODAsMAoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0NwoJYzE0OC4yMzUsMTQ4LjIzNSwzODcuMDU5LDE0OC4yMzUsNTI3LjA2LDBsMCwwbDI0Ny4wNTktMjQ3LjA2YzE0OC4yMzUtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5CglTOTA1Ljg4MywxNzY3LjA1OSw3NTcuNjQ2LDE5MDcuMDU5TDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OXoiLz4KPC9zdmc+Cg==";
     },
-    19654: (e, t, a) => {
+    19654: (e, t, s) => {
       "use strict";
-      a.d(t, { A: () => n });
+      s.d(t, { A: () => n });
       const n =
-        a.p +
+        s.p +
         "images/applications/community/reddit_large.png?v=valveisgoodatcaching";
     },
   },

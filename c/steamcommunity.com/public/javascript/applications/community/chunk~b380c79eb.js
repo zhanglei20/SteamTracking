@@ -276,65 +276,68 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
-            variant: _ = "default",
-            size: __webpack_require__ = "2",
-            radius: _,
-            focusable: _ = !0,
-            hoverable: _ = !0,
-            clickable: _ = !0,
-            className: _,
             children: _,
-            beforeContent: _,
+            beforeContent: __webpack_require__,
             afterContent: _,
             hasValue: _,
             ..._
           } = _,
-          _ = "underline" === _ ? "none" : _;
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            radius: _,
-            className: _()(
-              _.ControlBox,
-              _ && _.Focusable,
-              _ && _.Hoverable,
-              _ && _.Clickable,
-              _[`Variant-${_}`],
-              _[`Size-${__webpack_require__}`],
-              _,
-            ),
-            align: "center",
-            "data-has-value": !!_,
-          },
-          _ &&
-            _.createElement(
-              _._,
+          _ = (function (_) {
+            const {
+                variant: _ = "default",
+                size: __webpack_require__ = "2",
+                radius: _,
+                focusable: _ = !0,
+                hoverable: _ = !0,
+                clickable: _ = !0,
+                className: _,
+                ..._
+              } = _,
+              _ = "underline" === _ ? "none" : _;
+            return (0, _._)(
               {
-                paddingRight: "2",
+                ..._,
+                radius: _,
+                className: _()(
+                  _.ControlBox,
+                  _ && _.Focusable,
+                  _ && _.Hoverable,
+                  _ && _.Clickable,
+                  _[`Variant-${_}`],
+                  _[`Size-${__webpack_require__}`],
+                  _,
+                ),
               },
-              _,
-            ),
-          _.createElement(
-            _._,
-            {
+              _._,
+            );
+          })(_);
+        return (0, _.jsxs)(_._, {
+          ..._,
+          align: "center",
+          "data-has-value": !!_,
+          children: [
+            __webpack_require__ &&
+              (0, _.jsx)(_._, {
+                paddingRight: "2",
+                children: __webpack_require__,
+              }),
+            (0, _.jsx)(_._, {
               flexGrow: "1",
               minWidth: "0",
-            },
-            _,
-          ),
-          _ &&
-            _.createElement(
-              _._,
-              {
+              children: _,
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
                 paddingLeft: "2",
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -343,6 +346,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -357,25 +361,22 @@
           getOptionLabel: __webpack_require__ = (_) => _,
           ..._
         } = _;
-        return _.createElement(
-          _.Root,
-          {
-            ..._,
-          },
-          _.map((_) =>
-            _.createElement(
+        return (0, _.jsx)(_.Root, {
+          ..._,
+          children: _.map((_) =>
+            (0, _.jsx)(
               _.Item,
               {
                 value: _,
-                key: _,
+                children: __webpack_require__(_),
               },
-              __webpack_require__(_),
+              _,
             ),
           ),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           className: _.Indicator,
           radius: _.radius,
         });
@@ -405,19 +406,16 @@
           _ = _ === _,
           _ = _ ? void 0 : () => _(_),
           _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
-        return _.createElement(
-          _._,
-          {
-            justify: "center",
-            align: "center",
-            radius: _,
-            ref: _,
-            onClick: _,
-            "data-selected": _ ? "true" : "false",
-            className: _()(_.Item, _ && _[`Size-${_}`]),
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          justify: "center",
+          align: "center",
+          radius: _,
+          ref: _,
+          onClick: _,
+          "data-selected": _ ? "true" : "false",
+          className: _()(_.Item, _ && _[`Size-${_}`]),
+          children: _,
+        });
       }),
         (_.Root = function (_) {
           const {
@@ -458,67 +456,60 @@
               }),
               [_, _, _, _, __webpack_require__, _],
             );
-          return _.createElement(
-            _._,
-            {
-              clickable: !1,
-              hoverable: !1,
-              focusable: !1,
-              variant: _,
-              radius: __webpack_require__,
-              size: _,
-              className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
-              tabIndex: 0,
-              onKeyDown: (_) => {
-                let _ = 0;
-                switch (_.key) {
-                  case " ":
-                  case "Enter":
-                  case "ArrowRight":
-                    _ = 1;
-                    break;
-                  case "ArrowLeft":
-                    _ = -1;
+          return (0, _.jsx)(_._, {
+            clickable: !1,
+            hoverable: !1,
+            focusable: !1,
+            variant: _,
+            radius: __webpack_require__,
+            size: _,
+            className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
+            tabIndex: 0,
+            onKeyDown: (_) => {
+              let _ = 0;
+              switch (_.key) {
+                case " ":
+                case "Enter":
+                case "ArrowRight":
+                  _ = 1;
+                  break;
+                case "ArrowLeft":
+                  _ = -1;
+              }
+              if (_) {
+                const _ = Array.from(Object.values(_)).sort(_);
+                let _;
+                if (null === _) _ = _ > 0 ? 0 : _.length - 1;
+                else {
+                  const _ = _[_],
+                    _ = __webpack_require__.findIndex((_) => _ === _);
+                  (0, _._)(
+                    "number" == typeof _,
+                    "Could not find current segmented value position",
+                  ),
+                    (_ = _ + _);
                 }
-                if (_) {
-                  const _ = Array.from(Object.values(_)).sort(_);
-                  let _;
-                  if (null === _) _ = _ > 0 ? 0 : _.length - 1;
-                  else {
-                    const _ = _[_],
-                      _ = __webpack_require__.findIndex((_) => _ === _);
-                    (0, _._)(
-                      "number" == typeof _,
-                      "Could not find current segmented value position",
-                    ),
-                      (_ = _ + _);
-                  }
-                  const _ = _[_ < 0 ? _.length + _ : _ % _.length],
-                    _ = Object.keys(_).find((_) => _[_] === _);
-                  "string" != typeof _
-                    ? console.error("Could not find next segmeneted value")
-                    : (_(_), _.stopPropagation(), _.preventDefault());
-                }
-              },
+                const _ = _[_ < 0 ? _.length + _ : _ % _.length],
+                  _ = Object.keys(_).find((_) => _[_] === _);
+                "string" != typeof _
+                  ? console.error("Could not find next segmeneted value")
+                  : (_(_), _.stopPropagation(), _.preventDefault());
+              }
             },
-            _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.SegmentedControl,
-                },
-                _,
-                null !== _ &&
-                  _.createElement(_, {
-                    radius: __webpack_require__,
-                  }),
-              ),
-            ),
-          );
+            children: (0, _.jsx)(_.Provider, {
+              value: _,
+              children: (0, _.jsxs)("div", {
+                className: _.SegmentedControl,
+                children: [
+                  _,
+                  null !== _ &&
+                    (0, _.jsx)(_, {
+                      radius: __webpack_require__,
+                    }),
+                ],
+              }),
+            }),
+          });
         });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -534,14 +525,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = (0, _._)(
-          {
-            ..._,
-            className: _()(_.Box, _.className),
-          },
-          _,
-        );
-        return _.createElement("div", {
+        const { _: _ = "div", ref: __webpack_require__, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, _.className),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: __webpack_require__,
           ..._,
         });
       }
@@ -563,20 +557,21 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = (0, _._)(
-          {
-            ..._,
-            className: _()(_.className, _.Flex),
-          },
-          _,
-        );
-        return _.createElement(
-          _._,
-          null,
-          _.createElement("div", {
+        const { _: _ = "div", ref: __webpack_require__, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.className, _.Flex),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_, {
+            ref: __webpack_require__,
             ..._,
           }),
-        );
+        });
       }
       const _ = [
         ..._._,
@@ -1061,6 +1056,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -1073,16 +1069,13 @@
               ? void 0
               : _.ref,
           );
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.cloneElement(__webpack_require__, {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: _.cloneElement(__webpack_require__, {
             ...__webpack_require__.props,
             ref: _,
           }),
-        );
+        });
       }
     },
   },

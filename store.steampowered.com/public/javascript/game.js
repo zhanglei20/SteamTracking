@@ -564,6 +564,11 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 	{
 		topics.push( $J( elem ).val() );
 	});
+	// hardware
+	let hardwareOS = $J( 'input[name="review_hardware_os"]:checked' ).val();
+	let hardwareCPU = $J( 'input[name="review_hardware_cpu_name"]:checked' ).val();
+	let hardwareGPU = $J( 'input[name="review_hardware_gfx_adapter_description"]:checked' ).val();
+	let hardwareDeviceType = $J( 'input[name="review_hardware_gaming_device_type"]:checked' ).val();
 
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
@@ -586,7 +591,11 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 		'topics' : topics,
 		'filter_offtopic_activity' : filterOfftopicActivity,
 		'summary_num_positive_reviews' : summaryNumPositiveReviews,
-		'summary_num_reviews' : summaryNumReviews
+		'summary_num_reviews' : summaryNumReviews,
+		'hardware_os' : hardwareOS,
+		'hardware_cpu' : hardwareCPU,
+		'hardware_gpu' : hardwareGPU,
+		'hardware_device_type' : hardwareDeviceType,
 	}).done( function( data ) {
 
 		RecordAJAXPageView( this.url );

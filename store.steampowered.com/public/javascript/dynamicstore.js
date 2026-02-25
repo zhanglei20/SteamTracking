@@ -320,7 +320,7 @@ GDynamicStore = {
 		if ( strRemove.length > 0 )
 		{
 			var strNewURL = window.location.href.replace( strRemove, '' );
-			window.history.replaceState( history.state, null, strNewURL );
+			ReplaceHistoryURL( strNewURL );
 		}
 	},
 
@@ -353,7 +353,7 @@ GDynamicStore = {
 				var strParam = rgNewParams[i];
 				strNewURL += ( i == 0 ? '?' : '&' ) + strParam;
 			}
-			window.history.replaceState( history.state, null, strNewURL );
+			ReplaceHistoryURL( strNewURL );
 		}
 	},
 
@@ -367,7 +367,7 @@ GDynamicStore = {
 			detachedAnchor.href = rel.attr( "href" );
 			if ( window.location.pathname != detachedAnchor.pathname ) {
 				// URL portion does not match canonical URL; rewrite it, preserving query params and hash
-				window.history.replaceState( null, null, rel[0].href + window.location.search + window.location.hash );
+				ReplaceHistoryURL( rel[0].href + window.location.search + window.location.hash );
 			}
 		}
 	},

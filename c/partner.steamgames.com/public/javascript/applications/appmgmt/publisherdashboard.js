@@ -257,6 +257,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef((_, _) => {
         const {
@@ -267,52 +268,40 @@
           beta: _,
           headerElement: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.Section,
-            ref: _,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.Section,
+          ref: _,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.Header,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              __webpack_require__,
-              null != _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _.Count,
-                  },
-                  _,
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _.BetaCallout,
-                  },
-                  (0, _._)("#NewToolTitleSuffix_Beta"),
-                ),
-            ),
-            _,
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.Title,
+                  children: [
+                    __webpack_require__,
+                    null != _ &&
+                      (0, _.jsx)("span", {
+                        className: _.Count,
+                        children: _,
+                      }),
+                    _ &&
+                      (0, _.jsx)("span", {
+                        className: _.BetaCallout,
+                        children: (0, _._)("#NewToolTitleSuffix_Beta"),
+                      }),
+                  ],
+                }),
+                _,
+              ],
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _.Body,
-              },
-              _,
-            ),
-          _,
-        );
+                children: _,
+              }),
+            _,
+          ],
+        });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -325,19 +314,13 @@
             year: "numeric",
             month: "short",
           }).format(_);
-        return _.createElement(
-          "div",
-          {
-            className: _.MonthPickerContainer,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.MonthPickerDate,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _.MonthPickerContainer,
+          children: (0, _.jsx)("div", {
+            className: _.MonthPickerDate,
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -443,38 +426,37 @@
                 _ && _ && _.Hovered,
               );
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: _,
                   date: _,
                   daysEvents: _,
                   tooltipDateFormat: _,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _,
                     onClick: () => _(_),
                     ref: _[7 * _ + _],
-                  },
-                  _.getDate(),
-                ),
+                    children: _.getDate(),
+                  }),
+                },
+                _,
               ),
             );
           }
           _.push(
-            _.createElement(
+            (0, _.jsx)(
               "div",
               {
-                key: _,
                 className: _.Week,
+                children: _,
               },
               _,
             ),
           );
         }
-        return _.createElement(_.Fragment, null, _);
+        return (0, _.jsx)(_.Fragment, {
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -483,33 +465,32 @@
           tooltipDateFormat: _,
           children: _,
         } = _;
-        if (!__webpack_require__) return _.createElement(_.Fragment, null, _);
-        const _ = _.createElement(
-          "div",
-          {
-            className: _.DayTooltipContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        if (!__webpack_require__)
+          return (0, _.jsx)(_.Fragment, {
+            children: _,
+          });
+        const _ = (0, _.jsxs)("div", {
+          className: _.DayTooltipContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _.DayTooltipDate,
-            },
-            _.format(_),
-          ),
-          __webpack_require__.map((_) =>
-            _.createElement(_, {
-              key: _._,
-              event: _,
+              children: _.format(_),
             }),
-          ),
-        );
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-          },
-          _,
-        );
+            __webpack_require__.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  event: _,
+                },
+                _._,
+              ),
+            ),
+          ],
+        });
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          children: _,
+        });
       }
       function _(_) {
         const { event: _ } = _;
@@ -525,22 +506,18 @@
           _.useEffect(() => {
             _.current?.style.setProperty("--event-color", _.color);
           }, [_.color]),
-          _.createElement(
-            "div",
-            {
-              className: _.DayTooltipEvent,
-              ref: _,
-            },
-            _.title,
-            _.valveOnly &&
-              _.createElement(
-                "span",
-                {
+          (0, _.jsxs)("div", {
+            className: _.DayTooltipEvent,
+            ref: _,
+            children: [
+              _.title,
+              _.valveOnly &&
+                (0, _.jsx)("span", {
                   className: _.ValveOnly,
-                },
-                " (VO)",
-              ),
-          )
+                  children: " (VO)",
+                }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -550,22 +527,19 @@
           _ = [...Array(7).keys()].map((_) =>
             _.format(new Date(2024, 0, _ + 7)),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.Week,
-          },
-          __webpack_require__.map((_) =>
-            _.createElement(
+        return (0, _.jsx)("div", {
+          className: _.Week,
+          children: __webpack_require__.map((_) =>
+            (0, _.jsx)(
               "div",
               {
-                key: _,
                 className: _.DayName,
+                children: _,
               },
               _,
             ),
           ),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1854,117 +1828,102 @@
             include_release: !0,
           }),
           _ = !!__webpack_require__?.GetName();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            app: _,
-            storeItem: __webpack_require__,
-            hasStoreItem: _,
-          }),
-          _.createElement(_, {
-            app: _,
-            hasStoreItem: _,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              app: _,
+              storeItem: __webpack_require__,
+              hasStoreItem: _,
+            }),
+            (0, _.jsx)(_, {
+              app: _,
+              hasStoreItem: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { app: _, storeItem: __webpack_require__, hasStoreItem: _ } = _,
           _ = _._.PARTNER_BASE_URL + "apps/landing/" + _.appid,
           _ = _ ? __webpack_require__.GetName() : _.name,
           _ = __webpack_require__?.GetAssets().GetHeaderURL();
-        return _.createElement(
-          _._,
-          {
-            hasImage: !!_,
-          },
-          _.createElement(_._, {
-            imageUrl: _,
-            url: _,
-          }),
-          _.createElement(
-            _._,
-            {
-              hasImage: !!_,
-            },
-            _.createElement(_._, {
-              text: _,
+        return (0, _.jsxs)(_._, {
+          hasImage: !!_,
+          children: [
+            (0, _.jsx)(_._, {
+              imageUrl: _,
               url: _,
             }),
-            _.createElement(
-              "div",
-              {
-                className: _.ReleaseInfoCtn,
-              },
-              _.releaserequest &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ReleaseInfoRow,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ReleaseDateLabel,
-                    },
-                    (0, _._)("#App_Landing_SpecifiedReleaseDate"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ReleaseDateText,
-                    },
-                    _(_.releaserequest.release_date),
-                  ),
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ReleaseInfoRow,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ReleaseDateLabel,
-                    },
-                    (0, _._)("#App_Landing_CustomersSeeReleaseDate"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ReleaseDateText,
-                    },
-                    __webpack_require__.GetFormattedSteamReleaseDate(),
-                  ),
-                ),
-              _.earliestadvancedaccessdate > 0 &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.ReleaseInfoRow, _.AdvancedAccess),
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ReleaseDateLabel,
-                    },
-                    (0, _._)("#App_Landing_AdvancedAccessDate"),
-                    _.createElement(_._, {
-                      tooltip: (0, _._)("#App_Landing_AdvancedAccessDate_ttip"),
-                    }),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ReleaseDateText,
-                    },
-                    _(_.earliestadvancedaccessdate),
-                  ),
-                ),
-            ),
-          ),
-        );
+            (0, _.jsxs)(_._, {
+              hasImage: !!_,
+              children: [
+                (0, _.jsx)(_._, {
+                  text: _,
+                  url: _,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.ReleaseInfoCtn,
+                  children: [
+                    _.releaserequest &&
+                      (0, _.jsxs)("div", {
+                        className: _.ReleaseInfoRow,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.ReleaseDateLabel,
+                            children: (0, _._)(
+                              "#App_Landing_SpecifiedReleaseDate",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.ReleaseDateText,
+                            children: _(_.releaserequest.release_date),
+                          }),
+                        ],
+                      }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _.ReleaseInfoRow,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.ReleaseDateLabel,
+                            children: (0, _._)(
+                              "#App_Landing_CustomersSeeReleaseDate",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.ReleaseDateText,
+                            children:
+                              __webpack_require__.GetFormattedSteamReleaseDate(),
+                          }),
+                        ],
+                      }),
+                    _.earliestadvancedaccessdate > 0 &&
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_.ReleaseInfoRow, _.AdvancedAccess),
+                        children: [
+                          (0, _.jsxs)("span", {
+                            className: _.ReleaseDateLabel,
+                            children: [
+                              (0, _._)("#App_Landing_AdvancedAccessDate"),
+                              (0, _.jsx)(_._, {
+                                tooltip: (0, _._)(
+                                  "#App_Landing_AdvancedAccessDate_ttip",
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.ReleaseDateText,
+                            children: _(_.earliestadvancedaccessdate),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         return _
@@ -1985,40 +1944,32 @@
             "prerelease" == _.releasestate && _.Prerelease,
             "released" == _.releasestate && _.Released,
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.ItemReleaseInfoContainer,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.ItemReleaseStatusCtn,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: _.ItemReleaseInfoContainer,
+          children: (0, _.jsxs)("div", {
+            className: _.ItemReleaseStatusCtn,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ItemReleaseStatusLabel,
-              },
-              (0, _._)("#Dashboard_UpcomingEvents_ReleaseStatusLabel"),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "span",
-                {
-                  className: _,
-                },
-                _.sText,
-              ),
-              _.sTooltip &&
-                _.createElement(_._, {
-                  tooltip: _.sTooltip,
-                }),
-            ),
-          ),
-        );
+                children: (0, _._)(
+                  "#Dashboard_UpcomingEvents_ReleaseStatusLabel",
+                ),
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _,
+                    children: _.sText,
+                  }),
+                  _.sTooltip &&
+                    (0, _.jsx)(_._, {
+                      tooltip: _.sTooltip,
+                    }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       !(function (_) {
         (_[(_.BuildReview = 0)] = "BuildReview"),
@@ -2412,28 +2363,28 @@
       function _(_) {
         const { eventData: _ } = _;
         return _(_(), _.m_plan) && "nextfest" == _.m_plan.type
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               eventData: _,
             })
           : "nextfest" == _.m_plan.type || "themesale" === _.m_plan.type
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 eventData: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 eventData: _,
               });
       }
       function _(_) {
         const { eventData: _ } = _;
         return _(_(), _.m_plan) && "nextfest" == _.m_plan.type
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               eventData: _,
             })
           : "nextfest" == _.m_plan.type || "themesale" === _.m_plan.type
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 eventData: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 eventData: _,
               });
       }
@@ -2483,60 +2434,50 @@
             _.discount_event_id && !_.m_assetInput?.enable_input
               ? `${_._.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_.discount_event_id}`
               : void 0,
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
                 url: _,
-              },
-              (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
-              ),
-            ),
-            _ &&
-              _.createElement(
-                _._,
-                {
-                  url: _,
-                },
-                (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
+                children: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
                 ),
-              ),
-            _.createElement(
-              _._,
-              {
+              }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  url: _,
+                  children: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
+                  ),
+                }),
+              (0, _.jsx)(_._, {
                 url: _.asset_kit_url,
-              },
-              (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_OptIn_Button_AssetKit",
-              ),
-            ),
-          ),
+                children: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_OptIn_Button_AssetKit",
+                ),
+              }),
+            ],
+          }),
           _ = (0, _._)(_);
-        return _.createElement(
-          _._,
-          {
-            dimmed: _.dimmed,
-            backgroundColor: _,
-            hasImage: !!_,
-          },
-          _.createElement(_, {
-            warnings: _,
-            eventName: _.title,
-            startTime: _.start_date,
-            endTime: _.end_date,
-            eventUrl: _,
-            imageUrl: _,
-            additionalButtons: _,
-            bigName: _,
-          }),
-          _.createElement(_, {
-            eventData: _,
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          dimmed: _.dimmed,
+          backgroundColor: _,
+          hasImage: !!_,
+          children: [
+            (0, _.jsx)(_, {
+              warnings: _,
+              eventName: _.title,
+              startTime: _.start_date,
+              endTime: _.end_date,
+              eventUrl: _,
+              imageUrl: _,
+              additionalButtons: _,
+              bigName: _,
+            }),
+            (0, _.jsx)(_, {
+              eventData: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { eventData: _ } = _,
@@ -2558,7 +2499,7 @@
           );
         return (
           (_ ??= !_ && _?.GetImageURL("capsule", _, _._.capsule_main)),
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             imageUrl: _,
           })
         );
@@ -2588,27 +2529,22 @@
               1e3 * _.m_optIn.description.definition.optin_deadline_date,
             ),
           );
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ItemDeadlineHeaderText,
-              },
-              (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_Deadline_RegistrationCloses",
-                _,
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_Deadline_RegistrationCloses_Description",
-              ),
-            ),
-          );
+                children: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_Deadline_RegistrationCloses",
+                  _,
+                ),
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_Deadline_RegistrationCloses_Description",
+                ),
+              }),
+            ],
+          });
         }
         !(function (_) {
           const _ = _(),
@@ -2636,7 +2572,7 @@
                   ),
                 );
                 (_.getElement = () =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     eventData: _,
                   })),
                   (_ = __webpack_require__.AddAdditionalEvent(_));
@@ -2676,31 +2612,30 @@
             [_?.rgEligibleApps, _?.rgRegisteredApps],
           ),
           _ = _?.length > 0;
-        return _.createElement(
-          _._,
-          {
-            buttonPosition: _ ? "bottom" : void 0,
-            backgroundImageUrl: _,
-            backgroundColor: _,
-            dimmed: _.dimmed,
-          },
-          _.createElement(_, {
-            warnings: _,
-            eventName: _.title,
-            eventDescription: _,
-            startTime: _,
-            endTime: _,
-            eventUrl: _,
-            inlineDate: !0,
-          }),
-          _ &&
-            _.createElement(_, {
-              eventData: _,
+        return (0, _.jsxs)(_._, {
+          buttonPosition: _ ? "bottom" : void 0,
+          backgroundImageUrl: _,
+          backgroundColor: _,
+          dimmed: _.dimmed,
+          children: [
+            (0, _.jsx)(_, {
+              warnings: _,
+              eventName: _.title,
+              eventDescription: _,
+              startTime: _,
+              endTime: _,
               eventUrl: _,
-              optIn: _,
-              invitedAndRegisteredApps: _,
+              inlineDate: !0,
             }),
-        );
+            _ &&
+              (0, _.jsx)(_, {
+                eventData: _,
+                eventUrl: _,
+                optIn: _,
+                invitedAndRegisteredApps: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { eventData: _ } = _,
@@ -2712,7 +2647,7 @@
             _?.description.opt_in_name &&
             _ &&
             (0, _._)(_?.description.opt_in_name, _, _);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           imageUrl: _,
         });
       }
@@ -2770,7 +2705,7 @@
                     ),
                   );
                   (_.getElement = () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       eventData: _,
                       appId: _.appid,
                       registerByDate: _,
@@ -2797,7 +2732,7 @@
                     ),
                   );
                   (_.getElement = () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       eventData: _,
                       appId: _.appid,
                       registerByDate: _,
@@ -2824,7 +2759,7 @@
                     ),
                   );
                   (_.getElement = () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       eventData: _,
                       appId: _.appid,
                       registerByDate: _,
@@ -2913,349 +2848,277 @@
           }, [_, _, _, _._, _.isLoading, _.isSuccess]),
           _.isLoading)
         )
-          return _.createElement(_._, null);
+          return (0, _.jsx)(_._, {});
         if (0 == _ && !_ && !_._.startsWith("fakerecap_")) return;
         const _ = `${_._.PARTNER_BASE_URL}optin/survey/${_.opt_in_id}/${_}`,
           _ = new Intl.NumberFormat((0, _._)()),
-          _ = _.createElement(
-            "a",
-            {
-              href: `${_._.PARTNER_BASE_URL}doc/gettingstarted/managing_users`,
-              target: "_blank",
-            },
-            (0, _._)(
+          _ = (0, _.jsx)("a", {
+            href: `${_._.PARTNER_BASE_URL}doc/gettingstarted/managing_users`,
+            target: "_blank",
+            children: (0, _._)(
               "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_ViewFinancials",
             ),
-          );
-        return _.createElement(
-          "div",
-          {
-            className: _.RecapItemContainer,
-          },
-          _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapItemImage,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href: _,
-                      target: "_blank",
-                    },
-                    _.createElement("img", {
-                      src: _,
+          });
+        return (0, _.jsxs)("div", {
+          className: _.RecapItemContainer,
+          children: [
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RecapItemImage,
+                      children: (0, _.jsx)(_._, {
+                        href: _,
+                        target: "_blank",
+                        children: (0, _.jsx)("img", {
+                          src: _,
+                        }),
+                      }),
                     }),
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _.RecapTextSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapTextHeader,
-                  },
-                  (0, _._)(
-                    "#Dashboard_UpcomingEvents_RecapNextFest_TextHeader",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapTextSummary,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RecapTextGameDescription,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.RecapTextGameCount,
-                      },
-                      (0, _._)(
-                        "#Dashboard_UpcomingEvents_RecapNextFest_TextGameCount",
-                        _,
-                        _.createElement("b", null),
-                      ),
-                    ),
-                    _.length > 0 &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.RecapTextGameAdditionalCount,
-                        },
-                        (0, _._)(
-                          "#Dashboard_UpcomingEvents_RecapNextFest_PartialStats_TextGameCount",
-                          _.length,
-                          _,
+                  (0, _.jsxs)("div", {
+                    className: _.RecapTextSection,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapTextHeader,
+                        children: (0, _._)(
+                          "#Dashboard_UpcomingEvents_RecapNextFest_TextHeader",
                         ),
-                      ),
-                  ),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RecapTextSummary,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.RecapTextGameDescription,
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: _.RecapTextGameCount,
+                                children: (0, _._)(
+                                  "#Dashboard_UpcomingEvents_RecapNextFest_TextGameCount",
+                                  _,
+                                  (0, _.jsx)("b", {}),
+                                ),
+                              }),
+                              _.length > 0 &&
+                                (0, _.jsx)("div", {
+                                  className: _.RecapTextGameAdditionalCount,
+                                  children: (0, _._)(
+                                    "#Dashboard_UpcomingEvents_RecapNextFest_PartialStats_TextGameCount",
+                                    _.length,
+                                    _,
+                                  ),
+                                }),
+                            ],
+                          }),
+                          _ &&
+                            (0, _.jsx)(_, {
+                              summaryURL: _,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.RecapBox, _.Plays),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapBoxCount,
+                        children: _.format(_.nDemoPlayers),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RecapBoxDesc,
+                        children: [
+                          (0, _._)("#Recap_NextFest_TotalPlayers"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)(
+                              "#Recap_NextFest_TotalPlayers_ttip",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.RecapBox, _.Conversions),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapBoxCount,
+                        children: _.format(_.nConversions),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RecapBoxDesc,
+                        children: [
+                          (0, _._)("#Recap_NextFest_PlayerWishlist"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)(
+                              "#Recap_NextFest_PlayerWishlist_ttip",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.RecapBox, _.Wishlists),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapBoxCount,
+                        children: _.format(_.nWishlists),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RecapBoxDesc,
+                        children: [
+                          (0, _._)("#Recap_NextFest_TotalWishlist"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)(
+                              "#Recap_NextFest_TotalWishlist_ttip",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
                   _ &&
-                    _.createElement(_, {
-                      summaryURL: _,
+                    (0, _.jsx)("div", {
+                      className: _.RecapItemImage,
+                      children: (0, _.jsx)(_._, {
+                        href: _,
+                        target: "_blank",
+                        children: (0, _.jsx)("img", {
+                          src: _,
+                        }),
+                      }),
                     }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.RecapBox, _.Plays),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxCount,
-                  },
-                  _.format(_.nDemoPlayers),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxDesc,
-                  },
-                  (0, _._)("#Recap_NextFest_TotalPlayers"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#Recap_NextFest_TotalPlayers_ttip"),
+                  (0, _.jsxs)("div", {
+                    className: _.RecapTextSection,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapTextHeader,
+                        children: (0, _._)(
+                          "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_TextHeader",
+                        ),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RecapTextSummary,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.RecapTextGameDescription,
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: _.RecapTextGameCount,
+                                children: (0, _._)(
+                                  "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_TextGameCount",
+                                  _,
+                                  (0, _.jsx)("b", {}),
+                                ),
+                              }),
+                              (0, _.jsx)("div", {
+                                className: _.RecapTextGameAdditionalCount,
+                                children: (0, _._)(
+                                  "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_NeedPermission",
+                                  _,
+                                ),
+                              }),
+                            ],
+                          }),
+                          _ &&
+                            (0, _.jsx)(_, {
+                              summaryURL: _,
+                            }),
+                        ],
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.RecapBox, _.Conversions),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxCount,
-                  },
-                  _.format(_.nConversions),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxDesc,
-                  },
-                  (0, _._)("#Recap_NextFest_PlayerWishlist"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#Recap_NextFest_PlayerWishlist_ttip"),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.RecapBox, _.Plays),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapBoxCount,
+                        children: _.format(_),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.RecapBoxDesc,
+                        children: (0, _._)("#Recap_NextFest_Apps"),
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.RecapBox, _.Wishlists),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxCount,
-                  },
-                  _.format(_.nWishlists),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxDesc,
-                  },
-                  (0, _._)("#Recap_NextFest_TotalWishlist"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#Recap_NextFest_TotalWishlist_ttip"),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.RecapBox, _.Conversions, _.Disabled),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapBoxCount,
+                        children: "--",
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RecapBoxDesc,
+                        children: [
+                          (0, _._)("#Recap_NextFest_PlayerWishlist"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)(
+                              "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_Tooltip",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
-                ),
-              ),
-            ),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapItemImage,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href: _,
-                      target: "_blank",
-                    },
-                    _.createElement("img", {
-                      src: _,
-                    }),
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _.RecapTextSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapTextHeader,
-                  },
-                  (0, _._)(
-                    "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_TextHeader",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapTextSummary,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RecapTextGameDescription,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.RecapTextGameCount,
-                      },
-                      (0, _._)(
-                        "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_TextGameCount",
-                        _,
-                        _.createElement("b", null),
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.RecapTextGameAdditionalCount,
-                      },
-                      (0, _._)(
-                        "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_NeedPermission",
-                        _,
-                      ),
-                    ),
-                  ),
-                  _ &&
-                    _.createElement(_, {
-                      summaryURL: _,
-                    }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.RecapBox, _.Plays),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxCount,
-                  },
-                  _.format(_),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxDesc,
-                  },
-                  (0, _._)("#Recap_NextFest_Apps"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.RecapBox, _.Conversions, _.Disabled),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxCount,
-                  },
-                  "--",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxDesc,
-                  },
-                  (0, _._)("#Recap_NextFest_PlayerWishlist"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)(
-                      "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_Tooltip",
-                    ),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.RecapBox, _.Wishlists, _.Disabled),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.RecapBoxCount,
+                        children: "--",
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.RecapBoxDesc,
+                        children: [
+                          (0, _._)("#Recap_NextFest_TotalWishlist"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)(
+                              "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_Tooltip",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.RecapBox, _.Wishlists, _.Disabled),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxCount,
-                  },
-                  "--",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RecapBoxDesc,
-                  },
-                  (0, _._)("#Recap_NextFest_TotalWishlist"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)(
-                      "#Dashboard_UpcomingEvents_RecapNextFest_NoStats_Tooltip",
-                    ),
-                  }),
-                ),
-              ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                ],
+              }),
+            _ &&
+              (0, _.jsxs)("div", {
                 className: _.RecapSurveyArea,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.RecapSurveyText,
-                },
-                (0, _._)("#Dashboard_UpcomingEvents_RecapNextFest_SurveyText"),
-              ),
-              _.createElement(
-                "button",
-                {
-                  className: _.RecapSurveyButton,
-                  onClick: () => window.open(_, "_blank"),
-                },
-                (0, _._)(
-                  "#Dashboard_UpcomingEvents_RecapNextFest_SurveyButton",
-                ),
-              ),
-            ),
-        );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.RecapSurveyText,
+                    children: (0, _._)(
+                      "#Dashboard_UpcomingEvents_RecapNextFest_SurveyText",
+                    ),
+                  }),
+                  (0, _.jsx)("button", {
+                    className: _.RecapSurveyButton,
+                    onClick: () => window.open(_, "_blank"),
+                    children: (0, _._)(
+                      "#Dashboard_UpcomingEvents_RecapNextFest_SurveyButton",
+                    ),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "button",
-          {
-            className: _.RecapTextFullSummaryButton,
-            onClick: () => window.open(_.summaryURL, "_blank"),
-          },
-          (0, _._)("#Dashboard_UpcomingEvents_RecapNextFest_TextFullSummary"),
-        );
+        return (0, _.jsx)("button", {
+          className: _.RecapTextFullSummaryButton,
+          onClick: () => window.open(_.summaryURL, "_blank"),
+          children: (0, _._)(
+            "#Dashboard_UpcomingEvents_RecapNextFest_TextFullSummary",
+          ),
+        });
       }
       function _(_) {
         const { eventData: _ } = _,
@@ -3266,7 +3129,7 @@
             _.sale_clan_event_gid,
           ),
           _ = !_ && _?.GetImageURL("capsule", _, _._.capsule_main);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           imageUrl: _,
         });
       }
@@ -3283,46 +3146,44 @@
           inlineDate: _,
           bigName: _,
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            imageUrl: _,
-            url: _,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              imageUrl: _,
+              url: _,
+            }),
+            (0, _.jsxs)(_._, {
               hasImage: !!_,
-            },
-            _.createElement(
-              _._,
-              {
-                inlineDate: _,
-              },
-              _.createElement(_._, {
-                text: _,
-                url: _,
-                large: _,
+              children: [
+                (0, _.jsxs)(_._, {
+                  inlineDate: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      text: _,
+                      url: _,
+                      large: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      startTimestamp: _,
+                      endTimestamp: _,
+                      largeDate: _,
+                    }),
+                  ],
+                }),
+                __webpack_require__,
+                _?.length > 0 &&
+                  (0, _.jsx)("div", {
+                    className: _.ItemWarning,
+                    children: _.join(", "),
+                  }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                children: _,
               }),
-              _.createElement(_._, {
-                startTimestamp: _,
-                endTimestamp: _,
-                largeDate: _,
-              }),
-            ),
-            __webpack_require__,
-            _?.length > 0 &&
-              _.createElement(
-                "div",
-                {
-                  className: _.ItemWarning,
-                },
-                _.join(", "),
-              ),
-          ),
-          _ && _.createElement(_._, null, _),
-        );
+          ],
+        });
       }
       function _(_) {
         const { eventData: _ } = _,
@@ -3362,43 +3223,43 @@
           _ = (0, _._)(_.m_plan, _.m_assetInput) > _._.k_AwaitingPartner,
           _ = !_ || _?.length > 0 || _?.length > 0;
         if (_.m_assetInput?.enable_input)
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              complete: _ && _,
-              urgent: !0,
-            }),
-            _.createElement(_._, {
-              complete: _,
-              urgent: !0,
-              label: (0, _._)(
-                "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_duedate",
-              ),
-              status: _,
-              actionStatus: _
-                ? (0, _._)(
-                    "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_button_submitted",
-                  )
-                : (0, _._)(
-                    "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_button",
-                  ),
-              actionUrl: _,
-            }),
-            _ &&
-              _.createElement(_._, {
+          return (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
+                complete: _ && _,
+                urgent: !0,
+              }),
+              (0, _.jsx)(_._, {
                 complete: _,
                 urgent: !0,
                 label: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Action",
+                  "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_duedate",
                 ),
                 status: _,
-                actionStatus: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
-                ),
+                actionStatus: _
+                  ? (0, _._)(
+                      "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_button_submitted",
+                    )
+                  : (0, _._)(
+                      "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_button",
+                    ),
                 actionUrl: _,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  urgent: !0,
+                  label: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Action",
+                  ),
+                  status: _,
+                  actionStatus: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
+                  ),
+                  actionUrl: _,
+                }),
+            ],
+          });
       }
       function _(_) {
         const {
@@ -3420,36 +3281,20 @@
           _ = _.useMemo(
             () =>
               _?.length &&
-              _.createElement(
-                "div",
-                {
-                  className: _.OptInGamesToolTipContainer,
-                },
-                _.sort((_, _) => _.appName.localeCompare(_.appName)).map((_) =>
-                  _.createElement(
+              (0, _.jsx)("div", {
+                className: _.OptInGamesToolTipContainer,
+                children: _.sort((_, _) =>
+                  _.appName.localeCompare(_.appName),
+                ).map((_) =>
+                  (0, _.jsx)(
                     "div",
                     {
-                      key: _.appid,
+                      children: `${_.appName} (${_(_.discountsDuring)})`,
                     },
-                    `${_.appName} (${(function (_) {
-                      const _ = new Intl.DateTimeFormat(navigator.language, {
-                        month: "numeric",
-                        day: "numeric",
-                        year: "2-digit",
-                      });
-                      return (0, _._)(
-                        _,
-                        (_) => `${_.rtStartDate}_${_.rtEndDate}`,
-                      )
-                        .map(
-                          (_) =>
-                            `${_.format(new Date(1e3 * _.rtStartDate))} - ${_.format(new Date(1e3 * _.rtEndDate))}`,
-                        )
-                        .join(", ");
-                    })(_.discountsDuring)})`,
+                    _.appid,
                   ),
                 ),
-              ),
+              }),
             [_],
           ),
           _ = _?.length > 0,
@@ -3471,92 +3316,82 @@
               _.description.definition.optin_deadline_date >
               _._.PerDay &&
             _.format(1e3 * _.description.definition.optin_deadline_date);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                text: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_OptIn_EligibleGames",
-                ),
-                count: _.length,
-                tooltip: _.createElement(_, {
-                  apps: _,
-                }),
-              }),
-              _.createElement(_, {
-                text: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_OptIn_RegisteredGames",
-                ),
-                count: _.rgRegisteredApps?.length ?? 0,
-                tooltip: _.createElement(_, {
-                  apps:
-                    ((_ = _.rgRegisteredApps),
-                    (_ = !1),
-                    _?.map((_) => ({
-                      details: _,
-                      bRegistered: _,
-                    })) ?? []),
-                }),
-              }),
-              _.createElement(_, {
-                text: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_OptIn_Discounted",
-                ),
-                count: _?.length ?? 0,
-                tooltip: _,
-                hidden: !_,
-              }),
-            ),
-          _.createElement(
-            _._,
-            null,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
             _ &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.AssetRequestDateLabel,
-                  },
-                  (0, _._)("#Dashboard_UpcomingEvents_Events_OptIn_Deadline"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.AssetRequestDate,
-                  },
-                  _,
-                ),
-              ),
-            _.createElement(
-              _._,
-              {
-                url: __webpack_require__,
-              },
-              _
-                ? (0, _._)(
-                    "#Dashboard_UpcomingEvents_Events_OptIn_Button_EligibleGames",
-                  )
-                : (0, _._)(
-                    "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_, {
+                    text: (0, _._)(
+                      "#Dashboard_UpcomingEvents_Events_OptIn_EligibleGames",
+                    ),
+                    count: _.length,
+                    tooltip: (0, _.jsx)(_, {
+                      apps: _,
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    text: (0, _._)(
+                      "#Dashboard_UpcomingEvents_Events_OptIn_RegisteredGames",
+                    ),
+                    count: _.rgRegisteredApps?.length ?? 0,
+                    tooltip: (0, _.jsx)(_, {
+                      apps:
+                        ((_ = _.rgRegisteredApps),
+                        (_ = !1),
+                        _?.map((_) => ({
+                          details: _,
+                          bRegistered: _,
+                        })) ?? []),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    text: (0, _._)(
+                      "#Dashboard_UpcomingEvents_Events_OptIn_Discounted",
+                    ),
+                    count: _?.length ?? 0,
+                    tooltip: _,
+                    hidden: !_,
+                  }),
+                ],
+              }),
+            (0, _.jsxs)(_._, {
+              children: [
+                _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.AssetRequestDateLabel,
+                        children: (0, _._)(
+                          "#Dashboard_UpcomingEvents_Events_OptIn_Deadline",
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.AssetRequestDate,
+                        children: _,
+                      }),
+                    ],
+                  }),
+                (0, _.jsx)(_._, {
+                  url: __webpack_require__,
+                  children: _
+                    ? (0, _._)(
+                        "#Dashboard_UpcomingEvents_Events_OptIn_Button_EligibleGames",
+                      )
+                    : (0, _._)(
+                        "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
+                      ),
+                }),
+                (0, _.jsx)(_._, {
+                  url: _,
+                  children: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
                   ),
-            ),
-            _.createElement(
-              _._,
-              {
-                url: _,
-              },
-              (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
-              ),
-            ),
-          ),
-        );
+                }),
+              ],
+            }),
+          ],
+        });
         var _, _;
       }
       function _(_) {
@@ -3566,32 +3401,22 @@
           tooltip: _,
           hidden: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.StatusItemBox, _ && _.Hidden),
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_.StatusItemBox, _ && _.Hidden),
+            children: [
+              (0, _.jsx)("div", {
                 className: _.StatusItemBoxLabel,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _,
+              }),
+              (0, _.jsx)("div", {
                 className: _.StatusItemBoxText,
-              },
-              __webpack_require__,
-            ),
-          ),
-        );
+                children: __webpack_require__,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { apps: _ } = _;
@@ -3599,35 +3424,29 @@
         const _ = _.sort((_, _) =>
           _.details.app_name.localeCompare(_.details.app_name),
         );
-        return _.createElement(
-          "div",
-          {
-            className: _.OptInGamesToolTipContainer,
-          },
-          __webpack_require__.map((_) =>
-            _.createElement(
+        return (0, _.jsx)("div", {
+          className: _.OptInGamesToolTipContainer,
+          children: __webpack_require__.map((_) =>
+            (0, _.jsx)(
               "div",
               {
-                key: _.details.appid,
-              },
-              _.bRegistered
-                ? (0, _._)(
-                    "#Dashboard_UpcomingEvents_Events_OptIn_GameRegistered",
-                    _.details.app_name,
-                    _.createElement(
-                      "span",
-                      {
+                children: _.bRegistered
+                  ? (0, _._)(
+                      "#Dashboard_UpcomingEvents_Events_OptIn_GameRegistered",
+                      _.details.app_name,
+                      (0, _.jsx)("span", {
                         className: _.OptInGamesToolTipRegistered,
-                      },
-                      (0, _._)(
-                        "#Dashboard_UpcomingEvents_Events_OptIn_GameRegisteredText",
-                      ),
-                    ),
-                  )
-                : _.details.app_name,
+                        children: (0, _._)(
+                          "#Dashboard_UpcomingEvents_Events_OptIn_GameRegisteredText",
+                        ),
+                      }),
+                    )
+                  : _.details.app_name,
+              },
+              _.details.appid,
             ),
           ),
-        );
+        });
       }
       function _(_) {
         const {
@@ -3719,65 +3538,73 @@
               (_ =
                 "#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedRegister_Action");
         }
-        return _.createElement(
-          _._,
-          {
-            hasImage: !!_,
-            backgroundImageUrl: _,
-            dimmed: !0,
-          },
-          _.createElement(_._, {
-            imageUrl: _,
-            url: _,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          hasImage: !!_,
+          backgroundImageUrl: _,
+          dimmed: !0,
+          children: [
+            (0, _.jsx)(_._, {
+              imageUrl: _,
+              url: _,
+            }),
+            (0, _.jsxs)(_._, {
               hasImage: !!_,
-            },
-            _.createElement(_._, {
-              text: (0, _._)(_, _.title),
-              light: !0,
+              children: [
+                (0, _.jsx)(_._, {
+                  text: (0, _._)(_, _.title),
+                  light: !0,
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_.ItemDeadlineHeaderText, _ && _.Urgent),
+                  children: (0, _._)(_, _),
+                }),
+              ],
             }),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ItemDeadlineHeaderText, _ && _.Urgent),
-              },
-              (0, _._)(_, _),
-            ),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              complete: _,
-              urgent: _,
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  urgent: _,
+                }),
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  urgent: _,
+                  label: (0, _._)(_),
+                  status: _,
+                  actionStatus: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_Deadline_EventFeatured_Register_Button",
+                  ),
+                  actionUrl: _,
+                }),
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  urgent: _,
+                  label: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Action",
+                  ),
+                  status: _,
+                  actionStatus: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
+                  ),
+                  actionUrl: _,
+                }),
+              ],
             }),
-            _.createElement(_._, {
-              complete: _,
-              urgent: _,
-              label: (0, _._)(_),
-              status: _,
-              actionStatus: (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_Deadline_EventFeatured_Register_Button",
-              ),
-              actionUrl: _,
-            }),
-            _.createElement(_._, {
-              complete: _,
-              urgent: _,
-              label: (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_Deadline_EventFeaturedDiscount_Action",
-              ),
-              status: _,
-              actionStatus: (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
-              ),
-              actionUrl: _,
-            }),
-          ),
-        );
+          ],
+        });
+      }
+      function _(_) {
+        const _ = new Intl.DateTimeFormat(navigator.language, {
+          month: "numeric",
+          day: "numeric",
+          year: "2-digit",
+        });
+        return (0, _._)(_, (_) => `${_.rtStartDate}_${_.rtEndDate}`)
+          .map(
+            (_) =>
+              `${_.format(new Date(1e3 * _.rtStartDate))} - ${_.format(new Date(1e3 * _.rtEndDate))}`,
+          )
+          .join(", ");
       }
       function _(_, _, _, _) {
         const _ = _.useMemo(
@@ -3947,7 +3774,7 @@
               sHeader: "Action Required",
               sTitle: "Test 1",
               bUrgent: !0,
-              element: _.createElement(_, {
+              element: (0, _.jsx)(_, {
                 deadline: _,
                 json: _,
               }),
@@ -3959,7 +3786,7 @@
                 "#PartnerDeadline_DailyDeal_InviteExpiring_Title",
               ),
               bUrgent: !0,
-              element: _.createElement(_, {
+              element: (0, _.jsx)(_, {
                 deadline: _,
                 json: _,
               }),
@@ -3977,7 +3804,7 @@
                     (0, _._)("#PartnerDeadline_NextFest_PressPreview_Title"),
                     _,
                   ),
-                  element: _.createElement(_, {
+                  element: (0, _.jsx)(_, {
                     deadline: _,
                     json: _,
                   }),
@@ -3998,7 +3825,7 @@
                     _,
                   ),
                   bUrgent: !1,
-                  element: _.createElement(_, {
+                  element: (0, _.jsx)(_, {
                     deadline: _,
                     json: _,
                   }),
@@ -4012,7 +3839,7 @@
                 "#PartnerDeadline_AssetRequest_InviteExpiring_Title",
               ),
               bUrgent: !0,
-              element: _.createElement(_, {
+              element: (0, _.jsx)(_, {
                 deadline: _,
                 json: _,
               }),
@@ -4026,7 +3853,7 @@
                 "#Dashboard_UpcomingEvents_EventType_SeasonPass",
               ),
               bUrgent: _.due_date < _._.GetTimeNowWithOverride() - 604800,
-              element: _.createElement(_, {
+              element: (0, _.jsx)(_, {
                 deadline: _,
                 json: _,
               }),
@@ -4036,17 +3863,14 @@
               sHeader: _(_?.TemplateName),
               sTitle: _(_?.TemplateName),
               bUrgent: _.due_date < _._.GetTimeNowWithOverride() + 2678400,
-              element: _.createElement(_, {
+              element: (0, _.jsx)(_, {
                 deadline: _,
                 json: _,
               }),
-              capsuleElement: _.createElement(
-                "div",
-                {
-                  className: _.CapsuleTax,
-                },
-                _(_?.TemplateName),
-              ),
+              capsuleElement: (0, _.jsx)("div", {
+                className: _.CapsuleTax,
+                children: _(_?.TemplateName),
+              }),
             };
           default:
             "dev" == _._.WEB_UNIVERSE &&
@@ -4063,12 +3887,16 @@
             month: "short",
             day: "numeric",
           }).format(new Date(1e3 * _.due_date));
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("div", null, "Name: ", __webpack_require__.name),
-          _.createElement("div", null, "Due date: ", _),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
+              children: ["Name: ", __webpack_require__.name],
+            }),
+            (0, _.jsxs)("div", {
+              children: ["Due date: ", _],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { deadline: _ } = _,
@@ -4081,20 +3909,17 @@
           ),
           _ = `${_._.PARTNER_BASE_URL}promotion/dailydeals/invite/${_.gid}`,
           _ = (0, _._)(_?.due_date, !0);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           urgent: !0,
           imageUrl: __webpack_require__?.GetAssets().GetHeaderURL(),
           title: (0, _._)("#PartnerDeadline_DailyDeal_InviteExpiring_Title"),
           body: (0, _._)("#PartnerDeadline_InviteExpiring_Body", _),
           url: _,
           imageTooltip: __webpack_require__?.GetName(),
-          rightCol: _.createElement(
-            _._,
-            {
-              url: _,
-            },
-            (0, _._)("#DailyDeals_PickDate"),
-          ),
+          rightCol: (0, _.jsx)(_._, {
+            url: _,
+            children: (0, _._)("#DailyDeals_PickDate"),
+          }),
         });
       }
       function _(_) {
@@ -4108,22 +3933,19 @@
           ),
           _ = `${_._.PARTNER_BASE_URL}promotion/assetportal/request/${_.gid}`,
           _ = (0, _._)(_?.due_date, !0);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           urgent: !0,
           imageUrl: __webpack_require__?.GetAssets().GetHeaderURL(),
           title: (0, _._)("#PartnerDeadline_AssetRequest_InviteExpiring_Title"),
           body: (0, _._)("#PartnerDeadline_InviteExpiring_Body", _),
           url: _,
           imageTooltip: __webpack_require__?.GetName(),
-          rightCol: _.createElement(
-            _._,
-            {
-              url: _,
-            },
-            (0, _._)(
+          rightCol: (0, _.jsx)(_._, {
+            url: _,
+            children: (0, _._)(
               "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_button",
             ),
-          ),
+          }),
         });
       }
       function _(_) {
@@ -4131,16 +3953,15 @@
           _ = _(__webpack_require__.opt_in_name),
           _ = `${_._.PARTNER_BASE_URL}optin/sale/${__webpack_require__.opt_in_name.replace("sale_", "")}`;
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               title: _.description.definition.event_title[_._.LANGUAGE],
               body: (0, _._)("#PartnerDeadline_NextFest_PressPreview_Body"),
-              rightCol: _.createElement(
-                _._,
-                {
-                  url: _,
-                },
-                (0, _._)("#PartnerDeadline_NextFest_View_Registration"),
-              ),
+              rightCol: (0, _.jsx)(_._, {
+                url: _,
+                children: (0, _._)(
+                  "#PartnerDeadline_NextFest_View_Registration",
+                ),
+              }),
             })
           : null;
       }
@@ -4153,7 +3974,7 @@
         if (!_ || !_?.store_item_id) return null;
         const _ = `${_._.PARTNER_BASE_URL}apps/demo/${_.store_item_id}`,
           _ = `${_._.PARTNER_BASE_URL}doc/store/review_process`;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           imageUrl: _?.GetAssets().GetHeaderURL(),
           title: _.description.definition.event_title[_._.LANGUAGE],
           body: (0, _._)(
@@ -4161,17 +3982,14 @@
               "#PartnerDeadline_NextFest_DemoBuildReview_Body",
               _?.GetName() || "(" + _.store_item_id + ")",
             ),
-            _.createElement("a", {
+            (0, _.jsx)("a", {
               href: _,
             }),
           ),
-          rightCol: _.createElement(
-            _._,
-            {
-              url: _,
-            },
-            (0, _._)("#PartnerDeadline_NextFest_View_Registration"),
-          ),
+          rightCol: (0, _.jsx)(_._, {
+            url: _,
+            children: (0, _._)("#PartnerDeadline_NextFest_View_Registration"),
+          }),
         });
       }
       const _ = {
@@ -4185,31 +4003,27 @@
           _ = _._.GetTokenWithFallback(_?.title),
           _ = `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_.store_item_id}?activetab=tab_specialsettings#seasonpass`,
           _ = `${_._.PARTNER_BASE_URL}apps/landing/${_.store_item_id}`;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           imageUrl: _?.GetAssets().GetSmallCapsuleURL(),
           title: (0, _._)(
             "#PartnerDeadline_SeasonPass_DLC",
             _?.GetName() || "(" + _.store_item_id + ")",
           ),
           body: (0, _._)("#PartnerDeadline_SeasonPass_Desc", _ || _.gid),
-          rightCol: _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
+          rightCol: (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
                 url: _,
-              },
-              (0, _._)("#PartnerDeadline_SeasonPass_OpenEditor"),
-            ),
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#PartnerDeadline_SeasonPass_OpenEditor"),
+              }),
+              (0, _.jsx)(_._, {
                 url: _,
-              },
-              (0, _._)("#DiscountDashboard_VisitAppLanding_Tooltip"),
-            ),
-          ),
+                children: (0, _._)(
+                  "#DiscountDashboard_VisitAppLanding_Tooltip",
+                ),
+              }),
+            ],
+          }),
         });
       }
       function _(_) {
@@ -4276,16 +4090,15 @@
               (0, _._)(
                 "#PartnerDeadline_TaxRequirement_ActualAuthorityRequired",
               )),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             title: _(__webpack_require__?.TemplateName),
             body: _,
-            rightCol: _.createElement(
-              _._,
-              {
-                url: _,
-              },
-              (0, _._)("#PartnerDeadline_TaxRequirement_ButtonViewDetails"),
-            ),
+            rightCol: (0, _.jsx)(_._, {
+              url: _,
+              children: (0, _._)(
+                "#PartnerDeadline_TaxRequirement_ButtonViewDetails",
+              ),
+            }),
           })
         );
       }
@@ -4299,34 +4112,32 @@
           rightCol: _,
           urgent: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            hasImage: !!_,
-          },
-          _.createElement(_._, {
-            imageUrl: _,
-            url: _,
-            tooltip: _,
-          }),
-          _.createElement(
-            _._,
-            {
-              hasImage: !!_,
-            },
-            _.createElement(_._, {
-              text: __webpack_require__,
+        return (0, _.jsxs)(_._, {
+          hasImage: !!_,
+          children: [
+            (0, _.jsx)(_._, {
+              imageUrl: _,
+              url: _,
+              tooltip: _,
             }),
-            _.createElement(
-              "div",
-              {
-                className: _ ? _.DeadlineWarningUrgent : _.DeadlineWarning,
-              },
-              _,
-            ),
-          ),
-          _ && _.createElement(_._, null, _),
-        );
+            (0, _.jsxs)(_._, {
+              hasImage: !!_,
+              children: [
+                (0, _.jsx)(_._, {
+                  text: __webpack_require__,
+                }),
+                (0, _.jsx)("div", {
+                  className: _ ? _.DeadlineWarningUrgent : _.DeadlineWarning,
+                  children: _,
+                }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         switch (_) {
@@ -4368,11 +4179,11 @@
       function _(_) {
         const { deal: _, partnerId: __webpack_require__ } = _;
         return _(new Date(), _)
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               deal: _,
               partnerId: __webpack_require__,
             })
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               partnerId: __webpack_require__,
               deal: _,
             });
@@ -4417,117 +4228,113 @@
             day: "numeric",
           }).format(new Date(1e3 * __webpack_require__.rtime32_start_time)),
           _ = (0, _._)(__webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            hasImage: !!_,
-          },
-          _.createElement(_._, {
-            imageUrl: _,
-            url: _,
-            tooltip: __webpack_require__.store_item_name,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          hasImage: !!_,
+          children: [
+            (0, _.jsx)(_._, {
+              imageUrl: _,
+              url: _,
+              tooltip: __webpack_require__.store_item_name,
+            }),
+            (0, _.jsxs)(_._, {
               hasImage: !!_,
-            },
-            _.createElement(_._, {
-              text: __webpack_require__.store_item_name,
-            }),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "span",
-                {
-                  className: _.DateDesc,
-                },
-                (0, _._)("#Dashboard_UpcomingEvents_DailyDeal_Dates"),
-              ),
-              _.createElement(_._, {
-                startTimestamp: __webpack_require__.rtime32_start_time,
-                endTimestamp: _,
-              }),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "span",
-                  {
-                    className: _.DateDesc,
-                  },
-                  (0, _._)("#Dashboard_UpcomingEvents_DailyDeal_Discounted"),
-                ),
-                _.createElement(_._, {
-                  startTimestamp: _,
-                  endTimestamp: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  text: __webpack_require__.store_item_name,
                 }),
-              ),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              complete: _,
-              urgent: !0,
-              overrideText: _,
-            }),
-            _ &&
-              _.createElement(_._, {
-                complete: _,
-                urgent: !0,
-                label: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
-                ),
-                status: _.createElement(_._, {
-                  oDailyDeal: __webpack_require__,
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("span", {
+                      className: _.DateDesc,
+                      children: (0, _._)(
+                        "#Dashboard_UpcomingEvents_DailyDeal_Dates",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      startTimestamp: __webpack_require__.rtime32_start_time,
+                      endTimestamp: _,
+                    }),
+                  ],
                 }),
-                actionStatus: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_EditDiscount",
-                ),
-                actionUrl: _,
-              }),
-            !_ &&
-              _.createElement(_._, {
-                complete: !1,
-                urgent: !0,
-                label: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
-                ),
-                status: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_DueBy",
-                  _,
-                ),
-                actionStatus: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_EnterDiscount",
-                ),
-                actionUrl: _,
-              }),
-            _ == _._.SetUp &&
-              _.createElement(_._, {
-                complete: !0,
-                urgent: !0,
-                label: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_StatusSalePageSetUp",
-                ),
-                actionStatus: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_StatusSalePageView",
-                ),
-                actionUrl: _,
-              }),
-            _ == _._.NotSetUp &&
-              _.createElement(_._, {
-                complete: !1,
-                urgent: !0,
-                label: (0, _._)(
-                  "#Dashboard_UpcomingEvents_DailyDeal_StatusSalePageNeeded",
-                ),
-              }),
-          ),
-        );
+                _ &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.DateDesc,
+                        children: (0, _._)(
+                          "#Dashboard_UpcomingEvents_DailyDeal_Discounted",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        startTimestamp: _,
+                        endTimestamp: _,
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  urgent: !0,
+                  overrideText: _,
+                }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    complete: _,
+                    urgent: !0,
+                    label: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
+                    ),
+                    status: (0, _.jsx)(_._, {
+                      oDailyDeal: __webpack_require__,
+                    }),
+                    actionStatus: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_EditDiscount",
+                    ),
+                    actionUrl: _,
+                  }),
+                !_ &&
+                  (0, _.jsx)(_._, {
+                    complete: !1,
+                    urgent: !0,
+                    label: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
+                    ),
+                    status: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_DueBy",
+                      _,
+                    ),
+                    actionStatus: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_EnterDiscount",
+                    ),
+                    actionUrl: _,
+                  }),
+                _ == _._.SetUp &&
+                  (0, _.jsx)(_._, {
+                    complete: !0,
+                    urgent: !0,
+                    label: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusSalePageSetUp",
+                    ),
+                    actionStatus: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusSalePageView",
+                    ),
+                    actionUrl: _,
+                  }),
+                _ == _._.NotSetUp &&
+                  (0, _.jsx)(_._, {
+                    complete: !1,
+                    urgent: !0,
+                    label: (0, _._)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusSalePageNeeded",
+                    ),
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { deal: _ } = _,
@@ -4546,7 +4353,7 @@
                 _ &&
                 (_ =
                   _._.PARTNER_BASE_URL + "store/packagelanding/" + _.GetID()),
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             imageUrl: _,
             title: (0, _._)("#Dashboard_UpcomingEvents_EventType_DailyDeal"),
           })
@@ -4565,164 +4372,125 @@
         let _;
         return (
           (_ = _?.GetAssets().GetHeaderURL()
-            ? _.createElement("img", {
+            ? (0, _.jsx)("img", {
                 src: _.GetAssets().GetHeaderURL(),
               })
             : _
               ? (0, _._)("#DailyDeals_HeaderArtMissing")
               : (0, _._)("#DailyDeals_StoreItem_Hidden")),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.DailyDeal_RecapContainer),
-            },
-            _
-              ? _.createElement(_, null)
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.DailyDeal_RecapTable),
-                    },
-                    _.createElement(
-                      "div",
-                      {
+          (0, _.jsx)("div", {
+            className: (0, _._)(_.DailyDeal_RecapContainer),
+            children: _
+              ? (0, _.jsx)(_, {})
+              : (0, _.jsx)(_.Fragment, {
+                  children: (0, _.jsxs)("div", {
+                    className: (0, _._)(_.DailyDeal_RecapTable),
+                    children: [
+                      (0, _.jsx)("div", {
                         className: _.Cell,
-                      },
-                      _.createElement(
-                        "div",
-                        {
+                        children: (0, _.jsx)("div", {
                           className: _.CapsuleContainer,
-                        },
-                        _,
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
+                          children: _,
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
                         className: (0, _._)(_.Cell),
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.PromoTitle,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            className: _.FeaturedDate,
-                          },
-                          (0, _._)(_.rtime32_start_time),
-                        ),
-                        _?.GetName() || _?.store_item_name,
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.SalesRow,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.VerticalCell,
-                          },
-                          _?.gross_sales &&
-                            _.createElement(
-                              _.Fragment,
-                              null,
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _.HighlightHeader,
-                                },
-                                (0, _._)("#DailyDeals_Report_Revenue"),
-                              ),
-                              _.createElement(
-                                "div",
-                                {
-                                  className: (0, _._)(
-                                    _.HighlightValue,
-                                    _.Revenue,
-                                  ),
-                                },
-                                _.gross_sales ? (0, _._)(_.gross_sales) : "?",
-                              ),
-                            ),
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.VerticalCell,
-                          },
-                          _?.impressions &&
-                            _.createElement(
-                              _.Fragment,
-                              null,
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _.HighlightHeader,
-                                },
-                                (0, _._)("#DailyDeals_Report_Impressions"),
-                              ),
-                              _.createElement(
-                                "div",
-                                {
-                                  className: (0, _._)(
-                                    _.HighlightValue,
-                                    _.Revenue,
-                                  ),
-                                },
-                                (0, _._)(_.impressions),
-                              ),
-                            ),
-                        ),
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.PromoTitle,
+                            children: [
+                              (0, _.jsx)("span", {
+                                className: _.FeaturedDate,
+                                children: (0, _._)(_.rtime32_start_time),
+                              }),
+                              _?.GetName() || _?.store_item_name,
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.SalesRow,
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: _.VerticalCell,
+                                children:
+                                  _?.gross_sales &&
+                                  (0, _.jsxs)(_.Fragment, {
+                                    children: [
+                                      (0, _.jsx)("div", {
+                                        className: _.HighlightHeader,
+                                        children: (0, _._)(
+                                          "#DailyDeals_Report_Revenue",
+                                        ),
+                                      }),
+                                      (0, _.jsx)("div", {
+                                        className: (0, _._)(
+                                          _.HighlightValue,
+                                          _.Revenue,
+                                        ),
+                                        children: _.gross_sales
+                                          ? (0, _._)(_.gross_sales)
+                                          : "?",
+                                      }),
+                                    ],
+                                  }),
+                              }),
+                              (0, _.jsx)("div", {
+                                className: _.VerticalCell,
+                                children:
+                                  _?.impressions &&
+                                  (0, _.jsxs)(_.Fragment, {
+                                    children: [
+                                      (0, _.jsx)("div", {
+                                        className: _.HighlightHeader,
+                                        children: (0, _._)(
+                                          "#DailyDeals_Report_Impressions",
+                                        ),
+                                      }),
+                                      (0, _.jsx)("div", {
+                                        className: (0, _._)(
+                                          _.HighlightValue,
+                                          _.Revenue,
+                                        ),
+                                        children: (0, _._)(_.impressions),
+                                      }),
+                                    ],
+                                  }),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
                         className: (0, _._)(_.Cell, _.GameCount),
-                      },
-                      _?.marketing?.length > 1 &&
-                        _.createElement(_._, {
-                          nGames: _.marketing.length,
-                        }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
+                        children:
+                          _?.marketing?.length > 1 &&
+                          (0, _.jsx)(_._, {
+                            nGames: _.marketing.length,
+                          }),
+                      }),
+                      (0, _.jsx)("div", {
                         className: _.Cell,
-                      },
-                      _.createElement(
-                        "div",
-                        {
+                        children: (0, _.jsx)("div", {
                           className: _.DailyDealLinkButtonContainer,
-                        },
-                        _.createElement(_, {
-                          summaryURL: _,
+                          children: (0, _.jsx)(_, {
+                            summaryURL: _,
+                          }),
                         }),
-                      ),
-                    ),
-                  ),
-                ),
-          )
+                      }),
+                    ],
+                  }),
+                }),
+          })
         );
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _.RecapThrobberContainer,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _.RecapThrobberContainer,
+          children: (0, _.jsx)(_._, {
             size: "medium",
             position: "center",
             className: _.ReportThrobber,
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4730,13 +4498,13 @@
       function _(_) {
         const { saleDesc: _ } = _;
         return _._.GetClanEventModel(_.clanEventGID)
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               saleDesc: _,
               bShowAppBrowse: !0,
               bHidePartnerStats: !0,
               bShowWhyAmISeeingThis: !0,
             })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               saleDesc: _,
               message: (0, _._)(
                 "#Dashboard_UpcomingEvents_PartnerEvents_NoAccess",
@@ -4748,7 +4516,7 @@
           _ = (0, _._)(_._.LANGUAGE),
           _ = _._.GetClanEventModel(_.clanEventGID);
         return _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               imageUrls: _.GetImageForSizeAsArrayWithFallback(
                 "capsule",
                 _,
@@ -4871,102 +4639,91 @@
               : (0, _._)(
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ReviewNotSubmitted",
                 );
-            return _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_._, {
-                complete: _,
-                label: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
-                ),
-                status: _,
-                actionStatus: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
-                ),
-                actionUrl: _,
-              }),
-              _.createElement(_._, {
-                complete: _,
-                label: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_Status",
-                ),
-                tooltip: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ttip",
-                ),
-                status: _,
-                actionStatus: (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ViewButton",
-                ),
-                actionUrl: _
-                  ? `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${_}`
-                  : void 0,
-              }),
-            );
-          })(_);
-        return _.createElement(
-          _._,
-          {
-            hasImage: !!_,
-            buttonPosition: "top",
-          },
-          _.createElement(_._, {
-            imageUrl: _,
-            url: _,
-          }),
-          _.createElement(
-            _._,
-            {
-              hasImage: !!_,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                text: _.title,
-                url: _,
-              }),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(_._, {
-                  startTimestamp: _.start_date,
-                  endTimestamp: _.end_date,
+            return (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  label: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
+                  ),
+                  status: _,
+                  actionStatus: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
+                  ),
+                  actionUrl: _,
                 }),
-              ),
-            ),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              complete: _,
-              overrideText: _,
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  label: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_Status",
+                  ),
+                  tooltip: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ttip",
+                  ),
+                  status: _,
+                  actionStatus: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ViewButton",
+                  ),
+                  actionUrl: _
+                    ? `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${_}`
+                    : void 0,
+                }),
+              ],
+            });
+          })(_);
+        return (0, _.jsxs)(_._, {
+          hasImage: !!_,
+          buttonPosition: "top",
+          children: [
+            (0, _.jsx)(_._, {
+              imageUrl: _,
+              url: _,
             }),
-            _.createElement(_._, {
-              complete: _,
-              label: (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_MarketingMessage_Status",
-              ),
-              status: _,
-              tooltip: _,
-              actionStatus: _,
-              actionUrl: _,
+            (0, _.jsx)(_._, {
+              hasImage: !!_,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    text: _.title,
+                    url: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    children: (0, _.jsx)(_._, {
+                      startTimestamp: _.start_date,
+                      endTimestamp: _.end_date,
+                    }),
+                  }),
+                ],
+              }),
             }),
-            _,
-          ),
-          _ &&
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  overrideText: _,
+                }),
+                (0, _.jsx)(_._, {
+                  complete: _,
+                  label: (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Status",
+                  ),
+                  status: _,
+                  tooltip: _,
+                  actionStatus: _,
+                  actionUrl: _,
+                }),
+                _,
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
                   url: _,
-                },
-                "Edit MM (VO)...",
-              ),
-            ),
-        );
+                  children: "Edit MM (VO)...",
+                }),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { marketingMessage: _ } = _,
@@ -4977,7 +4734,7 @@
           }),
           _ = _,
           _ = _?.GetAssets().GetHeaderURL() || null;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           imageUrl: _,
         });
       }
@@ -4994,106 +4751,89 @@
           _ = _.sort((_, _) => _.name.localeCompare(_.name))
             .slice(0, 30)
             .map((_) =>
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
-                  key: _.appid,
+                  children: _.name,
                 },
-                _.name,
+                _.appid,
               ),
             ),
-          _ = _.createElement(
-            "div",
-            {
-              className: _.AppsCountTooltip,
-            },
-            _,
-            _.length > 30 ? _.createElement("div", null, "...") : void 0,
-          );
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                text: (0, _._)(
-                  "#Dashboard_UpcomingEvents_GermanRatingMissing_Title",
-                ),
-                url: _,
+          _ = (0, _.jsxs)("div", {
+            className: _.AppsCountTooltip,
+            children: [
+              _,
+              _.length > 30
+                ? (0, _.jsx)("div", {
+                    children: "...",
+                  })
+                : void 0,
+            ],
+          });
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    text: (0, _._)(
+                      "#Dashboard_UpcomingEvents_GermanRatingMissing_Title",
+                    ),
+                    url: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.HeaderText),
+                    children: (0, _._)(
+                      1 == _.length
+                        ? "#Dashboard_UpcomingEvents_GermanRatingMissing_Desc"
+                        : "#Dashboard_UpcomingEvents_GermanRatingMissing_Desc_Plural",
+                      _,
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.AppsCountToolTipSource,
+                    toolTipContent: _,
+                    children: (0, _.jsx)("a", {
+                      className: _.AppsCountText,
+                      href: _,
+                      children: (0, _.jsxs)("div", {
+                        className: _.AppsCount,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.AppsCountLabel,
+                            children: (0, _._)(
+                              "#Dashboard_UpcomingEvents_GermanRatingMissing_Count",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.AppsCountText,
+                            children: _.length,
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                ],
               }),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.HeaderText),
-                },
-                (0, _._)(
-                  1 == _.length
-                    ? "#Dashboard_UpcomingEvents_GermanRatingMissing_Desc"
-                    : "#Dashboard_UpcomingEvents_GermanRatingMissing_Desc_Plural",
-                  _,
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _.AppsCountToolTipSource,
-                  toolTipContent: _,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.AppsCountText,
-                    href: _,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AppsCount,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AppsCountLabel,
-                      },
-                      (0, _._)(
-                        "#Dashboard_UpcomingEvents_GermanRatingMissing_Count",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AppsCountText,
-                      },
-                      _.length,
-                    ),
+            }),
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  url: _,
+                  children: (0, _._)(
+                    "#Dashboard_UpcomingEvents_General_ReadDocumentation",
                   ),
-                ),
-              ),
-            ),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                url: _,
-              },
-              (0, _._)("#Dashboard_UpcomingEvents_General_ReadDocumentation"),
-            ),
-            _.createElement(
-              _._,
-              {
-                url: _,
-              },
-              (0, _._)("#Dashboard_UpcomingEvents_General_AffectedApps"),
-            ),
-          ),
-        );
+                }),
+                (0, _.jsx)(_._, {
+                  url: _,
+                  children: (0, _._)(
+                    "#Dashboard_UpcomingEvents_General_AffectedApps",
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5138,12 +4878,12 @@
                   "#Dashboard_UpcomingEvents_EventType_MeetSteam",
                 ),
                 getElement: () =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     eventModel: _,
                     registered: _,
                   }),
                 getCapsuleElement: () =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     eventModel: _,
                   }),
                 passesFilter: (_) => 1 == _,
@@ -5163,72 +4903,64 @@
               ),
           _ = (0, _._)(_, _._.k_eView, "allowRelative"),
           _ = _.GetImageURL("capsule", _, _._.capsule_main);
-        return _.createElement(
-          _._,
-          {
-            hasImage: !!_,
-            buttonPosition: "top",
-          },
-          _.createElement(_._, {
-            imageUrl: _,
-            url: _,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          hasImage: !!_,
+          buttonPosition: "top",
+          children: [
+            (0, _.jsx)(_._, {
+              imageUrl: _,
+              url: _,
+            }),
+            (0, _.jsx)(_._, {
               hasImage: !!_,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                text: _,
-                url: _,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    text: _,
+                    url: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    startTimestamp: _.startTime,
+                    endTimestamp: _.endTime,
+                    showTime: !0,
+                  }),
+                  (0, _.jsx)("div", {
+                    children: _.GetSummaryWithFallback(_),
+                  }),
+                  __webpack_require__ &&
+                    (0, _.jsxs)("div", {
+                      className: _.YoureRegistered,
+                      children: [
+                        (0, _.jsx)(_.Jlk, {}),
+                        (0, _._)(
+                          "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_YoureRegistered",
+                        ),
+                      ],
+                    }),
+                ],
               }),
-              _.createElement(_._, {
-                startTimestamp: _.startTime,
-                endTimestamp: _.endTime,
-                showTime: !0,
-              }),
-              _.createElement("div", null, _.GetSummaryWithFallback(_)),
-              __webpack_require__ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.YoureRegistered,
-                  },
-                  _.createElement(_.Jlk, null),
-                  (0, _._)(
-                    "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_YoureRegistered",
-                  ),
-                ),
-            ),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
                 url: _,
-              },
-              __webpack_require__
-                ? (0, _._)(
-                    "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Button_EditRegistration",
-                  )
-                : (0, _._)(
-                    "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Button_Register",
-                  ),
-            ),
-          ),
-        );
+                children: __webpack_require__
+                  ? (0, _._)(
+                      "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Button_EditRegistration",
+                    )
+                  : (0, _._)(
+                      "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Button_Register",
+                    ),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { eventModel: _ } = _,
           _ = (0, _._)(_._.LANGUAGE);
         return (
           !!_ &&
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             imageUrl: _.GetImageURL("capsule", _, _._.capsule_main),
           })
         );
@@ -5321,28 +5053,22 @@
                 endDate: _.endDate ?? _.startDate,
                 eventTypeName: _(_.eventType),
                 getElement: () =>
-                  _.createElement(
-                    "div",
-                    {
-                      style: {
-                        color: "white",
-                        backgroundColor: _(_.title, 0.4),
-                      },
+                  (0, _.jsx)("div", {
+                    style: {
+                      color: "white",
+                      backgroundColor: _(_.title, 0.4),
                     },
-                    _.title,
-                  ),
+                    children: _.title,
+                  }),
                 getCapsuleElement: () =>
-                  _.createElement(
-                    "div",
-                    {
-                      style: {
-                        color: "white",
-                        backgroundColor: _(_.title, 0.4),
-                        flex: 1,
-                      },
+                  (0, _.jsx)("div", {
+                    style: {
+                      color: "white",
+                      backgroundColor: _(_.title, 0.4),
+                      flex: 1,
                     },
-                    _.title,
-                  ),
+                    children: _.title,
+                  }),
               }));
             let _ = 40;
             for (let _ = 0; _ < 50; _++) {
@@ -5372,7 +5098,9 @@
                 _: "fake_" + _.toString(),
                 eventTypeName: _(_),
                 getElement: () =>
-                  _.createElement("div", null, "Generated event" + _),
+                  (0, _.jsx)("div", {
+                    children: "Generated event" + _,
+                  }),
                 dimmed: Math.random() > 0.9,
               };
               __webpack_require__.push(_);
@@ -5398,11 +5126,11 @@
                     "#Dashboard_UpcomingEvents_EventType_MarketingMessagePreview",
                   ),
                   getElement: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       marketingMessage: _,
                     }),
                   getCapsuleElement: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       marketingMessage: _,
                     }),
                   passesFilter: (_) => 1 == _,
@@ -5429,7 +5157,7 @@
                     : (0, _._)("#Dashboard_UpcomingEvents_EventType_Release"),
                   eventTypeSortWeight: _ ? 10 : 0,
                   getElement: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       app: _,
                     }),
                   passesFilter: (_) => 2 == _,
@@ -5460,12 +5188,12 @@
                     _: _.gid,
                     eventTypeName: _(_),
                     getElement: () =>
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         deal: _,
                         partnerId: _,
                       }),
                     getCapsuleElement: () =>
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         deal: _,
                       }),
                     passesFilter: (_) => 1 == _,
@@ -5487,11 +5215,11 @@
                 _: _.clanEventGID,
                 eventTypeName: _,
                 getElement: () =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     saleDesc: _,
                   }),
                 getCapsuleElement: () =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     saleDesc: _,
                   }),
                 passesFilter: (_) => 1 == _,
@@ -5541,7 +5269,7 @@
                         "#Dashboard_UpcomingEvents_EventType_GermanRatingMissing",
                       ),
                       getElement: () =>
-                        _.createElement(_, {
+                        (0, _.jsx)(_, {
                           apps: _,
                           partnerId: _,
                         }),
@@ -5647,15 +5375,12 @@
             }),
             [_, _, _, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       function _(_) {
         const { partnerId: _, testData: __webpack_require__ } = _,
@@ -5729,7 +5454,7 @@
                         _: "live_placeholder",
                         eventTypeName: "",
                         getElement: () =>
-                          _.createElement(_, {
+                          (0, _.jsx)(_, {
                             text: (0, _._)(
                               "#Dashboard_UpcomingEvents_Events_Placeholder_Live",
                             ),
@@ -5753,7 +5478,7 @@
                           _: "recap_placeholder",
                           eventTypeName: "",
                           getElement: () =>
-                            _.createElement(_, {
+                            (0, _.jsx)(_, {
                               text: (0, _._)(
                                 "#Dashboard_UpcomingEvents_Events_Placeholder_Recap",
                               ),
@@ -5834,87 +5559,72 @@
         _.useEffect(() => _(void 0), [_]);
         const _ = _.useMemo(
             () =>
-              _.createElement(
-                "div",
-                {
-                  className: _.FilterHeader,
-                },
-                _.createElement(_, {
-                  filterType: _,
-                  setFilterType: _,
-                }),
-                _.createElement(_, {
-                  filterText: _,
-                  setFilterText: _,
-                }),
-              ),
+              (0, _.jsxs)("div", {
+                className: _.FilterHeader,
+                children: [
+                  (0, _.jsx)(_, {
+                    filterType: _,
+                    setFilterType: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    filterText: _,
+                    setFilterText: _,
+                  }),
+                ],
+              }),
             [_, _, _],
           ),
           _ = _ > 0 || 0 != _,
           _ = 0 == _ && null != _ && 0 == _?.length;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              _,
-              {
-                title: (0, _._)("#Dashboard_UpcomingEvents_Title"),
-                ref: _,
-                beta: !0,
-                headerElement: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.SectionContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ListArea,
-                  },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
+        return (0, _.jsx)(_.Fragment, {
+          children:
+            _ &&
+            (0, _.jsx)(_, {
+              title: (0, _._)("#Dashboard_UpcomingEvents_Title"),
+              ref: _,
+              beta: !0,
+              headerElement: _,
+              children: (0, _.jsx)("div", {
+                className: _.SectionContainer,
+                children: (0, _.jsxs)("div", {
+                  className: _.ListArea,
+                  children: [
+                    _ &&
+                      (0, _.jsx)("div", {
                         className: _.AllEventsFiltered,
-                      },
-                      (0, _._)(
-                        "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed",
-                        _.createElement(
-                          "a",
-                          {
+                        children: (0, _._)(
+                          "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed",
+                          (0, _.jsx)("a", {
                             onClick: () => {
                               _(3), _("");
                             },
-                          },
-                          (0, _._)(
-                            "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText",
-                          ),
+                            children: (0, _._)(
+                              "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText",
+                            ),
+                          }),
                         ),
-                      ),
-                    ),
-                  !_ &&
-                    _.createElement(_, {
-                      events: _,
-                      filterVisibleEventIds: _,
-                      dayRefsToScrollTo: _,
-                      fnScrollToDay: _,
-                      isExpanded: _,
-                      fnSetExpanded: _,
-                      filterEnabled: _,
-                      filterType: _,
-                      clearAllFilters: () => {
-                        _(0), _("");
-                      },
-                      hoverEvent: _,
-                      setHoverEvent: _,
-                    }),
-                ),
-              ),
-            ),
-        );
+                      }),
+                    !_ &&
+                      (0, _.jsx)(_, {
+                        events: _,
+                        filterVisibleEventIds: _,
+                        dayRefsToScrollTo: _,
+                        fnScrollToDay: _,
+                        isExpanded: _,
+                        fnSetExpanded: _,
+                        filterEnabled: _,
+                        filterType: _,
+                        clearAllFilters: () => {
+                          _(0), _("");
+                        },
+                        hoverEvent: _,
+                        setHoverEvent: _,
+                      }),
+                  ],
+                }),
+              }),
+            }),
+        });
       }
       function _(_, _) {
         return _.startDate != _.endDate && _ >= _.startDate && _ <= _.endDate;
@@ -5924,36 +5634,29 @@
       }
       function _(_) {
         const { filterText: _, setFilterText: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.FilterTextArea,
-          },
-          _.createElement("input", {
-            className: _.FilterTextInput,
-            type: "text",
-            value: _,
-            onChange: (_) => __webpack_require__(_.target.value),
-            placeholder: (0, _._)(
-              "#Dashboard_UpcomingEvents_Events_FilterEmpty",
-            ),
-          }),
-          _.createElement(
-            "button",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.FilterTextArea,
+          children: [
+            (0, _.jsx)("input", {
+              className: _.FilterTextInput,
+              type: "text",
+              value: _,
+              onChange: (_) => __webpack_require__(_.target.value),
+              placeholder: (0, _._)(
+                "#Dashboard_UpcomingEvents_Events_FilterEmpty",
+              ),
+            }),
+            (0, _.jsx)("button", {
               className: _.FilterTextClearButton,
               onClick: () => __webpack_require__(""),
-            },
-            "✖",
-          ),
-          _.createElement(
-            "span",
-            {
+              children: "✖",
+            }),
+            (0, _.jsx)("span", {
               className: _.FilterTextIcon,
-            },
-            "🔍",
-          ),
-        );
+              children: "🔍",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { filterType: _, setFilterType: __webpack_require__ } = _,
@@ -5978,26 +5681,23 @@
             ],
             [],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.FilterOptionsContainer,
-          },
-          _.map((_) =>
-            _.createElement(
+        return (0, _.jsx)("div", {
+          className: _.FilterOptionsContainer,
+          children: _.map((_) =>
+            (0, _.jsx)(
               "div",
               {
-                key: _.type,
                 className: (0, _._)(
                   _.FilterOption,
                   _ == _.type && _.Highlighted,
                 ),
                 onClick: () => __webpack_require__(_.type),
+                children: _.text,
               },
-              _.text,
+              _.type,
             ),
           ),
-        );
+        });
       }
       function _(_) {
         const {
@@ -6030,29 +5730,26 @@
           _ = _.useMemo(
             () =>
               _.map((_) =>
-                _.createElement(_, {
-                  key: _._,
-                  event: _,
-                  setHoverEvent: () => {},
-                  showHeader: !1,
-                  showDateInHeader: !1,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    event: _,
+                    setHoverEvent: () => {},
+                    showHeader: !1,
+                    showDateInHeader: !1,
+                  },
+                  _._,
+                ),
               ),
             [_],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.ListDayGroup,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)("div", {
+            className: _.ListDayGroup,
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -6111,20 +5808,23 @@
         const _ = _.useCallback(
             (_, _, _, _, _) =>
               _.length > 0
-                ? _.createElement(_, {
-                    key: `${"normal" != _ ? _ + "_" : ""}${_}`,
-                    date: new Date(1e3 * _),
-                    events: _,
-                    filterVisibleEventIds: __webpack_require__,
-                    dayRefsToScrollTo: _,
-                    fnScrollToDay: _,
-                    firstMonth: 0 == _,
-                    lastMonth: _ == _.length - 1,
-                    hoverEvent: _,
-                    setHoverEvent: _,
-                    eventTimeGroup: _,
-                    showHeader: _,
-                  })
+                ? (0, _.jsx)(
+                    _,
+                    {
+                      date: new Date(1e3 * _),
+                      events: _,
+                      filterVisibleEventIds: __webpack_require__,
+                      dayRefsToScrollTo: _,
+                      fnScrollToDay: _,
+                      firstMonth: 0 == _,
+                      lastMonth: _ == _.length - 1,
+                      hoverEvent: _,
+                      setHoverEvent: _,
+                      eventTimeGroup: _,
+                      showHeader: _,
+                    },
+                    `${"normal" != _ ? _ + "_" : ""}${_}`,
+                  )
                 : void 0,
             [_, _.length, __webpack_require__, _, _, _],
           ),
@@ -6156,65 +5856,51 @@
             [_, _],
           ),
           _ = _.useMemo(() => _(_, "normal", !0), [_, _]);
-        return _.createElement(
-          "div",
-          {
-            className: _.ListContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ListContainer,
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_.List, _ && _.Expanded, _ && _.Overflows),
               ref: _,
-            },
-            _,
-            _,
-            _,
-            _ &&
-              0 == _.length &&
-              _.createElement(
-                "div",
-                {
-                  className: _.AllEventsFiltered,
-                },
-                (0, _._)(
-                  3 != _
-                    ? "#Dashboard_UpcomingEvents_Filter_NoEvents"
-                    : "#Dashboard_UpcomingEvents_Filter_DismissedNoEvents",
-                  _.createElement(
-                    "a",
-                    {
-                      onClick: () => _(),
-                    },
-                    (0, _._)(
-                      "#Dashboard_UpcomingEvents_Filter_NoEvents_LinkText",
+              children: [
+                _,
+                _,
+                _,
+                _ &&
+                  0 == _.length &&
+                  (0, _.jsx)("div", {
+                    className: _.AllEventsFiltered,
+                    children: (0, _._)(
+                      3 != _
+                        ? "#Dashboard_UpcomingEvents_Filter_NoEvents"
+                        : "#Dashboard_UpcomingEvents_Filter_DismissedNoEvents",
+                      (0, _.jsx)("a", {
+                        onClick: () => _(),
+                        children: (0, _._)(
+                          "#Dashboard_UpcomingEvents_Filter_NoEvents_LinkText",
+                        ),
+                      }),
                     ),
-                  ),
-                ),
-              ),
-          ),
-          _ &&
-            !_ &&
-            _.length > 0 &&
-            _.createElement(
-              "button",
-              {
+                  }),
+              ],
+            }),
+            _ &&
+              !_ &&
+              _.length > 0 &&
+              (0, _.jsx)("button", {
                 className: _.ExpandButton,
                 onClick: () => _(!0),
-              },
-              (0, _._)("#Dashboard_UpcomingEvents_ShowMore"),
-            ),
-          _ &&
-            _.length > 0 &&
-            _.createElement(
-              "button",
-              {
+                children: (0, _._)("#Dashboard_UpcomingEvents_ShowMore"),
+              }),
+            _ &&
+              _.length > 0 &&
+              (0, _.jsx)("button", {
                 className: _.ExpandButton,
                 onClick: () => _(!1),
-              },
-              (0, _._)("#Dashboard_UpcomingEvents_ShowLess"),
-            ),
-        );
+                children: (0, _._)("#Dashboard_UpcomingEvents_ShowLess"),
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -6268,14 +5954,17 @@
           _ = _.useMemo(
             () =>
               _.map(([_, _]) =>
-                _.createElement(_, {
-                  key: _,
-                  events: _,
-                  showHeader: _,
-                  showDateInHeader: !0,
-                  refScrollTo: _.get(_),
-                  setHoverEvent: _,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    events: _,
+                    showHeader: _,
+                    showDateInHeader: !0,
+                    refScrollTo: _.get(_),
+                    setHoverEvent: _,
+                  },
+                  _,
+                ),
               ),
             [_, _, _, _],
           ),
@@ -6320,101 +6009,87 @@
               })(_.get(_), _.get(_)),
             [_],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.ListMonthContainer,
-          },
-          __webpack_require__.length > 0 &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _.ListMonthCalendarMovingContainer,
-                },
-                "normal" == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ListMonthCalendar,
-                    },
-                    _.createElement(_, {
-                      viewDate: _,
-                    }),
-                    _.createElement(_, null),
-                    _.createElement(_, {
-                      now: _,
-                      viewDate: _,
-                      events: _,
-                      filterVisibleEventIds: _,
-                      fnScrollToDay: _,
-                      hoverEvent: _(_),
-                      bShowPreceedingWeeks: _,
-                      bShowFollowingWeeks: _,
-                      compareEvents: _,
-                      colorPriority: _,
-                    }),
-                  ),
-                "live" == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ListMonthCalendarAlt,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_.ListMonthCalendarAltFlag, _.Live),
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ListMonthCalendarAltLiveText,
-                        },
-                        (0, _._)("#Dashboard_UpcomingEvents_EventIsLive"),
-                      ),
-                    ),
-                  ),
-                "recap" == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ListMonthCalendarAlt,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_.ListMonthCalendarAltFlag, _.Past),
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ListMonthCalendarAltPastText,
-                        },
-                        (0, _._)("#Dashboard_UpcomingEvents_EventIsRecap"),
-                      ),
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.ListMonth,
-                },
-                _,
-              ),
-            ),
-          0 == __webpack_require__.length &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("div", {
+          className: _.ListMonthContainer,
+          children: [
+            __webpack_require__.length > 0 &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.ListMonthCalendarMovingContainer,
+                    children: [
+                      "normal" == _ &&
+                        (0, _.jsxs)("div", {
+                          className: _.ListMonthCalendar,
+                          children: [
+                            (0, _.jsx)(_, {
+                              viewDate: _,
+                            }),
+                            (0, _.jsx)(_, {}),
+                            (0, _.jsx)(_, {
+                              now: _,
+                              viewDate: _,
+                              events: _,
+                              filterVisibleEventIds: _,
+                              fnScrollToDay: _,
+                              hoverEvent: _(_),
+                              bShowPreceedingWeeks: _,
+                              bShowFollowingWeeks: _,
+                              compareEvents: _,
+                              colorPriority: _,
+                            }),
+                          ],
+                        }),
+                      "live" == _ &&
+                        (0, _.jsx)("div", {
+                          className: _.ListMonthCalendarAlt,
+                          children: (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _.ListMonthCalendarAltFlag,
+                              _.Live,
+                            ),
+                            children: (0, _.jsx)("div", {
+                              className: _.ListMonthCalendarAltLiveText,
+                              children: (0, _._)(
+                                "#Dashboard_UpcomingEvents_EventIsLive",
+                              ),
+                            }),
+                          }),
+                        }),
+                      "recap" == _ &&
+                        (0, _.jsx)("div", {
+                          className: _.ListMonthCalendarAlt,
+                          children: (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _.ListMonthCalendarAltFlag,
+                              _.Past,
+                            ),
+                            children: (0, _.jsx)("div", {
+                              className: _.ListMonthCalendarAltPastText,
+                              children: (0, _._)(
+                                "#Dashboard_UpcomingEvents_EventIsRecap",
+                              ),
+                            }),
+                          }),
+                        }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ListMonth,
+                    children: _,
+                  }),
+                ],
+              }),
+            0 == __webpack_require__.length &&
+              (0, _.jsx)("div", {
                 className: _.EmptyMonth,
-              },
-              (0, _._)("#Dashboard_UpcomingEvents_NoEventsInMonth", _),
-            ),
-        );
+                children: (0, _._)(
+                  "#Dashboard_UpcomingEvents_NoEventsInMonth",
+                  _,
+                ),
+              }),
+          ],
+        });
       }
       function _(_) {
         if (!_) return;
@@ -6467,25 +6142,25 @@
           _ = _.useMemo(
             () =>
               _.map(([_, _]) =>
-                _.createElement(_, {
-                  key: _,
-                  events: _,
-                  showHeader: __webpack_require__,
-                  showDateInHeader: _,
-                  refScrollTo: _,
-                  setHoverEvent: _,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    events: _,
+                    showHeader: __webpack_require__,
+                    showDateInHeader: _,
+                    refScrollTo: _,
+                    setHoverEvent: _,
+                  },
+                  _,
+                ),
               ),
             [_, _, _, __webpack_require__, _],
           );
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _.ListDay,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: _.ListDay,
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -6498,24 +6173,24 @@
           _ = _.useMemo(
             () =>
               _.map((_, _) =>
-                _.createElement(_, {
-                  key: _._,
-                  event: _,
-                  setHoverEvent: _,
-                  showHeader: __webpack_require__ && 0 == _,
-                  showDateInHeader: _,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    event: _,
+                    setHoverEvent: _,
+                    showHeader: __webpack_require__ && 0 == _,
+                    showDateInHeader: _,
+                  },
+                  _._,
+                ),
               ),
             [_, _, __webpack_require__, _],
           );
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _.ListDayGroup,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: _.ListDayGroup,
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -6568,149 +6243,122 @@
           })(_._);
         return (
           _ &&
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.ListEvent,
-                _ && _.DeadlineUrgent,
-                _.dimmed && _.Dimmed,
-              ),
-              onPointerEnter: () => _(_),
-              onPointerLeave: () => _(void 0),
-            },
-            __webpack_require__ &&
-              _.createElement(
-                "div",
-                {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _.ListEvent,
+              _ && _.DeadlineUrgent,
+              _.dimmed && _.Dimmed,
+            ),
+            onPointerEnter: () => _(_),
+            onPointerLeave: () => _(void 0),
+            children: [
+              __webpack_require__ &&
+                (0, _.jsxs)("div", {
                   className: _.ListEventHeader,
-                },
-                _ &&
-                  _.createElement(
-                    _._,
-                    {
-                      className: _,
-                      toolTipContent: new Intl.DateTimeFormat(
-                        navigator.language,
-                        {
-                          month: "numeric",
-                          day: "numeric",
-                          year: "2-digit",
-                        },
-                      ).format(_.startDate),
-                    },
-                    _ ? _.startDate.getDate() : "",
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: (0, _._)(!_ && _.NoDate),
-                    },
-                    _.eventTypeName,
-                  ),
-                  _.valveOnly &&
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.ValveOnly,
-                      },
-                      "(VO)",
-                    ),
-                  _.createElement("span", {
-                    className: _.Spacer,
-                  }),
-                  _ &&
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.Edit,
-                      },
-                      _.createElement(
-                        "a",
-                        {
-                          href: _,
-                          target: "_blank",
-                        },
-                        "isolate",
-                      ),
-                      " (dev)",
-                    ),
-                  _.bShowWarnings &&
-                    _.editURL &&
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.Edit,
-                      },
-                      _.createElement(
-                        "a",
-                        {
-                          href: _.editURL,
-                          target: "_blank",
-                        },
-                        "edit",
-                      ),
-                      " (VO)",
-                    ),
-                  !_ &&
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.Dismiss,
-                        onClick: () => _(!0),
-                      },
-                      (0, _._)("#Dashboard_UpcomingEvents_Dismiss"),
-                      _.createElement(_._, {
-                        tooltip: (0, _._)(
-                          "#Dashboard_UpcomingEvents_Dismiss_ttip",
-                        ),
+                  children: [
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        className: _,
+                        toolTipContent: new Intl.DateTimeFormat(
+                          navigator.language,
+                          {
+                            month: "numeric",
+                            day: "numeric",
+                            year: "2-digit",
+                          },
+                        ).format(_.startDate),
+                        children: _ ? _.startDate.getDate() : "",
                       }),
-                    ),
-                  _ &&
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.Dismiss,
-                        onClick: () => _(!1),
-                      },
-                      (0, _._)("#Dashboard_UpcomingEvents_Undismiss"),
-                    ),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
+                    (0, _.jsxs)("div", {
+                      className: _,
+                      children: [
+                        (0, _.jsx)("span", {
+                          className: (0, _._)(!_ && _.NoDate),
+                          children: _.eventTypeName,
+                        }),
+                        _.valveOnly &&
+                          (0, _.jsx)("span", {
+                            className: _.ValveOnly,
+                            children: "(VO)",
+                          }),
+                        (0, _.jsx)("span", {
+                          className: _.Spacer,
+                        }),
+                        _ &&
+                          (0, _.jsxs)("span", {
+                            className: _.Edit,
+                            children: [
+                              (0, _.jsx)("a", {
+                                href: _,
+                                target: "_blank",
+                                children: "isolate",
+                              }),
+                              " (dev)",
+                            ],
+                          }),
+                        _.bShowWarnings &&
+                          _.editURL &&
+                          (0, _.jsxs)("span", {
+                            className: _.Edit,
+                            children: [
+                              (0, _.jsx)("a", {
+                                href: _.editURL,
+                                target: "_blank",
+                                children: "edit",
+                              }),
+                              " (VO)",
+                            ],
+                          }),
+                        !_ &&
+                          (0, _.jsxs)("span", {
+                            className: _.Dismiss,
+                            onClick: () => _(!0),
+                            children: [
+                              (0, _._)("#Dashboard_UpcomingEvents_Dismiss"),
+                              (0, _.jsx)(_._, {
+                                tooltip: (0, _._)(
+                                  "#Dashboard_UpcomingEvents_Dismiss_ttip",
+                                ),
+                              }),
+                            ],
+                          }),
+                        _ &&
+                          (0, _.jsx)("span", {
+                            className: _.Dismiss,
+                            onClick: () => _(!1),
+                            children: (0, _._)(
+                              "#Dashboard_UpcomingEvents_Undismiss",
+                            ),
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _.ListEventEventSection,
                   _.ListEventEventSection,
                 ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.ListEventEventGutter,
-                    _.loading && _.Loading,
-                  ),
-                },
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.ListEventEventElement,
-                },
-                _.createElement(_._, null, _),
-              ),
-            ),
-          )
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _.ListEventEventGutter,
+                      _.loading && _.Loading,
+                    ),
+                    children: (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ListEventEventElement,
+                    children: (0, _.jsx)(_._, {
+                      children: _,
+                    }),
+                  }),
+                ],
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -6724,55 +6372,40 @@
             event: _,
             element: _.getCapsuleElement?.(),
           }));
-        return _.createElement(
-          "div",
-          {
-            className: _.GroupPlaceholder,
-          },
-          !_ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("div", {
+          className: _.GroupPlaceholder,
+          children: [
+            !_ &&
+              (0, _.jsx)("div", {
                 className: _.ExpandContainer,
-              },
-              _.createElement(
-                "button",
-                {
+                children: (0, _.jsx)("button", {
                   className: _.ExpandButton,
                   onClick: () => _(!0),
-                },
-                _,
-              ),
-            ),
-          _.createElement(
-            "div",
-            {
+                  children: _,
+                }),
+              }),
+            (0, _.jsx)("div", {
               className: _.GroupPlaceholderCapsules,
-            },
-            _.map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: _.event._,
-                },
-                _.createElement(
-                  "div",
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _._,
                   {
-                    className: _.GroupPlaceholderCapsule,
+                    children: (0, _.jsx)("div", {
+                      className: _.GroupPlaceholderCapsule,
+                      children:
+                        _.element ||
+                        (0, _.jsx)("div", {
+                          className: _.GroupPlaceholderCapsuleMissing,
+                          children: _.event.title,
+                        }),
+                    }),
                   },
-                  _.element ||
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.GroupPlaceholderCapsuleMissing,
-                      },
-                      _.event.title,
-                    ),
+                  _.event._,
                 ),
               ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_, _) {
         return _[0] - _[0];
@@ -6809,68 +6442,53 @@
             })(),
           [],
         );
-        return _.createElement(
-          _,
-          {
-            title: (0, _._)("#Dashboard_RecentApps_Title"),
-            headerElement: _.createElement(_, null),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.AppTileContainer,
-            },
-            !_.length && _.createElement(_, null),
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.appid,
-                app: _,
-              }),
-            ),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          title: (0, _._)("#Dashboard_RecentApps_Title"),
+          headerElement: (0, _.jsx)(_, {}),
+          children: (0, _.jsxs)("div", {
+            className: _.AppTileContainer,
+            children: [
+              !_.length && (0, _.jsx)(_, {}),
+              _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    app: _,
+                  },
+                  _.appid,
+                ),
+              ),
+            ],
+          }),
+        });
       }
       function _(_) {
         const _ = _._.PARTNER_BASE_URL + "apps/";
-        return _.createElement(
-          "div",
-          {
-            className: _.NoRecentApps,
-          },
-          (0, _._)("#Dashboard_RecentApps_NoRecent"),
-          " ",
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.NoRecentApps,
+          children: [
+            (0, _._)("#Dashboard_RecentApps_NoRecent"),
+            " ",
+            (0, _.jsxs)("a", {
               href: _,
               target: "_blank",
-            },
-            " ",
-            (0, _._)("#Dashboard_RecentApps_ViewAll"),
-          ),
-        );
+              children: [" ", (0, _._)("#Dashboard_RecentApps_ViewAll")],
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = _._.PARTNER_BASE_URL + "apps/";
-        return _.createElement(
-          "div",
-          {
-            className: _.ViewAppsContainer,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.ViewAppsLink,
-            },
-            _.createElement(
-              "a",
-              {
-                href: _,
-              },
-              (0, _._)("#Dashboard_RecentApps_ViewAllShort"),
-            ),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _.ViewAppsContainer,
+          children: (0, _.jsx)("div", {
+            className: _.ViewAppsLink,
+            children: (0, _.jsx)("a", {
+              href: _,
+              children: (0, _._)("#Dashboard_RecentApps_ViewAllShort"),
+            }),
+          }),
+        });
       }
       function _(_) {
         const { app: _ } = _,
@@ -6890,63 +6508,46 @@
                 _.asset_url_format.replace("${FILENAME}", _[_])
               );
           })(_, "header");
-        return _.createElement(
-          "div",
-          {
-            className: _.AppTile,
-          },
-          _ &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)("div", {
+          className: _.AppTile,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
                 toolTipContent: _.name,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _.AppTileImage,
-                },
-                _.createElement(
-                  "a",
-                  {
+                  children: (0, _.jsx)("a", {
                     href: _,
                     target: "_blank",
-                  },
-                  _.createElement("img", {
-                    src: _,
+                    children: (0, _.jsx)("img", {
+                      src: _,
+                    }),
                   }),
-                ),
-              ),
-            ),
-          !_ &&
-            _.createElement(
-              "div",
-              {
+                }),
+              }),
+            !_ &&
+              (0, _.jsx)("div", {
                 className: _.AppTileImagePlaceholder,
-              },
-              _.createElement(
-                "a",
-                {
+                children: (0, _.jsx)("a", {
                   href: _,
                   target: "_blank",
-                },
-                _.name,
-              ),
-            ),
-          _.createElement(
-            "div",
-            {
+                  children: _.name,
+                }),
+              }),
+            (0, _.jsxs)("div", {
               className: _.AppLabels,
-            },
-            _.createElement(_, {
-              appType: _.type,
+              children: [
+                (0, _.jsx)(_, {
+                  appType: _.type,
+                }),
+                (0, _.jsx)(_, {
+                  releaseState: _.releasestate,
+                  hasStoreItem: _?.visible,
+                }),
+              ],
             }),
-            _.createElement(_, {
-              releaseState: _.releasestate,
-              hasStoreItem: _?.visible,
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { appType: _ } = _;
@@ -6966,13 +6567,10 @@
                     ((_ = (0, _._)("#Dashboard_RecentApps_Music")),
                     (_ = _.Music)),
           !!_ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.AppType, _),
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.AppType, _),
+              children: _,
+            })
         );
       }
       function _(_) {
@@ -6980,82 +6578,72 @@
           _ = (0, _._)(_, __webpack_require__);
         return (
           "released" != _ &&
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.AppRelease),
-            },
-            _.sText,
-          )
+          (0, _.jsx)("div", {
+            className: (0, _._)(_.AppRelease),
+            children: _.sText,
+          })
         );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 60 39",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M20.2544 28.0733H21.8805C22.6505 28.0733 23.3893 27.7674 23.9338 27.2226C24.4782 26.6782 24.7841 25.9397 24.7841 25.1697V22.5369C24.7841 21.9376 24.5491 21.3626 24.1288 20.9351C23.7088 20.5079 23.1379 20.2628 22.5386 20.2527H20.2544V28.0733Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M53.0371 23.7372C53.0371 24.5497 52.3783 25.2085 51.5658 25.2085C50.7535 25.2085 50.0947 24.5497 50.0947 23.7372C50.0947 22.9246 50.7535 22.2661 51.5658 22.2661C52.3783 22.2661 53.0371 22.9246 53.0371 23.7372Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M13.7505 13.4774V16.0812C13.7635 16.6785 14.0095 17.2472 14.4364 17.665C14.8637 18.0831 15.4374 18.3169 16.0348 18.3169H18.319V10.4963H16.6835C15.8946 10.4881 15.1365 10.8012 14.5832 11.3636C14.0303 11.9257 13.7297 12.6889 13.7505 13.4774Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M32.421 17.4362C32.421 17.1362 32.4985 16.8265 32.5467 16.5263C32.5952 16.2263 32.6242 16.168 32.6724 15.9938C32.721 15.8196 32.7887 15.4613 32.8659 15.1904C32.9434 14.9194 32.9821 14.8227 33.0401 14.6387C33.0981 14.4547 33.2046 14.1355 33.3013 13.8935C33.398 13.6516 33.4563 13.5259 33.5335 13.3419C33.611 13.1579 33.7367 12.8771 33.853 12.6449C33.9693 12.4127 34.0464 12.2867 34.1435 12.1125C34.2402 11.9382 34.3952 11.6673 34.521 11.4543C34.6467 11.2413 34.7437 11.1058 34.8596 10.9413C34.9759 10.7769 35.1501 10.5251 35.2951 10.3317L35.6921 9.83797L35.9243 9.54747L35.9249 9.5481C33.7871 5.89204 30.5051 3.0416 26.5855 1.43715C22.666 -0.167213 18.327 -0.436528 14.2392 0.670589C10.1512 1.77802 6.54175 4.20066 3.96828 7.56433C1.39449 10.9277 0 15.0453 0 19.2807C0 23.5159 1.39449 27.6328 3.96828 30.9962C6.54175 34.3599 10.1512 36.7824 14.2392 37.89C18.327 38.9974 22.6656 38.7281 26.5855 37.1234C30.505 35.519 33.7871 32.6687 35.9249 29.0124L35.6927 28.722L35.3055 28.2282C35.1505 28.025 35.0055 27.8218 34.8603 27.6088L34.5216 27.0959C34.3861 26.8829 34.2604 26.6605 34.1344 26.4377C34.0086 26.2149 33.9409 26.0892 33.8536 25.9052C33.7667 25.7212 33.6309 25.4405 33.5341 25.1985C33.4374 24.9566 33.3697 24.8403 33.3019 24.6566C33.2342 24.4726 33.1277 24.1629 33.0407 23.9115C32.9538 23.6597 32.915 23.5532 32.8665 23.3598C32.818 23.1663 32.731 22.8273 32.6731 22.5564C32.6151 22.2854 32.5861 22.2079 32.5568 22.0239C32.5278 21.8399 32.4601 21.4237 32.4213 21.114C32.4213 20.959 32.4213 20.814 32.3633 20.659C32.3633 20.2041 32.2956 19.6911 32.2956 19.2749C32.2956 18.8587 32.2956 18.307 32.3633 17.8908C32.3728 17.7462 32.4018 17.5912 32.421 17.4362ZM22.5388 18.3171C23.6573 18.3196 24.7292 18.7651 25.52 19.5559C26.3108 20.3468 26.7563 21.4186 26.7588 22.5371V25.0924C26.7588 26.3759 26.2491 27.6069 25.3414 28.5143C24.434 29.4221 23.2029 29.9318 21.9194 29.9318H20.2545V32.2161C20.2545 32.7507 19.8213 33.1839 19.2866 33.1839C18.7523 33.1839 18.3187 32.7507 18.3187 32.2161V30.0093H16.0345C14.9154 30.0093 13.8419 29.5648 13.0505 28.7733C12.2593 27.9819 11.8145 26.9084 11.8145 25.7893C11.8145 25.2547 12.248 24.8214 12.7824 24.8214C13.317 24.8214 13.7503 25.2547 13.7503 25.7893C13.7503 26.3952 13.991 26.9762 14.4195 27.4043C14.8477 27.8328 15.429 28.0735 16.0345 28.0735H18.3187V20.2529H16.0345C14.9154 20.2529 13.8419 19.8083 13.0505 19.0169C12.2593 18.2254 11.8145 17.152 11.8145 16.0329V13.4776C11.8145 12.194 12.3246 10.963 13.2319 10.0556C14.1397 9.14792 15.3707 8.63816 16.6539 8.63816H18.2898V6.27642C18.2898 5.74206 18.723 5.30853 19.2576 5.30853C19.7923 5.30853 20.2255 5.74206 20.2255 6.27642V8.56065H22.5098C23.6283 8.56317 24.7001 9.00868 25.491 9.79948C26.2818 10.5903 26.7273 11.6622 26.7298 12.7807C26.7298 13.3153 26.2966 13.7486 25.7619 13.7486C25.2272 13.7486 24.794 13.3153 24.794 12.7807C24.794 12.1748 24.5533 11.5938 24.1248 11.1657C23.6966 10.7372 23.1156 10.4964 22.5098 10.4964H20.2545V18.3171H22.5388Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M44.1421 14.8326C44.1421 15.6451 43.4836 16.3036 42.6711 16.3036C41.8585 16.3036 41.1997 15.6451 41.1997 14.8326C41.1997 14.02 41.8585 13.3612 42.6711 13.3612C43.4836 13.3612 44.1421 14.02 44.1421 14.8326Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M47.1135 32.1772C51.1064 32.1754 54.873 30.3237 57.3127 27.1629C59.7526 24.0024 60.5903 19.8898 59.5812 16.0265C58.572 12.1634 55.8299 8.98595 52.1562 7.42192C48.4822 5.8582 44.2911 6.08509 40.8077 8.0363C37.324 9.98725 34.9411 13.4422 34.3547 17.3918C33.7684 21.3415 35.0453 25.3397 37.8119 28.2185C40.2456 30.7473 43.6039 32.1764 47.1134 32.177L47.1135 32.1772ZM51.5657 27.1538C50.6624 27.1538 49.7957 26.7949 49.1567 26.156C48.5177 25.517 48.1589 24.6506 48.1589 23.747C48.1589 22.8434 48.5178 21.9769 49.1567 21.338C49.7957 20.699 50.6624 20.3398 51.5657 20.3398C52.4693 20.3398 53.3361 20.699 53.975 21.338C54.614 21.9769 54.9729 22.8434 54.9729 23.747C54.9678 24.6481 54.6067 25.5107 53.9688 26.1469C53.3307 26.7833 52.4671 27.1419 51.5657 27.1444V27.1538ZM42.6708 11.4255C43.5744 11.4255 44.4408 11.7847 45.0798 12.4237C45.7187 13.0623 46.0776 13.9291 46.0776 14.8327C46.0776 15.7363 45.7187 16.6027 45.0798 17.2417C44.4408 17.8806 43.5744 18.2395 42.6708 18.2395C41.7672 18.2395 40.9004 17.8806 40.2618 17.2417C39.6228 16.6027 39.2636 15.7363 39.2636 14.8327C39.2661 13.9297 39.626 13.0648 40.2643 12.4262C40.9029 11.7878 41.7678 11.428 42.6708 11.4255ZM39.5443 25.489L53.3271 11.7159C53.7112 11.387 54.2836 11.409 54.6413 11.7666C54.9989 12.1242 55.0209 12.6967 54.692 13.0805L40.9189 26.8536C40.5351 27.1825 39.9627 27.1605 39.605 26.8028C39.2474 26.4452 39.2254 25.8728 39.5543 25.489H39.5443Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 60 39",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M20.2544 28.0733H21.8805C22.6505 28.0733 23.3893 27.7674 23.9338 27.2226C24.4782 26.6782 24.7841 25.9397 24.7841 25.1697V22.5369C24.7841 21.9376 24.5491 21.3626 24.1288 20.9351C23.7088 20.5079 23.1379 20.2628 22.5386 20.2527H20.2544V28.0733Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M53.0371 23.7372C53.0371 24.5497 52.3783 25.2085 51.5658 25.2085C50.7535 25.2085 50.0947 24.5497 50.0947 23.7372C50.0947 22.9246 50.7535 22.2661 51.5658 22.2661C52.3783 22.2661 53.0371 22.9246 53.0371 23.7372Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M13.7505 13.4774V16.0812C13.7635 16.6785 14.0095 17.2472 14.4364 17.665C14.8637 18.0831 15.4374 18.3169 16.0348 18.3169H18.319V10.4963H16.6835C15.8946 10.4881 15.1365 10.8012 14.5832 11.3636C14.0303 11.9257 13.7297 12.6889 13.7505 13.4774Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M32.421 17.4362C32.421 17.1362 32.4985 16.8265 32.5467 16.5263C32.5952 16.2263 32.6242 16.168 32.6724 15.9938C32.721 15.8196 32.7887 15.4613 32.8659 15.1904C32.9434 14.9194 32.9821 14.8227 33.0401 14.6387C33.0981 14.4547 33.2046 14.1355 33.3013 13.8935C33.398 13.6516 33.4563 13.5259 33.5335 13.3419C33.611 13.1579 33.7367 12.8771 33.853 12.6449C33.9693 12.4127 34.0464 12.2867 34.1435 12.1125C34.2402 11.9382 34.3952 11.6673 34.521 11.4543C34.6467 11.2413 34.7437 11.1058 34.8596 10.9413C34.9759 10.7769 35.1501 10.5251 35.2951 10.3317L35.6921 9.83797L35.9243 9.54747L35.9249 9.5481C33.7871 5.89204 30.5051 3.0416 26.5855 1.43715C22.666 -0.167213 18.327 -0.436528 14.2392 0.670589C10.1512 1.77802 6.54175 4.20066 3.96828 7.56433C1.39449 10.9277 0 15.0453 0 19.2807C0 23.5159 1.39449 27.6328 3.96828 30.9962C6.54175 34.3599 10.1512 36.7824 14.2392 37.89C18.327 38.9974 22.6656 38.7281 26.5855 37.1234C30.505 35.519 33.7871 32.6687 35.9249 29.0124L35.6927 28.722L35.3055 28.2282C35.1505 28.025 35.0055 27.8218 34.8603 27.6088L34.5216 27.0959C34.3861 26.8829 34.2604 26.6605 34.1344 26.4377C34.0086 26.2149 33.9409 26.0892 33.8536 25.9052C33.7667 25.7212 33.6309 25.4405 33.5341 25.1985C33.4374 24.9566 33.3697 24.8403 33.3019 24.6566C33.2342 24.4726 33.1277 24.1629 33.0407 23.9115C32.9538 23.6597 32.915 23.5532 32.8665 23.3598C32.818 23.1663 32.731 22.8273 32.6731 22.5564C32.6151 22.2854 32.5861 22.2079 32.5568 22.0239C32.5278 21.8399 32.4601 21.4237 32.4213 21.114C32.4213 20.959 32.4213 20.814 32.3633 20.659C32.3633 20.2041 32.2956 19.6911 32.2956 19.2749C32.2956 18.8587 32.2956 18.307 32.3633 17.8908C32.3728 17.7462 32.4018 17.5912 32.421 17.4362ZM22.5388 18.3171C23.6573 18.3196 24.7292 18.7651 25.52 19.5559C26.3108 20.3468 26.7563 21.4186 26.7588 22.5371V25.0924C26.7588 26.3759 26.2491 27.6069 25.3414 28.5143C24.434 29.4221 23.2029 29.9318 21.9194 29.9318H20.2545V32.2161C20.2545 32.7507 19.8213 33.1839 19.2866 33.1839C18.7523 33.1839 18.3187 32.7507 18.3187 32.2161V30.0093H16.0345C14.9154 30.0093 13.8419 29.5648 13.0505 28.7733C12.2593 27.9819 11.8145 26.9084 11.8145 25.7893C11.8145 25.2547 12.248 24.8214 12.7824 24.8214C13.317 24.8214 13.7503 25.2547 13.7503 25.7893C13.7503 26.3952 13.991 26.9762 14.4195 27.4043C14.8477 27.8328 15.429 28.0735 16.0345 28.0735H18.3187V20.2529H16.0345C14.9154 20.2529 13.8419 19.8083 13.0505 19.0169C12.2593 18.2254 11.8145 17.152 11.8145 16.0329V13.4776C11.8145 12.194 12.3246 10.963 13.2319 10.0556C14.1397 9.14792 15.3707 8.63816 16.6539 8.63816H18.2898V6.27642C18.2898 5.74206 18.723 5.30853 19.2576 5.30853C19.7923 5.30853 20.2255 5.74206 20.2255 6.27642V8.56065H22.5098C23.6283 8.56317 24.7001 9.00868 25.491 9.79948C26.2818 10.5903 26.7273 11.6622 26.7298 12.7807C26.7298 13.3153 26.2966 13.7486 25.7619 13.7486C25.2272 13.7486 24.794 13.3153 24.794 12.7807C24.794 12.1748 24.5533 11.5938 24.1248 11.1657C23.6966 10.7372 23.1156 10.4964 22.5098 10.4964H20.2545V18.3171H22.5388Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M44.1421 14.8326C44.1421 15.6451 43.4836 16.3036 42.6711 16.3036C41.8585 16.3036 41.1997 15.6451 41.1997 14.8326C41.1997 14.02 41.8585 13.3612 42.6711 13.3612C43.4836 13.3612 44.1421 14.02 44.1421 14.8326Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M47.1135 32.1772C51.1064 32.1754 54.873 30.3237 57.3127 27.1629C59.7526 24.0024 60.5903 19.8898 59.5812 16.0265C58.572 12.1634 55.8299 8.98595 52.1562 7.42192C48.4822 5.8582 44.2911 6.08509 40.8077 8.0363C37.324 9.98725 34.9411 13.4422 34.3547 17.3918C33.7684 21.3415 35.0453 25.3397 37.8119 28.2185C40.2456 30.7473 43.6039 32.1764 47.1134 32.177L47.1135 32.1772ZM51.5657 27.1538C50.6624 27.1538 49.7957 26.7949 49.1567 26.156C48.5177 25.517 48.1589 24.6506 48.1589 23.747C48.1589 22.8434 48.5178 21.9769 49.1567 21.338C49.7957 20.699 50.6624 20.3398 51.5657 20.3398C52.4693 20.3398 53.3361 20.699 53.975 21.338C54.614 21.9769 54.9729 22.8434 54.9729 23.747C54.9678 24.6481 54.6067 25.5107 53.9688 26.1469C53.3307 26.7833 52.4671 27.1419 51.5657 27.1444V27.1538ZM42.6708 11.4255C43.5744 11.4255 44.4408 11.7847 45.0798 12.4237C45.7187 13.0623 46.0776 13.9291 46.0776 14.8327C46.0776 15.7363 45.7187 16.6027 45.0798 17.2417C44.4408 17.8806 43.5744 18.2395 42.6708 18.2395C41.7672 18.2395 40.9004 17.8806 40.2618 17.2417C39.6228 16.6027 39.2636 15.7363 39.2636 14.8327C39.2661 13.9297 39.626 13.0648 40.2643 12.4262C40.9029 11.7878 41.7678 11.428 42.6708 11.4255ZM39.5443 25.489L53.3271 11.7159C53.7112 11.387 54.2836 11.409 54.6413 11.7666C54.9989 12.1242 55.0209 12.6967 54.692 13.0805L40.9189 26.8536C40.5351 27.1825 39.9627 27.1605 39.605 26.8028C39.2474 26.4452 39.2254 25.8728 39.5543 25.489H39.5443Z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 55 37",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 55 37",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             _: "M33.6009 7.90708H50.8782C52.0142 7.90708 53.0449 8.3717 53.791 9.12055C54.5374 9.86976 55 10.9044 55 12.0447V25.672C55 27.9496 53.1458 29.8097 50.8783 29.8097H48.12C47.3373 31.81 45.8447 33.5566 43.8136 34.8285C41.6511 36.1828 38.8737 37 35.704 37C34.988 37 34.4074 36.4171 34.4074 35.6983C34.4074 35.1888 34.699 34.7479 35.1234 34.534C36.2956 33.8138 36.9901 33.0738 37.3857 32.1952C37.6859 31.5282 37.8413 30.7449 37.9168 29.8096H25.5205C23.2519 29.8096 21.3991 27.9482 21.3991 25.6719V21.9028H17.0836C17.1592 22.8378 17.3146 23.6212 17.6148 24.2881C18.0105 25.167 18.7048 25.9068 19.8768 26.6272C20.3014 26.8411 20.5928 27.2819 20.5928 27.7913C20.5928 28.5101 20.0122 29.093 19.2961 29.093C16.1265 29.093 13.3488 28.2756 11.1865 26.9217C9.15546 25.6497 7.66267 23.9032 6.88002 21.9029H4.12174C1.854 21.9029 0 20.0436 0 17.7653V4.13753C0 1.86138 1.85313 0 4.12174 0H29.4796C31.7473 0 33.6011 1.85943 33.6011 4.13753L33.6009 7.90708ZM23.9921 21.9028V25.6719C23.9921 26.5196 24.676 27.2063 25.5202 27.2063C30.1078 27.2063 34.7063 27.2113 39.2871 27.2113C40.0005 27.2225 40.5695 27.8123 40.5584 28.5282C40.5267 30.4189 40.346 31.9294 39.7456 33.2629C39.6428 33.4912 39.529 33.7121 39.4031 33.9267C40.5378 33.6214 41.5597 33.1767 42.4457 32.6218C44.2148 31.5141 45.4374 29.9682 45.9188 28.231C46.0452 27.6452 46.5644 27.2064 47.1859 27.2064H50.8781C51.7206 27.2064 52.4066 26.5198 52.4066 25.6721V12.0448C52.4066 11.623 52.2346 11.2396 51.9574 10.9613C51.6804 10.6832 51.2983 10.5106 50.8781 10.5106H33.6009V17.7653C33.6009 18.9021 33.138 19.9352 32.3921 20.6842L32.387 20.6892C31.6407 21.4382 30.6117 21.9027 29.4793 21.9027H23.992L23.9921 21.9028ZM9.08081 20.3238C9.56237 22.061 10.7848 23.607 12.5541 24.7148C13.4403 25.2696 14.4621 25.7144 15.5971 26.0197C15.4712 25.8051 15.3572 25.584 15.2544 25.3557C14.654 24.0223 14.473 22.5121 14.4412 20.6215C14.4301 19.9054 14.9992 19.3156 15.7125 19.3046C18.0317 19.3046 20.3694 19.2996 22.6953 19.2996H29.479C29.9011 19.2996 30.284 19.128 30.5608 18.8512C30.8365 18.5733 31.0074 18.1891 31.0074 17.7654V4.13759C31.0074 3.29058 30.3211 2.60342 29.4792 2.60342H4.12137C3.27726 2.60342 2.59295 3.29187 2.59295 4.13759V17.7654C2.59295 18.6124 3.27947 19.2995 4.12137 19.2995H7.81361C8.43495 19.2995 8.95412 19.7383 9.08072 20.3239L9.08081 20.3238Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 42 35",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 42 35",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             _: "M2.86369 0C1.57321 0 0.471511 0.88952 0.119285 2.09452L20.185 19.8661C20.6574 20.2845 21.3421 20.2845 21.8145 19.8661L41.8802 2.09452C41.528 0.88952 40.4264 0 39.136 0H2.86369ZM0 4.5631V30.4371L14.6054 17.5003L0 4.5631ZM42 4.5631L27.3946 17.4999L42 30.4367V4.5631ZM16.0615 18.7892L0.119413 32.9055C0.471605 34.1103 1.57316 35 2.86382 35H39.1363C40.4268 35 41.5284 34.1105 41.8807 32.9055L25.9386 18.7892L23.0675 21.3318C21.8876 22.3767 20.1122 22.3767 18.9324 21.3318L16.0615 18.7892Z",
           }),
-        );
+        });
       }
       function _(_) {
         const _ = (function (_) {
@@ -7071,7 +6659,7 @@
               __webpack_require__.push({
                 _: "dailydeal",
                 title: (0, _._)("#Dashboard_ImportantActions_DailyDeals_Title"),
-                image: _.createElement(_, null),
+                image: (0, _.jsx)(_, {}),
                 description: _
                   ? (0, _._)(
                       "#Dashboard_ImportantActions_DailyDeals_Desc_Expiring",
@@ -7096,7 +6684,7 @@
                   title: (0, _._)(
                     "#Dashboard_ImportantActions_CommRights_Title",
                   ),
-                  image: _.createElement(_, null),
+                  image: (0, _.jsx)(_, {}),
                   description: (0, _._)(
                     "#Dashboard_ImportantActions_CommRights_Desc",
                   ),
@@ -7114,7 +6702,7 @@
                   title: (0, _._)(
                     "#Dashboard_ImportantActions_MailingAddr_Title",
                   ),
-                  image: _.createElement(_, null),
+                  image: (0, _.jsx)(_, {}),
                   description: (0, _._)(
                     "#Dashboard_ImportantActions_MailingAddr_Desc",
                   ),
@@ -7132,7 +6720,7 @@
                   title: (0, _._)(
                     "#Dashboard_ImportantActions_PhoneNumber_Title",
                   ),
-                  image: _.createElement(_, null),
+                  image: (0, _.jsx)(_, {}),
                   description: (0, _._)(
                     "#Dashboard_ImportantActions_PhoneNumber_Desc",
                   ),
@@ -7162,7 +6750,7 @@
                 title: (0, _._)(
                   "#Dashboard_ImportantActions_BankingExpiring_Title",
                 ),
-                image: _.createElement(_, null),
+                image: (0, _.jsx)(_, {}),
                 description: (0, _._)(
                   "#Dashboard_ImportantActions_BankingExpiring_Desc",
                   _,
@@ -7200,25 +6788,22 @@
           _ = _(_);
         return 0 == _.length
           ? null
-          : _.createElement(
-              _,
-              {
-                title: (0, _._)("#Dashboard_ImportantActions_Title"),
-                count: _.length,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.ImportantActions,
-                },
-                __webpack_require__.map((_) =>
-                  _.createElement(_, {
-                    key: _._,
-                    ..._,
-                  }),
+          : (0, _.jsx)(_, {
+              title: (0, _._)("#Dashboard_ImportantActions_Title"),
+              count: _.length,
+              children: (0, _.jsx)("div", {
+                className: _.ImportantActions,
+                children: __webpack_require__.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      ..._,
+                    },
+                    _._,
+                  ),
                 ),
-              ),
-            );
+              }),
+            });
       }
       function _(_) {
         const {
@@ -7230,59 +6815,46 @@
           actionDescription: _,
           action: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.ImportantAction, 1 == _ && _.Urgent),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.ImportantAction, 1 == _ && _.Urgent),
+          children: [
+            (0, _.jsxs)("div", {
               className: _.Header,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Image,
-              },
-              __webpack_require__,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Description,
-                },
-                _,
-                _ &&
-                  _.createElement(_._, {
-                    tooltip: _,
-                  }),
-              ),
-            ),
-          ),
-          _.createElement(
-            "button",
-            {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Image,
+                  children: __webpack_require__,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.Body,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Title,
+                      children: _,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.Description,
+                      children: [
+                        _,
+                        _ &&
+                          (0, _.jsx)(_._, {
+                            tooltip: _,
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("button", {
               className: (0, _._)(_.Button),
               onClick: () => {
                 "function" == typeof _ && _(), window.open(_, "_blank");
               },
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _._)(),
@@ -7309,26 +6881,24 @@
         return _
           ? null
           : _
-            ? _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
+            ? (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
                   partnerId: _,
                   showWarnings: _,
                   testData: _,
                 }),
-              )
-            : _.createElement(
-                _._,
-                null,
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, {
-                  partnerId: _,
-                  showWarnings: _,
-                  testData: _,
-                }),
-              );
+              })
+            : (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {
+                    partnerId: _,
+                    showWarnings: _,
+                    testData: _,
+                  }),
+                ],
+              });
       }
     },
   },

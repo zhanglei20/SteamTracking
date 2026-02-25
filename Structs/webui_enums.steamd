@@ -336,6 +336,14 @@ enum ECountryTarget
 	k_ECountryTarget_DenyList = 2;
 }
 
+enum ECurator
+{
+	k_ECuratorFollow = 1;
+	k_ECuratorUnfollow = 2;
+	k_ECuratorIgnore = 3;
+	k_ECuratorUnignore = 4;
+}
+
 enum ECurrencyCode
 {
 	k_ECurrencyCodeInvalid = 0;
@@ -1342,6 +1350,20 @@ enum UnnamedEnum0d5b030e19417dab
 	BAN_WARNING = 4;
 	RETURNING_PLAYER = 16;
 	COMMS_DISRUPTIVE = 64;
+}
+
+enum UnnamedEnum0dcb40bf59f915d7
+{
+	MainGamepadUI = 0;
+	OverlayGamepadUI = 1;
+	Keyboard = 2;
+	ControllerConfigurator = 3;
+	MainVRGamepadUI = 4;
+	MainDesktopUI = 5;
+	DesktopLogin = 6;
+	OverlayDesktopUI = 7;
+	SteamChinaReviewLauncher = 8;
+	OverlayVRGamepadUI = 9;
 }
 
 enum UnnamedEnum0edbba0e83cd6a43

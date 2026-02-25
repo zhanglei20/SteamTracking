@@ -5224,24 +5224,22 @@ function GPNavUpdateActionDescriptions( element, actionDescriptions )
 }
 
 var SetGPFocusRestoreTimeout = function(){}; // no op unless InitializeGPFocusRestoreTimeout is called
-var nGPFocusRestoreTimeoutID = -1;
 function InitializeGPFocusRestoreTimeout( bUseWindowOnload = true )
 {
-	window.history.replaceState( $J.extend( {}, window.history.state, { notify_focus_restore_ready: true } ), "" );
+	var nGPFocusRestoreTimeoutID;
 	SetGPFocusRestoreTimeout = function( delay = 200 )
 	{
-		if ( nGPFocusRestoreTimeoutID == 0 || ( !window.UseGamepadScreenMode || !window.UseGamepadScreenMode() ) )
-			return;
-
-		if ( nGPFocusRestoreTimeoutID !== -1 )
+		if ( nGPFocusRestoreTimeoutID )
 			window.clearTimeout( nGPFocusRestoreTimeoutID );
 
 		this.nGPFocusRestoreTimeoutID = window.setTimeout( function(){
-			nGPFocusRestoreTimeoutID = 0;
-			dispatchEvent( new Event( 'focus_restore_ready' ) );
+			SetGPFocusRestoreTimeout = function(){};	// only fire once
+			window.__bFocusRestoreReady = true;
+			window.postMessage( 'FocusRestoreReady' );
 		}, delay );
 	}
 
+	// this waits for all images on the page to finish downloading
 	if ( bUseWindowOnload )
 		window.addEventListener( "load", function(){ SetGPFocusRestoreTimeout(); } );
 }
@@ -5338,5 +5336,85 @@ function InitAutoCollapseReadMore( elTargets )
 		nInterval = window.setInterval( fnCheckHeight, 250 );
 		fnCheckHeight();
 	});
+}
+
+
+let g_bUseNavigationAPI = !!( typeof window != 'undefined' && window.navigation );
+
+/**
+ * Update history state, either the browser history API or navigation API, whichever we are using.
+ * @param fnUpdater and updater that will receive current state and should return new state, eg `( state ) => ( { ...state, ...yourState } )`
+ */
+function ReplaceHistoryState( fnUpdater /* : ( state: T ) => T */ )
+{
+	const newState = fnUpdater( GetHistoryState() );
+	if ( g_bUseNavigationAPI )
+	{
+		window.navigation.updateCurrentEntry( { state: newState } );
+	}
+	else
+	{
+		history.replaceState( newState, '' );
+	}
+}
+
+
+/**
+ * Replace the current browser URL, navigation API-aware
+ */
+function ReplaceHistoryURL( url /*: string | URL */ )
+{
+	let strURL = typeof url == "string" ? url : url.toString();
+	if ( g_bUseNavigationAPI )
+	{
+		if ( window.navigation.currentEntry.url != strURL )
+		{
+			window.navigation.navigate( strURL, { state: window.navigation.currentEntry.getState(), history: "replace" } );
+		}
+	}
+	else
+	{
+		if ( window.location.href != strURL )
+			history.replaceState( history.state, '', strURL );
+	}
+}
+
+
+/**
+ * Replace the current browser URL and state, navigation API-aware
+ * @param fnUpdater
+ * @param url
+ */
+function ReplaceHistoryStateAndURL( fnUpdater /*: ( state: T ) => T*/, url /*: string | URL*/, bPushState )
+{
+	let newState = fnUpdater( GetHistoryState() );
+	if ( g_bUseNavigationAPI )
+	{
+		window.navigation.navigate( typeof url == "string" ? url : url.toString(), { state: newState, history: bPushState ? "push" : "replace" } );
+	}
+	else
+	{
+		if ( bPushState )
+			history.pushState( newState, '', url );
+		else
+			history.replaceState( newState, '', url );
+	}
+}
+
+
+/**
+ * Get current state, Navigation API-aware.  Should be paired with ReplaceHistoryState.
+ *
+ * Guarantted to return an object
+ */
+function GetHistoryState()
+{
+	let state;
+	if ( g_bUseNavigationAPI )
+		state = window.navigation.currentEntry.getState();
+	else
+		state = window.history && window.history.state;
+
+	return state ? state : {};
 }
 

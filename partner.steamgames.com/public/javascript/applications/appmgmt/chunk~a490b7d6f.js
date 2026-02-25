@@ -5,37 +5,17 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [5295],
   {
-    72839: (e, t, s) => {
-      s.d(t, { Bn: () => o, hS: () => n, rV: () => i });
-      var r = s(15161),
-        a = s(78327);
-      s(94601);
-      function i(e, t) {
-        e.Body().set_context(n(t));
-      }
-      function n(e) {
-        let t = new r.TS();
-        return (
-          e || t.set_country_code(a.TS.COUNTRY),
-          t.set_language(a.TS.LANGUAGE),
-          t
-        );
-      }
-      function o(e, t) {
-        e.Body().set_data_request(r.gn.fromObject(t));
-      }
-    },
-    75279: (e, t, s) => {
-      s.d(t, { Ay: () => _, DJ: () => I });
-      var r = s(15161),
-        a = s(62792),
-        i = s(81393),
-        n = s(61859),
-        o = s(91675),
-        u = s(78327),
-        l = s(63369),
-        c = s(62490);
-      class _ {
+    75279: (e, t, r) => {
+      r.d(t, { Ay: () => c, DJ: () => R, QO: () => I });
+      var s = r(15161),
+        i = r(62792),
+        a = r(81393),
+        n = r(61859),
+        o = r(91675),
+        u = r(78327),
+        _ = r(63369),
+        l = r(62490);
+      class c {
         m_eItemType;
         m_unID;
         m_bVisible = !1;
@@ -132,7 +112,7 @@
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new h(e.trailers())),
+              ((this.m_Trailers = new m(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count &&
               t.include_tag_count > this.m_rgStoreTags.length &&
@@ -188,16 +168,16 @@
           );
         }
         BContainDataRequest(e) {
-          return _.BDataRequestContainsOtherDataRequest(
+          return c.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e,
           );
         }
         BCheckDataRequestIncluded(e) {
           ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
-            (0, i.wT)(
+            (0, a.wT)(
               this.BContainDataRequest(e),
-              `Requested data without for ${(0, a.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
+              `Requested data without for ${(0, i.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
               e,
               this.m_DataRequested,
             );
@@ -399,7 +379,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? m([
+              ? h([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -410,19 +390,19 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? m(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? h(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? m(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? h(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? m(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? h(this.m_BasicInfo.franchises) : []
           );
         }
         GetCapsuleHeadline() {
@@ -483,7 +463,7 @@
             this.m_ReleaseInfo?.is_coming_soon)
           ) {
             if (this.m_ReleaseInfo?.coming_soon_display)
-              return (0, l.d)(this.m_ReleaseInfo);
+              return (0, _.d)(this.m_ReleaseInfo);
             if (this.m_ReleaseInfo?.custom_release_date_message)
               return this.m_ReleaseInfo.custom_release_date_message;
             const e = this.m_ReleaseInfo?.steam_release_date;
@@ -648,7 +628,7 @@
           return this.m_strInternalName;
         }
       }
-      function m(e) {
+      function h(e) {
         if (!e?.length) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
@@ -669,58 +649,58 @@
         m_strCommunityIcon;
         m_strCommunityIcon_Full;
         constructor(e, t) {
-          const s = e.asset_url_format();
-          s &&
+          const r = e.asset_url_format();
+          r &&
             (e.main_capsule() &&
               (this.m_strMainCapsuleURL = this.ConstructAssetURL(
-                s,
+                r,
                 e.main_capsule(),
               )),
             e.small_capsule() &&
               (this.m_strSmallCapsuleURL = this.ConstructAssetURL(
-                s,
+                r,
                 e.small_capsule(),
               )),
             e.header() &&
-              (this.m_strHeaderURL = this.ConstructAssetURL(s, e.header())),
+              (this.m_strHeaderURL = this.ConstructAssetURL(r, e.header())),
             e.package_header() &&
               (this.m_strPackageHeaderURL = this.ConstructAssetURL(
-                s,
+                r,
                 e.package_header(),
               )),
             e.raw_page_background() &&
               (this.m_strRawPageBackgroundURL = this.ConstructAssetURL(
-                s,
+                r,
                 e.raw_page_background(),
               )),
             e.hero_capsule() &&
               (this.m_strHeroCapsuleURL = this.ConstructAssetURL(
-                s,
+                r,
                 e.hero_capsule(),
               )),
             e.hero_capsule_2x() &&
               (this.m_strHeroCapsuleURL_2x = this.ConstructAssetURL(
-                s,
+                r,
                 e.hero_capsule_2x(),
               )),
             e.library_capsule() &&
               (this.m_strLibraryCapsuleURL = this.ConstructAssetURL(
-                s,
+                r,
                 e.library_capsule(),
               )),
             e.library_capsule_2x() &&
               (this.m_strLibraryCapsuleURL_2x = this.ConstructAssetURL(
-                s,
+                r,
                 e.library_capsule_2x(),
               )),
             e.library_hero() &&
               (this.m_strLibraryHeroURL = this.ConstructAssetURL(
-                s,
+                r,
                 e.library_hero(),
               )),
             e.library_hero_2x() &&
               (this.m_strLibraryHeroURL_2x = this.ConstructAssetURL(
-                s,
+                r,
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
@@ -779,7 +759,7 @@
           return this.m_strCommunityIcon_Full;
         }
       }
-      class h {
+      class m {
         m_mapTrailer;
         m_highlightTrailers;
         m_highlightTrailersAllAges;
@@ -892,26 +872,26 @@
           return this.m_bIsAllAges;
         }
         ExtractTrailerFormats(e, t) {
-          let s = {};
+          let r = {};
           return (
             t.forEach((t) => {
               "video/mp4" == t.type()
-                ? (s.strMP4URL = this.ConstructAssetURL(e, t.filename()))
+                ? (r.strMP4URL = this.ConstructAssetURL(e, t.filename()))
                 : "video/webm" == t.type() &&
-                  (s.strWebMURL = this.ConstructAssetURL(e, t.filename()));
+                  (r.strWebMURL = this.ConstructAssetURL(e, t.filename()));
             }),
-            s
+            r
           );
         }
         ExtractAdaptiveTrailers(e, t) {
-          let s = `${t}_`,
-            r = e.filter(
-              (e) => e.encoding() && e.cdn_path() && e.encoding().startsWith(s),
+          let r = `${t}_`,
+            s = e.filter(
+              (e) => e.encoding() && e.cdn_path() && e.encoding().startsWith(r),
             ),
-            a = r.findIndex((e) => e.encoding().endsWith("_av1"));
+            i = s.findIndex((e) => e.encoding().endsWith("_av1"));
           return (
-            a > 0 && c.yY(r, a, 0),
-            r.map((e) => this.ConstructAssetURL(e.cdn_path(), ""))
+            i > 0 && l.yY(s, i, 0),
+            s.map((e) => this.ConstructAssetURL(e.cdn_path(), ""))
           );
         }
         ConstructScreenshotURL(e, t) {
@@ -934,13 +914,13 @@
         m_rgOnlyAllAgesScreenshots;
         constructor(e) {
           const t = e.all_ages_screenshots() || [],
-            s = e.mature_content_screenshots() || [],
-            r = (e) =>
+            r = e.mature_content_screenshots() || [],
+            s = (e) =>
               u.TS.BASE_URL_SHARED_CDN + "/store_item_assets/" + e.filename();
-          (this.m_rgOnlyAllAgesScreenshots = t.map(r)),
-            (this.m_rgAllScreenshots = [...t, ...s]
+          (this.m_rgOnlyAllAgesScreenshots = t.map(s)),
+            (this.m_rgAllScreenshots = [...t, ...r]
               .sort((e, t) => e.ordinal() - t.ordinal())
-              .map(r));
+              .map(s));
         }
         GetAllAgesAndMatureScreenshots() {
           return this.m_rgAllScreenshots;
@@ -949,7 +929,7 @@
           return this.m_rgOnlyAllAgesScreenshots;
         }
       }
-      function I(e) {
+      function R(e) {
         if (e)
           switch (e.GetStoreItemType()) {
             case 0:
@@ -968,927 +948,44 @@
             case -1:
               return;
             default:
-              return void (0, i.z_)(
+              return void (0, a.z_)(
                 e.GetStoreItemType(),
-                `Unknown EStoreItemType ${e.GetStoreItemType()} ${(0, r.md)(e.GetStoreItemType())} `,
+                `Unknown EStoreItemType ${e.GetStoreItemType()} ${(0, s.md)(e.GetStoreItemType())} `,
+              );
+          }
+      }
+      function I(e) {
+        if (e)
+          switch (e.item_type) {
+            case 0:
+              return { appid: e.appid };
+            case 1:
+              return { packageid: e.id };
+            case 2:
+              return { bundleid: e.id };
+            case 4:
+              return { tagid: e.id };
+            case 5:
+              return { creatorid: e.id };
+            case 6:
+              return { hubcategoryid: e.id };
+            case 3:
+            case -1:
+              return;
+            default:
+              return void (0, a.z_)(
+                e.item_type,
+                `Unknown EStoreItemType ${e.item_type} ${(0, s.md)(e.item_type)} `,
               );
           }
       }
     },
-    16021: (e, t, s) => {
-      s.d(t, { A: () => I });
-      var r = s(34629),
-        a = s(14947),
-        i = s(56545),
-        n = s(96059),
-        o = s(59411),
-        u = s(15161),
-        l = s(81393),
-        c = s(68797),
-        _ = s(78327),
-        m = s(72839),
-        d = s(75279),
-        h = s(6419);
-      function p(e, t) {
-        if (!e) return t;
-        if (!t) return e;
-        return {
-          include_assets: e.include_assets || t.include_assets,
-          include_release: e.include_release || t.include_release,
-          include_platforms: e.include_platforms || t.include_platforms,
-          include_all_purchase_options:
-            e.include_all_purchase_options || t.include_all_purchase_options,
-          include_screenshots: e.include_screenshots || t.include_screenshots,
-          include_trailers: e.include_trailers || t.include_trailers,
-          include_ratings: e.include_ratings || t.include_ratings,
-          include_tag_count:
-            Math.max(e.include_tag_count || 0, t.include_tag_count || 0) ||
-            void 0,
-          include_reviews: e.include_reviews || t.include_reviews,
-          include_basic_info: e.include_basic_info || t.include_basic_info,
-          include_supported_languages:
-            e.include_supported_languages || t.include_supported_languages,
-          include_full_description:
-            e.include_full_description || t.include_full_description,
-          include_included_items:
-            e.include_included_items || t.include_included_items,
-          include_assets_without_overrides:
-            e.include_assets_without_overrides ||
-            t.include_assets_without_overrides,
-          apply_user_filters: e.apply_user_filters || t.apply_user_filters,
-          include_links: e.include_links || t.include_links,
-        };
-      }
-      async function g(e, t) {
-        const s = await e,
-          r = await t;
-        return 1 != s ? s : r;
-      }
-      class I {
-        k_QueueWaitUntilRequestMS = 5;
-        k_nMaxBatchSize = 250;
-        m_bReturnUnavailableItems = !1;
-        m_mapApps = new Map();
-        m_mapPackages = new Map();
-        m_mapBundles = new Map();
-        m_mapTags = new Map();
-        m_mapCreators = new Map();
-        m_mapHubCategories = new Map();
-        m_setUnavailableApps = new Set();
-        m_setUnavailablePackages = new Set();
-        m_setUnavailableBundles = new Set();
-        m_setUnavailableTags = new Set();
-        m_setUnavailableCreators = new Set();
-        m_setUnavailableHubCategories = new Set();
-        m_setUnavailableDueToCountryRestrictionApps = new Set();
-        m_setUnavailableDueToCountryRestrictionPackages = new Set();
-        m_setUnavailableDueToCountryRestrictionBundles = new Set();
-        m_mapAppsInFlight = new Map();
-        m_mapPackageInFlight = new Map();
-        m_mapBundleInFlight = new Map();
-        m_mapTagsInFlight = new Map();
-        m_mapCreatorsInFlight = new Map();
-        m_mapHubCategoriesInFlight = new Map();
-        m_serviceTransport;
-        m_bUsePartnerAPI = !1;
-        m_bInitialized = !1;
-        m_bActivelyResettingCache = !1;
-        m_setPendingAppInfo = new Set();
-        m_setPendingBundleInfo = new Set();
-        m_setPendingPackageInfo = new Set();
-        m_setPendingTagInfo = new Set();
-        m_setPendingCreatorInfo = new Set();
-        m_setPendingHubCategoryInfo = new Set();
-        m_setPendingDataRequest = {};
-        m_PendingInfoPromise;
-        m_PendingInfoResolve = void 0;
-        m_PendingTimer = void 0;
-        k_AlreadyResolvedOK = Promise.resolve(1);
-        k_AlreadyResolvedInvalid = Promise.resolve(8);
-        k_AlreadyResolvedBusy = Promise.resolve(10);
-        static sm_instance;
-        static Get() {
-          return (
-            I.sm_instance ||
-              ((I.sm_instance = new I()),
-              (window.StoreItemCache = I.sm_instance)),
-            I.sm_instance
-          );
-        }
-        static Initialize(e, t) {
-          const s = I.Get();
-          return (
-            (0, l.wT)(
-              !s.m_bInitialized,
-              "CStoreItemCache was already initialized; initialize it only once.",
-            ),
-            (s.m_serviceTransport = e),
-            (s.m_bUsePartnerAPI = !!t),
-            (s.m_bInitialized = !0),
-            () => {
-              (s.m_serviceTransport = void 0),
-                (s.m_bUsePartnerAPI = !1),
-                (s.m_bInitialized = !1);
-            }
-          );
-        }
-        SetSteamInterface(e) {
-          this.SetServiceTransport(e.GetServiceTransport());
-        }
-        SetServiceTransport(e) {
-          this.m_serviceTransport = e;
-        }
-        SetReturnUnavailableItems(e) {
-          this.m_bReturnUnavailableItems = e;
-        }
-        GetReturnUnavailableItems() {
-          return this.m_bReturnUnavailableItems;
-        }
-        async ResetCache() {
-          (this.m_bActivelyResettingCache = !0), this.FlushPendingInfo();
-          let e = [];
-          this.m_mapAppsInFlight.forEach((t) => {
-            e.push(t.promise);
-          }),
-            this.m_mapBundleInFlight.forEach((t) => {
-              e.push(t.promise);
-            }),
-            this.m_mapPackageInFlight.forEach((t) => {
-              e.push(t.promise);
-            }),
-            this.m_mapTagsInFlight.forEach((t) => {
-              e.push(t.promise);
-            }),
-            this.m_mapCreatorsInFlight.forEach((t) => {
-              e.push(t.promise);
-            }),
-            this.m_mapHubCategoriesInFlight.forEach((t) => {
-              e.push(t.promise);
-            }),
-            await Promise.all(e),
-            this.m_mapApps.clear(),
-            this.m_mapBundles.clear(),
-            this.m_mapPackages.clear(),
-            this.m_mapTagsInFlight.clear(),
-            this.m_mapCreatorsInFlight.clear(),
-            this.m_mapHubCategoriesInFlight.clear(),
-            (this.m_bActivelyResettingCache = !1);
-        }
-        static BIsInitialized() {
-          return I.Get().m_bInitialized;
-        }
-        static k_DataRequest_CommonOnly = {};
-        static k_DataRequest_BasicInfo = { include_basic_info: !0 };
-        static k_DataRequest_Assets = { include_assets: !0 };
-        static k_DataRequest_IncludeAll = {
-          include_assets: !0,
-          include_release: !0,
-          include_platforms: !0,
-          include_all_purchase_options: !0,
-          include_screenshots: !0,
-          include_trailers: !0,
-          include_ratings: !0,
-          include_tag_count: 20,
-          include_reviews: !0,
-          include_basic_info: !0,
-          include_supported_languages: !0,
-          include_links: !0,
-        };
-        async QueueAppRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 0, t);
-        }
-        async QueuePackageRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 1, t);
-        }
-        async QueueBundleRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 2, t);
-        }
-        async QueueTagRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 4, t);
-        }
-        async QueueCreatorRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 5, t);
-        }
-        async QueueHubCategoryRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 6, t);
-        }
-        static ValidateDataRequest(e) {
-          const t = [
-            e.include_assets,
-            e.include_release,
-            e.include_platforms,
-            e.include_all_purchase_options,
-            e.include_screenshots,
-            e.include_trailers,
-            e.include_ratings,
-            e.include_reviews,
-            e.include_basic_info,
-            e.include_supported_languages,
-            e.include_links,
-          ];
-          for (const e of t) if (!0 !== e && void 0 !== e) return !1;
-          return !0;
-        }
-        async QueueMultipleAppRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
-          const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 0, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
-        }
-        async QueueMultiplePackageRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
-          const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 1, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
-        }
-        async QueueMultipleBundleRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
-          const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 2, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
-        }
-        async QueueMultipleTagRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
-          const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 4, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
-        }
-        async QueueMultipleCreatorRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
-          const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 5, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
-        }
-        async QueueMultipleHubCategoryRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
-          const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 6, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
-        }
-        async QueueMultipleStoreItemRequests(e, t, s) {
-          if (!e || 0 == e.length) return 1;
-          const r = (
-            await Promise.all(
-              e.map((e, r) => this.QueueStoreItemRequest(e, t[r], s)),
-            )
-          ).filter((e) => 1 != e);
-          return r.length > 0 ? r[0] : 1;
-        }
-        async QueueStoreItemRequest(e, t, s) {
-          if (
-            ((0, l.wT)(
-              I.ValidateDataRequest(s),
-              "Invalid Data Request: " + JSON.stringify(s),
-            ),
-            "string" == typeof e && (e = parseInt(e)),
-            this.m_bActivelyResettingCache)
-          )
-            return (
-              console.log(
-                "Rejecting store item request due to currently clearing the cache",
-              ),
-              this.k_AlreadyResolvedBusy
-            );
-          if (!e)
-            return (
-              (0, l.wT)(
-                !e,
-                `unexpected id ${e} of zero or undefined for type ${t}`,
-              ),
-              this.k_AlreadyResolvedInvalid
-            );
-          const r = this.GetPreviousSupersetLoadPromise(e, t, s);
-          if (r) return r;
-          switch (
-            (this.m_PendingInfoPromise ||
-              ((this.m_PendingInfoPromise = new Promise(
-                (e) => (this.m_PendingInfoResolve = e),
-              )),
-              (this.m_PendingTimer = window.setTimeout(
-                () => this.FlushPendingInfo(),
-                this.k_QueueWaitUntilRequestMS,
-              ))),
-            (this.m_setPendingDataRequest = p(this.m_setPendingDataRequest, s)),
-            t)
-          ) {
-            case 0:
-              this.m_setPendingAppInfo.add(e);
-              break;
-            case 2:
-              this.m_setPendingBundleInfo.add(e);
-              break;
-            case 1:
-              this.m_setPendingPackageInfo.add(e);
-              break;
-            case 4:
-              this.m_setPendingTagInfo.add(e);
-              break;
-            case 5:
-              this.m_setPendingCreatorInfo.add(e);
-              break;
-            case 6:
-              this.m_setPendingHubCategoryInfo.add(e);
-              break;
-            default:
-              (0, l.wT)(!1, `Unexpected Type ${t}`);
-          }
-          const a = this.m_PendingInfoPromise;
-          return (
-            this.m_setPendingAppInfo.size +
-              this.m_setPendingPackageInfo.size +
-              this.m_setPendingBundleInfo.size >=
-              this.k_nMaxBatchSize &&
-              (this.m_PendingTimer && window.clearTimeout(this.m_PendingTimer),
-              this.FlushPendingInfo()),
-            a
-          );
-        }
-        async FlushPendingInfo() {
-          if (void 0 === this.m_PendingInfoResolve) return;
-          const e = this.m_PendingInfoResolve,
-            t = Array.from(this.m_setPendingAppInfo),
-            s = Array.from(this.m_setPendingPackageInfo),
-            r = Array.from(this.m_setPendingBundleInfo),
-            a = Array.from(this.m_setPendingTagInfo),
-            i = Array.from(this.m_setPendingCreatorInfo),
-            n = Array.from(this.m_setPendingHubCategoryInfo),
-            o = this.m_setPendingDataRequest;
-          (this.m_PendingInfoPromise = void 0),
-            (this.m_PendingInfoResolve = void 0),
-            this.m_setPendingAppInfo.clear(),
-            this.m_setPendingBundleInfo.clear(),
-            this.m_setPendingPackageInfo.clear(),
-            this.m_setPendingTagInfo.clear(),
-            this.m_setPendingCreatorInfo.clear(),
-            this.m_setPendingHubCategoryInfo.clear(),
-            (this.m_setPendingDataRequest = {}),
-            (this.m_PendingTimer = void 0),
-            this.HintLoadStoreItems(t, s, r, a, i, n, o).then((t) => e(t));
-        }
-        async HintLoadStoreApps(e, t) {
-          return this.HintLoadStoreItems(e, null, null, null, null, null, t);
-        }
-        async HintLoadStorePackages(e, t) {
-          return this.HintLoadStoreItems(null, e, null, null, null, null, t);
-        }
-        async HintLoadStoreBundles(e, t) {
-          return this.HintLoadStoreItems(null, null, e, null, null, null, t);
-        }
-        GetPreviousSupersetLoadPromise(e, t, s) {
-          if (this.BHasStoreItem(e, t, s) || this.BIsStoreItemMissing(e, t))
-            return this.k_AlreadyResolvedOK;
-          let r = null;
-          switch (t) {
-            case 0:
-              r = this.m_mapAppsInFlight.get(e);
-              break;
-            case 1:
-              r = this.m_mapPackageInFlight.get(e);
-              break;
-            case 2:
-              r = this.m_mapBundleInFlight.get(e);
-              break;
-            case 4:
-              r = this.m_mapTagsInFlight.get(e);
-              break;
-            case 5:
-              r = this.m_mapCreatorsInFlight.get(e);
-              break;
-            case 6:
-              r = this.m_mapHubCategoriesInFlight.get(e);
-          }
-          return r &&
-            d.Ay.BDataRequestContainsOtherDataRequest(r.dataRequest, s)
-            ? r.promise
-            : null;
-        }
-        async HintLoadStoreItems(e, t, s, r, a, i, n) {
-          let o = null;
-          const l = new Promise((e) => (o = e));
-          let c = [],
-            _ = [];
-          (e || []).forEach((e) => {
-            const t = this.GetPreviousSupersetLoadPromise(e, 0, n);
-            if (t) _.push(t);
-            else {
-              c.push(u.O4.fromObject({ appid: e }));
-              let t = p(this.GetStoreItemDataRequest(e, 0), n);
-              const s = this.m_mapAppsInFlight.get(e);
-              (t = p(s?.dataRequest, t)),
-                s && _.push(s.promise),
-                this.m_mapAppsInFlight.set(e, {
-                  promise: s ? g(s.promise, l) : l,
-                  dataRequest: t,
-                });
-            }
-          }),
-            (t || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 1, n);
-              if (t) _.push(t);
-              else {
-                c.push(u.O4.fromObject({ packageid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 1), n);
-                const s = this.m_mapPackageInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && _.push(s.promise),
-                  this.m_mapPackageInFlight.set(e, {
-                    promise: s ? g(s.promise, l) : l,
-                    dataRequest: t,
-                  });
-              }
-            }),
-            (s || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 2, n);
-              if (t) _.push(t);
-              else {
-                c.push(u.O4.fromObject({ bundleid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 2), n);
-                const s = this.m_mapBundleInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && _.push(s.promise),
-                  this.m_mapBundleInFlight.set(e, {
-                    promise: s ? g(s.promise, l) : l,
-                    dataRequest: t,
-                  });
-              }
-            }),
-            (r || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 4, n);
-              if (t) _.push(t);
-              else {
-                c.push(u.O4.fromObject({ tagid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 4), n);
-                const s = this.m_mapTagsInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && _.push(s.promise),
-                  this.m_mapTagsInFlight.set(e, {
-                    promise: s ? g(s.promise, l) : l,
-                    dataRequest: t,
-                  });
-              }
-            }),
-            (a || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 5, n);
-              if (t) _.push(t);
-              else {
-                c.push(u.O4.fromObject({ creatorid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 5), n);
-                const s = this.m_mapCreatorsInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && _.push(s.promise),
-                  this.m_mapCreatorsInFlight.set(e, {
-                    promise: s ? g(s.promise, l) : l,
-                    dataRequest: t,
-                  });
-              }
-            }),
-            (i || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 6, n);
-              if (t) _.push(t);
-              else {
-                c.push(u.O4.fromObject({ hubcategoryid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 6), n);
-                const s = this.m_mapHubCategoriesInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && _.push(s.promise),
-                  this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: s ? g(s.promise, l) : l,
-                    dataRequest: t,
-                  });
-              }
-            });
-          let m = 1;
-          if (
-            (c.length > 0 &&
-              (m = await this.InternalHandleLoadStoreItems(c, n)),
-            o(m),
-            _.length > 0)
-          ) {
-            const e = await Promise.all(_);
-            for (const t of e) 1 != t && 1 == m && (m = t);
-          }
-          return (
-            (e || []).forEach((e) => this.m_mapAppsInFlight.delete(e)),
-            (t || []).forEach((e) => this.m_mapPackageInFlight.delete(e)),
-            (s || []).forEach((e) => this.m_mapBundleInFlight.delete(e)),
-            (r || []).forEach((e) => this.m_mapTagsInFlight.delete(e)),
-            (a || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
-            (i || []).forEach((e) => this.m_mapHubCategoriesInFlight.delete(e)),
-            m
-          );
-        }
-        MarkStoreItemIDUnavailable(e) {
-          (e || []).forEach((e) => {
-            e.appid()
-              ? (this.m_setUnavailableApps.add(e.appid()),
-                this.m_mapApps.delete(e.appid()))
-              : e.packageid()
-                ? (this.m_setUnavailablePackages.add(e.packageid()),
-                  this.m_mapPackages.delete(e.packageid()))
-                : e.bundleid()
-                  ? (this.m_setUnavailableBundles.add(e.bundleid()),
-                    this.m_mapBundles.delete(e.bundleid()))
-                  : e.tagid()
-                    ? (this.m_setUnavailableTags.add(e.tagid()),
-                      this.m_mapTags.delete(e.tagid()))
-                    : e.creatorid()
-                      ? (this.m_setUnavailableCreators.add(e.creatorid()),
-                        this.m_mapCreators.delete(e.creatorid()))
-                      : e.hubcategoryid() &&
-                        (this.m_setUnavailableHubCategories.add(
-                          e.hubcategoryid(),
-                        ),
-                        this.m_mapHubCategories.delete(e.hubcategoryid()));
-          });
-        }
-        SortStoreItems(e) {
-          let t = e.slice();
-          return (
-            t.sort((e, t) => {
-              let s = e.appid() ?? 0,
-                r = t.appid() ?? 0;
-              if (s != r) return s - r;
-              let a = e.packageid() ?? 0,
-                i = t.packageid() ?? 0;
-              if (a != i) return a - i;
-              let n = e.bundleid() ?? 0,
-                o = t.bundleid() ?? 0;
-              if (n != o) return n - o;
-              let u = e.tagid() ?? 0,
-                l = t.tagid() ?? 0;
-              if (u != l) return u - l;
-              let c = e.creatorid() ?? 0,
-                _ = t.creatorid() ?? 0;
-              if (c != _) return c - _;
-              let m = e.hubcategoryid() ?? 0,
-                d = t.hubcategoryid() ?? 0;
-              return m != d ? m - d : 0;
-            }),
-            t
-          );
-        }
-        GetServiceTransport() {
-          return (
-            this.m_serviceTransport ||
-              (console.warn(
-                "Service transport not initialized for StoreItemCache",
-              ),
-              (this.m_serviceTransport = new n.D(
-                _.TS.WEBAPI_BASE_URL,
-              ).GetAnonymousServiceTransport())),
-            this.m_serviceTransport
-          );
-        }
-        async InternalHandleLoadStoreItems(e, t) {
-          let s = 1;
-          (e = this.SortStoreItems(e)),
-            t.include_included_items &&
-              (t = {
-                ...t,
-                included_item_data_request: {
-                  ...t,
-                  include_included_items: !1,
-                },
-              });
-          const r = new Array();
-          try {
-            const n = [];
-            for (; e.length > 0; ) {
-              const s = e.splice(0, this.k_nMaxBatchSize);
-              if ((r.push(s), this.m_bUsePartnerAPI)) {
-                const e = i.w.Init(o.St);
-                e.Body().set_include_unpublished(!1);
-                const r = e.Body().getitems_request(!0);
-                r.set_context((0, m.hS)(this.m_bUsePartnerAPI)),
-                  r.set_data_request(u.gn.fromObject(t)),
-                  r.set_ids(s),
-                  n.push(o.BT.GetItems(this.GetServiceTransport(), e));
-              } else {
-                const e = i.w.Init(u.eE);
-                (0, m.rV)(e, this.m_bUsePartnerAPI),
-                  (0, m.Bn)(e, t),
-                  e.Body().set_ids(s),
-                  n.push(u.$4.GetItems(this.GetServiceTransport(), e));
-              }
-            }
-            (await Promise.all(n)).forEach((i, n) => {
-              1 == i.GetEResult()
-                ? i
-                    .Body()
-                    .store_items()
-                    .forEach((s) => {
-                      const r = s.id(),
-                        n = s.item_type();
-                      let o =
-                          this.m_bReturnUnavailableItems && 15 == s.success(),
-                        u = 1 == s.success() && !this.BIsStoreItemMissing(r, n);
-                      if (o || u) this.ReadItem(s, t);
-                      else {
-                        switch (
-                          ("dev" == _.TS.WEB_UNIVERSE &&
-                            console.warn(
-                              `Failed to load ${r} type ${n} with error ${s.success()}`,
-                              s,
-                            ),
-                          n)
-                        ) {
-                          case 0:
-                            this.m_setUnavailableApps.add(r),
-                              this.m_mapApps.delete(r);
-                            break;
-                          case 1:
-                            this.m_setUnavailablePackages.add(r),
-                              this.m_mapPackages.delete(r);
-                            break;
-                          case 2:
-                            this.m_setUnavailableBundles.add(r),
-                              this.m_mapBundles.delete(r);
-                            break;
-                          case 4:
-                            this.m_setUnavailableTags.add(r),
-                              this.m_mapTags.delete(r);
-                            break;
-                          case 5:
-                            this.m_setUnavailableCreators.add(r),
-                              this.m_mapCreators.delete(r);
-                            break;
-                          case 6:
-                            this.m_setUnavailableHubCategories.add(r),
-                              this.m_mapHubCategories.delete(r);
-                            break;
-                          default:
-                            console.error(
-                              "CStoreItemCache.InternalHandleLoadStoreItems unexpected item_type in response " +
-                                n +
-                                " " +
-                                r,
-                            );
-                        }
-                        if (s.unvailable_for_country_restriction())
-                          switch (n) {
-                            case 0:
-                              this.m_setUnavailableDueToCountryRestrictionApps.add(
-                                r,
-                              );
-                              break;
-                            case 1:
-                              this.m_setUnavailableDueToCountryRestrictionPackages.add(
-                                r,
-                              );
-                              break;
-                            case 2:
-                              this.m_setUnavailableDueToCountryRestrictionBundles.add(
-                                r,
-                              );
-                              break;
-                            case 4:
-                            case 5:
-                            case 6:
-                              console.error(
-                                "CStoreItemCache::InternalHandleLoadStoreItems - tags, creators or categories don't have country restrictions. eResult: " +
-                                  i.GetEResult() +
-                                  " message: " +
-                                  i.Hdr().error_message(),
-                                (0, a.HO)(e),
-                              );
-                          }
-                      }
-                    })
-                : (console.warn(
-                    "CStoreItemCache::InternalHandleLoadStoreItems failed with eResult: " +
-                      i.GetEResult() +
-                      " message: " +
-                      i.Hdr().error_message(),
-                    (0, a.HO)(e),
-                  ),
-                  (1 == i.Hdr().transport_error() || _.TS.FROM_WEB) &&
-                    this.MarkStoreItemIDUnavailable(r[n]),
-                  1 == s && (s = i.GetEResult()));
-            });
-          } catch (e) {
-            const t = (0, c.H)(e);
-            return (
-              console.error(
-                "CStoreItemCache::InternalHandleLoadStoreItems failed: " +
-                  t.strErrorMsg,
-                t,
-              ),
-              r.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
-              79
-            );
-          }
-          return s;
-        }
-        GetMapForType(e) {
-          let t;
-          switch (e) {
-            case 0:
-              t = this.m_mapApps;
-              break;
-            case 2:
-              t = this.m_mapBundles;
-              break;
-            case 1:
-              t = this.m_mapPackages;
-              break;
-            case 4:
-              t = this.m_mapTags;
-              break;
-            case 5:
-              t = this.m_mapCreators;
-              break;
-            case 6:
-              t = this.m_mapHubCategories;
-              break;
-            default:
-              console.error("Invalid map type requested", e);
-          }
-          return t;
-        }
-        BHasStoreItem(e, t, s) {
-          let r = this.GetMapForType(t);
-          return Boolean(
-            r && r.has(e) && (!s || r.get(e).BContainDataRequest(s)),
-          );
-        }
-        GetStoreItem(e, t) {
-          if (-1 == t || 3 == t) return;
-          const s = this.GetMapForType(t);
-          return s?.get(e);
-        }
-        GetStoreItemWithLegacyVisibilityCheck(e, t) {
-          const s = this.GetStoreItem(e, t);
-          return s && (this.m_bReturnUnavailableItems || s.BIsVisible())
-            ? s
-            : void 0;
-        }
-        GetStoreItemDataRequest(e, t) {
-          return this.GetMapForType(t)?.get(e)?.GetDataRequest() || null;
-        }
-        BHasApp(e, t) {
-          return this.BHasStoreItem(e, 0, t);
-        }
-        GetApp(e) {
-          return this.GetStoreItem(e, 0);
-        }
-        BHasPackage(e, t) {
-          return this.BHasStoreItem(e, 1, t);
-        }
-        GetPackage(e) {
-          return this.GetStoreItem(e, 1);
-        }
-        BHasBundle(e, t) {
-          return this.BHasStoreItem(e, 2, t);
-        }
-        GetBundle(e) {
-          return this.GetStoreItem(e, 2);
-        }
-        BHasTag(e, t) {
-          return this.BHasStoreItem(e, 4, t);
-        }
-        GetTag(e) {
-          return this.GetStoreItem(e, 4);
-        }
-        BHasCreator(e, t) {
-          return this.BHasStoreItem(e, 5, t);
-        }
-        GetCreator(e) {
-          return this.GetStoreItem(e, 5);
-        }
-        BHasHubCategory(e, t) {
-          return this.BHasStoreItem(e, 6, t);
-        }
-        GetHubCategory(e) {
-          return this.GetStoreItem(e, 6);
-        }
-        BIsStoreItemMissing(e, t) {
-          switch (t) {
-            case 0:
-              return this.BIsAppMissing(e);
-            case 1:
-              return this.BIsPackageMissing(e);
-            case 2:
-              return this.BIsBundleMissing(e);
-            case 4:
-              return this.BIsTagMissing(e);
-            case 5:
-              return this.BIsCreatorMissing(e);
-            case 6:
-              return this.BIsHubCategoryMissing(e);
-            default:
-              return console.error("BStoreItemMissing invalid type", t), !0;
-          }
-        }
-        BIsAppMissing(e) {
-          return this.m_setUnavailableApps.has(e);
-        }
-        BIsPackageMissing(e) {
-          return this.m_setUnavailablePackages.has(e);
-        }
-        BIsBundleMissing(e) {
-          return this.m_setUnavailableBundles.has(e);
-        }
-        BIsTagMissing(e) {
-          return this.m_setUnavailableTags.has(e);
-        }
-        BIsCreatorMissing(e) {
-          return this.m_setUnavailableCreators.has(e);
-        }
-        BIsHubCategoryMissing(e) {
-          return this.m_setUnavailableHubCategories.has(e);
-        }
-        BIsStoreItemUnavailableDueToCountryRestriction(e, t) {
-          switch (t) {
-            case 0:
-              return this.BIsAppUnavailableDueToCountryRestriction(e);
-            case 1:
-              return this.BIsPackageUnavailableDueToCountryRestriction(e);
-            case 2:
-              return this.BIsBundleUnavailableDueToCountryRestriction(e);
-            case 4:
-            case 5:
-            case 6:
-              return (
-                console.error(
-                  "BIsStoreItemUnavailableDueToCountryRestriction - tags, creators or categories don't have country restrictions. type: ",
-                  t,
-                ),
-                !0
-              );
-            default:
-              return console.error("BStoreItemMissing invalid type", t), !0;
-          }
-        }
-        BIsAppUnavailableDueToCountryRestriction(e) {
-          return this.m_setUnavailableDueToCountryRestrictionApps.has(e);
-        }
-        BIsPackageUnavailableDueToCountryRestriction(e) {
-          return this.m_setUnavailableDueToCountryRestrictionPackages.has(e);
-        }
-        BIsBundleUnavailableDueToCountryRestriction(e) {
-          return this.m_setUnavailableDueToCountryRestrictionBundles.has(e);
-        }
-        ReadResults(e, t) {
-          let s = [];
-          for (const r of e) s.push(this.ReadItem(r, t));
-          return s;
-        }
-        ReadItem(e, t) {
-          const s = e.item_type();
-          let r = null;
-          if (void 0 === s)
-            return (
-              console.warn(`Failed to load item data: ${e.success()}`), null
-            );
-          switch (s) {
-            case 0:
-              r = this.m_mapApps;
-              break;
-            case 1:
-              r = this.m_mapPackages;
-              break;
-            case 2:
-              r = this.m_mapBundles;
-              break;
-            case 4:
-              r = this.m_mapTags;
-              break;
-            case 5:
-              r = this.m_mapCreators;
-              break;
-            case 6:
-              r = this.m_mapHubCategories;
-              break;
-            default:
-              return console.error(`Invalid item type: ${s}`), null;
-          }
-          let a = r.get(e.id());
-          if (
-            (a ? a.MergeData(e, t) : ((a = new d.Ay(e, t)), r.set(e.id(), a)),
-            t.include_included_items && e.included_items(!1))
-          ) {
-            for (const s of e.included_items().included_apps())
-              this.ReadItem(s, t.included_item_data_request);
-            for (const s of e.included_items().included_packages())
-              this.ReadItem(s, t.included_item_data_request);
-          }
-          return a;
-        }
-      }
-      (0, r.Cg)([h.o], I.prototype, "ReadItem", null);
-    },
-    62792: (e, t, s) => {
-      var r;
-      function a(e) {
+    62792: (e, t, r) => {
+      var s;
+      function i(e) {
         return "app" == e ? 0 : "sub" == e ? 1 : 2;
       }
-      function i(e, t = -1) {
+      function a(e, t = -1) {
         return e?.appid
           ? 0
           : e?.packageid
@@ -1936,14 +1033,14 @@
             return "app";
         }
       }
-      function l(e, t, s) {
+      function _(e, t, r) {
         return e
           ? { id: e, item_type: "app" }
           : t
             ? { id: t, item_type: "sub" }
-            : { id: s, item_type: "bundle" };
+            : { id: r, item_type: "bundle" };
       }
-      function c(e) {
+      function l(e) {
         return "app" == e?.item_type
           ? { appid: e.id }
           : "sub" == e?.item_type
@@ -1952,7 +1049,7 @@
               ? { bundleid: e.id }
               : null;
       }
-      function _(e) {
+      function c(e) {
         return e?.appid
           ? { item_type: "app", id: e.appid }
           : e?.packageid
@@ -1961,7 +1058,7 @@
               ? { item_type: "bundle", id: e.bundleid }
               : null;
       }
-      function m(e, t) {
+      function h(e, t) {
         return 0 == t
           ? { id: e, item_type: "app" }
           : 1 == t
@@ -1989,7 +1086,7 @@
                     ? { hubcategoryid: e }
                     : null;
       }
-      function h(e) {
+      function m(e) {
         return e?.appid
           ? "a" + e.appid
           : e?.packageid
@@ -2030,7 +1127,7 @@
                     ? e.tagid
                     : 0;
       }
-      function I(e) {
+      function R(e) {
         return e?.appid
           ? 0
           : e?.packageid
@@ -2045,7 +1142,7 @@
                     ? 4
                     : 0;
       }
-      function R(e) {
+      function I(e) {
         return "app" == e?.item_type
           ? 0
           : "sub" == e?.item_type
@@ -2065,7 +1162,7 @@
             return { bundleid: t };
         }
       }
-      function b(e) {
+      function C(e) {
         return "application" == e
           ? 0
           : "bundle" == e
@@ -2083,33 +1180,33 @@
               ? "bundle"
               : null;
       }
-      function C(e) {
+      function y(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function y(e) {
+      function D(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
-      s.d(t, {
-        Di: () => c,
+      r.d(t, {
+        Di: () => l,
         FT: () => p,
-        JK: () => a,
+        JK: () => i,
         Je: () => d,
         M9: () => g,
         Rz: () => n,
         SW: () => o,
-        Si: () => y,
+        Si: () => D,
         TM: () => u,
-        TV: () => b,
-        _P: () => I,
+        TV: () => C,
+        _P: () => R,
         cW: () => f,
-        gy: () => R,
-        hh: () => _,
+        gy: () => I,
+        hh: () => c,
         lY: () => S,
-        pk: () => i,
-        s9: () => C,
-        vo: () => m,
-        wD: () => h,
-        wR: () => l,
+        pk: () => a,
+        s9: () => y,
+        vo: () => h,
+        wD: () => m,
+        wR: () => _,
       }),
         (function (e) {
           (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
@@ -2135,45 +1232,45 @@
             (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
             (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
             (e[(e.k_RejectAO = 19)] = "k_RejectAO");
-        })(r || (r = {}));
+        })(s || (s = {}));
     },
-    63369: (e, t, s) => {
-      s.d(t, { M: () => n, d: () => i });
-      var r = s(61859),
-        a = s(91675);
-      function i(e) {
+    63369: (e, t, r) => {
+      r.d(t, { M: () => n, d: () => a });
+      var s = r(61859),
+        i = r(91675);
+      function a(e) {
         return n(
           e.coming_soon_display,
           e.steam_release_date,
           e.custom_release_date_message,
         );
       }
-      function n(e, t, s, i) {
+      function n(e, t, r, a) {
         switch (e) {
           case "date_full":
-            return (0, r.$z)(t);
+            return (0, s.$z)(t);
           case "date_month":
-            return (0, a.sq)(new Date(1e3 * t));
+            return (0, i.sq)(new Date(1e3 * t));
           case "date_quarter":
-            return (0, a.u6)(new Date(1e3 * t), i);
+            return (0, i.u6)(new Date(1e3 * t), a);
           case "date_year":
-            return (0, a.vl)(new Date(1e3 * t));
+            return (0, i.vl)(new Date(1e3 * t));
           case "text_comingsoon":
-            return s || (0, r.we)("#Store_ComingSoon_ComingSoon");
+            return r || (0, s.we)("#Store_ComingSoon_ComingSoon");
           case "text_tba":
-            return s || (0, r.we)("#Store_ComingSoon_TBA");
+            return r || (0, s.we)("#Store_ComingSoon_TBA");
           default:
             return "";
         }
       }
     },
-    68797: (e, t, s) => {
-      s.d(t, { H: () => n });
-      var r = s(41735),
-        a = s.n(r),
-        i = s(56545);
+    68797: (e, t, r) => {
+      r.d(t, { H: () => n });
+      var s = r(41735),
+        i = r.n(s),
+        a = r(56545);
       function n(e) {
-        if (a().isCancel(e))
+        if (i().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -2226,7 +1323,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof i.w)
+            if ("object" == typeof e && e instanceof a.w)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),

@@ -69,102 +69,105 @@
         HTMLErrorBoxAppear: "bXT6nAG7o3DqMjoZ_zWJ",
       };
     },
-    92528: (e, t, a) => {
+    92528: (e, t, n) => {
       "use strict";
-      a.d(t, { Y: () => o });
-      var n = a(90626),
-        i = a(64046),
-        l = a(88997),
-        r = a(40139),
-        s = a.n(r);
-      function o(e) {
+      n.d(t, { Y: () => l });
+      var a = n(7850),
+        i = n(90626),
+        s = n(64046),
+        r = n(88997),
+        o = n(40139),
+        d = n.n(o);
+      function l(e) {
         const { rgGameProfileColorDefs: t } = e,
-          a = t.map((e) =>
-            n.createElement(
+          n = t.map((e) =>
+            (0, a.jsxs)(
               "div",
-              { key: e.strProfileColorKey, className: "form_row_flex" },
-              n.createElement(
-                "div",
-                { className: "form_label_flex" },
-                "*",
-                e.strProfileColorLabel,
-              ),
-              n.createElement(
-                "div",
-                { className: "form_data_flex" },
-                (function (e) {
-                  const { strKVPrepend: t, bWriteAsRGBOnly: a } = e;
-                  let [r, o] = n.useState(e.strCurrentColor);
-                  const c = n.useRef(void 0),
-                    m = (e) => {
-                      const t = (e) => {
-                        o(e);
-                      };
-                      (0, l.lX)(
-                        n.createElement(i.s, {
-                          onChange: t,
-                          color: r,
-                          disableAlpha: a,
-                        }),
-                        e,
-                        { bDisablePopTop: !0 },
-                      );
-                    },
-                    p = () => {
-                      o(c.current.value);
-                    };
-                  return n.createElement(
-                    n.Fragment,
-                    null,
-                    n.createElement("input", {
-                      ref: c,
-                      type: "text",
-                      name: `${t || "item[profile_colors]"}[${e.strProfileColorKey}]`,
-                      onChange: p,
-                      placeholder: a
-                        ? "255,255,255"
-                        : "rgba(255, 255, 255, .5)",
-                      size: 20,
-                      value: a ? d(r) : r,
-                      readOnly: !0,
-                    }),
-                    n.createElement("div", {
-                      className: s().profile_color_preview,
-                      style: { backgroundColor: `${r}` },
-                      onClick: m,
-                    }),
-                  );
-                })(e),
-              ),
+              {
+                className: "form_row_flex",
+                children: [
+                  (0, a.jsxs)("div", {
+                    className: "form_label_flex",
+                    children: ["*", e.strProfileColorLabel],
+                  }),
+                  (0, a.jsx)("div", {
+                    className: "form_data_flex",
+                    children: p(e),
+                  }),
+                ],
+              },
+              e.strProfileColorKey,
             ),
           );
-        return n.createElement("div", { className: s().profile_colors_ctn }, a);
+        return (0, a.jsx)("div", {
+          className: d().profile_colors_ctn,
+          children: n,
+        });
       }
-      function d(e) {
+      function c(e) {
         const t = e.match(/rgba?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
         if (!t) return null;
-        const [, a, n, i] = t;
-        return `${a},${n},${i}`;
+        const [, n, a, i] = t;
+        return `${n},${a},${i}`;
+      }
+      function p(e) {
+        const { strKVPrepend: t, bWriteAsRGBOnly: n } = e;
+        let [o, l] = i.useState(e.strCurrentColor);
+        const p = i.useRef(void 0);
+        return (0, a.jsxs)(a.Fragment, {
+          children: [
+            (0, a.jsx)("input", {
+              ref: p,
+              type: "text",
+              name: `${t || "item[profile_colors]"}[${e.strProfileColorKey}]`,
+              onChange: () => {
+                l(p.current.value);
+              },
+              placeholder: n ? "255,255,255" : "rgba(255, 255, 255, .5)",
+              size: 20,
+              value: n ? c(o) : o,
+              readOnly: !0,
+            }),
+            (0, a.jsx)("div", {
+              className: d().profile_color_preview,
+              style: { backgroundColor: `${o}` },
+              onClick: (e) => {
+                (0, r.lX)(
+                  (0, a.jsx)(s.s, {
+                    onChange: (e) => {
+                      l(e);
+                    },
+                    color: o,
+                    disableAlpha: n,
+                  }),
+                  e,
+                  { bDisablePopTop: !0 },
+                );
+              },
+            }),
+          ],
+        });
       }
     },
-    35863: (e, t, a) => {
+    35863: (e, t, n) => {
       "use strict";
-      a.d(t, { H: () => h });
-      var n = a(90626),
-        i = a(93542),
-        l = a(61859),
-        r = a(21869),
-        s = a(10411),
-        o = a(52038),
-        d = a(51614),
-        c = a(41735),
-        m = a.n(c),
-        p = a(22797),
-        E = a(78327),
-        u = a(12155);
-      const _ = 748,
-        g = 896;
-      class S {
+      n.d(t, { H: () => j });
+      var a = n(7850),
+        i = n(90626),
+        s = n(93542),
+        r = n(61859),
+        o = n(21869),
+        d = n(10411),
+        l = n(52038),
+        c = n(51614),
+        p = n(41735),
+        m = n.n(p),
+        _ = n(22797),
+        g = n(78327),
+        h = n(12155);
+      const u = 748,
+        x = 896;
+      class E {
         rgSet = new Set();
         constructor(e) {
           for (const t of e) this.rgSet.add(JSON.stringify(t));
@@ -188,565 +191,538 @@
           for (const e of this.rgSet) yield JSON.parse(e);
         }
       }
-      function h(e) {
-        const [t, a] = (0, n.useState)("closed"),
-          c = e.rgEditions,
-          [_, g] = (0, n.useState)(new S(c)),
-          h = new Map();
+      function j(e) {
+        const [t, n] = (0, i.useState)("closed"),
+          p = e.rgEditions,
+          [u, x] = (0, i.useState)(new E(p)),
+          j = new Map();
         for (const t of Object.keys(e.rgEditionsComparisonGraphics))
-          h.set(t, e.rgEditionsComparisonGraphics[t]);
-        const [b, C] = (0, n.useState)(() => {
+          j.set(t, e.rgEditionsComparisonGraphics[t]);
+        const [S, A] = (0, i.useState)(() => {
             const t = new Map();
-            for (const a of Object.keys(e.rgEditionsAltText))
-              t.set(a, e.rgEditionsAltText[a]);
+            for (const n of Object.keys(e.rgEditionsAltText))
+              t.set(n, e.rgEditionsAltText[n]);
             return t;
           }),
-          [D, w] = (0, n.useState)(h),
-          R = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
-          v = (function (e, t) {
-            return (0, d.n)({
-              mutationFn: async (a) => {
+          [C, D] = (0, i.useState)(j),
+          w = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
+          R = (function (e, t) {
+            return (0, c.n)({
+              mutationFn: async (n) => {
                 const {
-                    rgEditionsToSave: n,
+                    rgEditionsToSave: a,
                     rgGraphicsToDelete: i,
-                    mapGraphicsToUpload: l,
+                    mapGraphicsToUpload: s,
                     mapAltText: r,
-                  } = a,
-                  s = new FormData();
-                s.append("sessionid", E.TS.SESSIONID);
-                const o = Math.max(t.length, n.length);
-                for (let e = 0; e < o; e++)
-                  e >= n.length
-                    ? (s.append(
+                  } = n,
+                  o = new FormData();
+                o.append("sessionid", g.TS.SESSIONID);
+                const d = Math.max(t.length, a.length);
+                for (let e = 0; e < d; e++)
+                  e >= a.length
+                    ? (o.append(
                         `app[related_items][editions][${e}][packageid]`,
                         "",
                       ),
-                      s.append(
+                      o.append(
                         `app[related_items][editions][${e}][bundleid]`,
                         "",
                       ))
-                    : n[e].packageid
-                      ? (s.append(
+                    : a[e].packageid
+                      ? (o.append(
                           `app[related_items][editions][${e}][packageid]`,
-                          "" + n[e].packageid,
+                          "" + a[e].packageid,
                         ),
-                        s.append(
+                        o.append(
                           `app[related_items][editions][${e}][bundleid]`,
                           "",
                         ))
-                      : n[e].bundleid
-                        ? (s.append(
+                      : a[e].bundleid
+                        ? (o.append(
                             `app[related_items][editions][${e}][packageid]`,
                             "",
                           ),
-                          s.append(
+                          o.append(
                             `app[related_items][editions][${e}][bundleid]`,
-                            "" + n[e].bundleid,
+                            "" + a[e].bundleid,
                           ))
                         : console.log(
                             "Tried to save an edition with neither packageid or bundleid.",
                           );
-                l.forEach((e, t) => {
-                  s.append(
+                s.forEach((e, t) => {
+                  o.append(
                     `edition_comparison|edition_comparision|assets|edition_comparison|image|${t}`,
                     e,
                   );
                 });
                 for (const e of i)
-                  s.append(`app[assets][edition_comparison][image][${e}]`, "");
+                  o.append(`app[assets][edition_comparison][image][${e}]`, "");
                 r.forEach((e, t) => {
-                  s.append(
+                  o.append(
                     `app[assets][edition_comparison][image_alt_text][${t}]`,
                     e,
                   );
                 });
-                const d = `${E.TS.PARTNER_BASE_URL}admin/game/quickupdateajax/${e}`;
-                return m().post(d, s);
+                const l = `${g.TS.PARTNER_BASE_URL}admin/game/quickupdateajax/${e}`;
+                return m().post(l, o);
               },
             });
-          })(e.nItemId, c),
-          N = new Map();
-        for (const t of e.rgCandidates) N.set(t.nId, t);
-        let k = null;
+          })(e.nItemId, p),
+          v = new Map();
+        for (const t of e.rgCandidates) v.set(t.nId, t);
+        let N = null;
         if (
-          _.size > 0 &&
+          u.size > 0 &&
           -1 !== e.nBasePackageId &&
-          !_.has({ packageid: e.nBasePackageId })
+          !u.has({ packageid: e.nBasePackageId })
         ) {
           const t = e.rgCandidates.find((t) => t.nId === e.nBasePackageId);
-          k = (0, l.we)(
+          N = (0, r.we)(
             "#StoreAdmin_EditEditions_MustIncludeCheapestBasePageError",
             t?.strName,
             e.nBasePackageId,
           );
         }
-        const T = n.useId();
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            r.E,
-            { active: "editor" === t || "alert" === t },
-            n.createElement(
-              s.eV,
-              { "aria-labelledby": T, closeModal: () => a("closed") },
-              "editor" === t &&
-                n.createElement(
-                  n.Fragment,
-                  null,
-                  n.createElement(
-                    "div",
-                    { className: i.EditionsEditorContents },
-                    n.createElement(
-                      "h2",
-                      { id: T },
-                      (0, l.we)("#StoreAdmin_EditEditions_DialogTitle"),
-                    ),
-                    v.isPending && n.createElement(p.t, null),
-                    !v.isPending &&
-                      n.createElement(
-                        n.Fragment,
-                        null,
-                        null !== k &&
-                          n.createElement(
-                            "div",
-                            { className: i.ErrorBox },
-                            n.createElement(u.X, null),
-                            n.createElement("div", null, k),
-                          ),
-                        n.createElement(f, {
-                          rgEditions: _,
-                          rgCandidates: e.rgCandidates,
-                          setEditions: g,
-                        }),
-                        n.createElement("div", {
-                          className: i.EditionPickerHr,
-                        }),
-                        n.createElement(A, {
-                          mapOriginalImages: h,
-                          mapImages: D,
-                          setImages: w,
-                          mapAltText: b,
-                          setAltText: C,
-                          bAppHasSteamChinaToolsEnabled:
-                            e.bAppHasSteamChinaToolsEnabled,
-                        }),
-                      ),
-                  ),
-                  n.createElement(
-                    "div",
-                    { className: i.EditionsEditorDialogButtons },
-                    n.createElement(
-                      "button",
-                      {
-                        className: "btn_green_white_innerfade",
-                        disabled: null !== k,
-                        onClick: async () => {
-                          const e = new Map();
-                          D.forEach((t, a) => {
-                            t instanceof File && e.set(a, t);
-                          });
-                          const t = [];
-                          h.forEach((e, a) => {
-                            D.has(a) || t.push(a);
-                          }),
-                            v.mutate({
-                              rgEditionsToSave: Array.from(_),
-                              mapGraphicsToUpload: e,
-                              mapAltText: b,
-                              rgGraphicsToDelete: t,
-                            }),
-                            a("alert");
-                        },
-                      },
-                      (0, l.we)("#StoreAdmin_EditEditions_SaveButton"),
-                    ),
-                    n.createElement(
-                      "button",
-                      {
-                        onClick: () => {
-                          g(new S(c)), a("closed");
-                        },
-                      },
-                      (0, l.we)("#StoreAdmin_EditEditions_CancelButton"),
-                    ),
-                  ),
-                  n.createElement(
-                    "p",
-                    { className: i.NeedToPublishNotification },
-                    (0, l.oW)(
-                      "#StoreAdmin_EditEditions_NeedToPublishNotice",
-                      n.createElement("a", {
-                        target: "_blank",
-                        href: `${E.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
-                      }),
-                    ),
-                  ),
-                ),
-              "alert" === t &&
-                n.createElement(
-                  n.Fragment,
-                  null,
-                  n.createElement(
-                    "div",
-                    { className: i.EditionEditorContents },
-                    n.createElement(
-                      "h2",
-                      null,
-                      (0, l.we)("#StoreAdmin_EditEditions_SavingTitle"),
-                    ),
-                    n.createElement(
-                      "div",
-                      { className: i.EditionsEditorSaveStatus },
-                      v.isPending &&
-                        n.createElement(
-                          n.Fragment,
-                          null,
-                          n.createElement(p.t, null),
-                          " ",
-                          (0, l.we)("#StoreAdmin_EditEditions_Saving"),
-                        ),
-                      !v.isPending &&
-                        n.createElement(
-                          "span",
-                          null,
-                          (0, l.we)("#StoreAdmin_EditEditions_Saved"),
-                        ),
-                    ),
-                    n.createElement(
-                      "span",
-                      { className: i.PublishReminder },
-                      (0, l.oW)(
-                        "#StoreAdmin_EditEditions_NeedToPublishAlert",
-                        n.createElement("a", {
-                          target: "_blank",
-                          href: `${E.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
-                        }),
-                      ),
-                    ),
-                    n.createElement(
-                      "div",
-                      { className: i.EditionsEditorDialogButtons },
-                      n.createElement(
-                        "button",
-                        {
-                          onClick: () => {
-                            a("refreshing"), window.location.reload();
-                          },
-                        },
-                        (0, l.we)("#StoreAdmin_EditEditions_OK"),
-                      ),
-                    ),
-                  ),
-                ),
-            ),
-          ),
-          (e.rgCandidates.length > 1 || e.rgEditions.length > 0) &&
-            n.createElement(
-              n.Fragment,
-              null,
-              n.createElement(
-                "div",
-                {
-                  className: (0, o.A)(
-                    i.EditionsEditorRow,
-                    R && i.ImageProvided,
-                  ),
-                },
-                "closed" === t &&
-                  n.createElement(
-                    n.Fragment,
-                    null,
-                    n.createElement(
-                      "button",
-                      {
-                        className: i.OpenEditorButton,
-                        onClick: () => a("editor"),
-                      },
-                      (0, l.we)(
-                        "#StoreAdmin_EditEditions_ManageEditionsButton",
-                      ),
-                    ),
-                    _?.size > 0
-                      ? n.createElement(
-                          "span",
-                          null,
-                          (0, l.we)(
-                            "#StoreAdmin_EditEditions_ManageEditionsDescription",
-                            _.size,
-                          ),
-                        )
-                      : n.createElement(
-                          "span",
-                          null,
-                          (0, l.we)(
-                            "#StoreAdmin_EditEditions_GroupEditionsDescription",
-                          ),
-                        ),
-                    n.createElement(
-                      "span",
-                      null,
-                      R
-                        ? n.createElement(
-                            "span",
-                            {
-                              className: (0, o.A)(
-                                i.TaskDone,
-                                "icon_check_green",
+        const k = i.useId();
+        return (0, a.jsxs)(a.Fragment, {
+          children: [
+            (0, a.jsx)(o.E, {
+              active: "editor" === t || "alert" === t,
+              children: (0, a.jsxs)(d.eV, {
+                "aria-labelledby": k,
+                closeModal: () => n("closed"),
+                children: [
+                  "editor" === t &&
+                    (0, a.jsxs)(a.Fragment, {
+                      children: [
+                        (0, a.jsxs)("div", {
+                          className: s.EditionsEditorContents,
+                          children: [
+                            (0, a.jsx)("h2", {
+                              id: k,
+                              children: (0, r.we)(
+                                "#StoreAdmin_EditEditions_DialogTitle",
                               ),
-                            },
-                            (0, l.we)(
-                              "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic",
-                            ),
-                          )
-                        : (0, l.we)(
-                            "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
+                            }),
+                            R.isPending && (0, a.jsx)(_.t, {}),
+                            !R.isPending &&
+                              (0, a.jsxs)(a.Fragment, {
+                                children: [
+                                  null !== N &&
+                                    (0, a.jsxs)("div", {
+                                      className: s.ErrorBox,
+                                      children: [
+                                        (0, a.jsx)(h.X, {}),
+                                        (0, a.jsx)("div", { children: N }),
+                                      ],
+                                    }),
+                                  (0, a.jsx)(b, {
+                                    rgEditions: u,
+                                    rgCandidates: e.rgCandidates,
+                                    setEditions: x,
+                                  }),
+                                  (0, a.jsx)("div", {
+                                    className: s.EditionPickerHr,
+                                  }),
+                                  (0, a.jsx)(f, {
+                                    mapOriginalImages: j,
+                                    mapImages: C,
+                                    setImages: D,
+                                    mapAltText: S,
+                                    setAltText: A,
+                                    bAppHasSteamChinaToolsEnabled:
+                                      e.bAppHasSteamChinaToolsEnabled,
+                                  }),
+                                ],
+                              }),
+                          ],
+                        }),
+                        (0, a.jsxs)("div", {
+                          className: s.EditionsEditorDialogButtons,
+                          children: [
+                            (0, a.jsx)("button", {
+                              className: "btn_green_white_innerfade",
+                              disabled: null !== N,
+                              onClick: async () => {
+                                const e = new Map();
+                                C.forEach((t, n) => {
+                                  t instanceof File && e.set(n, t);
+                                });
+                                const t = [];
+                                j.forEach((e, n) => {
+                                  C.has(n) || t.push(n);
+                                }),
+                                  R.mutate({
+                                    rgEditionsToSave: Array.from(u),
+                                    mapGraphicsToUpload: e,
+                                    mapAltText: S,
+                                    rgGraphicsToDelete: t,
+                                  }),
+                                  n("alert");
+                              },
+                              children: (0, r.we)(
+                                "#StoreAdmin_EditEditions_SaveButton",
+                              ),
+                            }),
+                            (0, a.jsx)("button", {
+                              onClick: () => {
+                                x(new E(p)), n("closed");
+                              },
+                              children: (0, r.we)(
+                                "#StoreAdmin_EditEditions_CancelButton",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, a.jsx)("p", {
+                          className: s.NeedToPublishNotification,
+                          children: (0, r.oW)(
+                            "#StoreAdmin_EditEditions_NeedToPublishNotice",
+                            (0, a.jsx)("a", {
+                              target: "_blank",
+                              href: `${g.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
+                            }),
                           ),
-                    ),
-                  ),
-                "refreshing" === t &&
-                  n.createElement(
-                    n.Fragment,
-                    null,
-                    n.createElement(p.t, { size: "small" }),
-                  ),
-              ),
-            ),
-        );
-      }
-      const b = (e) =>
-        "bundle" === e.eType ? { bundleid: e.nId } : { packageid: e.nId };
-      function f(e) {
-        const { rgEditions: t, rgCandidates: a, setEditions: r } = e,
-          s = new Map();
-        for (const t of e.rgCandidates) s.set(t.nId, t);
-        const [d, c] = (0, n.useState)(""),
-          m = a.filter(
-            (e) => -1 !== e.strName.toLowerCase().indexOf(d.toLowerCase()),
-          );
-        return n.createElement(
-          "div",
-          { className: i.EditionPicker },
-          n.createElement(
-            "p",
-            null,
-            (0, l.oW)(
-              "#StoreAdmin_EditEditions_GroupEditionsIntro",
-              n.createElement("a", {
-                target: "_blank",
-                href: `${E.TS.PARTNER_BASE_URL}doc/store/manageeditions`,
-              }),
-            ),
-          ),
-          n.createElement("br", null),
-          n.createElement(
-            "h3",
-            null,
-            (0, l.we)("#StoreAdmin_EditEditions_StepNumber1"),
-          ),
-          n.createElement(
-            "p",
-            null,
-            (0, l.we)("#StoreAdmin_EditEditions_SelectEditionsDescription"),
-          ),
-          n.createElement(
-            "div",
-            { className: i.EditionPickerFilterBox },
-            n.createElement("input", {
-              type: "text",
-              placeholder: (0, l.we)(
-                "#StoreAdmin_EditEditions_FilterDescription",
-              ),
-              value: d,
-              onChange: (e) => {
-                const t = e.target.value;
-                c(t);
-              },
-            }),
-          ),
-          n.createElement(
-            "table",
-            null,
-            n.createElement(
-              "thead",
-              null,
-              n.createElement(
-                "tr",
-                null,
-                n.createElement(
-                  "td",
-                  null,
-                  (0, l.we)("#StoreAdmin_EditEditions_ColumnEdition"),
-                ),
-                n.createElement(
-                  "td",
-                  null,
-                  (0, l.we)("#StoreAdmin_EditEditions_ColumnPackageTitle"),
-                ),
-                n.createElement(
-                  "td",
-                  null,
-                  (0, l.we)("#StoreAdmin_EditEditions_ColumnState"),
-                ),
-                n.createElement(
-                  "td",
-                  null,
-                  (0, l.we)("#StoreAdmin_EditEditions_ColumnPrice"),
-                ),
-              ),
-            ),
-            n.createElement(
-              "tbody",
-              null,
-              m.map((e) => {
-                const a = t.has(b(e));
-                let l = i.HiddenColor;
-                return (
-                  "Released" === e.strReleaseState
-                    ? (l = i.ReleasedColor)
-                    : "Prepurchase" === e.strReleaseState
-                      ? (l = i.PrepurchaseColor)
-                      : "Beta" === e.strReleaseState && (l = i.BetaColor),
-                  n.createElement(
-                    "tr",
-                    { key: e.nId, className: (0, o.A)(l, i.EditionPickerRow) },
-                    n.createElement(
-                      "td",
-                      null,
-                      n.createElement("input", {
-                        type: "checkbox",
-                        onChange:
-                          ((s = e.eType),
-                          (d = e.nId),
-                          (e) => {
-                            const a = new S(t);
-                            e.target.checked
-                              ? a.add(
-                                  "package" === s
-                                    ? { packageid: d }
-                                    : { bundleid: d },
-                                )
-                              : a.delete(
-                                  "package" === s
-                                    ? { packageid: d }
-                                    : { bundleid: d },
-                                ),
-                              r(a);
-                          }),
-                        checked: a,
-                      }),
-                    ),
-                    n.createElement("td", null, e.strName),
-                    n.createElement("td", null, e.strLocalizedReleaseState),
-                    n.createElement("td", {
-                      dangerouslySetInnerHTML: { __html: e.strPricing },
+                        }),
+                      ],
                     }),
-                  )
-                );
-                var s, d;
+                  "alert" === t &&
+                    (0, a.jsx)(a.Fragment, {
+                      children: (0, a.jsxs)("div", {
+                        className: s.EditionEditorContents,
+                        children: [
+                          (0, a.jsx)("h2", {
+                            children: (0, r.we)(
+                              "#StoreAdmin_EditEditions_SavingTitle",
+                            ),
+                          }),
+                          (0, a.jsxs)("div", {
+                            className: s.EditionsEditorSaveStatus,
+                            children: [
+                              R.isPending &&
+                                (0, a.jsxs)(a.Fragment, {
+                                  children: [
+                                    (0, a.jsx)(_.t, {}),
+                                    " ",
+                                    (0, r.we)(
+                                      "#StoreAdmin_EditEditions_Saving",
+                                    ),
+                                  ],
+                                }),
+                              !R.isPending &&
+                                (0, a.jsx)("span", {
+                                  children: (0, r.we)(
+                                    "#StoreAdmin_EditEditions_Saved",
+                                  ),
+                                }),
+                            ],
+                          }),
+                          (0, a.jsx)("span", {
+                            className: s.PublishReminder,
+                            children: (0, r.oW)(
+                              "#StoreAdmin_EditEditions_NeedToPublishAlert",
+                              (0, a.jsx)("a", {
+                                target: "_blank",
+                                href: `${g.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
+                              }),
+                            ),
+                          }),
+                          (0, a.jsx)("div", {
+                            className: s.EditionsEditorDialogButtons,
+                            children: (0, a.jsx)("button", {
+                              onClick: () => {
+                                n("refreshing"), window.location.reload();
+                              },
+                              children: (0, r.we)(
+                                "#StoreAdmin_EditEditions_OK",
+                              ),
+                            }),
+                          }),
+                        ],
+                      }),
+                    }),
+                ],
               }),
-            ),
-          ),
-        );
+            }),
+            (e.rgCandidates.length > 1 || e.rgEditions.length > 0) &&
+              (0, a.jsx)(a.Fragment, {
+                children: (0, a.jsxs)("div", {
+                  className: (0, l.A)(
+                    s.EditionsEditorRow,
+                    w && s.ImageProvided,
+                  ),
+                  children: [
+                    "closed" === t &&
+                      (0, a.jsxs)(a.Fragment, {
+                        children: [
+                          (0, a.jsx)("button", {
+                            className: s.OpenEditorButton,
+                            onClick: () => n("editor"),
+                            children: (0, r.we)(
+                              "#StoreAdmin_EditEditions_ManageEditionsButton",
+                            ),
+                          }),
+                          u?.size > 0
+                            ? (0, a.jsx)("span", {
+                                children: (0, r.we)(
+                                  "#StoreAdmin_EditEditions_ManageEditionsDescription",
+                                  u.size,
+                                ),
+                              })
+                            : (0, a.jsx)("span", {
+                                children: (0, r.we)(
+                                  "#StoreAdmin_EditEditions_GroupEditionsDescription",
+                                ),
+                              }),
+                          (0, a.jsx)("span", {
+                            children: w
+                              ? (0, a.jsx)("span", {
+                                  className: (0, l.A)(
+                                    s.TaskDone,
+                                    "icon_check_green",
+                                  ),
+                                  children: (0, r.we)(
+                                    "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic",
+                                  ),
+                                })
+                              : (0, r.we)(
+                                  "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
+                                ),
+                          }),
+                        ],
+                      }),
+                    "refreshing" === t &&
+                      (0, a.jsx)(a.Fragment, {
+                        children: (0, a.jsx)(_.t, { size: "small" }),
+                      }),
+                  ],
+                }),
+              }),
+          ],
+        });
       }
-      function A(e) {
+      const S = (e) =>
+        "bundle" === e.eType ? { bundleid: e.nId } : { packageid: e.nId };
+      function b(e) {
+        const { rgEditions: t, rgCandidates: n, setEditions: o } = e,
+          d = new Map();
+        for (const t of e.rgCandidates) d.set(t.nId, t);
+        const [c, p] = (0, i.useState)(""),
+          m = n.filter(
+            (e) => -1 !== e.strName.toLowerCase().indexOf(c.toLowerCase()),
+          );
+        return (0, a.jsxs)("div", {
+          className: s.EditionPicker,
+          children: [
+            (0, a.jsx)("p", {
+              children: (0, r.oW)(
+                "#StoreAdmin_EditEditions_GroupEditionsIntro",
+                (0, a.jsx)("a", {
+                  target: "_blank",
+                  href: `${g.TS.PARTNER_BASE_URL}doc/store/manageeditions`,
+                }),
+              ),
+            }),
+            (0, a.jsx)("br", {}),
+            (0, a.jsx)("h3", {
+              children: (0, r.we)("#StoreAdmin_EditEditions_StepNumber1"),
+            }),
+            (0, a.jsx)("p", {
+              children: (0, r.we)(
+                "#StoreAdmin_EditEditions_SelectEditionsDescription",
+              ),
+            }),
+            (0, a.jsx)("div", {
+              className: s.EditionPickerFilterBox,
+              children: (0, a.jsx)("input", {
+                type: "text",
+                placeholder: (0, r.we)(
+                  "#StoreAdmin_EditEditions_FilterDescription",
+                ),
+                value: c,
+                onChange: (e) => {
+                  const t = e.target.value;
+                  p(t);
+                },
+              }),
+            }),
+            (0, a.jsxs)("table", {
+              children: [
+                (0, a.jsx)("thead", {
+                  children: (0, a.jsxs)("tr", {
+                    children: [
+                      (0, a.jsx)("td", {
+                        children: (0, r.we)(
+                          "#StoreAdmin_EditEditions_ColumnEdition",
+                        ),
+                      }),
+                      (0, a.jsx)("td", {
+                        children: (0, r.we)(
+                          "#StoreAdmin_EditEditions_ColumnPackageTitle",
+                        ),
+                      }),
+                      (0, a.jsx)("td", {
+                        children: (0, r.we)(
+                          "#StoreAdmin_EditEditions_ColumnState",
+                        ),
+                      }),
+                      (0, a.jsx)("td", {
+                        children: (0, r.we)(
+                          "#StoreAdmin_EditEditions_ColumnPrice",
+                        ),
+                      }),
+                    ],
+                  }),
+                }),
+                (0, a.jsx)("tbody", {
+                  children: m.map((e) => {
+                    const n = t.has(S(e));
+                    let i = s.HiddenColor;
+                    return (
+                      "Released" === e.strReleaseState
+                        ? (i = s.ReleasedColor)
+                        : "Prepurchase" === e.strReleaseState
+                          ? (i = s.PrepurchaseColor)
+                          : "Beta" === e.strReleaseState && (i = s.BetaColor),
+                      (0, a.jsxs)(
+                        "tr",
+                        {
+                          className: (0, l.A)(i, s.EditionPickerRow),
+                          children: [
+                            (0, a.jsx)("td", {
+                              children: (0, a.jsx)("input", {
+                                type: "checkbox",
+                                onChange:
+                                  ((r = e.eType),
+                                  (d = e.nId),
+                                  (e) => {
+                                    const n = new E(t);
+                                    e.target.checked
+                                      ? n.add(
+                                          "package" === r
+                                            ? { packageid: d }
+                                            : { bundleid: d },
+                                        )
+                                      : n.delete(
+                                          "package" === r
+                                            ? { packageid: d }
+                                            : { bundleid: d },
+                                        ),
+                                      o(n);
+                                  }),
+                                checked: n,
+                              }),
+                            }),
+                            (0, a.jsx)("td", { children: e.strName }),
+                            (0, a.jsx)("td", {
+                              children: e.strLocalizedReleaseState,
+                            }),
+                            (0, a.jsx)("td", {
+                              dangerouslySetInnerHTML: { __html: e.strPricing },
+                            }),
+                          ],
+                        },
+                        e.nId,
+                      )
+                    );
+                    var r, d;
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function f(e) {
         const {
             mapOriginalImages: t,
-            mapImages: a,
-            setImages: r,
-            mapAltText: s,
-            setAltText: o,
-            bAppHasSteamChinaToolsEnabled: d,
+            mapImages: n,
+            setImages: o,
+            mapAltText: d,
+            setAltText: l,
+            bAppHasSteamChinaToolsEnabled: c,
           } = e,
-          [c, m] = (0, n.useState)(null),
-          p = (0, l.O9)(e.bAppHasSteamChinaToolsEnabled),
-          [E, S] = (0, n.useState)("english"),
-          h = (0, n.useRef)(null);
-        let b = null,
-          f = "missing";
-        if (a.has(E)) {
-          const e = a.get(E);
+          [p, m] = (0, i.useState)(null),
+          _ = (0, r.O9)(e.bAppHasSteamChinaToolsEnabled),
+          [g, E] = (0, i.useState)("english"),
+          j = (0, i.useRef)(null);
+        let S = null,
+          b = "missing";
+        if (n.has(g)) {
+          const e = n.get(g);
           e instanceof File
-            ? ((b = URL.createObjectURL(e)), (f = "uploaded"))
-            : ((b = e), (f = "exists"));
+            ? ((S = URL.createObjectURL(e)), (b = "uploaded"))
+            : ((S = e), (b = "exists"));
         }
-        const A = (e) =>
-          a.has(e) && a.get(e) instanceof File
-            ? i.UploadedImageOption
-            : a.has(e)
-              ? i.ExistsImageOption
-              : i.MissingImageOption;
-        return n.createElement(
-          "div",
-          { className: i.LocalizedImageSelector },
-          n.createElement(
-            "h3",
-            null,
-            (0, l.we)("#StoreAdmin_EditEditions_StepNumber2"),
-          ),
-          n.createElement(
-            "p",
-            null,
-            (0, l.we)(
-              "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
-              _,
-              g,
-            ),
-          ),
-          n.createElement(
-            "div",
-            { className: i.Header },
-            n.createElement("input", {
-              type: "file",
-              ref: h,
-              onChange: async (e) => {
-                if (e.target.files && e.target.files[0]) {
-                  const t = e.target.files[0],
-                    n = await createImageBitmap(t);
-                  if (n.width !== _ || n.height !== g)
-                    return void m(
-                      (0, l.we)(
-                        "#StoreAdmin_EditEditions_ImageSizeError",
-                        _,
-                        g,
-                        n.width,
-                        n.height,
-                      ),
-                    );
-                  const i = new Map(a);
-                  i.set(E, t), r(i), m(null);
-                }
-              },
-              style: { display: "none" },
+        const f = (e) =>
+          n.has(e) && n.get(e) instanceof File
+            ? s.UploadedImageOption
+            : n.has(e)
+              ? s.ExistsImageOption
+              : s.MissingImageOption;
+        return (0, a.jsxs)("div", {
+          className: s.LocalizedImageSelector,
+          children: [
+            (0, a.jsx)("h3", {
+              children: (0, r.we)("#StoreAdmin_EditEditions_StepNumber2"),
             }),
-            n.createElement(
-              "select",
-              {
-                onChange: (e) => {
-                  S(e.target.value), m(null);
-                },
-                className: A(E),
-              },
-              (0, l.vR)(p, (e, t) =>
-                n.createElement(
-                  "option",
-                  { key: t, value: t, className: A(t) },
-                  e,
-                ),
+            (0, a.jsx)("p", {
+              children: (0, r.we)(
+                "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
+                u,
+                x,
               ),
-            ),
-          ),
-          n.createElement(
-            "p",
-            { className: i.ErrorBox },
-            null !== c &&
-              n.createElement(n.Fragment, null, n.createElement(u.X, null), c),
-          ),
-          n.createElement(
-            "div",
-            {
-              className: i.ImageDropPane,
-              onClick: () => h.current?.click(),
+            }),
+            (0, a.jsxs)("div", {
+              className: s.Header,
+              children: [
+                (0, a.jsx)("input", {
+                  type: "file",
+                  ref: j,
+                  onChange: async (e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      const t = e.target.files[0],
+                        a = await createImageBitmap(t);
+                      if (a.width !== u || a.height !== x)
+                        return void m(
+                          (0, r.we)(
+                            "#StoreAdmin_EditEditions_ImageSizeError",
+                            u,
+                            x,
+                            a.width,
+                            a.height,
+                          ),
+                        );
+                      const i = new Map(n);
+                      i.set(g, t), o(i), m(null);
+                    }
+                  },
+                  style: { display: "none" },
+                }),
+                (0, a.jsx)("select", {
+                  onChange: (e) => {
+                    E(e.target.value), m(null);
+                  },
+                  className: f(g),
+                  children: (0, r.vR)(_, (e, t) =>
+                    (0, a.jsx)(
+                      "option",
+                      { value: t, className: f(t), children: e },
+                      t,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+            (0, a.jsx)("p", {
+              className: s.ErrorBox,
+              children:
+                null !== p &&
+                (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(h.X, {}), p] }),
+            }),
+            (0, a.jsx)("div", {
+              className: s.ImageDropPane,
+              onClick: () => j.current?.click(),
               onDragOver: (e) => e.preventDefault(),
               onDrop: async (e) => {
                 if (
@@ -754,89 +730,87 @@
                   e.dataTransfer.files && e.dataTransfer.files[0])
                 ) {
                   const t = e.dataTransfer.files[0],
-                    n = await createImageBitmap(t);
-                  if (n.width !== _ || n.height !== g)
+                    a = await createImageBitmap(t);
+                  if (a.width !== u || a.height !== x)
                     return void m(
-                      (0, l.we)(
+                      (0, r.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
-                        _,
-                        g,
-                        n.width,
-                        n.height,
+                        u,
+                        x,
+                        a.width,
+                        a.height,
                       ),
                     );
-                  const i = new Map(a);
-                  i.set(E, t), r(i), m(null);
+                  const i = new Map(n);
+                  i.set(g, t), o(i), m(null);
                 }
               },
-            },
-            b
-              ? n.createElement(
-                  n.Fragment,
-                  null,
-                  n.createElement(
-                    "div",
-                    { className: i.DragAndDropDescriptionWithImage },
-                    (0, l.we)("#StoreAdmin_EditEditions_DragAndDropToReplace"),
-                  ),
-                  n.createElement("img", { src: b }),
-                  n.createElement(
-                    "div",
-                    { className: i.DeleteLink },
-                    n.createElement(
-                      "a",
-                      {
-                        onClick: () => {
-                          if (a.has(E)) {
-                            const e = new Map(a);
-                            e.delete(E), r(e), m(null);
-                          }
-                        },
-                      },
-                      (0, l.we)("#StoreAdmin_EditEditions_Delete"),
+              children: S
+                ? (0, a.jsxs)(a.Fragment, {
+                    children: [
+                      (0, a.jsx)("div", {
+                        className: s.DragAndDropDescriptionWithImage,
+                        children: (0, r.we)(
+                          "#StoreAdmin_EditEditions_DragAndDropToReplace",
+                        ),
+                      }),
+                      (0, a.jsx)("img", { src: S }),
+                      (0, a.jsx)("div", {
+                        className: s.DeleteLink,
+                        children: (0, a.jsx)("a", {
+                          onClick: () => {
+                            if (n.has(g)) {
+                              const e = new Map(n);
+                              e.delete(g), o(e), m(null);
+                            }
+                          },
+                          children: (0, r.we)(
+                            "#StoreAdmin_EditEditions_Delete",
+                          ),
+                        }),
+                      }),
+                    ],
+                  })
+                : (0, a.jsx)("div", {
+                    className: s.DragAndDropDescriptionWithoutImage,
+                    children: (0, r.we)(
+                      "#StoreAdmin_EditEditions_DragAndDropHere",
                     ),
-                  ),
-                )
-              : n.createElement(
-                  "div",
-                  { className: i.DragAndDropDescriptionWithoutImage },
-                  (0, l.we)("#StoreAdmin_EditEditions_DragAndDropHere"),
+                  }),
+            }),
+            (0, a.jsx)("h3", {
+              children: (0, r.we)("#StoreAdmin_EditEditions_StepNumber3"),
+            }),
+            (0, a.jsx)("label", {
+              htmlFor: "altTextArea",
+              children: (0, a.jsx)("p", {
+                children: (0, r.we)(
+                  "#StoreAdmin_EditEditions_AltTextDescription",
                 ),
-          ),
-          n.createElement(
-            "h3",
-            null,
-            (0, l.we)("#StoreAdmin_EditEditions_StepNumber3"),
-          ),
-          n.createElement(
-            "label",
-            { htmlFor: "altTextArea" },
-            n.createElement(
-              "p",
-              null,
-              (0, l.we)("#StoreAdmin_EditEditions_AltTextDescription"),
-            ),
-          ),
-          n.createElement("textarea", {
-            id: "altTextArea",
-            className: i.AltTextArea,
-            onChange: (e) => {
-              const t = new Map(s);
-              t.set(E, e.target.value), o(t);
-            },
-            value: s.get(E) ?? "",
-          }),
-        );
+              }),
+            }),
+            (0, a.jsx)("textarea", {
+              id: "altTextArea",
+              className: s.AltTextArea,
+              onChange: (e) => {
+                const t = new Map(d);
+                t.set(g, e.target.value), l(t);
+              },
+              value: d.get(g) ?? "",
+            }),
+          ],
+        });
       }
     },
-    39679: (e, t, a) => {
+    39679: (e, t, n) => {
       "use strict";
-      a.d(t, { Ll: () => d, ut: () => o });
-      var n = a(90626),
-        i = a(63369),
-        l = a(16676),
-        r = a(61859);
-      const s = [
+      n.d(t, { Ll: () => c, ut: () => l });
+      var a = n(7850),
+        i = n(90626),
+        s = n(63369),
+        r = n(16676),
+        o = n(61859);
+      const d = [
           "date_full",
           "date_month",
           "date_quarter",
@@ -844,77 +818,78 @@
           "text_comingsoon",
           "text_tba",
         ],
-        o = ["date_full", "date_month", "date_quarter"];
-      function d(e) {
+        l = ["date_full", "date_month", "date_quarter"];
+      function c(e) {
         const {
             rtSteamReleaseDate: t,
-            value: a,
-            onChange: o,
-            rgComingSoonOptionOverride: d,
-            bExpandedDisplay: c,
+            value: n,
+            onChange: l,
+            rgComingSoonOptionOverride: c,
+            bExpandedDisplay: p,
           } = e,
           m = !!t,
-          p = n.useMemo(
+          _ = i.useMemo(
             () =>
-              (d || s).map((e) => ({
-                label: (0, i.M)(e, t, null, c),
+              (c || d).map((e) => ({
+                label: (0, s.M)(e, t, null, p),
                 data: e,
               })),
-            [t, d, c],
+            [t, c, p],
           ),
-          E = n.useCallback(
+          g = i.useCallback(
             (e) => {
-              o(e.data);
+              l(e.data);
             },
-            [o],
+            [l],
           ),
-          u = t
-            ? (0, r.we)("#GameEdit_ComingSoon_SelectAnOption")
-            : (0, r.we)("#App_Landing_NoDateSelected");
-        return n.createElement(l.ZU, {
+          h = t
+            ? (0, o.we)("#GameEdit_ComingSoon_SelectAnOption")
+            : (0, o.we)("#App_Landing_NoDateSelected");
+        return (0, a.jsx)(r.ZU, {
           disabled: !m,
-          strDefaultLabel: u,
-          rgOptions: p,
-          selectedOption: m ? a : null,
-          onChange: E,
+          strDefaultLabel: h,
+          rgOptions: _,
+          selectedOption: m ? n : null,
+          onChange: g,
         });
       }
     },
-    67045: (e, t, a) => {
+    67045: (e, t, n) => {
       "use strict";
-      a.d(t, { M: () => O });
-      var n = a(90626),
-        i = a(63369),
-        l = a(61859),
-        r = a(91675),
-        s = a(46595),
-        o = a(12155),
-        d = a(41735),
-        c = a.n(d),
-        m = a(70986),
-        p = a(20194),
-        E = a(16676),
-        u = a(99637),
-        _ = a(9154),
-        g = a(22797),
-        S = a(7860),
-        h = a(61336),
-        b = a(78327),
-        f = a(39679),
-        A = a(51780);
-      function C(e) {
-        const { appid: t, onClose: a, onCommit: i } = e,
-          [r, s] = n.useState(null),
+      n.d(t, { M: () => O });
+      var a = n(7850),
+        i = n(90626),
+        s = n(63369),
+        r = n(61859),
+        o = n(91675),
+        d = n(46595),
+        l = n(12155),
+        c = n(41735),
+        p = n.n(c),
+        m = n(70986),
+        _ = n(20194),
+        g = n(16676),
+        h = n(99637),
+        u = n(9154),
+        x = n(22797),
+        E = n(7860),
+        j = n(61336),
+        S = n(78327),
+        b = n(39679),
+        f = n(51780);
+      function A(e) {
+        const { appid: t, onClose: n, onCommit: s } = e,
+          [o, d] = i.useState(null),
           {
-            data: o,
-            isLoading: d,
+            data: l,
+            isLoading: c,
             isLoadingError: m,
           } = (function (e) {
-            return (0, p.I)({
+            return (0, _.I)({
               queryKey: ["ReleaseRequest", e],
               queryFn: async () => {
-                const t = await c().get(
-                  `${b.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
+                const t = await p().get(
+                  `${S.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
                 );
                 if ("string" == typeof t.data)
                   throw "Error loading release status";
@@ -922,423 +897,428 @@
               },
             });
           })(t),
-          E = "prerelease" == o?.strReleaseState,
-          u = n.useCallback(
-            (e, a) => {
-              S.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
-                i(e, a, E);
+          g = "prerelease" == l?.strReleaseState,
+          h = i.useCallback(
+            (e, n) => {
+              E.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
+                s(e, n, g);
             },
-            [t, i, E],
+            [t, s, g],
           );
-        let _ = n.createElement(R, { setOnOKButton: s, onCommit: u });
+        let u = (0, a.jsx)(w, { setOnOKButton: d, onCommit: h });
         return (
           m
-            ? (_ = n.createElement(v, {
-                strError: (0, l.we)("#Error_ErrorCommunicatingWithNetwork"),
+            ? (u = (0, a.jsx)(R, {
+                strError: (0, r.we)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!d && o) || (_ = n.createElement(g.t, null)),
-          n.createElement(
-            D.Provider,
-            { value: o },
-            n.createElement(k, { fnSubmit: r, fnCloseModal: a }, _),
-          )
+            : (!c && l) || (u = (0, a.jsx)(x.t, {})),
+          (0, a.jsx)(C.Provider, {
+            value: l,
+            children: (0, a.jsx)(N, {
+              fnSubmit: o,
+              fnCloseModal: n,
+              children: u,
+            }),
+          })
         );
       }
-      const D = n.createContext(null);
-      function w() {
-        return n.useContext(D);
+      const C = i.createContext(null);
+      function D() {
+        return i.useContext(C);
       }
-      const R = n.memo(function (e) {
+      const w = i.memo(function (e) {
         const {
             appid: t,
-            bCanUpdateComingSoonDate: a,
-            rtReleaseDate: i,
-            strComingSoonDisplay: r,
-          } = w(),
-          { setOnOKButton: s, onCommit: o } = e,
-          [d, m] = n.useState(i),
-          [p, u] = n.useState(r || void 0),
-          [_, g] = n.useState("none"),
-          [S, C] = n.useState(),
-          D = n.useCallback((e) => {
-            C(e), g("none");
+            bCanUpdateComingSoonDate: n,
+            rtReleaseDate: s,
+            strComingSoonDisplay: o,
+          } = D(),
+          { setOnOKButton: d, onCommit: l } = e,
+          [c, m] = i.useState(s),
+          [_, h] = i.useState(o || void 0),
+          [u, x] = i.useState("none"),
+          [E, A] = i.useState(),
+          C = i.useCallback((e) => {
+            A(e), x("none");
           }, []),
-          R = n.useCallback(() => {
-            if (d)
-              if (p) {
-                g("submitting"), C(null);
+          w = i.useCallback(() => {
+            if (c)
+              if (_) {
+                x("submitting"), A(null);
                 (async function (e) {
                   const {
                       unAppID: t,
-                      rtReleaseDate: a,
-                      strComingSoonDisplay: n,
+                      rtReleaseDate: n,
+                      strComingSoonDisplay: a,
                     } = e,
-                    i = `${b.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
-                    r = new FormData();
-                  r.append("sessionid", b.TS.SESSIONID),
-                    a && r.append("release_date", a.toString());
-                  r.append("coming_soon_display", n);
-                  const s = await c().post(i, r);
-                  if (!s.data || 1 != s.data.success)
-                    throw (0, l.we)(
+                    i = `${S.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
+                    s = new FormData();
+                  s.append("sessionid", S.TS.SESSIONID),
+                    n && s.append("release_date", n.toString());
+                  s.append("coming_soon_display", a);
+                  const o = await p().post(i, s);
+                  if (!o.data || 1 != o.data.success)
+                    throw (0, r.we)(
                       "#Error_Description",
-                      s.data?.success,
-                      s.data?.error_message || "unknown",
+                      o.data?.success,
+                      o.data?.error_message || "unknown",
                     );
                 })({
                   unAppID: t,
-                  rtReleaseDate: a ? d : null,
-                  strComingSoonDisplay: p,
+                  rtReleaseDate: n ? c : null,
+                  strComingSoonDisplay: _,
                 })
                   .then(() => {
-                    g("refreshing"), o(d, p);
+                    x("refreshing"), l(c, _);
                   })
                   .catch((e) => {
-                    D(e);
+                    C(e);
                   });
               } else
-                D(
-                  (0, l.we)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"),
+                C(
+                  (0, r.we)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"),
                 );
-            else D((0, l.we)("#App_Landing_ReleaseDate_Error_NoDate"));
-          }, [t, d, p, a, o, D]);
+            else C((0, r.we)("#App_Landing_ReleaseDate_Error_NoDate"));
+          }, [t, c, _, n, l, C]);
         return (
-          n.useEffect(() => {
-            s("none" == _ ? () => R : null);
-          }, [R, a, _, s]),
-          n.createElement(
-            n.Fragment,
-            null,
-            S && n.createElement(v, { strError: S }),
-            n.createElement(N, null),
-            n.createElement(
-              E.dR,
-              null,
-              n.createElement(
-                T,
-                { label: (0, l.we)("#App_Landing_IntendedReleaseDateTitle") },
-                n.createElement(P, { rtSelectedDate: d, setSelectedDate: m }),
-                n.createElement(I, null),
-              ),
-              n.createElement(
-                T,
-                { label: (0, l.we)("#App_Landing_PublicDateDisplayTitle") },
-                n.createElement(f.Ll, {
-                  rtSteamReleaseDate: d,
-                  value: p,
-                  onChange: u,
-                }),
-                n.createElement(
-                  "p",
-                  null,
-                  (0, l.we)("#App_Landing_ReleaseDateStorePage"),
+          i.useEffect(() => {
+            d("none" == u ? () => w : null);
+          }, [w, n, u, d]),
+          (0, a.jsxs)(a.Fragment, {
+            children: [
+              E && (0, a.jsx)(R, { strError: E }),
+              (0, a.jsx)(v, {}),
+              (0, a.jsxs)(g.dR, {
+                children: [
+                  (0, a.jsxs)(k, {
+                    label: (0, r.we)("#App_Landing_IntendedReleaseDateTitle"),
+                    children: [
+                      (0, a.jsx)(T, { rtSelectedDate: c, setSelectedDate: m }),
+                      (0, a.jsx)(P, {}),
+                    ],
+                  }),
+                  (0, a.jsxs)(k, {
+                    label: (0, r.we)("#App_Landing_PublicDateDisplayTitle"),
+                    children: [
+                      (0, a.jsx)(b.Ll, {
+                        rtSteamReleaseDate: c,
+                        value: _,
+                        onChange: h,
+                      }),
+                      (0, a.jsx)("p", {
+                        children: (0, r.we)(
+                          "#App_Landing_ReleaseDateStorePage",
+                        ),
+                      }),
+                      (0, a.jsx)("p", {
+                        children: (0, r.we)(
+                          "#App_Landing_ReleaseDateStoreListing",
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, a.jsx)("div", {
+                className: f.ReleaseColumnFooter,
+                children: (0, r.oW)(
+                  "#App_Landing_NeedHelpWithReleaseDates",
+                  (0, a.jsx)("a", {
+                    target: "_blank",
+                    href: `${S.TS.PARTNER_BASE_URL}doc/store/coming_soon`,
+                  }),
+                  (0, a.jsx)("a", {
+                    target: "_blank",
+                    href: `${(0, j.GX)()}wizard/HelpWithPublishing`,
+                  }),
                 ),
-                n.createElement(
-                  "p",
-                  null,
-                  (0, l.we)("#App_Landing_ReleaseDateStoreListing"),
-                ),
-              ),
-            ),
-            n.createElement(
-              "div",
-              { className: A.ReleaseColumnFooter },
-              (0, l.oW)(
-                "#App_Landing_NeedHelpWithReleaseDates",
-                n.createElement("a", {
-                  target: "_blank",
-                  href: `${b.TS.PARTNER_BASE_URL}doc/store/coming_soon`,
-                }),
-                n.createElement("a", {
-                  target: "_blank",
-                  href: `${(0, h.GX)()}wizard/HelpWithPublishing`,
-                }),
-              ),
-            ),
-            n.createElement(B, null),
-          )
+              }),
+              (0, a.jsx)(L, {}),
+            ],
+          })
         );
       });
-      function v(e) {
+      function R(e) {
         const { strError: t } = e;
-        return n.createElement("div", { className: A.ErrorBox }, t);
+        return (0, a.jsx)("div", { className: f.ErrorBox, children: t });
       }
-      function N() {
+      function v() {
         const {
           bIsComingSoon: e,
           bIsStorePageReviewed: t,
-          bIsWaitingForBuildReview: a,
+          bIsWaitingForBuildReview: n,
           bIsFirstSelfPublishingApp: i,
-          rtEarliestDate: r,
-        } = w();
+          rtEarliestDate: s,
+        } = D();
         return e && t
-          ? a
-            ? n.createElement(
-                L,
-                null,
-                (0, l.we)("#App_Landing_Release_EarliestDate_BuildReview"),
-              )
-            : n.createElement(
-                L,
-                null,
-                (0, l.we)("#App_Landing_Release_EarliestDate", (0, l.$z)(r)),
-              )
+          ? n
+            ? (0, a.jsx)(I, {
+                children: (0, r.we)(
+                  "#App_Landing_Release_EarliestDate_BuildReview",
+                ),
+              })
+            : (0, a.jsx)(I, {
+                children: (0, r.we)(
+                  "#App_Landing_Release_EarliestDate",
+                  (0, r.$z)(s),
+                ),
+              })
           : i
-            ? n.createElement(
-                L,
-                null,
-                (0, l.we)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
-              )
-            : n.createElement(
-                L,
-                null,
-                (0, l.we)("#App_Landing_Release_EarliestDate_TwoWeeks"),
-              );
+            ? (0, a.jsx)(I, {
+                children: (0, r.we)(
+                  "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
+                ),
+              })
+            : (0, a.jsx)(I, {
+                children: (0, r.we)(
+                  "#App_Landing_Release_EarliestDate_TwoWeeks",
+                ),
+              });
       }
-      function k(e) {
-        const { fnCloseModal: t, fnSubmit: a, children: i } = e,
-          { bCanUpdateComingSoonDate: r } = w() || {
+      function N(e) {
+        const { fnCloseModal: t, fnSubmit: n, children: i } = e,
+          { bCanUpdateComingSoonDate: s } = D() || {
             bCanUpdateComingSoonDate: !0,
           };
-        return n.createElement(
-          _.mt,
-          { active: !0, className: A.ReleaseDateModal, onDismiss: t },
-          n.createElement(
-            E.Y9,
-            null,
-            (0, l.we)(
-              r
-                ? "#App_Landing_Set_Release_Date"
-                : "#App_Landing_Change_Release_Date",
-            ),
-          ),
-          n.createElement(E.nB, { className: A.ReleaseDateRequestBody }, i),
-          n.createElement(E.CB, {
-            bOKDisabled: !a,
-            onCancel: t,
-            strCancelText: (0, l.we)("#App_Landing_Requested_Date_Cancel"),
-            onOK: a,
-            strOKText: (0, l.we)("#App_Landing_Requested_Date_Update"),
-          }),
-        );
+        return (0, a.jsxs)(u.mt, {
+          active: !0,
+          className: f.ReleaseDateModal,
+          onDismiss: t,
+          children: [
+            (0, a.jsx)(g.Y9, {
+              children: (0, r.we)(
+                s
+                  ? "#App_Landing_Set_Release_Date"
+                  : "#App_Landing_Change_Release_Date",
+              ),
+            }),
+            (0, a.jsx)(g.nB, {
+              className: f.ReleaseDateRequestBody,
+              children: i,
+            }),
+            (0, a.jsx)(g.CB, {
+              bOKDisabled: !n,
+              onCancel: t,
+              strCancelText: (0, r.we)("#App_Landing_Requested_Date_Cancel"),
+              onOK: n,
+              strOKText: (0, r.we)("#App_Landing_Requested_Date_Update"),
+            }),
+          ],
+        });
+      }
+      function k(e) {
+        const { label: t, children: n } = e;
+        return (0, a.jsxs)(g.VP, {
+          className: f.Column,
+          children: [
+            (0, a.jsxs)("div", {
+              className: f.ColumnLabel,
+              children: [t, ":"],
+            }),
+            (0, a.jsx)("div", { className: f.ColumnContent, children: n }),
+          ],
+        });
       }
       function T(e) {
-        const { label: t, children: a } = e;
-        return n.createElement(
-          E.VP,
-          { className: A.Column },
-          n.createElement("div", { className: A.ColumnLabel }, t, ":"),
-          n.createElement("div", { className: A.ColumnContent }, a),
-        );
-      }
-      function P(e) {
-        const { rtSelectedDate: t, setSelectedDate: a } = e,
-          { bCanUpdateComingSoonDate: i, rtEarliestDate: l } = w();
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(u.K, {
+        const { rtSelectedDate: t, setSelectedDate: n } = e,
+          { bCanUpdateComingSoonDate: i, rtEarliestDate: s } = D();
+        return (0, a.jsx)(a.Fragment, {
+          children: (0, a.jsx)(h.K, {
             bWeekdaysOnly: !0,
             bNoDefaultDate: !0,
             disabled: !i,
-            nEarliestTime: l,
+            nEarliestTime: s,
             fnGetTimeToUpdate: () => t,
-            fnSetTimeToUpdate: a,
-            className: A.DatePicker,
+            fnSetTimeToUpdate: n,
+            className: f.DatePicker,
             bShowTimeZone: !0,
             strAlsoShowTimeZone: m.o,
           }),
-        );
+        });
       }
-      function I(e) {
-        const { bCanUpdateComingSoonDate: t, rtReleaseDate: a } = w();
+      function P(e) {
+        const { bCanUpdateComingSoonDate: t, rtReleaseDate: n } = D();
         return t
-          ? n.createElement(
-              n.Fragment,
-              null,
-              n.createElement(
-                "p",
-                null,
-                (0, l.we)("#App_Landing_Set_Release_Date_SetIntended"),
-              ),
-              n.createElement(
-                "p",
-                null,
-                (0, l.we)("#App_Landing_Set_Release_Date_Weekends"),
-              ),
-              n.createElement(
-                "p",
-                null,
-                (0, l.we)("#App_Landing_Set_Release_Date_PacificTime"),
-              ),
-            )
-          : n.createElement(
-              "p",
-              null,
-              (0, l.oW)(
-                (0, l.we)(
+          ? (0, a.jsxs)(a.Fragment, {
+              children: [
+                (0, a.jsx)("p", {
+                  children: (0, r.we)(
+                    "#App_Landing_Set_Release_Date_SetIntended",
+                  ),
+                }),
+                (0, a.jsx)("p", {
+                  children: (0, r.we)("#App_Landing_Set_Release_Date_Weekends"),
+                }),
+                (0, a.jsx)("p", {
+                  children: (0, r.we)(
+                    "#App_Landing_Set_Release_Date_PacificTime",
+                  ),
+                }),
+              ],
+            })
+          : (0, a.jsx)("p", {
+              children: (0, r.oW)(
+                (0, r.we)(
                   "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
-                  (0, l.$z)(a),
+                  (0, r.$z)(n),
                 ),
-                n.createElement("a", {
-                  href: `${(0, h.GX)()}wizard/HelpWithPublishing?issueid=905`,
+                (0, a.jsx)("a", {
+                  href: `${(0, j.GX)()}wizard/HelpWithPublishing?issueid=905`,
                 }),
               ),
-            );
+            });
+      }
+      function I(e) {
+        return (0, a.jsx)("span", {
+          className: f.BlueNote,
+          children: e.children,
+        });
       }
       function L(e) {
-        return n.createElement("span", { className: A.BlueNote }, e.children);
-      }
-      function B(e) {
         const {
           rtEarliestDate: t,
-          strReleaseState: a,
+          strReleaseState: n,
           bCanUpdateComingSoonDate: i,
-        } = w();
-        return "prerelease" != a || i
+        } = D();
+        return "prerelease" != n || i
           ? null
-          : n.createElement(
-              "div",
-              { className: A.PublishNowWarning },
-              (0, l.we)(
+          : (0, a.jsx)("div", {
+              className: f.PublishNowWarning,
+              children: (0, r.we)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
-                (0, l.$z)(t),
+                (0, r.$z)(t),
               ),
-            );
+            });
       }
-      var y = a(52038),
-        x = a(96409);
+      var B = n(52038),
+        y = n(96409);
       function O(e) {
         const {
             bIsGameEdit: t,
-            unAppID: a,
-            rgEarliestAdvancedAccessDate: r,
+            unAppID: n,
+            rgEarliestAdvancedAccessDate: o,
           } = e,
-          [d, c] = n.useState(e.rtReleaseDate),
-          [m, p] = n.useState(e.strComingSoonDisplay),
-          [E, u] = n.useState(!1),
-          [_, g] = n.useState(!1),
-          S = n.useCallback(() => u(!0), []),
-          h = n.useCallback(() => u(!1), []),
-          b = n.useCallback((e, t, a) => {
-            c(e), p(t), u(!1), a && g(!0);
+          [c, p] = i.useState(e.rtReleaseDate),
+          [m, _] = i.useState(e.strComingSoonDisplay),
+          [g, h] = i.useState(!1),
+          [u, x] = i.useState(!1),
+          E = i.useCallback(() => h(!0), []),
+          j = i.useCallback(() => h(!1), []),
+          S = i.useCallback((e, t, n) => {
+            p(e), _(t), h(!1), n && x(!0);
           }, []);
-        return n.createElement(
-          n.Fragment,
-          null,
-          E && n.createElement(C, { appid: a, onClose: h, onCommit: b }),
-          _ &&
-            n.createElement($, {
-              appid: a,
-              bIsGameEdit: t,
-              closeModal: () => g(!1),
-            }),
-          n.createElement(
-            "div",
-            { className: (0, y.A)(s.ReleaseDateInfoCtn, t && s.GameEditCtn) },
-            n.createElement(
-              "div",
-              { className: s.ReleaseDateContent },
-              n.createElement(
-                M,
-                { label: (0, l.we)("#App_Landing_SpecifiedReleaseDate") },
-                n.createElement(F, { rtReleaseDate: d }),
-              ),
-              n.createElement(
-                M,
-                { label: (0, l.we)("#App_Landing_CustomersSeeReleaseDate") },
-                n.createElement(
-                  "div",
-                  { className: (0, y.A)(s.BigField, m ? s.Set : s.Unset) },
-                  m
-                    ? (0, i.M)(m, d)
-                    : (0, l.we)("#App_Landing_UnsetReleaseDate"),
-                ),
-              ),
-            ),
-            n.createElement(
-              "div",
-              { className: s.EditButton, onClick: S },
-              n.createElement("div", { className: (0, y.A)(s.Spacer, s.Top) }),
-              n.createElement(
-                "div",
-                { className: s.EditButtonIcon },
-                n.createElement(o.ffu, null),
-              ),
-              n.createElement("div", {
-                className: (0, y.A)(s.Spacer, s.Bottom),
+        return (0, a.jsxs)(a.Fragment, {
+          children: [
+            g && (0, a.jsx)(A, { appid: n, onClose: j, onCommit: S }),
+            u &&
+              (0, a.jsx)($, {
+                appid: n,
+                bIsGameEdit: t,
+                closeModal: () => x(!1),
               }),
-            ),
-          ),
-          1e3 * r > new Date().getTime() &&
-            n.createElement(
-              M,
-              { label: (0, l.we)("#App_Landing_EarliestAdvancedAccessDate") },
-              n.createElement(F, { rtReleaseDate: r }),
-            ),
-        );
+            (0, a.jsxs)("div", {
+              className: (0, B.A)(d.ReleaseDateInfoCtn, t && d.GameEditCtn),
+              children: [
+                (0, a.jsxs)("div", {
+                  className: d.ReleaseDateContent,
+                  children: [
+                    (0, a.jsx)(M, {
+                      label: (0, r.we)("#App_Landing_SpecifiedReleaseDate"),
+                      children: (0, a.jsx)(F, { rtReleaseDate: c }),
+                    }),
+                    (0, a.jsx)(M, {
+                      label: (0, r.we)("#App_Landing_CustomersSeeReleaseDate"),
+                      children: (0, a.jsx)("div", {
+                        className: (0, B.A)(d.BigField, m ? d.Set : d.Unset),
+                        children: m
+                          ? (0, s.M)(m, c)
+                          : (0, r.we)("#App_Landing_UnsetReleaseDate"),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, a.jsxs)("div", {
+                  className: d.EditButton,
+                  onClick: E,
+                  children: [
+                    (0, a.jsx)("div", { className: (0, B.A)(d.Spacer, d.Top) }),
+                    (0, a.jsx)("div", {
+                      className: d.EditButtonIcon,
+                      children: (0, a.jsx)(l.ffu, {}),
+                    }),
+                    (0, a.jsx)("div", {
+                      className: (0, B.A)(d.Spacer, d.Bottom),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            1e3 * o > new Date().getTime() &&
+              (0, a.jsx)(M, {
+                label: (0, r.we)("#App_Landing_EarliestAdvancedAccessDate"),
+                children: (0, a.jsx)(F, { rtReleaseDate: o }),
+              }),
+          ],
+        });
       }
       function F(e) {
         const { rtReleaseDate: t } = e;
         return t
-          ? n.createElement(
-              n.Fragment,
-              null,
-              n.createElement(
-                "div",
-                { className: (0, y.A)(s.BigField, s.Set) },
-                (0, l.$z)(t),
-              ),
-              n.createElement(
-                "div",
-                { className: (0, y.A)(s.SubField, s.Set) },
-                (0, r.KC)(t, {}, { timeZoneName: "short" }),
-              ),
-            )
-          : n.createElement(
-              "div",
-              { className: (0, y.A)(s.BigField, s.Unset) },
-              (0, l.we)("#App_Landing_UnsetReleaseDate"),
-            );
+          ? (0, a.jsxs)(a.Fragment, {
+              children: [
+                (0, a.jsx)("div", {
+                  className: (0, B.A)(d.BigField, d.Set),
+                  children: (0, r.$z)(t),
+                }),
+                (0, a.jsx)("div", {
+                  className: (0, B.A)(d.SubField, d.Set),
+                  children: (0, o.KC)(t, {}, { timeZoneName: "short" }),
+                }),
+              ],
+            })
+          : (0, a.jsx)("div", {
+              className: (0, B.A)(d.BigField, d.Unset),
+              children: (0, r.we)("#App_Landing_UnsetReleaseDate"),
+            });
       }
       function M(e) {
-        return n.createElement(
-          "div",
-          { className: s.LabelField },
-          n.createElement("div", { className: s.Label }, e.label),
-          e.children,
-        );
+        return (0, a.jsxs)("div", {
+          className: d.LabelField,
+          children: [
+            (0, a.jsx)("div", { className: d.Label, children: e.label }),
+            e.children,
+          ],
+        });
       }
       function $(e) {
-        const { appid: t, bIsGameEdit: a, closeModal: i } = e,
-          r = n.useCallback(() => {
-            a
+        const { appid: t, bIsGameEdit: n, closeModal: s } = e,
+          o = i.useCallback(() => {
+            n
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
-                  x.bI.GameEditByAppID(t.toString()) +
+                  y.bI.GameEditByAppID(t.toString()) +
                   "?activetab=tab_publish"),
-              i();
-          }, [t, a, i]);
-        return n.createElement(
-          _.EN,
-          { active: !0 },
-          n.createElement(_.o0, {
-            strTitle: (0, l.we)("#App_Landing_ReleaseDate_ChangesSaved"),
-            strDescription: (0, l.we)(
+              s();
+          }, [t, n, s]);
+        return (0, a.jsx)(u.EN, {
+          active: !0,
+          children: (0, a.jsx)(u.o0, {
+            strTitle: (0, r.we)("#App_Landing_ReleaseDate_ChangesSaved"),
+            strDescription: (0, r.we)(
               "#App_Landing_Release_PublishStorePrompt",
             ),
-            strOKButtonText: (0, l.we)("#App_Landing_Release_PrepareToPublish"),
-            onOK: r,
-            strCancelButtonText: (0, l.we)("#Button_OK"),
-            closeModal: i,
+            strOKButtonText: (0, r.we)("#App_Landing_Release_PrepareToPublish"),
+            onOK: o,
+            strCancelButtonText: (0, r.we)("#Button_OK"),
+            closeModal: s,
           }),
-        );
+        });
       }
     },
-    96409: (e, t, a) => {
+    96409: (e, t, n) => {
       "use strict";
-      a.d(t, { Cg: () => r, _h: () => l, a3: () => i, bI: () => n });
-      let n = {
+      n.d(t, { Cg: () => r, _h: () => s, a3: () => i, bI: () => a });
+      let a = {
         GameEdit: (e, t) => `/admin/game/${e}/${t}`,
         PackageEdit: (e, t) => `/admin/store/${e}/${t}`,
         BundleEdit: (e, t) => `/bundles/${e}/${t}`,
@@ -1352,7 +1332,7 @@
           `/admin/store/pageclusteredit/content_hub_${t}/${e}`,
       };
       const i = ["edit", "diff", "revert", "prepare", "publish"],
-        l = [
+        s = [
           "package",
           "packagesave",
           "packagediff",

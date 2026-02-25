@@ -11,7 +11,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { familyGroupID: _ } = _;
-        return _.createElement(_.PurchaseRequestSimpleInfoPage, {
+        return (0, _.jsx)(_.PurchaseRequestSimpleInfoPage, {
           familyGroupID: _,
           headerLocToken: "#PurchaseRequested_Header",
           infoLocToken: "#PurchaseRequested_Info",

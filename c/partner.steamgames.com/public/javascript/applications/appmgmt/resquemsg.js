@@ -108,6 +108,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)("physical_goods", "application_config");
       var _ = __webpack_require__("chunkid"),
@@ -348,32 +349,28 @@
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(null),
           { fnAddProductID: _ } = _();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, null, "Add Product SKU:"),
-          _.createElement(
-            "p",
-            null,
-            "Select an item for which we want to communicate a reservation status.",
-          ),
-          _.createElement(_, {
-            selected: _,
-            setSelected: __webpack_require__,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Add Product SKU:",
+            }),
+            (0, _.jsx)("p", {
+              children:
+                "Select an item for which we want to communicate a reservation status.",
+            }),
+            (0, _.jsx)(_, {
+              selected: _,
+              setSelected: __webpack_require__,
+            }),
+            (0, _.jsxs)(_._, {
               disabled: !_,
               onClick: () => {
                 _(_), __webpack_require__(null);
               },
-            },
-            "Add ",
-            _?.product_description,
-            " To List",
-          ),
-        );
+              children: ["Add ", _?.product_description, " To List"],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { selected: _, setSelected: __webpack_require__ } = _,
@@ -410,7 +407,7 @@
             _.edistributor == _.value.edistributor &&
             _.product_identifier == _.value.product_identifier,
         );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           isSearchable: !0,
           ref: _,
           isMulti: !1,
@@ -497,75 +494,69 @@
           default:
             _ = "#Sale_Reservation_Fallback";
         }
-        return _.createElement(
-          "div",
-          {
-            className: _().Ctn,
-          },
-          (0, _._)(_, _, _, _, ""),
-        );
+        return (0, _.jsx)("div", {
+          className: _().Ctn,
+          children: (0, _._)(_, _, _, _, ""),
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _();
         return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              null,
-              _.map((_) =>
-                _.createElement(_, {
-                  key: `${_.edistributor}_${_.product_identifier}`,
-                  productID: _,
-                }),
+          ? (0, _.jsx)("div", {
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    productID: _,
+                  },
+                  `${_.edistributor}_${_.product_identifier}`,
+                ),
               ),
-            )
-          : _.createElement(
-              "div",
-              null,
-              "No products with reservation position messages exists.",
-            );
+            })
+          : (0, _.jsx)("div", {
+              children:
+                "No products with reservation position messages exists.",
+            });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, null, "instructions:"),
-          _.createElement(
-            "p",
-            null,
-            "Select an item from the drop-down to the left to set it as a visible item that we're taking reservations for.",
-          ),
-          _.createElement(
-            "p",
-            null,
-            "Once selected, you can add groupings of item quantities and a description of how we want to describe the date at which those people will recieve their items.",
-          ),
-        );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "instructions:",
+            }),
+            (0, _.jsx)("p", {
+              children:
+                "Select an item from the drop-down to the left to set it as a visible item that we're taking reservations for.",
+            }),
+            (0, _.jsx)("p", {
+              children:
+                "Once selected, you can add groupings of item quantities and a description of how we want to describe the date at which those people will recieve their items.",
+            }),
+          ],
+        });
       }
       function _(_) {
         _();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, null, "Force update:"),
-          _.createElement(
-            "p",
-            null,
-            "By default, the server caches the list in memory and that list will refresh from SQL every hour. You can use the force button to refresh immediately across all of the servers.",
-          ),
-          _.createElement(
-            "p",
-            null,
-            "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
-          ),
-          _.createElement(
-            _._,
-            {
-              onClick: (_) => (0, _._)(_.createElement(_, null), (0, _._)(_)),
-            },
-            "Force Reload Definitions on Steam Servers",
-          ),
-        );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Force update:",
+            }),
+            (0, _.jsx)("p", {
+              children:
+                "By default, the server caches the list in memory and that list will refresh from SQL every hour. You can use the force button to refresh immediately across all of the servers.",
+            }),
+            (0, _.jsx)("p", {
+              children:
+                "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
+            }),
+            (0, _.jsx)(_._, {
+              onClick: (_) => (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
+              children: "Force Reload Definitions on Steam Servers",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { productID: _ } = _,
@@ -583,118 +574,114 @@
             );
             return (0, _._)(_.Get().GetPositionListChangeCallback(_), _), _;
           })(_);
-        return _.createElement(
-          _._,
-          {
-            bStartMinimized: !1,
-            title: _,
-            tooltip: `distributor enum: ${_.edistributor}, part number: ${_.part_number}, product identifier: ${_.product_identifier}`,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          bStartMinimized: !1,
+          title: _,
+          tooltip: `distributor enum: ${_.edistributor}, part number: ${_.part_number}, product identifier: ${_.product_identifier}`,
+          children: [
+            (0, _.jsx)(_._, {
               onClick: (_) =>
                 (0, _._)(
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     productID: _,
                   }),
                   (0, _._)(_),
                 ),
-            },
-            "Add new start position",
-          ),
-          _.createElement(
-            "table",
-            {
+              children: "Add new start position",
+            }),
+            (0, _.jsxs)("table", {
               className: _.ItemTable,
-            },
-            _.createElement(
-              "thead",
-              null,
-              _.createElement(
-                "tr",
-                null,
-                _.createElement("th", null, "Starting Queue Position"),
-                _.createElement("th", null, "Estimate Date Receive Invite"),
-                _.createElement("th", null, "Localized Date"),
-                _.createElement("th", null, "Entry Created By"),
-                _.createElement("th", null),
-              ),
-            ),
-            _.createElement(
-              "tbody",
-              null,
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _ + _.start_queue_position,
-                  positionMsg: _,
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Starting Queue Position",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Estimate Date Receive Invite",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Localized Date",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Entry Created By",
+                      }),
+                      (0, _.jsx)("th", {}),
+                    ],
+                  }),
                 }),
-              ),
-            ),
-          ),
-        );
+                (0, _.jsx)("tbody", {
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        positionMsg: _,
+                      },
+                      _ + _.start_queue_position,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { positionMsg: _ } = _;
-        return _.createElement(
-          "tr",
-          null,
-          _.createElement("td", null, (0, _._)(_.start_queue_position)),
-          _.createElement("td", null, (0, _._)(_.rtime_estimated_notification)),
-          _.createElement(
-            "td",
-            null,
-            _.createElement(_, {
-              rtEstimatedNotifcationDate: _.rtime_estimated_notification,
-              strToken: _.localization_token,
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsx)("td", {
+              children: (0, _._)(_.start_queue_position),
             }),
-          ),
-          _.createElement(
-            "td",
-            null,
-            _.createElement(
-              "div",
-              null,
-              _.createElement(_._, {
-                accountID: _.accountid,
+            (0, _.jsx)("td", {
+              children: (0, _._)(_.rtime_estimated_notification),
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _.jsx)(_, {
+                rtEstimatedNotifcationDate: _.rtime_estimated_notification,
+                strToken: _.localization_token,
               }),
-            ),
-            _.createElement("br", null),
-            "On: ",
-            (0, _._)(_.rtime_created),
-          ),
-          _.createElement(
-            "td",
-            null,
-            _.createElement(
-              _._,
-              {
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      productID: _,
-                      existingPositionMsg: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              "Update",
-            ),
-            _.createElement(
-              _._,
-              {
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      positionMsg: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              "Delete",
-            ),
-          ),
-        );
+            }),
+            (0, _.jsxs)("td", {
+              children: [
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)(_._, {
+                    accountID: _.accountid,
+                  }),
+                }),
+                (0, _.jsx)("br", {}),
+                "On: ",
+                (0, _._)(_.rtime_created),
+              ],
+            }),
+            (0, _.jsxs)("td", {
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: (_) =>
+                    (0, _._)(
+                      (0, _.jsx)(_, {
+                        productID: _,
+                        existingPositionMsg: _,
+                      }),
+                      (0, _._)(_),
+                    ),
+                  children: "Update",
+                }),
+                (0, _.jsx)(_._, {
+                  onClick: (_) =>
+                    (0, _._)(
+                      (0, _.jsx)(_, {
+                        positionMsg: _,
+                      }),
+                      (0, _._)(_),
+                    ),
+                  children: "Delete",
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -717,73 +704,71 @@
           _ = __webpack_require__ ? "Update Queue Range" : "Create Queue Range",
           _ = (0, _._)();
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: _,
               closeModal: _,
             })
-          : _.createElement(
-              _._,
-              {
-                bDisableBackgroundDismiss: !0,
-                strTitle: _,
-                onCancel: _,
-                onOK: () => {
-                  _.fnSetLoading(!0);
-                  const _ = {
-                    ..._,
-                    start_queue_position: _,
-                    rtime_estimated_notification: _,
-                    localization_token: _,
-                  };
-                  _([_]).then((_) => {
-                    _
-                      ? (_.fnSetSuccess(!0),
-                        _.fnSetStrSuccess("Successfully created position"))
-                      : (_.fnSetSuccess(!1),
-                        _.fnSetStrError(
-                          "Failed, please check console logs and/or try again",
-                        ));
-                  });
-                },
+          : (0, _.jsx)(_._, {
+              bDisableBackgroundDismiss: !0,
+              strTitle: _,
+              onCancel: _,
+              onOK: () => {
+                _.fnSetLoading(!0);
+                const _ = {
+                  ..._,
+                  start_queue_position: _,
+                  rtime_estimated_notification: _,
+                  localization_token: _,
+                };
+                _([_]).then((_) => {
+                  _
+                    ? (_.fnSetSuccess(!0),
+                      _.fnSetStrSuccess("Successfully created position"))
+                    : (_.fnSetSuccess(!1),
+                      _.fnSetStrError(
+                        "Failed, please check console logs and/or try again",
+                      ));
+                });
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.NewEntryCtn,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  "When we get to accepting reservation number ",
-                  _.createElement("i", null, "n"),
-                  ", show those users a date they can anticipate to recieve an invite to purchase.",
-                ),
-                _.createElement(_._, {
-                  type: "number",
-                  min: "0",
-                  value: _,
-                  label: "Starting Queue Position",
-                  onChange: (_) =>
-                    _(Number.parseInt(_?.currentTarget?.value || "0")),
-                }),
-                _.createElement(_._, {
-                  bShowTimeZone: !0,
-                  strDescription: "Estimated Time Users will receive invite",
-                  strDescToolTip:
-                    "Everyone above this queue position until the next entry, we expect to have been invited by or on this date",
-                  nEarliestTime: _,
-                  fnGetTimeToUpdate: () => _,
-                  fnSetTimeToUpdate: _,
-                }),
-                _.createElement("br", null),
-                _.createElement(_, {
-                  strToken: _,
-                  fnSetToken: _,
-                  rtEstimateDate: _,
-                }),
-              ),
-            );
+              children: (0, _.jsxs)("div", {
+                className: _.NewEntryCtn,
+                children: [
+                  (0, _.jsxs)("p", {
+                    children: [
+                      "When we get to accepting reservation number ",
+                      (0, _.jsx)("i", {
+                        children: "n",
+                      }),
+                      ", show those users a date they can anticipate to recieve an invite to purchase.",
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    type: "number",
+                    min: "0",
+                    value: _,
+                    label: "Starting Queue Position",
+                    onChange: (_) =>
+                      _(Number.parseInt(_?.currentTarget?.value || "0")),
+                  }),
+                  (0, _.jsx)(_._, {
+                    bShowTimeZone: !0,
+                    strDescription: "Estimated Time Users will receive invite",
+                    strDescToolTip:
+                      "Everyone above this queue position until the next entry, we expect to have been invited by or on this date",
+                    nEarliestTime: _,
+                    fnGetTimeToUpdate: () => _,
+                    fnSetTimeToUpdate: _,
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)(_, {
+                    strToken: _,
+                    fnSetToken: _,
+                    rtEstimateDate: _,
+                  }),
+                ],
+              }),
+            });
       }
       function _(_) {
         const { positionMsg: _, closeModal: __webpack_require__ } = _,
@@ -791,12 +776,12 @@
           _ = `Delete Queue Position ${(0, _._)(_.start_queue_position)}`,
           _ = (0, _._)();
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: _,
               closeModal: __webpack_require__,
             })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               strTitle: _,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: __webpack_require__,
@@ -822,7 +807,7 @@
           (0, _.useEffect)(() => {
             __webpack_require__().then(() => _(!0));
           }, [__webpack_require__]),
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: _
@@ -853,7 +838,7 @@
           _ = (0, _.useMemo)(
             () =>
               _.map((_) => ({
-                label: _.createElement(_, {
+                label: (0, _.jsx)(_, {
                   strToken: _,
                   rtEstimatedNotifcationDate: _,
                 }),
@@ -861,131 +846,105 @@
               })),
             [_],
           );
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, {
-            strDropDownClassName: _.DropDownScroll,
-            label: "Date Format",
-            rgOptions: _,
-            selectedOption: _,
-            onChange: (_) => __webpack_require__(_.data),
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              label: "Date Format",
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => __webpack_require__(_.data),
               bDisableMouseOverlay: !0,
-            },
-          }),
-          _.createElement(
-            "div",
-            null,
-            _.createElement("h3", null, "This will display to users as: "),
-            _.createElement(
-              "div",
-              {
-                className: _.DatePreview,
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
               },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#Sale_Reservation_ExpectedDate"),
-              ),
-              _.createElement(_, {
-                rtEstimatedNotifcationDate: _,
-                strToken: _,
-              }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("h3", {
+                  children: "This will display to users as: ",
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.DatePreview,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _._)("#Sale_Reservation_ExpectedDate"),
+                    }),
+                    (0, _.jsx)(_, {
+                      rtEstimatedNotifcationDate: _,
+                      strToken: _,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.ctn, _().AdminPageCtn),
-          },
-          _.createElement(
-            "h1",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.ctn, _().AdminPageCtn),
+          children: [
+            (0, _.jsx)("h1", {
               className: _().PageTitle,
-            },
-            "Reservation Queue - Messaging Tools",
-          ),
-          _.createElement("hr", {
-            className: "VO",
-          }),
-          _.createElement(
-            "div",
-            {
+              children: "Reservation Queue - Messaging Tools",
+            }),
+            (0, _.jsx)("hr", {
+              className: "VO",
+            }),
+            (0, _.jsxs)("div", {
               className: _().ColumnCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().LeftCol,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                _.createElement(_, null),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                _.createElement(_, null),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().RightCol,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                _.createElement(_, null),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                _.createElement(_, null),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                _.createElement(_._, null, "Useful Links:"),
-                _.createElement(
-                  "ul",
-                  null,
-                  _.createElement(
-                    "li",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: `${_._.STATS_BASE_URL}steamdeck/reservations/`,
-                        target: "_blank",
-                      },
-                      "Steam Deck reservation stats page",
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().LeftCol,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().SectionCtn,
+                      children: (0, _.jsx)(_, {}),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().SectionCtn,
+                      children: (0, _.jsx)(_, {}),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().RightCol,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().SectionCtn,
+                      children: (0, _.jsx)(_, {}),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().SectionCtn,
+                      children: (0, _.jsx)(_, {}),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().SectionCtn,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          children: "Useful Links:",
+                        }),
+                        (0, _.jsx)("ul", {
+                          children: (0, _.jsx)("li", {
+                            children: (0, _.jsx)("a", {
+                              href: `${_._.STATS_BASE_URL}steamdeck/reservations/`,
+                              target: "_blank",
+                              children: "Steam Deck reservation stats page",
+                            }),
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1129,6 +1088,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -1276,146 +1236,132 @@
             },
             _,
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().EventTimeSection, _),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().EventTimeSection, _),
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().EventTimeTitle, "DialogLabel"),
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: _,
-                direction: "top",
-              },
-              Boolean(_) && _.createElement("span", null, _),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().DateErrorCtn,
-                },
-                _.createElement("img", {
-                  src: _._,
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: _,
+                  direction: "top",
+                  children:
+                    Boolean(_) &&
+                    (0, _.jsx)("span", {
+                      children: _,
+                    }),
                 }),
-                _,
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+                _ &&
+                  (0, _.jsxs)("span", {
+                    className: _().DateErrorCtn,
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _._,
+                      }),
+                      _,
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _().FlexRowContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                timeFormat: !1,
-                value: null != _ ? _ : _,
-                isValidDate: (_) =>
-                  !_ &&
-                  (function (_, _, _, _) {
-                    const _ = _().unix(_).hour(0).seconds(0).minute(0);
-                    let _ = _.unix() >= _.unix();
-                    if (_ && _ && _ >= _) {
-                      const _ = _().unix(_).hour(23).minute(59).seconds(59);
-                      _ = _.unix() <= _.unix();
-                    }
-                    _ &&
-                      _ &&
-                      ((0 != _.weekday() && 6 != _.weekday()) || (_ = !1));
-                    return _;
-                  })(__webpack_require__, _, _, _),
-                initialValue: _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
-                  className: (0, _._)(
-                    _().DateWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().InputBorder, _().TimeBlock),
+                  children: [
+                    (0, _.jsx)(_(), {
+                      onChange: _,
+                      timeFormat: !1,
+                      value: null != _ ? _ : _,
+                      isValidDate: (_) =>
+                        !_ &&
+                        (function (_, _, _, _) {
+                          const _ = _().unix(_).hour(0).seconds(0).minute(0);
+                          let _ = _.unix() >= _.unix();
+                          if (_ && _ && _ >= _) {
+                            const _ = _()
+                              .unix(_)
+                              .hour(23)
+                              .minute(59)
+                              .seconds(59);
+                            _ = _.unix() <= _.unix();
+                          }
+                          _ &&
+                            _ &&
+                            ((0 != _.weekday() && 6 != _.weekday()) ||
+                              (_ = !1));
+                          return _;
+                        })(__webpack_require__, _, _, _),
+                      initialValue: _,
+                      inputProps: {
+                        placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
+                        className: (0, _._)(
+                          _().DateWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: _,
+                        onChange: (_) => _(_.currentTarget.value),
+                        onBlur: (_) => _(_.currentTarget.value),
+                      },
+                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().PacificTimeHint,
+                        children: _.format("L"),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().InputBorder, _().TimeBlock),
+                  children: [
+                    (0, _.jsx)(_(), {
+                      onChange: _,
+                      dateFormat: !1,
+                      timeFormat: _,
+                      timeConstraints: _,
+                      value: null != _ ? _ : _,
+                      inputProps: {
+                        placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
+                        className: (0, _._)(
+                          _().TimeWidth,
+                          "DialogInput",
+                          "DialogTextInputBase",
+                        ),
+                        disabled: _,
+                        onChange: (_) => _(_.currentTarget.value),
+                        onBlur: (_) => _(_.currentTarget.value),
+                      },
+                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().PacificTimeHint,
+                        children: _.format("LT"),
+                      }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().TimeZone,
+                        children: _.zoneAbbr(),
+                      }),
+                      !!_ &&
+                        (0, _.jsx)("div", {
+                          className: _().TimeZone,
+                          children: _.zoneAbbr(),
+                        }),
+                    ],
+                  }),
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                children: (0, _._)("#DateTimePicker_DateTime_Fixed"),
               }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("L"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                dateFormat: !1,
-                timeFormat: _,
-                timeConstraints: _,
-                value: null != _ ? _ : _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
-                  className: (0, _._)(
-                    _().TimeWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
-              }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("LT"),
-                ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TimeZone,
-                  },
-                  _.zoneAbbr(),
-                ),
-                !!_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TimeZone,
-                    },
-                    _.zoneAbbr(),
-                  ),
-              ),
-          ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DateTimePicker_DateTime_Fixed"),
-            ),
-        );
+          ],
+        });
       }
       function _(_, _, _) {
         const [_, _] = _.useState(!1);
@@ -1465,6 +1411,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1478,34 +1425,30 @@
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
           _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
           _ = _ ? "a" : "span";
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(!_)
-            ? _.createElement(
-                _.Fragment,
-                null,
-                Boolean(!__webpack_require__) &&
-                  _.createElement("span", null, _),
-              )
-            : _.createElement(
-                _,
-                {
-                  href: _ ? _ : void 0,
-                },
-                _.createElement("img", {
-                  className: _.SmallAvatar,
-                  src: _.avatar_url,
-                  "data-miniprofile": "s" + _.ConvertTo64BitString(),
-                }),
-                Boolean(!_) &&
-                  _.createElement(
-                    "span",
-                    null,
-                    _ ? `${_} (${_.persona_name})` : _.persona_name,
-                  ),
-              ),
-        );
+        return (0, _.jsx)(_.Fragment, {
+          children: Boolean(!_)
+            ? (0, _.jsx)(_.Fragment, {
+                children:
+                  Boolean(!__webpack_require__) &&
+                  (0, _.jsx)("span", {
+                    children: _,
+                  }),
+              })
+            : (0, _.jsxs)(_, {
+                href: _ ? _ : void 0,
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.SmallAvatar,
+                    src: _.avatar_url,
+                    "data-miniprofile": "s" + _.ConvertTo64BitString(),
+                  }),
+                  Boolean(!_) &&
+                    (0, _.jsx)("span", {
+                      children: _ ? `${_} (${_.persona_name})` : _.persona_name,
+                    }),
+                ],
+              }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1516,6 +1459,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1536,73 +1480,67 @@
             elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _,
                 _.SectionTitleHeader,
                 _.required_title,
                 "SectionTitleHeader",
               ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.CollapsableSectionTitle,
-                  "EventEditorTextTitle",
-                ),
-              },
-              _,
-              Boolean(__webpack_require__) &&
-                _.createElement(_._, {
-                  tooltip: __webpack_require__,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.CollapsableSectionTitle,
+                    "EventEditorTextTitle",
+                  ),
+                  children: [
+                    _,
+                    Boolean(__webpack_require__) &&
+                      (0, _.jsx)(_._, {
+                        tooltip: __webpack_require__,
+                      }),
+                  ],
                 }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SectionTitleButtons,
-              },
-              _,
-              _.createElement(_, {
-                bIsMinimized: _,
-                fnToggleMinimize: _,
+                (0, _.jsxs)("div", {
+                  className: _.SectionTitleButtons,
+                  children: [
+                    _,
+                    (0, _.jsx)(_, {
+                      bIsMinimized: _,
+                      fnToggleMinimize: _,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            !_ &&
+              (0, _.jsx)(_._, {
+                children: _,
               }),
-            ),
-          ),
-          !_ && _.createElement(_._, null, _),
-        );
+          ],
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
-        return _.createElement(
-          _,
-          {
-            ..._,
-            getMinimized: () => _,
-            toggleMinimized: () => __webpack_require__(!_),
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_, {
+          ..._,
+          getMinimized: () => _,
+          toggleMinimized: () => __webpack_require__(!_),
+          children: _.children,
+        });
       }
       function _(_) {
         const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return _.createElement(
-          _._,
-          {
-            "data-tooltip-text": (0, _._)(_),
-            onClick: __webpack_require__,
-          },
-          _.bIsMinimized
-            ? _.createElement(_.hz4, null)
-            : _.createElement(_.Xjb, null),
-        );
+        return (0, _.jsx)(_._, {
+          "data-tooltip-text": (0, _._)(_),
+          onClick: __webpack_require__,
+          children: _.bIsMinimized
+            ? (0, _.jsx)(_.hz4, {})
+            : (0, _.jsx)(_.Xjb, {}),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

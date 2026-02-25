@@ -14,6 +14,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -39,24 +40,20 @@
         return _._.is_support
           ? _ && 0 != _.length
             ? 0 == _.length
-              ? _.createElement(
-                  "div",
-                  null,
-                  "You're all good! Nothing of yours needs attention :)",
-                )
-              : _.createElement(
-                  "div",
-                  {
-                    className: _.Ctn,
-                  },
-                  _.createElement(_._, {
+              ? (0, _.jsx)("div", {
+                  children:
+                    "You're all good! Nothing of yours needs attention :)",
+                })
+              : (0, _.jsx)("div", {
+                  className: _.Ctn,
+                  children: (0, _.jsx)(_._, {
                     planIDs: _,
                     bExcludeHideButton: !0,
                     bHideTypeField: !0,
                     bHideDoneByDefault: !0,
                   }),
-                )
-            : _.createElement(_._, {
+                })
+            : (0, _.jsx)(_._, {
                 string: "loading",
                 size: "medium",
                 position: "center",

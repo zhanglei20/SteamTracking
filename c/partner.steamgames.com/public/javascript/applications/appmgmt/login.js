@@ -14,6 +14,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return (
@@ -21,7 +22,7 @@
             () => (
               (window.g_ShowLoginDialog = (_) =>
                 (0, _._)(
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     redirectUrl: _,
                   }),
                   window,
@@ -48,16 +49,13 @@
             new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
           ).current,
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: __webpack_require__,
-            hideTopBar: !0,
-            bDisableBackgroundDismiss: !0,
-          },
-          _
-            ? _.createElement(_._, null)
-            : _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          onEscKeypress: __webpack_require__,
+          hideTopBar: !0,
+          bDisableBackgroundDismiss: !0,
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
                 platform: 2,
                 transport: _,
                 onComplete: (_) => {
@@ -69,7 +67,7 @@
                 theme: "modal",
                 redirectUrl: _,
               }),
-        );
+        });
       }
     },
   },

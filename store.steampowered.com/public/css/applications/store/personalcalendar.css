@@ -755,22 +755,28 @@ a:link {
 :where(._3A_c3YHYd4YIjA8Y-olnPl):where(input[type="radio"]) {
   cursor: var(--cursor-radio);
 }
-._3UJsjqCfOxuT5SoqLekeha {
+._1vE-LsK6l_D_5yjbywZV1p {
   width: 100%;
   box-sizing: border-box;
   --color-placeholder-text: var(--text-muted-color, #afafaf);
 }
-._3UJsjqCfOxuT5SoqLekeha::placeholder,
-._3UJsjqCfOxuT5SoqLekeha::-webkit-input-placeholder {
+._1vE-LsK6l_D_5yjbywZV1p::placeholder,
+._1vE-LsK6l_D_5yjbywZV1p::-webkit-input-placeholder {
   color: var(--color-placeholder-text);
   font-size: var(--font-size);
   letter-spacing: var(--letter-spacing);
   font-style: normal;
 }
-._3UJsjqCfOxuT5SoqLekeha::-ms-input-placeholder,
-._3UJsjqCfOxuT5SoqLekeha:-ms-input-placeholder {
+._1vE-LsK6l_D_5yjbywZV1p::-ms-input-placeholder,
+._1vE-LsK6l_D_5yjbywZV1p:-ms-input-placeholder {
   color: var(--color-placeholder-text);
   font-size: var(--font-size);
   letter-spacing: var(--letter-spacing);
   font-style: normal;
+}
+textarea._1vE-LsK6l_D_5yjbywZV1p {
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+  max-width: 100%;
+  max-height: 100%;
 }

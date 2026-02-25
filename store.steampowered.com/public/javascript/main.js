@@ -2832,7 +2832,7 @@ function IgnoreCuratorWithCallback( clanID, bIgnore, onComplete )
 		'json'
 	).fail( function()
 		{
-			ShowAlertDialog( 'Error', 'There was a problem trying to ignore the Steam Curator.<br>Note: You cannot ignore a curator you already follow. ' );
+			ShowAlertDialog( 'Error', 'There was a problem trying to ignore the Steam Curator. Possible issues:<ul><li>You cannot ignore a curator you already follow.</li><li>You can only ignore upto 100 curators at a time</li><li>Limited accounts cannot ignore a curator</li></ul>' );
 		}
 	);
 	return false;

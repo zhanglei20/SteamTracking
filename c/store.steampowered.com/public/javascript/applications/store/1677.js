@@ -65,6 +65,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       let _ = class extends _.Component {
         static get hoverClass() {
@@ -82,44 +83,34 @@
           let _ = "";
           return (
             "medium" == _ ? (_ = _().Medium) : "large" == _ && (_ = _().Large),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().SnoozeContainer,
-                  _.online_state,
-                  __webpack_require__,
-                  _ && _().animating,
-                  _,
-                  _ && _().Dim,
-                ),
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().SnoozeContainer,
+                _.online_state,
+                __webpack_require__,
+                _ && _().animating,
+                _,
+                _ && _().Dim,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
                   "data-text": "Z",
                   className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "Z",
+                }),
+                (0, _.jsx)("div", {
                   "data-text": "Z",
                   className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "Z",
+                }),
+                (0, _.jsx)("div", {
                   "data-text": "Z",
                   className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-            )
+                  children: "Z",
+                }),
+              ],
+            })
           );
         }
       };
@@ -137,13 +128,10 @@
           _ = 544 == _.m_eGamingDeviceType,
           _ = 545 == _.m_eGamingDeviceType,
           _ = !_ && !_ && !_ && _.HasStateFlag(1024);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -152,13 +140,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_Mobile"),
                 ..._,
-              },
-              _.createElement(_._, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_._, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -167,13 +152,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_VR"),
                 ..._,
-              },
-              _.createElement(_.MUh, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_.MUh, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -182,13 +164,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_BigPicture"),
                 ..._,
-              },
-              _.createElement(_.bPr, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_.bPr, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -197,13 +176,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_SteamDeck"),
                 ..._,
-              },
-              _.createElement(_.DQe, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_.DQe, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -212,28 +188,25 @@
                 ),
                 title: (0, _._)("#Platform_Hint_LegionGoS"),
                 ..._,
-              },
-              _.createElement(_.DQe, null),
-            ),
-        );
+                children: (0, _.jsx)(_.DQe, {}),
+              }),
+          ],
+        });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("span", {
               className: _().partyBeaconJoin,
-            },
-            (0, _._)("#User_WantsToPlay"),
-          ),
-          " – ",
-          _.persona.GetCurrentGameName(),
-        );
+              children: (0, _._)("#User_WantsToPlay"),
+            }),
+            " – ",
+            _.persona.GetCurrentGameName(),
+          ],
+        });
       }
       let _ = class extends _.Component {
         render() {
@@ -271,7 +244,7 @@
               _ && _().NoMask,
             ];
           _ || __webpack_require__.has_public_party_beacon
-            ? (_ = _.createElement(_, {
+            ? (_ = (0, _.jsx)(_, {
                 persona: __webpack_require__,
               }))
             : (0, _._)(_)
@@ -294,19 +267,16 @@
           !1 === _ && (_ = !0),
             __webpack_require__.is_awayOrSnooze &&
               _ &&
-              (_ = _.createElement(_, {
+              (_ = (0, _.jsx)(_, {
                 persona: __webpack_require__,
               }));
           let _ = null;
           _
-            ? (_ = _.createElement(
-                "div",
-                {
-                  className: "ContextMenuButton",
-                  onClick: _,
-                },
-                _.createElement(_.GB9, null),
-              ))
+            ? (_ = (0, _.jsx)("div", {
+                className: "ContextMenuButton",
+                onClick: _,
+                children: (0, _.jsx)(_.GB9, {}),
+              }))
             : _.push(_().noContextMenu),
             _ && _.push(_().hidePersona),
             _ && (_ = _()),
@@ -318,110 +288,84 @@
           let _ = _ && !_,
             _ = _ ? _ : __webpack_require__.m_strPlayerName,
             _ = !_ && (_ || _) && _;
-          return _.createElement(
-            "div",
-            {
-              ..._,
-              className: (0, _._)(..._),
-              onContextMenu: _,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            ..._,
+            className: (0, _._)(..._),
+            onContextMenu: _,
+            children: [
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().statusAndName, _ && _().threeLines),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().playerName, _ && _().EllipsisName),
-                },
-                _ || " ",
-                _ &&
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_().playerName, _ && _().EllipsisName),
+                    children: [
+                      _ || " ",
+                      _ &&
+                        _ &&
+                        (0, _.jsxs)("span", {
+                          className: _().playerNickname,
+                          children: ["(", _, ")"],
+                        }),
+                    ],
+                  }),
                   _ &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().playerNickname,
-                    },
-                    "(",
-                    _,
-                    ")",
-                  ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DNDContainer,
-                    title: (0, _._)("#User_ToggleDoNotDisturb"),
-                  },
-                  _.createElement(_.Aj0, null),
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().playerNicknameBracket,
-                    title: (0, _._)("#isNickname"),
-                  },
-                  " *",
-                ),
-              _.createElement(_, {
-                persona: __webpack_require__,
-              }),
-              _,
-              (__webpack_require__.m_bPlayerNamePending ||
-                __webpack_require__.m_bAvatarPending) &&
-                _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PendingPersona,
-                    title: (0, _._)("#SteamChina_PendingPersonaName"),
-                  },
-                  _.createElement(_.zD7, null),
-                ),
-              _,
-            ),
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().richPresenceContainer,
-                },
-                (_ || _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().gameName,
-                        _ && _().threeLines,
-                        _().richPresenceLabel,
-                        "no-drag",
-                      ),
-                    },
+                    (0, _.jsx)("div", {
+                      className: _().DNDContainer,
+                      title: (0, _._)("#User_ToggleDoNotDisturb"),
+                      children: (0, _.jsx)(_.Aj0, {}),
+                    }),
+                  _ &&
+                    (0, _.jsx)("span", {
+                      className: _().playerNicknameBracket,
+                      title: (0, _._)("#isNickname"),
+                      children: " *",
+                    }),
+                  (0, _.jsx)(_, {
+                    persona: __webpack_require__,
+                  }),
+                  _,
+                  (__webpack_require__.m_bPlayerNamePending ||
+                    __webpack_require__.m_bAvatarPending) &&
                     _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().gameIsPrivateIcon,
-                          title: (0, _._)("#User_GameInfoHidden"),
-                        },
-                        _.createElement(_.jZl, null),
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().richPresenceLabel, "no-drag"),
-                    },
-                    _,
-                    " ",
-                  ),
-              ),
-          );
+                    (0, _.jsx)("div", {
+                      className: _().PendingPersona,
+                      title: (0, _._)("#SteamChina_PendingPersonaName"),
+                      children: (0, _.jsx)(_.zD7, {}),
+                    }),
+                  _,
+                ],
+              }),
+              !_ &&
+                (0, _.jsxs)("div", {
+                  className: _().richPresenceContainer,
+                  children: [
+                    (_ || _) &&
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().gameName,
+                          _ && _().threeLines,
+                          _().richPresenceLabel,
+                          "no-drag",
+                        ),
+                        children: [
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _().gameIsPrivateIcon,
+                              title: (0, _._)("#User_GameInfoHidden"),
+                              children: (0, _.jsx)(_.jZl, {}),
+                            }),
+                          _,
+                        ],
+                      }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().richPresenceLabel, "no-drag"),
+                        children: [_, " "],
+                      }),
+                  ],
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -436,31 +380,22 @@
           ..._
         } = _;
         let _ = _ && !__webpack_require__ ? _ : _.m_strPlayerName;
-        return _.createElement(
-          "span",
-          {
-            ..._,
-            className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
-          },
-          _.createElement(
-            "span",
-            {
-              className: _().playerName,
-            },
-            _ || " ",
-            __webpack_require__ &&
-              _ &&
-              _.createElement(
-                "span",
-                {
+        return (0, _.jsx)("span", {
+          ..._,
+          className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
+          children: (0, _.jsxs)("span", {
+            className: _().playerName,
+            children: [
+              _ || " ",
+              __webpack_require__ &&
+                _ &&
+                (0, _.jsxs)("span", {
                   className: _().playerNickname,
-                },
-                "(",
-                _,
-                ")",
-              ),
-          ),
-        );
+                  children: ["(", _, ")"],
+                }),
+            ],
+          }),
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1470,20 +1405,18 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _._)()
-          ? _.createElement(_.MGO, {
+          ? (0, _.jsx)(_.MGO, {
               ..._,
             })
-          : _.createElement(_.Jlk, {
+          : (0, _.jsx)(_.Jlk, {
               ..._,
             });
       }
       function _() {
-        return _.createElement(_.rfv, null);
+        return (0, _.jsx)(_.rfv, {});
       }
       function _() {
-        return (0, _._)()
-          ? _.createElement(_._, null)
-          : _.createElement(_.jZW, null);
+        return (0, _._)() ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_.jZW, {});
       }
     },
   },

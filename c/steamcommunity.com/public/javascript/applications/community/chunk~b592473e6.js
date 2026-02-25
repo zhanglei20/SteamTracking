@@ -40,6 +40,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._({
           props: {
@@ -76,7 +77,7 @@
               var _;
             }, [_]),
           ),
-          _.createElement(_.Fragment, null)
+          (0, _.jsx)(_.Fragment, {})
         );
       }
     },
@@ -276,6 +277,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
@@ -289,13 +291,10 @@
             }),
             [_, __webpack_require__],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       const _ = _.memo(function (_) {
         const {
@@ -1679,6 +1678,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -1703,42 +1703,36 @@
               }
             else alert((0, _._)("#Sale_EyeDropperError"));
           }, [__webpack_require__]);
-        return _.createElement(
-          "div",
-          null,
-          Boolean(_) && _.createElement(_._, null, _),
-          _.createElement(_._, {
-            onChange: (_) => {
-              const _ = (function (_) {
-                return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
-              })(_);
-              _(_), __webpack_require__(_);
-            },
-            color: _,
-            disableAlpha: _,
-            className: _().ColorPickerCtn,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().EyeDropperCtn,
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+        return (0, _.jsxs)("div", {
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              onChange: (_) => {
+                const _ = (function (_) {
+                  return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
+                })(_);
+                _(_), __webpack_require__(_);
               },
-              _.createElement(
-                _._,
-                {
+              color: _,
+              disableAlpha: _,
+              className: _().ColorPickerCtn,
+            }),
+            (0, _.jsx)("div", {
+              className: _().EyeDropperCtn,
+              children: (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                children: (0, _.jsx)(_._, {
                   className: _().EyeDropperBtn,
                   onClick: _,
-                },
-                _.createElement(_.O7b, null),
-              ),
-            ),
-          ),
-        );
+                  children: (0, _.jsx)(_.O7b, {}),
+                }),
+              }),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1747,6 +1741,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1766,32 +1761,28 @@
             _ && _(), _();
           }, [_, _]),
           _ = _ ? void 0 : _;
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: _,
-          },
-          _.createElement(
-            _._,
-            {
-              onSubmit: _,
-              classNameContent: _,
-            },
-            _.createElement(_._, null, __webpack_require__),
-            _,
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                strOKText: _,
-                bOKDisabled: _,
-                onCancel: _,
-                strCancelText: _,
-                bCancelDisabled: _,
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _,
+          children: (0, _.jsxs)(_._, {
+            onSubmit: _,
+            classNameContent: _,
+            children: [
+              (0, _.jsx)(_._, {
+                children: __webpack_require__,
               }),
-            ),
-          ),
-        );
+              _,
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  strOKText: _,
+                  bOKDisabled: _,
+                  onCancel: _,
+                  strCancelText: _,
+                  bCancelDisabled: _,
+                }),
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1800,6 +1791,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1863,18 +1855,15 @@
         return [
           _,
           _ &&
-            _.createElement(
-              _._,
-              {
-                active: !0,
-              },
-              _.createElement(_, {
+            (0, _.jsx)(_._, {
+              active: !0,
+              children: (0, _.jsx)(_, {
                 schema: _,
                 bColor: _,
                 closeModal: _,
                 ..._,
               }),
-            ),
+            }),
         ];
       }
       const _ = _.memo(function (_) {
@@ -1961,16 +1950,13 @@
             : (0, _._)(
                 _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
               );
-        return _.createElement(
-          _._,
-          {
-            onOK: _,
-            closeModal: _,
-            strTitle: _,
-            strOKText: _,
-            bOKDisabled: !_ || 0 == _.length,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          onOK: _,
+          closeModal: _,
+          strTitle: _,
+          strOKText: _,
+          bOKDisabled: !_ || 0 == _.length,
+          children: (0, _.jsx)(_._, {
             color: _,
             strTitle: _,
             disableAlpha: !0,
@@ -1988,7 +1974,7 @@
                 })(_),
               ),
           }),
-        );
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1997,6 +1983,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2064,17 +2051,14 @@
         return [
           _,
           __webpack_require__ &&
-            _.createElement(
-              _._,
-              {
-                active: !0,
-              },
-              _.createElement(_, {
+            (0, _.jsx)(_._, {
+              active: !0,
+              children: (0, _.jsx)(_, {
                 schema: _,
                 closeModal: _,
                 ...__webpack_require__,
               }),
-            ),
+            }),
         ];
       }
       const _ = _.memo(function (_) {
@@ -2124,121 +2108,118 @@
           _ = _
             ? (0, _._)("#Button_Save")
             : (0, _._)("#FormattingToolbar_InsertLink");
-        return _.createElement(
-          _._,
-          {
-            onOK: () => {
-              var _, _, _, _, _;
-              let _ = _.state._;
-              if (
-                !(
-                  "dev" != _._.WEB_UNIVERSE ||
-                  (_ &&
-                    null != _ &&
-                    null != _ &&
-                    (null === (_ = null == _ ? void 0 : _.marks) || void 0 === _
-                      ? void 0
-                      : _.link))
-                )
+        return (0, _.jsxs)(_._, {
+          onOK: () => {
+            var _, _, _, _, _;
+            let _ = _.state._;
+            if (
+              !(
+                "dev" != _._.WEB_UNIVERSE ||
+                (_ &&
+                  null != _ &&
+                  null != _ &&
+                  (null === (_ = null == _ ? void 0 : _.marks) || void 0 === _
+                    ? void 0
+                    : _.link))
               )
-                return void console.warn(
-                  "Missing required data in insertLink",
-                  {
-                    view: _,
-                    from: _,
-                    _: _,
-                    schema: _,
-                  },
-                );
-              const _ = {
-                href: _,
-              };
-              for (const _ in _) _[_] = _[_];
-              const _ =
-                null === (_ = _.marks.link) || void 0 === _
+            )
+              return void console.warn("Missing required data in insertLink", {
+                view: _,
+                from: _,
+                _: _,
+                schema: _,
+              });
+            const _ = {
+              href: _,
+            };
+            for (const _ in _) _[_] = _[_];
+            const _ =
+              null === (_ = _.marks.link) || void 0 === _
+                ? void 0
+                : __webpack_require__.create(_);
+            if ("dev" == _._.WEB_UNIVERSE && !_)
+              return void console.error(
+                "Failed to create link mark with attrs",
+                _,
+              );
+            const _ = _.text(_ || _, [_]);
+            "dev" == _._.WEB_UNIVERSE &&
+              (console.log(
+                "Replacement node:",
+                (null === (_ = _.toJSON) || void 0 === _
                   ? void 0
-                  : __webpack_require__.create(_);
-              if ("dev" == _._.WEB_UNIVERSE && !_)
-                return void console.error(
-                  "Failed to create link mark with attrs",
-                  _,
-                );
-              const _ = _.text(_ || _, [_]);
-              "dev" == _._.WEB_UNIVERSE &&
-                (console.log(
-                  "Replacement node:",
-                  (null === (_ = _.toJSON) || void 0 === _
-                    ? void 0
-                    : _.call(_)) || _,
-                ),
-                console.log("Transaction range from-to:", {
-                  from: _,
-                  _: _,
-                }),
-                console.log(
-                  "Document slice at range:",
-                  (null ===
-                    (_ =
-                      null === (_ = _.state.doc.slice(_, _).content) ||
-                      void 0 === _
-                        ? void 0
-                        : _.toJSON) || void 0 === _
-                    ? void 0
-                    : _.call(_)) || _.state.doc.slice(_, _),
-                ));
-              try {
-                (_ = _.replaceRangeWith(_, _, _)),
-                  (_ = _.setSelection(
-                    _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
-                  )),
-                  _.dispatch(_);
-              } catch (_) {
-                console.error("Error during link insertion", _);
-              }
-              _();
-            },
-            closeModal: _,
-            strTitle: _,
-            strOKText: _,
-            bOKDisabled: 0 == _.length,
+                  : _.call(_)) || _,
+              ),
+              console.log("Transaction range from-to:", {
+                from: _,
+                _: _,
+              }),
+              console.log(
+                "Document slice at range:",
+                (null ===
+                  (_ =
+                    null === (_ = _.state.doc.slice(_, _).content) ||
+                    void 0 === _
+                      ? void 0
+                      : _.toJSON) || void 0 === _
+                  ? void 0
+                  : _.call(_)) || _.state.doc.slice(_, _),
+              ));
+            try {
+              (_ = _.replaceRangeWith(_, _, _)),
+                (_ = _.setSelection(
+                  _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
+                )),
+                _.dispatch(_);
+            } catch (_) {
+              console.error("Error during link insertion", _);
+            }
+            _();
           },
-          _.createElement(_._, {
-            ref: _,
-            value: _,
-            onChange: (_) => _(_.currentTarget.value),
-            label: (0, _._)("#FormattingToolbar_LinkText"),
-          }),
-          _.createElement(_._, {
-            ref: _,
-            value: _,
-            placeholder: "https://",
-            onChange: (_) => _(_.currentTarget.value),
-            label: (0, _._)("#FormattingToolbar_LinkAddress"),
-            mustBeURL: !0,
-          }),
-          _ &&
-            _.createElement(_, {
-              addtlAttrs: _,
-              values: _,
-              setValues: _,
+          closeModal: _,
+          strTitle: _,
+          strOKText: _,
+          bOKDisabled: 0 == _.length,
+          children: [
+            (0, _.jsx)(_._, {
+              ref: _,
+              value: _,
+              onChange: (_) => _(_.currentTarget.value),
+              label: (0, _._)("#FormattingToolbar_LinkText"),
             }),
-        );
+            (0, _.jsx)(_._, {
+              ref: _,
+              value: _,
+              placeholder: "https://",
+              onChange: (_) => _(_.currentTarget.value),
+              label: (0, _._)("#FormattingToolbar_LinkAddress"),
+              mustBeURL: !0,
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                addtlAttrs: _,
+                values: _,
+                setValues: _,
+              }),
+          ],
+        });
       });
       function _(_) {
         const { addtlAttrs: _, values: __webpack_require__, setValues: _ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          Object.keys(_).map((_) =>
-            _.createElement(_, {
-              key: _,
-              attrName: _,
-              fnRender: _[_].fnRenderEditor,
-              value: __webpack_require__[_],
-              setValues: _,
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: Object.keys(_).map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                attrName: _,
+                fnRender: _[_].fnRenderEditor,
+                value: __webpack_require__[_],
+                setValues: _,
+              },
+              _,
+            ),
           ),
-        );
+        });
       }
       const _ = _.memo(function (_) {
         const {
@@ -2266,6 +2247,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2376,41 +2358,43 @@
           _ = (0, _._)(_, _);
         if (!_) return null;
         const { schemaConfig: _, bbcodeParser: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            view: _,
-            pmState: _,
-          },
-          _.createElement(_._, {
-            key: `editordiv_${_}`,
-            className: (0, _._)({
-              ["" + __webpack_require__]: !!__webpack_require__,
-              [_.Container]: !0,
-              [_.SingleLine]: !!_,
+        return (0, _.jsxs)(_._, {
+          view: _,
+          pmState: _,
+          children: [
+            (0, _.jsx)(
+              _._,
+              {
+                className: (0, _._)({
+                  ["" + __webpack_require__]: !!__webpack_require__,
+                  [_.Container]: !0,
+                  [_.SingleLine]: !!_,
+                }),
+                ref: _,
+                spellCheck: _,
+                focusable: !0,
+                onActivate: _,
+                onOKActionDescription: (0, _._)("#UserGameNotes_Edit"),
+                onGamepadDirection: _,
+                ..._,
+              },
+              `editordiv_${_}`,
+            ),
+            (0, _.jsx)(_._, {
+              refOnUpdate: _,
+              schema: _.pm_schema,
+              bSingleLine: _,
             }),
-            ref: _,
-            spellCheck: _,
-            focusable: !0,
-            onActivate: _,
-            onOKActionDescription: (0, _._)("#UserGameNotes_Edit"),
-            onGamepadDirection: _,
-            ..._,
-          }),
-          _.createElement(_._, {
-            refOnUpdate: _,
-            schema: _.pm_schema,
-            bSingleLine: _,
-          }),
-          _.createElement(_, {
-            parser: _,
-            schema: _.pm_schema,
-          }),
-          _.createElement(_, {
-            schema: _.pm_schema,
-          }),
-          _,
-        );
+            (0, _.jsx)(_, {
+              parser: _,
+              schema: _.pm_schema,
+            }),
+            (0, _.jsx)(_, {
+              schema: _.pm_schema,
+            }),
+            _,
+          ],
+        });
       });
       const _ = _.memo(function (_) {
         const { parser: _, schema: __webpack_require__ } = _;
@@ -2460,6 +2444,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { schema: _, addtlAttrs: __webpack_require__, children: _ } = _,
@@ -2468,21 +2453,18 @@
           _ = _.useCallback((_) => _((0, _._)(_.state, _.marks.link)), [_]);
         (0, _._)(_, _);
         const [_, _] = (0, _._)(_, __webpack_require__);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsx)(_._, {
               onClick: () => _(_),
               toggled: _,
               tooltip: "#FormattingToolbar_InsertLink",
               keyboardShortcut: "Mod-k",
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2512,208 +2494,160 @@
           );
         (0, _._)(_, _);
         const [_, _] = (0, _._)(_, __webpack_require__, _);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsx)(_._, {
               onClick: () => _(_),
               toggled: _,
               tooltip: __webpack_require__
                 ? "#FormattingToolbar_Color"
                 : "#FormattingToolbar_BgColor",
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               tooltip: "#FormattingToolbar_Undo",
               keyboardShortcut: "Mod-z",
               command: _._,
-            },
-            _.createElement(_.VnB, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.VnB, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: "#FormattingToolbar_Redo",
               keyboardShortcut:
                 "macos" == _._.PLATFORM ? "Mod-Shift-z" : "Mod-y",
               command: _._,
-            },
-            _.createElement(_.Bal, null),
-          ),
-        );
+              children: (0, _.jsx)(_.Bal, {}),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { schema: _ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               tooltip: "#FormattingToolbar_Bold",
               keyboardShortcut: "Mod-b",
               mark: _.marks.strong,
-            },
-            _.createElement(_.l4n, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.l4n, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: "#FormattingToolbar_Italic",
               keyboardShortcut: "Mod-i",
               mark: _.marks.italic,
-            },
-            _.createElement(_.UKJ, null),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _.jsx)(_.UKJ, {}),
+            }),
+            (0, _.jsx)(_._, {
               tooltip: "#FormattingToolbar_Underline",
               keyboardShortcut: "Mod-u",
               mark: _.marks.underline,
-            },
-            _.createElement(_.Gj3, null),
-          ),
-          "strike" in _.marks &&
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_.Gj3, {}),
+            }),
+            "strike" in _.marks &&
+              (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_Strike",
                 keyboardShortcut: "Mod-Shift-x",
                 mark: _.marks.strike,
-              },
-              _.createElement(_.tI4, null),
-            ),
-          "code" in _.marks &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_.tI4, {}),
+              }),
+            "code" in _.marks &&
+              (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_InlineCode",
                 keyboardShortcut: "Ctrl-Shift-c",
                 mark: _.marks.code,
-              },
-              _.createElement(_.bmT, null),
-            ),
-          "color" in _.marks &&
-            _.createElement(
-              _,
-              {
+                children: (0, _.jsx)(_.bmT, {}),
+              }),
+            "color" in _.marks &&
+              (0, _.jsx)(_, {
                 schema: _,
                 bColor: !0,
-              },
-              _.createElement(_.r7n, null),
-            ),
-          "bgcolor" in _.marks &&
-            _.createElement(
-              _,
-              {
+                children: (0, _.jsx)(_.r7n, {}),
+              }),
+            "bgcolor" in _.marks &&
+              (0, _.jsx)(_, {
                 schema: _,
                 bColor: !1,
-              },
-              _.createElement(_.FId, null),
-            ),
-        );
+                children: (0, _.jsx)(_.FId, {}),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { schema: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            tooltip: "#FormattingToolbar_Paragraph",
-            keyboardShortcut: "Ctrl-Shift-0",
-            nodeType: _.nodes.paragraph,
-          },
-          _.createElement(_.iYj, null),
-        );
+        return (0, _.jsx)(_._, {
+          tooltip: "#FormattingToolbar_Paragraph",
+          keyboardShortcut: "Ctrl-Shift-0",
+          nodeType: _.nodes.paragraph,
+          children: (0, _.jsx)(_.iYj, {}),
+        });
       }
       function _(_) {
         const { schema: _, maxLevel: __webpack_require__ = 1, levels: _ } = _,
           _ = __webpack_require__ + _ - 1;
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__ <= 1 &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            __webpack_require__ <= 1 &&
+              (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel1",
                 keyboardShortcut: "Ctrl-Shift-1",
                 nodeType: _.nodes.heading,
                 attrs: {
                   level: 1,
                 },
-              },
-              _.createElement(_.jRw, null),
-            ),
-          __webpack_require__ <= 2 &&
-            _ >= 2 &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_.jRw, {}),
+              }),
+            __webpack_require__ <= 2 &&
+              _ >= 2 &&
+              (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel2",
                 keyboardShortcut: "Ctrl-Shift-2",
                 nodeType: _.nodes.heading,
                 attrs: {
                   level: 2,
                 },
-              },
-              _.createElement(_.qOW, null),
-            ),
-          __webpack_require__ <= 3 &&
-            _ >= 3 &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_.qOW, {}),
+              }),
+            __webpack_require__ <= 3 &&
+              _ >= 3 &&
+              (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel3",
                 keyboardShortcut: "Ctrl-Shift-3",
                 nodeType: _.nodes.heading,
                 attrs: {
                   level: 3,
                 },
-              },
-              _.createElement(_.x7X, null),
-            ),
-          __webpack_require__ <= 4 &&
-            _ >= 4 &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_.x7X, {}),
+              }),
+            __webpack_require__ <= 4 &&
+              _ >= 4 &&
+              (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel4",
                 keyboardShortcut: "Ctrl-Shift-4",
                 nodeType: _.nodes.heading,
                 attrs: {
                   level: 4,
                 },
-              },
-              _.createElement(_.qzO, null),
-            ),
-          __webpack_require__ <= 5 &&
-            _ >= 5 &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_.qzO, {}),
+              }),
+            __webpack_require__ <= 5 &&
+              _ >= 5 &&
+              (0, _.jsx)(_._, {
                 tooltip: "#FormattingToolbar_HeadingLevel5",
                 keyboardShortcut: "Ctrl-Shift-5",
                 nodeType: _.nodes.heading,
                 attrs: {
                   level: 5,
                 },
-              },
-              _.createElement(_.jXA, null),
-            ),
-        );
+                children: (0, _.jsx)(_.jXA, {}),
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2735,54 +2669,42 @@
               [_, _],
             ),
           ),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
                 tooltip: "#FormattingToolbar_BulletedList",
                 keyboardShortcut: "Ctrl-Shift-8",
                 list_type: _,
                 list_item: _,
-              },
-              _.createElement(_.JPq, null),
-            ),
-            _ &&
-              _.createElement(
-                _,
-                {
+                children: (0, _.jsx)(_.JPq, {}),
+              }),
+              _ &&
+                (0, _.jsx)(_, {
                   tooltip: "#FormattingToolbar_OrderedList",
                   keyboardShortcut: "Ctrl-Shift-7",
                   list_type: _,
                   list_item: _,
-                },
-                _.createElement(_.jE0, null),
-              ),
-            (!__webpack_require__ || _) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    tooltip: "#FormattingToolbar_OutdentList",
-                    keyboardShortcut: "Mod-[",
-                    command: _,
-                  },
-                  _.createElement(_.LSz, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    tooltip: "#FormattingToolbar_IndentList",
-                    keyboardShortcut: "Mod-[",
-                    command: _,
-                  },
-                  _.createElement(_.ycU, null),
-                ),
-              ),
-          )
+                  children: (0, _.jsx)(_.jE0, {}),
+                }),
+              (!__webpack_require__ || _) &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      tooltip: "#FormattingToolbar_OutdentList",
+                      keyboardShortcut: "Mod-[",
+                      command: _,
+                      children: (0, _.jsx)(_.LSz, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip: "#FormattingToolbar_IndentList",
+                      keyboardShortcut: "Mod-[",
+                      command: _,
+                      children: (0, _.jsx)(_.ycU, {}),
+                    }),
+                  ],
+                }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -2807,44 +2729,35 @@
               [_],
             ),
           ),
-          _.createElement(
-            _._,
-            {
-              ..._,
-              toggled: _,
-              command: _ ? _ : _,
-            },
-            _,
-          )
+          (0, _.jsx)(_._, {
+            ..._,
+            toggled: _,
+            command: _ ? _ : _,
+            children: _,
+          })
         );
       }
       function _(_) {
         const { schema: _, addtlAttrs: __webpack_require__ } = _;
-        return _.createElement(
-          _,
-          {
-            schema: _,
-            addtlAttrs: __webpack_require__,
-          },
-          _.createElement(_.YqK, null),
-        );
+        return (0, _.jsx)(_, {
+          schema: _,
+          addtlAttrs: __webpack_require__,
+          children: (0, _.jsx)(_.YqK, {}),
+        });
       }
       function _(_) {
         const {
           bSpellcheckEnabled: _,
           setSpellcheckEnabled: __webpack_require__,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            tooltip: _
-              ? "#FormattingToolbar_DisableSpellcheck"
-              : "#FormattingToolbar_EnableSpellcheck",
-            toggled: _,
-            onClick: () => __webpack_require__(!_),
-          },
-          _.createElement(_.DEV, null),
-        );
+        return (0, _.jsx)(_._, {
+          tooltip: _
+            ? "#FormattingToolbar_DisableSpellcheck"
+            : "#FormattingToolbar_EnableSpellcheck",
+          toggled: _,
+          onClick: () => __webpack_require__(!_),
+          children: (0, _.jsx)(_.DEV, {}),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2861,6 +2774,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2896,41 +2810,32 @@
           [_],
         );
         return _
-          ? _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              _,
-            )
+          ? (0, _.jsx)(_.Provider, {
+              value: _,
+              children: _,
+            })
           : null;
       }
       const _ = _.createContext(void 0);
       function _() {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _.Gap,
         });
       }
       function _() {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _.Spacer,
         });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.className, _.ToolbarRowOverflowContainer),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.ToolbarRow,
-              "flow-children": "row",
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_.className, _.ToolbarRowOverflowContainer),
+          children: (0, _.jsx)(_._, {
+            className: _.ToolbarRow,
+            "flow-children": "row",
+            children: _.children,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -2950,7 +2855,7 @@
           () => _._(_, __webpack_require__),
           [__webpack_require__, _],
         );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
           command: _,
           toggled: _,
@@ -2964,7 +2869,7 @@
           _ = _.useCallback((_) => _((0, _._)(_.state, _)), [_]);
         (0, _._)(_, _);
         const _ = _.useMemo(() => _._(_), [_]);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
           command: _,
           toggled: _,
@@ -2986,27 +2891,21 @@
         ),
           _.useEffect(() => _(_(_.state)), [_, _]);
         const _ = !_ && !__webpack_require__;
-        return _.createElement(
-          _,
-          {
-            ..._,
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.CommandButton,
-                __webpack_require__ && _.Toggled,
-              ),
-              onMouseDown: (_) => {
-                _.preventDefault(), _(_.state, _.dispatch, _);
-              },
-              disabled: _,
-              focusable: !_,
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            className: (0, _._)(
+              _.CommandButton,
+              __webpack_require__ && _.Toggled,
+            ),
+            onMouseDown: (_) => {
+              _.preventDefault(), _(_.state, _.dispatch, _);
             },
-            _,
-          ),
-        );
+            disabled: _,
+            focusable: !_,
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -3017,27 +2916,21 @@
           className: _,
           ..._
         } = _;
-        return _.createElement(
-          _,
-          {
-            ..._,
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.CommandButton,
-                __webpack_require__ && _.Toggled,
-                _,
-              ),
-              onMouseDown: (_) => {
-                0 === _.button && (_.preventDefault(), _(_));
-              },
-              disabled: !0 === _,
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            className: (0, _._)(
+              _.CommandButton,
+              __webpack_require__ && _.Toggled,
+              _,
+            ),
+            onMouseDown: (_) => {
+              0 === _.button && (_.preventDefault(), _(_));
             },
-            _,
-          ),
-        );
+            disabled: !0 === _,
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -3047,71 +2940,66 @@
         } = _;
         if (!_) return _;
         const _ = __webpack_require__
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               tooltip: _,
               keyboardShortcut: __webpack_require__,
             })
           : _;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-            direction: "bottom",
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "bottom",
+          children: _,
+        });
       }
       function _(_) {
         const { tooltip: _, keyboardShortcut: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.TooltipWithShortcut,
-          },
-          _.createElement("div", null, "string" == typeof _ ? (0, _._)(_) : _),
-          _.createElement(
-            "div",
-            null,
-            _.createElement(_, {
-              keyboardShortcut: __webpack_require__,
+        return (0, _.jsxs)("div", {
+          className: _.TooltipWithShortcut,
+          children: [
+            (0, _.jsx)("div", {
+              children: "string" == typeof _ ? (0, _._)(_) : _,
             }),
-          ),
-        );
+            (0, _.jsx)("div", {
+              children: (0, _.jsx)(_, {
+                keyboardShortcut: __webpack_require__,
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { keyboardShortcut: _ } = _,
           _ = _.split("-"),
           _ = __webpack_require__.pop();
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__.map((_, _) =>
-            _.createElement(
-              _.Fragment,
-              {
-                key: _,
-              },
-              _.createElement(
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            __webpack_require__.map((_, _) =>
+              (0, _.jsxs)(
+                _.Fragment,
+                {
+                  children: [
+                    (0, _.jsx)(_, {
+                      children: (0, _.jsx)(_, {
+                        modifier: _,
+                      }),
+                    }),
+                    " + ",
+                  ],
+                },
                 _,
-                null,
-                _.createElement(_, {
-                  modifier: _,
-                }),
               ),
-              " + ",
             ),
-          ),
-          _.createElement(_, null, _.toUpperCase()),
-        );
+            (0, _.jsx)(_, {
+              children: _.toUpperCase(),
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "span",
-          {
-            className: _.KeyCap,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("span", {
+          className: _.KeyCap,
+          children: _.children,
+        });
       }
       function _(_) {
         const { modifier: _ } = _;

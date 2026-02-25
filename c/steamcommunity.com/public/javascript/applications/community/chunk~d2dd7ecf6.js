@@ -1268,22 +1268,19 @@
           children: _.children,
         });
       }
-      const _ = (0, _.createContext)(null);
+      const _ = (0, __webpack_require__("chunkid").createContext)(null);
       function _(_) {
         const _ = _(_.clanInfo.clanSteamID.ConvertTo64BitString());
         let _ = !1;
         return (
           _.isSuccess && (_ = _.data.push_by_default),
-          _.createElement(
-            _.Provider,
-            {
-              value: {
-                clanSteamId: _.clanInfo.clanSteamID,
-                bPushToCrowdInByDefault: _,
-              },
+          (0, _.jsx)(_.Provider, {
+            value: {
+              clanSteamId: _.clanInfo.clanSteamID,
+              bPushToCrowdInByDefault: _,
             },
-            _.children,
-          )
+            children: _.children,
+          })
         );
       }
       function _(_, _, _) {

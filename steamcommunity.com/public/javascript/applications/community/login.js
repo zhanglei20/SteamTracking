@@ -6,38 +6,38 @@
     9211: (e) => {
       e.exports = { LoginContainer: "_2vAS_iK_bJ7iv_7pRL7Zdk" };
     },
-    42144: (e, t, n) => {
+    42144: (e, n, t) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => l });
-      var r = n(90626),
-        a = n(97436),
-        o = n(96059),
-        i = n(78327),
-        s = n(28240),
-        c = n(9211);
+      t.r(n), t.d(n, { default: () => l });
+      var r = t(7850),
+        o = t(90626),
+        i = t(97436),
+        s = t(96059),
+        a = t(78327),
+        c = t(28240),
+        u = t(9211);
       function l(e) {
-        const { redirectUrl: t = i.TS.COMMUNITY_BASE_URL } = e,
-          [n] = (0, r.useState)(
-            new o.D(i.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+        const { redirectUrl: n = a.TS.COMMUNITY_BASE_URL } = e,
+          [t] = (0, o.useState)(
+            new s.D(a.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [l, u] = (0, r.useState)(!1);
-        return r.createElement(
-          "div",
-          { className: c.LoginContainer },
-          l
-            ? r.createElement(a.Fn, null)
-            : r.createElement(a.YN, {
+          [l, m] = (0, o.useState)(!1);
+        return (0, r.jsx)("div", {
+          className: u.LoginContainer,
+          children: l
+            ? (0, r.jsx)(i.Fn, {})
+            : (0, r.jsx)(i.YN, {
                 autoFocus: !0,
-                transport: n,
+                transport: t,
                 platform: 2,
                 onComplete: (e) => {
-                  e == s.wI.k_PrimaryDomainFail
-                    ? u(!0)
-                    : window.location.assign(t);
+                  e == c.wI.k_PrimaryDomainFail
+                    ? m(!0)
+                    : window.location.assign(n);
                 },
-                redirectUrl: t,
+                redirectUrl: n,
               }),
-        );
+        });
       }
     },
   },

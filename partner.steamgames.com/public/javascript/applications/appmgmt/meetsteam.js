@@ -46,13 +46,13 @@
       };
     },
     40323: function (e, t) {
-      var n, r, a;
+      var n, s, r;
       /* @license
 Papa Parse
 v5.5.3
 https://github.com/mholt/PapaParse
 License: MIT
-*/ (r = []),
+*/ (s = []),
         (n = function e() {
           var t,
             n =
@@ -63,12 +63,12 @@ License: MIT
                   : void 0 !== n
                     ? n
                     : {},
-            r = !n.document && !!n.postMessage,
-            a = n.IS_PAPA_WORKER || !1,
-            s = {},
-            i = 0,
-            l = {};
-          function o(e) {
+            s = !n.document && !!n.postMessage,
+            r = n.IS_PAPA_WORKER || !1,
+            i = {},
+            a = 0,
+            o = {};
+          function c(e) {
             (this._handle = null),
               (this._finished = !1),
               (this._completed = !1),
@@ -82,97 +82,97 @@ License: MIT
               (this.isFirstChunk = !0),
               (this._completeResults = { data: [], errors: [], meta: {} }),
               function (e) {
-                var t = v(e);
+                var t = j(e);
                 (t.chunkSize = parseInt(t.chunkSize)),
                   e.step || e.chunk || (t.chunkSize = null),
-                  (this._handle = new h(t)),
+                  (this._handle = new p(t)),
                   ((this._handle.streamer = this)._config = t);
               }.call(this, e),
               (this.parseChunk = function (e, t) {
-                var r = parseInt(this._config.skipFirstNLines) || 0;
-                if (this.isFirstChunk && 0 < r) {
+                var s = parseInt(this._config.skipFirstNLines) || 0;
+                if (this.isFirstChunk && 0 < s) {
                   let t = this._config.newline;
                   t ||
-                    ((s = this._config.quoteChar || '"'),
-                    (t = this._handle.guessLineEndings(e, s))),
-                    (e = [...e.split(t).slice(r)].join(t));
+                    ((i = this._config.quoteChar || '"'),
+                    (t = this._handle.guessLineEndings(e, i))),
+                    (e = [...e.split(t).slice(s)].join(t));
                 }
                 this.isFirstChunk &&
-                  y(this._config.beforeFirstChunk) &&
-                  void 0 !== (s = this._config.beforeFirstChunk(e)) &&
-                  (e = s),
+                  S(this._config.beforeFirstChunk) &&
+                  void 0 !== (i = this._config.beforeFirstChunk(e)) &&
+                  (e = i),
                   (this.isFirstChunk = !1),
                   (this._halted = !1),
-                  (r = this._partialLine + e);
-                var s =
+                  (s = this._partialLine + e);
+                var i =
                   ((this._partialLine = ""),
-                  this._handle.parse(r, this._baseIndex, !this._finished));
+                  this._handle.parse(s, this._baseIndex, !this._finished));
                 if (!this._handle.paused() && !this._handle.aborted()) {
                   if (
-                    ((e = s.meta.cursor),
+                    ((e = i.meta.cursor),
                     this._finished ||
-                      ((this._partialLine = r.substring(e - this._baseIndex)),
+                      ((this._partialLine = s.substring(e - this._baseIndex)),
                       (this._baseIndex = e)),
-                    s && s.data && (this._rowCount += s.data.length),
-                    (r =
+                    i && i.data && (this._rowCount += i.data.length),
+                    (s =
                       this._finished ||
                       (this._config.preview &&
                         this._rowCount >= this._config.preview)),
-                    a)
+                    r)
                   )
                     n.postMessage({
-                      results: s,
-                      workerId: l.WORKER_ID,
-                      finished: r,
+                      results: i,
+                      workerId: o.WORKER_ID,
+                      finished: s,
                     });
-                  else if (y(this._config.chunk) && !t) {
+                  else if (S(this._config.chunk) && !t) {
                     if (
-                      (this._config.chunk(s, this._handle),
+                      (this._config.chunk(i, this._handle),
                       this._handle.paused() || this._handle.aborted())
                     )
                       return void (this._halted = !0);
-                    this._completeResults = s = void 0;
+                    this._completeResults = i = void 0;
                   }
                   return (
                     this._config.step ||
                       this._config.chunk ||
                       ((this._completeResults.data =
-                        this._completeResults.data.concat(s.data)),
+                        this._completeResults.data.concat(i.data)),
                       (this._completeResults.errors =
-                        this._completeResults.errors.concat(s.errors)),
-                      (this._completeResults.meta = s.meta)),
+                        this._completeResults.errors.concat(i.errors)),
+                      (this._completeResults.meta = i.meta)),
                     this._completed ||
-                      !r ||
-                      !y(this._config.complete) ||
-                      (s && s.meta.aborted) ||
+                      !s ||
+                      !S(this._config.complete) ||
+                      (i && i.meta.aborted) ||
                       (this._config.complete(
                         this._completeResults,
                         this._input,
                       ),
                       (this._completed = !0)),
-                    r || (s && s.meta.paused) || this._nextChunk(),
-                    s
+                    s || (i && i.meta.paused) || this._nextChunk(),
+                    i
                   );
                 }
                 this._halted = !0;
               }),
               (this._sendError = function (e) {
-                y(this._config.error)
+                S(this._config.error)
                   ? this._config.error(e)
-                  : a &&
+                  : r &&
                     this._config.error &&
                     n.postMessage({
-                      workerId: l.WORKER_ID,
+                      workerId: o.WORKER_ID,
                       error: e,
                       finished: !1,
                     });
               });
           }
-          function c(e) {
+          function l(e) {
             var t;
-            (e = e || {}).chunkSize || (e.chunkSize = l.RemoteChunkSize),
-              o.call(this, e),
-              (this._nextChunk = r
+            (e = e || {}).chunkSize || (e.chunkSize = o.RemoteChunkSize),
+              c.call(this, e),
+              (this._nextChunk = s
                 ? function () {
                     this._readChunk(), this._chunkLoaded();
                   }
@@ -189,13 +189,13 @@ License: MIT
                     ((t = new XMLHttpRequest()),
                     this._config.withCredentials &&
                       (t.withCredentials = this._config.withCredentials),
-                    r ||
-                      ((t.onload = S(this._chunkLoaded, this)),
-                      (t.onerror = S(this._chunkError, this))),
+                    s ||
+                      ((t.onload = v(this._chunkLoaded, this)),
+                      (t.onerror = v(this._chunkError, this))),
                     t.open(
                       this._config.downloadRequestBody ? "POST" : "GET",
                       this._input,
-                      !r,
+                      !s,
                     ),
                     this._config.downloadRequestHeaders)
                   ) {
@@ -203,19 +203,19 @@ License: MIT
                       n = this._config.downloadRequestHeaders;
                     for (e in n) t.setRequestHeader(e, n[e]);
                   }
-                  var a;
+                  var r;
                   this._config.chunkSize &&
-                    ((a = this._start + this._config.chunkSize - 1),
+                    ((r = this._start + this._config.chunkSize - 1),
                     t.setRequestHeader(
                       "Range",
-                      "bytes=" + this._start + "-" + a,
+                      "bytes=" + this._start + "-" + r,
                     ));
                   try {
                     t.send(this._config.downloadRequestBody);
                   } catch (e) {
                     this._chunkError(e.message);
                   }
-                  r && 0 === t.status && this._chunkError();
+                  s && 0 === t.status && this._chunkError();
                 }
               }),
               (this._chunkLoaded = function () {
@@ -237,21 +237,21 @@ License: MIT
                 (e = t.statusText || e), this._sendError(new Error(e));
               });
           }
-          function u(e) {
-            (e = e || {}).chunkSize || (e.chunkSize = l.LocalChunkSize),
-              o.call(this, e);
+          function d(e) {
+            (e = e || {}).chunkSize || (e.chunkSize = o.LocalChunkSize),
+              c.call(this, e);
             var t,
               n,
-              r = "undefined" != typeof FileReader;
+              s = "undefined" != typeof FileReader;
             (this.stream = function (e) {
               (this._input = e),
                 (n = e.slice || e.webkitSlice || e.mozSlice),
-                r
-                  ? (((t = new FileReader()).onload = S(
+                s
+                  ? (((t = new FileReader()).onload = v(
                       this._chunkLoaded,
                       this,
                     )),
-                    (t.onerror = S(this._chunkError, this)))
+                    (t.onerror = v(this._chunkError, this)))
                   : (t = new FileReaderSync()),
                 this._nextChunk();
             }),
@@ -263,15 +263,15 @@ License: MIT
               }),
               (this._readChunk = function () {
                 var e = this._input,
-                  a =
+                  r =
                     (this._config.chunkSize &&
-                      ((a = Math.min(
+                      ((r = Math.min(
                         this._start + this._config.chunkSize,
                         this._input.size,
                       )),
-                      (e = n.call(e, this._start, a))),
+                      (e = n.call(e, this._start, r))),
                     t.readAsText(e, this._config.encoding));
-                r || this._chunkLoaded({ target: { result: a } });
+                s || this._chunkLoaded({ target: { result: r } });
               }),
               (this._chunkLoaded = function (e) {
                 (this._start += this._config.chunkSize),
@@ -283,9 +283,9 @@ License: MIT
                 this._sendError(t.error);
               });
           }
-          function m(e) {
+          function u(e) {
             var t;
-            o.call(this, (e = e || {})),
+            c.call(this, (e = e || {})),
               (this.stream = function (e) {
                 return (t = e), this._nextChunk();
               }),
@@ -302,16 +302,16 @@ License: MIT
                   );
               });
           }
-          function d(e) {
-            o.call(this, (e = e || {}));
+          function h(e) {
+            c.call(this, (e = e || {}));
             var t = [],
               n = !0,
-              r = !1;
+              s = !1;
             (this.pause = function () {
-              o.prototype.pause.apply(this, arguments), this._input.pause();
+              c.prototype.pause.apply(this, arguments), this._input.pause();
             }),
               (this.resume = function () {
-                o.prototype.resume.apply(this, arguments), this._input.resume();
+                c.prototype.resume.apply(this, arguments), this._input.resume();
               }),
               (this.stream = function (e) {
                 (this._input = e),
@@ -320,13 +320,13 @@ License: MIT
                   this._input.on("error", this._streamError);
               }),
               (this._checkIsFinished = function () {
-                r && 1 === t.length && (this._finished = !0);
+                s && 1 === t.length && (this._finished = !0);
               }),
               (this._nextChunk = function () {
                 this._checkIsFinished(),
                   t.length ? this.parseChunk(t.shift()) : (n = !0);
               }),
-              (this._streamData = S(function (e) {
+              (this._streamData = v(function (e) {
                 try {
                   t.push(
                     "string" == typeof e
@@ -341,74 +341,74 @@ License: MIT
                   this._streamError(e);
                 }
               }, this)),
-              (this._streamError = S(function (e) {
+              (this._streamError = v(function (e) {
                 this._streamCleanUp(), this._sendError(e);
               }, this)),
-              (this._streamEnd = S(function () {
-                this._streamCleanUp(), (r = !0), this._streamData("");
+              (this._streamEnd = v(function () {
+                this._streamCleanUp(), (s = !0), this._streamData("");
               }, this)),
-              (this._streamCleanUp = S(function () {
+              (this._streamCleanUp = v(function () {
                 this._input.removeListener("data", this._streamData),
                   this._input.removeListener("end", this._streamEnd),
                   this._input.removeListener("error", this._streamError);
               }, this));
           }
-          function h(e) {
+          function p(e) {
             var t,
               n,
+              s,
               r,
-              a,
-              s = Math.pow(2, 53),
-              i = -s,
-              o = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
-              c =
+              i = Math.pow(2, 53),
+              a = -i,
+              c = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
+              l =
                 /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
-              u = this,
-              m = 0,
-              d = 0,
-              h = !1,
-              E = !1,
-              f = [],
-              _ = { data: [], errors: [], meta: {} };
-            function S(t) {
+              d = this,
+              u = 0,
+              h = 0,
+              p = !1,
+              f = !1,
+              _ = [],
+              x = { data: [], errors: [], meta: {} };
+            function v(t) {
               return "greedy" === e.skipEmptyLines
                 ? "" === t.join("").trim()
                 : 1 === t.length && 0 === t[0].length;
             }
-            function w() {
+            function y() {
               if (
-                (_ &&
-                  r &&
-                  (b(
+                (x &&
+                  s &&
+                  (E(
                     "Delimiter",
                     "UndetectableDelimiter",
                     "Unable to auto-detect delimiting character; defaulted to '" +
-                      l.DefaultDelimiter +
+                      o.DefaultDelimiter +
                       "'",
                   ),
-                  (r = !1)),
+                  (s = !1)),
                 e.skipEmptyLines &&
-                  (_.data = _.data.filter(function (e) {
-                    return !S(e);
+                  (x.data = x.data.filter(function (e) {
+                    return !v(e);
                   })),
-                I())
+                w())
               ) {
-                if (_)
-                  if (Array.isArray(_.data[0])) {
-                    for (var t = 0; I() && t < _.data.length; t++)
-                      _.data[t].forEach(n);
-                    _.data.splice(0, 1);
-                  } else _.data.forEach(n);
+                if (x)
+                  if (Array.isArray(x.data[0])) {
+                    for (var t = 0; w() && t < x.data.length; t++)
+                      x.data[t].forEach(n);
+                    x.data.splice(0, 1);
+                  } else x.data.forEach(n);
                 function n(t, n) {
-                  y(e.transformHeader) && (t = e.transformHeader(t, n)),
-                    f.push(t);
+                  S(e.transformHeader) && (t = e.transformHeader(t, n)),
+                    _.push(t);
                 }
               }
-              function a(t, n) {
-                for (var r = e.header ? {} : [], a = 0; a < t.length; a++) {
-                  var l = a,
-                    u = t[a];
-                  (u = ((t, n) =>
+              function r(t, n) {
+                for (var s = e.header ? {} : [], r = 0; r < t.length; r++) {
+                  var o = r,
+                    d = t[r];
+                  (d = ((t, n) =>
                     ((t) => (
                       e.dynamicTypingFunction &&
                         void 0 === e.dynamicTyping[t] &&
@@ -421,184 +421,184 @@ License: MIT
                           "FALSE" !== n &&
                           (((e) => {
                             if (
-                              o.test(e) &&
-                              ((e = parseFloat(e)), i < e && e < s)
+                              c.test(e) &&
+                              ((e = parseFloat(e)), a < e && e < i)
                             )
                               return 1;
                           })(n)
                             ? parseFloat(n)
-                            : c.test(n)
+                            : l.test(n)
                               ? new Date(n)
                               : "" === n
                                 ? null
                                 : n))
                       : n)(
-                    (l = e.header
-                      ? a >= f.length
+                    (o = e.header
+                      ? r >= _.length
                         ? "__parsed_extra"
-                        : f[a]
-                      : l),
-                    (u = e.transform ? e.transform(u, l) : u),
+                        : _[r]
+                      : o),
+                    (d = e.transform ? e.transform(d, o) : d),
                   )),
-                    "__parsed_extra" === l
-                      ? ((r[l] = r[l] || []), r[l].push(u))
-                      : (r[l] = u);
+                    "__parsed_extra" === o
+                      ? ((s[o] = s[o] || []), s[o].push(d))
+                      : (s[o] = d);
                 }
                 return (
                   e.header &&
-                    (a > f.length
-                      ? b(
+                    (r > _.length
+                      ? E(
                           "FieldMismatch",
                           "TooManyFields",
                           "Too many fields: expected " +
-                            f.length +
+                            _.length +
                             " fields but parsed " +
-                            a,
-                          d + n,
+                            r,
+                          h + n,
                         )
-                      : a < f.length &&
-                        b(
+                      : r < _.length &&
+                        E(
                           "FieldMismatch",
                           "TooFewFields",
                           "Too few fields: expected " +
-                            f.length +
+                            _.length +
                             " fields but parsed " +
-                            a,
-                          d + n,
+                            r,
+                          h + n,
                         )),
-                  r
+                  s
                 );
               }
-              var u;
-              _ &&
+              var d;
+              x &&
                 (e.header || e.dynamicTyping || e.transform) &&
-                ((u = 1),
-                !_.data.length || Array.isArray(_.data[0])
-                  ? ((_.data = _.data.map(a)), (u = _.data.length))
-                  : (_.data = a(_.data, 0)),
-                e.header && _.meta && (_.meta.fields = f),
-                (d += u));
+                ((d = 1),
+                !x.data.length || Array.isArray(x.data[0])
+                  ? ((x.data = x.data.map(r)), (d = x.data.length))
+                  : (x.data = r(x.data, 0)),
+                e.header && x.meta && (x.meta.fields = _),
+                (h += d));
             }
-            function I() {
-              return e.header && 0 === f.length;
+            function w() {
+              return e.header && 0 === _.length;
             }
-            function b(e, t, n, r) {
+            function E(e, t, n, s) {
               (e = { type: e, code: t, message: n }),
-                void 0 !== r && (e.row = r),
-                _.errors.push(e);
+                void 0 !== s && (e.row = s),
+                x.errors.push(e);
             }
-            y(e.step) &&
-              ((a = e.step),
+            S(e.step) &&
+              ((r = e.step),
               (e.step = function (t) {
-                (_ = t),
-                  I()
-                    ? w()
-                    : (w(),
-                      0 !== _.data.length &&
-                        ((m += t.data.length),
-                        e.preview && m > e.preview
+                (x = t),
+                  w()
+                    ? y()
+                    : (y(),
+                      0 !== x.data.length &&
+                        ((u += t.data.length),
+                        e.preview && u > e.preview
                           ? n.abort()
-                          : ((_.data = _.data[0]), a(_, u))));
+                          : ((x.data = x.data[0]), r(x, d))));
               })),
-              (this.parse = function (a, s, i) {
-                var o = e.quoteChar || '"';
+              (this.parse = function (r, i, a) {
+                var c = e.quoteChar || '"';
                 return (
-                  e.newline || (e.newline = this.guessLineEndings(a, o)),
-                  (r = !1),
+                  e.newline || (e.newline = this.guessLineEndings(r, c)),
+                  (s = !1),
                   e.delimiter
-                    ? y(e.delimiter) &&
-                      ((e.delimiter = e.delimiter(a)),
-                      (_.meta.delimiter = e.delimiter))
-                    : ((o = ((t, n, r, a, s) => {
-                        var i, o, c, u;
-                        s = s || [
+                    ? S(e.delimiter) &&
+                      ((e.delimiter = e.delimiter(r)),
+                      (x.meta.delimiter = e.delimiter))
+                    : ((c = ((t, n, s, r, i) => {
+                        var a, c, l, d;
+                        i = i || [
                           ",",
                           "\t",
                           "|",
                           ";",
-                          l.RECORD_SEP,
-                          l.UNIT_SEP,
+                          o.RECORD_SEP,
+                          o.UNIT_SEP,
                         ];
-                        for (var m = 0; m < s.length; m++) {
+                        for (var u = 0; u < i.length; u++) {
                           for (
-                            var d,
-                              h = s[m],
-                              p = 0,
-                              E = 0,
+                            var h,
+                              p = i[u],
+                              g = 0,
                               f = 0,
-                              _ =
-                                ((c = void 0),
-                                new g({
-                                  comments: a,
-                                  delimiter: h,
+                              _ = 0,
+                              x =
+                                ((l = void 0),
+                                new m({
+                                  comments: r,
+                                  delimiter: p,
                                   newline: n,
                                   preview: 10,
                                 }).parse(t)),
-                              v = 0;
-                            v < _.data.length;
-                            v++
+                              j = 0;
+                            j < x.data.length;
+                            j++
                           )
-                            r && S(_.data[v])
-                              ? f++
-                              : ((E += d = _.data[v].length),
-                                void 0 === c
-                                  ? (c = d)
-                                  : 0 < d && ((p += Math.abs(d - c)), (c = d)));
-                          0 < _.data.length && (E /= _.data.length - f),
-                            (void 0 === o || p <= o) &&
-                              (void 0 === u || u < E) &&
-                              1.99 < E &&
-                              ((o = p), (i = h), (u = E));
+                            s && v(x.data[j])
+                              ? _++
+                              : ((f += h = x.data[j].length),
+                                void 0 === l
+                                  ? (l = h)
+                                  : 0 < h && ((g += Math.abs(h - l)), (l = h)));
+                          0 < x.data.length && (f /= x.data.length - _),
+                            (void 0 === c || g <= c) &&
+                              (void 0 === d || d < f) &&
+                              1.99 < f &&
+                              ((c = g), (a = p), (d = f));
                         }
                         return {
-                          successful: !!(e.delimiter = i),
-                          bestDelimiter: i,
+                          successful: !!(e.delimiter = a),
+                          bestDelimiter: a,
                         };
                       })(
-                        a,
+                        r,
                         e.newline,
                         e.skipEmptyLines,
                         e.comments,
                         e.delimitersToGuess,
                       )).successful
-                        ? (e.delimiter = o.bestDelimiter)
-                        : ((r = !0), (e.delimiter = l.DefaultDelimiter)),
-                      (_.meta.delimiter = e.delimiter)),
-                  (o = v(e)),
-                  e.preview && e.header && o.preview++,
-                  (t = a),
-                  (n = new g(o)),
-                  (_ = n.parse(t, s, i)),
-                  w(),
-                  h ? { meta: { paused: !0 } } : _ || { meta: { paused: !1 } }
+                        ? (e.delimiter = c.bestDelimiter)
+                        : ((s = !0), (e.delimiter = o.DefaultDelimiter)),
+                      (x.meta.delimiter = e.delimiter)),
+                  (c = j(e)),
+                  e.preview && e.header && c.preview++,
+                  (t = r),
+                  (n = new m(c)),
+                  (x = n.parse(t, i, a)),
+                  y(),
+                  p ? { meta: { paused: !0 } } : x || { meta: { paused: !1 } }
                 );
               }),
               (this.paused = function () {
-                return h;
+                return p;
               }),
               (this.pause = function () {
-                (h = !0),
+                (p = !0),
                   n.abort(),
-                  (t = y(e.chunk) ? "" : t.substring(n.getCharIndex()));
+                  (t = S(e.chunk) ? "" : t.substring(n.getCharIndex()));
               }),
               (this.resume = function () {
-                u.streamer._halted
-                  ? ((h = !1), u.streamer.parseChunk(t, !0))
-                  : setTimeout(u.resume, 3);
+                d.streamer._halted
+                  ? ((p = !1), d.streamer.parseChunk(t, !0))
+                  : setTimeout(d.resume, 3);
               }),
               (this.aborted = function () {
-                return E;
+                return f;
               }),
               (this.abort = function () {
-                (E = !0),
+                (f = !0),
                   n.abort(),
-                  (_.meta.aborted = !0),
-                  y(e.complete) && e.complete(_),
+                  (x.meta.aborted = !0),
+                  S(e.complete) && e.complete(x),
                   (t = "");
               }),
               (this.guessLineEndings = function (e, t) {
                 (e = e.substring(0, 1048576)),
-                  (t = new RegExp(p(t) + "([^]*?)" + p(t), "gm"));
+                  (t = new RegExp(g(t) + "([^]*?)" + g(t), "gm"));
                 var n = (e = e.replace(t, "")).split("\r");
                 if (
                   ((e =
@@ -607,317 +607,317 @@ License: MIT
                   1 === n.length || e)
                 )
                   return "\n";
-                for (var r = 0, a = 0; a < n.length; a++)
-                  "\n" === n[a][0] && r++;
-                return r >= n.length / 2 ? "\r\n" : "\r";
+                for (var s = 0, r = 0; r < n.length; r++)
+                  "\n" === n[r][0] && s++;
+                return s >= n.length / 2 ? "\r\n" : "\r";
               });
           }
-          function p(e) {
+          function g(e) {
             return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
           }
-          function g(e) {
+          function m(e) {
             var t = (e = e || {}).delimiter,
               n = e.newline,
-              r = e.comments,
-              a = e.step,
-              s = e.preview,
-              i = e.fastMode,
-              o = null,
-              c = !1,
-              u = null == e.quoteChar ? '"' : e.quoteChar,
-              m = u;
+              s = e.comments,
+              r = e.step,
+              i = e.preview,
+              a = e.fastMode,
+              c = null,
+              l = !1,
+              d = null == e.quoteChar ? '"' : e.quoteChar,
+              u = d;
             if (
-              (void 0 !== e.escapeChar && (m = e.escapeChar),
-              ("string" != typeof t || -1 < l.BAD_DELIMITERS.indexOf(t)) &&
+              (void 0 !== e.escapeChar && (u = e.escapeChar),
+              ("string" != typeof t || -1 < o.BAD_DELIMITERS.indexOf(t)) &&
                 (t = ","),
-              r === t)
+              s === t)
             )
               throw new Error("Comment character same as delimiter");
-            !0 === r
-              ? (r = "#")
-              : ("string" != typeof r || -1 < l.BAD_DELIMITERS.indexOf(r)) &&
-                (r = !1),
+            !0 === s
+              ? (s = "#")
+              : ("string" != typeof s || -1 < o.BAD_DELIMITERS.indexOf(s)) &&
+                (s = !1),
               "\n" !== n && "\r" !== n && "\r\n" !== n && (n = "\n");
-            var d = 0,
-              h = !1;
-            (this.parse = function (l, g, E) {
-              if ("string" != typeof l)
+            var h = 0,
+              p = !1;
+            (this.parse = function (o, m, f) {
+              if ("string" != typeof o)
                 throw new Error("Input must be a string");
-              var f = l.length,
-                _ = t.length,
-                v = n.length,
-                S = r.length,
-                w = y(a),
+              var _ = o.length,
+                x = t.length,
+                j = n.length,
+                v = s.length,
+                y = S(r),
+                w = [],
+                E = [],
                 I = [],
-                b = [],
-                D = [],
-                C = (d = 0);
-              if (!l) return x();
-              if (i || (!1 !== i && -1 === l.indexOf(u))) {
-                for (var A = l.split(n), k = 0; k < A.length; k++) {
-                  if (((D = A[k]), (d += D.length), k !== A.length - 1))
-                    d += n.length;
-                  else if (E) return x();
-                  if (!r || D.substring(0, S) !== r) {
-                    if (w) {
-                      if (((I = []), L(D.split(t)), G(), h)) return x();
-                    } else L(D.split(t));
-                    if (s && s <= k) return (I = I.slice(0, s)), x(!0);
+                b = (h = 0);
+              if (!o) return P();
+              if (a || (!1 !== a && -1 === o.indexOf(d))) {
+                for (var D = o.split(n), C = 0; C < D.length; C++) {
+                  if (((I = D[C]), (h += I.length), C !== D.length - 1))
+                    h += n.length;
+                  else if (f) return P();
+                  if (!s || I.substring(0, v) !== s) {
+                    if (y) {
+                      if (((w = []), M(I.split(t)), F(), p)) return P();
+                    } else M(I.split(t));
+                    if (i && i <= C) return (w = w.slice(0, i)), P(!0);
                   }
                 }
-                return x();
+                return P();
               }
               for (
-                var T = l.indexOf(t, d),
-                  R = l.indexOf(n, d),
-                  N = new RegExp(p(m) + p(u), "g"),
-                  M = l.indexOf(u, d);
+                var A = o.indexOf(t, h),
+                  k = o.indexOf(n, h),
+                  T = new RegExp(g(u) + g(d), "g"),
+                  R = o.indexOf(d, h);
                 ;
               )
-                if (l[d] === u)
-                  for (M = d, d++; ; ) {
-                    if (-1 === (M = l.indexOf(u, M + 1)))
+                if (o[h] === d)
+                  for (R = h, h++; ; ) {
+                    if (-1 === (R = o.indexOf(d, R + 1)))
                       return (
-                        E ||
-                          b.push({
+                        f ||
+                          E.push({
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
-                            row: I.length,
-                            index: d,
+                            row: w.length,
+                            index: h,
                           }),
-                        P()
+                        L()
                       );
-                    if (M === f - 1) return P(l.substring(d, M).replace(N, u));
-                    if (u === m && l[M + 1] === m) M++;
-                    else if (u === m || 0 === M || l[M - 1] !== m) {
-                      -1 !== T && T < M + 1 && (T = l.indexOf(t, M + 1));
-                      var B = O(
+                    if (R === _ - 1) return L(o.substring(h, R).replace(T, d));
+                    if (d === u && o[R + 1] === u) R++;
+                    else if (d === u || 0 === R || o[R - 1] !== u) {
+                      -1 !== A && A < R + 1 && (A = o.indexOf(t, R + 1));
+                      var N = B(
                         -1 ===
-                          (R = -1 !== R && R < M + 1 ? l.indexOf(n, M + 1) : R)
-                          ? T
-                          : Math.min(T, R),
+                          (k = -1 !== k && k < R + 1 ? o.indexOf(n, R + 1) : k)
+                          ? A
+                          : Math.min(A, k),
                       );
-                      if (l.substr(M + 1 + B, _) === t) {
-                        D.push(l.substring(d, M).replace(N, u)),
-                          l[(d = M + 1 + B + _)] !== u && (M = l.indexOf(u, d)),
-                          (T = l.indexOf(t, d)),
-                          (R = l.indexOf(n, d));
+                      if (o.substr(R + 1 + N, x) === t) {
+                        I.push(o.substring(h, R).replace(T, d)),
+                          o[(h = R + 1 + N + x)] !== d && (R = o.indexOf(d, h)),
+                          (A = o.indexOf(t, h)),
+                          (k = o.indexOf(n, h));
                         break;
                       }
                       if (
-                        ((B = O(R)),
-                        l.substring(M + 1 + B, M + 1 + B + v) === n)
+                        ((N = B(k)),
+                        o.substring(R + 1 + N, R + 1 + N + j) === n)
                       ) {
                         if (
-                          (D.push(l.substring(d, M).replace(N, u)),
-                          F(M + 1 + B + v),
-                          (T = l.indexOf(t, d)),
-                          (M = l.indexOf(u, d)),
-                          w && (G(), h))
+                          (I.push(o.substring(h, R).replace(T, d)),
+                          O(R + 1 + N + j),
+                          (A = o.indexOf(t, h)),
+                          (R = o.indexOf(d, h)),
+                          y && (F(), p))
                         )
-                          return x();
-                        if (s && I.length >= s) return x(!0);
+                          return P();
+                        if (i && w.length >= i) return P(!0);
                         break;
                       }
-                      b.push({
+                      E.push({
                         type: "Quotes",
                         code: "InvalidQuotes",
                         message: "Trailing quote on quoted field is malformed",
-                        row: I.length,
-                        index: d,
+                        row: w.length,
+                        index: h,
                       }),
-                        M++;
+                        R++;
                     }
                   }
-                else if (r && 0 === D.length && l.substring(d, d + S) === r) {
-                  if (-1 === R) return x();
-                  (d = R + v), (R = l.indexOf(n, d)), (T = l.indexOf(t, d));
-                } else if (-1 !== T && (T < R || -1 === R))
-                  D.push(l.substring(d, T)), (d = T + _), (T = l.indexOf(t, d));
+                else if (s && 0 === I.length && o.substring(h, h + v) === s) {
+                  if (-1 === k) return P();
+                  (h = k + j), (k = o.indexOf(n, h)), (A = o.indexOf(t, h));
+                } else if (-1 !== A && (A < k || -1 === k))
+                  I.push(o.substring(h, A)), (h = A + x), (A = o.indexOf(t, h));
                 else {
-                  if (-1 === R) break;
-                  if ((D.push(l.substring(d, R)), F(R + v), w && (G(), h)))
-                    return x();
-                  if (s && I.length >= s) return x(!0);
+                  if (-1 === k) break;
+                  if ((I.push(o.substring(h, k)), O(k + j), y && (F(), p)))
+                    return P();
+                  if (i && w.length >= i) return P(!0);
                 }
-              return P();
-              function L(e) {
-                I.push(e), (C = d);
+              return L();
+              function M(e) {
+                w.push(e), (b = h);
               }
-              function O(e) {
+              function B(e) {
                 var t = 0;
                 return -1 !== e &&
-                  (e = l.substring(M + 1, e)) &&
+                  (e = o.substring(R + 1, e)) &&
                   "" === e.trim()
                   ? e.length
                   : t;
               }
-              function P(e) {
+              function L(e) {
                 return (
-                  E ||
-                    (void 0 === e && (e = l.substring(d)),
-                    D.push(e),
-                    (d = f),
-                    L(D),
-                    w && G()),
-                  x()
+                  f ||
+                    (void 0 === e && (e = o.substring(h)),
+                    I.push(e),
+                    (h = _),
+                    M(I),
+                    y && F()),
+                  P()
                 );
               }
-              function F(e) {
-                (d = e), L(D), (D = []), (R = l.indexOf(n, d));
+              function O(e) {
+                (h = e), M(I), (I = []), (k = o.indexOf(n, h));
               }
-              function x(r) {
-                if (e.header && !g && I.length && !c) {
-                  var a = I[0],
-                    s = Object.create(null),
-                    i = new Set(a);
+              function P(s) {
+                if (e.header && !m && w.length && !l) {
+                  var r = w[0],
+                    i = Object.create(null),
+                    a = new Set(r);
                   let t = !1;
-                  for (let n = 0; n < a.length; n++) {
-                    let r = a[n];
+                  for (let n = 0; n < r.length; n++) {
+                    let s = r[n];
                     if (
-                      s[
-                        (r = y(e.transformHeader) ? e.transformHeader(r, n) : r)
+                      i[
+                        (s = S(e.transformHeader) ? e.transformHeader(s, n) : s)
                       ]
                     ) {
                       let e,
-                        l = s[r];
-                      for (; (e = r + "_" + l), l++, i.has(e); );
-                      i.add(e),
-                        (a[n] = e),
-                        s[r]++,
+                        o = i[s];
+                      for (; (e = s + "_" + o), o++, a.has(e); );
+                      a.add(e),
+                        (r[n] = e),
+                        i[s]++,
                         (t = !0),
-                        ((o = null === o ? {} : o)[e] = r);
-                    } else (s[r] = 1), (a[n] = r);
-                    i.add(r);
+                        ((c = null === c ? {} : c)[e] = s);
+                    } else (i[s] = 1), (r[n] = s);
+                    a.add(s);
                   }
                   t && console.warn("Duplicate headers found and renamed."),
-                    (c = !0);
+                    (l = !0);
                 }
                 return {
-                  data: I,
-                  errors: b,
+                  data: w,
+                  errors: E,
                   meta: {
                     delimiter: t,
                     linebreak: n,
-                    aborted: h,
-                    truncated: !!r,
-                    cursor: C + (g || 0),
-                    renamedHeaders: o,
+                    aborted: p,
+                    truncated: !!s,
+                    cursor: b + (m || 0),
+                    renamedHeaders: c,
                   },
                 };
               }
-              function G() {
-                a(x()), (I = []), (b = []);
+              function F() {
+                r(P()), (w = []), (E = []);
               }
             }),
               (this.abort = function () {
-                h = !0;
+                p = !0;
               }),
               (this.getCharIndex = function () {
-                return d;
+                return h;
               });
           }
-          function E(e) {
+          function f(e) {
             var t = e.data,
-              n = s[t.workerId],
-              r = !1;
+              n = i[t.workerId],
+              s = !1;
             if (t.error) n.userError(t.error, t.file);
             else if (t.results && t.results.data) {
-              var a = {
+              var r = {
                 abort: function () {
-                  (r = !0),
-                    f(t.workerId, {
+                  (s = !0),
+                    _(t.workerId, {
                       data: [],
                       errors: [],
                       meta: { aborted: !0 },
                     });
                 },
-                pause: _,
-                resume: _,
+                pause: x,
+                resume: x,
               };
-              if (y(n.userStep)) {
+              if (S(n.userStep)) {
                 for (
-                  var i = 0;
-                  i < t.results.data.length &&
+                  var a = 0;
+                  a < t.results.data.length &&
                   (n.userStep(
                     {
-                      data: t.results.data[i],
+                      data: t.results.data[a],
                       errors: t.results.errors,
                       meta: t.results.meta,
                     },
-                    a,
+                    r,
                   ),
-                  !r);
-                  i++
+                  !s);
+                  a++
                 );
                 delete t.results;
               } else
-                y(n.userChunk) &&
-                  (n.userChunk(t.results, a, t.file), delete t.results);
+                S(n.userChunk) &&
+                  (n.userChunk(t.results, r, t.file), delete t.results);
             }
-            t.finished && !r && f(t.workerId, t.results);
+            t.finished && !s && _(t.workerId, t.results);
           }
-          function f(e, t) {
-            var n = s[e];
-            y(n.userComplete) && n.userComplete(t), n.terminate(), delete s[e];
+          function _(e, t) {
+            var n = i[e];
+            S(n.userComplete) && n.userComplete(t), n.terminate(), delete i[e];
           }
-          function _() {
+          function x() {
             throw new Error("Not implemented.");
           }
-          function v(e) {
+          function j(e) {
             if ("object" != typeof e || null === e) return e;
             var t,
               n = Array.isArray(e) ? [] : {};
-            for (t in e) n[t] = v(e[t]);
+            for (t in e) n[t] = j(e[t]);
             return n;
           }
-          function S(e, t) {
+          function v(e, t) {
             return function () {
               e.apply(t, arguments);
             };
           }
-          function y(e) {
+          function S(e) {
             return "function" == typeof e;
           }
           return (
-            (l.parse = function (t, r) {
-              var a = (r = r || {}).dynamicTyping || !1;
+            (o.parse = function (t, s) {
+              var r = (s = s || {}).dynamicTyping || !1;
               if (
-                (y(a) && ((r.dynamicTypingFunction = a), (a = {})),
-                (r.dynamicTyping = a),
-                (r.transform = !!y(r.transform) && r.transform),
-                !r.worker || !l.WORKERS_SUPPORTED)
+                (S(r) && ((s.dynamicTypingFunction = r), (r = {})),
+                (s.dynamicTyping = r),
+                (s.transform = !!S(s.transform) && s.transform),
+                !s.worker || !o.WORKERS_SUPPORTED)
               )
                 return (
-                  (a = null),
-                  l.NODE_STREAM_INPUT,
+                  (r = null),
+                  o.NODE_STREAM_INPUT,
                   "string" == typeof t
                     ? ((t = ((e) =>
                         65279 !== e.charCodeAt(0) ? e : e.slice(1))(t)),
-                      (a = new (r.download ? c : m)(r)))
-                    : !0 === t.readable && y(t.read) && y(t.on)
-                      ? (a = new d(r))
+                      (r = new (s.download ? l : u)(s)))
+                    : !0 === t.readable && S(t.read) && S(t.on)
+                      ? (r = new h(s))
                       : ((n.File && t instanceof File) ||
                           t instanceof Object) &&
-                        (a = new u(r)),
-                  a.stream(t)
+                        (r = new d(s)),
+                  r.stream(t)
                 );
-              ((a = (() => {
+              ((r = (() => {
                 var t;
                 return (
-                  !!l.WORKERS_SUPPORTED &&
+                  !!o.WORKERS_SUPPORTED &&
                   ((t = (() => {
                     var t = n.URL || n.webkitURL || null,
-                      r = e.toString();
+                      s = e.toString();
                     return (
-                      l.BLOB_URL ||
-                      (l.BLOB_URL = t.createObjectURL(
+                      o.BLOB_URL ||
+                      (o.BLOB_URL = t.createObjectURL(
                         new Blob(
                           [
                             "var global = (function() { if (typeof self !== 'undefined') { return self; } if (typeof window !== 'undefined') { return window; } if (typeof global !== 'undefined') { return global; } return {}; })(); global.IS_PAPA_WORKER=true; ",
                             "(",
-                            r,
+                            s,
                             ")();",
                           ],
                           { type: "text/javascript" },
@@ -925,76 +925,76 @@ License: MIT
                       ))
                     );
                   })()),
-                  ((t = new n.Worker(t)).onmessage = E),
-                  (t.id = i++),
-                  (s[t.id] = t))
+                  ((t = new n.Worker(t)).onmessage = f),
+                  (t.id = a++),
+                  (i[t.id] = t))
                 );
-              })()).userStep = r.step),
-                (a.userChunk = r.chunk),
-                (a.userComplete = r.complete),
-                (a.userError = r.error),
-                (r.step = y(r.step)),
-                (r.chunk = y(r.chunk)),
-                (r.complete = y(r.complete)),
-                (r.error = y(r.error)),
-                delete r.worker,
-                a.postMessage({ input: t, config: r, workerId: a.id });
+              })()).userStep = s.step),
+                (r.userChunk = s.chunk),
+                (r.userComplete = s.complete),
+                (r.userError = s.error),
+                (s.step = S(s.step)),
+                (s.chunk = S(s.chunk)),
+                (s.complete = S(s.complete)),
+                (s.error = S(s.error)),
+                delete s.worker,
+                r.postMessage({ input: t, config: s, workerId: r.id });
             }),
-            (l.unparse = function (e, t) {
+            (o.unparse = function (e, t) {
               var n = !1,
-                r = !0,
-                a = ",",
-                s = "\r\n",
-                i = '"',
-                o = i + i,
-                c = !1,
-                u = null,
-                m = !1,
-                d =
+                s = !0,
+                r = ",",
+                i = "\r\n",
+                a = '"',
+                c = a + a,
+                l = !1,
+                d = null,
+                u = !1,
+                h =
                   ((() => {
                     if ("object" == typeof t) {
                       if (
                         ("string" != typeof t.delimiter ||
-                          l.BAD_DELIMITERS.filter(function (e) {
+                          o.BAD_DELIMITERS.filter(function (e) {
                             return -1 !== t.delimiter.indexOf(e);
                           }).length ||
-                          (a = t.delimiter),
+                          (r = t.delimiter),
                         ("boolean" != typeof t.quotes &&
                           "function" != typeof t.quotes &&
                           !Array.isArray(t.quotes)) ||
                           (n = t.quotes),
                         ("boolean" != typeof t.skipEmptyLines &&
                           "string" != typeof t.skipEmptyLines) ||
-                          (c = t.skipEmptyLines),
-                        "string" == typeof t.newline && (s = t.newline),
-                        "string" == typeof t.quoteChar && (i = t.quoteChar),
-                        "boolean" == typeof t.header && (r = t.header),
+                          (l = t.skipEmptyLines),
+                        "string" == typeof t.newline && (i = t.newline),
+                        "string" == typeof t.quoteChar && (a = t.quoteChar),
+                        "boolean" == typeof t.header && (s = t.header),
                         Array.isArray(t.columns))
                       ) {
                         if (0 === t.columns.length)
                           throw new Error("Option columns is empty");
-                        u = t.columns;
+                        d = t.columns;
                       }
-                      void 0 !== t.escapeChar && (o = t.escapeChar + i),
+                      void 0 !== t.escapeChar && (c = t.escapeChar + a),
                         t.escapeFormulae instanceof RegExp
-                          ? (m = t.escapeFormulae)
+                          ? (u = t.escapeFormulae)
                           : "boolean" == typeof t.escapeFormulae &&
                             t.escapeFormulae &&
-                            (m = /^[=+\-@\t\r].*$/);
+                            (u = /^[=+\-@\t\r].*$/);
                     }
                   })(),
-                  new RegExp(p(i), "g"));
+                  new RegExp(g(a), "g"));
               if (
                 ("string" == typeof e && (e = JSON.parse(e)), Array.isArray(e))
               ) {
-                if (!e.length || Array.isArray(e[0])) return h(null, e, c);
+                if (!e.length || Array.isArray(e[0])) return p(null, e, l);
                 if ("object" == typeof e[0])
-                  return h(u || Object.keys(e[0]), e, c);
+                  return p(d || Object.keys(e[0]), e, l);
               } else if ("object" == typeof e)
                 return (
                   "string" == typeof e.data && (e.data = JSON.parse(e.data)),
                   Array.isArray(e.data) &&
-                    (e.fields || (e.fields = (e.meta && e.meta.fields) || u),
+                    (e.fields || (e.fields = (e.meta && e.meta.fields) || d),
                     e.fields ||
                       (e.fields = Array.isArray(e.data[0])
                         ? e.fields
@@ -1004,65 +1004,65 @@ License: MIT
                     Array.isArray(e.data[0]) ||
                       "object" == typeof e.data[0] ||
                       (e.data = [e.data])),
-                  h(e.fields || [], e.data || [], c)
+                  p(e.fields || [], e.data || [], l)
                 );
               throw new Error("Unable to serialize unrecognized input");
-              function h(e, t, n) {
-                var i = "",
-                  l =
+              function p(e, t, n) {
+                var a = "",
+                  o =
                     ("string" == typeof e && (e = JSON.parse(e)),
                     "string" == typeof t && (t = JSON.parse(t)),
                     Array.isArray(e) && 0 < e.length),
-                  o = !Array.isArray(t[0]);
-                if (l && r) {
-                  for (var c = 0; c < e.length; c++)
-                    0 < c && (i += a), (i += g(e[c], c));
-                  0 < t.length && (i += s);
+                  c = !Array.isArray(t[0]);
+                if (o && s) {
+                  for (var l = 0; l < e.length; l++)
+                    0 < l && (a += r), (a += m(e[l], l));
+                  0 < t.length && (a += i);
                 }
-                for (var u = 0; u < t.length; u++) {
-                  var m = (l ? e : t[u]).length,
-                    d = !1,
-                    h = l ? 0 === Object.keys(t[u]).length : 0 === t[u].length;
+                for (var d = 0; d < t.length; d++) {
+                  var u = (o ? e : t[d]).length,
+                    h = !1,
+                    p = o ? 0 === Object.keys(t[d]).length : 0 === t[d].length;
                   if (
                     (n &&
-                      !l &&
-                      (d =
+                      !o &&
+                      (h =
                         "greedy" === n
-                          ? "" === t[u].join("").trim()
-                          : 1 === t[u].length && 0 === t[u][0].length),
-                    "greedy" === n && l)
+                          ? "" === t[d].join("").trim()
+                          : 1 === t[d].length && 0 === t[d][0].length),
+                    "greedy" === n && o)
                   ) {
-                    for (var p = [], E = 0; E < m; E++) {
-                      var f = o ? e[E] : E;
-                      p.push(t[u][f]);
+                    for (var g = [], f = 0; f < u; f++) {
+                      var _ = c ? e[f] : f;
+                      g.push(t[d][_]);
                     }
-                    d = "" === p.join("").trim();
+                    h = "" === g.join("").trim();
                   }
-                  if (!d) {
-                    for (var _ = 0; _ < m; _++) {
-                      0 < _ && !h && (i += a);
-                      var v = l && o ? e[_] : _;
-                      i += g(t[u][v], _);
+                  if (!h) {
+                    for (var x = 0; x < u; x++) {
+                      0 < x && !p && (a += r);
+                      var j = o && c ? e[x] : x;
+                      a += m(t[d][j], x);
                     }
-                    u < t.length - 1 && (!n || (0 < m && !h)) && (i += s);
+                    d < t.length - 1 && (!n || (0 < u && !p)) && (a += i);
                   }
                 }
-                return i;
+                return a;
               }
-              function g(e, t) {
-                var r, s;
+              function m(e, t) {
+                var s, i;
                 return null == e
                   ? ""
                   : e.constructor === Date
                     ? JSON.stringify(e).slice(1, 25)
-                    : ((s = !1),
-                      m &&
+                    : ((i = !1),
+                      u &&
                         "string" == typeof e &&
-                        m.test(e) &&
-                        ((e = "'" + e), (s = !0)),
-                      (r = e.toString().replace(d, o)),
-                      (s =
-                        s ||
+                        u.test(e) &&
+                        ((e = "'" + e), (i = !0)),
+                      (s = e.toString().replace(h, c)),
+                      (i =
+                        i ||
                         !0 === n ||
                         ("function" == typeof n && n(e, t)) ||
                         (Array.isArray(n) && n[t]) ||
@@ -1070,33 +1070,33 @@ License: MIT
                           for (var n = 0; n < t.length; n++)
                             if (-1 < e.indexOf(t[n])) return !0;
                           return !1;
-                        })(r, l.BAD_DELIMITERS) ||
-                        -1 < r.indexOf(a) ||
-                        " " === r.charAt(0) ||
-                        " " === r.charAt(r.length - 1))
-                        ? i + r + i
-                        : r);
+                        })(s, o.BAD_DELIMITERS) ||
+                        -1 < s.indexOf(r) ||
+                        " " === s.charAt(0) ||
+                        " " === s.charAt(s.length - 1))
+                        ? a + s + a
+                        : s);
               }
             }),
-            (l.RECORD_SEP = String.fromCharCode(30)),
-            (l.UNIT_SEP = String.fromCharCode(31)),
-            (l.BYTE_ORDER_MARK = "\ufeff"),
-            (l.BAD_DELIMITERS = ["\r", "\n", '"', l.BYTE_ORDER_MARK]),
-            (l.WORKERS_SUPPORTED = !r && !!n.Worker),
-            (l.NODE_STREAM_INPUT = 1),
-            (l.LocalChunkSize = 10485760),
-            (l.RemoteChunkSize = 5242880),
-            (l.DefaultDelimiter = ","),
-            (l.Parser = g),
-            (l.ParserHandle = h),
-            (l.NetworkStreamer = c),
-            (l.FileStreamer = u),
-            (l.StringStreamer = m),
-            (l.ReadableStreamStreamer = d),
+            (o.RECORD_SEP = String.fromCharCode(30)),
+            (o.UNIT_SEP = String.fromCharCode(31)),
+            (o.BYTE_ORDER_MARK = "\ufeff"),
+            (o.BAD_DELIMITERS = ["\r", "\n", '"', o.BYTE_ORDER_MARK]),
+            (o.WORKERS_SUPPORTED = !s && !!n.Worker),
+            (o.NODE_STREAM_INPUT = 1),
+            (o.LocalChunkSize = 10485760),
+            (o.RemoteChunkSize = 5242880),
+            (o.DefaultDelimiter = ","),
+            (o.Parser = m),
+            (o.ParserHandle = p),
+            (o.NetworkStreamer = l),
+            (o.FileStreamer = d),
+            (o.StringStreamer = u),
+            (o.ReadableStreamStreamer = h),
             n.jQuery &&
               ((t = n.jQuery).fn.parse = function (e) {
-                var r = e.config || {},
-                  a = [];
+                var s = e.config || {},
+                  r = [];
                 return (
                   this.each(function (e) {
                     if (
@@ -1107,170 +1107,171 @@ License: MIT
                       0 === this.files.length
                     )
                       return !0;
-                    for (var s = 0; s < this.files.length; s++)
-                      a.push({
-                        file: this.files[s],
+                    for (var i = 0; i < this.files.length; i++)
+                      r.push({
+                        file: this.files[i],
                         inputElem: this,
-                        instanceConfig: t.extend({}, r),
+                        instanceConfig: t.extend({}, s),
                       });
                   }),
-                  s(),
+                  i(),
                   this
                 );
-                function s() {
-                  if (0 === a.length) y(e.complete) && e.complete();
+                function i() {
+                  if (0 === r.length) S(e.complete) && e.complete();
                   else {
                     var n,
-                      r,
                       s,
-                      o,
-                      c = a[0];
-                    if (y(e.before)) {
-                      var u = e.before(c.file, c.inputElem);
-                      if ("object" == typeof u) {
-                        if ("abort" === u.action)
+                      i,
+                      c,
+                      l = r[0];
+                    if (S(e.before)) {
+                      var d = e.before(l.file, l.inputElem);
+                      if ("object" == typeof d) {
+                        if ("abort" === d.action)
                           return (
                             (n = "AbortError"),
-                            (r = c.file),
-                            (s = c.inputElem),
-                            (o = u.reason),
-                            void (y(e.error) && e.error({ name: n }, r, s, o))
+                            (s = l.file),
+                            (i = l.inputElem),
+                            (c = d.reason),
+                            void (S(e.error) && e.error({ name: n }, s, i, c))
                           );
-                        if ("skip" === u.action) return void i();
-                        "object" == typeof u.config &&
-                          (c.instanceConfig = t.extend(
-                            c.instanceConfig,
-                            u.config,
+                        if ("skip" === d.action) return void a();
+                        "object" == typeof d.config &&
+                          (l.instanceConfig = t.extend(
+                            l.instanceConfig,
+                            d.config,
                           ));
-                      } else if ("skip" === u) return void i();
+                      } else if ("skip" === d) return void a();
                     }
-                    var m = c.instanceConfig.complete;
-                    (c.instanceConfig.complete = function (e) {
-                      y(m) && m(e, c.file, c.inputElem), i();
+                    var u = l.instanceConfig.complete;
+                    (l.instanceConfig.complete = function (e) {
+                      S(u) && u(e, l.file, l.inputElem), a();
                     }),
-                      l.parse(c.file, c.instanceConfig);
+                      o.parse(l.file, l.instanceConfig);
                   }
                 }
-                function i() {
-                  a.splice(0, 1), s();
+                function a() {
+                  r.splice(0, 1), i();
                 }
               }),
-            a &&
+            r &&
               (n.onmessage = function (e) {
                 (e = e.data),
-                  void 0 === l.WORKER_ID && e && (l.WORKER_ID = e.workerId),
+                  void 0 === o.WORKER_ID && e && (o.WORKER_ID = e.workerId),
                   "string" == typeof e.input
                     ? n.postMessage({
-                        workerId: l.WORKER_ID,
-                        results: l.parse(e.input, e.config),
+                        workerId: o.WORKER_ID,
+                        results: o.parse(e.input, e.config),
                         finished: !0,
                       })
                     : ((n.File && e.input instanceof File) ||
                         e.input instanceof Object) &&
-                      (e = l.parse(e.input, e.config)) &&
+                      (e = o.parse(e.input, e.config)) &&
                       n.postMessage({
-                        workerId: l.WORKER_ID,
+                        workerId: o.WORKER_ID,
                         results: e,
                         finished: !0,
                       });
               }),
-            ((c.prototype = Object.create(o.prototype)).constructor = c),
-            ((u.prototype = Object.create(o.prototype)).constructor = u),
-            ((m.prototype = Object.create(m.prototype)).constructor = m),
-            ((d.prototype = Object.create(o.prototype)).constructor = d),
-            l
+            ((l.prototype = Object.create(c.prototype)).constructor = l),
+            ((d.prototype = Object.create(c.prototype)).constructor = d),
+            ((u.prototype = Object.create(u.prototype)).constructor = u),
+            ((h.prototype = Object.create(c.prototype)).constructor = h),
+            o
           );
         }),
-        void 0 === (a = "function" == typeof n ? n.apply(t, r) : n) ||
-          (e.exports = a);
+        void 0 === (r = "function" == typeof n ? n.apply(t, s) : n) ||
+          (e.exports = r);
     },
     36637: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => ln, default: () => on });
-      var r = n(43527),
-        a = n(90626),
-        s = n(17083),
-        i = n(92757),
-        l = n(11577),
-        o = n(14932),
-        c = n(97058),
+      n.r(t), n.d(t, { MeetSteamRoutes: () => ln, default: () => dn });
+      var s = n(7850),
+        r = n(43527),
+        i = n(90626),
+        a = n(17083),
+        o = n(92757),
+        c = n(11577),
+        l = n(14932),
+        d = n(97058),
         u = n(84811),
-        m = n(95695),
-        d = n.n(m),
-        h = n(38135),
-        p = n(45737),
-        g = n.n(p),
-        E = n(24484),
-        f = n(56545),
-        _ = n(85737),
+        h = n(95695),
+        p = n.n(h),
+        g = n(38135),
+        m = n(45737),
+        f = n.n(m),
+        _ = n(24484),
+        x = n(56545),
+        j = n(85737),
         v = n(64753),
         S = n(20194),
         y = n(75233),
         w = n(41735),
-        I = n.n(w),
-        b = n(17720),
-        D = n(78327),
-        C = n(32179),
-        A = n(21711),
-        k = n(44165),
-        T = n(95034);
-      function R() {
-        const [e] = a.useState(() =>
-            (0, D.Tc)("events_list", "application_config"),
+        E = n.n(w),
+        I = n(17720),
+        b = n(78327),
+        D = n(32179),
+        C = n(21711),
+        A = n(44165),
+        k = n(95034);
+      function T() {
+        const [e] = i.useState(() =>
+            (0, b.Tc)("events_list", "application_config"),
           ),
-          [t] = (0, T.QD)("filter"),
-          n = (0, k.f1)(),
-          [r, s] = a.useMemo(() => {
+          [t] = (0, k.QD)("filter"),
+          n = (0, A.f1)(),
+          [s, r] = i.useMemo(() => {
             let t = new Array(),
-              r = new Array();
+              s = new Array();
             return (
               e.forEach((e) => {
                 e.endtime &&
                 (function (e, t = !1) {
-                  const [n, r = "00:00:00"] = e.trim().split(/\s+/),
-                    [a, s, i] = n.split("-").map(Number),
-                    [l, o, c] = r.split(":").map(Number),
-                    u = t
-                      ? Date.UTC(a, s - 1, i, l, o, c ?? 0)
-                      : new Date(a, s - 1, i, l, o, c ?? 0).getTime();
-                  return Math.floor(u / 1e3);
+                  const [n, s = "00:00:00"] = e.trim().split(/\s+/),
+                    [r, i, a] = n.split("-").map(Number),
+                    [o, c, l] = s.split(":").map(Number),
+                    d = t
+                      ? Date.UTC(r, i - 1, a, o, c, l ?? 0)
+                      : new Date(r, i - 1, a, o, c, l ?? 0).getTime();
+                  return Math.floor(d / 1e3);
                 })(e.endtime) < n
-                  ? r.push(e)
+                  ? s.push(e)
                   : t.push(e);
               }),
-              [r, t]
+              [s, t]
             );
           }, [e, n]);
         return {
-          rgOldEvents: r,
-          rgEvents: s,
-          selectConference: (0, a.useMemo)(
+          rgOldEvents: s,
+          rgEvents: r,
+          selectConference: (0, i.useMemo)(
             () => e.find((e) => e.id === t?.toLocaleLowerCase()),
             [e, t],
           ),
         };
       }
-      function N(e) {
+      function R(e) {
         return ["usePartnerRevAndBestAppSlow", e];
       }
-      async function M(e) {
-        const t = `${D.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
-          n = { sessionid: D.TS.SESSIONID, partnerid: e },
-          r = await I().get(t, { params: n });
-        return r?.data?.data;
+      async function N(e) {
+        const t = `${b.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
+          n = { sessionid: b.TS.SESSIONID, partnerid: e },
+          s = await E().get(t, { params: n });
+        return s?.data?.data;
       }
-      function B(e, t) {
+      function M(e, t) {
         return e.getQueryData(["usePartnerRevAndBestAppSlow", t]);
       }
-      function L(e, t, n) {
+      function B(e, t, n) {
         return (0, S.I)({
           queryKey: ["useMeetSteamGetAllRegistration", t, n],
           queryFn: async () => {
-            const n = f.w.Init(_.q3);
+            const n = x.w.Init(j.q3);
             n.Body().set_clan_event_gid(t);
-            const r = await _.ZK.GetRegistrations(e, n);
-            return r.BSuccess()
-              ? r
+            const s = await j.ZK.GetRegistrations(e, n);
+            return s.BSuccess()
+              ? s
                   .Body()
                   .registrations()
                   .map((e) => e.toObject())
@@ -1279,28 +1280,28 @@ License: MIT
           enabled: null != t && 0 != n,
         });
       }
-      var O = n(38390),
-        P = n(50304),
-        F = n(96001),
-        x = n(16676),
+      var L = n(38390),
+        O = n(50304),
+        P = n(96001),
+        F = n(16676),
         G = n(26161),
         z = n(78395),
-        j = n(21869),
-        U = n(22797),
-        $ = n(26408),
-        q = n(52038),
-        K = n(61859),
-        W = n(91675),
-        H = n(30470),
-        Y = n(30565),
-        V = n.n(Y),
-        J = n(34283),
-        Q = n.n(J),
-        Z = n(68797),
-        X = n(9161),
-        ee = n(65689),
-        te = n(81393),
-        ne = n(96059);
+        U = n(21869),
+        $ = n(22797),
+        q = n(26408),
+        K = n(52038),
+        W = n(61859),
+        H = n(91675),
+        Y = n(30470),
+        V = n(30565),
+        J = n.n(V),
+        Q = n(34283),
+        Z = n.n(Q),
+        X = n(68797),
+        ee = n(9161),
+        te = n(65689),
+        ne = n(81393),
+        se = n(96059);
       class re {
         m_steamInterface;
         GetSaleFeatureTransport() {
@@ -1315,355 +1316,353 @@ License: MIT
           );
         }
         Init() {
-          const e = (0, E.Tc)("store_feature_token", "application_config");
-          (0, te.wT)(Boolean(e), "require store_feature_token"),
-            (this.m_steamInterface = new ne.D(H.TS.WEBAPI_BASE_URL, e));
+          const e = (0, _.Tc)("store_feature_token", "application_config");
+          (0, ne.wT)(Boolean(e), "require store_feature_token"),
+            (this.m_steamInterface = new se.D(Y.TS.WEBAPI_BASE_URL, e));
         }
       }
-      function ae() {
+      function ie() {
         return re.Get().GetSaleFeatureTransport().GetServiceTransport();
       }
-      var se = n(6083);
-      function ie(e) {
+      var ae = n(6083);
+      function oe(e) {
         const { hideModal: t, gid: n } = e,
-          [r, s] = (0, a.useState)(!1),
-          [i, l] = (0, a.useState)(null),
-          [o, c] = a.useState(0),
-          [u, d] = a.useState(""),
-          [h, p] = a.useState(""),
-          [g, E] = a.useState(!1),
-          f = ae(),
-          _ = (0, S.I)({
-            queryKey: ["MeetSteamInviteDirectDialog", n, o],
+          [r, a] = (0, i.useState)(!1),
+          [o, c] = (0, i.useState)(null),
+          [l, d] = i.useState(0),
+          [u, p] = i.useState(""),
+          [g, m] = i.useState(""),
+          [f, _] = i.useState(!1),
+          x = ie(),
+          j = (0, S.I)({
+            queryKey: ["MeetSteamInviteDirectDialog", n, l],
             queryFn: async () => {
               const e = {
-                  steamid: b.b.InitFromAccountID(o).ConvertTo64BitString(),
+                  steamid: I.b.InitFromAccountID(l).ConvertTo64BitString(),
                   gid: n,
                   type: 6,
                 },
-                t = await ee.Nl.GetUserActionData(f, e);
+                t = await te.Nl.GetUserActionData(x, e);
               return t.BSuccess() && t.Body().jsondata()
                 ? JSON.parse(t.Body().jsondata())
                 : {};
             },
-            enabled: Boolean(n) && o > 0,
+            enabled: Boolean(n) && l > 0,
           });
-        a.useEffect(() => {
-          _.isLoading ||
-            (_.isSuccess &&
-              (d(_.data.partner_id ? _.data.partner_id.toString() : ""),
-              p(_.data.email_override ?? ""),
-              E(_.data.allow_registration_if_full ?? !1)));
-        }, [_.isLoading, _.isSuccess, _.data]);
-        return a.createElement(
-          z.o0,
-          {
-            strTitle: "Invite User",
-            bOKDisabled: !o || r || _.isLoading,
-            onOK: async () => {
-              s(!0);
-              const e = Number.parseInt(u) > 0 ? Number.parseInt(u) : 0,
-                r = await ue(
-                  n,
-                  [
-                    {
-                      nAccountID: o,
-                      nPartnerID: e,
-                      strEmailOverride: h,
-                      bAllowRegistrationIfFull: g,
-                    },
-                  ],
-                  !0,
-                ),
-                a = r && 1 == r.success;
-              a || l("We hit error during invite, check console: " + r?.msg),
-                s(!1),
-                _.refetch(),
-                a && t();
-            },
-            onCancel: t,
+        i.useEffect(() => {
+          j.isLoading ||
+            (j.isSuccess &&
+              (p(j.data.partner_id ? j.data.partner_id.toString() : ""),
+              m(j.data.email_override ?? ""),
+              _(j.data.allow_registration_if_full ?? !1)));
+        }, [j.isLoading, j.isSuccess, j.data]);
+        return (0, s.jsxs)(z.o0, {
+          strTitle: "Invite User",
+          bOKDisabled: !l || r || j.isLoading,
+          onOK: async () => {
+            a(!0);
+            const e = Number.parseInt(u) > 0 ? Number.parseInt(u) : 0,
+              s = await ue(
+                n,
+                [
+                  {
+                    nAccountID: l,
+                    nPartnerID: e,
+                    strEmailOverride: g,
+                    bAllowRegistrationIfFull: f,
+                  },
+                ],
+                !0,
+              ),
+              r = s && 1 == s.success;
+            r || c("We hit error during invite, check console: " + s?.msg),
+              a(!1),
+              j.refetch(),
+              r && t();
           },
-          Boolean(i) &&
-            a.createElement("div", { className: m.ErrorStylesWithIcon }, i),
-          !r &&
-            a.createElement(
-              a.Fragment,
-              null,
-              a.createElement(x.pd, {
-                type: "number",
-                label: "Account ID",
-                onChange: (e) => c(Number.parseInt(e.currentTarget.value)),
-                value: o,
+          onCancel: t,
+          children: [
+            Boolean(o) &&
+              (0, s.jsx)("div", {
+                className: h.ErrorStylesWithIcon,
+                children: o,
               }),
-              0 != o &&
-                !_.isLoading &&
-                a.createElement(
-                  a.Fragment,
-                  null,
-                  a.createElement(x.pd, {
+            !r &&
+              (0, s.jsxs)(s.Fragment, {
+                children: [
+                  (0, s.jsx)(F.pd, {
                     type: "number",
-                    label: "Partner ID (optional)",
-                    onChange: (e) => d(e.currentTarget.value),
-                    value: u,
+                    label: "Account ID",
+                    onChange: (e) => d(Number.parseInt(e.currentTarget.value)),
+                    value: l,
                   }),
-                  a.createElement(x.pd, {
-                    type: "text",
-                    label: "Email override (optional)",
-                    onChange: (e) => p(e.currentTarget.value.trim()),
-                    value: h,
-                  }),
-                  a.createElement(x.Yh, {
-                    controlled: !0,
-                    checked: g,
-                    onChange: E,
-                    label: "Allow if registration is full",
-                  }),
-                ),
-            ),
-          r &&
-            a.createElement(U.t, {
-              size: "small",
-              position: "center",
-              string: (0, K.we)("#Saving"),
-            }),
-          _.isLoading &&
-            a.createElement(U.t, {
-              size: "small",
-              position: "center",
-              string: (0, K.we)("#Loading"),
-            }),
-        );
-      }
-      function le(e) {
-        const { hideModal: t, gid: n } = e,
-          [r, s] = (0, a.useState)(null),
-          [i, l] = (0, a.useState)(!1),
-          [o, c] = (0, a.useState)(null),
-          [u, d] = (0, a.useState)(null),
-          [h, p] = (0, a.useState)(null);
-        return a.createElement(
-          z.o0,
-          {
-            strTitle: "Invite Users",
-            bOKDisabled: !r || 0 == r.length || null != u,
-            strCancelButtonText: null !== u ? "Close" : "Cancel",
-            onOK: async () => {
-              l(!0);
-              const e = await ue(n, r, !1);
-              1 == e?.success
-                ? (d(e.rgInvitedAccounts.length), p(e.rgSkippedAccounts.length))
-                : c("We hit error during invite, check console: " + e?.msg),
-                l(!1);
-            },
-            onCancel: () => {
-              d(null), p(null), l(!1), s(null), t();
-            },
-          },
-          Boolean(o) &&
-            a.createElement("div", { className: m.ErrorStylesWithIcon }, o),
-          null != u &&
-            a.createElement(
-              "div",
-              null,
-              "Invited ",
-              (0, se.D)(u),
-              " accounts, skipped previously invited ",
-              (0, se.D)(h),
-            ),
-          i &&
-            a.createElement(U.t, {
-              size: "small",
-              position: "center",
-              string: (0, K.we)("#Saving"),
-            }),
-          null == r
-            ? a.createElement(ce, { setInvites: s })
-            : a.createElement(oe, { rgInvites: r }),
-        );
-      }
-      function oe(e) {
-        const { rgInvites: t } = e;
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement("div", null, "Total Invites Parsed: ", t.length, " "),
-          a.createElement(
-            "table",
-            null,
-            a.createElement(
-              "thead",
-              null,
-              a.createElement(
-                "tr",
-                null,
-                a.createElement("th", null, "AccountID"),
-                a.createElement("th", null, "PartnerID"),
-                a.createElement("th", null, "Email Override"),
-              ),
-            ),
-            a.createElement(
-              "tbody",
-              null,
-              t.map((e, t) =>
-                a.createElement(
-                  "tr",
-                  { key: "invite" + e.nAccountID + "_" + t },
-                  a.createElement("td", null, e.nAccountID),
-                  a.createElement("td", null, e.nPartnerID),
-                  a.createElement("td", null, e.strEmailOverride),
-                ),
-              ),
-            ),
-          ),
-        );
+                  0 != l &&
+                    !j.isLoading &&
+                    (0, s.jsxs)(s.Fragment, {
+                      children: [
+                        (0, s.jsx)(F.pd, {
+                          type: "number",
+                          label: "Partner ID (optional)",
+                          onChange: (e) => p(e.currentTarget.value),
+                          value: u,
+                        }),
+                        (0, s.jsx)(F.pd, {
+                          type: "text",
+                          label: "Email override (optional)",
+                          onChange: (e) => m(e.currentTarget.value.trim()),
+                          value: g,
+                        }),
+                        (0, s.jsx)(F.Yh, {
+                          controlled: !0,
+                          checked: f,
+                          onChange: _,
+                          label: "Allow if registration is full",
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            r &&
+              (0, s.jsx)($.t, {
+                size: "small",
+                position: "center",
+                string: (0, W.we)("#Saving"),
+              }),
+            j.isLoading &&
+              (0, s.jsx)($.t, {
+                size: "small",
+                position: "center",
+                string: (0, W.we)("#Loading"),
+              }),
+          ],
+        });
       }
       function ce(e) {
+        const { hideModal: t, gid: n } = e,
+          [r, a] = (0, i.useState)(null),
+          [o, c] = (0, i.useState)(!1),
+          [l, d] = (0, i.useState)(null),
+          [u, p] = (0, i.useState)(null),
+          [g, m] = (0, i.useState)(null);
+        return (0, s.jsxs)(z.o0, {
+          strTitle: "Invite Users",
+          bOKDisabled: !r || 0 == r.length || null != u,
+          strCancelButtonText: null !== u ? "Close" : "Cancel",
+          onOK: async () => {
+            c(!0);
+            const e = await ue(n, r, !1);
+            1 == e?.success
+              ? (p(e.rgInvitedAccounts.length), m(e.rgSkippedAccounts.length))
+              : d("We hit error during invite, check console: " + e?.msg),
+              c(!1);
+          },
+          onCancel: () => {
+            p(null), m(null), c(!1), a(null), t();
+          },
+          children: [
+            Boolean(l) &&
+              (0, s.jsx)("div", {
+                className: h.ErrorStylesWithIcon,
+                children: l,
+              }),
+            null != u &&
+              (0, s.jsxs)("div", {
+                children: [
+                  "Invited ",
+                  (0, ae.D)(u),
+                  " accounts, skipped previously invited ",
+                  (0, ae.D)(g),
+                ],
+              }),
+            o &&
+              (0, s.jsx)($.t, {
+                size: "small",
+                position: "center",
+                string: (0, W.we)("#Saving"),
+              }),
+            null == r
+              ? (0, s.jsx)(de, { setInvites: a })
+              : (0, s.jsx)(le, { rgInvites: r }),
+          ],
+        });
+      }
+      function le(e) {
+        const { rgInvites: t } = e;
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsxs)("div", {
+              children: ["Total Invites Parsed: ", t.length, " "],
+            }),
+            (0, s.jsxs)("table", {
+              children: [
+                (0, s.jsx)("thead", {
+                  children: (0, s.jsxs)("tr", {
+                    children: [
+                      (0, s.jsx)("th", { children: "AccountID" }),
+                      (0, s.jsx)("th", { children: "PartnerID" }),
+                      (0, s.jsx)("th", { children: "Email Override" }),
+                    ],
+                  }),
+                }),
+                (0, s.jsx)("tbody", {
+                  children: t.map((e, t) =>
+                    (0, s.jsxs)(
+                      "tr",
+                      {
+                        children: [
+                          (0, s.jsx)("td", { children: e.nAccountID }),
+                          (0, s.jsx)("td", { children: e.nPartnerID }),
+                          (0, s.jsx)("td", { children: e.strEmailOverride }),
+                        ],
+                      },
+                      "invite" + e.nAccountID + "_" + t,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function de(e) {
         const { setInvites: t } = e;
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement(
-            "div",
-            null,
-            "Format for CSV File, please use the template below:",
-          ),
-          a.createElement(
-            "ul",
-            null,
-            a.createElement(
-              "li",
-              null,
-              a.createElement("b", null, "nAccountID"),
-              " - required, 32-bit integer value, not the 64-bit steam id",
-            ),
-            a.createElement(
-              "li",
-              null,
-              a.createElement("b", null, "nPartnerID"),
-              " - (preferred for biz contact)",
-            ),
-            a.createElement(
-              "li",
-              null,
-              a.createElement("b", null, "strOverrideEmail"),
-              " - (optional, we wil use the email associated with the account and partner or the steamid itself)",
-            ),
-          ),
-          a.createElement("br", null),
-          a.createElement(
-            "a",
-            {
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)("div", {
+              children: "Format for CSV File, please use the template below:",
+            }),
+            (0, s.jsxs)("ul", {
+              children: [
+                (0, s.jsxs)("li", {
+                  children: [
+                    (0, s.jsx)("b", { children: "nAccountID" }),
+                    " - required, 32-bit integer value, not the 64-bit steam id",
+                  ],
+                }),
+                (0, s.jsxs)("li", {
+                  children: [
+                    (0, s.jsx)("b", { children: "nPartnerID" }),
+                    " - (preferred for biz contact)",
+                  ],
+                }),
+                (0, s.jsxs)("li", {
+                  children: [
+                    (0, s.jsx)("b", { children: "strOverrideEmail" }),
+                    " - (optional, we wil use the email associated with the account and partner or the steamid itself)",
+                  ],
+                }),
+              ],
+            }),
+            (0, s.jsx)("br", {}),
+            (0, s.jsx)("a", {
               href: "#",
               onClick: async (e) => {
                 e.preventDefault(), e.stopPropagation();
                 const t = [];
                 t.push(["nAccountID", "nPartnerID", "strEmailOverride"]),
                   t.push(["388445686", "1", "adils@valvesoftware.com"]);
-                X.g.WriteCSVToFile(t, "invite_template.csv");
+                ee.g.WriteCSVToFile(t, "invite_template.csv");
               },
-            },
-            "Download Template Example",
-          ),
-          a.createElement("br", null),
-          a.createElement("br", null),
-          a.createElement(
-            x.$n,
-            null,
-            a.createElement(
-              "label",
-              {
-                className: Q().ImportButtonLabel,
+              children: "Download Template Example",
+            }),
+            (0, s.jsx)("br", {}),
+            (0, s.jsx)("br", {}),
+            (0, s.jsx)(F.$n, {
+              children: (0, s.jsxs)("label", {
+                className: Z().ImportButtonLabel,
                 htmlFor: "import-discount-input",
-              },
-              "Choose CSV File",
-              a.createElement("input", {
-                id: "import-discount-input",
-                type: "file",
-                style: { display: "none" },
-                onChange: async (e) => {
-                  if (e.target.files.length >= 1) {
-                    const n = e.target.files[0],
-                      r = await X.g.ParseCSVFile(n);
-                    if (r?.data) {
-                      const e = new Array();
-                      r.data.forEach((t) => {
-                        if (t.nAccountID) {
-                          const n = {
-                            nAccountID: Number.parseInt(t.nAccountID),
-                          };
-                          t.nPartnerID &&
-                            (n.nPartnerID = Number.parseInt(t.nPartnerID)),
-                            t.strEmailOverride &&
-                              (n.strEmailOverride = t.strEmailOverride),
-                            e.push(n);
+                children: [
+                  "Choose CSV File",
+                  (0, s.jsx)("input", {
+                    id: "import-discount-input",
+                    type: "file",
+                    style: { display: "none" },
+                    onChange: async (e) => {
+                      if (e.target.files.length >= 1) {
+                        const n = e.target.files[0],
+                          s = await ee.g.ParseCSVFile(n);
+                        if (s?.data) {
+                          const e = new Array();
+                          s.data.forEach((t) => {
+                            if (t.nAccountID) {
+                              const n = {
+                                nAccountID: Number.parseInt(t.nAccountID),
+                              };
+                              t.nPartnerID &&
+                                (n.nPartnerID = Number.parseInt(t.nPartnerID)),
+                                t.strEmailOverride &&
+                                  (n.strEmailOverride = t.strEmailOverride),
+                                e.push(n);
+                            }
+                          }),
+                            t(e);
                         }
-                      }),
-                        t(e);
-                    }
-                  }
-                },
+                      }
+                    },
+                  }),
+                ],
               }),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       async function ue(e, t, n) {
-        const r = t.map((e) => e.nAccountID).join(","),
-          a = t.map((e) => e.nPartnerID).join(","),
-          s = t.map((e) => e.strEmailOverride).join(","),
-          i = t.map((e) => (e.bAllowRegistrationIfFull ? "1" : "0")).join(",");
-        let l = new FormData();
-        l.append("sessionid", H.TS.SESSIONID),
-          l.append("gid", e),
-          l.append("accounts", r),
-          l.append("partnerids", a),
-          l.append("emailoverride", s),
-          l.append("allowregistrationiffull", i),
-          l.append("forceupdate", n ? "1" : "0");
-        const o = `${H.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
+        const s = t.map((e) => e.nAccountID).join(","),
+          r = t.map((e) => e.nPartnerID).join(","),
+          i = t.map((e) => e.strEmailOverride).join(","),
+          a = t.map((e) => (e.bAllowRegistrationIfFull ? "1" : "0")).join(",");
+        let o = new FormData();
+        o.append("sessionid", Y.TS.SESSIONID),
+          o.append("gid", e),
+          o.append("accounts", s),
+          o.append("partnerids", r),
+          o.append("emailoverride", i),
+          o.append("allowregistrationiffull", a),
+          o.append("forceupdate", n ? "1" : "0");
+        const c = `${Y.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
         try {
-          const e = await I().post(o, l, { withCredentials: !0 });
+          const e = await E().post(c, o, { withCredentials: !0 });
           if (1 != e?.data?.success) {
-            let t = (0, Z.H)(e);
+            let t = (0, X.H)(e);
             console.error("DisplayPartnerEventRow error: " + t.strErrorMsg, t);
           }
           return e?.data;
         } catch (e) {
-          let t = (0, Z.H)(e);
+          let t = (0, X.H)(e);
           console.error("DisplayPartnerEventRow error: " + t.strErrorMsg, t);
         }
         return null;
       }
-      var me = n(16666),
-        de = n(66051),
-        he = n(54806),
-        pe = n(58632),
-        ge = n.n(pe);
-      function Ee(e) {
-        const t = ae(),
-          n = a.useContext(_e),
-          r = (0, S.I)(ve(n, t, e));
-        return r.isLoading ? null : r.data;
+      var he = n(16666),
+        pe = n(66051),
+        ge = n(54806),
+        me = n(58632),
+        fe = n.n(me);
+      function _e(e) {
+        const t = ie(),
+          n = i.useContext(je),
+          s = (0, S.I)(ve(n, t, e));
+        return s.isLoading ? null : s.data;
       }
-      function fe(e) {
-        const t = ae(),
-          n = a.useContext(_e);
-        return (0, he.E)({ queries: e.map((e) => ve(n, t, e)) });
+      function xe(e) {
+        const t = ie(),
+          n = i.useContext(je);
+        return (0, ge.E)({ queries: e.map((e) => ve(n, t, e)) });
       }
-      const _e = a.createContext({
+      const je = i.createContext({
         loadMeetSteamAllRegistration: async (e, t) =>
           await (function (e) {
             Se ||
-              (Se = new (ge())(
+              (Se = new (fe())(
                 async (t) => {
-                  const n = f.w.Init(ee.j3);
+                  const n = x.w.Init(te.j3);
                   n.Body().set_gids([...t]), n.Body().set_type(6);
-                  const r = await ee.Nl.GetMultipleUserActionData(e, n);
-                  if (!r.BSuccess())
-                    throw `Failed to call GetMultipleUserActionData with details: ${r.GetErrorMessage()}`;
-                  const a = new Map();
+                  const s = await te.Nl.GetMultipleUserActionData(e, n);
+                  if (!s.BSuccess())
+                    throw `Failed to call GetMultipleUserActionData with details: ${s.GetErrorMessage()}`;
+                  const r = new Map();
                   return (
-                    r
+                    s
                       .Body()
                       .entries()
                       .forEach((e) => {
@@ -1671,18 +1670,18 @@ License: MIT
                           const t = JSON.parse(e.jsondata());
                           if (!("steamid" in t) || !t.steamid) {
                             t.steamid = e.steamid();
-                            const n = new b.b(t.steamid);
+                            const n = new I.b(t.steamid);
                             t.accountid = n.GetAccountID();
                           }
                           const n = e.gid();
                           return (
-                            a.has(n) ? a.get(n).push(t) : a.set(n, [t]), [t]
+                            r.has(n) ? r.get(n).push(t) : r.set(n, [t]), [t]
                           );
                         } catch (t) {
                           throw `Failed to parse GetMultipleUserActionData with details: ${e.steamid()}`;
                         }
                       }),
-                    t.map((e) => a.get(e) ?? null)
+                    t.map((e) => r.get(e) ?? null)
                   );
                 },
                 { maxBatchSize: 5 },
@@ -1700,103 +1699,93 @@ License: MIT
       let Se;
       var ye = n(7860);
       function we(e, t) {
-        const n = (0, F.a)(),
-          r = a.useContext(be),
-          s = (0, S.I)(De(r, n, e, t));
-        return s.isLoading ? null : s.data;
+        const n = (0, P.a)(),
+          s = i.useContext(Ie),
+          r = (0, S.I)(be(s, n, e, t));
+        return r.isLoading ? null : r.data;
       }
-      function Ie(e, t) {
+      function Ee(e, t) {
         return ye.L.getQueryData(["PartnerEmailAndName", e, t]);
       }
-      const be = a.createContext({
+      const Ie = i.createContext({
         loadPartnerEmailAndName: async (e, t, n) =>
           await (function (e) {
-            Ce ||
-              (Ce = new (ge())(
+            De ||
+              (De = new (fe())(
                 async (t) => {
-                  const n = f.w.Init(_.g9);
+                  const n = x.w.Init(j.g9);
                   n.Body().set_accountids(t.map((e) => e.accountID)),
                     n.Body().set_partnerids(t.map((e) => e.partnerID));
-                  const r = await _.ZK.GetBatchPartnerEmailAndName(e, n);
-                  if (!r.BSuccess())
-                    throw `Failed to call GetBatchPartnerEmailAndName with details: ${r.GetErrorMessage()}`;
-                  const a = new Map();
+                  const s = await j.ZK.GetBatchPartnerEmailAndName(e, n);
+                  if (!s.BSuccess())
+                    throw `Failed to call GetBatchPartnerEmailAndName with details: ${s.GetErrorMessage()}`;
+                  const r = new Map();
                   return (
-                    r
+                    s
                       .Body()
                       .info()
                       .forEach((e) => {
-                        a.set(
+                        r.set(
                           e.accountid() + "_" + e.partnerid(),
                           e.toObject(),
                         );
                       }),
-                    t.map((e) => a.get(e.accountID + "_" + e.partnerID) ?? null)
+                    t.map((e) => r.get(e.accountID + "_" + e.partnerID) ?? null)
                   );
                 },
                 { maxBatchSize: 100 },
               ));
-            return Ce;
+            return De;
           })(e).load({ accountID: t, partnerID: n }),
       });
-      function De(e, t, n, r) {
+      function be(e, t, n, s) {
         return {
-          queryKey: ["PartnerEmailAndName", n, r],
-          queryFn: () => e.loadPartnerEmailAndName(t, n, r),
-          enabled: !!n || !!r,
+          queryKey: ["PartnerEmailAndName", n, s],
+          queryFn: () => e.loadPartnerEmailAndName(t, n, s),
+          enabled: !!n || !!s,
         };
       }
-      let Ce;
-      function Ae(e) {
+      let De;
+      function Ce(e) {
         const { rgEventGIDs: t } = e,
-          [n, r, s] = (0, v.uD)(),
-          [i, l] = (0, a.useState)(null);
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement("span", null, " | "),
-          a.createElement(
-            "a",
-            {
+          [n, r, a] = (0, v.uD)(),
+          [o, c] = (0, i.useState)(null);
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)("span", { children: " | " }),
+            (0, s.jsx)("a", {
               href: "#",
               onClick: (e) => {
                 e.preventDefault(), e.stopPropagation(), r();
               },
-            },
-            "Analyse Top Partner Coverage",
-          ),
-          a.createElement(
-            j.E,
-            { active: n },
-            a.createElement(
-              u.tH,
-              null,
-              a.createElement(
-                z.o0,
-                {
-                  closeModal: s,
+              children: "Analyse Top Partner Coverage",
+            }),
+            (0, s.jsx)(U.E, {
+              active: n,
+              children: (0, s.jsx)(u.tH, {
+                children: (0, s.jsx)(z.o0, {
+                  closeModal: a,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
-                },
-                Boolean(null == i)
-                  ? a.createElement(Be, { rgEventGIDs: t, fnSelectedEvents: l })
-                  : a.createElement(
-                      a.Fragment,
-                      null,
-                      a.createElement(Me, { rgGidMeetSteamEvents: i }),
-                      a.createElement(
-                        x.$n,
-                        { onClick: () => l(null) },
-                        "Reset Selection",
-                      ),
-                    ),
-              ),
-            ),
-          ),
-        );
+                  children: Boolean(null == o)
+                    ? (0, s.jsx)(Me, { rgEventGIDs: t, fnSelectedEvents: c })
+                    : (0, s.jsxs)(s.Fragment, {
+                        children: [
+                          (0, s.jsx)(Ne, { rgGidMeetSteamEvents: o }),
+                          (0, s.jsx)(F.$n, {
+                            onClick: () => c(null),
+                            children: "Reset Selection",
+                          }),
+                        ],
+                      }),
+                }),
+              }),
+            }),
+          ],
+        });
       }
-      const ke = (0, me.FB)();
-      function Te(e) {
+      const Ae = (0, he.FB)();
+      function ke(e) {
         return (
           (e = e?.filter(
             (t, n) =>
@@ -1806,30 +1795,30 @@ License: MIT
             ?.map(
               (e) =>
                 e.name ||
-                Ie(e.accountid, e.partner_id)?.realname ||
+                Ee(e.accountid, e.partner_id)?.realname ||
                 e.accountid,
             )
             .join(",") || ""
         );
       }
-      function Re(e) {
-        return Te(e.cell.getValue());
+      function Te(e) {
+        return ke(e.cell.getValue());
       }
-      function Ne(e, t) {
-        const n = fe(t),
-          [r, s, i] = (0, a.useMemo)(() => {
+      function Re(e, t) {
+        const n = xe(t),
+          [s, r, a] = (0, i.useMemo)(() => {
             if (n.filter((e) => !e.isLoading).length != n.length)
               return [null, [], []];
             const t = new Map(),
-              r = new Set(e),
-              a = new Map();
+              s = new Set(e),
+              r = new Map();
             n.forEach((e) =>
               e.data.forEach((e) => {
                 if (
-                  r.has(e.partner_id) &&
-                  (a.has(e.partner_id)
-                    ? a.get(e.partner_id).push(e)
-                    : a.set(e.partner_id, [e]),
+                  s.has(e.partner_id) &&
+                  (r.has(e.partner_id)
+                    ? r.get(e.partner_id).push(e)
+                    : r.set(e.partner_id, [e]),
                   !e.name)
                 ) {
                   const n = e.accountid;
@@ -1840,35 +1829,35 @@ License: MIT
                 }
               }),
             );
-            const s = Array.from(t.values());
-            return [a, s.map((e) => e.accountID), s.map((e) => e.partnerID)];
+            const i = Array.from(t.values());
+            return [r, i.map((e) => e.accountID), i.map((e) => e.partnerID)];
           }, [n, e]),
-          l = (function (e, t) {
-            const n = (0, F.a)(),
-              r = a.useContext(be);
-            return (0, he.E)({ queries: e.map((e, a) => De(r, n, e, t[a])) });
-          })(s, i);
-        return l.filter((e) => !e.isLoading).length == l.length ? r : null;
+          o = (function (e, t) {
+            const n = (0, P.a)(),
+              s = i.useContext(Ie);
+            return (0, ge.E)({ queries: e.map((e, r) => be(s, n, e, t[r])) });
+          })(r, a);
+        return o.filter((e) => !e.isLoading).length == o.length ? s : null;
       }
-      function Me(e) {
+      function Ne(e) {
         const { rgGidMeetSteamEvents: t } = e,
           n = (function () {
-            const [e] = (0, a.useState)(() =>
-              (0, E.Tc)("partners_to_verify", "application_config"),
+            const [e] = (0, i.useState)(() =>
+              (0, _.Tc)("partners_to_verify", "application_config"),
             );
             return e;
           })(),
-          r = (0, C.vh)(n),
-          s = Ne(n, t),
-          i = (0, a.useMemo)(() => {
-            if (!r || !s) return null;
+          r = (0, D.vh)(n),
+          a = Re(n, t),
+          o = (0, i.useMemo)(() => {
+            if (!r || !a) return null;
             const e = [];
             return (
               n.forEach((t) => {
-                const n = s.get(t);
+                const n = a.get(t);
                 e.push({
                   partner_id: t,
-                  partner_name: (0, C.Yd)(t)?.name || "Unknown",
+                  partner_name: (0, D.Yd)(t)?.name || "Unknown",
                   invitations:
                     n?.filter(
                       (e) =>
@@ -1887,287 +1876,266 @@ License: MIT
               }),
               e
             );
-          }, [r, s, n]),
-          l = (0, a.useMemo)(
+          }, [r, a, n]),
+          c = (0, i.useMemo)(
             () => [
-              ke.accessor("partner_id", { header: "Partner ID", size: 100 }),
-              ke.accessor("partner_name", {
+              Ae.accessor("partner_id", { header: "Partner ID", size: 100 }),
+              Ae.accessor("partner_name", {
                 header: "Partner Name",
                 size: 300,
               }),
-              ke.accessor("invitations", {
+              Ae.accessor("invitations", {
                 header: "Invitations",
-                cell: Re,
+                cell: Te,
                 size: 300,
               }),
-              ke.accessor("registrations", {
+              Ae.accessor("registrations", {
                 header: "Registered to Attend",
-                cell: Re,
+                cell: Te,
                 size: 300,
               }),
             ],
             [],
           );
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement(x.JU, null, "Partner Analysis"),
-          Boolean(i)
-            ? a.createElement(
-                u.tH,
-                null,
-                a.createElement(de.k, {
-                  columns: l,
-                  data: i,
-                  getRowKey: (e) => e,
-                  stickyHeader: !0,
-                  nItemHeight: 28,
-                  overscan: n.length,
-                }),
-                a.createElement("br", null),
-                a.createElement(
-                  x.$n,
-                  {
-                    id: "download-csv",
-                    onClick: function () {
-                      const e = [],
-                        t = [];
-                      for (const e of l) t.push(e.header);
-                      e.push(t);
-                      for (const t of i) {
-                        const n = [];
-                        for (const e of l) {
-                          const r = t[e.accessorKey];
-                          n.push(
-                            "invitations" == e.accessorKey ||
-                              "registrations" == e.accessorKey
-                              ? Te(r)
-                              : r.toString(),
-                          );
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)(F.JU, { children: "Partner Analysis" }),
+            Boolean(o)
+              ? (0, s.jsxs)(u.tH, {
+                  children: [
+                    (0, s.jsx)(pe.k, {
+                      columns: c,
+                      data: o,
+                      getRowKey: (e) => e,
+                      stickyHeader: !0,
+                      nItemHeight: 28,
+                      overscan: n.length,
+                    }),
+                    (0, s.jsx)("br", {}),
+                    (0, s.jsx)(F.$n, {
+                      id: "download-csv",
+                      onClick: function () {
+                        const e = [],
+                          t = [];
+                        for (const e of c) t.push(e.header);
+                        e.push(t);
+                        for (const t of o) {
+                          const n = [];
+                          for (const e of c) {
+                            const s = t[e.accessorKey];
+                            n.push(
+                              "invitations" == e.accessorKey ||
+                                "registrations" == e.accessorKey
+                                ? ke(s)
+                                : s.toString(),
+                            );
+                          }
+                          e.push(n);
                         }
-                        e.push(n);
-                      }
-                      X.g.WriteCSVToFile(e, "partneranalysis.csv");
-                    },
-                    style: { width: "120px" },
-                  },
-                  "Download CSV",
-                ),
-              )
-            : a.createElement(U.t, {
-                string: (0, K.we)("#Loading"),
-                position: "center",
-              }),
-        );
+                        ee.g.WriteCSVToFile(e, "partneranalysis.csv");
+                      },
+                      style: { width: "120px" },
+                      children: "Download CSV",
+                    }),
+                  ],
+                })
+              : (0, s.jsx)($.t, {
+                  string: (0, W.we)("#Loading"),
+                  position: "center",
+                }),
+          ],
+        });
+      }
+      function Me(e) {
+        const { rgEventGIDs: t, fnSelectedEvents: n } = e,
+          [r, a] = (0, i.useState)([]);
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)(F.JU, { children: "Choose Events" }),
+            t.map((e) =>
+              (0, s.jsx)(
+                Be,
+                { gidClanEvent: e, rgSelected: r, fnSetSelected: a },
+                e,
+              ),
+            ),
+            (0, s.jsx)(F.$n, {
+              disabled: 0 == r.length,
+              onClick: () => n(r),
+              children: "Continue",
+            }),
+          ],
+        });
       }
       function Be(e) {
-        const { rgEventGIDs: t, fnSelectedEvents: n } = e,
-          [r, s] = (0, a.useState)([]);
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement(x.JU, null, "Choose Events"),
-          t.map((e) =>
-            a.createElement(Le, {
-              key: e,
-              gidClanEvent: e,
-              rgSelected: r,
-              fnSetSelected: s,
-            }),
-          ),
-          a.createElement(
-            x.$n,
-            { disabled: 0 == r.length, onClick: () => n(r) },
-            "Continue",
-          ),
-        );
-      }
-      function Le(e) {
         const { gidClanEvent: t, rgSelected: n, fnSetSelected: r } = e,
-          s = (0, O.RR)(t).GetNameWithFallback(0);
-        return a.createElement(x.Yh, {
-          label: s,
+          i = (0, L.RR)(t).GetNameWithFallback(0);
+        return (0, s.jsx)(F.Yh, {
+          label: i,
           checked: n.includes(t),
           onChange: (e) => {
-            const a = n.indexOf(t),
-              s = Boolean(a >= 0);
-            e && !s
+            const s = n.indexOf(t),
+              i = Boolean(s >= 0);
+            e && !i
               ? r([...n, t])
-              : !e && s && r([...n.slice(0, a), ...n.slice(a + 1)]);
+              : !e && i && r([...n.slice(0, s), ...n.slice(s + 1)]);
           },
         });
       }
-      var Oe = n(30603),
-        Pe = n.n(Oe),
-        Fe = n(29233);
-      function xe(e) {
+      var Le = n(30603),
+        Oe = n.n(Le),
+        Pe = n(29233);
+      function Fe(e) {
         const { hideModal: t, gid: n } = e,
-          r = Ee(n),
-          s = (0, y.jE)(),
-          [i, l] = (0, a.useMemo)(
+          r = _e(n),
+          a = (0, y.jE)(),
+          [o, c] = (0, i.useMemo)(
             () =>
               r
                 ? [r.length, r.filter((e) => !e.invitation_emailed).length]
                 : [0, 0],
             [r],
           );
-        return a.createElement(
-          z.o0,
-          {
-            bAlertDialog: !0,
-            bAllowFullSize: !0,
-            bDisableBackgroundDismiss: !0,
-            closeModal: t,
-            strDescription:
-              "This will show the users we have invited and their status. As well as individual who were just sent the registration page on their own.",
-            strTitle: "Invitation And Registration Status",
-          },
-          !r &&
-            a.createElement(U.t, {
-              size: "medium",
-              position: "center",
-              string: (0, K.we)("#Loading"),
-            }),
-          r &&
-            a.createElement(
-              a.Fragment,
-              null,
-              a.createElement("div", null, "There are ", i, " registrations."),
-              l > 0 &&
-                a.createElement(
-                  x.$n,
-                  {
-                    onClick: async () => {
-                      await (async function (e, t) {
-                        let n = new FormData();
-                        n.append("sessionid", H.TS.SESSIONID),
-                          n.append("gid", t);
-                        const r = `${H.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
-                        try {
-                          const a = await I().post(r, n, {
-                            withCredentials: !0,
-                          });
-                          if (1 != a?.data?.success) {
-                            let e = (0, Z.H)(a);
+        return (0, s.jsxs)(z.o0, {
+          bAlertDialog: !0,
+          bAllowFullSize: !0,
+          bDisableBackgroundDismiss: !0,
+          closeModal: t,
+          strDescription:
+            "This will show the users we have invited and their status. As well as individual who were just sent the registration page on their own.",
+          strTitle: "Invitation And Registration Status",
+          children: [
+            !r &&
+              (0, s.jsx)($.t, {
+                size: "medium",
+                position: "center",
+                string: (0, W.we)("#Loading"),
+              }),
+            r &&
+              (0, s.jsxs)(s.Fragment, {
+                children: [
+                  (0, s.jsxs)("div", {
+                    children: ["There are ", o, " registrations."],
+                  }),
+                  c > 0 &&
+                    (0, s.jsxs)(F.$n, {
+                      onClick: async () => {
+                        await (async function (e, t) {
+                          let n = new FormData();
+                          n.append("sessionid", Y.TS.SESSIONID),
+                            n.append("gid", t);
+                          const s = `${Y.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
+                          try {
+                            const r = await E().post(s, n, {
+                              withCredentials: !0,
+                            });
+                            if (1 != r?.data?.success) {
+                              let e = (0, X.H)(r);
+                              console.error(
+                                "AsyncSendInviteEmails error: " + e.strErrorMsg,
+                                e,
+                              );
+                            }
+                            return (
+                              e.invalidateQueries({
+                                queryKey: [
+                                  "useMeetSteamAllRegistrationStatus",
+                                  t,
+                                ],
+                              }),
+                              r?.data
+                            );
+                          } catch (e) {
+                            let t = (0, X.H)(e);
                             console.error(
-                              "AsyncSendInviteEmails error: " + e.strErrorMsg,
-                              e,
+                              "AsyncSendInviteEmails error: " + t.strErrorMsg,
+                              t,
                             );
                           }
-                          return (
-                            e.invalidateQueries({
-                              queryKey: [
-                                "useMeetSteamAllRegistrationStatus",
-                                t,
-                              ],
-                            }),
-                            a?.data
-                          );
-                        } catch (e) {
-                          let t = (0, Z.H)(e);
-                          console.error(
-                            "AsyncSendInviteEmails error: " + t.strErrorMsg,
-                            t,
-                          );
-                        }
-                        return null;
-                      })(s, n);
-                    },
-                  },
-                  l,
-                  " Invites To Sent. Send now?",
-                ),
-              a.createElement(
-                "table",
-                null,
-                a.createElement(
-                  "thead",
-                  null,
-                  a.createElement(
-                    "tr",
-                    null,
-                    a.createElement("th", null, "SteamID"),
-                    a.createElement("th", null, "Name"),
-                    a.createElement("th", null, "invited"),
-                    a.createElement("th", null, "Invite Emailed"),
-                    a.createElement("th", null, "Partner"),
-                    a.createElement("th", null, "Email Override"),
-                  ),
-                ),
-                a.createElement(
-                  "tbody",
-                  null,
-                  r?.map((e) =>
-                    a.createElement(Ge, {
-                      key: "regentry_" + e.steamid,
-                      reg: e,
+                          return null;
+                        })(a, n);
+                      },
+                      children: [c, " Invites To Sent. Send now?"],
                     }),
-                  ),
-                ),
-              ),
-            ),
-        );
+                  (0, s.jsxs)("table", {
+                    children: [
+                      (0, s.jsx)("thead", {
+                        children: (0, s.jsxs)("tr", {
+                          children: [
+                            (0, s.jsx)("th", { children: "SteamID" }),
+                            (0, s.jsx)("th", { children: "Name" }),
+                            (0, s.jsx)("th", { children: "invited" }),
+                            (0, s.jsx)("th", { children: "Invite Emailed" }),
+                            (0, s.jsx)("th", { children: "Partner" }),
+                            (0, s.jsx)("th", { children: "Email Override" }),
+                          ],
+                        }),
+                      }),
+                      (0, s.jsx)("tbody", {
+                        children: r?.map((e) =>
+                          (0, s.jsx)(Ge, { reg: e }, "regentry_" + e.steamid),
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function Ge(e) {
         const { reg: t } = e,
-          [n] = (0, C.UA)(t.partner_id);
-        return a.createElement(
-          "tr",
-          null,
-          a.createElement("td", null, t.steamid),
-          a.createElement("td", null, t.name),
-          a.createElement("td", null, Boolean(t.invited) ? "YES" : ""),
-          a.createElement(
-            "td",
-            null,
-            Boolean(t.invitation_emailed) ? "YES" : "",
-          ),
-          a.createElement("td", null, n?.name, " (", t.partner_id, ")"),
-          a.createElement("td", null, t.email_override),
-        );
+          [n] = (0, D.UA)(t.partner_id);
+        return (0, s.jsxs)("tr", {
+          children: [
+            (0, s.jsx)("td", { children: t.steamid }),
+            (0, s.jsx)("td", { children: t.name }),
+            (0, s.jsx)("td", { children: Boolean(t.invited) ? "YES" : "" }),
+            (0, s.jsx)("td", {
+              children: Boolean(t.invitation_emailed) ? "YES" : "",
+            }),
+            (0, s.jsxs)("td", { children: [n?.name, " (", t.partner_id, ")"] }),
+            (0, s.jsx)("td", { children: t.email_override }),
+          ],
+        });
       }
       function ze(e) {
-        const { hideModal: t, gid: n, title: r, group: s, session: i } = e,
-          l = (0, F.a)(),
-          o = Ee(n),
-          c = L(l, n, s?.group_id),
-          [u, m] = (0, a.useMemo)(() => {
-            const e = c?.data?.filter((e) => e.session_id == i.id),
+        const { hideModal: t, gid: n, title: r, group: a, session: o } = e,
+          c = (0, P.a)(),
+          l = _e(n),
+          d = B(c, n, a?.group_id),
+          [u, h] = (0, i.useMemo)(() => {
+            const e = d?.data?.filter((e) => e.session_id == o.id),
               t = new Map(),
               n = new Map();
             return (
               e?.forEach((e) => {
-                const r = new Fe.b2(e.steamid).GetAccountID();
-                if ((t.set(r, e), e.jsondata)) {
+                const s = new Pe.b2(e.steamid).GetAccountID();
+                if ((t.set(s, e), e.jsondata)) {
                   const t = JSON.parse(e.jsondata);
                   t.pre_event_partner_questions &&
-                    n.set(r, t.pre_event_partner_questions);
+                    n.set(s, t.pre_event_partner_questions);
                 }
               }),
               [t, n]
             );
-          }, [i, c]),
-          d = o?.filter((e) => u.has(new Fe.b2(e.steamid).GetAccountID()));
-        return a.createElement(
-          z.o0,
-          {
-            bAlertDialog: !0,
-            bAllowFullSize: !0,
-            bDisableBackgroundDismiss: !0,
-            closeModal: t,
-            strDescription: "Show who is registered for this session",
-            strTitle: "Session Registration",
-          },
-          a.createElement(
-            "div",
-            { className: Pe().ExportToCSV },
-            a.createElement(
-              "a",
-              {
+          }, [o, d]),
+          p = l?.filter((e) => u.has(new Pe.b2(e.steamid).GetAccountID()));
+        return (0, s.jsxs)(z.o0, {
+          bAlertDialog: !0,
+          bAllowFullSize: !0,
+          bDisableBackgroundDismiss: !0,
+          closeModal: t,
+          strDescription: "Show who is registered for this session",
+          strTitle: "Session Registration",
+          children: [
+            (0, s.jsx)("div", {
+              className: Oe().ExportToCSV,
+              children: (0, s.jsx)("a", {
                 onClick: () =>
-                  (function (e, t, n, r, a) {
-                    const s = [],
-                      i = [
+                  (function (e, t, n, s, r) {
+                    const i = [],
+                      a = [
                         "SteamID",
                         "Name",
                         "Invited",
@@ -2176,15 +2144,15 @@ License: MIT
                         "Guest Count",
                         "Reg Confirmation Email Sent",
                       ];
-                    e.ask_registration_question && i.push("Pre Reg Answer");
-                    s.push(i),
+                    e.ask_registration_question && a.push("Pre Reg Answer");
+                    i.push(a),
                       n.forEach((t) => {
                         const n = [],
-                          i = t.partner_id ? (0, C.Yd)(t.partner_id) : void 0;
+                          a = t.partner_id ? (0, D.Yd)(t.partner_id) : void 0;
                         n.push("" + t.steamid),
                           n.push(t.name),
                           n.push(t.invited ? "YES" : ""),
-                          n.push(i ? `${i?.name} (${t.partner_id})` : ""),
+                          n.push(a ? `${a?.name} (${t.partner_id})` : ""),
                           n.push(t.email_override),
                           n.push(
                             "" +
@@ -2192,9 +2160,9 @@ License: MIT
                                 ? t.guests_registered - 1
                                 : 0),
                           );
-                        const l = new Fe.b2(t.steamid);
-                        if (r.has(l.GetAccountID())) {
-                          const e = je(r.get(l.GetAccountID()), t);
+                        const o = new Pe.b2(t.steamid);
+                        if (s.has(o.GetAccountID())) {
+                          const e = Ue(s.get(o.GetAccountID()), t);
                           if (e) {
                             const t = new Date(1e3 * e)
                               .toISOString()
@@ -2204,185 +2172,173 @@ License: MIT
                           } else n.push("");
                         } else n.push("");
                         if (e.ask_registration_question) {
-                          const t = a
-                            .get(l.GetAccountID())
+                          const t = r
+                            .get(o.GetAccountID())
                             ?.find((t) => t.group_id == e.group_id);
                           t && n.push(t.question);
                         }
-                        s.push(n);
+                        i.push(n);
                         for (let e = 0; e < t.guest_names?.length; e++) {
                           const n = [];
                           n.push("(guest)"),
                             n.push(t.guest_names[e]),
-                            s.push(n);
+                            i.push(n);
                         }
                       });
-                    const l =
+                    const o =
                       "meetsteam_" +
                       t.replace(/[ <>:"/\\|?*\x00-\x1F]/g, "_") +
                       ".csv";
-                    X.g.WriteCSVToFile(s, l);
-                  })(s, r, d, u, m),
-              },
-              "Export to CSV",
-            ),
-          ),
-          a.createElement(
-            "table",
-            { className: Pe().Table },
-            a.createElement(
-              "thead",
-              null,
-              a.createElement(
-                "tr",
-                null,
-                a.createElement("th", null, "SteamID"),
-                a.createElement("th", null, "Name"),
-                a.createElement("th", null, "Invited"),
-                a.createElement("th", null, "Partner"),
-                a.createElement("th", null, "Email Override"),
-                a.createElement(
-                  "th",
-                  null,
-                  "Guest Count ",
-                  a.createElement($.o, {
-                    tooltip:
-                      "Additional guests, doesn't include main registrant",
-                  }),
-                ),
-                a.createElement("th", null, "Reg Confirm Email Sent"),
-                s.ask_registration_question &&
-                  a.createElement("th", null, "Answer"),
-              ),
-            ),
-            a.createElement(
-              "tbody",
-              null,
-              d?.flatMap((e) => {
-                const t = new Fe.b2(e.steamid).GetAccountID(),
-                  n = [
-                    a.createElement(Ue, {
-                      key: "regrow" + e.steamid,
-                      group: s,
-                      regInfo: u.get(t),
-                      inviteInfo: e,
-                      preRegQuestions: m.get(t),
-                    }),
-                  ];
-                for (let t = 0; t < e.guest_names?.length; t++)
-                  n.push(
-                    a.createElement($e, {
-                      key: "regguestrow" + e.steamid + "_" + t,
-                      guestName: e.guest_names[t],
-                    }),
-                  );
-                return n;
+                    ee.g.WriteCSVToFile(i, o);
+                  })(a, r, p, u, h),
+                children: "Export to CSV",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, s.jsxs)("table", {
+              className: Oe().Table,
+              children: [
+                (0, s.jsx)("thead", {
+                  children: (0, s.jsxs)("tr", {
+                    children: [
+                      (0, s.jsx)("th", { children: "SteamID" }),
+                      (0, s.jsx)("th", { children: "Name" }),
+                      (0, s.jsx)("th", { children: "Invited" }),
+                      (0, s.jsx)("th", { children: "Partner" }),
+                      (0, s.jsx)("th", { children: "Email Override" }),
+                      (0, s.jsxs)("th", {
+                        children: [
+                          "Guest Count ",
+                          (0, s.jsx)(q.o, {
+                            tooltip:
+                              "Additional guests, doesn't include main registrant",
+                          }),
+                        ],
+                      }),
+                      (0, s.jsx)("th", { children: "Reg Confirm Email Sent" }),
+                      a.ask_registration_question &&
+                        (0, s.jsx)("th", { children: "Answer" }),
+                    ],
+                  }),
+                }),
+                (0, s.jsx)("tbody", {
+                  children: p?.flatMap((e) => {
+                    const t = new Pe.b2(e.steamid).GetAccountID(),
+                      n = [
+                        (0, s.jsx)(
+                          $e,
+                          {
+                            group: a,
+                            regInfo: u.get(t),
+                            inviteInfo: e,
+                            preRegQuestions: h.get(t),
+                          },
+                          "regrow" + e.steamid,
+                        ),
+                      ];
+                    for (let t = 0; t < e.guest_names?.length; t++)
+                      n.push(
+                        (0, s.jsx)(
+                          qe,
+                          { guestName: e.guest_names[t] },
+                          "regguestrow" + e.steamid + "_" + t,
+                        ),
+                      );
+                    return n;
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
-      function je(e, t) {
+      function Ue(e, t) {
         const n = `registration_emailed_${e.group_id}_${e.session_id}`;
-        let r = null;
-        return n in t && (r = t[n]), r;
-      }
-      function Ue(e) {
-        const { inviteInfo: t, regInfo: n, group: r, preRegQuestions: s } = e,
-          [i] = (0, C.UA)(t.partner_id),
-          l = je(n, t);
-        return a.createElement(
-          "tr",
-          null,
-          a.createElement("td", null, t.steamid),
-          a.createElement("td", null, t.name),
-          a.createElement("td", null, Boolean(t.invited) ? "YES" : ""),
-          a.createElement(
-            "td",
-            null,
-            (i?.name ?? t.game) ? `Game: ${t.game}` : "",
-            " ",
-            t.partner_id ? `(${t.partner_id})` : "",
-          ),
-          a.createElement("td", null, t.email_override),
-          a.createElement(
-            "td",
-            null,
-            n.guests_registered ? n.guests_registered - 1 : 0,
-          ),
-          a.createElement("td", null, l ? (0, K.TW)(l) : ""),
-          r.ask_registration_question &&
-            a.createElement(
-              "td",
-              null,
-              s?.find((e) => e.group_id == r.group_id)?.question || "",
-            ),
-        );
+        let s = null;
+        return n in t && (s = t[n]), s;
       }
       function $e(e) {
-        const { guestName: t } = e;
-        return a.createElement(
-          "tr",
-          null,
-          a.createElement("td", null, "(guest)"),
-          a.createElement("td", null, t),
-        );
+        const { inviteInfo: t, regInfo: n, group: r, preRegQuestions: i } = e,
+          [a] = (0, D.UA)(t.partner_id),
+          o = Ue(n, t);
+        return (0, s.jsxs)("tr", {
+          children: [
+            (0, s.jsx)("td", { children: t.steamid }),
+            (0, s.jsx)("td", { children: t.name }),
+            (0, s.jsx)("td", { children: Boolean(t.invited) ? "YES" : "" }),
+            (0, s.jsxs)("td", {
+              children: [
+                (a?.name ?? t.game) ? `Game: ${t.game}` : "",
+                " ",
+                t.partner_id ? `(${t.partner_id})` : "",
+              ],
+            }),
+            (0, s.jsx)("td", { children: t.email_override }),
+            (0, s.jsx)("td", {
+              children: n.guests_registered ? n.guests_registered - 1 : 0,
+            }),
+            (0, s.jsx)("td", { children: o ? (0, W.TW)(o) : "" }),
+            r.ask_registration_question &&
+              (0, s.jsx)("td", {
+                children:
+                  i?.find((e) => e.group_id == r.group_id)?.question || "",
+              }),
+          ],
+        });
       }
-      var qe = n(2516);
-      function Ke(e) {
+      function qe(e) {
+        const { guestName: t } = e;
+        return (0, s.jsxs)("tr", {
+          children: [
+            (0, s.jsx)("td", { children: "(guest)" }),
+            (0, s.jsx)("td", { children: t }),
+          ],
+        });
+      }
+      var Ke = n(2516);
+      function We(e) {
         const { rgEventGIDs: t } = e,
-          [n, r, s] = (0, v.uD)(),
-          [i, l] = (0, a.useState)(null);
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement("span", null, " | "),
-          a.createElement(
-            "a",
-            {
+          [n, r, a] = (0, v.uD)(),
+          [o, c] = (0, i.useState)(null);
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)("span", { children: " | " }),
+            (0, s.jsx)("a", {
               href: "#",
               onClick: (e) => {
                 e.preventDefault(), e.stopPropagation(), r();
               },
-            },
-            "Show Registration Across Events",
-          ),
-          a.createElement(
-            j.E,
-            { active: n },
-            a.createElement(
-              u.tH,
-              null,
-              a.createElement(
-                z.o0,
-                {
-                  closeModal: s,
+              children: "Show Registration Across Events",
+            }),
+            (0, s.jsx)(U.E, {
+              active: n,
+              children: (0, s.jsx)(u.tH, {
+                children: (0, s.jsx)(z.o0, {
+                  closeModal: a,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
-                },
-                Boolean(null == i)
-                  ? a.createElement(Be, { rgEventGIDs: t, fnSelectedEvents: l })
-                  : a.createElement(
-                      a.Fragment,
-                      null,
-                      a.createElement(He, { rgGidMeetSteamEvents: i }),
-                      a.createElement(
-                        x.$n,
-                        { onClick: () => l(null) },
-                        "Reset Selection",
-                      ),
-                    ),
-              ),
-            ),
-          ),
-        );
+                  children: Boolean(null == o)
+                    ? (0, s.jsx)(Me, { rgEventGIDs: t, fnSelectedEvents: c })
+                    : (0, s.jsxs)(s.Fragment, {
+                        children: [
+                          (0, s.jsx)(Ye, { rgGidMeetSteamEvents: o }),
+                          (0, s.jsx)(F.$n, {
+                            onClick: () => c(null),
+                            children: "Reset Selection",
+                          }),
+                        ],
+                      }),
+                }),
+              }),
+            }),
+          ],
+        });
       }
-      const We = (0, me.FB)();
-      function He(e) {
+      const He = (0, he.FB)();
+      function Ye(e) {
         const { rgGidMeetSteamEvents: t } = e,
           { rgAllRegistrations: n, rgPartnerIDs: r } = (function (e) {
-            const t = fe(e),
-              [n, r] = (0, a.useMemo)(() => {
+            const t = xe(e),
+              [n, s] = (0, i.useMemo)(() => {
                 if (t.filter((e) => !e.isLoading).length != t.length)
                   return [null, null];
                 const e = new Array(),
@@ -2397,18 +2353,18 @@ License: MIT
                   [Array.from(n), e]
                 );
               }, [t]);
-            return { rgAllRegistrations: r, rgPartnerIDs: n };
+            return { rgAllRegistrations: s, rgPartnerIDs: n };
           })(t),
-          s = (0, C.vh)(r),
-          i = (0, a.useMemo)(() => {
-            if (!s || !n) return null;
+          a = (0, D.vh)(r),
+          o = (0, i.useMemo)(() => {
+            if (!a || !n) return null;
             const e = [];
             return (
               n.forEach((t) => {
-                (0, C.Yd)(t.partner_id);
+                (0, D.Yd)(t.partner_id);
                 e.push({
                   partner_id: t.partner_id ? "" + t.partner_id : "",
-                  partner_name: (0, C.Yd)(t.partner_id)?.name || "Unknown",
+                  partner_name: (0, D.Yd)(t.partner_id)?.name || "Unknown",
                   name: t.name,
                   accountid: t.accountid,
                   email: t.email_override,
@@ -2419,659 +2375,605 @@ License: MIT
               }),
               e
             );
-          }, [s, n]),
-          l = (0, a.useMemo)(
+          }, [a, n]),
+          c = (0, i.useMemo)(
             () => [
-              We.accessor("name", { header: "Name", size: 200 }),
-              We.accessor("accountid", { header: "Account ID", size: 150 }),
-              We.accessor("email", { header: "Email", size: 150 }),
-              We.accessor("guest_registrated", {
+              He.accessor("name", { header: "Name", size: 200 }),
+              He.accessor("accountid", { header: "Account ID", size: 150 }),
+              He.accessor("email", { header: "Email", size: 150 }),
+              He.accessor("guest_registrated", {
                 header: "Guest Count",
                 size: 100,
               }),
-              We.accessor("guest_names", {
+              He.accessor("guest_names", {
                 header: "Guest's Names",
                 size: 100,
               }),
-              We.accessor("partner_id", { header: "Partner ID", size: 100 }),
-              We.accessor("partner_name", {
+              He.accessor("partner_id", { header: "Partner ID", size: 100 }),
+              He.accessor("partner_name", {
                 header: "Partner Name",
                 size: 300,
               }),
             ],
             [],
           );
-        return s && r && i
-          ? a.createElement(
-              a.Fragment,
-              null,
-              a.createElement(x.JU, null, "Registations"),
-              Boolean(i)
-                ? a.createElement(
-                    u.tH,
-                    null,
-                    a.createElement(de.k, {
-                      columns: l,
-                      data: i,
-                      getRowKey: (e) => e,
-                      stickyHeader: !0,
-                      nItemHeight: 28,
-                      overscan: r.length,
+        return a && r && o
+          ? (0, s.jsxs)(s.Fragment, {
+              children: [
+                (0, s.jsx)(F.JU, { children: "Registations" }),
+                Boolean(o)
+                  ? (0, s.jsxs)(u.tH, {
+                      children: [
+                        (0, s.jsx)(pe.k, {
+                          columns: c,
+                          data: o,
+                          getRowKey: (e) => e,
+                          stickyHeader: !0,
+                          nItemHeight: 28,
+                          overscan: r.length,
+                        }),
+                        (0, s.jsx)("br", {}),
+                        (0, s.jsx)(F.$n, {
+                          id: "download-csv",
+                          onClick: () =>
+                            (0, Ke.K)(
+                              "registrationdump.csv",
+                              o,
+                              c.map((e) => ({
+                                accessorKey: e.accessorKey,
+                                header:
+                                  "string" == typeof e.header
+                                    ? e.header
+                                    : (e.accessorKey ?? ""),
+                              })),
+                            ),
+                          style: { width: "120px" },
+                          children: "Download CSV",
+                        }),
+                      ],
+                    })
+                  : (0, s.jsx)($.t, {
+                      string: (0, W.we)("#Loading"),
+                      position: "center",
                     }),
-                    a.createElement("br", null),
-                    a.createElement(
-                      x.$n,
-                      {
-                        id: "download-csv",
-                        onClick: () =>
-                          (0, qe.K)(
-                            "registrationdump.csv",
-                            i,
-                            l.map((e) => ({
-                              accessorKey: e.accessorKey,
-                              header:
-                                "string" == typeof e.header
-                                  ? e.header
-                                  : (e.accessorKey ?? ""),
-                            })),
-                          ),
-                        style: { width: "120px" },
-                      },
-                      "Download CSV",
-                    ),
-                  )
-                : a.createElement(U.t, {
-                    string: (0, K.we)("#Loading"),
-                    position: "center",
-                  }),
-            )
-          : a.createElement(U.t, { string: (0, K.we)("#Loading") });
+              ],
+            })
+          : (0, s.jsx)($.t, { string: (0, W.we)("#Loading") });
       }
-      var Ye = n(65);
-      function Ve(e) {
-        const t = Je();
-        return a.createElement(
-          "div",
-          null,
-          a.createElement(
-            "ol",
-            null,
-            Array.from(t.entries()).map(([e, t]) =>
-              a.createElement(
+      var Ve = n(65);
+      function Je(e) {
+        const t = Qe();
+        return (0, s.jsx)("div", {
+          children: (0, s.jsx)("ol", {
+            children: Array.from(t.entries()).map(([e, t]) =>
+              (0, s.jsx)(
                 "li",
-                { key: e },
-                a.createElement(
-                  "a",
-                  {
-                    href: `${D.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
+                {
+                  children: (0, s.jsx)("a", {
+                    href: `${b.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
                     target: "_blank",
-                  },
-                  t,
-                ),
+                    children: t,
+                  }),
+                },
+                e,
               ),
             ),
-          ),
-        );
+          }),
+        });
       }
-      function Je() {
-        const [e] = (0, a.useState)(() => {
-          const e = (0, D.Tc)("survey_list", "application_config") || {},
+      function Qe() {
+        const [e] = (0, i.useState)(() => {
+          const e = (0, b.Tc)("survey_list", "application_config") || {},
             t = new Map();
           for (const n of Object.keys(e)) t.set(n, e[n]);
           return t;
         });
         return e;
       }
-      var Qe = n(74783),
-        Ze = n(19367),
-        Xe = n.n(Ze);
-      function et(e) {
-        const t = b.b.InitFromClanID((0, G.H)()),
+      var Ze = n(74783),
+        Xe = n(19367),
+        et = n.n(Xe);
+      function tt(e) {
+        const t = I.b.InitFromClanID((0, G.H)()),
           n = (function () {
-            const [e] = (0, a.useState)(() =>
-              (0, E.Tc)("event_gids", "application_config"),
+            const [e] = (0, i.useState)(() =>
+              (0, _.Tc)("event_gids", "application_config"),
             );
             return e;
           })(),
-          [r, s] = (0, T.QD)("showpastevents", !1),
-          { bIsLoading: i, events: l } = (0, O.PB)(n),
-          o = a.useMemo(() => {
-            if (!l) return null;
+          [r, a] = (0, k.QD)("showpastevents", !1),
+          { bIsLoading: o, events: c } = (0, L.PB)(n),
+          l = i.useMemo(() => {
+            if (!c) return null;
             const e =
-                r && l
-                  ? [...l]
-                  : l?.filter((e) => e.endTime >= new Date().getTime() / 1e3),
+                r && c
+                  ? [...c]
+                  : c?.filter((e) => e.endTime >= new Date().getTime() / 1e3),
               t = Array.from(
-                (0, Ye.bv)(e, (e) => (0, Ye.J2)(new Date(1e3 * e.startTime))),
+                (0, Ve.bv)(e, (e) => (0, Ve.J2)(new Date(1e3 * e.startTime))),
               );
             return t?.sort((e) => -e[0]), t;
-          }, [l, r]);
-        return i
-          ? a.createElement(U.t, null)
-          : o
-            ? a.createElement(
-                "div",
-                null,
-                a.createElement(
-                  "div",
-                  null,
-                  a.createElement(
-                    "a",
-                    {
-                      href: `${H.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
-                    },
-                    "Open Meet Steam Event Dashboard",
-                  ),
-                  a.createElement(Ae, { rgEventGIDs: n }),
-                  a.createElement(Ke, { rgEventGIDs: n }),
-                ),
-                a.createElement(x.Yh, {
-                  checked: r,
-                  onChange: s,
-                  label: "Show Past Events",
-                }),
-                a.createElement("hr", null),
-                o.map((e) =>
-                  a.createElement(tt, {
-                    key: e[0],
-                    month: new Date(1e3 * e[0]),
-                    events: e[1],
+          }, [c, r]);
+        return o
+          ? (0, s.jsx)($.t, {})
+          : l
+            ? (0, s.jsxs)("div", {
+                children: [
+                  (0, s.jsxs)("div", {
+                    children: [
+                      (0, s.jsx)("a", {
+                        href: `${Y.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
+                        children: "Open Meet Steam Event Dashboard",
+                      }),
+                      (0, s.jsx)(Ce, { rgEventGIDs: n }),
+                      (0, s.jsx)(We, { rgEventGIDs: n }),
+                    ],
                   }),
-                ),
-              )
+                  (0, s.jsx)(F.Yh, {
+                    checked: r,
+                    onChange: a,
+                    label: "Show Past Events",
+                  }),
+                  (0, s.jsx)("hr", {}),
+                  l.map((e) =>
+                    (0, s.jsx)(
+                      nt,
+                      { month: new Date(1e3 * e[0]), events: e[1] },
+                      e[0],
+                    ),
+                  ),
+                ],
+              })
             : null;
       }
-      function tt(e) {
+      function nt(e) {
         const { month: t, events: n } = e,
-          r = a.useMemo(() => [...n].sort((e) => -e.startTime), [n]),
-          s = new Intl.DateTimeFormat(navigator.language, {
+          r = i.useMemo(() => [...n].sort((e) => -e.startTime), [n]),
+          a = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
             month: "long",
           }).format(t);
-        return a.createElement(
-          "div",
-          null,
-          a.createElement("div", { className: V().MonthTitle }, s),
-          a.createElement(
-            "div",
-            { className: V().MonthEvents },
-            r.map((e) => a.createElement(nt, { oEvent: e, key: e.GID })),
-          ),
-        );
+        return (0, s.jsxs)("div", {
+          children: [
+            (0, s.jsx)("div", { className: J().MonthTitle, children: a }),
+            (0, s.jsx)("div", {
+              className: J().MonthEvents,
+              children: r.map((e) => (0, s.jsx)(st, { oEvent: e }, e.GID)),
+            }),
+          ],
+        });
       }
-      function nt(e) {
+      function st(e) {
         const { oEvent: t } = e,
           n = t.GID,
-          r = b.b.InitFromClanID((0, G.H)()),
-          s = (0, F.a)(),
-          i = (0, P.my)(s, (0, G.H)(), n),
-          l = i.isSuccess ? i.data : null,
-          o = t.GetNameWithFallback(0),
-          c = (0, a.useMemo)(() => {
+          r = I.b.InitFromClanID((0, G.H)()),
+          a = (0, P.a)(),
+          o = (0, O.my)(a, (0, G.H)(), n),
+          c = o.isSuccess ? o.data : null,
+          l = t.GetNameWithFallback(0),
+          d = (0, i.useMemo)(() => {
             const e = new Array();
             return (
               t.jsondata.meet_steam_groups?.forEach((t) => {
-                t.sessions.forEach((n, r) => {
-                  e.push({ group: t, session: n, firstSession: 0 == r });
+                t.sessions.forEach((n, s) => {
+                  e.push({ group: t, session: n, firstSession: 0 == s });
                 });
               }),
               e
             );
           }, [t.jsondata.meet_steam_groups]);
-        return a.createElement(
-          "div",
-          { className: V().EventRow },
-          a.createElement(
-            "div",
-            { className: V().EventMainDetails },
-            a.createElement(
-              "div",
-              { className: V().TitleLine },
-              a.createElement("div", { className: V().Title }, o),
-              a.createElement(
-                "div",
-                { className: V().StartDate },
-                (0, K.TW)(t?.startTime),
-              ),
-            ),
-            a.createElement(
-              "div",
-              { className: V().ActionLine },
-              a.createElement(
-                "div",
-                null,
-                a.createElement(
-                  "a",
-                  {
-                    href: `${H.TS.COMMUNITY_BASE_URL}gid/${r.ConvertTo64BitString()}/partnerevents/edit/${n}`,
-                  },
-                  "Edit",
-                ),
-              ),
-              a.createElement(
-                "div",
-                null,
-                " | ",
-                a.createElement(
-                  "a",
-                  { href: `${H.TS.STORE_BASE_URL}meetsteam/${n}` },
-                  "View",
-                ),
-              ),
-              Boolean(
-                t.BIsUnlistedEvent() &&
-                  t.jsondata.meet_steam_groups?.length > 0,
-              ) &&
-                a.createElement(
-                  a.Fragment,
-                  null,
-                  a.createElement(lt, { gid: n }),
-                  " | ",
-                  a.createElement(
-                    "a",
-                    {
-                      href: `${H.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${H.iA.accountid}`,
-                    },
-                    "QR Page",
-                  ),
-                  " | ",
-                  a.createElement(
-                    "a",
-                    {
-                      href: `${H.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${n}`,
-                    },
-                    "Attendance List",
-                  ),
-                  a.createElement(rt, { gid: n }),
-                  a.createElement(st, { gid: n }),
-                  a.createElement(at, { gid: n }),
-                  a.createElement(it, { gid: n }),
-                ),
-            ),
-          ),
-          a.createElement(
-            "div",
-            null,
-            a.createElement(
-              "table",
-              { className: "landingTable" },
-              a.createElement(
-                "thead",
-                null,
-                a.createElement(
-                  "tr",
-                  null,
-                  a.createElement("th", null, "Group"),
-                  a.createElement("th", null, "Session Start"),
-                  a.createElement("th", null, "Session Duration"),
-                  a.createElement("th", null, "Seats"),
-                  a.createElement(
-                    "th",
-                    { style: { width: "50px" } },
-                    "Registered",
-                  ),
-                  a.createElement("th", { style: { width: "50px" } }, "Guests"),
-                  a.createElement(
-                    "th",
-                    { style: { width: "100px" } },
-                    "Details",
-                  ),
-                ),
-              ),
-              a.createElement(
-                "tbody",
-                null,
-                a.createElement(
-                  "tr",
-                  null,
-                  Boolean(c.length > 0)
-                    ? a.createElement(ot, {
-                        key: c[0].session.id,
-                        gid: n,
-                        group: c[0].group,
-                        session: c[0].session,
-                        rgAvailability: l,
-                      })
-                    : a.createElement(
-                        a.Fragment,
-                        null,
-                        a.createElement("td", null, "None"),
-                        a.createElement("td", null),
-                        a.createElement("td", null),
-                        a.createElement("td", null),
-                        a.createElement("td", null),
-                        a.createElement("td", null),
-                      ),
-                  a.createElement(
-                    "td",
-                    null,
-                    !Boolean(
-                      t?.BIsUnlistedEvent() &&
+        return (0, s.jsxs)("div", {
+          className: J().EventRow,
+          children: [
+            (0, s.jsxs)("div", {
+              className: J().EventMainDetails,
+              children: [
+                (0, s.jsxs)("div", {
+                  className: J().TitleLine,
+                  children: [
+                    (0, s.jsx)("div", { className: J().Title, children: l }),
+                    (0, s.jsx)("div", {
+                      className: J().StartDate,
+                      children: (0, W.TW)(t?.startTime),
+                    }),
+                  ],
+                }),
+                (0, s.jsxs)("div", {
+                  className: J().ActionLine,
+                  children: [
+                    (0, s.jsx)("div", {
+                      children: (0, s.jsx)("a", {
+                        href: `${Y.TS.COMMUNITY_BASE_URL}gid/${r.ConvertTo64BitString()}/partnerevents/edit/${n}`,
+                        children: "Edit",
+                      }),
+                    }),
+                    (0, s.jsxs)("div", {
+                      children: [
+                        " | ",
+                        (0, s.jsx)("a", {
+                          href: `${Y.TS.STORE_BASE_URL}meetsteam/${n}`,
+                          children: "View",
+                        }),
+                      ],
+                    }),
+                    Boolean(
+                      t.BIsUnlistedEvent() &&
                         t.jsondata.meet_steam_groups?.length > 0,
                     ) &&
-                      a.createElement(
-                        "div",
-                        null,
-                        "Invite Disabled. Event need to publish into Unlisted State",
-                      ),
-                  ),
-                ),
-                c
-                  .filter((e, t) => t > 0)
-                  .map((e) =>
-                    a.createElement(
-                      "tr",
-                      { key: e.session.id },
-                      a.createElement(ot, {
-                        group: e.group,
-                        gid: n,
-                        session: e.session,
-                        rgAvailability: l,
-                        firstSession: e.firstSession,
+                      (0, s.jsxs)(s.Fragment, {
+                        children: [
+                          (0, s.jsx)(ct, { gid: n }),
+                          " | ",
+                          (0, s.jsx)("a", {
+                            href: `${Y.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${Y.iA.accountid}`,
+                            children: "QR Page",
+                          }),
+                          " | ",
+                          (0, s.jsx)("a", {
+                            href: `${Y.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${n}`,
+                            children: "Attendance List",
+                          }),
+                          (0, s.jsx)(rt, { gid: n }),
+                          (0, s.jsx)(at, { gid: n }),
+                          (0, s.jsx)(it, { gid: n }),
+                          (0, s.jsx)(ot, { gid: n }),
+                        ],
                       }),
-                    ),
-                  ),
-              ),
-            ),
-          ),
-        );
+                  ],
+                }),
+              ],
+            }),
+            (0, s.jsx)("div", {
+              children: (0, s.jsxs)("table", {
+                className: "landingTable",
+                children: [
+                  (0, s.jsx)("thead", {
+                    children: (0, s.jsxs)("tr", {
+                      children: [
+                        (0, s.jsx)("th", { children: "Group" }),
+                        (0, s.jsx)("th", { children: "Session Start" }),
+                        (0, s.jsx)("th", { children: "Session Duration" }),
+                        (0, s.jsx)("th", { children: "Seats" }),
+                        (0, s.jsx)("th", {
+                          style: { width: "50px" },
+                          children: "Registered",
+                        }),
+                        (0, s.jsx)("th", {
+                          style: { width: "50px" },
+                          children: "Guests",
+                        }),
+                        (0, s.jsx)("th", {
+                          style: { width: "100px" },
+                          children: "Details",
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, s.jsxs)("tbody", {
+                    children: [
+                      (0, s.jsxs)("tr", {
+                        children: [
+                          Boolean(d.length > 0)
+                            ? (0, s.jsx)(
+                                dt,
+                                {
+                                  gid: n,
+                                  group: d[0].group,
+                                  session: d[0].session,
+                                  rgAvailability: c,
+                                },
+                                d[0].session.id,
+                              )
+                            : (0, s.jsxs)(s.Fragment, {
+                                children: [
+                                  (0, s.jsx)("td", { children: "None" }),
+                                  (0, s.jsx)("td", {}),
+                                  (0, s.jsx)("td", {}),
+                                  (0, s.jsx)("td", {}),
+                                  (0, s.jsx)("td", {}),
+                                  (0, s.jsx)("td", {}),
+                                ],
+                              }),
+                          (0, s.jsx)("td", {
+                            children:
+                              !Boolean(
+                                t?.BIsUnlistedEvent() &&
+                                  t.jsondata.meet_steam_groups?.length > 0,
+                              ) &&
+                              (0, s.jsx)("div", {
+                                children:
+                                  "Invite Disabled. Event need to publish into Unlisted State",
+                              }),
+                          }),
+                        ],
+                      }),
+                      d
+                        .filter((e, t) => t > 0)
+                        .map((e) =>
+                          (0, s.jsx)(
+                            "tr",
+                            {
+                              children: (0, s.jsx)(dt, {
+                                group: e.group,
+                                gid: n,
+                                session: e.session,
+                                rgAvailability: c,
+                                firstSession: e.firstSession,
+                              }),
+                            },
+                            e.session.id,
+                          ),
+                        ),
+                    ],
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
       }
       function rt(e) {
         const { gid: t } = e,
-          n = Je();
+          n = Qe();
         return Array.from(n.keys()).includes(t)
-          ? a.createElement(
-              a.Fragment,
-              null,
-              " | ",
-              a.createElement(
-                "a",
-                { href: `${H.TS.PARTNER_BASE_URL}meetsteam/survey/${t}` },
-                "Survey",
-              ),
-            )
+          ? (0, s.jsxs)(s.Fragment, {
+              children: [
+                " | ",
+                (0, s.jsx)("a", {
+                  href: `${Y.TS.PARTNER_BASE_URL}meetsteam/survey/${t}`,
+                  children: "Survey",
+                }),
+              ],
+            })
           : null;
-      }
-      function at(e) {
-        const { gid: t } = e,
-          [n, r, s] = (0, v.uD)();
-        return a.createElement(
-          "div",
-          null,
-          " | ",
-          a.createElement(
-            "a",
-            {
-              href: "#",
-              onClick: (e) => {
-                e.preventDefault(), e.stopPropagation(), r();
-              },
-            },
-            "Invite via CSV",
-            a.createElement($.o, {
-              tooltip:
-                "This will email invitee and show the users on the dashboard (if not already invited).  We need csv with accountid,partnerid,email_override (optional)",
-            }),
-          ),
-          a.createElement(
-            u.tH,
-            null,
-            a.createElement(
-              j.E,
-              { active: n },
-              a.createElement(le, { hideModal: s, gid: t }),
-            ),
-          ),
-        );
-      }
-      function st(e) {
-        const { gid: t } = e,
-          [n, r, s] = (0, v.uD)();
-        return a.createElement(
-          "div",
-          null,
-          " | ",
-          a.createElement(
-            "a",
-            {
-              href: "#",
-              onClick: (e) => {
-                e.preventDefault(), e.stopPropagation(), r();
-              },
-            },
-            "Invite",
-          ),
-          a.createElement(
-            u.tH,
-            null,
-            a.createElement(
-              j.E,
-              { active: n },
-              a.createElement(ie, { hideModal: s, gid: t }),
-            ),
-          ),
-        );
       }
       function it(e) {
         const { gid: t } = e,
-          [n, r, s] = (0, v.uD)();
-        return a.createElement(
-          "div",
-          null,
-          " | ",
-          a.createElement(
-            "a",
-            {
+          [n, r, i] = (0, v.uD)();
+        return (0, s.jsxs)("div", {
+          children: [
+            " | ",
+            (0, s.jsxs)("a", {
               href: "#",
               onClick: (e) => {
                 e.preventDefault(), e.stopPropagation(), r();
               },
-            },
-            "Show Invites",
-          ),
-          a.createElement(
-            u.tH,
-            null,
-            a.createElement(
-              j.E,
-              { active: n },
-              a.createElement(xe, { hideModal: s, gid: t }),
-            ),
-          ),
-        );
+              children: [
+                "Invite via CSV",
+                (0, s.jsx)(q.o, {
+                  tooltip:
+                    "This will email invitee and show the users on the dashboard (if not already invited).  We need csv with accountid,partnerid,email_override (optional)",
+                }),
+              ],
+            }),
+            (0, s.jsx)(u.tH, {
+              children: (0, s.jsx)(U.E, {
+                active: n,
+                children: (0, s.jsx)(ce, { hideModal: i, gid: t }),
+              }),
+            }),
+          ],
+        });
       }
-      function lt(e) {
+      function at(e) {
         const { gid: t } = e,
-          n = (0, F.a)(),
-          [r, s] = (0, a.useState)(!1),
-          [i, l] = (0, a.useState)(null);
-        return a.createElement(
-          "div",
-          null,
-          " | ",
-          a.createElement(
-            "a",
-            {
+          [n, r, i] = (0, v.uD)();
+        return (0, s.jsxs)("div", {
+          children: [
+            " | ",
+            (0, s.jsx)("a", {
+              href: "#",
+              onClick: (e) => {
+                e.preventDefault(), e.stopPropagation(), r();
+              },
+              children: "Invite",
+            }),
+            (0, s.jsx)(u.tH, {
+              children: (0, s.jsx)(U.E, {
+                active: n,
+                children: (0, s.jsx)(oe, { hideModal: i, gid: t }),
+              }),
+            }),
+          ],
+        });
+      }
+      function ot(e) {
+        const { gid: t } = e,
+          [n, r, i] = (0, v.uD)();
+        return (0, s.jsxs)("div", {
+          children: [
+            " | ",
+            (0, s.jsx)("a", {
+              href: "#",
+              onClick: (e) => {
+                e.preventDefault(), e.stopPropagation(), r();
+              },
+              children: "Show Invites",
+            }),
+            (0, s.jsx)(u.tH, {
+              children: (0, s.jsx)(U.E, {
+                active: n,
+                children: (0, s.jsx)(Fe, { hideModal: i, gid: t }),
+              }),
+            }),
+          ],
+        });
+      }
+      function ct(e) {
+        const { gid: t } = e,
+          n = (0, P.a)(),
+          [r, a] = (0, i.useState)(!1),
+          [o, c] = (0, i.useState)(null);
+        return (0, s.jsxs)("div", {
+          children: [
+            " | ",
+            (0, s.jsx)("a", {
               href: "#",
               onClick: async (e) => {
-                e.preventDefault(), e.stopPropagation(), s(!0);
-                const r = await (async function (e, t) {
-                  const n = f.w.Init(_.VI),
-                    r = b.b.InitFromClanID((0, G.H)());
+                e.preventDefault(), e.stopPropagation(), a(!0);
+                const s = await (async function (e, t) {
+                  const n = x.w.Init(j.VI),
+                    s = I.b.InitFromClanID((0, G.H)());
                   n.Body().set_clan_event_gid(t),
-                    n.Body().set_steamid(r.ConvertTo64BitString());
-                  const a = await _.ZK.TestFireEmails(e, n);
-                  return console.log("test fire", a), a.GetEResult();
+                    n.Body().set_steamid(s.ConvertTo64BitString());
+                  const r = await j.ZK.TestFireEmails(e, n);
+                  return console.log("test fire", r), r.GetEResult();
                 })(n, t);
-                l(r);
+                c(s);
               },
-            },
-            "Email Self",
-          ),
-          a.createElement(
-            j.E,
-            { active: r },
-            a.createElement(
-              z.o0,
-              {
+              children: "Email Self",
+            }),
+            (0, s.jsx)(U.E, {
+              active: r,
+              children: (0, s.jsxs)(z.o0, {
                 bAlertDialog: !0,
                 strTitle: "Test Emails",
                 closeModal: () => {
-                  s(!1), l(null);
+                  a(!1), c(null);
                 },
                 onOK: () => {},
-              },
-              a.createElement(
-                "div",
-                null,
-                "This will temporarily register and then de-register you from the event as a way to test the email sending code.",
-              ),
-              Boolean(null == i) &&
-                a.createElement(U.t, { string: (0, K.we)("#Loading") }),
-              Boolean(1 == i) &&
-                a.createElement("div", null, "Test Emails Sent"),
-              Boolean(i && 1 != i) &&
-                a.createElement(
-                  "div",
-                  null,
-                  "Email Failed to Send. Check console",
-                ),
-            ),
-          ),
-        );
+                children: [
+                  (0, s.jsx)("div", {
+                    children:
+                      "This will temporarily register and then de-register you from the event as a way to test the email sending code.",
+                  }),
+                  Boolean(null == o) &&
+                    (0, s.jsx)($.t, { string: (0, W.we)("#Loading") }),
+                  Boolean(1 == o) &&
+                    (0, s.jsx)("div", { children: "Test Emails Sent" }),
+                  Boolean(o && 1 != o) &&
+                    (0, s.jsx)("div", {
+                      children: "Email Failed to Send. Check console",
+                    }),
+                ],
+              }),
+            }),
+          ],
+        });
       }
-      function ot(e) {
+      function lt(e, t) {
+        const n = et().unix(e),
+          s = et().unix(e).tz(t),
+          r = s.utcOffset() - n.utcOffset(),
+          i = new Date(1e3 * (e + 60 * r)),
+          a = new Date();
+        return `${i.getFullYear() == a.getFullYear() ? ((0, H.$w))(i, !1, !1) : ((0, H._9))(i, !1, !1)} ${(0, H.KC)(e + 60 * r)} ${s.format("z")}`;
+      }
+      function dt(e) {
         const {
             gid: t,
             group: n,
             rgAvailability: r,
-            session: s,
-            firstSession: i = !0,
+            session: i,
+            firstSession: a = !0,
           } = e,
-          l = K.NT.GetWithFallback(n?.localized_session_title, 0),
-          o = K.NT.GetWithFallback(n?.localized_session_description, 0),
-          c = K.NT.GetWithFallback(n?.localized_intended_audience, 0),
-          m = r?.find((e) => e.group_id == n.group_id && e.session_id == s.id),
-          [d, h, p] = (0, v.uD)(),
-          g = L((0, F.a)(), t, n?.group_id);
-        let E = Math.min((m?.guest_count / s.max_capacity) * 100, 100),
-          f = m?.guest_count > 0 ? `${E}%` : "0%",
-          _ = m?.guest_count >= s.max_capacity;
-        const S = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          y =
-            "in_person" === s.location_type
-              ? (s.in_person_time_zone ?? Qe.hh)
-              : S;
-        return a.createElement(
-          a.Fragment,
-          null,
-          i && Boolean(n)
-            ? a.createElement(
-                "td",
-                null,
-                l,
-                a.createElement($.o, { tooltip: o }),
-                Boolean(c) && a.createElement("div", null, c),
-              )
-            : a.createElement("td", null),
-          a.createElement(
-            "td",
-            null,
-            a.createElement(
-              "span",
-              null,
-              (function (e, t) {
-                const n = Xe().unix(e),
-                  r = Xe().unix(e).tz(t),
-                  a = r.utcOffset() - n.utcOffset(),
-                  s = new Date(1e3 * (e + 60 * a)),
-                  i = new Date();
-                return `${s.getFullYear() == i.getFullYear() ? ((0, W.$w))(s, !1, !1) : ((0, W._9))(s, !1, !1)} ${(0, W.KC)(e + 60 * a)} ${r.format("z")}`;
-              })(s.rtime_start, y),
-            ),
-          ),
-          a.createElement("td", null, (0, W.IH)(s.rtime_end - s.rtime_start)),
-          a.createElement(
-            "td",
-            null,
-            m?.guest_count || 0,
-            " / ",
-            s.max_capacity,
-            a.createElement("br", null),
-            a.createElement(
-              "div",
-              { className: V().CapacityBarMax },
-              a.createElement("div", {
-                className: (0, q.A)(V().CapacityBarCurrent, _ ? V().Full : ""),
-                style: { width: f },
-              }),
-            ),
-          ),
-          a.createElement(
-            "td",
-            null,
-            g.isSuccess &&
-              a.createElement(
-                a.Fragment,
-                null,
-                g.data?.filter((e) => e.session_id == s.id).length,
-              ),
-          ),
-          a.createElement(
-            "td",
-            null,
-            g.isSuccess &&
-              a.createElement(
-                a.Fragment,
-                null,
-                g.data
-                  ?.filter((e) => e.session_id == s.id)
-                  .reduce((e, t) => e + t.guests_registered - 1, 0),
-              ),
-          ),
-          a.createElement(
-            "td",
-            null,
-            a.createElement(x.$n, { onClick: h }, "Details"),
-            a.createElement(
-              u.tH,
-              null,
-              a.createElement(
-                j.E,
-                { active: d },
-                a.createElement(ze, {
-                  gid: t,
-                  title: l,
-                  group: n,
-                  session: s,
-                  hideModal: p,
+          o = W.NT.GetWithFallback(n?.localized_session_title, 0),
+          c = W.NT.GetWithFallback(n?.localized_session_description, 0),
+          l = W.NT.GetWithFallback(n?.localized_intended_audience, 0),
+          d = r?.find((e) => e.group_id == n.group_id && e.session_id == i.id),
+          [h, p, g] = (0, v.uD)(),
+          m = B((0, P.a)(), t, n?.group_id);
+        let f = Math.min((d?.guest_count / i.max_capacity) * 100, 100),
+          _ = d?.guest_count > 0 ? `${f}%` : "0%",
+          x = d?.guest_count >= i.max_capacity;
+        const j = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          S =
+            "in_person" === i.location_type
+              ? (i.in_person_time_zone ?? Ze.hh)
+              : j;
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            a && Boolean(n)
+              ? (0, s.jsxs)("td", {
+                  children: [
+                    o,
+                    (0, s.jsx)(q.o, { tooltip: c }),
+                    Boolean(l) && (0, s.jsx)("div", { children: l }),
+                  ],
+                })
+              : (0, s.jsx)("td", {}),
+            (0, s.jsx)("td", {
+              children: (0, s.jsx)("span", { children: lt(i.rtime_start, S) }),
+            }),
+            (0, s.jsx)("td", {
+              children: (0, H.IH)(i.rtime_end - i.rtime_start),
+            }),
+            (0, s.jsxs)("td", {
+              children: [
+                d?.guest_count || 0,
+                " / ",
+                i.max_capacity,
+                (0, s.jsx)("br", {}),
+                (0, s.jsx)("div", {
+                  className: J().CapacityBarMax,
+                  children: (0, s.jsx)("div", {
+                    className: (0, K.A)(
+                      J().CapacityBarCurrent,
+                      x ? J().Full : "",
+                    ),
+                    style: { width: _ },
+                  }),
                 }),
-              ),
-            ),
-          ),
-        );
+              ],
+            }),
+            (0, s.jsx)("td", {
+              children:
+                m.isSuccess &&
+                (0, s.jsx)(s.Fragment, {
+                  children: m.data?.filter((e) => e.session_id == i.id).length,
+                }),
+            }),
+            (0, s.jsx)("td", {
+              children:
+                m.isSuccess &&
+                (0, s.jsx)(s.Fragment, {
+                  children: m.data
+                    ?.filter((e) => e.session_id == i.id)
+                    .reduce((e, t) => e + t.guests_registered - 1, 0),
+                }),
+            }),
+            (0, s.jsxs)("td", {
+              children: [
+                (0, s.jsx)(F.$n, { onClick: p, children: "Details" }),
+                (0, s.jsx)(u.tH, {
+                  children: (0, s.jsx)(U.E, {
+                    active: h,
+                    children: (0, s.jsx)(ze, {
+                      gid: t,
+                      title: o,
+                      group: n,
+                      session: i,
+                      hideModal: g,
+                    }),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
-      var ct = n(22837),
-        ut = n(14336),
-        mt = n(55263),
-        dt = n(29863),
-        ht = n(48479),
-        pt = n(16021),
-        gt = n(98019);
-      function Et(e) {
-        const { rgEvents: t } = R(),
+      var ut = n(22837),
+        ht = n(39777),
+        pt = n(98019),
+        gt = n(35380),
+        mt = n(14336),
+        ft = n(16021),
+        _t = n(68276),
+        xt = n(48479);
+      function jt(e) {
+        const { rgEvents: t } = T(),
           n = (function () {
-            const [e] = (0, a.useState)(() =>
-              (0, E.Tc)("interest_results", "application_config"),
+            const [e] = (0, i.useState)(() =>
+              (0, _.Tc)("interest_results", "application_config"),
             );
-            return (0, a.useMemo)(
+            return (0, i.useMemo)(
               () => e.map((e) => ((e.results = JSON.parse(e.jsondata)), e)),
               [e],
             );
           })(),
-          [r, s] = (0, a.useState)(""),
-          i = D.TS.PARTNER_BASE_URL + "meetsteam",
-          l = (0, a.useMemo)(() => {
+          [r, a] = (0, i.useState)(""),
+          o = b.TS.PARTNER_BASE_URL + "meetsteam",
+          c = (0, i.useMemo)(() => {
             const e = new Map();
             return (
               n.forEach((t) => {
@@ -3082,54 +2984,52 @@ License: MIT
               e
             );
           }, [n]);
-        return a.createElement(
-          "div",
-          { className: V().EventList },
-          a.createElement(x.pd, {
-            type: "text",
-            value: r,
-            onChange: (e) => s(e.currentTarget.value.trim()),
-            label: "Filter",
-          }),
-          a.createElement(
-            "div",
-            null,
-            "Total Survey Responses: ",
-            (0, se.D)(n?.length || 0),
-          ),
-          a.createElement(
-            "div",
-            null,
-            "Link to partner-facing survey: ",
-            a.createElement("a", { href: i }, i),
-          ),
-          t
-            .filter(
-              (e) => 0 == r.length || e.name.includes(r) || e.id.includes(r),
-            )
-            .map((e) =>
-              a.createElement(ft, {
-                key: e.id,
-                conf: e,
-                nInterestCount: l.get(e.id) ?? 0,
-                rgSurveyInterest: n,
-              }),
-            ),
-          a.createElement(Ct, { rgSurveyInterest: n }),
-        );
+        return (0, s.jsxs)("div", {
+          className: J().EventList,
+          children: [
+            (0, s.jsx)(F.pd, {
+              type: "text",
+              value: r,
+              onChange: (e) => a(e.currentTarget.value.trim()),
+              label: "Filter",
+            }),
+            (0, s.jsxs)("div", {
+              children: ["Total Survey Responses: ", (0, ae.D)(n?.length || 0)],
+            }),
+            (0, s.jsxs)("div", {
+              children: [
+                "Link to partner-facing survey: ",
+                (0, s.jsx)("a", { href: o, children: o }),
+              ],
+            }),
+            t
+              .filter(
+                (e) => 0 == r.length || e.name.includes(r) || e.id.includes(r),
+              )
+              .map((e) =>
+                (0, s.jsx)(
+                  vt,
+                  {
+                    conf: e,
+                    nInterestCount: c.get(e.id) ?? 0,
+                    rgSurveyInterest: n,
+                  },
+                  e.id,
+                ),
+              ),
+            (0, s.jsx)(Ct, { rgSurveyInterest: n }),
+          ],
+        });
       }
-      function ft(e) {
+      function vt(e) {
         const { conf: t, nInterestCount: n, rgSurveyInterest: r } = e;
-        return a.createElement(
-          ht.qx,
-          {
-            title: `${t.name} in ${t.place} around ${t.time}: Interest: ${(0, se.D)(n)}`,
-            bStartMinimized: !0,
-          },
-          a.createElement(vt, { conf: t, rgSurveyInterest: r }),
-        );
+        return (0, s.jsx)(xt.qx, {
+          title: `${t.name} in ${t.place} around ${t.time}: Interest: ${(0, ae.D)(n)}`,
+          bStartMinimized: !0,
+          children: (0, s.jsx)(yt, { conf: t, rgSurveyInterest: r }),
+        });
       }
-      function _t(e) {
+      function St(e) {
         if ("number" == typeof e) return e;
         const t = e.slice(-1).toUpperCase(),
           n = parseFloat(e.slice(0, -1));
@@ -3144,64 +3044,61 @@ License: MIT
             return parseFloat(e);
         }
       }
-      function vt(e) {
+      function yt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
-          r = (0, a.useMemo)(
+          r = (0, i.useMemo)(
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
             [t, n],
           ),
-          s = (0, gt.qh)(),
-          { bComplete: i, nCount: l } = (function (e) {
-            const [t, n] = (0, a.useState)(!1),
-              [r, s] = (0, a.useState)(0),
-              i = (0, y.jE)();
+          a = (0, pt.qh)(),
+          { bComplete: o, nCount: c } = (function (e) {
+            const [t, n] = (0, i.useState)(!1),
+              [s, r] = (0, i.useState)(0),
+              a = (0, y.jE)();
             return (
-              (0, a.useEffect)(() => {
+              (0, i.useEffect)(() => {
                 (async () => {
                   let t = 0;
                   for (const n of e) {
                     const e = n.results.partner_id;
-                    new b.b(n.steamid).GetAccountID(),
+                    new I.b(n.steamid).GetAccountID(),
                       await Promise.all([
-                        (0, C.qG)(e),
-                        i.prefetchQuery({
-                          queryKey: N(e),
-                          queryFn: async () => M(e),
+                        (0, D.qG)(e),
+                        a.prefetchQuery({
+                          queryKey: R(e),
+                          queryFn: async () => N(e),
                         }),
-                        (0, A.PQ)(i, e),
+                        (0, C.PQ)(a, e),
                       ]),
                       ++t,
-                      s(t);
+                      r(t);
                   }
                   n(!0);
                 })();
-              }, [i, e]),
-              { bComplete: t, nCount: r }
+              }, [a, e]),
+              { bComplete: t, nCount: s }
             );
           })(r);
-        return i
-          ? s?.length
+        return o
+          ? a?.length
             ? r && 0 != r.length
-              ? a.createElement(St, { conf: t, rgSurveyInterest: r })
-              : a.createElement("div", null, "No users with interest")
-            : a.createElement(U.t, {
+              ? (0, s.jsx)(wt, { conf: t, rgSurveyInterest: r })
+              : (0, s.jsx)("div", { children: "No users with interest" })
+            : (0, s.jsx)($.t, {
                 position: "center",
                 string: "Loading Valve Account info (this shouldn't take long)",
               })
-          : a.createElement(U.t, {
+          : (0, s.jsx)($.t, {
               position: "center",
-              string: `Loading ${l} of ${r.length}`,
+              string: `Loading ${c} of ${r.length}`,
             });
       }
-      function St(e) {
+      function wt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           r = (0, y.jE)();
-        return a.createElement(
-          "div",
-          null,
-          a.createElement(
-            x.$n,
-            {
+        return (0, s.jsxs)("div", {
+          children: [
+            (0, s.jsx)(F.$n, {
               onClick: () => {
                 const e = [];
                 e.push([
@@ -3224,190 +3121,182 @@ License: MIT
                 ]),
                   n.forEach((t) => {
                     const n = [],
-                      a = new Fe.b2(t.steamid);
-                    n.push("" + a.GetAccountID());
-                    const s = (0, ut.z0)(a.GetAccountID()),
-                      i = t.results.partner_id;
-                    n.push("" + i);
-                    const l = (0, A.N6)(i).map(
-                      (e) => (0, gt.YA)(r, e)?.displayName || "" + e,
+                      s = new Pe.b2(t.steamid);
+                    n.push("" + s.GetAccountID());
+                    const i = (0, mt.z0)(s.GetAccountID()),
+                      a = t.results.partner_id;
+                    n.push("" + a);
+                    const o = (0, C.N6)(a).map(
+                      (e) => (0, pt.YA)(r, e)?.displayName || "" + e,
                     );
-                    n.push(l.join("|"));
-                    const o = t.results.email_override || "";
-                    n.push("" + o),
-                      n.push(s?.m_strPlayerName ? s.m_strPlayerName : "");
-                    const c = Ie(a.GetAccountID(), i);
+                    n.push(o.join("|"));
+                    const c = t.results.email_override || "";
+                    n.push("" + c),
+                      n.push(i?.m_strPlayerName ? i.m_strPlayerName : "");
+                    const l = Ee(s.GetAccountID(), a);
                     if (
-                      (n.push(c ? c.realname : ""),
+                      (n.push(l ? l.realname : ""),
                       n.push(t.results.have_you_met_steam ? "yes" : "no"),
                       t.results.submit_time)
                     ) {
                       const e = t.results.submit_time,
-                        r = new Date(1e3 * e)
+                        s = new Date(1e3 * e)
                           .toISOString()
                           .replace("T", " ")
                           .split(".")[0];
-                      n.push(r);
+                      n.push(s);
                     } else n.push("");
                     n.push("" + t.results.attending?.length),
                       n.push(t.results.country_code),
                       n.push(
                         t.results.preferred_language
-                          ? (0, ct.Lg)(t.results.preferred_language)
+                          ? (0, ut.Lg)(t.results.preferred_language)
                           : "",
                       );
-                    const u = (0, C.Yd)(i);
-                    n.push(u ? u.name : "");
-                    const m = B(r, i);
-                    m
-                      ? (n.push("" + _t(m.strGrossUSD)),
-                        n.push("" + m.nBestAppID),
-                        n.push(pt.A.Get().GetApp(m.nBestAppID)?.GetName()),
-                        n.push("" + m.nBestAppLongTermSalesRank))
+                    const d = (0, D.Yd)(a);
+                    n.push(d ? d.name : "");
+                    const u = M(r, a);
+                    u
+                      ? (n.push("" + St(u.strGrossUSD)),
+                        n.push("" + u.nBestAppID),
+                        n.push(ft.A.Get().GetApp(u.nBestAppID)?.GetName()),
+                        n.push("" + u.nBestAppLongTermSalesRank))
                       : (n.push(""), n.push(""), n.push(""), n.push("")),
                       e.push(n);
                   });
-                const a = t.name.replace(" ", "_") + "_conference_interest.csv";
-                X.g.WriteCSVToFile(e, a);
+                const s = t.name.replace(" ", "_") + "_conference_interest.csv";
+                ee.g.WriteCSVToFile(e, s);
               },
-            },
-            "Export to CSV",
-          ),
-          a.createElement(
-            "table",
-            { className: "landingTable" },
-            a.createElement(
-              "thead",
-              null,
-              a.createElement(
-                "tr",
-                null,
-                a.createElement("th", null, "Name and Email"),
-                a.createElement("th", null, "Have you met steam?"),
-                a.createElement("th", null, "Partner"),
-                a.createElement("th", null, "Valve Contacts"),
-                a.createElement("th", null, "Partner Revenue"),
-                a.createElement("th", null, "Biggest Game"),
-                a.createElement("th", null, "Long Term Sales Rank"),
-                a.createElement("th", null, "Attending count?"),
-                a.createElement("th", null, "Alt Language"),
-                a.createElement("th", null, "Country"),
-                a.createElement("th", null, "Submit Survey Time"),
-              ),
-            ),
-            a.createElement(
-              "tbody",
-              null,
-              n.map((e) =>
-                a.createElement(yt, {
-                  key: t.id + "_" + e.steamid,
-                  strsteamid: e.steamid,
-                  partnerID: e.results.partner_id,
-                  registration: e.results,
+              children: "Export to CSV",
+            }),
+            (0, s.jsxs)("table", {
+              className: "landingTable",
+              children: [
+                (0, s.jsx)("thead", {
+                  children: (0, s.jsxs)("tr", {
+                    children: [
+                      (0, s.jsx)("th", { children: "Name and Email" }),
+                      (0, s.jsx)("th", { children: "Have you met steam?" }),
+                      (0, s.jsx)("th", { children: "Partner" }),
+                      (0, s.jsx)("th", { children: "Valve Contacts" }),
+                      (0, s.jsx)("th", { children: "Partner Revenue" }),
+                      (0, s.jsx)("th", { children: "Biggest Game" }),
+                      (0, s.jsx)("th", { children: "Long Term Sales Rank" }),
+                      (0, s.jsx)("th", { children: "Attending count?" }),
+                      (0, s.jsx)("th", { children: "Alt Language" }),
+                      (0, s.jsx)("th", { children: "Country" }),
+                      (0, s.jsx)("th", { children: "Submit Survey Time" }),
+                    ],
+                  }),
                 }),
-              ),
-            ),
-          ),
-        );
+                (0, s.jsx)("tbody", {
+                  children: n.map((e) =>
+                    (0, s.jsx)(
+                      Et,
+                      {
+                        strsteamid: e.steamid,
+                        partnerID: e.results.partner_id,
+                        registration: e.results,
+                      },
+                      t.id + "_" + e.steamid,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
-      function yt(e) {
+      function Et(e) {
         const { partnerID: t, registration: n } = e;
-        return a.createElement(
-          "tr",
-          null,
-          a.createElement("td", null, a.createElement(wt, { ...e })),
-          a.createElement("td", null, n.have_you_met_steam ? "" : "NO"),
-          a.createElement(It, { nPartnerID: t }),
-          a.createElement("td", null, n.attending.length),
-          a.createElement(
-            "td",
-            null,
-            n.english_not_good && n.preferred_language
-              ? (0, ct.Lg)(n.preferred_language)
-              : "",
-          ),
-          a.createElement("td", null, n.country_code),
-          a.createElement("td", null, (0, K.TW)(n.submit_time)),
-        );
-      }
-      function wt(e) {
-        const { strsteamid: t, partnerID: n, registration: r } = e,
-          s = (0, ut.hW)(t),
-          i = we(new Fe.b2(t).GetAccountID(), n),
-          l = i?.realname || s.data?.m_strPlayerName;
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement("span", null, l),
-          a.createElement("br", null),
-          a.createElement("span", null, r.email_override || i?.email),
-        );
+        return (0, s.jsxs)("tr", {
+          children: [
+            (0, s.jsx)("td", { children: (0, s.jsx)(It, { ...e }) }),
+            (0, s.jsx)("td", { children: n.have_you_met_steam ? "" : "NO" }),
+            (0, s.jsx)(bt, { nPartnerID: t }),
+            (0, s.jsx)("td", { children: n.attending.length }),
+            (0, s.jsx)("td", {
+              children:
+                n.english_not_good && n.preferred_language
+                  ? (0, ut.Lg)(n.preferred_language)
+                  : "",
+            }),
+            (0, s.jsx)("td", { children: n.country_code }),
+            (0, s.jsx)("td", { children: (0, W.TW)(n.submit_time) }),
+          ],
+        });
       }
       function It(e) {
+        const { strsteamid: t, partnerID: n, registration: r } = e,
+          i = (0, mt.hW)(t),
+          a = we(new Pe.b2(t).GetAccountID(), n),
+          o = a?.realname || i.data?.m_strPlayerName;
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)("span", { children: o }),
+            (0, s.jsx)("br", {}),
+            (0, s.jsx)("span", { children: r.email_override || a?.email }),
+          ],
+        });
+      }
+      function bt(e) {
         const { nPartnerID: t } = e,
-          [n] = (0, C.UA)(t),
+          [n] = (0, D.UA)(t),
           r = (function (e) {
             const t = (0, S.I)({
-              queryKey: N(e),
-              queryFn: async () => M(e),
+              queryKey: R(e),
+              queryFn: async () => N(e),
               enabled: Boolean(e),
             });
             return t.isLoading ? null : t.data;
           })(t),
-          s = (0, A.Z4)(t),
-          i = (0, y.jE)();
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement("td", null, n ? n?.name + ` (${t})` : t),
-          a.createElement(
-            "td",
-            null,
-            s?.map((e) => (0, gt.YA)(i, e)?.displayName || "" + e).join(","),
-          ),
-          a.createElement("td", null, "$", r?.strGrossUSD),
-          a.createElement(
-            "td",
-            null,
-            r?.nBestAppID > 0
-              ? a.createElement(Dt, { appid: r?.nBestAppID })
-              : "N/A",
-          ),
-          a.createElement("td", null, r?.nBestAppLongTermSalesRank),
-        );
+          i = (0, C.Z4)(t),
+          a = (0, y.jE)();
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)("td", { children: n ? n?.name + ` (${t})` : t }),
+            (0, s.jsx)("td", {
+              children: i
+                ?.map((e) => (0, pt.YA)(a, e)?.displayName || "" + e)
+                .join(","),
+            }),
+            (0, s.jsxs)("td", { children: ["$", r?.strGrossUSD] }),
+            (0, s.jsx)("td", {
+              children:
+                r?.nBestAppID > 0
+                  ? (0, s.jsx)(Dt, { appid: r?.nBestAppID })
+                  : "N/A",
+            }),
+            (0, s.jsx)("td", { children: r?.nBestAppLongTermSalesRank }),
+          ],
+        });
       }
-      const bt = {};
       function Dt(e) {
         const { appid: t } = e,
-          [n] = (0, mt.t7)(t, bt),
-          r = (0, a.useMemo)(() => ({ id: t, type: "game" }), [t]);
-        return a.createElement(
-          dt.Qf,
-          { item: r },
-          a.createElement("span", null, n?.GetName() || t),
-        );
+          n = (0, gt.$5)(t),
+          { data: r } = (0, ht.J$)(n);
+        return (0, s.jsx)(_t.Q, {
+          id: n,
+          children: (0, s.jsx)("span", { children: r?.name || t }),
+        });
       }
       function Ct(e) {
         const { rgSurveyInterest: t } = e,
           n = (0, y.jE)(),
           r =
-            ((0, gt.qh)(),
-            (0, a.useMemo)(
+            ((0, pt.qh)(),
+            (0, i.useMemo)(
               () =>
                 t.filter((e) =>
                   Boolean(e.results?.suggestion?.trim().length > 0),
                 ),
               [t],
             ));
-        return a.createElement(
-          ht.qx,
-          {
-            title: `Alternative Suggestions (${r.length})`,
-            bStartMinimized: !0,
-          },
-          a.createElement(
-            x.$n,
-            {
+        return (0, s.jsxs)(xt.qx, {
+          title: `Alternative Suggestions (${r.length})`,
+          bStartMinimized: !0,
+          children: [
+            (0, s.jsx)(F.$n, {
               onClick: () => {
                 const e = [];
                 e.push([
@@ -3426,111 +3315,103 @@ License: MIT
                   "Suggestion",
                 ]),
                   r.forEach((t) => {
-                    const r = [],
-                      a = new Fe.b2(t.steamid);
-                    r.push("" + a.GetAccountID());
-                    const s = (0, ut.z0)(a.GetAccountID()),
-                      i = t.results.partner_id;
-                    r.push("" + i);
-                    const l = t.results.email_override || "";
-                    r.push("" + l),
-                      r.push(s?.m_strPlayerName ? s.m_strPlayerName : "");
-                    const o = Ie(a.GetAccountID(), i);
-                    r.push(o ? o.realname : ""),
-                      r.push("" + t.results.attending?.length),
-                      r.push(t.results.country_code),
-                      r.push(
+                    const s = [],
+                      r = new Pe.b2(t.steamid);
+                    s.push("" + r.GetAccountID());
+                    const i = (0, mt.z0)(r.GetAccountID()),
+                      a = t.results.partner_id;
+                    s.push("" + a);
+                    const o = t.results.email_override || "";
+                    s.push("" + o),
+                      s.push(i?.m_strPlayerName ? i.m_strPlayerName : "");
+                    const c = Ee(r.GetAccountID(), a);
+                    s.push(c ? c.realname : ""),
+                      s.push("" + t.results.attending?.length),
+                      s.push(t.results.country_code),
+                      s.push(
                         t.results.preferred_language
-                          ? (0, ct.Lg)(t.results.preferred_language)
+                          ? (0, ut.Lg)(t.results.preferred_language)
                           : "",
                       );
-                    const c = (0, C.Yd)(i);
-                    r.push(c ? c.name : "");
-                    const u = B(n, i);
-                    u
-                      ? (r.push("" + _t(u.strGrossUSD)),
-                        r.push("" + u.nBestAppID),
-                        r.push("" + u.nBestAppLongTermSalesRank))
-                      : (r.push(""), r.push(""), r.push("")),
-                      r.push(t.results.suggestion),
-                      e.push(r);
+                    const l = (0, D.Yd)(a);
+                    s.push(l ? l.name : "");
+                    const d = M(n, a);
+                    d
+                      ? (s.push("" + St(d.strGrossUSD)),
+                        s.push("" + d.nBestAppID),
+                        s.push("" + d.nBestAppLongTermSalesRank))
+                      : (s.push(""), s.push(""), s.push("")),
+                      s.push(t.results.suggestion),
+                      e.push(s);
                   });
-                X.g.WriteCSVToFile(e, "suggestsion.csv");
+                ee.g.WriteCSVToFile(e, "suggestsion.csv");
               },
-            },
-            "Export to CSV (wait until the table populates fully)",
-          ),
-          a.createElement(
-            "table",
-            { className: "landingTable" },
-            a.createElement(
-              "thead",
-              null,
-              a.createElement(
-                "tr",
-                null,
-                a.createElement("th", null, "Name and Email"),
-                a.createElement("th", null, "Partner"),
-                a.createElement("th", null, "Valve Contacts"),
-                a.createElement("th", null, "Partner Revenue"),
-                a.createElement("th", null, "Biggest Game"),
-                a.createElement("th", null, "Long Term Sales Rank"),
-                a.createElement("th", null, "Suggestions"),
-              ),
-            ),
-            a.createElement(
-              "tbody",
-              null,
-              r.map((e) =>
-                a.createElement(At, {
-                  key: "suggested" + e.steamid,
-                  survey: e,
+              children: "Export to CSV (wait until the table populates fully)",
+            }),
+            (0, s.jsxs)("table", {
+              className: "landingTable",
+              children: [
+                (0, s.jsx)("thead", {
+                  children: (0, s.jsxs)("tr", {
+                    children: [
+                      (0, s.jsx)("th", { children: "Name and Email" }),
+                      (0, s.jsx)("th", { children: "Partner" }),
+                      (0, s.jsx)("th", { children: "Valve Contacts" }),
+                      (0, s.jsx)("th", { children: "Partner Revenue" }),
+                      (0, s.jsx)("th", { children: "Biggest Game" }),
+                      (0, s.jsx)("th", { children: "Long Term Sales Rank" }),
+                      (0, s.jsx)("th", { children: "Suggestions" }),
+                    ],
+                  }),
                 }),
-              ),
-            ),
-          ),
-        );
+                (0, s.jsx)("tbody", {
+                  children: r.map((e) =>
+                    (0, s.jsx)(At, { survey: e }, "suggested" + e.steamid),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function At(e) {
         const { survey: t } = e;
-        new Fe.b2(t.steamid);
-        return a.createElement(
-          "tr",
-          null,
-          a.createElement(
-            "td",
-            null,
-            a.createElement(wt, {
-              strsteamid: t.steamid,
-              partnerID: t.results.partner_id,
-              registration: t.results,
+        new Pe.b2(t.steamid);
+        return (0, s.jsxs)("tr", {
+          children: [
+            (0, s.jsx)("td", {
+              children: (0, s.jsx)(It, {
+                strsteamid: t.steamid,
+                partnerID: t.results.partner_id,
+                registration: t.results,
+              }),
             }),
-          ),
-          a.createElement(It, { nPartnerID: t.results.partner_id }),
-          a.createElement("td", null, t.results.suggestion.trim()),
-        );
+            (0, s.jsx)(bt, { nPartnerID: t.results.partner_id }),
+            (0, s.jsx)("td", { children: t.results.suggestion.trim() }),
+          ],
+        });
       }
-      const kt = a.createContext({
+      const kt = i.createContext({
         loadUserEmailAndLangs: async (e) =>
           await (function () {
             Rt ||
-              (Rt = new (ge())(
+              (Rt = new (fe())(
                 async (e) => {
-                  const t = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
+                  const t = `${b.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
                     n = {
-                      sessionid: D.TS.SESSIONID,
+                      sessionid: b.TS.SESSIONID,
                       strAccountIDs: e.join(","),
                     },
-                    r = await I().get(t, { params: n, withCredentials: !0 });
-                  if (!r || 200 != r?.status || 1 != r?.data?.success)
-                    throw `Failed to load app to user email and langs: ${((0, Z.H))(r).strErrorMsg}`;
-                  const a = new Map();
+                    s = await E().get(t, { params: n, withCredentials: !0 });
+                  if (!s || 200 != s?.status || 1 != s?.data?.success)
+                    throw `Failed to load app to user email and langs: ${((0, X.H))(s).strErrorMsg}`;
+                  const r = new Map();
                   return (
-                    r.data.users.forEach((e) => {
-                      const t = new b.b(e.steamid);
-                      a.set(t.GetAccountID(), e);
+                    s.data.users.forEach((e) => {
+                      const t = new I.b(e.steamid);
+                      r.set(t.GetAccountID(), e);
                     }),
-                    e.map((e) => a.get(e) ?? null)
+                    e.map((e) => r.get(e) ?? null)
                   );
                 },
                 { maxBatchSize: 100 },
@@ -3549,19 +3430,19 @@ License: MIT
       var Nt = n(73745),
         Mt = n(3049);
       function Bt(e) {
-        const t = (0, F.a)(),
-          n = (0, gt.qh)(),
+        const t = (0, P.a)(),
+          n = (0, pt.qh)(),
           r = (function (e) {
             const t = (0, S.I)({
               queryKey: ["useMeetSteamSaleOperators"],
               queryFn: async () => {
-                const t = f.w.Init(_.Rl),
+                const t = x.w.Init(j.Rl),
                   n = new Date();
                 n.setFullYear(n.getFullYear() - 2),
                   t.Body().set_rt_oldest_date(0);
-                const r = await _.ZK.GetSaleEventOrganizers(e, t);
-                return r.BSuccess()
-                  ? r
+                const s = await j.ZK.GetSaleEventOrganizers(e, t);
+                return s.BSuccess()
+                  ? s
                       .Body()
                       .info()
                       .map((e) => e.toObject())
@@ -3570,7 +3451,7 @@ License: MIT
             });
             return t.isLoading ? null : t.data;
           })(t),
-          s = (0, a.useMemo)(() => {
+          a = (0, i.useMemo)(() => {
             if (!r || !n) return null;
             const e = new Set(n.map((e) => e.id));
             return r
@@ -3579,130 +3460,117 @@ License: MIT
                 (e, t) => t.clan_event_gids?.length - e.clan_event_gids.length,
               );
           }, [r, n]);
-        return s
-          ? a.createElement(
-              "div",
-              null,
-              a.createElement(
-                x.$n,
-                {
+        return a
+          ? (0, s.jsxs)("div", {
+              children: [
+                (0, s.jsxs)(F.$n, {
                   onClick: () => {
                     const e = [];
                     e.push(["User Name", "account id", "Email", "Event Count"]),
-                      s.forEach((t) => {
-                        const n = (0, ut.z0)(t.accountid),
-                          r =
-                            ((a = t.accountid),
-                            ye.L.getQueryData(["UserEmailAndLangs", a]));
-                        var a;
+                      a.forEach((t) => {
+                        const n = (0, mt.z0)(t.accountid),
+                          s =
+                            ((r = t.accountid),
+                            ye.L.getQueryData(["UserEmailAndLangs", r]));
+                        var r;
                         e.push([
                           n?.m_strPlayerName || "",
                           "" + t.accountid,
-                          r?.email_address || "",
+                          s?.email_address || "",
                           t.clan_event_gids?.length.toLocaleString((0, Mt.J)()),
                         ]);
                       });
-                    X.g.WriteCSVToFile(e, "sale_operators.csv");
+                    ee.g.WriteCSVToFile(e, "sale_operators.csv");
                   },
-                },
-                "CSV Export",
-                a.createElement($.o, {
-                  tooltip: "Wait until the page finishes loading before export",
+                  children: [
+                    "CSV Export",
+                    (0, s.jsx)(q.o, {
+                      tooltip:
+                        "Wait until the page finishes loading before export",
+                    }),
+                  ],
                 }),
-              ),
-              a.createElement(
-                "table",
-                null,
-                a.createElement(
-                  "thead",
-                  null,
-                  a.createElement(
-                    "tr",
-                    null,
-                    a.createElement("th", null, "User"),
-                    a.createElement("th", null, "Email"),
-                    a.createElement("th", null, "Events"),
-                  ),
-                ),
-                a.createElement(
-                  "tbody",
-                  null,
-                  s.map((e) =>
-                    a.createElement(Lt, { key: e.accountid, organizer: e }),
-                  ),
-                ),
-              ),
-            )
-          : a.createElement(U.t, {
-              string: (0, K.we)("#Loading"),
-              size: "medium",
-            });
+                (0, s.jsxs)("table", {
+                  children: [
+                    (0, s.jsx)("thead", {
+                      children: (0, s.jsxs)("tr", {
+                        children: [
+                          (0, s.jsx)("th", { children: "User" }),
+                          (0, s.jsx)("th", { children: "Email" }),
+                          (0, s.jsx)("th", { children: "Events" }),
+                        ],
+                      }),
+                    }),
+                    (0, s.jsx)("tbody", {
+                      children: a.map((e) =>
+                        (0, s.jsx)(Lt, { organizer: e }, e.accountid),
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            })
+          : (0, s.jsx)($.t, { string: (0, W.we)("#Loading"), size: "medium" });
       }
       function Lt(e) {
         const { organizer: t } = e,
-          n = (0, a.useMemo)(
-            () => b.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
+          n = (0, i.useMemo)(
+            () => I.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
             [t],
           ),
-          r = (0, ut.hW)(n),
-          s = (function (e) {
-            const t = a.useContext(kt);
+          r = (0, mt.hW)(n),
+          a = (function (e) {
+            const t = i.useContext(kt);
             return (0, S.I)(Tt(t, e));
           })(t.accountid),
-          i = r.data?.m_strPlayerName || "";
-        return a.createElement(
-          "tr",
-          null,
-          a.createElement("td", null, i, " (", t.accountid, ")"),
-          a.createElement("td", null, s?.data?.email_address),
-          a.createElement(
-            "td",
-            null,
-            a.createElement(Ot, {
-              name: i,
-              rgClanEventGIDs: t.clan_event_gids,
+          o = r.data?.m_strPlayerName || "";
+        return (0, s.jsxs)("tr", {
+          children: [
+            (0, s.jsxs)("td", { children: [o, " (", t.accountid, ")"] }),
+            (0, s.jsx)("td", { children: a?.data?.email_address }),
+            (0, s.jsx)("td", {
+              children: (0, s.jsx)(Ot, {
+                name: o,
+                rgClanEventGIDs: t.clan_event_gids,
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
       function Ot(e) {
         const { name: t, rgClanEventGIDs: n } = e,
-          [r, s, i] = (0, Nt.uD)();
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement(
-            x.$n,
-            { onClick: s },
-            "See ",
-            (0, se.D)(n.length),
-            " Events",
-          ),
-          a.createElement(
-            j.E,
-            { active: r },
-            a.createElement(
-              z.o0,
-              { bAlertDialog: !0, closeModal: i, strTitle: `${t}'s Events` },
-              n.map((e) => a.createElement(Pt, { gid: e, key: e })),
-            ),
-          ),
-        );
+          [r, i, a] = (0, Nt.uD)();
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsxs)(F.$n, {
+              onClick: i,
+              children: ["See ", (0, ae.D)(n.length), " Events"],
+            }),
+            (0, s.jsx)(U.E, {
+              active: r,
+              children: (0, s.jsx)(z.o0, {
+                bAlertDialog: !0,
+                closeModal: a,
+                strTitle: `${t}'s Events`,
+                children: n.map((e) => (0, s.jsx)(Pt, { gid: e }, e)),
+              }),
+            }),
+          ],
+        });
       }
       function Pt(e) {
         const { gid: t } = e,
-          n = (0, O.RR)(t);
+          n = (0, L.RR)(t);
         return n
-          ? a.createElement(
-              "a",
-              {
-                href: `${H.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
-                target: "_blank",
-              },
-              a.createElement("div", null, n.GetNameWithFallback(0)),
-              a.createElement("img", { src: n.GetImageURL("capsule", 0) }),
-            )
-          : a.createElement("div", null, "Loading ", t);
+          ? (0, s.jsxs)("a", {
+              href: `${Y.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
+              target: "_blank",
+              children: [
+                (0, s.jsx)("div", { children: n.GetNameWithFallback(0) }),
+                (0, s.jsx)("img", { src: n.GetImageURL("capsule", 0) }),
+              ],
+            })
+          : (0, s.jsxs)("div", { children: ["Loading ", t] });
       }
       function Ft(e) {
         const t = (e) =>
@@ -3711,460 +3579,452 @@ License: MIT
             {
               name: "Interest Survey Results",
               key: "survey",
-              contents: a.createElement(u.tH, null, a.createElement(Et, null)),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(jt, {}) }),
               onClick: t,
             },
             {
               name: "Event Management",
               key: "event",
-              contents: a.createElement(u.tH, null, a.createElement(et, null)),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(tt, {}) }),
               onClick: t,
             },
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: a.createElement(u.tH, null, a.createElement(Bt, null)),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Bt, {}) }),
               onClick: t,
             },
             {
               name: "Post Event Surveys",
               key: "postsurvey",
-              contents: a.createElement(u.tH, null, a.createElement(Ve, null)),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Je, {}) }),
               onClick: t,
             },
           ];
-        return a.createElement(
-          "div",
-          { className: g().AdminPageCtn },
-          a.createElement(
-            "div",
-            { className: g().PageTitle },
-            "Meet Steam Admin Dashboard ",
-            (0, E.Fd)("current_year", "application_config"),
-          ),
-          a.createElement("hr", null),
-          a.createElement(h.V, { tabs: n }),
-          a.createElement("div", { className: d().ClearThings }),
-          a.createElement("br", null),
-        );
+        return (0, s.jsxs)("div", {
+          className: f().AdminPageCtn,
+          children: [
+            (0, s.jsxs)("div", {
+              className: f().PageTitle,
+              children: [
+                "Meet Steam Admin Dashboard ",
+                (0, _.Fd)("current_year", "application_config"),
+              ],
+            }),
+            (0, s.jsx)("hr", {}),
+            (0, s.jsx)(g.V, { tabs: n }),
+            (0, s.jsx)("div", { className: p().ClearThings }),
+            (0, s.jsx)("br", {}),
+          ],
+        });
       }
-      var xt = n(65946),
-        Gt = n(79645),
-        zt = n(1909),
-        jt = n(56330),
-        Ut = n(85761),
-        $t = n.n(Ut);
-      function qt(e) {
+      var Gt = n(65946),
+        zt = n(79645),
+        Ut = n(1909),
+        $t = n(56330),
+        qt = n(85761),
+        Kt = n.n(qt);
+      function Wt(e) {
         const t = (function () {
-            const [e] = (0, a.useState)(() =>
-              (0, D.Tc)("registration_open", "application_config"),
+            const [e] = (0, i.useState)(() =>
+              (0, b.Tc)("registration_open", "application_config"),
             );
             return e;
           })(),
           n = (function () {
-            const [e] = (0, a.useState)(
-              () => (0, D.Tc)("user_reg", "application_config") || {},
+            const [e] = (0, i.useState)(
+              () => (0, b.Tc)("user_reg", "application_config") || {},
             );
             return e;
           })(),
-          { data: r } = (0, ut.js)(D.iA.accountid),
-          [s, i] = (0, a.useState)(!1),
-          [l, o] = (0, a.useState)(!1),
-          [c, u] = (0, a.useState)(!1),
-          [m, d] = (0, a.useState)(() => JSON.parse(JSON.stringify(n)));
+          { data: r } = (0, mt.js)(b.iA.accountid),
+          [a, o] = (0, i.useState)(!1),
+          [c, l] = (0, i.useState)(!1),
+          [d, u] = (0, i.useState)(!1),
+          [h, p] = (0, i.useState)(() => JSON.parse(JSON.stringify(n)));
         return t
           ? !r || r.m_bPlayerNamePending
-            ? a.createElement(U.t, {
+            ? (0, s.jsx)($.t, {
                 size: "medium",
                 position: "center",
-                string: (0, K.we)("#Loading"),
+                string: (0, W.we)("#Loading"),
               })
-            : a.createElement(
-                "div",
-                { className: (0, q.A)(g().AdminPageCtn, $t().Ctn) },
-                a.createElement(
-                  "div",
-                  { className: g().PageTitle },
-                  (0, K.we)("#MeetSteam_MainTitle"),
-                ),
-                a.createElement("hr", null),
-                a.createElement(
-                  "div",
-                  { className: g().ColumnCtn },
-                  a.createElement(
-                    "div",
-                    { className: g().LeftCol },
-                    a.createElement(
-                      "div",
-                      { className: g().SectionCtn },
-                      a.createElement(
-                        "h1",
-                        null,
-                        " ",
-                        (0, K.PP)(
-                          "#MeetSteam_Intro",
-                          r.m_strPlayerName,
-                          a.createElement("br", null),
-                        ),
-                      ),
-                      a.createElement(
-                        "p",
-                        { className: g().IntroText },
-                        (0, K.we)("#MeetSteam_Desc1"),
-                      ),
-                    ),
-                    a.createElement(
-                      "div",
-                      { className: g().SectionCtn },
-                      a.createElement(Yt, {
-                        oRegistration: m,
-                        fnSetRegistration: d,
-                      }),
-                    ),
-                    a.createElement(
-                      "div",
-                      { className: g().SectionCtn },
-                      a.createElement(Kt, {
-                        oRegistration: m,
-                        fnSetRegistration: d,
-                      }),
-                    ),
-                    a.createElement(
-                      "div",
-                      { className: (0, q.A)(g().SectionCtn, g().ActionBar) },
-                      a.createElement(
-                        x.jn,
-                        {
-                          onClick: async () => {
-                            o(!0), i(!1), u(!1);
-                            const e = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
-                              t = new FormData();
-                            t.append("sessionid", D.TS.SESSIONID),
-                              t.append("registrationJson", JSON.stringify(m));
-                            try {
-                              const n = await I().post(e, t, {
-                                withCredentials: !0,
-                              });
-                              1 != n.data.success
-                                ? (console.error(
-                                    "MeetSteamLanding failed " + n.data.success,
-                                  ),
-                                  i(!0))
-                                : u(!0);
-                            } catch (e) {
-                              console.error(
-                                "MeetSteamLanding failed caught",
-                                e,
-                              );
-                            }
-                            o(!1);
-                          },
-                        },
-                        (0, K.we)("#Button_Submit"),
-                      ),
-                      l &&
-                        a.createElement(U.t, {
-                          size: "medium",
-                          position: "center",
-                          string: (0, K.we)("#Saving"),
+            : (0, s.jsxs)("div", {
+                className: (0, K.A)(f().AdminPageCtn, Kt().Ctn),
+                children: [
+                  (0, s.jsx)("div", {
+                    className: f().PageTitle,
+                    children: (0, W.we)("#MeetSteam_MainTitle"),
+                  }),
+                  (0, s.jsx)("hr", {}),
+                  (0, s.jsx)("div", {
+                    className: f().ColumnCtn,
+                    children: (0, s.jsxs)("div", {
+                      className: f().LeftCol,
+                      children: [
+                        (0, s.jsxs)("div", {
+                          className: f().SectionCtn,
+                          children: [
+                            (0, s.jsxs)("h1", {
+                              children: [
+                                " ",
+                                (0, W.PP)(
+                                  "#MeetSteam_Intro",
+                                  r.m_strPlayerName,
+                                  (0, s.jsx)("br", {}),
+                                ),
+                              ],
+                            }),
+                            (0, s.jsx)("p", {
+                              className: f().IntroText,
+                              children: (0, W.we)("#MeetSteam_Desc1"),
+                            }),
+                          ],
                         }),
-                      c &&
-                        a.createElement(
-                          "div",
-                          null,
-                          (0, K.we)("#Button_Saved"),
-                        ),
-                      s &&
-                        a.createElement(
-                          "div",
-                          { className: jt.ErrorStylesWithIcon },
-                          (0, K.we)("#Error_ErrorCommunicatingWithNetwork"),
-                        ),
-                    ),
-                  ),
-                ),
-              )
-          : a.createElement(
-              "div",
-              { className: $t().Ctn },
-              (0, K.we)("#MeetSteam_closed"),
-            );
-      }
-      function Kt(e) {
-        const { oRegistration: t, fnSetRegistration: n } = e,
-          { rgEvents: r, rgOldEvents: s, selectConference: i } = R();
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement("h1", null, (0, K.we)("#MeetSteam_Events_Interest")),
-          a.createElement(
-            "p",
-            null,
-            (0, K.PP)(
-              "#MeetSteam_Events_title",
-              (0, D.Tc)("meet_steam_year", "application_config") || "2025",
-            ),
-          ),
-          a.createElement(
-            "p",
-            null,
-            a.createElement("span", { className: $t().Indicator }, "*"),
-            " ",
-            (0, K.PP)("#MeetSteam_Events_desc"),
-          ),
-          Boolean(i) &&
-            a.createElement(
-              a.Fragment,
-              null,
-              a.createElement("hr", null),
-              a.createElement("p", null, (0, K.we)("#MeetSteam_ConferenceOrg")),
-              a.createElement(Wt, { ...e, rgConference: [i] }),
-              a.createElement("br", null),
-              a.createElement("br", null),
-              a.createElement("hr", null),
-              a.createElement(
-                "h2",
-                null,
-                (0, K.we)("#MeetSteam_OtherConference"),
-              ),
-            ),
-          a.createElement(Wt, { ...e, rgConference: r }),
-          a.createElement("br", null),
-          a.createElement(x.pd, {
-            type: "text",
-            value: t.suggestion || "",
-            onChange: (e) => n({ ...t, suggestion: e.currentTarget.value }),
-            label: (0, K.we)("#MeetSteam_others"),
-          }),
-          Boolean(s?.length > 0) &&
-            a.createElement(
-              ht.qx,
-              {
-                bStartMinimized: !0,
-                title: (0, K.we)("#MeetSteam_PastEvents", s.length),
-              },
-              a.createElement(Wt, { ...e, rgConference: s }),
-            ),
-        );
-      }
-      function Wt(e) {
-        const { rgConference: t } = e;
-        return a.createElement(
-          "table",
-          null,
-          a.createElement(
-            "thead",
-            null,
-            a.createElement(
-              "tr",
-              null,
-              a.createElement("th", null),
-              a.createElement("th", null),
-              a.createElement("th", null),
-              a.createElement("th", null),
-            ),
-          ),
-          a.createElement(
-            "tbody",
-            null,
-            t.map((t) =>
-              a.createElement(
-                "tr",
-                { key: t.id },
-                a.createElement(
-                  "td",
-                  null,
-                  t.attending
-                    ? a.createElement(
-                        "span",
-                        { className: $t().Indicator },
-                        "*",
-                      )
-                    : "",
-                ),
-                a.createElement(
-                  "td",
-                  null,
-                  a.createElement("div", null, t.name),
-                  a.createElement("div", null, t.place),
-                ),
-                a.createElement(
-                  "td",
-                  null,
-                  a.createElement("div", null, t.time),
-                ),
-                a.createElement(
-                  "td",
-                  null,
-                  a.createElement(Ht, { ...e, conf: t }),
-                ),
-              ),
-            ),
-          ),
-        );
+                        (0, s.jsx)("div", {
+                          className: f().SectionCtn,
+                          children: (0, s.jsx)(Jt, {
+                            oRegistration: h,
+                            fnSetRegistration: p,
+                          }),
+                        }),
+                        (0, s.jsx)("div", {
+                          className: f().SectionCtn,
+                          children: (0, s.jsx)(Ht, {
+                            oRegistration: h,
+                            fnSetRegistration: p,
+                          }),
+                        }),
+                        (0, s.jsxs)("div", {
+                          className: (0, K.A)(f().SectionCtn, f().ActionBar),
+                          children: [
+                            (0, s.jsx)(F.jn, {
+                              onClick: async () => {
+                                l(!0), o(!1), u(!1);
+                                const e = `${b.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
+                                  t = new FormData();
+                                t.append("sessionid", b.TS.SESSIONID),
+                                  t.append(
+                                    "registrationJson",
+                                    JSON.stringify(h),
+                                  );
+                                try {
+                                  const n = await E().post(e, t, {
+                                    withCredentials: !0,
+                                  });
+                                  1 != n.data.success
+                                    ? (console.error(
+                                        "MeetSteamLanding failed " +
+                                          n.data.success,
+                                      ),
+                                      o(!0))
+                                    : u(!0);
+                                } catch (e) {
+                                  console.error(
+                                    "MeetSteamLanding failed caught",
+                                    e,
+                                  );
+                                }
+                                l(!1);
+                              },
+                              children: (0, W.we)("#Button_Submit"),
+                            }),
+                            c &&
+                              (0, s.jsx)($.t, {
+                                size: "medium",
+                                position: "center",
+                                string: (0, W.we)("#Saving"),
+                              }),
+                            d &&
+                              (0, s.jsx)("div", {
+                                children: (0, W.we)("#Button_Saved"),
+                              }),
+                            a &&
+                              (0, s.jsx)("div", {
+                                className: $t.ErrorStylesWithIcon,
+                                children: (0, W.we)(
+                                  "#Error_ErrorCommunicatingWithNetwork",
+                                ),
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              })
+          : (0, s.jsx)("div", {
+              className: Kt().Ctn,
+              children: (0, W.we)("#MeetSteam_closed"),
+            });
       }
       function Ht(e) {
-        const { oRegistration: t, fnSetRegistration: n, conf: r } = e;
-        return a.createElement(x.Yh, {
-          checked: t.attending?.includes(r.id),
-          onChange: (e) => {
-            let a = t.attending ? [...t.attending] : [];
-            e && !a.includes(r.id)
-              ? (a.push(r.id), n({ ...t, attending: a }))
-              : !e &&
-                a.includes(r.id) &&
-                (a.splice(a.indexOf(r.id), 1), n({ ...t, attending: a }));
-          },
-          tooltip: (0, K.we)("#MeetSteam_attend_ttip"),
+        const { oRegistration: t, fnSetRegistration: n } = e,
+          { rgEvents: r, rgOldEvents: i, selectConference: a } = T();
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)("h1", {
+              children: (0, W.we)("#MeetSteam_Events_Interest"),
+            }),
+            (0, s.jsx)("p", {
+              children: (0, W.PP)(
+                "#MeetSteam_Events_title",
+                (0, b.Tc)("meet_steam_year", "application_config") || "2025",
+              ),
+            }),
+            (0, s.jsxs)("p", {
+              children: [
+                (0, s.jsx)("span", {
+                  className: Kt().Indicator,
+                  children: "*",
+                }),
+                " ",
+                (0, W.PP)("#MeetSteam_Events_desc"),
+              ],
+            }),
+            Boolean(a) &&
+              (0, s.jsxs)(s.Fragment, {
+                children: [
+                  (0, s.jsx)("hr", {}),
+                  (0, s.jsx)("p", {
+                    children: (0, W.we)("#MeetSteam_ConferenceOrg"),
+                  }),
+                  (0, s.jsx)(Yt, { ...e, rgConference: [a] }),
+                  (0, s.jsx)("br", {}),
+                  (0, s.jsx)("br", {}),
+                  (0, s.jsx)("hr", {}),
+                  (0, s.jsx)("h2", {
+                    children: (0, W.we)("#MeetSteam_OtherConference"),
+                  }),
+                ],
+              }),
+            (0, s.jsx)(Yt, { ...e, rgConference: r }),
+            (0, s.jsx)("br", {}),
+            (0, s.jsx)(F.pd, {
+              type: "text",
+              value: t.suggestion || "",
+              onChange: (e) => n({ ...t, suggestion: e.currentTarget.value }),
+              label: (0, W.we)("#MeetSteam_others"),
+            }),
+            Boolean(i?.length > 0) &&
+              (0, s.jsx)(xt.qx, {
+                bStartMinimized: !0,
+                title: (0, W.we)("#MeetSteam_PastEvents", i.length),
+                children: (0, s.jsx)(Yt, { ...e, rgConference: i }),
+              }),
+          ],
         });
       }
       function Yt(e) {
+        const { rgConference: t } = e;
+        return (0, s.jsxs)("table", {
+          children: [
+            (0, s.jsx)("thead", {
+              children: (0, s.jsxs)("tr", {
+                children: [
+                  (0, s.jsx)("th", {}),
+                  (0, s.jsx)("th", {}),
+                  (0, s.jsx)("th", {}),
+                  (0, s.jsx)("th", {}),
+                ],
+              }),
+            }),
+            (0, s.jsx)("tbody", {
+              children: t.map((t) =>
+                (0, s.jsxs)(
+                  "tr",
+                  {
+                    children: [
+                      (0, s.jsx)("td", {
+                        children: t.attending
+                          ? (0, s.jsx)("span", {
+                              className: Kt().Indicator,
+                              children: "*",
+                            })
+                          : "",
+                      }),
+                      (0, s.jsxs)("td", {
+                        children: [
+                          (0, s.jsx)("div", { children: t.name }),
+                          (0, s.jsx)("div", { children: t.place }),
+                        ],
+                      }),
+                      (0, s.jsx)("td", {
+                        children: (0, s.jsx)("div", { children: t.time }),
+                      }),
+                      (0, s.jsx)("td", {
+                        children: (0, s.jsx)(Vt, { ...e, conf: t }),
+                      }),
+                    ],
+                  },
+                  t.id,
+                ),
+              ),
+            }),
+          ],
+        });
+      }
+      function Vt(e) {
+        const { oRegistration: t, fnSetRegistration: n, conf: r } = e;
+        return (0, s.jsx)(F.Yh, {
+          checked: t.attending?.includes(r.id),
+          onChange: (e) => {
+            let s = t.attending ? [...t.attending] : [];
+            e && !s.includes(r.id)
+              ? (s.push(r.id), n({ ...t, attending: s }))
+              : !e &&
+                s.includes(r.id) &&
+                (s.splice(s.indexOf(r.id), 1), n({ ...t, attending: s }));
+          },
+          tooltip: (0, W.we)("#MeetSteam_attend_ttip"),
+        });
+      }
+      function Jt(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          r = (0, ut.js)(D.iA.accountid),
-          s = (function (e) {
+          r = (0, mt.js)(b.iA.accountid),
+          a = (function (e) {
             const t = (function () {
-                const [e] = (0, a.useState)(
+                const [e] = (0, i.useState)(
                   () =>
-                    (0, D.Tc)("partner_user_email", "application_config") || "",
+                    (0, b.Tc)("partner_user_email", "application_config") || "",
                 );
                 return e;
               })(),
               n = (function () {
-                const [e] = (0, a.useState)(() =>
-                  (0, D.Tc)("primary_partner_id", "application_config"),
+                const [e] = (0, i.useState)(() =>
+                  (0, b.Tc)("primary_partner_id", "application_config"),
                 );
                 return e;
               })(),
-              r = we(D.iA.accountid, e != n ? e : null);
-            return e == n ? t : r?.email;
+              s = we(b.iA.accountid, e != n ? e : null);
+            return e == n ? t : s?.email;
           })(t?.partner_id),
-          [i, l] = (0, a.useState)(() =>
-            Boolean((t.email_override && t.email_override != s) || !s),
+          [o, c] = (0, i.useState)(() =>
+            Boolean((t.email_override && t.email_override != a) || !a),
           ),
-          [o, c, u] = (0, xt.q3)(() => [
+          [l, d, u] = (0, Gt.q3)(() => [
             !Boolean(t.have_you_met_steam),
             Boolean(t.english_not_good),
             t.preferred_language,
           ]);
         return r.data
-          ? a.createElement(
-              "div",
-              null,
-              a.createElement("h1", null, (0, K.we)("#MeetSteam_You")),
-              a.createElement("p", null, (0, K.we)("#MeetSteam_You_Desc")),
-              a.createElement(Vt, {
-                nPartnerID: t.partner_id,
-                label: (0, K.we)("#MeetSteam_You_Company"),
-                setPartnerID: (e) => n({ ...t, partner_id: e }),
-              }),
-              a.createElement(
-                "div",
-                { className: $t().EmailInfoRow },
-                a.createElement(
-                  "div",
-                  { className: $t().EmailField },
-                  a.createElement(x.pd, {
-                    type: "string",
-                    label: (0, K.we)("#MeetSteam_You_Email"),
-                    disabled: !i,
-                    value: t.email_override || s || "",
-                    placeholder: (0, K.we)("#MeetSteam_You_EmailMissing"),
-                    mustBeEmail: !0,
-                    onChange: (e) =>
-                      n({ ...t, email_override: e.currentTarget.value }),
-                  }),
-                ),
-                !i &&
-                  a.createElement(x.Yh, {
-                    checked: i,
-                    onChange: l,
-                    label: (0, K.we)("#MeetSteam_You_Update"),
-                    tooltip: (0, K.we)("#MeetSteam_You_Update_ttip"),
-                  }),
-              ),
-              a.createElement(x.JU, null, (0, K.we)("#MeetSteam_NeverMet")),
-              a.createElement(x.Yh, {
-                label: (0, K.we)("#MeetSteam_NeverMetNo"),
-                checked: o,
-                onChange: (e) => n({ ...t, have_you_met_steam: !e }),
-              }),
-              a.createElement(
-                x.JU,
-                null,
-                (0, K.we)("#MeetSteam_CapabableEnglish"),
-              ),
-              a.createElement(
-                "div",
-                { className: $t().RadioButtonCtn },
-                a.createElement(x.Od, {
-                  className: $t().RadioButtons,
-                  checked: !c,
-                  onChange: (e) =>
-                    e &&
-                    n({
-                      ...t,
-                      english_not_good: void 0,
-                      preferred_language: void 0,
-                    }),
-                  label: (0, K.we)("#MeetSteam_CapabableEnglish_Yes"),
+          ? (0, s.jsxs)("div", {
+              children: [
+                (0, s.jsx)("h1", { children: (0, W.we)("#MeetSteam_You") }),
+                (0, s.jsx)("p", { children: (0, W.we)("#MeetSteam_You_Desc") }),
+                (0, s.jsx)(Qt, {
+                  nPartnerID: t.partner_id,
+                  label: (0, W.we)("#MeetSteam_You_Company"),
+                  setPartnerID: (e) => n({ ...t, partner_id: e }),
                 }),
-                a.createElement(x.Od, {
-                  className: $t().RadioButtons,
-                  checked: c,
-                  onChange: (e) =>
-                    e &&
-                    n({
-                      ...t,
-                      english_not_good: !0,
-                      preferred_language: (0, ct.sf)(D.TS.LANGUAGE),
+                (0, s.jsxs)("div", {
+                  className: Kt().EmailInfoRow,
+                  children: [
+                    (0, s.jsx)("div", {
+                      className: Kt().EmailField,
+                      children: (0, s.jsx)(F.pd, {
+                        type: "string",
+                        label: (0, W.we)("#MeetSteam_You_Email"),
+                        disabled: !o,
+                        value: t.email_override || a || "",
+                        placeholder: (0, W.we)("#MeetSteam_You_EmailMissing"),
+                        mustBeEmail: !0,
+                        onChange: (e) =>
+                          n({ ...t, email_override: e.currentTarget.value }),
+                      }),
                     }),
-                  label: (0, K.we)("#MeetSteam_CapabableEnglish_No"),
+                    !o &&
+                      (0, s.jsx)(F.Yh, {
+                        checked: o,
+                        onChange: c,
+                        label: (0, W.we)("#MeetSteam_You_Update"),
+                        tooltip: (0, W.we)("#MeetSteam_You_Update_ttip"),
+                      }),
+                  ],
                 }),
-              ),
-              c &&
-                a.createElement(
-                  a.Fragment,
-                  null,
-                  a.createElement("br", null),
-                  a.createElement(
-                    x.JU,
-                    null,
-                    (0, K.we)("#MeetSteam_LanguagePref"),
-                  ),
-                  a.createElement(zt.Ng, {
-                    selectedLang: u,
-                    bAllowUnsetOption: !1,
-                    strTooltip: (0, K.we)("#MeetSteam_LanguagePref_ttip"),
-                    fnOnLanguageChanged: (e) =>
-                      n({ ...t, preferred_language: e }),
+                (0, s.jsx)(F.JU, {
+                  children: (0, W.we)("#MeetSteam_NeverMet"),
+                }),
+                (0, s.jsx)(F.Yh, {
+                  label: (0, W.we)("#MeetSteam_NeverMetNo"),
+                  checked: l,
+                  onChange: (e) => n({ ...t, have_you_met_steam: !e }),
+                }),
+                (0, s.jsx)(F.JU, {
+                  children: (0, W.we)("#MeetSteam_CapabableEnglish"),
+                }),
+                (0, s.jsxs)("div", {
+                  className: Kt().RadioButtonCtn,
+                  children: [
+                    (0, s.jsx)(F.Od, {
+                      className: Kt().RadioButtons,
+                      checked: !d,
+                      onChange: (e) =>
+                        e &&
+                        n({
+                          ...t,
+                          english_not_good: void 0,
+                          preferred_language: void 0,
+                        }),
+                      label: (0, W.we)("#MeetSteam_CapabableEnglish_Yes"),
+                    }),
+                    (0, s.jsx)(F.Od, {
+                      className: Kt().RadioButtons,
+                      checked: d,
+                      onChange: (e) =>
+                        e &&
+                        n({
+                          ...t,
+                          english_not_good: !0,
+                          preferred_language: (0, ut.sf)(b.TS.LANGUAGE),
+                        }),
+                      label: (0, W.we)("#MeetSteam_CapabableEnglish_No"),
+                    }),
+                  ],
+                }),
+                d &&
+                  (0, s.jsxs)(s.Fragment, {
+                    children: [
+                      (0, s.jsx)("br", {}),
+                      (0, s.jsx)(F.JU, {
+                        children: (0, W.we)("#MeetSteam_LanguagePref"),
+                      }),
+                      (0, s.jsx)(Ut.Ng, {
+                        selectedLang: u,
+                        bAllowUnsetOption: !1,
+                        strTooltip: (0, W.we)("#MeetSteam_LanguagePref_ttip"),
+                        fnOnLanguageChanged: (e) =>
+                          n({ ...t, preferred_language: e }),
+                      }),
+                    ],
                   }),
-                ),
-            )
-          : a.createElement(U.t, {
+              ],
+            })
+          : (0, s.jsx)($.t, {
               size: "medium",
               position: "center",
-              string: (0, K.we)("#Loading"),
+              string: (0, W.we)("#Loading"),
             });
       }
-      function Vt(e) {
+      function Qt(e) {
         const { nPartnerID: t, setPartnerID: n, label: r } = e,
-          s = (0, Gt.c)(D.iA.accountid);
-        if (!s)
-          return a.createElement(U.t, {
+          i = (0, zt.c)(b.iA.accountid);
+        if (!i)
+          return (0, s.jsx)($.t, {
             size: "small",
             position: "center",
-            string: (0, K.we)("#Loading"),
+            string: (0, W.we)("#Loading"),
           });
-        if (1 == s.length) return null;
-        const i = [];
+        if (1 == i.length) return null;
+        const a = [];
         return (
-          s.forEach((e) =>
-            i.push({ label: e?.partner_name, data: e.partnerid }),
+          i.forEach((e) =>
+            a.push({ label: e?.partner_name, data: e.partnerid }),
           ),
-          a.createElement(x.m, {
+          (0, s.jsx)(F.m, {
             layout: "inline",
             label: r,
-            rgOptions: i,
+            rgOptions: a,
             selectedOption: t,
             onChange: (e) => {
               n(e.data);
@@ -4172,171 +4032,179 @@ License: MIT
           })
         );
       }
-      var Jt = n(20587),
-        Qt = n(13038),
-        Zt = n.n(Qt);
-      function Xt(e) {
-        const { data: t } = (0, ut.js)(D.iA.accountid),
+      var Zt = n(20587),
+        Xt = n(13038),
+        en = n.n(Xt);
+      function tn(e) {
+        const { data: t } = (0, mt.js)(b.iA.accountid),
           n = (function () {
-            const [e] = (0, a.useState)(
-              () => (0, D.Tc)("survey_event_name", "application_config") || "",
+            const [e] = (0, i.useState)(
+              () => (0, b.Tc)("survey_event_name", "application_config") || "",
             );
             return e;
           })(),
           r = (function () {
-            const [e] = (0, a.useState)(
-              () => (0, D.Tc)("survey_data", "application_config") || "",
+            const [e] = (0, i.useState)(
+              () => (0, b.Tc)("survey_data", "application_config") || "",
             );
             return e;
           })(),
-          [s, l] = (0, a.useState)(() => r || ""),
-          { surveyGID: o } = (0, i.g)(),
-          [c, u] = (0, a.useState)(!1),
-          [m, d] = (0, a.useState)(!1),
-          [h, p] = (0, a.useState)(!1);
+          [a, c] = (0, i.useState)(() => r || ""),
+          { surveyGID: l } = (0, o.g)(),
+          [d, u] = (0, i.useState)(!1),
+          [h, p] = (0, i.useState)(!1),
+          [g, m] = (0, i.useState)(!1);
         return !t || t.m_bPlayerNamePending
-          ? a.createElement(U.t, {
+          ? (0, s.jsx)($.t, {
               size: "medium",
               position: "center",
-              string: (0, K.we)("#Loading"),
+              string: (0, W.we)("#Loading"),
             })
-          : a.createElement(
-              "div",
-              { className: (0, q.A)(g().AdminPageCtn, Zt().Ctn) },
-              a.createElement(
-                "div",
-                { className: g().PageTitle },
-                (0, K.we)("#MeetSteam_PostSurvey_Title", n),
-              ),
-              a.createElement("hr", null),
-              a.createElement(
-                "div",
-                { className: g().ColumnCtn },
-                a.createElement(
-                  "div",
-                  { className: g().LeftCol },
-                  a.createElement(
-                    "div",
-                    { className: g().SectionCtn },
-                    a.createElement(
-                      "div",
-                      null,
-                      (0, K.we)("#MeetSteam_PostSurvey_Question"),
-                    ),
-                    a.createElement("textarea", {
-                      rows: 10,
-                      onChange: (e) => l(e.currentTarget.value),
-                      value: s,
-                      autoFocus: !0,
-                    }),
-                  ),
-                  a.createElement(
-                    "div",
-                    { className: (0, q.A)(g().SectionCtn, g().ActionBar) },
-                    a.createElement(
-                      x.jn,
-                      {
-                        onClick: async () => {
-                          d(!0), u(!1), p(!1);
-                          const e = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${o}`,
-                            t = new FormData();
-                          t.append("gid", o),
-                            t.append("sessionid", D.TS.SESSIONID);
-                          let n = {
-                            gid: o,
-                            simple_response: s,
-                            submit_time: Math.floor(new Date().getTime() / 1e3),
-                          };
-                          t.append("surveyjson", JSON.stringify(n));
-                          try {
-                            const n = await I().post(e, t, {
-                              withCredentials: !0,
-                            });
-                            1 != n.data.success
-                              ? (console.error(
-                                  "MeetSteamLanding failed " + n.data.success,
-                                ),
-                                u(!0))
-                              : p(!0);
-                          } catch (e) {
-                            console.error("MeetSteamLanding failed caught", e);
-                          }
-                          d(!1);
-                        },
-                      },
-                      (0, K.we)("#Button_Submit"),
-                    ),
-                    m &&
-                      a.createElement(U.t, {
-                        size: "medium",
-                        position: "center",
-                        string: (0, K.we)("#Saving"),
+          : (0, s.jsxs)("div", {
+              className: (0, K.A)(f().AdminPageCtn, en().Ctn),
+              children: [
+                (0, s.jsx)("div", {
+                  className: f().PageTitle,
+                  children: (0, W.we)("#MeetSteam_PostSurvey_Title", n),
+                }),
+                (0, s.jsx)("hr", {}),
+                (0, s.jsx)("div", {
+                  className: f().ColumnCtn,
+                  children: (0, s.jsxs)("div", {
+                    className: f().LeftCol,
+                    children: [
+                      (0, s.jsxs)("div", {
+                        className: f().SectionCtn,
+                        children: [
+                          (0, s.jsx)("div", {
+                            children: (0, W.we)(
+                              "#MeetSteam_PostSurvey_Question",
+                            ),
+                          }),
+                          (0, s.jsx)("textarea", {
+                            rows: 10,
+                            onChange: (e) => c(e.currentTarget.value),
+                            value: a,
+                            autoFocus: !0,
+                          }),
+                        ],
                       }),
-                    h &&
-                      a.createElement("div", null, (0, K.we)("#Button_Saved")),
-                    c &&
-                      a.createElement(
-                        "div",
-                        { className: jt.ErrorStylesWithIcon },
-                        (0, K.we)("#Error_ErrorCommunicatingWithNetwork"),
-                      ),
-                  ),
-                ),
-              ),
-            );
+                      (0, s.jsxs)("div", {
+                        className: (0, K.A)(f().SectionCtn, f().ActionBar),
+                        children: [
+                          (0, s.jsx)(F.jn, {
+                            onClick: async () => {
+                              p(!0), u(!1), m(!1);
+                              const e = `${b.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${l}`,
+                                t = new FormData();
+                              t.append("gid", l),
+                                t.append("sessionid", b.TS.SESSIONID);
+                              let n = {
+                                gid: l,
+                                simple_response: a,
+                                submit_time: Math.floor(
+                                  new Date().getTime() / 1e3,
+                                ),
+                              };
+                              t.append("surveyjson", JSON.stringify(n));
+                              try {
+                                const n = await E().post(e, t, {
+                                  withCredentials: !0,
+                                });
+                                1 != n.data.success
+                                  ? (console.error(
+                                      "MeetSteamLanding failed " +
+                                        n.data.success,
+                                    ),
+                                    u(!0))
+                                  : m(!0);
+                              } catch (e) {
+                                console.error(
+                                  "MeetSteamLanding failed caught",
+                                  e,
+                                );
+                              }
+                              p(!1);
+                            },
+                            children: (0, W.we)("#Button_Submit"),
+                          }),
+                          h &&
+                            (0, s.jsx)($.t, {
+                              size: "medium",
+                              position: "center",
+                              string: (0, W.we)("#Saving"),
+                            }),
+                          g &&
+                            (0, s.jsx)("div", {
+                              children: (0, W.we)("#Button_Saved"),
+                            }),
+                          d &&
+                            (0, s.jsx)("div", {
+                              className: $t.ErrorStylesWithIcon,
+                              children: (0, W.we)(
+                                "#Error_ErrorCommunicatingWithNetwork",
+                              ),
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            });
       }
-      var en = n(27144),
-        tn = n(5695);
-      function nn(e) {
+      var nn = n(27144),
+        sn = n(5695);
+      function rn(e) {
         const t = (function () {
-            const [e] = (0, a.useState)(
-              () => (0, D.Tc)("event_gids", "application_config") || [],
+            const [e] = (0, i.useState)(
+              () => (0, b.Tc)("event_gids", "application_config") || [],
             );
             return e;
           })(),
           n = (function () {
-            const [e] = (0, a.useState)(
-              () => (0, D.Tc)("survey_results", "application_config") || [],
+            const [e] = (0, i.useState)(
+              () => (0, b.Tc)("survey_results", "application_config") || [],
             );
             return e;
           })(),
           r = (function () {
             const e = (function () {
-              const [e] = (0, a.useState)(() => {
+              const [e] = (0, i.useState)(() => {
                 const e = new Map(),
                   t =
-                    (0, D.Tc)("registration_by_gid", "application_config") ||
+                    (0, b.Tc)("registration_by_gid", "application_config") ||
                     {};
                 for (const n in t) {
-                  const r = t[n];
-                  e.set(n, r);
+                  const s = t[n];
+                  e.set(n, s);
                 }
                 return e;
               });
               return e;
             })();
-            return (0, a.useMemo)(() => {
+            return (0, i.useMemo)(() => {
               const t = new Map();
               return (
                 e.forEach((e, n) => {
                   e.forEach((e) => {
-                    const r = new b.b(e.steamid);
-                    t.has(r.GetAccountID()) || t.set(r.GetAccountID(), []),
+                    const s = new I.b(e.steamid);
+                    t.has(s.GetAccountID()) || t.set(s.GetAccountID(), []),
                       (e.gidEvent = n),
-                      t.get(r.GetAccountID()).push(e);
+                      t.get(s.GetAccountID()).push(e);
                   });
                 }),
                 t
               );
             }, [e]);
           })(),
-          { surveyGID: s } = (0, i.g)(),
-          { bIsLoading: l, events: o } = (0, O.PB)(t),
-          [c, u] = (0, a.useMemo)(
+          { surveyGID: a } = (0, o.g)(),
+          { bIsLoading: c, events: l } = (0, L.PB)(t),
+          [d, u] = (0, i.useMemo)(
             () => [
               n
                 .map((e) => {
-                  const t = new b.b(e.steamid);
+                  const t = new I.b(e.steamid);
                   if (r.has(t.GetAccountID())) {
                     const e = r.get(t.GetAccountID());
                     return JSON.parse(e[0].jsondata).partner_id;
@@ -4344,114 +4212,107 @@ License: MIT
                   return null;
                 })
                 .filter(Boolean),
-              n.map((e) => new b.b(e.steamid).GetAccountID()),
+              n.map((e) => new I.b(e.steamid).GetAccountID()),
             ],
             [r, n],
           ),
-          m = (0, C.vh)(c),
-          d = (0, en.B3)(u);
-        return !l && m && d
-          ? a.createElement(an, {
+          h = (0, D.vh)(d),
+          p = (0, nn.B3)(u);
+        return !c && h && p
+          ? (0, s.jsx)(on, {
               rgSurveyResults: n,
               mapAccountsToReg: r,
-              meetSteamEvents: o,
+              meetSteamEvents: l,
             })
-          : a.createElement(U.t, {
-              string: "Loading Event, Partner and User Info",
-            });
+          : (0, s.jsx)($.t, { string: "Loading Event, Partner and User Info" });
       }
-      const rn = (0, me.FB)();
-      function an(e) {
+      const an = (0, he.FB)();
+      function on(e) {
         const {
             rgSurveyResults: t,
             mapAccountsToReg: n,
             meetSteamEvents: r,
           } = e,
-          s = (0, a.useMemo)(() => {
+          a = (0, i.useMemo)(() => {
             if (!t) return null;
             const e = new Map();
             r.forEach((t) => e.set(t.GID, t));
-            const a = [];
+            const s = [];
             return (
               t.forEach((t) => {
                 const r = JSON.parse(t.jsondata),
-                  s = new b.b(t.steamid);
-                let i = {
+                  i = new I.b(t.steamid);
+                let a = {
                   feedback: r.simple_response,
-                  accountid: s.GetAccountID(),
+                  accountid: i.GetAccountID(),
                 };
-                if (n.has(s.GetAccountID())) {
-                  const t = n.get(s.GetAccountID()),
-                    r = JSON.parse(t[0].jsondata);
-                  (i.partner_id = r.partner_id),
-                    (i.email = r.email_override),
-                    (i.name = r.name),
-                    (i.registrations = "");
-                  const a = (0, C.Yd)(r.partner_id);
-                  a && (i.partner_name = a.name),
+                if (n.has(i.GetAccountID())) {
+                  const t = n.get(i.GetAccountID()),
+                    s = JSON.parse(t[0].jsondata);
+                  (a.partner_id = s.partner_id),
+                    (a.email = s.email_override),
+                    (a.name = s.name),
+                    (a.registrations = "");
+                  const r = (0, D.Yd)(s.partner_id);
+                  r && (a.partner_name = r.name),
                     t.forEach((t) => {
                       const n = e.get(t.gidEvent);
                       if (n) {
                         const e = n.jsondata.meet_steam_groups.find(
                           (e) => e.group_id === t.group_id,
                         ).localized_session_title[0];
-                        i.registrations.length > 0 && (i.registrations += "|"),
-                          (i.registrations += e);
+                        a.registrations.length > 0 && (a.registrations += "|"),
+                          (a.registrations += e);
                       }
                     });
                 } else {
-                  const e = (0, en.CF)(s.GetAccountID());
-                  e && (i.name = e.persona_name);
+                  const e = (0, nn.CF)(i.GetAccountID());
+                  e && (a.name = e.persona_name);
                 }
-                a.push(i);
+                s.push(a);
               }),
-              a
+              s
             );
           }, [n, r, t]),
-          i = (0, a.useMemo)(
+          o = (0, i.useMemo)(
             () => [
-              rn.accessor("name", { header: "Name", size: 150 }),
-              rn.accessor("feedback", {
+              an.accessor("name", { header: "Name", size: 150 }),
+              an.accessor("feedback", {
                 header: "Feedback",
                 size: 500,
-                cell: tn.Gb,
+                cell: sn.Gb,
               }),
-              rn.accessor("registrations", {
+              an.accessor("registrations", {
                 header: "Sessions",
                 size: 200,
-                cell: sn,
+                cell: cn,
               }),
-              rn.accessor("accountid", { header: "Account ID", size: 150 }),
-              rn.accessor("email", { header: "Email", size: 150 }),
-              rn.accessor("partner_name", {
+              an.accessor("accountid", { header: "Account ID", size: 150 }),
+              an.accessor("email", { header: "Email", size: 150 }),
+              an.accessor("partner_name", {
                 header: "Partner Name",
                 size: 200,
               }),
             ],
             [],
           );
-        return s
-          ? a.createElement(
-              u.tH,
-              null,
-              a.createElement(
-                "div",
-                { className: g().AdminPageCtn },
-                a.createElement(
-                  "div",
-                  { className: g().PageTitle },
-                  "Survey Results",
-                ),
-                a.createElement("hr", null),
-                a.createElement(
-                  x.$n,
-                  {
+        return a
+          ? (0, s.jsx)(u.tH, {
+              children: (0, s.jsxs)("div", {
+                className: f().AdminPageCtn,
+                children: [
+                  (0, s.jsx)("div", {
+                    className: f().PageTitle,
+                    children: "Survey Results",
+                  }),
+                  (0, s.jsx)("hr", {}),
+                  (0, s.jsx)(F.$n, {
                     id: "download-csv",
                     onClick: () =>
-                      (0, qe.K)(
+                      (0, Ke.K)(
                         "meetsteam_survey_results.csv",
-                        s,
-                        i.map((e) => ({
+                        a,
+                        o.map((e) => ({
                           accessorKey: e.accessorKey,
                           header:
                             "string" == typeof e.header
@@ -4460,26 +4321,26 @@ License: MIT
                         })),
                       ),
                     style: { width: "120px" },
-                  },
-                  "Download CSV",
-                ),
-                a.createElement("br", null),
-                a.createElement(de.k, {
-                  columns: i,
-                  data: s,
-                  getRowKey: (e) => e,
-                  stickyHeader: !0,
-                  nItemHeight: 28,
-                  overscan: s.length,
-                }),
-              ),
-            )
-          : a.createElement(U.t, { string: (0, K.we)("#Loading") });
+                    children: "Download CSV",
+                  }),
+                  (0, s.jsx)("br", {}),
+                  (0, s.jsx)(pe.k, {
+                    columns: o,
+                    data: a,
+                    getRowKey: (e) => e,
+                    stickyHeader: !0,
+                    nItemHeight: 28,
+                    overscan: a.length,
+                  }),
+                ],
+              }),
+            })
+          : (0, s.jsx)($.t, { string: (0, W.we)("#Loading") });
       }
-      function sn(e) {
+      function cn(e) {
         const t = e.getValue();
         return t?.length > 0
-          ? a.createElement(tn.DP, { text: e.getValue(), regExp: /\|/ })
+          ? (0, s.jsx)(sn.DP, { text: e.getValue(), regExp: /\|/ })
           : "";
       }
       const ln = {
@@ -4488,53 +4349,50 @@ License: MIT
         AdminDashboard: () => "/admin",
         PostEventSurveyResults: (e = ":surveyGID") => `/surveyresults/${e}`,
       };
-      function on(e) {
+      function dn(e) {
         return (
-          (0, a.useEffect)(() => {
-            Jt.O3.Init();
+          (0, i.useEffect)(() => {
+            Zt.O3.Init();
           }, []),
-          a.createElement(
-            l.m,
-            null,
-            a.createElement(
-              s.Kd,
-              { basename: (0, r.C)() + "meetsteam/" },
-              a.createElement(
-                i.dO,
-                null,
-                a.createElement(i.qh, {
-                  exact: !0,
-                  path: r.B.DiagData(),
-                  render: (e) =>
-                    a.createElement(o.z, {
-                      ...e,
-                      strConfigID: "application_config",
-                    }),
-                }),
-                a.createElement(i.qh, {
-                  exact: !0,
-                  path: ln.AdminDashboard(),
-                  component: Ft,
-                }),
-                a.createElement(i.qh, {
-                  exact: !0,
-                  path: ln.YearlySurvery(":year(\\d+)"),
-                  component: qt,
-                }),
-                a.createElement(i.qh, {
-                  exact: !0,
-                  path: ln.PostEventSurvey(":surveyGID(\\d+)"),
-                  component: Xt,
-                }),
-                a.createElement(i.qh, {
-                  exact: !0,
-                  path: ln.PostEventSurveyResults(":surveyGID(\\d+)"),
-                  component: nn,
-                }),
-                a.createElement(i.qh, { component: c.a }),
-              ),
-            ),
-          )
+          (0, s.jsx)(c.m, {
+            children: (0, s.jsx)(a.Kd, {
+              basename: (0, r.C)() + "meetsteam/",
+              children: (0, s.jsxs)(o.dO, {
+                children: [
+                  (0, s.jsx)(o.qh, {
+                    exact: !0,
+                    path: r.B.DiagData(),
+                    render: (e) =>
+                      (0, s.jsx)(l.z, {
+                        ...e,
+                        strConfigID: "application_config",
+                      }),
+                  }),
+                  (0, s.jsx)(o.qh, {
+                    exact: !0,
+                    path: ln.AdminDashboard(),
+                    component: Ft,
+                  }),
+                  (0, s.jsx)(o.qh, {
+                    exact: !0,
+                    path: ln.YearlySurvery(":year(\\d+)"),
+                    component: Wt,
+                  }),
+                  (0, s.jsx)(o.qh, {
+                    exact: !0,
+                    path: ln.PostEventSurvey(":surveyGID(\\d+)"),
+                    component: tn,
+                  }),
+                  (0, s.jsx)(o.qh, {
+                    exact: !0,
+                    path: ln.PostEventSurveyResults(":surveyGID(\\d+)"),
+                    component: rn,
+                  }),
+                  (0, s.jsx)(o.qh, { component: d.a }),
+                ],
+              }),
+            }),
+          })
         );
       }
     },

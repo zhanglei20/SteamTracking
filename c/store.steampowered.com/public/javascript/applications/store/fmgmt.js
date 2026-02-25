@@ -375,22 +375,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(_.d1w, null);
+        return (0, _.jsx)(_.d1w, {});
       }
       function _(_) {
-        return _.createElement(_.Bir, null);
+        return (0, _.jsx)(_.Bir, {});
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.RoleIcon, _.className),
-          },
-          2 == _.role ? _.createElement(_, null) : _.createElement(_, null),
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_.RoleIcon, _.className),
+          children: 2 == _.role ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {}),
+        });
       }
       function _(_) {
         const { steamid: _ } = _,
@@ -399,23 +397,18 @@
           _ = (0, _._)(),
           _ = _.data?.get(new _._(_).GetAccountID()),
           _ = _.data?.preferences().parenthesize_nicknames();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.data?.m_strPlayerName || " ",
-          " ",
-          _ &&
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.data?.m_strPlayerName || " ",
+            " ",
             _ &&
-            _.createElement(
-              "span",
-              {
+              _ &&
+              (0, _.jsxs)("span", {
                 className: _.playerNickname,
-              },
-              "(",
-              _,
-              ")",
-            ),
-        );
+                children: ["(", _, ")"],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { role: _, persona: __webpack_require__, isSelf: _ } = _;
@@ -424,107 +417,89 @@
           _ = (0, _._)(),
           _ = _.data?.get(__webpack_require__.GetAccountID()),
           _ = _.data?.preferences().parenthesize_nicknames();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: _.ProfileLink,
-            },
-            _.createElement(_._, {
-              className: _.Avatar,
-              persona: __webpack_require__,
-              size: _,
-              statusPosition: "right",
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.Avatar,
+                  persona: __webpack_require__,
+                  size: _,
+                  statusPosition: "right",
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.PlayerName,
+                  bIsSelf: _,
+                  bHideStatus: !1,
+                  bHidePersona: !1,
+                  bParenthesizeNicknames: _,
+                  bCompactView: !1,
+                  persona: __webpack_require__,
+                  strNickname: _,
+                  eFriendRelationship: 3,
+                  bEllipsisName: !0,
+                }),
+              ],
             }),
-            _.createElement(_._, {
-              className: _.PlayerName,
-              bIsSelf: _,
-              bHideStatus: !1,
-              bHidePersona: !1,
-              bParenthesizeNicknames: _,
-              bCompactView: !1,
-              persona: __webpack_require__,
-              strNickname: _,
-              eFriendRelationship: 3,
-              bEllipsisName: !0,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: _.RoleAndIcon,
-            },
-            _.createElement(_, {
-              className: _.ProfileRoleIcon,
-              role: _,
+              children: [
+                (0, _.jsx)(_, {
+                  className: _.ProfileRoleIcon,
+                  role: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.RoleName,
+                  children: (0, _._)(`#FamilyManagement_Role_${_}`),
+                }),
+              ],
             }),
-            _.createElement(
-              "div",
-              {
-                className: _.RoleName,
-              },
-              (0, _._)(`#FamilyManagement_Role_${_}`),
-            ),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _.useContext)(_._);
         return _.errorMessage
-          ? _.createElement(
-              "div",
-              {
-                className: _.FamilyErrorDisplay,
-              },
-              _.errorMessage,
-            )
+          ? (0, _.jsx)("div", {
+              className: _.FamilyErrorDisplay,
+              children: _.errorMessage,
+            })
           : null;
       }
       function _(_) {
         const { persona: _, role: __webpack_require__, invitePending: _ } = _,
           _ = (0, _._)() == _.GetSteamIDAsString();
-        return _.createElement(
-          "div",
-          {
-            className: _.FamilyMemberStatus,
-          },
-          _.createElement(_, {
-            role: __webpack_require__,
-            persona: _,
-            isSelf: _,
-          }),
-          _ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("div", {
+          className: _.FamilyMemberStatus,
+          children: [
+            (0, _.jsx)(_, {
+              role: __webpack_require__,
+              persona: _,
+              isSelf: _,
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _.InvitePending,
-              },
-              (0, _._)("#FamilyManagement_InvitePending"),
-            ),
-          _ &&
-            _.createElement(
-              "span",
-              {
+                children: (0, _._)("#FamilyManagement_InvitePending"),
+              }),
+            _ &&
+              (0, _.jsx)("span", {
                 className: _.MeBadge,
-              },
-              (0, _._)("#FamilyManagement_Me"),
-            ),
-        );
+                children: (0, _._)("#FamilyManagement_Me"),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { bExpanded: _, setExpanded: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
-            onClick: () => __webpack_require__(!_),
-          },
-          _.createElement(_.b8_, {
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
+          onClick: () => __webpack_require__(!_),
+          children: (0, _.jsx)(_.b8_, {
             direction: "down",
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -745,6 +720,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return new URLSearchParams(_.search).get(_);
@@ -758,16 +734,13 @@
             year: "numeric",
             weekday: void 0,
           };
-        return _.createElement(
-          "div",
-          {
-            className: _.DialogText,
-          },
-          (0, _._)(
+        return (0, _.jsx)("div", {
+          className: _.DialogText,
+          children: (0, _._)(
             "#FamilyManagement_CooldownAllowed",
             (0, _._)(Date.now() / 1e3 + _, _),
           ),
-        );
+        });
       }
       function _(_) {
         const {
@@ -805,445 +778,352 @@
         }
         if (_.isError) return null;
         if (_.isLoading)
-          return _.createElement(
-            "div",
-            {
-              className: _.ThrobberContainer,
-            },
-            _.createElement(_._, null),
-          );
+          return (0, _.jsx)("div", {
+            className: _.ThrobberContainer,
+            children: (0, _.jsx)(_._, {}),
+          });
         const _ = _.data,
           _ = () => _(!1),
           _ = () => _.push("/account/familymanagement");
-        return _.createElement(
-          "div",
-          {
-            className: _.IncomingInviteRow,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.IncomingInviteRow,
+          children: [
+            (0, _.jsxs)(_._, {
               active: !!_,
-            },
-            "explanation" === _ &&
-              _.createElement(
-                _._,
-                {
-                  title: (0, _._)(
-                    `#FamilyManagement_RoleDescriptionLongHeader_${_}`,
-                  ),
-                  closeModal: _,
-                },
-                1 === _ ? _.createElement(_, null) : _.createElement(_, null),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  (0, _._)("#FamilyManagement_Close"),
-                ),
-              ),
-            "confirm" === _ &&
-              _.createElement(
-                _._,
-                {
-                  closeModal: _,
-                  onCancel: _,
-                  onOK: () => {
-                    _(null),
-                      _.mutate(null, {
-                        onSuccess: (_) => {
-                          _.cooldown_skip_granted() && _(!0),
-                            1 === _.two_factor_method()
-                              ? _._.IN_MOBILE_WEBVIEW
-                                ? (window.location.href =
-                                    "steammobile://confirmations?first_of_type=11")
-                                : _("awaitmobile2fa")
-                              : 2 === _.two_factor_method()
-                                ? _("awaitemail2fa")
-                                : _.push("/account/familymanagement");
-                        },
-                      });
-                  },
-                  strTitle: (0, _._)("#FamilyManagement_ConfirmJoinDialog"),
-                },
-                (0, _._)(
-                  `#FamilyManagement_ConfirmJoin_${_}`,
-                  _.createElement("b", null),
-                ),
-              ),
-            "awaitmobile2fa" === _ &&
-              _.createElement(
-                _._,
-                {
-                  title: (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
-                  closeModal: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DialogText,
-                  },
-                  (0, _._)(
-                    "awaitmobile2fa" === _
-                      ? _._.IN_MOBILE_WEBVIEW
-                        ? "#FamilyManagement_Await2FAForJoin_Description_Mobile_MobileApp"
-                        : "#FamilyManagement_Await2FAForJoin_Description_Mobile"
-                      : "#FamilyManagement_Await2FAForJoin_Description_Email",
-                  ),
-                ),
-                _ &&
-                  _.createElement(_, {
-                    cooldownSecondsRemaining:
-                      _.data.cooldown_seconds_remaining(),
-                  }),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.DialogText,
-                    },
-                    (0, _._)("#FamilyManagement_CooldownAllowed_2_Join"),
-                  ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  (0, _._)("#FamilyManagement_Close"),
-                ),
-              ),
-            "awaitemail2fa" === _ &&
-              _.createElement(
-                _._,
-                {
-                  title: (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
-                  closeModal: _,
-                },
-                2 === _ &&
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.DialogWarning,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        className: _.DialogText,
-                      },
-                      (0, _._)(
-                        "#FamilyManagement_Await2FAForJoin_ChildWarning_1",
-                      ),
+              children: [
+                "explanation" === _ &&
+                  (0, _.jsxs)(_._, {
+                    title: (0, _._)(
+                      `#FamilyManagement_RoleDescriptionLongHeader_${_}`,
                     ),
-                    _.createElement(
-                      _._,
-                      {
+                    closeModal: _,
+                    children: [
+                      1 === _ ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {}),
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _._)("#FamilyManagement_Close"),
+                      }),
+                    ],
+                  }),
+                "confirm" === _ &&
+                  (0, _.jsx)(_._, {
+                    closeModal: _,
+                    onCancel: _,
+                    onOK: () => {
+                      _(null),
+                        _.mutate(null, {
+                          onSuccess: (_) => {
+                            _.cooldown_skip_granted() && _(!0),
+                              1 === _.two_factor_method()
+                                ? _._.IN_MOBILE_WEBVIEW
+                                  ? (window.location.href =
+                                      "steammobile://confirmations?first_of_type=11")
+                                  : _("awaitmobile2fa")
+                                : 2 === _.two_factor_method()
+                                  ? _("awaitemail2fa")
+                                  : _.push("/account/familymanagement");
+                          },
+                        });
+                    },
+                    strTitle: (0, _._)("#FamilyManagement_ConfirmJoinDialog"),
+                    children: (0, _._)(
+                      `#FamilyManagement_ConfirmJoin_${_}`,
+                      (0, _.jsx)("b", {}),
+                    ),
+                  }),
+                "awaitmobile2fa" === _ &&
+                  (0, _.jsxs)(_._, {
+                    title: (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
+                    closeModal: _,
+                    children: [
+                      (0, _.jsx)("div", {
                         className: _.DialogText,
-                      },
-                      (0, _._)(
-                        "#FamilyManagement_Await2FAForJoin_ChildWarning_2",
-                        _.createElement("a", {
-                          href: `${_._.HELP_BASE_URL}/wizard/HelpChangePassword`,
+                        children: (0, _._)(
+                          ((_ = "awaitmobile2fa" === _),
+                          _
+                            ? _._.IN_MOBILE_WEBVIEW
+                              ? "#FamilyManagement_Await2FAForJoin_Description_Mobile_MobileApp"
+                              : "#FamilyManagement_Await2FAForJoin_Description_Mobile"
+                            : "#FamilyManagement_Await2FAForJoin_Description_Email"),
+                        ),
+                      }),
+                      _ &&
+                        (0, _.jsx)(_, {
+                          cooldownSecondsRemaining:
+                            _.data.cooldown_seconds_remaining(),
                         }),
-                      ),
-                    ),
-                  ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.DialogText,
-                  },
-                  (0, _._)(
-                    "#FamilyManagement_Await2FAForJoin_Description_Email",
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.TwoFactorCodeBox,
-                  },
-                  _.createElement(_._, {
-                    className: _.EditNameInput,
-                    type: "text",
-                    onChange: (_) => {
-                      _(_.target.value), _(null);
-                    },
-                    value: _,
-                    placeholder: (0, _._)(
-                      "#FamilyManagement_Await2FAForJoin_InputPlaceholder",
-                    ),
-                    maxLength: 128,
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: _.DialogText,
+                          children: (0, _._)(
+                            "#FamilyManagement_CooldownAllowed_2_Join",
+                          ),
+                        }),
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _._)("#FamilyManagement_Close"),
+                      }),
+                    ],
                   }),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.DialogButtons,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: async () => {
-                        _.mutateAsync(_).then(_);
-                      },
-                    },
-                    (0, _._)("#FamilyManagement_AwaitCodeFromEmail_Confirm"),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: _,
-                    },
-                    (0, _._)("#FamilyManagement_AwaitCodeFromEmail_Cancel"),
-                  ),
-                ),
-              ),
-            "alreadyaccepted" == _ &&
-              _.createElement(
-                _._,
-                {
-                  title: (0, _._)("#FamilyManagement_AlreadyAccepted_Header"),
-                  closeModal: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DialogText,
-                  },
-                  (0, _._)("#FamilyManagement_AlreadyAccepted_Text"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  (0, _._)("#FamilyManagement_Close"),
-                ),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+                "awaitemail2fa" === _ &&
+                  (0, _.jsxs)(_._, {
+                    title: (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
+                    closeModal: _,
+                    children: [
+                      2 === _ &&
+                        (0, _.jsxs)(_._, {
+                          className: _.DialogWarning,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              className: _.DialogText,
+                              children: (0, _._)(
+                                "#FamilyManagement_Await2FAForJoin_ChildWarning_1",
+                              ),
+                            }),
+                            (0, _.jsx)(_._, {
+                              className: _.DialogText,
+                              children: (0, _._)(
+                                "#FamilyManagement_Await2FAForJoin_ChildWarning_2",
+                                (0, _.jsx)("a", {
+                                  href: `${_._.HELP_BASE_URL}/wizard/HelpChangePassword`,
+                                }),
+                              ),
+                            }),
+                          ],
+                        }),
+                      (0, _.jsx)(_._, {
+                        className: _.DialogText,
+                        children: (0, _._)(
+                          "#FamilyManagement_Await2FAForJoin_Description_Email",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _.TwoFactorCodeBox,
+                        children: (0, _.jsx)(_._, {
+                          className: _.EditNameInput,
+                          type: "text",
+                          onChange: (_) => {
+                            _(_.target.value), _(null);
+                          },
+                          value: _,
+                          placeholder: (0, _._)(
+                            "#FamilyManagement_Await2FAForJoin_InputPlaceholder",
+                          ),
+                          maxLength: 128,
+                        }),
+                      }),
+                      (0, _.jsxs)(_._, {
+                        className: _.DialogButtons,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            onClick: async () => {
+                              _.mutateAsync(_).then(_);
+                            },
+                            children: (0, _._)(
+                              "#FamilyManagement_AwaitCodeFromEmail_Confirm",
+                            ),
+                          }),
+                          (0, _.jsx)(_._, {
+                            onClick: _,
+                            children: (0, _._)(
+                              "#FamilyManagement_AwaitCodeFromEmail_Cancel",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                "alreadyaccepted" == _ &&
+                  (0, _.jsxs)(_._, {
+                    title: (0, _._)("#FamilyManagement_AlreadyAccepted_Header"),
+                    closeModal: _,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.DialogText,
+                        children: (0, _._)(
+                          "#FamilyManagement_AlreadyAccepted_Text",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _._)("#FamilyManagement_Close"),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _.InviteRowHeader,
-            },
-            _.createElement(
-              "a",
-              {
-                className: _.ProfileLink,
-                href: _.GetCommunityProfileURL(),
-              },
-              _.createElement(_._, {
-                className: _.Avatar,
-                persona: _,
-                size: "Large",
-                statusPosition: "right",
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.InviteRowDetails,
-              },
-              (0, _._)(
-                1 === _
-                  ? "#FamilyManagement_PendingFamilyInviteInviteText_Adult"
-                  : "#FamilyManagement_PendingFamilyInviteInviteText_Child",
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ProfileLink,
-                    href: _.GetCommunityProfileURL(),
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.PersonaName,
-                    },
-                    _?.m_strPlayerName,
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RoleBlock,
-                  },
-                  _.createElement(_._, {
-                    className: _.RoleIcon,
-                    role: _,
+              children: [
+                (0, _.jsx)("a", {
+                  className: _.ProfileLink,
+                  href: _.GetCommunityProfileURL(),
+                  children: (0, _.jsx)(_._, {
+                    className: _.Avatar,
+                    persona: _,
+                    size: "Large",
+                    statusPosition: "right",
                   }),
-                  _.createElement(
-                    "span",
-                    {
+                }),
+                (0, _.jsx)("div", {
+                  className: _.InviteRowDetails,
+                  children: (0, _._)(
+                    1 === _
+                      ? "#FamilyManagement_PendingFamilyInviteInviteText_Adult"
+                      : "#FamilyManagement_PendingFamilyInviteInviteText_Child",
+                    (0, _.jsx)("a", {
+                      className: _.ProfileLink,
+                      href: _.GetCommunityProfileURL(),
+                      children: (0, _.jsx)("span", {
+                        className: _.PersonaName,
+                        children: _?.m_strPlayerName,
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.RoleBlock,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          className: _.RoleIcon,
+                          role: _,
+                        }),
+                        (0, _.jsx)("span", {
+                          className: _.RoleName,
+                          children: (0, _._)(`#FamilyManagement_Role_${_}`),
+                        }),
+                      ],
+                    }),
+                  ),
+                }),
+              ],
+            }),
+            1 == _ &&
+              (0, _.jsx)("div", {
+                className: _.RoleDescriptionShort,
+                children: (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#FamilyManagement_RoleDescriptionShort_Adult",
+                    (0, _.jsx)("span", {
                       className: _.RoleName,
-                    },
-                    (0, _._)(`#FamilyManagement_Role_${_}`),
+                    }),
+                    (0, _.jsx)("a", {
+                      className: _.LearnMoreLink,
+                      onClick: () => _("explanation"),
+                    }),
                   ),
-                ),
-              ),
-            ),
-          ),
-          1 == _ &&
-            _.createElement(
-              "div",
-              {
+                }),
+              }),
+            2 == _ &&
+              (0, _.jsxs)("div", {
                 className: _.RoleDescriptionShort,
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)(
-                  "#FamilyManagement_RoleDescriptionShort_Adult",
-                  _.createElement("span", {
-                    className: _.RoleName,
+                children: [
+                  (0, _.jsx)("p", {
+                    children: (0, _._)(
+                      "#FamilyManagement_RoleDescriptionShort_Child",
+                      (0, _.jsx)("span", {
+                        className: _.RoleName,
+                      }),
+                      (0, _.jsx)("a", {
+                        className: _.LearnMoreLink,
+                        onClick: () => _("explanation"),
+                      }),
+                    ),
                   }),
-                  _.createElement("a", {
-                    className: _.LearnMoreLink,
-                    onClick: () => _("explanation"),
+                  (0, _.jsxs)("ul", {
+                    className: _.RoleDescriptionList,
+                    children: [
+                      (0, _.jsx)("li", {
+                        children: (0, _._)(
+                          "#FamilyManagement_RoleDescriptionShort_Child_1",
+                        ),
+                      }),
+                      (0, _.jsx)("li", {
+                        children: (0, _._)(
+                          "#FamilyManagement_RoleDescriptionShort_Child_2",
+                        ),
+                      }),
+                      (0, _.jsx)("li", {
+                        children: (0, _._)(
+                          "#FamilyManagement_RoleDescriptionShort_Child_3",
+                        ),
+                      }),
+                    ],
                   }),
-                ),
-              ),
-            ),
-          2 == _ &&
-            _.createElement(
-              "div",
-              {
-                className: _.RoleDescriptionShort,
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)(
-                  "#FamilyManagement_RoleDescriptionShort_Child",
-                  _.createElement("span", {
-                    className: _.RoleName,
-                  }),
-                  _.createElement("a", {
-                    className: _.LearnMoreLink,
-                    onClick: () => _("explanation"),
-                  }),
-                ),
-              ),
-              _.createElement(
-                "ul",
-                {
-                  className: _.RoleDescriptionList,
-                },
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)("#FamilyManagement_RoleDescriptionShort_Child_1"),
-                ),
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)("#FamilyManagement_RoleDescriptionShort_Child_2"),
-                ),
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)("#FamilyManagement_RoleDescriptionShort_Child_3"),
-                ),
-              ),
-            ),
-          _.createElement(
-            "div",
-            {
+                ],
+              }),
+            (0, _.jsxs)("div", {
               className: _.Buttons,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.AcceptInviteButton,
-                onClick: () => _("confirm"),
-              },
-              (0, _._)("#FamilyManagement_AcceptInviteButton"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.DeclineInviteButton,
-                onClick: () => {
-                  _(null), _.mutate(), _ && _.push("/account/familymanagement");
-                },
-              },
-              (0, _._)("#FamilyManagement_DeclineInviteButton"),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.AcceptInviteButton,
+                  onClick: () => _("confirm"),
+                  children: (0, _._)("#FamilyManagement_AcceptInviteButton"),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.DeclineInviteButton,
+                  onClick: () => {
+                    _(null),
+                      _.mutate(),
+                      _ && _.push("/account/familymanagement");
+                  },
+                  children: (0, _._)("#FamilyManagement_DeclineInviteButton"),
+                }),
+              ],
+            }),
+          ],
+        });
+        var _;
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)("account_settings_container"),
-          },
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#FamilyManagement_AdultDescription_1"),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#FamilyManagement_AdultDescription_2"),
-          ),
-          _.createElement(
-            "ul",
-            null,
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#FamilyManagement_AdultDescription_3"),
-            ),
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#FamilyManagement_AdultDescription_4"),
-            ),
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#FamilyManagement_AdultDescription_5"),
-            ),
-          ),
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)("account_settings_container"),
+          children: [
+            (0, _.jsx)("p", {
+              children: (0, _._)("#FamilyManagement_AdultDescription_1"),
+            }),
+            (0, _.jsx)("p", {
+              children: (0, _._)("#FamilyManagement_AdultDescription_2"),
+            }),
+            (0, _.jsxs)("ul", {
+              children: [
+                (0, _.jsx)("li", {
+                  children: (0, _._)("#FamilyManagement_AdultDescription_3"),
+                }),
+                (0, _.jsx)("li", {
+                  children: (0, _._)("#FamilyManagement_AdultDescription_4"),
+                }),
+                (0, _.jsx)("li", {
+                  children: (0, _._)("#FamilyManagement_AdultDescription_5"),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)("account_settings_container"),
-          },
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#FamilyManagement_ChildDescription_1"),
-          ),
-          _.createElement(
-            "ul",
-            null,
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#FamilyManagement_ChildDescription_2"),
-            ),
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#FamilyManagement_ChildDescription_3"),
-            ),
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#FamilyManagement_ChildDescription_4"),
-            ),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#FamilyManagement_ChildDescription_5"),
-          ),
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)("account_settings_container"),
+          children: [
+            (0, _.jsx)("p", {
+              children: (0, _._)("#FamilyManagement_ChildDescription_1"),
+            }),
+            (0, _.jsxs)("ul", {
+              children: [
+                (0, _.jsx)("li", {
+                  children: (0, _._)("#FamilyManagement_ChildDescription_2"),
+                }),
+                (0, _.jsx)("li", {
+                  children: (0, _._)("#FamilyManagement_ChildDescription_3"),
+                }),
+                (0, _.jsx)("li", {
+                  children: (0, _._)("#FamilyManagement_ChildDescription_4"),
+                }),
+              ],
+            }),
+            (0, _.jsx)("p", {
+              children: (0, _._)("#FamilyManagement_ChildDescription_5"),
+            }),
+          ],
+        });
       }
       function _() {
         const _ = (0, _._)(),
@@ -1255,7 +1135,7 @@
           (0, _._)(_, _, _).mutate(null, {
             onSuccess: () => _.push("/account/familymanagement"),
           }),
-          _.createElement(_._, null)
+          (0, _.jsx)(_._, {})
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -1284,20 +1164,17 @@
               ),
               [_, _],
             );
-          return _.createElement(
-            _._,
-            {
-              ref: __webpack_require__ ? _.measureElement : void 0,
-              "data-index": _,
-              fnScrollIntoViewHandler: _,
-              scrollIntoViewWhenChildFocused: "force",
-              style: {
-                width: "100%",
-                paddingBottom: _,
-              },
+          return (0, _.jsx)(_._, {
+            ref: __webpack_require__ ? _.measureElement : void 0,
+            "data-index": _,
+            fnScrollIntoViewHandler: _,
+            scrollIntoViewWhenChildFocused: "force",
+            style: {
+              width: "100%",
+              paddingBottom: _,
             },
-            _(_),
-          );
+            children: _(_),
+          });
         }),
         _ = _.forwardRef(function (_, _) {
           const {
@@ -1342,29 +1219,26 @@
               initialOffset: _,
               onOffsetChange: _,
             };
-          return _.createElement(
-            _._,
-            {
-              className: _,
-              ref: _,
-              ..._,
-            },
-            _.createElement(
-              _.Suspense,
-              null,
-              "element" === _ &&
-                _.createElement(_, {
-                  ..._,
-                  nScrollMargin: _ || 0,
-                  elScrollable: _,
-                }),
-              "window" === _ &&
-                _.createElement(_, {
-                  ..._,
-                  nScrollMargin: _,
-                }),
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            className: _,
+            ref: _,
+            ..._,
+            children: (0, _.jsxs)(_.Suspense, {
+              children: [
+                "element" === _ &&
+                  (0, _.jsx)(_, {
+                    ..._,
+                    nScrollMargin: _ || 0,
+                    elScrollable: _,
+                  }),
+                "window" === _ &&
+                  (0, _.jsx)(_, {
+                    ..._,
+                    nScrollMargin: _,
+                  }),
+              ],
+            }),
+          });
         });
       function _(_) {
         const {
@@ -1398,7 +1272,7 @@
               _.measure();
             });
           }, [_, _]),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
           })
@@ -1443,7 +1317,7 @@
               _.measure();
             });
           }, [_, _]),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._,
             virtualizer: _,
           })
@@ -1459,40 +1333,37 @@
           _ = _.getVirtualItems(),
           _ = _.length ? _[0].start - _.options.scrollMargin : 0,
           _ = Math.max(0, _.getTotalSize());
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "column",
-            navEntryPreferPosition: _._.MAINTAIN_Y,
-            style: {
-              height: `${_}px`,
-              width: "100%",
-              position: "relative",
-            },
+        return (0, _.jsx)(_._, {
+          "flow-children": "column",
+          navEntryPreferPosition: _._.MAINTAIN_Y,
+          style: {
+            height: `${_}px`,
+            width: "100%",
+            position: "relative",
           },
-          _.createElement(
-            "div",
-            {
-              style: {
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                transform: `translateY( ${_}px )`,
-              },
+          children: (0, _.jsx)("div", {
+            style: {
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              transform: `translateY( ${_}px )`,
             },
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.key,
-                virtualizer: _,
-                bDynamic: _,
-                idx: _.index,
-                rowGap: __webpack_require__,
-                renderItem: _,
-              }),
+            children: _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  virtualizer: _,
+                  bDynamic: _,
+                  idx: _.index,
+                  rowGap: __webpack_require__,
+                  renderItem: _,
+                },
+                _.key,
+              ),
             ),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         return (..._) => {
@@ -1594,51 +1465,45 @@
             _(_), _("selectRole");
           };
         return "splash" === _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               onClick: () => _("selectMethod"),
             })
           : "selectMethod" !== _ || _
             ? "selectMethod" === _ && _
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   slotCooldownSeconds: _.data.slot_cooldown_remaining_seconds(),
                   familyGroupID: _,
                   onCancel: () => _("splash"),
                   onSelect: _,
                 })
               : "selectRole" === _
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     familyGroupID: _,
                     steamid: _,
                     onCancel: () => _("splash"),
                   })
                 : null
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 familyGroupID: _,
                 onCancel: () => _("splash"),
                 onSelect: _,
               });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.InviteButtonCtn,
-          },
-          _.createElement(
-            _._,
-            {
-              noFocusRing: !1,
-              className: _.InviteButton,
-              onClick: _.onClick,
-            },
-            _.e6B({}),
-            _.createElement(
-              "span",
-              null,
-              (0, _._)("#FamilyManagement_InviteAMember"),
-            ),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _.InviteButtonCtn,
+          children: (0, _.jsxs)(_._, {
+            noFocusRing: !1,
+            className: _.InviteButton,
+            onClick: _.onClick,
+            children: [
+              _.e6B({}),
+              (0, _.jsx)("span", {
+                children: (0, _._)("#FamilyManagement_InviteAMember"),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { familyGroupID: _, onSelect: __webpack_require__ } = _,
@@ -1659,29 +1524,23 @@
         return _.isError || 0 == _?.length
           ? null
           : _.isSuccess
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.Text,
-                  },
-                  (0, _._)("#FamilyManagement_PreviousUsers"),
-                ),
-                _.isLoading
-                  ? _.createElement(
-                      "div",
-                      {
+                    children: (0, _._)("#FamilyManagement_PreviousUsers"),
+                  }),
+                  _.isLoading
+                    ? (0, _.jsx)("div", {
                         className: _.ThrobberContainer,
-                      },
-                      _.createElement(_._, null),
-                    )
-                  : _.createElement(_, {
-                      steamids: _,
-                      onSelect: __webpack_require__,
-                    }),
-              )
+                        children: (0, _.jsx)(_._, {}),
+                      })
+                    : (0, _.jsx)(_, {
+                        steamids: _,
+                        onSelect: __webpack_require__,
+                      }),
+                ],
+              })
             : null;
       }
       function _(_) {
@@ -1690,48 +1549,35 @@
           onSelect: __webpack_require__,
           onCancel: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.SelectAccountContainer,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.SelectAccountContainer,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.CloseButton,
               onClick: _,
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _.jsx)(_.sED, {}),
+            }),
+            (0, _.jsx)("div", {
               className: _.Header,
-            },
-            (0, _._)("#FamilyManagement_InviteAMember"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#FamilyManagement_InviteAMember"),
+            }),
+            (0, _.jsx)("div", {
               className: _.Text,
-            },
-            (0, _._)("#FamilyManagement_InviteMethodText"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#FamilyManagement_InviteMethodText"),
+            }),
+            (0, _.jsx)(_._, {
               className: _.MethodButtons,
-            },
-            _.createElement(_, {
+              children: (0, _.jsx)(_, {
+                familyGroupID: _,
+                onSelect: __webpack_require__,
+              }),
+            }),
+            (0, _.jsx)(_, {
               familyGroupID: _,
               onSelect: __webpack_require__,
             }),
-          ),
-          _.createElement(_, {
-            familyGroupID: _,
-            onSelect: __webpack_require__,
-          }),
-        );
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1750,39 +1596,32 @@
           .former_members()
           .map((_) => _.steamid())
           .filter((_) => -1 === _.data.indexOf(_));
-        return _.createElement(
-          "div",
-          {
-            className: _.SelectAccountContainer,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.SelectAccountContainer,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.CloseButton,
               noFocusRing: !1,
               onClick: _,
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _.jsx)(_.sED, {}),
+            }),
+            (0, _.jsx)("div", {
               className: _.Header,
-            },
-            (0, _._)("#FamilyManagement_InviteAMember"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#FamilyManagement_InviteAMember"),
+            }),
+            (0, _.jsx)("div", {
               className: _.Text,
-            },
-            (0, _._)("#FamilyManagement_CooldownAndReinvite", _.current),
-          ),
-          _.createElement(_, {
-            steamids: _,
-            onSelect: __webpack_require__,
-          }),
-        );
+              children: (0, _._)(
+                "#FamilyManagement_CooldownAndReinvite",
+                _.current,
+              ),
+            }),
+            (0, _.jsx)(_, {
+              steamids: _,
+              onSelect: __webpack_require__,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1802,105 +1641,86 @@
           _._.k_EFamilyQueryInviteToFamily,
         );
         if (_.isLoading)
-          return _.createElement(
-            "div",
-            {
-              className: _.ThrobberContainer,
-            },
-            _.createElement(_._, null),
-          );
+          return (0, _.jsx)("div", {
+            className: _.ThrobberContainer,
+            children: (0, _.jsx)(_._, {}),
+          });
         const _ = _.data,
           _ = (_) => {
             _(""), _(_);
           };
-        return _.createElement(
-          "div",
-          {
-            className: _.SelectRoleContainer,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.SelectRoleContainer,
+          children: [
+            (0, _.jsx)(_._, {
               active: 0 !== _,
-            },
-            "awaitmobile2fa" === _ || "awaitemail2fa" === _
-              ? _.createElement(_, {
-                  onClose: _,
-                  eMethod: "awaitemail2fa" === _ ? 2 : 1,
-                })
-              : _.createElement(_, {
-                  steamid: __webpack_require__,
-                  role: _,
-                  onCancel: () => _(0),
-                  onConfirm: () => {
-                    _.mutateAsync(null, {
-                      onSuccess: (_) => {
-                        0 === _.two_factor_method()
-                          ? _()
-                          : 1 === _.two_factor_method()
-                            ? _("awaitmobile2fa")
-                            : 2 === _.two_factor_method() && _("awaitemail2fa");
+              children:
+                "awaitmobile2fa" === _ || "awaitemail2fa" === _
+                  ? (0, _.jsx)(_, {
+                      onClose: _,
+                      eMethod: "awaitemail2fa" === _ ? 2 : 1,
+                    })
+                  : (0, _.jsx)(_, {
+                      steamid: __webpack_require__,
+                      role: _,
+                      onCancel: () => _(0),
+                      onConfirm: () => {
+                        _.mutateAsync(null, {
+                          onSuccess: (_) => {
+                            0 === _.two_factor_method()
+                              ? _()
+                              : 1 === _.two_factor_method()
+                                ? _("awaitmobile2fa")
+                                : 2 === _.two_factor_method() &&
+                                  _("awaitemail2fa");
+                          },
+                        });
                       },
-                    });
-                  },
-                }),
-          ),
-          _.createElement(
-            _._,
-            {
+                    }),
+            }),
+            (0, _.jsx)(_._, {
               className: _.CloseButton,
               onActivate: _,
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _.jsx)(_.sED, {}),
+            }),
+            (0, _.jsxs)("div", {
               className: _.Header,
-            },
-            _.createElement(
-              "span",
-              {
-                className: _.Invite,
-              },
-              (0, _._)("#FamilyManagement_Invite"),
-            ),
-            _.createElement(_._, {
-              className: _.Avatar,
-              persona: _,
-              size: "Large",
-              statusPosition: "right",
+              children: [
+                (0, _.jsx)("span", {
+                  className: _.Invite,
+                  children: (0, _._)("#FamilyManagement_Invite"),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.Avatar,
+                  persona: _,
+                  size: "Large",
+                  statusPosition: "right",
+                }),
+                (0, _.jsx)("div", {
+                  className: _.PlayerName,
+                  children: _?.m_strPlayerName,
+                }),
+              ],
             }),
-            _.createElement(
-              "div",
-              {
-                className: _.PlayerName,
-              },
-              _?.m_strPlayerName,
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _.Text,
-            },
-            (0, _._)("#FamilyManagement_ChooseRole"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#FamilyManagement_ChooseRole"),
+            }),
+            (0, _.jsxs)(_._, {
               className: _.InviteButtonCtn,
-            },
-            _.createElement(_, {
-              role: 1,
-              onSelect: () => _(1),
+              children: [
+                (0, _.jsx)(_, {
+                  role: 1,
+                  onSelect: () => _(1),
+                }),
+                (0, _.jsx)(_, {
+                  role: 2,
+                  onSelect: () => _(2),
+                }),
+              ],
             }),
-            _.createElement(_, {
-              role: 2,
-              onSelect: () => _(2),
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { eMethod: _, onClose: __webpack_require__ } = _;
@@ -1912,23 +1732,19 @@
           if (2 !== _) return null;
           _ = "#FamilyManagement_Await2FAForInvite_EmailAuth";
         }
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            onOK: __webpack_require__,
-            closeModal: __webpack_require__,
-            strTitle: (0, _._)("#FamilyManagement_ConfirmInviteTitle"),
-          },
-          _.createElement(_._, null),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          bAlertDialog: !0,
+          onOK: __webpack_require__,
+          closeModal: __webpack_require__,
+          strTitle: (0, _._)("#FamilyManagement_ConfirmInviteTitle"),
+          children: [
+            (0, _.jsx)(_._, {}),
+            (0, _.jsx)("div", {
               className: _.Text,
-            },
-            (0, _._)(_),
-          ),
-        );
+              children: (0, _._)(_),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1938,53 +1754,42 @@
             role: _,
           } = _,
           _ = (0, _._)(_).data;
-        return _.createElement(
-          _._,
-          {
-            onCancel: _,
-            strTitle: (0, _._)("#FamilyManagement_ConfirmInviteTitle"),
-            onOK: __webpack_require__,
-            strOKButtonText: (0, _._)("#FamilyManagement_Invite"),
-          },
-          _.createElement(_._, null),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          onCancel: _,
+          strTitle: (0, _._)("#FamilyManagement_ConfirmInviteTitle"),
+          onOK: __webpack_require__,
+          strOKButtonText: (0, _._)("#FamilyManagement_Invite"),
+          children: [
+            (0, _.jsx)(_._, {}),
+            (0, _.jsxs)("div", {
               className: _.ProfilePlusRole,
-            },
-            _.createElement(_._, {
-              className: _.Avatar,
-              persona: _,
-              size: "Large",
-              statusPosition: "right",
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.Avatar,
+                  persona: _,
+                  size: "Large",
+                  statusPosition: "right",
+                }),
+                (0, _.jsx)("div", {
+                  className: _.PlayerName,
+                  children: _?.m_strPlayerName,
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.RoleIcon,
+                  role: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.RoleName,
+                  children: (0, _._)(`#FamilyManagement_Role_${_}`),
+                }),
+              ],
             }),
-            _.createElement(
-              "div",
-              {
-                className: _.PlayerName,
-              },
-              _?.m_strPlayerName,
-            ),
-            _.createElement(_._, {
-              className: _.RoleIcon,
-              role: _,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.RoleName,
-              },
-              (0, _._)(`#FamilyManagement_Role_${_}`),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _.Text,
-            },
-            (0, _._)("#FamilyManagement_ConfirmInvite"),
-          ),
-        );
+              children: (0, _._)("#FamilyManagement_ConfirmInvite"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { familyGroupID: _, onSelect: __webpack_require__ } = _,
@@ -1992,53 +1797,44 @@
           _ = (0, _._)(_)
             .data.members()
             .map((_) => _.steamid());
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               active: _,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 title: (0, _._)("#FamilyManagement_InviteMethodFriend"),
                 className: _.SelectFriendModal,
                 onCancel: () => _(!1),
-              },
-              _.createElement(_, {
-                setSelectedFriendSteamID: __webpack_require__,
-                excludeSteamIDs: _,
+                children: (0, _.jsx)(_, {
+                  setSelectedFriendSteamID: __webpack_require__,
+                  excludeSteamIDs: _,
+                }),
               }),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
+            }),
+            (0, _.jsx)(_._, {
               noFocusRing: !1,
               onClick: () => _(!0),
-            },
-            (0, _._)("#FamilyManagement_InviteMethodFriend"),
-          ),
-        );
+              children: (0, _._)("#FamilyManagement_InviteMethodFriend"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { steamids: _, onSelect: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.ProfileSelector,
-            "flow-children": "grid",
-          },
-          _.map((_) =>
-            _.createElement(_, {
-              key: _,
-              steamid: _,
-              onClick: () => __webpack_require__(_),
-            }),
+        return (0, _.jsx)(_._, {
+          className: _.ProfileSelector,
+          "flow-children": "grid",
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                steamid: _,
+                onClick: () => __webpack_require__(_),
+              },
+              _,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const { steamid: _, onClick: __webpack_require__ } = _,
@@ -2053,53 +1849,46 @@
         )
           return null;
         const _ = _.data;
-        return _.createElement(
-          _._,
-          {
-            className: _.ProfileChoice,
-            onActivate: __webpack_require__,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.ProfileChoice,
+          onActivate: __webpack_require__,
+          children: [
+            (0, _.jsx)("div", {
               className: _.Avatar,
-            },
-            _.createElement(_._, {
-              className: _.Avatar,
-              persona: _,
-              size: "Large",
-              statusPosition: "right",
+              children: (0, _.jsx)(_._, {
+                className: _.Avatar,
+                persona: _,
+                size: "Large",
+                statusPosition: "right",
+              }),
             }),
-          ),
-          _.createElement(_._, {
-            className: _.PlayerName,
-            bParenthesizeNicknames: _,
-            bIsSelf: !1,
-            bHideStatus: !0,
-            bHidePersona: !1,
-            bCompactView: !1,
-            persona: _,
-            strNickname: _,
-            eFriendRelationship: 3,
-          }),
-        );
+            (0, _.jsx)(_._, {
+              className: _.PlayerName,
+              bParenthesizeNicknames: _,
+              bIsSelf: !1,
+              bHideStatus: !0,
+              bHidePersona: !1,
+              bCompactView: !1,
+              persona: _,
+              strNickname: _,
+              eFriendRelationship: 3,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { role: _, onSelect: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.InviteButton),
-            noFocusRing: !1,
-            onClick: () => __webpack_require__(_),
-          },
-          2 == _ ? _.createElement(_.Bir, null) : _.createElement(_.d1w, null),
-          _.createElement(
-            "span",
-            null,
-            (0, _._)(`#FamilyManagement_InviteAsRoleButton_${_}`),
-          ),
-        );
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_.InviteButton),
+          noFocusRing: !1,
+          onClick: () => __webpack_require__(_),
+          children: [
+            2 == _ ? (0, _.jsx)(_.Bir, {}) : (0, _.jsx)(_.d1w, {}),
+            (0, _.jsx)("span", {
+              children: (0, _._)(`#FamilyManagement_InviteAsRoleButton_${_}`),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2110,16 +1899,13 @@
         (0, _._)(_, "#FamilyManagement_ErrorLoadFriendListGeneric");
         const _ = _.data;
         return _.isLoading
-          ? _.createElement(
-              "div",
-              {
-                className: _.ThrobberContainer,
-              },
-              _.createElement(_._, null),
-            )
+          ? (0, _.jsx)("div", {
+              className: _.ThrobberContainer,
+              children: (0, _.jsx)(_._, {}),
+            })
           : _.isError
             ? null
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 setSelectedFriendSteamID: _,
                 steamIDs: _,
                 excludeSteamIDs: __webpack_require__,
@@ -2182,7 +1968,7 @@
           ),
           _ = _.useCallback(
             (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 persona: _[_].persona,
                 nickname: _[_].nickname,
                 setSelectedFriendSteamID: _,
@@ -2190,53 +1976,43 @@
             [_, _],
           ),
           _ = _.some((_) => _.isLoading);
-        return _.createElement(
-          _._,
-          {
-            className: _.InviteFriendSelector,
-          },
-          _.createElement(
-            "p",
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.InviteFriendSelector,
+          children: [
+            (0, _.jsx)("p", {
               className: _.InviteText,
-            },
-            (0, _._)("#FamilyManagement_SelectFriend"),
-          ),
-          _ &&
-            _.createElement(_._, {
-              size: "xlarge",
+              children: (0, _._)("#FamilyManagement_SelectFriend"),
             }),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  className: _.InputContainer,
-                },
-                _.createElement(_, {
-                  strFilter: _,
-                  setFilter: _,
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _.FriendList,
-                },
-                _.createElement(_, {
-                  nRows: _.length,
-                  nItemHeight: 84,
-                  renderItem: _,
-                }),
-              ),
-            ),
-        );
+            _ &&
+              (0, _.jsx)(_._, {
+                size: "xlarge",
+              }),
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _.InputContainer,
+                    children: (0, _.jsx)(_, {
+                      strFilter: _,
+                      setFilter: _,
+                    }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.FriendList,
+                    children: (0, _.jsx)(_, {
+                      nRows: _.length,
+                      nItemHeight: 84,
+                      renderItem: _,
+                    }),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { strFilter: _, setFilter: __webpack_require__ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           autoFocus: !0,
           bShowClearAction: !0,
           className: _.InviteFriendInput,
@@ -2256,32 +2032,31 @@
           } = _,
           _ = (0, _._)(),
           _ = _.data?.preferences().parenthesize_nicknames();
-        return _.createElement(
-          _._,
-          {
-            className: _.FriendSelectorRow,
-            onActivate: (_) => {
-              _(_.m_steamid.ConvertTo64BitString());
-            },
+        return (0, _.jsxs)(_._, {
+          className: _.FriendSelectorRow,
+          onActivate: (_) => {
+            _(_.m_steamid.ConvertTo64BitString());
           },
-          _.createElement(_._, {
-            className: _.Avatar,
-            persona: _,
-            size: "Large",
-            statusPosition: "right",
-          }),
-          _.createElement(_._, {
-            className: _.PlayerName,
-            bIsSelf: !1,
-            bHideStatus: !1,
-            bHidePersona: !1,
-            bParenthesizeNicknames: _,
-            bCompactView: !1,
-            persona: _,
-            strNickname: __webpack_require__,
-            eFriendRelationship: 3,
-          }),
-        );
+          children: [
+            (0, _.jsx)(_._, {
+              className: _.Avatar,
+              persona: _,
+              size: "Large",
+              statusPosition: "right",
+            }),
+            (0, _.jsx)(_._, {
+              className: _.PlayerName,
+              bIsSelf: !1,
+              bHideStatus: !1,
+              bHidePersona: !1,
+              bParenthesizeNicknames: _,
+              bCompactView: !1,
+              persona: _,
+              strNickname: __webpack_require__,
+              eFriendRelationship: 3,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2300,14 +2075,14 @@
           !(function (_) {
             return "function" == typeof _.cooldown_seconds_remaining;
           })(__webpack_require__)
-            ? (_ = _.createElement(_, {
+            ? (_ = (0, _.jsx)(_, {
                 active: _,
                 onClose: _,
                 familyGroupID: _,
                 invited: __webpack_require__,
                 persona: _,
               }))
-            : ((_ = _.createElement(_, {
+            : ((_ = (0, _.jsx)(_, {
                 active: _,
                 onClose: _,
                 familyGroupID: _,
@@ -2315,29 +2090,23 @@
                 persona: _,
               })),
               (_ = !0)),
-          _.createElement(
-            _.Fragment,
-            null,
-            _,
-            _.createElement(
-              _._,
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              (0, _.jsx)(_._, {
                 className: (0, _._)(_.FamilyMemberRow, _.FamilyMemberRow),
                 onActivate: _,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _.TopRow,
-                },
-                _.createElement(_._, {
-                  persona: _,
-                  role: __webpack_require__.role(),
-                  invitePending: !_,
+                  children: (0, _.jsx)(_._, {
+                    persona: _,
+                    role: __webpack_require__.role(),
+                    invitePending: !_,
+                  }),
                 }),
-              ),
-            ),
-          )
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -2369,32 +2138,23 @@
         let _ = _
           ? (0, _._)("#FamilyManagement_RemoveMemberConfirmationTitle_Self")
           : (0, _._)("#FamilyManagement_RemoveMemberConfirmationTitle");
-        return _.createElement(
-          _._,
-          {
-            active: _,
-          },
-          _.createElement(
-            _._,
-            {
-              strTitle: _,
-              onOK: () => {
-                _(null),
-                  _.mutate(null, {
-                    onSuccess: () => _.push(_.pathname),
-                  });
-              },
-              closeModal: __webpack_require__,
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsx)(_._, {
+            strTitle: _,
+            onOK: () => {
+              _(null),
+                _.mutate(null, {
+                  onSuccess: () => _.push(_.pathname),
+                });
             },
-            _.createElement(
-              "div",
-              {
-                className: _.RemovalDescription,
-              },
-              _,
-            ),
-          ),
-        );
+            closeModal: __webpack_require__,
+            children: (0, _.jsx)("div", {
+              className: _.RemovalDescription,
+              children: _,
+            }),
+          }),
+        });
       }
       function _(_) {
         const {
@@ -2426,25 +2186,19 @@
           "#FamilyManagement_ManageDialogTitle",
           _?.m_strPlayerName,
         );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            active: _,
-            onClose: _,
-            familyGroupID: _,
-            member: _,
-            persona: _,
-            isSelf: _,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
               active: _,
-            },
-            _.createElement(
-              _._,
-              {
+              onClose: _,
+              familyGroupID: _,
+              member: _,
+              persona: _,
+              isSelf: _,
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
                 className: _.FamilyMemberActionsDialog,
                 titleClassName: _.Title,
                 title: _,
@@ -2452,103 +2206,88 @@
                 bOKDisabled: !0,
                 closeModal: __webpack_require__,
                 bHideCloseIcon: !0,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _.ButtonList,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _.ManagementButton,
-                    onClick: () => {
-                      window.location.href =
-                        _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid();
-                    },
-                  },
-                  (0, _._)("#FamilyManagement_ProfileLink"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.ManagementButton,
-                    onClick: () => {
-                      window.location.href =
-                        _._.STORE_BASE_URL + "wishlist/profiles/" + _.steamid();
-                    },
-                  },
-                  (0, _._)("#FamilyManagement_WishlistLink"),
-                ),
-                _.createElement(_._, {
-                  className: _.Separator,
-                }),
-                !_ &&
-                  2 == _.role() &&
-                  _.createElement(
-                    _._,
-                    {
+                  children: [
+                    (0, _.jsx)(_._, {
                       className: _.ManagementButton,
                       onClick: () => {
-                        const _ = _.endsWith("/") ? _.slice(0, -1) : _;
-                        _.push(`${_}/parentalcontrols/${_.steamid()}`);
-                      },
-                    },
-                    (0, _._)("#FamilyManagement_ParentalControls"),
-                  ),
-                !_ &&
-                  !_ &&
-                  2 == _.role() &&
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.ManagementButton,
-                      disabled: _,
-                      onClick: () => {
-                        const _ = new _._(_.steamid());
                         window.location.href =
-                          _._.HELP_BASE_URL +
-                          "wizard/HelpRecoverFamilyMember?childid=" +
-                          _.GetAccountID();
+                          _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid();
                       },
-                    },
-                    (0, _._)("#FamilyManagement_RecoverMember"),
-                  ),
-                !_ &&
-                  2 !== _ &&
-                  _.createElement(
-                    _._,
-                    {
-                      className: (0, _._)(_.ManagementButton, _.Remove),
+                      children: (0, _._)("#FamilyManagement_ProfileLink"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.ManagementButton,
                       onClick: () => {
-                        _(null), _(), __webpack_require__();
+                        window.location.href =
+                          _._.STORE_BASE_URL +
+                          "wishlist/profiles/" +
+                          _.steamid();
                       },
-                    },
-                    (0, _._)(
-                      _
-                        ? "#FamilyManagement_RemoveMember_Self"
-                        : "#FamilyManagement_RemoveMember",
-                    ),
-                  ),
-                _ &&
-                  _.createElement(_, {
-                    familyGroupID: _,
-                  }),
-                _.createElement(_._, {
-                  className: _.Separator,
+                      children: (0, _._)("#FamilyManagement_WishlistLink"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.Separator,
+                    }),
+                    !_ &&
+                      2 == _.role() &&
+                      (0, _.jsx)(_._, {
+                        className: _.ManagementButton,
+                        onClick: () => {
+                          const _ = _.endsWith("/") ? _.slice(0, -1) : _;
+                          _.push(`${_}/parentalcontrols/${_.steamid()}`);
+                        },
+                        children: (0, _._)(
+                          "#FamilyManagement_ParentalControls",
+                        ),
+                      }),
+                    !_ &&
+                      !_ &&
+                      2 == _.role() &&
+                      (0, _.jsx)(_._, {
+                        className: _.ManagementButton,
+                        disabled: _,
+                        onClick: () => {
+                          const _ = new _._(_.steamid());
+                          window.location.href =
+                            _._.HELP_BASE_URL +
+                            "wizard/HelpRecoverFamilyMember?childid=" +
+                            _.GetAccountID();
+                        },
+                        children: (0, _._)("#FamilyManagement_RecoverMember"),
+                      }),
+                    !_ &&
+                      2 !== _ &&
+                      (0, _.jsx)(_._, {
+                        className: (0, _._)(_.ManagementButton, _.Remove),
+                        onClick: () => {
+                          _(null), _(), __webpack_require__();
+                        },
+                        children: (0, _._)(
+                          _
+                            ? "#FamilyManagement_RemoveMember_Self"
+                            : "#FamilyManagement_RemoveMember",
+                        ),
+                      }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        familyGroupID: _,
+                      }),
+                    (0, _.jsx)(_._, {
+                      className: _.Separator,
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.ManagementButton,
+                      onClick: __webpack_require__,
+                      children: (0, _._)("#FamilyManagement_Cancel"),
+                    }),
+                  ],
                 }),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.ManagementButton,
-                    onClick: __webpack_require__,
-                  },
-                  (0, _._)("#FamilyManagement_Cancel"),
-                ),
-              ),
-            ),
-          ),
-        );
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2569,12 +2308,9 @@
           "#FamilyManagement_CancelInvitationConfirmationText",
           _?.m_strPlayerName,
         );
-        return _.createElement(
-          _._,
-          {
-            active: _,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsx)(_._, {
             strTitle: (0, _._)(
               "#FamilyManagement_CancelInvitationConfirmationTitle",
             ),
@@ -2584,7 +2320,7 @@
             },
             closeModal: __webpack_require__,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -2606,24 +2342,18 @@
           "#FamilyManagement_ManageDialogTitle",
           _?.m_strPlayerName,
         );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            active: _,
-            onClose: _,
-            familyGroupID: _,
-            invited: _,
-            persona: _,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
               active: _,
-            },
-            _.createElement(
-              _._,
-              {
+              onClose: _,
+              familyGroupID: _,
+              invited: _,
+              persona: _,
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
                 className: _.FamilyMemberActionsDialog,
                 titleClassName: _.Title,
                 title: _,
@@ -2631,51 +2361,43 @@
                 bOKDisabled: !0,
                 closeModal: __webpack_require__,
                 bHideCloseIcon: !0,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _.ButtonList,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _.ManagementButton,
-                    onClick: () => {
-                      window.location.href =
-                        _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid();
-                    },
-                  },
-                  (0, _._)("#FamilyManagement_ProfileLink"),
-                ),
-                _.createElement(_._, {
-                  className: _.Separator,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.ManagementButton,
+                      onClick: () => {
+                        window.location.href =
+                          _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid();
+                      },
+                      children: (0, _._)("#FamilyManagement_ProfileLink"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.Separator,
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: (0, _._)(_.ManagementButton, _.CancelInvite),
+                      onClick: () => {
+                        _(null), _(), __webpack_require__();
+                      },
+                      children: (0, _._)(
+                        "#FamilyManagement_CancelInviteButton",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.Separator,
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.ManagementButton,
+                      onClick: __webpack_require__,
+                      children: (0, _._)("#FamilyManagement_Cancel"),
+                    }),
+                  ],
                 }),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(_.ManagementButton, _.CancelInvite),
-                    onClick: () => {
-                      _(null), _(), __webpack_require__();
-                    },
-                  },
-                  (0, _._)("#FamilyManagement_CancelInviteButton"),
-                ),
-                _.createElement(_._, {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.ManagementButton,
-                    onClick: __webpack_require__,
-                  },
-                  (0, _._)("#FamilyManagement_Cancel"),
-                ),
-              ),
-            ),
-          ),
-        );
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { familyGroupID: _ } = _,
@@ -2692,24 +2414,15 @@
           _ = (0, _._)(_),
           _ = (0, _._)();
         if (_.isPending)
-          return _.createElement(
-            "div",
-            {
-              className: _.ThrobberContainer,
-            },
-            _.createElement(_._, null),
-          );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+          return (0, _.jsx)("div", {
+            className: _.ThrobberContainer,
+            children: (0, _.jsx)(_._, {}),
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               active: __webpack_require__,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsxs)(_._, {
                 strTitle: (0, _._)(
                   "#FamilyManagement_DeleteFamilyConfirmationTitle",
                 ),
@@ -2720,67 +2433,56 @@
                     });
                 },
                 closeModal: _,
-              },
-              _ > 0 &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "p",
-                    null,
-                    (0, _._)(
-                      "#FamilyManagement_DeleteFamilyConfirmationText_1",
-                    ),
-                  ),
-                  _.createElement(
-                    "ul",
-                    null,
-                    _.createElement(
-                      "li",
-                      null,
-                      (0, _._)(
-                        "#FamilyManagement_DeleteFamilyConfirmationText_2",
-                        _,
+                children: [
+                  _ > 0 &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("p", {
+                          children: (0, _._)(
+                            "#FamilyManagement_DeleteFamilyConfirmationText_1",
+                          ),
+                        }),
+                        (0, _.jsxs)("ul", {
+                          children: [
+                            (0, _.jsx)("li", {
+                              children: (0, _._)(
+                                "#FamilyManagement_DeleteFamilyConfirmationText_2",
+                                _,
+                              ),
+                            }),
+                            (0, _.jsx)("li", {
+                              children: (0, _._)(
+                                "#FamilyManagement_DeleteFamilyConfirmationText_3",
+                              ),
+                            }),
+                            (0, _.jsx)("li", {
+                              children: (0, _._)(
+                                "#FamilyManagement_DeleteFamilyConfirmationText_4",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  0 === _ &&
+                    (0, _.jsx)("p", {
+                      children: (0, _._)(
+                        "#FamilyManagement_DeleteFamilyConfirmationText_NoCooldown",
                       ),
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      (0, _._)(
-                        "#FamilyManagement_DeleteFamilyConfirmationText_3",
-                      ),
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      (0, _._)(
-                        "#FamilyManagement_DeleteFamilyConfirmationText_4",
-                      ),
-                    ),
-                  ),
-                ),
-              0 === _ &&
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#FamilyManagement_DeleteFamilyConfirmationText_NoCooldown",
-                  ),
-                ),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
+                    }),
+                ],
+              }),
+            }),
+            (0, _.jsx)(_._, {
               className: (0, _._)(_.DeleteFamily, _.ManagementButton),
               noFocusRing: !1,
               onClick: () => {
                 _(null), _();
               },
-            },
-            (0, _._)("#FamilyManagement_DeleteFamilyButton"),
-          ),
-        );
+              children: (0, _._)("#FamilyManagement_DeleteFamilyButton"),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -2795,25 +2497,22 @@
         const _ = parseInt(__webpack_require__.nFamilyHistoryRowHeight),
           _ = _.useCallback(
             (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 entry: _[_],
                 styleProps: __webpack_require__,
                 fnRenderName: _.FnRenderName,
               }),
             [_, __webpack_require__, _.FnRenderName],
           );
-        return _.createElement(
-          _._,
-          {
-            className: __webpack_require__.FamilyHistory,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          className: __webpack_require__.FamilyHistory,
+          children: (0, _.jsx)(_, {
             bDynamic: !0,
             nRows: _.length,
             nItemHeight: _,
             renderItem: _,
           }),
-        );
+        });
       }
       function _(_) {
         let {
@@ -2837,14 +2536,16 @@
           _ = _(_.actor_steamid());
         _ = _.actor_steamid()
           ? _.by_support()
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, _.data?.m_strPlayerName),
-                " (",
-                _,
-                ")",
-              )
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: _.data?.m_strPlayerName,
+                  }),
+                  " (",
+                  _,
+                  ")",
+                ],
+              })
             : _
           : _;
         let _ = JSON.parse(_.body());
@@ -2941,28 +2642,21 @@
           default:
             _ = (0, _._)("#FamilyHistory_UnknownChange");
         }
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(__webpack_require__.Entry),
-            focusable: !0,
-            ..._,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(__webpack_require__.Entry),
+          focusable: !0,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
               className: (0, _._)(__webpack_require__.Timestamp),
-            },
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _,
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(__webpack_require__.EntryText),
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2997,17 +2691,14 @@
           } = _,
           _ = [];
         for (let _ = _; _ < __webpack_require__; _++) _.push(_(_, _));
-        return _.createElement(
-          _._,
-          {
-            className: _.VirtualizedGridRow,
-            style: {
-              height: _,
-              gap: _,
-            },
+        return (0, _.jsx)(_._, {
+          className: _.VirtualizedGridRow,
+          style: {
+            height: _,
+            gap: _,
           },
-          _,
-        );
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -3035,21 +2726,24 @@
             [_],
           ),
           _ = (0, _._)(_);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ref: _,
           nRows: _,
           nItemHeight: _,
           nRowGap: _,
           renderItem: (_) =>
-            _.createElement(_, {
-              key: _,
-              idxStart: _ * _,
-              idxEnd: Math.min(_, (_ + 1) * _),
-              height: _,
-              itemWidth: _,
-              columnGap: _,
-              renderItem: __webpack_require__,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                idxStart: _ * _,
+                idxEnd: Math.min(_, (_ + 1) * _),
+                height: _,
+                itemWidth: _,
+                columnGap: _,
+                renderItem: __webpack_require__,
+              },
+              _,
+            ),
         });
       }
       function _(_) {
@@ -3065,24 +2759,21 @@
         const _ = "error" == _ || !_;
         let _;
         _ = _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("img", {
-                className: _.Capsule,
-                src: _,
-                alt: _.name,
-                loading: "lazy",
-              }),
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("img", {
+                  className: _.Capsule,
+                  src: _,
+                  alt: _.name,
+                  loading: "lazy",
+                }),
+                (0, _.jsx)("div", {
                   className: _.Label,
-                },
-                _.name,
-              ),
-            )
-          : _.createElement("img", {
+                  children: _.name,
+                }),
+              ],
+            })
+          : (0, _.jsx)("img", {
               className: _.Capsule,
               src: _,
               alt: _.name,
@@ -3103,17 +2794,20 @@
           _ = _.useCallback(
             (_, _) => {
               const _ = _[_];
-              return _.createElement(_, {
-                key: _.appid,
-                app: _,
-                width: _,
-                index: _,
-                renderItem: __webpack_require__,
-              });
+              return (0, _.jsx)(
+                _,
+                {
+                  app: _,
+                  width: _,
+                  index: _,
+                  renderItem: __webpack_require__,
+                },
+                _.appid,
+              );
             },
             [_, __webpack_require__],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           nItems: _.length,
           renderItem: _,
           nAspectRatio: 600 / 900,
@@ -3121,6 +2815,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3227,12 +2922,9 @@
         ("date_acquired-asc" != __webpack_require__ &&
           "date_acquired-desc" != __webpack_require__) ||
           !_.rt_time_acquired ||
-          (_ = _.createElement(
-            "div",
-            {
-              className: _.Acquired,
-            },
-            (0, _._)(
+          (_ = (0, _.jsx)("div", {
+            className: _.Acquired,
+            children: (0, _._)(
               "#FamilyGame_DateAcquired",
               (0, _._)(_.rt_time_acquired, {
                 month: "long",
@@ -3241,31 +2933,25 @@
                 weekday: void 0,
               }),
             ),
-          ));
+          }));
         const _ = (_) =>
           _(_[_].data, _.data?.get(new _._(_[_]).GetAccountID()), _);
         let _, _;
         if (
           (_ &&
-            (_ = _.createElement(
-              "div",
-              {
-                className: _.Excluded,
-              },
-              (0, _._)(_) + " (" + String(_.exclude_reason) + ")",
-            )),
+            (_ = (0, _.jsx)("div", {
+              className: _.Excluded,
+              children: (0, _._)(_) + " (" + String(_.exclude_reason) + ")",
+            })),
           3 != _.exclude_reason)
         )
           if (
             (_ &&
               !_ &&
-              (_ = _.createElement(
-                "div",
-                {
-                  className: _.Excluded,
-                },
-                (0, _._)("#FamilyGame_Excluded_Private"),
-              )),
+              (_ = (0, _.jsx)("div", {
+                className: _.Excluded,
+                children: (0, _._)("#FamilyGame_Excluded_Private"),
+              })),
             0 == _.length || _.some((_) => !_.isSuccess))
           )
             _ = null;
@@ -3273,59 +2959,45 @@
             const _ = _.length != _.owner_steamids.length && !_;
             _ =
               1 == _.length
-                ? _.createElement(
-                    "div",
-                    {
-                      className: _.LibraryOwnerSingle,
-                    },
-                    (0, _._)(
+                ? (0, _.jsx)("div", {
+                    className: _.LibraryOwnerSingle,
+                    children: (0, _._)(
                       _
                         ? "#FamilyGames_FromTheLibraryOf_Single_Owned"
                         : "#FamilyGames_FromTheLibraryOf_Single",
                       _(0),
                     ),
-                  )
-                : _.createElement(
-                    "div",
-                    {
-                      className: _.LibraryOwnerMultiple,
-                    },
-                    _.createElement(
-                      "div",
-                      {
+                  })
+                : (0, _.jsxs)("div", {
+                    className: _.LibraryOwnerMultiple,
+                    children: [
+                      (0, _.jsx)("div", {
                         className: _.Header,
-                      },
-                      (0, _._)(
-                        _
-                          ? "#FamilyGames_FromTheLibraryOf_Header_Owned"
-                          : "#FamilyGames_FromTheLibraryOf_Header",
-                      ),
-                    ),
-                    _.createElement(
-                      "ul",
-                      null,
-                      _.map((_, _) =>
-                        _.createElement(
-                          "li",
-                          {
-                            key: _,
-                            className: _.Owner,
-                          },
-                          _(_),
+                        children: (0, _._)(
+                          _
+                            ? "#FamilyGames_FromTheLibraryOf_Header_Owned"
+                            : "#FamilyGames_FromTheLibraryOf_Header",
                         ),
-                      ),
-                    ),
-                  );
+                      }),
+                      (0, _.jsx)("ul", {
+                        children: _.map((_, _) =>
+                          (0, _.jsx)(
+                            "li",
+                            {
+                              className: _.Owner,
+                              children: _(_),
+                            },
+                            _,
+                          ),
+                        ),
+                      }),
+                    ],
+                  });
           }
-        return _.createElement(
-          "div",
-          {
-            className: _.AdditionalHoverCtn,
-          },
-          _,
-          _,
-          _,
-        );
+        return (0, _.jsxs)("div", {
+          className: _.AdditionalHoverCtn,
+          children: [_, _, _],
+        });
       }
       function _(_) {
         const { item: _ } = _,
@@ -3336,13 +3008,10 @@
           _ && _.owner_steamids.includes(_) && (_ -= 1),
           _ <= 1
             ? null
-            : _.createElement(
-                "div",
-                {
-                  className: _.LicenseCount,
-                },
-                _,
-              )
+            : (0, _.jsx)("div", {
+                className: _.LicenseCount,
+                children: _,
+              })
         );
       }
       function _(_, _, _) {
@@ -3373,16 +3042,13 @@
             (0, _._)(_, !_, [_]), _.mutate(_);
           }, [_, _, _, _]);
         return _ && _ && _.is_enabled && 0 != _.applist_base_id
-          ? _.createElement(
-              _._,
-              {
-                onSelected: _,
-              },
-              (0, _._)(
+          ? (0, _.jsx)(_._, {
+              onSelected: _,
+              children: (0, _._)(
                 _ ? "#FamilyGame_DenyForChild" : "#FamilyGame_AllowForChild",
                 _,
               ),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -3413,55 +3079,46 @@
             [_],
           ),
           _ = _ && _;
-        return _.createElement(
-          _._,
-          null,
-          _ &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)(_._, {
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
                 onSelected: () => {
                   (0, _._)(_.appid, _.name);
                 },
-              },
-              (0, _._)("#FamilyGame_PlayGame"),
-            ),
-          _ &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#FamilyGame_PlayGame"),
+              }),
+            _ &&
+              (0, _.jsx)(_._, {
                 onSelected: _,
-              },
-              (0, _._)("#FamilyGame_OpenAppDetails"),
-            ),
-          _?.visible &&
-            _.createElement(
-              _._,
-              {
+                children: (0, _._)("#FamilyGame_OpenAppDetails"),
+              }),
+            _?.visible &&
+              (0, _.jsx)(_._, {
                 onSelected: _,
-              },
-              (0, _._)("#FamilyGame_ViewStore"),
-            ),
-          _.createElement(
-            _._,
-            {
+                children: (0, _._)("#FamilyGame_ViewStore"),
+              }),
+            (0, _.jsx)(_._, {
               onSelected: _,
-            },
-            (0, _._)(
-              _ ? "#FamilyGame_UnmarkAsPrivate" : "#FamilyGame_MarkAsPrivate",
-            ),
-          ),
-          _ &&
-            _.members
-              .filter((_) => 2 == _.role)
-              .map((_) =>
-                _.createElement(_, {
-                  key: _.steamid,
-                  item: _,
-                  strSteamID: _.steamid,
-                }),
+              children: (0, _._)(
+                _ ? "#FamilyGame_UnmarkAsPrivate" : "#FamilyGame_MarkAsPrivate",
               ),
-        );
+            }),
+            _ &&
+              _.members
+                .filter((_) => 2 == _.role)
+                .map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      item: _,
+                      strSteamID: _.steamid,
+                    },
+                    _.steamid,
+                  ),
+                ),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3475,13 +3132,12 @@
           } = _,
           _ = (0, _._)(),
           _ = _.useContext(_),
-          _ = _.createElement(_, {
+          _ = (0, _.jsx)(_, {
             app: __webpack_require__,
             sort: _,
           }),
-          { data: _ } = (0, _._)({
-            appid: __webpack_require__.appid,
-          }),
+          _ = (0, _._)(__webpack_require__.appid),
+          { data: _ } = (0, _._)(_),
           _ =
             0 == __webpack_require__.exclude_reason ||
             3 == __webpack_require__.exclude_reason,
@@ -3491,7 +3147,7 @@
           _ = _.useCallback(
             (_) => {
               (0, _._)(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   item: __webpack_require__,
                   bOwnsGame: _,
                   familyContext: _,
@@ -3513,42 +3169,35 @@
             },
             [_.appid, _, _, _, _, _],
           );
-        return _.createElement(
-          _._,
-          {
-            item: {
-              type: "game",
-              _: __webpack_require__.appid,
+        return (0, _.jsx)(_._, {
+          _: _,
+          name: __webpack_require__.name,
+          bPreventNavigation: _ || _,
+          bHidePrice: _,
+          bShowWishlistButton: !_,
+          hoverProps: {
+            direction: "right",
+            style: {
+              minWidth: "320px",
             },
-            name: __webpack_require__.name,
-            bPreventNavigation: _ || _,
-            bHidePrice: _,
-            bShowWishlistButton: !_,
-            hoverProps: {
-              direction: "right",
-              style: {
-                minWidth: "320px",
-              },
-            },
-            className: _.HoverSource,
-            elElementToAppend: _,
           },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_, _.FamilyGameItem, _ && _.Selectable),
-              focusable: !0,
-              onActivate: _ ? _ : void 0,
-              onContextMenu: _,
-              ..._,
-            },
-            _,
-            _ &&
-              _.createElement(_, {
-                item: __webpack_require__,
-              }),
-          ),
-        );
+          className: _.HoverSource,
+          elElementToAppend: _,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_, _.FamilyGameItem, _ && _.Selectable),
+            focusable: !0,
+            onActivate: _ ? _ : void 0,
+            onContextMenu: _,
+            ..._,
+            children: [
+              _,
+              _ &&
+                (0, _.jsx)(_, {
+                  item: __webpack_require__,
+                }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const _ = 2,
@@ -3567,43 +3216,30 @@
               }),
               _.current?.Node().ForceMeasureFocusRing());
           }, [__webpack_require__]),
-          _.createElement(
-            _._,
-            {
-              className: _.Buttons,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_._, {
+            className: _.Buttons,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ButtonWrapper,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   className: _.Button,
                   navRef: _,
                   onClick: () => {
                     _(__webpack_require__ + _);
                   },
-                },
-                (0, _._)("#FamilyGames_ShowMore"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                  children: (0, _._)("#FamilyGames_ShowMore"),
+                }),
+              }),
+              (0, _.jsx)("div", {
                 className: _.ButtonWrapper,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   className: _.Button,
                   onClick: () => _(!0),
-                },
-                (0, _._)("#FamilyGames_ShowAll"),
-              ),
-            ),
-          )
+                  children: (0, _._)("#FamilyGames_ShowAll"),
+                }),
+              }),
+            ],
+          })
         );
       }
       function _(_, _) {
@@ -3659,7 +3295,7 @@
           } = _(_, !1),
           _ = _.useCallback(
             (_, _, _) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 app: _,
                 item: _[_],
                 bShowLicenseCount: _,
@@ -3669,44 +3305,36 @@
             [_, _, _],
           );
         return _?.length
-          ? _.createElement(
-              "div",
-              {
-                className: _.FamilyGamesSection,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _.FamilyGamesSection,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.Header,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Label,
-                  },
-                  __webpack_require__,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Count,
-                  },
-                  (0, _._)("#FamilyGames_Count", _.length),
-                ),
-              ),
-              _.createElement(_, {
-                rgApps: _,
-                nColumns: _,
-                onWidthChanged: _,
-                renderItem: _,
-              }),
-              !_ &&
-                _.createElement(_, {
-                  nRows: _,
-                  setRows: _,
-                  setShowAll: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Label,
+                      children: __webpack_require__,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.Count,
+                      children: (0, _._)("#FamilyGames_Count", _.length),
+                    }),
+                  ],
                 }),
-            )
+                (0, _.jsx)(_, {
+                  rgApps: _,
+                  nColumns: _,
+                  onWidthChanged: _,
+                  renderItem: _,
+                }),
+                !_ &&
+                  (0, _.jsx)(_, {
+                    nRows: _,
+                    setRows: _,
+                    setShowAll: _,
+                  }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -3720,53 +3348,43 @@
           _ = _.findIndex((_) => _ == __webpack_require__),
           _ = -1 != _,
           _ = _[(_ + 1) % _.length];
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.FamilyGamesSortSelector, _ && _.Selected),
-            onActivate: () => _(_),
-          },
-          _,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_.FamilyGamesSortSelector, _ && _.Selected),
+          onActivate: () => _(_),
+          children: [
+            _,
+            (0, _.jsx)("div", {
               className: _.DirectionIndicator,
-            },
-            _ &&
-              _.createElement(_.i3G, {
-                direction: _ ? "up" : "down",
-              }),
-          ),
-        );
+              children:
+                _ &&
+                (0, _.jsx)(_.i3G, {
+                  direction: _ ? "up" : "down",
+                }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { sort: _, setSort: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.FamilyGamesSort,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.FamilyGamesSort,
+          children: [
+            (0, _.jsx)(_, {
               rgOptions: ["alpha-asc", "alpha-desc"],
               sort: _,
               setSort: __webpack_require__,
               bAscending: "alpha-asc" == _,
-            },
-            (0, _._)("#FamilyGames_Sort_Alphabetical"),
-          ),
-          _.createElement(
-            _,
-            {
+              children: (0, _._)("#FamilyGames_Sort_Alphabetical"),
+            }),
+            (0, _.jsx)(_, {
               rgOptions: ["date_acquired-desc", "date_acquired-asc"],
               sort: _,
               setSort: __webpack_require__,
               bAscending: "date_acquired-asc" == _,
-            },
-            (0, _._)("#FamilyGames_Sort_DateAcquired"),
-          ),
-        );
+              children: (0, _._)("#FamilyGames_Sort_DateAcquired"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { strFilter: _, setFilter: __webpack_require__ } = _,
@@ -3776,18 +3394,15 @@
             },
             [__webpack_require__],
           );
-        return _.createElement(
-          _._,
-          {
-            className: _.FamilyGamesSearchBox,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          className: _.FamilyGamesSearchBox,
+          children: (0, _.jsx)(_._, {
             className: _.Input,
             value: _,
             onChange: _,
             placeholder: (0, _._)("#Parental_GameList_Search"),
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -3796,20 +3411,19 @@
           sort: _,
           setSort: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.FamilyGamesControls,
-          },
-          _.createElement(_, {
-            sort: _,
-            setSort: _,
-          }),
-          _.createElement(_, {
-            strFilter: _,
-            setFilter: __webpack_require__,
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          className: _.FamilyGamesControls,
+          children: [
+            (0, _.jsx)(_, {
+              sort: _,
+              setSort: _,
+            }),
+            (0, _.jsx)(_, {
+              strFilter: _,
+              setFilter: __webpack_require__,
+            }),
+          ],
+        });
       }
       const _ = {
         bIncludeOwn: !0,
@@ -3827,13 +3441,10 @@
             }),
             [_, _.data, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: __webpack_require__,
+        });
       }
       const _ = _.createContext(void 0);
       function _(_) {
@@ -3849,79 +3460,65 @@
             [_],
           ),
           _ = _.useMemo(() => _?.filter((_) => 3 == _.exclude_reason), [_]);
-        return _.createElement(
-          _,
-          {
-            familyGroupID: _,
-          },
-          _.isFetching &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_, {
+          familyGroupID: _,
+          children: [
+            _.isFetching &&
+              (0, _.jsx)("div", {
                 className: _.Loading,
-              },
-              _.createElement(_._, null),
-            ),
-          _.isError &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_._, {}),
+              }),
+            _.isError &&
+              (0, _.jsx)("div", {
                 className: _.Error,
-              },
-              (0, _._)("#FamilyGames_Error", _.error),
-            ),
-          _.isSuccess &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#FamilyGames_Error", _.error),
+              }),
+            _.isSuccess &&
+              (0, _.jsxs)("div", {
                 className: _.FamilyGames,
-              },
-              _.data?.length > 0 &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    strFilter: __webpack_require__,
-                    setFilter: _,
-                    sort: _,
-                    setSort: _,
-                  }),
-                  _.createElement(_, {
-                    rgSortedGames: _,
-                    strLabel: (0, _._)("#FamilyGames_IncludedGames"),
-                    sort: _,
-                  }),
-                  _.createElement(_, {
-                    rgSortedGames: _,
-                    bShowLicenseCount: !1,
-                    strLabel: (0, _._)("#FamilyGames_ExcludedGames"),
-                    sort: _,
-                  }),
-                  _.createElement(_, {
-                    rgSortedGames: _,
-                    bShowLicenseCount: !1,
-                    strLabel: (0, _._)("#FamilyGames_FreeGames"),
-                    sort: _,
-                  }),
-                  0 == _?.length &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Empty,
-                      },
-                      (0, _._)("#FamilyGames_EmptySearch"),
-                    ),
-                ),
-              0 == _.data?.length &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Empty,
-                  },
-                  (0, _._)("#FamilyGames_NoGames"),
-                ),
-            ),
-        );
+                children: [
+                  _.data?.length > 0 &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_, {
+                          strFilter: __webpack_require__,
+                          setFilter: _,
+                          sort: _,
+                          setSort: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          rgSortedGames: _,
+                          strLabel: (0, _._)("#FamilyGames_IncludedGames"),
+                          sort: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          rgSortedGames: _,
+                          bShowLicenseCount: !1,
+                          strLabel: (0, _._)("#FamilyGames_ExcludedGames"),
+                          sort: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          rgSortedGames: _,
+                          bShowLicenseCount: !1,
+                          strLabel: (0, _._)("#FamilyGames_FreeGames"),
+                          sort: _,
+                        }),
+                        0 == _?.length &&
+                          (0, _.jsx)("div", {
+                            className: _.Empty,
+                            children: (0, _._)("#FamilyGames_EmptySearch"),
+                          }),
+                      ],
+                    }),
+                  0 == _.data?.length &&
+                    (0, _.jsx)("div", {
+                      className: _.Empty,
+                      children: (0, _._)("#FamilyGames_NoGames"),
+                    }),
+                ],
+              }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4064,26 +3661,26 @@
             [_, _, _],
           );
         let _ = __webpack_require__.is_enabled ? "enabled" : "disabled";
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            steamid: _,
-            otherChildrenQuery: _,
-            confirmCopy: _,
-            setConfirmCopy: _,
-          }),
-          _.createElement(_._, {
-            strClassName: _.DropDownCtn,
-            controlled: !0,
-            bottomSeparator: "none",
-            label: (0, _._)("#Parental_EnableDropdown"),
-            rgOptions: _,
-            selectedOption: _,
-            onChange: _,
-            bMatchWidth: !1,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              steamid: _,
+              otherChildrenQuery: _,
+              confirmCopy: _,
+              setConfirmCopy: _,
+            }),
+            (0, _.jsx)(_._, {
+              strClassName: _.DropDownCtn,
+              controlled: !0,
+              bottomSeparator: "none",
+              label: (0, _._)("#Parental_EnableDropdown"),
+              rgOptions: _,
+              selectedOption: _,
+              onChange: _,
+              bMatchWidth: !1,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4113,27 +3710,18 @@
         let _ = _;
         _.isSuccess && (_ = _.data.m_strPlayerName);
         let _ = (0, _._)("#Parental_CopySettingsConfirmation_Desc", _, _);
-        return _.createElement(
-          _._,
-          {
-            active: _.length > 0,
-          },
-          _.createElement(
-            _._,
-            {
-              closeModal: () => _(""),
-              onOK: _,
-              strTitle: (0, _._)("#Parental_CopySettingsConfirmation_Title"),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ConfirmCopyDescription,
-              },
-              _,
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          active: _.length > 0,
+          children: (0, _.jsx)(_._, {
+            closeModal: () => _(""),
+            onOK: _,
+            strTitle: (0, _._)("#Parental_CopySettingsConfirmation_Title"),
+            children: (0, _.jsx)("div", {
+              className: _.ConfirmCopyDescription,
+              children: _,
+            }),
+          }),
+        });
       }
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _,
@@ -4161,7 +3749,7 @@
             },
             [__webpack_require__, _, _],
           );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           focusable: !0,
           strClassName: _.DropDownCtn,
           bottomSeparator: "none",
@@ -4193,35 +3781,31 @@
               (0, _._)(__webpack_require__, !_, [_]),
               _.mutate(__webpack_require__);
           }, [_, __webpack_require__, _, _, _]);
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.ParentalGameRow, _ && _.Allowed),
-            onActivate: _,
-            ..._,
-          },
-          _ &&
-            _.createElement("img", {
-              className: _.Icon,
-              src: _,
-            }),
-          !_ &&
-            _.createElement("div", {
-              className: _.Icon,
-            }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_.ParentalGameRow, _ && _.Allowed),
+          onActivate: _,
+          ..._,
+          children: [
+            _ &&
+              (0, _.jsx)("img", {
+                className: _.Icon,
+                src: _,
+              }),
+            !_ &&
+              (0, _.jsx)("div", {
+                className: _.Icon,
+              }),
+            (0, _.jsx)("div", {
               className: _.Name,
-            },
-            _.name,
-          ),
-          _.createElement(_._, {
-            className: _.RoundCheckbox,
-            checked: _,
-            onChange: _,
-          }),
-        );
+              children: _.name,
+            }),
+            (0, _.jsx)(_._, {
+              className: _.RoundCheckbox,
+              checked: _,
+              onChange: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4246,89 +3830,79 @@
               data: "show_denied_only",
             },
           ];
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            null,
-            (0, _._)("#Parental_GameList_ShowGamesThatAreFilterHeader"),
-          ),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)(
+                "#Parental_GameList_ShowGamesThatAreFilterHeader",
+              ),
+            }),
+            (0, _.jsx)(_._, {
               className: _.FilterDropdownCtn,
-            },
-            _.createElement(_._, {
-              focusable: !0,
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) => _(_.data),
+              children: (0, _.jsx)(_._, {
+                focusable: !0,
+                rgOptions: _,
+                selectedOption: _,
+                onChange: (_) => _(_.data),
+              }),
             }),
-          ),
-          _.createElement(
-            _._,
-            null,
-            (0, _._)("#Parental_GameList_ContentDescriptorFilterHeader"),
-          ),
-          _.createElement(
-            _._,
-            {
+            (0, _.jsx)(_._, {
+              children: (0, _._)(
+                "#Parental_GameList_ContentDescriptorFilterHeader",
+              ),
+            }),
+            (0, _.jsx)(_._, {
               className: _.FilterSection,
-            },
-            _.map((_) => {
-              const _ = _.includes(_),
-                _ = ((_) => (_) => {
-                  let _ = [];
-                  if (_) {
-                    const _ = [_].concat(_(_));
-                    for (const _ of _)
-                      (_.includes(_) || _.includes(_)) &&
-                        __webpack_require__.push(_);
-                  } else {
-                    const _ = [_].concat(_(_));
-                    for (const _ of _)
-                      _.includes(_) &&
-                        !_.includes(_) &&
-                        __webpack_require__.push(_);
-                  }
-                  _(_);
-                })(_);
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  className: _.FilterRow,
-                },
-                _.createElement(
+              children: _.map((_) => {
+                const _ = _.includes(_),
+                  _ = ((_) => (_) => {
+                    let _ = [];
+                    if (_) {
+                      const _ = [_].concat(_(_));
+                      for (const _ of _)
+                        (_.includes(_) || _.includes(_)) &&
+                          __webpack_require__.push(_);
+                    } else {
+                      const _ = [_].concat(_(_));
+                      for (const _ of _)
+                        _.includes(_) &&
+                          !_.includes(_) &&
+                          __webpack_require__.push(_);
+                    }
+                    _(_);
+                  })(_);
+                return (0, _.jsxs)(
                   _._,
                   {
-                    className: _.FilterInfo,
+                    className: _.FilterRow,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _.FilterInfo,
+                        children: _(_),
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _.FilterToggle,
+                        children: (0, _.jsx)(_._, {
+                          checked: _,
+                          onChange: _,
+                        }),
+                      }),
+                    ],
                   },
-                  _(_),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.FilterToggle,
-                  },
-                  _.createElement(_._, {
-                    checked: _,
-                    onChange: _,
-                  }),
-                ),
-              );
+                  _,
+                );
+              }),
             }),
-          ),
-          _.createElement(_._, {
-            onCancel: _,
-            onOK: () => {
-              _(_), _();
-            },
-            strOKText: (0, _._)("#Parental_GameList_Button_Apply"),
-            className: _.FilterModalButtons,
-          }),
-        );
+            (0, _.jsx)(_._, {
+              onCancel: _,
+              onOK: () => {
+                _(_), _();
+              },
+              strOKText: (0, _._)("#Parental_GameList_Button_Apply"),
+              className: _.FilterModalButtons,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4342,102 +3916,75 @@
             setShowFilter: _,
           } = _,
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               active: _,
               onDismiss: () => _(!1),
               className: _.FilterModal,
-            },
-            _.createElement(_, {
-              selectedContentDescriptors: _,
-              setContentDescriptors: _,
-              showFilter: _,
-              setShowFilter: _,
-              onDismiss: () => _(!1),
-            }),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _.ParentalGameListHeader,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              (0, _._)("#Parental_GameList_Header"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.SearchCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.SelectorCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.ViewSelector,
-                      "list" == _ && _.Selected,
-                    ),
-                    onActivate: () => _("list"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: (0, _._)("#Parental_GameList_List"),
-                    },
-                    _.createElement(_.B8B, null),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.ViewSelector,
-                      "grid" == _ && _.Selected,
-                    ),
-                    onActivate: () => _("grid"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: (0, _._)("#Parental_GameList_Grid"),
-                    },
-                    _.createElement(_.F7C, null),
-                  ),
-                ),
-              ),
-              _.createElement(_, {
-                strFilter: _,
-                setFilter: __webpack_require__,
+              children: (0, _.jsx)(_, {
+                selectedContentDescriptors: _,
+                setContentDescriptors: _,
+                showFilter: _,
+                setShowFilter: _,
+                onDismiss: () => _(!1),
               }),
-              _.createElement(
-                _._,
-                {
-                  className: _.FilterDropdownButton,
-                  onActivate: () => _(!0),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#Parental_GameList_Filter"),
-                  },
-                  _.createElement(_.nkJ, null),
-                ),
-              ),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsxs)(_._, {
+              className: _.ParentalGameListHeader,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Title,
+                  children: (0, _._)("#Parental_GameList_Header"),
+                }),
+                (0, _.jsxs)(_._, {
+                  className: _.SearchCtn,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.SelectorCtn,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          className: (0, _._)(
+                            _.ViewSelector,
+                            "list" == _ && _.Selected,
+                          ),
+                          onActivate: () => _("list"),
+                          children: (0, _.jsx)(_._, {
+                            toolTipContent: (0, _._)("#Parental_GameList_List"),
+                            children: (0, _.jsx)(_.B8B, {}),
+                          }),
+                        }),
+                        (0, _.jsx)(_._, {
+                          className: (0, _._)(
+                            _.ViewSelector,
+                            "grid" == _ && _.Selected,
+                          ),
+                          onActivate: () => _("grid"),
+                          children: (0, _.jsx)(_._, {
+                            toolTipContent: (0, _._)("#Parental_GameList_Grid"),
+                            children: (0, _.jsx)(_.F7C, {}),
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_, {
+                      strFilter: _,
+                      setFilter: __webpack_require__,
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.FilterDropdownButton,
+                      onActivate: () => _(!0),
+                      children: (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)("#Parental_GameList_Filter"),
+                        children: (0, _.jsx)(_.nkJ, {}),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_, _, _) {
         const _ = (0, _._)()?.data.family_groupid(),
@@ -4552,40 +4099,29 @@
             setAllowAllApps: _,
           } = _,
           _ = _(__webpack_require__);
-        return _.createElement(
-          "div",
-          {
-            className: _.SectionHeader,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.SectionHeader,
+          children: [
+            (0, _.jsx)("div", {
               className: _.Title,
-            },
-            (0, _._)(_ + (_ ? "_Count" : ""), _, _, _),
-          ),
-          _ &&
-            _.createElement(
-              _._,
-              {
+              children: (0, _._)(_ + (_ ? "_Count" : ""), _, _, _),
+            }),
+            _ &&
+              (0, _.jsxs)(_._, {
                 className: _.SelectorCtn,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(!0),
-                },
-                (0, _._)("#Parental_GameList_AllowAll"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(!1),
-                },
-                (0, _._)("#Parental_GameList_DenyAll"),
-              ),
-            ),
-        );
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: () => _(!0),
+                    children: (0, _._)("#Parental_GameList_AllowAll"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: () => _(!1),
+                    children: (0, _._)("#Parental_GameList_DenyAll"),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4608,33 +4144,32 @@
           (0, _._)(_, "Parental Control Library not displaying all"),
           0 == _.length
             ? null
-            : _.createElement(
-                "div",
-                {
-                  className: _.ParentalGameSection,
-                },
-                _.createElement(_, {
-                  strToken: _,
-                  steamid: _,
-                  nAllowed: __webpack_require__,
-                  nTotal: _,
-                  setAllowAllApps: _,
-                }),
-                "list" == _ &&
-                  _.createElement(_, {
+            : (0, _.jsxs)("div", {
+                className: _.ParentalGameSection,
+                children: [
+                  (0, _.jsx)(_, {
+                    strToken: _,
                     steamid: _,
-                    settings: _,
-                    rgSortedGames: _,
+                    nAllowed: __webpack_require__,
+                    nTotal: _,
+                    setAllowAllApps: _,
                   }),
-                "grid" == _ &&
-                  _.createElement(_, {
-                    steamid: _,
-                    settings: _,
-                    rgSortedGames: _,
-                    nColumns: _,
-                    onWidthChanged: _,
-                  }),
-              )
+                  "list" == _ &&
+                    (0, _.jsx)(_, {
+                      steamid: _,
+                      settings: _,
+                      rgSortedGames: _,
+                    }),
+                  "grid" == _ &&
+                    (0, _.jsx)(_, {
+                      steamid: _,
+                      settings: _,
+                      rgSortedGames: _,
+                      nColumns: _,
+                      onWidthChanged: _,
+                    }),
+                ],
+              })
         );
       }
       function _(_) {
@@ -4671,53 +4206,48 @@
               ? (_ = _.filter((_) => _.has(_.appid)))
               : "show_denied_only" === _ &&
                 (_ = _.filter((_) => !_.has(_.appid))),
-            _.createElement(
-              "div",
-              {
-                className: _.ParentalGameListOuter,
-              },
-              _.createElement(_, {
-                strFilter: _,
-                setFilter: _,
-                strView: _,
-                setView: _,
-                selectedContentDescriptors: _,
-                setContentDescriptors: _,
-                showFilter: _,
-                setShowFilter: _,
-              }),
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _.ParentalGameListOuter,
+              children: [
+                (0, _.jsx)(_, {
+                  strFilter: _,
+                  setFilter: _,
+                  strView: _,
+                  setView: _,
+                  selectedContentDescriptors: _,
+                  setContentDescriptors: _,
+                  showFilter: _,
+                  setShowFilter: _,
+                }),
+                (0, _.jsxs)("div", {
                   className: _.Content,
-                },
-                _.createElement(_, {
-                  strTitleToken: "#Parental_GameList_Library",
-                  strView: _,
-                  nAllowed: _,
-                  nTotal: _,
-                  setAllowAllApps: !_ && _,
-                  steamid: _,
-                  settings: __webpack_require__,
-                  rgAllApps: _,
+                  children: [
+                    (0, _.jsx)(_, {
+                      strTitleToken: "#Parental_GameList_Library",
+                      strView: _,
+                      nAllowed: _,
+                      nTotal: _,
+                      setAllowAllApps: !_ && _,
+                      steamid: _,
+                      settings: __webpack_require__,
+                      rgAllApps: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      strTitleToken: "#Parental_GameList_Store",
+                      strView: _,
+                      steamid: _,
+                      settings: __webpack_require__,
+                      rgAllApps: _,
+                    }),
+                    _.length + _.length == 0 &&
+                      (0, _.jsx)("div", {
+                        className: _.Empty,
+                        children: (0, _._)("#Parental_GameList_Empty"),
+                      }),
+                  ],
                 }),
-                _.createElement(_, {
-                  strTitleToken: "#Parental_GameList_Store",
-                  strView: _,
-                  steamid: _,
-                  settings: __webpack_require__,
-                  rgAllApps: _,
-                }),
-                _.length + _.length == 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Empty,
-                    },
-                    (0, _._)("#Parental_GameList_Empty"),
-                  ),
-              ),
-            ))
+              ],
+            }))
           : null;
       }
       function _(_) {
@@ -4729,15 +4259,18 @@
           _ = parseInt(_.nParentalListRowHeight),
           _ = _.useCallback(
             (_) =>
-              _.createElement(_, {
-                key: _,
-                steamid: _,
-                settings: __webpack_require__,
-                game: _[_],
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  steamid: _,
+                  settings: __webpack_require__,
+                  game: _[_],
+                },
+                _,
+              ),
             [_, __webpack_require__, _],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           nRows: _?.length,
           nItemHeight: _,
           nRowGap: 0,
@@ -4754,16 +4287,13 @@
           children: _,
           ..._
         } = _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_, _.ParentalApp, _ && _.Allowed),
-            focusable: !0,
-            onActivate: () => _(_, !_),
-            ..._,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_, _.ParentalApp, _ && _.Allowed),
+          focusable: !0,
+          onActivate: () => _(_, !_),
+          ..._,
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -4795,7 +4325,7 @@
                 __webpack_require__.applist_custom.find(
                   (_) => _.appid == _.appid,
                 )?.is_allowed || !1;
-              return _.createElement(_, {
+              return (0, _.jsx)(_, {
                 app: _,
                 item: _[_],
                 bIsAllowed: _,
@@ -4805,7 +4335,7 @@
             },
             [_, __webpack_require__, _],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           rgApps: _,
           nColumns: _,
           onWidthChanged: _,
@@ -4818,20 +4348,20 @@
           settings: __webpack_require__,
           mapAppsAllowed: _,
         } = _;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_, {
-            steamid: _,
-            settings: __webpack_require__,
-          }),
-          0 != __webpack_require__.applist_base_id &&
-            _.createElement(_, {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_, {
               steamid: _,
               settings: __webpack_require__,
-              mapAppsAllowed: _,
             }),
-        );
+            0 != __webpack_require__.applist_base_id &&
+              (0, _.jsx)(_, {
+                steamid: _,
+                settings: __webpack_require__,
+                mapAppsAllowed: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4850,7 +4380,7 @@
             },
             [_, __webpack_require__, _],
           );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           className: _.ToggleCtn,
           bottomSeparator: "none",
           label: (0, _._)(_),
@@ -4929,30 +4459,31 @@
           !_.includes(_) &&
             (_.includes(_) || _.current & (1 << _)) &&
             _.push(_);
-        return _.createElement(
-          "div",
-          {
-            className: _.ParentalFeatures,
-          },
-          _.createElement("hr", null),
-          _.map((_) =>
-            _[_]
-              ? _.createElement(
-                  _.Fragment,
-                  {
-                    key: _,
-                  },
-                  _.createElement(_, {
-                    steamid: _,
-                    settings: __webpack_require__,
-                    feature: _,
-                    label: _[_].featureDescription,
-                  }),
-                  _.createElement("hr", null),
-                )
-              : null,
-          ),
-        );
+        return (0, _.jsxs)("div", {
+          className: _.ParentalFeatures,
+          children: [
+            (0, _.jsx)("hr", {}),
+            _.map((_) =>
+              _[_]
+                ? (0, _.jsxs)(
+                    _.Fragment,
+                    {
+                      children: [
+                        (0, _.jsx)(_, {
+                          steamid: _,
+                          settings: __webpack_require__,
+                          feature: _,
+                          label: _[_].featureDescription,
+                        }),
+                        (0, _.jsx)("hr", {}),
+                      ],
+                    },
+                    _,
+                  )
+                : null,
+            ),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4967,7 +4498,7 @@
           } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useRef)(void 0);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ref: _,
           ..._,
           className: (0, _._)(
@@ -5014,15 +4545,18 @@
           const _ = __webpack_require__ & (BigInt(1) << BigInt(_)),
             _ = _ && _ & (BigInt(1) << BigInt(_));
           _.push(
-            _.createElement(_, {
-              key: _,
-              enabled: !!_,
-              locked: !!_,
-              slotIndex: _,
-              onToggle: _,
-              dragState: _,
-              setDragState: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                enabled: !!_,
+                locked: !!_,
+                slotIndex: _,
+                onToggle: _,
+                dragState: _,
+                setDragState: _,
+              },
+              _,
+            ),
           );
         }
         for (let _ = 0; _ < 48; _ += 8) {
@@ -5031,11 +4565,14 @@
             gridColumnEnd: _ + 9,
           };
           _.push(
-            _.createElement("div", {
-              className: (0, _._)(_.HashMark, "HashMark" + _),
-              key: "HashMark" + _,
-              style: _,
-            }),
+            (0, _.jsx)(
+              "div",
+              {
+                className: (0, _._)(_.HashMark, "HashMark" + _),
+                style: _,
+              },
+              "HashMark" + _,
+            ),
           );
         }
         for (let _ = 0; _ <= 48; _ += 8) {
@@ -5049,25 +4586,22 @@
               gridColumnEnd: _ + 1 + (0 == _ || 48 == _ ? 4 : 8),
             };
           _.push(
-            _.createElement(
+            (0, _.jsx)(
               "div",
               {
                 className: (0, _._)(_.HourMarker, "Hour" + _),
-                key: "Hour" + _,
                 style: _,
+                children: _,
               },
-              _,
+              "Hour" + _,
             ),
           );
         }
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.ParentalPlaytimeGrid, _),
-            onMouseLeave: () => _(null),
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_.ParentalPlaytimeGrid, _),
+          onMouseLeave: () => _(null),
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -5079,28 +4613,22 @@
           [_, _] = _.useState(_),
           _ = _.useRef(Object.assign({}, __webpack_require__)),
           _ = (0, _._)(_);
-        return _.createElement(
-          _._,
-          {
-            className: _.ParentalPlaytimeWindowsDialog,
-            closeModal: _,
-            onOK: () => {
-              _.mutate(_.current), _();
-            },
-            strTitle: _.createElement(
-              _._,
-              {
-                className: _.Title,
-              },
-              (0, _._)("#Parental_PlaytimeWindows_Title"),
-            ),
+        return (0, _.jsx)(_._, {
+          className: _.ParentalPlaytimeWindowsDialog,
+          closeModal: _,
+          onOK: () => {
+            _.mutate(_.current), _();
           },
-          _.createElement(_, {
+          strTitle: (0, _.jsx)(_._, {
+            className: _.Title,
+            children: (0, _._)("#Parental_PlaytimeWindows_Title"),
+          }),
+          children: (0, _.jsx)(_, {
             restrictions: _.current.playtime_restrictions?.playtime_days[_],
             dayIndex: _,
             setDayIndex: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { dayIndex: _, onChange: __webpack_require__ } = _,
@@ -5111,7 +4639,7 @@
             [__webpack_require__],
           ),
           _ = _();
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           rgOptions: _,
           selectedOption: _,
           onChange: _,
@@ -5154,79 +4682,69 @@
             },
             [_],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.ParentalPlaytimeWindowsDialogInner,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ParentalPlaytimeWindowsDialogInner,
+          children: [
+            (0, _.jsxs)(_._, {
               className: _.TopRow,
-            },
-            _.createElement(_, {
-              dayIndex: __webpack_require__,
-              onChange: _,
+              children: [
+                (0, _.jsx)(_, {
+                  dayIndex: __webpack_require__,
+                  onChange: _,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.Right,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.PlaytimeDescription,
+                      children: _(_),
+                    }),
+                    (0, _.jsxs)(_._, {
+                      className: _.PlaytimeButtons,
+                      children: [
+                        _ == BigInt(0) &&
+                          (0, _.jsx)(_._, {
+                            onClick: () => _(BigInt(0xffffffffffff)),
+                            children: (0, _._)(
+                              "#Parental_PlaytimeWindows_AllowAll",
+                            ),
+                          }),
+                        _ != BigInt(0) &&
+                          (0, _.jsx)(_._, {
+                            onClick: () => _(BigInt(0)),
+                            children: (0, _._)(
+                              "#Parental_PlaytimeWindows_ClearAll",
+                            ),
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
             }),
-            _.createElement(
-              "div",
-              {
-                className: _.Right,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.PlaytimeDescription,
-                },
-                _(_),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _.PlaytimeButtons,
-                },
-                _ == BigInt(0) &&
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () => _(BigInt(0xffffffffffff)),
-                    },
-                    (0, _._)("#Parental_PlaytimeWindows_AllowAll"),
-                  ),
-                _ != BigInt(0) &&
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () => _(BigInt(0)),
-                    },
-                    (0, _._)("#Parental_PlaytimeWindows_ClearAll"),
-                  ),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: _.ParentalPlaytimeWindows,
-            },
-            _.createElement(_, {
-              className: _.Grid,
-              nWindows: _,
-              onToggle: _,
+              children: [
+                (0, _.jsx)(_, {
+                  className: _.Grid,
+                  nWindows: _,
+                  onToggle: _,
+                }),
+                !_ &&
+                  (0, _.jsx)(_, {
+                    className: _.Input,
+                    nWindows: _,
+                    onSet: _,
+                  }),
+              ],
             }),
-            !_ &&
-              _.createElement(_, {
-                className: _.Input,
-                nWindows: _,
-                onSet: _,
-              }),
-          ),
-          _.createElement(_, {
-            strLabel: "#Parental_Playtime_Limit",
-            nMinutes: _.allowed_daily_minutes || 0,
-            onSelected: _,
-          }),
-        );
+            (0, _.jsx)(_, {
+              strLabel: "#Parental_Playtime_Limit",
+              nMinutes: _.allowed_daily_minutes || 0,
+              onSelected: _,
+            }),
+          ],
+        });
       }
       function _(_, _) {
         let _ = BigInt(0),
@@ -5276,90 +4794,72 @@
             },
             [_],
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.ParentalPlaytimeInput, _),
-            ..._,
-          },
-          _.createElement(
-            "div",
-            null,
-            (0, _._)("#Parental_PlaytimeWindows_From"),
-          ),
-          _.createElement(
-            "div",
-            null,
-            (0, _._)("#Parental_PlaytimeWindows_To"),
-          ),
-          _.createElement("div", null),
-          _.createElement(_(), {
-            className: _.Datetime,
-            value: _,
-            onChange: _,
-            dateFormat: !1,
-            open: !0,
-            input: !1,
-            timeConstraints: {
-              minutes: {
-                min: 0,
-                max: 59,
-                step: 30,
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.ParentalPlaytimeInput, _),
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              children: (0, _._)("#Parental_PlaytimeWindows_From"),
+            }),
+            (0, _.jsx)("div", {
+              children: (0, _._)("#Parental_PlaytimeWindows_To"),
+            }),
+            (0, _.jsx)("div", {}),
+            (0, _.jsx)(_(), {
+              className: _.Datetime,
+              value: _,
+              onChange: _,
+              dateFormat: !1,
+              open: !0,
+              input: !1,
+              timeConstraints: {
+                minutes: {
+                  min: 0,
+                  max: 59,
+                  step: 30,
+                },
               },
-            },
-          }),
-          _.createElement(_(), {
-            className: _.Datetime,
-            value: _,
-            onChange: _,
-            dateFormat: !1,
-            open: !0,
-            input: !1,
-            timeConstraints: {
-              minutes: {
-                min: 0,
-                max: 59,
-                step: 30,
+            }),
+            (0, _.jsx)(_(), {
+              className: _.Datetime,
+              value: _,
+              onChange: _,
+              dateFormat: !1,
+              open: !0,
+              input: !1,
+              timeConstraints: {
+                minutes: {
+                  min: 0,
+                  max: 59,
+                  step: 30,
+                },
               },
-            },
-          }),
-          _.createElement(
-            "div",
-            {
+            }),
+            (0, _.jsxs)("div", {
               className: _.ButtonCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ButtonWrapper,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.Button,
-                  disabled: _ >= _,
-                  onClick: _,
-                },
-                "+",
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.ButtonWrapper,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.Button,
-                  disabled: _ >= _,
-                  onClick: _,
-                },
-                "-",
-              ),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.ButtonWrapper,
+                  children: (0, _.jsx)(_._, {
+                    className: _.Button,
+                    disabled: _ >= _,
+                    onClick: _,
+                    children: "+",
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ButtonWrapper,
+                  children: (0, _.jsx)(_._, {
+                    className: _.Button,
+                    disabled: _ >= _,
+                    onClick: _,
+                    children: "-",
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         let _ = (0, _._)("#Parental_Playtime_Hours", _);
@@ -5370,6 +4870,9 @@
               (_ = (0, _._)("#Parental_Playtime_Hours_NoRestriction")),
           _
         );
+      }
+      function _(_) {
+        return _(Math.floor(_ / 60));
       }
       function _(_) {
         const {
@@ -5392,7 +4895,7 @@
             data: _,
             label: _(_),
           });
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           layout: _,
           label: (0, _._)(_),
           bottomSeparator: "none",
@@ -5425,62 +4928,44 @@
           _ =
             __webpack_require__.playtime_restrictions?.playtime_days[_]
               ?.allowed_daily_minutes || 0;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
               className: _.ParentalPlaytimeRow,
               onActivate: () => _(!0),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Day,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Windows,
-              },
-              _(_),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Minutes,
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#Parental_Playtime_Limit"),
-                ":",
-              ),
-              _.createElement(
-                "div",
-                null,
-                (function (_) {
-                  return _(Math.floor(_ / 60));
-                })(_),
-              ),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(_, {
-              steamid: _,
-              settings: __webpack_require__,
-              dayIndexStart: _,
-              closeModal: () => _(!1),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Day,
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.Windows,
+                  children: _(_),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.Minutes,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      children: [(0, _._)("#Parental_Playtime_Limit"), ":"],
+                    }),
+                    (0, _.jsx)("div", {
+                      children: _(_),
+                    }),
+                  ],
+                }),
+              ],
             }),
-          ),
-        );
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                steamid: _,
+                settings: __webpack_require__,
+                dayIndexStart: _,
+                closeModal: () => _(!1),
+              }),
+            }),
+          ],
+        });
       }
       function _() {
         const _ = _().localeData(_._.GetPreferredLocales()[0]).firstDayOfWeek(),
@@ -5503,21 +4988,21 @@
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _,
           _ = _().map((_) =>
-            _.createElement(_, {
-              steamid: _,
-              settings: __webpack_require__,
-              dayIndex: _.data,
-              strDay: _.label,
-              key: _.data,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                steamid: _,
+                settings: __webpack_require__,
+                dayIndex: _.data,
+                strDay: _.label,
+              },
+              _.data,
+            ),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.ParentalPlaytimeInner,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _.ParentalPlaytimeInner,
+          children: _,
+        });
       }
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _,
@@ -5543,24 +5028,23 @@
           _ =
             __webpack_require__.playtime_restrictions
               .apply_playtime_restrictions;
-        return _.createElement(
-          "div",
-          {
-            className: _.ParentalPlaytime,
-          },
-          _.createElement(_._, {
-            className: _.ToggleCtn,
-            bottomSeparator: "none",
-            label: (0, _._)("#Parental_EnablePlaytimeRestrictions"),
-            checked: _,
-            onChange: _,
-          }),
-          _ &&
-            _.createElement(_, {
-              steamid: _,
-              settings: __webpack_require__,
+        return (0, _.jsxs)("div", {
+          className: _.ParentalPlaytime,
+          children: [
+            (0, _.jsx)(_._, {
+              className: _.ToggleCtn,
+              bottomSeparator: "none",
+              label: (0, _._)("#Parental_EnablePlaytimeRestrictions"),
+              checked: _,
+              onChange: _,
             }),
-        );
+            _ &&
+              (0, _.jsx)(_, {
+                steamid: _,
+                settings: __webpack_require__,
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5633,86 +5117,74 @@
           _ = !_.excluded_community_content_descriptors.includes(
             __webpack_require__.valueOf(),
           );
-        return _.createElement(
-          _._,
-          {
-            className: _.ContentDescriptorRow,
-            navEntryPreferPosition: _._.MAINTAIN_X,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.ContentDescriptorRow,
+          navEntryPreferPosition: _._.MAINTAIN_X,
+          children: [
+            (0, _.jsxs)(_._, {
               className: _.ContentDescriptorInfo,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ContentDescriptorName,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.ContentDescriptorDescription,
-              },
-              _,
-              _.createElement("br", null),
-              _.createElement(
-                _._,
-                {
-                  className: _.ContentDescriptorViewExamples,
-                  onClick: () => _(__webpack_require__),
-                },
-                (0, _._)("#ContentDescriptors_ViewExampleProducts"),
-              ),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _.ContentDescriptorToggle,
-            },
-            _.createElement(_._, {
-              checked: _,
-              onChange: _(
-                (_) => _.excluded_store_content_descriptors,
-                (_, _) => {
-                  _.excluded_store_content_descriptors = _;
-                },
-              ),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.ContentDescriptorName,
+                  children: _,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.ContentDescriptorDescription,
+                  children: [
+                    _,
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)(_._, {
+                      className: _.ContentDescriptorViewExamples,
+                      onClick: () => _(__webpack_require__),
+                      children: (0, _._)(
+                        "#ContentDescriptors_ViewExampleProducts",
+                      ),
+                    }),
+                  ],
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            _._,
-            {
+            (0, _.jsx)(_._, {
               className: _.ContentDescriptorToggle,
-            },
-            _.createElement(_._, {
-              checked: _,
-              onChange: _(
-                (_) => _.excluded_community_content_descriptors,
-                (_, _) => {
-                  _.excluded_community_content_descriptors = _;
-                },
-              ),
+              children: (0, _.jsx)(_._, {
+                checked: _,
+                onChange: _(
+                  (_) => _.excluded_store_content_descriptors,
+                  (_, _) => {
+                    _.excluded_store_content_descriptors = _;
+                  },
+                ),
+              }),
             }),
-          ),
-        );
+            (0, _.jsx)(_._, {
+              className: _.ContentDescriptorToggle,
+              children: (0, _.jsx)(_._, {
+                checked: _,
+                onChange: _(
+                  (_) => _.excluded_community_content_descriptors,
+                  (_, _) => {
+                    _.excluded_community_content_descriptors = _;
+                  },
+                ),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { strName: _, strLogoUrl: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.ContentDescriptorExampleApp,
-            focusable: !0,
-          },
-          _.createElement("img", {
-            src: __webpack_require__,
-          }),
-          _.createElement("div", null, _),
-        );
+        return (0, _.jsxs)(_._, {
+          className: _.ContentDescriptorExampleApp,
+          focusable: !0,
+          children: [
+            (0, _.jsx)("img", {
+              src: __webpack_require__,
+            }),
+            (0, _.jsx)("div", {
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5746,104 +5218,94 @@
               },
             }));
         var _;
-        return _.createElement(
-          _._,
-          {
-            active: null !== _,
-          },
-          _.createElement(
-            _._,
-            {
-              title: (0, _._)("#ContentDescriptor_ExampleProductsHeader"),
-              closeModal: () => __webpack_require__(null),
-            },
-            !_.data && _.createElement(_._, null),
-            0 === _.data?.length &&
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#ContentDescriptorExample_NoGames"),
-              ),
-            _.data?.length > 0 &&
-              _.data.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  strName: _.name,
-                  strLogoUrl: _.logo,
+        return (0, _.jsx)(_._, {
+          active: null !== _,
+          children: (0, _.jsxs)(_._, {
+            title: (0, _._)("#ContentDescriptor_ExampleProductsHeader"),
+            closeModal: () => __webpack_require__(null),
+            children: [
+              !_.data && (0, _.jsx)(_._, {}),
+              0 === _.data?.length &&
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#ContentDescriptorExample_NoGames"),
                 }),
-              ),
-          ),
-        );
+              _.data?.length > 0 &&
+                _.data.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      strName: _.name,
+                      strLogoUrl: _.logo,
+                    },
+                    _,
+                  ),
+                ),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _,
           [_, _] = (0, _.useState)(null);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            eSelectedContentDescriptor: _,
-            fnSelectDescriptor: _,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              eSelectedContentDescriptor: _,
+              fnSelectDescriptor: _,
+            }),
+            (0, _.jsxs)(_._, {
               className: _.ContentDescriptorParentalSettings,
-            },
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#Parental_ContentDescriptors_Intro"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.ContentDescriptorParentalSettingsInner,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.ContentDescriptorRow,
-                },
-                _.createElement(_._, {
-                  className: _.ContentDescriptorInfo,
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Parental_ContentDescriptors_Intro"),
                 }),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.ContentDescriptorToggle,
-                  },
-                  (0, _._)("#Parental_ContentDescriptors_Store"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.ContentDescriptorToggle,
-                  },
-                  (0, _._)("#Parental_ContentDescriptors_Community"),
-                ),
-              ),
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _,
-                  steamid: _,
-                  eContentDescriptor: _,
-                  settings: __webpack_require__,
-                  fnSelectContentDescriptor: _,
+                (0, _.jsxs)(_._, {
+                  className: _.ContentDescriptorParentalSettingsInner,
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      className: _.ContentDescriptorRow,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          className: _.ContentDescriptorInfo,
+                        }),
+                        (0, _.jsx)(_._, {
+                          className: _.ContentDescriptorToggle,
+                          children: (0, _._)(
+                            "#Parental_ContentDescriptors_Store",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          className: _.ContentDescriptorToggle,
+                          children: (0, _._)(
+                            "#Parental_ContentDescriptors_Community",
+                          ),
+                        }),
+                      ],
+                    }),
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          steamid: _,
+                          eContentDescriptor: _,
+                          settings: __webpack_require__,
+                          fnSelectContentDescriptor: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  ],
                 }),
-              ),
-            ),
-          ),
-        );
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.ErrorLoading,
-          },
-          (0, _._)("#Parental_Settings_PageError"),
-        );
+        return (0, _.jsx)("div", {
+          className: _.ErrorLoading,
+          children: (0, _._)("#Parental_Settings_PageError"),
+        });
       }
       function _(_) {
         let _ = (0, _._)();
@@ -5856,74 +5318,65 @@
           _ = _.isLoading || _.isLoading || _.isLoading,
           _ = _.isError || _.isError || _.isError;
         if (_ && !_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             position: "center",
           });
-        if (_ || !_.data.settings) return _.createElement(_, null);
+        if (_ || !_.data.settings) return (0, _.jsx)(_, {});
         const _ = _.data.family_group(),
           _ = (0, _._)(_, _),
           _ = (0, _._)(_, _.steamid);
         if (!_ || !_ || 1 != _.role() || 2 != _.role())
-          return _.createElement(_, null);
+          return (0, _.jsx)(_, {});
         const { settings: _, mapAppsAllowed: _ } = _.data,
           _ = _.data;
-        return _.createElement(
-          "div",
-          {
-            className: _.FamilyMemberParentalSettings,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.FamilyMemberParentalSettings,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.ReturnToFamily,
               onActivate: () => {
                 _.push("/account/familymanagement");
               },
-            },
-            (0, _._)("#Parental_Settings_Return"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#Parental_Settings_Return"),
+            }),
+            (0, _.jsxs)("div", {
               className: _.HeaderContainer,
-            },
-            _.createElement(_, {
-              member: _,
-              persona: _,
+              children: [
+                (0, _.jsx)(_, {
+                  member: _,
+                  persona: _,
+                }),
+                (0, _.jsx)(_, {
+                  steamid: _,
+                  settings: _,
+                  familyGroup: _,
+                }),
+              ],
             }),
-            _.createElement(_, {
-              steamid: _,
-              settings: _,
-              familyGroup: _,
-            }),
-          ),
-          _.is_enabled &&
-            _.createElement(_, {
-              steamID: _,
-              settings: _,
-              mapAppsAllowed: _,
-            }),
-        );
+            _.is_enabled &&
+              (0, _.jsx)(_, {
+                steamID: _,
+                settings: _,
+                mapAppsAllowed: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { member: _, persona: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.ParentalHeader,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ParentalHeader,
+          children: [
+            (0, _.jsx)("div", {
               className: _.Title,
-            },
-            (0, _._)("#Parental_Settings_For"),
-          ),
-          _.createElement(_._, {
-            persona: __webpack_require__,
-            role: _.role(),
-          }),
-        );
+              children: (0, _._)("#Parental_Settings_For"),
+            }),
+            (0, _.jsx)(_._, {
+              persona: __webpack_require__,
+              role: _.role(),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5936,7 +5389,7 @@
               {
                 name: (0, _._)("#Parental_Tab_AllowedGames"),
                 key: "games",
-                contents: _.createElement(_, {
+                contents: (0, _.jsx)(_, {
                   steamid: _,
                   settings: __webpack_require__,
                   mapAppsAllowed: _,
@@ -5945,7 +5398,7 @@
               {
                 name: (0, _._)("#Parental_Tab_Settings"),
                 key: "settings",
-                contents: _.createElement(_, {
+                contents: (0, _.jsx)(_, {
                   steamid: _,
                   settings: __webpack_require__,
                 }),
@@ -5953,7 +5406,7 @@
               {
                 name: (0, _._)("#Parental_Tab_PlaytimeLimits"),
                 key: "playtime",
-                contents: _.createElement(_, {
+                contents: (0, _.jsx)(_, {
                   steamid: _,
                   settings: __webpack_require__,
                 }),
@@ -5961,7 +5414,7 @@
             ],
             [_, __webpack_require__, _],
           );
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           tabs: _,
           classNameCtn: _.FamilyTabs,
           classNameTab: _.FamilyTab,
@@ -5969,20 +5422,21 @@
       }
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            steamid: _,
-            settings: __webpack_require__,
-          }),
-          _.createElement(_, {
-            steamid: _,
-            settings: __webpack_require__,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              steamid: _,
+              settings: __webpack_require__,
+            }),
+            (0, _.jsx)(_, {
+              steamid: _,
+              settings: __webpack_require__,
+            }),
+          ],
+        });
       }
-      var _;
+      var _,
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { item: _, closeModal: __webpack_require__ } = _,
           _ = (0, _._)(_),
@@ -6015,34 +5469,28 @@
               data: 0,
             },
           ];
-        return _.createElement(
-          _._,
-          {
-            className: _().ApproveRequestDialog,
-            closeModal: __webpack_require__,
-            onOK: _,
-            strTitle: _.createElement(
-              _._,
-              {
-                className: _().Title,
-              },
-              (0, _._)("#FeatureRequest_AcceptDialog_Title"),
-            ),
-          },
-          _.createElement(
-            _._,
-            null,
-            (0, _._)("#FeatureRequest_AcceptDialog_BodyText"),
-          ),
-          _.createElement(_._, {
-            layout: _,
-            bottomSeparator: "none",
-            label: (0, _._)("#FeatureRequest_AcceptDialog_AllowAccess"),
-            rgOptions: _,
-            selectedOption: _,
-            onChange: _,
+        return (0, _.jsxs)(_._, {
+          className: _().ApproveRequestDialog,
+          closeModal: __webpack_require__,
+          onOK: _,
+          strTitle: (0, _.jsx)(_._, {
+            className: _().Title,
+            children: (0, _._)("#FeatureRequest_AcceptDialog_Title"),
           }),
-        );
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#FeatureRequest_AcceptDialog_BodyText"),
+            }),
+            (0, _.jsx)(_._, {
+              layout: _,
+              bottomSeparator: "none",
+              label: (0, _._)("#FeatureRequest_AcceptDialog_AllowAccess"),
+              rgOptions: _,
+              selectedOption: _,
+              onChange: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -6072,59 +5520,54 @@
         return (
           _ && (_ = "#PlaytimeRequest_AcceptDialog_BodyText_UnlimitedWindows"),
           _ && (_ = "#PlaytimeRequest_AcceptDialog_BodyText_UnlimitedHours"),
-          _.createElement(
-            "div",
-            {
-              className: _().ApprovePlaytimeDialog,
-            },
-            _.createElement(_._, null, (0, _._)(_)),
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ParentalPlaytimeWindows,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Text,
-                  },
-                  _(_),
-                ),
-                _.createElement(_, {
-                  nWindows: _,
-                  nLockedWindows: __webpack_require__,
-                  onToggle: _,
-                }),
-              ),
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().CurrentHours,
-                },
-                (0, _._)(
-                  "#PlaytimeRequest_AcceptDialog_CurrentHours",
-                  Math.floor(_ / 60),
-                ),
-                " ",
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().CurrentHours,
-                },
-                (0, _._)("#PlaytimeRequest_AcceptDialog_UnlimitedHours"),
-              ),
-            !_ &&
-              _.createElement(_, {
-                strLabel: "#PlaytimeRequest_AcceptDialog_AdditionalTime",
-                nMinutes: _,
-                onSelected: _,
-                nMax: 25 - _ / 60,
+          (0, _.jsxs)("div", {
+            className: _().ApprovePlaytimeDialog,
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _._)(_),
               }),
-          )
+              !_ &&
+                (0, _.jsxs)("div", {
+                  className: _().ParentalPlaytimeWindows,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().Text,
+                      children: _(_),
+                    }),
+                    (0, _.jsx)(_, {
+                      nWindows: _,
+                      nLockedWindows: __webpack_require__,
+                      onToggle: _,
+                    }),
+                  ],
+                }),
+              !_ &&
+                (0, _.jsxs)("div", {
+                  className: _().CurrentHours,
+                  children: [
+                    (0, _._)(
+                      "#PlaytimeRequest_AcceptDialog_CurrentHours",
+                      Math.floor(_ / 60),
+                    ),
+                    " ",
+                  ],
+                }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().CurrentHours,
+                  children: (0, _._)(
+                    "#PlaytimeRequest_AcceptDialog_UnlimitedHours",
+                  ),
+                }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  strLabel: "#PlaytimeRequest_AcceptDialog_AdditionalTime",
+                  nMinutes: _,
+                  onSelected: _,
+                  nMax: 25 - _ / 60,
+                }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -6150,22 +5593,16 @@
               restrictions: _,
             });
         }, [_, _, _, _, _]);
-        return _.createElement(
-          _._,
-          {
-            className: _().ApproveRequestDialog,
-            closeModal: __webpack_require__,
-            onOK: _,
-            bOKDisabled: _,
-            strTitle: _.createElement(
-              _._,
-              {
-                className: _().Title,
-              },
-              (0, _._)("#FeatureRequest_AcceptDialog_Title"),
-            ),
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          className: _().ApproveRequestDialog,
+          closeModal: __webpack_require__,
+          onOK: _,
+          bOKDisabled: _,
+          strTitle: (0, _.jsx)(_._, {
+            className: _().Title,
+            children: (0, _._)("#FeatureRequest_AcceptDialog_Title"),
+          }),
+          children: (0, _.jsx)(_, {
             currentMinutes: _,
             currentWindows: _,
             additionalMinutes: _,
@@ -6173,7 +5610,7 @@
             nWindows: _,
             setWindows: _,
           }),
-        );
+        });
       }
       function _(_) {
         let {
@@ -6187,46 +5624,38 @@
           _ = (0, _._)();
         return (
           _ || (__webpack_require__ = (0, _._)("#ParentalRequest_Canceled")),
-          _.createElement(
-            "div",
-            {
-              className: _().RequestResponse,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: _().RequestResponse,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().Result,
-              },
-              __webpack_require__,
-            ),
-            !!_ &&
-              _.createElement(
-                "div",
-                {
+                children: __webpack_require__,
+              }),
+              !!_ &&
+                (0, _.jsxs)("div", {
                   className: _().AvatarAndPersona,
-                },
-                _.createElement(_._, {
-                  className: _().Avatar,
-                  persona: _,
-                  size: "Medium",
-                  statusPosition: "right",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _().Avatar,
+                      persona: _,
+                      size: "Medium",
+                      statusPosition: "right",
+                    }),
+                    (0, _.jsx)(_._, {
+                      persona: _.data,
+                      bParenthesizeNicknames: _.data
+                        ?.preferences()
+                        .parenthesize_nicknames(),
+                      strNickname: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_._, {
-                  persona: _.data,
-                  bParenthesizeNicknames: _.data
-                    ?.preferences()
-                    .parenthesize_nicknames(),
-                  strNickname: _,
-                }),
-              ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 className: _().TimeResponded,
-              },
-              (0, _._)(_),
-            ),
-          )
+                children: (0, _._)(_),
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -6240,29 +5669,28 @@
           _ = (0, _._)(_.GetAccountID()),
           _ = (0, _._)();
         return _.isSuccess
-          ? _.createElement(
-              "div",
-              {
-                className: _().AvatarAndPersona,
-              },
-              _.createElement(_._, {
-                className: _().Avatar,
-                persona: _,
-                size: "Medium",
-                statusPosition: "right",
-              }),
-              (0, _._)(
-                __webpack_require__,
-                _,
-                _.createElement(_._, {
-                  persona: _.data,
-                  bParenthesizeNicknames: _.data
-                    ?.preferences()
-                    .parenthesize_nicknames(),
-                  strNickname: _,
+          ? (0, _.jsxs)("div", {
+              className: _().AvatarAndPersona,
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _().Avatar,
+                  persona: _,
+                  size: "Medium",
+                  statusPosition: "right",
                 }),
-              ),
-            )
+                (0, _._)(
+                  __webpack_require__,
+                  _,
+                  (0, _.jsx)(_._, {
+                    persona: _.data,
+                    bParenthesizeNicknames: _.data
+                      ?.preferences()
+                      .parenthesize_nicknames(),
+                    strNickname: _,
+                  }),
+                ),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -6288,121 +5716,98 @@
             _ && _.push((0, _._)(_));
           }
         return 0 != _.length || _
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().FamilyRequestItem,
-                  _().ParentalFeatureRequestItem,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().FamilyRequestItem,
+                _().ParentalFeatureRequestItem,
+              ),
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().RequestInfo,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SelfRequested,
-                    },
-                    (0, _._)(
-                      _
-                        ? "#PlaytimeRequest_UserRequested_Self"
-                        : "#FeatureRequest_UserRequested_Self",
-                    ),
-                  ),
-                !_ &&
-                  _.createElement(_, {
-                    steamID: new _._(_.steamid()),
-                    locToken: _
-                      ? "#PlaytimeRequest_UserRequested"
-                      : "#FeatureRequest_UserRequested",
-                    locTokenPlurality: 1,
-                  }),
-                _.createElement(
-                  "ul",
-                  {
-                    className: _().FeatureList,
-                  },
-                  _.map((_) =>
-                    _.createElement(
-                      "li",
-                      {
-                        key: _,
-                        className: _().Feature,
-                      },
-                      _,
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TimeResponded,
-                    },
-                    (0, _._)(_.time_requested()),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().SelfRequested,
+                        children: (0, _._)(
+                          _
+                            ? "#PlaytimeRequest_UserRequested_Self"
+                            : "#FeatureRequest_UserRequested_Self",
+                        ),
+                      }),
+                    !_ &&
+                      (0, _.jsx)(_, {
+                        steamID: new _._(_.steamid()),
+                        locToken: _
+                          ? "#PlaytimeRequest_UserRequested"
+                          : "#FeatureRequest_UserRequested",
+                        locTokenPlurality: 1,
+                      }),
+                    (0, _.jsxs)("ul", {
+                      className: _().FeatureList,
+                      children: [
+                        _.map((_) =>
+                          (0, _.jsx)(
+                            "li",
+                            {
+                              className: _().Feature,
+                              children: _,
+                            },
+                            _,
+                          ),
+                        ),
+                        (0, _.jsx)("div", {
+                          className: _().TimeResponded,
+                          children: (0, _._)(_.time_requested()),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
                   className: _().StatusCtn,
-                },
-                !_ &&
-                  !_.time_responded() &&
-                  _.createElement(
-                    _._,
-                    {
-                      className: _().Buttons,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        noFocusRing: !1,
-                        onClick: _,
-                      },
-                      (0, _._)("#ParentalRequest_Accept"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        noFocusRing: !1,
-                        onClick: _,
-                      },
-                      (0, _._)("#ParentalRequest_Reject"),
-                    ),
-                  ),
-                _ &&
-                  !_.time_responded() &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().Buttons, _().Pending),
-                    },
-                    (0, _._)("#ParentalRequest_Pending"),
-                  ),
-                !!_.time_responded() &&
-                  _.createElement(_, {
-                    steamIDResponder: new _._(_.steamid_responder()),
-                    resultMessage: (0, _._)(
-                      _.approved()
-                        ? "#ParentalRequest_AcceptedBy"
-                        : "#ParentalRequest_RejectedBy",
-                    ),
-                    timeResponded: _.time_responded(),
-                  }),
-                !_.time_responded() &&
-                  _.createElement(
-                    _._,
-                    {
-                      active: _,
-                    },
-                    _(() => _(!1)),
-                  ),
-              ),
-            )
+                  children: [
+                    !_ &&
+                      !_.time_responded() &&
+                      (0, _.jsxs)(_._, {
+                        className: _().Buttons,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            noFocusRing: !1,
+                            onClick: _,
+                            children: (0, _._)("#ParentalRequest_Accept"),
+                          }),
+                          (0, _.jsx)(_._, {
+                            noFocusRing: !1,
+                            onClick: _,
+                            children: (0, _._)("#ParentalRequest_Reject"),
+                          }),
+                        ],
+                      }),
+                    _ &&
+                      !_.time_responded() &&
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(_().Buttons, _().Pending),
+                        children: (0, _._)("#ParentalRequest_Pending"),
+                      }),
+                    !!_.time_responded() &&
+                      (0, _.jsx)(_, {
+                        steamIDResponder: new _._(_.steamid_responder()),
+                        resultMessage: (0, _._)(
+                          _.approved()
+                            ? "#ParentalRequest_AcceptedBy"
+                            : "#ParentalRequest_RejectedBy",
+                        ),
+                        timeResponded: _.time_responded(),
+                      }),
+                    !_.time_responded() &&
+                      (0, _.jsx)(_._, {
+                        active: _,
+                        children: _(() => _(!1)),
+                      }),
+                  ],
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -6416,14 +5821,14 @@
           }, [_]),
           _ = _.useCallback(
             (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 item: _,
                 closeModal: _,
               }),
             [_],
           ),
           _ = _.features();
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           item: _,
           nFeatures: _,
           onReject: _,
@@ -6441,13 +5846,13 @@
           }, [_]),
           _ = _.useCallback(
             (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 item: _,
                 closeModal: _,
               }),
             [_],
           );
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           item: _,
           onReject: _,
           renderApproveDialog: _,
@@ -6456,24 +5861,21 @@
       function _(_) {
         const { packageIDs: _, bundleIDs: __webpack_require__ } = _;
         return _.length || __webpack_require__.length
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: _().Purchased,
-                },
-                (0, _._)(
-                  "#PurchaseRequest_Purchased",
-                  _.length + __webpack_require__.length,
-                ),
-              ),
-              _.createElement(_, {
-                packageIDs: _,
-                bundleIDs: __webpack_require__,
-              }),
-            )
+                  children: (0, _._)(
+                    "#PurchaseRequest_Purchased",
+                    _.length + __webpack_require__.length,
+                  ),
+                }),
+                (0, _.jsx)(_, {
+                  packageIDs: _,
+                  bundleIDs: __webpack_require__,
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -6486,35 +5888,34 @@
         else {
           (_ = _(_, __webpack_require__, 5)),
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 "span",
                 {
-                  key: "sepand",
+                  children: (0, _._)(
+                    "#PurchaseRequest_PackageLinksFinalSeparator",
+                  ),
                 },
-                (0, _._)("#PurchaseRequest_PackageLinksFinalSeparator"),
+                "sepand",
               ),
             );
           const _ = _.length + __webpack_require__.length - 5;
           _.push(
-            _.createElement(
+            (0, _.jsx)(
               _._,
               {
                 onActivate: () => _(!0),
-                key: "showMore",
                 className: (0, _._)(_().PackageShowMore, _().Selectable),
                 focusable: !0,
+                children: (0, _._)("#PurchaseRequest_PackageLinksShowMore", _),
               },
-              (0, _._)("#PurchaseRequest_PackageLinksShowMore", _),
+              "showMore",
             ),
           );
         }
-        return _.createElement(
-          "div",
-          {
-            className: _().PackageLinks,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _().PackageLinks,
+          children: _,
+        });
       }
       function _(_, _, _) {
         let _ = [],
@@ -6522,38 +5923,48 @@
         for (let _ = 0; _ < _.length && _ < _; _++, _++) {
           const _ = _[_];
           _.push(
-            _.createElement(_, {
-              key: _,
-              packageID: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                packageID: _,
+              },
+              _,
+            ),
           ),
             _ < _ - 1 &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: "sep" + _,
+                    children: (0, _._)(
+                      "#PurchaseRequest_PackageLinksSeparator",
+                    ),
                   },
-                  (0, _._)("#PurchaseRequest_PackageLinksSeparator"),
+                  "sep" + _,
                 ),
               );
         }
         for (let _ = 0; _ < _.length && _ < _; _++, _++) {
           const _ = _[_];
           _.push(
-            _.createElement(_, {
-              key: _,
-              bundleID: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                bundleID: _,
+              },
+              _,
+            ),
           ),
             _ < _ - 1 &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "span",
                   {
-                    key: "sep" + _,
+                    children: (0, _._)(
+                      "#PurchaseRequest_PackageLinksSeparator",
+                    ),
                   },
-                  (0, _._)("#PurchaseRequest_PackageLinksSeparator"),
+                  "sep" + _,
                 ),
               );
         }
@@ -6562,19 +5973,20 @@
       function _(_) {
         const { packageID: _ } = _,
           [__webpack_require__] = (0, _._)(_, {});
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           storeItem: __webpack_require__,
         });
       }
       function _(_) {
         const { bundleID: _ } = _,
           [__webpack_require__] = (0, _._)(_, {});
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           storeItem: __webpack_require__,
         });
       }
       function _(_) {
         const { storeItem: _ } = _,
+          _ = (0, _._)(_),
           _ = _.useCallback(
             (_) => {
               _((0, _._)(_), _.GetStorePageURL());
@@ -6582,42 +5994,30 @@
             [_],
           );
         if (!_) return null;
-        const _ = 1 === _.GetStoreItemType() ? "sub" : "bundle";
-        return _.createElement(
-          _._,
-          {
-            item: {
-              type: _,
-              _: _.GetID(),
+        _.GetStoreItemType();
+        return (0, _.jsx)(_._, {
+          _: _,
+          name: _.GetName(),
+          bPreventNavigation: !0,
+          bHidePrice: !1,
+          bShowWishlistButton: !1,
+          hoverProps: {
+            direction: "right",
+            style: {
+              minWidth: "320px",
             },
-            name: _.GetName(),
-            bPreventNavigation: !0,
-            bHidePrice: !1,
-            bShowWishlistButton: !1,
-            hoverProps: {
-              direction: "right",
-              style: {
-                minWidth: "320px",
-              },
-            },
-            className: _().HoverSource,
           },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_().PackageLinkItem, _().Selectable),
-              focusable: !0,
-              onActivate: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PackageLinkItemText,
-              },
-              _.GetName(),
-            ),
-          ),
-        );
+          className: _().HoverSource,
+          children: (0, _.jsx)(_._, {
+            className: (0, _._)(_().PackageLinkItem, _().Selectable),
+            focusable: !0,
+            onActivate: _,
+            children: (0, _.jsx)("div", {
+              className: _().PackageLinkItemText,
+              children: _.GetName(),
+            }),
+          }),
+        });
       }
       function _(_) {
         const { item: _, familyGroupID: __webpack_require__ } = _,
@@ -6661,95 +6061,76 @@
             _.requested_bundleids() &&
             _.purchased_bundleids().length == _.requested_bundleids().length &&
             (_ = !0),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().FamilyRequestItem,
-                _().PurchaseRequestItem,
-              ),
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_().FamilyRequestItem, _().PurchaseRequestItem),
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().RequestInfo,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SelfRequested,
-                  },
-                  (0, _._)(
-                    "#PurchaseRequest_UserRequested_Self",
-                    _.requested_packageids()?.length,
-                  ),
-                ),
-              !_ &&
-                _.createElement(_, {
-                  steamID: new _._(_.requester_steamid()),
-                  locToken: "#PurchaseRequest_UserRequested",
-                  locTokenPlurality: _.requested_packageids()?.length,
-                }),
-              _.createElement(_, {
-                packageIDs: _.requested_packageids(),
-                bundleIDs: _.requested_bundleids(),
-              }),
-              !_ &&
-                _.createElement(_, {
-                  packageIDs: _.purchased_packageids(),
-                  bundleIDs: _.purchased_bundleids(),
-                }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().StatusCtn,
-              },
-              !_.time_responded() &&
-                _.createElement(
-                  _._,
-                  {
-                    className: _().Buttons,
-                  },
-                  !_ &&
-                    !_.time_responded() &&
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          noFocusRing: !1,
-                        },
-                        (0, _._)("#PurchaseRequest_Approve"),
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().SelfRequested,
+                      children: (0, _._)(
+                        "#PurchaseRequest_UserRequested_Self",
+                        _.requested_packageids()?.length,
                       ),
-                    ),
-                  _.createElement(
-                    _._,
-                    {
-                      noFocusRing: !1,
-                      onClick: () => {
-                        _(null), _.mutate();
-                      },
-                    },
-                    (0, _._)(
-                      _
-                        ? "#PurchaseRequest_Cancel"
-                        : "#PurchaseRequest_Decline",
-                    ),
-                  ),
-                ),
-              _.time_responded() &&
-                _.createElement(_, {
-                  steamIDResponder: new _._(_.responder_steamid()),
-                  resultMessage: _,
-                  timeResponded: _.time_responded(),
-                }),
-            ),
-          )
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_, {
+                      steamID: new _._(_.requester_steamid()),
+                      locToken: "#PurchaseRequest_UserRequested",
+                      locTokenPlurality: _.requested_packageids()?.length,
+                    }),
+                  (0, _.jsx)(_, {
+                    packageIDs: _.requested_packageids(),
+                    bundleIDs: _.requested_bundleids(),
+                  }),
+                  !_ &&
+                    (0, _.jsx)(_, {
+                      packageIDs: _.purchased_packageids(),
+                      bundleIDs: _.purchased_bundleids(),
+                    }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _().StatusCtn,
+                children: [
+                  !_.time_responded() &&
+                    (0, _.jsxs)(_._, {
+                      className: _().Buttons,
+                      children: [
+                        !_ &&
+                          !_.time_responded() &&
+                          (0, _.jsx)("a", {
+                            href: _,
+                            children: (0, _.jsx)(_._, {
+                              noFocusRing: !1,
+                              children: (0, _._)("#PurchaseRequest_Approve"),
+                            }),
+                          }),
+                        (0, _.jsx)(_._, {
+                          noFocusRing: !1,
+                          onClick: () => {
+                            _(null), _.mutate();
+                          },
+                          children: (0, _._)(
+                            _
+                              ? "#PurchaseRequest_Cancel"
+                              : "#PurchaseRequest_Decline",
+                          ),
+                        }),
+                      ],
+                    }),
+                  _.time_responded() &&
+                    (0, _.jsx)(_, {
+                      steamIDResponder: new _._(_.responder_steamid()),
+                      resultMessage: _,
+                      timeResponded: _.time_responded(),
+                    }),
+                ],
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -6757,17 +6138,17 @@
         let _;
         switch (_.type) {
           case _.k_ParentalFeature:
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               item: _.data,
             });
             break;
           case _.k_ParentalPlaytime:
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               item: _.data,
             });
             break;
           case _.k_PurchaseRequest:
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               item: _.data,
               familyGroupID: __webpack_require__,
             });
@@ -6780,32 +6161,29 @@
       function _(_) {
         const { rgRequests: _, familyGroupID: __webpack_require__ } = _,
           _ = _.length > 0;
-        return _.createElement(
-          _.Fragment,
-          null,
-          !_ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsx)("div", {
                 className: _().NoFamilyRequests,
-              },
-              (0, _._)("#FamilyManagement_NoCurrentRequests"),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#FamilyManagement_NoCurrentRequests"),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().FamilyRequests,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _.key,
-                  item: _,
-                  familyGroupID: __webpack_require__,
-                }),
-              ),
-            ),
-        );
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      item: _,
+                      familyGroupID: __webpack_require__,
+                    },
+                    _.key,
+                  ),
+                ),
+              }),
+          ],
+        });
       }
       !(function (_) {
         (_[(_.k_ParentalFeature = 0)] = "k_ParentalFeature"),
@@ -6823,13 +6201,10 @@
         const { steamid: _ } = _,
           _ = (0, _._)(_);
         if (((0, _._)(), _.isLoading))
-          return _.createElement(
-            "div",
-            {
-              className: _.ThrobberContainer,
-            },
-            _.createElement(_._, null),
-          );
+          return (0, _.jsx)("div", {
+            className: _.ThrobberContainer,
+            children: (0, _.jsx)(_._, {}),
+          });
         const _ = (_) => {
           const _ = _.getTime() / 1e3;
           let _ = new Date(_);
@@ -6845,19 +6220,22 @@
           let _ = new Date(_);
           return _.setDate(_.getDate() - _), _;
         });
-        return _.createElement(
+        return (0, _.jsx)(
           "div",
           {
-            key: _,
             className: _.PlaytimeHistoryBrowser,
+            children: _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  date: _,
+                  vecSessions: _(_),
+                },
+                _,
+              ),
+            ),
           },
-          _.map((_, _) =>
-            _.createElement(_, {
-              key: _,
-              date: _,
-              vecSessions: _(_),
-            }),
-          ),
+          _,
         );
       }
       function _(_) {
@@ -6889,64 +6267,61 @@
         const _ = Array.from(_.entries());
         _.sort((_, _) => _[1] - _[1]);
         const _ = 0 == __webpack_require__.length;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.PlaytimeHistoryDay, _ && _.Empty),
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_.PlaytimeHistoryDay, _ && _.Empty),
+          children: [
+            (0, _.jsxs)(_._, {
               className: _.PlaytimeOnDay,
               onClick: _ ? void 0 : () => _(!_),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.DateColumn,
-                onActivate: _ ? void 0 : () => _(!_),
-              },
-              _,
-              _.createElement("br", null),
-              _.createElement(
-                "span",
-                {
-                  className: _.TotalTimePlayed,
-                },
-                _,
-              ),
-            ),
-            _ > 0 &&
-              [...Array(_).keys()].map((_) =>
-                _.createElement(_, {
-                  key: _,
-                  nDate: _,
-                  nBin: _,
-                  vecSessions: _(_),
+              children: [
+                (0, _.jsxs)(_._, {
+                  className: _.DateColumn,
+                  onActivate: _ ? void 0 : () => _(!_),
+                  children: [
+                    _,
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("span", {
+                      className: _.TotalTimePlayed,
+                      children: _,
+                    }),
+                  ],
                 }),
-              ),
-            !_ &&
-              _.createElement(_._, {
-                bExpanded: _,
-                setExpanded: _,
-              }),
-          ),
-          _ &&
-            !_ &&
-            _.createElement(
-              _._,
-              {
+                _ > 0 &&
+                  [...Array(_).keys()].map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        nDate: _,
+                        nBin: _,
+                        vecSessions: _(_),
+                      },
+                      _,
+                    ),
+                  ),
+                !_ &&
+                  (0, _.jsx)(_._, {
+                    bExpanded: _,
+                    setExpanded: _,
+                  }),
+              ],
+            }),
+            _ &&
+              !_ &&
+              (0, _.jsx)(_._, {
                 className: _.PlaytimeSessionRows,
-              },
-              _.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  appid: _[0],
-                  nSecondsPlayed: _[1],
-                }),
-              ),
-            ),
-        );
+                children: _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      appid: _[0],
+                      nSecondsPlayed: _[1],
+                    },
+                    _,
+                  ),
+                ),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { appid: _ } = _,
@@ -6959,7 +6334,7 @@
         _.GetAssets()?.GetLibraryCapsuleURL() &&
           (_ = [_.GetAssets()?.GetLibraryCapsuleURL(), ..._]);
         const _ = _[__webpack_require__];
-        return _.createElement("img", {
+        return (0, _.jsx)("img", {
           className: (0, _._)(_.AppImage, _ && _.Loaded),
           onLoad: () => {
             _(!0);
@@ -6974,15 +6349,12 @@
         const { appid: _ } = _,
           [__webpack_require__] = (0, _._)(_, _._.k_DataRequest_Assets);
         return __webpack_require__
-          ? _.createElement(
-              _._,
-              {
-                href: __webpack_require__.GetStorePageURL(),
-              },
-              _.createElement(_, {
+          ? (0, _.jsx)(_._, {
+              href: __webpack_require__.GetStorePageURL(),
+              children: (0, _.jsx)(_, {
                 appid: _,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -7002,134 +6374,101 @@
         let _ =
             0 === _.size
               ? null
-              : _.createElement(
-                  _._,
-                  {
-                    className: _.AppListTooltipApps,
-                  },
-                  Array.from(_).map((_) =>
-                    _.createElement(_, {
-                      key: _,
-                      appid: _,
-                    }),
+              : (0, _.jsx)(_._, {
+                  className: _.AppListTooltipApps,
+                  children: Array.from(_).map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        appid: _,
+                      },
+                      _,
+                    ),
                   ),
-                ),
-          _ = _.createElement(
-            "div",
-            {
-              className: _.AppListTooltip,
-            },
-            _.createElement(
-              "div",
-              {
+                }),
+          _ = (0, _.jsxs)("div", {
+            className: _.AppListTooltip,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.TimeRangeTooltip,
-              },
-              (0, _._)(_),
-              " - ",
-              (0, _._)(_),
-            ),
-            _,
-          );
-        return _.createElement(
-          _._,
-          {
-            focusable: _.size > 0,
-            onOKButton: () => _(!0),
-          },
-          _.createElement(
-            _._,
-            {
+                children: [(0, _._)(_), " - ", (0, _._)(_)],
+              }),
+              _,
+            ],
+          });
+        return (0, _.jsxs)(_._, {
+          focusable: _.size > 0,
+          onOKButton: () => _(!0),
+          children: [
+            (0, _.jsxs)(_._, {
               active: _,
               onDismiss: () => _(!1),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.TimeRangeTooltip,
-              },
-              (0, _._)(
-                "#FamilyPlaytime_GamesPlayedBetween",
-                (0, _._)(_),
-                (0, _._)(_),
-              ),
-            ),
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.TimeRangeTooltip,
+                  children: (0, _._)(
+                    "#FamilyPlaytime_GamesPlayedBetween",
+                    (0, _._)(_),
+                    (0, _._)(_),
+                  ),
+                }),
+                _,
+              ],
+            }),
+            (0, _.jsx)(_._, {
               toolTipContent: _,
               nDelayShowMS: 0,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: (0, _._)(_.PlaytimeHistoryBin),
                 style: {
                   background: _,
                 },
-              },
-              _.createElement(
-                "span",
-                {
+                children: (0, _.jsx)("span", {
                   className: _.TimeLabel,
-                },
-                ((_) => {
-                  if (0 === _ || _ === _) return "";
-                  const _ = Math.round(_ / 6);
-                  return _ % _ === _ / 2
-                    ? new Date(1e3 * _).toLocaleTimeString(
-                        _._.GetPreferredLocales(),
-                        {
-                          hour: "numeric",
-                        },
-                      )
-                    : "";
-                })(__webpack_require__),
-              ),
-            ),
-          ),
-        );
+                  children: ((_) => {
+                    if (0 === _ || _ === _) return "";
+                    const _ = Math.round(_ / 6);
+                    return _ % _ === _ / 2
+                      ? new Date(1e3 * _).toLocaleTimeString(
+                          _._.GetPreferredLocales(),
+                          {
+                            hour: "numeric",
+                          },
+                        )
+                      : "";
+                  })(__webpack_require__),
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { appid: _, nSecondsPlayed: __webpack_require__ } = _,
           [_] = (0, _._)(_, _._.k_DataRequest_Assets);
         return _
-          ? _.createElement(
-              _._,
-              {
-                href: _.GetStorePageURL(),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.SessionRow,
-                },
-                _.createElement(
-                  "div",
-                  {
+          ? (0, _.jsx)(_._, {
+              href: _.GetStorePageURL(),
+              children: (0, _.jsxs)(_._, {
+                className: _.SessionRow,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.GameIcon,
-                  },
-                  _.createElement(_, {
-                    appid: _,
+                    children: (0, _.jsx)(_, {
+                      appid: _,
+                    }),
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                  (0, _.jsx)("div", {
                     className: _.SessionRowTimeRange,
-                  },
-                  (0, _._)(__webpack_require__),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: (0, _._)(__webpack_require__),
+                  }),
+                  (0, _.jsx)("div", {
                     className: _.SessionRowGameName,
-                  },
-                  _.GetName(),
-                ),
-              ),
-            )
+                    children: _.GetName(),
+                  }),
+                ],
+              }),
+            })
           : null;
       }
       function _(_) {
@@ -7144,21 +6483,16 @@
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(_ ? _[0] : null);
         if (_.isLoading || _.some((_) => _.isLoading) || _.isLoading)
-          return _.createElement(
-            "div",
-            {
-              className: _.ThrobberContainer,
-            },
-            _.createElement(_._, null),
-          );
+          return (0, _.jsx)("div", {
+            className: _.ThrobberContainer,
+            children: (0, _.jsx)(_._, {}),
+          });
         if (0 === _.length)
-          return _.createElement(
-            "p",
-            null,
-            (0, _._)("#FamilyPlaytime_NoChildren"),
-          );
+          return (0, _.jsx)("p", {
+            children: (0, _._)("#FamilyPlaytime_NoChildren"),
+          });
         const _ = _.map((_) => ({
-          label: _.createElement(_._, {
+          label: (0, _.jsx)(_._, {
             persona: _.data,
             bIgnorePersonaStatus: !0,
             bParenthesizeNicknames: _.data
@@ -7168,23 +6502,22 @@
           }),
           data: _.data.m_steamid.ConvertTo64BitString(),
         }));
-        return _.createElement(
-          _._,
-          {
-            className: _.FamilyPlaytime,
-          },
-          _.createElement(_._, {
-            rgOptions: _,
-            selectedOption: _,
-            onChange: (_) => _(_.data),
-            label: (0, _._)("#FamilyPlaytime_ShowPlaytimeFor"),
-            layout: "inline",
-            childrenContainerWidth: "max",
-          }),
-          _.createElement(_, {
-            steamid: _,
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          className: _.FamilyPlaytime,
+          children: [
+            (0, _.jsx)(_._, {
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => _(_.data),
+              label: (0, _._)("#FamilyPlaytime_ShowPlaytimeFor"),
+              layout: "inline",
+              childrenContainerWidth: "max",
+            }),
+            (0, _.jsx)(_, {
+              steamid: _,
+            }),
+          ],
+        });
       }
       const _ = function () {
         const [_, _] = (0, _.useState)(null),
@@ -7193,98 +6526,74 @@
         if (_.isError) return null;
         const _ = !_.data?.is_not_member_of_any_group(),
           _ = _._.HELP_BASE_URL + "faqs/view/054C-3167-DD7F-49D4";
-        return _.createElement(
-          _._,
-          {
-            navID: "StoreFamilyManagement",
-          },
-          _.createElement(
-            _._,
-            {
-              staleTimeMs: 3e3,
-            },
-            _.createElement(
-              _._.Provider,
-              {
-                value: {
-                  errorMessage: _,
-                  setErrorMessage: _,
-                },
+        return (0, _.jsx)(_._, {
+          navID: "StoreFamilyManagement",
+          children: (0, _.jsx)(_._, {
+            staleTimeMs: 3e3,
+            children: (0, _.jsxs)(_._.Provider, {
+              value: {
+                errorMessage: _,
+                setErrorMessage: _,
               },
-              _.createElement(_._, null),
-              _.createElement(
-                _,
-                null,
-                _.createElement(_.Hxx, null),
-                _.createElement(
-                  "span",
-                  {
-                    className: _.FamilyManagementTitle,
-                  },
-                  (0, _._)("#FamilyManagement_Title"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.HelpLink,
-                    href: _,
-                  },
-                  _.createElement(_._VW, null),
-                ),
-              ),
-              _.isLoading &&
-                _.createElement(
-                  "div",
-                  {
+              children: [
+                (0, _.jsx)(_._, {}),
+                (0, _.jsxs)(_, {
+                  children: [
+                    (0, _.jsx)(_.Hxx, {}),
+                    (0, _.jsx)("span", {
+                      className: _.FamilyManagementTitle,
+                      children: (0, _._)("#FamilyManagement_Title"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.HelpLink,
+                      href: _,
+                      children: (0, _.jsx)(_._VW, {}),
+                    }),
+                  ],
+                }),
+                _.isLoading &&
+                  (0, _.jsx)("div", {
                     className: _.ThrobberContainer,
-                  },
-                  _.createElement(_._, null),
-                ),
-              !_.isLoading &&
-                _.createElement(
-                  "div",
-                  {
+                    children: (0, _.jsx)(_._, {}),
+                  }),
+                !_.isLoading &&
+                  (0, _.jsx)("div", {
                     className: _.FamilySettingsContainer,
-                  },
-                  _.createElement(
-                    _._,
-                    {
+                    children: (0, _.jsx)(_._, {
                       className: _.FamilyContainer,
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_._, {
-                        path: `${_.path}/create`,
-                        component: _,
+                      children: (0, _.jsxs)(_._, {
+                        children: [
+                          (0, _.jsx)(_._, {
+                            path: `${_.path}/create`,
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: `${_.path}/join`,
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: `${_.path}/confirm_invite`,
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: `${_.path}/parentalcontrols/:steamid`,
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            children: _
+                              ? (0, _.jsx)(_, {
+                                  familyGroupID: _.data.family_groupid(),
+                                })
+                              : (0, _.jsx)(_, {}),
+                          }),
+                        ],
                       }),
-                      _.createElement(_._, {
-                        path: `${_.path}/join`,
-                        component: _,
-                      }),
-                      _.createElement(_._, {
-                        path: `${_.path}/confirm_invite`,
-                        component: _,
-                      }),
-                      _.createElement(_._, {
-                        path: `${_.path}/parentalcontrols/:steamid`,
-                        component: _,
-                      }),
-                      _.createElement(
-                        _._,
-                        null,
-                        _
-                          ? _.createElement(_, {
-                              familyGroupID: _.data.family_groupid(),
-                            })
-                          : _.createElement(_, null),
-                      ),
-                    ),
-                  ),
-                ),
-            ),
-          ),
-        );
+                    }),
+                  }),
+              ],
+            }),
+          }),
+        });
       };
       function _(_) {
         const _ = [
@@ -7294,7 +6603,7 @@
             contents: _.children,
           },
         ];
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           tabs: _,
           classNameCtn: _.FamilyTabs,
         });
@@ -7307,7 +6616,7 @@
             contents: _.children,
           },
         ];
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           tabs: _,
           classNameCtn: _.FamilyTabs,
         });
@@ -7315,20 +6624,17 @@
       function _(_) {
         const { familyGroupID: _ } = _,
           { mutate: __webpack_require__ } = (0, _._)(_);
-        return _.createElement(
-          _._,
-          {
-            className: _.UndeleteSplashButton,
-            onClick: () => __webpack_require__(),
-          },
-          (0, _._)("#FamilyManagement_UndeleteButton"),
-        );
+        return (0, _.jsx)(_._, {
+          className: _.UndeleteSplashButton,
+          onClick: () => __webpack_require__(),
+          children: (0, _._)("#FamilyManagement_UndeleteButton"),
+        });
       }
       function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
           { setErrorMessage: _ } = (0, _._)();
-        if (_.isLoading) return _.createElement(_._, null);
+        if (_.isLoading) return (0, _.jsx)(_._, {});
         const _ = _.data?.pending_group_invites().length;
         let _;
         _ =
@@ -7339,116 +6645,93 @@
               : (0, _._)("#FamilyManagement_SelectJoinButtonPendingInvites", _);
         const _ = _.data.cooldown_seconds_remaining() > 0,
           _ = _.data.can_undelete_last_joined_family();
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.OnboardSplashContainer,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_, {
+          children: (0, _.jsxs)("div", {
+            className: _.OnboardSplashContainer,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.WallOfText,
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#FamilyManagement_CreateInstructions"),
-              ),
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#FamilyManagement_CreateInstructions_2"),
-              ),
-            ),
-            (_ || _) &&
-              _.createElement(
-                "div",
-                {
+                children: [
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#FamilyManagement_CreateInstructions"),
+                  }),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)(
+                      "#FamilyManagement_CreateInstructions_2",
+                    ),
+                  }),
+                ],
+              }),
+              (_ || _) &&
+                (0, _.jsxs)("div", {
                   className: _.SplashCooldown,
-                },
-                _.createElement(_.eTF, {
-                  color: _.colorCautionSign,
-                }),
-                _.createElement(
-                  "div",
-                  null,
-                  !_ && (0, _._)("#FamilyManagement_CanRejoin"),
-                  _ && (0, _._)("#FamilyManagement_CanUndelete"),
-                ),
-                _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(_, {
-                      familyGroupID: _.data.latest_joined_family_groupid(),
+                  children: [
+                    (0, _.jsx)(_.eTF, {
+                      color: _.colorCautionSign,
                     }),
-                  ),
-              ),
-            _.createElement(
-              "div",
-              {
+                    (0, _.jsxs)("div", {
+                      children: [
+                        !_ && (0, _._)("#FamilyManagement_CanRejoin"),
+                        _ && (0, _._)("#FamilyManagement_CanUndelete"),
+                      ],
+                    }),
+                    _ &&
+                      (0, _.jsx)(_.Fragment, {
+                        children: (0, _.jsx)(_, {
+                          familyGroupID: _.data.latest_joined_family_groupid(),
+                        }),
+                      }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
                 className: _.OnboardSplashButtons,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.OnboardSplashButton,
-                  onClick: () => {
-                    _(""), _.push("/account/familymanagement/join");
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OnboardSplashButtonLabel,
-                  },
-                  (0, _._)("#FamilyManagement_SelectJoinButton"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OnboardSplashButtonGraphic,
-                  },
-                  _.createElement(_.dsc, null),
-                ),
-                _ > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OnboardSplashButtonBadge,
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: _.OnboardSplashButton,
+                    onClick: () => {
+                      _(""), _.push("/account/familymanagement/join");
                     },
-                    _,
-                  ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _.OnboardSplashButton,
-                  onClick: () => {
-                    _(""), _.push("/account/familymanagement/create");
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OnboardSplashButtonLabel,
-                  },
-                  (0, _._)("#FamilyManagement_SelectCreateButton"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OnboardSplashButtonGraphic,
-                  },
-                  _.createElement(_.LDq, null),
-                ),
-              ),
-            ),
-          ),
-        );
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.OnboardSplashButtonLabel,
+                        children: (0, _._)(
+                          "#FamilyManagement_SelectJoinButton",
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.OnboardSplashButtonGraphic,
+                        children: (0, _.jsx)(_.dsc, {}),
+                      }),
+                      _ > 0 &&
+                        (0, _.jsx)("div", {
+                          className: _.OnboardSplashButtonBadge,
+                          children: _,
+                        }),
+                    ],
+                  }),
+                  (0, _.jsxs)(_._, {
+                    className: _.OnboardSplashButton,
+                    onClick: () => {
+                      _(""), _.push("/account/familymanagement/create");
+                    },
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.OnboardSplashButtonLabel,
+                        children: (0, _._)(
+                          "#FamilyManagement_SelectCreateButton",
+                        ),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.OnboardSplashButtonGraphic,
+                        children: (0, _.jsx)(_.LDq, {}),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -7457,39 +6740,32 @@
           closeModal: _,
           cooldownSeconds: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            active: _,
-          },
-          _.createElement(
-            _._,
-            {
-              bAlertDialog: !0,
-              onOK: _,
-              closeModal: _,
-              strTitle: (0, _._)(
-                __webpack_require__
-                  ? "#FamilyManagement_FamilyCreated"
-                  : "#FamilyManagement_FamilyJoined",
-              ),
-            },
-            _.createElement(_, {
-              cooldownSecondsRemaining: _,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.DialogText,
-              },
-              (0, _._)(
-                __webpack_require__
-                  ? "#FamilyManagement_CooldownAllowed_2_Create"
-                  : "#FamilyManagement_CooldownAllowed_2_Join",
-              ),
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsxs)(_._, {
+            bAlertDialog: !0,
+            onOK: _,
+            closeModal: _,
+            strTitle: (0, _._)(
+              __webpack_require__
+                ? "#FamilyManagement_FamilyCreated"
+                : "#FamilyManagement_FamilyJoined",
             ),
-          ),
-        );
+            children: [
+              (0, _.jsx)(_, {
+                cooldownSecondsRemaining: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _.DialogText,
+                children: (0, _._)(
+                  __webpack_require__
+                    ? "#FamilyManagement_CooldownAllowed_2_Create"
+                    : "#FamilyManagement_CooldownAllowed_2_Join",
+                ),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(""),
@@ -7505,74 +6781,66 @@
           ),
           _.data && !_.data?.is_not_member_of_any_group() && !_)
         )
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             _: "/account/familymanagement",
           });
         return _.isPending
-          ? _.createElement(
-              "div",
-              {
-                className: _.ThrobberContainer,
-              },
-              _.createElement(_._, null),
-            )
-          : _.createElement(
-              _,
-              null,
-              _.createElement(_, {
-                active: _,
-                isCreate: !0,
-                closeModal: _,
-                cooldownSeconds: _.data.cooldown_seconds_remaining(),
-              }),
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsx)("div", {
+              className: _.ThrobberContainer,
+              children: (0, _.jsx)(_._, {}),
+            })
+          : (0, _.jsxs)(_, {
+              children: [
+                (0, _.jsx)(_, {
+                  active: _,
+                  isCreate: !0,
+                  closeModal: _,
+                  cooldownSeconds: _.data.cooldown_seconds_remaining(),
+                }),
+                (0, _.jsxs)("div", {
                   className: _.CreateFamilyContainer,
-                },
-                _.createElement(
-                  _,
-                  null,
-                  (0, _._)("#FamilyManagement_CreateAFamilyHeader"),
-                ),
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)("#FamilyManagement_CreateAFamilyText"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CreateFamilyForm,
-                  },
-                  _.createElement(_._, {
-                    type: "text",
-                    onChange: (_) => {
-                      __webpack_require__(_.target.value), _(null);
-                    },
-                    value: _,
-                    placeholder: (0, _._)(
-                      "#FamilyManagement_InputNamePlaceholder",
-                    ),
-                  }),
-                  _.createElement(
-                    _._,
-                    {
-                      disabled: 0 === _.length,
-                      onClick: () => {
-                        _(null),
-                          _.mutate(_, {
-                            onSuccess: (_) => {
-                              _.cooldown_skip_granted() && _();
-                            },
-                          });
-                      },
-                    },
-                    (0, _._)("#FamilyManagement_FinalizeCreateFamily"),
-                  ),
-                ),
-              ),
-            );
+                  children: [
+                    (0, _.jsx)(_, {
+                      children: (0, _._)(
+                        "#FamilyManagement_CreateAFamilyHeader",
+                      ),
+                    }),
+                    (0, _.jsx)("p", {
+                      children: (0, _._)("#FamilyManagement_CreateAFamilyText"),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.CreateFamilyForm,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          type: "text",
+                          onChange: (_) => {
+                            __webpack_require__(_.target.value), _(null);
+                          },
+                          value: _,
+                          placeholder: (0, _._)(
+                            "#FamilyManagement_InputNamePlaceholder",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          disabled: 0 === _.length,
+                          onClick: () => {
+                            _(null),
+                              _.mutate(_, {
+                                onSuccess: (_) => {
+                                  _.cooldown_skip_granted() && _();
+                                },
+                              });
+                          },
+                          children: (0, _._)(
+                            "#FamilyManagement_FinalizeCreateFamily",
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            });
       }
       function _(_) {
         const _ = (0, _._)(),
@@ -7584,10 +6852,10 @@
           _ = (0, _._)(_);
         if (_.data && !_.data?.is_not_member_of_any_group() && !_)
           return _
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 _: `/account/familymanagement?invitation=${_}`,
               })
-            : _.createElement(_._, {
+            : (0, _.jsx)(_._, {
                 _: "/account/familymanagement",
               });
         let _ = null,
@@ -7604,10 +6872,8 @@
             (window.location.href =
               "steammobile://confirmations?first_of_type=11")),
           _
-            ? _.createElement(
-                _,
-                null,
-                _.createElement(_, {
+            ? (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
                   active: _,
                   isCreate: !1,
                   closeModal: () => {
@@ -7615,161 +6881,153 @@
                   },
                   cooldownSeconds: _.data?.cooldown_seconds_remaining(),
                 }),
-              )
+              })
             : _
-              ? _.createElement(
-                  _,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.JoinFamilyContainer,
-                    },
-                    _.createElement(
-                      "p",
-                      null,
-                      (0, _._)(
-                        "#FamilyManagement_PendingInvitesText",
-                        _.createElement("span", {
-                          className: _.JoinWarning,
-                        }),
-                        _.createElement("b", null),
-                      ),
-                      " ",
-                    ),
-                    _.createElement(_, {
-                      key: _,
-                      inviteID: _.invite_id(),
-                      inviterSteamID: _.inviter_steamid(),
-                      familyGroupID: _.family_groupid(),
-                      role: _.role(),
-                      setCooldownModalActive: _,
-                    }),
-                    _.length > 0 &&
-                      !_ &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "p",
-                          null,
-                          (0, _._)(
-                            1 === _.length
-                              ? "#FamilyManagement_OtherInvite"
-                              : "#FamilyManagement_OtherInvites",
-                            _.length,
-                          ),
-                          " ",
-                          _.createElement(
-                            "a",
-                            {
-                              onClick: () => _(!0),
-                            },
-                            (0, _._)("#FamilyManagement_Expand"),
-                          ),
-                        ),
-                      ),
-                    _.length > 0 &&
-                      _ &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "p",
-                          null,
-                          (0, _._)(
-                            1 === _.length
-                              ? "#FamilyManagement_OtherInvite"
-                              : "#FamilyManagement_OtherInvites",
-                            _.length,
-                          ),
-                          " ",
-                          _.createElement(
-                            "a",
-                            {
-                              onClick: () => _(!1),
-                            },
-                            (0, _._)("#FamilyManagement_Collapse"),
-                          ),
-                        ),
-                        _.createElement(
-                          "div",
-                          null,
-                          _.map((_) =>
-                            _.createElement(_, {
-                              inviterSteamID: _.inviter_steamid(),
-                              inviteID: _.invite_id(),
-                              familyGroupID: _.family_groupid(),
-                              role: _.role(),
-                              key: _.family_groupid(),
-                              setCooldownModalActive: _,
-                            }),
-                          ),
-                        ),
-                      ),
-                  ),
-                )
-              : _.createElement(
-                  _,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.JoinFamilyContainer,
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.IncomingInviteGone,
-                        },
-                        (0, _._)("#FamilyManagement_IncomingInviteGone"),
-                      ),
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)("#FamilyManagement_JoinAFamily"),
-                    ),
-                    _.createElement(
-                      "p",
-                      null,
-                      (0, _._)("#FamilyManagement_ToJoinInstructions"),
-                    ),
-                    _.createElement("br", null),
-                    _ > 0 &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          _,
-                          null,
-                          (0, _._)("#FamilyManagement_PendingInvitesHeader"),
-                        ),
-                        _.createElement(
-                          "p",
-                          null,
+              ? (0, _.jsx)(_, {
+                  children: (0, _.jsxs)("div", {
+                    className: _.JoinFamilyContainer,
+                    children: [
+                      (0, _.jsxs)("p", {
+                        children: [
                           (0, _._)(
                             "#FamilyManagement_PendingInvitesText",
-                            _.createElement("span", {
+                            (0, _.jsx)("span", {
                               className: _.JoinWarning,
                             }),
-                            _.createElement("b", null),
+                            (0, _.jsx)("b", {}),
                           ),
                           " ",
-                        ),
-                        _.data?.pending_group_invites().map((_) =>
-                          _.createElement(_, {
-                            key: _.family_groupid(),
-                            inviteID: _.invite_id(),
-                            inviterSteamID: _.inviter_steamid(),
-                            familyGroupID: _.family_groupid(),
-                            role: _.role(),
-                            setCooldownModalActive: _,
-                          }),
-                        ),
+                        ],
+                      }),
+                      (0, _.jsx)(
+                        _,
+                        {
+                          inviteID: _.invite_id(),
+                          inviterSteamID: _.inviter_steamid(),
+                          familyGroupID: _.family_groupid(),
+                          role: _.role(),
+                          setCooldownModalActive: _,
+                        },
+                        _,
                       ),
-                  ),
-                )
+                      _.length > 0 &&
+                        !_ &&
+                        (0, _.jsx)(_.Fragment, {
+                          children: (0, _.jsxs)("p", {
+                            children: [
+                              (0, _._)(
+                                1 === _.length
+                                  ? "#FamilyManagement_OtherInvite"
+                                  : "#FamilyManagement_OtherInvites",
+                                _.length,
+                              ),
+                              " ",
+                              (0, _.jsx)("a", {
+                                onClick: () => _(!0),
+                                children: (0, _._)("#FamilyManagement_Expand"),
+                              }),
+                            ],
+                          }),
+                        }),
+                      _.length > 0 &&
+                        _ &&
+                        (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsxs)("p", {
+                              children: [
+                                (0, _._)(
+                                  1 === _.length
+                                    ? "#FamilyManagement_OtherInvite"
+                                    : "#FamilyManagement_OtherInvites",
+                                  _.length,
+                                ),
+                                " ",
+                                (0, _.jsx)("a", {
+                                  onClick: () => _(!1),
+                                  children: (0, _._)(
+                                    "#FamilyManagement_Collapse",
+                                  ),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsx)("div", {
+                              children: _.map((_) =>
+                                (0, _.jsx)(
+                                  _,
+                                  {
+                                    inviterSteamID: _.inviter_steamid(),
+                                    inviteID: _.invite_id(),
+                                    familyGroupID: _.family_groupid(),
+                                    role: _.role(),
+                                    setCooldownModalActive: _,
+                                  },
+                                  _.family_groupid(),
+                                ),
+                              ),
+                            }),
+                          ],
+                        }),
+                    ],
+                  }),
+                })
+              : (0, _.jsx)(_, {
+                  children: (0, _.jsxs)("div", {
+                    className: _.JoinFamilyContainer,
+                    children: [
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: _.IncomingInviteGone,
+                          children: (0, _._)(
+                            "#FamilyManagement_IncomingInviteGone",
+                          ),
+                        }),
+                      (0, _.jsx)(_, {
+                        children: (0, _._)("#FamilyManagement_JoinAFamily"),
+                      }),
+                      (0, _.jsx)("p", {
+                        children: (0, _._)(
+                          "#FamilyManagement_ToJoinInstructions",
+                        ),
+                      }),
+                      (0, _.jsx)("br", {}),
+                      _ > 0 &&
+                        (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)(_, {
+                              children: (0, _._)(
+                                "#FamilyManagement_PendingInvitesHeader",
+                              ),
+                            }),
+                            (0, _.jsxs)("p", {
+                              children: [
+                                (0, _._)(
+                                  "#FamilyManagement_PendingInvitesText",
+                                  (0, _.jsx)("span", {
+                                    className: _.JoinWarning,
+                                  }),
+                                  (0, _.jsx)("b", {}),
+                                ),
+                                " ",
+                              ],
+                            }),
+                            _.data?.pending_group_invites().map((_) =>
+                              (0, _.jsx)(
+                                _,
+                                {
+                                  inviteID: _.invite_id(),
+                                  inviterSteamID: _.inviter_steamid(),
+                                  familyGroupID: _.family_groupid(),
+                                  role: _.role(),
+                                  setCooldownModalActive: _,
+                                },
+                                _.family_groupid(),
+                              ),
+                            ),
+                          ],
+                        }),
+                    ],
+                  }),
+                })
         );
       }
       function _(_) {
@@ -7784,67 +7042,48 @@
             _._.k_EFamilyQueryLoadFamily,
           ),
           _.isLoading
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ManageFamily,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ThrobberContainer,
-                  },
-                  _.createElement(_._, null),
-                ),
-              )
+            ? (0, _.jsx)("div", {
+                className: _.ManageFamily,
+                children: (0, _.jsx)("div", {
+                  className: _.ThrobberContainer,
+                  children: (0, _.jsx)(_._, {}),
+                }),
+              })
             : _.isError
               ? null
-              : _.createElement(
-                  _._,
-                  {
-                    className: _.ManageFamily,
-                  },
-                  _.createElement(_, null),
-                  _.createElement(_, {
-                    familyGroupID: _,
-                    isAdult: _,
-                  }),
-                  _.createElement(_, {
-                    familyGroupID: _,
-                  }),
-                )
+              : (0, _.jsxs)(_._, {
+                  className: _.ManageFamily,
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      familyGroupID: _,
+                      isAdult: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      familyGroupID: _,
+                    }),
+                  ],
+                })
         );
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.FamilySubsection,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: _.FamilySubsection,
+          children: _.children,
+        });
       }
       function _(_) {
         const _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: _.PreferencesHeader,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.AccountHeader,
-                "account_header_line noicon",
-              ),
-              onClick: function () {
-                _.push("/account/familymanagement");
-              },
+        return (0, _.jsx)("div", {
+          className: _.PreferencesHeader,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_.AccountHeader, "account_header_line noicon"),
+            onClick: function () {
+              _.push("/account/familymanagement");
             },
-            _.children,
-          ),
-        );
+            children: _.children,
+          }),
+        });
       }
       function _() {
         const _ = _((0, _._)(), _),
@@ -7853,20 +7092,19 @@
         return _ && _
           ? _ === _.data.family_groupid()
             ? null
-            : _.createElement(
-                "div",
-                {
-                  className: _.IncomingInviteGone,
-                },
-                _.createElement(_.eTF, {
-                  color: _.colorCautionSign,
-                }),
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#FamilyManagement_CannotJoinWhileAlreadyMember"),
-                ),
-              )
+            : (0, _.jsxs)("div", {
+                className: _.IncomingInviteGone,
+                children: [
+                  (0, _.jsx)(_.eTF, {
+                    color: _.colorCautionSign,
+                  }),
+                  (0, _.jsx)("span", {
+                    children: (0, _._)(
+                      "#FamilyManagement_CannotJoinWhileAlreadyMember",
+                    ),
+                  }),
+                ],
+              })
           : null;
       }
       function _(_) {
@@ -7880,43 +7118,34 @@
         const _ = _.data,
           _ = _.members().length + _.pending_invites().length,
           _ = _.free_spots() + _.members().length + _.pending_invites().length;
-        return _.createElement(
-          "div",
-          {
-            className: _.FamilyNameAndSlots,
-          },
-          _.createElement(_, {
-            familyGroupID: _,
-            isAdult: __webpack_require__,
-          }),
-          __webpack_require__ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("div", {
+          className: _.FamilyNameAndSlots,
+          children: [
+            (0, _.jsx)(_, {
+              familyGroupID: _,
+              isAdult: __webpack_require__,
+            }),
+            __webpack_require__ &&
+              (0, _.jsx)("div", {
                 className: _.FamilySlotsContainer,
-              },
-              (0, _._)("#FamilyManagement_MemberCount", _, _),
-            ),
-        );
+                children: (0, _._)("#FamilyManagement_MemberCount", _, _),
+              }),
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _._)(_),
           _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}`;
         return _.isSuccess
-          ? _.createElement(
-              _._,
-              {
-                className: _.FamilyHistoryName,
-                href: _,
-              },
-              _.createElement(
-                "b",
-                null,
-                _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
+              className: _.FamilyHistoryName,
+              href: _,
+              children: (0, _.jsx)("b", {
+                children: (0, _.jsx)(_._, {
                   steamid: _,
                 }),
-              ),
-            )
+              }),
+            })
           : null;
       }
       function _(_) {
@@ -7959,21 +7188,21 @@
             {
               name: (0, _._)("#FamilyManagement_ManageTab"),
               key: "manage",
-              contents: _.createElement(_, null),
+              contents: (0, _.jsx)(_, {}),
             },
           ];
         return (
           _.push({
             name: (0, _._)("#FamilyManagement_LibraryTab"),
             key: "library",
-            contents: _.createElement(_, {
+            contents: (0, _.jsx)(_, {
               familyGroupID: _,
             }),
           }),
           _.push({
             name: (0, _._)("#FamilyManagement_RequestsTab"),
             key: "requests",
-            contents: _.createElement(_, {
+            contents: (0, _.jsx)(_, {
               rgRequests: _,
               familyGroupID: _,
             }),
@@ -7982,14 +7211,14 @@
             (_.push({
               name: (0, _._)("#FamilyManagement_PlaytimeTab"),
               key: "playtime",
-              contents: _.createElement(_, {
+              contents: (0, _.jsx)(_, {
                 familyGroupID: _,
               }),
             }),
             _.push({
               name: (0, _._)("#FamilyManagement_HistoryTab"),
               key: "history",
-              contents: _.createElement(_, {
+              contents: (0, _.jsx)(_, {
                 familyGroupID: _,
                 nFamilyHistoryRowHeight: _.nFamilyHistoryRowHeight,
                 FamilyHistory: _.FamilyHistory,
@@ -7999,19 +7228,16 @@
                 FnRenderName: _,
               }),
             })),
-          _.createElement(
-            _._,
-            {
-              autoFocus: !0,
-              focusableIfEmpty: !0,
-            },
-            _.createElement(_._, {
+          (0, _.jsx)(_._, {
+            autoFocus: !0,
+            focusableIfEmpty: !0,
+            children: (0, _.jsx)(_._, {
               tabs: _,
               classNameCtn: _.FamilyTabs,
               classNameTab: _.FamilyTab,
               preferredFocus: !0,
             }),
-          )
+          })
         );
       }
       function _(_) {
@@ -8025,13 +7251,10 @@
         );
         const _ = (0, _._)();
         if (_.isLoading)
-          return _.createElement(
-            "div",
-            {
-              className: _.ThrobberContainer,
-            },
-            _.createElement(_._, null),
-          );
+          return (0, _.jsx)("div", {
+            className: _.ThrobberContainer,
+            children: (0, _.jsx)(_._, {}),
+          });
         if (_.isError) return null;
         const _ = 1 == _,
           _ = _.data.members().findIndex((_) => _.steamid() === _),
@@ -8039,36 +7262,45 @@
           _ = _.data.members().slice();
         return (
           -1 !== _ && _.splice(_, 1),
-          _.createElement(
-            _.Fragment,
-            null,
-            -1 !== _ &&
-              _.createElement(_, {
-                key: _.steamid(),
-                familyGroupID: _,
-                member: _,
-              }),
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.steamid(),
-                familyGroupID: _,
-                member: _,
-              }),
-            ),
-            _ &&
-              _.data?.pending_invites().map((_) =>
-                _.createElement(_, {
-                  key: _.steamid(),
-                  familyGroupID: _,
-                  member: _,
-                }),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              -1 !== _ &&
+                (0, _.jsx)(
+                  _,
+                  {
+                    familyGroupID: _,
+                    member: _,
+                  },
+                  _.steamid(),
+                ),
+              _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    familyGroupID: _,
+                    member: _,
+                  },
+                  _.steamid(),
+                ),
               ),
-            _ &&
-              _.data.free_spots() > 0 &&
-              _.createElement(_, {
-                familyGroupID: _,
-              }),
-          )
+              _ &&
+                _.data?.pending_invites().map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      familyGroupID: _,
+                      member: _,
+                    },
+                    _.steamid(),
+                  ),
+                ),
+              _ &&
+                _.data.free_spots() > 0 &&
+                (0, _.jsx)(_, {
+                  familyGroupID: _,
+                }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -8095,85 +7327,70 @@
             _(_.target.value), _(null);
           };
         return _ && __webpack_require__
-          ? _.createElement(
-              _._,
-              {
-                className: _.FamilyNameEditor,
-              },
-              _.createElement(
-                "span",
-                {
+          ? (0, _.jsxs)(_._, {
+              className: _.FamilyNameEditor,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.YourFamily,
-                },
-                (0, _._)("#FamilyManagement_YourFamily"),
-              ),
-              _.createElement(_._, {
-                className: _.EditNameInput,
-                type: "text",
-                onChange: _,
-                value: _,
-                placeholder: (0, _._)("#FamilyManagement_InputNamePlaceholder"),
-                maxLength: 128,
-              }),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)("#FamilyManagement_YourFamily"),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.EditNameInput,
+                  type: "text",
+                  onChange: _,
+                  value: _,
+                  placeholder: (0, _._)(
+                    "#FamilyManagement_InputNamePlaceholder",
+                  ),
+                  maxLength: 128,
+                }),
+                (0, _.jsx)(_._, {
                   className: _.SaveButton,
                   noFocusRing: !1,
                   onClick: () => {
                     return (_ = _), _(null), _.mutate(_), void _(!1);
                     var _;
                   },
-                },
-                (0, _._)("#FamilyManagement_EditFamilyNameSaveButton"),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)(
+                    "#FamilyManagement_EditFamilyNameSaveButton",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
                   className: _.CancelButton,
                   noFocusRing: !1,
                   onClick: () => {
                     _(!1), _(null);
                   },
-                },
-                (0, _._)("#FamilyManagement_EditFamilyNameCancelButton"),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _.FamilyNameEditor,
-              },
-              _.createElement(
-                "span",
-                {
+                  children: (0, _._)(
+                    "#FamilyManagement_EditFamilyNameCancelButton",
+                  ),
+                }),
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              className: _.FamilyNameEditor,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.YourFamily,
-                },
-                (0, _._)("#FamilyManagement_YourFamily"),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)("#FamilyManagement_YourFamily"),
+                }),
+                (0, _.jsxs)(_._, {
                   className: _.FamilyNameButton,
                   onActivate: __webpack_require__ ? _ : void 0,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.FamilyName,
-                  },
-                  _,
-                ),
-                __webpack_require__ &&
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.EditButton,
-                    },
-                    _.createElement(_.ffu, null),
-                  ),
-              ),
-            );
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.FamilyName,
+                      children: _,
+                    }),
+                    __webpack_require__ &&
+                      (0, _.jsx)(_._, {
+                        className: _.EditButton,
+                        children: (0, _.jsx)(_.ffu, {}),
+                      }),
+                  ],
+                }),
+              ],
+            });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -8192,6 +7409,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8258,11 +7476,11 @@
             };
           if (__webpack_require__) {
             const _ = __webpack_require__;
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               ..._,
             });
           }
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             className: _,
             style: _,
             ref: _,
@@ -8283,40 +7501,31 @@
             _ = _(),
             _ = _.spacing[_(_ || _ || "none")],
             _ = _.spacing[_(_ || _ || "none")];
-          return _.createElement(
-            _._,
-            {
-              "flow-children": _,
-              ref: _,
-              style: {
-                ...(_ || {}),
-                marginTop: _(-_),
-              },
-              ..._,
+          return (0, _.jsx)(_._, {
+            "flow-children": _,
+            ref: _,
+            style: {
+              ...(_ || {}),
+              marginTop: _(-_),
             },
-            _.createElement(
-              "div",
-              {
-                style: {
-                  marginLeft: _(-_),
-                },
-                className: _.InlineContainer,
+            ..._,
+            children: (0, _.jsx)("div", {
+              style: {
+                marginLeft: _(-_),
               },
-              _.Children.map(__webpack_require__, (_) =>
+              className: _.InlineContainer,
+              children: _.Children.map(__webpack_require__, (_) =>
                 null != _
-                  ? _.createElement(
-                      _,
-                      {
-                        paddingLeft: _ || _,
-                        paddingTop: _ || _,
-                        className: _,
-                      },
-                      _,
-                    )
+                  ? (0, _.jsx)(_, {
+                      paddingLeft: _ || _,
+                      paddingTop: _ || _,
+                      className: _,
+                      children: _,
+                    })
                   : null,
               ),
-            ),
-          );
+            }),
+          });
         }),
         _ = (0, _.forwardRef)(function (_, _) {
           const {
@@ -8327,27 +7536,21 @@
               ..._
             } = _,
             _ = _.Children.count(_);
-          return _.createElement(
-            _._,
-            {
-              "flow-children": "column",
-              ref: _,
-              className: _,
-              ..._,
-            },
-            _.Children.map(_, (_, _) =>
+          return (0, _.jsx)(_._, {
+            "flow-children": "column",
+            ref: _,
+            className: _,
+            ..._,
+            children: _.Children.map(_, (_, _) =>
               null != _
-                ? _.createElement(
-                    _,
-                    {
-                      paddingBottom: _ !== _ - 1 ? __webpack_require__ : void 0,
-                      className: (0, _._)(_, _.RemoveOnEmpty),
-                    },
-                    _,
-                  )
+                ? (0, _.jsx)(_, {
+                    paddingBottom: _ !== _ - 1 ? __webpack_require__ : void 0,
+                    className: (0, _._)(_, _.RemoveOnEmpty),
+                    children: _,
+                  })
                 : null,
             ),
-          );
+          });
         }),
         _ = (_) => `${_}px`,
         _ = {
@@ -8403,12 +7606,14 @@
             (0, _.useLayoutEffect)(() => {
               _((_) => _ + 1);
             }, [_]),
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("style", null, _),
-              __webpack_require__,
-            )
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("style", {
+                  children: _,
+                }),
+                __webpack_require__,
+              ],
+            })
           );
         };
       const _ = (_, _) => `${_}-${_}`,
@@ -8446,7 +7651,7 @@
         return _.children(_());
       }
       function _(_) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           component: _._,
           ..._,
         });

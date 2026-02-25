@@ -403,7 +403,7 @@ div.rightcol {
     margin-left: -30px;
 }
 
-input {
+input:where(:not(.noOpinionatedGlobalStyles input)) {
 	text-align: left;
 }
 

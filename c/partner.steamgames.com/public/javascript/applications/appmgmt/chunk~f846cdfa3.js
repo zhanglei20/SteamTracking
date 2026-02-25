@@ -78,92 +78,83 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { rgGameProfileColorDefs: _ } = _,
           _ = _.map((_) =>
-            _.createElement(
+            (0, _.jsxs)(
               "div",
               {
-                key: _.strProfileColorKey,
                 className: "form_row_flex",
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: "form_label_flex",
+                    children: ["*", _.strProfileColorLabel],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "form_data_flex",
+                    children: _(_),
+                  }),
+                ],
               },
-              _.createElement(
-                "div",
-                {
-                  className: "form_label_flex",
-                },
-                "*",
-                _.strProfileColorLabel,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "form_data_flex",
-                },
-                (function (_) {
-                  const { strKVPrepend: _, bWriteAsRGBOnly: _ } = _;
-                  let [_, _] = _.useState(_.strCurrentColor);
-                  const _ = _.useRef(void 0),
-                    _ = (_) => {
-                      const _ = (_) => {
-                        _(_);
-                      };
-                      (0, _._)(
-                        _.createElement(_._, {
-                          onChange: _,
-                          color: _,
-                          disableAlpha: _,
-                        }),
-                        _,
-                        {
-                          bDisablePopTop: !0,
-                        },
-                      );
-                    },
-                    _ = () => {
-                      _(_.current.value);
-                    };
-                  return _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement("input", {
-                      ref: _,
-                      type: "text",
-                      name: `${_ || "item[profile_colors]"}[${_.strProfileColorKey}]`,
-                      onChange: _,
-                      placeholder: _
-                        ? "255,255,255"
-                        : "rgba(255, 255, 255, .5)",
-                      size: 20,
-                      value: _ ? _(_) : _,
-                      readOnly: !0,
-                    }),
-                    _.createElement("div", {
-                      className: _().profile_color_preview,
-                      style: {
-                        backgroundColor: `${_}`,
-                      },
-                      onClick: _,
-                    }),
-                  );
-                })(_),
-              ),
+              _.strProfileColorKey,
             ),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _().profile_colors_ctn,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _().profile_colors_ctn,
+          children: _,
+        });
       }
       function _(_) {
         const _ = _.match(/rgba?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
         if (!_) return null;
         const [, __webpack_require__, _, _] = _;
         return `${__webpack_require__},${_},${_}`;
+      }
+      function _(_) {
+        const { strKVPrepend: _, bWriteAsRGBOnly: __webpack_require__ } = _;
+        let [_, _] = _.useState(_.strCurrentColor);
+        const _ = _.useRef(void 0);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("input", {
+              ref: _,
+              type: "text",
+              name: `${_ || "item[profile_colors]"}[${_.strProfileColorKey}]`,
+              onChange: () => {
+                _(_.current.value);
+              },
+              placeholder: __webpack_require__
+                ? "255,255,255"
+                : "rgba(255, 255, 255, .5)",
+              size: 20,
+              value: __webpack_require__ ? _(_) : _,
+              readOnly: !0,
+            }),
+            (0, _.jsx)("div", {
+              className: _().profile_color_preview,
+              style: {
+                backgroundColor: `${_}`,
+              },
+              onClick: (_) => {
+                (0, _._)(
+                  (0, _.jsx)(_._, {
+                    onChange: (_) => {
+                      _(_);
+                    },
+                    color: _,
+                    disableAlpha: __webpack_require__,
+                  }),
+                  _,
+                  {
+                    bDisablePopTop: !0,
+                  },
+                );
+              },
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -172,6 +163,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -304,262 +296,223 @@
           );
         }
         const _ = _.useId();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               active: "editor" === _ || "alert" === _,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsxs)(_._, {
                 "aria-labelledby": _,
                 closeModal: () => __webpack_require__("closed"),
-              },
-              "editor" === _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.EditionsEditorContents,
-                    },
-                    _.createElement(
-                      "h2",
-                      {
-                        _: _,
-                      },
-                      (0, _._)("#StoreAdmin_EditEditions_DialogTitle"),
-                    ),
-                    _.isPending && _.createElement(_._, null),
-                    !_.isPending &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        null !== _ &&
-                          _.createElement(
-                            "div",
-                            {
-                              className: _.ErrorBox,
-                            },
-                            _.createElement(_._, null),
-                            _.createElement("div", null, _),
-                          ),
-                        _.createElement(_, {
-                          rgEditions: _,
-                          rgCandidates: _.rgCandidates,
-                          setEditions: _,
-                        }),
-                        _.createElement("div", {
-                          className: _.EditionPickerHr,
-                        }),
-                        _.createElement(_, {
-                          mapOriginalImages: _,
-                          mapImages: _,
-                          setImages: _,
-                          mapAltText: _,
-                          setAltText: _,
-                          bAppHasSteamChinaToolsEnabled:
-                            _.bAppHasSteamChinaToolsEnabled,
-                        }),
-                      ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.EditionsEditorDialogButtons,
-                    },
-                    _.createElement(
-                      "button",
-                      {
-                        className: "btn_green_white_innerfade",
-                        disabled: null !== _,
-                        onClick: async () => {
-                          const _ = new Map();
-                          _.forEach((_, _) => {
-                            _ instanceof File && _.set(_, _);
-                          });
-                          const _ = [];
-                          _.forEach((_, _) => {
-                            _.has(_) || _.push(_);
-                          }),
-                            _.mutate({
-                              rgEditionsToSave: Array.from(_),
-                              mapGraphicsToUpload: _,
-                              mapAltText: _,
-                              rgGraphicsToDelete: _,
+                children: [
+                  "editor" === _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.EditionsEditorContents,
+                          children: [
+                            (0, _.jsx)("h2", {
+                              _: _,
+                              children: (0, _._)(
+                                "#StoreAdmin_EditEditions_DialogTitle",
+                              ),
                             }),
-                            __webpack_require__("alert");
-                        },
-                      },
-                      (0, _._)("#StoreAdmin_EditEditions_SaveButton"),
-                    ),
-                    _.createElement(
-                      "button",
-                      {
-                        onClick: () => {
-                          _(new _(_)), __webpack_require__("closed");
-                        },
-                      },
-                      (0, _._)("#StoreAdmin_EditEditions_CancelButton"),
-                    ),
-                  ),
-                  _.createElement(
-                    "p",
-                    {
-                      className: _.NeedToPublishNotification,
-                    },
-                    (0, _._)(
-                      "#StoreAdmin_EditEditions_NeedToPublishNotice",
-                      _.createElement("a", {
-                        target: "_blank",
-                        href: `${_._.PARTNER_BASE_URL}admin/game/edit/${_.nItemId}?activetab=tab_publish`,
-                      }),
-                    ),
-                  ),
-                ),
-              "alert" === _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.EditionEditorContents,
-                    },
-                    _.createElement(
-                      "h2",
-                      null,
-                      (0, _._)("#StoreAdmin_EditEditions_SavingTitle"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.EditionsEditorSaveStatus,
-                      },
-                      _.isPending &&
-                        _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(_._, null),
-                          " ",
-                          (0, _._)("#StoreAdmin_EditEditions_Saving"),
-                        ),
-                      !_.isPending &&
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)("#StoreAdmin_EditEditions_Saved"),
-                        ),
-                    ),
-                    _.createElement(
-                      "span",
-                      {
-                        className: _.PublishReminder,
-                      },
-                      (0, _._)(
-                        "#StoreAdmin_EditEditions_NeedToPublishAlert",
-                        _.createElement("a", {
-                          target: "_blank",
-                          href: `${_._.PARTNER_BASE_URL}admin/game/edit/${_.nItemId}?activetab=tab_publish`,
+                            _.isPending && (0, _.jsx)(_._, {}),
+                            !_.isPending &&
+                              (0, _.jsxs)(_.Fragment, {
+                                children: [
+                                  null !== _ &&
+                                    (0, _.jsxs)("div", {
+                                      className: _.ErrorBox,
+                                      children: [
+                                        (0, _.jsx)(_._, {}),
+                                        (0, _.jsx)("div", {
+                                          children: _,
+                                        }),
+                                      ],
+                                    }),
+                                  (0, _.jsx)(_, {
+                                    rgEditions: _,
+                                    rgCandidates: _.rgCandidates,
+                                    setEditions: _,
+                                  }),
+                                  (0, _.jsx)("div", {
+                                    className: _.EditionPickerHr,
+                                  }),
+                                  (0, _.jsx)(_, {
+                                    mapOriginalImages: _,
+                                    mapImages: _,
+                                    setImages: _,
+                                    mapAltText: _,
+                                    setAltText: _,
+                                    bAppHasSteamChinaToolsEnabled:
+                                      _.bAppHasSteamChinaToolsEnabled,
+                                  }),
+                                ],
+                              }),
+                          ],
                         }),
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.EditionsEditorDialogButtons,
-                      },
-                      _.createElement(
-                        "button",
-                        {
-                          onClick: () => {
-                            __webpack_require__("refreshing"),
-                              window.location.reload();
-                          },
-                        },
-                        (0, _._)("#StoreAdmin_EditEditions_OK"),
-                      ),
-                    ),
-                  ),
-                ),
-            ),
-          ),
-          (_.rgCandidates.length > 1 || _.rgEditions.length > 0) &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+                        (0, _.jsxs)("div", {
+                          className: _.EditionsEditorDialogButtons,
+                          children: [
+                            (0, _.jsx)("button", {
+                              className: "btn_green_white_innerfade",
+                              disabled: null !== _,
+                              onClick: async () => {
+                                const _ = new Map();
+                                _.forEach((_, _) => {
+                                  _ instanceof File && _.set(_, _);
+                                });
+                                const _ = [];
+                                _.forEach((_, _) => {
+                                  _.has(_) || _.push(_);
+                                }),
+                                  _.mutate({
+                                    rgEditionsToSave: Array.from(_),
+                                    mapGraphicsToUpload: _,
+                                    mapAltText: _,
+                                    rgGraphicsToDelete: _,
+                                  }),
+                                  __webpack_require__("alert");
+                              },
+                              children: (0, _._)(
+                                "#StoreAdmin_EditEditions_SaveButton",
+                              ),
+                            }),
+                            (0, _.jsx)("button", {
+                              onClick: () => {
+                                _(new _(_)), __webpack_require__("closed");
+                              },
+                              children: (0, _._)(
+                                "#StoreAdmin_EditEditions_CancelButton",
+                              ),
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)("p", {
+                          className: _.NeedToPublishNotification,
+                          children: (0, _._)(
+                            "#StoreAdmin_EditEditions_NeedToPublishNotice",
+                            (0, _.jsx)("a", {
+                              target: "_blank",
+                              href: `${_._.PARTNER_BASE_URL}admin/game/edit/${_.nItemId}?activetab=tab_publish`,
+                            }),
+                          ),
+                        }),
+                      ],
+                    }),
+                  "alert" === _ &&
+                    (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsxs)("div", {
+                        className: _.EditionEditorContents,
+                        children: [
+                          (0, _.jsx)("h2", {
+                            children: (0, _._)(
+                              "#StoreAdmin_EditEditions_SavingTitle",
+                            ),
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.EditionsEditorSaveStatus,
+                            children: [
+                              _.isPending &&
+                                (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    (0, _.jsx)(_._, {}),
+                                    " ",
+                                    (0, _._)("#StoreAdmin_EditEditions_Saving"),
+                                  ],
+                                }),
+                              !_.isPending &&
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#StoreAdmin_EditEditions_Saved",
+                                  ),
+                                }),
+                            ],
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.PublishReminder,
+                            children: (0, _._)(
+                              "#StoreAdmin_EditEditions_NeedToPublishAlert",
+                              (0, _.jsx)("a", {
+                                target: "_blank",
+                                href: `${_._.PARTNER_BASE_URL}admin/game/edit/${_.nItemId}?activetab=tab_publish`,
+                              }),
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.EditionsEditorDialogButtons,
+                            children: (0, _.jsx)("button", {
+                              onClick: () => {
+                                __webpack_require__("refreshing"),
+                                  window.location.reload();
+                              },
+                              children: (0, _._)("#StoreAdmin_EditEditions_OK"),
+                            }),
+                          }),
+                        ],
+                      }),
+                    }),
+                ],
+              }),
+            }),
+            (_.rgCandidates.length > 1 || _.rgEditions.length > 0) &&
+              (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _.EditionsEditorRow,
                     _ && _.ImageProvided,
                   ),
-                },
-                "closed" === _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "button",
-                      {
-                        className: _.OpenEditorButton,
-                        onClick: () => __webpack_require__("editor"),
-                      },
-                      (0, _._)("#StoreAdmin_EditEditions_ManageEditionsButton"),
-                    ),
-                    _?.size > 0
-                      ? _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(
-                            "#StoreAdmin_EditEditions_ManageEditionsDescription",
-                            _.size,
-                          ),
-                        )
-                      : _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(
-                            "#StoreAdmin_EditEditions_GroupEditionsDescription",
-                          ),
-                        ),
-                    _.createElement(
-                      "span",
-                      null,
-                      _
-                        ? _.createElement(
-                            "span",
-                            {
-                              className: (0, _._)(
-                                _.TaskDone,
-                                "icon_check_green",
-                              ),
-                            },
-                            (0, _._)(
-                              "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic",
+                  children: [
+                    "closed" === _ &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("button", {
+                            className: _.OpenEditorButton,
+                            onClick: () => __webpack_require__("editor"),
+                            children: (0, _._)(
+                              "#StoreAdmin_EditEditions_ManageEditionsButton",
                             ),
-                          )
-                        : (0, _._)(
-                            "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
-                          ),
-                    ),
-                  ),
-                "refreshing" === _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(_._, {
-                      size: "small",
-                    }),
-                  ),
-              ),
-            ),
-        );
+                          }),
+                          _?.size > 0
+                            ? (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#StoreAdmin_EditEditions_ManageEditionsDescription",
+                                  _.size,
+                                ),
+                              })
+                            : (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#StoreAdmin_EditEditions_GroupEditionsDescription",
+                                ),
+                              }),
+                          (0, _.jsx)("span", {
+                            children: _
+                              ? (0, _.jsx)("span", {
+                                  className: (0, _._)(
+                                    _.TaskDone,
+                                    "icon_check_green",
+                                  ),
+                                  children: (0, _._)(
+                                    "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic",
+                                  ),
+                                })
+                              : (0, _._)(
+                                  "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
+                                ),
+                          }),
+                        ],
+                      }),
+                    "refreshing" === _ &&
+                      (0, _.jsx)(_.Fragment, {
+                        children: (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                      }),
+                  ],
+                }),
+              }),
+          ],
+        });
       }
       const _ = (_) =>
         "bundle" === _.eType
@@ -581,147 +534,139 @@
           _ = __webpack_require__.filter(
             (_) => -1 !== _.strName.toLowerCase().indexOf(_.toLowerCase()),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.EditionPicker,
-          },
-          _.createElement(
-            "p",
-            null,
-            (0, _._)(
-              "#StoreAdmin_EditEditions_GroupEditionsIntro",
-              _.createElement("a", {
-                target: "_blank",
-                href: `${_._.PARTNER_BASE_URL}doc/store/manageeditions`,
-              }),
-            ),
-          ),
-          _.createElement("br", null),
-          _.createElement(
-            "h3",
-            null,
-            (0, _._)("#StoreAdmin_EditEditions_StepNumber1"),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#StoreAdmin_EditEditions_SelectEditionsDescription"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.EditionPickerFilterBox,
-            },
-            _.createElement("input", {
-              type: "text",
-              placeholder: (0, _._)(
-                "#StoreAdmin_EditEditions_FilterDescription",
+        return (0, _.jsxs)("div", {
+          className: _.EditionPicker,
+          children: [
+            (0, _.jsx)("p", {
+              children: (0, _._)(
+                "#StoreAdmin_EditEditions_GroupEditionsIntro",
+                (0, _.jsx)("a", {
+                  target: "_blank",
+                  href: `${_._.PARTNER_BASE_URL}doc/store/manageeditions`,
+                }),
               ),
-              value: _,
-              onChange: (_) => {
-                const _ = _.target.value;
-                _(_);
-              },
             }),
-          ),
-          _.createElement(
-            "table",
-            null,
-            _.createElement(
-              "thead",
-              null,
-              _.createElement(
-                "tr",
-                null,
-                _.createElement(
-                  "td",
-                  null,
-                  (0, _._)("#StoreAdmin_EditEditions_ColumnEdition"),
-                ),
-                _.createElement(
-                  "td",
-                  null,
-                  (0, _._)("#StoreAdmin_EditEditions_ColumnPackageTitle"),
-                ),
-                _.createElement(
-                  "td",
-                  null,
-                  (0, _._)("#StoreAdmin_EditEditions_ColumnState"),
-                ),
-                _.createElement(
-                  "td",
-                  null,
-                  (0, _._)("#StoreAdmin_EditEditions_ColumnPrice"),
-                ),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("h3", {
+              children: (0, _._)("#StoreAdmin_EditEditions_StepNumber1"),
+            }),
+            (0, _.jsx)("p", {
+              children: (0, _._)(
+                "#StoreAdmin_EditEditions_SelectEditionsDescription",
               ),
-            ),
-            _.createElement(
-              "tbody",
-              null,
-              _.map((_) => {
-                const _ = _.has(_(_));
-                let _ = _.HiddenColor;
-                return (
-                  "Released" === _.strReleaseState
-                    ? (_ = _.ReleasedColor)
-                    : "Prepurchase" === _.strReleaseState
-                      ? (_ = _.PrepurchaseColor)
-                      : "Beta" === _.strReleaseState && (_ = _.BetaColor),
-                  _.createElement(
-                    "tr",
-                    {
-                      key: _.nId,
-                      className: (0, _._)(_, _.EditionPickerRow),
-                    },
-                    _.createElement(
-                      "td",
-                      null,
-                      _.createElement("input", {
-                        type: "checkbox",
-                        onChange:
-                          ((_ = _.eType),
-                          (_ = _.nId),
-                          (_) => {
-                            const _ = new _(_);
-                            _.target.checked
-                              ? __webpack_require__.add(
-                                  "package" === _
-                                    ? {
-                                        packageid: _,
-                                      }
-                                    : {
-                                        bundleid: _,
-                                      },
-                                )
-                              : __webpack_require__.delete(
-                                  "package" === _
-                                    ? {
-                                        packageid: _,
-                                      }
-                                    : {
-                                        bundleid: _,
-                                      },
-                                ),
-                              _(_);
-                          }),
-                        checked: _,
-                      }),
-                    ),
-                    _.createElement("td", null, _.strName),
-                    _.createElement("td", null, _.strLocalizedReleaseState),
-                    _.createElement("td", {
-                      dangerouslySetInnerHTML: {
-                        __html: _.strPricing,
-                      },
-                    }),
-                  )
-                );
-                var _, _;
+            }),
+            (0, _.jsx)("div", {
+              className: _.EditionPickerFilterBox,
+              children: (0, _.jsx)("input", {
+                type: "text",
+                placeholder: (0, _._)(
+                  "#StoreAdmin_EditEditions_FilterDescription",
+                ),
+                value: _,
+                onChange: (_) => {
+                  const _ = _.target.value;
+                  _(_);
+                },
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsxs)("table", {
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("td", {
+                        children: (0, _._)(
+                          "#StoreAdmin_EditEditions_ColumnEdition",
+                        ),
+                      }),
+                      (0, _.jsx)("td", {
+                        children: (0, _._)(
+                          "#StoreAdmin_EditEditions_ColumnPackageTitle",
+                        ),
+                      }),
+                      (0, _.jsx)("td", {
+                        children: (0, _._)(
+                          "#StoreAdmin_EditEditions_ColumnState",
+                        ),
+                      }),
+                      (0, _.jsx)("td", {
+                        children: (0, _._)(
+                          "#StoreAdmin_EditEditions_ColumnPrice",
+                        ),
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("tbody", {
+                  children: _.map((_) => {
+                    const _ = _.has(_(_));
+                    let _ = _.HiddenColor;
+                    return (
+                      "Released" === _.strReleaseState
+                        ? (_ = _.ReleasedColor)
+                        : "Prepurchase" === _.strReleaseState
+                          ? (_ = _.PrepurchaseColor)
+                          : "Beta" === _.strReleaseState && (_ = _.BetaColor),
+                      (0, _.jsxs)(
+                        "tr",
+                        {
+                          className: (0, _._)(_, _.EditionPickerRow),
+                          children: [
+                            (0, _.jsx)("td", {
+                              children: (0, _.jsx)("input", {
+                                type: "checkbox",
+                                onChange:
+                                  ((_ = _.eType),
+                                  (_ = _.nId),
+                                  (_) => {
+                                    const _ = new _(_);
+                                    _.target.checked
+                                      ? __webpack_require__.add(
+                                          "package" === _
+                                            ? {
+                                                packageid: _,
+                                              }
+                                            : {
+                                                bundleid: _,
+                                              },
+                                        )
+                                      : __webpack_require__.delete(
+                                          "package" === _
+                                            ? {
+                                                packageid: _,
+                                              }
+                                            : {
+                                                bundleid: _,
+                                              },
+                                        ),
+                                      _(_);
+                                  }),
+                                checked: _,
+                              }),
+                            }),
+                            (0, _.jsx)("td", {
+                              children: _.strName,
+                            }),
+                            (0, _.jsx)("td", {
+                              children: _.strLocalizedReleaseState,
+                            }),
+                            (0, _.jsx)("td", {
+                              dangerouslySetInnerHTML: {
+                                __html: _.strPricing,
+                              },
+                            }),
+                          ],
+                        },
+                        _.nId,
+                      )
+                    );
+                    var _, _;
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -751,87 +696,75 @@
             : __webpack_require__.has(_)
               ? _.ExistsImageOption
               : _.MissingImageOption;
-        return _.createElement(
-          "div",
-          {
-            className: _.LocalizedImageSelector,
-          },
-          _.createElement(
-            "h3",
-            null,
-            (0, _._)("#StoreAdmin_EditEditions_StepNumber2"),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)(
-              "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
-              _,
-              _,
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.Header,
-            },
-            _.createElement("input", {
-              type: "file",
-              ref: _,
-              onChange: async (_) => {
-                if (_.target.files && _.target.files[0]) {
-                  const _ = _.target.files[0],
-                    _ = await createImageBitmap(_);
-                  if (_.width !== _ || _.height !== _)
-                    return void _(
-                      (0, _._)(
-                        "#StoreAdmin_EditEditions_ImageSizeError",
-                        _,
-                        _,
-                        _.width,
-                        _.height,
-                      ),
-                    );
-                  const _ = new Map(__webpack_require__);
-                  _.set(_, _), _(_), _(null);
-                }
-              },
-              style: {
-                display: "none",
-              },
+        return (0, _.jsxs)("div", {
+          className: _.LocalizedImageSelector,
+          children: [
+            (0, _.jsx)("h3", {
+              children: (0, _._)("#StoreAdmin_EditEditions_StepNumber2"),
             }),
-            _.createElement(
-              "select",
-              {
-                onChange: (_) => {
-                  _(_.target.value), _(null);
-                },
-                className: _(_),
-              },
-              (0, _._)(_, (_, _) =>
-                _.createElement(
-                  "option",
-                  {
-                    key: _,
-                    value: _,
-                    className: _(_),
-                  },
-                  _,
-                ),
+            (0, _.jsx)("p", {
+              children: (0, _._)(
+                "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
+                _,
+                _,
               ),
-            ),
-          ),
-          _.createElement(
-            "p",
-            {
+            }),
+            (0, _.jsxs)("div", {
+              className: _.Header,
+              children: [
+                (0, _.jsx)("input", {
+                  type: "file",
+                  ref: _,
+                  onChange: async (_) => {
+                    if (_.target.files && _.target.files[0]) {
+                      const _ = _.target.files[0],
+                        _ = await createImageBitmap(_);
+                      if (_.width !== _ || _.height !== _)
+                        return void _(
+                          (0, _._)(
+                            "#StoreAdmin_EditEditions_ImageSizeError",
+                            _,
+                            _,
+                            _.width,
+                            _.height,
+                          ),
+                        );
+                      const _ = new Map(__webpack_require__);
+                      _.set(_, _), _(_), _(null);
+                    }
+                  },
+                  style: {
+                    display: "none",
+                  },
+                }),
+                (0, _.jsx)("select", {
+                  onChange: (_) => {
+                    _(_.target.value), _(null);
+                  },
+                  className: _(_),
+                  children: (0, _._)(_, (_, _) =>
+                    (0, _.jsx)(
+                      "option",
+                      {
+                        value: _,
+                        className: _(_),
+                        children: _,
+                      },
+                      _,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+            (0, _.jsx)("p", {
               className: _.ErrorBox,
-            },
-            null !== _ &&
-              _.createElement(_.Fragment, null, _.createElement(_._, null), _),
-          ),
-          _.createElement(
-            "div",
-            {
+              children:
+                null !== _ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [(0, _.jsx)(_._, {}), _],
+                }),
+            }),
+            (0, _.jsx)("div", {
               className: _.ImageDropPane,
               onClick: () => _.current?.click(),
               onDragOver: (_) => _.preventDefault(),
@@ -856,74 +789,61 @@
                   _.set(_, _), _(_), _(null);
                 }
               },
-            },
-            _
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.DragAndDropDescriptionWithImage,
-                    },
-                    (0, _._)("#StoreAdmin_EditEditions_DragAndDropToReplace"),
-                  ),
-                  _.createElement("img", {
-                    src: _,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.DeleteLink,
-                    },
-                    _.createElement(
-                      "a",
-                      {
-                        onClick: () => {
-                          if (__webpack_require__.has(_)) {
-                            const _ = new Map(__webpack_require__);
-                            _.delete(_), _(_), _(null);
-                          }
-                        },
-                      },
-                      (0, _._)("#StoreAdmin_EditEditions_Delete"),
-                    ),
-                  ),
-                )
-              : _.createElement(
-                  "div",
-                  {
+              children: _
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.DragAndDropDescriptionWithImage,
+                        children: (0, _._)(
+                          "#StoreAdmin_EditEditions_DragAndDropToReplace",
+                        ),
+                      }),
+                      (0, _.jsx)("img", {
+                        src: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.DeleteLink,
+                        children: (0, _.jsx)("a", {
+                          onClick: () => {
+                            if (__webpack_require__.has(_)) {
+                              const _ = new Map(__webpack_require__);
+                              _.delete(_), _(_), _(null);
+                            }
+                          },
+                          children: (0, _._)("#StoreAdmin_EditEditions_Delete"),
+                        }),
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)("div", {
                     className: _.DragAndDropDescriptionWithoutImage,
-                  },
-                  (0, _._)("#StoreAdmin_EditEditions_DragAndDropHere"),
-                ),
-          ),
-          _.createElement(
-            "h3",
-            null,
-            (0, _._)("#StoreAdmin_EditEditions_StepNumber3"),
-          ),
-          _.createElement(
-            "label",
-            {
+                    children: (0, _._)(
+                      "#StoreAdmin_EditEditions_DragAndDropHere",
+                    ),
+                  }),
+            }),
+            (0, _.jsx)("h3", {
+              children: (0, _._)("#StoreAdmin_EditEditions_StepNumber3"),
+            }),
+            (0, _.jsx)("label", {
               htmlFor: "altTextArea",
-            },
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#StoreAdmin_EditEditions_AltTextDescription"),
-            ),
-          ),
-          _.createElement("textarea", {
-            _: "altTextArea",
-            className: _.AltTextArea,
-            onChange: (_) => {
-              const _ = new Map(_);
-              _.set(_, _.target.value), _(_);
-            },
-            value: _.get(_) ?? "",
-          }),
-        );
+              children: (0, _.jsx)("p", {
+                children: (0, _._)(
+                  "#StoreAdmin_EditEditions_AltTextDescription",
+                ),
+              }),
+            }),
+            (0, _.jsx)("textarea", {
+              _: "altTextArea",
+              className: _.AltTextArea,
+              onChange: (_) => {
+                const _ = new Map(_);
+                _.set(_, _.target.value), _(_);
+              },
+              value: _.get(_) ?? "",
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -933,6 +853,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -971,7 +892,7 @@
           _ = _
             ? (0, _._)("#GameEdit_ComingSoon_SelectAnOption")
             : (0, _._)("#App_Landing_NoDateSelected");
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           disabled: !_,
           strDefaultLabel: _,
           rgOptions: _,
@@ -986,6 +907,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1037,30 +959,24 @@
             },
             [_, _, _],
           );
-        let _ = _.createElement(_, {
+        let _ = (0, _.jsx)(_, {
           setOnOKButton: _,
           onCommit: _,
         });
         return (
           _
-            ? (_ = _.createElement(_, {
+            ? (_ = (0, _.jsx)(_, {
                 strError: (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!_ && _) || (_ = _.createElement(_._, null)),
-          _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _,
-              {
-                fnSubmit: _,
-                fnCloseModal: __webpack_require__,
-              },
-              _,
-            ),
-          )
+            : (!_ && _) || (_ = (0, _.jsx)(_._, {})),
+          (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_, {
+              fnSubmit: _,
+              fnCloseModal: __webpack_require__,
+              children: _,
+            }),
+          })
         );
       }
       const _ = _.createContext(null);
@@ -1124,80 +1040,70 @@
           _.useEffect(() => {
             _("none" == _ ? () => _ : null);
           }, [_, __webpack_require__, _, _]),
-          _.createElement(
-            _.Fragment,
-            null,
-            _ &&
-              _.createElement(_, {
-                strError: _,
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ &&
+                (0, _.jsx)(_, {
+                  strError: _,
+                }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsxs)(_, {
+                    label: (0, _._)("#App_Landing_IntendedReleaseDateTitle"),
+                    children: [
+                      (0, _.jsx)(_, {
+                        rtSelectedDate: _,
+                        setSelectedDate: _,
+                      }),
+                      (0, _.jsx)(_, {}),
+                    ],
+                  }),
+                  (0, _.jsxs)(_, {
+                    label: (0, _._)("#App_Landing_PublicDateDisplayTitle"),
+                    children: [
+                      (0, _.jsx)(_._, {
+                        rtSteamReleaseDate: _,
+                        value: _,
+                        onChange: _,
+                      }),
+                      (0, _.jsx)("p", {
+                        children: (0, _._)("#App_Landing_ReleaseDateStorePage"),
+                      }),
+                      (0, _.jsx)("p", {
+                        children: (0, _._)(
+                          "#App_Landing_ReleaseDateStoreListing",
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
               }),
-            _.createElement(_, null),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _,
-                {
-                  label: (0, _._)("#App_Landing_IntendedReleaseDateTitle"),
-                },
-                _.createElement(_, {
-                  rtSelectedDate: _,
-                  setSelectedDate: _,
-                }),
-                _.createElement(_, null),
-              ),
-              _.createElement(
-                _,
-                {
-                  label: (0, _._)("#App_Landing_PublicDateDisplayTitle"),
-                },
-                _.createElement(_._, {
-                  rtSteamReleaseDate: _,
-                  value: _,
-                  onChange: _,
-                }),
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)("#App_Landing_ReleaseDateStorePage"),
-                ),
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)("#App_Landing_ReleaseDateStoreListing"),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 className: _.ReleaseColumnFooter,
-              },
-              (0, _._)(
-                "#App_Landing_NeedHelpWithReleaseDates",
-                _.createElement("a", {
-                  target: "_blank",
-                  href: `${_._.PARTNER_BASE_URL}doc/store/coming_soon`,
-                }),
-                _.createElement("a", {
-                  target: "_blank",
-                  href: `${(0, _._)()}wizard/HelpWithPublishing`,
-                }),
-              ),
-            ),
-            _.createElement(_, null),
-          )
+                children: (0, _._)(
+                  "#App_Landing_NeedHelpWithReleaseDates",
+                  (0, _.jsx)("a", {
+                    target: "_blank",
+                    href: `${_._.PARTNER_BASE_URL}doc/store/coming_soon`,
+                  }),
+                  (0, _.jsx)("a", {
+                    target: "_blank",
+                    href: `${(0, _._)()}wizard/HelpWithPublishing`,
+                  }),
+                ),
+              }),
+              (0, _.jsx)(_, {}),
+            ],
+          })
         );
       });
       function _(_) {
         const { strError: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.ErrorBox,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _.ErrorBox,
+          children: _,
+        });
       }
       function _() {
         const {
@@ -1209,27 +1115,28 @@
         } = _();
         return _ && _
           ? __webpack_require__
-            ? _.createElement(
-                _,
-                null,
-                (0, _._)("#App_Landing_Release_EarliestDate_BuildReview"),
-              )
-            : _.createElement(
-                _,
-                null,
-                (0, _._)("#App_Landing_Release_EarliestDate", (0, _._)(_)),
-              )
+            ? (0, _.jsx)(_, {
+                children: (0, _._)(
+                  "#App_Landing_Release_EarliestDate_BuildReview",
+                ),
+              })
+            : (0, _.jsx)(_, {
+                children: (0, _._)(
+                  "#App_Landing_Release_EarliestDate",
+                  (0, _._)(_),
+                ),
+              })
           : _
-            ? _.createElement(
-                _,
-                null,
-                (0, _._)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
-              )
-            : _.createElement(
-                _,
-                null,
-                (0, _._)("#App_Landing_Release_EarliestDate_TwoWeeks"),
-              );
+            ? (0, _.jsx)(_, {
+                children: (0, _._)(
+                  "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
+                ),
+              })
+            : (0, _.jsx)(_, {
+                children: (0, _._)(
+                  "#App_Landing_Release_EarliestDate_TwoWeeks",
+                ),
+              });
       }
       function _(_) {
         const {
@@ -1240,69 +1147,53 @@
           { bCanUpdateComingSoonDate: _ } = _() || {
             bCanUpdateComingSoonDate: !0,
           };
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-            className: _.ReleaseDateModal,
-            onDismiss: _,
-          },
-          _.createElement(
-            _._,
-            null,
-            (0, _._)(
-              _
-                ? "#App_Landing_Set_Release_Date"
-                : "#App_Landing_Change_Release_Date",
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          active: !0,
+          className: _.ReleaseDateModal,
+          onDismiss: _,
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _._)(
+                _
+                  ? "#App_Landing_Set_Release_Date"
+                  : "#App_Landing_Change_Release_Date",
+              ),
+            }),
+            (0, _.jsx)(_._, {
               className: _.ReleaseDateRequestBody,
-            },
-            _,
-          ),
-          _.createElement(_._, {
-            bOKDisabled: !__webpack_require__,
-            onCancel: _,
-            strCancelText: (0, _._)("#App_Landing_Requested_Date_Cancel"),
-            onOK: __webpack_require__,
-            strOKText: (0, _._)("#App_Landing_Requested_Date_Update"),
-          }),
-        );
+              children: _,
+            }),
+            (0, _.jsx)(_._, {
+              bOKDisabled: !__webpack_require__,
+              onCancel: _,
+              strCancelText: (0, _._)("#App_Landing_Requested_Date_Cancel"),
+              onOK: __webpack_require__,
+              strOKText: (0, _._)("#App_Landing_Requested_Date_Update"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { label: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.Column,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.Column,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.ColumnLabel,
-            },
-            _,
-            ":",
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [_, ":"],
+            }),
+            (0, _.jsx)("div", {
               className: _.ColumnContent,
-            },
-            __webpack_require__,
-          ),
-        );
+              children: __webpack_require__,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { rtSelectedDate: _, setSelectedDate: __webpack_require__ } = _,
           { bCanUpdateComingSoonDate: _, rtEarliestDate: _ } = _();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsx)(_._, {
             bWeekdaysOnly: !0,
             bNoDefaultDate: !0,
             disabled: !_,
@@ -1313,7 +1204,7 @@
             bShowTimeZone: !0,
             strAlsoShowTimeZone: _._,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -1321,47 +1212,40 @@
           rtReleaseDate: __webpack_require__,
         } = _();
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#App_Landing_Set_Release_Date_SetIntended"),
-              ),
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#App_Landing_Set_Release_Date_Weekends"),
-              ),
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#App_Landing_Set_Release_Date_PacificTime"),
-              ),
-            )
-          : _.createElement(
-              "p",
-              null,
-              (0, _._)(
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#App_Landing_Set_Release_Date_SetIntended",
+                  ),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#App_Landing_Set_Release_Date_Weekends"),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#App_Landing_Set_Release_Date_PacificTime",
+                  ),
+                }),
+              ],
+            })
+          : (0, _.jsx)("p", {
+              children: (0, _._)(
                 (0, _._)(
                   "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
                   (0, _._)(__webpack_require__),
                 ),
-                _.createElement("a", {
+                (0, _.jsx)("a", {
                   href: `${(0, _._)()}wizard/HelpWithPublishing?issueid=905`,
                 }),
               ),
-            );
+            });
       }
       function _(_) {
-        return _.createElement(
-          "span",
-          {
-            className: _.BlueNote,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("span", {
+          className: _.BlueNote,
+          children: _.children,
+        });
       }
       function _(_) {
         const {
@@ -1371,16 +1255,13 @@
         } = _();
         return "prerelease" != __webpack_require__ || _
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.PublishNowWarning,
-              },
-              (0, _._)(
+          : (0, _.jsx)("div", {
+              className: _.PublishNowWarning,
+              children: (0, _._)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
                 (0, _._)(_),
               ),
-            );
+            });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1399,139 +1280,108 @@
           _ = _.useCallback((_, _, _) => {
             _(_), _(_), _(!1), _ && _(!0);
           }, []);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              appid: __webpack_require__,
-              onClose: _,
-              onCommit: _,
-            }),
-          _ &&
-            _.createElement(_, {
-              appid: __webpack_require__,
-              bIsGameEdit: _,
-              closeModal: () => _(!1),
-            }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                appid: __webpack_require__,
+                onClose: _,
+                onCommit: _,
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                appid: __webpack_require__,
+                bIsGameEdit: _,
+                closeModal: () => _(!1),
+              }),
+            (0, _.jsxs)("div", {
               className: (0, _._)(_.ReleaseDateInfoCtn, _ && _.GameEditCtn),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ReleaseDateContent,
-              },
-              _.createElement(
-                _,
-                {
-                  label: (0, _._)("#App_Landing_SpecifiedReleaseDate"),
-                },
-                _.createElement(_, {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.ReleaseDateContent,
+                  children: [
+                    (0, _.jsx)(_, {
+                      label: (0, _._)("#App_Landing_SpecifiedReleaseDate"),
+                      children: (0, _.jsx)(_, {
+                        rtReleaseDate: _,
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      label: (0, _._)("#App_Landing_CustomersSeeReleaseDate"),
+                      children: (0, _.jsx)("div", {
+                        className: (0, _._)(_.BigField, _ ? _.Set : _.Unset),
+                        children: _
+                          ? (0, _._)(_, _)
+                          : (0, _._)("#App_Landing_UnsetReleaseDate"),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.EditButton,
+                  onClick: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.Spacer, _.Top),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.EditButtonIcon,
+                      children: (0, _.jsx)(_.ffu, {}),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.Spacer, _.Bottom),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            1e3 * _ > new Date().getTime() &&
+              (0, _.jsx)(_, {
+                label: (0, _._)("#App_Landing_EarliestAdvancedAccessDate"),
+                children: (0, _.jsx)(_, {
                   rtReleaseDate: _,
                 }),
-              ),
-              _.createElement(
-                _,
-                {
-                  label: (0, _._)("#App_Landing_CustomersSeeReleaseDate"),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.BigField, _ ? _.Set : _.Unset),
-                  },
-                  _
-                    ? (0, _._)(_, _)
-                    : (0, _._)("#App_Landing_UnsetReleaseDate"),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.EditButton,
-                onClick: _,
-              },
-              _.createElement("div", {
-                className: (0, _._)(_.Spacer, _.Top),
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.EditButtonIcon,
-                },
-                _.createElement(_.ffu, null),
-              ),
-              _.createElement("div", {
-                className: (0, _._)(_.Spacer, _.Bottom),
-              }),
-            ),
-          ),
-          1e3 * _ > new Date().getTime() &&
-            _.createElement(
-              _,
-              {
-                label: (0, _._)("#App_Landing_EarliestAdvancedAccessDate"),
-              },
-              _.createElement(_, {
-                rtReleaseDate: _,
-              }),
-            ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { rtReleaseDate: _ } = _;
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: (0, _._)(_.BigField, _.Set),
-                },
-                (0, _._)(_),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)(_),
+                }),
+                (0, _.jsx)("div", {
                   className: (0, _._)(_.SubField, _.Set),
-                },
-                (0, _._)(
-                  _,
-                  {},
-                  {
-                    timeZoneName: "short",
-                  },
-                ),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.BigField, _.Unset),
-              },
-              (0, _._)("#App_Landing_UnsetReleaseDate"),
-            );
+                  children: (0, _._)(
+                    _,
+                    {},
+                    {
+                      timeZoneName: "short",
+                    },
+                  ),
+                }),
+              ],
+            })
+          : (0, _.jsx)("div", {
+              className: (0, _._)(_.BigField, _.Unset),
+              children: (0, _._)("#App_Landing_UnsetReleaseDate"),
+            });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.LabelField,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.LabelField,
+          children: [
+            (0, _.jsx)("div", {
               className: _.Label,
-            },
-            _.label,
-          ),
-          _.children,
-        );
+              children: _.label,
+            }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { appid: _, bIsGameEdit: __webpack_require__, closeModal: _ } = _,
@@ -1542,12 +1392,9 @@
                   _._.GameEditByAppID(_.toString()) + "?activetab=tab_publish"),
               _();
           }, [_, __webpack_require__, _]);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
             strTitle: (0, _._)("#App_Landing_ReleaseDate_ChangesSaved"),
             strDescription: (0, _._)("#App_Landing_Release_PublishStorePrompt"),
             strOKButtonText: (0, _._)("#App_Landing_Release_PrepareToPublish"),
@@ -1555,7 +1402,7 @@
             strCancelButtonText: (0, _._)("#Button_OK"),
             closeModal: _,
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

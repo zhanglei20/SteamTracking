@@ -252,35 +252,29 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { conferenceInfo: _ } = _,
           _ = _.broadcastSteamID.ConvertTo64BitString();
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(_.default, {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_.default, {
             steamIDBroadcast: _,
             watchLocation: 5,
             bStartMuted: !0,
           }),
-        );
+        });
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
           _ = (0, _._)(() => _.broadcastSteamID.ConvertTo64BitString());
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _.BroadcastChatCtn,
-              _.className ? `${_.className}` : "",
-            ),
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _.BroadcastChatCtn,
+            _.className ? `${_.className}` : "",
+          ),
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
               emoticonStore: _._,
               watchLocation: 5,
               steamID: _,
@@ -288,45 +282,48 @@
               bPartnerMemberOnlyChat: _.bPartnerOnly,
               bInvertLayout: !0,
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
           [__webpack_require__, _] = _.useState(!1);
         return __webpack_require__
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.broadcast_floating,
-              },
-              _.createElement(_.BroadcastEmbeddablePopoutHeader, {
-                steamIDBroadcast: _.broadcastSteamID.ConvertTo64BitString(),
-                OnPreventPopup: () => _(!0),
-              }),
-              _.createElement(_, {
-                conferenceInfo: _,
-              }),
-            );
+          : (0, _.jsxs)("div", {
+              className: _.broadcast_floating,
+              children: [
+                (0, _.jsx)(_.BroadcastEmbeddablePopoutHeader, {
+                  steamIDBroadcast: _.broadcastSteamID.ConvertTo64BitString(),
+                  OnPreventPopup: () => _(!0),
+                }),
+                (0, _.jsx)(_, {
+                  conferenceInfo: _,
+                }),
+              ],
+            });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { conferenceInfo: _ } = _;
         return "dev" != _._.WEB_UNIVERSE
           ? null
-          : _.createElement(
-              "div",
-              null,
-              _.createElement("h1", null, "Conference Data"),
-              _.createElement(_._, {
-                data: _,
-              }),
-              _.createElement("h1", null, "Config Data"),
-              _.createElement(_._, {
-                strConfigID: "application_config",
-              }),
-            );
+          : (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("h1", {
+                  children: "Conference Data",
+                }),
+                (0, _.jsx)(_._, {
+                  data: _,
+                }),
+                (0, _.jsx)("h1", {
+                  children: "Config Data",
+                }),
+                (0, _.jsx)(_._, {
+                  strConfigID: "application_config",
+                }),
+              ],
+            });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -392,254 +389,295 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { closeModal: _ } = _;
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)(
+            "#EventCalendar_GameSource_UnhideCuratorsDialog_Title",
+          ),
+          strDescription: (0, _._)(
+            "#EventCalendar_GameSource_UnhideCuratorsDialog_Description",
+          ),
+          strOKButtonText: (0, _._)(
+            "#EventCalendar_GameSource_UnhideCuratorsDialog_OKButton",
+          ),
+          strCancelButtonText: (0, _._)(
+            "#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton",
+          ),
+          onOK: () => {
+            (0, _._)().m_visibilityStore.SetGameSourceAllowed(
+              _._.k_ECurator,
+              !0,
+            ),
+              _ && _();
+          },
+          onCancel: () => {
+            (0,
+            _._)().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(
+              !0,
+            ),
+              _ && _();
+          },
+        });
+      }
       const _ = (0, _._)((_) => {
-          const {
-              eventModel: _,
-              calendarEvent: __webpack_require__,
-              history: _,
-            } = _,
-            _ = (_) => {
-              let _ = __webpack_require__.GetEntityName();
-              (0, _._)(
-                _.createElement(
-                  _._,
-                  {
-                    strTitle: (0, _._)("#EventCalendar_MuteApp_Title", _),
-                    strDescription: (0, _._)(
-                      "#EventCalendar_MuteApp_details",
-                      _,
-                    ),
-                    onOK: () =>
-                      (0, _._)().UpdateEventBlockFromCalendarEvent(
-                        __webpack_require__,
-                        !1,
-                      ),
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "account/emailoptout/app",
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                    },
-                    (0, _._)("#EventCalendar_ManageMutedSources"),
+        const {
+            eventModel: _,
+            calendarEvent: __webpack_require__,
+            history: _,
+          } = _,
+          _ = (_) => {
+            let _ = __webpack_require__.GetEntityName();
+            (0, _._)(
+              (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#EventCalendar_MuteApp_Title", _),
+                strDescription: (0, _._)("#EventCalendar_MuteApp_details", _),
+                onOK: () =>
+                  (0, _._)().UpdateEventBlockFromCalendarEvent(
+                    __webpack_require__,
+                    !1,
                   ),
-                ),
-                (0, _._)(_),
-              );
-            },
-            _ = () => {
-              (0, _._)().UpdateEventBlockFromCalendarEvent(
-                __webpack_require__,
-                !0,
-              );
-            },
-            _ = () => {
-              const _ = _().MapClanEventTypeToGroup(_.GetEventType());
-              _().SetEventTypeGroupAllowed(_, !1);
-            },
-            _ = () => (0, _._)().m_visibilityStore,
-            _ = (_, _, _, _ = !0) => {
-              _().BIsGameSourceAllowed(_) &&
-                (_ &&
-                  _.push(
-                    _.createElement(
-                      _._,
-                      {
-                        key: `item-source-${_}-${_}`,
-                        disabled: !0,
-                        onSelected: () => {},
-                      },
-                      (0, _._)("#EventCalender_Reason_" + _),
-                    ),
-                  ),
+                children: (0, _.jsx)("a", {
+                  href: _._.STORE_BASE_URL + "account/emailoptout/app",
+                  target: _._.IN_CLIENT ? void 0 : "_blank",
+                  children: (0, _._)("#EventCalendar_ManageMutedSources"),
+                }),
+              }),
+              (0, _._)(_),
+            );
+          },
+          _ = () => {
+            (0, _._)().UpdateEventBlockFromCalendarEvent(
+              __webpack_require__,
+              !0,
+            );
+          },
+          _ = () => {
+            const _ = _().MapClanEventTypeToGroup(_.GetEventType());
+            _().SetEventTypeGroupAllowed(_, !1);
+          },
+          _ = () => (0, _._)().m_visibilityStore,
+          _ = (_, _, _, _ = !0) => {
+            _().BIsGameSourceAllowed(_) &&
+              (_ &&
                 _.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _._,
                     {
-                      key: `item-hidesource-${_}-${_}`,
-                      onSelected: () => {
-                        _().SetGameSourceAllowed(_, !1);
-                      },
+                      disabled: !0,
+                      onSelected: () => {},
+                      children: (0, _._)("#EventCalender_Reason_" + _),
                     },
-                    (0, _._)("#EventCalender_Hide_Reason_" + _),
+                    `item-source-${_}-${_}`,
                   ),
-                ));
-            },
-            _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
-            _ = () => {
-              _.startsWith("http") ? (window.location.href = _) : _.push(_);
-            },
-            _ = () => {
-              (0, _._)(_.clanSteamID.GetAccountID());
-            };
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().FooterStat, _().Options),
-              onClick: (_) => {
-                let _ = [];
-                const _ = __webpack_require__.GetSource(),
-                  _ = __webpack_require__.unique_id,
-                  _ = (0, _._)(),
-                  _ = (0, _._)();
-                if (
-                  (_.BIsGlobalCalendar() &&
-                    (_ &&
-                      _ & _._.k_eLibrary &&
-                      (_().BIsGameSourceAllowed(_._.k_ERecent) &&
-                      __webpack_require__.appInfo
-                        ? (_.push(
-                            _.createElement(
-                              _._,
-                              {
-                                key: `item-source-${_}-lastplayed`,
-                                disabled: !0,
-                                onSelected: () => {},
-                              },
-                              (0, _._)(
-                                "#EventCalender_LastPlayed",
-                                (0, _._)(
-                                  _._.GetTimeNowWithOverride() -
-                                    __webpack_require__.appInfo.last_played,
-                                ),
-                              ),
-                            ),
-                          ),
-                          _(_, _._.k_ERecent, _, !1))
-                        : _(_, _._.k_ELibrary, _)),
-                    _ && _ & _._.k_eWishlist && _(_, _._.k_EWishlist, _),
-                    _ && _ & _._.k_eFollowing && _(_, _._.k_EFollowing, _),
-                    !_ && _ && _ & _._.k_eCurator && _(_, _._.k_ECurator, _),
-                    _ && _ & _._.k_eRecommended && _(_, _._.k_ERecommended, _),
-                    _ && _ & _._.k_eSteam && _(_, _._.k_ESteam, _),
-                    _ && _ & _._.k_eFeatured && _(_, _._.k_EFeatured, _)),
-                  _.push(
-                    _.createElement(
-                      _._,
-                      {
-                        key: _.GID + "hidetype",
-                        onSelected: _,
-                      },
-                      (0, _._)(
-                        "#EVentCalendar_Hide_EventType",
-                        (0, _._)(
-                          "#EventCalendar_EventTypeGroup_" +
-                            _().MapClanEventTypeToGroup(_.GetEventType()),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _._.logged_in &&
-                    (_._.Get().BIsEventBlocked(__webpack_require__)
-                      ? _.push(
-                          _.createElement(
-                            _._,
-                            {
-                              key: _.GID + "unmuteapp",
-                              onSelected: _,
-                            },
-                            _.createElement(
-                              _._,
-                              {
-                                toolTipContent: (0, _._)(
-                                  "#EventCalendar_UnMuteApp_ttip",
-                                ),
-                              },
-                              (0, _._)(
-                                "#EventCalendar_UnMuteApp_Title",
-                                __webpack_require__.GetEntityName(),
-                              ),
-                            ),
-                          ),
-                        )
-                      : _.push(
-                          _.createElement(
-                            _._,
-                            {
-                              key: _.GID + "muteapp",
-                              onSelected: _,
-                            },
-                            _.createElement(
-                              _._,
-                              {
-                                toolTipContent: (0, _._)(
-                                  "#EventCalendar_MuteApp_ttip",
-                                ),
-                              },
-                              (0, _._)(
-                                "#EventCalendar_MuteApp_Title",
-                                __webpack_require__.GetEntityName(),
-                              ),
-                            ),
-                          ),
-                        )),
-                  !_.BIsOGGEvent() && !_)
-                ) {
-                  const _ = _._.Get().BIsFollowingCurator(_.clanSteamID);
-                  _.push(
-                    _.createElement(
-                      _._,
-                      {
-                        key: _.GID + "followcurator",
-                        onSelected: _,
-                      },
-                      _.createElement(
+                ),
+              _.push(
+                (0, _.jsx)(
+                  _._,
+                  {
+                    onSelected: () => {
+                      _().SetGameSourceAllowed(_, !1);
+                    },
+                    children: (0, _._)("#EventCalender_Hide_Reason_" + _),
+                  },
+                  `item-hidesource-${_}-${_}`,
+                ),
+              ));
+          },
+          _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
+          _ = () => {
+            _.startsWith("http") ? (window.location.href = _) : _.push(_);
+          };
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().FooterStat, _().Options),
+          onClick: (_) => {
+            let _ = [];
+            const _ = __webpack_require__.GetSource(),
+              _ = __webpack_require__.unique_id,
+              _ = (0, _._)(),
+              _ = (0, _._)();
+            _.BIsGlobalCalendar() &&
+              (_ &&
+                _ & _._.k_eLibrary &&
+                (_().BIsGameSourceAllowed(_._.k_ERecent) &&
+                __webpack_require__.appInfo
+                  ? (_.push(
+                      (0, _.jsx)(
                         _._,
                         {
-                          toolTipContent: (0, _._)(
-                            _
-                              ? "#EventCalendar_UnFollowCurator_ttip"
-                              : "#EventCalendar_FollowCurator_ttip",
+                          disabled: !0,
+                          onSelected: () => {},
+                          children: (0, _._)(
+                            "#EventCalender_LastPlayed",
+                            (0, _._)(
+                              _._.GetTimeNowWithOverride() -
+                                __webpack_require__.appInfo.last_played,
+                            ),
                           ),
                         },
-                        (0, _._)(
-                          _
-                            ? "#EventCalendar_UnFollowCurator"
-                            : "#EventCalendar_FollowCurator",
-                          __webpack_require__.GetEntityName(),
-                        ),
+                        `item-source-${_}-lastplayed`,
                       ),
                     ),
-                  );
-                }
-                _.BIsSingleSourceCalendar() ||
-                  _.push(
-                    _.createElement(
-                      _._,
-                      {
-                        key: _.GID + "goto",
-                        onSelected: _,
-                      },
+                    _(_, _._.k_ERecent, _, !1))
+                  : _(_, _._.k_ELibrary, _)),
+              _ && _ & _._.k_eWishlist && _(_, _._.k_EWishlist, _),
+              _ && _ & _._.k_eFollowing && _(_, _._.k_EFollowing, _),
+              !_ && _ && _ & _._.k_eCurator && _(_, _._.k_ECurator, _),
+              _ && _ & _._.k_eRecommended && _(_, _._.k_ERecommended, _),
+              _ && _ & _._.k_eSteam && _(_, _._.k_ESteam, _),
+              _ && _ & _._.k_eFeatured && _(_, _._.k_EFeatured, _)),
+              _.push(
+                (0, _.jsx)(
+                  _._,
+                  {
+                    onSelected: _,
+                    children: (0, _._)(
+                      "#EVentCalendar_Hide_EventType",
                       (0, _._)(
+                        "#EventCalendar_EventTypeGroup_" +
+                          _().MapClanEventTypeToGroup(_.GetEventType()),
+                      ),
+                    ),
+                  },
+                  _.GID + "hidetype",
+                ),
+              ),
+              _._.logged_in &&
+                (_._.Get().BIsEventBlocked(__webpack_require__)
+                  ? _.push(
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          onSelected: _,
+                          children: (0, _.jsx)(_._, {
+                            toolTipContent: (0, _._)(
+                              "#EventCalendar_UnMuteApp_ttip",
+                            ),
+                            children: (0, _._)(
+                              "#EventCalendar_UnMuteApp_Title",
+                              __webpack_require__.GetEntityName(),
+                            ),
+                          }),
+                        },
+                        _.GID + "unmuteapp",
+                      ),
+                    )
+                  : _.push(
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          onSelected: _,
+                          children: (0, _.jsx)(_._, {
+                            toolTipContent: (0, _._)(
+                              "#EventCalendar_MuteApp_ttip",
+                            ),
+                            children: (0, _._)(
+                              "#EventCalendar_MuteApp_Title",
+                              __webpack_require__.GetEntityName(),
+                            ),
+                          }),
+                        },
+                        _.GID + "muteapp",
+                      ),
+                    )),
+              _.BIsOGGEvent() ||
+                _ ||
+                _.push(
+                  (0, _.jsx)(_, {
+                    eventModel: _,
+                    calendarEvent: __webpack_require__,
+                  }),
+                ),
+              _.BIsSingleSourceCalendar() ||
+                _.push(
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      onSelected: _,
+                      children: (0, _._)(
                         "#EventCalendar_Goto_SpecificCalendar",
                         __webpack_require__.GetEntityName(),
                       ),
-                    ),
+                    },
+                    _.GID + "goto",
                   ),
-                  _.appid &&
-                    _.push(
-                      _.createElement(
-                        _._,
-                        {
-                          key: _.GID + "goto",
-                          onSelected: () =>
-                            (window.location.href = (0, _._)(
-                              _._.STORE_BASE_URL + "app/" + _.appid,
-                            )),
-                        },
-                        (0, _._)("#EventDisplay_ViewStorePage"),
-                      ),
-                    ),
-                  (0, _._)(_.createElement(_._, null, _), _);
+                ),
+              _.appid &&
+                _.push(
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      onSelected: () =>
+                        (window.location.href = (0, _._)(
+                          _._.STORE_BASE_URL + "app/" + _.appid,
+                        )),
+                      children: (0, _._)("#EventDisplay_ViewStorePage"),
+                    },
+                    _.GID + "goto",
+                  ),
+                ),
+              (0, _._)(
+                (0, _.jsx)(_._, {
+                  children: _,
+                }),
+                _,
+              );
+          },
+          children: (0, _.jsx)(_.faJ, {}),
+        });
+      });
+      function _(_) {
+        const { eventModel: _, calendarEvent: __webpack_require__ } = _,
+          _ = (0, _._)(_.clanSteamID.GetAccountID()),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
+          _ = _.useCallback(async () => {
+            _._.logged_in
+              ? (await _._.Get().UpdateFollowOrIgnoreCurator(
+                  _.clanSteamID,
+                  !0,
+                  !_,
+                ),
+                !!_ ||
+                  ((0, _._)() &&
+                    ((0,
+                    _._)().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
+                      (0, _._)().m_visibilityStore.BIsGameSourceAllowed(
+                        _._.k_ECurator,
+                      ) ||
+                      (0, _._)((0, _.jsx)(_, {}), window))))
+              : _();
+          }, [_, _.clanSteamID, _]);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(
+              _._,
+              {
+                onSelected: _,
+                children: (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)(
+                    _
+                      ? "#EventCalendar_UnFollowCurator_ttip"
+                      : "#EventCalendar_FollowCurator_ttip",
+                  ),
+                  children: (0, _._)(
+                    _
+                      ? "#EventCalendar_UnFollowCurator"
+                      : "#EventCalendar_FollowCurator",
+                    __webpack_require__.GetEntityName(),
+                  ),
+                }),
               },
-            },
-            _.createElement(_.faJ, null),
-          );
-        }),
-        _ = (0, _._)(_);
+              _.GID + "followcurator",
+            ),
+            _,
+          ],
+        });
+      }
+      const _ = (0, _._)(_);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -654,12 +692,12 @@
           _.useEffect(() => _(0), [_.video]);
           const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               className: _.className,
               srcs: _.altImgWithFallback,
             });
           if (_.altImg)
-            return _.createElement("img", {
+            return (0, _.jsx)("img", {
               src: _.altImg,
               className: _.className,
             });
@@ -677,7 +715,7 @@
               _ = () => {
                 _.current && _.current.naturalHeight < 91 && _();
               };
-            return _.createElement("img", {
+            return (0, _.jsx)("img", {
               ref: _,
               onLoad: _,
               onError: _,
@@ -691,7 +729,7 @@
           (0, _._)(!!_.preloadYoutubeScripts);
           const _ = (0, _._)("youtube");
           if (_ && _)
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               ..._,
               classnames: (0, _._)(_().YoutubePlayer, _.classnames),
             });
@@ -702,42 +740,35 @@
                 _.stopPropagation(),
                 _.preventDefault();
             };
-            return _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  "YoutubePreviewContainer",
-                  _().YoutubePreviewImage,
-                  _.imageClassnames,
-                ),
-                onClick: _ ? _ : void 0,
-              },
-              _.createElement(_, {
-                className: "YoutubePreviewImage",
-                altImgWithFallback: _.altImgWithFallback,
-                altImg: _.altImg,
-                video: _.video,
-              }),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "YoutubePreviewPlay",
-                    },
-                    _.createElement(_.IOc, null),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "VideoHintText",
-                    },
-                    (0, _._)("#EventCalendar_WatchYouTubeVideo"),
-                  ),
-                ),
-            );
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                "YoutubePreviewContainer",
+                _().YoutubePreviewImage,
+                _.imageClassnames,
+              ),
+              onClick: _ ? _ : void 0,
+              children: [
+                (0, _.jsx)(_, {
+                  className: "YoutubePreviewImage",
+                  altImgWithFallback: _.altImgWithFallback,
+                  altImg: _.altImg,
+                  video: _.video,
+                }),
+                _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "YoutubePreviewPlay",
+                        children: (0, _.jsx)(_.IOc, {}),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "VideoHintText",
+                        children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),
+                      }),
+                    ],
+                  }),
+              ],
+            });
           }
         };
       var _ = __webpack_require__("chunkid"),
@@ -801,7 +832,7 @@
                   _ = (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
                   _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
                 if ("carousel" === _)
-                  return _.createElement(_, {
+                  return (0, _.jsx)(_, {
                     altImgWithFallback: _,
                     video: _,
                     className: _().YoutubePreviewImage,
@@ -810,7 +841,7 @@
                   _._.RecordAppInteractionEvent(_, _._.k_ePlayedVideo),
                     __webpack_require__(!0);
                 };
-                return _.createElement(_, {
+                return (0, _.jsx)(_, {
                   video: _,
                   altImgWithFallback: _,
                   autoplay: !0,
@@ -844,7 +875,7 @@
           _ = _;
         _ === _ && (_ = void 0), _ === _ && (_ = void 0);
         const _ = (0, _._)(_),
-          _ = _.createElement(_, {
+          _ = (0, _.jsx)(_, {
             videoPreview: _,
             calendarEvent: __webpack_require__,
             eventModel: _,
@@ -861,19 +892,16 @@
             28 !== _ &&
             12 !== _ &&
             _._.GetTimeNowWithOverride() < _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().ReminderContainer, _ && _().OnlyIcon),
-              },
-              _.createElement(_._, {
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().ReminderContainer, _ && _().OnlyIcon),
+              children: (0, _.jsx)(_._, {
                 eventModel: _,
                 lang: _,
                 bShowStartTime: !0,
                 bOnlyShowIcon: _,
                 bExpandLeft: _,
               }),
-            ),
+            }),
           _ = Boolean(12 !== _ && _),
           _ = Boolean(
             _ &&
@@ -884,24 +912,17 @@
                   return __webpack_require__(_).startsWith(_);
                 })(_, _)),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.createElement(_._, {
-            event: _,
-            recordNewsHubStats: !0,
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            (0, _.jsx)(_._, {
+              event: _,
+              recordNewsHubStats: !0,
+            }),
+            (0, _.jsx)(_._, {
               eventModel: _,
               route: _._.k_eView,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().Tile,
                 onClick: (_) => {
                   _._.RecordAppInteractionEvent(
@@ -912,110 +933,97 @@
                     _.stopPropagation(),
                     _.preventDefault();
                 },
-              },
-              14 === _ &&
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().TileBackgroundImage,
-                    _ && _().FallbackImage,
-                  ),
-                  style: {
-                    backgroundImage: `url(${_})`,
-                  },
-                }),
-              _.createElement(
-                "div",
-                {
-                  className: _().MainContentContainer,
-                },
-                _,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TileTextContainer,
-                  },
-                  Boolean(12 == _) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().PatchIconCtn,
-                      },
-                      _.createElement(_.vjL, null),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EventTitleCtn,
-                    },
-                    _,
-                    !_ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().GameSource,
-                        },
-                        _.createElement(_, {
-                          ..._,
-                        }),
-                        __webpack_require__ &&
-                          _.createElement(_, {
-                            calendarEvent: __webpack_require__,
-                          }),
+                children: [
+                  14 === _ &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().TileBackgroundImage,
+                        _ && _().FallbackImage,
                       ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().EventName,
+                      style: {
+                        backgroundImage: `url(${_})`,
                       },
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: _().MainContentContainer,
+                    children: [
                       _,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().EventTypeAndDateCtn,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(_().TileTextCategoryType, _),
-                        },
-                        _,
-                      ),
-                      _.createElement(_, {
-                        eventModel: _,
-                        className: (0, _._)(_ && _().LeaveRoomForReminder),
+                      (0, _.jsxs)("div", {
+                        className: _().TileTextContainer,
+                        children: [
+                          Boolean(12 == _) &&
+                            (0, _.jsx)("div", {
+                              className: _().PatchIconCtn,
+                              children: (0, _.jsx)(_.vjL, {}),
+                            }),
+                          (0, _.jsxs)("div", {
+                            className: _().EventTitleCtn,
+                            children: [
+                              _,
+                              !_ &&
+                                (0, _.jsxs)("div", {
+                                  className: _().GameSource,
+                                  children: [
+                                    (0, _.jsx)(_, {
+                                      ..._,
+                                    }),
+                                    __webpack_require__ &&
+                                      (0, _.jsx)(_, {
+                                        calendarEvent: __webpack_require__,
+                                      }),
+                                  ],
+                                }),
+                              (0, _.jsx)("div", {
+                                className: _().EventName,
+                                children: _,
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _().EventTypeAndDateCtn,
+                                children: [
+                                  (0, _.jsx)("div", {
+                                    className: (0, _._)(
+                                      _().TileTextCategoryType,
+                                      _,
+                                    ),
+                                    children: _,
+                                  }),
+                                  (0, _.jsx)(_, {
+                                    eventModel: _,
+                                    className: (0, _._)(
+                                      _ && _().LeaveRoomForReminder,
+                                    ),
+                                  }),
+                                  _ && _,
+                                ],
+                              }),
+                              _ &&
+                                (0, _.jsx)("div", {
+                                  className: _().EventSubTitle,
+                                  children: _,
+                                }),
+                              _ &&
+                                (0, _.jsx)("div", {
+                                  className: (0, _._)(
+                                    _().EventSummaryDefault,
+                                    _ ? _().SubTitleShown : "",
+                                  ),
+                                  children: _,
+                                }),
+                            ],
+                          }),
+                          !_ && _,
+                        ],
                       }),
-                      _ && _,
-                    ),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().EventSubTitle,
-                        },
-                        _,
-                      ),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(
-                            _().EventSummaryDefault,
-                            _ ? _().SubTitleShown : "",
-                          ),
-                        },
-                        _,
-                      ),
-                  ),
-                  !_ && _,
-                ),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
+                    ],
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1050,86 +1058,74 @@
         return (
           __webpack_require__.GetSubTitleWithLanguageFallback(_) === _ &&
             (_ = void 0),
-          _.createElement(
-            "div",
-            {
-              className: _().CoverImageCtn,
-            },
-            _,
-            _ &&
-              _.createElement(
-                _.Fragment,
-                null,
-                12 === _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().GameCapsuleCtn,
-                      },
-                      _.createElement("div", {
+          (0, _.jsxs)("div", {
+            className: _().CoverImageCtn,
+            children: [
+              _,
+              _ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    12 === _ &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().GameCapsuleCtn,
+                            children: (0, _.jsx)("div", {
+                              className: (0, _._)({
+                                [_().AppBannerLogo]: !0,
+                                [_().FallbackImage]: _,
+                                [_().ClanSource]: _,
+                              }),
+                              style: {
+                                backgroundImage: `url(${_})`,
+                              },
+                            }),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().GameShortDescription,
+                            children: _,
+                          }),
+                        ],
+                      }),
+                    12 !== _ &&
+                      (0, _.jsxs)("div", {
                         className: (0, _._)({
-                          [_().AppBannerLogo]: !0,
-                          [_().FallbackImage]: _,
-                          [_().ClanSource]: _,
+                          [_().EventCapsuleCtn]: !0,
+                          [_().LiveBroadcastPreview]: _,
                         }),
-                        style: {
-                          backgroundImage: `url(${_})`,
-                        },
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: (0, _._)({
+                              [_().TileImage]: !0,
+                              [_().FallbackImage]: _,
+                              [_().ClanSource]: _,
+                            }),
+                            style: {
+                              backgroundImage: `url(${_})`,
+                            },
+                          }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _().TileCoverImagePlayable,
+                            }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _().TileCoverLiveIcon,
+                              children: (0, _._)("#home_page_live_broadcast"),
+                            }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: "VideoHintText",
+                              children: (0, _._)(
+                                "#EventCalendar_WatchLiveBroadcast",
+                              ),
+                            }),
+                        ],
                       }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().GameShortDescription,
-                      },
-                      _,
-                    ),
-                  ),
-                12 !== _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)({
-                        [_().EventCapsuleCtn]: !0,
-                        [_().LiveBroadcastPreview]: _,
-                      }),
-                    },
-                    _.createElement("div", {
-                      className: (0, _._)({
-                        [_().TileImage]: !0,
-                        [_().FallbackImage]: _,
-                        [_().ClanSource]: _,
-                      }),
-                      style: {
-                        backgroundImage: `url(${_})`,
-                      },
-                    }),
-                    _ &&
-                      _.createElement("div", {
-                        className: _().TileCoverImagePlayable,
-                      }),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().TileCoverLiveIcon,
-                        },
-                        (0, _._)("#home_page_live_broadcast"),
-                      ),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: "VideoHintText",
-                        },
-                        (0, _._)("#EventCalendar_WatchLiveBroadcast"),
-                      ),
-                  ),
-              ),
-          )
+                  ],
+                }),
+            ],
+          })
         );
       }
       const _ = (0, _._)((_) => {
@@ -1146,41 +1142,29 @@
               _().GameTitleContainer,
               _ ? _().DisableHovers : _().EnableHovers,
             );
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _().TileTextHeader,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _,
-                  onClick: (_) => {
-                    _.startsWith("http")
-                      ? (window.location.href = _)
-                      : _.push(_),
-                      _.stopPropagation(),
-                      _.preventDefault();
-                  },
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)("div", {
+              className: _().TileTextHeader,
+              children: (0, _.jsxs)("div", {
+                className: _,
+                onClick: (_) => {
+                  _.startsWith("http") ? (window.location.href = _) : _.push(_),
+                    _.stopPropagation(),
+                    _.preventDefault();
                 },
-                _.createElement("img", {
-                  className: _().AppIcon,
-                  src: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _().AppIcon,
+                    src: _,
+                  }),
+                  (0, _.jsxs)("div", {
                     className: _().TileTextAppName,
-                  },
-                  _,
-                  " ",
-                ),
-              ),
-            ),
-          );
+                    children: [_, " "],
+                  }),
+                ],
+              }),
+            }),
+          });
         }),
         _ = (0, _._)(_),
         _ = (0, _._)((_) => {
@@ -1197,53 +1181,37 @@
           if (_ && _ < _ && _ < _) {
             const _ = _ - _,
               _ = (0, _._)(_, !0);
-            return _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().LiveText, _),
-              },
-              _.createElement(
-                _._,
-                {
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(_().LiveText, _),
+              children: [
+                (0, _.jsx)(_._, {
                   rtFullDate: _,
                   stylesmodule: _(),
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().LiveNow,
-                  },
-                  (0, _._)("#EventCalendar_LiveNow"),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
+                    children: (0, _._)("#EventCalendar_LiveNow"),
+                  }),
+                }),
+                (0, _.jsx)(_._, {
                   rtFullDate: _,
                   stylesmodule: _(),
-                },
-                (0, _._)("#EventCalendar_TimeLeft", _),
-              ),
-            );
+                  children: (0, _._)("#EventCalendar_TimeLeft", _),
+                }),
+              ],
+            });
           }
           if (_ < _) {
             const _ = _ - _,
               _ = _ < 86400 ? (0, _._)(_, !1, !0) : (0, _._)(_);
-            return _.createElement(
-              _._,
-              {
-                className: _,
-                rtFullDate: _,
-                stylesmodule: _(),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().PastDateText,
-                },
-                _,
-              ),
-            );
+            return (0, _.jsx)(_._, {
+              className: _,
+              rtFullDate: _,
+              stylesmodule: _(),
+              children: (0, _.jsx)("div", {
+                className: _().PastDateText,
+                children: _,
+              }),
+            });
           }
           {
             const _ = new Date(1e3 * _);
@@ -1252,21 +1220,15 @@
               _ = Math.floor((_ - _) / 86400),
               _ = _ > 1 && _ <= 5 ? (0, _._)(new Date(1e3 * _)) : (0, _._)(_),
               _ = (0, _._)(_);
-            return _.createElement(
-              _._,
-              {
-                className: _,
-                rtFullDate: _,
-                stylesmodule: _(),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().FutureDateText,
-                },
-                (0, _._)("#EventCalendar_WillStartAtDateTime", _, _),
-              ),
-            );
+            return (0, _.jsx)(_._, {
+              className: _,
+              rtFullDate: _,
+              stylesmodule: _(),
+              children: (0, _.jsx)("div", {
+                className: _().FutureDateText,
+                children: (0, _._)("#EventCalendar_WillStartAtDateTime", _, _),
+              }),
+            });
           }
         }),
         _ = (0, _._)((_) => {
@@ -1321,23 +1283,20 @@
               _ + 1 < _.length,
             );
           });
-          return _.createElement(
-            "div",
-            {
-              className: _().SourceList,
-            },
-            _,
-          );
+          return (0, _.jsx)("div", {
+            className: _().SourceList,
+            children: _,
+          });
         }),
         _ = (_, _, _, _, _) =>
-          _.createElement(
+          (0, _.jsx)(
             _._,
             {
-              key: _,
               className: (0, _._)(_().Source, _),
               toolTipContent: (0, _._)(_),
+              children: (0, _._)(_) + (_ ? ", " : ""),
             },
-            (0, _._)(_) + (_ ? ", " : ""),
+            _,
           );
       let _ = class extends _.Component {
         OnPerformVoteUp() {
@@ -1374,64 +1333,52 @@
               _.live_stream_viewer_count > 0
                 ? _.live_stream_viewer_count
                 : void 0;
-          return _.createElement(
-            "div",
-            {
-              className: _().Footer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().FooterRightSide,
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
+          return (0, _.jsx)("div", {
+            className: _().Footer,
+            children: (0, _.jsxs)("div", {
+              className: _().FooterRightSide,
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
                     className: _().TileViewerCount,
-                  },
-                  (0, _._)(_),
-                ),
-              _.createElement(
-                "div",
-                {
+                    children: (0, _._)(_),
+                  }),
+                (0, _.jsxs)("div", {
                   className: (0, _._)(_().FooterStat, _().Vote, _),
                   onClick: this.OnPerformVoteUp,
-                },
-                _.createElement(_.bfp, {
-                  className: _().RateIcon,
+                  children: [
+                    (0, _.jsx)(_.bfp, {
+                      className: _().RateIcon,
+                    }),
+                    (0, _.jsx)("span", {
+                      children: (0, _._)(Number(_)),
+                    }),
+                  ],
                 }),
-                _.createElement("span", null, (0, _._)(Number(_))),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _().FooterStat,
-                  },
-                  _.createElement(
-                    "a",
-                    {
+                    children: (0, _.jsxs)("a", {
                       href: _,
                       className: _().CommentIconCtn,
                       target: "_blank",
                       onClick: this.OnDiscussionClicked,
-                    },
-                    _.createElement(_._h6, {
-                      className: _().CommentIcon,
+                      children: [
+                        (0, _.jsx)(_._h6, {
+                          className: _().CommentIcon,
+                        }),
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(Number(_.nCommentCount)),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)(Number(_.nCommentCount)),
-                    ),
-                  ),
-                ),
-              _.createElement(_, {
-                ...this.props,
-              }),
-            ),
-          );
+                  }),
+                (0, _.jsx)(_, {
+                  ...this.props,
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnPerformVoteUp", null),
@@ -1458,7 +1405,7 @@
             }
           }, [_, _]),
           _
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 appid: _.appid,
                 trackingLocation: _,
                 announcementGID: _.GetAnnouncementGID(),
@@ -1488,51 +1435,41 @@
             [],
           );
         return 0 == _.GetNumEventsLoaded()
-          ? _.createElement(
-              "div",
-              null,
-              (0, _._)("#Conference_No_Schedule_Yet"),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _.EventsScheduleCtn,
-              },
-              _.createElement(_, {
-                displayLocation: 6,
-                fnChangeModalEvent: _,
-              }),
-              _.createElement(_, {
-                rgActiveEvents: _,
-                fnDisplayModalEvent: _,
-              }),
-              _.createElement(_, {
-                rgActiveEvents: _,
-                fnDisplayModalEvent: _,
-                rtNow: _,
-              }),
-              _.createElement("br", null),
-              _.createElement("br", null),
-              _.createElement(
-                _._,
-                {
-                  onClick: (_) =>
-                    (0, _._)(_.createElement(_, null), (0, _._)(_)),
-                },
-                (0, _._)("#Conference_NeedHelp"),
-              ),
-            );
+          ? (0, _.jsx)("div", {
+              children: (0, _._)("#Conference_No_Schedule_Yet"),
+            })
+          : (0, _.jsxs)("div", {
+              className: _.EventsScheduleCtn,
+              children: [
+                (0, _.jsx)(_, {
+                  displayLocation: 6,
+                  fnChangeModalEvent: _,
+                }),
+                (0, _.jsx)(_, {
+                  rgActiveEvents: _,
+                  fnDisplayModalEvent: _,
+                }),
+                (0, _.jsx)(_, {
+                  rgActiveEvents: _,
+                  fnDisplayModalEvent: _,
+                  rtNow: _,
+                }),
+                (0, _.jsx)("br", {}),
+                (0, _.jsx)("br", {}),
+                (0, _.jsx)(_._, {
+                  onClick: (_) => (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
+                  children: (0, _._)("#Conference_NeedHelp"),
+                }),
+              ],
+            });
       }
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            ..._,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       function _(_) {
         const { rgActiveEvents: _, rtNow: __webpack_require__ } = _,
@@ -1541,39 +1478,33 @@
             .rgCalendarItems.filter((_) => !_.some((_) => _.GID == _.unique_id))
             .sort((_, _) => _.start_time - _.start_time);
         return 0 == _.length
-          ? _.createElement(
-              "div",
-              null,
-              (0, _._)("#Conference_No_More_Schedule"),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _.UpcomingEventsCtn,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsx)("div", {
+              children: (0, _._)("#Conference_No_More_Schedule"),
+            })
+          : (0, _.jsxs)("div", {
+              className: _.UpcomingEventsCtn,
+              children: [
+                (0, _.jsx)("div", {
                   className: _.SectionTitle,
-                },
-                (0, _._)("#Conference_ScheduleNext"),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#Conference_ScheduleNext"),
+                }),
+                (0, _.jsx)("div", {
                   className: _.EventSchedCtn,
-                },
-                _.map((_, _) =>
-                  _.createElement(_, {
-                    key: _.unique_id,
-                    bDisplayAsUpNext: Boolean(0 == _ && _.length >= 1),
-                    calendarItem: _,
-                    fnDisplayModalEvent: _.fnDisplayModalEvent,
-                    rtNow: __webpack_require__,
-                  }),
-                ),
-              ),
-            );
+                  children: _.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        bDisplayAsUpNext: Boolean(0 == _ && _.length >= 1),
+                        calendarItem: _,
+                        fnDisplayModalEvent: _.fnDisplayModalEvent,
+                        rtNow: __webpack_require__,
+                      },
+                      _.unique_id,
+                    ),
+                  ),
+                }),
+              ],
+            });
       }
       function _(_) {
         const {
@@ -1586,55 +1517,48 @@
           _ = (0, _._)(_._.LANGUAGE),
           _ = _.GetStartTimeAndDateUnixSeconds(),
           _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
-        return _.createElement(
-          "div",
-          {
-            className: _.EventItemCtn,
-            onClick: () => _(_.GID, _.clanSteamID.GetAccountID()),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.EventItemCtn,
+          onClick: () => _(_.GID, _.clanSteamID.GetAccountID()),
+          children: [
+            (0, _.jsx)("div", {
               className: _.Title,
-            },
-            _.GetNameWithFallback(_),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.SessionTime,
-            },
-            !_ && _.createElement("div", null, (0, _._)(_, !0)),
-            _.createElement(
-              "div",
-              null,
-              Boolean(__webpack_require__ && _)
-                ? (0, _._)(
-                    "#Conference_StartInMin",
-                    Math.max(1, Math.floor((_ - _) / 60)),
-                  )
-                : (0, _._)(
-                    "#Conference_StartsAt",
-                    (0, _._)(_, {
-                      bForce24HourClock: !1,
-                    }),
-                  ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.ReminderContainer, _.OnlyIcon),
-            },
-            _.createElement(_._, {
-              eventModel: _,
-              lang: _,
-              bOnlyShowIcon: !0,
-              bExpandLeft: !0,
-              bShowStartTime: !1,
+              children: _.GetNameWithFallback(_),
             }),
-          ),
-        );
+            (0, _.jsxs)("div", {
+              className: _.SessionTime,
+              children: [
+                !_ &&
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(_, !0),
+                  }),
+                (0, _.jsx)("div", {
+                  children: Boolean(__webpack_require__ && _)
+                    ? (0, _._)(
+                        "#Conference_StartInMin",
+                        Math.max(1, Math.floor((_ - _) / 60)),
+                      )
+                    : (0, _._)(
+                        "#Conference_StartsAt",
+                        (0, _._)(_, {
+                          bForce24HourClock: !1,
+                        }),
+                      ),
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.ReminderContainer, _.OnlyIcon),
+              children: (0, _.jsx)(_._, {
+                eventModel: _,
+                lang: _,
+                bOnlyShowIcon: !0,
+                bExpandLeft: !0,
+                bShowStartTime: !1,
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { rgActiveEvents: _, fnDisplayModalEvent: __webpack_require__ } =
@@ -1643,60 +1567,51 @@
         const _ = _[0],
           _ = (0, _._)(_._.LANGUAGE),
           _ = _._.ParseEventModelPresenters(_, _);
-        return _.createElement(
-          "div",
-          {
-            className: _.ActiveEventCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ActiveEventCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.LiveNote,
-            },
-            _.createElement("div", {
-              className: _.LiveIcon,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.LiveIcon,
+                }),
+                "Live Now!",
+              ],
             }),
-            "Live Now!",
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _.Title,
-            },
-            _.GetNameWithFallback(_),
-          ),
-          Boolean(_) &&
-            _.map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: "presenter_" + _.name,
-                  name: _.name,
-                  title: _.title,
-                  photo: _.photo,
-                  company: _.company,
-                  bioString: _.bio,
-                },
-                _.createElement("div", null, _.name),
+              children: _.GetNameWithFallback(_),
+            }),
+            Boolean(_) &&
+              _.map((_) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    name: _.name,
+                    title: _.title,
+                    photo: _.photo,
+                    company: _.company,
+                    bioString: _.bio,
+                    children: (0, _.jsx)("div", {
+                      children: _.name,
+                    }),
+                  },
+                  "presenter_" + _.name,
+                ),
               ),
-            ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _.EventDescription,
-            },
-            _.GetSummaryWithFallback(_),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _.GetSummaryWithFallback(_),
+            }),
+            (0, _.jsx)("div", {
               className: _.ReadMoreBtn,
               onClick: () =>
                 __webpack_require__(_.GID, _.clanSteamID.GetAccountID()),
-            },
-            (0, _._)("#EventEmail_Button_ClickForMoreDetails"),
-          ),
-        );
+              children: (0, _._)("#EventEmail_Button_ClickForMoreDetails"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
@@ -1711,40 +1626,41 @@
             )
             .sort((_, _) => _.start_time - _.start_time);
         return 0 == _.length
-          ? _.createElement("div", null, (0, _._)("#Conference_NoPastEvents"))
-          : _.createElement(
-              "div",
-              {
-                className: _.PastEventsCtn,
-              },
-              _.createElement(_, {
-                displayLocation: 6,
-                fnChangeModalEvent: _,
-              }),
-              _.map((_) => {
-                const _ = _._.GetClanEventModel(_.unique_id);
-                return _.createElement(_, {
-                  key: "row" + _.unique_id,
-                  eventModel: _,
-                  calendarEvent: _,
-                  bSuppressHoverEffects: !1,
-                  mode: "wide",
-                  fnOnClicked: () =>
-                    _.Dispatch(_.GID, _.clanSteamID.GetAccountID()),
-                });
-              }),
-            );
+          ? (0, _.jsx)("div", {
+              children: (0, _._)("#Conference_NoPastEvents"),
+            })
+          : (0, _.jsxs)("div", {
+              className: _.PastEventsCtn,
+              children: [
+                (0, _.jsx)(_, {
+                  displayLocation: 6,
+                  fnChangeModalEvent: _,
+                }),
+                _.map((_) => {
+                  const _ = _._.GetClanEventModel(_.unique_id);
+                  return (0, _.jsx)(
+                    _,
+                    {
+                      eventModel: _,
+                      calendarEvent: _,
+                      bSuppressHoverEffects: !1,
+                      mode: "wide",
+                      fnOnClicked: () =>
+                        _.Dispatch(_.GID, _.clanSteamID.GetAccountID()),
+                    },
+                    "row" + _.unique_id,
+                  );
+                }),
+              ],
+            });
       }
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            ..._,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
@@ -1760,100 +1676,83 @@
                 });
           }, [_.rtEndTime, _.strConferenceID, _]),
           _
-            ? _.createElement(_._, null)
-            : _.createElement(_.Fragment, null, _.children)
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_.Fragment, {
+                children: _.children,
+              })
         );
       }
       function _(_) {
         const { closeModal: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#Conference_NeedHelp"),
-            bAlertDialog: !0,
-            onCancel: _,
-            onOK: _,
-          },
-          _.createElement("div", null, (0, _._)("#Conference_NeedHelp_Desc1")),
-          _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _.HelpDialogDetailsCtn,
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#Conference_NeedHelp_BroadcastChatQ"),
-              ),
-              _.createElement(
-                "ul",
-                {
-                  className: _.HelpRequirements,
-                },
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)("#Conference_NeedHelp_ChatA1"),
-                ),
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)(
-                    "#Conference_NeedHelp_BroadcastChatA1",
-                    _.createElement(
-                      "a",
-                      {
-                        href: "https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A",
-                      },
-                      (0, _._)("#Conferenec_NeedHelp_LimitedAccounts"),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.HelpDialogDetailsCtn,
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#Conference_NeedHelp_QandAQ"),
-              ),
-              _.createElement(
-                "ul",
-                null,
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)("#Conference_NeedHelp_ChatA1"),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.HelpDialogDetailsCtn,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#Conference_NeedHelp_StillHaveQuestions"),
-              ),
-              _.createElement(
-                "a",
-                {
-                  href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
-                },
-                (0, _._)("#Conference_NeedHelp_CreateTicket"),
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)("#Conference_NeedHelp"),
+          bAlertDialog: !0,
+          onCancel: _,
+          onOK: _,
+          children: [
+            (0, _.jsx)("div", {
+              children: (0, _._)("#Conference_NeedHelp_Desc1"),
+            }),
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.HelpDialogDetailsCtn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _._)("#Conference_NeedHelp_BroadcastChatQ"),
+                    }),
+                    (0, _.jsxs)("ul", {
+                      className: _.HelpRequirements,
+                      children: [
+                        (0, _.jsx)("li", {
+                          children: (0, _._)("#Conference_NeedHelp_ChatA1"),
+                        }),
+                        (0, _.jsx)("li", {
+                          children: (0, _._)(
+                            "#Conference_NeedHelp_BroadcastChatA1",
+                            (0, _.jsx)("a", {
+                              href: "https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A",
+                              children: (0, _._)(
+                                "#Conferenec_NeedHelp_LimitedAccounts",
+                              ),
+                            }),
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.HelpDialogDetailsCtn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _._)("#Conference_NeedHelp_QandAQ"),
+                    }),
+                    (0, _.jsx)("ul", {
+                      children: (0, _.jsx)("li", {
+                        children: (0, _._)("#Conference_NeedHelp_ChatA1"),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.HelpDialogDetailsCtn,
+                  children: [
+                    (0, _.jsx)("span", {
+                      children: (0, _._)(
+                        "#Conference_NeedHelp_StillHaveQuestions",
+                      ),
+                    }),
+                    (0, _.jsx)("a", {
+                      href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
+                      children: (0, _._)("#Conference_NeedHelp_CreateTicket"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1862,102 +1761,76 @@
         const { conferenceInfo: _, bShowYouTube: __webpack_require__ } = _,
           [_, _] = _.useState(!1),
           _ = (0, _._)(_._.PerMinute) < _.rtStartTime - 30 * _._.PerMinute;
-        return _.createElement(
-          "div",
-          {
-            className: _.ConferenceHome,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ConferenceHome,
+          children: [
+            (0, _.jsx)("div", {
               className: (0, _._)(_.LeftCol, _ ? "Active" : "Hidden"),
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _.AgendaCtn,
-              },
-              _.createElement(_, {
-                conferenceInfo: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    conferenceInfo: _,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.AgendaToggle,
+                    onClick: () => {
+                      _(!_);
+                    },
+                    children: [
+                      (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)("#QAndA_HideSchedule"),
+                        children: (0, _.jsx)("div", {
+                          className: _.CollapseBtn,
+                          children: (0, _.jsx)(_.F2T, {
+                            angle: 0,
+                          }),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        toolTipContent: (0, _._)("#QAndA_ShowSchedule"),
+                        children: (0, _.jsxs)("div", {
+                          className: _.CalendarBtn,
+                          children: [
+                            (0, _.jsx)(_.VvS, {}),
+                            (0, _.jsx)("div", {
+                              className: _.CalendarText,
+                              children: "See Event Schedule",
+                            }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.AgendaToggle,
-                  onClick: () => {
-                    _(!_);
-                  },
-                },
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#QAndA_HideSchedule"),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.CollapseBtn,
-                    },
-                    _.createElement(_.F2T, {
-                      angle: 0,
-                    }),
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#QAndA_ShowSchedule"),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.CalendarBtn,
-                    },
-                    _.createElement(_.VvS, null),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.CalendarText,
-                      },
-                      "See Event Schedule",
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+            }),
+            (0, _.jsxs)("div", {
               className: _.MainCol,
-            },
-            __webpack_require__ &&
-              _.createElement(_._, {
-                videoID: _.youtubeVideoID,
-                classNameAlign: "",
-                classNameSize: _.sizeFull,
-                bAutoPlay: !0,
-                bShowVideoImmediately: !0,
-              }),
-            Boolean(_)
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.InteractionCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.PreEventNote,
-                    },
-                    (0, _._)("#Conference_ChatHidden", 30),
-                  ),
-                )
-              : _.createElement(_, {
-                  conferenceInfo: _,
-                }),
-          ),
-        );
+              children: [
+                __webpack_require__ &&
+                  (0, _.jsx)(_._, {
+                    videoID: _.youtubeVideoID,
+                    classNameAlign: "",
+                    classNameSize: _.sizeFull,
+                    bAutoPlay: !0,
+                    bShowVideoImmediately: !0,
+                  }),
+                Boolean(_)
+                  ? (0, _.jsx)("div", {
+                      className: _.InteractionCtn,
+                      children: (0, _.jsx)("div", {
+                        className: _.PreEventNote,
+                        children: (0, _._)("#Conference_ChatHidden", 30),
+                      }),
+                    })
+                  : (0, _.jsx)(_, {
+                      conferenceInfo: _,
+                    }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
@@ -1973,170 +1846,138 @@
             _._.VANITY_ID +
             "/view/" +
             _.globalQandASessionID;
-        return _.createElement(
-          "div",
-          {
-            className: _.InteractionCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.InteractionCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.TabControlsCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.InnerChatTab,
-                  _.ChatTab,
-                  __webpack_require__ ? _.Active : "",
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TabTitle,
-                  onClick: () => {
-                    _(!0), _(!1);
-                  },
-                },
-                (0, _._)("#Conference_Tab_Chat"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)("#QAndA_PopOutChat_ttip"),
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.Popout,
-                    href: _,
-                    target: "_blank",
-                  },
-                  _.createElement(_.YNO, null),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.InnerChatTab, _.QATab, _ ? _.Active : ""),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TabTitle,
-                  onClick: () => {
-                    _(!1), _(!0);
-                  },
-                },
-                (0, _._)("#Conference_Tab_QandA"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)("#QAndA_PopOutQAndA_ttip"),
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.Popout,
-                    href: _,
-                    target: "_blank",
-                  },
-                  _.createElement(_.YNO, null),
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#QAndA_ChatToggle_ShowBoth"),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.ShowBothTabs,
-                  onClick: () => {
-                    _(!0), _(!0);
-                  },
-                },
-                _.createElement(_.QQ4, null),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.InnerChatTab,
+                    _.ChatTab,
+                    __webpack_require__ ? _.Active : "",
+                  ),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.TabTitle,
+                      onClick: () => {
+                        _(!0), _(!1);
+                      },
+                      children: (0, _._)("#Conference_Tab_Chat"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)("#QAndA_PopOutChat_ttip"),
+                      children: (0, _.jsx)("a", {
+                        className: _.Popout,
+                        href: _,
+                        target: "_blank",
+                        children: (0, _.jsx)(_.YNO, {}),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.InnerChatTab,
+                    _.QATab,
+                    _ ? _.Active : "",
+                  ),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.TabTitle,
+                      onClick: () => {
+                        _(!1), _(!0);
+                      },
+                      children: (0, _._)("#Conference_Tab_QandA"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)("#QAndA_PopOutQAndA_ttip"),
+                      children: (0, _.jsx)("a", {
+                        className: _.Popout,
+                        href: _,
+                        target: "_blank",
+                        children: (0, _.jsx)(_.YNO, {}),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)("#QAndA_ChatToggle_ShowBoth"),
+                  children: (0, _.jsx)("div", {
+                    className: _.ShowBothTabs,
+                    onClick: () => {
+                      _(!0), _(!0);
+                    },
+                    children: (0, _.jsx)(_.QQ4, {}),
+                  }),
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _.ChatStack,
-            },
-            Boolean(
-              (__webpack_require__ && _) || (!_ && !__webpack_require__),
-            ) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ChatColumn,
-                  },
-                  _.createElement(_, {
+              children: [
+                Boolean(
+                  (__webpack_require__ && _) || (!_ && !__webpack_require__),
+                ) &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ChatColumn,
+                        children: (0, _.jsx)(_, {
+                          conferenceInfo: _,
+                          className: _.ChatCtn,
+                        }),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.QAColumn,
+                        children: (0, _.jsx)(_._, {
+                          gidSession: _.globalQandASessionID,
+                        }),
+                      }),
+                    ],
+                  }),
+                Boolean(__webpack_require__ && !_) &&
+                  (0, _.jsx)(_, {
                     conferenceInfo: _,
                     className: _.ChatCtn,
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.QAColumn,
-                  },
-                  _.createElement(_._, {
+                Boolean(!__webpack_require__ && _) &&
+                  (0, _.jsx)(_._, {
                     gidSession: _.globalQandASessionID,
                   }),
-                ),
-              ),
-            Boolean(__webpack_require__ && !_) &&
-              _.createElement(_, {
-                conferenceInfo: _,
-                className: _.ChatCtn,
-              }),
-            Boolean(!__webpack_require__ && _) &&
-              _.createElement(_._, {
-                gidSession: _.globalQandASessionID,
-              }),
-          ),
-        );
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { conferenceInfo: _ } = _;
         if (!_.faqAboutPage)
-          return _.createElement("div", null, (0, _._)("#Conference_NoAbout"));
+          return (0, _.jsx)("div", {
+            children: (0, _._)("#Conference_NoAbout"),
+          });
         const {
           title: __webpack_require__,
           content: _,
           timestamp: _,
         } = _.faqAboutPage;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("div", {
               className: _.AboutTitle,
-            },
-            __webpack_require__,
-          ),
-          _.createElement(_._, {
-            text: _,
-            bShowErrorInfo: !1,
-          }),
-        );
+              children: __webpack_require__,
+            }),
+            (0, _.jsx)(_._, {
+              text: _,
+              bShowErrorInfo: !1,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { conferenceInfo: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           conferenceInfo: _,
         });
       }
@@ -2145,20 +1986,17 @@
         const { strVanity: _ } = _,
           _ = _.Get().GetConferenceInfo(_);
         return _
-          ? _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _.ConferencePageCtn,
-                },
-                _.createElement(_, {
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsx)("div", {
+                className: _.ConferencePageCtn,
+                children: (0, _.jsx)(_, {
                   conferenceInfo: _,
                 }),
-              ),
-            )
-          : _.createElement("div", null, (0, _._)("#Conference_Invalid"));
+              }),
+            })
+          : (0, _.jsx)("div", {
+              children: (0, _._)("#Conference_Invalid"),
+            });
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
@@ -2174,96 +2012,87 @@
             _.push({
               name: (0, _._)("#Conference_tab_Home"),
               key: "live",
-              contents: _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
                   bShowYouTube: !!_.youtubeVideoID,
                   conferenceInfo: _,
                 }),
-              ),
+              }),
               onClick: _,
             }),
           _.push({
             name: (0, _._)("#Conference_tab_Past"),
             key: "past",
-            contents: _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                conferenceInfo: _,
-              }),
-              !_.youtubeVideoID &&
-                Boolean(_ < _.rtEndTime) &&
-                _.createElement(_, {
+            contents: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_, {
                   conferenceInfo: _,
                 }),
-            ),
+                !_.youtubeVideoID &&
+                  Boolean(_ < _.rtEndTime) &&
+                  (0, _.jsx)(_, {
+                    conferenceInfo: _,
+                  }),
+              ],
+            }),
             onClick: _,
           }),
           _.push({
             name: (0, _._)("#Conference_tab_Info"),
             key: "about",
-            contents: _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                conferenceInfo: _,
-              }),
-              !_.youtubeVideoID &&
-                Boolean(_ < _.rtEndTime) &&
-                _.createElement(_, {
+            contents: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_, {
                   conferenceInfo: _,
                 }),
-            ),
+                !_.youtubeVideoID &&
+                  Boolean(_ < _.rtEndTime) &&
+                  (0, _.jsx)(_, {
+                    conferenceInfo: _,
+                  }),
+              ],
+            }),
             onClick: _,
           }),
           _.push({
             name: "(VO/WebUniveser=Dev) Debug",
             key: "debug",
             hidden: "dev" != _._.WEB_UNIVERSE,
-            contents: _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
+            contents: (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
                 conferenceInfo: _,
               }),
-            ),
+            }),
             onClick: _,
           }),
-          _.createElement(
-            "div",
-            {
-              className: _.ConferenceContentsCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: _.ConferenceContentsCtn,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.ConferenceHeaderCtn,
-              },
-              _.createElement(_._, {
-                className: _.LogoImage,
-                rgSources: _.strLocalizedLogos,
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _.LogoImage,
+                    rgSources: _.strLocalizedLogos,
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.LogoImageMobile,
+                    rgSources: _.strLocalizedMobileLogos,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ConferenceDateRange,
+                    children: (0, _.jsx)(_._, {
+                      rtStartDate: _.rtStartTime,
+                      rtEndDate: _.rtEndTime,
+                    }),
+                  }),
+                ],
               }),
-              _.createElement(_._, {
-                className: _.LogoImageMobile,
-                rgSources: _.strLocalizedMobileLogos,
+              (0, _.jsx)(_._, {
+                tabs: _,
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.ConferenceDateRange,
-                },
-                _.createElement(_._, {
-                  rtStartDate: _.rtStartTime,
-                  rtEndDate: _.rtEndTime,
-                }),
-              ),
-            ),
-            _.createElement(_._, {
-              tabs: _,
-            }),
-          )
+            ],
+          })
         );
       }
       var _ = __webpack_require__("chunkid");
@@ -2271,27 +2100,27 @@
         LandingPage: (_) => `/(conference|steamworksvirtualconference)/${_}`,
       };
       const _ = function (_) {
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(_._, {
-            path: _.LandingPage(":vanity_str"),
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "conference-root": () => {
-                    const { vanity_str: _ } = _.match.params;
-                    return _.createElement(_, {
-                      strVanity: _.toLocaleLowerCase(),
-                    });
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_._, {
+              path: _.LandingPage(":vanity_str"),
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "conference-root": () => {
+                      const { vanity_str: _ } = _.match.params;
+                      return (0, _.jsx)(_, {
+                        strVanity: _.toLocaleLowerCase(),
+                      });
+                    },
                   },
-                },
-              }),
-          }),
-          _.createElement(_._, {
-            component: _._,
-          }),
-        );
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              component: _._,
+            }),
+          ],
+        });
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2348,16 +2177,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            navID: "SinglePartnerEventRoot",
-            closeModal: __webpack_require__,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          navID: "SinglePartnerEventRoot",
+          closeModal: __webpack_require__,
+          children: (0, _.jsx)(_._, {
             initialEvent: _,
             bShowOnlyInitialEvent: !0,
             partnerEventStore: _._,
@@ -2365,11 +2192,11 @@
             showAppHeader: !0,
             closeModal: __webpack_require__,
           }),
-        );
+        });
       }
       function _(_, _) {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             event: _,
           }),
           _,
@@ -2401,23 +2228,23 @@
             langOverride: _,
             isPreview: __webpack_require__,
           } = this.props;
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_refFocus,
-              className: _.Main,
-              onClick: this.OnBackgroundClick,
-            },
-            _.createElement(_._, {
-              key: _.GID,
-              event: _,
-              emoticonStore: _._,
-              partnerEventStore: _._.Get(),
-              langOverride: _,
-              isPreview: __webpack_require__,
-              bDisableBroadcastPlayer: !1,
-            }),
-          );
+          return (0, _.jsx)("div", {
+            ref: this.m_refFocus,
+            className: _.Main,
+            onClick: this.OnBackgroundClick,
+            children: (0, _.jsx)(
+              _._,
+              {
+                event: _,
+                emoticonStore: _._,
+                partnerEventStore: _._.Get(),
+                langOverride: _,
+                isPreview: __webpack_require__,
+                bDisableBroadcastPlayer: !1,
+              },
+              _.GID,
+            ),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "escFunction", null),
@@ -2480,7 +2307,7 @@
           if (_.ShouldTrack(_)) {
             const _ = () => _.StartTracking(_, _.recordNewsHubStats || !1),
               _ = () => _.StopTracking(_);
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               onEnter: _,
               onLeave: _,
             });

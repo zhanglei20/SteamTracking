@@ -45171,39 +45171,6 @@ Error generating stack: ` +
     "use strict";
     _();
   });
-  var _,
-    _ = _(() => {
-      "use strict";
-      _ = class {
-        async GetObject(_, _) {
-          try {
-            let _ = await this.GetString(_);
-            return _ ? JSON.parse(_, _) : null;
-          } catch {
-            return null;
-          }
-        }
-        async StoreObject(_, _) {
-          return this.StoreString(_, JSON.stringify(_));
-        }
-      };
-    });
-  var _,
-    _ = _(() => {
-      "use strict";
-      _();
-      _ = class extends _ {
-        GetString(_) {
-          return Promise.resolve(localStorage.getItem(_));
-        }
-        StoreString(_, _) {
-          return localStorage.setItem(_, _), Promise.resolve();
-        }
-        RemoveObject(_) {
-          return localStorage.removeItem(_), Promise.resolve();
-        }
-      };
-    });
   function _(_) {
     let _ = 0;
     for (let _ = 0; _ < _.length; _++) _ = _.charCodeAt(_) + ((_ << 5) - _);
@@ -45274,7 +45241,6 @@ Error generating stack: ` +
       "use strict";
       _();
       _();
-      _();
       _ = class {
         m_sName;
         m_fnIdGenerator = void 0;
@@ -45320,14 +45286,13 @@ Error generating stack: ` +
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
         static s_Singleton = null;
-        m_Storage = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
         m_SettingsChangedCallback = new _();
-        m_bLoading = !1;
+        m_bLoading = !0;
         constructor() {
-          (this.m_Storage = new _()), this.LoadSettings();
+          this.LoadSettings();
         }
         LogAsLogManager(..._) {
           _(
@@ -45340,13 +45305,14 @@ Error generating stack: ` +
           );
         }
         async LoadSettings() {
-          (this.m_bLoading = !0),
-            (this.m_bIncludeBacktraceInLog = !!(await this.m_Storage?.GetObject(
-              _.k_IncludeBacktraceInLog_StorageKey,
-            )));
-          let _ = await this.m_Storage?.GetObject(
-            _.k_EnabledLogNames_StorageKey,
+          let _ = (_) => {
+            let _ = localStorage.getItem(_);
+            return _ ? JSON.parse(_) : void 0;
+          };
+          this.m_bIncludeBacktraceInLog = !!_(
+            _.k_IncludeBacktraceInLog_StorageKey,
           );
+          let _ = _(_.k_EnabledLogNames_StorageKey);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (let _ of _) this.m_setKnownDebugLogs.add(_);
@@ -45358,13 +45324,13 @@ Error generating stack: ` +
           (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
         }
         async SaveSettings() {
-          await this.m_Storage?.StoreObject(
+          localStorage.setItem(
             _.k_EnabledLogNames_StorageKey,
-            Array.from(this.m_setEnabledDebugLogs),
+            JSON.stringify(Array.from(this.m_setEnabledDebugLogs)),
           ),
-            await this.m_Storage?.StoreObject(
+            localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
-              this.m_bIncludeBacktraceInLog,
+              JSON.stringify(this.m_bIncludeBacktraceInLog),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -45946,6 +45912,7 @@ Error generating stack: ` +
               enabled: _,
               modal: _,
               virtualFocus: _,
+              historyMode: _,
               parentEmbeddedNavTree: _,
               onGlobalButtonDown: _,
               disableFocusClasses: _,
@@ -45963,6 +45930,7 @@ Error generating stack: ` +
                 enabled: _,
                 modal: _,
                 virtualFocus: _,
+                historyMode: _,
                 parentEmbeddedNavTree: _,
                 onGlobalButtonDown: _,
                 disableFocusClasses: _,
@@ -47209,9 +47177,27 @@ Error generating stack: ` +
       _ = (0, _.useCallback)(() => {
         (_.current = !0), _(!0);
       }, []),
+      _ = (0, _.useCallback)(
+        (_) => {
+          _.current?.contains(_.target) && _();
+        },
+        [_],
+      ),
+      _ = (0, _.useCallback)(
+        (_) => {
+          _.current?.contains(_.target) && _();
+        },
+        [_],
+      ),
       _ = (0, _.useCallback)(() => {
         (_.current = !1), _.current || _(!1);
       }, []),
+      _ = (0, _.useCallback)(
+        (_) => {
+          _.current?.contains(_.target) && _();
+        },
+        [_],
+      ),
       _ = (0, _.useCallback)(() => {
         _(), _();
       }, [_, _]),
@@ -47231,15 +47217,24 @@ Error generating stack: ` +
       ),
       _ = (0, _.useCallback)(
         (_) => {
+          _ === 2 && _();
+        },
+        [_, _],
+      ),
+      _ = (0, _.useCallback)(
+        (_) => {
           let _ = _.relatedTarget && !_.currentTarget.contains(_.relatedTarget),
             _ = !_.relatedTarget && !_.current;
           (_ || _) && (_(), _(!1));
         },
         [_],
       ),
-      _ = (0, _.useCallback)(() => {
-        _ && _ ? _() : _();
-      }, [_, _, _, _]),
+      _ = (0, _.useCallback)(
+        (_) => {
+          _.current?.contains(_.target) && (_ && _ ? _() : _.current && _());
+        },
+        [_, _, _, _],
+      ),
       _ = (0, _.useCallback)(
         (_) => {
           _.key === "Enter" && _ && _ ? _() : _(),
@@ -47247,37 +47242,48 @@ Error generating stack: ` +
         },
         [_, _, _, _],
       ),
-      _ = _ === 0,
       _;
+    _ === 0 && !_
+      ? (_ = (_) => {
+          _.preventDefault(), _();
+        })
+      : _ === 1 && (_ = _ ? _ : _);
+    let _ = {
+        "aria-expanded": _,
+        role: "button",
+        onMouseEnter: _ === 0 ? _ : void 0,
+        onMouseLeave: _ === 0 ? _ : void 0,
+        onClick: _,
+        ref: _,
+        onKeyDown: _,
+        onFocus: _,
+        onBlur: _,
+      },
+      _ = {
+        popover: "manual",
+        ref: _,
+        onMouseEnter: _,
+        onMouseLeave: _,
+        onFocus: _,
+        onBlur: _,
+        onClick: _,
+        onKeyDown: _,
+        className: _,
+      };
     return (
-      _ && !_
-        ? (_ = (_) => {
-            _.preventDefault(), _();
-          })
-        : _ || (_ = _ ? _ : _),
+      (0, _.useImperativeHandle)(
+        _.ref,
+        () => ({
+          show: _,
+          hide: _,
+          close: _,
+        }),
+        [_, _, _],
+      ),
       {
         isShowingMenu: _,
-        triggerProps: {
-          "aria-expanded": _,
-          role: "button",
-          onMouseEnter: _ ? _ : void 0,
-          onMouseLeave: _ ? _ : void 0,
-          onClick: _,
-          ref: _,
-          onKeyDown: _,
-          onBlur: _,
-        },
-        menuProps: {
-          popover: "manual",
-          ref: _,
-          onMouseEnter: _,
-          onMouseLeave: _,
-          onFocus: _,
-          onBlur: _,
-          onClick: _,
-          onKeyDown: _,
-          className: _,
-        },
+        triggerProps: _,
+        menuProps: _,
         closeMenu: _,
       }
     );
@@ -47294,6 +47300,7 @@ Error generating stack: ` +
         children: _,
         _: _ = "div",
         renderWhenClosed: _ = !0,
+        ref: _,
         ..._
       } = _,
       { triggerProps: _, menuProps: _, isShowingMenu: _ } = _(_);

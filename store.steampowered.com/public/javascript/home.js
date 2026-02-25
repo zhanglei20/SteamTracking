@@ -1258,8 +1258,6 @@ GHomepage = {
 			$InfoCtn.append( $elReleaseDate );
 		}
 
-		$InfoCtn.append( $ScreenshotCtn );
-
 		// Recommendation reason block
 		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( rgItem );
 		var $RecommendedReason = $J('<div/>').addClass('reason');
@@ -1485,17 +1483,13 @@ GHomepage = {
 		}
 
 		$InfoCtn.append( $RecommendedReason );
-
-		// Platform icons
-		let $PlatformsAndPriceCtn = $J( '<div/>' ).addClass('info_bottom_ctn');
-		let $PlatformContainer = $J( '<div/>' ).addClass('platforms').append( GStoreItemData.BuildSupportedPlatformIcon(rgItemData) );
-		$PlatformsAndPriceCtn.append( $PlatformContainer )
+		$InfoCtn.append( $ScreenshotCtn );
 
 		// Discount block
-		$PlatformsAndPriceCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline' ) : '' );
+		let $PriceCtn = ( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline' ) : '' );
 
 		$RightColCtn.append( $InfoCtn );
-		$RightColCtn.append($PlatformsAndPriceCtn);
+		$RightColCtn.append( $PriceCtn );
 		$CapCtn.append($RightColCtn);
 
 		return $CapCtn;
@@ -2284,7 +2278,6 @@ GHomepage = {
 				{
 					$Col.append ( GHomepage.BuildHomePageCapsule( oItem, 'spotlight_specials', {
 						'discount_class': 'daily_deal_discount discount_block_large',
-						'capsule_size': 'header',
 						'disable_autosizer': true,
 						lazy: 1,
 					}, iPage + 1 ) );
@@ -2294,7 +2287,6 @@ GHomepage = {
 					var $Target = $J( '<div/>', {'class': 'specials_target' });
 					$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
 						'discount_class': 'daily_deal_discount discount_block_large',
-						'capsule_size': 'header',
 						lazy: true
 					}, iPage + 1 ) );
 					$Col.append( $Target );

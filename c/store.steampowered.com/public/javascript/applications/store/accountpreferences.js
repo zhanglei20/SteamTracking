@@ -239,6 +239,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -538,17 +539,17 @@
           _ = _.useCallback(() => {
             _.Get().DeleteHardware(_.hardware_id), __webpack_require__();
           }, [__webpack_require__, _.hardware_id]);
-        return _.createElement(
-          _._,
-          {
-            bDisableBackgroundDismiss: !0,
-            strTitle: (0, _._)("#SavedHardware_Delete_Confirm_Title"),
-            onCancel: __webpack_require__,
-            onOK: _,
-            strOKButtonText: (0, _._)("#SavedHardware_Delete"),
-          },
-          (0, _._)("#SavedHardware_Delete_Confirm_Desc", _.friendly_name),
-        );
+        return (0, _.jsx)(_._, {
+          bDisableBackgroundDismiss: !0,
+          strTitle: (0, _._)("#SavedHardware_Delete_Confirm_Title"),
+          onCancel: __webpack_require__,
+          onOK: _,
+          strOKButtonText: (0, _._)("#SavedHardware_Delete"),
+          children: (0, _._)(
+            "#SavedHardware_Delete_Confirm_Desc",
+            _.friendly_name,
+          ),
+        });
       }
       function _(_) {
         const { _: _, closeModal: __webpack_require__ } = _,
@@ -557,17 +558,14 @@
             _.Get().RenameHardware(_.hardware_id, _.trim()),
               __webpack_require__();
           }, [_, __webpack_require__, _.hardware_id]);
-        return _.createElement(
-          _._,
-          {
-            bDisableBackgroundDismiss: !0,
-            strTitle: (0, _._)("#SavedHardware_Rename_Confirm_Title"),
-            onCancel: __webpack_require__,
-            onOK: _,
-            bOKDisabled: 0 == _.trim().length,
-            strOKButtonText: (0, _._)("#SavedHardware_Rename"),
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          bDisableBackgroundDismiss: !0,
+          strTitle: (0, _._)("#SavedHardware_Rename_Confirm_Title"),
+          onCancel: __webpack_require__,
+          onOK: _,
+          bOKDisabled: 0 == _.trim().length,
+          strOKButtonText: (0, _._)("#SavedHardware_Rename"),
+          children: (0, _.jsx)(_._, {
             label: (0, _._)("#SavedHardware_Rename_Confirm_Label"),
             value: _,
             onChange: (_) => {
@@ -575,7 +573,7 @@
             },
             maxLength: 100,
           }),
-        );
+        });
       }
       const _ = (0, _._)((_) => {
           const { _: _ } = _;
@@ -590,90 +588,82 @@
             case 546:
               _ = (0, _._)("#HardwareVariant_SteamMachine");
           }
-          return _.createElement(
-            "div",
-            {
-              className: _.SavedHardware,
-            },
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _.FriendlyName,
-                },
-                _.friendly_name,
-                " ",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Details,
-                },
-                _ && _.createElement("div", null, _),
-                _.createElement("div", null, _.system_info._),
-                _.createElement(
-                  "div",
-                  null,
-                  _.system_info.cpu_name,
-                  " - ",
-                  (0, _._)(1024 * parseInt(_.system_info.system_ram) * 1024, 0),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.system_info.adapter_description,
-                  " - ",
-                  (0, _._)(1024 * _.system_info.vram_size * 1024, 0),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Timestamp,
-                },
-                (0, _._)(
-                  "#SavedHardware_Timestamp",
-                  (0, _._)(_.timestamp_created),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.SavedHardware,
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.FriendlyName,
+                    children: [_.friendly_name, " "],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.Details,
+                    children: [
+                      _ &&
+                        (0, _.jsx)("div", {
+                          children: _,
+                        }),
+                      (0, _.jsx)("div", {
+                        children: _.system_info._,
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: [
+                          _.system_info.cpu_name,
+                          " - ",
+                          (0, _._)(
+                            1024 * parseInt(_.system_info.system_ram) * 1024,
+                            0,
+                          ),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: [
+                          _.system_info.adapter_description,
+                          " - ",
+                          (0, _._)(1024 * _.system_info.vram_size * 1024, 0),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Timestamp,
+                    children: (0, _._)(
+                      "#SavedHardware_Timestamp",
+                      (0, _._)(_.timestamp_created),
+                    ),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
                 className: _.SavedHardwareControls,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.RenameButton,
-                  onClick: (_) =>
-                    (0, _._)(
-                      _.createElement(_, {
-                        _: _,
-                      }),
-                      (0, _._)(_),
-                    ),
-                },
-                (0, _._)("#SavedHardware_Rename"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _.DeleteButton,
-                  onClick: (_) =>
-                    (0, _._)(
-                      _.createElement(_, {
-                        _: _,
-                      }),
-                      (0, _._)(_),
-                    ),
-                },
-                (0, _._)("#SavedHardware_Delete"),
-              ),
-            ),
-          );
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _.RenameButton,
+                    onClick: (_) =>
+                      (0, _._)(
+                        (0, _.jsx)(_, {
+                          _: _,
+                        }),
+                        (0, _._)(_),
+                      ),
+                    children: (0, _._)("#SavedHardware_Rename"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.DeleteButton,
+                    onClick: (_) =>
+                      (0, _._)(
+                        (0, _.jsx)(_, {
+                          _: _,
+                        }),
+                        (0, _._)(_),
+                      ),
+                    children: (0, _._)("#SavedHardware_Delete"),
+                  }),
+                ],
+              }),
+            ],
+          });
         }),
         _ = (0, _._)(() => {
           const _ = _.Get().GetSavedHardware(),
@@ -688,54 +678,45 @@
                   "",
                 );
             }, [_]);
-          return _.createElement(
-            "div",
-            {
-              className: _.CookieGroup,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.CookieGroup,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.CookieSection,
-              },
-              _.createElement("h2", null, (0, _._)("#SavedHardware_Title")),
-              _.createElement(
-                "p",
-                {
-                  className: _.SectionDescription,
-                },
-                (0, _._)("#SavedHardware_Desc"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: (0, _._)("#SavedHardware_Title"),
+                  }),
+                  (0, _.jsx)("p", {
+                    className: _.SectionDescription,
+                    children: (0, _._)("#SavedHardware_Desc"),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
                 className: _.SavedHardwareList,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: _.hardware_id,
-                  _: _,
-                }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      _: _,
+                    },
+                    _.hardware_id,
+                  ),
+                ),
+              }),
+              (0, _.jsx)("div", {
                 className: _.SavedHardwareControls,
-              },
-              _ &&
-                _.createElement(
-                  _._,
-                  {
+                children:
+                  _ &&
+                  (0, _.jsxs)(_._, {
                     className: _.SavedHardwareAddPCButton,
                     onClick: _,
-                  },
-                  (0, _._)("#SavedHardware_AddNew"),
-                  " ",
-                ),
-            ),
-          );
+                    children: [(0, _._)("#SavedHardware_AddNew"), " "],
+                  }),
+              }),
+            ],
+          });
         });
       let _ = null,
         _ = null;
@@ -758,385 +739,282 @@
               _.SetPreferenceState(2);
             }, [_]),
             _ = (0, _._)();
-          return _.createElement(
-            _._,
-            {
-              navID: "StoreCookiesSettings",
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            navID: "StoreCookiesSettings",
+            children: [
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#CookiePref_OptionalCookies_Title"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)("div", {
+                  children: (0, _._)("#CookiePref_OptionalCookies_Title"),
+                }),
+              }),
+              (0, _.jsxs)("div", {
                 className: "account_settings_container",
-              },
-              _.createElement(
-                _._,
-                {
-                  "flow-children": "row",
-                  className: _.ButtonGroup,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.AllButton,
-                      _.BIsRejectAll() ? _.ButtonHighlight : "",
-                    ),
-                    onClick: _,
-                  },
-                  (0, _._)("#CookiePref_RejectAll"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.AllButton,
-                      _.BIsAllowAll() ? _.ButtonHighlight : "",
-                    ),
-                    onClick: _,
-                  },
-                  (0, _._)("#CookiePref_AcceptAll"),
-                ),
-              ),
-              _.createElement(_, {
-                settings: _,
-              }),
-              _.createElement(_, {
-                settings: _,
-              }),
-              _.createElement(_, {
-                settings: _,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.CookieSettingsHeader,
-                  "account_header_line noicon",
-                ),
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#CookiePref_TechnicallyNeccesary_Title"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: "account_settings_container",
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#CookiePref_TechnicallyNeccesary_Desc"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CookieGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_SessionID_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_SessionID_Desc"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_ShoppingCart_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_ShoppingCart_Desc"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_SteamCountry_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_SteamCountry_Desc"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_Timezone_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_Timezone_Desc"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_BirthTime_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_BirthTime_Desc"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_Login_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_Login_Desc"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_Language_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_Language_Desc"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NecessaryGroup,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryTitle,
-                    },
-                    (0, _._)("#CookiePref_CookieSettings_Title"),
-                  ),
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.NecessaryDesc,
-                    },
-                    (0, _._)("#CookiePref_CookieSettings_Desc"),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.CookieSettingsHeader,
-                  "account_header_line noicon",
-                ),
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#PrivacySettings_Marketing_Header"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: "account_settings_container",
-              },
-              _.createElement(_, {
-                settings: _,
-              }),
-            ),
-            !!_ &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _.DataCollectionSettingsHeader,
-                      "account_header_line noicon",
-                    ),
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#DataPreferences_Header"),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: "account_settings_container",
-                  },
-                  _.createElement(_, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    "flow-children": "row",
+                    className: _.ButtonGroup,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: (0, _._)(
+                          _.AllButton,
+                          _.BIsRejectAll() ? _.ButtonHighlight : "",
+                        ),
+                        onClick: _,
+                        children: (0, _._)("#CookiePref_RejectAll"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: (0, _._)(
+                          _.AllButton,
+                          _.BIsAllowAll() ? _.ButtonHighlight : "",
+                        ),
+                        onClick: _,
+                        children: (0, _._)("#CookiePref_AcceptAll"),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
                     settings: _,
                   }),
+                  (0, _.jsx)(_, {
+                    settings: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    settings: _,
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _.CookieSettingsHeader,
+                  "account_header_line noicon",
                 ),
-              ),
-            null,
-          );
+                children: (0, _.jsx)("div", {
+                  children: (0, _._)("#CookiePref_TechnicallyNeccesary_Title"),
+                }),
+              }),
+              (0, _.jsxs)("div", {
+                className: "account_settings_container",
+                children: [
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#CookiePref_TechnicallyNeccesary_Desc"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.CookieGroup,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)("#CookiePref_SessionID_Title"),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)("#CookiePref_SessionID_Desc"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)(
+                              "#CookiePref_ShoppingCart_Title",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)("#CookiePref_ShoppingCart_Desc"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)(
+                              "#CookiePref_SteamCountry_Title",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)("#CookiePref_SteamCountry_Desc"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)("#CookiePref_Timezone_Title"),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)("#CookiePref_Timezone_Desc"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)("#CookiePref_BirthTime_Title"),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)("#CookiePref_BirthTime_Desc"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)("#CookiePref_Login_Title"),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)("#CookiePref_Login_Desc"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)("#CookiePref_Language_Title"),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)("#CookiePref_Language_Desc"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.NecessaryGroup,
+                        children: [
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryTitle,
+                            children: (0, _._)(
+                              "#CookiePref_CookieSettings_Title",
+                            ),
+                          }),
+                          (0, _.jsx)("span", {
+                            className: _.NecessaryDesc,
+                            children: (0, _._)(
+                              "#CookiePref_CookieSettings_Desc",
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _.CookieSettingsHeader,
+                  "account_header_line noicon",
+                ),
+                children: (0, _.jsx)("div", {
+                  children: (0, _._)("#PrivacySettings_Marketing_Header"),
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: "account_settings_container",
+                children: (0, _.jsx)(_, {
+                  settings: _,
+                }),
+              }),
+              !!_ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _.DataCollectionSettingsHeader,
+                        "account_header_line noicon",
+                      ),
+                      children: (0, _.jsx)("div", {
+                        children: (0, _._)("#DataPreferences_Header"),
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "account_settings_container",
+                      children: (0, _.jsx)(_, {
+                        settings: _,
+                      }),
+                    }),
+                  ],
+                }),
+              null,
+            ],
+          });
         }),
         _ = (0, _._)((_) => {
           const { settings: _ } = _,
             _ = (0, _.useCallback)(() => {
               _.ToggleRecentApps();
             }, [_]);
-          return _.createElement(
-            "div",
-            {
-              className: _.CookieGroup,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.CookieSection,
-              },
-              _.createElement(
-                "h2",
-                null,
-                (0, _._)("#CookiePref_Content_Title"),
-              ),
-              _.createElement(
-                "p",
-                {
+          return (0, _.jsx)("div", {
+            className: _.CookieGroup,
+            children: (0, _.jsxs)("div", {
+              className: _.CookieSection,
+              children: [
+                (0, _.jsx)("h2", {
+                  children: (0, _._)("#CookiePref_Content_Title"),
+                }),
+                (0, _.jsx)("p", {
                   className: _.SectionDescription,
-                },
-                (0, _._)("#CookiePref_Content_Desc"),
-              ),
-              _.createElement(_._, {
-                onChange: _,
-                label: (0, _._)("#CookiePref_Content_ToggleTitle"),
-                checked: _.GetRecentApps(),
-                description: (0, _._)("#CookiePref_Content_ToggleDesc"),
-              }),
-            ),
-          );
+                  children: (0, _._)("#CookiePref_Content_Desc"),
+                }),
+                (0, _.jsx)(_._, {
+                  onChange: _,
+                  label: (0, _._)("#CookiePref_Content_ToggleTitle"),
+                  checked: _.GetRecentApps(),
+                  description: (0, _._)("#CookiePref_Content_ToggleDesc"),
+                }),
+              ],
+            }),
+          });
         }),
         _ = (0, _._)((_) => {
           const { settings: _ } = _,
             _ = (0, _.useCallback)(() => {
               _.ToggleImpressions();
             }, [_]);
-          return _.createElement(
-            "div",
-            {
-              className: _.CookieGroup,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.CookieSection,
-              },
-              _.createElement(
-                "h2",
-                null,
-                (0, _._)("#CookiePref_ValveAnalytics_Title"),
-              ),
-              _.createElement(
-                "p",
-                {
+          return (0, _.jsx)("div", {
+            className: _.CookieGroup,
+            children: (0, _.jsxs)("div", {
+              className: _.CookieSection,
+              children: [
+                (0, _.jsx)("h2", {
+                  children: (0, _._)("#CookiePref_ValveAnalytics_Title"),
+                }),
+                (0, _.jsx)("p", {
                   className: _.SectionDescription,
-                },
-                (0, _._)("#CookiePref_ValveAnalytics_Desc"),
-              ),
-              _.createElement(_._, {
-                onChange: _,
-                label: (0, _._)("#CookiePref_ValveAnalytics_ToggleTitle"),
-                checked: _.GetImpressions(),
-                description: (0, _._)("#CookiePref_ValveAnalytics_ToggleDesc"),
-              }),
-            ),
-          );
+                  children: (0, _._)("#CookiePref_ValveAnalytics_Desc"),
+                }),
+                (0, _.jsx)(_._, {
+                  onChange: _,
+                  label: (0, _._)("#CookiePref_ValveAnalytics_ToggleTitle"),
+                  checked: _.GetImpressions(),
+                  description: (0, _._)(
+                    "#CookiePref_ValveAnalytics_ToggleDesc",
+                  ),
+                }),
+              ],
+            }),
+          });
         }),
         _ = (0, _._)((_) => {
           const { settings: _ } = _,
@@ -1149,114 +1027,91 @@
             _ = (0, _.useCallback)(() => {
               _.ToggleSketchfab();
             }, [_]);
-          return _.createElement(
-            "div",
-            {
-              className: _.CookieGroup,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.CookieSection,
-              },
-              _.createElement(
-                "h2",
-                null,
-                (0, _._)("#CookiePref_ThirdParty_Title"),
-              ),
-              _.createElement(
-                "p",
-                {
+          return (0, _.jsx)("div", {
+            className: _.CookieGroup,
+            children: (0, _.jsxs)("div", {
+              className: _.CookieSection,
+              children: [
+                (0, _.jsx)("h2", {
+                  children: (0, _._)("#CookiePref_ThirdParty_Title"),
+                }),
+                (0, _.jsx)("p", {
                   className: _.SectionDescription,
-                },
-                (0, _._)("#CookiePref_ThirdParty_Desc"),
-              ),
-              _.createElement(_._, {
-                onChange: _,
-                label: (0, _._)("#CookiePref_YouTube_Title"),
-                checked: _.GetYouTube(),
-                description: (0, _._)(
-                  "#CookiePref_YouTube_Desc",
-                  _.createElement(
-                    "a",
-                    {
+                  children: (0, _._)("#CookiePref_ThirdParty_Desc"),
+                }),
+                (0, _.jsx)(_._, {
+                  onChange: _,
+                  label: (0, _._)("#CookiePref_YouTube_Title"),
+                  checked: _.GetYouTube(),
+                  description: (0, _._)(
+                    "#CookiePref_YouTube_Desc",
+                    (0, _.jsx)("a", {
                       href: "https://policies.google.com/privacy",
                       target: "_blank",
-                    },
-                    (0, _._)("#CookiePref_YouTube_TogglePolicyName"),
+                      children: (0, _._)(
+                        "#CookiePref_YouTube_TogglePolicyName",
+                      ),
+                    }),
                   ),
-                ),
-              }),
-              _.createElement(_._, {
-                onChange: _,
-                label: (0, _._)("#CookiePref_Vimeo_Title"),
-                checked: _.GetVimeo(),
-                description: (0, _._)(
-                  "#CookiePref_Vimeo_Desc",
-                  _.createElement(
-                    "a",
-                    {
+                }),
+                (0, _.jsx)(_._, {
+                  onChange: _,
+                  label: (0, _._)("#CookiePref_Vimeo_Title"),
+                  checked: _.GetVimeo(),
+                  description: (0, _._)(
+                    "#CookiePref_Vimeo_Desc",
+                    (0, _.jsx)("a", {
                       href: "https://vimeo.com/privacy",
                       target: "_blank",
-                    },
-                    (0, _._)("#CookiePref_Vimeo_TogglePolicyName"),
+                      children: (0, _._)("#CookiePref_Vimeo_TogglePolicyName"),
+                    }),
                   ),
-                ),
-              }),
-              _.createElement(_._, {
-                onChange: _,
-                label: (0, _._)("#CookiePref_Sketchfab_Title"),
-                checked: _.GetSketchfab(),
-                description: (0, _._)(
-                  "#CookiePref_Sketchfab_Desc",
-                  _.createElement(
-                    "a",
-                    {
+                }),
+                (0, _.jsx)(_._, {
+                  onChange: _,
+                  label: (0, _._)("#CookiePref_Sketchfab_Title"),
+                  checked: _.GetSketchfab(),
+                  description: (0, _._)(
+                    "#CookiePref_Sketchfab_Desc",
+                    (0, _.jsx)("a", {
                       href: "https://sketchfab.com/privacy",
                       target: "_blank",
-                    },
-                    (0, _._)("#CookiePref_Sketchfab_TogglePolicyName"),
+                      children: (0, _._)(
+                        "#CookiePref_Sketchfab_TogglePolicyName",
+                      ),
+                    }),
                   ),
-                ),
-              }),
-            ),
-          );
+                }),
+              ],
+            }),
+          });
         }),
         _ = (0, _._)((_) => {
           const { settings: _ } = _,
             _ = (0, _.useCallback)(() => {
               _.ToggleUTMEnabled();
             }, [_]);
-          return _.createElement(
-            "div",
-            {
-              className: _.CookieGroup,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.CookieSection,
-              },
-              _.createElement(
-                "h2",
-                null,
-                (0, _._)("#PrivacySettings_Marketing_Title"),
-              ),
-              _.createElement(
-                "p",
-                {
+          return (0, _.jsx)("div", {
+            className: _.CookieGroup,
+            children: (0, _.jsxs)("div", {
+              className: _.CookieSection,
+              children: [
+                (0, _.jsx)("h2", {
+                  children: (0, _._)("#PrivacySettings_Marketing_Title"),
+                }),
+                (0, _.jsx)("p", {
                   className: _.SectionDescription,
-                },
-                (0, _._)("#PrivacySettings_Marketing_Desc"),
-              ),
-              _.createElement(_._, {
-                onChange: _,
-                label: (0, _._)("#PrivacySettings_UTM_ToggleLabel"),
-                checked: _.GetUTMEnabled(),
-                description: (0, _._)("#PrivacySettings_UTM_ToggleDesc"),
-              }),
-            ),
-          );
+                  children: (0, _._)("#PrivacySettings_Marketing_Desc"),
+                }),
+                (0, _.jsx)(_._, {
+                  onChange: _,
+                  label: (0, _._)("#PrivacySettings_UTM_ToggleLabel"),
+                  checked: _.GetUTMEnabled(),
+                  description: (0, _._)("#PrivacySettings_UTM_ToggleDesc"),
+                }),
+              ],
+            }),
+          });
         }),
         _ = (0, _._)((_) => {
           const { settings: _ } = _,
@@ -1266,73 +1121,63 @@
             _ = (0, _.useCallback)(() => {
               _.ToggleGameFrameRateReporting();
             }, [_]);
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
                 className: _.CookieGroup,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _.CookieSection,
-                },
-                _.createElement(
-                  "h2",
-                  null,
-                  (0, _._)("#DataPreferences_Provide_SteamOS_Feedback_Title"),
-                ),
-                _.createElement(
-                  "p",
-                  {
-                    className: _.SectionDescription,
-                  },
-                  (0, _._)("#DataPreferences_Provide_SteamOS_Feedback_Desc"),
-                ),
-                _.createElement(_._, {
-                  onChange: _,
-                  checked: _.GetProvideDeckFeedbackEnabled(),
-                  description: (0, _._)(
-                    "#DataPreferences_Provide_SteamOS_Feedback_Label",
-                  ),
+                  children: [
+                    (0, _.jsx)("h2", {
+                      children: (0, _._)(
+                        "#DataPreferences_Provide_SteamOS_Feedback_Title",
+                      ),
+                    }),
+                    (0, _.jsx)("p", {
+                      className: _.SectionDescription,
+                      children: (0, _._)(
+                        "#DataPreferences_Provide_SteamOS_Feedback_Desc",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onChange: _,
+                      checked: _.GetProvideDeckFeedbackEnabled(),
+                      description: (0, _._)(
+                        "#DataPreferences_Provide_SteamOS_Feedback_Label",
+                      ),
+                    }),
+                  ],
                 }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              }),
+              (0, _.jsx)("div", {
                 className: _.CookieGroup,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _.CookieSection,
-                },
-                _.createElement(
-                  "h2",
-                  null,
-                  (0, _._)("#DataPreferences_FrameRateReporting_Title"),
-                ),
-                _.createElement(
-                  "p",
-                  {
-                    className: _.SectionDescription,
-                  },
-                  (0, _._)("#DataPreferences_FrameRateReporting_Description"),
-                ),
-                _.createElement(_._, {
-                  onChange: _,
-                  checked: _.GetGameFrameRateReportingEnabled(),
-                  description: (0, _._)(
-                    "#DataPreferences_FrameRateReporting_Label",
-                  ),
+                  children: [
+                    (0, _.jsx)("h2", {
+                      children: (0, _._)(
+                        "#DataPreferences_FrameRateReporting_Title",
+                      ),
+                    }),
+                    (0, _.jsx)("p", {
+                      className: _.SectionDescription,
+                      children: (0, _._)(
+                        "#DataPreferences_FrameRateReporting_Description",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onChange: _,
+                      checked: _.GetGameFrameRateReportingEnabled(),
+                      description: (0, _._)(
+                        "#DataPreferences_FrameRateReporting_Label",
+                      ),
+                    }),
+                  ],
                 }),
-              ),
-            ),
-            _.createElement(_, null),
-          );
+              }),
+              (0, _.jsx)(_, {}),
+            ],
+          });
         });
       class _ {
         m_Preferences = void 0;
@@ -1401,115 +1246,86 @@
             _ = [];
           for (const _ of _.GetPreferences())
             _.push(
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 preferenceSetting: _,
               }),
             );
-          return _.createElement(
-            _._,
-            {
-              navID: "StoreNotificationSettings",
-            },
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.NotificationSettingsHeader,
-                    "account_header_line noicon",
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#NotificationSettings_Email_Title"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    "account_settings_container",
-                    _.Account_settings_notifications_extrapadding,
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Account_manage_container_inner,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.Account_manage_link,
-                      onClick: () =>
-                        (document.location =
-                          _._.STORE_BASE_URL + "account/emailoptout"),
-                    },
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#NotificationSettings_Email_Button"),
+          return (0, _.jsxs)(_._, {
+            navID: "StoreNotificationSettings",
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _.NotificationSettingsHeader,
+                      "account_header_line noicon",
                     ),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.NotificationSettingsHeader,
-                    "account_header_line noicon",
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#NotificationSettings_Title"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "account_settings_container",
-                },
-                _.createElement(
-                  "p",
-                  {
-                    className: _.SectionDescription,
-                  },
-                  (0, _._)("#NotificationSettings_Desc1"),
-                ),
-                _.createElement(
-                  "p",
-                  {
-                    className: _.SectionDescription,
-                  },
-                  (0, _._)("#NotificationSettings_Desc2"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: "notification_settings_container",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NotificationSendWhen,
-                    },
-                    (0, _._)("#NotificationSettings_SendMeWhen"),
-                  ),
-                  _,
-                ),
-              ),
-            ),
-          );
+                    children: (0, _.jsx)("div", {
+                      children: (0, _._)("#NotificationSettings_Email_Title"),
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      "account_settings_container",
+                      _.Account_settings_notifications_extrapadding,
+                    ),
+                    children: (0, _.jsx)("div", {
+                      className: _.Account_manage_container_inner,
+                      children: (0, _.jsx)(_._, {
+                        className: _.Account_manage_link,
+                        onClick: () =>
+                          (document.location =
+                            _._.STORE_BASE_URL + "account/emailoptout"),
+                        children: (0, _.jsx)("div", {
+                          children: (0, _._)(
+                            "#NotificationSettings_Email_Button",
+                          ),
+                        }),
+                      }),
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _.NotificationSettingsHeader,
+                      "account_header_line noicon",
+                    ),
+                    children: (0, _.jsx)("div", {
+                      children: (0, _._)("#NotificationSettings_Title"),
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "account_settings_container",
+                    children: [
+                      (0, _.jsx)("p", {
+                        className: _.SectionDescription,
+                        children: (0, _._)("#NotificationSettings_Desc1"),
+                      }),
+                      (0, _.jsx)("p", {
+                        className: _.SectionDescription,
+                        children: (0, _._)("#NotificationSettings_Desc2"),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: "notification_settings_container",
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.NotificationSendWhen,
+                            children: (0, _._)(
+                              "#NotificationSettings_SendMeWhen",
+                            ),
+                          }),
+                          _,
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }),
         _ = (0, _._)((_) => {
           const { preferenceSetting: _ } = _;
@@ -1535,65 +1351,58 @@
                 : null);
           var _;
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.NotificationGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
+            ? (0, _.jsxs)("div", {
+                className: _.NotificationGroup,
+                children: [
+                  (0, _.jsxs)("div", {
                     className: _.NotificationSection,
-                  },
-                  _.createElement(_._, {
-                    className: _.NotificationFeedToggle,
-                    padding: "compact",
-                    onChange: _,
-                    disabled: _,
-                    bottomSeparator: "none",
-                    checked: _,
-                  }),
-                  _.createElement(
-                    "p",
-                    {
-                      className: _.NotificationDescription,
-                    },
-                    _,
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      className: (0, _._)({
-                        [_.PrefDetailsToggle]: !0,
-                        [_.Selected]: _,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _.NotificationFeedToggle,
+                        padding: "compact",
+                        onChange: _,
+                        disabled: _,
+                        bottomSeparator: "none",
+                        checked: _,
                       }),
-                      onClick: () => _(!_),
-                    },
-                    _.createElement(_.b8_, {
-                      direction: "down",
-                    }),
-                  ),
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
+                      (0, _.jsx)("p", {
+                        className: _.NotificationDescription,
+                        children: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: (0, _._)({
+                          [_.PrefDetailsToggle]: !0,
+                          [_.Selected]: _,
+                        }),
+                        onClick: () => _(!_),
+                        children: (0, _.jsx)(_.b8_, {
+                          direction: "down",
+                        }),
+                      }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsxs)("div", {
                       className: _.NotificationPrefDetails,
-                    },
-                    _.createElement(_._, {
-                      label: (0, _._)("#NotificationSettings_SendToast"),
-                      disabled: _ || !_,
-                      checked: _,
-                      onChange: _,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          label: (0, _._)("#NotificationSettings_SendToast"),
+                          disabled: _ || !_,
+                          checked: _,
+                          onChange: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          label: (0, _._)(
+                            "#NotificationSettings_PushNotification",
+                          ),
+                          disabled: _ || !_,
+                          checked: _,
+                          onChange: _,
+                        }),
+                      ],
                     }),
-                    _.createElement(_._, {
-                      label: (0, _._)("#NotificationSettings_PushNotification"),
-                      disabled: _ || !_,
-                      checked: _,
-                      onChange: _,
-                    }),
-                  ),
-              )
+                ],
+              })
             : null;
         });
       var _ = __webpack_require__("chunkid"),
@@ -1640,66 +1449,57 @@
               .filter((_) => 1 === _.status || 3 === _.status)
               .map((_) =>
                 3 === _.status
-                  ? _.createElement(_, {
-                      invite: _,
-                      key: _.invite_id,
-                    })
-                  : _.createElement(_, {
-                      invite: _,
-                      key: _.invite_id,
-                    }),
+                  ? (0, _.jsx)(
+                      _,
+                      {
+                        invite: _,
+                      },
+                      _.invite_id,
+                    )
+                  : (0, _.jsx)(
+                      _,
+                      {
+                        invite: _,
+                      },
+                      _.invite_id,
+                    ),
               )),
-          _.createElement(
-            _._,
-            {
-              navID: "StorePlaytestInvites",
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_._, {
+            navID: "StorePlaytestInvites",
+            children: [
+              (0, _.jsx)("div", {
                 className: "account_header_line noicon",
-              },
-              (0, _._)("#PlaytestInvites_Title"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#PlaytestInvites_Title"),
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().PlaytestInvites,
                   "account_settings_container",
                 ),
-              },
-              _.isLoading || _.length > 0
-                ? _
-                : (0, _._)("#PlaytestInvites_NoInvites"),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                children:
+                  _.isLoading || _.length > 0
+                    ? _
+                    : (0, _._)("#PlaytestInvites_NoInvites"),
+              }),
+              _ &&
+                (0, _.jsxs)("div", {
                   className: "account_settings_container",
-                },
-                _.createElement(
-                  "h2",
-                  null,
-                  (0, _._)("#PlaytestInvites_Desc_Title"),
-                ),
-                _.createElement(
-                  "p",
-                  {
-                    className: _().Description,
-                  },
-                  (0, _._)("#PlaytestInvites_Desc1"),
-                ),
-                _.createElement(
-                  "p",
-                  {
-                    className: _().Description,
-                  },
-                  (0, _._)("#PlaytestInvites_Desc2"),
-                ),
-              ),
-          )
+                  children: [
+                    (0, _.jsx)("h2", {
+                      children: (0, _._)("#PlaytestInvites_Desc_Title"),
+                    }),
+                    (0, _.jsx)("p", {
+                      className: _().Description,
+                      children: (0, _._)("#PlaytestInvites_Desc1"),
+                    }),
+                    (0, _.jsx)("p", {
+                      className: _().Description,
+                      children: (0, _._)("#PlaytestInvites_Desc2"),
+                    }),
+                  ],
+                }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -1713,45 +1513,30 @@
           },
           [_],
         );
-        return _.createElement(
-          "div",
-          {
-            className: _().PlaytestInvite,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().PlaytestInvite,
+          children: [
+            (0, _.jsx)("div", {
               className: _().InviteInfo,
-            },
-            _.createElement(
-              "span",
-              null,
-              (0, _._)("#PlaytestInvites_Welcome", _),
-            ),
-          ),
-          !_._.IN_MOBILE_WEBVIEW &&
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("span", {
+                children: (0, _._)("#PlaytestInvites_Welcome", _),
+              }),
+            }),
+            !_._.IN_MOBILE_WEBVIEW &&
+              (0, _.jsx)("div", {
                 className: _().StatusCtn,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   className: _().Buttons,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     className: _().WideButton,
                     noFocusRing: !1,
                     onClick: _,
-                  },
-                  (0, _._)("#PlaytestInvites_ViewLibrary"),
-                ),
-              ),
-            ),
-        );
+                    children: (0, _._)("#PlaytestInvites_ViewLibrary"),
+                  }),
+                }),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { invite: _ } = _,
@@ -1801,72 +1586,55 @@
             [_],
           ),
           _ = new _._(_.steamid_inviter);
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            {
-              className: _().PlaytestInvite,
-              navEntryPreferPosition: _._.MAINTAIN_X,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)(_._, {
+            className: _().PlaytestInvite,
+            navEntryPreferPosition: _._.MAINTAIN_X,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().InviteInfo,
-              },
-              _.createElement(_, {
-                steamIDInviter: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    steamIDInviter: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    appStoreItem: _,
+                    strAppName: _,
+                    nAppID: _.appid,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().TimeInvited,
+                    children: (0, _._)(_.time_created ?? _),
+                  }),
+                ],
               }),
-              _.createElement(_, {
-                appStoreItem: _,
-                strAppName: _,
-                nAppID: _.appid,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().TimeInvited,
-                },
-                (0, _._)(_.time_created ?? _),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 className: _().StatusCtn,
-              },
-              _.isPending
-                ? _.createElement(_._, {
-                    size: "medium",
-                    position: "center",
-                    msDelayAppear: 250,
-                  })
-                : _.createElement(
-                    "div",
-                    {
+                children: _.isPending
+                  ? (0, _.jsx)(_._, {
+                      size: "medium",
+                      position: "center",
+                      msDelayAppear: 250,
+                    })
+                  : (0, _.jsxs)("div", {
                       className: _().Buttons,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        noFocusRing: !1,
-                        onClick: () => _(!0),
-                      },
-                      (0, _._)("#PlaytestInvites_Accept"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        noFocusRing: !1,
-                        onClick: () => _(!1),
-                      },
-                      (0, _._)("#PlaytestInvites_Reject"),
-                    ),
-                  ),
-            ),
-          ),
-        );
+                      children: [
+                        (0, _.jsx)(_._, {
+                          noFocusRing: !1,
+                          onClick: () => _(!0),
+                          children: (0, _._)("#PlaytestInvites_Accept"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          noFocusRing: !1,
+                          onClick: () => _(!1),
+                          children: (0, _._)("#PlaytestInvites_Reject"),
+                        }),
+                      ],
+                    }),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -1878,103 +1646,78 @@
             ? _.GetDeveloperNames()[0]
             : null,
           _ = _?.GetStorePageURL(),
-          _ = _.createElement("img", {
+          _ = (0, _.jsx)("img", {
             className: _().SmallCap,
             src: _?.GetAssets().GetSmallCapsuleURL() ?? _._,
           });
         return (
           1422450 == _ && (_ = "Valve"),
-          _.createElement(
-            "div",
-            {
-              className: _().AppInfoCtn,
-            },
-            _
-              ? _.createElement(
-                  _._,
-                  {
+          (0, _.jsxs)("div", {
+            className: _().AppInfoCtn,
+            children: [
+              _
+                ? (0, _.jsxs)(_._, {
                     href: _,
-                  },
-                  " ",
-                  _,
-                  " ",
-                )
-              : _,
-            _.createElement(
-              "div",
-              {
+                    children: [" ", _, " "],
+                  })
+                : _,
+              (0, _.jsxs)("div", {
                 className: _().AppDescription,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().AppName,
-                },
-                __webpack_require__,
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().AppDetail,
-                  },
-                  (0, _._)("#PlaytestInvites_AppDeveloper", _),
-                ),
-            ),
-          )
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().AppName,
+                    children: __webpack_require__,
+                  }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().AppDetail,
+                      children: (0, _._)("#PlaytestInvites_AppDeveloper", _),
+                    }),
+                ],
+              }),
+            ],
+          })
         );
       }
       function _(_) {
         const { steamIDInviter: _ } = _;
         return _.BIsValid()
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               steamIDInviter: _,
             })
-          : _.createElement(_, null);
+          : (0, _.jsx)(_, {});
       }
       function _(_) {
         const { steamIDInviter: _ } = _,
           _ = (0, _._)(_.ConvertTo64BitString()),
           _ = _?.data;
         return _.isSuccess
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().AvatarAndPersona,
-                  _().InviteDescription,
-                ),
-              },
-              _.createElement(_._, {
-                persona: _,
-                size: "Small",
-                statusPosition: "right",
-              }),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)(
-                  "#PlaytestInvites_InviteDescription_FromUser2",
-                  _.createElement(
-                    _._,
-                    {
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_().AvatarAndPersona, _().InviteDescription),
+              children: [
+                (0, _.jsx)(_._, {
+                  persona: _,
+                  size: "Small",
+                  statusPosition: "right",
+                }),
+                (0, _.jsx)("div", {
+                  children: (0, _._)(
+                    "#PlaytestInvites_InviteDescription_FromUser2",
+                    (0, _.jsx)(_._, {
                       href: _.GetCommunityProfileURL(),
-                    },
-                    _?.m_strPlayerName,
+                      children: _?.m_strPlayerName,
+                    }),
                   ),
-                ),
-              ),
-            )
-          : _.createElement(_, null);
+                }),
+              ],
+            })
+          : (0, _.jsx)(_, {});
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().InviteDescription,
-          },
-          (0, _._)("#PlaytestInvites_InviteDescription_FromApp2"),
-        );
+        return (0, _.jsx)("div", {
+          className: _().InviteDescription,
+          children: (0, _._)("#PlaytestInvites_InviteDescription_FromApp2"),
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _._)(_, {
@@ -1986,57 +1729,41 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            navID: "StorePlaytests",
-          },
-          _.createElement(_, {
-            bShowPlaytestOverview: !1,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          navID: "StorePlaytests",
+          children: [
+            (0, _.jsx)(_, {
+              bShowPlaytestOverview: !1,
+            }),
+            (0, _.jsx)("div", {
               className: "account_header_line noicon",
-            },
-            (0, _._)("#PlaytestStatus_Title"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#PlaytestStatus_Title"),
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(
                 _().PlaytestStatusCtn,
                 "account_settings_container",
               ),
-            },
-            (0, _._)("#PlaytestStatus_None"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#PlaytestStatus_None"),
+            }),
+            (0, _.jsxs)("div", {
               className: "account_settings_container",
-            },
-            _.createElement(
-              "h2",
-              null,
-              (0, _._)("#PlaytestInvites_Desc_Title"),
-            ),
-            _.createElement(
-              "p",
-              {
-                className: _().Description,
-              },
-              (0, _._)("#PlaytestInvites_Desc1"),
-            ),
-            _.createElement(
-              "p",
-              {
-                className: _().Description,
-              },
-              (0, _._)("#PlaytestInvites_Desc2"),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)("h2", {
+                  children: (0, _._)("#PlaytestInvites_Desc_Title"),
+                }),
+                (0, _.jsx)("p", {
+                  className: _().Description,
+                  children: (0, _._)("#PlaytestInvites_Desc1"),
+                }),
+                (0, _.jsx)("p", {
+                  className: _().Description,
+                  children: (0, _._)("#PlaytestInvites_Desc2"),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       class _ {
         m_rgActiveDevices = [];
@@ -2159,165 +1886,139 @@
         for (const _ of _.GetActiveDevices()) {
           const _ = _.logged_in && _.last_seen?.time > _ - 900,
             _ = 5 == _.effective_token_state ? _.RememberedDevice : null,
-            _ = _.createElement(_, {
-              className: _,
-              device: _,
-              key: _.token_id,
-              bActiveNow: _,
-              bCurrentDevice: _ == _.token_id,
-              strActiveCountry: _,
-              msgTwoFactorStatus: _,
-            });
+            _ = (0, _.jsx)(
+              _,
+              {
+                className: _,
+                device: _,
+                bActiveNow: _,
+                bCurrentDevice: _ == _.token_id,
+                strActiveCountry: _,
+                msgTwoFactorStatus: _,
+              },
+              _.token_id,
+            );
           _ ? _.push(_) : _.push(_);
         }
         const _ = _.GetRevokedDevices().map((_) =>
-          _.createElement(_, {
-            className: _.RevokedDevice,
-            device: _,
-            key: _.token_id,
-            strActiveCountry: _,
-            msgTwoFactorStatus: _,
-          }),
-        );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
+          (0, _.jsx)(
+            _,
             {
+              className: _.RevokedDevice,
+              device: _,
+              strActiveCountry: _,
+              msgTwoFactorStatus: _,
+            },
+            _.token_id,
+          ),
+        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: (0, _._)(
                 _.AuthorizedDeviceHeader,
                 "account_header_line noicon",
               ),
-            },
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#accountpreferences_authorized_devices_header"),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#accountpreferences_authorized_devices_header",
+                ),
+              }),
+            }),
+            (0, _.jsxs)("div", {
               className: "account_settings_container",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.SectionDescription,
-              },
-              (0, _._)(
-                "#accountpreferences_authorized_devices_description",
-                _.createElement("p", null),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.AuthorizedDeviceGroup,
-              },
-              _.createElement(_, {
-                elHeader: _.createElement(
-                  "div",
-                  {
-                    className: _.ActiveNow,
-                  },
-                  _.createElement(_.jlt, {
-                    className: _.ActiveNowDot,
-                  }),
-                  (0, _._)("#accountpreferences_authorized_device_active_now"),
-                ),
-                rgDevices: _,
-              }),
-              _.createElement(_, {
-                elHeader: (0, _._)(
-                  "#accountpreferences_authorized_devices_recentseen_heading",
-                ),
-                rgDevices: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.DeviceGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RemoveDevicesRow,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.RemoveDevicesButton,
-                      onClick: (_) => {
-                        (0, _._)(_.createElement(_, null), (0, _._)(_));
-                      },
-                    },
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_remove_button",
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.SectionDescription,
+                  children: (0, _._)(
+                    "#accountpreferences_authorized_devices_description",
+                    (0, _.jsx)("p", {}),
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.AuthorizedDeviceGroup,
+                  children: [
+                    (0, _.jsx)(_, {
+                      elHeader: (0, _.jsxs)("div", {
+                        className: _.ActiveNow,
+                        children: [
+                          (0, _.jsx)(_.jlt, {
+                            className: _.ActiveNowDot,
+                          }),
+                          (0, _._)(
+                            "#accountpreferences_authorized_device_active_now",
+                          ),
+                        ],
+                      }),
+                      rgDevices: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      elHeader: (0, _._)(
+                        "#accountpreferences_authorized_devices_recentseen_heading",
+                      ),
+                      rgDevices: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.DeviceGroup,
+                      children: (0, _.jsx)("div", {
+                        className: _.RemoveDevicesRow,
+                        children: (0, _.jsx)(_._, {
+                          className: _.RemoveDevicesButton,
+                          onClick: (_) => {
+                            (0, _._)((0, _.jsx)(_, {}), (0, _._)(_));
+                          },
+                          children: (0, _._)(
+                            "#accountpreferences_authorized_devices_remove_button",
+                          ),
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            _?.length > 0 &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _.AuthorizedDeviceHeader,
+                      "account_header_line noicon",
                     ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          _?.length > 0 &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.AuthorizedDeviceHeader,
-                    "account_header_line noicon",
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)(
-                    "#accountpreferences_revoked_devices_revoked_header",
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "account_settings_container",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SectionDescription,
-                  },
-                  (0, _._)(_, _.createElement("p", null)),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.AuthorizedDeviceGroup,
-                  },
-                  _.createElement(_, {
-                    rgDevices: _,
+                    children: (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#accountpreferences_revoked_devices_revoked_header",
+                      ),
+                    }),
                   }),
-                ),
-              ),
-            ),
-        );
+                  (0, _.jsxs)("div", {
+                    className: "account_settings_container",
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.SectionDescription,
+                        children: (0, _._)(_, (0, _.jsx)("p", {})),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.AuthorizedDeviceGroup,
+                        children: (0, _.jsx)(_, {
+                          rgDevices: _,
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+          ],
+        });
       });
       function _(_) {
         const { rgDevices: _, elHeader: __webpack_require__ } = _;
         return 0 == _.length
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.DeviceGroup,
-              },
-              __webpack_require__ && __webpack_require__,
-              _,
-            );
+          : (0, _.jsxs)("div", {
+              className: _.DeviceGroup,
+              children: [__webpack_require__ && __webpack_require__, _],
+            });
       }
       function _(_) {
         const _ = Date.now() / 1e3;
@@ -2371,31 +2072,21 @@
         let _ = null;
         _ =
           _.country && _ && _ != _.country
-            ? _.createElement(
-                _._,
-                {
-                  className: _.Tooltip,
-                  toolTipContent: (0, _._)(
-                    "#accountpreferences_authorized_devices_suspicous_tooltip",
-                  ),
-                  direction: "top",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LocationSuspicious,
-                  },
-                  _.location,
-                  _.createElement(_.$$j, null),
+            ? (0, _.jsx)(_._, {
+                className: _.Tooltip,
+                toolTipContent: (0, _._)(
+                  "#accountpreferences_authorized_devices_suspicous_tooltip",
                 ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _.LocationNotSuspicious,
-                },
-                _.location,
-              );
+                direction: "top",
+                children: (0, _.jsxs)("div", {
+                  className: _.LocationSuspicious,
+                  children: [_.location, (0, _.jsx)(_.$$j, {})],
+                }),
+              })
+            : (0, _.jsx)("div", {
+                className: _.LocationNotSuspicious,
+                children: _.location,
+              });
         const _ = (function (_, _) {
           return (
             _?.state > 0 &&
@@ -2403,7 +2094,7 @@
             _.token_id == _?.last_seen_auth_token_id
           );
         })(_, _);
-        return _.createElement(
+        return (0, _.jsxs)(
           _._,
           {
             className: (0, _._)(
@@ -2411,86 +2102,74 @@
               __webpack_require__ && _.ActiveDevice,
               _,
             ),
-            key: "id_" + _.token_id,
             navRef: _,
             onActivate: () => _(!_),
-          },
-          _.createElement(_, {
-            device: _,
-            bHasAuthenticator: _,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.DeviceContent,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.DeviceHeaderRow,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.DeviceNameContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DeviceName,
-                  },
-                  _.createElement(_, {
-                    device: _,
-                  }),
-                  _,
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ThisDevice,
-                    },
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_this_device",
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.DetailsToggleContainer,
-                },
-                _,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DetailsToggle,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: (0, _._)({
-                        [_.DetailsToggle]: !0,
-                        [_.Selected]: _,
-                      }),
-                    },
-                    _.createElement(_.b8_, {
-                      direction: "down",
-                    }),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(_, {
-              device: _,
-              bActiveNow: __webpack_require__,
-              msgTwoFactorStatus: _ && _,
-            }),
-            _ &&
-              _.createElement(_, {
+            children: [
+              (0, _.jsx)(_, {
                 device: _,
+                bHasAuthenticator: _,
               }),
-          ),
+              (0, _.jsxs)("div", {
+                className: _.DeviceContent,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.DeviceHeaderRow,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.DeviceNameContainer,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.DeviceName,
+                            children: [
+                              (0, _.jsx)(_, {
+                                device: _,
+                              }),
+                              _,
+                            ],
+                          }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _.ThisDevice,
+                              children: (0, _._)(
+                                "#accountpreferences_authorized_devices_this_device",
+                              ),
+                            }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.DetailsToggleContainer,
+                        children: [
+                          _,
+                          (0, _.jsx)("div", {
+                            className: _.DetailsToggle,
+                            children: (0, _.jsx)(_._, {
+                              className: (0, _._)({
+                                [_.DetailsToggle]: !0,
+                                [_.Selected]: _,
+                              }),
+                              children: (0, _.jsx)(_.b8_, {
+                                direction: "down",
+                              }),
+                            }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    device: _,
+                    bActiveNow: __webpack_require__,
+                    msgTwoFactorStatus: _ && _,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      device: _,
+                    }),
+                ],
+              }),
+            ],
+          },
+          "id_" + _.token_id,
         );
       }
       function _(_) {
@@ -2500,12 +2179,12 @@
           msgTwoFactorStatus: _,
         } = _;
         return _?.state > 0
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               msgTwoFactorUsage: _.usages?.length > 0 ? _.usages[0] : null,
             })
           : __webpack_require__
             ? null
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 device: _,
               });
       }
@@ -2593,13 +2272,12 @@
           }
         }
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.LastSeenRow,
-              },
-              _.createElement("div", null, _),
-            )
+          ? (0, _.jsx)("div", {
+              className: _.LastSeenRow,
+              children: (0, _.jsx)("div", {
+                children: _,
+              }),
+            })
           : null;
       }
       function _(_) {
@@ -2617,86 +2295,76 @@
             : _.time_updated &&
               _.time_updated > Math.floor(Date.now() / 1e3 - 7776e3) &&
               (_ = (0, _._)(_.time_updated)),
-          _.createElement(
-            "div",
-            {
-              className: _.LastSeenRow,
-            },
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "span",
-                {
-                  className: _.LastActive,
-                },
-                (0, _._)(
-                  "#accountpreferences_authorized_devices_last_seen_title",
-                ),
-              ),
-              _,
-              _ &&
-                _.createElement(
-                  "span",
-                  {
+          (0, _.jsxs)("div", {
+            className: _.LastSeenRow,
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("span", {
                     className: _.LastActive,
-                  },
-                  " - ",
-                  (0, _._)(
-                    "#accountpreferences_authorized_devices_state_signedout",
-                  ),
-                ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.NewDevice,
-                },
-                (0, _._)(
-                  "#accountpreferences_authorized_devices_new_device",
-                  _.createElement("a", {
-                    href: _._.HELP_BASE_URL + "wizard/HelpWithAccountStolen",
-                    onClick: (_) => {
-                      _.stopPropagation();
-                    },
+                    children: (0, _._)(
+                      "#accountpreferences_authorized_devices_last_seen_title",
+                    ),
                   }),
-                ),
-              ),
-          )
+                  _,
+                  _ &&
+                    (0, _.jsxs)("span", {
+                      className: _.LastActive,
+                      children: [
+                        " - ",
+                        (0, _._)(
+                          "#accountpreferences_authorized_devices_state_signedout",
+                        ),
+                      ],
+                    }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _.NewDevice,
+                  children: (0, _._)(
+                    "#accountpreferences_authorized_devices_new_device",
+                    (0, _.jsx)("a", {
+                      href: _._.HELP_BASE_URL + "wizard/HelpWithAccountStolen",
+                      onClick: (_) => {
+                        _.stopPropagation();
+                      },
+                    }),
+                  ),
+                }),
+            ],
+          })
         );
       }
       function _(_) {
         const { device: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.AuthorizedDeviceDetails,
-          },
-          (0, _._)(
-            (function (_) {
-              const _ = _.authentication_type,
-                _ = _.auth_type;
-              if (2 == _) return "#authorized_devices_default_qr";
-              if (5 == _.effective_token_state)
-                return "#authorized_devices_remembered_machine";
-              switch (_) {
-                case 2:
-                  return "#authorized_devices_emailcode_password";
-                case 3:
-                  return "#authorized_devices_devicecode_password";
-                case 4:
-                case 5:
-                  return "#authorized_devices_mobileconf_password";
-                case 6:
-                  return "#authorized_devices_machinetoken_password";
-                default:
-                  return "#authorized_devices_default_password";
-              }
-            })(_),
+        return (0, _.jsx)("div", {
+          className: _.AuthorizedDeviceDetails,
+          children: (0, _._)(
+            _(_),
             (0, _._)(_.first_seen.time) + " @ " + (0, _._)(_.first_seen.time),
           ),
-        );
+        });
+      }
+      function _(_) {
+        const _ = _.authentication_type,
+          _ = _.auth_type;
+        if (2 == _) return "#authorized_devices_default_qr";
+        if (5 == _.effective_token_state)
+          return "#authorized_devices_remembered_machine";
+        switch (_) {
+          case 2:
+            return "#authorized_devices_emailcode_password";
+          case 3:
+            return "#authorized_devices_devicecode_password";
+          case 4:
+          case 5:
+            return "#authorized_devices_mobileconf_password";
+          case 6:
+            return "#authorized_devices_machinetoken_password";
+          default:
+            return "#authorized_devices_default_password";
+        }
       }
       function _(_) {
         const { device: _, bHasAuthenticator: __webpack_require__ } = _,
@@ -2704,10 +2372,10 @@
         let _ = null;
         if (2 == _.platform_type)
           _ = _
-            ? _.createElement(_.SQF, {
+            ? (0, _.jsx)(_.SQF, {
                 className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
               })
-            : _.createElement(_.FH7, {
+            : (0, _.jsx)(_.FH7, {
                 className: _.DeviceLogo,
               });
         else if (
@@ -2721,10 +2389,10 @@
             case _._.k_EPlatformTypeWin64:
             case _._.k_EPlatformTypeOSX:
               _ = _
-                ? _.createElement(_.ulH, {
+                ? (0, _.jsx)(_.ulH, {
                     className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
                   })
-                : _.createElement(_.nl8, {
+                : (0, _.jsx)(_.nl8, {
                     className: _.DeviceLogo,
                   });
               break;
@@ -2734,30 +2402,29 @@
             case _._.k_EPlatformTypeLinux64:
             case _._.k_EPlatformTypeIOS32:
             case _._.k_EPlatformTypeIOS64:
-              _ = _.createElement(_.rfv, {
+              _ = (0, _.jsx)(_.rfv, {
                 className: _.DeviceLogo,
               });
           }
         else
           _ = _
-            ? _.createElement(_.VRo, {
+            ? (0, _.jsx)(_.VRo, {
                 className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
               })
-            : _.createElement(_.oEi, {
+            : (0, _.jsx)(_.oEi, {
                 className: _.DeviceLogo,
               });
         return __webpack_require__
-          ? _.createElement(
-              "div",
-              {
-                className: _.DeviceLogoBoundingBox,
-              },
-              _,
-              _.createElement("img", {
-                src: _,
-                className: _.DeviceSteamGuardLogo,
-              }),
-            )
+          ? (0, _.jsxs)("div", {
+              className: _.DeviceLogoBoundingBox,
+              children: [
+                _,
+                (0, _.jsx)("img", {
+                  src: _,
+                  className: _.DeviceSteamGuardLogo,
+                }),
+              ],
+            })
           : _;
       }
       function _(_) {
@@ -2816,71 +2483,58 @@
       }
       function _(_) {
         const { closeModal: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: _,
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#authorized_devices_deauthorize_title"),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#authorized_devices_deauthorize_msg"),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  strOKText: (0, _._)(
-                    "#authorized_devices_deauthorize_proceed",
-                  ),
-                  onOK: async () => {
-                    const _ = new FormData();
-                    _.set("action", "deauthorize"),
-                      _.set("sessionid", _._.SESSIONID),
-                      await _().post(
-                        _._.STORE_BASE_URL + "twofactor/manage_action",
-                        _,
-                      );
-                    const _ = document.createElement("form");
-                    (_.method = "POST"),
-                      (_.action = _._.STORE_BASE_URL + "logout");
-                    const _ = document.createElement("input");
-                    (_.type = "hidden"),
-                      (_.name = "sessionid"),
-                      (_.value = _._.SESSIONID),
-                      _.appendChild(_),
-                      document.body.appendChild(_),
-                      _.submit();
-                  },
-                  onCancel: _,
-                }),
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _,
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#authorized_devices_deauthorize_title"),
+              }),
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#authorized_devices_deauthorize_msg"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_._, {
+                      strOKText: (0, _._)(
+                        "#authorized_devices_deauthorize_proceed",
+                      ),
+                      onOK: async () => {
+                        const _ = new FormData();
+                        _.set("action", "deauthorize"),
+                          _.set("sessionid", _._.SESSIONID),
+                          await _().post(
+                            _._.STORE_BASE_URL + "twofactor/manage_action",
+                            _,
+                          );
+                        const _ = document.createElement("form");
+                        (_.method = "POST"),
+                          (_.action = _._.STORE_BASE_URL + "logout");
+                        const _ = document.createElement("input");
+                        (_.type = "hidden"),
+                          (_.name = "sessionid"),
+                          (_.value = _._.SESSIONID),
+                          _.appendChild(_),
+                          document.body.appendChild(_),
+                          _.submit();
+                      },
+                      onCancel: _,
+                    }),
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       var _,
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            navID: "StoreSecurityAndDevices",
-          },
-          _.createElement(_, null),
-          _.createElement(_, null),
-        );
+        return (0, _.jsxs)(_._, {
+          navID: "StoreSecurityAndDevices",
+          children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+        });
       }
       function _(_) {
         const _ = _._.HELP_BASE_URL + "faqs/view/7EFD-3CAE-64D3-1C31",
@@ -2888,67 +2542,62 @@
           _ =
             __webpack_require__.GetTwoFactorStatus()?.steamguard_scheme ==
             _.k_ETwoFactorTokenSteamguardScheme_TwoFactor;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: "account_header_line",
-            },
-            _.createElement(
-              "div",
-              null,
-              _.createElement(_.iSZ, {
-                className: _.HeaderIcon,
+              children: (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)(_.iSZ, {
+                    className: _.HeaderIcon,
+                  }),
+                  (0, _._)("#youraccount_account_security"),
+                ],
               }),
-              (0, _._)("#youraccount_account_security"),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+            }),
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.AccountSecurityCtn,
                 "account_settings_container",
               ),
-            },
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#accountpreferences_account_security_description",
-                _.createElement(_._, {
-                  target: "_blank",
-                  href: _,
+              children: [
+                (0, _.jsx)("div", {
+                  children: (0, _._)(
+                    "#accountpreferences_account_security_description",
+                    (0, _.jsx)(_._, {
+                      target: "_blank",
+                      href: _,
+                    }),
+                  ),
                 }),
-              ),
-            ),
-            _
-              ? _.createElement(_, {
-                  msgTwoFactorStatus: __webpack_require__.GetTwoFactorStatus(),
-                  strFaqUrl: _,
-                })
-              : _.createElement(_, {
-                  strFaqUrl: _,
+                _
+                  ? (0, _.jsx)(_, {
+                      msgTwoFactorStatus:
+                        __webpack_require__.GetTwoFactorStatus(),
+                      strFaqUrl: _,
+                    })
+                  : (0, _.jsx)(_, {
+                      strFaqUrl: _,
+                    }),
+                (0, _.jsxs)("div", {
+                  className: _.AccountDetailsCtn,
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)("div", {
+                      className: _.Divider,
+                    }),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      msgTwoFactorStatus:
+                        __webpack_require__.GetTwoFactorStatus(),
+                    }),
+                    _ && (0, _.jsx)(_, {}),
+                  ],
                 }),
-            _.createElement(
-              "div",
-              {
-                className: _.AccountDetailsCtn,
-              },
-              _.createElement(_, null),
-              _.createElement("div", {
-                className: _.Divider,
-              }),
-              _.createElement(_, null),
-              _.createElement(_, {
-                msgTwoFactorStatus: __webpack_require__.GetTwoFactorStatus(),
-              }),
-              _ && _.createElement(_, null),
-            ),
-          ),
-        );
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { msgTwoFactorStatus: _, strFaqUrl: __webpack_require__ } = _,
@@ -2965,238 +2614,206 @@
           _?.last_seen_auth_token_id &&
             ((_ = _.find((_) => _.token_id === _.last_seen_auth_token_id)),
             (_ = _?.length > 0 && _ == _?.token_id)),
-          _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.SteamGuardStatusHeader,
-              },
-              _.createElement("img", {
-                className: _.SteamGuardLogo,
-                src: _,
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.SteamGuardLogo,
+                    src: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.HeaderText,
+                    children: (0, _._)(
+                      "#accountpreferences_account_security_steamguard",
+                    ),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.RemoveText,
+                    children: (0, _.jsx)(_._, {
+                      href:
+                        _._.STORE_BASE_URL +
+                        "twofactor/remove?step=promptdevice",
+                      children: (0, _._)(
+                        "#accountpreferences_account_security_steamguard_remove",
+                      ),
+                    }),
+                  }),
+                ],
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.HeaderText,
-                },
-                (0, _._)("#accountpreferences_account_security_steamguard"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.RemoveText,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    href:
-                      _._.STORE_BASE_URL + "twofactor/remove?step=promptdevice",
-                  },
-                  (0, _._)(
-                    "#accountpreferences_account_security_steamguard_remove",
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.SteamGuardStatusBody,
-              },
-              !!_ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    className: _.AuthorizedDevice,
-                    device: _,
-                    strActiveCountry: _,
-                    msgTwoFactorStatus: _,
-                    bShowAuthenticatorActivity: !0,
+                children: [
+                  !!_ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_, {
+                          className: _.AuthorizedDevice,
+                          device: _,
+                          strActiveCountry: _,
+                          msgTwoFactorStatus: _,
+                          bShowAuthenticatorActivity: !0,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.Divider,
+                        }),
+                      ],
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: _.SteamGuardActionsCtn,
+                    children: [
+                      (0, _.jsx)(_, {
+                        strLabel: (0, _._)(
+                          "#accountpreferences_account_security_move",
+                        ),
+                        href:
+                          _._.HELP_BASE_URL + "faqs/view/29A9-9EEE-09F0-75F9",
+                      }),
+                      (0, _.jsx)(_, {
+                        strLabel: (0, _._)(
+                          "#accountpreferences_account_security_help_lost",
+                        ),
+                        href:
+                          _._.STORE_BASE_URL +
+                          "twofactor/remove?step=promptdevice",
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.RightAligned,
+                        children: (0, _.jsx)(_._, {
+                          href: __webpack_require__,
+                          target: "_blank",
+                          children: (0, _._)(
+                            "#accountpreferences_account_security_view_faq",
+                          ),
+                        }),
+                      }),
+                    ],
                   }),
-                  _.createElement("div", {
-                    className: _.Divider,
-                  }),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _.SteamGuardActionsCtn,
-                },
-                _.createElement(_, {
-                  strLabel: (0, _._)(
-                    "#accountpreferences_account_security_move",
-                  ),
-                  href: _._.HELP_BASE_URL + "faqs/view/29A9-9EEE-09F0-75F9",
-                }),
-                _.createElement(_, {
-                  strLabel: (0, _._)(
-                    "#accountpreferences_account_security_help_lost",
-                  ),
-                  href:
-                    _._.STORE_BASE_URL + "twofactor/remove?step=promptdevice",
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RightAligned,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href: __webpack_require__,
-                      target: "_blank",
-                    },
-                    (0, _._)("#accountpreferences_account_security_view_faq"),
-                  ),
-                ),
-              ),
-            ),
-          )
+                ],
+              }),
+            ],
+          })
         );
       }
       function _(_) {
         const { strFaqUrl: _ } = _,
           _ = _.Get().GetLatestAndroidAppVersion();
-        return _.createElement(
-          "div",
-          {
-            className: _.NoSteamGuardCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.NoSteamGuardCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.SteamGuardStatusHeader,
-            },
-            _.createElement("img", {
-              className: _.SteamGuardLogo,
-              src: _,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.HeaderText,
-              },
-              (0, _._)("#accountpreferences_account_security_no_steamguard"),
-            ),
-          ),
-          _.createElement("div", {
-            className: _.Divider,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.NoSteamGuardBody,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.QROuterCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.GetMobileAppCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.GetMobileAppText,
-                  },
-                  (0, _._)(
-                    "#accountpreferences_account_security_get_app",
-                    _.createElement(_._, {
-                      href: _._.STORE_BASE_URL + "mobile#mobile_section",
-                    }),
+              children: [
+                (0, _.jsx)("img", {
+                  className: _.SteamGuardLogo,
+                  src: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.HeaderText,
+                  children: (0, _._)(
+                    "#accountpreferences_account_security_no_steamguard",
                   ),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#accountpreferences_account_security_scan_qr"),
-                ),
-              ),
-              _.createElement("img", {
-                src: _,
-                className: _.QRCode,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.MobileAppLinksCtn,
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#accountpreferences_account_security_mobile_os_reqs"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.MobileAppDownloadImages,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    href: "https://itunes.apple.com/us/app/steam-mobile/id495369748",
-                    rel: "noopener",
-                    target: "_blank",
-                  },
-                  _.createElement(_._, {
-                    srcs: _(
-                      _._.IMG_URL +
-                        "mobile/localizedimages/appleappstore/apple_store_",
-                      ".png",
-                    ),
-                    className: _.AppleAppStoreImg,
-                  }),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    href: "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community",
-                    rel: "noopener",
-                    target: "_blank",
-                  },
-                  _.createElement(_._, {
-                    srcs: _(
-                      _._.IMG_URL +
-                        "mobile/localizedimages/googleplaystore/google_play_store_",
-                      ".png",
-                    ),
-                    className: _.GooglePlayStoreImg,
-                  }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)(
-                  "#accountpreferences_account_security_apk_download",
-                  _.createElement("a", {
-                    href: `https://media.steampowered.com/apps/steam-android/steam-${_}.apk`,
-                  }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "a",
-                  {
-                    href: _,
-                    target: "_blank",
-                  },
-                  (0, _._)("#accountpreferences_account_security_mobile_faq"),
-                ),
-              ),
-            ),
-          ),
-        );
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _.Divider,
+            }),
+            (0, _.jsxs)("div", {
+              className: _.NoSteamGuardBody,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.QROuterCtn,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.GetMobileAppCtn,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.GetMobileAppText,
+                          children: (0, _._)(
+                            "#accountpreferences_account_security_get_app",
+                            (0, _.jsx)(_._, {
+                              href:
+                                _._.STORE_BASE_URL + "mobile#mobile_section",
+                            }),
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          children: (0, _._)(
+                            "#accountpreferences_account_security_scan_qr",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("img", {
+                      src: _,
+                      className: _.QRCode,
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.MobileAppLinksCtn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#accountpreferences_account_security_mobile_os_reqs",
+                      ),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.MobileAppDownloadImages,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          href: "https://itunes.apple.com/us/app/steam-mobile/id495369748",
+                          rel: "noopener",
+                          target: "_blank",
+                          children: (0, _.jsx)(_._, {
+                            srcs: _(
+                              _._.IMG_URL +
+                                "mobile/localizedimages/appleappstore/apple_store_",
+                              ".png",
+                            ),
+                            className: _.AppleAppStoreImg,
+                          }),
+                        }),
+                        (0, _.jsx)(_._, {
+                          href: "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community",
+                          rel: "noopener",
+                          target: "_blank",
+                          children: (0, _.jsx)(_._, {
+                            srcs: _(
+                              _._.IMG_URL +
+                                "mobile/localizedimages/googleplaystore/google_play_store_",
+                              ".png",
+                            ),
+                            className: _.GooglePlayStoreImg,
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#accountpreferences_account_security_apk_download",
+                        (0, _.jsx)("a", {
+                          href: `https://media.steampowered.com/apps/steam-android/steam-${_}.apk`,
+                        }),
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      children: (0, _.jsx)("a", {
+                        href: _,
+                        target: "_blank",
+                        children: (0, _._)(
+                          "#accountpreferences_account_security_mobile_faq",
+                        ),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_, _) {
         const _ = _._.GetLanguageFallback(_._.LANGUAGE);
@@ -3206,27 +2823,26 @@
       function _(_) {
         const _ = _.Get(),
           _ = _._.IN_MOBILE_WEBVIEW;
-        return _.createElement(
-          "div",
-          {
-            className: _.AccountDetailsSubBlock,
-          },
-          _.createElement(_, {
-            strLabel: (0, _._)(
-              "#accountpreferences_account_security_account_name",
-            ),
-            strText: _.GetAccountName(),
-          }),
-          _.createElement(_, {
-            strLabel: (0, _._)(
-              "#accountpreferences_account_security_change_pass",
-            ),
-            href:
-              _._.HELP_BASE_URL +
-              "wizard/HelpChangePassword?redir=store/account/",
-            target: _ ? "_blank" : void 0,
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: _.AccountDetailsSubBlock,
+          children: [
+            (0, _.jsx)(_, {
+              strLabel: (0, _._)(
+                "#accountpreferences_account_security_account_name",
+              ),
+              strText: _.GetAccountName(),
+            }),
+            (0, _.jsx)(_, {
+              strLabel: (0, _._)(
+                "#accountpreferences_account_security_change_pass",
+              ),
+              href:
+                _._.HELP_BASE_URL +
+                "wizard/HelpChangePassword?redir=store/account/",
+              target: _ ? "_blank" : void 0,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { msgTwoFactorStatus: _ } = _,
@@ -3234,55 +2850,53 @@
           _ = _.email_validated,
           _ = _.steamguard_scheme == _.k_ETwoFactorTokenSteamguardScheme_Email,
           _ = _._.IN_MOBILE_WEBVIEW;
-        return _.createElement(
-          "div",
-          {
-            className: _.AccountDetailsSubBlock,
-          },
-          _.createElement(_, {
-            strLabel: (0, _._)("#accountpreferences_account_security_email"),
-            strText: __webpack_require__.GetEmailAddress(),
-          }),
-          _.createElement(_, {
-            strLabel: (0, _._)(
-              "#accountpreferences_account_security_email_status",
-            ),
-            strText: _
-              ? (0, _._)("#youraccount_email_verified")
-              : (0, _._)("#youraccount_email_unverified"),
-          }),
-          _ &&
-            _.createElement(_, {
-              strLabel: (0, _._)(
-                "#accountpreferences_account_security_verification",
-              ),
-              strText: (0, _._)(
-                "#accountpreferences_account_security_via_email",
-              ),
+        return (0, _.jsxs)("div", {
+          className: _.AccountDetailsSubBlock,
+          children: [
+            (0, _.jsx)(_, {
+              strLabel: (0, _._)("#accountpreferences_account_security_email"),
+              strText: __webpack_require__.GetEmailAddress(),
             }),
-          _.createElement(
-            "div",
-            {
-              className: _.EmailActions,
-            },
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               strLabel: (0, _._)(
-                "#accountpreferences_account_security_change_email",
+                "#accountpreferences_account_security_email_status",
               ),
-              href:
-                _._.HELP_BASE_URL +
-                "wizard/HelpChangeEmail?redir=store/account/",
-              target: _ ? "_blank" : void 0,
+              strText: _
+                ? (0, _._)("#youraccount_email_verified")
+                : (0, _._)("#youraccount_email_unverified"),
             }),
             _ &&
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 strLabel: (0, _._)(
-                  "#accountpreferences_account_security_remove_email_guard",
+                  "#accountpreferences_account_security_verification",
                 ),
-                href: _._.STORE_BASE_URL + "twofactor/manage",
+                strText: (0, _._)(
+                  "#accountpreferences_account_security_via_email",
+                ),
               }),
-          ),
-        );
+            (0, _.jsxs)("div", {
+              className: _.EmailActions,
+              children: [
+                (0, _.jsx)(_, {
+                  strLabel: (0, _._)(
+                    "#accountpreferences_account_security_change_email",
+                  ),
+                  href:
+                    _._.HELP_BASE_URL +
+                    "wizard/HelpChangeEmail?redir=store/account/",
+                  target: _ ? "_blank" : void 0,
+                }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    strLabel: (0, _._)(
+                      "#accountpreferences_account_security_remove_email_guard",
+                    ),
+                    href: _._.STORE_BASE_URL + "twofactor/manage",
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = _.Get();
@@ -3293,74 +2907,68 @@
               "#accountpreferences_account_security_phone_hint",
               _.GetPhoneHint(),
             )),
-          _.createElement(
-            "div",
-            {
-              className: _.AccountDetailsSubBlock,
-            },
-            _.createElement(_, {
-              strLabel: (0, _._)("#accountpreferences_account_security_phone"),
-              strText: _,
-            }),
-            _.createElement(_, {
-              strLabel: (0, _._)(
-                "#accountpreferences_account_security_manage_phone",
-              ),
-              href: _._.STORE_BASE_URL + "phone/manage",
-            }),
-          )
+          (0, _.jsxs)("div", {
+            className: _.AccountDetailsSubBlock,
+            children: [
+              (0, _.jsx)(_, {
+                strLabel: (0, _._)(
+                  "#accountpreferences_account_security_phone",
+                ),
+                strText: _,
+              }),
+              (0, _.jsx)(_, {
+                strLabel: (0, _._)(
+                  "#accountpreferences_account_security_manage_phone",
+                ),
+                href: _._.STORE_BASE_URL + "phone/manage",
+              }),
+            ],
+          })
         );
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.AccountDetailsSubBlock,
-          },
-          _.createElement(_, {
-            strLabel: (0, _._)(
-              "#accountpreferences_account_security_backup_codes",
-            ),
-          }),
-          _.createElement(_, {
-            strLabel: (0, _._)(
-              "#accountpreferences_account_security_get_backup_codes",
-            ),
-            href: _._.STORE_BASE_URL + "twofactor/emergency_codes",
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: _.AccountDetailsSubBlock,
+          children: [
+            (0, _.jsx)(_, {
+              strLabel: (0, _._)(
+                "#accountpreferences_account_security_backup_codes",
+              ),
+            }),
+            (0, _.jsx)(_, {
+              strLabel: (0, _._)(
+                "#accountpreferences_account_security_get_backup_codes",
+              ),
+              href: _._.STORE_BASE_URL + "twofactor/emergency_codes",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { strLabel: _, strText: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("span", {
               className: _.AccountDetailLabel,
-            },
-            _,
-          ),
-          !!__webpack_require__ &&
-            _.createElement("span", null, __webpack_require__),
-        );
+              children: _,
+            }),
+            !!__webpack_require__ &&
+              (0, _.jsx)("span", {
+                children: __webpack_require__,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { strLabel: _, href: __webpack_require__, target: _ } = _;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            _._,
-            {
-              className: _.AccountActionButton,
-              href: __webpack_require__,
-              target: _,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          children: (0, _.jsx)(_._, {
+            className: _.AccountActionButton,
+            href: __webpack_require__,
+            target: _,
+            children: _,
+          }),
+        });
       }
       !(function (_) {
         (_[(_.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
@@ -3372,11 +2980,6 @@
       })(_ || (_ = {}));
       const _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3399,80 +3002,71 @@
         _ = (_) => {
           const _ = _.match.url,
             _ = _;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              path: `${_}${__webpack_require__.CookieSettings()}`,
-              render: () =>
-                _.createElement(_._, {
-                  config: {
-                    "cookie-preferences": () => _.createElement(_, null),
-                  },
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_}${__webpack_require__.NotificationSettings()}`,
-              render: () =>
-                _.createElement(_._, {
-                  config: {
-                    "notification-settings": () => _.createElement(_, null),
-                  },
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_}${__webpack_require__.FamilyManagement()}`,
-              render: () =>
-                _.createElement(_._, {
-                  config: {
-                    "family-management": () => _.createElement(_, null),
-                  },
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_}${__webpack_require__.SecurityDevices()}`,
-              render: () =>
-                _.createElement(_._, {
-                  config: {
-                    "security-devices": () => _.createElement(_, null),
-                  },
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_}${__webpack_require__.PlaytestInvites()}`,
-              render: () =>
-                _.createElement(_._, {
-                  config: {
-                    "playtest-invites": () =>
-                      _.createElement(_, {
-                        bShowPlaytestOverview: !0,
-                      }),
-                  },
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_}${__webpack_require__.Playtests()}`,
-              render: () =>
-                _.createElement(_._, {
-                  config: {
-                    playtests: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                      }),
-                  },
-                }),
-            }),
-          );
+          return (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
+                path: `${_}${__webpack_require__.CookieSettings()}`,
+                render: () =>
+                  (0, _.jsx)(_._, {
+                    config: {
+                      "cookie-preferences": () => (0, _.jsx)(_, {}),
+                    },
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_}${__webpack_require__.NotificationSettings()}`,
+                render: () =>
+                  (0, _.jsx)(_._, {
+                    config: {
+                      "notification-settings": () => (0, _.jsx)(_, {}),
+                    },
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_}${__webpack_require__.FamilyManagement()}`,
+                render: () =>
+                  (0, _.jsx)(_._, {
+                    config: {
+                      "family-management": () => (0, _.jsx)(_, {}),
+                    },
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_}${__webpack_require__.SecurityDevices()}`,
+                render: () =>
+                  (0, _.jsx)(_._, {
+                    config: {
+                      "security-devices": () => (0, _.jsx)(_, {}),
+                    },
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_}${__webpack_require__.PlaytestInvites()}`,
+                render: () =>
+                  (0, _.jsx)(_._, {
+                    config: {
+                      "playtest-invites": () =>
+                        (0, _.jsx)(_, {
+                          bShowPlaytestOverview: !0,
+                        }),
+                    },
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_}${__webpack_require__.Playtests()}`,
+                render: () =>
+                  (0, _.jsx)(_._, {
+                    config: {
+                      playtests: (_) =>
+                        (0, _.jsx)(_, {
+                          ..._,
+                        }),
+                    },
+                  }),
+              }),
+            ],
+          });
         };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        __webpack_require__._ +
-        "images/applications/store/defaultappheader.png?v=valveisgoodatcaching";
     },
   },
 ]);

@@ -496,31 +496,27 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { parentAppId: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.Warning, _.Critical),
-          },
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#App_Landing_DemoWishlist_Demo_NotVisible"),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)(
-              "#App_Landing_DemoWishlist_Demo_NotVisible_Publish",
-              _.createElement("a", {
-                href: `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_}?activetab=tab_specialsettings#associated_demos`,
-                target: "_blank",
-              }),
-            ),
-          ),
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.Warning, _.Critical),
+          children: [
+            (0, _.jsx)("p", {
+              children: (0, _._)("#App_Landing_DemoWishlist_Demo_NotVisible"),
+            }),
+            (0, _.jsx)("p", {
+              children: (0, _._)(
+                "#App_Landing_DemoWishlist_Demo_NotVisible_Publish",
+                (0, _.jsx)("a", {
+                  href: `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_}?activetab=tab_specialsettings#associated_demos`,
+                  target: "_blank",
+                }),
+              ),
+            }),
+          ],
+        });
       }
       const _ = 7,
         _ = 7;
@@ -570,56 +566,49 @@
           _ = !_ && _ && new Date(1e3 * _) > new Date();
         if (_ || _) {
           const _ = `${_._.PARTNER_BASE_URL}doc/marketing/wishlist`;
-          return _.createElement(
-            "div",
-            {
-              className: _.DemoWishlistCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.DemoWishlistCtn,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.Header,
-              },
-              _.createElement(
-                "h2",
-                null,
-                (0, _._)("#App_Landing_DemoWishlist_Title"),
-              ),
-              _.createElement(
-                "a",
-                {
-                  className: _.DocumentationLink,
-                  href: _,
-                },
-                (0, _._)("#App_Landing_DemoWishlist_Link"),
-              ),
-            ),
-            _ &&
-              _.createElement(_, {
-                demoAppID: _,
-                parentAppId: __webpack_require__,
-                bSendEmailsSucceeded: _,
-                setSendEmailsSucceeded: _,
-                bIsDemoVisible: _,
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: (0, _._)("#App_Landing_DemoWishlist_Title"),
+                  }),
+                  (0, _.jsx)("a", {
+                    className: _.DocumentationLink,
+                    href: _,
+                    children: (0, _._)("#App_Landing_DemoWishlist_Link"),
+                  }),
+                ],
               }),
-            _ &&
-              !_ &&
-              _.createElement(_, {
-                demoAppID: _,
-                parentAppId: __webpack_require__,
-              }),
-            _ &&
               _ &&
-              _.createElement("hr", {
-                className: _.BothSeparator,
-              }),
-            _ &&
-              _.createElement(_, {
-                parentAppId: __webpack_require__,
-                timeStaged: _,
-                noticeVisibleToDate: _,
-              }),
-          );
+                (0, _.jsx)(_, {
+                  demoAppID: _,
+                  parentAppId: __webpack_require__,
+                  bSendEmailsSucceeded: _,
+                  setSendEmailsSucceeded: _,
+                  bIsDemoVisible: _,
+                }),
+              _ &&
+                !_ &&
+                (0, _.jsx)(_, {
+                  demoAppID: _,
+                  parentAppId: __webpack_require__,
+                }),
+              _ &&
+                _ &&
+                (0, _.jsx)("hr", {
+                  className: _.BothSeparator,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  parentAppId: __webpack_require__,
+                  timeStaged: _,
+                  noticeVisibleToDate: _,
+                }),
+            ],
+          });
         }
       }
       function _(_) {
@@ -748,149 +737,131 @@
             };
           })(__webpack_require__, _),
           _ = _.every((_) => !_.bCritical);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: _.SubTitle,
-            },
-            (0, _._)("#App_Landing_DemoWishlist_SubTitle"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#App_Landing_DemoWishlist_SubTitle"),
+            }),
+            (0, _.jsx)("div", {
               className: _.Description,
-            },
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#App_Landing_DemoWishlist_Desc"),
-            ),
-          ),
-          _
-            ? _.createElement(_._, null)
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: _.sText,
-                      className: (0, _._)(_.Warning, _.bCritical && _.Critical),
-                    },
-                    _.createElement("p", null, _.sText),
-                  ),
-                ),
-                void 0 === _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ButtonRow,
-                      },
-                      _.createElement(
-                        _._,
+              children: (0, _.jsx)("p", {
+                children: (0, _._)("#App_Landing_DemoWishlist_Desc"),
+              }),
+            }),
+            _
+              ? (0, _.jsx)(_._, {})
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        "div",
                         {
                           className: (0, _._)(
-                            "btn_green_steamui btn_border_2px btn_medium",
-                            _.ButtonDemoWishlistEmails,
+                            _.Warning,
+                            _.bCritical && _.Critical,
                           ),
-                          disabled: _ || !_ || !_,
-                          onClick: () => _(!0),
+                          children: (0, _.jsx)("p", {
+                            children: _.sText,
+                          }),
                         },
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(
-                            "#App_Landing_DemoWishlist_SendEmailsButton",
-                          ),
-                        ),
+                        _.sText,
                       ),
-                      _ &&
-                        _.createElement(_._, {
-                          className: _.InProgressThrobber,
-                          size: "small",
-                        }),
                     ),
-                  ),
-                void 0 !== _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ButtonRow,
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.DemoWishlistSendSucceeded,
-                        },
-                        (0, _._)(
-                          "#App_Landing_DemoWishlist_SendEmails_Succeeded",
-                        ),
-                      ),
-                    !_ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.DemoWishlistSendFailed,
-                        },
-                        (0, _._)("#App_Landing_DemoWishlist_SendEmails_Failed"),
-                      ),
-                  ),
-              ),
-          _ &&
-            _.createElement(
-              _._,
-              {
+                    void 0 === _ &&
+                      (0, _.jsx)(_.Fragment, {
+                        children: (0, _.jsxs)("div", {
+                          className: _.ButtonRow,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              className: (0, _._)(
+                                "btn_green_steamui btn_border_2px btn_medium",
+                                _.ButtonDemoWishlistEmails,
+                              ),
+                              disabled: _ || !_ || !_,
+                              onClick: () => _(!0),
+                              children: (0, _.jsx)("span", {
+                                children: (0, _._)(
+                                  "#App_Landing_DemoWishlist_SendEmailsButton",
+                                ),
+                              }),
+                            }),
+                            _ &&
+                              (0, _.jsx)(_._, {
+                                className: _.InProgressThrobber,
+                                size: "small",
+                              }),
+                          ],
+                        }),
+                      }),
+                    void 0 !== _ &&
+                      (0, _.jsxs)("div", {
+                        className: _.ButtonRow,
+                        children: [
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _.DemoWishlistSendSucceeded,
+                              children: (0, _._)(
+                                "#App_Landing_DemoWishlist_SendEmails_Succeeded",
+                              ),
+                            }),
+                          !_ &&
+                            (0, _.jsx)("div", {
+                              className: _.DemoWishlistSendFailed,
+                              children: (0, _._)(
+                                "#App_Landing_DemoWishlist_SendEmails_Failed",
+                              ),
+                            }),
+                        ],
+                      }),
+                  ],
+                }),
+            _ &&
+              (0, _.jsxs)(_._, {
                 active: !0,
                 className: _.ControllerWizardModal,
-              },
-              _.createElement(
-                "h1",
-                null,
-                (0, _._)("#App_Landing_DemoWishlist_Dialog_Header"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _.WizardBody,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#App_Landing_DemoWishlist_Dialog_Desc"),
-                ),
-                _.createElement(
-                  "h2",
-                  null,
-                  (0, _._)("#App_Landing_DemoWishlist_Dialog_ListTitle"),
-                ),
-                _.createElement(
-                  "ul",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_DemoWishlist_Dialog_List",
-                    _.createElement("li", null),
-                    _.createElement("b", null),
-                  ),
-                ),
-              ),
-              _.createElement(_._, {
-                onOK: _,
-                strOKText: (0, _._)("#App_Landing_DemoWishlist_Dialog_Confirm"),
-                onCancel: () => _(!1),
-                strCancelText: (0, _._)(
-                  "#App_Landing_DemoWishlist_Dialog_Cancel",
-                ),
+                children: [
+                  (0, _.jsx)("h1", {
+                    children: (0, _._)(
+                      "#App_Landing_DemoWishlist_Dialog_Header",
+                    ),
+                  }),
+                  (0, _.jsxs)(_._, {
+                    className: _.WizardBody,
+                    children: [
+                      (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#App_Landing_DemoWishlist_Dialog_Desc",
+                        ),
+                      }),
+                      (0, _.jsx)("h2", {
+                        children: (0, _._)(
+                          "#App_Landing_DemoWishlist_Dialog_ListTitle",
+                        ),
+                      }),
+                      (0, _.jsx)("ul", {
+                        children: (0, _._)(
+                          "#App_Landing_DemoWishlist_Dialog_List",
+                          (0, _.jsx)("li", {}),
+                          (0, _.jsx)("b", {}),
+                        ),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    onOK: _,
+                    strOKText: (0, _._)(
+                      "#App_Landing_DemoWishlist_Dialog_Confirm",
+                    ),
+                    onCancel: () => _(!1),
+                    strCancelText: (0, _._)(
+                      "#App_Landing_DemoWishlist_Dialog_Cancel",
+                    ),
+                  }),
+                ],
               }),
-            ),
-        );
+          ],
+        });
       }
       function _(_) {
         const {
@@ -913,35 +884,32 @@
             day: "numeric",
           }).format(1e3 * _),
           _ = `${_._.STATS_BASE_URL}app/wishlist/${_}/?dateStart=${_}&dateEnd=${_}`;
-        return _.createElement(
-          "div",
-          {
-            className: _.Description,
-          },
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#App_Landing_DemoWishlist_SentRecently_Desc", _),
-          ),
-          _.createElement(
-            "p",
-            null,
-            _.createElement(
-              "a",
-              {
+        return (0, _.jsxs)("div", {
+          className: _.Description,
+          children: [
+            (0, _.jsx)("p", {
+              children: (0, _._)(
+                "#App_Landing_DemoWishlist_SentRecently_Desc",
+                _,
+              ),
+            }),
+            (0, _.jsx)("p", {
+              children: (0, _.jsx)("a", {
                 href: _,
-              },
-              (0, _._)("#App_Landing_DemoWishlist_SentRecently_ViewStats"),
-            ),
-          ),
-          _.createElement(
-            "p",
-            {
+                children: (0, _._)(
+                  "#App_Landing_DemoWishlist_SentRecently_ViewStats",
+                ),
+              }),
+            }),
+            (0, _.jsx)("p", {
               className: _.Notice,
-            },
-            (0, _._)("#App_Landing_DemoWishlist_SentRecently_Notice", _),
-          ),
-        );
+              children: (0, _._)(
+                "#App_Landing_DemoWishlist_SentRecently_Notice",
+                _,
+              ),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -963,7 +931,7 @@
       function _(_) {
         const { nPartnerID: _, nAppID: __webpack_require__ } = _;
         return _._.is_support
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               nPartnerID: _,
               nAppID: __webpack_require__,
             })
@@ -998,29 +966,25 @@
             return _ ? null : _;
           })(_, _, __webpack_require__);
         return _ && 0 != _.daily_sales?.length
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.AppDashboard, "valveOutline padded"),
-              },
-              _.createElement(
-                "p",
-                {
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_.AppDashboard, "valveOutline padded"),
+              children: [
+                (0, _.jsx)("p", {
                   className: "valveh2",
-                },
-                "Valve Only:",
-              ),
-              _.createElement(_, {
-                nDaysInThePast: _,
-                fnUpdateDaysInPast: _,
-              }),
-              _.createElement(_, {
-                stats: _,
-              }),
-              _.createElement(_, {
-                stats: _,
-              }),
-            )
+                  children: "Valve Only:",
+                }),
+                (0, _.jsx)(_, {
+                  nDaysInThePast: _,
+                  fnUpdateDaysInPast: _,
+                }),
+                (0, _.jsx)(_, {
+                  stats: _,
+                }),
+                (0, _.jsx)(_, {
+                  stats: _,
+                }),
+              ],
+            })
           : null;
       }
       const _ = [
@@ -1040,45 +1004,34 @@
       function _(_) {
         const { nDaysInThePast: _, fnUpdateDaysInPast: __webpack_require__ } =
           _;
-        return _.createElement(
-          "div",
-          {
-            className: _.ModuleCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ModuleCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.LeftAlign,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ModuleTitle,
-              },
-              (0, _._)("#PartnerStats_DayLabel"),
-            ),
-            _.createElement(_._, {
-              layout: "inline",
-              label: null,
-              rgOptions: _,
-              selectedOption: _,
-              onChange: (_) => __webpack_require__(_.data),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.ModuleTitle,
+                  children: (0, _._)("#PartnerStats_DayLabel"),
+                }),
+                (0, _.jsx)(_._, {
+                  layout: "inline",
+                  label: null,
+                  rgOptions: _,
+                  selectedOption: _,
+                  onChange: (_) => __webpack_require__(_.data),
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _.ViewDetailLink,
-            },
-            _.createElement(
-              "a",
-              {
+              children: (0, _.jsx)("a", {
                 href: "#",
-              },
-              (0, _._)("#PartnerStats_ViewDetail"),
-            ),
-          ),
-        );
+                children: (0, _._)("#PartnerStats_ViewDetail"),
+              }),
+            }),
+          ],
+        });
       }
       const _ = new Intl.NumberFormat("en-US", {
         style: "currency",
@@ -1086,64 +1039,52 @@
         maximumFractionDigits: 0,
         minimumFractionDigits: 0,
       });
+      function _(..._) {
+        let _ = 0;
+        return (
+          _.forEach((_) => {
+            _ += Number.parseInt(_ || "0") / 1e4;
+          }),
+          _.format(_)
+        );
+      }
       function _(_) {
         const { stats: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.HeaderCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.HeaderCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.StatGroup,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Header,
-              },
-              (0, _._)("#PartnerStats_Header_Revenue"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Numerals,
-              },
-              (function (..._) {
-                let _ = 0;
-                return (
-                  _.forEach((_) => {
-                    _ += Number.parseInt(_ || "0") / 1e4;
-                  }),
-                  _.format(_)
-                );
-              })(_.summary_sales.total_gross_sales_usdx100),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Header,
+                  children: (0, _._)("#PartnerStats_Header_Revenue"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.Numerals,
+                  children: _(_.summary_sales.total_gross_sales_usdx100),
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _.StatGroup,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Header,
-              },
-              (0, _._)("#PartnerStats_Header_Units"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Numerals,
-              },
-              (0, _._)(
-                Number.parseInt(_.summary_sales.steam_gross_units_sold || "0"),
-              ),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Header,
+                  children: (0, _._)("#PartnerStats_Header_Units"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.Numerals,
+                  children: (0, _._)(
+                    Number.parseInt(
+                      _.summary_sales.steam_gross_units_sold || "0",
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { stats: _ } = _,
@@ -1177,26 +1118,18 @@
             );
           }, [_, _]);
         return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              {
-                className: _.DashStatsContainer,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Chart,
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
+          ? (0, _.jsx)("div", {
+              className: _.DashStatsContainer,
+              children: (0, _.jsx)("div", {
+                className: _.Chart,
+                children: (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_, {
                     Data: _,
                     nPeak: _,
                   }),
-                ),
-              ),
-            )
+                }),
+              }),
+            })
           : null;
       }
       const _ = _.memo((_) => {
@@ -1224,95 +1157,82 @@
                   : "",
             [_],
           );
-        return _.createElement(
-          _._,
-          {
-            width: "100%",
-            height: "100%",
-          },
-          _.createElement(
-            _._,
-            {
-              data: _,
-              margin: {
-                top: 25,
-                left: 0,
-                right: 0,
-                bottom: 0,
-              },
-              barGap: 10,
+        return (0, _.jsx)(_._, {
+          width: "100%",
+          height: "100%",
+          children: (0, _.jsxs)(_._, {
+            data: _,
+            margin: {
+              top: 25,
+              left: 0,
+              right: 0,
+              bottom: 0,
             },
-            _.createElement(
-              "defs",
-              null,
-              _.createElement(
-                "linearGradient",
-                {
+            barGap: 10,
+            children: [
+              (0, _.jsx)("defs", {
+                children: (0, _.jsxs)("linearGradient", {
                   _: "bar_linear",
                   _: "0",
                   _: "0",
                   _: "0",
                   _: "1",
+                  children: [
+                    (0, _.jsx)("stop", {
+                      stopColor: "#1A9FFF",
+                    }),
+                    (0, _.jsx)("stop", {
+                      offset: "1",
+                      stopColor: "#1A9FFF",
+                      stopOpacity: "1",
+                    }),
+                  ],
+                }),
+              }),
+              (0, _.jsx)(_._, {
+                vertical: !1,
+                stroke: "#a0aab6",
+              }),
+              (0, _.jsx)(_._, {
+                tickFormatter: _._,
+                tick: {
+                  fill: "white",
                 },
-                _.createElement("stop", {
-                  stopColor: "#1A9FFF",
-                }),
-                _.createElement("stop", {
-                  offset: "1",
-                  stopColor: "#1A9FFF",
-                  stopOpacity: "1",
-                }),
-              ),
-            ),
-            _.createElement(_._, {
-              vertical: !1,
-              stroke: "#a0aab6",
-            }),
-            _.createElement(_._, {
-              tickFormatter: _._,
-              tick: {
-                fill: "white",
-              },
-              axisLine: !1,
-              orientation: "right",
-            }),
-            _.createElement(_._, {
-              content: _.createElement(_, null),
-            }),
-            _.createElement(_._, {
-              dataKey: "partner_stats_value",
-              fill: "url( #bar_linear )",
-            }),
-            _.createElement(_._, {
-              interval: 0,
-              tick: _.createElement(_, null),
-              tickFormatter: _,
-            }),
-          ),
-        );
+                axisLine: !1,
+                orientation: "right",
+              }),
+              (0, _.jsx)(_._, {
+                content: (0, _.jsx)(_, {}),
+              }),
+              (0, _.jsx)(_._, {
+                dataKey: "partner_stats_value",
+                fill: "url( #bar_linear )",
+              }),
+              (0, _.jsx)(_._, {
+                interval: 0,
+                tick: (0, _.jsx)(_, {}),
+                tickFormatter: _,
+              }),
+            ],
+          }),
+        });
       });
       function _(_) {
         const { _: _, _: __webpack_require__, payload: _ } = _,
           _ = _.tickFormatter(_.value, _.index);
-        return _.createElement(
-          "g",
-          {
-            transform: `translate(${_},${__webpack_require__})`,
-          },
-          _.createElement(
-            "text",
-            {
-              _: 0,
-              _: 0,
-              _: 16,
-              textAnchor: "middle",
-              fill: "#FFFFFF",
-              transform: "rotate(0)",
-              fontSize: "11px",
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)("g", {
+          transform: `translate(${_},${__webpack_require__})`,
+          children: (0, _.jsx)("text", {
+            _: 0,
+            _: 0,
+            _: 16,
+            textAnchor: "middle",
+            fill: "#FFFFFF",
+            transform: "rotate(0)",
+            fontSize: "11px",
+            children: _,
+          }),
+        });
       }
       function _({ active: _, payload: _ }) {
         if (_ && _ && _.length) {
@@ -1325,99 +1245,82 @@
                 Number.parseInt(_.app_summary_sales.total_gross_sales_usdx100) /
                 1e4;
             }),
-            _.createElement(
-              _._,
-              {
-                className: _.TooltipPartnerSummary,
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#PartnerStats_Tooltip_Date", (0, _._)(_.rtime)),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.LineItemsCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ToolTipTable,
-                  },
-                  _.top_app_sales.map((_) => {
-                    const _ =
-                      (Number.parseInt(
-                        _.app_summary_sales.total_gross_sales_usdx100,
-                      ) /
-                        1e4 /
-                        _) *
-                      100;
-                    return _.createElement(_, {
-                      key: "app" + _.appid,
-                      appid: _.appid,
-                      usdRevenue:
-                        Number.parseInt(
-                          _.app_summary_sales.total_gross_sales_usdx100,
-                        ) / 1e4,
-                      nPercentage: _,
-                    });
-                  }),
-                  Boolean(_ > 2) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ToolTipTableRow,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ToolTipTableCell,
-                        },
-                        (0, _._)("#PartnerStats_Tooltip_Remaining"),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ToolTipTableCell,
-                        },
-                        (0, _._)(_),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ToolTipTableCell,
-                        },
-                        Math.round((_ / _) * 100),
-                        "%",
-                      ),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.ToolTipTableRow, _.TotalRow),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ToolTipTableCell,
-                      },
-                      (0, _._)("#PartnerStats_Tooltip_Total"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ToolTipTableCell,
-                      },
-                      (0, _._)(_),
-                    ),
-                    _.createElement("div", {
-                      className: _.ToolTipTableCell,
-                    }),
+            (0, _.jsxs)(_._, {
+              className: _.TooltipPartnerSummary,
+              children: [
+                (0, _.jsx)("div", {
+                  children: (0, _._)(
+                    "#PartnerStats_Tooltip_Date",
+                    (0, _._)(_.rtime),
                   ),
-                ),
-              ),
-            )
+                }),
+                (0, _.jsx)("div", {
+                  className: _.LineItemsCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _.ToolTipTable,
+                    children: [
+                      _.top_app_sales.map((_) => {
+                        const _ =
+                          (Number.parseInt(
+                            _.app_summary_sales.total_gross_sales_usdx100,
+                          ) /
+                            1e4 /
+                            _) *
+                          100;
+                        return (0, _.jsx)(
+                          _,
+                          {
+                            appid: _.appid,
+                            usdRevenue:
+                              Number.parseInt(
+                                _.app_summary_sales.total_gross_sales_usdx100,
+                              ) / 1e4,
+                            nPercentage: _,
+                          },
+                          "app" + _.appid,
+                        );
+                      }),
+                      Boolean(_ > 2) &&
+                        (0, _.jsxs)("div", {
+                          className: _.ToolTipTableRow,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.ToolTipTableCell,
+                              children: (0, _._)(
+                                "#PartnerStats_Tooltip_Remaining",
+                              ),
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _.ToolTipTableCell,
+                              children: (0, _._)(_),
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.ToolTipTableCell,
+                              children: [Math.round((_ / _) * 100), "%"],
+                            }),
+                          ],
+                        }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_.ToolTipTableRow, _.TotalRow),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.ToolTipTableCell,
+                            children: (0, _._)("#PartnerStats_Tooltip_Total"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.ToolTipTableCell,
+                            children: (0, _._)(_),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.ToolTipTableCell,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            })
           );
         }
         return null;
@@ -1425,34 +1328,23 @@
       function _(_) {
         const { appid: _, usdRevenue: __webpack_require__, nPercentage: _ } = _,
           [_] = (0, _._)(_, {});
-        return _.createElement(
-          "div",
-          {
-            className: _.ToolTipTableRow,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.ToolTipTableRow,
+          children: [
+            (0, _.jsx)("div", {
               className: _.ToolTipTableCell,
-            },
-            _?.GetName() || _,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _?.GetName() || _,
+            }),
+            (0, _.jsx)("div", {
               className: _.ToolTipTableCell,
-            },
-            (0, _._)(__webpack_require__),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)(__webpack_require__),
+            }),
+            (0, _.jsxs)("div", {
               className: _.ToolTipTableCell,
-            },
-            Math.round(_),
-            "%",
-          ),
-        );
+              children: [Math.round(_), "%"],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { nAppId: _, strAppType: __webpack_require__ } = _,
@@ -1462,7 +1354,7 @@
             "Application" == __webpack_require__ ||
             "DLC" == __webpack_require__ ||
             "Music" == __webpack_require__) &&
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             nPartnerID: _,
             nAppID: _,
           })
@@ -1476,7 +1368,7 @@
         } = _;
         return (
           "Demo" == _ &&
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             demoAppID: _,
             parentAppId: __webpack_require__,
           })
@@ -1503,39 +1395,34 @@
                 : [];
             })(_),
           );
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            null,
-            _.map((_, _) =>
-              _.createElement(_, {
-                schema: _,
-                index: _,
-                onUpdate: (_) => {
-                  ((_, _) => {
-                    const _ = _.map((_, _) => (_ === _ ? _ : _));
-                    _(_);
-                  })(_, _);
-                },
-                onRemove: (_) =>
-                  ((_) => {
-                    const _ = _.slice();
-                    _.splice(_, 1), _(_);
-                  })(_),
-                key: _,
-              }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("div", {
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    schema: _,
+                    index: _,
+                    onUpdate: (_) => {
+                      ((_, _) => {
+                        const _ = _.map((_, _) => (_ === _ ? _ : _));
+                        _(_);
+                      })(_, _);
+                    },
+                    onRemove: (_) =>
+                      ((_) => {
+                        const _ = _.slice();
+                        _.splice(_, 1), _(_);
+                      })(_),
+                  },
+                  _,
+                ),
+              ),
+            }),
+            (0, _.jsx)("div", {
               className: _.AddPropertyButton,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 onClick: () => {
                   const _ = _.slice();
                   _.push({
@@ -1548,18 +1435,12 @@
                   }),
                     _(_);
                 },
-              },
-              "Add Property",
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+                children: "Add Property",
+              }),
+            }),
+            (0, _.jsx)("div", {
               className: _.SaveButton,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 onClick: async () => {
                   _("");
                   const _ = new FormData();
@@ -1578,18 +1459,15 @@
                     ? _("Saved successfully")
                     : _("Failed to save properties");
                 },
-              },
-              "Save",
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+                children: "Save",
+              }),
+            }),
+            (0, _.jsx)("div", {
               className: _.StatusMessage,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1598,103 +1476,108 @@
           onUpdate: _,
           onRemove: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.AssetPropertyRow,
-          },
-          _.createElement("div", null, "ID"),
-          _.createElement(_._, {
-            className: _.PropertyID,
-            type: "number",
-            value: 0 !== _._ ? _._ : "",
-            placeholder: "Property id",
-            onChange: (_) => {
-              _({
-                ..._,
-                _: _.target.valueAsNumber,
-              });
-            },
-          }),
-          _.createElement("div", null, "Name"),
-          _.createElement(_._, {
-            className: _.PropertyName,
-            type: "text",
-            value: _.name,
-            placeholder: "Property name",
-            onChange: (_) => {
-              _({
-                ..._,
-                name: _.target.value,
-              });
-            },
-          }),
-          _.createElement("div", null, "Type"),
-          _.createElement(_, {
-            propertyType: _.type,
-            onUpdateType: (_) => {
-              _({
-                ..._,
-                type: _,
-              });
-            },
-          }),
-          _.createElement("div", null, "Min"),
-          _.createElement(_._, {
-            className: _.PropertyRange,
-            type: "number",
-            value: _.min ?? "",
-            placeholder: "Min value",
-            onChange: (_) => {
-              _({
-                ..._,
-                min: _.target.valueAsNumber,
-              });
-            },
-          }),
-          _.createElement("div", null, "Max"),
-          _.createElement(_._, {
-            className: _.PropertyRange,
-            type: "number",
-            value: _.max ?? "",
-            placeholder: "Max value",
-            onChange: (_) => {
-              _({
-                ..._,
-                max: _.target.valueAsNumber,
-              });
-            },
-          }),
-          _.createElement("div", null, "Hide"),
-          _.createElement(_._, {
-            className: _.HideFromDescription,
-            type: "checkbox",
-            checked: _.hide_from_description,
-            onChange: (_) => {
-              _({
-                ..._,
-                hide_from_description: _.target.checked,
-              });
-            },
-          }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.AssetPropertyRow,
+          children: [
+            (0, _.jsx)("div", {
+              children: "ID",
+            }),
+            (0, _.jsx)(_._, {
+              className: _.PropertyID,
+              type: "number",
+              value: 0 !== _._ ? _._ : "",
+              placeholder: "Property id",
+              onChange: (_) => {
+                _({
+                  ..._,
+                  _: _.target.valueAsNumber,
+                });
+              },
+            }),
+            (0, _.jsx)("div", {
+              children: "Name",
+            }),
+            (0, _.jsx)(_._, {
+              className: _.PropertyName,
+              type: "text",
+              value: _.name,
+              placeholder: "Property name",
+              onChange: (_) => {
+                _({
+                  ..._,
+                  name: _.target.value,
+                });
+              },
+            }),
+            (0, _.jsx)("div", {
+              children: "Type",
+            }),
+            (0, _.jsx)(_, {
+              propertyType: _.type,
+              onUpdateType: (_) => {
+                _({
+                  ..._,
+                  type: _,
+                });
+              },
+            }),
+            (0, _.jsx)("div", {
+              children: "Min",
+            }),
+            (0, _.jsx)(_._, {
+              className: _.PropertyRange,
+              type: "number",
+              value: _.min ?? "",
+              placeholder: "Min value",
+              onChange: (_) => {
+                _({
+                  ..._,
+                  min: _.target.valueAsNumber,
+                });
+              },
+            }),
+            (0, _.jsx)("div", {
+              children: "Max",
+            }),
+            (0, _.jsx)(_._, {
+              className: _.PropertyRange,
+              type: "number",
+              value: _.max ?? "",
+              placeholder: "Max value",
+              onChange: (_) => {
+                _({
+                  ..._,
+                  max: _.target.valueAsNumber,
+                });
+              },
+            }),
+            (0, _.jsx)("div", {
+              children: "Hide",
+            }),
+            (0, _.jsx)(_._, {
+              className: _.HideFromDescription,
+              type: "checkbox",
+              checked: _.hide_from_description,
+              onChange: (_) => {
+                _({
+                  ..._,
+                  hide_from_description: _.target.checked,
+                });
+              },
+            }),
+            (0, _.jsx)(_._, {
               className: _.RemoveButton,
               onClick: () => _(__webpack_require__),
-            },
-            "Remove",
-          ),
-        );
+              children: "Remove",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { propertyType: _, onUpdateType: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.PropertyType,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _.PropertyType,
+          children: (0, _.jsx)(_._, {
             strDefaultLabel: "Choose property type",
             controlled: !0,
             rgOptions: [
@@ -1716,7 +1599,7 @@
             },
             selectedOption: _,
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1796,57 +1679,53 @@
           },
           _ = _.size > 0,
           _ = 1 == _;
-        return _.createElement(
-          "div",
-          null,
-          _ &&
-            _.createElement(_, {
-              name: (0, _._)("#StoreAdmin_Platform_AllPlatforms"),
+        return (0, _.jsxs)("div", {
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                name: (0, _._)("#StoreAdmin_Platform_AllPlatforms"),
+                categories: _,
+                checkedState: _,
+                setChecked: _,
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                checked: _,
+              }),
+            (0, _.jsx)(_, {
+              name: (0, _._)("#StoreAdmin_Platform_Windows"),
               categories: _,
               checkedState: _,
               setChecked: _,
             }),
-          _ &&
-            _.createElement(_, {
-              checked: _,
-            }),
-          _.createElement(_, {
-            name: (0, _._)("#StoreAdmin_Platform_Windows"),
-            categories: _,
-            checkedState: _,
-            setChecked: _,
-          }),
-        );
+          ],
+        });
       }
       function _(_) {
         const { checked: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.DXVCNotice,
-          },
-          !_ &&
-            _.createElement("div", {
-              className: _.DXVCNoticeIconUnchecked,
-            }),
-          _ &&
-            _.createElement("div", {
-              className: _.DXVCNoticeIconChecked,
-            }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.DXVCNotice,
+          children: [
+            !_ &&
+              (0, _.jsx)("div", {
+                className: _.DXVCNoticeIconUnchecked,
+              }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: _.DXVCNoticeIconChecked,
+              }),
+            (0, _.jsx)("div", {
               className: _()(
                 _.DXVCNoticeText,
                 _ ? _.DXVCNoticeTextChecked : _.DXVCNoticeTextUnchecked,
               ),
-            },
-            (0, _._)(
-              "#StoreAdmin_Game_Engine_Requires_DirectX_VC",
-              (0, _._)("#StoreAdmin_GameEngine_Type_unreal"),
-            ),
-          ),
-        );
+              children: (0, _._)(
+                "#StoreAdmin_Game_Engine_Requires_DirectX_VC",
+                (0, _._)("#StoreAdmin_GameEngine_Type_unreal"),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1860,29 +1739,33 @@
             return (
               __webpack_require__.forEach((_, _) =>
                 _.push(
-                  _.createElement(_, {
-                    name: _,
-                    category: _,
-                    checkedState: _,
-                    key: _.category,
-                    setChecked: _,
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      name: _,
+                      category: _,
+                      checkedState: _,
+                      setChecked: _,
+                    },
+                    _.category,
+                  ),
                 ),
               ),
               _
             );
           }, [__webpack_require__, _, _]);
-        return _.createElement(
-          "div",
-          {
-            className: "section",
-          },
-          _.createElement("h2", null, _),
-          _.createElement("div", {
-            className: "grayRule",
-          }),
-          ..._,
-        );
+        return (0, _.jsxs)("div", {
+          className: "section",
+          children: [
+            (0, _.jsx)("h2", {
+              children: _,
+            }),
+            (0, _.jsx)("div", {
+              className: "grayRule",
+            }),
+            ..._,
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1892,25 +1775,29 @@
             setChecked: _,
           } = _,
           _ = Object.entries(__webpack_require__.components).map(([_, _]) =>
-            _.createElement(
+            (0, _.jsx)(
               "li",
               {
-                key: _,
+                children: (0, _.jsx)(_, {
+                  name: _,
+                  depotID: _,
+                  checked: _.get(_),
+                  setChecked: _,
+                }),
               },
-              _.createElement(_, {
-                name: _,
-                depotID: _,
-                checked: _.get(_),
-                setChecked: _,
-              }),
+              _,
             ),
           );
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("div", null, _),
-          _.createElement("ul", null, ..._),
-        );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("div", {
+              children: _,
+            }),
+            (0, _.jsxs)("ul", {
+              children: [..._],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1922,24 +1809,21 @@
           _ =
             (228987 == __webpack_require__ || 228986 == __webpack_require__) &&
             !_;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("input", {
-            _: __webpack_require__.toString(),
-            type: "checkbox",
-            checked: _,
-            disabled: _,
-            onChange: (_) => _(__webpack_require__, _.currentTarget.checked),
-          }),
-          _.createElement(
-            "label",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("input", {
+              _: __webpack_require__.toString(),
+              type: "checkbox",
+              checked: _,
+              disabled: _,
+              onChange: (_) => _(__webpack_require__, _.currentTarget.checked),
+            }),
+            (0, _.jsx)("label", {
               htmlFor: __webpack_require__.toString(),
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2184,10 +2068,8 @@
               `communityitems/ajaxuploadasset/${_}/${__webpack_require__}`;
             return new _(_, !0, _);
           }, [_, __webpack_require__, _]);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          children: (0, _.jsx)(_._, {
             elOverrideDragAndDropText: (0, _._)(
               "#CommunityItems_Upload_Instructions",
             ),
@@ -2203,7 +2085,7 @@
                 }));
             },
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -2350,16 +2232,13 @@
           assetDefs: _,
           children: __webpack_require__,
         }) =>
-          _.createElement(
-            _.Provider,
-            {
-              value: {
-                communityItem: _,
-                assetDefs: _,
-              },
+          (0, _.jsx)(_.Provider, {
+            value: {
+              communityItem: _,
+              assetDefs: _,
             },
-            __webpack_require__,
-          );
+            children: __webpack_require__,
+          });
       function _(_) {
         const { appID: _, unItemType: __webpack_require__ } = _,
           _ = (function (_, _) {
@@ -2390,166 +2269,140 @@
           _ = 17 === _.ItemClass ? _ : null;
         if (!_) return null;
         const _ = (!_.BIsActive || _._.is_support) && !_.BIsDeleted;
-        return _.createElement(
-          _,
-          {
-            communityItem: _,
-            assetDefs: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.AssetEditorContainer,
-            },
-            _ && _.createElement(_, null),
-            _.createElement(_, null),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          communityItem: _,
+          assetDefs: _,
+          children: (0, _.jsxs)("div", {
+            className: _.AssetEditorContainer,
+            children: [_ && (0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+          }),
+        });
       }
       function _() {
         const { communityItem: _, assetDefs: _ } = _.useContext(_),
           _ = _.flatMap((_) => _.guidelines).map((_, _) =>
-            _.createElement(_, {
-              key: `guideline_${_}`,
-              guideline: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                guideline: _,
+              },
+              `guideline_${_}`,
+            ),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.AssetUploadSection,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.AssetUploadSection,
+          children: [
+            (0, _.jsx)("div", {
               className: _.AssetGuidelinesSection,
-            },
-            _,
-          ),
-          _.createElement(_, {
-            appID: _.AppID,
-            unItemType: _.ItemID,
-            rgAssetDefinitions: _,
-          }),
-        );
+              children: _,
+            }),
+            (0, _.jsx)(_, {
+              appID: _.AppID,
+              unItemType: _.ItemID,
+              rgAssetDefinitions: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { guideline: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.GuidelineCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.GuidelineCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _.GuidelineHeader,
-            },
-            _.strHeader,
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.GuidelineIntro,
-            },
-            _.strIntro,
-          ),
-          _.rgBulletPoints?.length > 0 &&
-            _.createElement(_, {
-              rgBulletPoints: _.rgBulletPoints,
+              children: _.strHeader,
             }),
-        );
+            (0, _.jsx)("div", {
+              className: _.GuidelineIntro,
+              children: _.strIntro,
+            }),
+            _.rgBulletPoints?.length > 0 &&
+              (0, _.jsx)(_, {
+                rgBulletPoints: _.rgBulletPoints,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { rgBulletPoints: _ } = _,
           _ = _.map((_, _) =>
-            _.createElement(
+            (0, _.jsx)(
               "li",
               {
-                key: `bulletpoint_${_}`,
+                children: _,
               },
-              _,
+              `bulletpoint_${_}`,
             ),
           );
-        return _.createElement("ul", null, _);
+        return (0, _.jsx)("ul", {
+          children: _,
+        });
       }
       function _() {
         const { communityItem: _, assetDefs: _ } = _.useContext(_),
           _ = _.map((_) =>
-            _.createElement(_, {
-              key: _.asset_type,
-              assetDef: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                assetDef: _,
+              },
+              _.asset_type,
+            ),
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.AssetTypesCtn,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _.AssetTypesCtn,
+          children: _,
+        });
       }
       function _(_) {
         const { assetDef: _ } = _,
           { communityItem: __webpack_require__, assetDefs: _ } =
             _.useContext(_);
-        return _.createElement(
-          "div",
-          {
-            className: _.AssetEntryCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.AssetEntryCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.AssetTitle,
-            },
-            "*",
-            _.label,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: ["*", _.label],
+            }),
+            (0, _.jsx)("div", {
               className: _.AssetPreviewCtn,
-            },
-            _.is_video
-              ? _.createElement(_, {
-                  rgSources: _(
-                    _.asset_type,
-                    __webpack_require__.CommunityItemDef,
-                  ),
-                  unAppID: __webpack_require__.AppID,
-                })
-              : _.createElement(_, {
-                  rgSources: _(
-                    _.asset_type,
-                    __webpack_require__.CommunityItemDef,
-                  ),
-                  unAppID: __webpack_require__.AppID,
-                }),
-          ),
-        );
+              children: _.is_video
+                ? (0, _.jsx)(_, {
+                    rgSources: _(
+                      _.asset_type,
+                      __webpack_require__.CommunityItemDef,
+                    ),
+                    unAppID: __webpack_require__.AppID,
+                  })
+                : (0, _.jsx)(_, {
+                    rgSources: _(
+                      _.asset_type,
+                      __webpack_require__.CommunityItemDef,
+                    ),
+                    unAppID: __webpack_require__.AppID,
+                  }),
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _.PlaceholderAsset,
-          },
-          _.createElement(
-            "div",
-            null,
-            (0, _._)("#CommunityItems_PlaceholderAsset_Missing"),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _.PlaceholderAsset,
+          children: (0, _.jsx)("div", {
+            children: (0, _._)("#CommunityItems_PlaceholderAsset_Missing"),
+          }),
+        });
       }
       function _(_) {
         const { rgSources: _, unAppID: __webpack_require__ } = _;
         return _.length
-          ? _.createElement("img", {
+          ? (0, _.jsx)("img", {
               className: _.AssetPreview,
               src: _(__webpack_require__, _[0]),
             })
-          : _.createElement(_, null);
+          : (0, _.jsx)(_, {});
       }
       function _(_) {
         const { rgSources: _, unAppID: __webpack_require__ } = _,
@@ -2560,27 +2413,27 @@
           }, [_]),
           !_.length)
         )
-          return _.createElement(_, null);
+          return (0, _.jsx)(_, {});
         const _ = _.map((_, _) =>
-          _.createElement("source", {
-            key: `video_${_}`,
-            src: _(__webpack_require__, _),
-            type: (0, _._)(_),
-          }),
+          (0, _.jsx)(
+            "source",
+            {
+              src: _(__webpack_require__, _),
+              type: (0, _._)(_),
+            },
+            `video_${_}`,
+          ),
         );
-        return _.createElement(
-          "video",
-          {
-            ref: _,
-            className: _.AssetPreview,
-            autoPlay: !0,
-            loop: !0,
-            muted: !0,
-            playsInline: !0,
-            controls: !0,
-          },
-          _,
-        );
+        return (0, _.jsx)("video", {
+          ref: _,
+          className: _.AssetPreview,
+          autoPlay: !0,
+          loop: !0,
+          muted: !0,
+          playsInline: !0,
+          controls: !0,
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -2603,38 +2456,36 @@
             );
           }, [_, __webpack_require__, _]);
         return _.length || _.length
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#AppLanding_RegionRestrictions_Allowed", _),
-                ),
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#AppLanding_RegionRestrictions_Blocked", _),
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)(
-                    "#AppLanding_RegionRestrictions_ContentSurvey",
-                    _.createElement("a", {
-                      href: `${_._.PARTNER_BASE_URL}/contentdescriptors/editsurvey/${_}`,
-                    }),
-                  ),
-                ),
-            )
-          : _.createElement(
-              "div",
-              null,
-              (0, _._)("#AppLanding_RegionRestrictions_None"),
-            );
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                _.length > 0 &&
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#AppLanding_RegionRestrictions_Allowed",
+                      _,
+                    ),
+                  }),
+                _.length > 0 &&
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#AppLanding_RegionRestrictions_Blocked",
+                      _,
+                    ),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#AppLanding_RegionRestrictions_ContentSurvey",
+                      (0, _.jsx)("a", {
+                        href: `${_._.PARTNER_BASE_URL}/contentdescriptors/editsurvey/${_}`,
+                      }),
+                    ),
+                  }),
+              ],
+            })
+          : (0, _.jsx)("div", {
+              children: (0, _._)("#AppLanding_RegionRestrictions_None"),
+            });
       }
       const _ = {
         CommunityItem: (_, _) => `/apps/communityitems/${_}/${_}`,
@@ -2643,79 +2494,79 @@
         AppEconomy: (_) => `/apps/economy/${_}`,
       };
       function _(_) {
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(_._, {
-            path: _.CommunityItem(":appid", ":itemtype"),
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "appadmin-profilecolors": (_) =>
-                    _.createElement(_._, {
-                      ..._,
-                    }),
-                  "appadmin-communityitemassets": () =>
-                    _.createElement(_, {
-                      appID: Number.parseInt(_.match.params.appid),
-                      unItemType: Number.parseInt(_.match.params.itemtype),
-                    }),
-                },
-              }),
-          }),
-          _.createElement(_._, {
-            path: _.AppLanding(":appid"),
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "storeadmin-releasedateinfo": (_) =>
-                    _.createElement(_._, {
-                      ..._,
-                    }),
-                  "storeadmin-applanding-statsrollup": (_) =>
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                  "storeadmin-applanding-demowishlistemails": (_) =>
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                  "storeadmin-editions-editor": (_) =>
-                    _.createElement(_._, {
-                      ..._,
-                    }),
-                  "appadmin-restrictedcountries": (_) =>
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                },
-              }),
-          }),
-          _.createElement(_._, {
-            path: _.AppInstaller(":appid"),
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "storeadmin-steamworksredist-edit": (_) =>
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                },
-              }),
-          }),
-          _.createElement(_._, {
-            path: _.AppEconomy(":appid"),
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "storeadmin-steamworkseconomy-propertyedit": (_) =>
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                },
-              }),
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_._, {
+              path: _.CommunityItem(":appid", ":itemtype"),
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "appadmin-profilecolors": (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                      }),
+                    "appadmin-communityitemassets": () =>
+                      (0, _.jsx)(_, {
+                        appID: Number.parseInt(_.match.params.appid),
+                        unItemType: Number.parseInt(_.match.params.itemtype),
+                      }),
+                  },
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              path: _.AppLanding(":appid"),
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "storeadmin-releasedateinfo": (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                      }),
+                    "storeadmin-applanding-statsrollup": (_) =>
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                    "storeadmin-applanding-demowishlistemails": (_) =>
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                    "storeadmin-editions-editor": (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                      }),
+                    "appadmin-restrictedcountries": (_) =>
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                  },
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              path: _.AppInstaller(":appid"),
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "storeadmin-steamworksredist-edit": (_) =>
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                  },
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              path: _.AppEconomy(":appid"),
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "storeadmin-steamworkseconomy-propertyedit": (_) =>
+                      (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                  },
+                }),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2777,6 +2628,72 @@
           _.unix() < _ && _.hours(34),
           _.unix()
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.useMemo)(() => _(_), [_?._, _?.type]);
+      }
+      function _(_, _) {
+        return (0, _.useMemo)(
+          () =>
+            (function (_, _) {
+              switch (_) {
+                case "sub":
+                  return {
+                    packageid: _,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _,
+                  };
+                default:
+                  return {
+                    appid: _,
+                  };
+              }
+            })(_, _),
+          [_, _],
+        );
+      }
+      function _(_) {
+        if (_ && _._) {
+          if (!_.type)
+            return {
+              appid: _._,
+            };
+          switch (_.type) {
+            case "sub":
+              return {
+                packageid: _._,
+              };
+            case "bundle":
+              return {
+                bundleid: _._,
+              };
+            default:
+              return {
+                appid: _._,
+              };
+          }
+        }
+      }
+      function _(_) {
+        return (0, _.useMemo)(() => {
+          if (null != _ && _ != _._)
+            return {
+              appid: _,
+            };
+        }, [_]);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2911,77 +2828,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], 31, !1);
-        m_bHasLocalizationContext = !1;
-        m_callback = new _._();
-        GetCallback() {
-          return this.m_callback;
-        }
-        GetCurEditLanguage() {
-          return this.m_eCurLang;
-        }
-        SetCurEditLanguage(_) {
-          return (
-            this.m_eCurLang != _ &&
-            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
-          );
-        }
-        SetHasLanguage(_) {
-          _.forEach((_, _) => {
-            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
-          });
-        }
-        BHasLanguageData(_) {
-          return this.m_rgHasData[_];
-        }
-        GetHasLocalizationContext() {
-          return this.m_bHasLocalizationContext;
-        }
-        SetHasLocalizationContext(_) {
-          _ != this.m_bHasLocalizationContext &&
-            (this.m_bHasLocalizationContext = _);
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-      }
-      function _() {
-        return (0, _._)(() => _.Get().GetCurEditLanguage());
-      }
-      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
-        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
-        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
-        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
-        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
-        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
-        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -3001,12 +2847,6 @@
         nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
-        }
-        get bIsFollowingEnabled() {
-          return !(0, _._)();
-        }
-        get bIsCuratorsEnabled() {
-          return !(0, _._)();
         }
         get bIncludeCurators() {
           return !0;

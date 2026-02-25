@@ -658,13 +658,13 @@ License: MIT
                             row: b.length,
                             index: c,
                           }),
-                        M()
+                        B()
                       );
-                    if (F === _ - 1) return M(o.substring(c, F).replace(T, l));
+                    if (F === _ - 1) return B(o.substring(c, F).replace(T, l));
                     if (l === d && o[F + 1] === d) F++;
                     else if (l === d || 0 === F || o[F - 1] !== d) {
                       -1 !== D && D < F + 1 && (D = o.indexOf(t, F + 1));
-                      var x = B(
+                      var x = j(
                         -1 ===
                           (O = -1 !== O && O < F + 1 ? o.indexOf(i, F + 1) : O)
                           ? D
@@ -678,12 +678,12 @@ License: MIT
                         break;
                       }
                       if (
-                        ((x = B(O)),
+                        ((x = j(O)),
                         o.substring(F + 1 + x, F + 1 + x + w) === i)
                       ) {
                         if (
                           (A.push(o.substring(c, F).replace(T, l)),
-                          j(F + 1 + x + w),
+                          M(F + 1 + x + w),
                           (D = o.indexOf(t, c)),
                           (F = o.indexOf(l, c)),
                           k && (z(), f))
@@ -709,15 +709,15 @@ License: MIT
                   A.push(o.substring(c, D)), (c = D + y), (D = o.indexOf(t, c));
                 else {
                   if (-1 === O) break;
-                  if ((A.push(o.substring(c, O)), j(O + w), k && (z(), f)))
+                  if ((A.push(o.substring(c, O)), M(O + w), k && (z(), f)))
                     return G();
                   if (s && b.length >= s) return G(!0);
                 }
-              return M();
+              return B();
               function L(e) {
                 b.push(e), (I = c);
               }
-              function B(e) {
+              function j(e) {
                 var t = 0;
                 return -1 !== e &&
                   (e = o.substring(F + 1, e)) &&
@@ -725,7 +725,7 @@ License: MIT
                   ? e.length
                   : t;
               }
-              function M(e) {
+              function B(e) {
                 return (
                   m ||
                     (void 0 === e && (e = o.substring(c)),
@@ -736,7 +736,7 @@ License: MIT
                   G()
                 );
               }
-              function j(e) {
+              function M(e) {
                 (c = e), L(A), (A = []), (O = o.indexOf(i, c));
               }
               function G(n) {
@@ -1166,53 +1166,53 @@ License: MIT
         r$: () => p,
         yW: () => f,
       });
-      var n = i(56545),
-        r = i(88942),
-        s = i(61739),
-        a = i(23809),
-        o = i(37403),
-        u = i(90626);
+      var n = i(7850),
+        r = i(56545),
+        s = i(88942),
+        a = i(61739),
+        o = i(23809),
+        u = i(37403);
       function h(e, t) {
-        const i = (0, a.KV)();
-        return (0, r.I)({
+        const i = (0, o.KV)();
+        return (0, s.I)({
           queryKey: [
             "crowdin_metadata_for_clan_event",
             e.ConvertTo64BitString(),
             t,
           ],
           queryFn: async () => {
-            const r = n.w.Init(o.$5);
-            r.Body().set_steamid(e.ConvertTo64BitString()),
-              r.Body().set_itemid(t);
-            const s = await o.BE.GetClanEventCrowdInMetadata(i, r);
+            const n = r.w.Init(u.$5);
+            n.Body().set_steamid(e.ConvertTo64BitString()),
+              n.Body().set_itemid(t);
+            const s = await u.BE.GetClanEventCrowdInMetadata(i, n);
             return 1 != s.GetEResult() ? null : s.Body().toObject();
           },
         });
       }
       async function l(e, t) {
-        const i = n.w.Init(o.hA);
+        const i = r.w.Init(u.hA);
         i.Body().set_steamid(t);
-        const r = await o.BE.GetClanCrowdInMetadata(e, i);
-        if (42 === r.GetEResult())
+        const n = await u.BE.GetClanCrowdInMetadata(e, i);
+        if (42 === n.GetEResult())
           return {
             crowdin_project_id: null,
             crowdin_directory_id: null,
             push_by_default: !1,
           };
-        if (1 !== r.GetEResult()) throw r.GetEResult();
-        return r.Body().toObject();
+        if (1 !== n.GetEResult()) throw n.GetEResult();
+        return n.Body().toObject();
       }
       function d(e) {
-        const t = (0, a.KV)();
-        return (0, r.I)({
+        const t = (0, o.KV)();
+        return (0, s.I)({
           queryKey: ["clan_crowdin_mapping", e],
           queryFn: async () => await l(t, e),
         });
       }
       function c(e) {
         return (function (e) {
-          const t = (0, a.KV)(),
-            i = (0, r.I)({
+          const t = (0, o.KV)(),
+            i = (0, s.I)({
               queryKey: e.queryKey,
               queryFn: async () => e.queryFn(t, ...e.args),
             });
@@ -1224,41 +1224,38 @@ License: MIT
           children: e.children,
         });
       }
-      const f = (0, u.createContext)(null);
+      const f = (0, i(90626).createContext)(null);
       function p(e) {
         const t = d(e.clanInfo.clanSteamID.ConvertTo64BitString());
         let i = !1;
         return (
           t.isSuccess && (i = t.data.push_by_default),
-          u.createElement(
-            f.Provider,
-            {
-              value: {
-                clanSteamId: e.clanInfo.clanSteamID,
-                bPushToCrowdInByDefault: i,
-              },
+          (0, n.jsx)(f.Provider, {
+            value: {
+              clanSteamId: e.clanInfo.clanSteamID,
+              bPushToCrowdInByDefault: i,
             },
-            e.children,
-          )
+            children: e.children,
+          })
         );
       }
       function g(e, t, i) {
-        const r = (0, a.KV)();
-        return (0, s.n)({
+        const n = (0, o.KV)();
+        return (0, a.n)({
           mutationKey: ["fetch_translation_for_clan_event", e, t, i],
           mutationFn: async function () {
-            return await (async function (e, t, i, r) {
-              const s = n.w.Init(o.v7);
-              s.Body().set_language(r),
+            return await (async function (e, t, i, n) {
+              const s = r.w.Init(u.v7);
+              s.Body().set_language(n),
                 s.Body().set_steamid(t),
                 s.Body().set_itemid(i);
-              const a = await o.BE.FetchTranslationFromCrowdIn(e, s);
+              const a = await u.BE.FetchTranslationFromCrowdIn(e, s);
               if (1 != a.GetEResult())
                 throw new Error(
                   `Error from FetchLocalizationForClanEventFromCrowdIn: ${a.GetErrorMessage()} (${a.GetEResult()})`,
                 );
               return a.Body().toObject();
-            })(r, e, t, i);
+            })(n, e, t, i);
           },
           retry: !1,
         });

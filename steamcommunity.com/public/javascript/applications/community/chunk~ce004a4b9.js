@@ -37,7 +37,7 @@
         return (0, a.V)("PlayerLinkDetails", () => l(e));
       }
     },
-    71430: (e, r, t) => {
+    49049: (e, r, t) => {
       var i,
         a = t(80613),
         n = t.n(a),
@@ -1639,6 +1639,7 @@
       }
       t.d(r, { V: () => l });
       var n = t(90626);
+      t(7850);
       const s = (0, n.createContext)({ instances: {}, factories: {} });
       function l(e, r) {
         var t;
@@ -5954,7 +5955,7 @@
               request: $,
             });
         })(a || (a = {}));
-      t(37735), t(61859), t(71430);
+      t(37735), t(61859), t(49049);
       var Re = t(30470);
       t(60011), t(29233);
       n.createContext({ staleTimeMs: 1 / 0 });

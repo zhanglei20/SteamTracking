@@ -7,7 +7,7 @@
   {
     40330: (e) => {
       e.exports = JSON.parse(
-        '{"PricingGuideline_Default":"以下のUSD価格を選択してください","ConversionMethod_Title":"換算方法（%1$s）","ConversionMethod_Link":"詳細を表示","empty_no_trailing_comma":""}',
+        '{"PricingGuideline_Default":"以下のUSD価格を選択してください","FreeOnDemand_InlineOption":"無料","FreeOnDemand_Button":"無料に設定...","FreeOnDemand_Button_ttip":"このパッケージが顧客向けに無料になるように更新します","FreeOnDemand_Button_disabled_ttip":"This package can only be set free by a Valve Support. Please use the \\"Contact Steam Publishing\\" link under \\"Documentation and Help\\" for assistance.","FreeOnDemand_Title":"Convert Package To Free?","FreeOnDemand_Desc":"This will set your package pricing as free, mark your app so that it can appear in the Free To Play hub, and change the price display based on the term you select below. This change cannot be reversed without filing a ticket to the Steamworks support team.","FreeOnDemand_Desc_NotPermitted":"This package can only be set free by a Valve Support. Click below to create a ticket with Steam support to help convert to free","FreeOnDemand_Radio":"Select the appropriate text to show instead of price:","FreeOnDemand_Radio_FreeToPlay":"\\"Free to Play\\" - The game is free to download and play, but includes optional in-game purchases (items, currency, DLC, or other monetization).","FreeOnDemand_Radio_Free":"\\"Free\\" - The game is completely free to download and play. No in-game purchases or paid content.","FreeOnDemand_Button_Confirm":"Convert to free","FreeOnDemand_Store_Error":"Failed to update store app page: %1$s","FreeOnDemand_Package_Error":"Failed to change package type: %1$s","ConversionMethod_Title":"換算方法（%1$s）","ConversionMethod_Link":"詳細を表示","empty_no_trailing_comma":""}',
       );
     },
   },

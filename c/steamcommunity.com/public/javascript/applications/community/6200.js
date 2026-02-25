@@ -47,6 +47,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
@@ -158,12 +159,14 @@
           _ &&
             _ &&
             _ &&
-            (_ = _.createElement(_, {
+            (_ = (0, _.jsx)(_, {
               top: _,
               left: _,
               href: _.getAttribute("href"),
             })),
-          _.createElement(_.Fragment, null, _, _)
+          (0, _.jsxs)(_.Fragment, {
+            children: [_, _],
+          })
         );
       });
       function _(_) {
@@ -177,28 +180,21 @@
           top: `${_}px`,
           left: `${Math.max(__webpack_require__ - _ / 2, 12)}px`,
         };
-        return _.createElement(
-          "div",
-          {
-            className: _.Hover,
-            style: _,
-            ref: _,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.Hover,
+          style: _,
+          ref: _,
+          children: [
+            (0, _.jsx)("div", {
               className: _.Link,
-            },
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _,
+            }),
+            (0, _.jsx)("div", {
               className: _.LinkHelp,
-            },
-            (0, _._)("#UserGameNotes_ClickToOpenLink"),
-          ),
-        );
+              children: (0, _._)("#UserGameNotes_ClickToOpenLink"),
+            }),
+          ],
+        });
       }
       function _(_, _) {
         _.open(_);
@@ -211,6 +207,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -248,10 +245,13 @@
         return (
           (0, _._)(_),
           __webpack_require__.map(({ _: _, nodeView: _ }) =>
-            _.createElement(_, {
-              key: _,
-              nodeView: _,
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                nodeView: _,
+              },
+              _,
+            ),
           )
         );
       });
@@ -333,6 +333,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -430,18 +431,15 @@
             };
           })(_, _, _);
         return _ || _ || _
-          ? _.createElement(
-              "div",
-              {
-                _: _,
-                role: __webpack_require__,
-                className: _,
-                ref: _,
-                style: _,
-                inert: !_,
-              },
-              _,
-            )
+          ? (0, _.jsx)("div", {
+              _: _,
+              role: __webpack_require__,
+              className: _,
+              ref: _,
+              style: _,
+              inert: !_,
+              children: _,
+            })
           : null;
       }
     },
@@ -452,6 +450,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -478,22 +477,18 @@
           { manager: _ } = _;
         return (
           _.SetProps(__webpack_require__, _, _),
-          _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(_, {
-              manager: _,
-            }),
-            _.createElement(
-              _,
-              {
+          (0, _.jsxs)(_.Provider, {
+            value: _,
+            children: [
+              (0, _.jsx)(_, {
                 manager: _,
-              },
-              _,
-            ),
-          )
+              }),
+              (0, _.jsx)(_, {
+                manager: _,
+                children: _,
+              }),
+            ],
+          })
         );
       }
       const _ = _.memo(function (_) {
@@ -702,17 +697,18 @@
             () => __webpack_require__.RegisterEditor(_, _, _),
             [_, _, _, _],
           ),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.map(({ _: _, element: _, data: _ }) =>
-              _.createElement(_, {
-                key: _,
-                element: _,
-                data: _,
-              }),
+          (0, _.jsx)(_.Fragment, {
+            children: _.map(({ _: _, element: _, data: _ }) =>
+              (0, _.jsx)(
+                _,
+                {
+                  element: _,
+                  data: _,
+                },
+                _,
+              ),
             ),
-          )
+          })
         );
       });
       class _ extends Error {
@@ -727,49 +723,41 @@
           _ = "url" in __webpack_require__ ? __webpack_require__.url : _,
           _ = _.type.startsWith("video/");
         return _.createPortal(
-          _.createElement(
-            "span",
-            {
-              className: _.FileUploadPlaceholder,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("span", {
+            className: _.FileUploadPlaceholder,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ThrobberCtn,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _.ThrobberRow,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Throbber,
-                  },
-                  _.createElement(_._, {
-                    size: "medium",
-                    position: "center",
-                  }),
-                ),
-                (0, _._)("#Prosemirror_FileUpload_Uploading"),
-              ),
-            ),
-            !_ &&
-              _.createElement("img", {
-                src: _,
-                className: _.PendingImage,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Throbber,
+                      children: (0, _.jsx)(_._, {
+                        size: "medium",
+                        position: "center",
+                      }),
+                    }),
+                    (0, _._)("#Prosemirror_FileUpload_Uploading"),
+                  ],
+                }),
               }),
-            _ &&
-              _.createElement("video", {
-                src: _,
-                className: _.PendingImage,
-                muted: !0,
-                loop: !0,
-                playsInline: !0,
-                autoPlay: !0,
-              }),
-          ),
+              !_ &&
+                (0, _.jsx)("img", {
+                  src: _,
+                  className: _.PendingImage,
+                }),
+              _ &&
+                (0, _.jsx)("video", {
+                  src: _,
+                  className: _.PendingImage,
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  autoPlay: !0,
+                }),
+            ],
+          }),
           _,
         );
       }
@@ -903,19 +891,16 @@
         const { manager: _ } = _,
           _ = (0, _._)(_.GetErrors());
         return _.length
-          ? _.createElement(
-              _._,
-              {
-                active: !0,
-              },
-              _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
+              active: !0,
+              children: (0, _.jsx)(_._, {
                 bAlertDialog: !0,
                 strTitle: (0, _._)("#Error_Generic"),
                 strDescription: __webpack_require__.map((_, _) =>
-                  _.createElement(
+                  (0, _.jsx)(
                     "div",
                     {
-                      key: _,
+                      children: _,
                     },
                     _,
                   ),
@@ -924,7 +909,7 @@
                 onOK: () => _.ClearErrors(),
                 onCancel: () => _.ClearErrors(),
               }),
-            )
+            })
           : null;
       });
       function _(_) {

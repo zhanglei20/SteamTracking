@@ -96,6 +96,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
         "mousemove",
@@ -978,88 +979,67 @@
             _
           );
         })();
-        return _.createElement(
-          "div",
-          {
-            className: _().QADashboardCtn,
-          },
-          _.createElement(_, null),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().QADashboardCtn,
+          children: [
+            (0, _.jsx)(_, {}),
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().DashboardRow, _().DashboardColumnHeaders),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().QAndAName,
-              },
-              (0, _._)("#QAndA_Column_Name"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().GIDSession,
-              },
-              (0, _._)("#QAndA_Column_GID"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().QuestionCount,
-              },
-              (0, _._)("#QAndA_Column_QuestionCount"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().QAndADeleteColumn,
-              },
-              (0, _._)("#QAndA_Column_DeleteButtons"),
-            ),
-          ),
-          _.map((_) =>
-            _.createElement(_, {
-              key: _.gidSession,
-              qanda: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().QAndAName,
+                  children: (0, _._)("#QAndA_Column_Name"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().GIDSession,
+                  children: (0, _._)("#QAndA_Column_GID"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().QuestionCount,
+                  children: (0, _._)("#QAndA_Column_QuestionCount"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().QAndADeleteColumn,
+                  children: (0, _._)("#QAndA_Column_DeleteButtons"),
+                }),
+              ],
             }),
-          ),
-        );
+            _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  qanda: _,
+                },
+                _.gidSession,
+              ),
+            ),
+          ],
+        });
       }
       function _(_) {
         const _ = _.useCallback(
           () =>
-            (0, _._)(_.createElement(_, null), window, {
+            (0, _._)((0, _.jsx)(_, {}), window, {
               strTitle: (0, _._)("#QAndA_CreateQAndA_Title"),
             }),
           [],
         );
-        return _.createElement(
-          "div",
-          {
-            className: _().DashboardHeader,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().DashboardHeader,
+          children: [
+            (0, _.jsx)("div", {
               className: _().DashboardHeaderTitle,
-            },
-            (0, _._)("#QAndA_Dashboard"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#QAndA_Dashboard"),
+            }),
+            (0, _.jsx)("div", {
               className: _().DashboardHeaderButtonCtn,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 onClick: _,
-              },
-              (0, _._)("#QAndA_CreateQAndA_Button"),
-            ),
-          ),
-        );
+                children: (0, _._)("#QAndA_CreateQAndA_Button"),
+              }),
+            }),
+          ],
+        });
       }
       const _ = 120;
       function _(_) {
@@ -1068,18 +1048,15 @@
             return _.useCallback((_) => _.Get().CreateNewSession(_, _), [_]);
           })(),
           [__webpack_require__, _] = _.useState("");
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#QAndA_CreateQAndA_Title"),
-            strDescription: (0, _._)("#QAndA_CreateQAndA_Instructions"),
-            strOKButtonText: (0, _._)("#Button_Create"),
-            onOK: () => _(__webpack_require__),
-            bOKDisabled: 0 == __webpack_require__.length,
-            closeModal: _.closeModal,
-            className: _().CreateQAndADialog,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          strTitle: (0, _._)("#QAndA_CreateQAndA_Title"),
+          strDescription: (0, _._)("#QAndA_CreateQAndA_Instructions"),
+          strOKButtonText: (0, _._)("#Button_Create"),
+          onOK: () => _(__webpack_require__),
+          bOKDisabled: 0 == __webpack_require__.length,
+          closeModal: _.closeModal,
+          className: _().CreateQAndADialog,
+          children: (0, _.jsx)(_._, {
             type: "text",
             className: _().NameInput,
             value: __webpack_require__,
@@ -1088,7 +1065,7 @@
             onChange: (_) => _(_.currentTarget.value),
             maxLength: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { qanda: _ } = _,
@@ -1103,7 +1080,7 @@
               _.stopPropagation(),
                 _.preventDefault(),
                 (0, _._)(
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     qanda: _,
                   }),
                   window,
@@ -1114,44 +1091,31 @@
             },
             [_],
           );
-        return _.createElement(
-          "a",
-          {
-            className: _().DashboardRow,
-            href: _,
-          },
-          _.createElement(_, {
-            qanda: _,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("a", {
+          className: _().DashboardRow,
+          href: _,
+          children: [
+            (0, _.jsx)(_, {
+              qanda: _,
+            }),
+            (0, _.jsx)("div", {
               className: _().GIDSession,
-            },
-            _.gidSession,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _.gidSession,
+            }),
+            (0, _.jsx)("div", {
               className: _().QuestionCount,
-            },
-            _.rgQuestionGIDs.length,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _.rgQuestionGIDs.length,
+            }),
+            (0, _.jsx)("div", {
               className: _().QAndADeleteColumn,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _().DeleteButton,
                 onClick: _,
-              },
-              _.createElement(_.lMJ, null),
-            ),
-          ),
-        );
+                children: (0, _.jsx)(_.lMJ, {}),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { qanda: _ } = _,
@@ -1164,30 +1128,23 @@
           _ =
             _.strName.length > 0
               ? _.strName
-              : _.createElement(
-                  "span",
-                  {
-                    className: _().Prompt,
-                  },
-                  (0, _._)("#QAndA_EnterNamePrompt"),
-                ),
-          _ = _.createElement(
-            "div",
-            {
-              className: _().NameInput,
-            },
-            _.createElement(_._, {
-              type: "text",
-              className: _().NameInput,
-              value: _,
-              placeholder: (0, _._)("#QAndA_EnterNamePrompt"),
-              onFocus: (_) => _.target.select(),
-              onChange: (_) => _(_.currentTarget.value),
-              maxLength: _,
-            }),
-            _.createElement(
-              _._,
-              {
+              : (0, _.jsx)("span", {
+                  className: _().Prompt,
+                  children: (0, _._)("#QAndA_EnterNamePrompt"),
+                }),
+          _ = (0, _.jsxs)("div", {
+            className: _().NameInput,
+            children: [
+              (0, _.jsx)(_._, {
+                type: "text",
+                className: _().NameInput,
+                value: _,
+                placeholder: (0, _._)("#QAndA_EnterNamePrompt"),
+                onFocus: (_) => _.target.select(),
+                onChange: (_) => _(_.currentTarget.value),
+                maxLength: _,
+              }),
+              (0, _.jsx)(_._, {
                 onClick: (_) => {
                   _.stopPropagation(),
                     _.preventDefault(),
@@ -1196,25 +1153,22 @@
                       : _(!1);
                 },
                 className: _().InputButton,
-              },
-              (0, _._)("#Button_Save"),
-            ),
-          );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().QAndAName,
-              __webpack_require__ && _().Editing,
-            ),
-            onClick: (_) => {
-              _.stopPropagation(),
-                _.preventDefault(),
-                __webpack_require__ || _(!0);
-            },
+                children: (0, _._)("#Button_Save"),
+              }),
+            ],
+          });
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().QAndAName,
+            __webpack_require__ && _().Editing,
+          ),
+          onClick: (_) => {
+            _.stopPropagation(),
+              _.preventDefault(),
+              __webpack_require__ || _(!0);
           },
-          __webpack_require__ ? _ : _,
-        );
+          children: __webpack_require__ ? _ : _,
+        });
       }
       function _(_) {
         const { qanda: _ } = _,
@@ -1222,32 +1176,26 @@
             const _ = (0, _._)("useDeleteQAndAFn");
             return _.useCallback((_) => _.Get().DeleteSession(_, _), [_]);
           })();
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#QAndA_Column_DeleteButtons"),
-            strDescription: (0, _._)("#QAndA_DeleteQAndA_Instructions"),
-            onOK: () => __webpack_require__(_.gidSession),
-            closeModal: _.closeModal,
-            className: _().DeleteQAndADialog,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)("#QAndA_Column_DeleteButtons"),
+          strDescription: (0, _._)("#QAndA_DeleteQAndA_Instructions"),
+          onOK: () => __webpack_require__(_.gidSession),
+          closeModal: _.closeModal,
+          className: _().DeleteQAndADialog,
+          children: [
+            (0, _.jsx)("div", {
               className: _().DeleteInfo,
-            },
-            (0, _._)("#QAndA_Column_Name") + ": " + _.strName,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#QAndA_Column_Name") + ": " + _.strName,
+            }),
+            (0, _.jsx)("div", {
               className: _().DeleteInfo,
-            },
-            (0, _._)("#QAndA_Column_QuestionCount") +
-              ": " +
-              _.rgQuestionGIDs.length,
-          ),
-        );
+              children:
+                (0, _._)("#QAndA_Column_QuestionCount") +
+                ": " +
+                _.rgQuestionGIDs.length,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1280,99 +1228,76 @@
             0 == _.eState && _().Unmoderated,
             2 == _.eState && _().Answered,
           );
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().QuestionCtn, "questionCtn"),
-            },
-            _.createElement(_, {
-              accountID: _.posterAccountID,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().QuestionText,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().QuestionAndVotes,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().QuestionTitle,
-                  },
-                  _.strQuestionText,
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent:
-                      _ &&
-                      (_.bUserUpVoted
-                        ? (0, _._)("#QAndA_VoteRemoveTooltip")
-                        : (0, _._)("#QAndA_VoteTooltip")),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_, _().Votes),
-                      onClick: _,
-                    },
-                    _.createElement(_.bfp, {
-                      className: _().RateIcon,
+              children: [
+                (0, _.jsx)(_, {
+                  accountID: _.posterAccountID,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().QuestionText,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().QuestionAndVotes,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().QuestionTitle,
+                          children: _.strQuestionText,
+                        }),
+                        (0, _.jsx)(_._, {
+                          toolTipContent:
+                            _ &&
+                            (_.bUserUpVoted
+                              ? (0, _._)("#QAndA_VoteRemoveTooltip")
+                              : (0, _._)("#QAndA_VoteTooltip")),
+                          children: (0, _.jsxs)("div", {
+                            className: (0, _._)(_, _().Votes),
+                            onClick: _,
+                            children: [
+                              (0, _.jsx)(_.bfp, {
+                                className: _().RateIcon,
+                              }),
+                              (0, _.jsx)("div", {
+                                className: _().VoteCount,
+                                children: (0, _._)(Number(_.nVoteCount)),
+                              }),
+                            ],
+                          }),
+                        }),
+                      ],
                     }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().VoteCount,
-                      },
-                      (0, _._)(Number(_.nVoteCount)),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().QuestionStats,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PostTime,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      rtFullDate: _.rtPostTime,
-                      className: _().PostTime,
-                      stylesmodule: _(),
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          _.rtAnswerTime &&
-            _.createElement(_, {
-              question: _,
-              rtNow: _,
+                    (0, _.jsx)("div", {
+                      className: _().QuestionStats,
+                      children: (0, _.jsx)("div", {
+                        className: _().PostTime,
+                        children: (0, _.jsx)(_._, {
+                          rtFullDate: _.rtPostTime,
+                          className: _().PostTime,
+                          stylesmodule: _(),
+                          children: _,
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
             }),
-          _ &&
-            _.createElement(_, {
-              gidSession: _,
-              gidQuestion: __webpack_require__,
-              eState: null == _ ? void 0 : _.eState,
-            }),
-        );
+            _.rtAnswerTime &&
+              (0, _.jsx)(_, {
+                question: _,
+                rtNow: _,
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                gidSession: _,
+                gidQuestion: __webpack_require__,
+                eState: null == _ ? void 0 : _.eState,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { question: _, rtNow: __webpack_require__ } = _,
@@ -1381,68 +1306,48 @@
             _.rtAnswerTime &&
             (_ < _._.PerDay ? (0, _._)(_) : (0, _._)(_.rtAnswerTime));
         return _.strAnswerText
-          ? _.createElement(
-              "div",
-              {
-                className: _().Answer,
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)("div", {
+              className: _().Answer,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().AnswerTitle,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().AnswerCheck,
-                  },
-                  _.createElement(_.X4B, {
-                    color: "#67c1f5",
-                  }),
-                ),
-                (0, _._)("#QAndA_ModeratorAnswerTitle"),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().AnswerCheck,
+                      children: (0, _.jsx)(_.X4B, {
+                        color: "#67c1f5",
+                      }),
+                    }),
+                    (0, _._)("#QAndA_ModeratorAnswerTitle"),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
                   className: _().AnswerText,
-                },
-                " ",
-                _.strAnswerText,
-                " ",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [" ", _.strAnswerText, " "],
+                }),
+                (0, _.jsx)("div", {
                   className: _().QuestionStats,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     rtFullDate: _.rtAnswerTime,
                     className: _().PostTime,
                     stylesmodule: _(),
-                  },
-                  _,
-                ),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().AnswerTitle,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().AnswerCheck,
-                },
-                _.createElement(_.X4B, {
-                  color: "#67c1f5",
+                    children: _,
+                  }),
                 }),
-              ),
-              (0, _._)("#QAndA_AlreadyAnsweredTitle"),
-            );
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              className: _().AnswerTitle,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().AnswerCheck,
+                  children: (0, _.jsx)(_.X4B, {
+                    color: "#67c1f5",
+                  }),
+                }),
+                (0, _._)("#QAndA_AlreadyAnsweredTitle"),
+              ],
+            });
       }
       function _(_) {
         var _;
@@ -1450,18 +1355,16 @@
           { isLoading: _, data: _ } = (0, _._)(_.accountID);
         return _
           ? null
-          : _.createElement(
-              "a",
-              {
-                href: _.GetCommunityProfileURL(),
-                className: _().PersonaName,
-                "data-miniprofile": "s" + _,
-              },
-              null !== (_ = null == _ ? void 0 : _.m_strPlayerName) &&
+          : (0, _.jsx)("a", {
+              href: _.GetCommunityProfileURL(),
+              className: _().PersonaName,
+              "data-miniprofile": "s" + _,
+              children:
+                null !== (_ = null == _ ? void 0 : _.m_strPlayerName) &&
                 void 0 !== _
-                ? _
-                : _,
-            );
+                  ? _
+                  : _,
+            });
       }
       function _(_) {
         const {
@@ -1473,112 +1376,85 @@
           _ = 0 == _ || 3 == _,
           _ = 3 != _,
           _ = 1 == _;
-        return _.createElement(
-          "div",
-          {
-            className: _().ModeratorSection,
-          },
-          (0, _._)("#QAndA_ModeratorLabel"),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().ModeratorSection,
+          children: [
+            (0, _._)("#QAndA_ModeratorLabel"),
+            (0, _.jsx)("div", {
               className: _().ToolRow,
-            },
-            _.createElement(_, {
-              strPrompt: (0, _._)("#QAndA_AnswerPrompt"),
-              fnSubmit: (_) => _(__webpack_require__, _),
+              children: (0, _.jsx)(_, {
+                strPrompt: (0, _._)("#QAndA_AnswerPrompt"),
+                fnSubmit: (_) => _(__webpack_require__, _),
+              }),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: _().ToolRow,
-            },
-            (0, _._)("#QAndA_ModeratorOtherOptionsLabel"),
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#QAndA_ModerateApproveButton_ttip"),
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(__webpack_require__, 1),
-                  className: _().InputButton,
-                  disabled: !_,
-                },
-                (0, _._)("#QAndA_ModerateApproveButton"),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#QAndA_ModerateHideButton_ttip"),
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(__webpack_require__, 3),
-                  className: _().InputButton,
-                  disabled: !_,
-                },
-                (0, _._)("#QAndA_ModerateHideButton"),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#QAndA_QuickAnswerButton_ttip"),
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(__webpack_require__, ""),
-                  className: _().InputButton,
-                  disabled: !_,
-                },
-                (0, _._)("#QAndA_QuickAnswerButton"),
-              ),
-            ),
-          ),
-        );
+              children: [
+                (0, _._)("#QAndA_ModeratorOtherOptionsLabel"),
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)("#QAndA_ModerateApproveButton_ttip"),
+                  children: (0, _.jsx)(_._, {
+                    onClick: () => _(__webpack_require__, 1),
+                    className: _().InputButton,
+                    disabled: !_,
+                    children: (0, _._)("#QAndA_ModerateApproveButton"),
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)("#QAndA_ModerateHideButton_ttip"),
+                  children: (0, _.jsx)(_._, {
+                    onClick: () => _(__webpack_require__, 3),
+                    className: _().InputButton,
+                    disabled: !_,
+                    children: (0, _._)("#QAndA_ModerateHideButton"),
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)("#QAndA_QuickAnswerButton_ttip"),
+                  children: (0, _.jsx)(_._, {
+                    onClick: () => _(__webpack_require__, ""),
+                    className: _().InputButton,
+                    disabled: !_,
+                    children: (0, _._)("#QAndA_QuickAnswerButton"),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { gidSession: _ } = _;
         _();
         const { strName: __webpack_require__, bUserCanModerate: _ } = _(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().QAFullPageView,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().QAFullPageView,
+          children: [
+            (0, _.jsx)("div", {
               className: _().QAName,
-            },
-            (0, _._)("#QAndA_Header") +
-              ((null == __webpack_require__
-                ? void 0
-                : __webpack_require__.length) > 0
-                ? ": " + __webpack_require__
-                : ""),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().QAColumns,
-            },
-            _.createElement(_, {
-              gidSession: _,
-              bHalfOfFullPage: _,
+              children:
+                (0, _._)("#QAndA_Header") +
+                ((null == __webpack_require__
+                  ? void 0
+                  : __webpack_require__.length) > 0
+                  ? ": " + __webpack_require__
+                  : ""),
             }),
-            _ &&
-              _.createElement(_, {
-                gidSession: _,
-              }),
-          ),
-        );
+            (0, _.jsxs)("div", {
+              className: _().QAColumns,
+              children: [
+                (0, _.jsx)(_, {
+                  gidSession: _,
+                  bHalfOfFullPage: _,
+                }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    gidSession: _,
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { gidSession: _ } = _,
@@ -1589,59 +1465,52 @@
           } = _(_),
           _ = (0, _._)(10);
         return __webpack_require__
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().QAModeratorColumn, _().QASplitColumns),
-              },
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_().QAModeratorColumn, _().QASplitColumns),
+              children: [
+                (0, _.jsx)(_._, {
                   title: (0, _._)("#QAndA_ModeratorViewHeader"),
                   className: _().ModeratorInstructions,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().QuestionList,
-                  },
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: _,
-                      gidSession: _,
-                      gidQuestion: _,
-                      bUserCanModerate: __webpack_require__,
-                      bUserCanVote: !1,
-                      rtNow: _,
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          gidSession: _,
+                          gidQuestion: _,
+                          bUserCanModerate: __webpack_require__,
+                          bUserCanVote: !1,
+                          rtNow: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  }),
+                }),
+                (0, _.jsx)(_._, {
                   title: (0, _._)("#QAndA_HiddenQuestionsHeader"),
                   className: _().AnsweredSectionHeader,
                   bStartMinimized: !0,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().QuestionList,
-                  },
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: _,
-                      gidSession: _,
-                      gidQuestion: _,
-                      bUserCanModerate: __webpack_require__,
-                      bUserCanVote: !1,
-                      rtNow: _,
-                    }),
-                  ),
-                ),
-              ),
-            )
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          gidSession: _,
+                          gidQuestion: _,
+                          bUserCanModerate: __webpack_require__,
+                          bUserCanVote: !1,
+                          rtNow: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  }),
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -1661,255 +1530,210 @@
           _ = (0, _._)(10),
           _ = _ && __webpack_require__,
           { fnModerateQuestion: _ } = _(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().QAMainCtn,
-              __webpack_require__ && _().QASplitColumns,
-            ),
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().QAHeader, _ && _().ModerationHeader),
-            },
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-                disabled: !_,
-                className: (0, _._)(
-                  _().InputButton,
-                  _().Reload,
-                  _ && _().Reloading,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().ReloadIcon,
-                },
-                _.createElement(_.MvQ, null),
-              ),
-            ),
-            _
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  (0, _._)("#QAndA_ModeratorLabelHeader"),
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: (0, _._)(
-                        "#QAndA_ModerateHideAllButton_ttip",
-                      ),
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: async () => {
-                          for (const _ of [_, _, _])
-                            for (const _ of _) await _(_, 3);
-                        },
-                        className: _().InputButton,
-                      },
-                      (0, _._)("#QAndA_ModerateHideAllButton"),
-                    ),
-                  ),
-                )
-              : _
-                ? _.createElement(_, {
-                    fnAskQuestion: _,
-                  })
-                : _ && _.createElement(_, null),
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().QAMainCtn,
+            __webpack_require__ && _().QASplitColumns,
           ),
-          _.length + _.length == 0
-            ? _.createElement(
-                "div",
-                {
-                  className: _().NoQuestions,
-                },
-                (0, _._)("#QAndA_NoQuestionsYet"),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().QuestionsCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().InsetShadowTopCtn,
-                  },
-                  _.createElement("div", {
-                    className: _().InsetShadowTop,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().QuestionList,
-                  },
-                  _
-                    ? _.map((_) =>
-                        _.createElement(_, {
-                          key: _,
-                          gidSession: _,
-                          gidQuestion: _,
-                          bUserCanModerate: _,
-                          bUserCanVote: _,
-                          fnVoteOnQuestion: _,
-                          rtNow: _,
-                        }),
-                      )
-                    : _.createElement(_._, {
-                        position: "center",
-                      }),
-                ),
-                _.length > 0 &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().AnsweredSectionHeader,
-                      },
-                      (0, _._)("#QAndA_AnsweredQuestionsHeader"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().QuestionList,
-                      },
-                      _.map((_) =>
-                        _.createElement(_, {
-                          key: _,
-                          gidSession: _,
-                          gidQuestion: _,
-                          bUserCanModerate: _,
-                          bUserCanVote: _,
-                          fnVoteOnQuestion: _,
-                          rtNow: _,
-                        }),
-                      ),
-                    ),
+          children: [
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_().QAHeader, _ && _().ModerationHeader),
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  disabled: !_,
+                  className: (0, _._)(
+                    _().InputButton,
+                    _().Reload,
+                    _ && _().Reloading,
                   ),
-              ),
-        );
+                  children: (0, _.jsx)("div", {
+                    className: _().ReloadIcon,
+                    children: (0, _.jsx)(_.MvQ, {}),
+                  }),
+                }),
+                _
+                  ? (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _._)("#QAndA_ModeratorLabelHeader"),
+                        (0, _.jsx)(_._, {
+                          toolTipContent: (0, _._)(
+                            "#QAndA_ModerateHideAllButton_ttip",
+                          ),
+                          children: (0, _.jsx)(_._, {
+                            onClick: async () => {
+                              for (const _ of [_, _, _])
+                                for (const _ of _) await _(_, 3);
+                            },
+                            className: _().InputButton,
+                            children: (0, _._)("#QAndA_ModerateHideAllButton"),
+                          }),
+                        }),
+                      ],
+                    })
+                  : _
+                    ? (0, _.jsx)(_, {
+                        fnAskQuestion: _,
+                      })
+                    : _ && (0, _.jsx)(_, {}),
+              ],
+            }),
+            _.length + _.length == 0
+              ? (0, _.jsx)("div", {
+                  className: _().NoQuestions,
+                  children: (0, _._)("#QAndA_NoQuestionsYet"),
+                })
+              : (0, _.jsxs)("div", {
+                  className: _().QuestionsCtn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().InsetShadowTopCtn,
+                      children: (0, _.jsx)("div", {
+                        className: _().InsetShadowTop,
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().QuestionList,
+                      children: _
+                        ? _.map((_) =>
+                            (0, _.jsx)(
+                              _,
+                              {
+                                gidSession: _,
+                                gidQuestion: _,
+                                bUserCanModerate: _,
+                                bUserCanVote: _,
+                                fnVoteOnQuestion: _,
+                                rtNow: _,
+                              },
+                              _,
+                            ),
+                          )
+                        : (0, _.jsx)(_._, {
+                            position: "center",
+                          }),
+                    }),
+                    _.length > 0 &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().AnsweredSectionHeader,
+                            children: (0, _._)(
+                              "#QAndA_AnsweredQuestionsHeader",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().QuestionList,
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                _,
+                                {
+                                  gidSession: _,
+                                  gidQuestion: _,
+                                  bUserCanModerate: _,
+                                  bUserCanVote: _,
+                                  fnVoteOnQuestion: _,
+                                  rtNow: _,
+                                },
+                                _,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+          ],
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(!1),
           _ = (0, _._)("QuestionBox");
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: _().Description,
-            },
-            (0, _._)("#QAndA_HeaderDescription"),
-          ),
-          _.createElement(_, {
-            strPrompt: (0, _._)("#QAndA_QuestionPrompt"),
-            fnSubmit: async (_) => {
-              const _ = await _.fnAskQuestion(_);
-              return (
-                1 != _ ||
-                  _.token.reason ||
-                  (__webpack_require__(!0),
-                  window.setTimeout(() => {
-                    _.token.reason || __webpack_require__(!1);
-                  }, 1e3)),
-                _
-              );
-            },
-          }),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#QAndA_HeaderDescription"),
+            }),
+            (0, _.jsx)(_, {
+              strPrompt: (0, _._)("#QAndA_QuestionPrompt"),
+              fnSubmit: async (_) => {
+                const _ = await _.fnAskQuestion(_);
+                return (
+                  1 != _ ||
+                    _.token.reason ||
+                    (__webpack_require__(!0),
+                    window.setTimeout(() => {
+                      _.token.reason || __webpack_require__(!1);
+                    }, 1e3)),
+                  _
+                );
+              },
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(_().QuestionACK, _ && _().Visible),
-            },
-            (0, _._)("#QAndA_QuestionWasPosted"),
-          ),
-        );
+              children: (0, _._)("#QAndA_QuestionWasPosted"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { strPrompt: _, fnSubmit: __webpack_require__ } = _,
           [_, _] = _.useState(""),
           [_, _] = _.useState(!1);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().InputCtn,
-            },
-            _.createElement(_._, {
-              type: "text",
-              placeholder: _,
-              maxLength: 512,
-              value: _,
-              onChange: (_) => _(_.target.value),
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsxs)("div", {
+            className: _().InputCtn,
+            children: [
+              (0, _.jsx)(_._, {
+                type: "text",
+                placeholder: _,
+                maxLength: 512,
+                value: _,
+                onChange: (_) => _(_.target.value),
+              }),
+              (0, _.jsxs)("div", {
                 className: _().ButtonCtn,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SaveSpinner,
-                  },
-                  _.createElement(_._, {
-                    size: "small",
-                    position: "center",
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().SaveSpinner,
+                      children: (0, _.jsx)(_._, {
+                        size: "small",
+                        position: "center",
+                      }),
+                    }),
+                  (0, _.jsx)(_._, {
+                    onClick: async () => {
+                      _(!0);
+                      1 == (await __webpack_require__(_)) && _(""), _(!1);
+                    },
+                    disabled: _ || !_,
+                    className: _().InputButton,
+                    children: (0, _._)("#QAndA_SubmitCommentButton"),
                   }),
-                ),
-              _.createElement(
-                _._,
-                {
-                  onClick: async () => {
-                    _(!0);
-                    1 == (await __webpack_require__(_)) && _(""), _(!1);
-                  },
-                  disabled: _ || !_,
-                  className: _().InputButton,
-                },
-                (0, _._)("#QAndA_SubmitCommentButton"),
-              ),
-            ),
-          ),
-        );
+                ],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().Description,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().Description,
+          children: [
+            (0, _.jsx)("div", {
               className: _().LogInPrompt,
-            },
-            (0, _._)("#QAndA_LogInPrompt"),
-          ),
-          !_._.logged_in &&
-            _.createElement(
-              _._,
-              {
+              children: (0, _._)("#QAndA_LogInPrompt"),
+            }),
+            !_._.logged_in &&
+              (0, _.jsx)(_._, {
                 onClick: _._,
                 className: (0, _._)(_().SignInButton, _().InputButton),
-              },
-              (0, _._)("#Login_SignIn"),
-            ),
-        );
+                children: (0, _._)("#Login_SignIn"),
+              }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1920,6 +1744,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1940,73 +1765,67 @@
             elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _,
                 _.SectionTitleHeader,
                 _.required_title,
                 "SectionTitleHeader",
               ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.CollapsableSectionTitle,
-                  "EventEditorTextTitle",
-                ),
-              },
-              _,
-              Boolean(__webpack_require__) &&
-                _.createElement(_._, {
-                  tooltip: __webpack_require__,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.CollapsableSectionTitle,
+                    "EventEditorTextTitle",
+                  ),
+                  children: [
+                    _,
+                    Boolean(__webpack_require__) &&
+                      (0, _.jsx)(_._, {
+                        tooltip: __webpack_require__,
+                      }),
+                  ],
                 }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SectionTitleButtons,
-              },
-              _,
-              _.createElement(_, {
-                bIsMinimized: _,
-                fnToggleMinimize: _,
+                (0, _.jsxs)("div", {
+                  className: _.SectionTitleButtons,
+                  children: [
+                    _,
+                    (0, _.jsx)(_, {
+                      bIsMinimized: _,
+                      fnToggleMinimize: _,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            !_ &&
+              (0, _.jsx)(_._, {
+                children: _,
               }),
-            ),
-          ),
-          !_ && _.createElement(_._, null, _),
-        );
+          ],
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
-        return _.createElement(
-          _,
-          {
-            ..._,
-            getMinimized: () => _,
-            toggleMinimized: () => __webpack_require__(!_),
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_, {
+          ..._,
+          getMinimized: () => _,
+          toggleMinimized: () => __webpack_require__(!_),
+          children: _.children,
+        });
       }
       function _(_) {
         const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return _.createElement(
-          _._,
-          {
-            "data-tooltip-text": (0, _._)(_),
-            onClick: __webpack_require__,
-          },
-          _.bIsMinimized
-            ? _.createElement(_.hz4, null)
-            : _.createElement(_.Xjb, null),
-        );
+        return (0, _.jsx)(_._, {
+          "data-tooltip-text": (0, _._)(_),
+          onClick: __webpack_require__,
+          children: _.bIsMinimized
+            ? (0, _.jsx)(_.hz4, {})
+            : (0, _.jsx)(_.Xjb, {}),
+        });
       }
     },
   },

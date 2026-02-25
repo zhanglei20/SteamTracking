@@ -827,6 +827,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -2344,59 +2345,55 @@
       function _(_) {
         const { assetSetID: _, className: __webpack_require__, appid: _ } = _,
           { publicAssetSetID: _ } = _(_);
-        return _.createElement(
-          _._,
-          {
-            onClick: (_) =>
-              (function (_, _, _) {
-                const _ = new Map();
-                if (_) {
-                  _(_).forEach((_) => {
-                    const _ = _(_, _);
-                    _.set(_.markerid, _);
-                  });
-                }
-                if (_ && _ != _) {
-                  _(_).forEach((_) => {
-                    const _ = _(_, _);
-                    _.set(_.markerid, _);
-                  });
-                }
-                let _ =
-                  '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>';
-                Array.from(_.values()).forEach((_) => {
-                  _ += _(_);
-                }),
-                  (_ += "</defs></svg>");
-                const _ = `${_}_markers.svg`;
-                !(function (_, _) {
-                  const _ = new Blob([_], {
-                      type: "text/plain",
-                    }),
-                    _ = window.URL.createObjectURL(_),
-                    _ = document.createElement("a");
-                  (_.href = _),
-                    (_.download = _),
-                    document.body.appendChild(_),
-                    _.click(),
-                    window.URL.revokeObjectURL(_);
-                })(_, _);
-              })(_, _, _),
-            disabled: !_,
-          },
-          "↓",
-          " ",
-          (0, _._)("#TimelineMarkers_Hidden_download"),
-          " ",
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          onClick: (_) =>
+            (function (_, _, _) {
+              const _ = new Map();
+              if (_) {
+                _(_).forEach((_) => {
+                  const _ = _(_, _);
+                  _.set(_.markerid, _);
+                });
+              }
+              if (_ && _ != _) {
+                _(_).forEach((_) => {
+                  const _ = _(_, _);
+                  _.set(_.markerid, _);
+                });
+              }
+              let _ =
+                '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>';
+              Array.from(_.values()).forEach((_) => {
+                _ += _(_);
+              }),
+                (_ += "</defs></svg>");
+              const _ = `${_}_markers.svg`;
+              !(function (_, _) {
+                const _ = new Blob([_], {
+                    type: "text/plain",
+                  }),
+                  _ = window.URL.createObjectURL(_),
+                  _ = document.createElement("a");
+                (_.href = _),
+                  (_.download = _),
+                  document.body.appendChild(_),
+                  _.click(),
+                  window.URL.revokeObjectURL(_);
+              })(_, _);
+            })(_, _, _),
+          disabled: !_,
+          children: [
+            "↓",
+            " ",
+            (0, _._)("#TimelineMarkers_Hidden_download"),
+            " ",
+            (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#TimelineMarkers_Hidden_download_ttip"),
               className: __webpack_require__,
-            },
-            "(?)",
-          ),
-        );
+              children: "(?)",
+            }),
+          ],
+        });
       }
       function _(_) {
         let _ = `<g id="${_.markerid}">`;
@@ -2850,40 +2847,36 @@
           1 == __webpack_require__
             ? (_ = `data:image/svg+xml,${encodeURIComponent(_)}`)
             : 2 == __webpack_require__ && (_ = _),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.IconPreviewCtn),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Icons,
-              },
-              _.createElement("img", {
-                className: _.LargeIcon,
-                src: _,
-                alt: "SVG Large Preview",
-              }),
-              _.createElement("img", {
-                className: _.MediumIcon,
-                src: _,
-                alt: "SVG Medium Preview",
-              }),
-              _.createElement("img", {
-                className: _.SmallIcon,
-                src: _,
-                alt: "SVG Small Preview",
-              }),
-            ),
-          )
+          (0, _.jsx)("div", {
+            className: (0, _._)(_.IconPreviewCtn),
+            children: (0, _.jsxs)("div", {
+              className: _.Icons,
+              children: [
+                (0, _.jsx)("img", {
+                  className: _.LargeIcon,
+                  src: _,
+                  alt: "SVG Large Preview",
+                }),
+                (0, _.jsx)("img", {
+                  className: _.MediumIcon,
+                  src: _,
+                  alt: "SVG Medium Preview",
+                }),
+                (0, _.jsx)("img", {
+                  className: _.SmallIcon,
+                  src: _,
+                  alt: "SVG Small Preview",
+                }),
+              ],
+            }),
+          })
         );
       }
       function _(_) {
         const { svgXmlUntrusted: _ } = _;
         if (!_) return null;
         const _ = `data:image/svg+xml,${encodeURIComponent(_)}`;
-        return _.createElement("img", {
+        return (0, _.jsx)("img", {
           className: _.SmallIcon,
           src: _,
           alt: "SVG Small Preview",
@@ -2914,50 +2907,40 @@
         const _ = _ || _,
           _ = Boolean(_ && _.asset_set_id != _),
           _ = _?.asset_set_id === _;
-        return _.createElement(
-          "div",
-          {
-            className: _.IconContents,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-          },
-          _ &&
-            _.createElement(
-              "span",
-              {
+        return (0, _.jsxs)("div", {
+          className: _.IconContents,
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
+          children: [
+            _ &&
+              (0, _.jsx)("span", {
                 className: _.MsgUnpublished,
-              },
-              (0, _._)("#TimelineMarker_state_pending"),
-            ),
-          _.createElement(_, {
-            imageBase64OrUntrustedSVG: _.image,
-            imageType: _.image_type,
-          }),
-          _.createElement(
-            "div",
-            {
+                children: (0, _._)("#TimelineMarker_state_pending"),
+              }),
+            (0, _.jsx)(_, {
+              imageBase64OrUntrustedSVG: _.image,
+              imageType: _.image_type,
+            }),
+            (0, _.jsx)("div", {
               className: _.MarkerID,
-            },
-            _.markerid,
-          ),
-          _ &&
-            _.createElement(
-              _._,
-              {
+              children: _.markerid,
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
                 className: _.EditButton,
                 onClick: (_) =>
                   (0, _._)(
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       appid: _,
                       bDisallowMarkerIDEdit: _,
                       oTimelineMarkerDef: _,
                     }),
                     (0, _._)(_),
                   ),
-              },
-              (0, _._)("#Button_Edit"),
-            ),
-        );
+                children: (0, _._)("#Button_Edit"),
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2968,41 +2951,32 @@
           } = _,
           _ = _(_, __webpack_require__);
         return _ && 0 != _.size
-          ? _.createElement(
-              "div",
-              {
-                className: _.IconGridCtn,
-              },
-              _.createElement(
-                _,
-                {
-                  assetSetID: __webpack_require__,
-                },
-                Array.from(_).map((_, _) =>
-                  _.createElement(
+          ? (0, _.jsx)("div", {
+              className: _.IconGridCtn,
+              children: (0, _.jsx)(_, {
+                assetSetID: __webpack_require__,
+                children: Array.from(_).map((_, _) =>
+                  (0, _.jsx)(
                     _,
                     {
-                      key: __webpack_require__ + "_" + _,
                       _: `assetsetid_${__webpack_require__}_markerid_${_}`,
                       index: _,
                       bDraggable: _,
+                      children: (0, _.jsx)(_, {
+                        appid: _,
+                        assetSetID: __webpack_require__,
+                        markerID: _,
+                      }),
                     },
-                    _.createElement(_, {
-                      appid: _,
-                      assetSetID: __webpack_require__,
-                      markerID: _,
-                    }),
+                    __webpack_require__ + "_" + _,
                   ),
                 ),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _.NoHidden,
-              },
-              _,
-            );
+              }),
+            })
+          : (0, _.jsx)("div", {
+              className: _.NoHidden,
+              children: _,
+            });
       }
       function _(_) {
         const {
@@ -3011,71 +2985,56 @@
           index: _,
           bDraggable: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            draggableId: _,
-            index: _,
-            isDragDisabled: !_,
-          },
-          (_) =>
-            _.createElement(
-              "div",
-              {
-                ref: _.innerRef,
-                ..._.draggableProps,
-                ..._.dragHandleProps,
-                className: _.DraggableBox,
-                style: {
-                  ..._.draggableProps.style,
-                },
+        return (0, _.jsx)(_._, {
+          draggableId: _,
+          index: _,
+          isDragDisabled: !_,
+          children: (_) =>
+            (0, _.jsx)("div", {
+              ref: _.innerRef,
+              ..._.draggableProps,
+              ..._.dragHandleProps,
+              className: _.DraggableBox,
+              style: {
+                ..._.draggableProps.style,
               },
-              __webpack_require__,
-            ),
-        );
+              children: __webpack_require__,
+            }),
+        });
       }
       function _(_) {
         const { assetSetID: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            droppableId: "undroppable" + _,
-            direction: "horizontal",
-          },
-          (_) =>
-            _.createElement(
-              "div",
-              {
-                ref: _.innerRef,
-                ..._.droppableProps,
-                style: {
-                  display: "flex",
-                },
+        return (0, _.jsx)(_._, {
+          droppableId: "undroppable" + _,
+          direction: "horizontal",
+          children: (_) =>
+            (0, _.jsxs)("div", {
+              ref: _.innerRef,
+              ..._.droppableProps,
+              style: {
+                display: "flex",
               },
-              __webpack_require__,
-              _.placeholder,
-            ),
-        );
+              children: [__webpack_require__, _.placeholder],
+            }),
+        });
       }
       function _(_) {
         const { assetSetID: _, appid: __webpack_require__, strMessage: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            droppableId: `droptarget_assetsetid_${_}_appid_${__webpack_require__}`,
-          },
-          (_) =>
-            _.createElement(
-              "div",
-              {
-                ..._.droppableProps,
-                ref: _.innerRef,
-                className: _.DragBox,
-              },
-              _.createElement("span", null, _),
-              _.placeholder,
-            ),
-        );
+        return (0, _.jsx)(_._, {
+          droppableId: `droptarget_assetsetid_${_}_appid_${__webpack_require__}`,
+          children: (_) =>
+            (0, _.jsxs)("div", {
+              ..._.droppableProps,
+              ref: _.innerRef,
+              className: _.DragBox,
+              children: [
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
+                _.placeholder,
+              ],
+            }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3603,7 +3562,7 @@
         const _ = _(_().GetGameID());
         return _ === _.NotRecording || _ === _.NotRunning
           ? null
-          : _.createElement(_, null);
+          : (0, _.jsx)(_, {});
       }
       function _(_) {
         const _ = _(),
@@ -3613,26 +3572,20 @@
             const _ = _.GetLiveEdgeMS();
             _.SetPlaytimeFromGlobalMS(_), _.FocusGlobalMS(_);
           }, [_]);
-        return _.createElement(
-          _._,
-          {
-            className: _.GoLiveButtonCtn,
-            toolTipContent: (0, _._)(
-              _ ? "#Playback_AtLatest" : "#Playback_JumpToLatest",
-            ),
-            direction: "bottom",
-          },
-          _.createElement(
-            _._,
-            {
-              onClick: _,
-              className: (0, _._)(_.GoLiveButton, _ && _.IsLive),
-            },
-            _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          className: _.GoLiveButtonCtn,
+          toolTipContent: (0, _._)(
+            _ ? "#Playback_AtLatest" : "#Playback_JumpToLatest",
+          ),
+          direction: "bottom",
+          children: (0, _.jsx)(_._, {
+            onClick: _,
+            className: (0, _._)(_.GoLiveButton, _ && _.IsLive),
+            children: (0, _.jsx)(_._, {
               className: (0, _._)(_.JumpToEndIcon),
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const { app: _ } = _(_);
@@ -4629,13 +4582,10 @@
           }),
           [_],
         );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _() {
         return (0, _.useContext)(_).timelinePlaybackCoordinator;
@@ -5531,13 +5481,10 @@
             })(_);
           })(_),
           _
-            ? _.createElement(
-                _.Provider,
-                {
-                  value: _,
-                },
-                _,
-              )
+            ? (0, _.jsx)(_.Provider, {
+                value: _,
+                children: _,
+              })
             : null
         );
       }
@@ -5549,19 +5496,20 @@
         _ = _.memo(function (_) {
           const _ = _(),
             _ = (0, _._)(() => _.GetVisibleTimelines());
-          return _.createElement(
-            _.Fragment,
-            null,
-            __webpack_require__.map((_) =>
-              _.createElement(_, {
-                key: _.timelineID,
-                msVisibleStart: _.msVisibleStart,
-                pxVisibleDuration: _.pxVisibleDuration,
-                pxVisibleStart: _.pxVisibleStart,
-                msTimelineStart: _.globalOffsetMS,
-              }),
+          return (0, _.jsx)(_.Fragment, {
+            children: __webpack_require__.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  msVisibleStart: _.msVisibleStart,
+                  pxVisibleDuration: _.pxVisibleDuration,
+                  pxVisibleStart: _.pxVisibleStart,
+                  msTimelineStart: _.globalOffsetMS,
+                },
+                _.timelineID,
+              ),
             ),
-          );
+          });
         }),
         _ = _.memo(function (_) {
           const {
@@ -5601,24 +5549,27 @@
               return _;
             }, [_, _, _, _, _, _]);
           return _
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("div", {
-                  className: _.TimelineBacking,
-                  style: {
-                    transform: `translateX(${_}px)`,
-                    width: _,
-                  },
-                }),
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: _.key,
-                    timelineRelativeIndex: _.iTimelineRelativeTick,
-                    globalOffsetPX: _.offsetPX,
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.TimelineBacking,
+                    style: {
+                      transform: `translateX(${_}px)`,
+                      width: _,
+                    },
                   }),
-                ),
-              )
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        timelineRelativeIndex: _.iTimelineRelativeTick,
+                        globalOffsetPX: _.offsetPX,
+                      },
+                      _.key,
+                    ),
+                  ),
+                ],
+              })
             : null;
         });
       function _(_) {
@@ -5627,18 +5578,15 @@
             timelineRelativeIndex: __webpack_require__,
           } = _,
           _ = __webpack_require__ % 20 == 0 ? _.Major : _.Minor;
-        return _.createElement(
-          "div",
-          {
-            className: _.TimeTick,
-            style: {
-              transform: `translateX(${_}px)`,
-            },
+        return (0, _.jsx)("div", {
+          className: _.TimeTick,
+          style: {
+            transform: `translateX(${_}px)`,
           },
-          _.createElement("div", {
+          children: (0, _.jsx)("div", {
             className: (0, _._)(_.TickLine, _),
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5811,44 +5759,41 @@
           faded: _,
           bSelectedMarker: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            style: _ ?? {},
-            className: (0, _._)(_, {
-              [_.HighlightIcon]: !0,
-              [_.Selected]: _,
-              [_.Faded]: _,
-            }),
-            onClick: (_) => {
-              _ && _(_);
-            },
-            onContextMenu: _,
-            onMouseEnter: _,
-            onMouseLeave: _,
+        return (0, _.jsx)("div", {
+          style: _ ?? {},
+          className: (0, _._)(_, {
+            [_.HighlightIcon]: !0,
+            [_.Selected]: _,
+            [_.Faded]: _,
+          }),
+          onClick: (_) => {
+            _ && _(_);
           },
-          _.createElement(_, {
+          onContextMenu: _,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          children: (0, _.jsx)(_, {
             entry: _,
             strMarkerIcon: __webpack_require__,
           }),
-        );
+        });
       }
       function _(_) {
         let { entry: _, strMarkerIcon: __webpack_require__ } = _;
         const _ = _().GetGameID();
         return (0, _._)(_)
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               achievementEntry: _,
               strGameID: _,
             })
           : (0, _._)(_)
-            ? _.createElement(_, null)
+            ? (0, _.jsx)(_, {})
             : _(__webpack_require__)
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   entry: _,
                   strMarkerIcon: __webpack_require__,
                 })
-              : _.createElement(_, {
+              : (0, _.jsx)(_, {
                   strMarkerIcon: __webpack_require__,
                   strGameID: _,
                 });
@@ -5859,7 +5804,7 @@
         let _, _;
         if (_)
           (_ = "white"),
-            (_ = _.createElement("img", {
+            (_ = (0, _.jsx)("img", {
               src: _.iconURL,
             }));
         else {
@@ -5869,16 +5814,13 @@
           };
           (_ = _(_.color)), (_ = _.func({}));
         }
-        return _.createElement(
-          "div",
-          {
-            className: _.Marker,
-            style: {
-              color: _,
-            },
+        return (0, _.jsx)("div", {
+          className: _.Marker,
+          style: {
+            color: _,
           },
-          _,
-        );
+          children: _,
+        });
       }
       function _(_) {
         const { entry: _, strMarkerIcon: __webpack_require__ } = _;
@@ -5891,19 +5833,13 @@
             (_ = _.CustomMarker))
           : (_ = _(__webpack_require__));
         const _ = _(_.color);
-        return _.createElement(
-          _,
-          {
-            color: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _,
-            },
-            _.func({}),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          color: _,
+          children: (0, _.jsx)("div", {
+            className: _,
+            children: _.func({}),
+          }),
+        });
       }
       function _(_) {
         const { icon: _, className: __webpack_require__ } = _;
@@ -5914,24 +5850,21 @@
       function _(_) {
         const _ = _("steam_invalid"),
           _ = _(_.color);
-        return _.createElement(
-          _,
-          {
-            color: _,
-          },
-          _.createElement("div", null, _.func({})),
-        );
+        return (0, _.jsx)(_, {
+          color: _,
+          children: (0, _.jsx)("div", {
+            children: _.func({}),
+          }),
+        });
       }
       function _(_) {
         const { strMarkerIcon: _, strGameID: __webpack_require__ } = _;
-        return _.createElement(
-          _,
-          null,
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          children: (0, _.jsx)(_, {
             icon: _,
             gameID: __webpack_require__,
           }),
-        );
+        });
       }
       function _(_) {
         const { icon: _, gameID: __webpack_require__, className: _ } = _,
@@ -5944,19 +5877,16 @@
                 null);
           })(new _._(__webpack_require__).GetAppID(), _);
         if (_(_))
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ..._,
           });
         if (null === _) return null;
         if (void 0 === _) {
           const _ = _();
-          return _.createElement(
-            "div",
-            {
-              className: _,
-            },
-            _.func({}),
-          );
+          return (0, _.jsx)("div", {
+            className: _,
+            children: _.func({}),
+          });
         }
         let _ = "";
         return (
@@ -5964,41 +5894,32 @@
             "string" != typeof _
               ? new XMLSerializer().serializeToString(_)
               : _),
-          _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              className: (0, _._)(_, _.GameMarkerSVG),
-            },
-            _.createElement("g", {
+          (0, _.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            className: (0, _._)(_, _.GameMarkerSVG),
+            children: (0, _.jsx)("g", {
               dangerouslySetInnerHTML: {
                 __html: _,
               },
             }),
-          )
+          })
         );
       }
       function _(_) {
         const { children: _, color: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.MarkerCtn,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.Marker,
-              style: __webpack_require__
-                ? {
-                    color: __webpack_require__,
-                  }
-                : null,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _.MarkerCtn,
+          children: (0, _.jsx)("div", {
+            className: _.Marker,
+            style: __webpack_require__
+              ? {
+                  color: __webpack_require__,
+                }
+              : null,
+            children: _,
+          }),
+        });
       }
       function _(_, _) {
         return !(_.nStart >= _.nEnd || _.nEnd <= _.nStart);
@@ -6043,38 +5964,37 @@
           [_, _] = _.useState(_.description || ""),
           _ = (0, _._)();
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: (0, _._)("#Marker_Dialog"),
               closeModal: _,
             })
-          : _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#Marker_Dialog"),
-                strMiddleButtonText: (0, _._)("#Marker_Action_Delete"),
-                onCancel: _,
-                onOK: async () => {
-                  _.fnSetLoading(!0);
-                  (await _.UpdateUserMarker(__webpack_require__, _, _, _))
-                    ? _()
-                    : (_.fnSetError(!0),
-                      _.fnSetStrError((0, _._)("#Marker_UpdateFailed")));
-                },
+          : (0, _.jsxs)(_._, {
+              strTitle: (0, _._)("#Marker_Dialog"),
+              strMiddleButtonText: (0, _._)("#Marker_Action_Delete"),
+              onCancel: _,
+              onOK: async () => {
+                _.fnSetLoading(!0);
+                (await _.UpdateUserMarker(__webpack_require__, _, _, _))
+                  ? _()
+                  : (_.fnSetError(!0),
+                    _.fnSetStrError((0, _._)("#Marker_UpdateFailed")));
               },
-              _.createElement(_._, {
-                type: "text",
-                value: _,
-                onChange: (_) => _(_.currentTarget.value),
-                label: (0, _._)("#Marker_Title"),
-              }),
-              _.createElement(_._, {
-                type: "text",
-                value: _,
-                onChange: (_) => _(_.currentTarget.value),
-                label: (0, _._)("#Marker_Description"),
-              }),
-            );
+              children: [
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#Marker_Title"),
+                }),
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#Marker_Description"),
+                }),
+              ],
+            });
       }
       var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
@@ -6271,26 +6191,20 @@
           }),
           [_, __webpack_require__, _, _, _, _, _],
         );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              onMouseOver: _,
-              onFocus: _,
-              onMouseOut: _,
-              onBlur: _,
-              onMouseEnter: _,
-              onMouseLeave: _,
-              className: _.MouseListenerContainer,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)("div", {
+            ref: _,
+            onMouseOver: _,
+            onFocus: _,
+            onMouseOut: _,
+            onBlur: _,
+            onMouseEnter: _,
+            onMouseLeave: _,
+            className: _.MouseListenerContainer,
+            children: _,
+          }),
+        });
       }
       function _() {
         return (0, _.useContext)(_);
@@ -6335,7 +6249,7 @@
             _ || _
               ? null
               : (0, _._)(
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     isCurrentPlayback: _,
                     nGlobalOffsetMS: _,
                     playbackCoordinator: _,
@@ -6392,14 +6306,10 @@
             () => () => __webpack_require__.SetPhaseToHighlight(null),
             [__webpack_require__],
           ),
-          _.createElement(
-            _._,
-            {
-              refInstance: _,
-            },
-            _.createElement(
-              _._,
-              {
+          (0, _.jsxs)(_._, {
+            refInstance: _,
+            children: [
+              (0, _.jsx)(_._, {
                 onSelected: (_) => {
                   _.AddUserMarkerAtGlobalMS(
                     _,
@@ -6412,23 +6322,19 @@
                     _.FocusGlobalMS(_);
                 },
                 className: _.TimelineContextMenuItem,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: (0, _._)(_.MenuItem, _.AddUserMarker),
-                },
-                _.createElement(_._, null),
-                (0, _._)(
-                  _
-                    ? "#Playback_UserSelectionControls_AddUserMarker"
-                    : "#TimelineDialog_AddMarker",
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
+                  children: [
+                    (0, _.jsx)(_._, {}),
+                    (0, _._)(
+                      _
+                        ? "#Playback_UserSelectionControls_AddUserMarker"
+                        : "#TimelineDialog_AddMarker",
+                    ),
+                  ],
+                }),
+              }),
+              (0, _.jsx)(_._, {
                 onSelected: () => {
                   const {
                     strTimelineID: _,
@@ -6439,74 +6345,62 @@
                   })(_.GetGameID(), _, __webpack_require__);
                 },
                 className: _.TimelineContextMenuItem,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: (0, _._)(_.MenuItem, _.TakeScreenshot),
-                },
-                _.createElement(_._, null),
-                (0, _._)(
-                  _
-                    ? "#Playback_UserSelectionControls_TakeScreenshot"
-                    : "#TimelineDialog_TakeScreenshot",
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
+                  children: [
+                    (0, _.jsx)(_._, {}),
+                    (0, _._)(
+                      _
+                        ? "#Playback_UserSelectionControls_TakeScreenshot"
+                        : "#TimelineDialog_TakeScreenshot",
+                    ),
+                  ],
+                }),
+              }),
+              (0, _.jsx)(_._, {
                 onSelected: () => {
                   _(_, 4, _, void 0),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
                 className: _.TimelineContextMenuItem,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: (0, _._)(_.MenuItem, _.StartEndClip),
-                },
-                _.createElement(_._, {
-                  direction: "left",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      direction: "left",
+                    }),
+                    (0, _._)(
+                      _
+                        ? "#Playback_UserSelectionControls_SetClipStart"
+                        : "#TimelineContext_SetClipStart",
+                    ),
+                  ],
                 }),
-                (0, _._)(
-                  _
-                    ? "#Playback_UserSelectionControls_SetClipStart"
-                    : "#TimelineContext_SetClipStart",
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
+              }),
+              (0, _.jsx)(_._, {
                 onSelected: () => {
                   _(_, 4, void 0, _),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
                 className: _.TimelineContextMenuItem,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: (0, _._)(_.MenuItem, _.StartEndClip),
-                },
-                _.createElement(_._, {
-                  direction: "right",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      direction: "right",
+                    }),
+                    (0, _._)(
+                      _
+                        ? "#Playback_UserSelectionControls_SetClipEnd"
+                        : "#TimelineContext_SetClipEnd",
+                    ),
+                  ],
                 }),
-                (0, _._)(
-                  _
-                    ? "#Playback_UserSelectionControls_SetClipEnd"
-                    : "#TimelineContext_SetClipEnd",
-                ),
-              ),
-            ),
-            !!_ &&
-              _.createElement(
-                _._,
-                {
+              }),
+              !!_ &&
+                (0, _.jsx)(_._, {
                   onSelected: () => {
                     if (!_) return;
                     const { phase: _, strTimelineID: __webpack_require__ } = _;
@@ -6544,20 +6438,16 @@
                   className: _.TimelineContextMenuItem,
                   onMouseOver: () => _([_.strTimelineID, _.phase.time]),
                   onMouseLeave: () => _(null),
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.ClipPhase),
-                  },
-                  _.createElement(_._, null),
-                  (0, _._)("#TimelineDialog_ClipPhase"),
-                ),
-              ),
-            _.length > 0 &&
-              _.createElement(
-                _._,
-                {
+                    children: [
+                      (0, _.jsx)(_._, {}),
+                      (0, _._)("#TimelineDialog_ClipPhase"),
+                    ],
+                  }),
+                }),
+              _.length > 0 &&
+                (0, _.jsx)(_._, {
                   onSelected: () => {
                     _.length > 0 &&
                       (_.ReportTrackedAction(
@@ -6566,17 +6456,16 @@
                       _ && _(_[0].strClipID));
                   },
                   className: _.TimelineContextMenuItem,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.ViewClip),
-                  },
-                  _.createElement(_.CeX, null),
-                  (0, _._)("#TimelineDialog_ViewClip"),
-                ),
-              ),
-          )
+                    children: [
+                      (0, _.jsx)(_.CeX, {}),
+                      (0, _._)("#TimelineDialog_ViewClip"),
+                    ],
+                  }),
+                }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -6644,7 +6533,7 @@
             _.ReportTrackedAction(
               `/GameRecording/HighlightCtxMenu/Marker/Edit/${_.entry.type}`,
             );
-            let _ = _.createElement(_, {
+            let _ = (0, _.jsx)(_, {
               entry: _.entry,
               playbackCoordinator: _,
               fnClearSelection: _,
@@ -6671,109 +6560,101 @@
         return (
           (0, _._)(_.entry) &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "edit",
                   onSelected: _,
                   className: _.HighlightContextMenuItem,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.EditMarker),
-                  },
-                  _.createElement(_._, null),
-                  (0, _._)("#Marker_Action_Edit"),
-                ),
+                    children: [
+                      (0, _.jsx)(_._, {}),
+                      (0, _._)("#Marker_Action_Edit"),
+                    ],
+                  }),
+                },
+                "edit",
               ),
             ),
           _?.strRecordingID &&
             !_ &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "clip",
                   onSelected: _,
                   className: _.HighlightContextMenuItem,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.CreateClip),
-                  },
-                  _.createElement(_._, null),
-                  (0, _._)("#TimelineDialog_ClipVideo"),
-                ),
+                    children: [
+                      (0, _.jsx)(_._, {}),
+                      (0, _._)("#TimelineDialog_ClipVideo"),
+                    ],
+                  }),
+                },
+                "clip",
               ),
             ),
           (0, _._)(_.entry) &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "delete",
                   onSelected: _,
                   className: _.HighlightContextMenuItem,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.DeleteMarker),
-                  },
-                  _.createElement(_.lMJ, null),
-                  (0, _._)("#Marker_Action_Delete"),
-                ),
+                    children: [
+                      (0, _.jsx)(_.lMJ, {}),
+                      (0, _._)("#Marker_Action_Delete"),
+                    ],
+                  }),
+                },
+                "delete",
               ),
             ),
           (0, _._)(_.entry) &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "view_screenshot",
                   onSelected: _,
                   className: _.HighlightContextMenuItem,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.ViewScreenshot),
-                  },
-                  _.createElement(_._, null),
-                  (0, _._)("#TimelineDialog_ViewScreenshot"),
-                ),
+                    children: [
+                      (0, _.jsx)(_._, {}),
+                      (0, _._)("#TimelineDialog_ViewScreenshot"),
+                    ],
+                  }),
+                },
+                "view_screenshot",
               ),
             ),
           _ &&
             _ &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "view_clip",
                   onSelected: _,
                   className: _.HighlightContextMenuItem,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.ViewClip),
-                  },
-                  _.createElement(_._, null),
-                  (0, _._)("#TimelineDialog_ViewClip"),
-                ),
+                    children: [
+                      (0, _.jsx)(_._, {}),
+                      (0, _._)("#TimelineDialog_ViewClip"),
+                    ],
+                  }),
+                },
+                "view_clip",
               ),
             ),
           _.length
-            ? _.createElement(
-                _._,
-                {
-                  refInstance: _,
-                },
-                _,
-              )
+            ? (0, _.jsx)(_._, {
+                refInstance: _,
+                children: _,
+              })
             : null
         );
       }
@@ -6808,7 +6689,7 @@
             return _.useCallback(
               (_, _, _) => {
                 if (_) return;
-                const _ = _.createElement(_, {
+                const _ = (0, _.jsx)(_, {
                   markerInfo: _,
                   playbackCoordinator: _,
                   timelineView: _,
@@ -6911,52 +6792,51 @@
           _ = {
             transform: `translateX( calc( ${_}px - 50% ))`,
           };
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _.MarkerAndDropline,
-              _ && _.NoPointer,
-              _ && _.Faded,
-            ),
-            style: _,
-            ref: _,
-            onContextMenu: (_) => {
-              _(_, _, {
-                bDisableMouseOverlay: !0,
-                bForcePopup: !0,
-                bAlwaysOnTop: !0,
-              }),
-                _.stopPropagation();
-            },
-            ..._,
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _.MarkerAndDropline,
+            _ && _.NoPointer,
+            _ && _.Faded,
+          ),
+          style: _,
+          ref: _,
+          onContextMenu: (_) => {
+            _(_, _, {
+              bDisableMouseOverlay: !0,
+              bForcePopup: !0,
+              bAlwaysOnTop: !0,
+            }),
+              _.stopPropagation();
           },
-          _.createElement(
-            "div",
-            {
-              key: _.valMS,
-              className: (0, _._)(_.TimelineMarkerCtn),
-            },
-            _.createElement(_, {
-              classNames: _.TimelineMarker,
-              key: _.entry._,
-              entry: _.entry,
-              strMarkerIcon: _.strMarkerIcon,
-              faded: _,
-              onClick: _,
-              bSelectedMarker: _,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
+          ..._,
+          children: [
+            (0, _.jsx)(
+              "div",
+              {
+                className: (0, _._)(_.TimelineMarkerCtn),
+                children: (0, _.jsx)(
+                  _,
+                  {
+                    classNames: _.TimelineMarker,
+                    entry: _.entry,
+                    strMarkerIcon: _.strMarkerIcon,
+                    faded: _,
+                    onClick: _,
+                    bSelectedMarker: _,
+                  },
+                  _.entry._,
+                ),
+              },
+              _.valMS,
+            ),
+            (0, _.jsx)("div", {
               className: _.DroplineCtn,
-            },
-            _.createElement("div", {
-              className: (0, _._)(_.TimelineMarkerDropLine),
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_.TimelineMarkerDropLine),
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
       const _ = 150;
       function _(_) {
@@ -6965,16 +6845,17 @@
       const _ = _.memo(function (_) {
           const _ = _(),
             _ = (0, _._)(() => _.GetVisibleTimelines());
-          return _.createElement(
-            _.Fragment,
-            null,
-            __webpack_require__.map((_) =>
-              _.createElement(_, {
-                key: _.timelineID,
-                timeline: _,
-              }),
+          return (0, _.jsx)(_.Fragment, {
+            children: __webpack_require__.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  timeline: _,
+                },
+                _.timelineID,
+              ),
             ),
-          );
+          });
         }),
         _ = {
           screenshot: 0,
@@ -7044,16 +6925,19 @@
               return _;
             })(_.timelineID, _, _),
             _ = _.BAllowIcon(_.nGlobalMS.valMS);
-          return _.createElement(_, {
-            gameID: _,
-            clipID: _,
-            key: _,
-            view: _,
-            coordinator: _,
-            faded: !_,
-            timelineID: _.timelineID,
-            markerInfo: _,
-          });
+          return (0, _.jsx)(
+            _,
+            {
+              gameID: _,
+              clipID: _,
+              view: _,
+              coordinator: _,
+              faded: !_,
+              timelineID: _.timelineID,
+              markerInfo: _,
+            },
+            _,
+          );
         });
       });
       function _(_) {
@@ -7100,25 +6984,29 @@
             [_.Menus]: __webpack_require__.mode === _._.Menus,
             [_.Playing]: __webpack_require__.mode === _._.Playing,
           });
-        return _.createElement("div", {
-          key: __webpack_require__._,
-          className: (0, _._)(_.GameModeMarker, _, _ && _.GameModeMarkerClip),
-          style: _,
-        });
+        return (0, _.jsx)(
+          "div",
+          {
+            className: (0, _._)(_.GameModeMarker, _, _ && _.GameModeMarkerClip),
+            style: _,
+          },
+          __webpack_require__._,
+        );
       }
       const _ = _.memo(function (_) {
           const _ = _(),
             _ = (0, _._)(() => _.GetVisibleTimelines());
-          return _.createElement(
-            _.Fragment,
-            null,
-            __webpack_require__.map((_) =>
-              _.createElement(_, {
-                key: _.timelineID,
-                timeline: _,
-              }),
+          return (0, _.jsx)(_.Fragment, {
+            children: __webpack_require__.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  timeline: _,
+                },
+                _.timelineID,
+              ),
             ),
-          );
+          });
         }),
         _ = _.memo(function (_) {
           const {
@@ -7148,16 +7036,21 @@
               _ < _.length - 1 ? parseInt(_[_ + 1].time) + _ : _.valMS - 1,
             );
             _.push(
-              _.createElement(_, {
-                key: `gameMode_${_}_${_}`,
-                view: _,
-                entry: _[_],
-                nGlobalEntryEndMS: _,
-                nGlobalTLStartMS: (0, _._)(_),
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  view: _,
+                  entry: _[_],
+                  nGlobalEntryEndMS: _,
+                  nGlobalTLStartMS: (0, _._)(_),
+                },
+                `gameMode_${_}_${_}`,
+              ),
             );
           }
-          return _.createElement(_.Fragment, null, _);
+          return (0, _.jsx)(_.Fragment, {
+            children: _,
+          });
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -7184,15 +7077,15 @@
             );
           });
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               setDragActive: _,
             })
           : _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 view: _,
                 setDragActive: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 dragState: _,
                 setDragActive: _,
               });
@@ -7202,16 +7095,13 @@
           _ = (0, _._)(
             () => _.GetVisualWindowStartPX() + _.GetScrollWindowWidth() / 2,
           );
-        return _.createElement(
-          _,
-          {
-            playheadPosition: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          playheadPosition: _,
+          children: (0, _.jsx)(_, {
             setDragActive: __webpack_require__,
             bDragActive: !1,
           }),
-        );
+        });
       }
       const _ = (0, _.memo)(function (_) {
           const { setDragActive: _ } = _,
@@ -7228,16 +7118,13 @@
           return (
             (0, _.useEffect)(() => __webpack_require__.ScrollToEnd(), [_]),
             (0, _.useEffect)(() => _(_), [_, _]),
-            _.createElement(
-              _,
-              {
-                playheadPosition: _,
-              },
-              _.createElement(_, {
+            (0, _.jsx)(_, {
+              playheadPosition: _,
+              children: (0, _.jsx)(_, {
                 setDragActive: _,
                 bDragActive: !1,
               }),
-            )
+            })
           );
         }),
         _ = (0, _.memo)(function (_) {
@@ -7406,23 +7293,17 @@
                 !0,
               );
             }, [_, _, _, _, _]),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.PlayheadInteractionCtn, _ && _.ActiveCtn),
-              },
-              _.createElement(
-                _,
-                {
-                  className: _ ? _.Active : void 0,
-                  playheadPosition: _,
-                },
-                _.createElement(_, {
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.PlayheadInteractionCtn, _ && _.ActiveCtn),
+              children: (0, _.jsx)(_, {
+                className: _ ? _.Active : void 0,
+                playheadPosition: _,
+                children: (0, _.jsx)(_, {
                   setDragActive: __webpack_require__,
                   bDragActive: _,
                 }),
-              ),
-            )
+              }),
+            })
           );
         }),
         _ = (0, _.memo)(function (_) {
@@ -7436,19 +7317,16 @@
               __webpack_require__ || _.SetThumbnailComponent(null),
                 _.stopPropagation();
             };
-          return _.createElement(
-            "div",
-            {
-              className: _.PlayHeadContent,
-              onMouseOver: _,
-              onMouseOut: _,
-              onFocus: _,
-              onBlur: _,
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("div", {
+            className: _.PlayHeadContent,
+            onMouseOver: _,
+            onMouseOut: _,
+            onFocus: _,
+            onBlur: _,
+            children: (0, _.jsx)(_, {
               setDragActive: _,
             }),
-          );
+          });
         }),
         _ = _.memo(function (_) {
           const { setDragActive: _ } = _,
@@ -7504,39 +7382,35 @@
               },
               [_, _],
             );
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.PlayHead, _ && _.NoPointer),
-              onMouseDown: _,
-              onContextMenu: _,
-            },
-            _.createElement(_, null),
-          );
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_.PlayHead, _ && _.NoPointer),
+            onMouseDown: _,
+            onContextMenu: _,
+            children: (0, _.jsx)(_, {}),
+          });
         });
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            ..._,
-            width: "12",
-            height: "32",
-            viewBox: "0 0 12 24",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("rect", {
-            _: "5",
-            _: "4",
-            width: "2",
-            height: "40",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          ..._,
+          width: "12",
+          height: "32",
+          viewBox: "0 0 12 24",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "5",
+              _: "4",
+              width: "2",
+              height: "40",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M6 6L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 6Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -7544,16 +7418,13 @@
           playheadPosition: __webpack_require__,
           children: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.PlayHeadContainer, _),
-            style: {
-              transform: `translateX( calc(${__webpack_require__}px - 50% ))`,
-            },
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_.PlayHeadContainer, _),
+          style: {
+            transform: `translateX( calc(${__webpack_require__}px - 50% ))`,
           },
-          _,
-        );
+          children: _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -7866,59 +7737,49 @@
             (0, _.useEffect)(() => {
               _ && _(_);
             }, [_]),
-            _.createElement(
-              "div",
-              {
-                ref: _,
-                className: (0, _._)(_.ThumbnailContainerOffset, _[_], _),
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              ref: _,
+              className: (0, _._)(_.ThumbnailContainerOffset, _[_], _),
+              ..._,
+              children: [
+                (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _.ThumbnailContents,
                     _?.strRecordingID && !_ && _.Hide,
                     _[_],
                   ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ImageAndInfoBoxContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ImageContainer,
-                    },
-                    _?.strRecordingID
-                      ? _.createElement("img", {
-                          className: _.ThumbnailImage,
-                          src: _,
-                        })
-                      : _.createElement(
-                          "div",
-                          {
-                            className: _.NoRecordedContent,
-                          },
-                          (0, _._)("#GameRecording_PlayerNoContent"),
-                        ),
-                    _.createElement(_, null),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.TooltipChildren),
-                  },
-                  _,
-                ),
-              ),
-              _.createElement("div", {
-                className: (0, _._)(_.ThumbnailHitBoxPadding),
-              }),
-            )
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.ImageAndInfoBoxContainer,
+                      children: (0, _.jsxs)("div", {
+                        className: _.ImageContainer,
+                        children: [
+                          _?.strRecordingID
+                            ? (0, _.jsx)("img", {
+                                className: _.ThumbnailImage,
+                                src: _,
+                              })
+                            : (0, _.jsx)("div", {
+                                className: _.NoRecordedContent,
+                                children: (0, _._)(
+                                  "#GameRecording_PlayerNoContent",
+                                ),
+                              }),
+                          (0, _.jsx)(_, {}),
+                        ],
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.TooltipChildren),
+                      children: _,
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_.ThumbnailHitBoxPadding),
+                }),
+              ],
+            })
           );
         });
       function _() {
@@ -7928,7 +7789,7 @@
           _ = (0, _._)(() => _.GetThumbnailEntry());
         if (!_ || _ !== _.Highlight) return null;
         if ((0, _._)(_.entry))
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             thumbnailEntry: _,
             achievementEntry: _.entry,
             strGameID: _,
@@ -7947,7 +7808,7 @@
               : (0, _._)(_.entry) &&
                 ((_ = _.entry.title || ""), (_ = _.entry.description || "")),
           _ || _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 title: _,
                 description: _,
                 thumbnailEntry: _,
@@ -7963,7 +7824,7 @@
           } = _,
           _ = _(new _._(_).GetAppID(), _.achievement_name);
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               title: _.name ?? "",
               description: _.description ?? "",
               thumbnailEntry: __webpack_require__,
@@ -7976,50 +7837,37 @@
           description: __webpack_require__,
           thumbnailEntry: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.InfoBoxContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.InfoBoxContainer,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.Header,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Icon,
-              },
-              _.createElement(_, {
-                entry: _.entry,
-                strMarkerIcon: _.strMarkerIcon,
-              }),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _,
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Icon,
+                  children: (0, _.jsx)(_, {
+                    entry: _.entry,
+                    strMarkerIcon: _.strMarkerIcon,
+                  }),
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.Title,
+                    children: _,
+                  }),
+              ],
+            }),
+            (0, _.jsx)("div", {
               className: _.DescriptionBlock,
-            },
-            __webpack_require__ &&
-              _.createElement(
-                "div",
-                {
+              children:
+                __webpack_require__ &&
+                (0, _.jsx)("div", {
                   className: _.Description,
-                },
-                __webpack_require__,
-              ),
-          ),
-        );
+                  children: __webpack_require__,
+                }),
+            }),
+          ],
+        });
       }
       const _ = _.forwardRef(function (_, _) {
         const {
@@ -8034,36 +7882,34 @@
           _ = (0, _._)(() => _.GetThumbnailComponent()),
           _ = _(),
           _ = (0, _._)(() => _.GetRecordingMode());
-        return _.createElement(
-          _,
-          {
-            className: (0, _._)(_.ThumbnailTooltip, _[_], _[_]),
-            globalMS: _,
-            ref: _,
-            onMouseEnter: _,
-            onMouseLeave: _,
-          },
-          _.createElement(_, {
-            globalMS: _,
-          }),
-          _.createElement(_, {
-            globalMS: _,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.TooltipInteractionRegion,
-            },
-            _ === _.Highlight
-              ? _.createElement(_, null)
-              : _.createElement(_, {
-                  globalPX: __webpack_require__,
-                }),
-            _.createElement(_, {
+        return (0, _.jsxs)(_, {
+          className: (0, _._)(_.ThumbnailTooltip, _[_], _[_]),
+          globalMS: _,
+          ref: _,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          children: [
+            (0, _.jsx)(_, {
               globalMS: _,
             }),
-          ),
-        );
+            (0, _.jsx)(_, {
+              globalMS: _,
+            }),
+            (0, _.jsxs)("div", {
+              className: _.TooltipInteractionRegion,
+              children: [
+                _ === _.Highlight
+                  ? (0, _.jsx)(_, {})
+                  : (0, _.jsx)(_, {
+                      globalPX: __webpack_require__,
+                    }),
+                (0, _.jsx)(_, {
+                  globalMS: _,
+                }),
+              ],
+            }),
+          ],
+        });
       });
       function _(_) {
         const { globalMS: _ } = _,
@@ -8072,13 +7918,10 @@
             __webpack_require__.GetStateDescriptionAtGlobalMS(_),
           );
         return _?.title
-          ? _.createElement(
-              "div",
-              {
-                className: _.StateDescription,
-              },
-              _.title,
-            )
+          ? (0, _.jsx)("div", {
+              className: _.StateDescription,
+              children: _.title,
+            })
           : null;
       }
       function _(_, _) {
@@ -8091,14 +7934,11 @@
           _ = _(),
           _ = (0, _._)(() => _.FindRangeEventsAtGlobalMS(_)),
           _ = _.length > 3 ? _.sort(_).slice(0, 3) : _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.map((_, _) =>
-            _.createElement(
+        return (0, _.jsx)(_.Fragment, {
+          children: _.map((_, _) =>
+            (0, _.jsxs)(
               "div",
               {
-                key: `${_.time}_${_}`,
                 className: _.TooltipRangeContainer,
                 onClick: (_) =>
                   ((_, _) => {
@@ -8119,30 +7959,27 @@
                       ),
                       _.stopPropagation();
                   })(_, _),
+                children: [
+                  _.icon &&
+                    (0, _.jsx)(_, {
+                      gameID: _.GetGameID(),
+                      icon: _.icon,
+                      className: _.RangeIcon,
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.Title,
+                    children: _.title,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Duration,
+                    children: (0, _._)(parseInt(_.duration) / 1e3, !1),
+                  }),
+                ],
               },
-              _.icon &&
-                _.createElement(_, {
-                  gameID: _.GetGameID(),
-                  icon: _.icon,
-                  className: _.RangeIcon,
-                }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _.title,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Duration,
-                },
-                (0, _._)(parseInt(_.duration) / 1e3, !1),
-              ),
+              `${_.time}_${_}`,
             ),
           ),
-        );
+        });
       }
       function _() {
         const _ = _(),
@@ -8165,13 +8002,10 @@
             _ = (0, _._)(_ / 1e3, !1, !1) + " - " + (0, _._)(_ / 1e3, !1, !1);
           }
         } else _ = (0, _._)(_ / 1e3, !1, !0);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.TimeDisplayContainer, _.Highlight, _[_]),
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_.TimeDisplayContainer, _.Highlight, _[_]),
+          children: _,
+        });
       }
       function _(_) {
         const { globalPX: _ } = _,
@@ -8183,13 +8017,10 @@
             ),
           );
         return Boolean(_)
-          ? _.createElement(
-              "div",
-              {
-                className: _.TimeDisplayContainer,
-              },
-              (0, _._)(_ / 1e3, !1, !0),
-            )
+          ? (0, _.jsx)("div", {
+              className: _.TimeDisplayContainer,
+              children: (0, _._)(_ / 1e3, !1, !0),
+            })
           : null;
       }
       function _(_) {
@@ -8199,71 +8030,101 @@
           _ = (0, _._)(() => __webpack_require__.GetThumbnailComponent()),
           _ = (0, _._)(() => __webpack_require__.GetThumbnailEntry());
         let _ = [
-          _.createElement(_, {
-            key: "add_marker",
-            globalMS: _,
-          }),
-          _.createElement(_, {
-            key: "view_clip",
-            globalMS: _,
-          }),
+          (0, _.jsx)(
+            _,
+            {
+              globalMS: _,
+            },
+            "add_marker",
+          ),
+          (0, _.jsx)(
+            _,
+            {
+              globalMS: _,
+            },
+            "view_clip",
+          ),
         ];
         return (
           _ == _.Highlight &&
             _ &&
             ((0, _._)(_.entry) || (0, _._)(_.entry) || (0, _._)(_.entry)
               ? (_ = [
-                  _.createElement(_, {
-                    key: "create_marker_clip",
-                    markerInfo: _,
-                  }),
-                  _.createElement(_, {
-                    key: "view_clip",
-                    markerInfo: _,
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      markerInfo: _,
+                    },
+                    "create_marker_clip",
+                  ),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      markerInfo: _,
+                    },
+                    "view_clip",
+                  ),
                 ])
               : (0, _._)(_.entry)
                 ? (_ = [
-                    _.createElement(_, {
-                      key: "create_marker_clip",
-                      markerInfo: _,
-                    }),
-                    _.createElement(_, {
-                      key: "view_screen",
-                      entry: _.entry,
-                      gameID: _,
-                    }),
-                    _.createElement(_, {
-                      key: "view_clip",
-                      markerInfo: _,
-                    }),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        markerInfo: _,
+                      },
+                      "create_marker_clip",
+                    ),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        entry: _.entry,
+                        gameID: _,
+                      },
+                      "view_screen",
+                    ),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        markerInfo: _,
+                      },
+                      "view_clip",
+                    ),
                   ])
                 : (0, _._)(_.entry) &&
                   (_ = [
-                    _.createElement(_, {
-                      key: "edit_user",
-                      markerInfo: _,
-                    }),
-                    _.createElement(_, {
-                      key: "create_marker_clip",
-                      markerInfo: _,
-                    }),
-                    _.createElement(_, {
-                      key: "delete_user",
-                      markerInfo: _,
-                    }),
-                    _.createElement(_, {
-                      key: "view_clip",
-                      markerInfo: _,
-                    }),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        markerInfo: _,
+                      },
+                      "edit_user",
+                    ),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        markerInfo: _,
+                      },
+                      "create_marker_clip",
+                    ),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        markerInfo: _,
+                      },
+                      "delete_user",
+                    ),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        markerInfo: _,
+                      },
+                      "view_clip",
+                    ),
                   ])),
-          _.createElement(
-            "div",
-            {
-              className: _.TooltipButtons,
-            },
-            _,
-          )
+          (0, _.jsx)("div", {
+            className: _.TooltipButtons,
+            children: _,
+          })
         );
       }
       function _(_) {
@@ -8279,50 +8140,44 @@
           _ = _(),
           _ = _();
         return _?.strRecordingID && _
-          ? _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)(
-                  _
-                    ? "#RecordingState_Clip_LowDiskSpace"
-                    : "#TimelineDialog_ClipVideo",
-                ),
-                direction: "top",
-                bTopmost: !0,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Button, _.CreateClipButton),
-                  onClick: (_) => {
-                    let _ = _,
-                      _ = _;
-                    (0, _._)(__webpack_require__.entry) &&
-                      ((_ = 0),
-                      (_ = parseInt(__webpack_require__.entry.duration)));
-                    const [_, _] = _.GetLoader().CreateGlobalRangeForTimeline(
-                      __webpack_require__.strTimelineID,
-                      __webpack_require__.nGlobalMS.valMS,
-                      _,
-                      _,
-                    );
-                    _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                      _?.(
-                        __webpack_require__.entry._,
-                        __webpack_require__.strTimelineID,
-                        _,
-                        _,
-                      ),
-                      _(),
-                      _.ReportTrackedAction(
-                        "/GameRecording/Tooltip/ClipFromHighlight",
-                      ),
-                      _.stopPropagation();
-                  },
-                },
-                _.createElement(_._, null),
+          ? (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)(
+                _
+                  ? "#RecordingState_Clip_LowDiskSpace"
+                  : "#TimelineDialog_ClipVideo",
               ),
-            )
+              direction: "top",
+              bTopmost: !0,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_.Button, _.CreateClipButton),
+                onClick: (_) => {
+                  let _ = _,
+                    _ = _;
+                  (0, _._)(__webpack_require__.entry) &&
+                    ((_ = 0),
+                    (_ = parseInt(__webpack_require__.entry.duration)));
+                  const [_, _] = _.GetLoader().CreateGlobalRangeForTimeline(
+                    __webpack_require__.strTimelineID,
+                    __webpack_require__.nGlobalMS.valMS,
+                    _,
+                    _,
+                  );
+                  _.SetPlaytimeFromGlobalMS((0, _._)(_)),
+                    _?.(
+                      __webpack_require__.entry._,
+                      __webpack_require__.strTimelineID,
+                      _,
+                      _,
+                    ),
+                    _(),
+                    _.ReportTrackedAction(
+                      "/GameRecording/Tooltip/ClipFromHighlight",
+                    ),
+                    _.stopPropagation();
+                },
+                children: (0, _.jsx)(_._, {}),
+              }),
+            })
           : null;
       }
       function _(_) {
@@ -8333,120 +8188,94 @@
           ),
           { onNavigateToClip: _ } = _();
         return _
-          ? _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#TimelineDialog_ViewClip"),
-                direction: "top",
-                bTopmost: !0,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Button, _.GoToClipFromMarker),
-                  onClick: () => {
-                    _ &&
-                      (_.ReportTrackedAction(
-                        `/GameRecording/Tooltip/ViewClip/${_.entry.type}`,
-                      ),
-                      _(_.clipID));
-                  },
+          ? (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)("#TimelineDialog_ViewClip"),
+              direction: "top",
+              bTopmost: !0,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_.Button, _.GoToClipFromMarker),
+                onClick: () => {
+                  _ &&
+                    (_.ReportTrackedAction(
+                      `/GameRecording/Tooltip/ViewClip/${_.entry.type}`,
+                    ),
+                    _(_.clipID));
                 },
-                _.createElement(_.CeX, null),
-              ),
-            )
+                children: (0, _.jsx)(_.CeX, {}),
+              }),
+            })
           : null;
       }
       function _(_) {
         const { markerInfo: _ } = _,
           _ = _(),
           _ = _();
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: (0, _._)("#Marker_Action_Delete"),
-            direction: "top",
-            bTopmost: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Button, _.DeleteMarker),
-              onClick: (_) => {
-                (0, _._)(_.entry) &&
-                  (_.ReportTrackedAction(
-                    `/GameRecording/Marker/Delete/${_.entry.type}`,
-                  ),
-                  __webpack_require__.RemoveUserMarker(
-                    _.strTimelineID,
-                    _.entry._,
-                  ),
-                  _.SetThumbnailComponent(null));
-              },
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _._)("#Marker_Action_Delete"),
+          direction: "top",
+          bTopmost: !0,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_.Button, _.DeleteMarker),
+            onClick: (_) => {
+              (0, _._)(_.entry) &&
+                (_.ReportTrackedAction(
+                  `/GameRecording/Marker/Delete/${_.entry.type}`,
+                ),
+                __webpack_require__.RemoveUserMarker(
+                  _.strTimelineID,
+                  _.entry._,
+                ),
+                _.SetThumbnailComponent(null));
             },
-            _.createElement(_.lMJ, null),
-          ),
-        );
+            children: (0, _.jsx)(_.lMJ, {}),
+          }),
+        });
       }
       function _(_) {
         const { markerInfo: _ } = _,
           _ = _(),
           _ = _();
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: (0, _._)("#Marker_Action_Edit"),
-            direction: "top",
-            bTopmost: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Button, _.EditMarker),
-              onClick: (_) => {
-                if (!(0, _._)(_.entry)) return;
-                _.ReportTrackedAction(
-                  `/GameRecording/Marker/Edit/${_.entry.type}`,
-                );
-                let _ = _.createElement(_, {
-                  entry: _.entry,
-                  playbackCoordinator: _,
-                  fnClearSelection: _,
-                  strTimelineID: _.strTimelineID,
-                });
-                (0, _._)(_, (0, _._)(_)),
-                  _.stopPropagation(),
-                  _.preventDefault();
-              },
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _._)("#Marker_Action_Edit"),
+          direction: "top",
+          bTopmost: !0,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_.Button, _.EditMarker),
+            onClick: (_) => {
+              if (!(0, _._)(_.entry)) return;
+              _.ReportTrackedAction(
+                `/GameRecording/Marker/Edit/${_.entry.type}`,
+              );
+              let _ = (0, _.jsx)(_, {
+                entry: _.entry,
+                playbackCoordinator: _,
+                fnClearSelection: _,
+                strTimelineID: _.strTimelineID,
+              });
+              (0, _._)(_, (0, _._)(_)), _.stopPropagation(), _.preventDefault();
             },
-            _.createElement(_._, null),
-          ),
-        );
+            children: (0, _.jsx)(_._, {}),
+          }),
+        });
       }
       function _(_) {
         const { entry: _, gameID: __webpack_require__ } = _,
           _ = _.handle,
           { onNavigateToScreenshot: _ } = _();
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: (0, _._)("#TimelineDialog_ViewScreenshot"),
-            direction: "top",
-            bTopmost: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Button, _.ViewScreenshot),
-              onClick: () => {
-                _ &&
-                  (_.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
-                  _(__webpack_require__, _));
-              },
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _._)("#TimelineDialog_ViewScreenshot"),
+          direction: "top",
+          bTopmost: !0,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_.Button, _.ViewScreenshot),
+            onClick: () => {
+              _ &&
+                (_.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
+                _(__webpack_require__, _));
             },
-            _.createElement(_._, null),
-          ),
-        );
+            children: (0, _.jsx)(_._, {}),
+          }),
+        });
       }
       function _(_) {
         const { globalMS: _ } = _,
@@ -8457,28 +8286,22 @@
             ),
           );
         if (!_?.strRecordingID) return null;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: (0, _._)("#TimelineDialog_AddMarker"),
-            direction: "top",
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Button, _.AddMarker),
-              onClick: () => {
-                __webpack_require__.AddUserMarkerAtGlobalMS(
-                  (0, _._)(_),
-                  "/GameRecording/AddMarker/Thumbnail",
-                  null,
-                ),
-                  __webpack_require__.SetPlaytimeFromGlobalMS((0, _._)(_));
-              },
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _._)("#TimelineDialog_AddMarker"),
+          direction: "top",
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_.Button, _.AddMarker),
+            onClick: () => {
+              __webpack_require__.AddUserMarkerAtGlobalMS(
+                (0, _._)(_),
+                "/GameRecording/AddMarker/Thumbnail",
+                null,
+              ),
+                __webpack_require__.SetPlaytimeFromGlobalMS((0, _._)(_));
             },
-            _.createElement(_._, null),
-          ),
-        );
+            children: (0, _.jsx)(_._, {}),
+          }),
+        });
       }
       function _(_) {
         const { globalMS: _ } = _,
@@ -8488,27 +8311,21 @@
           ),
           { onNavigateToClip: _ } = _();
         return _
-          ? _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)("#TimelineDialog_ViewClip"),
-                direction: "top",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Button, _.GoToClip),
-                  onClick: () => {
-                    _ &&
-                      (_.ReportTrackedAction(
-                        "/GameRecording/Tooltip/ViewClip/timeline",
-                      ),
-                      _(_.clipID));
-                  },
+          ? (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)("#TimelineDialog_ViewClip"),
+              direction: "top",
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_.Button, _.GoToClip),
+                onClick: () => {
+                  _ &&
+                    (_.ReportTrackedAction(
+                      "/GameRecording/Tooltip/ViewClip/timeline",
+                    ),
+                    _(_.clipID));
                 },
-                _.createElement(_.CeX, null),
-              ),
-            )
+                children: (0, _.jsx)(_.CeX, {}),
+              }),
+            })
           : null;
       }
       const _ = _.memo(function (_) {
@@ -8547,7 +8364,7 @@
           return (
             _("click", _),
             _("contextmenu", _),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               globalMouseXPX: _.globalMouseXPX.valPX || 0,
             })
           );
@@ -8567,20 +8384,17 @@
               if (!isNaN(_)) return void _(_);
               !_ && _ && _(_);
             }, [_, _, _, _, _]),
-            _.createElement(
-              "div",
-              {
-                className: _.GhostPlayheadCtn,
-                style: {
-                  transform: `translateX( calc(${_}px - 50%))`,
-                },
+            (0, _.jsx)("div", {
+              className: _.GhostPlayheadCtn,
+              style: {
+                transform: `translateX( calc(${_}px - 50%))`,
               },
-              _.createElement(_, {
+              children: (0, _.jsx)(_, {
                 globalPX: _,
                 setInteractingWithThumbnail: _,
                 bInteractingWithThumbnail: _,
               }),
-            )
+            })
           );
         });
       function _(_) {
@@ -8600,7 +8414,7 @@
           _ = (0, _._)(() => _.GetThumbnailComponent()),
           _ = _(),
           _ = (0, _._)({
-            toolTipContent: _.createElement(_, {
+            toolTipContent: (0, _.jsx)(_, {
               globalPX: _,
               ref: _,
               onMouseEnter: () => __webpack_require__(!0),
@@ -8679,17 +8493,16 @@
           }, [_, _, _]),
           (0, _.useEffect)(() => _, [_]);
         const _ = (_ || _) && _ && !_;
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _.TooltipHoverSource,
-          },
-          _.createElement(_, {
-            className: (0, _._)(_.GhostPlayhead, _ && _.Show),
-          }),
-          !!_ && _.tooltip,
-        );
+        return (0, _.jsxs)("div", {
+          ref: _,
+          className: _.TooltipHoverSource,
+          children: [
+            (0, _.jsx)(_, {
+              className: (0, _._)(_.GhostPlayhead, _ && _.Show),
+            }),
+            !!_ && _.tooltip,
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.memo)(function () {
@@ -8698,16 +8511,13 @@
             _ = _(),
             _ = _();
           return _ && _ && _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.RangeControls,
-                },
-                _.createElement(_, {
+            ? (0, _.jsx)("div", {
+                className: _.RangeControls,
+                children: (0, _.jsx)(_, {
                   activeControlState: _,
                   setActiveControlState: _,
                 }),
-              )
+              })
             : null;
         }),
         _ = (0, _.memo)(function (_) {
@@ -8746,39 +8556,35 @@
               },
               [_],
             );
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.RangeSelectorCtn, "none" !== _ && _.Active),
-              onMouseOver: _,
-              onMouseOut: _,
-              onFocus: _,
-              onBlur: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.TrackRangeControls,
-              },
-              _.createElement(_, {
-                isActive: "left" === _,
-                setControlState: __webpack_require__,
-                setRangeControlPX: _,
-                pxOffset: _,
-              }),
-              _.createElement(_, {
-                startOffsetPX: ("left" === _ && _) || _,
-                endOffsetPX: ("right" === _ && _) || _,
-                className: _.SelectedRangeMask,
-              }),
-              _.createElement(_, {
-                isActive: "right" === _,
-                setControlState: __webpack_require__,
-                setRangeControlPX: _,
-                pxOffset: _,
-              }),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_.RangeSelectorCtn, "none" !== _ && _.Active),
+            onMouseOver: _,
+            onMouseOut: _,
+            onFocus: _,
+            onBlur: _,
+            children: (0, _.jsxs)("div", {
+              className: _.TrackRangeControls,
+              children: [
+                (0, _.jsx)(_, {
+                  isActive: "left" === _,
+                  setControlState: __webpack_require__,
+                  setRangeControlPX: _,
+                  pxOffset: _,
+                }),
+                (0, _.jsx)(_, {
+                  startOffsetPX: ("left" === _ && _) || _,
+                  endOffsetPX: ("right" === _ && _) || _,
+                  className: _.SelectedRangeMask,
+                }),
+                (0, _.jsx)(_, {
+                  isActive: "right" === _,
+                  setControlState: __webpack_require__,
+                  setRangeControlPX: _,
+                  pxOffset: _,
+                }),
+              ],
+            }),
+          });
         });
       function _(_, _, _) {
         const _ = _.GetVisualWindowStartPX() - _.GetTimelineMarginWidth(),
@@ -8796,12 +8602,12 @@
           } = _,
           _ = _();
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               setControlState: __webpack_require__,
               setRangeControlPX: _,
               pxOffset: _,
             })
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               offsetMS: _.valMS,
               direction: "left",
               setControlState: __webpack_require__,
@@ -8916,7 +8722,7 @@
               (_.SetThumbnailPosition(_),
               _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             offsetPX: _,
             direction: "left",
           })
@@ -8931,12 +8737,12 @@
           } = _,
           _ = _();
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               setControlState: __webpack_require__,
               setRangeControlPX: _,
               pxOffset: _,
             })
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               offsetMS: _.valMS,
               direction: "right",
               setControlState: __webpack_require__,
@@ -9053,7 +8859,7 @@
               (_.SetThumbnailPosition(_),
               _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             offsetPX: _,
             direction: "right",
           })
@@ -9106,21 +8912,18 @@
           _ = (_) => {
             _.SetThumbnailComponent(null);
           };
-        return _.createElement(
-          "div",
-          {
-            className: _.InactiveSelectedRangeControl,
-            onMouseDown: _,
-            onMouseOver: _,
-            onFocus: _,
-            onMouseOut: _,
-            onBlur: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: _.InactiveSelectedRangeControl,
+          onMouseDown: _,
+          onMouseOver: _,
+          onFocus: _,
+          onMouseOut: _,
+          onBlur: _,
+          children: (0, _.jsx)(_, {
             offsetPX: _,
             direction: __webpack_require__,
           }),
-        );
+        });
       }
       const _ = (0, _.memo)(function (_) {
           const {
@@ -9133,7 +8936,7 @@
             width: __webpack_require__ - _ || 0,
             transform: `translateX(${_}px)`,
           };
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: (0, _._)(_.RangeMask, _),
             style: _,
           });
@@ -9145,64 +8948,57 @@
             },
             _ = _(),
             _ = (0, _._)(() => _.GetThumbnailComponent() === _.Playhead);
-          return _.createElement(
-            "div",
-            {
-              style: _,
-              className: (0, _._)(_.RangeControl),
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.RangeIcon,
-                  "left" === _ && _.Left,
-                  _ && _.Hide,
-                ),
-              },
-              _.createElement(_, {
+          return (0, _.jsx)("div", {
+            style: _,
+            className: (0, _._)(_.RangeControl),
+            children: (0, _.jsx)("div", {
+              className: (0, _._)(
+                _.RangeIcon,
+                "left" === _ && _.Left,
+                _ && _.Hide,
+              ),
+              children: (0, _.jsx)(_, {
                 innerFill: "#171d25",
                 direction: _,
               }),
-            ),
-          );
+            }),
+          });
         });
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 3 36",
-            fill: "none",
-            style: {
-              transform: `rotate(${"right" === _.direction ? 180 : 0}deg)`,
-            },
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 3 36",
+          fill: "none",
+          style: {
+            transform: `rotate(${"right" === _.direction ? 180 : 0}deg)`,
           },
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "3",
-            height: "6.00006",
-            transform: "matrix(-1 0 0 1 3 0)",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "3",
-            height: "6.00006",
-            transform: "matrix(-1 0 0 1 3 10)",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "3",
-            height: "6.00006",
-            transform: "matrix(-1 0 0 1 3 20)",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "3",
-            height: "6.00006",
-            transform: "matrix(-1 0 0 1 3 30)",
-          }),
-        );
+          children: [
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "3",
+              height: "6.00006",
+              transform: "matrix(-1 0 0 1 3 0)",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "3",
+              height: "6.00006",
+              transform: "matrix(-1 0 0 1 3 10)",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "3",
+              height: "6.00006",
+              transform: "matrix(-1 0 0 1 3 20)",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "3",
+              height: "6.00006",
+              transform: "matrix(-1 0 0 1 3 30)",
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
@@ -9226,50 +9022,49 @@
           _[_ + 1].timeline.nVisibleStartPX - _.timeline.nVisibleStartPX >=
             100 || _.splice(_, 1);
         }
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.map((_) =>
-            _.createElement(_, {
-              key: _.timeline.timelineID,
-              startPX: _.timeline.nVisibleStartPX,
-              label: _.strLabel,
-              recordingMode: _,
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                startPX: _.timeline.nVisibleStartPX,
+                label: _.strLabel,
+                recordingMode: _,
+              },
+              _.timeline.timelineID,
+            ),
           ),
-        );
+        });
       });
       function _(_) {
         const { label: _, startPX: __webpack_require__, recordingMode: _ } = _;
         let _ = _ == _.Overlay;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.TimelineRelativeDate, _ && _.Overlay),
-            style: {
-              transform: `translateX(${__webpack_require__}px)`,
-            },
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_.TimelineRelativeDate, _ && _.Overlay),
+          style: {
+            transform: `translateX(${__webpack_require__}px)`,
           },
-          _,
-        );
+          children: _,
+        });
       }
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.memo)(function (_) {
         const _ = _(),
           _ = (0, _._)(() => _.GetVisibleRecordings());
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__.map((_) =>
-            _.createElement(_, {
-              key: _.recordingID,
-              startPX: _.nStartPX,
-              endPX: _.nEndPX,
-              isActive: _.bIsActive,
-              recordingType: _.recordingType,
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: __webpack_require__.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                startPX: _.nStartPX,
+                endPX: _.nEndPX,
+                isActive: _.bIsActive,
+                recordingType: _.recordingType,
+              },
+              _.recordingID,
+            ),
           ),
-        );
+        });
       });
       function _(_) {
         const {
@@ -9285,23 +9080,23 @@
           _ = _(),
           _ = 4 === _,
           _ = 2 === _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("div", {
-            className: (0, _._)(
-              _.RecordingDecorator,
-              _ && _.Clip,
-              _ && _.Manual,
-              _ && _.ClipMode,
-            ),
-            style: _,
-          }),
-          _ &&
-            _.createElement(_, {
-              endPX: __webpack_require__,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _.RecordingDecorator,
+                _ && _.Clip,
+                _ && _.Manual,
+                _ && _.ClipMode,
+              ),
+              style: _,
             }),
-        );
+            _ &&
+              (0, _.jsx)(_, {
+                endPX: __webpack_require__,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { endPX: _ } = _,
@@ -9325,7 +9120,7 @@
           width: _ - _ || 0,
           transform: `translateX(${_}px)`,
         };
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_.LiveRecordingBuffer, _ && _.IsLive),
           style: _,
         });
@@ -9334,17 +9129,18 @@
       const _ = (0, _.memo)(function (_) {
           const _ = _(),
             _ = (0, _._)(() => _.GetVisibleClips());
-          return _.createElement(
-            _.Fragment,
-            null,
-            __webpack_require__.map((_) =>
-              _.createElement(_, {
-                key: _.clipID,
-                startPX: _.pxClipStart,
-                endPX: _.pxClipEnd,
-              }),
+          return (0, _.jsx)(_.Fragment, {
+            children: __webpack_require__.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  startPX: _.pxClipStart,
+                  endPX: _.pxClipEnd,
+                },
+                _.clipID,
+              ),
             ),
-          );
+          });
         }),
         _ = (0, _.memo)(function (_) {
           const { endPX: _, startPX: __webpack_require__ } = _,
@@ -9352,7 +9148,7 @@
               width: _ - __webpack_require__ || 0,
               transform: `translateX(${__webpack_require__}px)`,
             };
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: _.ClipDecorator,
             style: _,
           });
@@ -9361,17 +9157,17 @@
       const _ = (0, _.forwardRef)(function (_, _) {
           const _ = _();
           return (0, _._)(() => !__webpack_require__.BEmpty())
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 ..._,
                 timelineView: _,
                 ref: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 ref: _,
               });
         }),
         _ = (0, _.forwardRef)(function (_, _) {
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             ref: _,
             className: (0, _._)(_.ScrollbarPlaceholder, _.className),
           });
@@ -9424,61 +9220,54 @@
                 return requestAnimationFrame(_), () => (_ = !0);
               }, [_, _, _]);
             })(_, _),
-            _.createElement(
-              "div",
-              {
-                ref: _,
-                onWheel: _,
-                onMouseOver: () => _.SetAutoScrollPaused(!0),
-                onFocus: () => {},
-                onMouseLeave: () => _.SetAutoScrollPauseTimeout(),
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              ref: _,
+              onWheel: _,
+              onMouseOver: () => _.SetAutoScrollPaused(!0),
+              onFocus: () => {},
+              onMouseLeave: () => _.SetAutoScrollPauseTimeout(),
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.LeftControlsAndContent,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    ref: _,
-                    className: (0, _._)(_.ContentAndGradient, _),
-                  },
-                  _,
-                  _.createElement(_, {
-                    timelineView: _,
-                  }),
-                ),
-                __webpack_require__.GetRecordingMode() === _.Overlay &&
-                  _.createElement(_, null),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    (0, _.jsxs)("div", {
+                      ref: _,
+                      className: (0, _._)(_.ContentAndGradient, _),
+                      children: [
+                        _,
+                        (0, _.jsx)(_, {
+                          timelineView: _,
+                        }),
+                      ],
+                    }),
+                    __webpack_require__.GetRecordingMode() === _.Overlay &&
+                      (0, _.jsx)(_, {}),
+                  ],
+                }),
+                (0, _.jsx)("div", {
                   className: _.ScrollbarAndSiblings,
-                },
-                !__webpack_require__.GetGamepadMode() &&
-                  _.createElement(_, null),
-              ),
-            )
+                  children:
+                    !__webpack_require__.GetGamepadMode() && (0, _.jsx)(_, {}),
+                }),
+              ],
+            })
           );
         });
       function _(_) {
         const { timelineView: _ } = _,
           _ = (0, _._)(() => _.GetVisualWindowStartPX()),
           _ = (0, _._)(() => _.BReachedMaxScroll());
-        return _.createElement(
-          "div",
-          {
-            className: _.ScrollGradientCtn,
-          },
-          _.createElement("div", {
-            className: (0, _._)(_.FrontGradient, 0 === _ && _.HideGradient),
-          }),
-          _.createElement("div", {
-            className: (0, _._)(_.EndGradient, _ && _.HideGradient),
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: _.ScrollGradientCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.FrontGradient, 0 === _ && _.HideGradient),
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.EndGradient, _ && _.HideGradient),
+            }),
+          ],
+        });
       }
       function _() {
         const [_, _] = (0, _.useState)({
@@ -9502,26 +9291,25 @@
             [_, _.scrollBarWidth, _],
           ),
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _.ScrollBarCtn,
-              Math.round(_) === Math.round(_.scrollBarWidth) && _.HideScrollBar,
-            ),
-            ref: _,
-          },
-          _.createElement(_, {
-            timelineView: _,
-            scrollSize: _,
-          }),
-          _.createElement(_, {
-            scrollSize: _,
-            timelineView: _,
-            timelineWidth: _,
-            thumbWidth: _,
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _.ScrollBarCtn,
+            Math.round(_) === Math.round(_.scrollBarWidth) && _.HideScrollBar,
+          ),
+          ref: _,
+          children: [
+            (0, _.jsx)(_, {
+              timelineView: _,
+              scrollSize: _,
+            }),
+            (0, _.jsx)(_, {
+              scrollSize: _,
+              timelineView: _,
+              timelineWidth: _,
+              thumbWidth: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { timelineView: _, scrollSize: __webpack_require__ } = _,
@@ -9595,23 +9383,22 @@
             },
             [__webpack_require__.scrollBarWidth, _, _],
           );
-        return _.createElement(
-          "div",
-          {
-            className: _.ScrollTrack,
-            ..._,
-          },
-          _.createElement(_, {
-            timelineView: _,
-            playbackCoordinator: _,
-            fnConvertGlobalPXToTrackPX: _,
-            scrollBarWidth: __webpack_require__.scrollBarWidth,
-          }),
-          _.createElement(_, {
-            timelineView: _,
-            fnConvertGlobalPXToTrackPX: _,
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: _.ScrollTrack,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              timelineView: _,
+              playbackCoordinator: _,
+              fnConvertGlobalPXToTrackPX: _,
+              scrollBarWidth: __webpack_require__.scrollBarWidth,
+            }),
+            (0, _.jsx)(_, {
+              timelineView: _,
+              fnConvertGlobalPXToTrackPX: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -9630,37 +9417,31 @@
             return null;
           });
         if (!_) return null;
-        return _.createElement(
-          "div",
-          {
-            className: _.PlayHeadAnnotation,
-            onClick: () => {
-              let _ = __webpack_require__.GetGlobalMSPlaytime();
-              _ && (_ = __webpack_require__.GetLiveEdgeMS()),
-                _.ScrollToCenteredGlobalMS(_.valMS);
-            },
-            style: {
-              transform: `translateX(${_ ? _ : _}px)`,
-            },
+        return (0, _.jsx)("div", {
+          className: _.PlayHeadAnnotation,
+          onClick: () => {
+            let _ = __webpack_require__.GetGlobalMSPlaytime();
+            _ && (_ = __webpack_require__.GetLiveEdgeMS()),
+              _.ScrollToCenteredGlobalMS(_.valMS);
           },
-          _.createElement(_, null),
-        );
+          style: {
+            transform: `translateX(${_ ? _ : _}px)`,
+          },
+          children: (0, _.jsx)(_, {}),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            width: "52",
-            height: "31",
-            viewBox: "0 0 52 31",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "52",
+          height: "31",
+          viewBox: "0 0 52 31",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M26 31L51.1147 0.25H0.885263L26 31Z",
             fill: "#D9D9D9",
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -9687,7 +9468,7 @@
             return null;
           });
         if (!_) return null;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _.RangeAnnotation,
           onClick: () => {
             _.ScrollToCenteredGlobalMS(_.nGlobalStartMS.valMS);
@@ -9770,7 +9551,7 @@
               }
             );
           })(_, __webpack_require__, _, _);
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_.ScrollThumb, _ && _.Highlight),
           style: {
             width: _,
@@ -9784,7 +9565,8 @@
           (__webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_tours = {};
         m_strActiveTour = "";
@@ -9898,7 +9680,9 @@
           _ = (0, _.useCallback)(
             (_) => _(__webpack_require__, _, _, _),
             [_, __webpack_require__, _],
-          );
+          ),
+          _ = _.Children.only(_),
+          _ = (0, _._)(_, _.props.ref);
         return (0, _.cloneElement)(_.Children.only(_), {
           ref: _,
         });
@@ -9907,19 +9691,17 @@
       function _(_) {
         const _ = _(),
           _ = (0, _._)(() => _.GetVisibleTimelines());
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__.flatMap((_) =>
+        return (0, _.jsx)(_.Fragment, {
+          children: __webpack_require__.flatMap((_) =>
             _.phaseOffsets.map((_, _) =>
-              _.createElement(_, {
+              (0, _.createElement)(_, {
                 ..._,
                 timeline: _,
                 key: `${_.timelineID}_${_}`,
               }),
             ),
           ),
-        );
+        });
       }
       function _(_) {
         const {
@@ -9928,15 +9710,10 @@
           phase: _,
           timeline: _,
         } = _;
-        return _.createElement(
-          _,
-          {
-            ..._,
-          },
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-        );
+        return (0, _.jsxs)(_, {
+          ..._,
+          children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+        });
       }
       function _(_) {
         const {
@@ -9988,33 +9765,30 @@
               });
           },
           _ = () => _(void 0);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _.Positioner,
-              _ && _.MouseWithin,
-              _ && _.Highlight,
-            ),
-            style: {
-              transform: `translateX( ${_}px )`,
-              width: `${_}px`,
-            },
-            onMouseOver: _,
-            onMouseLeave: _,
-            onFocus: _,
-            onBlur: _,
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _.Positioner,
+            _ && _.MouseWithin,
+            _ && _.Highlight,
+          ),
+          style: {
+            transform: `translateX( ${_}px )`,
+            width: `${_}px`,
           },
-          _,
-        );
+          onMouseOver: _,
+          onMouseLeave: _,
+          onFocus: _,
+          onBlur: _,
+          children: _,
+        });
       }
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _.Body,
         });
       }
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _.Edge,
         });
       }
@@ -10022,16 +9796,17 @@
       function _(_) {
         const _ = _(),
           _ = (0, _._)(() => _.GetVisibleTimelines());
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__.map((_) =>
-            _.createElement(_, {
-              timeline: _,
-              key: _.timelineID,
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: __webpack_require__.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                timeline: _,
+              },
+              _.timelineID,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const { timeline: _ } = _,
@@ -10045,19 +9820,20 @@
             __webpack_require__.GetTimelineOffsetMS(_.timelineID),
           ),
           _ = _.globalOffsetMS - _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.filter((_) => "range_highlight" === _(_)).map((_) =>
-            _.createElement(_, {
-              entry: _,
-              timeline: _,
-              timelineView: _,
-              key: _._,
-              timelineOffset: _,
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: _.filter((_) => "range_highlight" === _(_)).map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                entry: _,
+                timeline: _,
+                timelineView: _,
+                timelineOffset: _,
+              },
+              _._,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const {
@@ -10076,13 +9852,10 @@
             width: `${_}px`,
             transform: `translateX( ${_}px )`,
           };
-        return _.createElement(
-          "svg",
-          {
-            className: _.RangeHighlight,
-            style: _,
-          },
-          _.createElement("line", {
+        return (0, _.jsx)("svg", {
+          className: _.RangeHighlight,
+          style: _,
+          children: (0, _.jsx)("line", {
             _: "0",
             _: _,
             _: "0",
@@ -10094,7 +9867,7 @@
             "stroke-dashoffset": "0",
             "stroke-linecap": "square",
           }),
-        );
+        });
       }
       const _ = 0.08;
       function _(_) {
@@ -10108,7 +9881,7 @@
           _ = (0, _._)(() => _.BInitialized()),
           _ = _();
         if (!_)
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: _.LoadingTimeline,
           });
         let _ = (0, _._)(
@@ -10116,176 +9889,124 @@
           _.GetGamepadMode() && _.GamepadMode,
           __webpack_require__,
         );
-        return _.createElement(
-          _,
-          {
-            loader: _,
-            clipSummaries: _,
-            playbackCoordinator: _,
-            refTimelineParentCtn: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _,
-              dir: "ltr",
-            },
-            _.createElement(_, null),
-            _.createElement(_, null),
-            _.createElement(
-              _,
-              {
+        return (0, _.jsx)(_, {
+          loader: _,
+          clipSummaries: _,
+          playbackCoordinator: _,
+          refTimelineParentCtn: _,
+          children: (0, _.jsxs)("div", {
+            className: _,
+            dir: "ltr",
+            children: [
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)(_, {
                 tour: "recording_timeline",
                 name: "timeline",
                 options: {
                   position: "left",
-                  offset: 30,
+                  offset: 20,
                 },
-              },
-              _.createElement(
-                _,
-                {
+                children: (0, _.jsx)(_, {
                   className: _.TimelineScrollContainer,
                   disableZoom: _,
-                },
-                _.createElement(_, null),
-              ),
-            ),
-          ),
-        );
+                  children: (0, _.jsx)(_, {}),
+                }),
+              }),
+            ],
+          }),
+        });
       }
       const _ = (0, _.memo)(function (_) {
         const _ = _();
-        return (0, _._)(() => _.BInitialized())
-          ? _.createElement(_, null)
-          : null;
+        return (0, _._)(() => _.BInitialized()) ? (0, _.jsx)(_, {}) : null;
       });
       function _() {
         const _ = _(),
           _ = (0, _._)(() => _.GetScrollableWidthPX()),
           _ = (0, _._)(() => _.GetVisualWindowStartPX()),
           _ = (0, _._)(() => _.GetTimelineMarginWidth());
-        return _.createElement(
-          "div",
-          {
-            className: _.ContentContainer,
-            style: {
-              minWidth: _ || 0,
-              marginRight: _,
-              marginLeft: _,
-              transform: `translateX(${-_}px)`,
-            },
+        return (0, _.jsxs)("div", {
+          className: _.ContentContainer,
+          style: {
+            minWidth: _ || 0,
+            marginRight: _,
+            marginLeft: _,
+            transform: `translateX(${-_}px)`,
           },
-          _.createElement(
-            _,
-            {
+          children: [
+            (0, _.jsx)(_, {
               _: "recordings",
               className: _.RecordingDecorators,
-            },
-            _.createElement(_, null),
-          ),
-          _.createElement(
-            _,
-            {
+              children: (0, _.jsx)(_, {}),
+            }),
+            (0, _.jsx)(_, {
               _: "clips",
               className: _.ClipDecorators,
-            },
-            _.createElement(_, null),
-          ),
-          _.createElement(
-            _,
-            {
+              children: (0, _.jsx)(_, {}),
+            }),
+            (0, _.jsx)(_, {
               _: "game_modes",
               className: _.GameModes,
-            },
-            _.createElement(_, null),
-          ),
-          _.createElement(
-            _,
-            {
+              children: (0, _.jsx)(_, {}),
+            }),
+            (0, _.jsx)(_, {
               _: "date_decorators",
               className: _.DateDecorator,
-            },
-            _.createElement(_, null),
-          ),
-          _.createElement(
-            _,
-            {
+              children: (0, _.jsx)(_, {}),
+            }),
+            (0, _.jsx)(_, {
               _: "ticks",
               className: _.BackgroundTicks,
-            },
-            _.createElement(_, null),
-          ),
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              _,
-              {
-                _: "highlights",
-                className: _.Highlights,
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _,
-              {
-                _: "range_selection",
-                className: _.RangeSelector,
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _,
-              {
-                _: "seek_scrub",
-                className: _.SeekScrubber,
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _,
-              {
-                _: "play_head",
-                className: _.PlayHead,
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _,
-              {
-                _: "phases",
-                className: _.Phases,
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _,
-              {
-                _: "range_highlights",
-                className: _.RangeHighlights,
-              },
-              _.createElement(_, null),
-            ),
-          ),
-        );
+              children: (0, _.jsx)(_, {}),
+            }),
+            (0, _.jsxs)(_, {
+              children: [
+                (0, _.jsx)(_, {
+                  _: "highlights",
+                  className: _.Highlights,
+                  children: (0, _.jsx)(_, {}),
+                }),
+                (0, _.jsx)(_, {
+                  _: "range_selection",
+                  className: _.RangeSelector,
+                  children: (0, _.jsx)(_, {}),
+                }),
+                (0, _.jsx)(_, {
+                  _: "seek_scrub",
+                  className: _.SeekScrubber,
+                  children: (0, _.jsx)(_, {}),
+                }),
+                (0, _.jsx)(_, {
+                  _: "play_head",
+                  className: _.PlayHead,
+                  children: (0, _.jsx)(_, {}),
+                }),
+                (0, _.jsx)(_, {
+                  _: "phases",
+                  className: _.Phases,
+                  children: (0, _.jsx)(_, {}),
+                }),
+                (0, _.jsx)(_, {
+                  _: "range_highlights",
+                  className: _.RangeHighlights,
+                  children: (0, _.jsx)(_, {}),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { children: _, _: __webpack_require__, className: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            _: __webpack_require__,
-            className: (0, _._)(_, _.AbsoluteLayer),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.RelativeLayer,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          _: __webpack_require__,
+          className: (0, _._)(_, _.AbsoluteLayer),
+          children: (0, _.jsx)("div", {
+            className: _.RelativeLayer,
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const _ = _().GetRenderGlyph();
@@ -10542,18 +10263,15 @@
                 0,
               );
           }, [__webpack_require__, _]),
-          _.createElement(
-            _,
-            {
-              loader: _,
-              fnGetManifest: () => "",
-              mode: _.Partner,
-            },
-            _.createElement(_, {
+          (0, _.jsx)(_, {
+            loader: _,
+            fnGetManifest: () => "",
+            mode: _.Partner,
+            children: (0, _.jsx)(_, {
               loader: _,
               disableZoom: !0,
             }),
-          )
+          })
         );
       }
       const _ = 31;
@@ -10704,207 +10422,190 @@
             [_],
           );
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: (0, _._)("#TimelineMarkers_Dialog_Create"),
               closeModal: __webpack_require__,
             })
-          : _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#TimelineMarkers_Dialog_Create"),
-                bOKDisabled: _.some(
-                  (_) => !_(_.markerid) || !_.image || _.image?.length < 10,
-                ),
-                bDisableBackgroundDismiss: !0,
-                onCancel: __webpack_require__,
-                strOKButtonText: (0, _._)("#Button_Create"),
-                onOK: async () => {
-                  _.fnSetLoading(!0);
-                  let _ = _ == _.k_IconEditorPublic ? _ : _;
-                  if (
-                    (_ != _.k_IconEditorPublic || _
-                      ? _ != _.k_IconEditorHidden ||
-                        _ ||
-                        (_ = (await _(_, !1)).assetSetID)
-                      : (_ = (await _(_, !0)).assetSetID),
-                    !_)
-                  )
-                    return (
-                      console.error(
-                        "IconCreateEditDialog failed to create hidden sets " +
-                          _,
-                      ),
-                      _.fnSetError(!0),
-                      void _.fnSetStrError(
-                        (0, _._)("#OptIn_Appeals_Dialog_Failed"),
-                      )
-                    );
-                  let _ = !0;
-                  for (let _ = 0; _ < _.length; ++_) {
-                    const _ = _[_];
-                    if (
-                      1 != (await _(_, _, _.markerid, _.image, _.image_type))
-                    ) {
-                      _.fnSetError(!0),
-                        _.fnSetStrError(
-                          (0, _._)("#OptIn_Appeals_Dialog_Failed"),
-                        ),
-                        (_ = !1);
-                      break;
-                    }
-                  }
-                  _ &&
-                    (_.fnSetSuccess(!0),
-                    _.fnSetStrSuccess(
-                      (0, _._)("#TimelineMarkers_Dialog_CreateSuccess"),
-                    ));
-                },
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.DialogBody,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DialogIntro,
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#TimelineMarkers_Dialog_Create_Description"),
-                  ),
-                  _.createElement(
-                    "ul",
-                    null,
-                    _.createElement(
-                      "li",
-                      null,
-                      _.createElement(
-                        "strong",
-                        null,
-                        (0, _._)("#TimelineMarkers_Dialog_Name_Title"),
-                      ),
-                      " - ",
-                      (0, _._)("#TimelineMarkers_Dialog_Name_ttip", _),
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      _.createElement(
-                        "strong",
-                        null,
-                        (0, _._)("#TimelineMarkers_Dialog_SVG"),
-                      ),
-                      " - ",
-                      (0, _._)("#TimelineMarkers_Dialog_SVG_create_desc"),
-                    ),
-                  ),
-                ),
-                Boolean(_) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ErrorStylesBackground,
-                    },
-                    _,
-                  ),
-                _.createElement("br", null),
-                _.createElement("br", null),
-                _.createElement(
-                  "h3",
-                  null,
-                  (0, _._)("#TimelineMarkers_Dialog_Title_UploadIcons"),
-                ),
-                _.createElement("input", {
-                  type: "file",
-                  accept: ".svg,.png",
-                  style: {
-                    display: "none",
-                  },
-                  multiple: !0,
-                  name: "fileupload",
-                  ref: _,
-                  onChange: _,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _.current.click(),
-                  },
-                  _.createElement(_.xv8, null),
-                  " ",
-                  (0, _._)("#TimelineMarkers_Dialog_SVG_mutli_button"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DragTargetCtn,
-                  },
-                  _.createElement(_, {
-                    fnHandleFiles: _,
-                  }),
-                ),
-                Boolean(_?.length > 0 && _[0].image?.length > 0) &&
-                  _.createElement(
-                    "h3",
-                    null,
-                    (0, _._)("#TimelineMarkers_Dialog_IconCreateTitle"),
-                  ),
-                _.map((_, _) =>
-                  _.createElement(_, {
-                    marker: _,
-                    key: "" + _,
-                    appid: _,
-                    setMarkerID: (_) => {
-                      const _ = [..._];
-                      (_[_].markerid = _), _(_);
-                    },
-                  }),
-                ),
-                _.createElement("br", null),
-                _.createElement("br", null),
-                _.createElement(_, {
-                  createVisibilityState: _,
-                  setCreateVisibilityState: _,
-                }),
+          : (0, _.jsx)(_._, {
+              strTitle: (0, _._)("#TimelineMarkers_Dialog_Create"),
+              bOKDisabled: _.some(
+                (_) => !_(_.markerid) || !_.image || _.image?.length < 10,
               ),
-            );
+              bDisableBackgroundDismiss: !0,
+              onCancel: __webpack_require__,
+              strOKButtonText: (0, _._)("#Button_Create"),
+              onOK: async () => {
+                _.fnSetLoading(!0);
+                let _ = _ == _.k_IconEditorPublic ? _ : _;
+                if (
+                  (_ != _.k_IconEditorPublic || _
+                    ? _ != _.k_IconEditorHidden ||
+                      _ ||
+                      (_ = (await _(_, !1)).assetSetID)
+                    : (_ = (await _(_, !0)).assetSetID),
+                  !_)
+                )
+                  return (
+                    console.error(
+                      "IconCreateEditDialog failed to create hidden sets " + _,
+                    ),
+                    _.fnSetError(!0),
+                    void _.fnSetStrError(
+                      (0, _._)("#OptIn_Appeals_Dialog_Failed"),
+                    )
+                  );
+                let _ = !0;
+                for (let _ = 0; _ < _.length; ++_) {
+                  const _ = _[_];
+                  if (1 != (await _(_, _, _.markerid, _.image, _.image_type))) {
+                    _.fnSetError(!0),
+                      _.fnSetStrError((0, _._)("#OptIn_Appeals_Dialog_Failed")),
+                      (_ = !1);
+                    break;
+                  }
+                }
+                _ &&
+                  (_.fnSetSuccess(!0),
+                  _.fnSetStrSuccess(
+                    (0, _._)("#TimelineMarkers_Dialog_CreateSuccess"),
+                  ));
+              },
+              children: (0, _.jsxs)("div", {
+                className: _.DialogBody,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.DialogIntro,
+                    children: [
+                      (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#TimelineMarkers_Dialog_Create_Description",
+                        ),
+                      }),
+                      (0, _.jsxs)("ul", {
+                        children: [
+                          (0, _.jsxs)("li", {
+                            children: [
+                              (0, _.jsx)("strong", {
+                                children: (0, _._)(
+                                  "#TimelineMarkers_Dialog_Name_Title",
+                                ),
+                              }),
+                              " - ",
+                              (0, _._)("#TimelineMarkers_Dialog_Name_ttip", _),
+                            ],
+                          }),
+                          (0, _.jsxs)("li", {
+                            children: [
+                              (0, _.jsx)("strong", {
+                                children: (0, _._)(
+                                  "#TimelineMarkers_Dialog_SVG",
+                                ),
+                              }),
+                              " - ",
+                              (0, _._)(
+                                "#TimelineMarkers_Dialog_SVG_create_desc",
+                              ),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  Boolean(_) &&
+                    (0, _.jsx)("div", {
+                      className: _.ErrorStylesBackground,
+                      children: _,
+                    }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("h3", {
+                    children: (0, _._)(
+                      "#TimelineMarkers_Dialog_Title_UploadIcons",
+                    ),
+                  }),
+                  (0, _.jsx)("input", {
+                    type: "file",
+                    accept: ".svg,.png",
+                    style: {
+                      display: "none",
+                    },
+                    multiple: !0,
+                    name: "fileupload",
+                    ref: _,
+                    onChange: _,
+                  }),
+                  (0, _.jsxs)(_._, {
+                    onClick: () => _.current.click(),
+                    children: [
+                      (0, _.jsx)(_.xv8, {}),
+                      " ",
+                      (0, _._)("#TimelineMarkers_Dialog_SVG_mutli_button"),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.DragTargetCtn,
+                    children: (0, _.jsx)(_, {
+                      fnHandleFiles: _,
+                    }),
+                  }),
+                  Boolean(_?.length > 0 && _[0].image?.length > 0) &&
+                    (0, _.jsx)("h3", {
+                      children: (0, _._)(
+                        "#TimelineMarkers_Dialog_IconCreateTitle",
+                      ),
+                    }),
+                  _.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        marker: _,
+                        appid: _,
+                        setMarkerID: (_) => {
+                          const _ = [..._];
+                          (_[_].markerid = _), _(_);
+                        },
+                      },
+                      "" + _,
+                    ),
+                  ),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)(_, {
+                    createVisibilityState: _,
+                    setCreateVisibilityState: _,
+                  }),
+                ],
+              }),
+            });
       }
       function _(_) {
         const { fnHandleFiles: _ } = _,
           [__webpack_require__, _] = (0, _.useState)(!1);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _["drag-drop-box"],
-              __webpack_require__ && _.dragging,
-              _.DragBox,
-            ),
-            onDragEnter: (_) => {
-              _.preventDefault(), _(!0);
-            },
-            onDragOver: (_) => {
-              _.preventDefault();
-            },
-            onDragLeave: () => {
-              _(!1);
-            },
-            onDrop: (_) => {
-              _.preventDefault(), _(!1);
-              const _ = Array.from(_.dataTransfer.files);
-              _(_);
-            },
-          },
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#TimelineMarkers_Dialog_SVG_draganddrop"),
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _["drag-drop-box"],
+            __webpack_require__ && _.dragging,
+            _.DragBox,
           ),
-        );
+          onDragEnter: (_) => {
+            _.preventDefault(), _(!0);
+          },
+          onDragOver: (_) => {
+            _.preventDefault();
+          },
+          onDragLeave: () => {
+            _(!1);
+          },
+          onDrop: (_) => {
+            _.preventDefault(), _(!1);
+            const _ = Array.from(_.dataTransfer.files);
+            _(_);
+          },
+          children: (0, _.jsx)("p", {
+            children: (0, _._)("#TimelineMarkers_Dialog_SVG_draganddrop"),
+          }),
+        });
       }
       function _(_) {
         const { marker: _, appid: __webpack_require__, setMarkerID: _ } = _;
@@ -10919,54 +10620,53 @@
             [_],
           ),
           _?.image
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  markerID: _.markerid,
-                  strErrorMessage: null,
-                  imageContent: _.image,
-                  imageType: _.image_type,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PreviewCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      _._,
-                      null,
-                      (0, _._)("#TimelineMarkers_Dialog_Icon_Title"),
-                    ),
-                    _.createElement(_, {
-                      imageBase64OrUntrustedSVG: _.image,
-                      imageType: _.image_type,
-                    }),
-                  ),
-                  _.createElement(_._, {
-                    type: "text",
-                    value: _.markerid,
-                    maxChars: _,
-                    label: (0, _._)("#TimelineMarkers_Dialog_Name_Title"),
-                    placeholder: (0, _._)(
-                      "#TimelineMarkers_Dialog_Name_placeholder",
-                    ),
-                    onChange: (_) => _(_.currentTarget.value || ""),
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    markerID: _.markerid,
+                    strErrorMessage: null,
+                    imageContent: _.image,
+                    imageType: _.image_type,
                   }),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  (0, _._)("#TimelineMarkers_Dialog_Icon_TimelinePreview"),
-                ),
-                _.createElement(_, {
-                  appid: __webpack_require__,
-                  markerID: _.timeline_marker_id,
-                }),
-              )
+                  (0, _.jsxs)("div", {
+                    className: _.PreviewCtn,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)(_._, {
+                            children: (0, _._)(
+                              "#TimelineMarkers_Dialog_Icon_Title",
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            imageBase64OrUntrustedSVG: _.image,
+                            imageType: _.image_type,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        value: _.markerid,
+                        maxChars: _,
+                        label: (0, _._)("#TimelineMarkers_Dialog_Name_Title"),
+                        placeholder: (0, _._)(
+                          "#TimelineMarkers_Dialog_Name_placeholder",
+                        ),
+                        onChange: (_) => _(_.currentTarget.value || ""),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)(
+                      "#TimelineMarkers_Dialog_Icon_TimelinePreview",
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    appid: __webpack_require__,
+                    markerID: _.timeline_marker_id,
+                  }),
+                ],
+              })
             : null
         );
       }
@@ -11014,7 +10714,7 @@
           }, []),
           _ = (0, _._)();
         if (_.bLoading)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             state: _,
             strDialogTitle: _,
             closeModal: __webpack_require__,
@@ -11032,7 +10732,7 @@
               (_ = (0, _._)("#Button_Delete"))),
             (_ = async () => {
               (0, _._)(
-                _.createElement(_._, {
+                (0, _.jsx)(_._, {
                   strTitle: _,
                   strDescription: (0, _._)("#Dialog_AreYouSure"),
                   onOK: async () => {
@@ -11049,114 +10749,100 @@
               );
             });
         }
-        return _.createElement(
-          _._,
-          {
-            strTitle: _,
-            bOKDisabled: !_(_) || _?.length < 10,
-            bDisableBackgroundDismiss: !0,
-            onCancel: _,
-            onMiddleButton: _,
-            strMiddleButtonText: _,
-            strOKButtonText: (0, _._)("#Button_Update"),
-            onOK: async () => {
-              _.fnSetLoading(!0),
-                1 == (await _(_, _.asset_set_id, _.timeline_marker_id, _, _, _))
-                  ? (_.fnSetSuccess(!0),
-                    _.fnSetStrSuccess(
-                      (0, _._)("#TimelineMarkers_Dialog_UpdateSuccess"),
-                    ))
-                  : (_.fnSetError(!0),
-                    _.fnSetStrError((0, _._)("#OptIn_Appeals_Dialog_Failed")));
-            },
+        return (0, _.jsx)(_._, {
+          strTitle: _,
+          bOKDisabled: !_(_) || _?.length < 10,
+          bDisableBackgroundDismiss: !0,
+          onCancel: _,
+          onMiddleButton: _,
+          strMiddleButtonText: _,
+          strOKButtonText: (0, _._)("#Button_Update"),
+          onOK: async () => {
+            _.fnSetLoading(!0),
+              1 == (await _(_, _.asset_set_id, _.timeline_marker_id, _, _, _))
+                ? (_.fnSetSuccess(!0),
+                  _.fnSetStrSuccess(
+                    (0, _._)("#TimelineMarkers_Dialog_UpdateSuccess"),
+                  ))
+                : (_.fnSetError(!0),
+                  _.fnSetStrError((0, _._)("#OptIn_Appeals_Dialog_Failed")));
           },
-          _.createElement(
-            "div",
-            {
-              className: _.DialogBody,
-            },
-            _.createElement(_, {
-              markerID: _,
-              strErrorMessage: _,
-              imageContent: _,
-              imageType: _,
-            }),
-            _.createElement(
-              "h3",
-              null,
-              (0, _._)("#TimelineMarkers_Dialog_Name_Title"),
-            ),
-            _
-              ? _.createElement(
-                  "p",
-                  null,
-                  (0, _._)("#TimelineMarkers_Dialog_Name_Disabled"),
-                )
-              : _.createElement(
-                  "p",
-                  null,
-                  (0, _._)("#TimelineMarkers_Dialog_Name", _),
-                ),
-            _.createElement(_._, {
-              type: "text",
-              value: _,
-              disabled: _,
-              maxChars: _,
-              className: _.Identifier,
-              placeholder: (0, _._)("#TimelineMarkers_Dialog_Name_placeholder"),
-              tooltip: (0, _._)("#TimelineMarkers_Dialog_Name_ttip"),
-              onChange: (_) => _(_.currentTarget.value || ""),
-            }),
-            _.createElement("br", null),
-            _.createElement("br", null),
-            _.createElement(
-              "h3",
-              null,
-              (0, _._)("#TimelineMarkers_Dialog_SVG"),
-            ),
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#TimelineMarkers_Dialog_SVG_desc"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.PreviewCtn,
-              },
-              _.createElement(_, {
-                imageBase64OrUntrustedSVG: _,
+          children: (0, _.jsxs)("div", {
+            className: _.DialogBody,
+            children: [
+              (0, _.jsx)(_, {
+                markerID: _,
+                strErrorMessage: _,
+                imageContent: _,
                 imageType: _,
               }),
-              _.createElement("input", {
-                type: "file",
-                accept: ".svg,.png",
-                style: {
-                  display: "none",
-                },
-                multiple: !1,
-                name: "fileupload",
-                ref: _,
-                onChange: _,
+              (0, _.jsx)("h3", {
+                children: (0, _._)("#TimelineMarkers_Dialog_Name_Title"),
               }),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.current.click(),
-                },
-                _.createElement(_.xv8, null),
-                " ",
-                (0, _._)("#TimelineMarkers_Dialog_SVG_button"),
-              ),
-            ),
-            _.createElement(_, {
-              appid: _,
-              markerID: _
-                ? `temp_${_}_${_.timeline_marker_id}`
-                : _.timeline_marker_id,
-            }),
-          ),
-        );
+              _
+                ? (0, _.jsx)("p", {
+                    children: (0, _._)("#TimelineMarkers_Dialog_Name_Disabled"),
+                  })
+                : (0, _.jsx)("p", {
+                    children: (0, _._)("#TimelineMarkers_Dialog_Name", _),
+                  }),
+              (0, _.jsx)(_._, {
+                type: "text",
+                value: _,
+                disabled: _,
+                maxChars: _,
+                className: _.Identifier,
+                placeholder: (0, _._)(
+                  "#TimelineMarkers_Dialog_Name_placeholder",
+                ),
+                tooltip: (0, _._)("#TimelineMarkers_Dialog_Name_ttip"),
+                onChange: (_) => _(_.currentTarget.value || ""),
+              }),
+              (0, _.jsx)("br", {}),
+              (0, _.jsx)("br", {}),
+              (0, _.jsx)("h3", {
+                children: (0, _._)("#TimelineMarkers_Dialog_SVG"),
+              }),
+              (0, _.jsx)("p", {
+                children: (0, _._)("#TimelineMarkers_Dialog_SVG_desc"),
+              }),
+              (0, _.jsxs)("div", {
+                className: _.PreviewCtn,
+                children: [
+                  (0, _.jsx)(_, {
+                    imageBase64OrUntrustedSVG: _,
+                    imageType: _,
+                  }),
+                  (0, _.jsx)("input", {
+                    type: "file",
+                    accept: ".svg,.png",
+                    style: {
+                      display: "none",
+                    },
+                    multiple: !1,
+                    name: "fileupload",
+                    ref: _,
+                    onChange: _,
+                  }),
+                  (0, _.jsxs)(_._, {
+                    onClick: () => _.current.click(),
+                    children: [
+                      (0, _.jsx)(_.xv8, {}),
+                      " ",
+                      (0, _._)("#TimelineMarkers_Dialog_SVG_button"),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                appid: _,
+                markerID: _
+                  ? `temp_${_}_${_.timeline_marker_id}`
+                  : _.timeline_marker_id,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -11194,34 +10880,28 @@
                 (_ = `(${_}, ${_})-(${_ + _}, ${_ + _})`);
           }
         }
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(!_ && _.length > 0) &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            Boolean(!_ && _.length > 0) &&
+              (0, _.jsx)("div", {
                 className: _.ErrorStylesBackground,
-              },
-              (0, _._)("#TimelineMarkers_Dialog_Name_error"),
-            ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#TimelineMarkers_Dialog_Name_error"),
+              }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
                 className: _.ErrorStylesBackground,
-              },
-              (0, _._)("#TimelineMarkers_Dialog_Name_error2"),
-            ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#TimelineMarkers_Dialog_Name_error2"),
+              }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
                 className: _.WarningStylesBackground,
-              },
-              (0, _._)("#TimelineMarkers_Dialog_SVG_warning_dimensions", _),
-            ),
-        );
+                children: (0, _._)(
+                  "#TimelineMarkers_Dialog_SVG_warning_dimensions",
+                  _,
+                ),
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -11229,53 +10909,40 @@
             setCreateVisibilityState: __webpack_require__,
           } = _,
           _ = _.useId();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "h3",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("h3", {
               _: _,
-            },
-            (0, _._)("#TimelineMarkers_Dialog_Visibility"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#TimelineMarkers_Dialog_Visibility"),
+            }),
+            (0, _.jsx)(_._, {
               labelId: _,
               value: _,
               onChange: (_) => {
                 __webpack_require__(_);
               },
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _.RadioColumn,
-              },
-              _.createElement(
-                _._,
-                {
-                  value: _.k_IconEditorPublic,
-                },
-                (0, _._)(
-                  "#TimelineMarkers_Dialog_Public",
-                  _.createElement("b", null),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_IconEditorHidden,
-                },
-                (0, _._)(
-                  "#TimelineMarkers_Dialog_Hidden",
-                  _.createElement("b", null),
-                ),
-              ),
-            ),
-          ),
-        );
+                children: [
+                  (0, _.jsx)(_._, {
+                    value: _.k_IconEditorPublic,
+                    children: (0, _._)(
+                      "#TimelineMarkers_Dialog_Public",
+                      (0, _.jsx)("b", {}),
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    value: _.k_IconEditorHidden,
+                    children: (0, _._)(
+                      "#TimelineMarkers_Dialog_Hidden",
+                      (0, _.jsx)("b", {}),
+                    ),
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
       }
       !(function (_) {
         (_.k_IconEditorPublic = "public"), (_.k_IconEditorHidden = "hidden");
@@ -11286,72 +10953,57 @@
         const { appid: _ } = _,
           { publicAssetSetID: __webpack_require__ } = _(_),
           _ = _(_);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.Columns,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          children: (0, _.jsxs)("div", {
+            className: _.Columns,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.LeftCol,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SectionTitle),
-                },
-                (0, _._)("#TimelineMarkers_Public_title"),
-              ),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#TimelineMarkers_Public_desc1"),
-              ),
-              _.createElement("br", null),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#TimelineMarkers_Public_desc2"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Ctn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.GridCtn,
-                },
-                Boolean(__webpack_require__)
-                  ? _.createElement(_, {
-                      assetSetID: __webpack_require__,
-                      appid: _,
-                      bDraggable: !1,
-                      strMessageOnEmpty: (0, _._)(
-                        "#TimelineMarkers_Public_none",
-                      ),
-                    })
-                  : _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#TimelineMarkers_Public_none"),
-                    ),
-                _?.length > 0 &&
-                  _.createElement(_, {
-                    assetSetID: __webpack_require__ || _,
-                    appid: _,
-                    strMessage: (0, _._)("#TimelineMarkers_drag_target_public"),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().SectionTitle),
+                    children: (0, _._)("#TimelineMarkers_Public_title"),
                   }),
-              ),
-            ),
-          ),
-        );
+                  (0, _.jsx)("div", {
+                    children: (0, _._)("#TimelineMarkers_Public_desc1"),
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("div", {
+                    children: (0, _._)("#TimelineMarkers_Public_desc2"),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _.Ctn,
+                children: (0, _.jsxs)("div", {
+                  className: _.GridCtn,
+                  children: [
+                    Boolean(__webpack_require__)
+                      ? (0, _.jsx)(_, {
+                          assetSetID: __webpack_require__,
+                          appid: _,
+                          bDraggable: !1,
+                          strMessageOnEmpty: (0, _._)(
+                            "#TimelineMarkers_Public_none",
+                          ),
+                        })
+                      : (0, _.jsx)("div", {
+                          children: (0, _._)("#TimelineMarkers_Public_none"),
+                        }),
+                    _?.length > 0 &&
+                      (0, _.jsx)(_, {
+                        assetSetID: __webpack_require__ || _,
+                        appid: _,
+                        strMessage: (0, _._)(
+                          "#TimelineMarkers_drag_target_public",
+                        ),
+                      }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+        });
       }
       const _ = /^assetsetid_(.+)_markerid_(.+)$/,
         _ = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
@@ -11443,33 +11095,24 @@
           );
         return 0 == _
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.PublishNoteCtn,
-              },
-              _.createElement(
-                "div",
-                {
+          : (0, _.jsxs)("div", {
+              className: _.PublishNoteCtn,
+              children: [
+                (0, _.jsx)("div", {
                   className: _.CalloutTitle,
-                },
-                (0, _._)("#TimelineMarkers_Publishing_title", _),
-              ),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#TimelineMarkers_Publishing_desc"),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)("#TimelineMarkers_Publishing_title", _),
+                }),
+                (0, _.jsx)("div", {
+                  children: (0, _._)("#TimelineMarkers_Publishing_desc"),
+                }),
+                (0, _.jsx)(_._, {
                   onClick: (_) => {
                     window.location.href = `${_._.PARTNER_BASE_URL}apps/publishing/${_}`;
                   },
-                },
-                (0, _._)("#TimelineMarkers_Publishing_action"),
-              ),
-            );
+                  children: (0, _._)("#TimelineMarkers_Publishing_action"),
+                }),
+              ],
+            });
       }
       function _(_) {
         const { appid: _, assetSetID: __webpack_require__, closeModal: _ } = _,
@@ -11486,169 +11129,144 @@
           ),
           _ = (0, _._)();
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: _,
               closeModal: _,
             })
-          : _.createElement(
-              _._,
-              {
-                strTitle: _,
-                strDescription: (0, _._)(
-                  "#TimelineMarkers_Hidden_new_asset_set_desc",
-                ),
-                strOKButtonText: (0, _._)("#Button_Save"),
-                onOK: async () => {
-                  _.fnSetLoading(!0), (_.name = _), (_.desc = _), (_.appid = _);
-                  let _ = null;
-                  try {
-                    let _;
-                    __webpack_require__
-                      ? (_ = await _(_))
-                      : ((_.branches = []), (_ = await _(_))),
-                      1 != _ &&
-                        (_ = (0, _._)({
-                          sucess: _,
-                        }));
-                  } catch (_) {
-                    _ = (0, _._)(_);
-                  }
-                  _
-                    ? (console.error("Branch Set error " + _.strErrorMsg, _),
-                      _.fnSetError(!0),
-                      _.fnSetStrError((0, _._)("#OptIn_Appeals_Dialog_Failed")))
-                    : _.fnSetSuccess(!0);
-                },
-                onCancel: _,
-                bDisableBackgroundDismiss: !1,
-                bOKDisabled: _ || _ || _.bLoading,
+          : (0, _.jsxs)(_._, {
+              strTitle: _,
+              strDescription: (0, _._)(
+                "#TimelineMarkers_Hidden_new_asset_set_desc",
+              ),
+              strOKButtonText: (0, _._)("#Button_Save"),
+              onOK: async () => {
+                _.fnSetLoading(!0), (_.name = _), (_.desc = _), (_.appid = _);
+                let _ = null;
+                try {
+                  let _;
+                  __webpack_require__
+                    ? (_ = await _(_))
+                    : ((_.branches = []), (_ = await _(_))),
+                    1 != _ &&
+                      (_ = (0, _._)({
+                        sucess: _,
+                      }));
+                } catch (_) {
+                  _ = (0, _._)(_);
+                }
+                _
+                  ? (console.error("Branch Set error " + _.strErrorMsg, _),
+                    _.fnSetError(!0),
+                    _.fnSetStrError((0, _._)("#OptIn_Appeals_Dialog_Failed")))
+                  : _.fnSetSuccess(!0);
               },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+              onCancel: _,
+              bDisableBackgroundDismiss: !1,
+              bOKDisabled: _ || _ || _.bLoading,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _.ErrorStylesWithIcon,
-                  },
-                  (0, _._)("#AssetSet_Dialog_Disallowed"),
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+                    children: (0, _._)("#AssetSet_Dialog_Disallowed"),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _.ErrorStylesWithIcon,
+                    children: (0, _._)("#AssetSet_Dialog_MustHaveName"),
+                  }),
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  label: (0, _._)("#AssetSet_Dialog_Edit_Name"),
+                  value: _,
+                  onChange: (_) => {
+                    _(_?.currentTarget?.value || "");
                   },
-                  (0, _._)("#AssetSet_Dialog_MustHaveName"),
-                ),
-              _.createElement(_._, {
-                type: "text",
-                label: (0, _._)("#AssetSet_Dialog_Edit_Name"),
-                value: _,
-                onChange: (_) => {
-                  _(_?.currentTarget?.value || "");
-                },
-              }),
-              _.createElement(_._, {
-                type: "text",
-                label: (0, _._)("#AssetSet_Dialog_Edit_Description"),
-                value: _,
-                onChange: (_) => {
-                  _(_?.currentTarget?.value || "");
-                },
-              }),
-            );
+                }),
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  label: (0, _._)("#AssetSet_Dialog_Edit_Description"),
+                  value: _,
+                  onChange: (_) => {
+                    _(_?.currentTarget?.value || "");
+                  },
+                }),
+              ],
+            });
       }
       function _(_) {
         const { appid: _ } = _,
           { hiddenAssetSetID: __webpack_require__ } = _(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.Unassigned, _.Ctn),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.Unassigned, _.Ctn),
+          children: [
+            (0, _.jsx)("div", {
               className: _.Title,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _.TopRow,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#TimelineMarkers_Hidden_section_info"),
-              ),
-              _.createElement(_, {
-                appid: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.TitleText,
+                    children: (0, _._)("#TimelineMarkers_Hidden_section_info"),
+                  }),
+                  (0, _.jsx)(_, {
+                    appid: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    appid: _,
+                    assetSetID: __webpack_require__,
+                  }),
+                ],
               }),
-              _.createElement(_, {
-                appid: _,
-                assetSetID: __webpack_require__,
-              }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            null,
-            Boolean(__webpack_require__)
-              ? _.createElement(_, {
-                  appid: _,
-                  assetSetID: __webpack_require__,
-                  strMessageOnEmpty: (0, _._)("#TimelineMarkers_Hidden_none"),
-                  bDraggable: !0,
-                })
-              : _.createElement(
-                  "div",
-                  {
+            }),
+            (0, _.jsx)("div", {
+              children: Boolean(__webpack_require__)
+                ? (0, _.jsx)(_, {
+                    appid: _,
+                    assetSetID: __webpack_require__,
+                    strMessageOnEmpty: (0, _._)("#TimelineMarkers_Hidden_none"),
+                    bDraggable: !0,
+                  })
+                : (0, _.jsx)("div", {
                     className: _.NoHidden,
-                  },
-                  (0, _._)("#TimelineMarkers_Hidden_none"),
-                ),
-          ),
-          _.createElement(
-            "div",
-            {
+                    children: (0, _._)("#TimelineMarkers_Hidden_none"),
+                  }),
+            }),
+            (0, _.jsxs)("div", {
               className: (0, _._)(_.DragCtn, _.Row),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.BurgerWrapper,
-              },
-              _.createElement(_.wVV, {
-                size: "10px",
-              }),
-            ),
-            " ",
-            (0, _._)("#TimelineMarkers_drag_source_public"),
-          ),
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.BurgerWrapper,
+                  children: (0, _.jsx)(_.wVV, {
+                    size: "10px",
+                  }),
+                }),
+                " ",
+                (0, _._)("#TimelineMarkers_drag_source_public"),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { appid: _ } = _,
           { hiddenAssetSetID: __webpack_require__ } = _(_),
           _ = _(_, __webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            disabled: !__webpack_require__ || !_ || 0 == _.size,
-            onClick: (_) =>
-              (0, _._)(
-                _.createElement(_, {
-                  appid: _,
-                }),
-                (0, _._)(_),
-              ),
-          },
-          "↑",
-          " ",
-          (0, _._)("#TimelineMarkers_MoveAllHiddenToPublic"),
-        );
+        return (0, _.jsxs)(_._, {
+          disabled: !__webpack_require__ || !_ || 0 == _.size,
+          onClick: (_) =>
+            (0, _._)(
+              (0, _.jsx)(_, {
+                appid: _,
+              }),
+              (0, _._)(_),
+            ),
+          children: [
+            "↑",
+            " ",
+            (0, _._)("#TimelineMarkers_MoveAllHiddenToPublic"),
+          ],
+        });
       }
       function _(_) {
         const { appid: _, closeModal: __webpack_require__ } = _,
@@ -11656,14 +11274,14 @@
           _ = _(_, _),
           _ = (0, _._)();
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: (0, _._)(
                 "#TimelineMarkers_MoveAllHiddenToPublic",
               ),
               closeModal: __webpack_require__,
             })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               strTitle: (0, _._)("#TimelineMarkers_MoveAllHiddenToPublic"),
               strDescription: (0, _._)("#Dialog_AreYouSure"),
               onCancel: __webpack_require__,
@@ -11682,46 +11300,38 @@
       }
       function _(_) {
         const { appid: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.CreateNewCtn,
-          },
-          _.createElement(
-            "div",
-            null,
-            (0, _._)("#TimelineMarkers_Hidden_new_asset_set_desc"),
-          ),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.CreateNewCtn,
+          children: [
+            (0, _.jsx)("div", {
+              children: (0, _._)("#TimelineMarkers_Hidden_new_asset_set_desc"),
+            }),
+            (0, _.jsx)(_._, {
               onClick: (_) =>
                 (0, _._)(
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     appid: _,
                   }),
                   (0, _._)(_),
                 ),
-            },
-            (0, _._)("#TimelineMarkers_Hidden_new_asset_set"),
-          ),
-        );
+              children: (0, _._)("#TimelineMarkers_Hidden_new_asset_set"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { oAssetSet: _ } = _;
         return _.name == _
-          ? _.createElement(
-              "span",
-              null,
-              (0, _._)("#TimelineMarkers_Public_title"),
-            )
+          ? (0, _.jsx)("span", {
+              children: (0, _._)("#TimelineMarkers_Public_title"),
+            })
           : _.name == _
-            ? _.createElement(
-                "span",
-                null,
-                (0, _._)("#TimelineMarkers_Hidden_title"),
-              )
-            : _.createElement("span", null, _.name);
+            ? (0, _.jsx)("span", {
+                children: (0, _._)("#TimelineMarkers_Hidden_title"),
+              })
+            : (0, _.jsx)("span", {
+                children: _.name,
+              });
       }
       class _ {
         m_vecBranches = new Array();
@@ -11764,63 +11374,49 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { oAssetSet: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.BranchDefCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.BranchDefCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _.BranchDesc,
-            },
-            (0, _._)("#TimelineMarkers_Hidden_controls"),
-          ),
-          _.branches?.length > 0
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.branches.map((_) =>
-                  _.createElement(
-                    "span",
-                    {
-                      key: _,
-                      className: _.BranchName,
-                    },
-                    _.createElement(_, {
-                      branchName: _,
-                    }),
+              children: (0, _._)("#TimelineMarkers_Hidden_controls"),
+            }),
+            _.branches?.length > 0
+              ? (0, _.jsx)(_.Fragment, {
+                  children: _.branches.map((_) =>
+                    (0, _.jsx)(
+                      "span",
+                      {
+                        className: _.BranchName,
+                        children: (0, _.jsx)(_, {
+                          branchName: _,
+                        }),
+                      },
+                      _,
+                    ),
                   ),
-                ),
-              )
-            : _.createElement(
-                "div",
-                null,
-                (0, _._)("#TimelineMarkers_Hidden_nobranches"),
-              ),
-          _.createElement("br", null),
-          _.createElement(
-            _._,
-            {
+                })
+              : (0, _.jsx)("div", {
+                  children: (0, _._)("#TimelineMarkers_Hidden_nobranches"),
+                }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
               onClick: (_) => {
                 (0, _._)(
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     oAssetSet: _,
                   }),
                   (0, _._)(_),
                 );
               },
-            },
-            (0, _._)("#TimelineMarkers_Hidden_updatebranches"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#TimelineMarkers_Hidden_updatebranches"),
+            }),
+            (0, _.jsx)(_._, {
               onClick: () => {},
-            },
-            (0, _._)("#TimelineMarkers_Hidden_publishbranch"),
-          ),
-        );
+              children: (0, _._)("#TimelineMarkers_Hidden_publishbranch"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { oAssetSet: _, closeModal: __webpack_require__ } = _,
@@ -11829,91 +11425,91 @@
           { fnAddBranchToAssetSet: _, fnRemoveBranchFromAssetSet: _ } = _(),
           _ = (0, _._)();
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: (0, _._)(
                 "#TimelineMarkers_Hidden_updatebranches",
               ),
               closeModal: __webpack_require__,
             })
-          : _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#TimelineMarkers_Hidden_updatebranches"),
-                strDescription: (0, _._)("#AssetSet_Branch_Dialog_Desc"),
-                onCancel: __webpack_require__,
-                onOK: async () => {
-                  _.fnSetLoading(!0);
-                  const _ = Array.from(_);
-                  let _ = 0,
-                    _ = 0;
-                  for (let _ = 0; _ < _.length; ++_) {
-                    const _ = _[_];
-                    if (!_.branches?.includes(_)) {
-                      if (1 != (await _(_.appid, _.assetset_id, _)))
-                        return void _.fnSetError(!0);
-                      _++;
-                    }
+          : (0, _.jsxs)(_._, {
+              strTitle: (0, _._)("#TimelineMarkers_Hidden_updatebranches"),
+              strDescription: (0, _._)("#AssetSet_Branch_Dialog_Desc"),
+              onCancel: __webpack_require__,
+              onOK: async () => {
+                _.fnSetLoading(!0);
+                const _ = Array.from(_);
+                let _ = 0,
+                  _ = 0;
+                for (let _ = 0; _ < _.length; ++_) {
+                  const _ = _[_];
+                  if (!_.branches?.includes(_)) {
+                    if (1 != (await _(_.appid, _.assetset_id, _)))
+                      return void _.fnSetError(!0);
+                    _++;
                   }
-                  const _ = [...(_.branches || [])];
-                  for (let _ = 0; _ < _.length; ++_) {
-                    const _ = _[_];
-                    if (!_.has(_)) {
-                      if (1 != (await _(_.appid, _.assetset_id, _)))
-                        return void _.fnSetError(!0);
-                      _++;
-                    }
+                }
+                const _ = [...(_.branches || [])];
+                for (let _ = 0; _ < _.length; ++_) {
+                  const _ = _[_];
+                  if (!_.has(_)) {
+                    if (1 != (await _(_.appid, _.assetset_id, _)))
+                      return void _.fnSetError(!0);
+                    _++;
                   }
-                  0 == _ && 0 == _
-                    ? _.fnSetStrSuccess(
-                        (0, _._)("#AssetSet_Branch_Dialog_nochange"),
-                      )
-                    : _.fnSetStrSuccess(
-                        (0, _._)("#AssetSet_Branch_Dialog_updated", _, _),
-                      ),
-                    _.fnSetSuccess(!0);
-                },
+                }
+                0 == _ && 0 == _
+                  ? _.fnSetStrSuccess(
+                      (0, _._)("#AssetSet_Branch_Dialog_nochange"),
+                    )
+                  : _.fnSetStrSuccess(
+                      (0, _._)("#AssetSet_Branch_Dialog_updated", _, _),
+                    ),
+                  _.fnSetSuccess(!0);
               },
-              _.createElement("br", null),
-              _.map((_) =>
-                _.createElement(_._, {
-                  key: _.name,
-                  label: _.createElement(_, {
-                    branchName: _.name,
-                  }),
-                  tooltip: _.description,
-                  checked: _.has(_.name),
-                  onChange: (_) => {
-                    const _ = new Set(_);
-                    _
-                      ? __webpack_require__.add(_.name)
-                      : __webpack_require__.delete(_.name),
-                      _(_);
-                  },
-                }),
-              ),
-            );
+              children: [
+                (0, _.jsx)("br", {}),
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      label: (0, _.jsx)(_, {
+                        branchName: _.name,
+                      }),
+                      tooltip: _.description,
+                      checked: _.has(_.name),
+                      onChange: (_) => {
+                        const _ = new Set(_);
+                        _
+                          ? __webpack_require__.add(_.name)
+                          : __webpack_require__.delete(_.name),
+                          _(_);
+                      },
+                    },
+                    _.name,
+                  ),
+                ),
+              ],
+            });
       }
       function _(_) {
         const { branchName: _ } = _,
           _ = ((_ = _), _.Get().GetBranchDetailsByName(_));
         var _;
-        return _.createElement(
-          "span",
-          {
-            className: _.Lock,
-          },
-          _?.password?.length > 0 &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)("span", {
+          className: _.Lock,
+          children: [
+            _?.password?.length > 0 &&
+              (0, _.jsx)(_._, {
                 toolTipContent: (0, _._)("#AssetSet_Branch_Dialog_password"),
                 bTopmost: !0,
-              },
-              _.createElement("span", null, "🔒 "),
-            ),
-          _,
-        );
+                children: (0, _.jsx)("span", {
+                  children: "🔒 ",
+                }),
+              }),
+            _,
+          ],
+        });
       }
       function _(_) {
         const { appid: _, assetSetID: __webpack_require__, closeModal: _ } = _,
@@ -11948,62 +11544,61 @@
                   _.has(_.markerid)
                 ),
             ).map((_) => ({
-              label: _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  svgXmlUntrusted: _.image,
-                }),
-                _.markerid,
-                " ",
-                "(",
-                _.createElement(_, {
-                  oAssetSet: _.get(_.asset_set_id),
-                }),
-                ")",
-              ),
+              label: (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    svgXmlUntrusted: _.image,
+                  }),
+                  _.markerid,
+                  " ",
+                  "(",
+                  (0, _.jsx)(_, {
+                    oAssetSet: _.get(_.asset_set_id),
+                  }),
+                  ")",
+                ],
+              }),
               data: _,
             }));
           }, [_.assetset_id, _, _, _]),
           _ = (0, _._)();
         return _.bLoading
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: (0, _._)("#TimelineMarker_Clone_title"),
               closeModal: _,
             })
-          : _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#TimelineMarker_Clone_title"),
-                strDescription: (0, _._)("#TimelineMarker_Clone_desc", _.name),
-                onCancel: _,
-                bOKDisabled: !_,
-                onOK: async () => {
-                  _.fnSetLoading(!0);
-                  1 ==
-                  (await _(
-                    _,
-                    __webpack_require__,
-                    _.markerid,
-                    _.image,
-                    _.image_type,
-                  ))
-                    ? (_.fnSetStrSuccess(
-                        (0, _._)("#TimelineMarker_Clone_success"),
-                      ),
-                      _.fnSetSuccess(!0))
-                    : _.fnSetError(!0);
-                },
+          : (0, _.jsxs)(_._, {
+              strTitle: (0, _._)("#TimelineMarker_Clone_title"),
+              strDescription: (0, _._)("#TimelineMarker_Clone_desc", _.name),
+              onCancel: _,
+              bOKDisabled: !_,
+              onOK: async () => {
+                _.fnSetLoading(!0);
+                1 ==
+                (await _(
+                  _,
+                  __webpack_require__,
+                  _.markerid,
+                  _.image,
+                  _.image_type,
+                ))
+                  ? (_.fnSetStrSuccess(
+                      (0, _._)("#TimelineMarker_Clone_success"),
+                    ),
+                    _.fnSetSuccess(!0))
+                  : _.fnSetError(!0);
               },
-              _.createElement("br", null),
-              _.createElement("br", null),
-              _.createElement(_._, {
-                rgOptions: _,
-                selectedOption: _,
-                onChange: (_) => _(_.data),
-              }),
-            );
+              children: [
+                (0, _.jsx)("br", {}),
+                (0, _.jsx)("br", {}),
+                (0, _.jsx)(_._, {
+                  rgOptions: _,
+                  selectedOption: _,
+                  onChange: (_) => _(_.data),
+                }),
+              ],
+            });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -12022,266 +11617,213 @@
             );
           })(_),
           [_] = (0, _._)("branchset", !1);
-        return _.createElement(
-          "div",
-          {
-            className: _.RestrictedIconsSection,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.RestrictedIconsSection,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.Columns,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.LeftCol,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionTitle,
-                },
-                (0, _._)("#TimelineMarkers_Hidden_title"),
-              ),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#TimelineMarkers_Hidden_desc2"),
-              ),
-            ),
-            _.createElement(_, {
-              appid: _,
-            }),
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _.Columns,
-              },
-              _.createElement(
-                "div",
-                {
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.LeftCol,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SectionTitle,
-                  },
-                  (0, _._)("#TimelineMarkers_Hidden_branchsets_title"),
-                ),
-                _.createElement(_, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().SectionTitle,
+                      children: (0, _._)("#TimelineMarkers_Hidden_title"),
+                    }),
+                    (0, _.jsx)("div", {
+                      children: (0, _._)("#TimelineMarkers_Hidden_desc2"),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
                   appid: _,
                 }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.RightCol,
-                },
-                __webpack_require__?.map((_) =>
-                  _.createElement(_, {
-                    key: _.assetset_id,
-                    appid: _,
-                    assetSetID: _.assetset_id,
+              ],
+            }),
+            _ &&
+              (0, _.jsxs)("div", {
+                className: _.Columns,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.LeftCol,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().SectionTitle,
+                        children: (0, _._)(
+                          "#TimelineMarkers_Hidden_branchsets_title",
+                        ),
+                      }),
+                      (0, _.jsx)(_, {
+                        appid: _,
+                      }),
+                    ],
                   }),
-                ),
-              ),
-            ),
-        );
+                  (0, _.jsx)("div", {
+                    className: _.RightCol,
+                    children: __webpack_require__?.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          appid: _,
+                          assetSetID: _.assetset_id,
+                        },
+                        _.assetset_id,
+                      ),
+                    ),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { appid: _, assetSetID: __webpack_require__ } = _,
           _ = _(_, __webpack_require__);
-        return _.createElement(
-          "div",
-          {
-            className: _.Ctn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.Ctn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.Title,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.TopRow,
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: _.desc,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.TitleText,
-                  },
-                  _.name,
-                ),
-              ),
-              _.createElement(_, {
-                appid: _.appid,
-                assetSetID: _.assetset_id,
-              }),
-            ),
-            _.createElement(_, {
-              oAssetSet: _,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.CtnGridAndBranchSelection,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.GridCtn,
-              },
-              _.createElement(_, {
-                assetSetID: _.assetset_id,
-                appid: _.appid,
-                strMessageOnEmpty: "",
-                bDraggable: !0,
-              }),
-              _.createElement(_, {
-                assetSetID: _.assetset_id,
-                appid: _.appid,
-                strMessage: (0, _._)("#TimelineMarkers_drag_target"),
-              }),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: (_) =>
-                    (0, _._)(
-                      _.createElement(_, {
-                        appid: _,
-                        assetSetID: __webpack_require__,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.TopRow,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      toolTipContent: _.desc,
+                      children: (0, _.jsx)("div", {
+                        className: _.TitleText,
+                        children: _.name,
                       }),
-                      (0, _._)(_),
-                    ),
-                },
-                (0, _._)("#TimelineMarker_Clone_title"),
-              ),
-            ),
-          ),
-        );
+                    }),
+                    (0, _.jsx)(_, {
+                      appid: _.appid,
+                      assetSetID: _.assetset_id,
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  oAssetSet: _,
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _.CtnGridAndBranchSelection,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.GridCtn,
+                  children: [
+                    (0, _.jsx)(_, {
+                      assetSetID: _.assetset_id,
+                      appid: _.appid,
+                      strMessageOnEmpty: "",
+                      bDraggable: !0,
+                    }),
+                    (0, _.jsx)(_, {
+                      assetSetID: _.assetset_id,
+                      appid: _.appid,
+                      strMessage: (0, _._)("#TimelineMarkers_drag_target"),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)(_._, {
+                    onClick: (_) =>
+                      (0, _._)(
+                        (0, _.jsx)(_, {
+                          appid: _,
+                          assetSetID: __webpack_require__,
+                        }),
+                        (0, _._)(_),
+                      ),
+                    children: (0, _._)("#TimelineMarker_Clone_title"),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { appId: _ } = _,
           _ = Number.parseInt(_);
-        return _.createElement(
-          "div",
-          {
-            className: _.EditorCtn,
-          },
-          _.createElement(
-            _._,
-            {
-              onDragEnd: _,
-            },
-            _.createElement(_, {
-              appid: _,
-            }),
-            _.createElement(_, {
-              appid: _,
-            }),
-            _.createElement(_, {
-              appid: _,
-            }),
-            _.createElement(_, {
-              appid: _,
-            }),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _.EditorCtn,
+          children: (0, _.jsxs)(_._, {
+            onDragEnd: _,
+            children: [
+              (0, _.jsx)(_, {
+                appid: _,
+              }),
+              (0, _.jsx)(_, {
+                appid: _,
+              }),
+              (0, _.jsx)(_, {
+                appid: _,
+              }),
+              (0, _.jsx)(_, {
+                appid: _,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { appid: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.HeaderCtn,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ColumnCtn,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: _.HeaderCtn,
+          children: (0, _.jsxs)("div", {
+            className: _().ColumnCtn,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().LeftCol,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().ColHeader,
-                },
-                (0, _._)("#TimelineMarkers_Editor_title"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                (0, _._)("#TimelineMarkers_Editor_desc"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ColHeader,
+                    children: (0, _._)("#TimelineMarkers_Editor_title"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().SectionCtn,
+                    children: (0, _._)("#TimelineMarkers_Editor_desc"),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
                 className: _().RightCol,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().ColHeader,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    href: `${_._.PARTNER_BASE_URL}doc/features/timeline`,
-                    className: (0, _._)(_().Button, _().Button),
-                    target: "_blank",
-                  },
-                  (0, _._)("#AssetRequest_General_SeeDocs"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) =>
-                      (0, _._)(
-                        _.createElement(_, {
-                          appid: _,
-                        }),
-                        (0, _._)(_),
-                      ),
-                  },
-                  (0, _._)("#TimelineMarkers_Editor_createnew"),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#TimelineMarkers_Editor_createnew_desc"),
-                ),
-              ),
-            ),
-          ),
-        );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ColHeader,
+                    children: (0, _.jsx)("a", {
+                      href: `${_._.PARTNER_BASE_URL}doc/features/timeline`,
+                      className: (0, _._)(_().Button, _().Button),
+                      target: "_blank",
+                      children: (0, _._)("#AssetRequest_General_SeeDocs"),
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().SectionCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: (_) =>
+                          (0, _._)(
+                            (0, _.jsx)(_, {
+                              appid: _,
+                            }),
+                            (0, _._)(_),
+                          ),
+                        children: (0, _._)("#TimelineMarkers_Editor_createnew"),
+                      }),
+                      (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#TimelineMarkers_Editor_createnew_desc",
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

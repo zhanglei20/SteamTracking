@@ -35,6 +35,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -67,103 +68,90 @@
           _ = (0, _._)(_.ConvertTo64BitString(), _, _);
         return _.isLoading
           ? null
-          : _.createElement(
-              _._,
-              {
-                clanSteamID: _.editModel.GetClanSteamID(),
-              },
-              _.createElement(
-                _._,
-                {
+          : (0, _.jsxs)(_._, {
+              clanSteamID: _.editModel.GetClanSteamID(),
+              children: [
+                (0, _.jsx)(_._, {
                   active: _,
-                },
-                _.createElement(_._, null),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _.jsx)(_._, {}),
+                }),
+                (0, _.jsxs)("div", {
                   className: _().ValveCrowdInSyncCtn,
-                },
-                _.createElement(_._, {
-                  value: _.BPushUpdatesToCrowdInAutomatically(),
-                  onChange: (_) => {
-                    _.SetPushSourceToCrowdInAutomatically(_), _();
-                  },
+                  children: [
+                    (0, _.jsx)(_._, {
+                      value: _.BPushUpdatesToCrowdInAutomatically(),
+                      onChange: (_) => {
+                        _.SetPushSourceToCrowdInAutomatically(_), _();
+                      },
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().ValveCrowdInSyncLabel,
+                      children: [
+                        (0, _._)(
+                          "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
+                        ),
+                        " (",
+                        _
+                          ? (0, _.jsx)("a", {
+                              href: _,
+                              children: _,
+                            })
+                          : (0, _._)(
+                              "#EventEditor_Localization_NotMappedToCrowdIn",
+                            ),
+                        ")",
+                        (0, _.jsx)(_._, {
+                          tooltip: (0, _._)(
+                            "#EventEditor_Localization_Tooltip",
+                          ),
+                          className: _.tooltip_Ctn,
+                        }),
+                        (0, _.jsx)("br", {}),
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            "#EventEditor_Localization_RememberToSave",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_, {
+                      onChange: (_) => {
+                        const _ = _.target.value;
+                        if ("all" === _) _(-1);
+                        else {
+                          const _ = (0, _._)(_);
+                          _(_);
+                        }
+                      },
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().EditPreviewButton,
+                      onClick: () => {
+                        _(!0),
+                          _.mutateAsync()
+                            .then(() => window.location.reload())
+                            .catch((_) => {
+                              _(_.toString()), _(!1);
+                            })
+                            .then(() => {
+                              _(null);
+                            });
+                      },
+                      children: (0, _._)(
+                        "#EventEditor_Localization_FetchLocalization",
+                      ),
+                    }),
+                  ],
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ValveCrowdInSyncLabel,
-                  },
-                  (0, _._)(
-                    "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
-                  ),
-                  " (",
-                  _
-                    ? _.createElement(
-                        "a",
-                        {
-                          href: _,
-                        },
-                        _,
-                      )
-                    : (0, _._)("#EventEditor_Localization_NotMappedToCrowdIn"),
-                  ")",
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#EventEditor_Localization_Tooltip"),
-                    className: _.tooltip_Ctn,
-                  }),
-                  _.createElement("br", null),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventEditor_Localization_RememberToSave"),
-                  ),
-                ),
-                _.createElement(_, {
-                  onChange: (_) => {
-                    const _ = _.target.value;
-                    if ("all" === _) _(-1);
-                    else {
-                      const _ = (0, _._)(_);
-                      _(_);
-                    }
-                  },
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EditPreviewButton,
-                    onClick: () => {
-                      _(!0),
-                        _.mutateAsync()
-                          .then(() => window.location.reload())
-                          .catch((_) => {
-                            _(_.toString()), _(!1);
-                          })
-                          .then(() => {
-                            _(null);
-                          });
-                    },
-                  },
-                  (0, _._)("#EventEditor_Localization_FetchLocalization"),
-                ),
-              ),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+                _ &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsxs)("div", {
                       className: _().SyncPanelError,
-                    },
-                    _.createElement(_._, null),
-                    " ",
-                    _,
-                  ),
-                ),
-            );
+                      children: [(0, _.jsx)(_._, {}), " ", _],
+                    }),
+                  }),
+              ],
+            });
       }
       function _(_) {
         const _ = (0, _._)(!1);
@@ -171,30 +159,26 @@
         __webpack_require__.sort((_, _) => _[1].localeCompare(_[1]));
         const _ = __webpack_require__.map(([_, _]) =>
           "english" !== _
-            ? _.createElement(
+            ? (0, _.jsx)(
                 "option",
                 {
-                  key: _,
                   value: _,
+                  children: _,
                 },
                 _,
               )
             : "",
         );
-        return _.createElement(
-          "select",
-          {
-            onChange: _.onChange,
-          },
-          _.createElement(
-            "option",
-            {
+        return (0, _.jsxs)("select", {
+          onChange: _.onChange,
+          children: [
+            (0, _.jsx)("option", {
               value: "all",
-            },
-            (0, _._)("#EventEditor_Localization_AllLanguages"),
-          ),
-          _,
-        );
+              children: (0, _._)("#EventEditor_Localization_AllLanguages"),
+            }),
+            _,
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -204,6 +188,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -254,44 +239,38 @@
             }
             _ && _();
           };
-          return _.createElement(
-            _.Fragment,
-            null,
-            Boolean(_.bShowCSV) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) => _(_, "csv_row"),
-                  },
-                  (0, _._)("#Localization_Export_Btn_RowLanguages"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) => _(_, "csv_column"),
-                  },
-                  (0, _._)("#Localization_Export_Btn_ColumnLanguages"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) => _(_, "csv_token"),
-                  },
-                  (0, _._)("#Localization_Export_Btn_TokenLanguages"),
-                ),
-              ),
-            Boolean(_.bShowXML) &&
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              Boolean(_.bShowCSV) &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => _(_, "csv_row"),
+                      children: (0, _._)(
+                        "#Localization_Export_Btn_RowLanguages",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => _(_, "csv_column"),
+                      children: (0, _._)(
+                        "#Localization_Export_Btn_ColumnLanguages",
+                      ),
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: (_) => _(_, "csv_token"),
+                      children: (0, _._)(
+                        "#Localization_Export_Btn_TokenLanguages",
+                      ),
+                    }),
+                  ],
+                }),
+              Boolean(_.bShowXML) &&
+                (0, _.jsx)(_._, {
                   onClick: (_) => _(_, "xml"),
-                },
-                (0, _._)("#Localization_Export_Btn_XML"),
-              ),
-          );
+                  children: (0, _._)("#Localization_Export_Btn_XML"),
+                }),
+            ],
+          });
         },
         _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)(!1),
@@ -303,20 +282,18 @@
                   _,
                 ),
                 (0, _._)(
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement(
-                        "p",
-                        null,
-                        (0, _._)("#Localization_Error_Input"),
-                      ),
-                      _.createElement("p", null, _.message),
-                    ),
-                  ),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsxs)("div", {
+                      children: [
+                        (0, _.jsx)("p", {
+                          children: (0, _._)("#Localization_Error_Input"),
+                        }),
+                        (0, _.jsx)("p", {
+                          children: _.message,
+                        }),
+                      ],
+                    }),
+                  }),
                   window,
                 );
             },
@@ -328,22 +305,18 @@
                   (_ += (0, _._)("#Language_" + (0, _._)(_)));
               }),
                 (0, _._)(
-                  _.createElement(
-                    _._,
-                    {
-                      strTitle: (0, _._)("#EventDisplay_Share_Success"),
-                      bAlertDialog: !0,
-                    },
-                    _.createElement(
-                      "div",
-                      null,
-                      0 == _.length
-                        ? (0, _._)(
-                            "#Localization_Success_ImportComplete_NoChange",
-                          )
-                        : (0, _._)("#Localization_Success_ImportComplete", _),
-                    ),
-                  ),
+                  (0, _.jsx)(_._, {
+                    strTitle: (0, _._)("#EventDisplay_Share_Success"),
+                    bAlertDialog: !0,
+                    children: (0, _.jsx)("div", {
+                      children:
+                        0 == _.length
+                          ? (0, _._)(
+                              "#Localization_Success_ImportComplete_NoChange",
+                            )
+                          : (0, _._)("#Localization_Success_ImportComplete", _),
+                    }),
+                  }),
                   window,
                 );
             },
@@ -422,44 +395,39 @@
                 _(_);
               }
             };
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.className ? _.className : _.EditPreviewButton,
-              ),
-              toolTipContent: _.strToolTip,
-            },
-            _.createElement(
-              "label",
-              {
-                className: _.ImportButton,
-                htmlFor: "importlocalization",
-              },
-              _ &&
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Label,
-                },
-                (0, _._)(_.strLabel ? _.strLabel : "#Localization_Import_Btn"),
-              ),
-              _.createElement("input", {
-                _: "importlocalization",
-                className: _.ImportButton,
-                style: {
-                  display: "none",
-                },
-                type: "file",
-                onSubmit: _,
-                onChange: _,
-                multiple: !0,
-              }),
+          return (0, _.jsx)(_._, {
+            className: (0, _._)(
+              _.className ? _.className : _.EditPreviewButton,
             ),
-          );
+            toolTipContent: _.strToolTip,
+            children: (0, _.jsxs)("label", {
+              className: _.ImportButton,
+              htmlFor: "importlocalization",
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    size: "small",
+                  }),
+                (0, _.jsx)("div", {
+                  className: _.Label,
+                  children: (0, _._)(
+                    _.strLabel ? _.strLabel : "#Localization_Import_Btn",
+                  ),
+                }),
+                (0, _.jsx)("input", {
+                  _: "importlocalization",
+                  className: _.ImportButton,
+                  style: {
+                    display: "none",
+                  },
+                  type: "file",
+                  onSubmit: _,
+                  onChange: _,
+                  multiple: !0,
+                }),
+              ],
+            }),
+          });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

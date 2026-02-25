@@ -7,7 +7,7 @@
   {
     34044: (r, s, e) => {
       e.r(s), e.d(s, { default: () => n });
-      var o = e(90626),
+      var o = e(7850),
         t = e(35067);
       function n(r) {
         const { dataprops: s, results: e } = r;
@@ -25,7 +25,7 @@
           }
         }
         return n
-          ? o.createElement(t.default, { results: n, bIncludeSteamOS: !0 })
+          ? (0, o.jsx)(t.default, { results: n, bIncludeSteamOS: !0 })
           : null;
       }
     },

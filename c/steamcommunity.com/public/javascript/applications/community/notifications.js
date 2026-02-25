@@ -52,6 +52,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -288,70 +289,49 @@
         return (
           _.ProcessNewNotificationPayload(_),
           _.m_rgNotificationRollups.length
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().NotificationPageCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().NotificationsHeader,
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        className: _().NotificationsHeaderTitle,
-                      },
-                      (0, _._)("#NotificationsList_Header"),
-                    ),
-                    _.createElement(_, null),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().NotificationsBody,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().NotificationListCtn,
-                      },
-                      _.createElement(_, null),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().NotificationFiltersCtn,
-                      },
-                      _.createElement(_, null),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().NotificationActions,
-                        },
-                        _.createElement(
-                          _._,
-                          {
-                            href: "/my/moderatormessages",
-                          },
-                          (0, _._)("#CommunityActivity"),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
+            ? (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)("div", {
                   className: _().NotificationPageCtn,
-                },
-                _.createElement(_, null),
-              )
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().NotificationsHeader,
+                      children: [
+                        (0, _.jsx)("span", {
+                          className: _().NotificationsHeaderTitle,
+                          children: (0, _._)("#NotificationsList_Header"),
+                        }),
+                        (0, _.jsx)(_, {}),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().NotificationsBody,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().NotificationListCtn,
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().NotificationFiltersCtn,
+                          children: [
+                            (0, _.jsx)(_, {}),
+                            (0, _.jsx)("div", {
+                              className: _().NotificationActions,
+                              children: (0, _.jsx)(_._, {
+                                href: "/my/moderatormessages",
+                                children: (0, _._)("#CommunityActivity"),
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              })
+            : (0, _.jsx)("div", {
+                className: _().NotificationPageCtn,
+                children: (0, _.jsx)(_, {}),
+              })
         );
       }
       function _() {
@@ -374,50 +354,40 @@
             );
           })(),
           _ = (0, _._)("#NotificationsList_Unread", _);
-        return _.createElement(
-          "span",
-          {
-            className: _().NotificationsHeaderUnread,
-          },
-          _,
-        );
+        return (0, _.jsx)("span", {
+          className: _().NotificationsHeaderUnread,
+          children: _,
+        });
       }
       function _() {
         const _ = _();
-        return _.createElement(
-          _._,
-          {
-            className: _().NotificationsList,
-          },
-          _.map((_, _) =>
-            _.createElement(_, {
-              key: _,
-              rollup: _,
-            }),
+        return (0, _.jsx)(_._, {
+          className: _().NotificationsList,
+          children: _.map((_, _) =>
+            (0, _.jsx)(
+              _,
+              {
+                rollup: _,
+              },
+              _,
+            ),
           ),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          _._,
-          {
-            className: _().EmptyNotifications,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _().EmptyNotifications,
+          children: [
+            (0, _.jsx)(_._, {
               className: _().EmptyNotificationsTitle,
-            },
-            (0, _._)("#NotificationsList_EmptyTitle"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#NotificationsList_EmptyTitle"),
+            }),
+            (0, _.jsx)(_._, {
               className: _().EmptyNotificationsBody,
-            },
-            (0, _._)("#NotificationsList_EmptyBody"),
-          ),
-        );
+              children: (0, _._)("#NotificationsList_EmptyBody"),
+            }),
+          ],
+        });
       }
       function _() {
         const _ = _(),
@@ -427,96 +397,84 @@
               _.set(_.type, 1 + (_.get(_.type) || 0));
             return _;
           }, []);
-        return _.createElement(
-          "div",
-          {
-            className: _().NotificationsFilterCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().NotificationsFilterCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _().SettingsButtons,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().SettingsTooltip,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _().MarkAllReadButton,
-                  onClick: () => _.MarkAllItemsRead(_),
-                },
-                (0, _._)("#NotificationsList_MarkAllRead"),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().SettingsButton,
-                onClick: () =>
-                  window.location.assign(
-                    `${_._.STORE_BASE_URL}account/notificationsettings`,
-                  ),
-              },
-              _.createElement(_.wB_, {
-                className: _().SettingsImg,
-              }),
-              (0, _._)("#NotificationsList_Settings"),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().SettingsFiltersTitle,
-            },
-            (0, _._)("#NotificationsList_FilterTo"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().SettingsFilters,
-            },
-            _.k_rgFilterCheckboxes
-              .filter((_) => _.has(_.type))
-              .map((_) =>
-                _.createElement(_, {
-                  key: _.type,
-                  filterOptions: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().SettingsTooltip,
+                  children: (0, _.jsx)(_._, {
+                    className: _().MarkAllReadButton,
+                    onClick: () => _.MarkAllItemsRead(_),
+                    children: (0, _._)("#NotificationsList_MarkAllRead"),
+                  }),
                 }),
-              ),
-          ),
-          _.createElement(
-            _._,
-            {
+                (0, _.jsxs)(_._, {
+                  className: _().SettingsButton,
+                  onClick: () =>
+                    window.location.assign(
+                      `${_._.STORE_BASE_URL}account/notificationsettings`,
+                    ),
+                  children: [
+                    (0, _.jsx)(_.wB_, {
+                      className: _().SettingsImg,
+                    }),
+                    (0, _._)("#NotificationsList_Settings"),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _().SettingsFiltersTitle,
+              children: (0, _._)("#NotificationsList_FilterTo"),
+            }),
+            (0, _.jsx)("div", {
+              className: _().SettingsFilters,
+              children: _.k_rgFilterCheckboxes
+                .filter((_) => _.has(_.type))
+                .map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      filterOptions: _,
+                    },
+                    _.type,
+                  ),
+                ),
+            }),
+            (0, _.jsx)(_._, {
               className: _().ResetButton,
               onClick: () => _.SetFilter(null, !1, !0),
-            },
-            (0, _._)("#NotificationsList_Reset"),
-          ),
-        );
+              children: (0, _._)("#NotificationsList_Reset"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { filterOptions: _ } = _,
           { filters: __webpack_require__ } = _();
         return 3 == _.type
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               filterOptions: _,
               checked: __webpack_require__.get(_.type),
             })
-          : _.createElement(_._, {
-              className: _().FilterCheckbox,
-              key: _.type,
-              label: _.display,
-              checked: __webpack_require__.get(_.type),
-              onChange: (_) => _.SetFilter(_.type, _),
-            });
+          : (0, _.jsx)(
+              _._,
+              {
+                className: _().FilterCheckbox,
+                label: _.display,
+                checked: __webpack_require__.get(_.type),
+                onChange: (_) => _.SetFilter(_.type, _),
+              },
+              _.type,
+            );
       }
       function _(_) {
         const { threadType: _ } = _,
           _ = _();
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           className: _().AdvancedCommentFilterCheckbox,
           label: (0, _._)("#CommentThreadType_" + _),
           checked: _.setItemTypes.has(_),
@@ -538,18 +496,18 @@
       function _(_) {
         const { className: _ } = _,
           _ = _();
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().AdvancedCommentFilters, _),
-          },
-          Array.from(__webpack_require__.keys()).map((_) =>
-            _.createElement(_, {
-              key: _,
-              threadType: _,
-            }),
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().AdvancedCommentFilters, _),
+          children: Array.from(__webpack_require__.keys()).map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                threadType: _,
+              },
+              _,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const { expanded: _, children: __webpack_require__ } = _,
@@ -558,22 +516,16 @@
             const _ = _.target;
             _(_.scrollHeight);
           });
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().Expander, _().Expanded),
-            style: {
-              height: _ ? _ : 0,
-            },
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().Expander, _().Expanded),
+          style: {
+            height: _ ? _ : 0,
           },
-          _.createElement(
-            "div",
-            {
-              ref: _,
-            },
-            __webpack_require__,
-          ),
-        );
+          children: (0, _.jsx)("div", {
+            ref: _,
+            children: __webpack_require__,
+          }),
+        });
       }
       function _(_) {
         const { filterOptions: _, checked: __webpack_require__ } = _,
@@ -596,45 +548,40 @@
           _ = _.size > 2,
           _ = _.size > 1,
           _ = _ || _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            className: _().FilterCheckbox,
-            key: _.type,
-            label: _.display,
-            checked: __webpack_require__,
-            onChange: (_) => {
-              _.SetFilter(_.type, _);
-            },
-          }),
-          _ &&
-            _.createElement(
-              "div",
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(
+              _._,
               {
+                className: _().FilterCheckbox,
+                label: _.display,
+                checked: __webpack_require__,
+                onChange: (_) => {
+                  _.SetFilter(_.type, _);
+                },
+              },
+              _.type,
+            ),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().CommentFilterCtn,
                   __webpack_require__ && _().Expanded,
                 ),
-              },
-              _.createElement(
-                _,
-                {
+                children: (0, _.jsx)(_, {
                   expanded: __webpack_require__,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().CommentFilters,
-                  },
-                  _ &&
-                    _.createElement(_, {
-                      className: _().Expanded,
-                    }),
-                ),
-              ),
-            ),
-        );
+                    children:
+                      _ &&
+                      (0, _.jsx)(_, {
+                        className: _().Expanded,
+                      }),
+                  }),
+                }),
+              }),
+          ],
+        });
       }
       function _(_, _, _) {
         _.read ||
@@ -664,45 +611,37 @@
         }
         const _ = (0, _._)(_.type);
         return _
-          ? _.createElement(
-              _._,
-              {
-                controller: "notification",
-                method: (0, _._)(3),
-                submethod: (0, _._)(4),
-              },
-              _.createElement(
-                _,
-                {
-                  ref: _,
-                },
-                __webpack_require__ &&
-                  _.createElement(_, {
+          ? (0, _.jsx)(_._, {
+              controller: "notification",
+              method: (0, _._)(3),
+              submethod: (0, _._)(4),
+              children: (0, _.jsx)(_, {
+                ref: _,
+                children:
+                  __webpack_require__ &&
+                  (0, _.jsx)(_, {
                     rollup: _,
                     onNotificationClick: _,
                     onHide: _,
                     location: 4,
                     uimode: 3,
                   }),
-              ),
-            )
+              }),
+            })
           : null;
       }
       const _ = _.forwardRef((_, _) =>
-        _.createElement(
-          "div",
-          {
-            className: _().AllNotificationsRowCtn,
-            ref: _,
-          },
-          _.children,
-        ),
+        (0, _.jsx)("div", {
+          className: _().AllNotificationsRowCtn,
+          ref: _,
+          children: _.children,
+        }),
       );
       function _(_) {
         let _ = _.location.hash;
         return (
           _ && _.startsWith("#") && (_ = _.slice(1)),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             hash: _,
           })
         );

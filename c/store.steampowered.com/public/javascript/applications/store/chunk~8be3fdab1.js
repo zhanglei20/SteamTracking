@@ -1,8 +1,14 @@
-"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4922],
   {
+    chunkid: (module) => {
+      module.exports = {
+        WishlistButtonNotTop: "NLpQmAPIbG71U6eWdaOa1",
+        FollowGameButtonNotTop: "T3A9t1mjAR00ljJGlBapl",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -38,14 +44,11 @@
         let _ = _;
         return (
           _.toLowerCase().startsWith("http") || (_ = "http://" + _),
-          _.createElement(
-            _,
-            {
-              url: _,
-              event: _,
-            },
-            _ || _,
-          )
+          (0, _.jsx)(_, {
+            url: _,
+            event: _,
+            children: _ || _,
+          })
         );
       }
       const _ = (_) => {
@@ -66,27 +69,22 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-            direction: "top",
-          },
-          _.createElement(
-            _._,
-            {
-              className: _,
-              href: _,
-              rel: _,
-              _: _._,
-              style: _,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            className: _,
+            href: _,
+            rel: _,
+            _: _._,
+            style: _,
+            children: _.children,
+          }),
+        });
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -105,7 +103,7 @@
       function _(_) {
         const { _: _ } = _;
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               _: _,
             })
           : null;
@@ -136,22 +134,23 @@
             );
           })(_);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _().StoreSaleWidgetTags,
-              },
-              __webpack_require__.map((_) =>
-                _.createElement(_._, {
-                  key: "tag_" + _.tagid,
-                  tagid: _.tagid,
-                  className: _().AppTag,
-                }),
+          ? (0, _.jsx)("div", {
+              className: _().StoreSaleWidgetTags,
+              children: __webpack_require__.slice(0, 10).map((_) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    tagid: _.tagid,
+                    className: _().AppTag,
+                  },
+                  "tag_" + _.tagid,
+                ),
               ),
-            )
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -187,39 +186,34 @@
           const _ = _.included_appids?.length || 0;
           _ != _ && (_ = (0, _._)("#Sale_Bundle_CompletePartialSet", _ - _, _));
         }
-        return _.createElement(
-          "div",
-          {
-            className: _().BundleContentPreview,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().BundleContentPreview,
+          children: [
+            (0, _.jsxs)("div", {
               className: _().ContentsCount,
-            },
-            _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().BundleTag,
-                },
-                (0, _._)("#AppType_bundle"),
-              ),
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                _ &&
+                  (0, _.jsx)("span", {
+                    className: _().BundleTag,
+                    children: (0, _._)("#AppType_bundle"),
+                  }),
+                _,
+              ],
+            }),
+            (0, _.jsx)("div", {
               className: _().PreviewCtn,
-            },
-            _.slice(0, _).map((_) =>
-              _.createElement(_, {
-                key: `preview${(0, _._)(_)}`,
-                _: _,
-              }),
-            ),
-          ),
-        );
+              children: _.slice(0, _).map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    _: _,
+                  },
+                  `preview${(0, _._)(_)}`,
+                ),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { _: _ } = _,
@@ -227,19 +221,22 @@
           { data: _ } = (0, _._)(_);
         if (!__webpack_require__ || !_) return null;
         const _ = (0, _._)(__webpack_require__, "small_capsule");
-        return _.createElement(
-          _._,
-          {
-            _: _,
-            hoverClassName: _().PreviewItem,
+        return (0, _.jsx)(_._, {
+          _: _,
+          className: _().PreviewItem,
+          hoverProps: {
+            direction: "right",
+            style: {
+              minWidth: "350px",
+            },
           },
-          _.createElement("img", {
+          children: (0, _.jsx)("img", {
             src: _,
             className: _().PreviewImg,
             loading: "lazy",
             alt: _.name || "",
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -321,33 +318,23 @@
           _ = 0 == _.item_type || _,
           _ = _ && _.appid,
           _ = (0, _._)(_, _, _),
-          _ = (0, _._)(),
-          _ = _.name || "",
+          _ = ((0, _._)(), _.name || ""),
           _ = (0, _._)(_, _),
           _ = _ || !_?.is_coming_soon || _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)({
-              [_().StoreSaleWidgetOuterContainer]: !0,
-              [_().AllowTwoLineHeader]: _,
-              StoreSaleWidgetOuterContainer: !0,
-            }),
-            onMouseEnter: () => !_ && _(!0),
-            onMouseLeave: () => !_ && _(!1),
-            "flow-children": "grid",
-            navEntryPreferPosition: _._.PREFERRED_CHILD,
-            autoFocus: _,
-            navKey: "preview_widget_" + (0, _._)(_),
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)({
+            [_().StoreSaleWidgetOuterContainer]: !0,
+            [_().AllowTwoLineHeader]: _,
+            StoreSaleWidgetOuterContainer: !0,
+          }),
+          "flow-children": "grid",
+          navEntryPreferPosition: _._.PREFERRED_CHILD,
+          autoFocus: _,
+          navKey: "preview_widget_" + (0, _._)(_),
+          children: [
+            (0, _.jsx)(_._, {
               appid: _ && "appid" in _ ? _.appid : void 0,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsxs)(_._, {
                 onClick: _ ? _ : void 0,
                 className: (0, _._)({
                   [_().StoreSaleWidgetContainer]: !0,
@@ -356,201 +343,169 @@
                 }),
                 ...(0, _._)(_, _, _, Boolean(_), void 0, _),
                 preferredFocus: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().StoreSaleWidgetHalfLeft),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    _: _,
-                    fnHoverState: _,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreSaleWidgetImage,
-                    },
-                    _.createElement(_._, {
-                      appids: _,
-                    }),
-                    _.createElement(_._, {
-                      _: _,
-                      imageType: "header",
-                      bPreferAssetWithoutOverride: _,
-                    }),
-                    _.createElement(_._, {
-                      _: _,
-                    }),
-                    _.createElement(_._, {
-                      _: _,
-                      active: _ && _,
-                      bIsHoverMode: !0,
-                      bGrowOnHover: !0,
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().StoreSaleWidgetRight,
-                    _ ? _().Bundle : "",
-                  ),
-                },
-                Boolean(_ && !_) &&
-                  _.createElement(_._, {
-                    _: _,
-                    classOverride: (0, _._)(
-                      _().WishlistButtonNotTop,
-                      "WishlistButton",
-                    ),
-                    snr: _,
-                  }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TitleCtn,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _ ? void 0 : _,
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      onClick: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(
-                          _().StoreSaleWidgetTitle,
-                          "StoreSaleWidgetTitle",
-                        ),
-                      },
-                      _,
-                    ),
-                  ),
-                ),
-                _.createElement(_, {
-                  _: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().WidgetReleaseDateAndPlatformCtn,
-                    ref: _,
-                  },
-                  _ &&
-                    _.createElement(_, {
-                      _: _,
-                    }),
-                  !_ &&
-                    _ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_._, {
-                        _: _,
-                        bMinimizePlatforms: _,
-                      }),
-                      Boolean(_ && 0 == _.item_type) &&
-                        _.createElement(_._, {
-                          className: _().DeckCompatIcon,
-                          _: _,
-                        }),
-                    ),
-                ),
-                _ &&
-                  _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ReviewScores,
-                    },
-                    _.createElement(_._, {
-                      _: _,
-                    }),
-                  ),
-                _ &&
-                  _ &&
-                  _.createElement(_, {
-                    _: _,
-                    bHideInLibraryApps: !_ && 2 == _.item_type && _ < _,
-                  }),
-                Boolean(_) &&
-                  _.createElement(_, {
-                    _: _,
-                  }),
-                Boolean(!_)
-                  ? _.createElement(
-                      _.Fragment,
-                      null,
-                      _ && _ && _
-                        ? _.createElement(_._, {
-                            appid: _,
-                            bIsMuted: Boolean(_),
-                          })
-                        : _.createElement(_._, {
-                            _: _,
-                            bShowDemoButton: _,
-                            bHidePrice: _,
-                            bHideWishlistButton: _,
-                            bShowDeckCompatibilityDialog: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().StoreSaleWidgetHalfLeft),
+                    children: (0, _.jsx)(_._, {
+                      _: 0 == _.item_type ? _ : void 0,
+                      children: (0, _.jsxs)("div", {
+                        className: _().StoreSaleWidgetImage,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            appids: _,
                           }),
-                    )
-                  : _.createElement(
-                      "div",
-                      {
-                        className: _().StoreActionWidgetContainer,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StoreSalePriceActionWidgetContainer,
-                        },
-                        _.createElement(_._, {
+                          (0, _.jsx)(_._, {
+                            _: _,
+                            imageType: "header",
+                            bPreferAssetWithoutOverride: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            _: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            _: _,
+                            active: _ && _,
+                            bIsHoverMode: !0,
+                            bGrowOnHover: !0,
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)({
+                      [_().StoreSaleWidgetRight]: !0,
+                      [_().Bundle]: _,
+                    }),
+                    children: [
+                      Boolean(_ && !_) &&
+                        (0, _.jsx)(_._, {
+                          _: _,
+                          classOverride: (0, _._)(
+                            _().WishlistButtonNotTop,
+                            "WishlistButton",
+                          ),
+                          snr: _,
+                        }),
+                      (0, _.jsx)("div", {
+                        className: _().TitleCtn,
+                        children: (0, _.jsx)("a", {
+                          href: _ ? void 0 : _,
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: _,
+                          children: (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _().StoreSaleWidgetTitle,
+                              "StoreSaleWidgetTitle",
+                            ),
+                            children: _,
+                          }),
+                        }),
+                      }),
+                      !_ &&
+                        (0, _.jsx)(_, {
                           _: _,
                         }),
-                      ),
-                    ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().StoreSaleWidgetBgTint,
-                  },
-                  _.createElement(_._, {
-                    _: _,
-                    bPreferAssetWithoutOverride: _,
-                    imageType: "header",
+                      (0, _.jsxs)("div", {
+                        className: _().WidgetReleaseDateAndPlatformCtn,
+                        ref: _,
+                        children: [
+                          _ &&
+                            (0, _.jsx)(_, {
+                              _: _,
+                            }),
+                          !_ &&
+                            !_ &&
+                            _ &&
+                            (0, _.jsxs)(_.Fragment, {
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  _: _,
+                                  bMinimizePlatforms: _,
+                                }),
+                                Boolean(_ && 0 == _.item_type) &&
+                                  (0, _.jsx)(_._, {
+                                    className: _().DeckCompatIcon,
+                                    _: _,
+                                  }),
+                              ],
+                            }),
+                        ],
+                      }),
+                      !_ &&
+                        _ &&
+                        _ &&
+                        (0, _.jsx)("div", {
+                          className: _().ReviewScores,
+                          children: (0, _.jsx)(_._, {
+                            _: _,
+                          }),
+                        }),
+                      _ &&
+                        _ &&
+                        (0, _.jsx)(_, {
+                          _: _,
+                          bHideInLibraryApps: !_ && 2 == _.item_type && _ < _,
+                        }),
+                      Boolean(_) &&
+                        (0, _.jsx)(_, {
+                          _: _,
+                        }),
+                      Boolean(!_)
+                        ? (0, _.jsx)(_.Fragment, {
+                            children:
+                              _ && _ && _
+                                ? (0, _.jsx)(_._, {
+                                    appid: _,
+                                    bIsMuted: Boolean(_),
+                                  })
+                                : (0, _.jsx)(_._, {
+                                    _: _,
+                                    bShowDemoButton: _,
+                                    bHidePrice: _,
+                                    bHideWishlistButton: _,
+                                    bShowDeckCompatibilityDialog: _,
+                                  }),
+                          })
+                        : (0, _.jsx)("div", {
+                            className: _().StoreActionWidgetContainer,
+                            children: (0, _.jsx)("div", {
+                              className:
+                                _().StoreSalePriceActionWidgetContainer,
+                              children: (0, _.jsx)(_._, {
+                                _: _,
+                              }),
+                            }),
+                          }),
+                      (0, _.jsx)("div", {
+                        className: _().StoreSaleWidgetBgTint,
+                        children: (0, _.jsx)(_._, {
+                          _: _,
+                          bPreferAssetWithoutOverride: _,
+                          imageType: "header",
+                        }),
+                      }),
+                    ],
                   }),
-                ),
-              ),
-            ),
-          ),
-          Boolean(_.strReason && _.strReason.length > 0) &&
-            _.createElement(
-              "div",
-              {
+                ],
+              }),
+            }),
+            Boolean(_.strReason && _.strReason.length > 0) &&
+              (0, _.jsx)("div", {
                 className: _().RecommendationReason,
-              },
-              _.strReason,
-            ),
-        );
+                children: _.strReason,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { _: _ } = _,
           { data: __webpack_require__ } = (0, _._)(_);
         return __webpack_require__
-          ? _.createElement(
-              "div",
-              {
-                className: _().StoreSaleWidgetRelease,
-              },
-              (0, _._)(__webpack_require__),
-            )
+          ? (0, _.jsx)("div", {
+              className: _().StoreSaleWidgetRelease,
+              children: (0, _._)(__webpack_require__),
+            })
           : null;
       }
       function _(_) {
@@ -580,34 +535,29 @@
                 : _ > 0
                   ? (0, _._)("#Sale_BundleSave_WithDiscount", _, _)
                   : (0, _._)("#Sale_BundleSave", _)),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().StoreSaleWidgetShortDesc,
-                "StoreSaleWidgetShortDesc",
-              ),
-            },
-            Boolean(_.startsWith("#") && -1 == _.indexOf(" "))
-              ? _.createElement(
-                  "span",
-                  {
-                    className: _().LocalizationSpan,
-                  },
-                  (0, _._)(
+          (0, _.jsx)("div", {
+            className: (0, _._)(
+              _().StoreSaleWidgetShortDesc,
+              "StoreSaleWidgetShortDesc",
+            ),
+            children: Boolean(_.startsWith("#") && -1 == _.indexOf(" "))
+              ? (0, _.jsx)("span", {
+                  className: _().LocalizationSpan,
+                  children: (0, _._)(
                     _,
-                    _.createElement("i", null),
-                    _.createElement("i", null),
-                    _.createElement("i", null),
-                    _.createElement("i", null),
+                    (0, _.jsx)("i", {}),
+                    (0, _.jsx)("i", {}),
+                    (0, _.jsx)("i", {}),
+                    (0, _.jsx)("i", {}),
                   ),
-                )
+                })
               : _,
-          )
+          })
         );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -658,72 +608,68 @@
                   bForce24HourClock: !1,
                 }),
             );
-          _ = _.createElement(
-            "div",
-            {
-              className: _().PurchaseOptionDetails,
-            },
-            _,
-            _.createElement(_._, {
-              tooltip: (0, _._)("#Sale_default_Tooltip_Free_Promo_Limitation"),
-            }),
-          );
+          _ = (0, _.jsxs)("div", {
+            className: _().PurchaseOptionDetails,
+            children: [
+              _,
+              (0, _.jsx)(_._, {
+                tooltip: (0, _._)(
+                  "#Sale_default_Tooltip_Free_Promo_Limitation",
+                ),
+              }),
+            ],
+          });
         }
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().StoreActionWidgetContainer, _),
-          },
-          _,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().StoreActionWidgetContainer, _),
+          children: [
+            _,
+            (0, _.jsxs)("div", {
               className: _().StoreSalePriceActionWidgetContainer,
-            },
-            Boolean(_) &&
-              _.createElement(_._, {
-                _: _,
-                className: _().Action,
-              }),
-            Boolean(!_) &&
-              1 !== _.type &&
-              _.createElement(
-                _.Fragment,
-                null,
-                Boolean(_ && !_.is_free) &&
-                  _.createElement(_, {
-                    fnOnPurchaseOptionsClick: _,
-                  }),
-                Boolean(_ && !_.is_free) &&
-                  _.createElement(_._, {
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
                     _: _,
-                    className: "CartBtn",
+                    className: _().Action,
                   }),
-              ),
-            Boolean(!_) &&
-              _.createElement(_._, {
-                _: _,
-              }),
-            Boolean(_) &&
-              _.createElement(_._, {
-                _: _,
-              }),
-          ),
-        );
+                Boolean(!_) &&
+                  1 !== _.type &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      Boolean(_ && !_.is_free) &&
+                        (0, _.jsx)(_, {
+                          fnOnPurchaseOptionsClick: _,
+                        }),
+                      Boolean(_ && !_.is_free) &&
+                        (0, _.jsx)(_._, {
+                          _: _,
+                          className: "CartBtn",
+                        }),
+                    ],
+                  }),
+                Boolean(!_) &&
+                  (0, _.jsx)(_._, {
+                    _: _,
+                  }),
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    _: _,
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().Action,
-            onClick: _.fnOnPurchaseOptionsClick,
-          },
-          _.createElement(
-            "span",
-            null,
-            (0, _._)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button"),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _().Action,
+          onClick: _.fnOnPurchaseOptionsClick,
+          children: (0, _.jsx)("span", {
+            children: (0, _._)(
+              "#EventDisplay_CallToAction_ShowPurchaseOptions_Button",
+            ),
+          }),
+        });
       }
     },
   },

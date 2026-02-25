@@ -140,6 +140,52 @@
         Input: "_3xcXqLVteTNHmk-gh9W65d",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        LoadingWrapper: "_2wAKy-0ZkO_vhbiQCP9MgE",
+        Static: "_1QfwpLmLTSuiIRLDzdY_7l",
+        none: "_1F0lzP-Krz_y5P9ewZEvBD",
+        bottomCircle: "_2qjZm0dB7I6lcRkZhNTqvD",
+        noString: "_1Sy0pXVZOdWbgouFyD2zJj",
+        Throbber: "lYUEjD8Qh3GM_ZrZeLwpI",
+        throbber_small: "_2zbyh5jEDlV5HVD3iUve-k",
+        throbber_medium: "_2CphUsHNDgIWItNIzeIldY",
+        throbber_large: "_1x18vR7Qop8v8_G8qSR6CL",
+        throbber_center_wrapper: "_3IYPzqtvB2ZE7x710d5x2C",
+        ThrobberText: "_21nVi2jNuF_prxLY1mAaKK",
+        blur: "_1ctjA2yjeB21eCDj_r1mVz",
+        ThrobberRoundLoop: "_1O-cWE6nuIVO3x6-Onw0IU",
+        roundOuterOutline: "_1Vv--mA6PueyEKXXMTwljt",
+        roundOuter: "_2K0LzwjOXDopMHoqY_v_CO",
+        roundFill: "_3sQFkavAEPhliH6DiFmHRH",
+        ThrobberFillLoop: "ofdi9VLSRZ5W98WsXVHiq",
+        topCircle: "_1LZffuoDq-N25wNHckxsf",
+        circlePulse: "_1XN6ZJ1l8nVoUxp1WnOBqw",
+        ThrobberTopCircleLoop: "_1jALk36CiS_T9Pg7vBjpIQ",
+        ThrobberBottomCircleLoop: "_1KvOgdKiNE9XuSYUau3hKW",
+        roundThrobber15: "_2LGHpu_-ihfOhQwdfR3Kiy",
+        roundThrobber14: "_2FGCneH2AemMrIrZnZskw_",
+        roundThrobber13: "_1X-5j16jaQntVrZfadibyc",
+        roundThrobber12: "_1pj1Q3Ef4FdHDdl9QEtpxp",
+        roundThrobber11: "xFmZaMe5nZpoTc5PQBKn3",
+        roundThrobber10: "_3MGYowzMQ6TwbH3fu9SVjt",
+        roundThrobber09: "ktVJ42jiVhWEVV9O6z2FK",
+        roundThrobber08: "_3s_7my869lIOj-1vnqJ39y",
+        roundThrobber07: "_11MVp53Me_frOuaJfsQ4FE",
+        roundThrobber06: "_2cl-maglen-RF0YQjShgqG",
+        roundThrobber05: "_3-JE0FpIzECzeqtd5cyjGI",
+        roundThrobber04: "_1xNIKvHdzLhBldONo6yIZs",
+        roundThrobber03: "_1S17yicfcrPc11m83ydGp3",
+        roundThrobber02: "_1-oUJqmCLOoGqVJz5dgj6J",
+        roundThrobber01: "_2tXgejjqNKy6cSX1Lv7PrG",
+        ThrobberRoundLoopThickness: "_1fs4RGcMBRzbQQirDBiFoM",
+        throbber_xlarge: "_1gYeZMYKBDqNpVuw58_LCl",
+        throbber_xxlarge: "_3j-p4JOqdpaF4obGtIeAB",
+        ThrobberDelayAppear: "I3aEq3lbK7Pm8ujENvtri",
+        Visible: "_2SwSJd-DlX2dRiDGxZWHI5",
+        NewThrobber: "_1m8iQOSVziKDHiInrfskv_",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       var _;
@@ -5168,6 +5214,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5258,49 +5305,48 @@
           _ = [];
         for (let _ = 0; _ < _; _++)
           _.push(
-            _.createElement(_._, {
-              noFocusRing: !0,
-              type: "text",
-              maxLength: 1,
-              key: _,
-              ref: (_) => {
-                _.current[_] = _;
-              },
-              onChange: _,
-              onFocus: _,
-              onClick: (_) => _.stopPropagation(),
-              onKeyDown: _,
-              onPaste: _,
-              value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
-              autoComplete: "none",
-              autoFocus: 0 === _ && _,
-              disabled: _ || _,
-              className: _().Input,
-            }),
-          );
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(
-              _().SegmentedCharacterInput,
-              "danger" === _ && _().Danger,
-              _ && _().Disabled,
-              _ && _().BackupCode,
-            ),
-            onClick: _,
-          },
-          _ &&
-            _.createElement(
-              "div",
+            (0, _.jsx)(
+              _._,
               {
-                className: _().Loading,
+                noFocusRing: !0,
+                type: "text",
+                maxLength: 1,
+                ref: (_) => {
+                  _.current[_] = _;
+                },
+                onChange: _,
+                onFocus: _,
+                onClick: (_) => _.stopPropagation(),
+                onKeyDown: _,
+                onPaste: _,
+                value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
+                autoComplete: "none",
+                autoFocus: 0 === _ && _,
+                disabled: _ || _,
+                className: _().Input,
               },
-              _.createElement(_, {
-                size: "small",
-              }),
+              _,
             ),
-          _,
-        );
+          );
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(
+            _().SegmentedCharacterInput,
+            "danger" === _ && _().Danger,
+            _ && _().Disabled,
+            _ && _().BackupCode,
+          ),
+          onClick: _,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().Loading,
+                children: (0, _.jsx)(_, {
+                  size: "small",
+                }),
+              }),
+            _,
+          ],
+        });
       }
       var _,
         _ = __webpack_require__("chunkid"),
@@ -7439,16 +7485,13 @@
             type: "image/gif",
           }),
           _ = URL.createObjectURL(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().QRBits, _),
-          },
-          _.createElement("img", {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().QRBits, _),
+          children: (0, _.jsx)("img", {
             className: _().QRImg,
             src: _,
           }),
-        );
+        });
       }
       !(function (_) {
         (_[(_._ = 1)] = "L"),
@@ -7595,13 +7638,13 @@
           _ = 4 === _,
           _ = 3 === _,
           _ = _
-            ? _.createElement(_, null)
+            ? (0, _.jsx)(_, {})
             : _
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   reset: _,
                 })
               : _
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     size: "small",
                   })
                 : null,
@@ -7613,21 +7656,14 @@
             : _.login_token_id) && _(_.refreshInfo.login_token_id);
         }, [_.refreshInfo, _]);
         const _ = 1 !== _._.EUNIVERSE;
-        return _.createElement(
-          "div",
-          {
-            className: _().Column,
-          },
-          _.createElement(
-            "div",
-            {
-              style: {
-                position: "relative",
-              },
+        return (0, _.jsx)("div", {
+          className: _().Column,
+          children: (0, _.jsxs)("div", {
+            style: {
+              position: "relative",
             },
-            _.createElement(
-              _,
-              {
+            children: [
+              (0, _.jsx)(_, {
                 borderWidth: 0,
                 activeBitColor: [21, 23, 28],
                 inactiveBitColor: _ ? [255, 0, 255] : [255, 255, 255],
@@ -7638,32 +7674,26 @@
                   _ && _().Blur,
                   _ && _().NonPublic,
                 ),
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                children: _,
+              }),
+              _ &&
+                (0, _.jsx)("div", {
                   className: _().Overlay,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().Box,
-                  },
-                  _,
-                ),
-              ),
-          ),
-        );
+                    children: _,
+                  }),
+                }),
+            ],
+          }),
+        });
       }
       function _(_) {
         return _.length <= 90 ? _._ : void 0;
       }
       function _(_) {
         const { size: _ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(
             _().Loading,
             "small" == _ && _().Small,
@@ -7673,65 +7703,58 @@
         });
       }
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            onClick: _.reset,
-            className: _().QRFailure,
-          },
-          _.createElement(_, null),
-        );
+        return (0, _.jsx)(_._, {
+          onClick: _.reset,
+          className: _().QRFailure,
+          children: (0, _.jsx)(_, {}),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            style: {
-              width: "40px",
-              height: "40px",
-              cursor: "pointer",
-            },
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          style: {
+            width: "40px",
+            height: "40px",
+            cursor: "pointer",
           },
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#fff",
-            strokeWidth: "30",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
-          }),
-          _.createElement("polygon", {
-            points: "147.639,108.361 245.755,10.166 245.834,108.361",
-            fill: "#fff",
-          }),
-        );
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#fff",
+              strokeWidth: "30",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
+            }),
+            (0, _.jsx)("polygon", {
+              points: "147.639,108.361 245.755,10.166 245.834,108.361",
+              fill: "#fff",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            style: {
-              width: "45px",
-              height: "45px",
-            },
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          style: {
+            width: "45px",
+            height: "45px",
           },
-          _.createElement("polyline", {
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("polyline", {
             fill: "none",
             stroke: "#fff",
             strokeWidth: "24",
@@ -7740,22 +7763,19 @@
             strokeMiterlimit: "10",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(!1),
         _ = () => (0, _.useContext)(_);
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().Login,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: _().Login,
+          children: (0, _.jsx)(_, {
             reset: () => window.location.reload(),
             failure: _._.Generic,
           }),
-        );
+        });
       }
       function _(_) {
         return (function (_) {
@@ -7810,7 +7830,7 @@
           );
         })(_.redirectUrl)
           ? null
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               ..._,
               creationRedirectUrl: _.redirectUrl,
               onSuccess: (_) => {
@@ -7825,57 +7845,42 @@
       }
       function _(_) {
         const { embedded: _, children: __webpack_require__, ..._ } = _;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Login,
-              },
-              _.createElement(_, {
-                ..._,
-              }),
-              __webpack_require__,
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsxs)("div", {
+              className: _().Login,
+              children: [
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+                __webpack_require__,
+              ],
+            }),
+          }),
+        });
       }
       function _(_) {
         if ((0, _._)()) return null;
         const { variant: _ } = _;
         return "function" == typeof _
-          ? _.createElement(
-              _,
-              {
-                onClick: _,
-              },
-              (0, _._)("#Login_Help_SignIn"),
-            )
-          : _.createElement(
-              _,
-              {
-                href: `${_._.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
-              },
-              (0, _._)("#Login_Help_SignIn"),
-            );
+          ? (0, _.jsx)(_, {
+              onClick: _,
+              children: (0, _._)("#Login_Help_SignIn"),
+            })
+          : (0, _.jsx)(_, {
+              href: `${_._.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
+              children: (0, _._)("#Login_Help_SignIn"),
+            });
       }
       function _(_) {
         const { variant: _, redirectUrl: __webpack_require__ } = _;
         if ("function" == typeof _)
-          return _.createElement(
-            _,
-            {
-              inline: !0,
-              onClick: _,
-            },
-            (0, _._)("#Login_CreateAccount"),
-          );
+          return (0, _.jsx)(_, {
+            inline: !0,
+            onClick: _,
+            children: (0, _._)("#Login_CreateAccount"),
+          });
         {
           const _ = __webpack_require__
             ? `?redir=${encodeURIComponent(__webpack_require__)}`
@@ -7883,23 +7888,17 @@
           switch (null != _ ? _ : "normal") {
             default:
             case "normal":
-              return _.createElement(
-                _,
-                {
-                  inline: !0,
-                  href: `${_._.STORE_BASE_URL}join/${_}`,
-                },
-                (0, _._)("#Login_CreateAccount"),
-              );
+              return (0, _.jsx)(_, {
+                inline: !0,
+                href: `${_._.STORE_BASE_URL}join/${_}`,
+                children: (0, _._)("#Login_CreateAccount"),
+              });
             case "partner":
-              return _.createElement(
-                _,
-                {
-                  inline: !0,
-                  href: `${_._.PARTNER_BASE_URL}${_}`,
-                },
-                (0, _._)("#Login_CreateSteamworksAccount"),
-              );
+              return (0, _.jsx)(_, {
+                inline: !0,
+                href: `${_._.PARTNER_BASE_URL}${_}`,
+                children: (0, _._)("#Login_CreateSteamworksAccount"),
+              });
             case "none":
               return null;
           }
@@ -7923,23 +7922,19 @@
           case "partner":
             _ = "#Login_NoSteamworksAccount";
         }
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().AccountCreation, _ && _().InClient),
-          },
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().AccountCreation, _ && _().InClient),
+          children: [
+            (0, _.jsx)("span", {
               className: _().AccountCreationPrompt,
-            },
-            (0, _._)(_),
-          ),
-          _.createElement(_, {
-            variant: __webpack_require__,
-            redirectUrl: _,
-          }),
-        );
+              children: (0, _._)(_),
+            }),
+            (0, _.jsx)(_, {
+              variant: __webpack_require__,
+              redirectUrl: _,
+            }),
+          ],
+        });
       }
       async function _() {
         var _, _, _, _, _, _;
@@ -8118,7 +8113,7 @@
             platform: _,
             autoFocus: _,
             refreshInfo: _,
-            renderSuccess: _ = () => _.createElement(_, null),
+            renderSuccess: _ = () => (0, _.jsx)(_, {}),
             lastResult: _,
             joinLinkVariant: _,
             defaultAccountName: _,
@@ -8153,131 +8148,119 @@
           }),
           _ = _();
         if (null != _ && 1 != _)
-          return _.createElement(
-            "div",
-            {
-              className: _().Login,
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("div", {
+            className: _().Login,
+            children: (0, _.jsx)(_, {
               reset: () => window.location.reload(),
               failure: _._.Generic,
               errorReference: _.toString(),
               extendedErrorMessage: _.password.strExtendedErrorMessage,
             }),
-          );
+          });
         const _ = !(0, _._)();
         if (!_.bInPasswordFlow) {
-          const _ = _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().SideBySide, _ && _().Embedded),
-            },
-            _.createElement(_, {
-              strAccountName: _.strAccountName,
-              onAccountNameChange: _.onAccountNameChange,
-              strPassword: _.strPassword,
-              onPasswordChange: _.onPasswordChange,
-              bRememberMe: _.bRememberMe,
-              onRememberMeChange: _.onRememberMeChange,
-              onSubmit: _.onPasswordSubmit,
-              status: _.password.eStatus,
-              autoFocus: _,
-              secureComputer: _,
-              refreshInfo: _.refreshInfo,
-            }),
-            _ &&
-              _.createElement(_, {
-                transport: _,
-                onQRStatusChange: _.onQRStatusChange,
-                onComplete: _.onComplete,
-                platform: _,
-                refreshInfo: _,
+          const _ = (0, _.jsxs)("div", {
+            className: (0, _._)(_().SideBySide, _ && _().Embedded),
+            children: [
+              (0, _.jsx)(_, {
+                strAccountName: _.strAccountName,
+                onAccountNameChange: _.onAccountNameChange,
+                strPassword: _.strPassword,
+                onPasswordChange: _.onPasswordChange,
+                bRememberMe: _.bRememberMe,
+                onRememberMeChange: _.onRememberMeChange,
+                onSubmit: _.onPasswordSubmit,
+                status: _.password.eStatus,
+                autoFocus: _,
+                secureComputer: _,
+                refreshInfo: _.refreshInfo,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_, {
+                  transport: _,
+                  onQRStatusChange: _.onQRStatusChange,
+                  onComplete: _.onComplete,
+                  platform: _,
+                  refreshInfo: _,
+                }),
+            ],
+          });
           if (_) {
             const _ = _._.IN_STEAMUI,
               _ = _ ? _._.LAUNCHER_TYPE : void 0;
-            return _.createElement(
-              _,
-              {
-                className: (0, _._)(_().EmbeddedRoot, _ && _().InClient),
-              },
-              !_ && !1,
-              !_.refreshInfo &&
-                _.createElement(_, {
-                  realm: _._.EREALM,
-                  launcherType: _,
-                  className: _().HeaderLogo,
-                  onBack: _.onBack,
+            return (0, _.jsxs)(_, {
+              className: (0, _._)(_().EmbeddedRoot, _ && _().InClient),
+              children: [
+                !_ && !1,
+                !_.refreshInfo &&
+                  (0, _.jsx)(_, {
+                    realm: _._.EREALM,
+                    launcherType: _,
+                    className: _().HeaderLogo,
+                    onBack: _.onBack,
+                  }),
+                (0, _.jsx)(_, {
+                  refreshInfo: _,
                 }),
-              _.createElement(_, {
-                refreshInfo: _,
-              }),
-              _,
-              _.createElement(
-                "div",
-                {
+                _,
+                (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _().EmbeddedRootFooter,
                     _ && _().InClient,
                   ),
-                },
-                _.createElement(_, {
-                  variant: _.helpLinkVariant,
+                  children: [
+                    (0, _.jsx)(_, {
+                      variant: _.helpLinkVariant,
+                    }),
+                    (0, _.jsx)(_, {
+                      launcherType: _,
+                      variant: _,
+                      redirectUrl: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_, {
-                  launcherType: _,
-                  variant: _,
-                  redirectUrl: _,
-                }),
-              ),
-            );
+              ],
+            });
           }
-          const _ = _.createElement(
-            "div",
-            {
-              style: {
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
-                margin: "8px 16px",
-              },
+          const _ = (0, _.jsxs)("div", {
+            style: {
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              margin: "8px 16px",
             },
-            !1,
-            _.createElement(
-              "div",
-              {
+            children: [
+              !1,
+              (0, _.jsx)("div", {
                 className: _().PrimaryHeader,
-              },
-              _.refreshInfo
-                ? (0, _._)("#Login_RefreshSignIn")
-                : (0, _._)("#Login_SignInTitle"),
-            ),
-            _.createElement(_, {
-              refreshInfo: _.refreshInfo,
-            }),
-          );
-          return _.createElement(
-            _,
-            {
-              title: _,
-            },
-            _ && _.createElement(_, null),
-            _,
-          );
+                children: _.refreshInfo
+                  ? (0, _._)("#Login_RefreshSignIn")
+                  : (0, _._)("#Login_SignInTitle"),
+              }),
+              (0, _.jsx)(_, {
+                refreshInfo: _.refreshInfo,
+              }),
+            ],
+          });
+          return (0, _.jsxs)(_, {
+            title: _,
+            children: [_ && (0, _.jsx)(_, {}), _],
+          });
         }
         const _ = _.password.eStatus;
         switch (_) {
           case 13:
             return _.renderLoading
-              ? _.createElement(_.Fragment, null, _.renderLoading())
-              : _.createElement(_, null);
+              ? (0, _.jsx)(_.Fragment, {
+                  children: _.renderLoading(),
+                })
+              : (0, _.jsx)(_, {});
           case 5:
           case 11:
           case 3:
           case 10:
             const _ = 5 === _ || 11 === _;
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: _ ? "mobile" : "email",
               onSubmitCode: _.password.addCode,
               status: _,
@@ -8289,18 +8272,18 @@
           case 6:
           case 4:
             const _ = 6 === _;
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: _ ? "mobile" : "email",
               accountName: _.password.strAccountName,
               onUseCodeOverride: _.password.useCodeOverride,
               onCodeHelp: _.onCodeHelp,
             });
           case 16:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               reset: _.password.reset,
             });
           case 15:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               reset: _.password.reset,
               failure: _.password.eFailureState,
               onRequestOffline: _.onTryOffline,
@@ -8308,17 +8291,14 @@
               extendedErrorMessage: _.password.strExtendedErrorMessage,
             });
           case 14:
-            return _.createElement(
-              _,
-              {
-                compact: !0,
-              },
-              _(),
-            );
+            return (0, _.jsx)(_, {
+              compact: !0,
+              children: _(),
+            });
           default:
             return (
               (0, _._)(`Unknown Phase: ${_}`),
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 reset: _.password.reset,
                 failure: _._.Generic,
                 onRequestOffline: _.onTryOffline,
@@ -8373,35 +8353,25 @@
           case 84:
             _ = "#Login_RefreshReason_RateLimitExceeded";
         }
-        return _.createElement(
-          "div",
-          {
-            className: _().RefreshReasonContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().RefreshReasonContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().RefreshTitle,
-            },
-            (0, _._)("#Login_RefreshSignIn"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#Login_RefreshSignIn"),
+            }),
+            (0, _.jsx)("div", {
               className: _().RefreshReason,
-            },
-            (0, _._)(_),
-          ),
-        );
+              children: (0, _._)(_),
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().ConfirmCredntialsNag,
-          },
-          (0, _._)("#Login_ConfirmCredentials"),
-        );
+        return (0, _.jsx)("div", {
+          className: _().ConfirmCredntialsNag,
+          children: (0, _._)("#Login_ConfirmCredentials"),
+        });
       }
       function _(_) {
         const {
@@ -8434,82 +8404,75 @@
           _ = 1 === __webpack_require__ || 13 === __webpack_require__,
           _ = 2 === __webpack_require__ && !_,
           _ = _
-            ? _.createElement(_, null, (0, _._)("#Login_CheckCredentials"))
-            : _.createElement(_, null, " "),
+            ? (0, _.jsx)(_, {
+                children: (0, _._)("#Login_CheckCredentials"),
+              })
+            : (0, _.jsx)(_, {
+                children: " ",
+              }),
           _ = _ && !_,
           _ = _ && !!_,
           _ = !!_.refreshInfo;
-        return _.createElement(
-          _,
-          {
-            onSubmit: () => {
-              _().then(() => {
-                _() && _(!1);
-              });
-            },
-            className: _().LoginForm,
+        return (0, _.jsxs)(_, {
+          onSubmit: () => {
+            _().then(() => {
+              _() && _(!1);
+            });
           },
-          _.createElement(_, {
-            tone: _ ? "danger" : void 0,
-            label: _.createElement(
-              _,
-              {
+          className: _().LoginForm,
+          children: [
+            (0, _.jsx)(_, {
+              tone: _ ? "danger" : void 0,
+              label: (0, _.jsx)(_, {
                 highlight: !0,
+                children: (0, _._)("#Login_SignIn_WithAccountName"),
+              }),
+              value: _,
+              onChange: (_) => {
+                _(!0), _(_);
               },
-              (0, _._)("#Login_SignIn_WithAccountName"),
-            ),
-            value: _,
-            onChange: (_) => {
-              _(!0), _(_);
-            },
-            autoFocus: _,
-            disabled: _,
-          }),
-          _.createElement(_, {
-            tone: _ ? "danger" : void 0,
-            label: _.createElement(_, null, (0, _._)("#Login_Password")),
-            value: _,
-            onChange: (_) => {
-              _(!0), _(_);
-            },
-            type: "password",
-            autoFocus: _,
-          }),
-          _
-            ? _.createElement(
-                _._,
-                {
+              autoFocus: _,
+              disabled: _,
+            }),
+            (0, _.jsx)(_, {
+              tone: _ ? "danger" : void 0,
+              label: (0, _.jsx)(_, {
+                children: (0, _._)("#Login_Password"),
+              }),
+              value: _,
+              onChange: (_) => {
+                _(!0), _(_);
+              },
+              type: "password",
+              autoFocus: _,
+            }),
+            _
+              ? (0, _.jsx)(_._, {
                   toolTipContent: "#Login_RememberMe_Tooltip",
                   direction: "bottom",
-                },
-                _.createElement(_, {
-                  label: (0, _._)("#Login_RememberMe_Short"),
-                  value: _,
-                  onChange: _,
-                }),
-              )
-            : _.createElement(
-                "div",
-                {
+                  children: (0, _.jsx)(_, {
+                    label: (0, _._)("#Login_RememberMe_Short"),
+                    value: _,
+                    onChange: _,
+                  }),
+                })
+              : (0, _.jsx)("div", {
                   className: _().InsecureComputer,
-                },
-                (0, _._)("#Login_InsecureComputer"),
-              ),
-          _.createElement(_, {
-            loading: _,
-            refreshLogin: _,
-          }),
-          _,
-          !_ &&
-            _.createElement(
-              _,
-              {
+                  children: (0, _._)("#Login_InsecureComputer"),
+                }),
+            (0, _.jsx)(_, {
+              loading: _,
+              refreshLogin: _,
+            }),
+            _,
+            !_ &&
+              (0, _.jsx)(_, {
                 href: `${_._.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
                 align: "center",
-              },
-              (0, _._)("#Login_Help_SignIn"),
-            ),
-        );
+                children: (0, _._)("#Login_Help_SignIn"),
+              }),
+          ],
+        });
       }
       const _ = 700;
       function _(_) {
@@ -8520,19 +8483,16 @@
           (0, _._)(_.ownerWindow, "resize", () => {
             _(__webpack_require__());
           }),
-          _.createElement(
-            "div",
-            {
-              className: _().QRSection,
-            },
-            _
-              ? _.createElement(_, {
+          (0, _.jsx)("div", {
+            className: _().QRSection,
+            children: _
+              ? (0, _.jsx)(_, {
                   ..._,
                 })
-              : _.createElement(_, {
+              : (0, _.jsx)(_, {
                   ..._,
                 }),
-          )
+          })
         );
       }
       function _(_) {
@@ -8541,114 +8501,82 @@
           "join/?guest=1&purchaseType=gift&checkout=1&redir=" +
           encodeURIComponent(_.redirectURL);
         _._.STORE_BASE_URL, encodeURIComponent(_.redirectURL);
-        return _.createElement(
-          "div",
-          {
-            className: _().GuestLayout,
-          },
-          _.createElement(
-            _,
-            {
-              compact: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().GuestContainer,
-              },
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)("div", {
+          className: _().GuestLayout,
+          children: (0, _.jsx)(_, {
+            compact: !0,
+            children: (0, _.jsxs)("div", {
+              className: _().GuestContainer,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().GuestText,
-                },
-                (0, _._)(
-                  "#Login_Guest",
-                  _.createElement("a", {
-                    href: `${_}`,
-                    style: {
-                      textDecoration: "underline",
-                    },
-                  }),
-                ),
-              ),
-              _.createElement(
-                "a",
-                {
+                  children: (0, _._)(
+                    "#Login_Guest",
+                    (0, _.jsx)("a", {
+                      href: `${_}`,
+                      style: {
+                        textDecoration: "underline",
+                      },
+                    }),
+                  ),
+                }),
+                (0, _.jsx)("a", {
                   className: _().GuestLink,
                   href: `${_}`,
-                },
-                _.createElement(
-                  "button",
-                  {
+                  children: (0, _.jsx)("button", {
                     className: _().GuestButton,
-                  },
-                  (0, _._)("#Login_GuestContinue"),
-                ),
-              ),
-            ),
-          ),
-        );
+                    children: (0, _._)("#Login_GuestContinue"),
+                  }),
+                }),
+              ],
+            }),
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(!1);
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               bShowHideButton: !0,
               setShowQR: __webpack_require__,
             })
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               setShowQR: __webpack_require__,
             });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().MessagingContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().MessagingContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().MessagingTag,
-            },
-            (0, _._)("#Login_MobileFlow_New"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#Login_MobileFlow_New"),
+            }),
+            (0, _.jsx)("div", {
               className: _().MessagingSubtitle,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _().MessagingSubtitle,
-              },
-              (0, _._)("#Login_MobileFlow_SignIn_ScanQR"),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+                children: (0, _._)("#Login_MobileFlow_SignIn_ScanQR"),
+              }),
+            }),
+            (0, _.jsx)("div", {
               className: _().MessagingButton,
               onClick: () => _.setShowQR(!0),
-            },
-            (0, _._)("#Login_MobileFlow_ShowMeQR_Button"),
-          ),
-          _.createElement(
-            "a",
-            {
+              children: (0, _._)("#Login_MobileFlow_ShowMeQR_Button"),
+            }),
+            (0, _.jsx)("a", {
               href: `${_._.STORE_BASE_URL}mobile`,
               className: _().MessagingLink,
-            },
-            (0, _._)("#Login_JoinBeta_Button"),
-          ),
-        );
+              children: (0, _._)("#Login_JoinBeta_Button"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -8660,55 +8588,42 @@
           bShowHideButton: _ = !1,
           setShowQR: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().QRCodeContainer,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().QRCodeContainer,
+          children: [
+            (0, _.jsx)(_, {
               highlight: !0,
-            },
-            (0, _._)("#Login_SignIn_OrWithQRCode"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _()._,
-            },
-            _.createElement(_, {
-              onStatusChange: _,
-              transport: __webpack_require__,
-              onComplete: _,
-              platform: _,
-              refreshInfo: _,
+              children: (0, _._)("#Login_SignIn_OrWithQRCode"),
             }),
-          ),
-          _ &&
+            (0, _.jsx)("div", {
+              className: _()._,
+              children: (0, _.jsx)(_, {
+                onStatusChange: _,
+                transport: __webpack_require__,
+                onComplete: _,
+                platform: _,
+                refreshInfo: _,
+              }),
+            }),
             _ &&
-            _.createElement(
-              "div",
-              {
+              _ &&
+              (0, _.jsx)("div", {
                 className: _().QRHideLink,
                 onClick: () => _(!1),
-              },
-              (0, _._)("#Button_Hide"),
-            ),
-          _.createElement(
-            "div",
-            {
-              className: _().UseMobileAppForQR,
-            },
-            (0, _._)(
-              "#Login_UseMobileAppForQR_Inline",
-              _.createElement(_, {
-                href: `${_._.STORE_BASE_URL}mobile`,
-                align: "center",
+                children: (0, _._)("#Button_Hide"),
               }),
-            ),
-          ),
-        );
+            (0, _.jsx)("div", {
+              className: _().UseMobileAppForQR,
+              children: (0, _._)(
+                "#Login_UseMobileAppForQR_Inline",
+                (0, _.jsx)(_, {
+                  href: `${_._.STORE_BASE_URL}mobile`,
+                  align: "center",
+                }),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -8719,38 +8634,35 @@
             ..._
           } = _,
           _ = null != _ ? _ : __webpack_require__ ? "danger" : void 0;
-        return _.createElement(
-          "div",
-          {
-            className: _().TextField,
-          },
-          "string" == typeof _ ? _.createElement(_, null, _) : _,
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().TextField,
+          children: [
+            "string" == typeof _
+              ? (0, _.jsx)(_, {
+                  children: _,
+                })
+              : _,
+            (0, _.jsx)(_, {
               type: "error",
-            },
-            __webpack_require__,
-          ),
-          _.createElement(_, {
-            autoFocus: _,
-            tone: _,
-            ..._,
-          }),
-        );
+              children: __webpack_require__,
+            }),
+            (0, _.jsx)(_, {
+              autoFocus: _,
+              tone: _,
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { children: _, highlight: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().FieldLabel,
-              __webpack_require__ && _().Highlight,
-            ),
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().FieldLabel,
+            __webpack_require__ && _().Highlight,
+          ),
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -8762,7 +8674,7 @@
           autoFocus: _,
           disabled: _,
         } = _;
-        return _.createElement("input", {
+        return (0, _.jsx)("input", {
           value: _,
           type: _,
           autoFocus: _,
@@ -8773,62 +8685,50 @@
       }
       function _(_) {
         const { children: _, type: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().FieldHint,
-              "error" === __webpack_require__ && _().Error,
-            ),
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().FieldHint,
+            "error" === __webpack_require__ && _().Error,
+          ),
+          children: _,
+        });
       }
       function _(_) {
         const { label: _, onChange: __webpack_require__, value: _ } = _;
         let _ = () => {
           __webpack_require__ && __webpack_require__(!_);
         };
-        return _.createElement(
-          "div",
-          {
-            className: _().CheckboxField,
-            onClick: _,
-            onKeyPress: (_) => {
-              " " == _.key && (_(), _.preventDefault());
-            },
+        return (0, _.jsxs)("div", {
+          className: _().CheckboxField,
+          onClick: _,
+          onKeyPress: (_) => {
+            " " == _.key && (_(), _.preventDefault());
           },
-          _.createElement(_, {
-            value: _,
-          }),
-          _.createElement(
-            "div",
-            {
+          children: [
+            (0, _.jsx)(_, {
+              value: _,
+            }),
+            (0, _.jsx)("div", {
               className: _().CheckboxFieldLabel,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { value: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            tabIndex: 0,
-            className: _().Checkbox,
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().Check,
-              },
-              _.createElement(_.Jlk, {
+        return (0, _.jsx)("div", {
+          tabIndex: 0,
+          className: _().Checkbox,
+          children:
+            _ &&
+            (0, _.jsx)("div", {
+              className: _().Check,
+              children: (0, _.jsx)(_.Jlk, {
                 strokeWidth: 35,
               }),
-            ),
-        );
+            }),
+        });
       }
       function _(_) {
         var _;
@@ -8837,52 +8737,39 @@
           (null === (_ = SteamClient.User) || void 0 === _
             ? void 0
             : _.StartShutdown)
-          ? _.createElement(_, null)
-          : _.createElement(_, {
+          ? (0, _.jsx)(_, {})
+          : (0, _.jsx)(_, {
               ..._,
             });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().SignInButtonContainer,
-          },
-          _.createElement(
-            _,
-            {
-              ..._,
-            },
-            (0, _._)("#Login_SignIn"),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _().SignInButtonContainer,
+          children: (0, _.jsx)(_, {
+            ..._,
+            children: (0, _._)("#Login_SignIn"),
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().RefreshButtonContainer,
-          },
-          _.createElement(
-            "button",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().RefreshButtonContainer,
+          children: [
+            (0, _.jsx)("button", {
               className: _().SubmitButton,
               type: "submit",
-            },
-            (0, _._)("#Login_SignIn"),
-          ),
-          _.createElement(
-            "button",
-            {
+              children: (0, _._)("#Login_SignIn"),
+            }),
+            (0, _.jsx)("button", {
               className: _().RefreshQuitButton,
               onClick: () => SteamClient.User.StartShutdown(!0),
-            },
-            (0, _._)("#Login_ExitSteam"),
-          ),
-        );
+              children: (0, _._)("#Login_ExitSteam"),
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           type: "submit",
           ..._,
         });
@@ -8896,75 +8783,61 @@
             ..._
           } = _,
           _ = _ || __webpack_require__;
-        return _.createElement(
-          "button",
-          {
-            className: (0, _._)(
-              _().SubmitButton,
-              __webpack_require__ && _().Loading,
-              _,
-            ),
-            disabled: _,
-            ..._,
-          },
-          _,
-          __webpack_require__ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("button", {
+          className: (0, _._)(
+            _().SubmitButton,
+            __webpack_require__ && _().Loading,
+            _,
+          ),
+          disabled: _,
+          ..._,
+          children: [
+            _,
+            __webpack_require__ &&
+              (0, _.jsx)("div", {
                 className: _().LoadingContainer,
-              },
-              _.createElement(_, {
-                size: "small",
+                children: (0, _.jsx)(_, {
+                  size: "small",
+                }),
               }),
-            ),
-        );
+          ],
+        });
       }
       function _(_) {
         const _ = _.children || " ";
-        return _.createElement(
-          "div",
-          {
-            className: _().FormError,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _().FormError,
+          children: _,
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            compact: !0,
-          },
-          _.createElement(
-            _,
-            {
-              alignItems: "center",
-              className: (0, _._)(
-                _().WaitingForTokenContainer,
-                _._.IN_STEAMUI && _().Client,
-              ),
-            },
-            _.createElement(_._, {
-              size: "xlarge",
-            }),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().Description),
-              },
-              (0, _._)(
-                _._.IN_STEAMUI
-                  ? "#Login_ConnectingToSteam"
-                  : "#Login_LoadingAccountInfo",
-              ),
+        return (0, _.jsx)(_, {
+          compact: !0,
+          children: (0, _.jsxs)(_, {
+            alignItems: "center",
+            className: (0, _._)(
+              _().WaitingForTokenContainer,
+              _._.IN_STEAMUI && _().Client,
             ),
-          ),
-        );
+            children: [
+              (0, _.jsx)(_._, {
+                size: "xlarge",
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().Description),
+                children: (0, _._)(
+                  _._.IN_STEAMUI
+                    ? "#Login_ConnectingToSteam"
+                    : "#Login_LoadingAccountInfo",
+                ),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { size: _ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(
             _().LoadingSpinner,
             "small" == _ && _().Small,
@@ -8974,20 +8847,14 @@
         });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().OfferOffline,
-          },
-          _.createElement(
-            "button",
-            {
-              className: _().OfferOfflineButton,
-              onClick: _.onRequestOffline,
-            },
-            (0, _._)("#Login_GoOffline_Button"),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _().OfferOffline,
+          children: (0, _.jsx)("button", {
+            className: _().OfferOfflineButton,
+            onClick: _.onRequestOffline,
+            children: (0, _._)("#Login_GoOffline_Button"),
+          }),
+        });
       }
       function _(_) {
         const {
@@ -9051,71 +8918,53 @@
             return _;
           })(__webpack_require__, _),
           _ = _._.IN_STEAMUI && __webpack_require__ == _._.Network;
-        return _.createElement(
-          _,
-          {
-            compact: !0,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          compact: !0,
+          children: [
+            (0, _.jsxs)(_, {
               alignItems: "center",
               gap: 12,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().FailureTitle,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().FailureDescription,
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().FailureDescription,
-                },
-                (0, _._)("#Login_GoOffline_Description"),
-              ),
-            _.createElement(
-              _,
-              {
-                className: _().FailureButtons,
-              },
-              _.createElement(
-                _,
-                {
-                  className: _().TryAgainButton,
-                  onClick: _,
-                },
-                (0, _._)("#Button_Retry"),
-              ),
-              _ &&
-                _.createElement(_, {
-                  onRequestOffline: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().FailureTitle,
+                  children: _,
                 }),
-            ),
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                (0, _.jsx)("div", {
+                  className: _().FailureDescription,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().FailureDescription,
+                    children: (0, _._)("#Login_GoOffline_Description"),
+                  }),
+                (0, _.jsxs)(_, {
+                  className: _().FailureButtons,
+                  children: [
+                    (0, _.jsx)(_, {
+                      className: _().TryAgainButton,
+                      onClick: _,
+                      children: (0, _._)("#Button_Retry"),
+                    }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        onRequestOffline: _,
+                      }),
+                  ],
+                }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().MutedErrorReference,
-              },
-              (0, _._)("#Login_Error_Reference", _),
-            ),
-        );
+                children: (0, _._)("#Login_Error_Reference", _),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { reset: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           reset: _,
           failure: _._.Generic,
         });
@@ -9148,88 +8997,77 @@
         return (
           _
             ? "mobile" === _
-              ? ((_ = _.createElement(_, null)), (_ = "#Login_UseMobileCode"))
-              : ((_ = _.createElement(_, null)), (_ = "#Login_UseEmailCode"))
+              ? ((_ = (0, _.jsx)(_, {})), (_ = "#Login_UseMobileCode"))
+              : ((_ = (0, _.jsx)(_, {})), (_ = "#Login_UseEmailCode"))
             : ((_ =
                 "mobile" === _
-                  ? _.createElement(_, null)
-                  : _.createElement(_, {
+                  ? (0, _.jsx)(_, {})
+                  : (0, _.jsx)(_, {
                       emailAddress: _,
                     })),
               (_ = "#Login_UseBackupCode")),
-          _.createElement(
-            _,
-            {
-              title: _.createElement(_, null),
-              compact: !0,
-            },
-            _.createElement(
-              _,
-              {
-                onSubmit: () => {
-                  _ && _(_);
-                },
+          (0, _.jsx)(_, {
+            title: (0, _.jsx)(_, {}),
+            compact: !0,
+            children: (0, _.jsx)(_, {
+              onSubmit: () => {
+                _ && _(_);
               },
-              _.createElement(
-                _,
-                {
-                  alignItems: "center",
-                  gap: 14,
-                },
-                _.createElement(_, {
-                  type: _,
-                  accountName: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
+              children: (0, _.jsxs)(_, {
+                alignItems: "center",
+                gap: 14,
+                children: [
+                  (0, _.jsx)(_, {
+                    type: _,
+                    accountName: _,
+                  }),
+                  (0, _.jsxs)("div", {
                     className: _().ConfirmationEntryContainer,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      alignItems: "center",
-                      gap: 2,
-                    },
-                    _ &&
-                      _.createElement(
-                        _,
-                        null,
-                        (0, _._)("#Login_IncorrectSteamGuard"),
-                      ),
-                    _.createElement(_, {
-                      key: _,
-                      value: _,
-                      onChange: (_) => {
-                        _ || _(!0), _(_);
-                        const _ = _.join("");
-                        _(_, _) && _(_);
-                      },
-                      tone: _ ? "danger" : void 0,
-                      loading: _,
-                      backupCode: _,
-                    }),
-                  ),
-                  _,
-                ),
-                _ &&
-                  _.createElement(
-                    _,
-                    {
+                    children: [
+                      (0, _.jsxs)(_, {
+                        alignItems: "center",
+                        gap: 2,
+                        children: [
+                          _ &&
+                            (0, _.jsx)(_, {
+                              children: (0, _._)("#Login_IncorrectSteamGuard"),
+                            }),
+                          (0, _.jsx)(
+                            _,
+                            {
+                              value: _,
+                              onChange: (_) => {
+                                _ || _(!0), _(_);
+                                const _ = _.join("");
+                                _(_, _) && _(_);
+                              },
+                              tone: _ ? "danger" : void 0,
+                              loading: _,
+                              backupCode: _,
+                            },
+                            _,
+                          ),
+                        ],
+                      }),
+                      _,
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
                       onClick: () => {
                         _(!_), _([]), __webpack_require__(""), _(_ + 1);
                       },
                       align: "center",
-                    },
-                    (0, _._)(_),
-                  ),
-                _.createElement(_, {
-                  type: _,
-                  onCodeHelp: _.onCodeHelp,
-                }),
-              ),
-            ),
-          )
+                      children: (0, _._)(_),
+                    }),
+                  (0, _.jsx)(_, {
+                    type: _,
+                    onCodeHelp: _.onCodeHelp,
+                  }),
+                ],
+              }),
+            }),
+          })
         );
       }
       function _(_) {
@@ -9242,107 +9080,78 @@
             : ((_ = `${_._.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
               (_ = (0, _._)("#Login_Help_AccessEmail"))),
           _.onCodeHelp
-            ? _.createElement(
-                _,
-                {
-                  onClick: () => _.onCodeHelp(_),
-                  align: "center",
-                },
-                _,
-              )
-            : _.createElement(
-                _,
-                {
-                  href: _,
-                  align: "center",
-                },
-                _,
-              )
+            ? (0, _.jsx)(_, {
+                onClick: () => _.onCodeHelp(_),
+                align: "center",
+                children: _,
+              })
+            : (0, _.jsx)(_, {
+                href: _,
+                align: "center",
+                children: _,
+              })
         );
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            className: _().EnterBackupCodeContainer,
-          },
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_, {
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          className: _().EnterBackupCodeContainer,
+          children: (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsx)("div", {
                 className: _().EnterCodeFromMobile,
-              },
-              (0, _._)("#Login_EnterBackupCode"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#Login_EnterBackupCode"),
+              }),
+              (0, _.jsx)("div", {
                 className: _().Label,
-              },
-              (0, _._)("#Login_EnterBackupCodeDescription"),
-            ),
-          ),
-        );
+                children: (0, _._)("#Login_EnterBackupCodeDescription"),
+              }),
+            ],
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            className: _().EnterCodeFromMobileContainer,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_, {
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          className: _().EnterCodeFromMobileContainer,
+          children: [
+            (0, _.jsx)("div", {
               className: _().EnterCodeFromMobile,
-            },
-            (0, _._)("#Login_EnterMobileCode"),
-          ),
-          _.createElement(_, {
-            className: _().AwaitingMobileConfIcon,
-          }),
-        );
+              children: (0, _._)("#Login_EnterMobileCode"),
+            }),
+            (0, _.jsx)(_, {
+              className: _().AwaitingMobileConfIcon,
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            className: _().EnterCodeFromEmailContainer,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          className: _().EnterCodeFromEmailContainer,
+          children: [
+            (0, _.jsx)(_, {
               align: "center",
               spacing: 6,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _().EnterCodeFromEmail,
-              },
-              (0, _._)(
-                "#Login_EnterEmailCode",
-                _.createElement(
-                  "span",
-                  {
+                children: (0, _._)(
+                  "#Login_EnterEmailCode",
+                  (0, _.jsx)("span", {
                     className: _().EnterCodeEmailAddress,
-                  },
-                  _.emailAddress,
+                    children: _.emailAddress,
+                  }),
                 ),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            className: _().AwaitingEmailConfIcon,
-          }),
-        );
+              }),
+            }),
+            (0, _.jsx)(_, {
+              className: _().AwaitingEmailConfIcon,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { accountName: _, type: __webpack_require__ } = _,
@@ -9351,110 +9160,89 @@
               ? (0, _._)("#Login_MobileProtectingAccount")
               : (0, _._)("#Login_EmailProtectingAccount"),
           _ = _();
-        return _.createElement(
-          "div",
-          {
-            className: _().ProtectingAccount,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().ProtectingAccount,
+          children: [
+            (0, _.jsx)("div", {
               className: _().Label,
-            },
-            (0, _._)(
-              "#Login_ActiveAccountName",
-              _.createElement(
-                "span",
-                {
+              children: (0, _._)(
+                "#Login_ActiveAccountName",
+                (0, _.jsx)("span", {
                   className: _().AccountName,
-                },
-                _,
+                  children: _,
+                }),
               ),
-            ),
-          ),
-          !_ &&
-            _.createElement(
-              "div",
-              {
+            }),
+            !_ &&
+              (0, _.jsx)("div", {
                 className: _().Description,
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            alignItems: "center",
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ConfirmationContainer,
-            },
-            _.createElement("img", {
-              src: (0, _._)(_),
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_, {
+          alignItems: "center",
+          children: (0, _.jsxs)("div", {
+            className: _().ConfirmationContainer,
+            children: [
+              (0, _.jsx)("img", {
+                src: (0, _._)(_),
+              }),
+              (0, _.jsx)("div", {
                 className: _().AwaitingMobileConfText,
-              },
-              (0, _._)("#Login_AwaitingMobileConfirmation"),
-            ),
-          ),
-        );
+                children: (0, _._)("#Login_AwaitingMobileConfirmation"),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 33 49",
-            fill: "currentColor",
-            className: _.className,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M28 47.1106C29.1046 47.1106 30 46.2151 30 45.1106L30 3.72705C30 2.62248 29.1046 1.72705 28 1.72705L5 1.72705C3.89544 1.72705 3 2.62248 3 3.72705L3 45.1106C3 46.2151 3.89543 47.1106 5 47.1106L28 47.1106ZM5.68119 5.82741L27.3188 5.82741L27.3188 42.7772H5.68119L5.68119 5.82741ZM20.9999 44.944C20.9999 45.3429 20.6766 45.6662 20.2777 45.6662L12.7221 45.6662C12.3233 45.6662 11.9999 45.3429 11.9999 44.944C11.9999 44.5451 12.3233 44.2218 12.7221 44.2218H20.2777C20.6766 44.2218 20.9999 44.5451 20.9999 44.944ZM17.2778 4.44406C17.6767 4.44406 18 4.12071 18 3.72184C18 3.32296 17.6767 2.99962 17.2778 2.99962L15.7222 2.99962C15.3233 2.99962 15 3.32296 15 3.72184C15 4.12071 15.3233 4.44406 15.7222 4.44406L17.2778 4.44406Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M22.2456 22.4164C22.2456 21.6666 22.8127 21.0002 23.6228 21.0002C24.3519 21.0002 25 21.6666 25 22.4164C25 23.1661 24.3519 23.8325 23.6228 23.8325C22.8937 23.8325 22.2456 23.1661 22.2456 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M18.6812 22.4164C18.6812 21.6666 19.2483 21.0002 20.0584 21.0002C20.8685 21.0002 21.5166 21.6666 21.4355 22.4164C21.4355 23.1661 20.8685 23.8325 20.0584 23.8325C19.3293 23.8325 18.6812 23.1661 18.6812 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M15.1977 22.4164C15.1977 21.6666 15.7648 21.0002 16.5749 21.0002C17.304 21.0002 17.9521 21.6666 17.9521 22.4164C17.9521 23.1661 17.385 23.8325 16.5749 23.8325C15.8458 23.8325 15.1977 23.1661 15.1977 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M11.7143 22.4164C11.7143 21.6666 12.2814 21.0002 13.0915 21.0002C13.8206 21.0002 14.4686 21.6666 14.4686 22.4164C14.4686 23.1661 13.9016 23.8325 13.0915 23.8325C12.3624 23.8325 11.7143 23.1661 11.7143 22.4164Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M8.14983 22.4164C8.14983 21.6666 8.7169 21.0002 9.527 21.0002C10.3371 21.0002 10.9852 21.6666 10.9042 22.4164C10.9042 23.1661 10.3371 23.8325 9.527 23.8325C8.79791 23.8325 8.14983 23.1661 8.14983 22.4164Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 33 49",
+          fill: "currentColor",
+          className: _.className,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M28 47.1106C29.1046 47.1106 30 46.2151 30 45.1106L30 3.72705C30 2.62248 29.1046 1.72705 28 1.72705L5 1.72705C3.89544 1.72705 3 2.62248 3 3.72705L3 45.1106C3 46.2151 3.89543 47.1106 5 47.1106L28 47.1106ZM5.68119 5.82741L27.3188 5.82741L27.3188 42.7772H5.68119L5.68119 5.82741ZM20.9999 44.944C20.9999 45.3429 20.6766 45.6662 20.2777 45.6662L12.7221 45.6662C12.3233 45.6662 11.9999 45.3429 11.9999 44.944C11.9999 44.5451 12.3233 44.2218 12.7221 44.2218H20.2777C20.6766 44.2218 20.9999 44.5451 20.9999 44.944ZM17.2778 4.44406C17.6767 4.44406 18 4.12071 18 3.72184C18 3.32296 17.6767 2.99962 17.2778 2.99962L15.7222 2.99962C15.3233 2.99962 15 3.32296 15 3.72184C15 4.12071 15.3233 4.44406 15.7222 4.44406L17.2778 4.44406Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M22.2456 22.4164C22.2456 21.6666 22.8127 21.0002 23.6228 21.0002C24.3519 21.0002 25 21.6666 25 22.4164C25 23.1661 24.3519 23.8325 23.6228 23.8325C22.8937 23.8325 22.2456 23.1661 22.2456 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M18.6812 22.4164C18.6812 21.6666 19.2483 21.0002 20.0584 21.0002C20.8685 21.0002 21.5166 21.6666 21.4355 22.4164C21.4355 23.1661 20.8685 23.8325 20.0584 23.8325C19.3293 23.8325 18.6812 23.1661 18.6812 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M15.1977 22.4164C15.1977 21.6666 15.7648 21.0002 16.5749 21.0002C17.304 21.0002 17.9521 21.6666 17.9521 22.4164C17.9521 23.1661 17.385 23.8325 16.5749 23.8325C15.8458 23.8325 15.1977 23.1661 15.1977 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M11.7143 22.4164C11.7143 21.6666 12.2814 21.0002 13.0915 21.0002C13.8206 21.0002 14.4686 21.6666 14.4686 22.4164C14.4686 23.1661 13.9016 23.8325 13.0915 23.8325C12.3624 23.8325 11.7143 23.1661 11.7143 22.4164Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M8.14983 22.4164C8.14983 21.6666 8.7169 21.0002 9.527 21.0002C10.3371 21.0002 10.9852 21.6666 10.9042 22.4164C10.9042 23.1661 10.3371 23.8325 9.527 23.8325C8.79791 23.8325 8.14983 23.1661 8.14983 22.4164Z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 58 56",
-            fill: "none",
-            className: _.className,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          viewBox: "0 0 58 56",
+          fill: "none",
+          className: _.className,
+          children: (0, _.jsx)("path", {
             _: "M57.9352 24.5887C57.8463 24.233 57.8463 23.8774 57.6684 23.5217C57.4017 22.8993 57.046 22.4547 56.5125 22.0101L49.577 16.4083V10.9844C49.577 8.85041 47.8876 7.16098 45.7536 7.16098H38.1956L31.5269 1.73706C30.1042 0.581137 28.0591 0.581137 26.6364 1.73706L19.9677 7.16098H12.4097C10.2757 7.16098 8.58631 8.93932 8.58631 10.9844V16.4083L1.56188 22.0101C1.02838 22.3658 0.672713 22.8993 0.405962 23.5217V23.6106C0.228128 24.1441 0.050293 24.5887 0.050293 25.1222V52.1529C0.050293 53.2199 0.494878 54.1091 1.1173 54.8204C1.82863 55.5318 2.80672 55.8874 3.7848 55.8874H54.0228C55.0898 55.8874 55.979 55.4428 56.6903 54.8204C57.4017 54.1091 57.7573 53.131 57.7573 52.1529V25.1222C57.9352 24.8554 57.9352 24.7665 57.9352 24.5887ZM49.577 19.7872L54.7342 23.9663L49.577 28.9456V19.7872ZM28.148 3.60431C28.4148 3.42648 28.6815 3.24864 28.9483 3.24864C29.3039 3.24864 29.5707 3.33756 29.7485 3.60431L34.0165 7.07207H23.9689L28.148 3.60431ZM10.9871 10.9844C10.9871 10.2731 11.5206 9.73958 12.2319 9.73958H45.6646C46.376 9.73958 46.9095 10.362 46.9095 10.9844V31.4353L46.8206 31.5242L40.2407 37.9262H17.6558L11.076 31.5242L10.9871 31.4353V10.9844ZM8.40848 19.7872V28.9456L3.34022 23.9663L8.40848 19.7872ZM2.62888 51.6194V26.9005L15.2551 39.26L2.62888 51.6194ZM4.49614 53.3088L17.6558 40.5048H40.2407L53.4004 53.3088H4.49614ZM55.3566 51.6194L42.6415 39.1711L55.2677 26.8116V51.6194H55.3566ZM29.0372 35.3476C30.5488 35.3476 31.9715 35.0809 33.3941 34.5474C34.0165 34.2806 34.3722 33.4804 34.1055 32.858C33.8387 32.2355 33.0385 31.8799 32.416 32.1466C31.349 32.5912 30.1931 32.769 29.0372 32.769C27.3478 32.769 25.7473 32.3245 24.4135 31.5242C21.746 29.9237 20.0566 27.0784 20.0566 23.7884C20.0566 18.8091 24.0579 14.8078 29.0372 14.8078C34.0165 14.8078 38.0178 18.8091 38.0178 23.7884V24.4109C38.0178 25.4779 37.2175 26.367 36.0616 26.367C34.9946 26.367 34.1055 25.4779 34.1055 24.4109V23.7884C34.1055 20.9431 31.7936 18.6313 28.9483 18.6313C26.1029 18.6313 23.7911 20.9431 23.7911 23.7884C23.7911 26.6338 26.1029 28.9456 28.9483 28.9456C30.3709 28.9456 31.7047 28.3232 32.5939 27.434C33.3941 28.4121 34.639 28.9456 35.9727 28.9456C38.4624 28.9456 40.5075 26.9894 40.5075 24.4109V23.7884C40.5075 17.3864 35.2614 12.2292 28.9483 12.2292C22.6352 12.2292 17.3891 17.4753 17.3891 23.7884C17.3891 26.7227 18.545 29.4791 20.3233 31.5242C22.5463 33.925 25.5694 35.3476 29.0372 35.3476ZM29.0372 26.367C27.6145 26.367 26.4586 25.2111 26.4586 23.7884C26.4586 22.3658 27.6145 21.2098 29.0372 21.2098C30.4599 21.2098 31.6158 22.3658 31.6158 23.7884C31.5269 25.2111 30.371 26.367 29.0372 26.367Z",
             fill: "#1A99FF",
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -9463,67 +9251,47 @@
             onUseCodeOverride: _,
           } = _,
           _ = _(),
-          _ = _.createElement(_, {
+          _ = (0, _.jsx)(_, {
             type: "mobile",
             onCodeHelp: _.onCodeHelp,
           }),
           _ = _
-            ? _.createElement(
-                "div",
-                {
-                  style: {
-                    paddingBottom: "20px",
-                  },
+            ? (0, _.jsx)("div", {
+                style: {
+                  paddingBottom: "20px",
                 },
-                _.createElement(
-                  _,
-                  {
-                    align: "center",
-                    onClick: _,
-                  },
-                  (0, _._)("#Login_EnterCodeInstead"),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().EnterCodeInsteadLink,
-                },
-                _.createElement(
-                  _,
-                  {
-                    align: "center",
-                    onClick: _,
-                  },
-                  (0, _._)("#Login_EnterCodeInstead"),
-                ),
-              );
-        return _.createElement(
-          _,
-          {
-            title: _.createElement(_, null),
-            compact: !0,
-          },
-          _.createElement(
-            _,
-            {
-              gap: _._.IN_STEAMUI ? 24 : 40,
-            },
-            _.createElement(_, {
-              type: _,
-              accountName: __webpack_require__,
-            }),
-            _.createElement(_, null),
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_, {
+                  align: "center",
+                  onClick: _,
+                  children: (0, _._)("#Login_EnterCodeInstead"),
+                }),
+              })
+            : (0, _.jsx)("div", {
+                className: _().EnterCodeInsteadLink,
+                children: (0, _.jsx)(_, {
+                  align: "center",
+                  onClick: _,
+                  children: (0, _._)("#Login_EnterCodeInstead"),
+                }),
+              });
+        return (0, _.jsx)(_, {
+          title: (0, _.jsx)(_, {}),
+          compact: !0,
+          children: (0, _.jsxs)(_, {
+            gap: _._.IN_STEAMUI ? 24 : 40,
+            children: [
+              (0, _.jsx)(_, {
+                type: _,
+                accountName: __webpack_require__,
+              }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsxs)("div", {
                 className: _().LinkContainer,
-              },
-              _,
-              _,
-            ),
-          ),
-        );
+                children: [_, _],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { children: _, align: __webpack_require__, inline: _ } = _,
@@ -9535,37 +9303,28 @@
           const _ = _._.IN_STEAMUI
             ? `steam://openurl_external/${_.href}`
             : _.href;
-          return _.createElement(
-            "a",
-            {
-              className: _,
-              href: _,
-            },
-            _,
-          );
+          return (0, _.jsx)("a", {
+            className: _,
+            href: _,
+            children: _,
+          });
         }
         {
           const _ = _ ? "span" : "div";
-          return _.createElement(
-            _,
-            {
-              className: _,
-              onClick: _.onClick,
-            },
-            _,
-          );
+          return (0, _.jsx)(_, {
+            className: _,
+            onClick: _.onClick,
+            children: _,
+          });
         }
       }
       function _(_) {
         const { onSubmit: _, children: __webpack_require__, className: _ } = _;
-        return _.createElement(
-          "form",
-          {
-            onSubmit: (_) => (_.preventDefault(), _(), !1),
-            className: _,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)("form", {
+          onSubmit: (_) => (_.preventDefault(), _(), !1),
+          className: _,
+          children: __webpack_require__,
+        });
       }
       function _(_) {
         const {
@@ -9586,14 +9345,11 @@
                 gap: "number" == typeof _ ? `${_}px` : _,
               }
             : void 0;
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            style: _,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _,
+          style: _,
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -9608,18 +9364,15 @@
             justifyContent: __webpack_require__,
             alignItems: _,
           };
-        return _.createElement(
-          "div",
-          {
-            style: _,
-            className: _,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          style: _,
+          className: _,
+          children: _,
+        });
       }
       function _(_) {
         const { onChange: _, backupCode: __webpack_require__, ..._ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           length: _(__webpack_require__),
           backupCode: __webpack_require__,
           onChange: (_) => {
@@ -9635,60 +9388,47 @@
       }
       function _(_) {
         const { children: _, spacing: __webpack_require__ = 0, align: _ } = _;
-        return _.createElement(
-          _,
-          {
-            alignItems: _,
-          },
-          _.Children.map(_, (_, _) =>
+        return (0, _.jsx)(_, {
+          alignItems: _,
+          children: _.Children.map(_, (_, _) =>
             _
-              ? _.createElement(
-                  "div",
-                  {
-                    style:
-                      _ > 0
-                        ? {
-                            paddingTop: `${__webpack_require__}px`,
-                          }
-                        : void 0,
-                  },
-                  _,
-                )
+              ? (0, _.jsx)("div", {
+                  style:
+                    _ > 0
+                      ? {
+                          paddingTop: `${__webpack_require__}px`,
+                        }
+                      : void 0,
+                  children: _,
+                })
               : null,
           ).filter(Boolean),
-        );
+        });
       }
       function _(_) {
         const { title: _, children: __webpack_require__, compact: _ } = _,
           _ = _();
-        return _.createElement(
-          _,
-          {
-            gap: _._.IN_STEAMUI ? 0 : 32,
-            className: (0, _._)(
-              _().StandardLayout,
-              _ && _().Embedded,
-              _ && _().Compact,
-              _._.IN_STEAMUI && "IN_CLIENT",
-            ),
-          },
-          "string" == typeof _
-            ? _.createElement(
-                "div",
-                {
-                  className: _().PrimaryHeader,
-                },
-                _,
-              )
-            : _,
-          _.createElement(
-            "div",
-            {
-              className: _().FormContainer,
-            },
-            __webpack_require__,
+        return (0, _.jsxs)(_, {
+          gap: _._.IN_STEAMUI ? 0 : 32,
+          className: (0, _._)(
+            _().StandardLayout,
+            _ && _().Embedded,
+            _ && _().Compact,
+            _._.IN_STEAMUI && "IN_CLIENT",
           ),
-        );
+          children: [
+            "string" == typeof _
+              ? (0, _.jsx)("div", {
+                  className: _().PrimaryHeader,
+                  children: _,
+                })
+              : _,
+            (0, _.jsx)("div", {
+              className: _().FormContainer,
+              children: __webpack_require__,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -9699,171 +9439,170 @@
           className: _ = _().HeaderLogo,
         } = _;
         return 8 === __webpack_require__
-          ? _.createElement("div", {
+          ? (0, _.jsx)("div", {
               className: _,
             })
-          : _.createElement(
-              "div",
-              {
-                className: _().LogoContainer,
-              },
-              _.createElement(_, {
-                onBack: _.onBack,
-              }),
-              _ !== _._.k_ESteamRealmChina
-                ? _.createElement(_, {
-                    className: _,
-                  })
-                : _.createElement(_, {
-                    className: _,
-                  }),
-              " ",
-            );
+          : (0, _.jsxs)("div", {
+              className: _().LogoContainer,
+              children: [
+                (0, _.jsx)(_, {
+                  onBack: _.onBack,
+                }),
+                _ !== _._.k_ESteamRealmChina
+                  ? (0, _.jsx)(_, {
+                      className: _,
+                    })
+                  : (0, _.jsx)(_, {
+                      className: _,
+                    }),
+                " ",
+              ],
+            });
       }
       function _(_) {
         return _.onBack
-          ? _.createElement(
-              "div",
-              {
-                className: _().BackArrowContainer,
-                onClick: _.onBack,
-              },
-              _.createElement(_.Q38, {
+          ? (0, _.jsx)("div", {
+              className: _().BackArrowContainer,
+              onClick: _.onBack,
+              children: (0, _.jsx)(_.Q38, {
                 className: _().BackArrow,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 153 46",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _.className,
-          },
-          _.createElement("path", {
-            _: "M22.9891 0C10.8429 0 0.93833 9.30396 0 21.1548L12.3547 26.2486C13.3973 25.5209 14.6484 25.1051 16.0037 25.1051C16.108 25.1051 16.2644 25.1051 16.3687 25.1051L21.8944 17.2045C21.8944 17.1525 21.8944 17.1525 21.8944 17.1006C21.8944 12.3186 25.8041 8.42034 30.6 8.42034C35.3959 8.42034 39.3056 12.3186 39.3056 17.1006C39.3056 21.8825 35.3959 25.7808 30.6 25.7808C30.5479 25.7808 30.4436 25.7808 30.3915 25.7808L22.5721 31.3424C22.5721 31.4463 22.5721 31.5503 22.5721 31.6542C22.5721 35.2407 19.6528 38.1514 16.0559 38.1514C12.876 38.1514 10.2695 35.9164 9.64395 32.9017L0.781942 29.2633C3.5448 38.9311 12.4068 46 22.9891 46C35.7087 46 46.0303 35.7085 46.0303 23.026C46.0303 10.2915 35.7087 0 22.9891 0Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M14.44 34.8766L11.625 33.7331C12.1463 34.7726 12.9804 35.6562 14.1272 36.124C16.6294 37.1636 19.4966 35.9681 20.5391 33.4732C21.0604 32.2777 21.0604 30.9263 20.5391 29.7308C20.0178 28.5353 19.0795 27.5997 17.8805 27.08C16.6816 26.5602 15.3783 26.6122 14.2836 27.028L17.2029 28.2235C19.0274 29.0031 19.9136 31.0822 19.1316 32.9014C18.4018 34.7726 16.2645 35.6562 14.44 34.8766Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M36.3857 17.0488C36.3857 13.8782 33.7793 11.2793 30.5994 11.2793C27.4195 11.2793 24.813 13.8782 24.813 17.0488C24.813 20.2194 27.4195 22.8703 30.5994 22.8703C33.7793 22.8703 36.3857 20.2714 36.3857 17.0488ZM26.2205 17.0488C26.2205 14.6578 28.1493 12.6827 30.5994 12.6827C32.9973 12.6827 34.9782 14.6058 34.9782 17.0488C34.9782 19.4397 33.0495 21.3629 30.5994 21.3629C28.2014 21.4149 26.2205 19.4397 26.2205 17.0488Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M70.6879 15.7489L69.1241 18.4517C67.9251 17.6201 66.3091 17.1003 64.9016 17.1003C63.2856 17.1003 62.2951 17.776 62.2951 18.9715C62.2951 20.4269 64.0675 20.7387 66.674 21.6743C69.489 22.6619 71.105 23.8574 71.105 26.4043C71.105 29.9387 68.3421 31.9139 64.3282 31.9139C62.3994 31.9139 60.0014 31.3941 58.229 30.3026L59.3759 27.2879C60.8355 28.0675 62.6079 28.5353 64.1718 28.5353C66.3091 28.5353 67.2995 27.7557 67.2995 26.6122C67.2995 25.3127 65.7878 24.8969 63.2856 24.0653C60.4706 23.1297 58.5418 21.8822 58.5418 19.0235C58.5418 15.8009 61.1483 13.9297 64.8494 13.9297C67.4038 14.0336 69.489 14.8653 70.6879 15.7489Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M82.7305 17.4643V31.6542H79.0815V17.4643H73.8164V14.3457H87.9956V17.4643H82.7305Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M95.6574 17.4124V21.3107H102.643V24.4293H95.6574V28.4836H103.737V31.6022H92.0083V14.3457H103.737V17.4643H95.6574V17.4124Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M111.87 28.2756L110.723 31.6542H106.917L113.434 14.3457H117.083L123.755 31.6542H119.793L118.594 28.2756H111.87ZM115.258 18.4519L112.912 25.3649H117.708L115.258 18.4519Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M142.47 21.0508L137.726 31.1864H135.693L131.001 21.1547V31.7062H127.509V14.3457H131.001L136.84 26.8723L142.47 14.3457H145.963V31.6542H142.47V21.0508Z",
-            fill: "#E0E1E6",
-          }),
-          _.createElement("path", {
-            _: "M153 16.5288C153 18.0361 151.905 18.9197 150.602 18.9197C149.299 18.9197 148.204 17.9841 148.204 16.5288C148.204 15.0214 149.351 14.1378 150.602 14.1378C151.853 14.0858 153 15.0214 153 16.5288ZM148.569 16.5288C148.569 17.7762 149.455 18.5559 150.55 18.5559C151.645 18.5559 152.531 17.7762 152.531 16.5288C152.531 15.2813 151.645 14.5016 150.55 14.5016C149.455 14.5016 148.569 15.2813 148.569 16.5288ZM150.602 15.2813C151.228 15.2813 151.436 15.5932 151.436 15.957C151.436 16.2689 151.228 16.4768 151.019 16.6327L151.593 17.6723H151.123L150.654 16.7367H150.133V17.6723H149.768V15.2813H150.602ZM150.185 16.3728H150.602C150.863 16.3728 151.019 16.2169 151.019 16.009C151.019 15.8011 150.915 15.6451 150.602 15.6451H150.185V16.3728Z",
-            fill: "#E0E1E6",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 153 46",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _.className,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M22.9891 0C10.8429 0 0.93833 9.30396 0 21.1548L12.3547 26.2486C13.3973 25.5209 14.6484 25.1051 16.0037 25.1051C16.108 25.1051 16.2644 25.1051 16.3687 25.1051L21.8944 17.2045C21.8944 17.1525 21.8944 17.1525 21.8944 17.1006C21.8944 12.3186 25.8041 8.42034 30.6 8.42034C35.3959 8.42034 39.3056 12.3186 39.3056 17.1006C39.3056 21.8825 35.3959 25.7808 30.6 25.7808C30.5479 25.7808 30.4436 25.7808 30.3915 25.7808L22.5721 31.3424C22.5721 31.4463 22.5721 31.5503 22.5721 31.6542C22.5721 35.2407 19.6528 38.1514 16.0559 38.1514C12.876 38.1514 10.2695 35.9164 9.64395 32.9017L0.781942 29.2633C3.5448 38.9311 12.4068 46 22.9891 46C35.7087 46 46.0303 35.7085 46.0303 23.026C46.0303 10.2915 35.7087 0 22.9891 0Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M14.44 34.8766L11.625 33.7331C12.1463 34.7726 12.9804 35.6562 14.1272 36.124C16.6294 37.1636 19.4966 35.9681 20.5391 33.4732C21.0604 32.2777 21.0604 30.9263 20.5391 29.7308C20.0178 28.5353 19.0795 27.5997 17.8805 27.08C16.6816 26.5602 15.3783 26.6122 14.2836 27.028L17.2029 28.2235C19.0274 29.0031 19.9136 31.0822 19.1316 32.9014C18.4018 34.7726 16.2645 35.6562 14.44 34.8766Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M36.3857 17.0488C36.3857 13.8782 33.7793 11.2793 30.5994 11.2793C27.4195 11.2793 24.813 13.8782 24.813 17.0488C24.813 20.2194 27.4195 22.8703 30.5994 22.8703C33.7793 22.8703 36.3857 20.2714 36.3857 17.0488ZM26.2205 17.0488C26.2205 14.6578 28.1493 12.6827 30.5994 12.6827C32.9973 12.6827 34.9782 14.6058 34.9782 17.0488C34.9782 19.4397 33.0495 21.3629 30.5994 21.3629C28.2014 21.4149 26.2205 19.4397 26.2205 17.0488Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M70.6879 15.7489L69.1241 18.4517C67.9251 17.6201 66.3091 17.1003 64.9016 17.1003C63.2856 17.1003 62.2951 17.776 62.2951 18.9715C62.2951 20.4269 64.0675 20.7387 66.674 21.6743C69.489 22.6619 71.105 23.8574 71.105 26.4043C71.105 29.9387 68.3421 31.9139 64.3282 31.9139C62.3994 31.9139 60.0014 31.3941 58.229 30.3026L59.3759 27.2879C60.8355 28.0675 62.6079 28.5353 64.1718 28.5353C66.3091 28.5353 67.2995 27.7557 67.2995 26.6122C67.2995 25.3127 65.7878 24.8969 63.2856 24.0653C60.4706 23.1297 58.5418 21.8822 58.5418 19.0235C58.5418 15.8009 61.1483 13.9297 64.8494 13.9297C67.4038 14.0336 69.489 14.8653 70.6879 15.7489Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M82.7305 17.4643V31.6542H79.0815V17.4643H73.8164V14.3457H87.9956V17.4643H82.7305Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M95.6574 17.4124V21.3107H102.643V24.4293H95.6574V28.4836H103.737V31.6022H92.0083V14.3457H103.737V17.4643H95.6574V17.4124Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M111.87 28.2756L110.723 31.6542H106.917L113.434 14.3457H117.083L123.755 31.6542H119.793L118.594 28.2756H111.87ZM115.258 18.4519L112.912 25.3649H117.708L115.258 18.4519Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M142.47 21.0508L137.726 31.1864H135.693L131.001 21.1547V31.7062H127.509V14.3457H131.001L136.84 26.8723L142.47 14.3457H145.963V31.6542H142.47V21.0508Z",
+              fill: "#E0E1E6",
+            }),
+            (0, _.jsx)("path", {
+              _: "M153 16.5288C153 18.0361 151.905 18.9197 150.602 18.9197C149.299 18.9197 148.204 17.9841 148.204 16.5288C148.204 15.0214 149.351 14.1378 150.602 14.1378C151.853 14.0858 153 15.0214 153 16.5288ZM148.569 16.5288C148.569 17.7762 149.455 18.5559 150.55 18.5559C151.645 18.5559 152.531 17.7762 152.531 16.5288C152.531 15.2813 151.645 14.5016 150.55 14.5016C149.455 14.5016 148.569 15.2813 148.569 16.5288ZM150.602 15.2813C151.228 15.2813 151.436 15.5932 151.436 15.957C151.436 16.2689 151.228 16.4768 151.019 16.6327L151.593 17.6723H151.123L150.654 16.7367H150.133V17.6723H149.768V15.2813H150.602ZM150.185 16.3728H150.602C150.863 16.3728 151.019 16.2169 151.019 16.009C151.019 15.8011 150.915 15.6451 150.602 15.6451H150.185V16.3728Z",
+              fill: "#E0E1E6",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 232.73 46.07",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _.className,
-            fill: "#E0E1E6",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 232.73 46.07",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _.className,
+          fill: "#E0E1E6",
+          children: [
+            (0, _.jsxs)("g", {
               stroke: "null",
               _: "svg_2",
-            },
-            _.createElement("path", {
-              stroke: "null",
-              _: "svg_3",
-              _: "m21.73862,4.25158c-10.07896,0 -18.33997,7.77507 -19.12529,17.65445l10.28722,4.25199c0.87209,-0.59441 1.92641,-0.94585 3.05883,-0.94585c0.09979,0 0.20392,0.00434 0.30371,0.00868l4.57306,-6.62964c0,-0.03037 0,-0.06074 0,-0.09545c0,-3.99167 3.2454,-7.23707 7.23707,-7.23707c3.99167,0 7.23707,3.2454 7.23707,7.23707c0,3.99167 -3.2454,7.23707 -7.23707,7.23707c-0.0564,0 -0.10847,0 -0.16487,-0.00434l-6.52551,4.65984c0.00434,0.08678 0.00868,0.16921 0.00868,0.25599c0,2.99809 -2.43839,5.43214 -5.43214,5.43214c-2.62929,0 -4.82905,-1.87869 -5.32801,-4.36046l-7.35855,-3.04148c2.27785,8.05709 9.67979,13.96216 18.4658,13.96216c10.59961,0 19.19471,-8.5951 19.19471,-19.19471c0,-10.59527 -8.5951,-19.19037 -19.19471,-19.19037",
+              children: [
+                (0, _.jsx)("path", {
+                  stroke: "null",
+                  _: "svg_3",
+                  _: "m21.73862,4.25158c-10.07896,0 -18.33997,7.77507 -19.12529,17.65445l10.28722,4.25199c0.87209,-0.59441 1.92641,-0.94585 3.05883,-0.94585c0.09979,0 0.20392,0.00434 0.30371,0.00868l4.57306,-6.62964c0,-0.03037 0,-0.06074 0,-0.09545c0,-3.99167 3.2454,-7.23707 7.23707,-7.23707c3.99167,0 7.23707,3.2454 7.23707,7.23707c0,3.99167 -3.2454,7.23707 -7.23707,7.23707c-0.0564,0 -0.10847,0 -0.16487,-0.00434l-6.52551,4.65984c0.00434,0.08678 0.00868,0.16921 0.00868,0.25599c0,2.99809 -2.43839,5.43214 -5.43214,5.43214c-2.62929,0 -4.82905,-1.87869 -5.32801,-4.36046l-7.35855,-3.04148c2.27785,8.05709 9.67979,13.96216 18.4658,13.96216c10.59961,0 19.19471,-8.5951 19.19471,-19.19471c0,-10.59527 -8.5951,-19.19037 -19.19471,-19.19037",
+                }),
+                (0, _.jsx)("path", {
+                  stroke: "null",
+                  _: "svg_4",
+                  _: "m14.64039,33.37339l-2.35595,-0.97622c0.41652,0.86775 1.1411,1.59667 2.09996,2.00017c2.07393,0.86341 4.46459,-0.12149 5.33235,-2.19542c0.41652,-1.00226 0.42086,-2.11298 0.00434,-3.11957c-0.41652,-1.00659 -1.1975,-1.79191 -2.19976,-2.21277c-0.99792,-0.41652 -2.06525,-0.39917 -3.00677,-0.04773l2.43405,1.00659c1.53159,0.6378 2.25182,2.395 1.61836,3.92659c-0.6378,1.53592 -2.395,2.25616 -3.92659,1.61836",
+                }),
+                (0, _.jsx)("path", {
+                  stroke: "null",
+                  _: "svg_5",
+                  _: "m32.89793,18.49576c0,-2.65966 -2.16505,-4.82471 -4.82471,-4.82471c-2.65966,0 -4.82471,2.16505 -4.82471,4.82471c0,2.65966 2.16505,4.82037 4.82471,4.82037c2.65966,0.00434 4.82471,-2.16071 4.82471,-4.82037m-8.4389,-0.00434c0,-2.00017 1.6227,-3.62287 3.62287,-3.62287c2.00017,0 3.62287,1.6227 3.62287,3.62287c0,2.00017 -1.6227,3.62287 -3.62287,3.62287c-2.00017,0 -3.62287,-1.6227 -3.62287,-3.62287",
+                }),
+              ],
             }),
-            _.createElement("path", {
+            (0, _.jsx)("path", {
               stroke: "null",
-              _: "svg_4",
-              _: "m14.64039,33.37339l-2.35595,-0.97622c0.41652,0.86775 1.1411,1.59667 2.09996,2.00017c2.07393,0.86341 4.46459,-0.12149 5.33235,-2.19542c0.41652,-1.00226 0.42086,-2.11298 0.00434,-3.11957c-0.41652,-1.00659 -1.1975,-1.79191 -2.19976,-2.21277c-0.99792,-0.41652 -2.06525,-0.39917 -3.00677,-0.04773l2.43405,1.00659c1.53159,0.6378 2.25182,2.395 1.61836,3.92659c-0.6378,1.53592 -2.395,2.25616 -3.92659,1.61836",
+              _: "svg_6",
+              _: "m46.71333,8.08293c0,2.23529 -1.67014,3.62707 -3.5849,3.62707c-1.91476,0 -3.60177,-1.39178 -3.60177,-3.62707c0,-2.23529 1.68701,-3.6102 3.60177,-3.6102c1.91476,-0.00844 3.5849,1.37491 3.5849,3.6102m-6.64682,0c0,1.90632 1.39178,3.1041 3.05349,3.1041c1.66171,0 3.04505,-1.19778 3.04505,-3.1041c0,-1.91476 -1.38335,-3.09566 -3.04505,-3.09566c-1.65327,0 -3.05349,1.18934 -3.05349,3.09566m3.09566,-1.84728c0.95316,0 1.23152,0.49767 1.23152,1.01221c0,0.48923 -0.29523,0.8182 -0.64106,0.9869l0.83507,1.57736l-0.63263,0l-0.71698,-1.40865l-0.76759,0l0,1.40865l-0.52297,0l0,-3.56803l1.21465,0l0,-0.00844zm-0.69167,1.67858l0.65793,0c0.43019,0 0.70011,-0.27836 0.70011,-0.61576c0,-0.3374 -0.17714,-0.56515 -0.69167,-0.56515l-0.66637,0l0,1.18091z",
             }),
-            _.createElement("path", {
-              stroke: "null",
-              _: "svg_5",
-              _: "m32.89793,18.49576c0,-2.65966 -2.16505,-4.82471 -4.82471,-4.82471c-2.65966,0 -4.82471,2.16505 -4.82471,4.82471c0,2.65966 2.16505,4.82037 4.82471,4.82037c2.65966,0.00434 4.82471,-2.16071 4.82471,-4.82037m-8.4389,-0.00434c0,-2.00017 1.6227,-3.62287 3.62287,-3.62287c2.00017,0 3.62287,1.6227 3.62287,3.62287c0,2.00017 -1.6227,3.62287 -3.62287,3.62287c-2.00017,0 -3.62287,-1.6227 -3.62287,-3.62287",
-            }),
-          ),
-          _.createElement("path", {
-            stroke: "null",
-            _: "svg_6",
-            _: "m46.71333,8.08293c0,2.23529 -1.67014,3.62707 -3.5849,3.62707c-1.91476,0 -3.60177,-1.39178 -3.60177,-3.62707c0,-2.23529 1.68701,-3.6102 3.60177,-3.6102c1.91476,-0.00844 3.5849,1.37491 3.5849,3.6102m-6.64682,0c0,1.90632 1.39178,3.1041 3.05349,3.1041c1.66171,0 3.04505,-1.19778 3.04505,-3.1041c0,-1.91476 -1.38335,-3.09566 -3.04505,-3.09566c-1.65327,0 -3.05349,1.18934 -3.05349,3.09566m3.09566,-1.84728c0.95316,0 1.23152,0.49767 1.23152,1.01221c0,0.48923 -0.29523,0.8182 -0.64106,0.9869l0.83507,1.57736l-0.63263,0l-0.71698,-1.40865l-0.76759,0l0,1.40865l-0.52297,0l0,-3.56803l1.21465,0l0,-0.00844zm-0.69167,1.67858l0.65793,0c0.43019,0 0.70011,-0.27836 0.70011,-0.61576c0,-0.3374 -0.17714,-0.56515 -0.69167,-0.56515l-0.66637,0l0,1.18091z",
-          }),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               _: "svg_7",
-            },
-            _.createElement("path", {
-              _: "svg_8",
-              _: "m77.46999,20.31667c-2.27,6.12 -7.24,10.13 -13.11,12.2c-0.54,-1.12 -1.7,-2.9 -2.65,-3.76c3.6,-1.03 6.95,-3.06 9.14,-5.63l-7.24,0l0,-3.89l10.05,0l0.79,-0.12l3.02,1.2zm-15.02,20.43c1.7,-1.57 3.39,-4.01 4.47,-6l4.22,2.11c-1.2,2.03 -2.73,4.55 -4.34,6.29l-4.35,-2.4zm8.57,-29.9l-8.23,0l0,-4.26l8.23,0l0,-2.28l5.01,0l0,2.28l10.42,0l0,-2.28l5.01,0l0,2.28l8.15,0l0,4.26l-8.15,0l0,2.15l-5.01,0l0,-2.15l-10.42,0l0,2.15l-5.01,0l0,-2.15zm-2.57,19.85l24.53,0l0,4.1l-24.53,0l0,-4.1zm28.71,-9.8c-1.86,1.45 -3.85,2.81 -5.59,3.81c2.52,1.24 5.46,2.19 8.48,2.77c-1.03,0.95 -2.4,2.9 -3.1,4.14c-5.29,-1.41 -10.05,-4.14 -13.44,-7.82l0,1.99c0,2.03 -0.33,2.94 -1.78,3.52c-1.32,0.54 -3.14,0.58 -5.46,0.58c-0.25,-1.2 -0.87,-2.69 -1.41,-3.76c1.37,0.08 2.85,0.08 3.27,0.08c0.46,-0.04 0.62,-0.12 0.62,-0.58l0,-5.83c1.41,-0.62 2.85,-1.45 4.26,-2.32l-14.23,0l0,-3.72l19.28,0l0.99,-0.25l2.98,2.52c-1.9,1.49 -4.18,3.06 -6.58,4.38c0.7,0.79 1.57,1.53 2.52,2.23c1.78,-1.28 3.97,-3.06 5.25,-4.38l3.94,2.64zm-19.11,14.89c0.7,1.99 1.24,4.63 1.28,6.29l-4.88,0.75c0.04,-1.66 -0.37,-4.34 -0.95,-6.41l4.55,-0.63zm8.65,-0.54c1.16,1.86 2.27,4.3 2.61,6l-4.51,1.41c-0.29,-1.65 -1.28,-4.22 -2.36,-6.12l4.26,-1.29zm8.39,-0.54c1.86,1.82 4.05,4.38 5.09,6.21l-4.43,2.07c-0.91,-1.78 -2.98,-4.47 -4.8,-6.37l4.14,-1.91z",
+              children: [
+                (0, _.jsx)("path", {
+                  _: "svg_8",
+                  _: "m77.46999,20.31667c-2.27,6.12 -7.24,10.13 -13.11,12.2c-0.54,-1.12 -1.7,-2.9 -2.65,-3.76c3.6,-1.03 6.95,-3.06 9.14,-5.63l-7.24,0l0,-3.89l10.05,0l0.79,-0.12l3.02,1.2zm-15.02,20.43c1.7,-1.57 3.39,-4.01 4.47,-6l4.22,2.11c-1.2,2.03 -2.73,4.55 -4.34,6.29l-4.35,-2.4zm8.57,-29.9l-8.23,0l0,-4.26l8.23,0l0,-2.28l5.01,0l0,2.28l10.42,0l0,-2.28l5.01,0l0,2.28l8.15,0l0,4.26l-8.15,0l0,2.15l-5.01,0l0,-2.15l-10.42,0l0,2.15l-5.01,0l0,-2.15zm-2.57,19.85l24.53,0l0,4.1l-24.53,0l0,-4.1zm28.71,-9.8c-1.86,1.45 -3.85,2.81 -5.59,3.81c2.52,1.24 5.46,2.19 8.48,2.77c-1.03,0.95 -2.4,2.9 -3.1,4.14c-5.29,-1.41 -10.05,-4.14 -13.44,-7.82l0,1.99c0,2.03 -0.33,2.94 -1.78,3.52c-1.32,0.54 -3.14,0.58 -5.46,0.58c-0.25,-1.2 -0.87,-2.69 -1.41,-3.76c1.37,0.08 2.85,0.08 3.27,0.08c0.46,-0.04 0.62,-0.12 0.62,-0.58l0,-5.83c1.41,-0.62 2.85,-1.45 4.26,-2.32l-14.23,0l0,-3.72l19.28,0l0.99,-0.25l2.98,2.52c-1.9,1.49 -4.18,3.06 -6.58,4.38c0.7,0.79 1.57,1.53 2.52,2.23c1.78,-1.28 3.97,-3.06 5.25,-4.38l3.94,2.64zm-19.11,14.89c0.7,1.99 1.24,4.63 1.28,6.29l-4.88,0.75c0.04,-1.66 -0.37,-4.34 -0.95,-6.41l4.55,-0.63zm8.65,-0.54c1.16,1.86 2.27,4.3 2.61,6l-4.51,1.41c-0.29,-1.65 -1.28,-4.22 -2.36,-6.12l4.26,-1.29zm8.39,-0.54c1.86,1.82 4.05,4.38 5.09,6.21l-4.43,2.07c-0.91,-1.78 -2.98,-4.47 -4.8,-6.37l4.14,-1.91z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_9",
+                  _: "m110.14999,23.78667c-1.57,-1.12 -4.84,-2.9 -7.16,-4.09l2.61,-3.64c2.23,0.91 5.58,2.56 7.32,3.64l-2.77,4.09zm-5.79,15.14c2.03,-3.06 4.92,-8.07 7.16,-12.74l3.72,3.19c-1.94,4.22 -4.34,8.81 -6.58,12.74l-4.3,-3.19zm8.02,-26.02c-1.49,-1.28 -4.67,-3.14 -6.95,-4.38l2.73,-3.56c2.23,1.03 5.46,2.73 7.07,3.93l-2.85,4.01zm7.62,2.15c-0.91,1.32 -1.86,2.48 -2.81,3.52c-0.91,-0.87 -2.85,-2.36 -3.93,-3.02c2.98,-2.69 5.63,-6.99 7.07,-11.34l4.72,1.28c-0.41,0.99 -0.83,2.03 -1.32,3.06l18.08,0l0,4.22l-20.31,0c-0.46,0.74 -0.91,1.45 -1.41,2.15l17.95,0l0,3.97l-18.04,0l0,-3.84zm17.33,6.17c-0.08,10.05 -0.04,17.13 1.41,17.13c0.5,0 0.66,-2.23 0.7,-5.29c0.83,1.08 1.99,2.32 2.9,3.06c-0.33,4.67 -1.12,6.83 -3.97,6.87c-4.96,-0.04 -5.63,-6.87 -5.79,-17.5l-16.59,0l0,-4.3l19.28,0l0,0.04l2.06,0l0,-0.01z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_10",
+                  _: "m182.70999,29.24667l-16.26,0l0,13.65l-5.13,0l0,-13.65l-16.09,0l0,-5.01l16.09,0l0,-12.53l-13.94,0l0,-4.88l32.93,0l0,4.88l-13.86,0l0,12.53l16.26,0l0,5.01zm-28.3,-16.21c1.37,2.65 2.85,6.12 3.31,8.44l-4.8,1.49c-0.41,-2.19 -1.7,-5.83 -3.02,-8.6l4.51,-1.33zm15.35,8.6c1.32,-2.4 2.81,-6.04 3.6,-8.73l5.25,1.32c-1.49,3.19 -3.19,6.54 -4.55,8.65l-4.3,-1.24z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_11",
+                  _: "m212.48999,8.06667c3.81,3.56 8.73,8.65 10.88,12.12l-4.18,3.02c-0.54,-0.91 -1.28,-1.99 -2.15,-3.14c-21.97,1.08 -24.9,1.16 -27.09,1.9c-0.25,-0.99 -1.03,-3.43 -1.61,-4.72c1.08,-0.29 2.07,-1.08 3.43,-2.4c1.45,-1.28 5.96,-6.29 8.77,-11.25l4.96,2.11c-2.61,3.85 -5.87,7.53 -9.02,10.55l16.96,-0.54c-1.61,-1.82 -3.27,-3.56 -4.8,-5.09l3.85,-2.56zm-21.18,16.63l27.88,0l0,18.12l-5.29,0l0,-2.07l-17.54,0l0,2.11l-5.05,0l0,-18.16zm5.04,4.72l0,6.62l17.54,0l0,-6.62l-17.54,0z",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              _: "svg_9",
-              _: "m110.14999,23.78667c-1.57,-1.12 -4.84,-2.9 -7.16,-4.09l2.61,-3.64c2.23,0.91 5.58,2.56 7.32,3.64l-2.77,4.09zm-5.79,15.14c2.03,-3.06 4.92,-8.07 7.16,-12.74l3.72,3.19c-1.94,4.22 -4.34,8.81 -6.58,12.74l-4.3,-3.19zm8.02,-26.02c-1.49,-1.28 -4.67,-3.14 -6.95,-4.38l2.73,-3.56c2.23,1.03 5.46,2.73 7.07,3.93l-2.85,4.01zm7.62,2.15c-0.91,1.32 -1.86,2.48 -2.81,3.52c-0.91,-0.87 -2.85,-2.36 -3.93,-3.02c2.98,-2.69 5.63,-6.99 7.07,-11.34l4.72,1.28c-0.41,0.99 -0.83,2.03 -1.32,3.06l18.08,0l0,4.22l-20.31,0c-0.46,0.74 -0.91,1.45 -1.41,2.15l17.95,0l0,3.97l-18.04,0l0,-3.84zm17.33,6.17c-0.08,10.05 -0.04,17.13 1.41,17.13c0.5,0 0.66,-2.23 0.7,-5.29c0.83,1.08 1.99,2.32 2.9,3.06c-0.33,4.67 -1.12,6.83 -3.97,6.87c-4.96,-0.04 -5.63,-6.87 -5.79,-17.5l-16.59,0l0,-4.3l19.28,0l0,0.04l2.06,0l0,-0.01z",
-            }),
-            _.createElement("path", {
-              _: "svg_10",
-              _: "m182.70999,29.24667l-16.26,0l0,13.65l-5.13,0l0,-13.65l-16.09,0l0,-5.01l16.09,0l0,-12.53l-13.94,0l0,-4.88l32.93,0l0,4.88l-13.86,0l0,12.53l16.26,0l0,5.01zm-28.3,-16.21c1.37,2.65 2.85,6.12 3.31,8.44l-4.8,1.49c-0.41,-2.19 -1.7,-5.83 -3.02,-8.6l4.51,-1.33zm15.35,8.6c1.32,-2.4 2.81,-6.04 3.6,-8.73l5.25,1.32c-1.49,3.19 -3.19,6.54 -4.55,8.65l-4.3,-1.24z",
-            }),
-            _.createElement("path", {
-              _: "svg_11",
-              _: "m212.48999,8.06667c3.81,3.56 8.73,8.65 10.88,12.12l-4.18,3.02c-0.54,-0.91 -1.28,-1.99 -2.15,-3.14c-21.97,1.08 -24.9,1.16 -27.09,1.9c-0.25,-0.99 -1.03,-3.43 -1.61,-4.72c1.08,-0.29 2.07,-1.08 3.43,-2.4c1.45,-1.28 5.96,-6.29 8.77,-11.25l4.96,2.11c-2.61,3.85 -5.87,7.53 -9.02,10.55l16.96,-0.54c-1.61,-1.82 -3.27,-3.56 -4.8,-5.09l3.85,-2.56zm-21.18,16.63l27.88,0l0,18.12l-5.29,0l0,-2.07l-17.54,0l0,2.11l-5.05,0l0,-18.16zm5.04,4.72l0,6.62l17.54,0l0,-6.62l-17.54,0z",
-            }),
-          ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               _: "svg_12",
-            },
-            _.createElement("path", {
-              _: "svg_13",
-              _: "m224.05999,2.64667l-1.2,0l0,-0.43l2.92,0l0,0.43l-1.21,0l0,3.52l-0.52,0l0,-3.52l0.01,0z",
+              children: [
+                (0, _.jsx)("path", {
+                  _: "svg_13",
+                  _: "m224.05999,2.64667l-1.2,0l0,-0.43l2.92,0l0,0.43l-1.21,0l0,3.52l-0.52,0l0,-3.52l0.01,0z",
+                }),
+                (0, _.jsx)("path", {
+                  _: "svg_14",
+                  _: "m229.54999,4.42667c-0.03,-0.55 -0.06,-1.21 -0.06,-1.71l-0.02,0c-0.13,0.46 -0.3,0.96 -0.5,1.5l-0.7,1.92l-0.39,0l-0.64,-1.88c-0.19,-0.56 -0.35,-1.07 -0.46,-1.54l-0.01,0c-0.01,0.49 -0.04,1.15 -0.08,1.75l-0.11,1.69l-0.49,0l0.28,-3.95l0.65,0l0.67,1.91c0.16,0.49 0.3,0.92 0.4,1.33l0.02,0c0.1,-0.4 0.24,-0.83 0.42,-1.33l0.7,-1.91l0.65,0l0.25,3.95l-0.5,0l-0.08,-1.73z",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              _: "svg_14",
-              _: "m229.54999,4.42667c-0.03,-0.55 -0.06,-1.21 -0.06,-1.71l-0.02,0c-0.13,0.46 -0.3,0.96 -0.5,1.5l-0.7,1.92l-0.39,0l-0.64,-1.88c-0.19,-0.56 -0.35,-1.07 -0.46,-1.54l-0.01,0c-0.01,0.49 -0.04,1.15 -0.08,1.75l-0.11,1.69l-0.49,0l0.28,-3.95l0.65,0l0.67,1.91c0.16,0.49 0.3,0.92 0.4,1.33l0.02,0c0.1,-0.4 0.24,-0.83 0.42,-1.33l0.7,-1.91l0.65,0l0.25,3.95l-0.5,0l-0.08,-1.73z",
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            alignItems: "center",
-            justifyContent: "center",
-          },
-          _.createElement(_._, null),
-        );
+        return (0, _.jsx)(_, {
+          alignItems: "center",
+          justifyContent: "center",
+          children: (0, _.jsx)(_._, {}),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return _._.IN_CLIENT && (0, _._)(_._.LAUNCHER_TYPE);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9938,6 +9677,367 @@
               ..._.location.state,
             })
           : _.push(`?${_.toString()}`);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ =
+        __webpack_require__._ +
+        "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+          className: _,
+          size: __webpack_require__,
+          string: _,
+          position: _,
+          static: _,
+          msDelayAppear: _,
+        } = _;
+        let _ = [
+          _().LoadingWrapper,
+          "SteamLogoThrobber",
+          _(__webpack_require__),
+        ];
+        const [_, _] = _.useState(!_),
+          _ = !(0, _._)();
+        return (
+          (0, _.useEffect)(() => {
+            if (_) return;
+            const _ = setTimeout(() => _(!0), _);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          void 0 === _ && _.push(_().noString),
+          _ && _.push(_),
+          _ && _.push(_().Static),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
+              _ &&
+                _ &&
+                (0, _.jsx)("div", {
+                  className: _.join(" "),
+                  children: (0, _.jsx)("div", {
+                    className: _().NewThrobber,
+                    children: (0, _.jsx)("img", {
+                      src: (0, _._)(_),
+                    }),
+                  }),
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  className: _().ThrobberText,
+                  children: _,
+                }),
+            ],
+          })
+        );
+      });
+      _.memo(function (_) {
+        const {
+          className: _,
+          size: __webpack_require__,
+          string: _,
+          position: _,
+          static: _,
+          msDelayAppear: _,
+        } = _;
+        let _ = [
+          _().LoadingWrapper,
+          "SteamLogoThrobber",
+          _(__webpack_require__),
+        ];
+        const [_, _] = _.useState(!_);
+        return (
+          (0, _.useEffect)(() => {
+            if (_) return;
+            const _ = setTimeout(() => _(!0), _);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          void 0 === _ && _.push(_().noString),
+          _ && _.push(_),
+          _ && _.push(_().Static),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _.join(" "),
+                  children: (0, _.jsxs)("div", {
+                    className: _().Throbber,
+                    children: [
+                      (0, _.jsx)(_, {
+                        className: _().base,
+                      }),
+                      (0, _.jsx)(_, {
+                        className: _().blur,
+                      }),
+                    ],
+                  }),
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  className: _().ThrobberText,
+                  children: _,
+                }),
+            ],
+          })
+        );
+      });
+      function _(_) {
+        switch (_) {
+          case "small":
+            return _().throbber_small;
+          case "medium":
+            return _().throbber_medium;
+          case "xlarge":
+            return _().throbber_xlarge;
+          case "xxlarge":
+            return _().throbber_xxlarge;
+          default:
+            return _().throbber_large;
+        }
+      }
+      function _(_) {
+        let _ = "SVGIcon_Button SVGIcon_Throbber ";
+        return (
+          _.className && (_ += _.className),
+          (0, _.jsxs)("svg", {
+            version: "1.1",
+            _: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: _,
+            _: "0px",
+            _: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, _.jsxs)("g", {
+                className: _().partCircle,
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M201.432,101.166",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("g", {
+                className: _().mainOutline,
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundFill,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuterOutline,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber01,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber02,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber03,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber04,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber05,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber06,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber07,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber08,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber09,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber10,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber11,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber12,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber13,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber14,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber15,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                ],
+              }),
+              (0, _.jsx)("g", {
+                className: _().bottomCircle,
+                children: (0, _.jsx)("path", {
+                  fill: "#ffffff",
+                  _: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                }),
+              }),
+              (0, _.jsx)("g", {
+                className: _().topCircle,
+                children: (0, _.jsx)("circle", {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  _: "161.731",
+                  _: "101.274",
+                  _: "23.019",
+                }),
+              }),
+            ],
+          })
+        );
       }
     },
   },

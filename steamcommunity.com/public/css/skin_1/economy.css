@@ -1166,7 +1166,8 @@ a.game_button {
 }
 
 .market_headertip_container {
-
+	padding: 6px;
+	display: flex;
 }
 
 .market_headertip_container:nth-child(3) {
@@ -1177,6 +1178,7 @@ a.game_button {
 	background-color: #2B2E34;
 	margin-top: 20px;
 	border: 1px solid #632929;
+
 }
 
 .market_headertip {

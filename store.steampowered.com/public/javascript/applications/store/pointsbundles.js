@@ -25,89 +25,84 @@
     },
     91855: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => b });
-      var r = n(90626),
-        l = n(92757),
-        a = n(43527),
-        c = n(75844),
-        s = n(22580),
-        o = n(54279),
-        i = n(59707),
-        d = n(99428),
-        m = n(61859),
-        u = n(63927),
-        f = n(87873),
-        p = n(32150),
-        _ = n(12711),
-        w = n(26590),
-        E = n(52038),
-        k = n(6519);
-      const b = (0, c.PA)((e) => {
+      n.r(t), n.d(t, { default: () => j });
+      var r = n(7850),
+        s = n(92757),
+        l = n(43527),
+        o = n(75844),
+        a = n(22580),
+        i = n(54279),
+        d = n(59707),
+        c = n(99428),
+        u = n(61859),
+        x = n(63927),
+        m = n(87873),
+        f = n(32150),
+        p = n(12711),
+        _ = n(26590),
+        h = n(52038),
+        w = n(6519);
+      const j = (0, o.PA)((e) => {
           const { bundleid: t } = e.match.params,
             n = parseInt(t),
-            c = r.createElement(l.rd, { to: a.B.LoyaltyStore() });
-          if (isNaN(n)) return c;
-          const [o] = s.DZ.Get().GetRewardDefinitions(n);
-          return o
-            ? 5 !== o.type && 6 !== o.type
-              ? c
-              : r.createElement(g, { bundle: o })
+            o = (0, r.jsx)(s.rd, { to: l.B.LoyaltyStore() });
+          if (isNaN(n)) return o;
+          const [i] = a.DZ.Get().GetRewardDefinitions(n);
+          return i
+            ? 5 !== i.type && 6 !== i.type
+              ? o
+              : (0, r.jsx)(b, { bundle: i })
             : null;
         }),
-        g = (0, c.PA)((e) => {
+        b = (0, o.PA)((e) => {
           const { bundle: t } = e,
-            n = s.DZ.Get().GetBundleOfferForUser(t);
-          return r.createElement(
-            o.jy,
-            null,
-            r.createElement(
-              d.az,
-              {
-                paddingY: "xlarge",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              },
-              r.createElement(h, { bundle: t, offer: n }),
-              0 === n.point_cost
-                ? r.createElement(x, { className: w.PrimaryRedeemButton })
-                : r.createElement(i.gs, {
-                    cost: n.point_cost,
-                    discount: n.discount,
-                    originalCost: n.original_point_cost,
-                    className: w.PrimaryRedeemButton,
-                    onClick: (e) => (0, i.U$)(e, t),
-                  }),
-              r.createElement(y, { offer: n }),
-            ),
-          );
+            n = a.DZ.Get().GetBundleOfferForUser(t);
+          return (0, r.jsx)(i.jy, {
+            children: (0, r.jsxs)(c.az, {
+              paddingY: "xlarge",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              children: [
+                (0, r.jsx)(k, { bundle: t, offer: n }),
+                0 === n.point_cost
+                  ? (0, r.jsx)(g, { className: _.PrimaryRedeemButton })
+                  : (0, r.jsx)(d.gs, {
+                      cost: n.point_cost,
+                      discount: n.discount,
+                      originalCost: n.original_point_cost,
+                      className: _.PrimaryRedeemButton,
+                      onClick: (e) => (0, d.U$)(e, t),
+                    }),
+                (0, r.jsx)(C, { offer: n }),
+              ],
+            }),
+          });
         }),
-        h = (0, c.PA)(({ bundle: e, offer: t }) => {
-          const n = (0, u.g)(e),
-            l = (0, m.we)("#RewardBundle_OfferDescription", t.discount);
-          return r.createElement(
-            d.az,
-            { paddingBottom: "xlarge" },
-            r.createElement(o.Ch, { title: n, subtitle: l }),
-          );
+        k = (0, o.PA)(({ bundle: e, offer: t }) => {
+          const n = (0, x.g)(e),
+            s = (0, u.we)("#RewardBundle_OfferDescription", t.discount);
+          return (0, r.jsx)(c.az, {
+            paddingBottom: "xlarge",
+            children: (0, r.jsx)(i.Ch, { title: n, subtitle: s }),
+          });
         }),
-        x = ({ className: e }) =>
-          r.createElement(
-            "div",
-            { className: (0, E.A)(e, w.AlreadyOwned) },
-            r.createElement(k.wK, { className: w.CheckmarkCircle }),
-            r.createElement(
-              "span",
-              { className: w.AlreadyOwnedText },
-              (0, m.we)("#Redeem_BundleItemOwned"),
-            ),
-          ),
-        y = (0, c.PA)((e) => {
+        g = ({ className: e }) =>
+          (0, r.jsxs)("div", {
+            className: (0, h.A)(e, _.AlreadyOwned),
+            children: [
+              (0, r.jsx)(w.wK, { className: _.CheckmarkCircle }),
+              (0, r.jsx)("span", {
+                className: _.AlreadyOwnedText,
+                children: (0, u.we)("#Redeem_BundleItemOwned"),
+              }),
+            ],
+          }),
+        C = (0, o.PA)((e) => {
           const { offer: t } = e;
-          return r.createElement(
-            f.Gq,
-            { title: (0, m.we)("#RewardBundle_BundleContentsSection_Title") },
-            r.createElement(p.n, {
+          return (0, r.jsx)(m.Gq, {
+            title: (0, u.we)("#RewardBundle_BundleContentsSection_Title"),
+            children: (0, r.jsx)(f.n, {
               getItems: (e, n) => ({
                 rewards: t.items.slice(e, n),
                 bLoadingMore: !1,
@@ -115,14 +110,17 @@
                 cMaxToReturn: t.items.length,
               }),
               renderItem: (e) =>
-                r.createElement(_.Fo, {
-                  key: e.defid,
-                  definition: e,
-                  purchaseable: !1,
-                  onClick: (t) => (0, i.iZ)(t, e),
-                }),
+                (0, r.jsx)(
+                  p.Fo,
+                  {
+                    definition: e,
+                    purchaseable: !1,
+                    onClick: (t) => (0, d.iZ)(t, e),
+                  },
+                  e.defid,
+                ),
             }),
-          );
+          });
         });
     },
   },

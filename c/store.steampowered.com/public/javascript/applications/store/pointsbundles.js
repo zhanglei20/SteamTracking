@@ -46,7 +46,7 @@
       const _ = (0, _._)((_) => {
           const { bundleid: _ } = _.match.params,
             _ = parseInt(_),
-            _ = _.createElement(_._, {
+            _ = (0, _.jsx)(_._, {
               _: _._.LoyaltyStore(),
             });
           if (isNaN(_)) return _;
@@ -54,7 +54,7 @@
           return _
             ? 5 !== _.type && 6 !== _.type
               ? _
-              : _.createElement(_, {
+              : (0, _.jsx)(_, {
                   bundle: _,
                 })
             : null;
@@ -62,77 +62,64 @@
         _ = (0, _._)((_) => {
           const { bundle: _ } = _,
             _ = _._.Get().GetBundleOfferForUser(_);
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                paddingY: "xlarge",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              },
-              _.createElement(_, {
-                bundle: _,
-                offer: _,
-              }),
-              0 === _.point_cost
-                ? _.createElement(_, {
-                    className: _.PrimaryRedeemButton,
-                  })
-                : _.createElement(_._, {
-                    cost: _.point_cost,
-                    discount: _.discount,
-                    originalCost: _.original_point_cost,
-                    className: _.PrimaryRedeemButton,
-                    onClick: (_) => (0, _._)(_, _),
-                  }),
-              _.createElement(_, {
-                offer: _,
-              }),
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              paddingY: "xlarge",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              children: [
+                (0, _.jsx)(_, {
+                  bundle: _,
+                  offer: _,
+                }),
+                0 === _.point_cost
+                  ? (0, _.jsx)(_, {
+                      className: _.PrimaryRedeemButton,
+                    })
+                  : (0, _.jsx)(_._, {
+                      cost: _.point_cost,
+                      discount: _.discount,
+                      originalCost: _.original_point_cost,
+                      className: _.PrimaryRedeemButton,
+                      onClick: (_) => (0, _._)(_, _),
+                    }),
+                (0, _.jsx)(_, {
+                  offer: _,
+                }),
+              ],
+            }),
+          });
         }),
         _ = (0, _._)(({ bundle: _, offer: _ }) => {
           const _ = (0, _._)(_),
             _ = (0, _._)("#RewardBundle_OfferDescription", _.discount);
-          return _.createElement(
-            _._,
-            {
-              paddingBottom: "xlarge",
-            },
-            _.createElement(_._, {
+          return (0, _.jsx)(_._, {
+            paddingBottom: "xlarge",
+            children: (0, _.jsx)(_._, {
               title: _,
               subtitle: _,
             }),
-          );
+          });
         }),
         _ = ({ className: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_, _.AlreadyOwned),
-            },
-            _.createElement(_._, {
-              className: _.CheckmarkCircle,
-            }),
-            _.createElement(
-              "span",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_, _.AlreadyOwned),
+            children: [
+              (0, _.jsx)(_._, {
+                className: _.CheckmarkCircle,
+              }),
+              (0, _.jsx)("span", {
                 className: _.AlreadyOwnedText,
-              },
-              (0, _._)("#Redeem_BundleItemOwned"),
-            ),
-          ),
+                children: (0, _._)("#Redeem_BundleItemOwned"),
+              }),
+            ],
+          }),
         _ = (0, _._)((_) => {
           const { offer: _ } = _;
-          return _.createElement(
-            _._,
-            {
-              title: (0, _._)("#RewardBundle_BundleContentsSection_Title"),
-            },
-            _.createElement(_._, {
+          return (0, _.jsx)(_._, {
+            title: (0, _._)("#RewardBundle_BundleContentsSection_Title"),
+            children: (0, _.jsx)(_._, {
               getItems: (_, _) => ({
                 rewards: _.items.slice(_, _),
                 bLoadingMore: !1,
@@ -140,14 +127,17 @@
                 cMaxToReturn: _.items.length,
               }),
               renderItem: (_) =>
-                _.createElement(_._, {
-                  key: _.defid,
-                  definition: _,
-                  purchaseable: !1,
-                  onClick: (_) => (0, _._)(_, _),
-                }),
+                (0, _.jsx)(
+                  _._,
+                  {
+                    definition: _,
+                    purchaseable: !1,
+                    onClick: (_) => (0, _._)(_, _),
+                  },
+                  _.defid,
+                ),
             }),
-          );
+          });
         });
     },
   },

@@ -2095,30 +2095,31 @@
       }
     },
     87700: (e, r, c) => {
-      c.d(r, { Bb: () => i, jY: () => s });
-      var n = c(90626),
-        t = c(48174);
-      const a = n.createContext({
+      c.d(r, { Bb: () => o, jY: () => i });
+      var n = c(7850),
+        t = c(90626),
+        a = c(48174);
+      const s = t.createContext({
         eConversionMethod: 1,
         setConversionMethod: (e) => {},
         rgAvailableConversionMethods: [],
       });
-      function s(e) {
+      function i(e) {
         const { eInitialConversionMethod: r } = e,
-          c = (0, t.cT)(),
-          [s, i] = n.useState(r || 1),
-          o = n.useMemo(() => {
+          c = (0, a.cT)(),
+          [i, o] = t.useState(r || 1),
+          u = t.useMemo(() => {
             const e = c ? c.GetAvailableConversionMethods() : [];
             return {
-              eConversionMethod: s,
-              setConversionMethod: i,
+              eConversionMethod: i,
+              setConversionMethod: o,
               rgAvailableConversionMethods: e,
             };
-          }, [s, i, c]);
-        return n.createElement(a.Provider, { value: o }, e.children);
+          }, [i, o, c]);
+        return (0, n.jsx)(s.Provider, { value: u, children: e.children });
       }
-      function i() {
-        return n.useContext(a).eConversionMethod;
+      function o() {
+        return t.useContext(s).eConversionMethod;
       }
     },
     48174: (e, r, c) => {

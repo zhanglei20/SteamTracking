@@ -15,6 +15,50 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
+        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
+        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
+        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
+        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
+        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
+        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
+        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
+        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
+        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
+        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
+        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
+        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
+        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
+        Reason: "_2h0GKAYcXRP10ryZHFn79d",
+        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         YoutubePreviewImage: "_3bVwKmAuh70AH8XVDnyf5z",
         YoutubePlayer: "_3oXEPQSJY3yN1IVhfxeSy0",
       };
@@ -212,6 +256,259 @@
           );
         });
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            bShowAsMuted: __webpack_require__,
+            bHidePrice: _,
+            bShowInLibraryInsteadOfPrice: _,
+            bHidePlatforms: _,
+            strClassName: _,
+            creatorAccountID: _,
+            bShowName: _,
+            onlyOneDiscountPct: _,
+            bShowAddToCart: _,
+            bShowWishlistButton: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!1),
+          { data: _ } = (0, _._)(_);
+        if (
+          ((0, _.useEffect)(() => {
+            _.current && _(_.current.offsetWidth < 370);
+          }, [_]),
+          !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
+        )
+          return null;
+        const _ = Boolean(_ && 0 == _?.item_type),
+          _ = Boolean(!_ && !_ && !_ && _ && _);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsxs)("div", {
+                ref: _,
+                className: (0, _._)(
+                  _().CapsuleBottomBar,
+                  "CapsuleBottomBar",
+                  __webpack_require__ && _().Muted,
+                  _,
+                ),
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      creatorAccountID: _,
+                      ..._,
+                    }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      className: (0, _._)(
+                        _().MaxActionButtonWidth,
+                        _().AddToCartButton,
+                      ),
+                    }),
+                  _ &&
+                    "appid" in _ &&
+                    (0, _.jsx)(_._, {
+                      appid: _.appid,
+                      className: (0, _._)(
+                        _().MaxActionButtonWidth,
+                        _().AddToWishlistButton,
+                      ),
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      bMinimizePlatforms: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)("span", {
+                      className: _().BottomBarPriceInfo,
+                      children: (0, _.jsx)(_._, {
+                        _: _,
+                        bShowInLibrary: _,
+                        onlyOneDiscountPct: _,
+                      }),
+                    }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                _: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
+        return __webpack_require__?.name
+          ? (0, _.jsx)("div", {
+              className: _().CapsuleName,
+              children: __webpack_require__.name,
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            creatorAccountID: _,
+            bShowAsMuted: __webpack_require__,
+            strClassName: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              creatorid: _,
+            }),
+            [_],
+          ),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(_?.clan_avatar, "Medium"),
+          _ = _.name || "";
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().BottomCreatorRow,
+            __webpack_require__ && _().Muted,
+            _,
+          ),
+          children: [
+            (0, _.jsx)("img", {
+              className: (0, _._)(_().CreatorLogo),
+              src: _,
+              alt: _,
+            }),
+            (0, _.jsx)("span", {
+              className: _().CreatorName,
+              children: _,
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 20,
+        _ = /^.*youtube[^v]+v=(.{11}).*/,
+        _ = /^.*youtu\.be\/(.{11}).*/,
+        _ = /^.*youtube.*\/embed\/(.{11}).*/,
+        _ = /^.*[?&]t=([^&]+)(?:&|$)/,
+        _ = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
+      function _(_) {
+        return !!_(_);
+      }
+      function _(_) {
+        const _ = _?.length < _ ? void 0 : _.exec(_) || _.exec(_) || _.exec(_);
+        return _?.[1];
+      }
+      function _(_) {
+        const _ = _(_);
+        if (!_) return;
+        const _ = (function (_) {
+            const _ = _.exec(_);
+            return _?.[1];
+          })(_),
+          _ = _
+            ? (function (_) {
+                const _ = _.exec(_);
+                if (!(_?.[1] || _?.[2] || _?.[3] || _?.[4])) return;
+                if (_?.[4]) return parseInt(_?.[4]);
+                let _ = 0;
+                return (
+                  _?.[1] && (_ += 3600 * parseInt(_[1])),
+                  _?.[2] && (_ += 60 * parseInt(_[2])),
+                  _?.[3] && (_ += parseInt(_[3])),
+                  _
+                );
+              })(_)
+            : void 0;
+        return {
+          strVideoID: _,
+          nStartSeconds: _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      class _ {
+        m_HomeView;
+        BHasHomeView() {
+          return Boolean(this.m_HomeView);
+        }
+        GetHomeView() {
+          return this.m_HomeView?.home;
+        }
+        static s_globalSingletonStore;
+        static Get() {
+          return (
+            _.s_globalSingletonStore ||
+              ((_.s_globalSingletonStore = new _()),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_HomeViewSetting = _.s_globalSingletonStore)),
+            _.s_globalSingletonStore
+          );
+        }
+        constructor() {
+          "dev" === _._.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          const _ = (0, _._)("home_view_setting", "application_config");
+          this.ValidateHomeViewData(_) && this.SetHomeViewSetting(_);
+          const _ = (0, _._)(
+            "home_view_setting_override",
+            "application_config",
+          );
+          this.ValidateHomeViewDataOverride(_) &&
+            this.SetHomeViewSettingOverride(_);
+        }
+        ValidateHomeViewData(_) {
+          const _ = _;
+          return (
+            _ && "object" == typeof _.home && "object" == typeof _.main_cluster
+          );
+        }
+        SetHomeViewSetting(_) {
+          this.m_HomeView = _;
+        }
+        ValidateHomeViewDataOverride(_) {
+          const _ = _;
+          return (
+            _ &&
+            (!_.all || "object" == typeof _.all) &&
+            (!_.maincap || "object" == typeof _.maincap)
+          );
+        }
+        SetHomeViewSettingOverride(_) {
+          this.m_HomeView.home = {
+            ...this.m_HomeView.home,
+            ..._?.all,
+            ..._?.maincap,
+          };
+        }
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -527,61 +824,257 @@
       function _(_) {
         const { crumbs: _, className: __webpack_require__ } = _;
         return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.BreadContainer, __webpack_require__),
-              },
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_.BreadContainer, __webpack_require__),
+              children: [
+                (0, _.jsx)(_._, {
                   className: "blockbg",
                   "flow-children": "row",
-                },
-                _.map((_) => {
-                  const _ = new Array();
-                  return (
-                    _.url.startsWith("http")
-                      ? _.push(
-                          _.createElement(
-                            _._,
-                            {
-                              key: "anchor_" + _.name,
-                              href: _.url,
-                            },
-                            _.name,
+                  children: _.map((_) => {
+                    const _ = new Array();
+                    return (
+                      _.url.startsWith("http")
+                        ? _.push(
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                href: _.url,
+                                children: _.name,
+                              },
+                              "anchor_" + _.name,
+                            ),
+                          )
+                        : _.push(
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                _: _.url,
+                                children: _.name,
+                              },
+                              "link_" + _.name,
+                            ),
                           ),
-                        )
-                      : _.push(
-                          _.createElement(
-                            _._,
-                            {
-                              key: "link_" + _.name,
-                              _: _.url,
-                            },
-                            _.name,
-                          ),
+                      _.push(
+                        (0, _.jsx)(
+                          "span",
+                          {
+                            children: " > ",
+                          },
+                          _.name + "span",
                         ),
-                    _.push(
-                      _.createElement(
-                        "span",
-                        {
-                          key: _.name + "span",
-                        },
-                        " > ",
                       ),
-                    ),
-                    _
-                  );
+                      _
+                    );
+                  }),
                 }),
-              ),
-              _.createElement("div", {
-                style: {
-                  clear: "left",
-                },
-              }),
-            )
+                (0, _.jsx)("div", {
+                  style: {
+                    clear: "left",
+                  },
+                }),
+              ],
+            })
           : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _._.Get().BIsStoreItemMissing(_._, (0, _._)(_.type));
+      }
+      function _(_, _, _) {
+        const _ = new Array();
+        return (
+          _?.forEach((_) =>
+            _.push({
+              _: _,
+              type: "game",
+            }),
+          ),
+          _?.forEach((_) =>
+            _.push({
+              _: _,
+              type: "sub",
+            }),
+          ),
+          __webpack_require__?.forEach((_) =>
+            _.push({
+              _: _,
+              type: "bundle",
+            }),
+          ),
+          _
+        );
+      }
+      function _(_) {
+        const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
+        return _?.GetBestPurchaseOption()?.discount_pct > 0;
+      }
+      function _(_) {
+        if (!_._.Get().GetHomeView()?.localized) return !0;
+        const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
+        return _._.Get().BIsAnyLanguageEnabled(
+          _.GetAllLanguagesWithSomeSupport(),
+        );
+      }
+      async function _(_, _, _) {
+        if (!_ || 0 == _.length) return [];
+        const _ = _.filter((_) => (0, _._)(_.type)).map((_) => _._),
+          _ = _.filter((_) => "sub" === _.type).map((_) => _._),
+          _ = _.filter((_) => "bundle" === _.type).map((_) => _._);
+        {
+          const _ = _.filter((_) => !_._.Get().BHasApp(_, _)),
+            _ = _.filter((_) => !_._.Get().BHasApp(_, _)),
+            _ = _.filter((_) => !_._.Get().BHasApp(_, _));
+          (_.length > 0 || _.length > 0 || _.length > 0) &&
+            (await Promise.all([
+              _._.Get().QueueMultipleAppRequests(_, _),
+              _._.Get().QueueMultiplePackageRequests(_, _),
+              _._.Get().QueueMultipleBundleRequests(_, _),
+            ]));
+        }
+        const _ = new Set();
+        _?.forEach((_) => {
+          const _ = _._.Get().GetBundle(_);
+          _?.GetIncludedAppIDs().forEach((_) => _.add(_));
+        }),
+          _?.forEach((_) => {
+            const _ = _._.Get().GetPackage(_);
+            _?.GetIncludedAppIDs().forEach((_) => _.add(_));
+          });
+        const _ = Array.from(_).filter((_) => !_._.Get().BHasApp(_, _));
+        if (
+          (_.length > 0 && (await _._.Get().QueueMultipleAppRequests(_, _)),
+          _.forEach((_) => _.add(_)),
+          _)
+        ) {
+          const _ = Array.from(_)
+            .map((_) => {
+              const _ = _._.Get().GetApp(_);
+              return _?.GetParentAppID()
+                ? (_.add(_.GetParentAppID()), _.GetParentAppID())
+                : null;
+            })
+            .filter(Boolean)
+            .filter((_) => !_._.Get().BHasApp(_, _));
+          _.length > 0 && (await _._.Get().QueueMultipleAppRequests(_, _));
+        }
+        return Array.from(_).filter((_) => {
+          const _ = _._.Get().GetApp(_);
+          return _ && !_.GetParentAppID();
+        });
+      }
+      const _ = {
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_supported_languages: !0,
+      };
+      function _(_) {
+        const _ = _._.Get();
+        (0, _._)(_.BIsLoaded(), "Dynamic Store not loaded");
+        const _ = _?.GetAllLanguagesWithSomeSupport() || [],
+          _ = _._.Get().GetHomeView()?.localized;
+        return (
+          !_ ||
+          (0 == _.GetStoreItemType() &&
+            (_.BIsGameIgnored(_.GetAppID()) ||
+              _.BIsGameIgnored(_.GetParentAppID()))) ||
+          _.BExcludesContentDescriptor(_.GetContentDescriptorIDs()) ||
+          _.BExcludeTagIDs(_.GetTagIDs()) ||
+          _.GetAllCreatorClanIDs().some((_) => _.BIsIgnoringCurator(_)) ||
+          (_ &&
+            !(
+              0 == _.length ||
+              _.BHasSomeLanguageSupport(0) ||
+              _.BIsAnyLanguageEnabled(_)
+            ))
+        );
+      }
+      async function _(_, _, _, _) {
+        let _ = 0,
+          _ = 0;
+        const _ = [];
+        await _(_, _._, _);
+        for (const _ of _) {
+          const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
+          if (!_) {
+            _++;
+            continue;
+          }
+          const _ = _.GetIncludedAppIDs()
+            .map((_) => _._.Get().GetApp(_))
+            .filter(Boolean);
+          if ((_.push(_), _)) {
+            const _ = new Set(_.map((_) => _.GetParentAppID()).filter(Boolean)),
+              _ = Array.from(_)
+                .map((_) => _._.Get().GetApp(_))
+                .filter(Boolean);
+            _ && _.push(..._);
+          }
+          _.some(_ || _)
+            ? (_++,
+              _ &&
+                (_._.Get().BIsStoreItemOwned(_) || __webpack_require__.push(_)))
+            : _.push(_);
+        }
+        return (
+          "dev" === _._.WEB_UNIVERSE &&
+            0 === _.length &&
+            console.log(
+              "ApplyStorePreferenceFilters: " +
+                _ +
+                " failed to load, " +
+                _ +
+                " hidden by user filter.",
+            ),
+          _
+        );
+      }
+      async function _(_, _, _, _, _, _, _) {
+        let _ = await _(
+          _,
+          _,
+          _,
+          _
+            ? (_) =>
+                !_ ||
+                _._.Get().BExcludesContentDescriptor(
+                  _.GetContentDescriptorIDs(),
+                ) ||
+                _._.Get().BExcludeTagIDs(_.GetTagIDs())
+            : _,
+        );
+        const _ = [];
+        for (const _ of _) {
+          const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
+          if (!_) continue;
+          const _ = _?.GetIncludedAppIDsOrSelf();
+          let _ = !1;
+          _ && (_ = _ || _.every((_) => _._.Get().BIsGameOwned(_))),
+            _ && (_ = _ || _.every((_) => _._.Get().BIsGameWishlisted(_))),
+            _ && (_ = _ || _.every((_) => _._.Get().BIsGameIgnored(_))),
+            _ ? _ && _.push(_) : _.push(_);
+        }
+        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -597,6 +1090,312 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "capsule_index_";
+      function _(_) {
+        const {
+            capsule: _,
+            bShowParentApp: __webpack_require__,
+            elElementToAppendToHover: _,
+            index: _,
+            navKey: _,
+            bHideStoreHover: _,
+            onlyOneDiscountPct: _,
+            bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          [_] = (0, _._)(
+            __webpack_require__ ? _?.GetParentAppID() : void 0,
+            _._,
+          ),
+          _ = (0, _._)(_);
+        if (!_) return null;
+        const _ = Boolean(_),
+          _ = (0, _.jsx)(_, {
+            ..._,
+            strExtraParams: _.strExtraParams,
+            info: _,
+            bIsHovered: _,
+            bHasParentAppToDisplay: _,
+            onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: _,
+          });
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)({
+            [_().OuterCapsuleContainer]: !0,
+            [_ + _]: 0 == _,
+          }),
+          navEntryPreferPosition: _._.PREFERRED_CHILD,
+          navKey: _,
+          children: [
+            (0, _.jsxs)(_._, {
+              appid: _.GetAppID(),
+              children: [
+                Boolean(_)
+                  ? (0, _.jsx)("div", {
+                      onMouseEnter: () => _(!0),
+                      onMouseLeave: () => _(!1),
+                      children: _,
+                    })
+                  : (0, _.jsx)(_._, {
+                      className: _().CapsuleContainer,
+                      _: _,
+                      elElementToAppend: _.elElementToAppendToHover,
+                      bShowDemoButton: _.bShowDemoButton,
+                      bPreferDemoStorePage: _.bPreferDemoStorePage,
+                      bShowDeckCompatibilityDialog:
+                        _.bShowDeckCompatibilityDialog,
+                      bHidePrice: _.bHidePrice,
+                      bUseSubscriptionLayout: _.bUseSubscriptionLayout,
+                      strExtraParams: _.strExtraParams,
+                      nCreatorAccountID: _.creatorAccountID,
+                      nWidthMultiplier: _.nWidthMultiplier,
+                      bShowIgnoreButton: _.bShowIgnoreButton,
+                      bShowDescription: _.bShowDescriptionInHover,
+                      children: _,
+                    }),
+                Boolean(_) &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: _,
+                  }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                strExtraParams: _.strExtraParams,
+                parentStoreItem: _,
+                childAppType: _.GetAppType(),
+                bPreferDemoStorePage: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            strExtraParams: _,
+            parentStoreItem: __webpack_require__,
+            childAppType: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          _ = (0, _._)(__webpack_require__),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return _
+          ? (0, _.jsx)(_._, {
+              className: _().CapsuleParentInfo,
+              ...(0, _._)(_, _, _, _, _),
+              children: (0, _.jsxs)(_._, {
+                appid: __webpack_require__.GetAppID(),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ParentType,
+                    children: (0, _._)(
+                      11 == _
+                        ? "#SalePage_ParentApp_SoundTrack"
+                        : "#SalePage_ParentApp_DLC",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    _: _,
+                    strExtraParams: _,
+                    children: (0, _.jsx)("img", {
+                      loading: "lazy",
+                      className: _.AppCapsuleImage,
+                      alt: __webpack_require__.GetName(),
+                      src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
+                      ...(0, _._)(),
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            info: _,
+            bHideStatusBanners: __webpack_require__,
+            strExtraParams: _,
+            index: _,
+            imageType: _,
+            bHasParentAppToDisplay: _,
+            bIsHovered: _,
+            strDoubleCapsuleMessage: _,
+            bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
+            bPreferAssetWithoutOverride: _,
+          } = _,
+          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(
+          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
+        );
+        let _;
+        "overrideNavigation" in _ &&
+          (_ = (_) => (
+            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
+          ));
+        const _ = Boolean(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_().TwoWidthCtn]: _,
+              }),
+              children: [
+                (0, _.jsxs)(_._, {
+                  href: _ ? void 0 : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
+                  className: (0, _._)({
+                    [_().TwoWidthCapsule]: _,
+                  }),
+                  preferredFocus: _,
+                  onClick: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      appids: _,
+                      hide_status_banners: __webpack_require__,
+                      show_early_access: _.bShowEarlyAccessBanner,
+                    }),
+                    "none" != _ &&
+                      (0, _.jsx)(_._, {
+                        imageType: _,
+                        _: _,
+                        bPreferAssetWithoutOverride: _,
+                      }),
+                    (0, _.jsx)(_._, {
+                      _: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      active: _,
+                      bIsHoverMode: !0,
+                    }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().TwoWidthSideInfo,
+                      "TwoWidthSideInfo",
+                    ),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().Reason,
+                        children: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().StoreSaleItemRelease,
+                        children: (0, _.jsx)("span", {
+                          children: _.GetFormattedSteamReleaseDate(),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        bHideTitle: !0,
+                        rgTagIDs: _.GetTagIDs(),
+                        instanceNum: _,
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            info: _,
+            bHidePriceIfOwned: __webpack_require__,
+            bHideStatusBanners: _,
+            bUseSubscriptionLayout: _,
+            elElementToAppendToHover: _,
+            bHidePrice: _,
+            bHidePlatforms: _,
+            creatorAccountID: _,
+            bIsHovered: _,
+            onlyOneDiscountPct: _,
+            strDoubleCapsuleMessage: _,
+          } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = _ && !_;
+        if (_ && _ && 0 == _.item_type && _.appid)
+          return (0, _.jsx)(_._, {
+            appid: _.appid,
+            bIsMuted: _,
+          });
+        if (_) return null;
+        const _ = Boolean(_ && __webpack_require__),
+          _ = Boolean(_);
+        return (0, _.jsx)(_._, {
+          _: _,
+          bShowAsMuted: _,
+          bHidePrice: _,
+          bShowInLibraryInsteadOfPrice: _,
+          bHidePlatforms: _,
+          creatorAccountID: _,
+          bShowName: _.bShowName,
+          onlyOneDiscountPct: _,
+          bShowWishlistButton: Boolean(_),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -605,12 +1404,12 @@
           _.useEffect(() => _(0), [_.video]);
           const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               className: _.className,
               srcs: _.altImgWithFallback,
             });
           if (_.altImg)
-            return _.createElement("img", {
+            return (0, _.jsx)("img", {
               src: _.altImg,
               className: _.className,
             });
@@ -628,7 +1427,7 @@
               _ = () => {
                 _.current && _.current.naturalHeight < 91 && _();
               };
-            return _.createElement("img", {
+            return (0, _.jsx)("img", {
               ref: _,
               onLoad: _,
               onError: _,
@@ -642,7 +1441,7 @@
           (0, _._)(!!_.preloadYoutubeScripts);
           const _ = (0, _._)("youtube");
           if (_ && _)
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               ..._,
               classnames: (0, _._)(_().YoutubePlayer, _.classnames),
             });
@@ -653,42 +1452,35 @@
                 _.stopPropagation(),
                 _.preventDefault();
             };
-            return _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  "YoutubePreviewContainer",
-                  _().YoutubePreviewImage,
-                  _.imageClassnames,
-                ),
-                onClick: _ ? _ : void 0,
-              },
-              _.createElement(_, {
-                className: "YoutubePreviewImage",
-                altImgWithFallback: _.altImgWithFallback,
-                altImg: _.altImg,
-                video: _.video,
-              }),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "YoutubePreviewPlay",
-                    },
-                    _.createElement(_.IOc, null),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "VideoHintText",
-                    },
-                    (0, _._)("#EventCalendar_WatchYouTubeVideo"),
-                  ),
-                ),
-            );
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                "YoutubePreviewContainer",
+                _().YoutubePreviewImage,
+                _.imageClassnames,
+              ),
+              onClick: _ ? _ : void 0,
+              children: [
+                (0, _.jsx)(_, {
+                  className: "YoutubePreviewImage",
+                  altImgWithFallback: _.altImgWithFallback,
+                  altImg: _.altImg,
+                  video: _.video,
+                }),
+                _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "YoutubePreviewPlay",
+                        children: (0, _.jsx)(_.IOc, {}),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "VideoHintText",
+                        children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),
+                      }),
+                    ],
+                  }),
+              ],
+            });
           }
         };
     },
@@ -700,6 +1492,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -771,6 +1564,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -780,7 +1574,7 @@
       );
       function _(_) {
         const _ = _.exec(_);
-        return _?.length > 1 ? _[1] : null;
+        return _ && _.length > 1 ? _[1] : null;
       }
       function _(_) {
         const {
@@ -796,31 +1590,30 @@
           [_, _] = _.useState(Boolean(_)),
           _ = null != _ && null != _ && _;
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                "YoutubePreviewContainer",
-                _.YoutubePreviewImage,
-                _.imageClassnames,
-              ),
-              onClick: () => _(!1),
-            },
-            _.createElement("img", {
-              className: (0, _._)("YoutubePreviewImage", _.YoutubePreviewImage),
-              src:
-                _ ||
-                _._.COMMUNITY_CDN_URL +
-                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-            }),
-            _.createElement(
-              "div",
-              {
-                className: "YoutubePreviewPlay",
-              },
-              _.createElement(_.IOc, null),
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "YoutubePreviewContainer",
+              _.YoutubePreviewImage,
+              _.imageClassnames,
             ),
-          );
+            onClick: () => _(!1),
+            children: [
+              (0, _.jsx)("img", {
+                className: (0, _._)(
+                  "YoutubePreviewImage",
+                  _.YoutubePreviewImage,
+                ),
+                src:
+                  _ ||
+                  _._.COMMUNITY_CDN_URL +
+                    "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+              }),
+              (0, _.jsx)("div", {
+                className: "YoutubePreviewPlay",
+                children: (0, _.jsx)(_.IOc, {}),
+              }),
+            ],
+          });
         let _ = (0, _._)().replace("https://", "");
         const _ = _.indexOf("/");
         _ >= 0 && (_ = _.substring(0, _));
@@ -836,29 +1629,28 @@
               const _ = Math.floor(_ / 60);
               return `${_}h${_}m${(_ -= _ * _)}s`;
             })(_)}`),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("YoutubePlayer", _().TwitchPlayer),
-            },
-            _.createElement("img", {
-              className: (0, _._)(
-                "YoutubePreviewContainer",
-                _.YoutubePreviewImage,
-                _.imageClassnames,
-              ),
-              src:
-                _._.COMMUNITY_CDN_URL +
-                "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-            }),
-            _.createElement("iframe", {
-              src: _,
-              allowFullScreen: !0,
-              frameBorder: 0,
-              width: _ || 460,
-              height: _ || 300,
-            }),
-          )
+          (0, _.jsxs)("div", {
+            className: (0, _._)("YoutubePlayer", _().TwitchPlayer),
+            children: [
+              (0, _.jsx)("img", {
+                className: (0, _._)(
+                  "YoutubePreviewContainer",
+                  _.YoutubePreviewImage,
+                  _.imageClassnames,
+                ),
+                src:
+                  _._.COMMUNITY_CDN_URL +
+                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+              }),
+              (0, _.jsx)("iframe", {
+                src: _,
+                allowFullScreen: !0,
+                frameBorder: 0,
+                width: _ || 460,
+                height: _ || 300,
+              }),
+            ],
+          })
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -878,74 +1670,58 @@
         const { clanInfo: _ } = _,
           { curator_link: __webpack_require__, curator_medium_avatar: _ } = (0,
           _._)("curator_header", "application_config");
-        return _.createElement(
-          _._,
-          {
-            className: "page_content_ctn",
-            "flow-children": "column",
-            autoFocus: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: "page_content",
-            },
-            _.createElement(
-              _._,
-              {
-                className: "list_header_area",
-                "flow-children": "row",
-              },
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_._, {
+          className: "page_content_ctn",
+          "flow-children": "column",
+          autoFocus: !0,
+          children: (0, _.jsx)("div", {
+            className: "page_content",
+            children: (0, _.jsxs)(_._, {
+              className: "list_header_area",
+              "flow-children": "row",
+              children: [
+                (0, _.jsx)("div", {
                   className: "curator_avatar_image",
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     href: __webpack_require__,
-                  },
-                  _.createElement("img", {
-                    className: "curator_avatar",
-                    src: _,
+                    children: (0, _.jsx)("img", {
+                      className: "curator_avatar",
+                      src: _,
+                    }),
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "curator_details",
-                },
-                _.createElement(_._, {
-                  className: _.BreadContainer,
-                  crumbs: (0, _._)("breadcrumbs", "application_config"),
                 }),
-                _.createElement(
-                  _._,
-                  {
-                    className: "pageheader curator_name",
-                    href: __webpack_require__,
-                  },
-                  (0, _._)("#SteamCurator_List_Header_List", _.group_name),
-                ),
-              ),
-            ),
-          ),
-        );
+                (0, _.jsxs)("div", {
+                  className: "curator_details",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.BreadContainer,
+                      crumbs: (0, _._)("breadcrumbs", "application_config"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: "pageheader curator_name",
+                      href: __webpack_require__,
+                      children: (0, _._)(
+                        "#SteamCurator_List_Header_List",
+                        _.group_name,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = function (_) {
-        return _.createElement(
-          _._,
-          {
-            navID: "StoreCuratorPageRoot",
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          navID: "StoreCuratorPageRoot",
+          children: (0, _.jsx)(_, {
             listid: _.listid,
           }),
-        );
+        });
       };
       function _(_) {
         const _ = parseInt(
@@ -956,62 +1732,53 @@
         return (
           (0, _._)(_._.LANGUAGE),
           _
-            ? _.createElement(
-                _._,
-                {
-                  feature: "curatorlistcapsule",
-                },
-                _.createElement(_, {
-                  clanInfo: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
+            ? (0, _.jsxs)(_._, {
+                feature: "curatorlistcapsule",
+                children: [
+                  (0, _.jsx)(_, {
+                    clanInfo: _,
+                  }),
+                  (0, _.jsx)("div", {
                     className: "page_content_ctn grayscale",
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                    children: (0, _.jsx)("div", {
                       className: "page_content",
-                    },
-                    _.createElement(
-                      "div",
-                      {
+                      children: (0, _.jsxs)("div", {
                         className: _().CuratorListCtn,
-                      },
-                      _.createElement(_, {
-                        listDetails: _,
-                      }),
-                      (0, _._)(_)
-                        ? _.createElement(_, {
+                        children: [
+                          (0, _.jsx)(_, {
                             listDetails: _,
-                          })
-                        : _.createElement(_, {
-                            listDetails: _,
-                            rgListItems: _.apps,
                           }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().CuratorMoreCtn,
-                        },
-                        _.createElement(
-                          "h2",
-                          null,
-                          (0, _._)("#SteamCurator_ExploreMoreTitle"),
-                        ),
-                        _.createElement(
-                          _._,
-                          {
-                            href: _.vanity_url,
-                          },
-                          (0, _._)("#SteamCurator_MoreReviews", _.group_name),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              )
+                          (0, _._)(_)
+                            ? (0, _.jsx)(_, {
+                                listDetails: _,
+                              })
+                            : (0, _.jsx)(_, {
+                                listDetails: _,
+                                rgListItems: _.apps,
+                              }),
+                          (0, _.jsxs)("div", {
+                            className: _().CuratorMoreCtn,
+                            children: [
+                              (0, _.jsx)("h2", {
+                                children: (0, _._)(
+                                  "#SteamCurator_ExploreMoreTitle",
+                                ),
+                              }),
+                              (0, _.jsx)(_._, {
+                                href: _.vanity_url,
+                                children: (0, _._)(
+                                  "#SteamCurator_MoreReviews",
+                                  _.group_name,
+                                ),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                ],
+              })
             : null
         );
       }
@@ -1035,7 +1802,7 @@
                 _(_.apps?.filter((_) => _.has(_.recommended_app?.appid)));
               }
           }, [_, _, _]),
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             listDetails: _,
             rgListItems: __webpack_require__,
           })
@@ -1076,49 +1843,46 @@
           }, [__webpack_require__, _]),
           null == _)
         )
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             string: (0, _._)("#Loading"),
             position: "center",
             size: "medium",
           });
         const _ = 1 == _.list_type;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               className: (0, _._)(_().CuratorList, _ && _().CuratorListGrid),
               "flow-children": "grid",
-            },
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: "rec_" + _.recommended_app.appid,
-                item: _,
-                listDetails: _,
-                bAutoFocus: 0 == _,
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    item: _,
+                    listDetails: _,
+                    bAutoFocus: 0 == _,
+                  },
+                  "rec_" + _.recommended_app.appid,
+                ),
+              ),
+            }),
+            Boolean(100 > _.length) &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsxs)("span", {
+                    children: [
+                      (0, _._)("#SteamCurator_Hidden", _ - _.length),
+                      " ",
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    href: _._.STORE_BASE_URL + "account/preferences/",
+                    children: (0, _._)("#SteamCurator_Setting"),
+                  }),
+                ],
               }),
-            ),
-          ),
-          Boolean(100 > _.length) &&
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#SteamCurator_Hidden", _ - _.length),
-                " ",
-              ),
-              _.createElement(
-                _._,
-                {
-                  href: _._.STORE_BASE_URL + "account/preferences/",
-                },
-                (0, _._)("#SteamCurator_Setting"),
-              ),
-            ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { listDetails: _ } = _,
@@ -1139,81 +1903,65 @@
               (0, _._)() ? "product_mobile_banner" : "product_banner",
               _,
             );
-        return _.createElement(
-          "div",
-          {
-            className: _().TopReviewInfo,
-          },
-          Boolean(_) &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)("div", {
+          className: _().TopReviewInfo,
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)(_._, {
                 href: __webpack_require__.GetSaleURL(),
-              },
-              _.createElement("img", {
-                className: _().SaleBanner,
-                src: _,
+                children: (0, _.jsx)("img", {
+                  className: _().SaleBanner,
+                  src: _,
+                }),
               }),
-            ),
-          _ &&
             _ &&
-            _.createElement(
-              "div",
-              {
+              _ &&
+              (0, _.jsx)("div", {
                 className: _().Title,
-              },
-              _,
-            ),
-          _ &&
+                children: _,
+              }),
             _ &&
-            _.createElement(
-              "div",
-              {
+              _ &&
+              (0, _.jsx)("div", {
                 className: _().Blurb,
-              },
-              _,
-            ),
-          Boolean(_ > 0) &&
-            _.createElement("div", {
-              style: {
-                height: _,
-              },
-            }),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().VideoReviewCtn,
-              },
-              _.createElement(_._, {
-                video: _.strVideoID,
-                startSeconds: _.nStartSeconds,
-                autoplay: !0,
-                autopause: !0,
-                showFullscreenBtn: !0,
-                controls: !0,
-                preloadYoutubeScripts: !0,
-                playsInline: !0,
-                imageClassnames: _().YouTubePreviewImage,
+                children: _,
               }),
-            ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
-                className: _().VideoReviewCtn,
-              },
-              _.createElement(_, {
-                videoid: _,
-                posterURL: "",
-                imageClassnames: _().YouTubePreviewImage,
+            Boolean(_ > 0) &&
+              (0, _.jsx)("div", {
+                style: {
+                  height: _,
+                },
               }),
-            ),
-          _ &&
-            _.createElement(_, {
-              url: _,
-            }),
-        );
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().VideoReviewCtn,
+                children: (0, _.jsx)(_._, {
+                  video: _.strVideoID,
+                  startSeconds: _.nStartSeconds,
+                  autoplay: !0,
+                  autopause: !0,
+                  showFullscreenBtn: !0,
+                  controls: !0,
+                  preloadYoutubeScripts: !0,
+                  playsInline: !0,
+                  imageClassnames: _().YouTubePreviewImage,
+                }),
+              }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().VideoReviewCtn,
+                children: (0, _.jsx)(_, {
+                  videoid: _,
+                  posterURL: "",
+                  imageClassnames: _().YouTubePreviewImage,
+                }),
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                url: _,
+              }),
+          ],
+        });
       }
       const _ = (0, _._)((_) => {
         const { item: _, listDetails: __webpack_require__, bAutoFocus: _ } = _,
@@ -1229,7 +1977,8 @@
               type: (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
             }),
             [_],
-          );
+          ),
+          _ = (0, _._)(_);
         if (!_ || !_) return null;
         const {
             appid: _,
@@ -1247,191 +1996,154 @@
           _ = _?.img_url,
           _ = `curator_clanid=${_.clanAccountID}&curator_listid=${__webpack_require__.listid}`,
           _ = _.GetStorePageURL() + "/?curator_clanid=" + _.clanAccountID;
-        return _.createElement(
-          _._,
-          {
-            className: _().CuratorReview,
-            autoFocus: _,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          className: _().CuratorReview,
+          autoFocus: _,
+          children: [
+            (0, _.jsx)("div", {
               className: _().CapsuleCtn,
-            },
-            Boolean(_ || _)
-              ? _.createElement(_, {
-                  strVideoID: _?.strVideoID || _,
-                  nStartSeconds: _?.nStartSeconds,
-                  info: _,
-                  strImgOverrideUrl: _,
-                  bShowDemoButton: _,
-                  strExtraParams: _,
-                  bTwitchVideo: Boolean(_),
-                })
-              : _.createElement(_._, {
-                  imageType: "header",
-                  capsule: _,
-                  bShowDemoButton: _,
-                  strExtraParams: _,
-                  bPreferAssetWithoutOverride: !1,
-                }),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: Boolean(_ || _)
+                ? (0, _.jsx)(_, {
+                    strVideoID: _?.strVideoID || _,
+                    nStartSeconds: _?.nStartSeconds,
+                    _: _,
+                    strImgOverrideUrl: _,
+                    bShowDemoButton: _,
+                    strExtraParams: _,
+                    bTwitchVideo: Boolean(_),
+                  })
+                : (0, _.jsx)(_._, {
+                    imageType: "header",
+                    capsule: _,
+                    bShowDemoButton: _,
+                    strExtraParams: _,
+                    bPreferAssetWithoutOverride: !1,
+                  }),
+            }),
+            (0, _.jsxs)("div", {
               className: _().ReviewTextSection,
-            },
-            _.createElement(
-              "a",
-              {
-                className: _().GameTitle,
-                href: _,
-              },
-              _.GetName(),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().RecommendationTypeAndDate,
-              },
-              _.createElement(_, {
-                type: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().ReviewDate,
-                },
-                _ || !Boolean(_)
-                  ? (0, _._)(
-                      "#EventModTile_ReleaseDate",
-                      _.GetFormattedSteamReleaseDate(),
-                    )
-                  : (0, _._)(_),
-              ),
-            ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ReviewBlurb,
-                },
-                (0, _._)("#SteamCurator_ReviewTextQuoted", _),
-              ),
-            Boolean(_) &&
-              _.createElement(_, {
-                url: _,
-              }),
-          ),
-        );
+              children: [
+                (0, _.jsx)("a", {
+                  className: _().GameTitle,
+                  href: _,
+                  children: _.GetName(),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().RecommendationTypeAndDate,
+                  children: [
+                    (0, _.jsx)(_, {
+                      type: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().ReviewDate,
+                      children:
+                        _ || !Boolean(_)
+                          ? (0, _._)(
+                              "#EventModTile_ReleaseDate",
+                              _.GetFormattedSteamReleaseDate(),
+                            )
+                          : (0, _._)(_),
+                    }),
+                  ],
+                }),
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _().ReviewBlurb,
+                    children: (0, _._)("#SteamCurator_ReviewTextQuoted", _),
+                  }),
+                Boolean(_) &&
+                  (0, _.jsx)(_, {
+                    url: _,
+                  }),
+              ],
+            }),
+          ],
+        });
       });
       function _(_) {
         const {
             strVideoID: _,
             nStartSeconds: __webpack_require__,
-            info: _,
+            _: _,
             strImgOverrideUrl: _,
             bShowDemoButton: _,
             strExtraParams: _,
             bTwitchVideo: _,
           } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), {
-            include_assets: !0,
-          }),
-          _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().YouTubeCapsule,
-          },
-          _.createElement(
-            "div",
-            {
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsxs)("div", {
+          className: _().YouTubeCapsule,
+          children: [
+            (0, _.jsx)("div", {
               className: _().YouTubeCtn,
-            },
-            _
-              ? _.createElement(_, {
-                  videoid: _,
-                  posterURL: _?.GetAssets().GetHeaderURL(),
-                  imageClassnames: _().YouTubePreviewImage,
-                  autoplay: !0,
-                })
-              : _.createElement(_._, {
-                  video: _,
-                  startSeconds: __webpack_require__,
-                  autoplay: !0,
-                  autopause: !0,
-                  showFullscreenBtn: !0,
-                  controls: !0,
-                  preloadYoutubeScripts: !0,
-                  playsInline: !0,
-                  imageClassnames: _().YouTubePreviewImage,
-                  altImg: _,
-                }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().YouTubeCapsuleBottomBar,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().GameImageCtn,
-              },
-              _.createElement(
-                _._,
-                {
-                  item: _,
-                  bShowDemoButton: _,
-                  nDelayShowMs: 300,
-                  strExtraParams: _,
-                  hoverProps: {
-                    direction: "overlay-center",
-                    style: {
-                      minWidth: "300px",
-                    },
-                  },
-                },
-                _.createElement("img", {
-                  className: _().GameImage,
-                  src: _?.GetAssets().GetLibraryCapsuleURL(),
-                }),
-              ),
-            ),
-            _.createElement(_._, {
-              _: _,
-              strClassName: _().FullWidth,
+              children: _
+                ? (0, _.jsx)(_, {
+                    videoid: _,
+                    posterURL: _ ? (0, _._)(_, "header") : void 0,
+                    imageClassnames: _().YouTubePreviewImage,
+                    autoplay: !0,
+                  })
+                : (0, _.jsx)(_._, {
+                    video: _,
+                    startSeconds: __webpack_require__,
+                    autoplay: !0,
+                    autopause: !0,
+                    showFullscreenBtn: !0,
+                    controls: !0,
+                    preloadYoutubeScripts: !0,
+                    playsInline: !0,
+                    imageClassnames: _().YouTubePreviewImage,
+                    altImg: _,
+                  }),
             }),
-          ),
-        );
+            (0, _.jsxs)("div", {
+              className: _().YouTubeCapsuleBottomBar,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().GameImageCtn,
+                  children: (0, _.jsx)(_._, {
+                    _: _,
+                    bShowDemoButton: _,
+                    nDelayShowMs: 300,
+                    strExtraParams: _,
+                    hoverProps: {
+                      direction: "overlay-center",
+                      style: {
+                        minWidth: "300px",
+                      },
+                    },
+                    children: (0, _.jsx)("img", {
+                      className: _().GameImage,
+                      src: _ ? (0, _._)(_, "library_capsule") : void 0,
+                    }),
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  _: _,
+                  strClassName: _().FullWidth,
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         switch (_.type) {
           case 0:
-            return _.createElement(
-              "div",
-              {
-                className: _().Recommended,
-              },
-              (0, _._)("#SteamCurator_Recommended"),
-            );
+            return (0, _.jsx)("div", {
+              className: _().Recommended,
+              children: (0, _._)("#SteamCurator_Recommended"),
+            });
           case 1:
-            return _.createElement(
-              "div",
-              {
-                className: _().NotRecommended,
-              },
-              (0, _._)("#SteamCurator_NotRecommended"),
-            );
+            return (0, _.jsx)("div", {
+              className: _().NotRecommended,
+              children: (0, _._)("#SteamCurator_NotRecommended"),
+            });
           case 2:
-            return _.createElement(
-              "div",
-              {
-                className: _().Informational,
-              },
-              (0, _._)("#SteamCurator_Informational"),
-            );
+            return (0, _.jsx)("div", {
+              className: _().Informational,
+              children: (0, _._)("#SteamCurator_Informational"),
+            });
           default:
             return null;
         }
@@ -1446,34 +2158,30 @@
             _);
         const _ = (0, _._)(_.url),
           _ = (0, _._)(_.url);
-        return _.createElement(
-          "div",
-          {
-            className: _().FullReviewLink,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _().FullReviewLink,
+          children: [
+            (0, _.jsx)(_._, {
               className: _().FullReviewAnchor,
               href: _,
               rel: "noopener nofollow",
               preferredFocus: !1,
               autoFocus: !1,
-            },
-            (0, _._)(
-              _
-                ? "#SteamCurator_WatchFullReview"
-                : "#SteamCurator_ReadFullReview",
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)(
+                _
+                  ? "#SteamCurator_WatchFullReview"
+                  : "#SteamCurator_ReadFullReview",
+              ),
+            }),
+            (0, _.jsx)("div", {
               className: _().FullReviewDomain,
-            },
-            (0, _._)("#SteamCurator_ReviewLinkHostnameBracketed", _),
-          ),
-        );
+              children: (0, _._)(
+                "#SteamCurator_ReviewLinkHostnameBracketed",
+                _,
+              ),
+            }),
+          ],
+        });
       }
     },
   },

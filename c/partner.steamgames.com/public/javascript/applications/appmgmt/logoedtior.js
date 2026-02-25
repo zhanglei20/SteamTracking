@@ -162,6 +162,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -257,18 +258,15 @@
         }
         render() {
           if (!this.props.editMode)
-            return _.createElement(
-              _.Provider,
-              {
-                value: {
-                  bFullscreen: this.props.bFullscreen,
-                },
+            return (0, _.jsx)(_.Provider, {
+              value: {
+                bFullscreen: this.props.bFullscreen,
               },
-              _.createElement(_, {
+              children: (0, _.jsx)(_, {
                 ref: this.m_refTopCapsule,
                 ...this.props,
               }),
-            );
+            });
           const {
               children: _,
               logoPosition: _,
@@ -276,45 +274,41 @@
               ..._
             } = this.props,
             _ = this.GetLogoPosition();
-          return _.createElement(
-            _.Provider,
-            {
-              value: {
-                bFullscreen: this.props.bFullscreen,
-              },
+          return (0, _.jsx)(_.Provider, {
+            value: {
+              bFullscreen: this.props.bFullscreen,
             },
-            _.createElement(
-              _,
-              {
-                ref: this.m_refTopCapsule,
-                ..._,
-                editMode: !0,
-                logoPosition: _,
-                fnOnPositionChanged: this.OnPositionChanged,
-              },
-              _.createElement("div", {
-                className: `${_().PinBox} ${_().BottomLeft}`,
-                onClick: () => this.SetPinnedPosition("BottomLeft"),
-                title: "Pin to Bottom Left",
-              }),
-              _.createElement("div", {
-                className: `${_().PinBox} ${_().UpperCenter}`,
-                onClick: () => this.SetPinnedPosition("UpperCenter"),
-                title: "Pin to Top Center",
-              }),
-              _.createElement("div", {
-                className: `${_().PinBox} ${_().CenterCenter}`,
-                onClick: () => this.SetPinnedPosition("CenterCenter"),
-                title: "Pin to Center",
-              }),
-              _.createElement("div", {
-                className: `${_().PinBox} ${_().BottomCenter}`,
-                onClick: () => this.SetPinnedPosition("BottomCenter"),
-                title: "Pin to Bottom Center",
-              }),
-              _,
-            ),
-          );
+            children: (0, _.jsxs)(_, {
+              ref: this.m_refTopCapsule,
+              ..._,
+              editMode: !0,
+              logoPosition: _,
+              fnOnPositionChanged: this.OnPositionChanged,
+              children: [
+                (0, _.jsx)("div", {
+                  className: `${_().PinBox} ${_().BottomLeft}`,
+                  onClick: () => this.SetPinnedPosition("BottomLeft"),
+                  title: "Pin to Bottom Left",
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().PinBox} ${_().UpperCenter}`,
+                  onClick: () => this.SetPinnedPosition("UpperCenter"),
+                  title: "Pin to Top Center",
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().PinBox} ${_().CenterCenter}`,
+                  onClick: () => this.SetPinnedPosition("CenterCenter"),
+                  title: "Pin to Center",
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().PinBox} ${_().BottomCenter}`,
+                  onClick: () => this.SetPinnedPosition("BottomCenter"),
+                  title: "Pin to Bottom Center",
+                }),
+                _,
+              ],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "SetDimensions", null),
@@ -420,62 +414,58 @@
             _ = {
               "--header-height": null == _ ? void 0 : _ + "px",
             };
-          return _.createElement(
-            _._,
-            {
-              timeout: _,
-              appear: !0,
-              _: this.props.bFullscreen,
-              classNames: _,
-            },
-            (_) =>
-              _.createElement(
-                "div",
-                {
-                  ref: _,
-                  className: _,
-                  style: _,
-                },
-                _.createElement(_, {
-                  ref: this.m_refBackgroundImage,
-                  bLowPerfMode: this.props.bLowPerfMode,
-                  appid: this.props.appid,
-                  rgHeaderImages: this.props.rgHeaderImages,
-                  rgBlurImages: this.props.rgBlurImages,
-                  onReportHeroImageMiss: this.props.fnReportHeroImageMiss,
-                  onError: this.OnHeaderError,
-                  onLoad: this.OnLoaded,
-                }),
-                _ &&
-                  null !== __webpack_require__ &&
-                  _.createElement(
-                    _,
-                    {
-                      key: _[0],
-                      strLogoImageURL: _[0],
-                      editMode: _,
-                      logoPosition: __webpack_require__ || _,
-                      fnOnPositionChanged: _ && _,
-                      fullscreen: this.props.bFullscreen,
-                    },
-                    _.createElement(_._, {
-                      ref: this.m_refLogoImage,
-                      className: (0, _._)(
-                        _().TitleLogo,
-                        this.state.bLogoLoaded && _().Loaded,
-                      ),
-                      rgSources: _,
-                      onLoad: this.OnLogoLoad,
-                      onIncrementalError: this.OnIncrementalLogoError,
-                      onError: this.OnLogoError,
-                    }),
-                  ),
-                this.props.children,
-                _.createElement("div", {
-                  className: _().TopGradient,
-                }),
-              ),
-          );
+          return (0, _.jsx)(_._, {
+            timeout: _,
+            appear: !0,
+            _: this.props.bFullscreen,
+            classNames: _,
+            children: (_) =>
+              (0, _.jsxs)("div", {
+                ref: _,
+                className: _,
+                style: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    ref: this.m_refBackgroundImage,
+                    bLowPerfMode: this.props.bLowPerfMode,
+                    appid: this.props.appid,
+                    rgHeaderImages: this.props.rgHeaderImages,
+                    rgBlurImages: this.props.rgBlurImages,
+                    onReportHeroImageMiss: this.props.fnReportHeroImageMiss,
+                    onError: this.OnHeaderError,
+                    onLoad: this.OnLoaded,
+                  }),
+                  _ &&
+                    null !== __webpack_require__ &&
+                    (0, _.jsx)(
+                      _,
+                      {
+                        strLogoImageURL: _[0],
+                        editMode: _,
+                        logoPosition: __webpack_require__ || _,
+                        fnOnPositionChanged: _ && _,
+                        fullscreen: this.props.bFullscreen,
+                        children: (0, _.jsx)(_._, {
+                          ref: this.m_refLogoImage,
+                          className: (0, _._)(
+                            _().TitleLogo,
+                            this.state.bLogoLoaded && _().Loaded,
+                          ),
+                          rgSources: _,
+                          onLoad: this.OnLogoLoad,
+                          onIncrementalError: this.OnIncrementalLogoError,
+                          onError: this.OnLogoError,
+                        }),
+                      },
+                      _[0],
+                    ),
+                  this.props.children,
+                  (0, _.jsx)("div", {
+                    className: _().TopGradient,
+                  }),
+                ],
+              }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnHeaderError", null),
@@ -557,98 +547,93 @@
         render() {
           let _ = null;
           return (
-            (_ = _.createElement(
-              _.Fragment,
-              null,
-              !this.state.bUseCanvasBlur &&
-                this.state.bBackgroundLoaded &&
-                this.props.rgBlurImages[this.state.nBlurImageIndex] &&
-                _.createElement("img", {
-                  src: this.props.rgBlurImages[this.state.nBlurImageIndex],
-                  className: (0, _._)(
-                    _().ImgSrc,
-                    _().ImgBlur,
-                    _().ImgBlurBackdrop,
-                  ),
-                  onError: this.OnBlurImageFailed,
-                }),
-              this.state.bUseCanvasBlur &&
-                this.state.bBackgroundLoaded &&
-                !this.props.bLowPerfMode &&
-                _.createElement(_._, {
-                  className: (0, _._)(
-                    _().ImgSrc,
-                    _().ImgBlur,
-                    _().ImgBlurBackdrop,
-                  ),
-                  elementRef: this.m_refCanvasBlurImage,
-                  updateRate: 0,
-                  width: 192,
-                  height: 62,
-                  reductionFactor: 10,
-                  blurAmount: 3,
-                }),
-            )),
-            _.createElement(_.Consumer, null, (_) =>
-              _.createElement(
-                _._,
-                {
+            (_ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                !this.state.bUseCanvasBlur &&
+                  this.state.bBackgroundLoaded &&
+                  this.props.rgBlurImages[this.state.nBlurImageIndex] &&
+                  (0, _.jsx)("img", {
+                    src: this.props.rgBlurImages[this.state.nBlurImageIndex],
+                    className: (0, _._)(
+                      _().ImgSrc,
+                      _().ImgBlur,
+                      _().ImgBlurBackdrop,
+                    ),
+                    onError: this.OnBlurImageFailed,
+                  }),
+                this.state.bUseCanvasBlur &&
+                  this.state.bBackgroundLoaded &&
+                  !this.props.bLowPerfMode &&
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(
+                      _().ImgSrc,
+                      _().ImgBlur,
+                      _().ImgBlurBackdrop,
+                    ),
+                    elementRef: this.m_refCanvasBlurImage,
+                    updateRate: 0,
+                    width: 192,
+                    height: 62,
+                    reductionFactor: 10,
+                    blurAmount: 3,
+                  }),
+              ],
+            })),
+            (0, _.jsx)(_.Consumer, {
+              children: (_) =>
+                (0, _.jsx)(_._, {
                   timeout: _,
                   appear: !0,
                   _: _.bFullscreen,
                   classNames: _,
-                },
-                (_) =>
-                  _.createElement(
-                    "div",
-                    {
+                  children: (_) =>
+                    (0, _.jsxs)("div", {
                       ref: _,
                       className: (0, _._)(
                         _().HeaderBackgroundImage,
                         _().Glassy,
                       ),
-                    },
-                    !this.state.bUseCanvasBlur &&
-                      this.state.bBackgroundLoaded &&
-                      this.props.rgBlurImages[this.state.nBlurImageIndex] &&
-                      _.createElement("img", {
-                        src: this.props.rgBlurImages[
-                          this.state.nBlurImageIndex
-                        ],
-                        className: (0, _._)(_().ImgSrc, _().ImgBlur),
-                        onError: this.OnBlurImageFailed,
-                      }),
-                    this.state.bUseCanvasBlur &&
-                      this.state.bBackgroundLoaded &&
-                      !this.props.bLowPerfMode &&
-                      _.createElement(_._, {
-                        className: (0, _._)(_().ImgSrc, _().ImgBlur),
-                        elementRef: this.m_refCanvasBlurImage,
-                        updateRate: 0,
-                        width: 192,
-                        height: 62,
-                        reductionFactor: 10,
-                        blurAmount: 3,
-                      }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ImgContainer,
-                      },
-                      this.HasHeaderImages() &&
-                        _.createElement(_._, {
-                          ref: this.m_refBackgroundImage,
-                          rgSources: this.props.rgHeaderImages,
-                          className: _().ImgSrc,
-                          onLoad: this.OnHeaderLoad,
-                          onIncrementalError: this.OnIncrementalError,
-                          onError: this.props.onError,
+                      children: [
+                        !this.state.bUseCanvasBlur &&
+                          this.state.bBackgroundLoaded &&
+                          this.props.rgBlurImages[this.state.nBlurImageIndex] &&
+                          (0, _.jsx)("img", {
+                            src: this.props.rgBlurImages[
+                              this.state.nBlurImageIndex
+                            ],
+                            className: (0, _._)(_().ImgSrc, _().ImgBlur),
+                            onError: this.OnBlurImageFailed,
+                          }),
+                        this.state.bUseCanvasBlur &&
+                          this.state.bBackgroundLoaded &&
+                          !this.props.bLowPerfMode &&
+                          (0, _.jsx)(_._, {
+                            className: (0, _._)(_().ImgSrc, _().ImgBlur),
+                            elementRef: this.m_refCanvasBlurImage,
+                            updateRate: 0,
+                            width: 192,
+                            height: 62,
+                            reductionFactor: 10,
+                            blurAmount: 3,
+                          }),
+                        (0, _.jsx)("div", {
+                          className: _().ImgContainer,
+                          children:
+                            this.HasHeaderImages() &&
+                            (0, _.jsx)(_._, {
+                              ref: this.m_refBackgroundImage,
+                              rgSources: this.props.rgHeaderImages,
+                              className: _().ImgSrc,
+                              onLoad: this.OnHeaderLoad,
+                              onIncrementalError: this.OnIncrementalError,
+                              onError: this.props.onError,
+                            }),
                         }),
-                    ),
-                    _,
-                  ),
-              ),
-            )
+                        _,
+                      ],
+                    }),
+                }),
+            })
           );
         }
       }
@@ -675,57 +660,41 @@
               height: `${_.nHeightPct}%`,
             }),
           _ = (0, _._)(_().BoxSizer, _()[_.pinnedPosition]);
-        return _.createElement(
-          "div",
-          {
-            className: _().BoxSizerContainer,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().BoxSizerValidRegion,
-            },
-            !_.editMode &&
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)("div", {
+          className: _().BoxSizerContainer,
+          children: (0, _.jsxs)("div", {
+            className: _().BoxSizerValidRegion,
+            children: [
+              !_.editMode &&
+                (0, _.jsx)("div", {
                   className: _,
                   style: _,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     timeout: _,
                     appear: !0,
                     _: _,
                     classNames: _,
-                  },
-                  (_) =>
-                    _.createElement(
-                      "div",
-                      {
+                    children: (_) =>
+                      (0, _.jsx)("div", {
                         ref: _,
                         className: _().TitleImageContainer,
-                      },
-                      _,
-                    ),
-                ),
-              ),
-            _.editMode &&
-              _.createElement(
-                _,
-                {
+                        children: _,
+                      }),
+                  }),
+                }),
+              _.editMode &&
+                (0, _.jsx)(_, {
                   _: __webpack_require__,
                   pinType: _.pinnedPosition,
                   index: 0,
                   widthPct: _.nWidthPct,
                   heightPct: _.nHeightPct,
                   fnOnPositionChanged: _,
-                },
-                _,
-              ),
-          ),
-        );
+                  children: _,
+                }),
+            ],
+          }),
+        });
       }
       function _(_, _, _) {
         let _, _, _, _;
@@ -1063,93 +1032,83 @@
                 (0, _._)(_().EdgeDown, _()[this.state.EdgeDown]),
               _()[this.props.pinType],
             );
-          return _.createElement(
-            "div",
-            {
-              className: _,
-              style: _,
-              ref: this.LinkRegionBoxRef,
-              draggable: !1,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().BoxSizerGridBox,
-              },
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().TopLeft}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.topleft);
-                },
-                draggable: !1,
-              }),
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().Top}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.top);
-                },
-              }),
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().TopRight}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.topright);
-                },
-                draggable: !1,
-              }),
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().Left}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.left);
-                },
-                draggable: !1,
-              }),
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _,
+            style: _,
+            ref: this.LinkRegionBoxRef,
+            draggable: !1,
+            children: (0, _.jsxs)("div", {
+              className: _().BoxSizerGridBox,
+              children: [
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().TopLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topleft);
+                  },
+                  draggable: !1,
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().Top}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.top);
+                  },
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().TopRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topright);
+                  },
+                  draggable: !1,
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().Left}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.left);
+                  },
+                  draggable: !1,
+                }),
+                (0, _.jsx)("div", {
                   className: `${_().BoxSizerEdge} ${_().Middle}`,
                   onMouseDown: (_) => {
                     this.OnMouseDown(_, _.middle);
                   },
                   draggable: !1,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().TitleImageContainer,
+                    children: this.props.children,
+                  }),
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().Right}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.right);
                   },
-                  this.props.children,
-                ),
-              ),
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().Right}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.right);
-                },
-                draggable: !1,
-              }),
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().BottomLeft}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.bottomleft);
-                },
-                draggable: !1,
-              }),
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().Bottom}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.bottom);
-                },
-                draggable: !1,
-              }),
-              _.createElement("div", {
-                className: `${_().BoxSizerEdge} ${_().BottomRight}`,
-                onMouseDown: (_) => {
-                  this.OnMouseDown(_, _.bottomright);
-                },
-                draggable: !1,
-              }),
-            ),
-          );
+                  draggable: !1,
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().BottomLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomleft);
+                  },
+                  draggable: !1,
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().Bottom}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottom);
+                  },
+                  draggable: !1,
+                }),
+                (0, _.jsx)("div", {
+                  className: `${_().BoxSizerEdge} ${_().BottomRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomright);
+                  },
+                  draggable: !1,
+                }),
+              ],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
@@ -1163,103 +1122,87 @@
         let _ = 26;
         _.length > 8 && (_ = Math.max(_ - (_.length - 5) / 2, 5.8));
         const [_, _] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_().SVGTitle, __webpack_require__),
-            viewBox: "0 0 300 14",
-          },
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "linearGradient",
-              {
+        return (0, _.jsxs)("svg", {
+          className: (0, _._)(_().SVGTitle, __webpack_require__),
+          viewBox: "0 0 300 14",
+          children: [
+            (0, _.jsx)("defs", {
+              children: (0, _.jsxs)("linearGradient", {
                 _: _,
                 _: "0",
                 _: "0",
                 _: "0",
                 _: "100%",
                 gradientUnits: "userSpaceOnUse",
-              },
-              _.createElement("stop", {
-                stopColor: "#fff",
-                offset: "0%",
+                children: [
+                  (0, _.jsx)("stop", {
+                    stopColor: "#fff",
+                    offset: "0%",
+                  }),
+                  (0, _.jsx)("stop", {
+                    stopColor: "#fff",
+                    offset: "20%",
+                  }),
+                  (0, _.jsx)("stop", {
+                    stopColor: "#fff",
+                    offset: "40%",
+                  }),
+                  (0, _.jsx)("stop", {
+                    stopColor: "#eee",
+                    offset: "60%",
+                  }),
+                  (0, _.jsx)("stop", {
+                    stopColor: "#ddd",
+                    offset: "80%",
+                  }),
+                  (0, _.jsx)("stop", {
+                    stopColor: "#ccc",
+                    offset: "100%",
+                  }),
+                ],
               }),
-              _.createElement("stop", {
-                stopColor: "#fff",
-                offset: "20%",
-              }),
-              _.createElement("stop", {
-                stopColor: "#fff",
-                offset: "40%",
-              }),
-              _.createElement("stop", {
-                stopColor: "#eee",
-                offset: "60%",
-              }),
-              _.createElement("stop", {
-                stopColor: "#ddd",
-                offset: "80%",
-              }),
-              _.createElement("stop", {
-                stopColor: "#ccc",
-                offset: "100%",
-              }),
-            ),
-          ),
-          _.createElement(
-            "text",
-            {
+            }),
+            (0, _.jsx)("text", {
               _: "-1",
               _: 14,
               fontSize: _,
               textAnchor: "bottom",
               fontWeight: "200",
               fill: _,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       };
       function _(_) {
         const { title: _, children: __webpack_require__ } = _,
           _ = _.useContext(_),
           _ = _.useRef(null);
-        return _.createElement(
-          _._,
-          {
-            nodeRef: _,
-            timeout: _,
-            appear: !0,
-            _: _.bFullscreen,
-            classNames: _,
-          },
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: (0, _._)(_().TitleSection, _ ? _().NoLogo : ""),
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          nodeRef: _,
+          timeout: _,
+          appear: !0,
+          _: _.bFullscreen,
+          classNames: _,
+          children: (0, _.jsxs)("div", {
+            ref: _,
+            className: (0, _._)(_().TitleSection, _ ? _().NoLogo : ""),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().TextNameSpace,
-              },
-              !!_ &&
-                _.createElement(_, {
-                  title: _,
-                }),
-            ),
-            _.createElement(
-              "div",
-              {
+                children:
+                  !!_ &&
+                  (0, _.jsx)(_, {
+                    title: _,
+                  }),
+              }),
+              (0, _.jsx)("div", {
                 className: _().Features,
-              },
-              __webpack_require__,
-            ),
-          ),
-        );
+                children: __webpack_require__,
+              }),
+            ],
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -1313,217 +1256,156 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("span", {
-            style: {
-              fontSize: 0,
-            },
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("span", {
+              style: {
+                fontSize: 0,
+              },
+            }),
+            (0, _.jsx)("div", {
               className: (0, _._)(_().Container),
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().Row,
-              },
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(
-                "div",
-                {
-                  className: _().RightControls,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().AppButtonsContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().MenuButton,
-                    },
-                    _.createElement(_.wB_, null),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().GameInfoButton,
-                    },
-                    "Game Info",
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Arrow,
-                      },
-                      _.createElement(_.V5W, {
-                        angle: 180,
-                      }),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
+                children: [
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)("div", {
+                    className: _().RightControls,
+                    children: (0, _.jsxs)("div", {
+                      className: _().AppButtonsContainer,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().MenuButton,
+                          children: (0, _.jsx)(_.wB_, {}),
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: _().GameInfoButton,
+                          children: [
+                            "Game Info",
+                            (0, _.jsx)("div", {
+                              className: _().Arrow,
+                              children: (0, _.jsx)(_.V5W, {
+                                angle: 180,
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().StatusAndStats),
-          },
-          _.createElement(_, null),
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().StatusAndStats),
+          children: (0, _.jsx)(_, {}),
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().GameStatsSection,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().GameStatsSection,
+          children: [
+            (0, _.jsx)("div", {
               className: _().LastPlayed,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().LastPlayedRight,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().LastPlayedLabel,
-                },
-                "LAST PLAYED",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().LastPlayedInfo,
-                },
-                "Mar 24",
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().LastPlayedLabel,
+                    children: "LAST PLAYED",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().LastPlayedInfo,
+                    children: "Mar 24",
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsxs)("div", {
               className: _().Playtime,
-            },
-            _.createElement("div", {
-              className: _().PlaytimeLeft,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().PlaytimeRight,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().PlaytimeLabel,
-                },
-                "PLAY TIME",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().PlaytimeInfo,
-                },
-                "37 hours",
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().MiniAchievements,
-            },
-            _.createElement("div", {
-              className: _().AchievementLeft,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().AchievementRight,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().AchievementLabel,
-                },
-                "ACHIEVEMENTS",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().AchievementProgressRow,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().AchievementCountLabel,
-                  },
-                  "30/47",
-                ),
-                _.createElement(_, {
-                  progressPct: 3e3 / 47,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PlaytimeLeft,
                 }),
-              ),
-            ),
-          ),
-        );
+                (0, _.jsxs)("div", {
+                  className: _().PlaytimeRight,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().PlaytimeLabel,
+                      children: "PLAY TIME",
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().PlaytimeInfo,
+                      children: "37 hours",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _().MiniAchievements,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().AchievementLeft,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().AchievementRight,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().AchievementLabel,
+                      children: "ACHIEVEMENTS",
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().AchievementProgressRow,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().AchievementCountLabel,
+                          children: "30/47",
+                        }),
+                        (0, _.jsx)(_, {
+                          progressPct: 3e3 / 47,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
       }
       class _ extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: _().DetailsProgressContainer,
-            },
-            _.createElement("div", {
+          return (0, _.jsx)("div", {
+            className: _().DetailsProgressContainer,
+            children: (0, _.jsx)("div", {
               className: _().DetailsProgressBar,
               style: {
                 width: this.props.progressPct + "%",
               },
             }),
-          );
+          });
         }
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().ActionSection,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().PlayButtonContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().PlayButton, _().Green),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().ButtonText,
-                },
-                "PLAY",
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: _().ActionSection,
+          children: (0, _.jsx)("div", {
+            className: _().PlayButtonContainer,
+            children: (0, _.jsx)("div", {
+              className: (0, _._)(_().PlayButton, _().Green),
+              children: (0, _.jsx)("div", {
+                className: _().ButtonText,
+                children: "PLAY",
+              }),
+            }),
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -1621,27 +1503,24 @@
               return _.sort(), _;
             }
           }, [_]);
-        return _.createElement(
-          "div",
-          {
-            className: _().GameList,
-          },
-          _.map((_) => {
+        return (0, _.jsx)("div", {
+          className: _().GameList,
+          children: _.map((_) => {
             let _ = _ === _;
-            return _.createElement(
+            return (0, _.jsx)(
               "div",
               {
-                key: _,
                 className: (0, _._)(
                   _().GameListEntry,
                   _ ? _().Selected : _().Uninstalled,
                 ),
                 ref: _ ? _ : void 0,
+                children: _,
               },
               _,
             );
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1741,73 +1620,58 @@
             });
         }
         render() {
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().LogoEditorPopup,
-                  this.state.saving && _().Saving,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().LogoEditorPopup,
+                this.state.saving && _().Saving,
+              ),
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().LogoEditorSaveActions,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _().LogoEditorSavedMessage,
-                      this.state.saved && _().Saved,
-                    ),
-                  },
-                  (0, _._)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LogoEditorButtons,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: this.OnOK,
-                      className: _().LogoEditorButton,
-                    },
-                    (0, _._)("#Button_Save"),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: this.OnCancel,
-                      className: _().LogoEditorButton,
-                    },
-                    this.state.unsavedChanges
-                      ? (0, _._)("#Button_Cancel")
-                      : (0, _._)("#Button_Close"),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SavingThrobberContainer,
-                },
-                _.createElement(_._, {
-                  size: "xlarge",
-                  className: _().SavingThrobber,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().LogoEditorSavedMessage,
+                        this.state.saved && _().Saved,
+                      ),
+                      children: (0, _._)(
+                        "#StoreAdmin_LibraryPlacementTool_ChangesSaved",
+                      ),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().LogoEditorButtons,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          onClick: this.OnOK,
+                          className: _().LogoEditorButton,
+                          children: (0, _._)("#Button_Save"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          onClick: this.OnCancel,
+                          className: _().LogoEditorButton,
+                          children: this.state.unsavedChanges
+                            ? (0, _._)("#Button_Cancel")
+                            : (0, _._)("#Button_Close"),
+                        }),
+                      ],
+                    }),
+                  ],
                 }),
-              ),
-              _.createElement(_, {
-                ...this.props,
-                fnOnPositionChanged: this.OnPositionChanged,
-              }),
-            ),
-          );
+                (0, _.jsx)("div", {
+                  className: _().SavingThrobberContainer,
+                  children: (0, _.jsx)(_._, {
+                    size: "xlarge",
+                    className: _().SavingThrobber,
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  ...this.props,
+                  fnOnPositionChanged: this.OnPositionChanged,
+                }),
+              ],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnBeforeUnload", null),
@@ -1831,90 +1695,78 @@
         render() {
           const { LogoEditorStore: _ } = this.props;
           let _ = !!_.GetLogoURL();
-          return _.createElement(
-            "div",
-            {
-              className: _().LogoEditorContainer,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().LogoEditorContainer,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().LogoEditorGameListContainer,
-              },
-              _.createElement(_, {
-                highlightedName: _.GetAppName(),
+                children: (0, _.jsx)(_, {
+                  highlightedName: _.GetAppName(),
+                }),
               }),
-            ),
-            _.createElement("div", {
-              className: _().ListDivider,
-            }),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
+                className: _().ListDivider,
+              }),
+              (0, _.jsxs)("div", {
                 className: _().LogoEditorDetailsContainer,
-              },
-              _.createElement(_, {
-                LogoEditorStore: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().LogoEditorHeaderContainer,
-                },
-                _.createElement(
-                  _,
-                  {
-                    editMode: _ && this.state.bEditModeEnabled,
-                    hasHeroImage: !0,
-                    rgHeaderImages: [_.GetHeroURL()],
-                    rgLogoImages: _ ? [_.GetLogoURL()] : [],
-                    classNameNoLogo: _().NoLogoImage,
-                    fnOnPositionChanged: this.OnPositionChanged,
-                    logoPosition: _.GetLogoPosition(),
-                  },
-                  _.createElement(_, {
-                    title: _.GetLogoURL() ? "" : _.GetAppName(),
+                children: [
+                  (0, _.jsx)(_, {
+                    LogoEditorStore: _,
                   }),
-                ),
-              ),
-              _.createElement(_, null),
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailsArea,
-                },
-                _.createElement("br", null),
-                _.createElement("br", null),
-                _.createElement("br", null),
-                _.createElement("br", null),
-                _.createElement("br", null),
-              ),
-            ),
-          );
+                  (0, _.jsx)("div", {
+                    className: _().LogoEditorHeaderContainer,
+                    children: (0, _.jsx)(_, {
+                      editMode: _ && this.state.bEditModeEnabled,
+                      hasHeroImage: !0,
+                      rgHeaderImages: [_.GetHeroURL()],
+                      rgLogoImages: _ ? [_.GetLogoURL()] : [],
+                      classNameNoLogo: _().NoLogoImage,
+                      fnOnPositionChanged: this.OnPositionChanged,
+                      logoPosition: _.GetLogoPosition(),
+                      children: (0, _.jsx)(_, {
+                        title: _.GetLogoURL() ? "" : _.GetAppName(),
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsxs)("div", {
+                    className: _().DetailsArea,
+                    children: [
+                      (0, _.jsx)("br", {}),
+                      (0, _.jsx)("br", {}),
+                      (0, _.jsx)("br", {}),
+                      (0, _.jsx)("br", {}),
+                      (0, _.jsx)("br", {}),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnPositionChanged", null);
       const _ = (0, _._)((_) => {
         const _ = _.LogoEditorStore.GetLogoPosition();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("input", {
-            type: "hidden",
-            name: "app[assets][library_logo][logo_position][pinned_position]",
-            value: _.pinnedPosition,
-          }),
-          _.createElement("input", {
-            type: "hidden",
-            name: "app[assets][library_logo][logo_position][width_pct]",
-            value: _.nWidthPct,
-          }),
-          _.createElement("input", {
-            type: "hidden",
-            name: "app[assets][library_logo][logo_position][height_pct]",
-            value: _.nHeightPct,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("input", {
+              type: "hidden",
+              name: "app[assets][library_logo][logo_position][pinned_position]",
+              value: _.pinnedPosition,
+            }),
+            (0, _.jsx)("input", {
+              type: "hidden",
+              name: "app[assets][library_logo][logo_position][width_pct]",
+              value: _.nWidthPct,
+            }),
+            (0, _.jsx)("input", {
+              type: "hidden",
+              name: "app[assets][library_logo][logo_position][height_pct]",
+              value: _.nHeightPct,
+            }),
+          ],
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1923,6 +1775,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1971,7 +1824,7 @@
           _(), (this.m_bSetupComplete = !0);
         }
         render() {
-          return _.createElement("canvas", {
+          return (0, _.jsx)("canvas", {
             _: this.props._,
             className: this.props.className,
             ref: this.BindCanvasRef,
@@ -1989,18 +1842,16 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, ...__webpack_require__ } = _,
           _ = _.useRef(null);
-        return _.createElement(
-          _._,
-          {
-            nodeRef: _,
-            ...__webpack_require__,
-          },
-          _.children(_),
-        );
+        return (0, _.jsx)(_._, {
+          nodeRef: _,
+          ...__webpack_require__,
+          children: _.children(_),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2009,6 +1860,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -2073,14 +1925,17 @@
             } = this.props,
             _ = this.src,
             _ = this.state.nPropChangeCounter;
-          return _.createElement("img", {
-            key: _,
-            ref: this.m_refImage,
-            ..._,
-            src: _,
-            onError: this.OnImageError,
-            alt: _,
-          });
+          return (0, _.jsx)(
+            "img",
+            {
+              ref: this.m_refImage,
+              ..._,
+              src: _,
+              onError: this.OnImageError,
+              alt: _,
+            },
+            _,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "OnImageError", null);

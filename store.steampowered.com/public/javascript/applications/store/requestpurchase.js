@@ -4,14 +4,14 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8987, 5894],
   {
-    35649: (e, r, u) => {
-      u.r(r), u.d(r, { default: () => o });
-      var s = u(90626),
-        a = u(13164);
-      function o(e) {
-        const { familyGroupID: r } = e;
-        return s.createElement(a.PurchaseRequestSimpleInfoPage, {
-          familyGroupID: r,
+    35649: (e, s, u) => {
+      u.r(s), u.d(s, { default: () => a });
+      var r = u(7850),
+        o = u(13164);
+      function a(e) {
+        const { familyGroupID: s } = e;
+        return (0, r.jsx)(o.PurchaseRequestSimpleInfoPage, {
+          familyGroupID: s,
           headerLocToken: "#PurchaseRequested_Header",
           infoLocToken: "#PurchaseRequested_Info",
         });

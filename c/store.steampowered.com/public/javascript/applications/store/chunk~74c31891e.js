@@ -3,6 +3,14 @@
   {
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
+        FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
+        FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk",
       };
     },
@@ -289,6 +297,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -397,50 +406,46 @@
             [_, _, _, _, _, _],
           );
         if (!_ || (_ && !_))
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             string: (0, _._)("#Loading"),
             size: "small",
             position: "center",
           });
         const _ = !_._.logged_in || !_.account_restricted_from_purchasing;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _.Suspense,
-            {
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_.Suspense, {
               fallback: null,
-            },
-            _.createElement(_, {
-              bIsPreview: _,
-              rgReservationDef: _,
-            }),
-          ),
-          Boolean(_.allow_purchase_in_country) &&
-            _.createElement(
-              "div",
-              {
-                className: _[0].unique_id,
-              },
-              _.createElement(_._, {
-                reservationDef: _[0],
-                hardwareDetail: _,
-                bPSULessModel: !1,
+              children: (0, _.jsx)(_, {
+                bIsPreview: _,
+                rgReservationDef: _,
               }),
-              _ &&
-                _.createElement(_._, {
-                  event: __webpack_require__,
-                  reservationDef: _[0],
-                  hardwareDetail: _,
-                }),
-              Boolean(_?.allow_purchase_in_country) &&
-                _.createElement(_._, {
-                  reservationDef: _[0],
-                  hardwareDetail: _,
-                  bPSULessModel: !0,
-                }),
-            ),
-        );
+            }),
+            Boolean(_.allow_purchase_in_country) &&
+              (0, _.jsxs)("div", {
+                className: _[0].unique_id,
+                children: [
+                  (0, _.jsx)(_._, {
+                    reservationDef: _[0],
+                    hardwareDetail: _,
+                    bPSULessModel: !1,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      event: __webpack_require__,
+                      reservationDef: _[0],
+                      hardwareDetail: _,
+                    }),
+                  Boolean(_?.allow_purchase_in_country) &&
+                    (0, _.jsx)(_._, {
+                      reservationDef: _[0],
+                      hardwareDetail: _,
+                      bPSULessModel: !0,
+                    }),
+                ],
+              }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -458,12 +463,9 @@
           _ = (0, _._)(),
           _ = (0, _._)(_),
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().WishlistHoverCtn,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().WishlistHoverCtn,
+          children: (0, _.jsx)(_._, {
             snr: _,
             _: _,
             classOverride: (0, _._)(
@@ -476,26 +478,68 @@
               backgroundColor: _,
             },
           }),
-        );
+        });
       }
       function _(_) {
         const _ = Number(_.args.appid);
         if (!_) return null;
         const _ = (0, _._)(_.args.color, "black"),
           _ = (0, _._)(_.args.bgcolor, "white");
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           appid: _,
           color: _,
           bgcolor: _,
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
+        const {
+            appID: _,
+            classOverride: __webpack_require__,
+            styleOverride: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)("GameHoverFollowButton"),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
+          _ = (0, _._)(_),
+          { mutateAsync: _ } = (0, _._)(_, !_, void 0);
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().FollowButton, __webpack_require__),
+          onClick: async (_) => {
+            _.preventDefault(),
+              _.stopPropagation(),
+              _._.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _();
+          },
+          style: _,
+          children: [
+            _ ? (0, _.jsx)(_.pPV, {}) : (0, _.jsx)(_.c9e, {}),
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().FollowButtonText,
+                _ && _().FollowLoadingText,
+                "FollowGameButton",
+              ),
+              children: (0, _._)(
+                _ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
+              ),
+            }),
+            _,
+          ],
+        });
+      }
+      function _(_) {
         const { appid: _, color: __webpack_require__, bgcolor: _ } = _;
         (0, _._)();
-        return _.createElement(_._, {
+        return (0, _.jsx)(_, {
           appID: _,
           classOverride: (0, _._)(
             _().FollowGameButtonNotTop,
@@ -512,7 +556,7 @@
         if (!_) return null;
         const _ = (0, _._)(_.args.color, "black"),
           _ = (0, _._)(_.args.bgcolor, "white");
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           appid: _,
           color: _,
           bgcolor: _,
@@ -535,88 +579,70 @@
           } = _;
         return _
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.countdownCtn,
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
+          : (0, _.jsxs)("div", {
+              className: _.countdownCtn,
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
                     className: _.Closed,
-                  },
-                  _ > 0
-                    ? (0, _._)("#Giveaway_Closed", (0, _._)(_))
-                    : (0, _._)("#Giveaway_Closed_NoWinnerInfo"),
-                ),
-              Boolean(!_) &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  Boolean(_ <= 0)
-                    ? _.createElement(
-                        "div",
-                        {
-                          className: _.Throbber,
-                        },
-                        _.createElement(_._, {
-                          size: "small",
+                    children:
+                      _ > 0
+                        ? (0, _._)("#Giveaway_Closed", (0, _._)(_))
+                        : (0, _._)("#Giveaway_Closed_NoWinnerInfo"),
+                  }),
+                Boolean(!_) &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      Boolean(_ <= 0)
+                        ? (0, _.jsxs)("div", {
+                            className: _.Throbber,
+                            children: [
+                              (0, _.jsx)(_._, {
+                                size: "small",
+                              }),
+                              (0, _.jsx)("div", {
+                                children: (0, _._)("#Giveaway_RandomDraw"),
+                              }),
+                            ],
+                          })
+                        : (0, _.jsxs)("div", {
+                            className: _.CountDownCtn,
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: _.CountDownTime,
+                                children:
+                                  _(Math.floor(_ / 60)) + ":" + _(_ % 60),
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _.CountDownText,
+                                children: [
+                                  (0, _._)("#Giveaway_CountDown2"),
+                                  " ",
+                                  (0, _._)("#Giveaway_KeepWatching"),
+                                ],
+                              }),
+                            ],
+                          }),
+                      Boolean(_ > 0) &&
+                        (0, _.jsxs)("div", {
+                          className: _.WinnerInfo,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.WinnerCount,
+                              children: (0, _._)(_),
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _.WinnerText,
+                              children: (0, _._)("#Giveaway_Congratulation"),
+                            }),
+                          ],
                         }),
-                        _.createElement(
-                          "div",
-                          null,
-                          (0, _._)("#Giveaway_RandomDraw"),
-                        ),
-                      )
-                    : _.createElement(
-                        "div",
-                        {
-                          className: _.CountDownCtn,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.CountDownTime,
-                          },
-                          _(Math.floor(_ / 60)) + ":" + _(_ % 60),
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.CountDownText,
-                          },
-                          (0, _._)("#Giveaway_CountDown2"),
-                          " ",
-                          (0, _._)("#Giveaway_KeepWatching"),
-                        ),
-                      ),
-                  Boolean(_ > 0) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.WinnerInfo,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.WinnerCount,
-                        },
-                        (0, _._)(_),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.WinnerText,
-                        },
-                        (0, _._)("#Giveaway_Congratulation"),
-                      ),
-                    ),
-                ),
-            );
+                    ],
+                  }),
+              ],
+            });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -642,7 +668,7 @@
                 _?.granted_by_discovery_queue
               ) {
                 const _ = _.levels[_.levels.length - 1].level;
-                return _.createElement(_, {
+                return (0, _.jsx)(_, {
                   eventModel: _,
                   nBadgeLevel: _,
                   nMaxLevel: _,
@@ -650,13 +676,10 @@
               }
             }
           }
-          return _.createElement(
-            "span",
-            {
-              className: "DisplayBadgeProgress",
-            },
-            (0, _._)(_),
-          );
+          return (0, _.jsx)("span", {
+            className: "DisplayBadgeProgress",
+            children: (0, _._)(_),
+          });
         }
         return null;
       }
@@ -678,19 +701,16 @@
           ),
           _ = (0, _._)(_, _),
           _ = Math.min(__webpack_require__ + _, _);
-        return _.createElement(
-          "span",
-          {
-            className: "DisplayBadgeProgress",
-          },
-          (0, _._)(_),
-        );
+        return (0, _.jsx)("span", {
+          className: "DisplayBadgeProgress",
+          children: (0, _._)(_),
+        });
       }
       function _(_) {
         const { event: _ } = _.context,
           _ = Number.parseInt((0, _._)(_.args, "eventid"));
         return _._.logged_in && _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               nEventBadgeID: _,
               eventModel: _,
             })
@@ -702,48 +722,44 @@
           { fnOpenDoor: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
-        return _.createElement(
-          _._,
-          {
-            disabled: _,
-            onClick: (_) => {
-              _ ||
-                (_._.logged_in
-                  ? (_(!0),
-                    _(_, !0, null, !1)
-                      .then((_) => {
-                        _ || _(!0), _(!1);
-                      })
-                      .catch(() => {
-                        _(!0), _(!1);
-                      }))
-                  : (0, _._)());
-            },
+        return (0, _.jsx)(_._, {
+          disabled: _,
+          onClick: (_) => {
+            _ ||
+              (_._.logged_in
+                ? (_(!0),
+                  _(_, !0, null, !1)
+                    .then((_) => {
+                      _ || _(!0), _(!1);
+                    })
+                    .catch(() => {
+                      _(!0), _(!1);
+                    }))
+                : (0, _._)());
           },
-          Boolean(_)
-            ? _.createElement("div", null, (0, _._)("#GrantAwardError_Busy"))
-            : _.createElement(
-                _.Fragment,
-                null,
-                Boolean(_) &&
-                  _.createElement(_._, {
-                    size: "small",
-                  }),
-                Boolean(_) && _.createElement(_.Jlk, null),
-                __webpack_require__,
-              ),
-        );
+          children: Boolean(_)
+            ? (0, _.jsx)("div", {
+                children: (0, _._)("#GrantAwardError_Busy"),
+              })
+            : (0, _.jsxs)(_.Fragment, {
+                children: [
+                  Boolean(_) &&
+                    (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  Boolean(_) && (0, _.jsx)(_.Jlk, {}),
+                  __webpack_require__,
+                ],
+              }),
+        });
       }
       function _(_) {
         const _ = Number.parseInt((0, _._)(_.args)) || 0;
         return _ >= 0 && _ < 32
-          ? _.createElement(
-              _,
-              {
-                nDoorIndex: _,
-              },
-              _.children,
-            )
+          ? (0, _.jsx)(_, {
+              nDoorIndex: _,
+              children: _.children,
+            })
           : null;
       }
       const _ = (0, _._)(_._);
@@ -756,12 +772,9 @@
           );
           if (_ >= 0) {
             const _ = __webpack_require__.GetDayIndexFromEventStart();
-            return _.createElement(
-              _._,
-              {
-                location: _ ? 2 : 0,
-              },
-              _.createElement(_, {
+            return (0, _.jsx)(_._, {
+              location: _ ? 2 : 0,
+              children: (0, _.jsx)(_, {
                 event: __webpack_require__,
                 section: __webpack_require__.jsondata.sale_sections[_],
                 activeTab: new _._(null, _),
@@ -773,35 +786,29 @@
                   ? _._.EPreviewMode_Enabled
                   : _._.EPreviewMode_Disabled,
               }),
-            );
+            });
           }
           if (_)
-            return _.createElement(
-              "div",
-              {
-                className: _.ErrorDiv,
-              },
-              "Error could not find sale section ",
-              _,
-            );
+            return (0, _.jsxs)("div", {
+              className: _.ErrorDiv,
+              children: ["Error could not find sale section ", _],
+            });
         }
         return null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { clanAccountID: _, color: __webpack_require__, bgcolor: _ } = _;
         (0, _._)();
         const [_, _] = _.useState(!1);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
+          children: (0, _.jsx)(_._, {
             nCreatorAccountID: _,
             classOverride: _().FollowGameButtonNotTop,
             styleOverride: {
@@ -810,7 +817,7 @@
             },
             followType: "group",
           }),
-        );
+        });
       }
       function _(_) {
         const { event: _ } = _.context,
@@ -818,7 +825,7 @@
         if (!_) return null;
         const _ = (0, _._)(_.args.color, "black"),
           _ = (0, _._)(_.args.bgcolor, "white");
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           clanAccountID: _,
           color: _,
           bgcolor: _,
@@ -832,7 +839,7 @@
           _ = Number.parseInt((0, _._)(_.args, "maxquantity")),
           _ = (0, _._)(_.args, "calltoaction");
         return (0, _._)(_, _)
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               language: _.language,
               clanAccountID: _.clanSteamID.GetAccountID(),
               itemDefSetting: {
@@ -842,7 +849,7 @@
               },
               strCallToAction: _,
             })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               size: "small",
               position: "center",
               string: (0, _._)("#Loading"),
@@ -859,7 +866,7 @@
           );
         })();
         if (!_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             size: "small",
           });
         const _ = Number.parseInt((0, _._)(_.args));
@@ -871,12 +878,14 @@
           case 1:
             _ = _.unsupported;
         }
-        return _.createElement("span", null, (0, _._)(Number(_)));
+        return (0, _.jsx)("span", {
+          children: (0, _._)(Number(_)),
+        });
       }
       function _(_) {
         const _ = (0, _._)("library");
         if (!_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             size: "small",
           });
         const _ = Number.parseInt((0, _._)(_.args));
@@ -891,7 +900,9 @@
           case 0:
             _ = _.unknownList?.length || 0;
         }
-        return _.createElement("span", null, (0, _._)(Number(_)));
+        return (0, _.jsx)("span", {
+          children: (0, _._)(Number(_)),
+        });
       }
       function _(_) {
         const _ = Number.parseInt((0, _._)(_.args)),
@@ -899,14 +910,11 @@
             "hide" in _.args &&
             Boolean(Number.parseInt((0, _._)(_.args, "hide")));
         return _ >= 0
-          ? _.createElement(
-              _,
-              {
-                nDoorIndex: _,
-                bHide: _,
-              },
-              _.children,
-            )
+          ? (0, _.jsx)(_, {
+              nDoorIndex: _,
+              bHide: _,
+              children: _.children,
+            })
           : null;
       }
       function _(_) {
@@ -915,7 +923,9 @@
         return null == _
           ? null
           : (_ && !__webpack_require__) || (!_ && __webpack_require__)
-            ? _.createElement(_.Fragment, null, _.children)
+            ? (0, _.jsx)(_.Fragment, {
+                children: _.children,
+              })
             : null;
       }
       function _(_) {
@@ -929,37 +939,33 @@
       function _(_) {
         const _ = (0, _._)(_.args);
         return _?.trim().length > 0
-          ? _.createElement(
-              "div",
-              {
-                className: _.trim(),
-              },
-              _.children,
-            )
-          : _.createElement(_.Fragment, null, _.children);
+          ? (0, _.jsx)("div", {
+              className: _.trim(),
+              children: _.children,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _.children,
+            });
       }
       function _(_) {
-        return _.createElement(
-          "span",
-          {
-            className: _.LocalizeBlock,
-          },
-          (0, _._)(
+        return (0, _.jsx)("span", {
+          className: _.LocalizeBlock,
+          children: (0, _._)(
             _.children,
-            _.createElement("b", null),
-            _.createElement("b", null),
-            _.createElement("b", null),
-            _.createElement("b", null),
+            (0, _.jsx)("b", {}),
+            (0, _.jsx)("b", {}),
+            (0, _.jsx)("b", {}),
+            (0, _.jsx)("b", {}),
           ),
-        );
+        });
       }
       function _(_) {
         let _ = (0, _._)(_.args);
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               giveawayid: _,
             })
-          : _.createElement(_.Fragment, null);
+          : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
         const { event: _, showErrorInfo: __webpack_require__ } = _.context,
@@ -970,7 +976,7 @@
             _ = (0, _._)(_.args, "out_of_stock_override"),
             _ = (0, _._)(_.args, "delivery_override"),
             _ = (0, _._)(_.args, "delivery_override_out_of_stock");
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             reservationPackageID: _,
             event: _,
             depositPackageID: _,
@@ -980,7 +986,7 @@
             bDeliveryOverrideOnlyIfOutOfStock: Boolean(_),
           });
         }
-        return _.createElement(_.Fragment, null);
+        return (0, _.jsx)(_.Fragment, {});
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {

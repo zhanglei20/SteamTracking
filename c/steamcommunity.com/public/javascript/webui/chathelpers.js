@@ -28,7 +28,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_norwegian.json": [80148, 4776],
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
-          "./friendsui_romanian.json": [31807, 7861],
+          "./friendsui_romanian.json": [54188, 7861],
           "./friendsui_russian.json": [30757, 2945],
           "./friendsui_sc_schinese.json": [69423, 43],
           "./friendsui_schinese.json": [5184, 9746],
@@ -76,7 +76,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_norwegian.json": [80148, 4776],
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
-          "./friendsui_romanian.json": [31807, 7861],
+          "./friendsui_romanian.json": [54188, 7861],
           "./friendsui_russian.json": [30757, 2945],
           "./friendsui_sc_schinese.json": [69423, 43],
           "./friendsui_schinese.json": [5184, 9746],
@@ -1278,6 +1278,7 @@ var CLSTAMP = "steamdb";
         const _ = new _();
         window.LocalizationManager = _;
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_strInviteCode;
@@ -1627,19 +1628,16 @@ var CLSTAMP = "steamdb";
           _([_._], _.prototype, "m_connectResult", void 0);
         let _ = class extends _.Component {
           render() {
-            return _.createElement(
-              "div",
-              {
-                className: "InviteLandingRoot",
-              },
-              this.props.controller.BIsInviteValid()
-                ? _.createElement(_, {
+            return (0, _.jsx)("div", {
+              className: "InviteLandingRoot",
+              children: this.props.controller.BIsInviteValid()
+                ? (0, _.jsx)(_, {
                     controller: this.props.controller,
                   })
-                : _.createElement(_, {
+                : (0, _.jsx)(_, {
                     controller: this.props.controller,
                   }),
-            );
+            });
           }
         };
         _ = _([_._], _);
@@ -1671,19 +1669,13 @@ var CLSTAMP = "steamdb";
           }
           render() {
             if (this.props.controller.BIsConnectingToClient())
-              return _.createElement(
-                "div",
-                {
-                  className: "ChatMessageInvite RequestingInfo NoColumns",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "postedExpiredInvite",
-                  },
-                  _("#bbcode_invite_requesting_info"),
-                ),
-              );
+              return (0, _.jsx)("div", {
+                className: "ChatMessageInvite RequestingInfo NoColumns",
+                children: (0, _.jsx)("div", {
+                  className: "postedExpiredInvite",
+                  children: _("#bbcode_invite_requesting_info"),
+                }),
+              });
             let _ = this.props.controller.GetConnectResults(),
               _ = this.props.controller.GetInvite(),
               _ = (_.COMMUNITY_BASE_URL, this.IsMobileDevice()),
@@ -1691,146 +1683,106 @@ var CLSTAMP = "steamdb";
             return (
               _.BIsVoiceChatInvite() && (_ += " inviteButtonJoinVoice"),
               _.success
-                ? _.createElement(
-                    "div",
-                    {
-                      className: "ChatMessageInvite NoColumns",
-                    },
-                    _.createElement(
-                      "div",
-                      {
+                ? (0, _.jsxs)("div", {
+                    className: "ChatMessageInvite NoColumns",
+                    children: [
+                      (0, _.jsx)("div", {
                         className: "groupName",
-                      },
-                      _("#InviteLanding_SentToSteam"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
+                        children: _("#InviteLanding_SentToSteam"),
+                      }),
+                      (0, _.jsx)("div", {
                         className: "inviteLabel",
-                      },
-                      _(
-                        "#InviteLanding_SentToSteam_Desc",
-                        _.createElement(
-                          "a",
-                          {
+                        children: _(
+                          "#InviteLanding_SentToSteam_Desc",
+                          (0, _.jsx)("a", {
                             href: "#",
                             onClick: this.LaunchWebChat,
-                          },
-                          _("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
+                            children: _(
+                              "#InviteLanding_SentToSteam_Desc_LaunchWebChat",
+                            ),
+                          }),
                         ),
-                      ),
-                    ),
-                  )
+                      }),
+                    ],
+                  })
                 : _.account_mismatch
-                  ? _.createElement(
-                      _,
-                      {
-                        render: this.props.controller.GetPreRenderedHTML(),
-                      },
-                      _.createElement(
-                        "div",
-                        {
+                  ? (0, _.jsxs)(_, {
+                      render: this.props.controller.GetPreRenderedHTML(),
+                      children: [
+                        (0, _.jsx)("div", {
                           className: "inviteLabel",
-                        },
-                        _("#InviteLanding_AccountMismatch"),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
+                          children: _("#InviteLanding_AccountMismatch"),
+                        }),
+                        (0, _.jsxs)("div", {
                           className: "inviteLabel",
-                        },
-                        _.createElement(
-                          "button",
-                          {
-                            className: _,
-                            type: "button",
-                            onClick: this.OpenInSteamIgnoreAccount,
-                          },
-                          _("#InviteLanding_OpenInSteam"),
-                        ),
-                        _.createElement(
-                          "button",
-                          {
-                            className: _,
-                            type: "button",
-                            onClick: this.LaunchWebChat,
-                          },
-                          _("#InviteLanding_OpenInWebChat"),
-                        ),
-                      ),
-                    )
-                  : _.call_unsupported
-                    ? _.createElement(
-                        "div",
-                        {
-                          className: "ChatMessageInvite",
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: "groupName",
-                          },
-                          _("#InviteLanding_SentToSteam"),
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: "inviteLabel",
-                          },
-                          _(
-                            "#InviteLanding_SentToSteam_Desc",
-                            _.createElement(
-                              "a",
-                              {
-                                href: "#",
-                                onClick: this.LaunchWebChat,
-                              },
-                              _(
-                                "#InviteLanding_SentToSteam_Desc_LaunchWebChat",
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
-                    : _.createElement(
-                        _,
-                        {
-                          render: this.props.controller.GetPreRenderedHTML(),
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: "inviteLabel inviteLabelButtons",
-                          },
-                          !_ &&
-                            _.createElement(
-                              "button",
-                              {
-                                className: _,
-                                type: "button",
-                                onClick: this.LaunchSteamClient,
-                              },
-                              _("#InviteLanding_OpenInSteam"),
-                            ),
-                          _.createElement(
-                            "button",
-                            {
+                          children: [
+                            (0, _.jsx)("button", {
+                              className: _,
+                              type: "button",
+                              onClick: this.OpenInSteamIgnoreAccount,
+                              children: _("#InviteLanding_OpenInSteam"),
+                            }),
+                            (0, _.jsx)("button", {
                               className: _,
                               type: "button",
                               onClick: this.LaunchWebChat,
-                            },
-                            _("#InviteLanding_OpenInWebChat"),
-                          ),
-                        ),
-                        this.m_bTriedToLaunchSteam &&
-                          _.createElement(
-                            "div",
-                            {
+                              children: _("#InviteLanding_OpenInWebChat"),
+                            }),
+                          ],
+                        }),
+                      ],
+                    })
+                  : _.call_unsupported
+                    ? (0, _.jsxs)("div", {
+                        className: "ChatMessageInvite",
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: "groupName",
+                            children: _("#InviteLanding_SentToSteam"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: "inviteLabel",
+                            children: _(
+                              "#InviteLanding_SentToSteam_Desc",
+                              (0, _.jsx)("a", {
+                                href: "#",
+                                onClick: this.LaunchWebChat,
+                                children: _(
+                                  "#InviteLanding_SentToSteam_Desc_LaunchWebChat",
+                                ),
+                              }),
+                            ),
+                          }),
+                        ],
+                      })
+                    : (0, _.jsxs)(_, {
+                        render: this.props.controller.GetPreRenderedHTML(),
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: "inviteLabel inviteLabelButtons",
+                            children: [
+                              !_ &&
+                                (0, _.jsx)("button", {
+                                  className: _,
+                                  type: "button",
+                                  onClick: this.LaunchSteamClient,
+                                  children: _("#InviteLanding_OpenInSteam"),
+                                }),
+                              (0, _.jsx)("button", {
+                                className: _,
+                                type: "button",
+                                onClick: this.LaunchWebChat,
+                                children: _("#InviteLanding_OpenInWebChat"),
+                              }),
+                            ],
+                          }),
+                          this.m_bTriedToLaunchSteam &&
+                            (0, _.jsx)("div", {
                               className: "inviteLabel inviteLabelLaunchPrompt",
-                            },
-                            _("#InviteLanding_OpenInSteam_Help"),
-                          ),
-                      )
+                              children: _("#InviteLanding_OpenInSteam_Help"),
+                            }),
+                        ],
+                      })
             );
           }
         };
@@ -1841,62 +1793,48 @@ var CLSTAMP = "steamdb";
           (_ = _([_._], _));
         class _ extends _.Component {
           render() {
-            return _.createElement(
-              "div",
-              {
-                className: "ChatMessageInvite",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "postedExpiredInvite",
-                },
-                _("#InviteLanding_ExpiredOrInvalid"),
-              ),
-            );
+            return (0, _.jsx)("div", {
+              className: "ChatMessageInvite",
+              children: (0, _.jsx)("div", {
+                className: "postedExpiredInvite",
+                children: _("#InviteLanding_ExpiredOrInvalid"),
+              }),
+            });
           }
         }
         function _(_) {
-          return _.createElement(
-            "div",
-            {
-              className: "ChatMessageInvite",
-            },
-            _.createElement("div", {
-              className: "leftInviteContainer",
-              dangerouslySetInnerHTML: {
-                __html: _.render.strAvatarHTML,
-              },
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "ChatMessageInvite",
+            children: [
+              (0, _.jsx)("div", {
+                className: "leftInviteContainer",
+                dangerouslySetInnerHTML: {
+                  __html: _.render.strAvatarHTML,
+                },
+              }),
+              (0, _.jsxs)("div", {
                 className: "rightInviteContainer",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "inviteLabel",
-                },
-                _(
-                  "#bbcode_invite_description",
-                  _.createElement("span", {
-                    dangerouslySetInnerHTML: {
-                      __html: _.render.strInviterNameLinkHTML,
-                    },
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "inviteLabel",
+                    children: _(
+                      "#bbcode_invite_description",
+                      (0, _.jsx)("span", {
+                        dangerouslySetInnerHTML: {
+                          __html: _.render.strInviterNameLinkHTML,
+                        },
+                      }),
+                    ),
                   }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "groupName",
-                },
-                _.render.strChatRoomGroupName,
-              ),
-              _.children,
-            ),
-          );
+                  (0, _.jsx)("div", {
+                    className: "groupName",
+                    children: _.render.strChatRoomGroupName,
+                  }),
+                  _.children,
+                ],
+              }),
+            ],
+          });
         }
         window.AssertMsg = _;
         let _ = new _();
@@ -2113,67 +2051,67 @@ var CLSTAMP = "steamdb";
       ".js?contenthash=" +
       {
         43: "7255988218820ff9c6d0",
-        762: "15a2669e71ec9c84aa33",
-        976: "b94f82ae0d50aef48445",
-        1225: "09e8135d88d708116d86",
-        1449: "877c4f9507441553f3de",
-        1499: "e339e20d94ad8a602dbf",
-        1973: "887eca0b7e4fb09b4af3",
-        2256: "1fc92786f45e0c95547c",
-        2320: "d27d784862d963d1a581",
-        2435: "a755b79a92eaa48a143f",
-        2632: "c763e0e7ae24f8e631c3",
-        2749: "2b43d13cea4afbab3d83",
-        2945: "8e28b66374e92bead376",
-        2954: "81137d73d7a9bd9c60e9",
-        3e3: "f24c14c20e42c6e01795",
-        3016: "a7ed9a0370a5a4cff14a",
-        3232: "d49f1753b8a3b35e3bb3",
-        3415: "aa9f2a1015733c8e84a9",
-        3485: "7dec5f5ccfafa4b286aa",
+        762: "8a41f18c9f3ef97f5303",
+        976: "61e33fbbe2d02a02c639",
+        1225: "39e5b7858e7819585981",
+        1449: "b2e6cb4f313ef18cdca8",
+        1499: "1e20c3907131f649dd4d",
+        1973: "21c6d81028863a52fd8e",
+        2256: "956b84327536a821df63",
+        2320: "d204fb9b3e34371c8911",
+        2435: "4b2f90d58c18b17d1a66",
+        2632: "51571b9e5b8bb44d384f",
+        2749: "bb2ef4174ea823f9c1b2",
+        2945: "200832aa708563d4ed2f",
+        2954: "bf0dee5c7e2b6d9fccf7",
+        3e3: "415336fb4854c153c61a",
+        3016: "5350f4e10ad588ceb109",
+        3232: "155a0e986abd2d2cb9d6",
+        3415: "af0a539ae9a2911a881f",
+        3485: "eb246dae000e9a6ba0e8",
         3710: "55a3fc5a214c1b82889b",
-        3789: "d9a91f6cd8be7ed54e80",
-        3912: "53c9853ff4c2d4b8b77e",
-        4154: "5a383f3fce004c6937ab",
-        4302: "3494316f6217deca926f",
-        4434: "f1cb7cfdae2ffac495e9",
-        4488: "986507d99d4d22b0d5bc",
-        4776: "42424792e06e5836f8a5",
-        4787: "1cd16c14443ddb028a30",
-        5018: "38ecb940c3d1e8787805",
-        5110: "f419070cf9a9012646af",
-        5241: "ae32e968ac80effcc8d9",
-        5341: "bef85c14c1a1cc022493",
-        5480: "13ed2ea9212b332b3448",
-        6031: "0b955cf675319544bdf9",
-        6127: "82623d50f5af258eb466",
-        6149: "13dfd18761b92f0bd650",
-        6165: "e6711a5c56add18f7abc",
-        6208: "819d6bdcc53d70237678",
-        6239: "119a1579bed55648cf7b",
-        6385: "4299e32a6ab6101d9347",
-        6518: "7fe5f05b9fed4ee70450",
-        6523: "732b7ea37dbdaeed3f52",
-        6562: "69b92666454ea12d3c27",
-        6609: "fda23e69f7478410b49c",
-        6888: "e9d1f5da1e41501a5e71",
-        6971: "c27bd6ce4926e28d0d1e",
-        7487: "f62814f91314baeeb88d",
-        7539: "6f5e932920ad3e9f263c",
-        7591: "f4e275f590bb07bd85b0",
-        7786: "33a2a617fefb38aa964a",
-        7861: "283dcace611993f9cff8",
-        8025: "28b190917e7d0deb196c",
-        8194: "54630e9ab50bdc7a7d18",
-        8306: "870576428d2c7784cff0",
-        8759: "d7ecf868d62da74d07e1",
-        8766: "07093154bcad344caed0",
-        8967: "dec422045e1fa3515762",
+        3789: "0585b445288e7abd1577",
+        3912: "874b6525fb591274fac5",
+        4154: "a42f5c8a931faec32b3e",
+        4302: "78d135f6aff11a629cf2",
+        4434: "db6aa0e85bb493b5af47",
+        4488: "128de2fa198489706ee6",
+        4776: "fcef25c79464d2dab63c",
+        4787: "1ef9e1595aa84a7482b8",
+        5018: "35513d01a4d715cd0cca",
+        5110: "f1320506028edf755ab9",
+        5241: "a0be3706a50b73ef912c",
+        5341: "7a78f0e1927e9759e826",
+        5480: "d26dc55b8496af1a8074",
+        6031: "6a40053dbfe3269839e3",
+        6127: "e4fb48274ffa22d2a19b",
+        6149: "329b475ca8f05990775c",
+        6165: "78edace050d6ac83e057",
+        6208: "a092bd077e5721886dd2",
+        6239: "e0f1677536133ad9783f",
+        6385: "9177b0fcf5e12ea9221a",
+        6518: "4be03ea551f5689fedb3",
+        6523: "e867cc559530bc7b87f1",
+        6562: "fd0277414438f6f2d14f",
+        6609: "4121483aafb32829cc07",
+        6888: "cb0bd7ca8a05d82baa50",
+        6971: "6b49bf1a46c0b31be944",
+        7487: "e3f3f02a0b89d528508b",
+        7539: "b78e16fb5720ee889998",
+        7591: "83f7a1fc6953ff73c89e",
+        7786: "e50c51e85e0985070778",
+        7861: "8ed7e29920f9f0b052cf",
+        8025: "ea5a247d06049d4b9556",
+        8194: "cee276ccf5a12e849dff",
+        8306: "163a4cb3e12139012f90",
+        8759: "b24baa8d268fa5620ea2",
+        8766: "18a4de0e6754dd62881f",
+        8967: "fa0954793c8d3192970a",
         9027: "5302ef69272754f00b13",
-        9152: "3a28a8672abaf5cc46f7",
-        9712: "c0a603ad2fc273314d3c",
-        9746: "b71007027b4959d0ae8a",
-        9808: "771369fd4c4cccbf7dff",
+        9152: "b788e5f74d25b8c6d871",
+        9712: "44db6039e42d263c45b9",
+        9746: "be8b290e3abf83f5354c",
+        9808: "901ca4da3194b2f45c26",
       }[_]),
     (_.miniCssF = (_) => {}),
     (_._ = (function () {
@@ -2319,6 +2257,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(61462));
+  var _ = _._(void 0, [1068], () => _(41600));
   _ = _._(_);
 })();

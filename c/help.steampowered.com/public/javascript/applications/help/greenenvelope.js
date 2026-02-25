@@ -246,6 +246,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -12457,6 +12458,28 @@
           link: (_) =>
             _._.STORE_BASE_URL + "account/gatedaccess?appid=" + _.appid,
         },
+        30: {
+          titleLoc: (_) => {
+            switch (_.status) {
+              case 1:
+                return "#Notification_ReportedContentAction_Received";
+              case 2:
+                return "#Notification_ReportedContentAction_Sanctioned";
+              case 3:
+                return "#Notification_ReportedContentAction_Acquitted";
+              case 4:
+                return "#Notification_ReportedContentAction_DisputeReceived";
+              case 5:
+                return "#Notification_ReportedContentAction_DisputeSanctioned";
+              case 6:
+                return "#Notification_ReportedContentAction_DisputeAcquitted";
+              default:
+                return "#Notification_ReportedContentAction_Unknown";
+            }
+          },
+          link: (_) =>
+            `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_.subject_type}-${_.subject_group_id}-${_.subject_id}`,
+        },
       };
       function _(_) {
         if (void 0 !== _) return _[_];
@@ -12976,6 +12999,39 @@
                 this.AddNotificationToRollupByAppID(_, _, _, _, _, _);
               }
               break;
+            case 30:
+              const _ = _(_),
+                _ = _?.report_id,
+                _ = _?.subject_type,
+                _ = _?.subject_group_id,
+                _ = _?.subject_id,
+                _ = `contentreport_${_}`;
+              let _ = _.findIndex((_) => _.rollup_key == _);
+              if (-1 == _)
+                _.push({
+                  type: _,
+                  rollup_key: _,
+                  item: _,
+                  rollup_count: 1,
+                  timestamp: _.timestamp,
+                  rgunread: _.read ? [] : [_.notification_id],
+                  rgread: _.read ? [_.notification_id] : [],
+                  bSendToCallbackAsNew: _,
+                  url: `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`,
+                });
+              else {
+                let _ = _[_];
+                this.BReplaceRollupItem(_, _.item) &&
+                  ((_.url = `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`),
+                  (_.item = _),
+                  (_.timestamp = _.timestamp),
+                  (_.bSendToCallbackAsNew = _)),
+                  (_.rollup_count = _.rollup_count + 1),
+                  _.read
+                    ? _.rgread.push(_.notification_id)
+                    : _.rgunread.push(_.notification_id);
+              }
+              break;
             case 8:
               const _ = _(_)?.appid;
               _ &&
@@ -13179,6 +13235,14 @@
               rtExpiration: _.expiration,
               thumbnailURL: _.thumbnail_url,
             };
+          case 30:
+            return {
+              report_id: _.report_id ?? "",
+              subject_type: _.subject_type ?? 0,
+              subject_group_id: _.subject_group_id ?? "0",
+              subject_id: _.subject_id ?? "0",
+              status: _.status ?? 0,
+            };
           default:
             return (
               _(
@@ -13307,6 +13371,10 @@
         29: {
           rollup_field: void 0,
           eFeature: 6,
+        },
+        30: {
+          rollup_field: void 0,
+          eFeature: 0,
         },
       };
       function _(_) {
@@ -14104,33 +14172,23 @@
             ? (_ = _().PinnedTemplateDesktop)
             : 3 == _ && (_ = _().PinnedTemplateWeb),
           (_ = (0, _._)(_, _)),
-          _.createElement(
-            _._,
-            {
-              className: _,
-              onActivate: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().PinnedBody,
-                },
-                _.createElement(
-                  "span",
-                  {
+          (0, _.jsx)(_._, {
+            className: _,
+            onActivate: _,
+            children: (0, _.jsx)("div", {
+              className: _().Content,
+              children: (0, _.jsxs)("div", {
+                className: _().PinnedBody,
+                children: [
+                  (0, _.jsx)("span", {
                     className: _().Icon,
-                  },
-                  __webpack_require__,
-                ),
-                _,
-              ),
-            ),
-          )
+                    children: __webpack_require__,
+                  }),
+                  _,
+                ],
+              }),
+            }),
+          })
         );
       }
       function _(_) {
@@ -14146,7 +14204,7 @@
         } = _;
         if (!_ && !_) return null;
         const _ = (0, _._)(_, _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           icon: __webpack_require__,
           body: _,
           onActivate: _,
@@ -14205,79 +14263,69 @@
           1 != __webpack_require__
         ) {
           let _ = _ == _.loadingComplete ? _().Hide : null;
-          _ = _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().LoadingTemplate, _),
-            },
-            _.createElement("div", {
-              className: (0, _._)(_().StandardLogoDimensions, _().ShimmerLogo),
-            }),
-            _.createElement(
-              "div",
-              {
+          _ = (0, _.jsxs)("div", {
+            className: (0, _._)(_().LoadingTemplate, _),
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().StandardLogoDimensions,
+                  _().ShimmerLogo,
+                ),
+              }),
+              (0, _.jsxs)("div", {
                 className: _().Content,
-              },
-              _.createElement("div", {
-                className: (0, _._)(_().Header, _().ShimmerHeader),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().Header, _().ShimmerHeader),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().Body, _().ShimmerBody),
+                  }),
+                ],
               }),
-              _.createElement("div", {
-                className: (0, _._)(_().Body, _().ShimmerBody),
-              }),
-            ),
-          );
+            ],
+          });
         }
-        return _.createElement(
-          _._,
-          {
-            onActivate: _,
-            className: _().StandardTemplateContainer,
-            onOptionsButton: _.onOptionsButton,
-            onOptionsActionDescription: _.onOptionsButtonDesc,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          onActivate: _,
+          className: _().StandardTemplateContainer,
+          onOptionsButton: _.onOptionsButton,
+          onOptionsActionDescription: _.onOptionsButtonDesc,
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_, _),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().StandardLogoDimensions,
-              },
-              _.logo,
-            ),
-            _.personaStatus &&
-              _.createElement("div", {
-                className: (0, _._)(_().AvatarStatus, _.personaStatus),
-              }),
-            _.createElement(
-              "div",
-              {
-                className: _().Content,
-              },
-              _.children,
-            ),
-            _,
-            _ &&
-              _.createElement(_, {
-                location: __webpack_require__,
-              }),
-          ),
-          _ || null,
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().StandardLogoDimensions,
+                  children: _.logo,
+                }),
+                _.personaStatus &&
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().AvatarStatus, _.personaStatus),
+                  }),
+                (0, _.jsx)("div", {
+                  className: _().Content,
+                  children: _.children,
+                }),
+                _,
+                _ &&
+                  (0, _.jsx)(_, {
+                    location: __webpack_require__,
+                  }),
+              ],
+            }),
+            _ || null,
+          ],
+        });
       }
       function _(_) {
         const { location: _ } = _;
         return 3 != _
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _().NewIndicator,
-              },
-              _.createElement(_.jlt, null),
-            );
+          : (0, _.jsx)("div", {
+              className: _().NewIndicator,
+              children: (0, _.jsx)(_.jlt, {}),
+            });
       }
       function _(_) {
         let {
@@ -14291,68 +14339,55 @@
         let _;
         return (
           (_ = 4 == _ ? _ : (_ ?? _)),
-          _.createElement(
-            "div",
-            {
-              className: _().Header,
-            },
-            _.createElement(_, {
-              icon: _,
-            }),
-            !!__webpack_require__ &&
-              _.createElement(_, {
-                title: __webpack_require__,
+          (0, _.jsxs)("div", {
+            className: _().Header,
+            children: [
+              (0, _.jsx)(_, {
+                icon: _,
               }),
-            _ &&
-              _({
-                timestamp: _,
-              }),
-          )
+              !!__webpack_require__ &&
+                (0, _.jsx)(_, {
+                  title: __webpack_require__,
+                }),
+              _ &&
+                _({
+                  timestamp: _,
+                }),
+            ],
+          })
         );
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().Icon,
-          },
-          _.icon,
-        );
+        return (0, _.jsx)("div", {
+          className: _().Icon,
+          children: _.icon,
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().Title,
-          },
-          _.title,
-        );
+        return (0, _.jsx)("div", {
+          className: _().Title,
+          children: _.title,
+        });
       }
       function _(_) {
         let _ = (0, _._)(
           _().StandardNotificationDescription,
           _.multiline && _().Multiline,
         );
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: _,
+          children: _.children,
+        });
       }
       function _(_) {
         let _ = (0, _._)(
           _().StandardNotificationSubText,
           _.multiline && _().Multiline,
         );
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: _,
+          children: _.children,
+        });
       }
       function _(_) {
         if (void 0 === _.timestamp) return null;
@@ -14361,13 +14396,10 @@
           _ = (0, _._)(_.timestamp);
         return (
           (0, _._)(_, _) || (_ = (0, _._)(_.timestamp, !1, !1, !1) + " " + _),
-          _.createElement(
-            "div",
-            {
-              className: _().Timestamp,
-            },
-            _,
-          )
+          (0, _.jsx)("div", {
+            className: _().Timestamp,
+            children: _,
+          })
         );
       }
       function _(_) {
@@ -14377,13 +14409,10 @@
           _ = (0, _._)(_, _)
             ? (0, _._)(_.timestamp)
             : (0, _._)(_.timestamp, !1, !1, !1);
-        return _.createElement(
-          "div",
-          {
-            className: _().Timestamp,
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _().Timestamp,
+          children: _,
+        });
       }
       function _(_) {
         return 1 == _;
@@ -14416,60 +14445,45 @@
               [_, _],
             );
           })(_, __webpack_require__);
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().ShortTemplate, !_ && _().TwoLine, _),
-            onActivate: _,
-            onMouseDown: (_) => {
-              1 == _.button && __webpack_require__ && __webpack_require__();
-            },
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().ShortTemplate, !_ && _().TwoLine, _),
+          onActivate: _,
+          onMouseDown: (_) => {
+            1 == _.button && __webpack_require__ && __webpack_require__();
           },
-          _.createElement(
-            "div",
-            {
+          children: [
+            (0, _.jsx)("div", {
               className: _().ShortLogoDimensions,
-            },
-            _,
-          ),
-          _.personaStatus &&
-            _.createElement("div", {
-              className: (0, _._)(_().AvatarStatus, _),
+              children: _,
             }),
-          _.createElement(
-            "div",
-            {
+            _.personaStatus &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().AvatarStatus, _),
+              }),
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().Content, _ && _().FullWidth),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Header,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Icon,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Title,
-                },
-                _,
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().Body,
-              },
-              _,
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().Header,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().Icon,
+                      children: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().Title,
+                      children: _,
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Body,
+                  children: _,
+                }),
+              ],
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -14477,11 +14491,11 @@
       function _(_) {
         switch (_) {
           case 6:
-            return _.createElement(_.ilR, null);
+            return (0, _.jsx)(_.ilR, {});
           case 11:
-            return _.createElement(_.Cv4, null);
+            return (0, _.jsx)(_.Cv4, {});
           default:
-            return _.createElement(_.Qte, null);
+            return (0, _.jsx)(_.Qte, {});
         }
       }
       function _(_) {
@@ -14509,7 +14523,7 @@
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ =
             _?.image && !_
-              ? _.createElement("img", {
+              ? (0, _.jsx)("img", {
                   className: _,
                   src: _.image,
                   onError: _,
@@ -14517,45 +14531,42 @@
               : _;
         }
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               logo: _,
               icon: _,
               title: _,
               body: _,
             })
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  logo: _,
-                  bLoading: _,
-                  ..._,
-                },
-                _.createElement(_, {
-                  icon: _,
-                  title: _,
-                  timestamp: _,
-                  location: _,
-                  fnRenderTimestamp: _,
-                }),
-                _.createElement(
-                  _,
-                  {
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                logo: _,
+                bLoading: _,
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: _,
+                    title: _,
+                    timestamp: _,
+                    location: _,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
                     multiline: !_,
-                  },
-                  _,
-                ),
-                !!_ && _.createElement(_, null, _),
-                _
-                  ? _.createElement(_, {
-                      onHide: _,
-                    })
-                  : null,
-              ),
-            );
+                    children: _,
+                  }),
+                  !!_ &&
+                    (0, _.jsx)(_, {
+                      children: _,
+                    }),
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       }
       function _(_) {
         let {
@@ -14574,38 +14585,39 @@
           _ = (0, _._)("#SteamNotifications_TradeOffer_Description", _ ?? ""),
           _ = !_;
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               logo: _.logo,
               icon: _.icon,
               title: _,
               body: _,
             })
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  bLoading: _,
-                  ..._,
-                },
-                _.createElement(_, {
-                  icon: _,
-                  title: _,
-                  timestamp: _,
-                  location: __webpack_require__,
-                  fnRenderTimestamp: _,
-                }),
-                _.createElement(_, null, _),
-                _.createElement(_, null, _),
-                _
-                  ? _.createElement(_, {
-                      onHide: _,
-                    })
-                  : null,
-              ),
-            );
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                bLoading: _,
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: _,
+                    title: _,
+                    timestamp: _,
+                    location: __webpack_require__,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    children: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    children: _,
+                  }),
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       }
       const _ = (_) => {
         let {
@@ -14622,37 +14634,38 @@
             : (0, _._)("#SteamNotifications_TradeReversal_Body"),
           _ = (0, _._)("#SteamNotifications_TradeReversal_Description");
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               logo: _.logo,
               icon: _.icon,
               title: _,
               body: _,
             })
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  ..._,
-                },
-                _.createElement(_, {
-                  icon: __webpack_require__,
-                  title: _,
-                  timestamp: _,
-                  location: _,
-                  fnRenderTimestamp: _,
-                }),
-                _.createElement(_, null, _),
-                _.createElement(_, null, _),
-                _
-                  ? _.createElement(_, {
-                      onHide: _,
-                    })
-                  : null,
-              ),
-            );
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: __webpack_require__,
+                    title: _,
+                    timestamp: _,
+                    location: _,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    children: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    children: _,
+                  }),
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       };
       function _(_) {
         let {
@@ -14671,44 +14684,41 @@
           _ = (0, _._)("#Notification_GiftReceived_Title"),
           _ = !_;
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               logo: _.logo,
               icon: _.icon,
               title: _,
               body: _,
             })
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  bLoading: _,
-                  ..._,
-                },
-                _.createElement(_, {
-                  icon: _,
-                  title: _,
-                  timestamp: _,
-                  location: __webpack_require__,
-                  fnRenderTimestamp: _,
-                }),
-                _.createElement(
-                  _,
-                  {
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                bLoading: _,
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: _,
+                    title: _,
+                    timestamp: _,
+                    location: __webpack_require__,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
                     multiline: !_,
-                  },
-                  _,
-                ),
-                !!_ && _.createElement(_, null, _),
-                _
-                  ? _.createElement(_, {
-                      onHide: _,
-                    })
-                  : null,
-              ),
-            );
+                    children: _,
+                  }),
+                  !!_ &&
+                    (0, _.jsx)(_, {
+                      children: _,
+                    }),
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       }
       function _(_) {
         let {
@@ -14740,67 +14750,63 @@
         if (__webpack_require__ && !_) {
           const _ = 3 == _.state && 1 != _,
             _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
-          _ = _.createElement(
-            _._,
-            {
-              style: {
-                position: "relative",
-              },
+          _ = (0, _.jsxs)(_._, {
+            style: {
+              position: "relative",
             },
-            _ &&
-              _.createElement(_.GSe, {
-                className: _().FriendIndicator,
+            children: [
+              _ &&
+                (0, _.jsx)(_.GSe, {
+                  className: _().FriendIndicator,
+                }),
+              (0, _.jsx)("img", {
+                className: _,
+                src: __webpack_require__,
+                onError: _,
               }),
-            _.createElement("img", {
-              className: _,
-              src: __webpack_require__,
-              onError: _,
-            }),
-          );
+            ],
+          });
         }
         const _ =
             _ || (0, _._)("#SteamNotifications_FriendInvite_Body_Generic"),
           _ = !_;
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               logo: _,
               icon: _.icon,
               title: (0, _._)("#Notification_FriendInvite_Title"),
               body: _,
             })
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  logo: _,
-                  bLoading: _,
-                  ..._,
-                },
-                _.createElement(_, {
-                  icon: _,
-                  title: (0, _._)("#Notification_FriendInvite_Title"),
-                  timestamp: _,
-                  location: _,
-                  fnRenderTimestamp: _,
-                }),
-                _.createElement(
-                  _,
-                  {
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                logo: _,
+                bLoading: _,
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: _,
+                    title: (0, _._)("#Notification_FriendInvite_Title"),
+                    timestamp: _,
+                    location: _,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
                     multiline: !_,
-                  },
-                  _,
-                ),
-                !!_ && _.createElement(_, null, _),
-                _
-                  ? _.createElement(_, {
-                      onHide: _,
-                    })
-                  : null,
-              ),
-            );
+                    children: _,
+                  }),
+                  !!_ &&
+                    (0, _.jsx)(_, {
+                      children: _,
+                    }),
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       }
       function _(_) {
         let {
@@ -14824,14 +14830,11 @@
               ? "#" + _.item_data.background_color
               : null;
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
-          _ = _.createElement(
-            _._,
-            {
-              style: {
-                position: "relative",
-              },
+          _ = (0, _.jsx)(_._, {
+            style: {
+              position: "relative",
             },
-            _.createElement("img", {
+            children: (0, _.jsx)("img", {
               className: _,
               style: {
                 backgroundColor: _ ?? void 0,
@@ -14840,7 +14843,7 @@
               src: _,
               onError: _,
             }),
-          );
+          });
         }
         const _ = 753 == parseInt(_.appid);
         let _ = null;
@@ -14872,7 +14875,7 @@
                 ? (0, _._)("#Notification_Item_Body_Short_Plural", _?.app_name)
                 : (0, _._)("#Notification_Item_Body_Short", _?.app_name)
               : (0, _._)("#Notification_Item_Body_Generic")),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               ..._,
               logo: _,
               icon: _.icon,
@@ -14881,38 +14884,35 @@
             })
           );
         }
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            {
-              logo: _,
-              bLoading: _,
-              ..._,
-            },
-            _.createElement(_, {
-              icon: _,
-              title: (0, _._)("#Notification_ItemAnnouncement_TitleLong"),
-              timestamp: _,
-              location: _,
-              fnRenderTimestamp: _,
-            }),
-            _.createElement(
-              _,
-              {
+        return (0, _.jsx)(_, {
+          children: (0, _.jsxs)(_, {
+            logo: _,
+            bLoading: _,
+            ..._,
+            children: [
+              (0, _.jsx)(_, {
+                icon: _,
+                title: (0, _._)("#Notification_ItemAnnouncement_TitleLong"),
+                timestamp: _,
+                location: _,
+                fnRenderTimestamp: _,
+              }),
+              (0, _.jsx)(_, {
                 multiline: !_,
-              },
-              _,
-            ),
-            !!_ && _.createElement(_, null, _),
-            _
-              ? _.createElement(_, {
-                  onHide: _,
-                })
-              : null,
-          ),
-        );
+                children: _,
+              }),
+              !!_ &&
+                (0, _.jsx)(_, {
+                  children: _,
+                }),
+              _
+                ? (0, _.jsx)(_, {
+                    onHide: _,
+                  })
+                : null,
+            ],
+          }),
+        });
       }
       function _(_) {
         let {
@@ -14947,39 +14947,40 @@
                     )
                   : (0, _._)("#SteamNotification_AsyncGame_Done")),
           _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 ..._,
                 logo: _,
                 icon: _.icon,
                 title: (0, _._)("#SteamNotification_AsyncGame_Title"),
                 body: _,
               })
-            : _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _,
-                  {
-                    logo: _,
-                    bLoading: _,
-                    ..._,
-                  },
-                  _.createElement(_, {
-                    icon: _,
-                    title: (0, _._)("#SteamNotification_AsyncGame_Title"),
-                    timestamp: _,
-                    location: _,
-                    fnRenderTimestamp: _,
-                  }),
-                  _.createElement(_, null, _),
-                  _.createElement(_, null, __webpack_require__?.GetName()),
-                  _
-                    ? _.createElement(_, {
-                        onHide: _,
-                      })
-                    : null,
-                ),
-              )
+            : (0, _.jsx)(_, {
+                children: (0, _.jsxs)(_, {
+                  logo: _,
+                  bLoading: _,
+                  ..._,
+                  children: [
+                    (0, _.jsx)(_, {
+                      icon: _,
+                      title: (0, _._)("#SteamNotification_AsyncGame_Title"),
+                      timestamp: _,
+                      location: _,
+                      fnRenderTimestamp: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      children: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      children: __webpack_require__?.GetName(),
+                    }),
+                    _
+                      ? (0, _.jsx)(_, {
+                          onHide: _,
+                        })
+                      : null,
+                  ],
+                }),
+              })
         );
       }
       function _(_) {
@@ -14998,23 +14999,20 @@
           } = _,
           _ = _(_),
           _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions,
-          _ = _.createElement(
-            _._,
-            {
-              style: {
-                position: "relative",
-              },
+          _ = (0, _.jsx)(_._, {
+            style: {
+              position: "relative",
             },
-            _.createElement("img", {
+            children: (0, _.jsx)("img", {
               className: _,
               style: {
                 justifyContent: "center",
               },
               src: _,
             }),
-          );
+          });
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               logo: _,
               icon: _.icon,
               title: _,
@@ -15022,39 +15020,33 @@
               onActivate: _,
               personaStatus: _,
             })
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  logo: _,
-                  bLoading: _,
-                  onActivate: _,
-                  personaStatus: _,
-                  ..._,
-                },
-                _.createElement(_, {
-                  icon: _,
-                  title: _,
-                  timestamp: _,
-                  location: _,
-                  fnRenderTimestamp: _,
-                }),
-                _.createElement(
-                  _,
-                  {
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                logo: _,
+                bLoading: _,
+                onActivate: _,
+                personaStatus: _,
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: _,
+                    title: _,
+                    timestamp: _,
+                    location: _,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
                     multiline: !0,
-                  },
-                  __webpack_require__,
-                ),
-                _
-                  ? _.createElement(_, {
-                      onHide: _,
-                    })
-                  : null,
-              ),
-            );
+                    children: __webpack_require__,
+                  }),
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       }
       function _(_) {
         let {
@@ -15117,24 +15109,24 @@
         let _ = null;
         _ =
           7 == _.comment_type && _.bis_forum && _
-            ? _.createElement(
-                _,
-                null,
-                (0, _._)("#SteamNotifications_Comment_NewDiscussion", _),
-              )
-            : _.createElement(_, null, '"', _, '"');
+            ? (0, _.jsx)(_, {
+                children: (0, _._)(
+                  "#SteamNotifications_Comment_NewDiscussion",
+                  _,
+                ),
+              })
+            : (0, _.jsxs)(_, {
+                children: ['"', _, '"'],
+              });
         let _ = (0, _._)("#SteamNotifications_Comment"),
           _ = null;
         if (void 0 !== _ && _ > 1) {
           const _ = "+" + (_ - 1);
           4 == _
-            ? (_ = _.createElement(
-                "div",
-                {
-                  className: _().AllNotificationsCommentPlus,
-                },
-                _,
-              ))
+            ? (_ = (0, _.jsx)("div", {
+                className: _().AllNotificationsCommentPlus,
+                children: _,
+              }))
             : (_ = _ + " " + _);
         }
         let _ = __webpack_require__;
@@ -15142,65 +15134,63 @@
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           if (_ && _(_)) {
             const _ = _.bhas_friend && 1 != _;
-            _ = _.createElement(
-              "div",
-              {
-                style: {
-                  position: "relative",
-                },
+            _ = (0, _.jsxs)("div", {
+              style: {
+                position: "relative",
               },
-              _ &&
-                _.createElement(_.GSe, {
-                  className: _().FriendIndicator,
+              children: [
+                _ &&
+                  (0, _.jsx)(_.GSe, {
+                    className: _().FriendIndicator,
+                  }),
+                (0, _.jsx)("img", {
+                  className: _,
+                  src: _,
+                  onError: _,
                 }),
-              _.createElement("img", {
-                className: _,
-                src: _,
-                onError: _,
-              }),
-            );
+              ],
+            });
           } else
             _?.avatar_medium_url &&
-              (_ = _.createElement("img", {
+              (_ = (0, _.jsx)("img", {
                 className: _,
                 src: _.avatar_medium_url,
                 onError: _,
               }));
         }
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
               logo: _,
               icon: _.icon,
               title: _,
               body: _,
             })
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  logo: _,
-                  ..._,
-                },
-                _.createElement(_, {
-                  icon: _,
-                  title: _,
-                  timestamp: _,
-                  location: _,
-                  fnRenderTimestamp: _,
-                }),
-                _.createElement(_, null, _),
-                _,
-                _,
-                _
-                  ? _.createElement(_, {
-                      onHide: _,
-                    })
-                  : null,
-              ),
-            );
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                logo: _,
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: _,
+                    title: _,
+                    timestamp: _,
+                    location: _,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    children: _,
+                  }),
+                  _,
+                  _,
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       }
       function _(_) {
         let {
@@ -15225,28 +15215,24 @@
                 ? _
                   ? (_ = (0, _._)(
                       "#SteamNotifications_Wishlist_OnSale_Single_Short",
-                      _.createElement("span", null, _.GetName()),
-                      _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: "#FFFFFF",
-                          },
+                      (0, _.jsx)("span", {
+                        children: _.GetName(),
+                      }),
+                      (0, _.jsx)("span", {
+                        style: {
+                          color: "#FFFFFF",
                         },
-                        _.GetBestPurchasePriceFormatted(),
-                      ),
+                        children: _.GetBestPurchasePriceFormatted(),
+                      }),
                     ))
                   : (_ = (0, _._)(
                       "#SteamNotifications_Wishlist_OnSale_Single",
-                      _.createElement(
-                        "span",
-                        {
-                          style: {
-                            color: "#FFFFFF",
-                          },
+                      (0, _.jsx)("span", {
+                        style: {
+                          color: "#FFFFFF",
                         },
-                        _.GetBestPurchasePriceFormatted(),
-                      ),
+                        children: _.GetBestPurchasePriceFormatted(),
+                      }),
                     ))
                 : 2 == _.count
                   ? _
@@ -15269,122 +15255,106 @@
                       )))
             : (_ = (0, _._)("#SteamNotifications_Wishlist_Generic")),
           _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 ..._,
                 logo: _,
                 icon: _.icon,
                 title: (0, _._)("#SteamNotifications_Wishlist"),
                 body: _,
               })
-            : _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _,
-                  {
-                    logo: _,
-                    bLoading: _,
-                    ..._,
-                  },
-                  _.createElement(_, {
-                    icon: _,
-                    title: (0, _._)("#SteamNotifications_Wishlist"),
-                    timestamp: _,
-                    location: _,
-                    fnRenderTimestamp: _,
-                  }),
-                  _.createElement(
-                    _,
-                    {
+            : (0, _.jsx)(_, {
+                children: (0, _.jsxs)(_, {
+                  logo: _,
+                  bLoading: _,
+                  ..._,
+                  children: [
+                    (0, _.jsx)(_, {
+                      icon: _,
+                      title: (0, _._)("#SteamNotifications_Wishlist"),
+                      timestamp: _,
+                      location: _,
+                      fnRenderTimestamp: _,
+                    }),
+                    (0, _.jsx)(_, {
                       multiline: !_,
-                    },
-                    _,
-                  ),
-                  !!_ && _.createElement(_, null, _),
-                  _
-                    ? _.createElement(_, {
-                        onHide: _,
-                      })
-                    : null,
-                ),
-              )
+                      children: _,
+                    }),
+                    !!_ &&
+                      (0, _.jsx)(_, {
+                        children: _,
+                      }),
+                    _
+                      ? (0, _.jsx)(_, {
+                          onHide: _,
+                        })
+                      : null,
+                  ],
+                }),
+              })
         );
       }
       function _(_, _, __webpack_require__ = !1) {
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
         return !_ || _
-          ? _.createElement(
-              _._,
-              {
+          ? (0, _.jsx)(_._, {
+              style: {
+                position: "relative",
+              },
+              children: _,
+            })
+          : __webpack_require__
+            ? (0, _.jsx)(_._, {
                 style: {
                   position: "relative",
                 },
-              },
-              _,
-            )
-          : __webpack_require__
-            ? _.createElement(
-                _._,
-                {
-                  style: {
-                    position: "relative",
-                  },
-                },
-                _.createElement("img", {
+                children: (0, _.jsx)("img", {
                   src: _?.GetAssets()?.GetCommunityIconURL(),
                   className: _().ShortLogoDimensions,
                   onError: _,
                 }),
-              )
-            : _.createElement(
-                _._,
-                {
-                  style: {
-                    position: "relative",
-                  },
+              })
+            : (0, _.jsxs)(_._, {
+                style: {
+                  position: "relative",
                 },
-                _.createElement("img", {
-                  className: (0, _._)(_().WishlistBlurImage),
-                  src: _?.GetAssets()?.GetCommunityIconURL(),
-                  onError: _,
-                }),
-                _.createElement("img", {
-                  src: _?.GetAssets()?.GetCommunityIconURL(),
-                  onError: _,
-                  style: {
-                    position: "absolute",
-                    left: 7,
-                    top: 7,
-                    height: 32,
-                    width: 32,
-                  },
-                }),
-              );
+                children: [
+                  (0, _.jsx)("img", {
+                    className: (0, _._)(_().WishlistBlurImage),
+                    src: _?.GetAssets()?.GetCommunityIconURL(),
+                    onError: _,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _?.GetAssets()?.GetCommunityIconURL(),
+                    onError: _,
+                    style: {
+                      position: "absolute",
+                      left: 7,
+                      top: 7,
+                      height: 32,
+                      width: 32,
+                    },
+                  }),
+                ],
+              });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().HideButton,
-            onClick: (_) => {
-              _.onHide(), _.stopPropagation(), _.preventDefault();
-            },
-            onMouseDown: (_) => {
-              _.stopPropagation(), _.preventDefault();
-            },
+        return (0, _.jsx)("div", {
+          className: _().HideButton,
+          onClick: (_) => {
+            _.onHide(), _.stopPropagation(), _.preventDefault();
           },
-          _.createElement(_.zHo, null),
-        );
+          onMouseDown: (_) => {
+            _.stopPropagation(), _.preventDefault();
+          },
+          children: (0, _.jsx)(_.zHo, {}),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().SteamNotificationWrapper,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: _().SteamNotificationWrapper,
+          children: _.children,
+        });
       }
       var _,
         _ = __webpack_require__("chunkid"),
@@ -16738,17 +16708,14 @@
             return _(_) ? (_ = _) : _(_) ? (_ = _) : _[_] && (_ = _[_]), _;
           })(_.type);
         return _
-          ? _.createElement(
-              _._,
-              {
-                controller: "notification",
-                method: (0, _._)(__webpack_require__),
-                submethod: (0, _._)(_),
-              },
-              _.createElement(_, {
+          ? (0, _.jsx)(_._, {
+              controller: "notification",
+              method: (0, _._)(__webpack_require__),
+              submethod: (0, _._)(_),
+              children: (0, _.jsx)(_, {
                 ..._,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -16805,19 +16772,16 @@
             ?.toLowerCase();
         var _;
         const _ = (0, _._)(_?.link ?? "#", _);
-        return _.createElement(
-          "a",
-          {
-            href: _?.link ? _ : "#",
-            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("a", {
+          href: _?.link ? _ : "#",
+          onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+          children: (0, _.jsx)(_, {
             icon: _(_.type),
             onActivate: () =>
               __webpack_require__(() => {
                 _?.link && _ && window.location.assign(_);
               }, _.item),
-            fallbackLogo: _.createElement(_.Qte, null),
+            fallbackLogo: (0, _.jsx)(_.Qte, {}),
             location: _,
             eUIMode: _,
             data: _,
@@ -16827,7 +16791,7 @@
             bNewIndicator: _(_.item),
             onHide: _,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -16846,18 +16810,15 @@
         const _ = !_,
           _ = (0, _._)(_, _?.m_strPlayerName ?? ""),
           _ = (0, _._)(_, _?.m_strPlayerName ?? "");
-        return _.createElement(
-          "a",
-          {
-            href: __webpack_require__,
-            onMouseDown: (_) => _(() => {}, _.item, _),
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("a", {
+          href: __webpack_require__,
+          onMouseDown: (_) => _(() => {}, _.item, _),
+          children: (0, _.jsx)(_, {
             title: _,
             body: _,
             bDataLoading: _,
             logoUrl: _?.avatar_url_medium,
-            icon: _.createElement(_.Qte, null),
+            icon: (0, _.jsx)(_.Qte, {}),
             onActivate: () =>
               _(() => window.location.assign(__webpack_require__), _.item),
             location: _,
@@ -16867,7 +16828,7 @@
             bNewIndicator: _(_.item),
             onHide: _,
           }),
-        );
+        });
       }
       function _(_) {
         const _ =
@@ -16896,7 +16857,7 @@
         if (!_) return null;
         const { strTitleLoc: _, strBodyLoc: _, strUrl: _, steamid: _ } = _;
         return _ && _ && _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               steamid: _,
               url: _,
               strTitleLoc: _,
@@ -16921,21 +16882,18 @@
         return __webpack_require__
           ? _
             ? null
-            : _.createElement(
-                "a",
-                {
-                  href: _,
-                  className: _().WebPinnedNotification,
-                },
-                _.createElement(_, {
-                  icon: _.createElement(_, null),
+            : (0, _.jsx)("a", {
+                href: _,
+                className: _().WebPinnedNotification,
+                children: (0, _.jsx)(_, {
+                  icon: (0, _.jsx)(_, {}),
                   count: __webpack_require__,
                   onActivate: () => window.location.assign(_),
                   strLocToken: _,
                   eUIMode: 3,
                   visible: !0,
                 }),
-              )
+              })
           : null;
       }
       const _ = {
@@ -16972,17 +16930,14 @@
             _ = _
               ? _.FilterText(_.account_steam_id.GetAccountID(), _.comment)
               : "";
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => {
-                __webpack_require__(() => {}, _.item, _);
-              },
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => {
+              __webpack_require__(() => {}, _.item, _);
             },
-            _.createElement(_, {
-              fallbackLogo: _.createElement(_.Qte, null),
-              icon: _.createElement(_.MwB, null),
+            children: (0, _.jsx)(_, {
+              fallbackLogo: (0, _.jsx)(_.Qte, {}),
+              icon: (0, _.jsx)(_.MwB, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17001,7 +16956,7 @@
               commentBody: _,
               bLoading: !_,
             }),
-          );
+          });
         },
         chunkid: function (module) {
           const {
@@ -17031,15 +16986,12 @@
                   `wishlist/profiles/${_}/${_}#sort=discount`,
               );
             }, [_, _, _]),
-            _.createElement(
-              "a",
-              {
-                href: _,
-                onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-              },
-              _.createElement(_, {
-                fallbackLogo: _.createElement(_.Qte, null),
-                icon: _.createElement(_.ilR, null),
+            (0, _.jsx)("a", {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+              children: (0, _.jsx)(_, {
+                fallbackLogo: (0, _.jsx)(_.Qte, {}),
+                icon: (0, _.jsx)(_.ilR, {}),
                 onActivate: () =>
                   __webpack_require__(() => window.location.assign(_), _.item),
                 app: _,
@@ -17051,7 +17003,7 @@
                 bNewIndicator: _(_.item),
                 onHide: _,
               }),
-            )
+            })
           );
         },
         chunkid: function (module) {
@@ -17066,15 +17018,12 @@
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/friends/pending`,
             _ = _(_),
             { data: _ } = _(_.requestorID);
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              fallbackLogo: _.createElement(_.Gv$, null),
-              icon: _.createElement(_.sdo, null),
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            children: (0, _.jsx)(_, {
+              fallbackLogo: (0, _.jsx)(_.Gv$, {}),
+              icon: (0, _.jsx)(_.sdo, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17087,7 +17036,7 @@
               bNewIndicator: _(_.item),
               onHide: _,
             }),
-          );
+          });
         },
         chunkid: function (module) {
           const {
@@ -17102,15 +17051,12 @@
             _ = _(_.item, _, _),
             _ = _(_),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory`;
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              icon: _.createElement(_.rI_, null),
-              fallbackLogo: _.createElement(_.Qte, null),
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            children: (0, _.jsx)(_, {
+              icon: (0, _.jsx)(_.rI_, {}),
+              fallbackLogo: (0, _.jsx)(_.Qte, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17122,7 +17068,7 @@
               bNewIndicator: _(_.item),
               onHide: _,
             }),
-          );
+          });
         },
         chunkid: function (module) {
           const {
@@ -17137,15 +17083,12 @@
             _ = _(_),
             _ = _._.InitFromAccountID(_),
             { data: _ } = _(_.GetAccountID());
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              logo: _.createElement(_.Qte, null),
-              icon: _.createElement(_._, null),
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            children: (0, _.jsx)(_, {
+              logo: (0, _.jsx)(_.Qte, {}),
+              icon: (0, _.jsx)(_._, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17156,7 +17099,7 @@
               bNewIndicator: _(_.item),
               onHide: _,
             }),
-          );
+          });
         },
         chunkid: function (module) {
           const {
@@ -17171,15 +17114,12 @@
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/tradeoffers`,
             _ = _._.InitFromAccountID(_),
             { data: _ } = _(_.GetAccountID());
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              logo: _.createElement(_.Qte, null),
-              icon: _.createElement(_.h20, null),
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            children: (0, _.jsx)(_, {
+              logo: (0, _.jsx)(_.Qte, {}),
+              icon: (0, _.jsx)(_.h20, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17190,7 +17130,7 @@
               bNewIndicator: _(_.item),
               onHide: _,
             }),
-          );
+          });
         },
         chunkid: function (module) {
           const {
@@ -17205,15 +17145,12 @@
             [_] = (0, _._)(_.appid, {
               include_assets: !0,
             });
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              icon: _.createElement(_.Qte, null),
-              fallbackLogo: _.createElement(_.wC1, null),
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            children: (0, _.jsx)(_, {
+              icon: (0, _.jsx)(_.Qte, {}),
+              fallbackLogo: (0, _.jsx)(_.wC1, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17225,7 +17162,7 @@
               bNewIndicator: _(_.item),
               onHide: _,
             }),
-          );
+          });
         },
         chunkid: function (module) {
           const {
@@ -17253,18 +17190,15 @@
                   _.GetName() ?? "",
                 )
               : "";
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            children: (0, _.jsx)(_, {
               title: _,
               body: _,
               bDataLoading: _,
               logoUrl: _?.avatar_url_medium,
-              icon: _.createElement(_.Qte, null),
+              icon: (0, _.jsx)(_.Qte, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17274,7 +17208,7 @@
               bNewIndicator: _(_.item),
               onHide: _,
             }),
-          );
+          });
         },
         chunkid: (module) => {
           const {
@@ -17285,15 +17219,12 @@
               onHide: _,
             } = module,
             _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              logo: _.createElement(_.Qte, null),
-              icon: _.createElement(_.h20, null),
+          return (0, _.jsx)("a", {
+            href: _,
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            children: (0, _.jsx)(_, {
+              logo: (0, _.jsx)(_.Qte, {}),
+              icon: (0, _.jsx)(_.h20, {}),
               onActivate: () =>
                 __webpack_require__(() => window.location.assign(_), _.item),
               location: _,
@@ -17303,7 +17234,7 @@
               bNewIndicator: _(_.item),
               onHide: _,
             }),
-          );
+          });
         },
       };
       var _ = __webpack_require__("chunkid"),
@@ -17398,14 +17329,11 @@
             horizontal: _,
             ..._
           } = this.props;
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_refElement,
-              ..._,
-            },
-            this.props.children,
-          );
+          return (0, _.jsx)("div", {
+            ref: this.m_refElement,
+            ..._,
+            children: this.props.children,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnIntersection", null);
@@ -17460,13 +17388,10 @@
           }, [_]);
           const _ = _();
           return _
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, null),
-                _.createElement(_, null),
-              )
-            : _.createElement(_, {
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+              })
+            : (0, _.jsx)(_, {
                 nTotalUnviewed: _.nUnviewed,
               });
         });
@@ -17494,7 +17419,7 @@
         _.useEffect(() => {
           _.current ||
             ((_.current = (0, _._)(
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 popupRef: _,
               }),
               document.getElementById("green_envelope_menu_root"),
@@ -17515,35 +17440,29 @@
           },
           [_],
         );
-        return _.createElement(
-          _,
-          {
-            trigger: "repeated",
-            onVisibilityChange: _,
-          },
-          _.createElement(
-            "button",
-            {
-              onClick: () => {
-                if (!_.current?.visible) {
-                  _.current?.Show();
-                  -1 != _.findIndex((_) => !_.item.viewed) &&
-                    _.MarkAllItemsViewed();
-                }
-              },
-              _: "green_envelope_menu_root",
-              className: (0, _._)(
-                _().NotificationsButton,
-                _ ? _().Green : _().Grey,
-                _,
-              ),
+        return (0, _.jsx)(_, {
+          trigger: "repeated",
+          onVisibilityChange: _,
+          children: (0, _.jsx)("button", {
+            onClick: () => {
+              if (!_.current?.visible) {
+                _.current?.Show();
+                -1 != _.findIndex((_) => !_.item.viewed) &&
+                  _.MarkAllItemsViewed();
+              }
             },
-            _.createElement(_.$0s, {
+            _: "green_envelope_menu_root",
+            className: (0, _._)(
+              _().NotificationsButton,
+              _ ? _().Green : _().Grey,
+              _,
+            ),
+            children: (0, _.jsx)(_.$0s, {
               className: _().SVGNotifications,
               "aria-label": (0, _._)("#NotificationsMenu_Title"),
             }),
-          ),
-        );
+          }),
+        });
       }
       const _ = (_) => {
           const { popupRef: _ } = _,
@@ -17556,78 +17475,54 @@
             );
           }, [_.current?.scrollHeight, _]);
           const _ = _ ? void 0 : _().MenuScrollbarHidden;
-          return _.createElement(
-            "div",
-            {
-              className: _().NotificationsMenu,
-              onClick: () => _?.current?.Hide(),
-            },
-            _.createElement(_, null),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().NotificationsMenu,
+            onClick: () => _?.current?.Hide(),
+            children: [
+              (0, _.jsx)(_, {}),
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationsMenuScrollable, _),
                 ref: _,
-              },
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-            ),
-          );
+                children: [
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                ],
+              }),
+            ],
+          });
         },
         _ = () => {
           const _ = `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/notifications`;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().NotificationHeader),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_().NotificationHeader),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().AllNotificationsTitle,
-              },
-              (0, _._)("#NotificationsMenu_Title"),
-            ),
-            _.createElement(
-              "a",
-              {
+                children: (0, _._)("#NotificationsMenu_Title"),
+              }),
+              (0, _.jsx)("a", {
                 href: _,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().AllNotificationsButton,
-                },
-                (0, _._)("#NotificationsMenu_ViewAll"),
-              ),
-            ),
-          );
+                  children: (0, _._)("#NotificationsMenu_ViewAll"),
+                }),
+              }),
+            ],
+          });
         },
         _ = () => {
           const _ = `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/notifications`;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().NotificationHeader,
-                _().ResponsiveViewAll,
-              ),
-            },
-            _.createElement(
-              "a",
-              {
-                href: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().AllNotificationsButton,
-                },
-                (0, _._)("#NotificationsMenu_ViewAll"),
-              ),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_().NotificationHeader, _().ResponsiveViewAll),
+            children: (0, _.jsx)("a", {
+              href: _,
+              children: (0, _.jsx)("div", {
+                className: _().AllNotificationsButton,
+                children: (0, _._)("#NotificationsMenu_ViewAll"),
+              }),
+            }),
+          });
         };
       function _(_, _, _) {
         _.read ||
@@ -17640,21 +17535,21 @@
         const _ = _();
         return 0 == _.length
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _().NotificationsMenuEntriesContainer,
-              },
-              _.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  rollup: _,
-                  onNotificationClick: _,
-                  uimode: 3,
-                  location: 3,
-                }),
+          : (0, _.jsx)("div", {
+              className: _().NotificationsMenuEntriesContainer,
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    rollup: _,
+                    onNotificationClick: _,
+                    uimode: 3,
+                    location: 3,
+                  },
+                  _,
+                ),
               ),
-            );
+            });
       }
       const _ = [
         {
@@ -17727,42 +17622,36 @@
       ];
       function _() {
         const _ = _();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.map((_) =>
-            _.createElement(_, {
-              key: _.countItem,
-              url: _.fnUrl(),
-              count: _.summary[_.countItem],
-              icon: _.icon,
-              strLocToken: _.strLocToken,
-              eFeature: _.feature,
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                url: _.fnUrl(),
+                count: _.summary[_.countItem],
+                icon: _.icon,
+                strLocToken: _.strLocToken,
+                eFeature: _.feature,
+              },
+              _.countItem,
+            ),
           ),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().EmptyNotificationsCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().EmptyNotificationsCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _().EmptyNotificationsTitle,
-            },
-            (0, _._)("#NotificationsList_EmptyTitle_New"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#NotificationsList_EmptyTitle_New"),
+            }),
+            (0, _.jsx)("div", {
               className: _().EmptyNotificationsBody,
-            },
-            (0, _._)("#NotificationsList_EmptyBody"),
-          ),
-        );
+              children: (0, _._)("#NotificationsList_EmptyBody"),
+            }),
+          ],
+        });
       }
       const _ = _;
     },

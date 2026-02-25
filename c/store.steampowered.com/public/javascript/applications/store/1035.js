@@ -325,6 +325,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
@@ -369,29 +370,28 @@
               _
             );
           }, [_, __webpack_require__]);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              __webpack_require__,
-              _,
-            ),
-            ..._,
-          },
-          _.createElement("div", {
-            className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-            style: _,
-          }),
-          _.createElement(_._, {
-            className: (0, _._)(_().avatar, "avatar"),
-            rgSources: _,
-            draggable: !1,
-          }),
-          _,
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().avatarHolder,
+            "avatarHolder",
+            "no-drag",
+            __webpack_require__,
+            _,
+          ),
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+              style: _,
+            }),
+            (0, _.jsx)(_._, {
+              className: (0, _._)(_().avatar, "avatar"),
+              rgSources: _,
+              draggable: !1,
+            }),
+            _,
+          ],
+        });
       });
       let _ = class extends _.Component {
         render() {
@@ -419,7 +419,7 @@
                     : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
                       (_ = _.avatar_url_full))
                 : _ && (_ = _),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               strAvatarURL: _,
               size: _,
               className: (0, _._)((0, _._)(_), _),
@@ -442,21 +442,18 @@
           _ || (_ = _.image_small),
           _.startsWith("https://") ||
             (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().avatarFrame,
-                __webpack_require__,
-                "avatarFrame",
-              ),
-              ..._,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: (0, _._)(
+              _().avatarFrame,
+              __webpack_require__,
+              "avatarFrame",
+            ),
+            ..._,
+            children: (0, _.jsx)("img", {
               className: _().avatarFrameImg,
               src: _,
             }),
-          )
+          })
         );
       });
       let _ = class extends _.Component {
@@ -548,28 +545,24 @@
               cursor: "pointer",
             });
           const _ = this.state.bAnimate ? (_ ?? null) : null;
-          return _.createElement(
-            "div",
-            {
-              onMouseEnter: () =>
-                this.setState({
-                  bAnimate: "None" != this.props.loopDuration,
-                }),
-              onMouseLeave: () => this.SetupAnimationTimer(),
-            },
-            _.createElement(
-              _,
-              {
-                animatedAvatar: _,
-                ..._,
-              },
-              _,
-              _.createElement(_, {
-                profileItem: __webpack_require__,
-                bDisableAnimation: _ && !this.state.bAnimate,
+          return (0, _.jsx)("div", {
+            onMouseEnter: () =>
+              this.setState({
+                bAnimate: "None" != this.props.loopDuration,
               }),
-            ),
-          );
+            onMouseLeave: () => this.SetupAnimationTimer(),
+            children: (0, _.jsxs)(_, {
+              animatedAvatar: _,
+              ..._,
+              children: [
+                _,
+                (0, _.jsx)(_, {
+                  profileItem: __webpack_require__,
+                  bDisableAnimation: _ && !this.state.bAnimate,
+                }),
+              ],
+            }),
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -580,6 +573,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -644,14 +638,17 @@
             } = this.props,
             _ = this.src,
             _ = this.state.nPropChangeCounter;
-          return _.createElement("img", {
-            key: _,
-            ref: this.m_refImage,
-            ..._,
-            src: _,
-            onError: this.OnImageError,
-            alt: _,
-          });
+          return (0, _.jsx)(
+            "img",
+            {
+              ref: this.m_refImage,
+              ..._,
+              src: _,
+              onError: this.OnImageError,
+              alt: _,
+            },
+            _,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "OnImageError", null);

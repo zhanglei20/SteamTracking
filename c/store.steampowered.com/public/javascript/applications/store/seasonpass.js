@@ -46,6 +46,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = {
         include_assets: !0,
@@ -56,35 +57,27 @@
           [__webpack_require__] = (0, _._)(_, _),
           _ = (0, _._)();
         return __webpack_require__ && _
-          ? _.createElement(
-              "div",
-              {
-                className: _().StoreItemCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().StoreItemRow,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    href: (0, _._)(__webpack_require__.GetStorePageURL(), _),
-                  },
-                  _.createElement("img", {
-                    src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
-                  }),
-                  _.createElement(
-                    "div",
-                    {
+          ? (0, _.jsx)("div", {
+              className: _().StoreItemCtn,
+              children: (0, _.jsx)("div", {
+                className: _().StoreItemRow,
+                children: (0, _.jsxs)("a", {
+                  href: (0, _._)(__webpack_require__.GetStorePageURL(), _),
+                  children: [
+                    (0, _.jsx)("img", {
+                      src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
+                    }),
+                    (0, _.jsxs)("div", {
                       className: _().StoreItemDescription,
-                    },
-                    __webpack_require__.GetShortDescription(),
-                    " ",
-                  ),
-                ),
-              ),
-            )
+                      children: [
+                        __webpack_require__.GetShortDescription(),
+                        " ",
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid"),
@@ -128,7 +121,9 @@
               __webpack_require__ || 0,
             ),
           );
-        return _.createElement(_.Fragment, null, _.ParseBBCode(_, {}, !0));
+        return (0, _.jsx)(_.Fragment, {
+          children: _.ParseBBCode(_, {}, !0),
+        });
       }
       function _(_) {
         const { showErrorInfo: _ } = _.context;
@@ -175,36 +170,35 @@
                   const _ = _.currentTarget;
                   _.paused ? _.play() : _.pause();
                 };
-              return _.createElement(
-                "video",
-                {
-                  className: _().StoreVideo,
-                  poster: _,
-                  "aria-label": _,
-                  autoPlay: !0,
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                  onClick: _,
-                },
-                _ &&
-                  !_ &&
-                  _.createElement("source", {
-                    src: _,
-                    type: "video/webm",
-                  }),
-                _ &&
-                  !_._.IN_CLIENT &&
-                  _.createElement("source", {
-                    src: _,
-                    type: "video/mp4",
-                  }),
-              );
+              return (0, _.jsxs)("video", {
+                className: _().StoreVideo,
+                poster: _,
+                "aria-label": _,
+                autoPlay: !0,
+                muted: !0,
+                loop: !0,
+                playsInline: !0,
+                onClick: _,
+                children: [
+                  _ &&
+                    !_ &&
+                    (0, _.jsx)("source", {
+                      src: _,
+                      type: "video/webm",
+                    }),
+                  _ &&
+                    !_._.IN_CLIENT &&
+                    (0, _.jsx)("source", {
+                      src: _,
+                      type: "video/mp4",
+                    }),
+                ],
+              });
             }
             {
               const _ = _[0]?.alt_text,
                 _ = _[0]?.url;
-              return _.createElement("img", {
+              return (0, _.jsx)("img", {
                 className: _().StoreImage,
                 src: _,
                 alt: _,
@@ -217,11 +211,11 @@
             .replace(_._, _())
             .replace("http://", "https://");
         return _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               className: _().StoreImage,
               src: _,
             })
-          : _.createElement("img", {
+          : (0, _.jsx)("img", {
               className: _().StoreImage,
               src: _,
               alt: (0, _._)("#EventEditor_InsertImage_URL"),
@@ -235,246 +229,219 @@
       function _(_) {
         const { season_pass: _ } = _;
         return _ && _.milestones && 0 != _.milestones.length
-          ? _.createElement(
-              _._,
-              {
-                feature: "seasonpassproductpage",
-              },
-              _.createElement(
-                "div",
-                {
-                  className:
-                    "game_area_description overflow_allowed season_pass_area",
-                },
-                _.createElement("h2", null, (0, _._)("#SeasonPass_Header")),
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)("#SeasonPass_Incomplete_Desc"),
-                ),
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#SeasonPass_Incomplete_Desc2",
-                    _.createElement("a", {
-                      href: `${_._.STORE_BASE_URL}account/emailoptout`,
-                    }),
-                  ),
-                ),
-                _.milestones
-                  .sort((_, _) =>
-                    _.shipped && _.shipped
-                      ? _.rtime_complete - _.rtime_complete
-                      : _.shipped
-                        ? -1
+          ? (0, _.jsx)(_._, {
+              feature: "seasonpassproductpage",
+              children: (0, _.jsxs)("div", {
+                className:
+                  "game_area_description overflow_allowed season_pass_area",
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: (0, _._)("#SeasonPass_Header"),
+                  }),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#SeasonPass_Incomplete_Desc"),
+                  }),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)(
+                      "#SeasonPass_Incomplete_Desc2",
+                      (0, _.jsx)("a", {
+                        href: `${_._.STORE_BASE_URL}account/emailoptout`,
+                      }),
+                    ),
+                  }),
+                  _.milestones
+                    .sort((_, _) =>
+                      _.shipped && _.shipped
+                        ? _.rtime_complete - _.rtime_complete
                         : _.shipped
-                          ? 1
-                          : _.dates[_.dates.length - 1].rtime -
-                            _.dates[_.dates.length - 1].rtime,
-                  )
-                  .map((_) =>
-                    _.createElement(_, {
-                      key: "ms_" + _.milestone_id,
-                      baseGameAppID: _.appid,
-                      milestone: _,
-                    }),
-                  ),
-              ),
-            )
+                          ? -1
+                          : _.shipped
+                            ? 1
+                            : _.dates[_.dates.length - 1].rtime -
+                              _.dates[_.dates.length - 1].rtime,
+                    )
+                    .map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          baseGameAppID: _.appid,
+                          milestone: _,
+                        },
+                        "ms_" + _.milestone_id,
+                      ),
+                    ),
+                ],
+              }),
+            })
           : null;
       }
       function _(_) {
         const { milestone: _, baseGameAppID: __webpack_require__ } = _,
           _ = _.milestone_desc?.length > 0;
-        return _.createElement(
-          "div",
-          {
-            className: _().SeasonPass,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().SeasonPass,
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().Title, Boolean(_.shipped) && _().Shipped),
-            },
-            _.createElement(
-              "span",
-              null,
-              Boolean(_.shipped) && "✓",
-              " ",
-              _._.GetTokenWithFallback(_.title),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().DateAndControl,
-              },
-              _.createElement(_, {
-                milestone: _,
-              }),
-            ),
-          ),
-          _ &&
-            _.createElement(_, {
-              milestone: _,
-              baseGameAppID: __webpack_require__,
+              children: [
+                (0, _.jsxs)("span", {
+                  children: [
+                    Boolean(_.shipped) && "✓",
+                    " ",
+                    _._.GetTokenWithFallback(_.title),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().DateAndControl,
+                  children: (0, _.jsx)(_, {
+                    milestone: _,
+                  }),
+                }),
+              ],
             }),
-        );
+            _ &&
+              (0, _.jsx)(_, {
+                milestone: _,
+                baseGameAppID: __webpack_require__,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { milestone: _, baseGameAppID: __webpack_require__ } = _,
           _ = _._.GetTokenWithFallback(_.milestone_desc),
           _ = _.appid || _.coming_soon_appid;
-        return _.createElement(
-          _.Fragment,
-          null,
-          Boolean(_) &&
-            _.createElement(_, {
-              appid: _,
-            }),
-          _.createElement(
-            "div",
-            {
-              className: _().Description,
-            },
-            _.createElement(_, {
-              text: _,
-            }),
-            Boolean(_.shipped) &&
-              _.createElement(_, {
-                milestone: _,
-                baseGameAppID: __webpack_require__,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)(_, {
+                appid: _,
               }),
-          ),
-        );
+            (0, _.jsxs)("div", {
+              className: _().Description,
+              children: [
+                (0, _.jsx)(_, {
+                  text: _,
+                }),
+                Boolean(_.shipped) &&
+                  (0, _.jsx)(_, {
+                    milestone: _,
+                    baseGameAppID: __webpack_require__,
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { milestone: _ } = _;
         if (_.shipped)
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             milestone: _,
           });
         const _ = _.dates[0].rtime,
           _ = _.dates.filter((_, _) => 0 == _ || _.rtime < _);
-        return _.createElement(
-          "div",
-          {
-            className: _().Upcoming,
-          },
-          (0, _._)(
+        return (0, _.jsx)("div", {
+          className: _().Upcoming,
+          children: (0, _._)(
             "#SeasonPass_Release_Date",
-            _.createElement("br", null),
+            (0, _.jsx)("br", {}),
             [..._].reverse().map((_, _) => {
               const _ = (0, _._)(_.coming_soon_display_type, _.rtime, null, !0);
-              return _.createElement(
+              return (0, _.jsx)(
                 "div",
                 {
-                  key: "dd" + _.rtime + _.coming_soon_display_type,
                   className: _ + 1 < _.length ? _().Strike : void 0,
+                  children: _,
                 },
-                _,
+                "dd" + _.rtime + _.coming_soon_display_type,
               );
             }),
           ),
-        );
+        });
       }
       function _(_) {
         const { milestone: _ } = _,
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = _?.steam_release_date || _.rtime_complete;
-        return _.createElement(
-          "div",
-          {
-            className: _().Shipped,
-          },
-          (0, _._)(
+        return (0, _.jsx)("div", {
+          className: _().Shipped,
+          children: (0, _._)(
             "#SeasonPass_Released_Date",
-            _.createElement("br", null),
+            (0, _.jsx)("br", {}),
             (0, _._)(_),
           ),
-        );
+        });
       }
       const _ = {};
       function _(_) {
         const { milestone: _, baseGameAppID: __webpack_require__ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: _().Status,
-            },
-            (0, _._)(
-              _.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
-            ),
-          ),
-          _.appid &&
-            _.createElement(_, {
-              milestone: _,
+              children: (0, _._)(
+                _.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
+              ),
             }),
-          Boolean(_.appid && _.event_gid) &&
-            _.createElement("span", {
-              className: _().Padding,
-            }),
-          Boolean(_.event_gid) &&
-            _.createElement(_, {
-              milestone: _,
-              baseGameAppID: __webpack_require__,
-            }),
-        );
+            _.appid &&
+              (0, _.jsx)(_, {
+                milestone: _,
+              }),
+            Boolean(_.appid && _.event_gid) &&
+              (0, _.jsx)("span", {
+                className: _().Padding,
+              }),
+            Boolean(_.event_gid) &&
+              (0, _.jsx)(_, {
+                milestone: _,
+                baseGameAppID: __webpack_require__,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { milestone: _ } = _,
           [__webpack_require__] = (0, _._)(_.appid, _);
-        return _.createElement(
-          "a",
-          {
-            href:
-              __webpack_require__?.GetStorePageURL() ||
-              `${_._.STORE_BASE_URL}app/${_.appid}`,
-          },
-          (0, _._)("#SeasonPass_ShowStore"),
-        );
+        return (0, _.jsx)("a", {
+          href:
+            __webpack_require__?.GetStorePageURL() ||
+            `${_._.STORE_BASE_URL}app/${_.appid}`,
+          children: (0, _._)("#SeasonPass_ShowStore"),
+        });
       }
       function _(_) {
         const { milestone: _, baseGameAppID: __webpack_require__ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(_.event_gid);
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "a",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("a", {
                   href: `${_._.STORE_BASE_URL}news/app/${__webpack_require__}/view/${_.event_gid}`,
                   onClick: (_) => {
                     _.preventDefault(), _.stopPropagation(), _(!0);
                   },
-                },
-                (0, _._)("#SeasonPass_ReadEvent"),
-              ),
-              Boolean(_) &&
-                _.createElement(_._, {
-                  appid: __webpack_require__,
-                  eventModel: _,
-                  announcementGID: _.AnnouncementGID,
-                  closeModal: () => _(!1),
-                  partnerEventStore: _._,
-                  bShowOnlyInitialEvent: !0,
-                  showAppHeader: !0,
-                  trackingLocation: 3,
+                  children: (0, _._)("#SeasonPass_ReadEvent"),
                 }),
-            )
-          : _.createElement(
-              "a",
-              {
-                href: `${_._.STORE_BASE_URL}news/app/${__webpack_require__}/view/${_.event_gid}`,
-              },
-              (0, _._)("#SeasonPass_ReadEvent"),
-            );
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    appid: __webpack_require__,
+                    eventModel: _,
+                    announcementGID: _.AnnouncementGID,
+                    closeModal: () => _(!1),
+                    partnerEventStore: _._,
+                    bShowOnlyInitialEvent: !0,
+                    showAppHeader: !0,
+                    trackingLocation: 3,
+                  }),
+              ],
+            })
+          : (0, _.jsx)("a", {
+              href: `${_._.STORE_BASE_URL}news/app/${__webpack_require__}/view/${_.event_gid}`,
+              children: (0, _._)("#SeasonPass_ReadEvent"),
+            });
       }
     },
   },

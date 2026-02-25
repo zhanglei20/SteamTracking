@@ -10,6 +10,7 @@
         _,
         _,
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5899,60 +5900,57 @@
                 (_ = this.OnDelete),
                 _.BHasForumTopicGID() &&
                   _.push(
-                    _.createElement(
+                    (0, _.jsxs)(
                       "div",
                       {
-                        key: "WantToDeleteCmtThread",
                         className: _().Padding,
+                        children: [
+                          (0, _.jsx)("input", {
+                            type: "checkbox",
+                            _: "del_cmt_post",
+                            name: "del_cmt_post",
+                            defaultChecked: this.state.bDeleteCommentThread,
+                            onChange: this.OnChangeDeleteForum,
+                          }),
+                          (0, _.jsx)("label", {
+                            htmlFor: "del_cmt_post",
+                            children: (0, _._)(
+                              "#EventDisplay_DeleteEvent_Comment",
+                            ),
+                          }),
+                        ],
                       },
-                      _.createElement("input", {
-                        type: "checkbox",
-                        _: "del_cmt_post",
-                        name: "del_cmt_post",
-                        defaultChecked: this.state.bDeleteCommentThread,
-                        onChange: this.OnChangeDeleteForum,
-                      }),
-                      _.createElement(
-                        "label",
-                        {
-                          htmlFor: "del_cmt_post",
-                        },
-                        (0, _._)("#EventDisplay_DeleteEvent_Comment"),
-                      ),
+                      "WantToDeleteCmtThread",
                     ),
                   );
               break;
             case "waiting":
               (_ = (0, _._)("#EventDisplay_DeleteEvent_InProgress")),
-                _.push(
-                  _.createElement(_._, {
-                    key: "throbber",
-                  }),
-                );
+                _.push((0, _.jsx)(_._, {}, "throbber"));
               break;
             case "error":
               (_ = (0, _._)("#EventDisplay_DeleteEvent_Error")),
                 _.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     "div",
                     {
-                      key: "deleteerror_" + ++_.m_uniqueError,
                       className: _().ErrorStyles,
+                      children: this.state.strErrorMsg,
                     },
-                    this.state.strErrorMsg,
+                    "deleteerror_" + ++_.m_uniqueError,
                   ),
                 );
               break;
             case "failed_thread_delete":
               (_ = (0, _._)("#EventDisplay_DeleteEvent_ForumTopicError")),
                 _.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     "div",
                     {
-                      key: "deleteerror_" + ++_.m_uniqueError,
                       className: _().ErrorStyles,
+                      children: this.state.strErrorMsg,
                     },
-                    this.state.strErrorMsg,
+                    "deleteerror_" + ++_.m_uniqueError,
                   ),
                 ),
                 this.props.onDeleteSuccessAndCloseDialog &&
@@ -5969,19 +5967,16 @@
                       this.props.closeModal();
                   });
           }
-          return _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#EventDisplay_DeleteEvent"),
-              strDescription: _,
-              onCancel: this.props.closeModal,
-              onOK: _,
-              bAlertDialog: "confirmation" != this.state.dialogState,
-              bOKDisabled: "waiting" == this.state.dialogState,
-              bDestructiveWarning: "error" == this.state.dialogState,
-            },
-            _,
-          );
+          return (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#EventDisplay_DeleteEvent"),
+            strDescription: _,
+            onCancel: this.props.closeModal,
+            onOK: _,
+            bAlertDialog: "confirmation" != this.state.dialogState,
+            bOKDisabled: "waiting" == this.state.dialogState,
+            bDestructiveWarning: "error" == this.state.dialogState,
+            children: _,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnDeleteEventSuccessCallback", null),
@@ -6017,7 +6012,7 @@
             ),
           [_],
         )
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
             })
           : null;
@@ -6070,16 +6065,13 @@
         }
         const _ = _.GetSaleSectionsByType("rewards"),
           _ = _?.length > 0 ? _[0] : null;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("a", {
               className: (0, _._)(_.Button, _.AdminButton),
               onClick: (_) => {
                 (0, _._)(
-                  _.createElement(_._, {
+                  (0, _.jsx)(_._, {
                     strTitle: (0, _._)("#Dialog_AreYouSure"),
                     strDescription:
                       "Reload page after you hit OK; will not grant virtual reward items a second itme",
@@ -6088,80 +6080,80 @@
                   (0, _._)(_),
                 );
               },
-            },
-            "Reset All Doors",
-          ),
-          _.createElement(_._, {
-            strDropDownClassName: (0, _._)(_.DropDownScroll),
-            rgOptions: _,
-            selectedOption: _,
-            label: "Minigame States:",
-            onChange: (_) => {
-              const _ = new Array();
-              if (_)
-                (0, _._)(() => {
-                  if (
-                    ((0, _._)(-1),
-                    _._.Get().ClearAnswersAndCategories(),
-                    -1 != _.data)
-                  ) {
-                    const _ = _[0].quiz.answer_categories.find(
-                      (_) => _.door_index == _.data,
-                    );
-                    _ &&
-                      _[0].quiz.questions
-                        .filter((_) => _.answers?.length > 0)
-                        .forEach((_, _) => {
-                          let _ = _.answers.findIndex((_) =>
-                            _.category_ids?.includes(_.category_id),
+              children: "Reset All Doors",
+            }),
+            (0, _.jsx)(_._, {
+              strDropDownClassName: (0, _._)(_.DropDownScroll),
+              rgOptions: _,
+              selectedOption: _,
+              label: "Minigame States:",
+              onChange: (_) => {
+                const _ = new Array();
+                if (_)
+                  (0, _._)(() => {
+                    if (
+                      ((0, _._)(-1),
+                      _._.Get().ClearAnswersAndCategories(),
+                      -1 != _.data)
+                    ) {
+                      const _ = _[0].quiz.answer_categories.find(
+                        (_) => _.door_index == _.data,
+                      );
+                      _ &&
+                        _[0].quiz.questions
+                          .filter((_) => _.answers?.length > 0)
+                          .forEach((_, _) => {
+                            let _ = _.answers.findIndex((_) =>
+                              _.category_ids?.includes(_.category_id),
+                            );
+                            _ < 0 && (_ = 0),
+                              _._.Get().SetAnswerCategory(
+                                _,
+                                _.answers[_].category_ids,
+                              ),
+                              _._.Get().SetAnswer(_, _.answers[_]);
+                          }),
+                        _.label.toString().startsWith(_) ||
+                          ((0, _._)(0, !0),
+                          (0, _._)(_.data, !0),
+                          _.push(0),
+                          _.push(_.data));
+                    }
+                  });
+                else {
+                  for (let _ = 0; _ <= _.data; ++_) _.push(_);
+                  (0, _._)(_.data);
+                }
+                if (
+                  _ &&
+                  _.rewards?.reward_items?.length > 0 &&
+                  _.data > -1 &&
+                  !_.label.toString().startsWith(_)
+                ) {
+                  const _ = _.map((_) =>
+                      (function (_, _) {
+                        if (_ && "rewards" == _.section_type) {
+                          const _ = _.rewards.reward_items?.filter(
+                            (_) => _.item_bucket == _,
                           );
-                          _ < 0 && (_ = 0),
-                            _._.Get().SetAnswerCategory(
-                              _,
-                              _.answers[_].category_ids,
-                            ),
-                            _._.Get().SetAnswer(_, _.answers[_]);
-                        }),
-                      _.label.toString().startsWith(_) ||
-                        ((0, _._)(0, !0),
-                        (0, _._)(_.data, !0),
-                        _.push(0),
-                        _.push(_.data));
-                  }
-                });
-              else {
-                for (let _ = 0; _ <= _.data; ++_) _.push(_);
-                (0, _._)(_.data);
-              }
-              if (
-                _ &&
-                _.rewards?.reward_items?.length > 0 &&
-                _.data > -1 &&
-                !_.label.toString().startsWith(_)
-              ) {
-                const _ = _.map((_) =>
-                    (function (_, _) {
-                      if (_ && "rewards" == _.section_type) {
-                        const _ = _.rewards.reward_items?.filter(
-                          (_) => _.item_bucket == _,
-                        );
-                        if (_?.length > 0)
-                          return __webpack_require__.map((_) => ({
-                            appid: _.appid,
-                            item_type: _.community_item_type,
-                            amount: "1",
-                          }));
-                      }
-                      return null;
-                    })(_, _),
-                  ).filter(Boolean),
-                  _ = new Array();
-                _.forEach((_) => __webpack_require__.push(..._)),
-                  (0, _._)(_.rewards?.reward_items[0].appid, _);
-              }
-            },
-          }),
-        );
+                          if (_?.length > 0)
+                            return __webpack_require__.map((_) => ({
+                              appid: _.appid,
+                              item_type: _.community_item_type,
+                              amount: "1",
+                            }));
+                        }
+                        return null;
+                      })(_, _),
+                    ).filter(Boolean),
+                    _ = new Array();
+                  _.forEach((_) => __webpack_require__.push(..._)),
+                    (0, _._)(_.rewards?.reward_items[0].appid, _);
+                }
+              },
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6211,7 +6203,7 @@
           { bVisible: _, ref: _ } = (0, _._)(),
           _ = (_) => {
             (0, _._)(
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 eventModel: _,
                 onDeleteSuccessAndCloseDialog: () => _(!0),
                 partnerEventStore: __webpack_require__,
@@ -6222,7 +6214,7 @@
           _ = (0, _._)(),
           { creatorHome: _ } = (0, _._)(_);
         if (_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             eventModel: _,
             route: _._.k_eCommunityAdminPage,
           });
@@ -6246,251 +6238,208 @@
                 _ == _._.k_EEventStateUnlisted) &&
               (!_ || _),
             _ = _ == _._.k_EEventStateStaged;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement("div", {
-              className: (0, _._)(_.DisplayAdminPanel_TopSpacer, _ && _.Sticky),
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _.DisplayAdminPanel_TopSpacer,
+                  _ && _.Sticky,
+                ),
+              }),
+              (0, _.jsxs)("div", {
                 className: (0, _._)({
                   [_.DisplayAdminPanel]: !0,
                   [_.Locked]: _,
                   [_.Sticky]: _,
                 }),
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.DisplayAdminPanel_Title,
-                },
-                (0, _._)("#EventDisplay_Admin_Title"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.DisplayAdminPanel_ctn, _ && _.Sticky),
-                },
-                _,
-                _ &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.DisplayAdminPanel_Spacer,
-                    },
-                    " ",
-                  ),
-                _.createElement(
-                  _._,
-                  {
-                    eventModel: _,
-                    route: _._.k_eCommunityEdit,
-                    className: (0, _._)(_.Button, _.AdminButton),
-                  },
-                  _
-                    ? (0, _._)("#EventEditor_Edit_Page")
-                    : (0, _._)("#EventEditor_Edit"),
-                ),
-                Boolean(__webpack_require__ && "community" == (0, _._)()) &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.Button + " " + _.AdminButton,
-                      onClick: _,
-                    },
-                    (0, _._)("#EventDisplay_DeleteEvent"),
-                  ),
-                !_ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      _._,
-                      {
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.DisplayAdminPanel_Title,
+                    children: (0, _._)("#EventDisplay_Admin_Title"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_.DisplayAdminPanel_ctn, _ && _.Sticky),
+                    children: [
+                      _,
+                      _ &&
+                        (0, _.jsx)("span", {
+                          className: _.DisplayAdminPanel_Spacer,
+                          children: " ",
+                        }),
+                      (0, _.jsx)(_._, {
                         eventModel: _,
-                        route: _._.k_eCommunityPublish,
+                        route: _._.k_eCommunityEdit,
                         className: (0, _._)(_.Button, _.AdminButton),
-                      },
-                      (0, _._)(
-                        _
-                          ? "#EventEditor_Publish_VisibleNow"
-                          : "#Button_Publish",
-                      ),
-                    ),
-                  ),
-                _.createElement(
-                  _._,
-                  {
-                    eventModel: _,
-                    route: _._.k_eCommunityAdminPage,
-                    className: (0, _._)(_.Button, _.AdminButton),
-                  },
-                  (0, _._)("#EventDisplay_Events"),
-                ),
-                Boolean(void 0 !== _ && _.length > 0) &&
-                  _.createElement(_._, {
-                    strDropDownClassName: _.DropDownScroll,
-                    rgOptions: _,
-                    selectedOption: Math.min(_, _),
-                    onChange: (_) => {
-                      _(_.data), _(_.data);
-                    },
-                    bDisableMouseOverlay: !0,
-                    contextMenuPositionOptions: {
-                      bDisableMouseOverlay: !0,
-                    },
-                  }),
-                Boolean(_.jsondata.bSaleEnabled && _ && !_) &&
-                  _.createElement(
-                    _._,
-                    {
-                      eventModel: _,
-                      route: _._.k_eStoreSalePage,
-                      className: (0, _._)(_.Button, _.AdminButton),
-                    },
-                    (0, _._)("#EventDisplay_SalesPage"),
-                  ),
-                Boolean(_ && _._.is_support && _) &&
-                  _.createElement(
-                    "a",
-                    {
-                      href:
-                        _._.STATS_BASE_URL +
-                        "sales/details/?gid=" +
-                        _ +
-                        "&clanid=" +
-                        _,
-                      target: _._.IN_CLIENT ? "" : "_blank",
-                      className: (0, _._)(
-                        _.Button,
-                        _.AdminButton,
-                        _.ValveOnlyBackground,
-                      ),
-                    },
-                    (0, _._)("#EventDisplay_StatsPage"),
-                  ),
-                Boolean(_ && _._.is_support && _ && !_) &&
-                  _.createElement(
-                    "a",
-                    {
-                      href:
-                        _._.PARTNER_BASE_URL +
-                        "promotion/invitationplanner/dashboard?saleclaneventgid=" +
-                        _ +
-                        "&saleclanaccountid=" +
-                        _,
-                      target: _._.IN_CLIENT ? "" : "_blank",
-                      className: (0, _._)(
-                        _.Button,
-                        _.AdminButton,
-                        _.ValveOnlyBackground,
-                      ),
-                    },
-                    (0, _._)("#EventDisplay_InvitationPlannerPage"),
-                  ),
-                Boolean(_ && _ && _) &&
-                  _.createElement(_, {
-                    clanAccountID: _.clanSteamID.GetAccountID(),
-                    gidClanEvent: _,
-                  }),
-                Boolean(_ && _ && _._ == _ && _.GetContentHubCategory()) &&
-                  _.createElement(
-                    "a",
-                    {
-                      href: `${_._.PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${_.GetContentHubCategory()}`,
-                      target: _._.IN_CLIENT ? "" : "_blank",
-                      className: (0, _._)(
-                        _.Button,
-                        _.AdminButton,
-                        _.ValveOnlyBackground,
-                      ),
-                    },
-                    (0, _._)("#EventDisplay_CategoryEditor"),
-                  ),
-                Boolean(_ && (_ || (_ && !_))) &&
-                  _.createElement(
-                    _._,
-                    {
-                      eventModel: _,
-                      route: _
-                        ? _._.k_eCommunityPreviewSale
-                        : _._.k_eCommunityView,
-                      className: (0, _._)(_.Button, _.AdminButton),
-                    },
-                    (0, _._)(
-                      _
-                        ? "#EventDisplay_PreviewOnCommunity"
-                        : "#EventDisplay_ViewOnCommunity",
-                    ),
-                  ),
-                Boolean(_ && _) &&
-                  _.createElement(
-                    _._,
-                    {
-                      eventModel: _,
-                      route: _._.k_eStoreView,
-                      className: (0, _._)(_.Button, _.AdminButton),
-                    },
-                    (0, _._)("#EventDisplay_ViewOnStore"),
-                  ),
-                _.createElement(_, {
-                  eventModel: _,
-                }),
-                _.createElement(_, {
-                  eventModel: _,
-                }),
-                Boolean(_._.is_support) &&
-                  _.createElement(_, {
-                    eventModel: _,
-                  }),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.DisplayAdminPanelClose,
-                      onClick: () => _(!1),
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: (0, _._)(
-                          "#EventDisplay_Admin_Close_ttip",
-                        ),
-                      },
-                      _.createElement(_._, null),
-                    ),
-                  ),
-                !_ &&
-                  _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.DisplayAdminPanelClose,
-                      onClick: () => _(!0),
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: (0, _._)(
-                          "#EventDisplay_Admin_Reopen_ttip",
-                        ),
-                      },
-                      _.createElement(_.i3G, {
-                        angle: 0,
+                        children: _
+                          ? (0, _._)("#EventEditor_Edit_Page")
+                          : (0, _._)("#EventEditor_Edit"),
                       }),
-                    ),
-                  ),
-              ),
-            ),
-            _.createElement("div", {
-              className: _.DisplayAdminPanelMarker,
-              ref: _,
-            }),
-          );
+                      Boolean(
+                        __webpack_require__ && "community" == (0, _._)(),
+                      ) &&
+                        (0, _.jsx)("span", {
+                          className: _.Button + " " + _.AdminButton,
+                          onClick: _,
+                          children: (0, _._)("#EventDisplay_DeleteEvent"),
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_.Fragment, {
+                          children: (0, _.jsx)(_._, {
+                            eventModel: _,
+                            route: _._.k_eCommunityPublish,
+                            className: (0, _._)(_.Button, _.AdminButton),
+                            children: (0, _._)(
+                              _
+                                ? "#EventEditor_Publish_VisibleNow"
+                                : "#Button_Publish",
+                            ),
+                          }),
+                        }),
+                      (0, _.jsx)(_._, {
+                        eventModel: _,
+                        route: _._.k_eCommunityAdminPage,
+                        className: (0, _._)(_.Button, _.AdminButton),
+                        children: (0, _._)("#EventDisplay_Events"),
+                      }),
+                      Boolean(void 0 !== _ && _.length > 0) &&
+                        (0, _.jsx)(_._, {
+                          strDropDownClassName: _.DropDownScroll,
+                          rgOptions: _,
+                          selectedOption: Math.min(_, _),
+                          onChange: (_) => {
+                            _(_.data), _(_.data);
+                          },
+                          bDisableMouseOverlay: !0,
+                          contextMenuPositionOptions: {
+                            bDisableMouseOverlay: !0,
+                          },
+                        }),
+                      Boolean(_.jsondata.bSaleEnabled && _ && !_) &&
+                        (0, _.jsx)(_._, {
+                          eventModel: _,
+                          route: _._.k_eStoreSalePage,
+                          className: (0, _._)(_.Button, _.AdminButton),
+                          children: (0, _._)("#EventDisplay_SalesPage"),
+                        }),
+                      Boolean(_ && _._.is_support && _) &&
+                        (0, _.jsx)("a", {
+                          href:
+                            _._.STATS_BASE_URL +
+                            "sales/details/?gid=" +
+                            _ +
+                            "&clanid=" +
+                            _,
+                          target: _._.IN_CLIENT ? "" : "_blank",
+                          className: (0, _._)(
+                            _.Button,
+                            _.AdminButton,
+                            _.ValveOnlyBackground,
+                          ),
+                          children: (0, _._)("#EventDisplay_StatsPage"),
+                        }),
+                      Boolean(_ && _._.is_support && _ && !_) &&
+                        (0, _.jsx)("a", {
+                          href:
+                            _._.PARTNER_BASE_URL +
+                            "promotion/invitationplanner/dashboard?saleclaneventgid=" +
+                            _ +
+                            "&saleclanaccountid=" +
+                            _,
+                          target: _._.IN_CLIENT ? "" : "_blank",
+                          className: (0, _._)(
+                            _.Button,
+                            _.AdminButton,
+                            _.ValveOnlyBackground,
+                          ),
+                          children: (0, _._)(
+                            "#EventDisplay_InvitationPlannerPage",
+                          ),
+                        }),
+                      Boolean(_ && _ && _) &&
+                        (0, _.jsx)(_, {
+                          clanAccountID: _.clanSteamID.GetAccountID(),
+                          gidClanEvent: _,
+                        }),
+                      Boolean(
+                        _ && _ && _._ == _ && _.GetContentHubCategory(),
+                      ) &&
+                        (0, _.jsx)("a", {
+                          href: `${_._.PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${_.GetContentHubCategory()}`,
+                          target: _._.IN_CLIENT ? "" : "_blank",
+                          className: (0, _._)(
+                            _.Button,
+                            _.AdminButton,
+                            _.ValveOnlyBackground,
+                          ),
+                          children: (0, _._)("#EventDisplay_CategoryEditor"),
+                        }),
+                      Boolean(_ && (_ || (_ && !_))) &&
+                        (0, _.jsx)(_._, {
+                          eventModel: _,
+                          route: _
+                            ? _._.k_eCommunityPreviewSale
+                            : _._.k_eCommunityView,
+                          className: (0, _._)(_.Button, _.AdminButton),
+                          children: (0, _._)(
+                            _
+                              ? "#EventDisplay_PreviewOnCommunity"
+                              : "#EventDisplay_ViewOnCommunity",
+                          ),
+                        }),
+                      Boolean(_ && _) &&
+                        (0, _.jsx)(_._, {
+                          eventModel: _,
+                          route: _._.k_eStoreView,
+                          className: (0, _._)(_.Button, _.AdminButton),
+                          children: (0, _._)("#EventDisplay_ViewOnStore"),
+                        }),
+                      (0, _.jsx)(_, {
+                        eventModel: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        eventModel: _,
+                      }),
+                      Boolean(_._.is_support) &&
+                        (0, _.jsx)(_, {
+                          eventModel: _,
+                        }),
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: _.DisplayAdminPanelClose,
+                          onClick: () => _(!1),
+                          children: (0, _.jsx)(_._, {
+                            toolTipContent: (0, _._)(
+                              "#EventDisplay_Admin_Close_ttip",
+                            ),
+                            children: (0, _.jsx)(_._, {}),
+                          }),
+                        }),
+                      !_ &&
+                        _ &&
+                        (0, _.jsx)("div", {
+                          className: _.DisplayAdminPanelClose,
+                          onClick: () => _(!0),
+                          children: (0, _.jsx)(_._, {
+                            toolTipContent: (0, _._)(
+                              "#EventDisplay_Admin_Reopen_ttip",
+                            ),
+                            children: (0, _.jsx)(_.i3G, {
+                              angle: 0,
+                            }),
+                          }),
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _.DisplayAdminPanelMarker,
+                ref: _,
+              }),
+            ],
+          });
         }
-        return _.createElement("span", null);
+        return (0, _.jsx)("span", {});
       }
       function _(_) {
         const { eventModel: _ } = _,
@@ -6501,12 +6450,9 @@
             _.jsondata?.bSaleEnabled &&
             _.jsondata?.sale_sections?.length > 0,
         )
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "a",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("a", {
                   className: (0, _._)(
                     _.Button,
                     _.AdminButton,
@@ -6534,12 +6480,9 @@
                     }),
                       (0, _._)(_);
                   },
-                },
-                "(VO) Inject Capsule",
-              ),
-              _.createElement(
-                "a",
-                {
+                  children: "(VO) Inject Capsule",
+                }),
+                (0, _.jsx)("a", {
                   className: (0, _._)(
                     _.Button,
                     _.AdminButton,
@@ -6547,7 +6490,7 @@
                   ),
                   onClick: (_) =>
                     (0, _._)(
-                      _.createElement(_._, {
+                      (0, _.jsx)(_._, {
                         strTitle: "Clear Rewards for Summer 2022",
                         onOK: async () => {
                           const _ = new FormData();
@@ -6566,10 +6509,10 @@
                       }),
                       (0, _._)(_),
                     ),
-                },
-                "( VO ) Clear Summer 2022 Rewards",
-              ),
-            )
+                  children: "( VO ) Clear Summer 2022 Rewards",
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -6583,7 +6526,7 @@
             [_],
           );
         return _?.badge_progress?.levels?.length > 0 && _._.is_support
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               section: _,
             })
           : null;
@@ -6600,7 +6543,7 @@
             label: "Level " + _,
             data: _,
           });
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           strDropDownClassName: (0, _._)(
             _.DropDownScroll,
             _.ValveOnlyBackground,
@@ -6618,14 +6561,11 @@
         const { clanAccountID: _, gidClanEvent: __webpack_require__ } = _,
           _ = _(_, __webpack_require__);
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.map((_) =>
-                _.createElement(
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.map((_) =>
+                (0, _.jsx)(
                   "a",
                   {
-                    key: _,
                     href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${_}`,
                     target: _._.IN_CLIENT ? "" : "_blank",
                     className: (0, _._)(
@@ -6633,11 +6573,12 @@
                       _.AdminButton,
                       _.ValveOnlyBackground,
                     ),
+                    children: (0, _._)("#EventDisplay_PromotionEditor"),
                   },
-                  (0, _._)("#EventDisplay_PromotionEditor"),
+                  _,
                 ),
               ),
-            )
+            })
           : null;
       }
     },

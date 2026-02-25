@@ -80,54 +80,50 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { closeModal: _, fnOnApply: __webpack_require__ } = _,
-          _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
+        const {
             closeModal: _,
-            bAlertDialog: !0,
-            strTitle: (0, _._)("#PricingDashboard_ApplyGuidelines_Header"),
-            onOK: () => {
-              _(), __webpack_require__ && __webpack_require__();
-            },
-            strOKButtonText: (0, _._)(
-              "#PricingDashboard_ApplyGuidelines_Button",
-            ),
+            fnOnApply: __webpack_require__,
+            singlePackage: _,
+          } = _,
+          _ = (0, _._)();
+        return (0, _.jsxs)(_._, {
+          closeModal: _,
+          bAlertDialog: !0,
+          strTitle: (0, _._)("#PricingDashboard_ApplyGuidelines_Header"),
+          onOK: () => {
+            _(), __webpack_require__ && __webpack_require__();
           },
-          _.createElement(
-            "div",
-            {
+          strOKButtonText: _
+            ? (0, _._)("#PricingDashboard_ApplyGuidelines_Button_Single")
+            : (0, _._)("#PricingDashboard_ApplyGuidelines_Button"),
+          children: [
+            (0, _.jsx)("div", {
               className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Instructions"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Instructions2"),
-          ),
-          _.createElement("br", null),
-          _.createElement("br", null),
-          _.createElement(
-            "a",
-            {
+              children: (0, _._)(
+                "#PricingDashboard_ApplyGuidelines_Instructions",
+              ),
+            }),
+            !_ &&
+              (0, _.jsx)("div", {
+                className: _().Instructions,
+                children: (0, _._)(
+                  "#PricingDashboard_ApplyGuidelines_Instructions2",
+                ),
+              }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("a", {
               href: _._.PARTNER_BASE_URL + "doc/store/pricing#5",
               target: "_blank",
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Link"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#PricingDashboard_ApplyGuidelines_Link"),
+            }),
+            (0, _.jsx)("div", {
               className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Assurance"),
-          ),
-          _.createElement(_._, null),
-        );
+              children: (0, _._)("#PricingDashboard_ApplyGuidelines_Assurance"),
+            }),
+            (0, _.jsx)(_._, {}),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -145,37 +141,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { rgLocalPriceOverrides: _ } = _,
           [__webpack_require__, _] = _.useState(_.length < 9);
-        return _.createElement(
-          "div",
-          {
-            className: _().SeeDetailsSection,
-          },
-          __webpack_require__
-            ? _.createElement(
-                "div",
-                {
-                  className: _().PriceOverrideSummaryList,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: `${_.packageID}_${_.strPriceKey}`,
-                    override: _,
-                  }),
+        return (0, _.jsx)("div", {
+          className: _().SeeDetailsSection,
+          children: __webpack_require__
+            ? (0, _.jsx)("div", {
+                className: _().PriceOverrideSummaryList,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      override: _,
+                    },
+                    `${_.packageID}_${_.strPriceKey}`,
+                  ),
                 ),
-              )
-            : _.createElement(
-                _._,
-                {
-                  onClick: () => _(!0),
-                  className: _().SeeDetailsButton,
-                },
-                (0, _._)("#PackageGrid_SeePendingChanges"),
-              ),
-        );
+              })
+            : (0, _.jsx)(_._, {
+                onClick: () => _(!0),
+                className: _().SeeDetailsButton,
+                children: (0, _._)("#PackageGrid_SeePendingChanges"),
+              }),
+        });
       }
       function _(_) {
         const { override: _ } = _,
@@ -194,104 +185,74 @@
             _,
           ),
           _ = _ < _ || (!!_ && _ > _);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().PriceOverrideSummary),
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().PriceOverrideSummary),
+          children: [
+            (0, _.jsx)(_._, {
               toolTipContent: _,
               direction: "top",
               className: _().Currency,
               strTooltipClassname: _().HoverToolTip,
-            },
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
+              children: _,
+            }),
+            (0, _.jsx)(_._, {
               toolTipContent: `${__webpack_require__}: ${_}`,
               direction: "overlay",
               className: _().PackageName,
               strTooltipClassname: _().HoverToolTip,
-            },
-            _,
-          ),
-          _
-            ? _.createElement(_._, {
-                packageID: __webpack_require__,
-                strPriceKey: _,
-              })
-            : _.createElement(_._, {
-                nPriceInCents: _,
-                nSavedPriceInCents: _,
-              }),
-          _.createElement(
-            "div",
-            {
-              className: _().OldPriceCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PricePrefix,
-              },
-              _,
-            ),
-            _.createElement(
-              "span",
-              {
-                className: _().OldPrice,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PriceSuffix,
-              },
-              _,
-            ),
-          ),
-          _.createElement(
-            "span",
-            {
-              className: _().ChangeArrow,
-            },
-            _.createElement(_.i3G, {
-              angle: 90,
+              children: _,
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            _
+              ? (0, _.jsx)(_._, {
+                  packageID: __webpack_require__,
+                  strPriceKey: _,
+                })
+              : (0, _.jsx)(_._, {
+                  nPriceInCents: _,
+                  nSavedPriceInCents: _,
+                }),
+            (0, _.jsxs)("div", {
+              className: _().OldPriceCtn,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PricePrefix,
+                  children: _,
+                }),
+                (0, _.jsx)("span", {
+                  className: _().OldPrice,
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().PriceSuffix,
+                  children: _,
+                }),
+              ],
+            }),
+            (0, _.jsx)("span", {
+              className: _().ChangeArrow,
+              children: (0, _.jsx)(_.i3G, {
+                angle: 90,
+              }),
+            }),
+            (0, _.jsxs)("div", {
               className: _().NewPriceCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PricePrefix,
-              },
-              _,
-            ),
-            _.createElement(
-              "span",
-              {
-                className: _().NewPrice,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PriceSuffix,
-              },
-              _,
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PricePrefix,
+                  children: _,
+                }),
+                (0, _.jsx)("span", {
+                  className: _().NewPrice,
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().PriceSuffix,
+                  children: _,
+                }),
+              ],
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -300,6 +261,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -314,33 +276,27 @@
           _ = _.useCallback(() => {
             _.HideElement(_.current.ownerDocument, _);
           }, [_]);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            tabIndex: -1,
-            className: _,
-            onFocus: (_) => {
-              _.target.focus();
-              let _ = _.createElement(
-                _._,
-                {
-                  target: _.current,
-                  direction: "top",
-                  bEnablePointerEvents: !0,
-                  nBodyDistance: 0,
-                  onClick: _,
-                },
-                _(),
-              );
-              _.ShowElement(_.current.ownerDocument, _, _);
-            },
-            onBlur: () => {
-              _.HideElement(_.current.ownerDocument, _, 100);
-            },
+        return (0, _.jsx)("div", {
+          ref: _,
+          tabIndex: -1,
+          className: _,
+          onFocus: (_) => {
+            _.target.focus();
+            let _ = (0, _.jsx)(_._, {
+              target: _.current,
+              direction: "top",
+              bEnablePointerEvents: !0,
+              nBodyDistance: 0,
+              onClick: _,
+              children: _(),
+            });
+            _.ShowElement(_.current.ownerDocument, _, _);
           },
-          _.createElement(_.faJ, null),
-        );
+          onBlur: () => {
+            _.HideElement(_.current.ownerDocument, _, 100);
+          },
+          children: (0, _.jsx)(_.faJ, {}),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -360,6 +316,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -411,67 +368,55 @@
         if (_ == _.FailedToLoad)
           _ = (0, _._)(
             "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
-            _.createElement("div", null),
-            _.createElement("div", null),
+            (0, _.jsx)("div", {}),
+            (0, _.jsx)("div", {}),
           );
         else if (_ == _.RequiresCooldown) {
-          let _ = _.createElement(_._, {
+          let _ = (0, _.jsx)(_._, {
             href: "https://partner.steamgames.com/doc/store/pricing",
           });
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError1",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError2",
-                _,
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError3",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "ol",
-                null,
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownError3a",
-                  ),
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#PricingDashboard_PriceProposal_Publish_CooldownError1",
                 ),
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownError3b",
-                  ),
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#PricingDashboard_PriceProposal_Publish_CooldownError2",
+                  _,
                 ),
-              ),
-            ),
-          );
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#PricingDashboard_PriceProposal_Publish_CooldownError3",
+                ),
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _.jsxs)("ol", {
+                  children: [
+                    (0, _.jsx)("li", {
+                      children: (0, _._)(
+                        "#PricingDashboard_PriceProposal_Publish_CooldownError3a",
+                      ),
+                    }),
+                    (0, _.jsx)("li", {
+                      children: (0, _._)(
+                        "#PricingDashboard_PriceProposal_Publish_CooldownError3b",
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          });
         } else
           _ == _.Failed &&
             (_ = (0, _._)(
               "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
-              _.createElement("div", null),
-              _.createElement("div", null),
+              (0, _.jsx)("div", {}),
+              (0, _.jsx)("div", {}),
             ));
         if (_) {
           let _ = (0, _._)("#PricingDashboard_PriceProposal_Publish_Title");
@@ -480,68 +425,58 @@
               (_ = (0, _._)(
                 "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
               )),
-            _.createElement(
-              _._,
-              {
-                strTitle: _,
-                bAlertDialog: !0,
-                onOK: _,
-                onCancel: _,
-                closeModal: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().PublishErrorDialog,
-                },
-                _,
-              ),
-            )
+            (0, _.jsx)(_._, {
+              strTitle: _,
+              bAlertDialog: !0,
+              onOK: _,
+              onCancel: _,
+              closeModal: _,
+              children: (0, _.jsx)("div", {
+                className: _().PublishErrorDialog,
+                children: _,
+              }),
+            })
           );
         }
         let _ = _ == _.Loading || _ == _.Loading;
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#PricingDashboard_PriceProposal_Publish_Title"),
-            bAlertDialog: !1,
-            strOKButtonText: (0, _._)(
-              "#PricingDashboard_PriceProposal_Publish_Button",
-            ),
-            bOKDisabled: _,
-            bCancelDisabled: _,
-            bDestructiveWarning: !0,
-            onOK: _,
-            onCancel: _,
-            closeModal: _,
-          },
-          _ &&
-            _.createElement(_._, {
-              position: "center",
-            }),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_Explanation",
-                _.length,
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PublishWarning,
-                  },
-                  (0, _._)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
-                  ),
-                ),
-              _.createElement(_._, {
-                rgLocalPriceOverrides: _,
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)("#PricingDashboard_PriceProposal_Publish_Title"),
+          bAlertDialog: !1,
+          strOKButtonText: (0, _._)(
+            "#PricingDashboard_PriceProposal_Publish_Button",
+          ),
+          bOKDisabled: _,
+          bCancelDisabled: _,
+          bDestructiveWarning: !0,
+          onOK: _,
+          onCancel: _,
+          closeModal: _,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                position: "center",
               }),
-            ),
-        );
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _._)(
+                    "#PricingDashboard_PriceProposal_Publish_Explanation",
+                    _.length,
+                  ),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().PublishWarning,
+                      children: (0, _._)(
+                        "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
+                      ),
+                    }),
+                  (0, _.jsx)(_._, {
+                    rgLocalPriceOverrides: _,
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       !(function (_) {
         (_[(_.Idle = 0)] = "Idle"),
@@ -591,7 +526,7 @@
                   (_ = (0, _._)(
                     "#PricingDashboard_PriceProposal_Approved_ttip",
                   )),
-                  (_ = _.createElement(_, {
+                  (_ = (0, _.jsx)(_, {
                     packageID: _,
                   })))
                 : ((_ = _().NoProposalsInFlight),
@@ -607,70 +542,65 @@
                   _,
                   _,
                 )),
-                (_ = _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#PricingDashboard_PriceProposal_WaitingForReview"),
-                  _.createElement("br", null),
-                  _.createElement(
-                    "span",
-                    null,
+                (_ = (0, _.jsxs)("div", {
+                  children: [
                     (0, _._)(
-                      "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
+                      "#PricingDashboard_PriceProposal_WaitingForReview",
                     ),
-                  ),
-                )));
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("span", {
+                      children: (0, _._)(
+                        "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
+                      ),
+                    }),
+                  ],
+                })));
         let _ = __webpack_require__ && (_ || !!_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ProposalState, _),
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().ProposalState, _),
+          children: [
+            (0, _.jsxs)(_._, {
               toolTipContent: _,
               className: _().StateText,
-            },
-            _.createElement("div", {
-              className: _().ProposalStateKey,
-            }),
-            _,
-          ),
-          _ &&
-            _.createElement(_._, {
-              hoverKey: _,
-              className: _().PackageMore,
-              renderHover: () =>
-                _.createElement(_, {
-                  packageID: _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ProposalStateKey,
                 }),
+                _,
+              ],
             }),
-        );
+            _ &&
+              (0, _.jsx)(_._, {
+                hoverKey: _,
+                className: _().PackageMore,
+                renderHover: () =>
+                  (0, _.jsx)(_, {
+                    packageID: _,
+                  }),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { packageID: _ } = _,
           [__webpack_require__, _, _] = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               onClick: _,
-            },
-            (0, _._)("#PricingDashboard_PriceProposal_PublishDialog_Button"),
-          ),
-          _.createElement(
-            _._,
-            {
-              active: __webpack_require__,
-            },
-            _.createElement(_, {
-              packageID: _,
+              children: (0, _._)(
+                "#PricingDashboard_PriceProposal_PublishDialog_Button",
+              ),
             }),
-          ),
-        );
+            (0, _.jsx)(_._, {
+              active: __webpack_require__,
+              children: (0, _.jsx)(_, {
+                packageID: _,
+                closeModal: _,
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { packageID: _ } = _,
@@ -678,36 +608,26 @@
         let _ = (0, _._)(_);
         const _ = (0, _._)(_);
         let _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().PricePopout,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DetailRow,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)("div", {
+          className: _().PricePopout,
+          children: (0, _.jsxs)("div", {
+            className: _().DetailRow,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _().DetailLabel,
                   onClick: _,
-                },
-                (0, _._)("#PricingDashboard_RevertAllPackage"),
-              ),
-            !!_ &&
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#PricingDashboard_RevertAllPackage"),
+                }),
+              !!_ &&
+                (0, _.jsx)("div", {
                   className: _().DetailLabel,
                   onClick: _,
-                },
-                (0, _._)("#PricingDashboard_CancelPriceProposal"),
-              ),
-          ),
-        );
+                  children: (0, _._)("#PricingDashboard_CancelPriceProposal"),
+                }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -734,25 +654,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#PackageGrid_DiscardChangesTitle"),
-            strOKButtonText: (0, _._)("#PackageGrid_DiscardChangesButton"),
-            onOK: _,
-            bDestructiveWarning: !0,
-            closeModal: _,
-          },
-          (0, _._)("#PricingDashboard_DiscardChangesExplanation", _.length),
-          _.createElement(_._, {
-            rgLocalPriceOverrides: _,
-          }),
-        );
+        return (0, _.jsxs)(_._, {
+          strTitle: (0, _._)("#PackageGrid_DiscardChangesTitle"),
+          strOKButtonText: (0, _._)("#PackageGrid_DiscardChangesButton"),
+          onOK: _,
+          bDestructiveWarning: !0,
+          closeModal: _,
+          children: [
+            (0, _._)("#PricingDashboard_DiscardChangesExplanation", _.length),
+            (0, _.jsx)(_._, {
+              rgLocalPriceOverrides: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -765,67 +685,50 @@
           _ = _ > 0;
         const [_, _, _] = (0, _._)(),
           [_, _, _] = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ToolbarInfo, _ && _().Visible),
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().ToolbarInfo, _ && _().Visible),
+          children: [
+            (0, _.jsx)("div", {
               className: _().ChangeCount,
-            },
-            (0, _._)("#PackageGrid_PendingChangeCount", _),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#PackageGrid_PendingChangeCount", _),
+            }),
+            (0, _.jsxs)("div", {
               className: _().Buttons,
-            },
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-                disabled: 0 == _,
-                className: (0, _._)(_().Button, _().SaveButton),
-              },
-              (0, _._)("#PackageGrid_SaveChangesDialogButton"),
-            ),
-            _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(_, {
-                closeModal: _,
-                bReloadPageOnSave: _,
-              }),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().Button,
-                onClick: _,
-              },
-              (0, _._)("#PackageGrid_DiscardChangesDialogButton"),
-            ),
-            _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(_, {
-                closeModal: _,
-              }),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  disabled: 0 == _,
+                  className: (0, _._)(_().Button, _().SaveButton),
+                  children: (0, _._)("#PackageGrid_SaveChangesDialogButton"),
+                }),
+                (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_, {
+                    closeModal: _,
+                    bReloadPageOnSave: _,
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _().Button,
+                  onClick: _,
+                  children: (0, _._)("#PackageGrid_DiscardChangesDialogButton"),
+                }),
+                (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_, {
+                    closeModal: _,
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _() {
         return _.useCallback(
           (_, _) =>
             (0, _._)(
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 strContinueUrl: _,
               }),
               (0, _._)(_),
@@ -894,27 +797,21 @@
           ),
           _ = (0, _._)("#PricingDashboard_SavePricesExplanation", _.length);
         if (_.loadFailed)
-          return _.createElement(
-            _._,
-            {
-              strTitle: _,
-              bAlertDialog: !0,
-              onOK: _,
-              onCancel: _,
-              closeModal: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PublishErrorDialog,
-              },
-              (0, _._)(
+          return (0, _.jsx)(_._, {
+            strTitle: _,
+            bAlertDialog: !0,
+            onOK: _,
+            onCancel: _,
+            closeModal: _,
+            children: (0, _.jsx)("div", {
+              className: _().PublishErrorDialog,
+              children: (0, _._)(
                 "#PricingDashboard_SavePrices_FailedToLoad",
-                _.createElement("div", null),
-                _.createElement("div", null),
+                (0, _.jsx)("div", {}),
+                (0, _.jsx)("div", {}),
               ),
-            ),
-          );
+            }),
+          });
         let _ = !1,
           _ = !1,
           _ = !1,
@@ -946,7 +843,7 @@
             void 0 !== _
               ? (_.closeModal(),
                 (0, _._)(
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     bAutoPublish: _,
                     fnOnSuccess: _,
                   }),
@@ -956,95 +853,79 @@
                   "Pricing:SaveChangesDialog auto publish undefined",
                 );
           };
-        let _ = _.createElement(_._, {
+        let _ = (0, _.jsx)(_._, {
           href: "https://partner.steamgames.com/doc/store/pricing",
         });
-        return _.createElement(
-          _._,
-          {
-            title: _,
-            onOK: _,
-            onCancel: _.closeModal,
-            bDestructiveWarning: _,
-            closeModal: _,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().SaveDialogBody,
-            },
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsx)(_._, {
+          title: _,
+          onOK: _,
+          onCancel: _.closeModal,
+          bDestructiveWarning: _,
+          closeModal: _,
+          children: (0, _.jsxs)(_._, {
+            className: _().SaveDialogBody,
+            children: [
+              (0, _.jsxs)(_._, {
                 className: _().SaveDialogBodyText,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().NavigationWarning,
-                  },
-                  (0, _._)("#PackageGrid_NavigationWarning"),
-                ),
-              _,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PricePreviewWarning,
-                  },
-                  " ",
-                  (0, _._)("#PricingDashboard_PreviewWarning", _),
-                  " ",
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PricePreviewWarning,
-                  },
-                  " ",
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _().NavigationWarning,
+                      children: (0, _._)("#PackageGrid_NavigationWarning"),
+                    }),
                   _,
-                  " ",
-                ),
-              _.createElement(_._, {
-                rgLocalPriceOverrides: _,
-              }),
-              _.createElement(_, {
-                priceIncrease: _,
-                nextDiscount: _.days,
-              }),
-              _.createElement(_, {
-                value: _,
-                onChange: _,
-                nextDiscount: _.days,
-              }),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _
-                ? _.createElement(_._, {
-                    strOKText: (0, _._)("#Button_Save"),
-                    onOK: _,
-                    bOKDisabled: _,
-                    strUpdateText: (0, _._)(
-                      "#PackageGrid_NavigateWithoutSavingButton",
-                    ),
-                    onUpdate: () => {
-                      _(), _.closeModal(), _(!0);
-                    },
-                    onCancel: _.closeModal,
-                  })
-                : _.createElement(_._, {
-                    strOKText: (0, _._)("#Button_Save"),
-                    onOK: _,
-                    bOKDisabled: _,
-                    onCancel: _.closeModal,
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _().PricePreviewWarning,
+                      children: [
+                        " ",
+                        (0, _._)("#PricingDashboard_PreviewWarning", _),
+                        " ",
+                      ],
+                    }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _().PricePreviewWarning,
+                      children: [" ", _, " "],
+                    }),
+                  (0, _.jsx)(_._, {
+                    rgLocalPriceOverrides: _,
                   }),
-            ),
-          ),
-        );
+                  (0, _.jsx)(_, {
+                    priceIncrease: _,
+                    nextDiscount: _.days,
+                  }),
+                  (0, _.jsx)(_, {
+                    value: _,
+                    onChange: _,
+                    nextDiscount: _.days,
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                children: _
+                  ? (0, _.jsx)(_._, {
+                      strOKText: (0, _._)("#Button_Save"),
+                      onOK: _,
+                      bOKDisabled: _,
+                      strUpdateText: (0, _._)(
+                        "#PackageGrid_NavigateWithoutSavingButton",
+                      ),
+                      onUpdate: () => {
+                        _(), _.closeModal(), _(!0);
+                      },
+                      onCancel: _.closeModal,
+                    })
+                  : (0, _.jsx)(_._, {
+                      strOKText: (0, _._)("#Button_Save"),
+                      onOK: _,
+                      bOKDisabled: _,
+                      onCancel: _.closeModal,
+                    }),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         let _,
@@ -1063,54 +944,44 @@
                       _,
                     )
                   : (0, _._)("#PricingDashboard_SavePrice_CooldownWarning", _)),
-            _.createElement(
-              "div",
-              {
-                className: _().PriceChangeSaveWarning,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _().PriceChangeSaveWarning,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().PriceChangeSaveWarningArrow,
-                },
-                _.createElement(_.i3G, {
-                  angle: 0,
+                  children: (0, _.jsx)(_.i3G, {
+                    angle: 0,
+                  }),
                 }),
-              ),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsxs)("div", {
                   className: _().HigherPriceWarning,
-                },
-                " ",
-                _,
-                " ",
-              ),
-            ))
+                  children: [" ", _, " "],
+                }),
+              ],
+            }))
           : null;
       }
       function _(_) {
         let { value: _, onChange: __webpack_require__ } = _,
           _ = _.nextDiscount <= _;
-        return _.createElement(
-          "div",
-          {
-            className: _().AutoPublishCheckBox,
-          },
-          _.createElement(_._, {
-            className: _().RadioButtons,
-            checked: !1 === _,
-            onChange: () => __webpack_require__(!1),
-            label: (0, _._)("#PricingDashboard_AutoPublish_Disabled"),
-          }),
-          _.createElement(_._, {
-            className: _().RadioButtons,
-            checked: !0 === _,
-            disabled: _,
-            onChange: () => __webpack_require__(!0),
-            label: (0, _._)("#PricingDashboard_AutoPublish_Enabled"),
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: _().AutoPublishCheckBox,
+          children: [
+            (0, _.jsx)(_._, {
+              className: _().RadioButtons,
+              checked: !1 === _,
+              onChange: () => __webpack_require__(!1),
+              label: (0, _._)("#PricingDashboard_AutoPublish_Disabled"),
+            }),
+            (0, _.jsx)(_._, {
+              className: _().RadioButtons,
+              checked: !0 === _,
+              disabled: _,
+              onChange: () => __webpack_require__(!0),
+              label: (0, _._)("#PricingDashboard_AutoPublish_Enabled"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1141,27 +1012,25 @@
               _(_.length), _(), _();
             })();
           }, []),
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#PackageGrid_SaveInProgress"),
-              bAlertDialog: !!_,
-              strOKButtonText: _
-                ? (0, _._)("#Button_Close")
-                : (0, _._)("#Button_OK"),
-              onOK: _ ? _ : _,
-              onCancel: () => {
-                _.cancel("cancelled by user");
-              },
-              closeModal: _,
-              bDestructiveWarning: !0,
+          (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#PackageGrid_SaveInProgress"),
+            bAlertDialog: !!_,
+            strOKButtonText: _
+              ? (0, _._)("#Button_Close")
+              : (0, _._)("#Button_OK"),
+            onOK: _ ? _ : _,
+            onCancel: () => {
+              _.cancel("cancelled by user");
             },
-            _ ??
-              _.createElement(_._, {
+            closeModal: _,
+            bDestructiveWarning: !0,
+            children:
+              _ ??
+              (0, _.jsx)(_._, {
                 position: "center",
                 string: (0, _._)("#PricingDashboard_Progress", _),
               }),
-          )
+          })
         );
       }
     },
@@ -1170,7 +1039,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       const _ = (_) => null;
     },
   },

@@ -10719,12 +10719,6 @@
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
-        get bIsFollowingEnabled() {
-          return !(0, _._)();
-        }
-        get bIsCuratorsEnabled() {
-          return !(0, _._)();
-        }
         get bIncludeCurators() {
           return !0;
         }

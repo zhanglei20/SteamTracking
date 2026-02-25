@@ -1685,10 +1685,11 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(_, _.options);
-        return _.createElement("span", {
+        return (0, _.jsx)("span", {
           ref: _,
           style: {
             fontSize: 0,
@@ -1704,11 +1705,166 @@
           } = _,
           _ = (0, _._)(_, _.options),
           _ = (0, _._)(_, _);
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           ref: _,
           ..._,
         });
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = new Map();
+                if (_)
+                  try {
+                    (
+                      await (async function (_, _) {
+                        var _, _, _, _, _;
+                        const _ = (0, _._)(
+                            _._.STORE_BASE_URL,
+                            _,
+                            _._.country_code,
+                          ),
+                          _ = await fetch(_),
+                          _ = await _.json(),
+                          _ = new Set();
+                        null === (_ = _.rgCreatorsIgnored) ||
+                          void 0 === _ ||
+                          __webpack_require__.forEach((_) => _.add(_)),
+                          null === (_ = _.rgCreatorsFollowed) ||
+                            void 0 === _ ||
+                            _.forEach((_) => _.add(_));
+                        const _ = new Set();
+                        return (
+                          null === (_ = _.rgCreatorsIgnored) ||
+                            void 0 === _ ||
+                            _.forEach((_) => _.add(_)),
+                          [
+                            ...(null !== (_ = _.rgCuratorsIgnored) &&
+                            void 0 !== _
+                              ? _
+                              : []),
+                            ...(_.rgCurators
+                              ? Object.values(
+                                  null !== (_ = _.rgCurators) && void 0 !== _
+                                    ? _
+                                    : {},
+                                ).map((_) => _.clanid)
+                              : []),
+                          ].map((_) => {
+                            const _ = _.has(_);
+                            return {
+                              clanid: _,
+                              ignored: _,
+                              followed: !_,
+                              is_creator: _.has(_),
+                            };
+                          })
+                        );
+                      })(0, _)
+                    ).forEach((_) => _.set(_.clanid, _));
+                  } catch (_) {
+                    console.error("GetCuratorAffinityQuery", _);
+                  }
+                return _;
+              },
+              enabled: !!_,
+            };
+          })(0, _),
+        );
+      }
+      function _(_) {
+        var _;
+        const { data: __webpack_require__ } = _();
+        return void 0 === __webpack_require__ || null == _
+          ? void 0
+          : Boolean(
+              null === (_ = __webpack_require__.get(_)) || void 0 === _
+                ? void 0
+                : _.followed,
+            );
+      }
+      function _(_) {
+        var _;
+        const { data: __webpack_require__ } = _();
+        return void 0 === __webpack_require__ || null == _
+          ? void 0
+          : Boolean(
+              null === (_ = __webpack_require__.get(_)) || void 0 === _
+                ? void 0
+                : _.ignored,
+            );
+      }
+      function _() {
+        return _._.EREALM != _._.k_ESteamRealmChina;
+      }
+      function _() {
+        return _._.EREALM != _._.k_ESteamRealmChina;
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = _._.accountid;
+        return (_, _, _, _) => {
+          _.setQueryData(_(_), (_) => {
+            if (!_) return;
+            const _ = new Map(_);
+            return (
+              null == _ ||
+                __webpack_require__.forEach((_) => {
+                  _.has(_.clanAccountID)
+                    ? (_.get(_.clanAccountID).followed = !0)
+                    : _.set(_.clanAccountID, {
+                        clanid: _.clanAccountID,
+                        followed: !0,
+                        ignored: !1,
+                        is_creator: !1,
+                      });
+                }),
+              null == _ ||
+                _.forEach((_) => {
+                  _.has(_.clanAccountID)
+                    ? (_.get(_.clanAccountID).ignored = !0)
+                    : _.set(_.clanAccountID, {
+                        clanid: _.clanAccountID,
+                        followed: !1,
+                        ignored: !0,
+                        is_creator: !1,
+                      });
+                }),
+              null == _ || _.forEach((_) => _.delete(_.clanAccountID)),
+              null == _ ||
+                _.forEach((_) => {
+                  let _ = _.get(_.clanAccountID);
+                  _ && (_.is_creator = !0);
+                }),
+              _
+            );
+          });
+        };
+      }
+      function _(_) {
+        return ["CuratorAffinityQueryKey", null != _ ? _ : 0];
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2611,6 +2767,27 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      const _ = "unUserdataVersion";
+      function _(_, _, _) {
+        const _ = Number.parseInt(window.localStorage.getItem(_) || "0");
+        let _ = `${_}dynamicstore/userdata/?id=${_}&cc=${_}&origin=${self.origin}`;
+        return _ && (_ += `&v=${_}`), _;
+      }
+      function _() {
+        window.localStorage.setItem(
+          _,
+          (
+            Number.parseInt(window.localStorage.getItem(_) || "0") + 1
+          ).toString(),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2627,6 +2804,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2652,13 +2830,10 @@
             "b",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "b",
-                  {
-                    className: _().Bold,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("b", {
+                  className: _().Bold,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2667,13 +2842,10 @@
             "i",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "i",
-                  {
-                    className: (0, _._)(_().Italic, "BB_Italic"),
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("i", {
+                  className: (0, _._)(_().Italic, "BB_Italic"),
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2732,14 +2904,11 @@
                   _.length > 0 &&
                   "#" === _[0] &&
                   (_ = _.substring(1));
-                return _.createElement(
-                  "span",
-                  {
-                    _: _ || void 0,
-                    className: (0, _._)(_().CenterSpan, "BB_Center"),
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("span", {
+                  _: _ || void 0,
+                  className: (0, _._)(_().CenterSpan, "BB_Center"),
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2758,13 +2927,10 @@
             "u",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "u",
-                  {
-                    className: _().Underline,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("u", {
+                  className: _().Underline,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2773,13 +2939,10 @@
             "strike",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "s",
-                  {
-                    className: _().Strike,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("s", {
+                  className: _().Strike,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2792,24 +2955,18 @@
                   _ = _.useCallback(() => {
                     __webpack_require__(!_);
                   }, [_]);
-                return _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(_().Spoiler, _ && _().Revealed),
-                    focusable: !0,
-                    onActivate: _,
-                    onOKActionDescription: (0, _._)(
-                      _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
-                    ),
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().SpoilerText,
-                    },
-                    _.children,
+                return (0, _.jsx)(_._, {
+                  className: (0, _._)(_().Spoiler, _ && _().Revealed),
+                  focusable: !0,
+                  onActivate: _,
+                  onOKActionDescription: (0, _._)(
+                    _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
                   ),
-                );
+                  children: (0, _.jsx)("span", {
+                    className: _().SpoilerText,
+                    children: _.children,
+                  }),
+                });
               },
               autocloses: !1,
             },
@@ -2818,7 +2975,7 @@
             "hr",
             {
               Constructor: function (_) {
-                return _.createElement("hr", {
+                return (0, _.jsx)("hr", {
                   className: _()._,
                 });
               },
@@ -2857,26 +3014,20 @@
                   void 0 === _ ||
                   ("string" == typeof _ && _.length > 0 && "#" == _[0])
                 )
-                  return _.createElement(
-                    "a",
-                    {
-                      href: null != _ ? _ : null,
-                      _: _,
-                    },
-                    _.children,
-                  );
-                return _.createElement(
-                  _,
-                  {
-                    className: _,
-                    href: _,
+                  return (0, _.jsx)("a", {
+                    href: null != _ ? _ : null,
                     _: _,
-                    style: {
-                      backgroundColor: _,
-                    },
+                    children: _.children,
+                  });
+                return (0, _.jsx)(_, {
+                  className: _,
+                  href: _,
+                  _: _,
+                  style: {
+                    backgroundColor: _,
                   },
-                  _.children,
-                );
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2892,13 +3043,10 @@
             "pullquote",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "div",
-                  {
-                    className: _().PullQuote,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("div", {
+                  className: _().PullQuote,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2907,13 +3055,10 @@
             "code",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "code",
-                  {
-                    className: _().CodeBlock,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("code", {
+                  className: _().CodeBlock,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2922,13 +3067,10 @@
             "c",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "code",
-                  {
-                    className: _().Code,
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("code", {
+                  className: _().Code,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -2964,29 +3106,31 @@
                 const _ = _(_.args, "noborder"),
                   _ = _(_.args, "equalcells"),
                   _ = _(_.args, "colwidth");
-                return _.createElement(
-                  "table",
-                  {
-                    className: (0, _._)(
-                      _().Table,
-                      "BB_Table",
-                      _ && _().NoBorder,
-                      _ && _().EqualCells,
-                    ),
-                  },
-                  _ &&
-                    _.createElement(
-                      "colgroup",
-                      null,
-                      _.split(",").map((_, _) =>
-                        _.createElement(_, {
-                          key: _,
-                          width: _,
-                        }),
-                      ),
-                    ),
-                  _.createElement("tbody", null, _.children),
-                );
+                return (0, _.jsxs)("table", {
+                  className: (0, _._)(
+                    _().Table,
+                    "BB_Table",
+                    _ && _().NoBorder,
+                    _ && _().EqualCells,
+                  ),
+                  children: [
+                    _ &&
+                      (0, _.jsx)("colgroup", {
+                        children: _.split(",").map((_, _) =>
+                          (0, _.jsx)(
+                            _,
+                            {
+                              width: _,
+                            },
+                            _,
+                          ),
+                        ),
+                      }),
+                    (0, _.jsx)("tbody", {
+                      children: _.children,
+                    }),
+                  ],
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -2996,13 +3140,10 @@
             "tr",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "tr",
-                  {
-                    className: (0, _._)(_().TableRow, "BB_TableRow"),
-                  },
-                  _.children,
-                );
+                return (0, _.jsx)("tr", {
+                  className: (0, _._)(_().TableRow, "BB_TableRow"),
+                  children: _.children,
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -3070,44 +3211,38 @@
                         };
                     }
                   })(_(_.args, "type"), _, _, _);
-                return _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().ExpandSectionBlock]: !0,
-                      [_.style]: null != _.style,
-                      [_().ExpandSectionExpanded]: __webpack_require__,
-                      [_().ExpandSectionCollapsed]: !__webpack_require__,
-                      BBCodeExpanded: __webpack_require__,
-                      BBCodeCollapsed: !__webpack_require__,
-                    }),
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                return (0, _.jsxs)("div", {
+                  className: (0, _._)({
+                    [_().ExpandSectionBlock]: !0,
+                    [_.style]: null != _.style,
+                    [_().ExpandSectionExpanded]: __webpack_require__,
+                    [_().ExpandSectionCollapsed]: !__webpack_require__,
+                    BBCodeExpanded: __webpack_require__,
+                    BBCodeCollapsed: !__webpack_require__,
+                  }),
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: _().ExpandSectionHeader,
                       onClick: () => _(!__webpack_require__),
-                    },
-                    (0, _._)(__webpack_require__ ? _.expanded : _.collapsed),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().EmbedArrow,
-                      },
-                      _.createElement(_.DK4, {
-                        angle: __webpack_require__ ? 180 : 0,
-                      }),
-                    ),
-                  ),
-                  __webpack_require__ &&
-                    _.createElement(
-                      "div",
-                      {
+                      children: [
+                        (0, _._)(
+                          __webpack_require__ ? _.expanded : _.collapsed,
+                        ),
+                        (0, _.jsx)("div", {
+                          className: _().EmbedArrow,
+                          children: (0, _.jsx)(_.DK4, {
+                            angle: __webpack_require__ ? 180 : 0,
+                          }),
+                        }),
+                      ],
+                    }),
+                    __webpack_require__ &&
+                      (0, _.jsx)("div", {
                         className: _().ExpandSectionBody,
-                      },
-                      _.children,
-                    ),
-                );
+                        children: _.children,
+                      }),
+                  ],
+                });
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -3122,13 +3257,13 @@
                     _.context,
                   _ = _(_.args);
                 if (_)
-                  return _.createElement(_._, {
+                  return (0, _.jsx)(_._, {
                     eventGID: _,
                     bPreviewMode: __webpack_require__,
                   });
                 if (_) {
                   const _ = (0, _._)(_._.LANGUAGE);
-                  return _.createElement(_._, {
+                  return (0, _.jsx)(_._, {
                     eventModel: _,
                     lang: _,
                   });
@@ -3208,19 +3343,15 @@
                     _.postMessage(JSON.stringify(_)), _.preventDefault();
                   }
                 };
-                return _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      "SaleSectionCalendarEventContainer",
-                      _().CalendarEventContainer,
-                    ),
-                    _: _,
-                  },
-                  _ &&
-                    _.createElement(
-                      "a",
-                      {
+                return (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    "SaleSectionCalendarEventContainer",
+                    _().CalendarEventContainer,
+                  ),
+                  _: _,
+                  children: [
+                    _ &&
+                      (0, _.jsx)("a", {
                         className: (0, _._)(
                           "SaleSectionCalendarEventLink",
                           _().CalendarEventLink,
@@ -3228,24 +3359,18 @@
                         href: _,
                         onClick: _,
                         download: "calendar.ics",
-                      },
-                      "Apple",
-                    ),
-                  _.createElement(
-                    "a",
-                    {
+                        children: "Apple",
+                      }),
+                    (0, _.jsx)("a", {
                       className: (0, _._)(
                         "SaleSectionCalendarEventLink",
                         _().CalendarEventLink,
                       ),
                       href: _,
-                    },
-                    "Google",
-                  ),
-                  _ &&
-                    _.createElement(
-                      "a",
-                      {
+                      children: "Google",
+                    }),
+                    _ &&
+                      (0, _.jsx)("a", {
                         className: (0, _._)(
                           "SaleSectionCalendarEventLink",
                           _().CalendarEventLink,
@@ -3253,10 +3378,10 @@
                         href: _,
                         onClick: _,
                         download: "calendar.ics",
-                      },
-                      "Outlook",
-                    ),
-                );
+                        children: "Outlook",
+                      }),
+                  ],
+                });
               },
               autocloses: !0,
             },
@@ -3268,17 +3393,14 @@
                 const _ = _(_.args),
                   _ = "button" == _(_.args, "style") ? _().LinkButton : null,
                   _ = _ && _(_.args, "buttoncolor");
-                return _.createElement(
-                  _,
-                  {
-                    className: _,
-                    style: {
-                      backgroundColor: _,
-                    },
-                    href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+                return (0, _.jsx)(_, {
+                  className: _,
+                  style: {
+                    backgroundColor: _,
                   },
-                  _.children,
-                );
+                  href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -3288,15 +3410,12 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args);
-                return _.createElement(
-                  "span",
-                  {
-                    style: {
-                      color: _,
-                    },
+                return (0, _.jsx)("span", {
+                  style: {
+                    color: _,
                   },
-                  _.children,
-                );
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -3306,15 +3425,12 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args);
-                return _.createElement(
-                  "span",
-                  {
-                    style: {
-                      backgroundColor: _,
-                    },
+                return (0, _.jsx)("span", {
+                  style: {
+                    backgroundColor: _,
                   },
-                  _.children,
-                );
+                  children: _.children,
+                });
               },
               autocloses: !1,
             },
@@ -3323,14 +3439,10 @@
             "p",
             {
               Constructor: function (_) {
-                return _.createElement(
-                  "p",
-                  {
-                    className: _().Paragraph,
-                  },
-                  _.children,
-                  _.createElement("wbr", null),
-                );
+                return (0, _.jsxs)("p", {
+                  className: _().Paragraph,
+                  children: [_.children, (0, _.jsx)("wbr", {})],
+                });
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -3420,14 +3532,11 @@
             _.length > 0 &&
             "#" === _[0] &&
             (_ = _.substring(1)),
-          _.createElement(
-            _,
-            {
-              _: _ || void 0,
-              className: (0, _._)(_, _.className),
-            },
-            _.children,
-          )
+          (0, _.jsx)(_, {
+            _: _ || void 0,
+            className: (0, _._)(_, _.className),
+            children: _.children,
+          })
         );
       }
       function _(_) {
@@ -3455,60 +3564,48 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-            direction: "top",
-          },
-          _.createElement(
-            _._,
-            {
-              ...__webpack_require__,
-              href: _,
-              rel: _,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            ...__webpack_require__,
+            href: _,
+            rel: _,
+            children: _.children,
+          }),
+        });
       };
       function _(_) {
         const _ = _(_.args, "author");
-        return _.createElement(
-          "blockquote",
-          {
-            className: (0, _._)(_().BlockQuote, _.className),
-          },
-          !!_ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("blockquote", {
+          className: (0, _._)(_().BlockQuote, _.className),
+          children: [
+            !!_ &&
+              (0, _.jsxs)("div", {
                 className: _().QuoteAuthor,
-              },
-              (0, _._)("#Bbcode_Originally_Posted_By") + " ",
-              " ",
-              _.createElement("b", null, _ + ":"),
-            ),
-          _.children,
-        );
+                children: [
+                  (0, _._)("#Bbcode_Originally_Posted_By") + " ",
+                  " ",
+                  (0, _.jsx)("b", {
+                    children: _ + ":",
+                  }),
+                ],
+              }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "ul",
-          {
-            className: (0, _._)(_().List, "bullets"),
-          },
-          _.children,
-        );
+        return (0, _.jsx)("ul", {
+          className: (0, _._)(_().List, "bullets"),
+          children: _.children,
+        });
       }
       function _(_) {
-        return _.createElement(
-          "ol",
-          {
-            className: _().OrderedList,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("ol", {
+          className: _().OrderedList,
+          children: _.children,
+        });
       }
       function _(_) {
         let _ = _(_.args, "id");
@@ -3518,14 +3615,11 @@
             _.length > 0 &&
             "#" === _[0] &&
             (_ = _.substring(1)),
-          _.createElement(
-            "li",
-            {
-              className: _().ListItem,
-              _: _ || void 0,
-            },
-            _.children,
-          )
+          (0, _.jsx)("li", {
+            className: _().ListItem,
+            _: _ || void 0,
+            children: _.children,
+          })
         );
       }
       function _(_) {
@@ -3537,7 +3631,7 @@
             (_ = {
               width: `${_}px`,
             }),
-          _.createElement("col", {
+          (0, _.jsx)("col", {
             style: _,
           })
         );
@@ -3550,17 +3644,14 @@
         return (
           _ && parseInt(_) > 1 && (_.colSpan = parseInt(_)),
           _ && parseInt(_) > 1 && (_.rowSpan = parseInt(_)),
-          _.createElement(
-            _,
-            {
-              className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
-              ..._,
-              style: _ && {
-                width: _,
-              },
+          (0, _.jsx)(_, {
+            className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
+            ..._,
+            style: _ && {
+              width: _,
             },
-            _.children,
-          )
+            children: _.children,
+          })
         );
       }
       function _(_) {
@@ -3610,7 +3701,7 @@
       }
       function _(_) {
         const _ = _(_.args);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           video: _,
           bAutoPlay: !0,
           bControls: !1,
@@ -3632,7 +3723,7 @@
           _ = "0" !== _ && "off" !== _ && "false" !== _,
           _ = _(_.args, "loop"),
           _ = "0" !== _ && "off" !== _ && "false" !== _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           video: _,
           bAutoPlay: _,
           bControls: _,
@@ -6472,6 +6563,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       let _ = class extends _.Component {
         static get hoverClass() {
@@ -6489,44 +6581,34 @@
           let _ = "";
           return (
             "medium" == _ ? (_ = _().Medium) : "large" == _ && (_ = _().Large),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().SnoozeContainer,
-                  _.online_state,
-                  __webpack_require__,
-                  _ && _().animating,
-                  _,
-                  _ && _().Dim,
-                ),
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().SnoozeContainer,
+                _.online_state,
+                __webpack_require__,
+                _ && _().animating,
+                _,
+                _ && _().Dim,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
                   "data-text": "Z",
                   className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "Z",
+                }),
+                (0, _.jsx)("div", {
                   "data-text": "Z",
                   className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "Z",
+                }),
+                (0, _.jsx)("div", {
                   "data-text": "Z",
                   className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-            )
+                  children: "Z",
+                }),
+              ],
+            })
           );
         }
       };
@@ -6544,6 +6626,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -6555,13 +6638,10 @@
           _ = 544 == _.m_eGamingDeviceType,
           _ = 545 == _.m_eGamingDeviceType,
           _ = !_ && !_ && !_ && _.HasStateFlag(1024);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -6570,13 +6650,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_Mobile"),
                 ..._,
-              },
-              _.createElement(_._, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_._, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -6585,13 +6662,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_VR"),
                 ..._,
-              },
-              _.createElement(_.MUh, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_.MUh, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -6600,13 +6674,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_BigPicture"),
                 ..._,
-              },
-              _.createElement(_.bPr, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_.bPr, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -6615,13 +6686,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_SteamDeck"),
                 ..._,
-              },
-              _.createElement(_.DQe, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_.DQe, {}),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   __webpack_require__,
                   _().PersonaStatusIcon,
@@ -6630,10 +6698,10 @@
                 ),
                 title: (0, _._)("#Platform_Hint_LegionGoS"),
                 ..._,
-              },
-              _.createElement(_.DQe, null),
-            ),
-        );
+                children: (0, _.jsx)(_.DQe, {}),
+              }),
+          ],
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -6643,6 +6711,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6692,29 +6761,28 @@
               _
             );
           }, [_, __webpack_require__]);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              __webpack_require__,
-              _,
-            ),
-            ..._,
-          },
-          _.createElement("div", {
-            className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-            style: _,
-          }),
-          _.createElement(_._, {
-            className: (0, _._)(_().avatar, "avatar"),
-            rgSources: _,
-            draggable: !1,
-          }),
-          _,
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().avatarHolder,
+            "avatarHolder",
+            "no-drag",
+            __webpack_require__,
+            _,
+          ),
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+              style: _,
+            }),
+            (0, _.jsx)(_._, {
+              className: (0, _._)(_().avatar, "avatar"),
+              rgSources: _,
+              draggable: !1,
+            }),
+            _,
+          ],
+        });
       });
       let _ = class extends _.Component {
         render() {
@@ -6742,7 +6810,7 @@
                     : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
                       (_ = _.avatar_url_full))
                 : _ && (_ = _),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               strAvatarURL: _,
               size: _,
               className: (0, _._)((0, _._)(_), _),
@@ -6765,21 +6833,18 @@
           _ || (_ = _.image_small),
           _.startsWith("https://") ||
             (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().avatarFrame,
-                __webpack_require__,
-                "avatarFrame",
-              ),
-              ..._,
-            },
-            _.createElement("img", {
+          (0, _.jsx)("div", {
+            className: (0, _._)(
+              _().avatarFrame,
+              __webpack_require__,
+              "avatarFrame",
+            ),
+            ..._,
+            children: (0, _.jsx)("img", {
               className: _().avatarFrameImg,
               src: _,
             }),
-          )
+          })
         );
       });
       let _ = class extends _.Component {
@@ -6870,28 +6935,24 @@
               cursor: "pointer",
             });
           const _ = this.state.bAnimate && null != _ ? _ : null;
-          return _.createElement(
-            "div",
-            {
-              onMouseEnter: () =>
-                this.setState({
-                  bAnimate: "None" != this.props.loopDuration,
-                }),
-              onMouseLeave: () => this.SetupAnimationTimer(),
-            },
-            _.createElement(
-              _,
-              {
-                animatedAvatar: _,
-                ..._,
-              },
-              _,
-              _.createElement(_, {
-                profileItem: __webpack_require__,
-                bDisableAnimation: _ && !this.state.bAnimate,
+          return (0, _.jsx)("div", {
+            onMouseEnter: () =>
+              this.setState({
+                bAnimate: "None" != this.props.loopDuration,
               }),
-            ),
-          );
+            onMouseLeave: () => this.SetupAnimationTimer(),
+            children: (0, _.jsxs)(_, {
+              animatedAvatar: _,
+              ..._,
+              children: [
+                _,
+                (0, _.jsx)(_, {
+                  profileItem: __webpack_require__,
+                  bDisableAnimation: _ && !this.state.bAnimate,
+                }),
+              ],
+            }),
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -8838,6 +8899,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_ERecent = "recent"),
@@ -8986,8 +9048,8 @@
         }
         BIsGameSourceAllowed(_) {
           return (
-            !(_ === _.k_EFollowing && !_._.bIsFollowingEnabled) &&
-            !(_ === _.k_ECurator && !_._.bIsCuratorsEnabled) &&
+            !(_ === _.k_EFollowing && !(0, _._)()) &&
+            !(_ === _.k_ECurator && !(0, _._)()) &&
             this.m_mapGameSources.has(_)
           );
         }
@@ -10452,6 +10514,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return new _._(new _._(), 0);
@@ -10465,7 +10528,9 @@
               __webpack_require__,
             ),
           );
-        return _.createElement(_.Fragment, null, _.ParseBBCode(_, {}));
+        return (0, _.jsx)(_.Fragment, {
+          children: _.ParseBBCode(_, {}),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -10477,6 +10542,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10498,7 +10564,7 @@
             let _ = _[0],
               _ = _[1].toLocaleLowerCase();
             const { sizeStr: _, alignStr: _ } = _(_);
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               videoID: _,
               classNameAlign: _,
               classNameSize: _,
@@ -10506,13 +10572,13 @@
             });
           }
         }
-        return _.createElement(_.Fragment, null);
+        return (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
         if ((0, _._)()) return null;
         const _ = (0, _._)(_);
         return void 0 !== (null == _ ? void 0 : _.strVideoID)
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               videoID: _.strVideoID,
               nStartSeconds: _.nStartSeconds,
               classNameAlign: "",
@@ -10528,7 +10594,7 @@
           _ = (0, _._)(_.args, "size"),
           _ = (0, _._)(_.args, "seconds"),
           { sizeStr: _, alignStr: _ } = _(_);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           videoID: _,
           nStartSeconds: _ ? Number.parseInt(_) : void 0,
           classNameAlign: _,
@@ -10549,6 +10615,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10594,77 +10661,67 @@
           const _ = _.title,
             _ = _.views,
             _ = _.description;
-          return _.createElement(
-            "div",
-            {
-              className: _().DynamicLinkBox,
-              onClick: () => _(!1),
-            },
-            _.createElement("img", {
-              className: _().DynamicLink_Preview,
-              src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().DynamicLinkBox,
+            onClick: () => _(!1),
+            children: [
+              (0, _.jsx)("img", {
+                className: _().DynamicLink_Preview,
+                src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
+              }),
+              (0, _.jsxs)("div", {
                 className: _().DynamicLink_Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_Name,
-                },
-                (0, _._)("#EventEditor_YouTubeVideoTitle", _),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_YoutubeViews,
-                },
-                (0, _._)("#EventEditor_YouTubeVideoViews", (0, _._)(Number(_))),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Dynamiclink_Content,
-                },
-                _ && _,
-                !_ &&
-                  _.createElement(_._, {
-                    size: "medium",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().DynamicLink_Name,
+                    children: (0, _._)("#EventEditor_YouTubeVideoTitle", _),
                   }),
-              ),
-            ),
-          );
+                  (0, _.jsx)("div", {
+                    className: _().DynamicLink_YoutubeViews,
+                    children: (0, _._)(
+                      "#EventEditor_YouTubeVideoViews",
+                      (0, _._)(Number(_)),
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Dynamiclink_Content,
+                    children: [
+                      _ && _,
+                      !_ &&
+                        (0, _.jsx)(_._, {
+                          size: "medium",
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
-        return _.createElement(
-          _._,
-          {
-            video: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().PreviewYouTubeVideo, _, _),
-              _: _,
-            },
-            _.createElement("img", {
-              className: _().PlaceholderImg,
-              src:
-                _._.COMMUNITY_CDN_URL +
-                "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-            }),
-            _.createElement(_._, {
-              video: _,
-              autoplay: null != _ && _,
-              startSeconds: _,
-              controls: !0,
-              playsInline: !0,
-              autopause: !0,
-              showFullscreenBtn: !0,
-            }),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          video: _,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().PreviewYouTubeVideo, _, _),
+            _: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _().PlaceholderImg,
+                src:
+                  _._.COMMUNITY_CDN_URL +
+                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+              }),
+              (0, _.jsx)(_._, {
+                video: _,
+                autoplay: null != _ && _,
+                startSeconds: _,
+                controls: !0,
+                playsInline: !0,
+                autopause: !0,
+                showFullscreenBtn: !0,
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -10673,6 +10730,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10700,7 +10758,7 @@
           let _ = null;
           if (
             ((_ = _
-              ? _.createElement(_._, {
+              ? (0, _.jsx)(_._, {
                   emoticonStore: this.props.emoticonStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   onEmoticonSelected: (_) =>
@@ -10716,12 +10774,12 @@
                   void 0 === _
                     ? void 0
                     : _.length) > 0
-                ? _.createElement(_._, {
+                ? (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })
-                : _.createElement(_._, {
+                : (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
@@ -10767,52 +10825,38 @@
             _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
             __webpack_require__ && _.push("ttip"),
             _
-              ? _.createElement(
-                  _._,
-                  {
-                    onClick: this.OnEmoticonClick,
-                    onOKActionDescription: (0, _._)(
-                      "#ChatEntryButton_Emoticon",
-                    ),
-                    focusable: !0,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: __webpack_require__,
-                    },
-                    _.createElement("img", {
+              ? (0, _.jsx)(_._, {
+                  onClick: this.OnEmoticonClick,
+                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
+                  focusable: !0,
+                  children: (0, _.jsx)(_._, {
+                    toolTipContent: __webpack_require__,
+                    children: (0, _.jsx)("img", {
                       src: this.props.useImg,
                       className: (0, _._)(..._),
                       title:
                         this.props.title ||
                         (0, _._)("#ChatEntryButton_Emoticon"),
                     }),
-                  ),
-                )
+                  }),
+                })
               : (_.push(_().chatSubmitButton, _().EmoticonPickerButton),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(..._),
-                    onOKActionDescription: (0, _._)(
-                      "#ChatEntryButton_Emoticon",
-                    ),
-                    type: "button",
-                    onClick: this.OnEmoticonClick,
-                    title:
-                      this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
-                    disabled: _,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      toolTipContent: __webpack_require__,
-                    },
-                    this.props.buttonIcon || _.createElement(_._, null),
-                    _ && _.createElement(_._, null),
-                  ),
-                ))
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(..._),
+                  onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
+                  type: "button",
+                  onClick: this.OnEmoticonClick,
+                  title:
+                    this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
+                  disabled: _,
+                  children: (0, _.jsxs)(_._, {
+                    toolTipContent: __webpack_require__,
+                    children: [
+                      this.props.buttonIcon || (0, _.jsx)(_._, {}),
+                      _ && (0, _.jsx)(_._, {}),
+                    ],
+                  }),
+                }))
           );
         }
       };
@@ -10829,6 +10873,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10872,70 +10917,60 @@
                       });
                 }
               : void 0;
-          return _.createElement(
-            _._,
-            {
-              className: _.Picker,
-              onButtonDown: _,
-            },
-            _ && _.createElement(_, null, this.RenderTabs()),
-            _,
-          );
+          return (0, _.jsxs)(_._, {
+            className: _.Picker,
+            onButtonDown: _,
+            children: [
+              _ &&
+                (0, _.jsx)(_, {
+                  children: this.RenderTabs(),
+                }),
+              _,
+            ],
+          });
         }
         RenderTabs() {
           return this.props.config.map(({ renderTab: _ }, _) => {
             const _ = this.state.activeIndex === _;
-            return _.createElement(
+            return (0, _.jsx)(
               _,
               {
-                key: _,
                 active: _,
                 onClick: () =>
                   this.setState({
                     activeIndex: _,
                   }),
+                children: _(_),
               },
-              _(_),
+              _,
             );
           });
         }
       }
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            className: _.Tabs,
-            "flow-children": "row",
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_._, {
+          className: _.Tabs,
+          "flow-children": "row",
+          children: _.children,
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.Content,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("div", {
+          className: _.Content,
+          children: _.children,
+        });
       }
       function _(_) {
         const { active: _, children: __webpack_require__, onClick: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.Tab, _ && _.Active),
-            focusClassName: _.Focus,
-            onActivate: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.TabContent, _ && _.Active),
-            },
-            __webpack_require__,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_.Tab, _ && _.Active),
+          focusClassName: _.Focus,
+          onActivate: _,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_.TabContent, _ && _.Active),
+            children: __webpack_require__,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -10946,28 +10981,25 @@
           renderEmpty: _,
         } = _;
         let _ = _.map((_, _) =>
-          _.createElement(
+          (0, _.jsx)(
             _._,
             {
-              key: _(_),
               className: _.Item,
               onActivate: () => _(_[_]),
               autoFocus: 0 === _,
               focusClassName: _.Focus,
+              children: __webpack_require__(_[_]),
             },
-            __webpack_require__(_[_]),
+            _(_),
           ),
         );
         return (
           0 === _.length && _ && (_ = _()),
-          _.createElement(
-            _._,
-            {
-              "flow-children": "grid",
-              className: _.ItemList,
-            },
-            _,
-          )
+          (0, _.jsx)(_._, {
+            "flow-children": "grid",
+            className: _.ItemList,
+            children: _,
+          })
         );
       }
       function _(_) {
@@ -10978,28 +11010,23 @@
           onSubmit: _,
           ..._
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              _,
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_, {
                 title: _,
-              },
-              _.createElement(_, {
-                ..._,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
               }),
-            ),
-          ),
-          _.createElement(_, {
-            value: _,
-            onChange: __webpack_require__,
-            onSubmit: _,
-          }),
-        );
+            }),
+            (0, _.jsx)(_, {
+              value: _,
+              onChange: __webpack_require__,
+              onSubmit: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -11008,69 +11035,56 @@
           sections: _,
           title: _,
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            null,
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.SectionedPageTitle,
-                },
-                _,
-              ),
-            _.map(({ title: _, ..._ }) =>
-              _.createElement(
-                _,
-                {
-                  title: _,
-                  key: _,
-                },
-                _.createElement(_, {
-                  ..._,
-                }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            value: __webpack_require__,
-            onChange: _,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_, {
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.SectionedPageTitle,
+                    children: _,
+                  }),
+                _.map(({ title: _, ..._ }) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      title: _,
+                      children: (0, _.jsx)(_, {
+                        ..._,
+                      }),
+                    },
+                    _,
+                  ),
+                ),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              value: __webpack_require__,
+              onChange: _,
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.Section,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.Section,
+          children: [
+            (0, _.jsx)("div", {
               className: _.SectionTitle,
-            },
-            _.title,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _.title,
+            }),
+            (0, _.jsx)("div", {
               className: _.SectionContent,
-            },
-            _.children,
-          ),
-        );
+              children: _.children,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { value: _, onChange: __webpack_require__, onSubmit: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _.FilterInputContainer,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _.FilterInputContainer,
+          children: (0, _.jsx)(_._, {
             type: "text",
             placeholder: (0, _._)("#AddonPicker_Search"),
             className: _.FilterInput,
@@ -11078,11 +11092,11 @@
             onChange: (_) => __webpack_require__(_.target.value),
             onSubmit: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_, _.AddonPickerMessage),
           ...__webpack_require__,
         });
@@ -11128,44 +11142,36 @@
           _(_) &&
             _.push({
               renderTab: (_) =>
-                _.createElement(
-                  "span",
-                  {
-                    title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                    className: (0, _._)(
-                      _().PickerTab,
-                      _().Clock,
-                      _ && _().ActiveTab,
-                    ),
-                  },
-                  _.createElement(_, null),
-                ),
+                (0, _.jsx)("span", {
+                  title: (0, _._)("#AddonPicker_RecentlyUsed"),
+                  className: (0, _._)(
+                    _().PickerTab,
+                    _().Clock,
+                    _ && _().ActiveTab,
+                  ),
+                  children: (0, _.jsx)(_, {}),
+                }),
               renderContent: () =>
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   store: _,
                   onEmoticonSelect: (_) => _(_.name),
                   onStickerSelect: (_) => _(_.name),
                   flairGroupID: _,
                 }),
             }),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_, {
+          (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               config: [
                 ..._,
                 {
                   renderTab: (_) =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Emoticons"),
+                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: _,
                       onItemSelect: (_) => _(_.name),
                       flairGroupID: _,
@@ -11173,32 +11179,26 @@
                 },
                 {
                   renderTab: (_) =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Stickers"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Stickers"),
+                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: _,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
                 {
                   renderTab: (_) =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_RoomEffects"),
-                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_RoomEffects"),
+                      className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: _,
                       effectSettings: __webpack_require__,
                       onItemSelect: (_) => _(_.name),
@@ -11206,7 +11206,7 @@
                 },
               ],
             }),
-          )
+          })
         );
       });
       let _ = class extends _.Component {
@@ -11238,47 +11238,36 @@
             _(_) &&
               _.push({
                 renderTab: (_) =>
-                  _.createElement(
-                    "span",
-                    {
-                      title: (0, _._)("#AddonPicker_RecentlyUsed"),
-                      className: (0, _._)(
-                        _().PickerTab,
-                        _().Clock,
-                        _ && _().ActiveTab,
-                      ),
-                    },
-                    _.createElement(_, null),
-                  ),
+                  (0, _.jsx)("span", {
+                    title: (0, _._)("#AddonPicker_RecentlyUsed"),
+                    className: (0, _._)(
+                      _().PickerTab,
+                      _().Clock,
+                      _ && _().ActiveTab,
+                    ),
+                    children: (0, _.jsx)(_, {}),
+                  }),
                 renderContent: () =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     store: _,
                     onEmoticonSelect: (_) => _(_.name),
                     onStickerSelect: (_) => __webpack_require__(_.name),
                     flairGroupID: _,
                   }),
               }),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
                 config: [
                   ..._,
                   {
                     renderTab: (_) =>
-                      _.createElement(
-                        "span",
-                        {
-                          title: (0, _._)("#AddonPicker_Emoticons"),
-                          className: (0, _._)(
-                            _().PickerTab,
-                            _ && _().ActiveTab,
-                          ),
-                        },
-                        _.createElement(_, null),
-                      ),
+                      (0, _.jsx)("span", {
+                        title: (0, _._)("#AddonPicker_Emoticons"),
+                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                        children: (0, _.jsx)(_, {}),
+                      }),
                     renderContent: () =>
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         store: _,
                         onItemSelect: (_) => _(_.name),
                         flairGroupID: _,
@@ -11286,26 +11275,20 @@
                   },
                   {
                     renderTab: (_) =>
-                      _.createElement(
-                        "span",
-                        {
-                          title: (0, _._)("#AddonPicker_Stickers"),
-                          className: (0, _._)(
-                            _().PickerTab,
-                            _ && _().ActiveTab,
-                          ),
-                        },
-                        _.createElement(_, null),
-                      ),
+                      (0, _.jsx)("span", {
+                        title: (0, _._)("#AddonPicker_Stickers"),
+                        className: (0, _._)(_().PickerTab, _ && _().ActiveTab),
+                        children: (0, _.jsx)(_, {}),
+                      }),
                     renderContent: () =>
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         store: _,
                         onItemSelect: (_) => __webpack_require__(_.name),
                       }),
                   },
                 ],
               }),
-            )
+            })
           );
         }
       };
@@ -11328,23 +11311,18 @@
           this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
         }
         render() {
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(_, {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               config: [
                 {
                   renderTab: () =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: _().PickerTab,
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Emoticons"),
+                      className: _().PickerTab,
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: this.props.emoticonStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
@@ -11352,7 +11330,7 @@
                 },
               ],
             }),
-          );
+          });
         }
       }
       class _ extends _.Component {
@@ -11373,23 +11351,18 @@
           this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
         }
         render() {
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(_, {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               config: [
                 {
                   renderTab: () =>
-                    _.createElement(
-                      "span",
-                      {
-                        title: (0, _._)("#AddonPicker_Emoticons"),
-                        className: _().PickerTab,
-                      },
-                      _.createElement(_, null),
-                    ),
+                    (0, _.jsx)("span", {
+                      title: (0, _._)("#AddonPicker_Emoticons"),
+                      className: _().PickerTab,
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   renderContent: () =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       store: this.props.emoticonStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
@@ -11397,7 +11370,7 @@
                 },
               ],
             }),
-          );
+          });
         }
       }
       class _ extends _.Component {
@@ -11422,21 +11395,19 @@
                 items: _._.FilterEmoticons(_(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     emoticon: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
-                  _.createElement(
-                    _,
-                    null,
-                    _
+                  (0, _.jsx)(_, {
+                    children: _
                       ? (0, _._)("#AddonPicker_NoResults")
                       : (0, _._)(
                           "#AddonPicker_NoRecent",
                           (0, _._)("#AddonPicker_Emoticons"),
                         ),
-                  ),
+                  }),
               }),
             _(_).length &&
               _.push({
@@ -11444,23 +11415,21 @@
                 items: _._.FilterStickers(_(_), _),
                 onItemSelect: __webpack_require__,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     sticker: _,
                   }),
                 keyExtractor: ({ name: _ }) => _,
                 renderEmpty: () =>
-                  _.createElement(
-                    _,
-                    null,
-                    _
+                  (0, _.jsx)(_, {
+                    children: _
                       ? (0, _._)("#AddonPicker_NoResults")
                       : (0, _._)(
                           "#AddonPicker_NoRecent",
                           (0, _._)("#AddonPicker_Stickers"),
                         ),
-                  ),
+                  }),
               }),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               onFilterChange: (_) =>
                 this.setState({
                   filter: _,
@@ -11490,12 +11459,12 @@
                 ? _.GetFlairListByGroupID(__webpack_require__)
                 : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
             items: _,
             onItemSelect: _,
             renderItem: (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 emoticon: _,
               }),
             keyExtractor: (_) => _.name,
@@ -11507,45 +11476,39 @@
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
               _
-                ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
-                : _.createElement(_, null),
+                ? (0, _.jsx)(_, {
+                    children: (0, _._)("#AddonPicker_NoResults"),
+                  })
+                : (0, _.jsx)(_, {}),
           });
         }
       }
       function _() {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            null,
-            (0, _._)(
-              "#AddonPicker_NoneOwned",
-              (0, _._)("#AddonPicker_Emoticons"),
-            ),
-          ),
-          _.createElement(
-            _,
-            null,
-            (0, _._)(
-              "#AddonPicker_AcquireAtPointsShopOrMarket",
-              _.createElement(
-                _._,
-                {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              children: (0, _._)(
+                "#AddonPicker_NoneOwned",
+                (0, _._)("#AddonPicker_Emoticons"),
+              ),
+            }),
+            (0, _.jsx)(_, {
+              children: (0, _._)(
+                "#AddonPicker_AcquireAtPointsShopOrMarket",
+                (0, _.jsx)(_._, {
                   href: `${_._.STORE_BASE_URL}points/shop/c/emoticons`,
-                },
-                (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
+                }),
+                (0, _.jsx)(_._, {
                   href: `${_._.COMMUNITY_BASE_URL}market`,
-                },
-                (0, _._)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
+                  children: (0, _._)(
+                    "#AddonPicker_AcquireAtPointsShopOrMarket_Link",
+                  ),
+                }),
               ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       class _ extends _.Component {
         constructor() {
@@ -11558,12 +11521,12 @@
           const { store: _, onItemSelect: _ } = this.props,
             { filter: __webpack_require__ } = this.state,
             _ = _._.FilterStickers(_.GetStickerList(), __webpack_require__);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_StickerHeading"),
             items: _,
             onItemSelect: _,
             renderItem: (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 sticker: _,
               }),
             keyExtractor: ({ name: _ }) => _,
@@ -11575,33 +11538,30 @@
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
               __webpack_require__
-                ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
-                : _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_NoneOwned",
-                        (0, _._)("#AddonPicker_Stickers"),
-                      ),
-                    ),
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_AcquireAtPointsShop",
-                        _.createElement(
-                          _._,
-                          {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/stickers`,
-                          },
-                          (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
+                ? (0, _.jsx)(_, {
+                    children: (0, _._)("#AddonPicker_NoResults"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_NoneOwned",
+                          (0, _._)("#AddonPicker_Stickers"),
                         ),
-                      ),
-                    ),
-                  ),
+                      }),
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_AcquireAtPointsShop",
+                          (0, _.jsx)(_._, {
+                            href: `${_._.STORE_BASE_URL}points/shop/c/stickers`,
+                            children: (0, _._)(
+                              "#AddonPicker_AcquireAtPointsShop_Link",
+                            ),
+                          }),
+                        ),
+                      }),
+                    ],
+                  }),
           });
         }
       }
@@ -11620,12 +11580,12 @@
             } = this.props,
             { filter: _ } = this.state,
             _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_EffectHeading"),
             items: _,
             onItemSelect: __webpack_require__,
             renderItem: (_) =>
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 effect: _,
                 roomEffectSettings: _,
               }),
@@ -11638,33 +11598,30 @@
             onSubmit: () => __webpack_require__(_[0]),
             renderEmpty: () =>
               _
-                ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
-                : _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_NoneOwned",
-                        (0, _._)("#AddonPicker_RoomEffects"),
-                      ),
-                    ),
-                    _.createElement(
-                      _,
-                      null,
-                      (0, _._)(
-                        "#AddonPicker_AcquireAtPointsShop",
-                        _.createElement(
-                          _._,
-                          {
-                            href: `${_._.STORE_BASE_URL}points/shop/c/chateffects`,
-                          },
-                          (0, _._)("#AddonPicker_AcquireAtPointsShop_Link"),
+                ? (0, _.jsx)(_, {
+                    children: (0, _._)("#AddonPicker_NoResults"),
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_NoneOwned",
+                          (0, _._)("#AddonPicker_RoomEffects"),
                         ),
-                      ),
-                    ),
-                  ),
+                      }),
+                      (0, _.jsx)(_, {
+                        children: (0, _._)(
+                          "#AddonPicker_AcquireAtPointsShop",
+                          (0, _.jsx)(_._, {
+                            href: `${_._.STORE_BASE_URL}points/shop/c/chateffects`,
+                            children: (0, _._)(
+                              "#AddonPicker_AcquireAtPointsShop_Link",
+                            ),
+                          }),
+                        ),
+                      }),
+                    ],
+                  }),
           });
         }
       }
@@ -11690,23 +11647,21 @@
                 items: _._.FilterEmoticons(_(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     emoticon: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
-                  _.createElement(
-                    _,
-                    null,
-                    _
+                  (0, _.jsx)(_, {
+                    children: _
                       ? (0, _._)("#AddonPicker_NoResults")
                       : (0, _._)(
                           "#AddonPicker_NoRecent",
                           (0, _._)("#AddonPicker_Emoticons"),
                         ),
-                  ),
+                  }),
               }),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               onFilterChange: (_) =>
                 this.setState({
                   filter: _,
@@ -11719,18 +11674,16 @@
                   items: _._.FilterStickers(_.emoticon_list, _).slice(0, 1e3),
                   onItemSelect: _,
                   renderItem: (_) =>
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       emoticon: _,
                     }),
                   keyExtractor: (_) => _.name,
                   renderEmpty: () =>
                     _
-                      ? _.createElement(
-                          _,
-                          null,
-                          (0, _._)("#AddonPicker_NoResults"),
-                        )
-                      : _.createElement(_, null),
+                      ? (0, _.jsx)(_, {
+                          children: (0, _._)("#AddonPicker_NoResults"),
+                        })
+                      : (0, _.jsx)(_, {}),
                 },
               ],
             })
@@ -11752,7 +11705,7 @@
               flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state;
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             onFilterChange: (_) =>
               this.setState({
                 filter: _,
@@ -11767,18 +11720,16 @@
                 ),
                 onItemSelect: _,
                 renderItem: (_) =>
-                  _.createElement(_, {
+                  (0, _.jsx)(_, {
                     emoticon: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
                   _
-                    ? _.createElement(
-                        _,
-                        null,
-                        (0, _._)("#AddonPicker_NoResults"),
-                      )
-                    : _.createElement(_, null),
+                    ? (0, _.jsx)(_, {
+                        children: (0, _._)("#AddonPicker_NoResults"),
+                      })
+                    : (0, _.jsx)(_, {}),
               },
             ],
           });
@@ -11788,17 +11739,16 @@
       const _ = (_) => {
         const { emoticon: _, large: __webpack_require__ } = _,
           _ = !_.last_used && _.time_received;
-        return _.createElement(
-          "div",
-          {
-            className: _().EmoticonItem,
-          },
-          _.createElement(_._, {
-            emoticon: _.name,
-            large: __webpack_require__,
-          }),
-          _ && _.createElement(_, null),
-        );
+        return (0, _.jsxs)("div", {
+          className: _().EmoticonItem,
+          children: [
+            (0, _.jsx)(_._, {
+              emoticon: _.name,
+              large: __webpack_require__,
+            }),
+            _ && (0, _.jsx)(_, {}),
+          ],
+        });
       };
       class _ extends _.Component {
         constructor() {
@@ -11815,41 +11765,40 @@
               ...__webpack_require__
             } = this.props,
             _ = _(_._.COMMUNITY_CDN_URL, _.name);
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_ref,
-              className: (0, _._)(_, _().StickerButton),
-              onMouseOver: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onFocus: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onMouseLeave: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              onBlur: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              ...__webpack_require__,
-            },
-            _.createElement("img", {
-              style: {
-                width: "100%",
-              },
-              src: _,
-            }),
-            this.state.showHover &&
-              _.createElement(_, {
-                target: this.m_ref.current,
-                sticker: _,
+          return (0, _.jsxs)("div", {
+            ref: this.m_ref,
+            className: (0, _._)(_, _().StickerButton),
+            onMouseOver: () =>
+              this.setState({
+                showHover: !0,
               }),
-          );
+            onFocus: () =>
+              this.setState({
+                showHover: !0,
+              }),
+            onMouseLeave: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            onBlur: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            ...__webpack_require__,
+            children: [
+              (0, _.jsx)("img", {
+                style: {
+                  width: "100%",
+                },
+                src: _,
+              }),
+              this.state.showHover &&
+                (0, _.jsx)(_, {
+                  target: this.m_ref.current,
+                  sticker: _,
+                }),
+            ],
+          });
         }
       }
       const _ = (0, _._)((_) => {
@@ -11858,18 +11807,15 @@
             sticker: { name: __webpack_require__, appid: _ },
           } = _,
           [_] = (0, _._)(_, {});
-        return _.createElement(
-          _._,
-          {
-            target: _,
-            title: __webpack_require__,
-            subtitle: null == _ ? void 0 : _.GetName(),
-          },
-          _.createElement("img", {
+        return (0, _.jsx)(_._, {
+          target: _,
+          title: __webpack_require__,
+          subtitle: null == _ ? void 0 : _.GetName(),
+          children: (0, _.jsx)("img", {
             src: _(_._.COMMUNITY_CDN_URL, __webpack_require__),
             className: _().StickerHoverSticker,
           }),
-        );
+        });
       });
       class _ extends _.Component {
         constructor() {
@@ -11887,37 +11833,36 @@
               ..._
             } = this.props,
             _ = _[_.name];
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_ref,
-              onMouseOver: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onFocus: () =>
-                this.setState({
-                  showHover: !0,
-                }),
-              onMouseLeave: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              onBlur: () =>
-                this.setState({
-                  showHover: !1,
-                }),
-              className: (0, _._)(__webpack_require__, _().EffectButton),
-              ..._,
-            },
-            _.renderEffectIcon(),
-            this.state.showHover &&
-              _.createElement(_, {
-                target: this.m_ref.current,
-                effect: _,
-                roomEffectSettings: _,
+          return (0, _.jsxs)("div", {
+            ref: this.m_ref,
+            onMouseOver: () =>
+              this.setState({
+                showHover: !0,
               }),
-          );
+            onFocus: () =>
+              this.setState({
+                showHover: !0,
+              }),
+            onMouseLeave: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            onBlur: () =>
+              this.setState({
+                showHover: !1,
+              }),
+            className: (0, _._)(__webpack_require__, _().EffectButton),
+            ..._,
+            children: [
+              _.renderEffectIcon(),
+              this.state.showHover &&
+                (0, _.jsx)(_, {
+                  target: this.m_ref.current,
+                  effect: _,
+                  roomEffectSettings: _,
+                }),
+            ],
+          });
         }
       }
       const _ = (0, _._)((_) => {
@@ -11928,138 +11873,121 @@
           } = _,
           _ = _[__webpack_require__],
           [_] = (0, _._)(_, {});
-        return _.createElement(
-          _._,
-          {
-            target: _,
-            title: __webpack_require__,
-            subtitle: null == _ ? void 0 : _.GetName(),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().EffectHoverEffect,
-            },
-            _.renderEffectIcon(),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          target: _,
+          title: __webpack_require__,
+          subtitle: null == _ ? void 0 : _.GetName(),
+          children: (0, _.jsx)("div", {
+            className: _().EffectHoverEffect,
+            children: _.renderEffectIcon(),
+          }),
+        });
       });
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().NewEmoticonIndicator,
-          },
-          _.createElement("div", {
+        return (0, _.jsx)("div", {
+          className: _().NewEmoticonIndicator,
+          children: (0, _.jsx)("div", {
             className: _().NewEmoticonCircle,
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M21 29H22.1875V31H19L21 29Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M29 22.1875V21L31 19V22.1875H29Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M21 29H22.1875V31H19L21 29Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M29 22.1875V21L31 19V22.1875H29Z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM9.00001 15C9.00001 14.4067 9.17595 13.8266 9.5056 13.3333C9.83524 12.8399 10.3038 12.4554 10.852 12.2284C11.4001 12.0013 12.0033 11.9419 12.5853 12.0576C13.1672 12.1734 13.7018 12.4591 14.1213 12.8787C14.5409 13.2982 14.8266 13.8328 14.9424 14.4147C15.0581 14.9967 14.9987 15.5999 14.7716 16.1481C14.5446 16.6962 14.1601 17.1648 13.6667 17.4944C13.1734 17.8241 12.5934 18 12 18C11.2044 18 10.4413 17.6839 9.87869 17.1213C9.31608 16.5587 9.00001 15.7956 9.00001 15ZM24 18C23.4067 18 22.8266 17.8241 22.3333 17.4944C21.8399 17.1648 21.4554 16.6962 21.2284 16.1481C21.0013 15.5999 20.9419 14.9967 21.0576 14.4147C21.1734 13.8328 21.4591 13.2982 21.8787 12.8787C22.2982 12.4591 22.8328 12.1734 23.4147 12.0576C23.9967 11.9419 24.5999 12.0013 25.1481 12.2284C25.6962 12.4554 26.1648 12.8399 26.4944 13.3333C26.8241 13.8266 27 14.4067 27 15C27 15.7956 26.6839 16.5587 26.1213 17.1213C25.5587 17.6839 24.7957 18 24 18ZM26.3149 23.6788C26.7672 22.8295 27 21.9193 27 21H18H9C9 21.9193 9.23279 22.8295 9.68508 23.6788C10.1374 24.5281 10.8003 25.2997 11.636 25.9497C12.4718 26.5998 13.4639 27.1154 14.5558 27.4672C15.6478 27.8189 16.8181 28 18 28C19.1819 28 20.3522 27.8189 21.4442 27.4672C22.5361 27.1154 23.5282 26.5998 24.364 25.9497C25.1997 25.2997 25.8626 24.5281 26.3149 23.6788Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
-            version: "1.1",
-            _: "0px",
-            _: "0px",
-            width: "20px",
-            height: "20px",
-            viewBox: "0 0 24 24",
-            ...__webpack_require__,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
+          version: "1.1",
+          _: "0px",
+          _: "0px",
+          width: "20px",
+          height: "20px",
+          viewBox: "0 0 24 24",
+          ...__webpack_require__,
+          children: (0, _.jsx)("path", {
             _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -12070,10 +11998,14 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { text: _ = "", style: __webpack_require__, children: _ } = _;
-        if (null == _) return _.createElement(_.Fragment, null, _);
+        if (null == _)
+          return (0, _.jsx)(_.Fragment, {
+            children: _,
+          });
         let _;
         if (
           ((_ =
@@ -12094,7 +12026,9 @@
           console.log(
             `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${__webpack_require__} copytext=${_}`,
           ),
-          _.createElement(_.Fragment, null, _)
+          (0, _.jsx)(_.Fragment, {
+            children: _,
+          })
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -12109,33 +12043,30 @@
           [_, _] = _.useState(),
           _ = `:${_}:`,
           _ = _._.GetEmoticonURL(_, __webpack_require__);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
               text: _,
               style: "merge-adjacent",
-            },
-            _.createElement("img", {
-              ..._,
-              src: _,
-              className: (0, _._)(
-                _().emoticon,
-                __webpack_require__ ? _().large : void 0,
-              ),
-              "data-emoticon": _,
-              alt: _,
-              ref: _,
+              children: (0, _.jsx)("img", {
+                ..._,
+                src: _,
+                className: (0, _._)(
+                  _().emoticon,
+                  __webpack_require__ ? _().large : void 0,
+                ),
+                "data-emoticon": _,
+                alt: _,
+                ref: _,
+              }),
             }),
-          ),
-          _ &&
-            _.createElement(_, {
-              target: _,
-              emoticon: _,
-            }),
-        );
+            _ &&
+              (0, _.jsx)(_, {
+                target: _,
+                emoticon: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { target: _, emoticon: __webpack_require__ } = _,
@@ -12151,18 +12082,15 @@
               },
             });
           })(__webpack_require__);
-        return _.createElement(
-          _,
-          {
-            target: _,
-            title: `:${__webpack_require__}:`,
-            subtitle: _ && _.app_name ? _.app_name : void 0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          target: _,
+          title: `:${__webpack_require__}:`,
+          subtitle: _ && _.app_name ? _.app_name : void 0,
+          children: (0, _.jsx)(_, {
             emoticon: __webpack_require__,
             large: !0,
           }),
-        );
+        });
       }
       const _ = ({
         target: _,
@@ -12170,37 +12098,37 @@
         subtitle: __webpack_require__,
         children: _,
       }) =>
-        _.createElement(
-          _._,
-          {
-            target: _,
-            style: {
-              zIndex: 1700,
-            },
-            className: _().EmoticonHover,
+        (0, _.jsxs)(_._, {
+          target: _,
+          style: {
+            zIndex: 1700,
           },
-          _,
-          _.createElement(
-            "div",
-            {
+          className: _().EmoticonHover,
+          children: [
+            _,
+            (0, _.jsxs)("div", {
               className: _().Info,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Name,
-              },
-              _ || _.createElement("span", null, " "),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().AppName,
-              },
-              __webpack_require__ || _.createElement("span", null, " "),
-            ),
-          ),
-        );
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().Name,
+                  children:
+                    _ ||
+                    (0, _.jsx)("span", {
+                      children: " ",
+                    }),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().AppName,
+                  children:
+                    __webpack_require__ ||
+                    (0, _.jsx)("span", {
+                      children: " ",
+                    }),
+                }),
+              ],
+            }),
+          ],
+        });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -12233,6 +12161,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12465,7 +12394,7 @@
             _ ? window.open(_) : window.location.assign(_);
           }, [_, _]),
           _
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 push: !0,
                 _: _,
               })
@@ -12487,37 +12416,31 @@
           _ = _ || !_ ? _ : (0, _._)(_, _);
         return _
           ? _
-            ? _.createElement(
-                _._,
-                {
-                  style: _.style,
-                  className: _.className,
-                  href: _.createHref({
-                    pathname: _,
-                  }),
-                  onClick: (_) => {
-                    var _;
-                    null === (_ = _.onClick) ||
-                      void 0 === _ ||
-                      __webpack_require__.call(_, _),
-                      _.push(_),
-                      _.preventDefault();
-                  },
-                  preferredFocus: __webpack_require__,
+            ? (0, _.jsx)(_._, {
+                style: _.style,
+                className: _.className,
+                href: _.createHref({
+                  pathname: _,
+                }),
+                onClick: (_) => {
+                  var _;
+                  null === (_ = _.onClick) ||
+                    void 0 === _ ||
+                    __webpack_require__.call(_, _),
+                    _.push(_),
+                    _.preventDefault();
                 },
-                _.children,
-              )
-            : _.createElement(
-                _._,
-                {
-                  href: _,
-                  style: _.style,
-                  className: _.className,
-                  onClick: _.onClick,
-                  preferredFocus: __webpack_require__,
-                },
-                _.children,
-              )
+                preferredFocus: __webpack_require__,
+                children: _.children,
+              })
+            : (0, _.jsx)(_._, {
+                href: _,
+                style: _.style,
+                className: _.className,
+                onClick: _.onClick,
+                preferredFocus: __webpack_require__,
+                children: _.children,
+              })
           : null;
       }
     },
@@ -12528,6 +12451,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12609,7 +12533,7 @@
               _.stopPropagation(),
               _.preventDefault())
             : (0, _._)(
-                _.createElement(_._, {
+                (0, _.jsx)(_._, {
                   strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
                   strDescription: (0, _._)(
                     "#EventDisplay_Share_NotLoggedIn_Description",
@@ -12621,7 +12545,7 @@
               );
         }
         ShowMenu() {
-          let _ = _.createElement(_, {
+          let _ = (0, _.jsx)(_, {
               ...this.props,
               fnHasReminderSet: (_) => this.BHasSomeNotificationSetting(_),
               fnHidePanel: this.HideMenu,
@@ -12677,47 +12601,37 @@
           return this.props.eventModel.startTime < _ ||
             this.props.eventModel.BIsUnlistedEvent()
             ? null
-            : _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_.ReminderCheckBox]: !0,
-                    [_().ReminderCtn]: !0,
-                    [_.IconMode]: _,
-                    [_.TextMode]: !_,
-                    ReminderSet: _,
-                    RemindMeWidget: !0,
-                  }),
-                  onClick: this.ToggleMenu,
-                  ref: this.m_elDropDownRef,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RemindCheck,
-                    },
-                    _.createElement(_.Jlk, null),
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RemindBell,
-                    },
-                    _.createElement(_.IrQ, null),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ReminderDefault,
-                  },
-                  (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                ),
-                _.createElement("div", {
-                  className: _.ReminderOptions,
+            : (0, _.jsxs)("div", {
+                className: (0, _._)({
+                  [_.ReminderCheckBox]: !0,
+                  [_().ReminderCtn]: !0,
+                  [_.IconMode]: _,
+                  [_.TextMode]: !_,
+                  ReminderSet: _,
+                  RemindMeWidget: !0,
                 }),
-              );
+                onClick: this.ToggleMenu,
+                ref: this.m_elDropDownRef,
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindCheck,
+                      children: (0, _.jsx)(_.Jlk, {}),
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindBell,
+                      children: (0, _.jsx)(_.IrQ, {}),
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderDefault,
+                    children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderOptions,
+                  }),
+                ],
+              });
         }
       };
       function _(_) {
@@ -12725,19 +12639,16 @@
           _ = (0, _._)(__webpack_require__);
         if (!_)
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ErrorDiv,
-                },
-                (0, _._)(
+            ? (0, _.jsx)("div", {
+                className: _.ErrorDiv,
+                children: (0, _._)(
                   "#EventDidplay_Reminder_EventNotVisible",
                   __webpack_require__,
                 ),
-              )
+              })
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           lang: _,
           ..._,
           eventModel: _,
@@ -12780,22 +12691,19 @@
                         _(_._.k_eReminder_MobilePush));
               } catch (_) {
                 (0, _._)(
-                  _.createElement(
-                    _._,
-                    {
-                      strTitle: (0, _._)(
-                        _
-                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                          : "#EventDisplay_Reminder_FollowEvent_Error",
-                      ),
-                      strDescription: (0, _._)(
-                        _
-                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                      ),
-                    },
-                    (0, _._)(_).strErrorMsg,
-                  ),
+                  (0, _.jsx)(_._, {
+                    strTitle: (0, _._)(
+                      _
+                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                        : "#EventDisplay_Reminder_FollowEvent_Error",
+                    ),
+                    strDescription: (0, _._)(
+                      _
+                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                    ),
+                    children: (0, _._)(_).strErrorMsg,
+                  }),
                   window,
                 );
               }
@@ -12817,258 +12725,225 @@
           _ = _._.BHasValidatedEmail(),
           _ = _._.BHasPushNotification(),
           _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.ReminderCheckBox,
                 _ ? _.IconMode : _.TextMode,
                 "RemindMeWidget",
               ),
               onClick: _,
-            },
-            _(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _.RemindCheck,
-                },
-                _.createElement(_.Jlk, null),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.RemindBell,
-                },
-                _.createElement(_.IrQ, null),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ReminderDefault,
-              },
-              (0, _._)("#EventDisplay_Reminder_SetReminder"),
-            ),
-            _.createElement("div", {
-              className: _.ReminderOpennedOptions,
+              children: [
+                _(_) &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindCheck,
+                    children: (0, _.jsx)(_.Jlk, {}),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindBell,
+                    children: (0, _.jsx)(_.IrQ, {}),
+                  }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderDefault,
+                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderOpennedOptions,
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.FlexColumnContainer,
                 _.ReminderBackground,
                 _ && _.ReminderExpandsLeft,
               ),
-            },
-            _ &&
-              _.createElement(_._, {
-                className: _.RpcThrobber,
-                size: "xlarge",
-                position: "center",
-              }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.FullStartTime,
-                },
-                (0, _._)(
-                  "#EventDisplay_EventUpcoming_WithDateAndTime",
-                  (0, _._)(
-                    _,
-                    (0, _._)(
-                      new Date(1e3 * _),
-                      _._.GetTimeNowWithOverrideAsDate(),
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    className: _.RpcThrobber,
+                    size: "xlarge",
+                    position: "center",
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.FullStartTime,
+                    children: (0, _._)(
+                      "#EventDisplay_EventUpcoming_WithDateAndTime",
+                      (0, _._)(
+                        _,
+                        (0, _._)(
+                          new Date(1e3 * _),
+                          _._.GetTimeNowWithOverrideAsDate(),
+                        ),
+                      ),
+                      (0, _._)(_, !0),
                     ),
-                  ),
-                  (0, _._)(_, !0),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ReminderOptionsHeader,
-              },
-              (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.CheckboxWrapper,
-                  bTopmost: !0,
-                  toolTipContent: (0, _._)(
-                    _
-                      ? "#EventReminder_NotifyByEmail_ttip"
-                      : "#EventReminder_NotifyByEmail_Missing",
-                  ),
-                },
-                _.createElement(_._, {
-                  label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                  disabled: !_,
-                  checked: _._.Get().BFollowsEventAndNotifiedBy(
-                    _.clanSteamID,
-                    _.GID,
-                    _._.k_ENotifyFlagByEmail,
-                  ),
-                  onChange: (_) => {
-                    _(_, !1, _._.k_ENotifyFlagByEmail);
-                  },
-                }),
-              ),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.FlexColumnContainer,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "account/",
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      onClick: () => _(_._.k_eReminder_EmailUnverified),
-                    },
-                    (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
-                  ),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.CheckboxWrapper,
-                  bTopmost: !0,
-                  toolTipContent: (0, _._)(
-                    _
-                      ? "#EventReminder_NotifyByMobile_ttip"
-                      : "#EventReminder_NotifyByMobile_Missing",
-                  ),
-                },
-                _.createElement(_._, {
-                  label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                  disabled: !_,
-                  checked: _._.Get().BFollowsEventAndNotifiedBy(
-                    _.clanSteamID,
-                    _.GID,
-                    _._.k_ENotifyFlagByPush,
-                  ),
-                  onChange: (_) => {
-                    _(_, !1, _._.k_ENotifyFlagByPush);
-                  },
-                }),
-              ),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.FlexColumnContainer,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      onClick: () => _(_._.k_eReminder_MobilePushMissing),
-                    },
-                    (0, _._)("#EventReminder_NotifyByMobile_Install"),
-                  ),
-                ),
-            ),
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+                  }),
+                (0, _.jsx)("div", {
                   className: _.ReminderOptionsHeader,
-                },
-                (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.ReminderCalendarOptions,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    href: _("ics"),
-                    onClick: () => _(_._.k_eReminder_CalendarApple),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    target: _._.IN_CLIENT ? void 0 : "_blank",
-                    href: (() => {
-                      const _ = encodeURIComponent(
-                          (() => {
-                            const _ = _.GetNameWithFallback(_);
-                            if (
-                              _._.BHasEntityNameForID(
-                                _.appid,
-                                _.clanSteamID.GetAccountID(),
-                              )
-                            )
-                              return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-                            return _;
+                  children: (0, _._)(
+                    "#EventDisplay_Reminder_GetNotification_Via",
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByEmail_ttip"
+                          : "#EventReminder_NotifyByEmail_Missing",
+                      ),
+                      children: (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                        disabled: !_,
+                        checked: _._.Get().BFollowsEventAndNotifiedBy(
+                          _.clanSteamID,
+                          _.GID,
+                          _._.k_ENotifyFlagByEmail,
+                        ),
+                        onChange: (_) => {
+                          _(_, !1, _._.k_ENotifyFlagByEmail);
+                        },
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "account/",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () => _(_._.k_eReminder_EmailUnverified),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByEmail_Missing_Add",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByMobile_ttip"
+                          : "#EventReminder_NotifyByMobile_Missing",
+                      ),
+                      children: (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
+                        disabled: !_,
+                        checked: _._.Get().BFollowsEventAndNotifiedBy(
+                          _.clanSteamID,
+                          _.GID,
+                          _._.k_ENotifyFlagByPush,
+                        ),
+                        onChange: (_) => {
+                          _(_, !1, _._.k_ENotifyFlagByPush);
+                        },
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () => _(_._.k_eReminder_MobilePushMissing),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByMobile_Install",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.ReminderOptionsHeader,
+                      children: (0, _._)(
+                        "#EventDisplay_Reminder_AddToCalendar",
+                      ),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.ReminderCalendarOptions,
+                      children: [
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("ics"),
+                          onClick: () => _(_._.k_eReminder_CalendarApple),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_AppleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          href: (() => {
+                            const _ = encodeURIComponent(
+                                (() => {
+                                  const _ = _.GetNameWithFallback(_);
+                                  if (
+                                    _._.BHasEntityNameForID(
+                                      _.appid,
+                                      _.clanSteamID.GetAccountID(),
+                                    )
+                                  )
+                                    return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
+                                  return _;
+                                })(),
+                              ),
+                              _ = encodeURIComponent(
+                                (() => {
+                                  let _ = _.GetSubTitleWithLanguageFallback(_);
+                                  return (
+                                    (_ = _ ? `${_}\n\n\n` : ""),
+                                    `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                                  );
+                                })(),
+                              ),
+                              _ = _.GetStartTimeAndDateUnixSeconds(),
+                              _ = _(_),
+                              _ = _(
+                                _.GetEndTimeAndDateUnixSeconds() ||
+                                  _ + _._.PerHour,
+                              ),
+                              _ =
+                                (_._.IN_CLIENT
+                                  ? "steam://openurl_external/"
+                                  : "") +
+                                `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                            return (0, _._)(_);
                           })(),
-                        ),
-                        _ = encodeURIComponent(
-                          (() => {
-                            let _ = _.GetSubTitleWithLanguageFallback(_);
-                            return (
-                              (_ = _ ? `${_}\n\n\n` : ""),
-                              `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
-                            );
-                          })(),
-                        ),
-                        _ = _.GetStartTimeAndDateUnixSeconds(),
-                        _ = _(_),
-                        _ = _(
-                          _.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour,
-                        ),
-                        _ =
-                          (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
-                          `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-                      return (0, _._)(_);
-                    })(),
-                    onClick: () => _(_._.k_eReminder_CalendarGoogle),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    href: _("outlook"),
-                    onClick: () => _(_._.k_eReminder_CalendarOutlook),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
-                ),
-              ),
-            ),
-            !1,
-          ),
-        );
+                          onClick: () => _(_._.k_eReminder_CalendarGoogle),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_GoogleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("outlook"),
+                          onClick: () => _(_._.k_eReminder_CalendarOutlook),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_OutlookCalendar_Short",
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                !1,
+              ],
+            }),
+          ],
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -13077,6 +12952,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13148,52 +13024,51 @@
         (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
         const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
           _ = __webpack_require__.sPoster ? _(__webpack_require__.sPoster) : "";
-        return _.createElement(
-          "video",
-          {
-            width: "100%",
-            height: "auto",
-            autoPlay: _,
-            muted: _,
-            playsInline: !0,
-            controls: _,
-            poster: _,
-            loop: _,
-            crossOrigin: _,
-            onVolumeChange: (_) => {
-              const _ = _.target,
-                _ = _.muted ? 0 : _.volume;
-              _ && _.Get().SetVolumePreference(_);
-            },
-            onPlay: (_) => {
-              const _ = _.target,
-                _ = 0 == _.currentTime,
-                _ = _.Get().BUserHasVolumePreference();
-              if ((_(!0), _))
-                if (_ || _)
-                  _ &&
-                    ((_.volume = _.Get().GetVolumePreference()),
-                    (_.muted = _.Get().BVolumePreferenceMuted()));
-                else {
-                  const _ = _.muted ? 0 : _.volume;
-                  _.Get().SetVolumePreference(_);
-                }
-            },
-            ref: _,
-            className: _,
-            onClick: _,
-            "aria-label": _,
-            style: {
-              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-            },
+        return (0, _.jsxs)("video", {
+          width: "100%",
+          height: "auto",
+          autoPlay: _,
+          muted: _,
+          playsInline: !0,
+          controls: _,
+          poster: _,
+          loop: _,
+          crossOrigin: _,
+          onVolumeChange: (_) => {
+            const _ = _.target,
+              _ = _.muted ? 0 : _.volume;
+            _ && _.Get().SetVolumePreference(_);
           },
-          _.createElement(_, {
-            rgVideoSources: __webpack_require__.rgVideoSources,
-          }),
-          _.createElement(_, {
-            rgVideoTracks: __webpack_require__.rgVideoTracks,
-          }),
-        );
+          onPlay: (_) => {
+            const _ = _.target,
+              _ = 0 == _.currentTime,
+              _ = _.Get().BUserHasVolumePreference();
+            if ((_(!0), _))
+              if (_ || _)
+                _ &&
+                  ((_.volume = _.Get().GetVolumePreference()),
+                  (_.muted = _.Get().BVolumePreferenceMuted()));
+              else {
+                const _ = _.muted ? 0 : _.volume;
+                _.Get().SetVolumePreference(_);
+              }
+          },
+          ref: _,
+          className: _,
+          onClick: _,
+          "aria-label": _,
+          style: {
+            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+          },
+          children: [
+            (0, _.jsx)(_, {
+              rgVideoSources: __webpack_require__.rgVideoSources,
+            }),
+            (0, _.jsx)(_, {
+              rgVideoTracks: __webpack_require__.rgVideoTracks,
+            }),
+          ],
+        });
       });
       function _(_) {
         if (_)
@@ -13211,22 +13086,28 @@
       function _(_) {
         const { rgVideoSources: _ } = _;
         return _.filter((_) => Boolean(_.sURL)).map((_) =>
-          _.createElement("source", {
-            key: _.sURL,
-            src: _(_.sURL),
-            type: _.sFormat,
-          }),
+          (0, _.jsx)(
+            "source",
+            {
+              src: _(_.sURL),
+              type: _.sFormat,
+            },
+            _.sURL,
+          ),
         );
       }
       function _(_) {
         const { rgVideoTracks: _ } = _;
         return _
           ? _.map((_, _) =>
-              _.createElement(_, {
-                key: _,
-                track: _,
-                rgVideoTracks: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  track: _,
+                  rgVideoTracks: _,
+                },
+                _,
+              ),
             )
           : null;
       }
@@ -13247,7 +13128,7 @@
           }
         else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
           return null;
-        return _.createElement("track", {
+        return (0, _.jsx)("track", {
           src: _(_.sURL),
           kind: _.sKind,
           default: _.bDefault,
@@ -13267,12 +13148,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(_.rfv, null);
+        return (0, _.jsx)(_.rfv, {});
       }
       function _() {
-        return (0, _._)()
-          ? _.createElement(_._, null)
-          : _.createElement(_.jZW, null);
+        return (0, _._)() ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_.jZW, {});
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -13281,6 +13160,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13622,165 +13502,140 @@
           return (
             null != this.state.EdgeDown &&
               (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                style: _,
-                ref: this.LinkRegionBoxRef,
-                draggable: !1,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _,
+              style: _,
+              ref: this.LinkRegionBoxRef,
+              draggable: !1,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _().LinkRegionGridBox,
-                },
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Top}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.top);
-                  },
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topright);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Left}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.left);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: `${_().LinkRegionEdge} ${_().Middle}`,
-                    onMouseDown: (_) => {
-                      this.OnMouseDown(_, _.middle);
-                    },
-                    draggable: !1,
-                  },
-                  this.props.deleteFn &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionDelete,
-                        onClick: this.HandleDelete,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topleft);
                       },
-                      _.createElement(_.sED, null),
-                    ),
-                  !this.props.bDisableLink &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionSettings,
-                        onClick: this.OnEditLink,
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Top}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.top);
                       },
-                      _.createElement(_.xv8, null),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkText,
-                    },
-                    " ",
-                    this.m_strDescription,
-                    " ",
-                  ),
-                ),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Right}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.right);
-                  },
-                  draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topright);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Left}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.left);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Middle}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.middle);
+                      },
+                      draggable: !1,
+                      children: [
+                        this.props.deleteFn &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionDelete,
+                            onClick: this.HandleDelete,
+                            children: (0, _.jsx)(_.sED, {}),
+                          }),
+                        !this.props.bDisableLink &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionSettings,
+                            onClick: this.OnEditLink,
+                            children: (0, _.jsx)(_.xv8, {}),
+                          }),
+                        (0, _.jsxs)("div", {
+                          className: _().LinkText,
+                          children: [" ", this.m_strDescription, " "],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Right}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.right);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottom);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomright);
+                      },
+                      draggable: !1,
+                    }),
+                  ],
                 }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottom);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomright);
-                  },
-                  draggable: !1,
-                }),
-              ),
-              this.state.bEditingLink &&
-                _.createElement(
-                  "div",
-                  {
+                this.state.bEditingLink &&
+                  (0, _.jsxs)("div", {
                     className: _().LinkRegionInfo,
-                  },
-                  _.createElement(_._, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_url",
-                    value: this.state.text_link_url,
-                    label: (0, _._)("#SteamTV_LinkURL"),
-                    placeholder: "https://www.example.com",
-                    onChange: this.OnSetLinkURLChange,
-                    mustBeURL: !0,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_url",
+                        value: this.state.text_link_url,
+                        label: (0, _._)("#SteamTV_LinkURL"),
+                        placeholder: "https://www.example.com",
+                        onChange: this.OnSetLinkURLChange,
+                        mustBeURL: !0,
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_description",
+                        value: this.state.text_link_description,
+                        label: (0, _._)("#SteamTV_LinkDescription"),
+                        placeholder: (0, _._)(
+                          "#SteamTV_LinkDescription_Placeholder",
+                        ),
+                        onChange: this.OnSetLinkDescriptionChange,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().LinkRegionButtonContainer,
+                        children: [
+                          (0, _.jsxs)(_._, {
+                            disabled: !this.state.valid_link,
+                            onClick: this.OnSaveLink,
+                            children: [" ", (0, _._)("#Button_OK"), " "],
+                          }),
+                          (0, _.jsxs)(_._, {
+                            onClick: this.OnEditLink,
+                            children: [" ", (0, _._)("#Button_Cancel")],
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
-                  _.createElement(_._, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_description",
-                    value: this.state.text_link_description,
-                    label: (0, _._)("#SteamTV_LinkDescription"),
-                    placeholder: (0, _._)(
-                      "#SteamTV_LinkDescription_Placeholder",
-                    ),
-                    onChange: this.OnSetLinkDescriptionChange,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkRegionButtonContainer,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        disabled: !this.state.valid_link,
-                        onClick: this.OnSaveLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_OK"),
-                      " ",
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: this.OnEditLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_Cancel"),
-                    ),
-                  ),
-                ),
-            )
+              ],
+            })
           );
         }
       };
@@ -13801,6 +13656,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -13865,14 +13721,17 @@
             } = this.props,
             _ = this.src,
             _ = this.state.nPropChangeCounter;
-          return _.createElement("img", {
-            key: _,
-            ref: this.m_refImage,
-            ..._,
-            src: _,
-            onError: this.OnImageError,
-            alt: _,
-          });
+          return (0, _.jsx)(
+            "img",
+            {
+              ref: this.m_refImage,
+              ..._,
+              src: _,
+              onError: this.OnImageError,
+              alt: _,
+            },
+            _,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "OnImageError", null);
@@ -13885,6 +13744,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -14065,37 +13925,31 @@
             (_ && this.m_player.seekTo(0, !0), this.m_player.playVideo());
         }
         render() {
-          return _.createElement(
-            _,
-            {
-              video: this.props.video,
-            },
-            _.createElement(
+          return (0, _.jsx)(_, {
+            video: this.props.video,
+            children: (0, _.jsx)(
               _._,
               {
-                key: this.m_strPlayerID,
                 onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
                 ref: this.BindPlayerContainer,
                 className: (0, _._)("YoutubePlayer", this.props.classnames),
+                children: (0, _.jsx)(_._, {
+                  className: "YoutubePlayerThrobber",
+                }),
               },
-              _.createElement(_._, {
-                className: "YoutubePlayerThrobber",
-              }),
+              this.m_strPlayerID,
             ),
-          );
+          });
         }
       }
       function _(_) {
         const { video: _, children: __webpack_require__ } = _;
         return (0, _._)("youtube")
           ? __webpack_require__
-          : _.createElement(
-              "a",
-              {
-                href: `https://www.youtube.com/watch?v=${_}`,
-              },
-              (0, _._)("#EventCalendar_WatchYouTubeVideo"),
-            );
+          : (0, _.jsx)("a", {
+              href: `https://www.youtube.com/watch?v=${_}`,
+              children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),
+            });
       }
       (_.s_nPlayerIndex = 0),
         (0, _._)([_._], _.prototype, "BindPlayerContainer", null),
@@ -14114,6 +13968,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -14246,88 +14101,71 @@
               800,
               500,
             );
-          return _.createElement(
-            _._,
-            {
-              onEscKeypress: this.props.closeModal,
-              bDisableBackgroundDismiss: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
-              },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)(
-                  "#ImageUpload_CropModalTitleDims",
-                  this.GetDestWidth(),
-                  this.GetDestHeight(),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_._, {
+            onEscKeypress: this.props.closeModal,
+            bDisableBackgroundDismiss: !0,
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)("DialogContent", "_DialogCenterVertically"),
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _._)(
+                    "#ImageUpload_CropModalTitleDims",
+                    this.GetDestWidth(),
+                    this.GetDestHeight(),
+                  ),
+                }),
+                (0, _.jsx)("div", {
                   className: (0, _._)("DialogBodyText"),
-                },
-                (0, _._)("#ImageUpload_CropModalDescription"),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#ImageUpload_CropModalDescription"),
+                }),
+                (0, _.jsxs)("div", {
                   className: _.CropImage,
                   style: {
                     width: _.width,
                     height: _.height,
                   },
-                },
-                _.createElement("img", {
-                  style: {
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain",
-                  },
-                  src: this.props.uploadFile.dataUrl,
+                  children: [
+                    (0, _.jsx)("img", {
+                      style: {
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "contain",
+                      },
+                      src: this.props.uploadFile.dataUrl,
+                    }),
+                    (0, _.jsx)(_._, {
+                      bLockAspectRatio: !0,
+                      bDisableLink: !0,
+                      index: 0,
+                      updateFn: this.UpdateCrop,
+                      xPosPct: 0,
+                      yPosPct: 0,
+                      widthMinPct: _,
+                      heightMinPct: _,
+                      widthPct: _,
+                      heightPct: _,
+                    }),
+                  ],
                 }),
-                _.createElement(_._, {
-                  bLockAspectRatio: !0,
-                  bDisableLink: !0,
-                  index: 0,
-                  updateFn: this.UpdateCrop,
-                  xPosPct: 0,
-                  yPosPct: 0,
-                  widthMinPct: _,
-                  heightMinPct: _,
-                  widthPct: _,
-                  heightPct: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsxs)("div", {
                   className: _.CropPreviewGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CropPreviewLabel,
-                  },
-                  (0, _._)("#ImageUpload_CropPreview"),
-                ),
-                _.createElement("div", {
-                  style: this.GetPreviewWindowStyle(),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.CropPreviewLabel,
+                      children: (0, _._)("#ImageUpload_CropPreview"),
+                    }),
+                    (0, _.jsx)("div", {
+                      style: this.GetPreviewWindowStyle(),
+                    }),
+                  ],
                 }),
-              ),
-              _.createElement(
-                _._,
-                {
+                (0, _.jsx)(_._, {
                   onClick: this.OnCrop,
-                },
-                (0, _._)("#ImageUpload_CropAndContinue"),
-              ),
-            ),
-          );
+                  children: (0, _._)("#ImageUpload_CropAndContinue"),
+                }),
+              ],
+            }),
+          });
         }
       }
       function _(_) {

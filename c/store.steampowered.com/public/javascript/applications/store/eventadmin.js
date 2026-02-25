@@ -1627,6 +1627,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1727,7 +1728,7 @@
         OnCreateOrSaveFeed(_) {
           _.preventDefault(),
             (0, _._)(
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 strRSSUrl: this.state.strRssURL,
                 admin: this.m_Admin,
               }),
@@ -1748,172 +1749,136 @@
               (0, _._)(this.m_Admin.GetFeedLanguageHandleUnset()),
             ),
             _ = _._.Get().GetDefaultAdmin();
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Ctn),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.Ctn),
+            children: [
+              (0, _.jsxs)("div", {
                 className: "titleframe",
-              },
-              _.createElement(
-                "h4",
-                null,
-                (0, _._)("#CuratorAdmin_RSSFeed_title"),
-              ),
-              _.createElement(
-                "p",
-                {
-                  className: "subtitle",
-                },
-                (0, _._)("#CuratorAdmin_RSSFeed_desc"),
-              ),
-              _.createElement(
-                "p",
-                null,
-                (0, _._)(
-                  "#CuratorAdmin_RSSFeed_doc_link",
-                  _.createElement(
-                    "a",
-                    {
-                      href: "https://partner.steamgames.com/doc/store/news/rss",
-                      target: "_blank",
-                    },
-                    (0, _._)("#CuratorAdmin_RSSFeed_doc_link_text"),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "p",
-                {
-                  className: _.DashboardBtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    href:
-                      _._.COMMUNITY_BASE_URL +
-                      "gid/" +
-                      this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
-                      "/partnerevents/",
-                    className: (0, _._)(_().Button, _().Primary),
-                  },
-                  (0, _._)("#RSSManager_EventDashBoard"),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: "darkframe",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.LanguageRow,
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _.LanguageTitle,
-                  },
-                  (0, _._)("#CuratorAdmin_RSSFeed_lang_only"),
-                ),
-                _.createElement(
-                  "span",
-                  {
-                    className: _.LanguageSet,
-                  },
-                  _,
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    href:
-                      _._.COMMUNITY_BASE_URL +
-                      "gid/" +
-                      this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
-                      "/edit ",
-                    target: "_blank",
-                    className: (0, _._)(_().Button, _.PreviewBtn),
-                  },
-                  (0, _._)("#CuratorAdmin_RSSFeed_edit_language"),
-                ),
-              ),
-              Boolean(
-                this.m_Admin.GetFeedLanguageHandleUnset() !=
-                  this.m_Admin.GetCuratorLanguage(),
-              ) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.LanguageRow, _().WarningIconLayout),
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.LanguageTitle,
-                    },
-                    (0, _._)(
-                      "#CuratorAdmin_Curator_lang_only",
-                      (0, _._)(
-                        "#Language_" +
-                          (0, _._)(this.m_Admin.GetCuratorLanguage()),
-                      ),
-                      _,
+                children: [
+                  (0, _.jsx)("h4", {
+                    children: (0, _._)("#CuratorAdmin_RSSFeed_title"),
+                  }),
+                  (0, _.jsx)("p", {
+                    className: "subtitle",
+                    children: (0, _._)("#CuratorAdmin_RSSFeed_desc"),
+                  }),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)(
+                      "#CuratorAdmin_RSSFeed_doc_link",
+                      (0, _.jsx)("a", {
+                        href: "https://partner.steamgames.com/doc/store/news/rss",
+                        target: "_blank",
+                        children: (0, _._)(
+                          "#CuratorAdmin_RSSFeed_doc_link_text",
+                        ),
+                      }),
                     ),
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().FlexRowContainer, _.UrlSettingCtn),
-                },
-                _.createElement(_._, {
-                  className: _.RssInpu,
-                  type: "text",
-                  name: "link_url",
-                  _: "link_url",
-                  value: this.state.strRssURL,
-                  label: (0, _._)("#CuratorAdmin_RSSFeed"),
-                  placeholder: (0, _._)("#CuratorAdmin_RSSFeed_placeholder"),
-                  onChange: this.OnChangeActualRSSURL,
-                  mustBeURL: !0,
-                }),
-                _.createElement(
-                  "a",
-                  {
-                    className: "btn_green_white_innerfade btn_medium",
-                    onClick: this.OnCreateOrSaveFeed,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)(_ ? "#Button_Saved" : "#Button_Save"),
-                  ),
-                ),
-                !_ &&
-                  _.createElement(
-                    "a",
-                    {
-                      onClick: this.OnRevert,
-                      className: "btn_grey_white_innerfade btn_medium",
-                    },
-                    (0, _._)("#Button_Revert"),
-                  ),
-              ),
-              _.createElement(_, {
-                admin: _,
+                  }),
+                  (0, _.jsx)("p", {
+                    className: _.DashboardBtn,
+                    children: (0, _.jsx)(_._, {
+                      href:
+                        _._.COMMUNITY_BASE_URL +
+                        "gid/" +
+                        this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
+                        "/partnerevents/",
+                      className: (0, _._)(_().Button, _().Primary),
+                      children: (0, _._)("#RSSManager_EventDashBoard"),
+                    }),
+                  }),
+                ],
               }),
-              _.createElement("br", null),
-              _.createElement(_, {
-                strRssURL: this.state.strRssURL,
-                admin: _,
+              (0, _.jsxs)("div", {
+                className: "darkframe",
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.LanguageRow,
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.LanguageTitle,
+                        children: (0, _._)("#CuratorAdmin_RSSFeed_lang_only"),
+                      }),
+                      (0, _.jsx)("span", {
+                        className: _.LanguageSet,
+                        children: _,
+                      }),
+                      (0, _.jsx)("a", {
+                        href:
+                          _._.COMMUNITY_BASE_URL +
+                          "gid/" +
+                          this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
+                          "/edit ",
+                        target: "_blank",
+                        className: (0, _._)(_().Button, _.PreviewBtn),
+                        children: (0, _._)(
+                          "#CuratorAdmin_RSSFeed_edit_language",
+                        ),
+                      }),
+                    ],
+                  }),
+                  Boolean(
+                    this.m_Admin.GetFeedLanguageHandleUnset() !=
+                      this.m_Admin.GetCuratorLanguage(),
+                  ) &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.LanguageRow, _().WarningIconLayout),
+                      children: (0, _.jsx)("span", {
+                        className: _.LanguageTitle,
+                        children: (0, _._)(
+                          "#CuratorAdmin_Curator_lang_only",
+                          (0, _._)(
+                            "#Language_" +
+                              (0, _._)(this.m_Admin.GetCuratorLanguage()),
+                          ),
+                          _,
+                        ),
+                      }),
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(_().FlexRowContainer, _.UrlSettingCtn),
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _.RssInpu,
+                        type: "text",
+                        name: "link_url",
+                        _: "link_url",
+                        value: this.state.strRssURL,
+                        label: (0, _._)("#CuratorAdmin_RSSFeed"),
+                        placeholder: (0, _._)(
+                          "#CuratorAdmin_RSSFeed_placeholder",
+                        ),
+                        onChange: this.OnChangeActualRSSURL,
+                        mustBeURL: !0,
+                      }),
+                      (0, _.jsx)("a", {
+                        className: "btn_green_white_innerfade btn_medium",
+                        onClick: this.OnCreateOrSaveFeed,
+                        children: (0, _.jsx)("span", {
+                          children: (0, _._)(
+                            _ ? "#Button_Saved" : "#Button_Save",
+                          ),
+                        }),
+                      }),
+                      !_ &&
+                        (0, _.jsx)("a", {
+                          onClick: this.OnRevert,
+                          className: "btn_grey_white_innerfade btn_medium",
+                          children: (0, _._)("#Button_Revert"),
+                        }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    admin: _,
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)(_, {
+                    strRssURL: this.state.strRssURL,
+                    admin: _,
+                  }),
+                ],
               }),
-            ),
-          );
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnChangeActualRSSURL", null),
@@ -1959,13 +1924,16 @@
             })),
               __webpack_require__.forEach((_) => {
                 _.push(
-                  _.createElement(_, {
-                    newsData: _,
-                    admin: _,
-                    key: "id: " + _.unique_id,
-                    clanSteamID: _.GetClanSteamID(),
-                    fnGetRSSUrl: this.GetRSSPreviewURL,
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      newsData: _,
+                      admin: _,
+                      clanSteamID: _.GetClanSteamID(),
+                      fnGetRSSUrl: this.GetRSSPreviewURL,
+                    },
+                    "id: " + _.unique_id,
+                  ),
                 );
               });
           }
@@ -2038,77 +2006,60 @@
         render() {
           const _ = this.RenderPreviews();
           let _ = this.props.admin;
-          return _.createElement(
-            "div",
-            null,
-            Boolean(
-              !this.state.bLoadingPreview &&
-                this.state.strPreviewURL !== this.props.strRssURL,
-            ) &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            children: [
+              Boolean(
+                !this.state.bLoadingPreview &&
+                  this.state.strPreviewURL !== this.props.strRssURL,
+              ) &&
+                (0, _.jsx)("div", {
                   className: _.PreviewListBtn,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     disabled: !_._.validateUrl(this.props.strRssURL),
                     onClick: this.OnLoadPreview,
-                  },
-                  (0, _._)("#CuratorAdmin_RSSFeed_preview"),
-                ),
-              ),
-            this.state.bLoadingPreview &&
-              _.createElement(_._, {
-                string: (0, _._)("#Loading"),
-                size: "medium",
-                position: "center",
-              }),
-            this.state.strPreviewErrorMsg &&
-              _.createElement(
-                "div",
-                {
+                    children: (0, _._)("#CuratorAdmin_RSSFeed_preview"),
+                  }),
+                }),
+              this.state.bLoadingPreview &&
+                (0, _.jsx)(_._, {
+                  string: (0, _._)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+              this.state.strPreviewErrorMsg &&
+                (0, _.jsx)("div", {
                   className: _().ErrorMsg,
-                },
-                this.state.strPreviewErrorMsg,
-              ),
-            Boolean(_.length > 0) &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)("#RSSManager_PreviewInfo", this.state.strPreviewURL),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PreviewListCtn,
-                  },
-                  _,
-                ),
-                _.createElement(
-                  "p",
-                  {
-                    className: _.DashboardBtn,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href:
-                        _._.COMMUNITY_BASE_URL +
-                        "gid/" +
-                        _.GetClanSteamID().ConvertTo64BitString() +
-                        "/partnerevents/",
-                      className: (0, _._)(_().Button, _().Primary),
-                    },
-                    (0, _._)("#RSSManager_EventDashBoard"),
-                  ),
-                ),
-              ),
-          );
+                  children: this.state.strPreviewErrorMsg,
+                }),
+              Boolean(_.length > 0) &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("p", {
+                      children: (0, _._)(
+                        "#RSSManager_PreviewInfo",
+                        this.state.strPreviewURL,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.PreviewListCtn,
+                      children: _,
+                    }),
+                    (0, _.jsx)("p", {
+                      className: _.DashboardBtn,
+                      children: (0, _.jsx)(_._, {
+                        href:
+                          _._.COMMUNITY_BASE_URL +
+                          "gid/" +
+                          _.GetClanSteamID().ConvertTo64BitString() +
+                          "/partnerevents/",
+                        className: (0, _._)(_().Button, _().Primary),
+                        children: (0, _._)("#RSSManager_EventDashBoard"),
+                      }),
+                    }),
+                  ],
+                }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "GetRSSPreviewURL", null),
@@ -2122,7 +2073,7 @@
                 strErrorMessage: void 0,
               }),
               (0, _._)(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   strRSSUrl: this.props.admin.GetRSSUrl(),
                   admin: this.props.admin,
                   bActivatePooling: !0,
@@ -2161,7 +2112,7 @@
               .CheckForNewUpdate()
               .then(() =>
                 (0, _._)(
-                  _.createElement(_._, {
+                  (0, _.jsx)(_._, {
                     strTitle: (0, _._)("#CuratorAdmin_RSSFeed_scannow"),
                     strDescription: (0, _._)("#CuratorAdmin_RSSFeed_queued"),
                   }),
@@ -2170,7 +2121,7 @@
               )
               .catch((_) =>
                 (0, _._)(
-                  _.createElement(_._, {
+                  (0, _.jsx)(_._, {
                     strTitle: (0, _._)("#CuratorAdmin_RSSFeed_scannow"),
                     strDescription: (0, _._)(_).strErrorMsg,
                   }),
@@ -2185,53 +2136,45 @@
         }
         render() {
           return this.props.admin.BHasSavedRSSURL()
-            ? _.createElement(
-                "div",
-                null,
-                Boolean(this.state.strReasonWaiting) &&
-                  _.createElement(_._, {
-                    size: "medium",
-                    string: this.state.strReasonWaiting,
-                  }),
-                Boolean(this.state.strErrorMessage) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Error,
-                    },
-                    this.state.strErrorMessage,
-                  ),
-                _.createElement(_._, {
-                  onChange: this.OnToggleChannelAutomation,
-                  label: (0, _._)("#RSSManager_Status_Automation_Desc"),
-                  checked: this.props.admin.BIsAutomationEnabled(),
-                  description: "",
-                }),
-                this.props.admin.BIsAutomationEnabled() &&
-                  _.createElement(
-                    "p",
-                    null,
-                    (0, _._)("#CuratorAdmin_RSSFeed_lastscanned"),
-                    " ",
-                    (0, _._)(this.props.admin.GetRSSLastRtimeChecked(), !1),
-                    "  @ ",
-                    (0, _._)(this.props.admin.GetRSSLastRtimeChecked(), {
-                      bForce24HourClock: !1,
+            ? (0, _.jsxs)("div", {
+                children: [
+                  Boolean(this.state.strReasonWaiting) &&
+                    (0, _.jsx)(_._, {
+                      size: "medium",
+                      string: this.state.strReasonWaiting,
                     }),
-                    " ",
-                    _.createElement(
-                      "a",
-                      {
-                        onClick: this.OnQueueScan,
-                      },
-                      _.createElement(
-                        "span",
-                        null,
-                        (0, _._)("#CuratorAdmin_RSSFeed_scannow"),
-                      ),
-                    ),
-                  ),
-              )
+                  Boolean(this.state.strErrorMessage) &&
+                    (0, _.jsx)("div", {
+                      className: _.Error,
+                      children: this.state.strErrorMessage,
+                    }),
+                  (0, _.jsx)(_._, {
+                    onChange: this.OnToggleChannelAutomation,
+                    label: (0, _._)("#RSSManager_Status_Automation_Desc"),
+                    checked: this.props.admin.BIsAutomationEnabled(),
+                    description: "",
+                  }),
+                  this.props.admin.BIsAutomationEnabled() &&
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _._)("#CuratorAdmin_RSSFeed_lastscanned"),
+                        " ",
+                        (0, _._)(this.props.admin.GetRSSLastRtimeChecked(), !1),
+                        "  @ ",
+                        (0, _._)(this.props.admin.GetRSSLastRtimeChecked(), {
+                          bForce24HourClock: !1,
+                        }),
+                        " ",
+                        (0, _.jsx)("a", {
+                          onClick: this.OnQueueScan,
+                          children: (0, _.jsx)("span", {
+                            children: (0, _._)("#CuratorAdmin_RSSFeed_scannow"),
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
+              })
             : null;
         }
       };
@@ -2325,7 +2268,7 @@
         OnPostNewsEvent(_) {
           const { newsData: _, fnGetRSSUrl: __webpack_require__ } = this.props;
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               newsData: _,
               admin: this.props.admin,
               strRSSUrl: __webpack_require__(),
@@ -2337,7 +2280,7 @@
         OnUpdateNewsEvent(_) {
           const { newsData: _, fnGetRSSUrl: __webpack_require__ } = this.props;
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               newsData: _,
               strRSSUrl: __webpack_require__(),
               admin: this.props.admin,
@@ -2368,18 +2311,15 @@
               return _ ? (0, _._)(_[0]) : _[0];
             })();
           (0, _._)(
-            _.createElement(
-              _._,
-              {
-                bAlertDialog: !0,
-                strTitle: (0, _._)("#RSSManager_PostEvent_ViewRaw"),
-              },
-              _.createElement("textarea", {
+            (0, _.jsx)(_._, {
+              bAlertDialog: !0,
+              strTitle: (0, _._)("#RSSManager_PostEvent_ViewRaw"),
+              children: (0, _.jsx)("textarea", {
                 className: _.RawRSS,
                 value: _,
                 disabled: !0,
               }),
-            ),
+            }),
             (0, _._)(_),
           );
         }
@@ -2410,165 +2350,140 @@
                 bForce24HourClock: !1,
               });
           }
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.PostCtn,
-                Boolean(_) ? _.ActivePost : "",
-                Boolean(_.valid_post) ? "" : _.ErrorPost,
-              ),
-            },
-            _.createElement(
-              "span",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _.PostCtn,
+              Boolean(_) ? _.ActivePost : "",
+              Boolean(_.valid_post) ? "" : _.ErrorPost,
+            ),
+            children: [
+              (0, _.jsx)("span", {
                 className: _.PostTitle,
-              },
-              _.title,
-            ),
-            _.createElement("br", null),
-            Boolean(__webpack_require__) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                Boolean(__webpack_require__.BIsVisibleEvent()) &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.PostDate,
-                    },
-                    (0, _._)("#RSSManager_PostEvent_PostedDate", _),
-                  ),
-                Boolean(!__webpack_require__.BIsVisibleEvent()) &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: (0, _._)(_.PostDraft, _ ? _.PostStaged : ""),
-                    },
-                    (0, _._)(
-                      _
-                        ? "#RSSManager_PostEvent_Staged"
-                        : "#RSSManager_PostEvent_Draft",
-                      _,
-                    ),
-                  ),
-              ),
-            Boolean(!_.valid_post && _.post_error_msg) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ErrorStylesBackground,
-                },
-                (0, _._)("#Error_Generic_Label"),
-                " ",
-                (0, _._)(_.post_error_msg),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ButtonCtn,
-              },
-              Boolean(_)
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    Boolean(_)
-                      ? _.createElement(_._, {
-                          string: (0, _._)("#Loading"),
-                          size: "small",
-                          position: "center",
-                        })
-                      : _.createElement(
-                          "div",
-                          {
-                            onClick: this.OnViewEvent,
-                            className: (0, _._)(_().Button, _.PreviewBtn),
-                          },
-                          (0, _._)("#RSSManager_PostEvent_ViewEvent"),
+                children: _.title,
+              }),
+              (0, _.jsx)("br", {}),
+              Boolean(__webpack_require__) &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    Boolean(__webpack_require__.BIsVisibleEvent()) &&
+                      (0, _.jsx)("span", {
+                        className: _.PostDate,
+                        children: (0, _._)(
+                          "#RSSManager_PostEvent_PostedDate",
+                          _,
                         ),
-                    _.createElement(
-                      "a",
-                      {
-                        className: (0, _._)(_().Button, _.PreviewBtn),
-                        href:
-                          _._.COMMUNITY_BASE_URL +
-                          "gid/" +
-                          _.GetClanSteamID().ConvertTo64BitString() +
-                          "/partnerevents/edit/" +
-                          this.state.clan_event_gid,
-                      },
-                      (0, _._)("#RSSManager_PostEvent_EditEvent"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        onClick: this.OnUpdateNewsEvent,
-                        className: (0, _._)(_().Button, _.PreviewBtn),
-                      },
-                      (0, _._)("#RSSManager_PostEvent_UpdateEvent"),
-                    ),
-                    _ &&
-                      _.createElement(
-                        "a",
-                        {
-                          className: (0, _._)(_().Button, _.PreviewBtn),
-                          href: (0, _._)(
-                            _._.STORE_BASE_URL +
-                              "app/" +
-                              _.post.appids[0] +
-                              "/?curator_clanid=" +
-                              _.GetAccountID(),
-                          ),
-                        },
-                        (0, _._)("#RSSManager_SeeReview"),
-                      ),
-                  )
-                : _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        onClick: this.OnOpenPreviewAsPartnerEvent,
-                        className: (0, _._)(_().Button, _.PreviewBtn),
-                      },
-                      (0, _._)("#CuratorAdmin_RSSFeed_col_preview_event"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        onClick: this.OnPostNewsEvent,
-                        className: (0, _._)(_().Button, _.PreviewBtn),
-                      },
-                      (0, _._)("#CuratorAdmin_RSSFeed_col_create_event"),
-                    ),
-                  ),
-              Boolean(_.rss_message && _.rss_message.length > 0) &&
-                _.createElement(
-                  "div",
-                  {
-                    onClick: this.OnShowRawRSS,
-                    className: _.ViewRaw,
-                  },
-                  (0, _._)("#RSSManager_PostEvent_ViewRaw"),
-                ),
-              Boolean(this.state.eventModelForPreviewNow) &&
-                _.createElement(
-                  _._,
-                  {
-                    className: _.StoreHeaderAdjust,
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(_._, {
-                      event: this.state.eventModelForPreviewNow,
-                      fnClose: this.HideModalEvent,
+                      }),
+                    Boolean(!__webpack_require__.BIsVisibleEvent()) &&
+                      (0, _.jsx)("span", {
+                        className: (0, _._)(_.PostDraft, _ ? _.PostStaged : ""),
+                        children: (0, _._)(
+                          _
+                            ? "#RSSManager_PostEvent_Staged"
+                            : "#RSSManager_PostEvent_Draft",
+                          _,
+                        ),
+                      }),
+                  ],
+                }),
+              Boolean(!_.valid_post && _.post_error_msg) &&
+                (0, _.jsxs)("div", {
+                  className: _().ErrorStylesBackground,
+                  children: [
+                    (0, _._)("#Error_Generic_Label"),
+                    " ",
+                    (0, _._)(_.post_error_msg),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
+                className: _.ButtonCtn,
+                children: [
+                  Boolean(_)
+                    ? (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          Boolean(_)
+                            ? (0, _.jsx)(_._, {
+                                string: (0, _._)("#Loading"),
+                                size: "small",
+                                position: "center",
+                              })
+                            : (0, _.jsx)("div", {
+                                onClick: this.OnViewEvent,
+                                className: (0, _._)(_().Button, _.PreviewBtn),
+                                children: (0, _._)(
+                                  "#RSSManager_PostEvent_ViewEvent",
+                                ),
+                              }),
+                          (0, _.jsx)("a", {
+                            className: (0, _._)(_().Button, _.PreviewBtn),
+                            href:
+                              _._.COMMUNITY_BASE_URL +
+                              "gid/" +
+                              _.GetClanSteamID().ConvertTo64BitString() +
+                              "/partnerevents/edit/" +
+                              this.state.clan_event_gid,
+                            children: (0, _._)(
+                              "#RSSManager_PostEvent_EditEvent",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            onClick: this.OnUpdateNewsEvent,
+                            className: (0, _._)(_().Button, _.PreviewBtn),
+                            children: (0, _._)(
+                              "#RSSManager_PostEvent_UpdateEvent",
+                            ),
+                          }),
+                          _ &&
+                            (0, _.jsx)("a", {
+                              className: (0, _._)(_().Button, _.PreviewBtn),
+                              href: (0, _._)(
+                                _._.STORE_BASE_URL +
+                                  "app/" +
+                                  _.post.appids[0] +
+                                  "/?curator_clanid=" +
+                                  _.GetAccountID(),
+                              ),
+                              children: (0, _._)("#RSSManager_SeeReview"),
+                            }),
+                        ],
+                      })
+                    : (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("div", {
+                            onClick: this.OnOpenPreviewAsPartnerEvent,
+                            className: (0, _._)(_().Button, _.PreviewBtn),
+                            children: (0, _._)(
+                              "#CuratorAdmin_RSSFeed_col_preview_event",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            onClick: this.OnPostNewsEvent,
+                            className: (0, _._)(_().Button, _.PreviewBtn),
+                            children: (0, _._)(
+                              "#CuratorAdmin_RSSFeed_col_create_event",
+                            ),
+                          }),
+                        ],
+                      }),
+                  Boolean(_.rss_message && _.rss_message.length > 0) &&
+                    (0, _.jsx)("div", {
+                      onClick: this.OnShowRawRSS,
+                      className: _.ViewRaw,
+                      children: (0, _._)("#RSSManager_PostEvent_ViewRaw"),
                     }),
-                  ),
-                ),
-            ),
-          );
+                  Boolean(this.state.eventModelForPreviewNow) &&
+                    (0, _.jsx)(_._, {
+                      className: _.StoreHeaderAdjust,
+                      children: (0, _.jsx)("div", {
+                        children: (0, _.jsx)(_._, {
+                          event: this.state.eventModelForPreviewNow,
+                          fnClose: this.HideModalEvent,
+                        }),
+                      }),
+                    }),
+                ],
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "DoPartnerEventLoad", null),
@@ -2686,226 +2601,182 @@
             case "activate_feed":
             case "update_feed":
             default:
-              return _.createElement(
-                _._,
-                {
-                  title: this.GetStrTitle(),
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    this.props.newsData &&
-                      _.createElement(
-                        "div",
-                        null,
-                        (0, _._)("#RSSManager_PostEvent_CreateFeed_DuringPost"),
-                      ),
-                    Boolean("activate_feed" !== this.state.step) &&
-                      _.createElement(
-                        "div",
-                        null,
-                        (0, _._)("#RSSManager_PostEvent_CreateFeed_Desc", _),
-                      ),
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#RSSManager_CreateFeed_Review"),
-                    ),
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement(_._, {
-                        label: (0, _._)(
-                          "#RSSManager_CreateFeed_Permissions_v1",
-                        ),
-                        onChange: this.OnChangePermissionsCreateFeed,
-                        checked: Boolean(this.state.bPermissions),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement(_._, {
-                        label: (0, _._)("#RSSManager_CreateFeed_Conduct_v1"),
-                        onChange: this.OnChangeConductCreateFeed,
-                        checked: Boolean(this.state.bConduct),
-                      }),
-                      _.createElement(
-                        _._,
-                        {
-                          href: _._.STORE_BASE_URL + "online_conduct/",
-                        },
-                        (0, _._)("#RSSManager_CreateFeed_Conduct_Link"),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_._, {
-                      bOKDisabled: !Boolean(
-                        this.state.bPermissions && this.state.bConduct,
-                      ),
-                      onOK: this.OnCreateNewsFeed,
-                      onCancel: this.props.closeModal,
+              return (0, _.jsx)(_._, {
+                title: this.GetStrTitle(),
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      children: [
+                        this.props.newsData &&
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#RSSManager_PostEvent_CreateFeed_DuringPost",
+                            ),
+                          }),
+                        Boolean("activate_feed" !== this.state.step) &&
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#RSSManager_PostEvent_CreateFeed_Desc",
+                              _,
+                            ),
+                          }),
+                        (0, _.jsx)("div", {
+                          children: (0, _._)("#RSSManager_CreateFeed_Review"),
+                        }),
+                        (0, _.jsx)("div", {
+                          children: (0, _.jsx)(_._, {
+                            label: (0, _._)(
+                              "#RSSManager_CreateFeed_Permissions_v1",
+                            ),
+                            onChange: this.OnChangePermissionsCreateFeed,
+                            checked: Boolean(this.state.bPermissions),
+                          }),
+                        }),
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _.jsx)(_._, {
+                              label: (0, _._)(
+                                "#RSSManager_CreateFeed_Conduct_v1",
+                              ),
+                              onChange: this.OnChangeConductCreateFeed,
+                              checked: Boolean(this.state.bConduct),
+                            }),
+                            (0, _.jsx)(_._, {
+                              href: _._.STORE_BASE_URL + "online_conduct/",
+                              children: (0, _._)(
+                                "#RSSManager_CreateFeed_Conduct_Link",
+                              ),
+                            }),
+                          ],
+                        }),
+                      ],
                     }),
-                  ),
-                ),
-              );
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        bOKDisabled: !Boolean(
+                          this.state.bPermissions && this.state.bConduct,
+                        ),
+                        onOK: this.OnCreateNewsFeed,
+                        onCancel: this.props.closeModal,
+                      }),
+                    }),
+                  ],
+                }),
+              });
             case "failure":
-              return _.createElement(
-                _._,
-                {
-                  strDescription: (0, _._)("#RSSManager_PostEvent_Failure"),
-                  closeModal: this.props.closeModal,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)(
+              return (0, _.jsx)(_._, {
+                strDescription: (0, _._)("#RSSManager_PostEvent_Failure"),
+                closeModal: this.props.closeModal,
+                children: (0, _.jsx)("div", {
+                  children: (0, _._)(
                     "#Error_Description",
                     this.state.eResult,
                     this.state.strErrorMessage,
                   ),
-                ),
-              );
+                }),
+              });
             case "creating_feed":
             case "waiting_post":
-              return _.createElement(
-                _._,
-                {
-                  strTitle: this.GetStrTitle(),
-                  strDescription: (0, _._)("#RSSManager_PostEvent_InFlight"),
-                  closeModal: this.props.closeModal,
-                },
-                _.createElement(_._, {
+              return (0, _.jsx)(_._, {
+                strTitle: this.GetStrTitle(),
+                strDescription: (0, _._)("#RSSManager_PostEvent_InFlight"),
+                closeModal: this.props.closeModal,
+                children: (0, _.jsx)(_._, {
                   position: "center",
                 }),
-              );
+              });
             case "create_post":
-              return _.createElement(
-                _._,
-                {
-                  title: this.GetStrTitle(),
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement(
-                        "div",
-                        null,
-                        (0, _._)("#RSSManager_PostEvent_CreatePost"),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.DialogPostTitle,
-                        },
-                        this.props.newsData.title,
-                      ),
-                      _.createElement("br", null),
-                      _.createElement(
-                        "div",
-                        null,
-                        _.createElement(_._, {
-                          label: (0, _._)(
-                            "#RSSManager_PostEvent_CreatePost_Draft",
-                          ),
-                          onChange: this.OnChangeDraftMode,
-                          checked: Boolean(this.state.bDraftMode),
-                        }),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_._, {
-                      onOK: this.OnCreatePost,
-                      onCancel: this.props.closeModal,
+              return (0, _.jsx)(_._, {
+                title: this.GetStrTitle(),
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#RSSManager_PostEvent_CreatePost",
+                            ),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.DialogPostTitle,
+                            children: this.props.newsData.title,
+                          }),
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsx)("div", {
+                            children: (0, _.jsx)(_._, {
+                              label: (0, _._)(
+                                "#RSSManager_PostEvent_CreatePost_Draft",
+                              ),
+                              onChange: this.OnChangeDraftMode,
+                              checked: Boolean(this.state.bDraftMode),
+                            }),
+                          }),
+                        ],
+                      }),
                     }),
-                  ),
-                ),
-              );
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        onOK: this.OnCreatePost,
+                        onCancel: this.props.closeModal,
+                      }),
+                    }),
+                  ],
+                }),
+              });
             case "update_post":
-              return _.createElement(
-                _._,
-                {
-                  title: this.GetStrTitle(),
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement(
-                        "div",
-                        null,
-                        (0, _._)("#RSSManager_PostEvent_UpdatePost"),
-                      ),
-                      _.createElement("br", null),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.DialogPostTitle,
-                        },
-                        this.props.newsData.title,
-                      ),
-                      _.createElement("br", null),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_._, {
-                      onOK: this.OnCreatePost,
-                      onCancel: this.props.closeModal,
+              return (0, _.jsx)(_._, {
+                title: this.GetStrTitle(),
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#RSSManager_PostEvent_UpdatePost",
+                            ),
+                          }),
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsx)("div", {
+                            className: _.DialogPostTitle,
+                            children: this.props.newsData.title,
+                          }),
+                          (0, _.jsx)("br", {}),
+                        ],
+                      }),
                     }),
-                  ),
-                ),
-              );
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        onOK: this.OnCreatePost,
+                        onCancel: this.props.closeModal,
+                      }),
+                    }),
+                  ],
+                }),
+              });
             case "success":
-              return _.createElement(
-                _._,
-                {
-                  strTitle: this.GetStrTitle(),
-                  strDescription: (0, _._)(
-                    this.props.newsData
-                      ? "#RSSManager_PostEvent_Success"
-                      : "#RSSManager_PostEvent_Success_feed",
-                  ),
-                  closeModal: this.props.closeModal,
-                  bAlertDialog: !0,
-                },
-                Boolean(this.state.eventGID) &&
-                  _.createElement(
-                    "a",
-                    {
-                      href:
-                        _._.COMMUNITY_BASE_URL +
-                        "gid/" +
-                        this.props.admin
-                          .GetClanSteamID()
-                          .ConvertTo64BitString() +
-                        "/partnerevents/edit/" +
-                        this.state.eventGID,
-                    },
-                    (0, _._)("#RSSManager_PostEvent_EventLink"),
-                  ),
-              );
+              return (0, _.jsx)(_._, {
+                strTitle: this.GetStrTitle(),
+                strDescription: (0, _._)(
+                  this.props.newsData
+                    ? "#RSSManager_PostEvent_Success"
+                    : "#RSSManager_PostEvent_Success_feed",
+                ),
+                closeModal: this.props.closeModal,
+                bAlertDialog: !0,
+                children:
+                  Boolean(this.state.eventGID) &&
+                  (0, _.jsx)("a", {
+                    href:
+                      _._.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      this.props.admin.GetClanSteamID().ConvertTo64BitString() +
+                      "/partnerevents/edit/" +
+                      this.state.eventGID,
+                    children: (0, _._)("#RSSManager_PostEvent_EventLink"),
+                  }),
+              });
           }
         }
       }
@@ -2929,6 +2800,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -2944,20 +2816,20 @@
         render() {
           return this.state.bIsLoading
             ? null
-            : _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
-                    component: _._,
-                  }),
-                  _.createElement(_._, null, !1),
-                ),
-              );
+            : (0, _.jsx)(_._, {
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      exact: !0,
+                      path: "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
+                      component: _._,
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: !1,
+                    }),
+                  ],
+                }),
+              });
         }
       }
     },
@@ -2968,6 +2840,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3078,68 +2951,62 @@
             }, []),
             _)
           )
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
               size: "medium",
             });
           const _ = _.Get().GetTrustedEnabledClans(!0),
             _ = _.Get().GetTrustedEnabledClans(!1);
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(
-              _._,
-              null,
-              _.createElement("h1", null, (0, _._)("#RSSModeration_Title")),
-              _.createElement(_, null),
-              _.createElement(_, {
-                rgClanIDs: _.Get()
-                  .GetAllRSSEnabledClans()
-                  .map((_) => _.clan_accoundid),
-              }),
-              _.createElement(_, {
-                rgClanIDs: _,
-                strTitle: (0, _._)("#RSSModeration_TrustTitle"),
-              }),
-              _.createElement(_, {
-                rgClanIDs: _,
-                strTitle: (0, _._)("#RSSModeration_RestTitle"),
-              }),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)("h1", {
+                  children: (0, _._)("#RSSModeration_Title"),
+                }),
+                (0, _.jsx)(_, {}),
+                (0, _.jsx)(_, {
+                  rgClanIDs: _.Get()
+                    .GetAllRSSEnabledClans()
+                    .map((_) => _.clan_accoundid),
+                }),
+                (0, _.jsx)(_, {
+                  rgClanIDs: _,
+                  strTitle: (0, _._)("#RSSModeration_TrustTitle"),
+                }),
+                (0, _.jsx)(_, {
+                  rgClanIDs: _,
+                  strTitle: (0, _._)("#RSSModeration_RestTitle"),
+                }),
+              ],
+            }),
+          });
         }),
         _ = (0, _._)((_) => {
           const [_, __webpack_require__] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(void 0);
           return _
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
                 size: "medium",
               })
             : void 0 !== _
               ? Boolean(_.length > 0)
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     rgClanIDs: _,
                     strTitle: (0, _._)("#RSSModeration_InactiveAutomation"),
                   })
-                : _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#RSSModreation_AllAutomationEnabled"),
-                  )
-              : _.createElement(
-                  _._,
-                  {
-                    onClick: async () => {
-                      __webpack_require__(!0),
-                        await _.Get().LoadKnownAllRSSInfo(),
-                        _(_.Get().ExtractWithoutRSSAutomation()),
-                        __webpack_require__(!1);
-                    },
+                : (0, _.jsx)("div", {
+                    children: (0, _._)("#RSSModreation_AllAutomationEnabled"),
+                  })
+              : (0, _.jsxs)(_._, {
+                  onClick: async () => {
+                    __webpack_require__(!0),
+                      await _.Get().LoadKnownAllRSSInfo(),
+                      _(_.Get().ExtractWithoutRSSAutomation()),
+                      __webpack_require__(!1);
                   },
-                  (0, _._)("#RSSModeration_FindInActive"),
-                  " ",
-                );
+                  children: [(0, _._)("#RSSModeration_FindInActive"), " "],
+                });
         }),
         _ = (_) => {
           const { rgClanIDs: _, strTitle: __webpack_require__ } = _,
@@ -3148,56 +3015,53 @@
           return (
             _ ||
               (_ = _.map((_) =>
-                _.createElement(_, {
-                  key: _,
-                  clanAccountID: _,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    clanAccountID: _,
+                  },
+                  _,
+                ),
               )),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().SectionContainer),
-              },
-              _.createElement(
-                "h2",
-                {
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_().SectionContainer),
+              children: [
+                (0, _.jsxs)("h2", {
                   className: (0, _._)(_().ModSectionTitle),
                   onDoubleClick: () => _(!_),
-                },
-                __webpack_require__,
-                _.createElement("span", null, " "),
-                _.createElement(
-                  _._,
-                  {
-                    className: _().ResizeButton,
-                    onClick: () => _(!_),
-                  },
-                  _
-                    ? _.createElement(_.hz4, null)
-                    : _.createElement(_.Xjb, null),
-                ),
-              ),
-              _ &&
-                _.createElement(
-                  _._,
-                  {
+                  children: [
+                    __webpack_require__,
+                    (0, _.jsx)("span", {
+                      children: " ",
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _().ResizeButton,
+                      onClick: () => _(!_),
+                      children: _
+                        ? (0, _.jsx)(_.hz4, {})
+                        : (0, _.jsx)(_.Xjb, {}),
+                    }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsx)(_._, {
                     onClick: () => _(!1),
-                  },
-                  (0, _._)("#Sale_ShowContents"),
-                ),
-              _,
-            )
+                    children: (0, _._)("#Sale_ShowContents"),
+                  }),
+                _,
+              ],
+            })
           );
         },
         _ = (0, _._)((_) => {
           const { clanAccountID: _ } = _;
           return _._.BHasClanInfoLoadedByAccountID(_) &&
             _._.Get().BHasClanIDLoaded(_)
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 clanInfo: _._.GetClanInfoByClanAccountID(_),
                 rssAdminInfo: _._.Get().GetRSSAdminForClanAccountID(_),
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 clanAccountID: _,
               });
         }),
@@ -3218,14 +3082,13 @@
                 rootMargin: `${_} 0px ${_} 0px`,
               },
             );
-          return _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _().TileContainer,
-            },
-            _.createElement("div", null, (0, _._)("#Loading"), " - ", _),
-          );
+          return (0, _.jsx)("div", {
+            ref: _,
+            className: _().TileContainer,
+            children: (0, _.jsxs)("div", {
+              children: [(0, _._)("#Loading"), " - ", _],
+            }),
+          });
         },
         _ = (_) => {
           const { clanInfo: _, rssAdminInfo: __webpack_require__ } = _,
@@ -3241,292 +3104,226 @@
               "https://steamsupport.valvesoftware.com/clan/overview/" +
               _._.InitFromClanID(_.clanAccountID).ConvertTo64BitString(),
             _ = _._.Get().GetRSSAdminStats(_.clanAccountID);
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().TileContainer),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_().TileContainer),
+            children: [
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().TileSpread),
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  null,
-                  _.group_name,
-                  " - ",
-                  _.clanAccountID,
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#CuratorAdmin_RSSFeed"),
-                    ":",
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      href: __webpack_require__.GetRSSUrl(),
-                    },
-                    __webpack_require__.GetRSSUrl(),
-                  ),
-                ),
-                Boolean(_) &&
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)(
-                        "#RSSModeration_TotalEvents",
-                        (0, _._)(_.total_event_count),
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)(
-                        "#RSSModeration_RSSEvents",
-                        (0, _._)(_.rss_event_count),
-                      ),
-                    ),
-                  ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _(!_),
-                  },
-                  (0, _._)(
-                    _
-                      ? "#Bbcode_Expand_Details_Expanded"
-                      : "#Bbcode_Expand_Details_Collapsed",
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "ul",
-                  null,
-                  _.createElement(
-                    "li",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                      },
-                      (0, _._)("#EventDisplay_NewsHubSubtitle"),
-                    ),
-                  ),
-                  _.createElement(
-                    "li",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                      },
-                      (0, _._)("#CuratorAdmin_RSSFeed_title"),
-                    ),
-                  ),
-                  _.createElement(
-                    "li",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                      },
-                      (0, _._)("#RSSModeration_GroupPage"),
-                    ),
-                  ),
-                  _.createElement(
-                    "li",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _,
-                      },
-                      (0, _._)("#RSSModeration_SupportPage"),
-                    ),
-                  ),
-                  _.createElement(
-                    "li",
-                    null,
-                    _.createElement(_, {
-                      rgClanIDs: [_.clanAccountID],
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsxs)("div", {
+                        children: [_.group_name, " - ", _.clanAccountID],
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsxs)("div", {
+                            children: [(0, _._)("#CuratorAdmin_RSSFeed"), ":"],
+                          }),
+                          (0, _.jsx)("a", {
+                            href: __webpack_require__.GetRSSUrl(),
+                            children: __webpack_require__.GetRSSUrl(),
+                          }),
+                        ],
+                      }),
+                      Boolean(_) &&
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _.jsx)("div", {
+                              children: (0, _._)(
+                                "#RSSModeration_TotalEvents",
+                                (0, _._)(_.total_event_count),
+                              ),
+                            }),
+                            (0, _.jsx)("div", {
+                              children: (0, _._)(
+                                "#RSSModeration_RSSEvents",
+                                (0, _._)(_.rss_event_count),
+                              ),
+                            }),
+                          ],
+                        }),
+                      (0, _.jsx)(_._, {
+                        onClick: () => _(!_),
+                        children: (0, _._)(
+                          _
+                            ? "#Bbcode_Expand_Details_Expanded"
+                            : "#Bbcode_Expand_Details_Collapsed",
+                        ),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    children: (0, _.jsxs)("ul", {
+                      children: [
+                        (0, _.jsx)("li", {
+                          children: (0, _.jsx)("a", {
+                            href: _,
+                            children: (0, _._)("#EventDisplay_NewsHubSubtitle"),
+                          }),
+                        }),
+                        (0, _.jsx)("li", {
+                          children: (0, _.jsx)("a", {
+                            href: _,
+                            children: (0, _._)("#CuratorAdmin_RSSFeed_title"),
+                          }),
+                        }),
+                        (0, _.jsx)("li", {
+                          children: (0, _.jsx)("a", {
+                            href: _,
+                            children: (0, _._)("#RSSModeration_GroupPage"),
+                          }),
+                        }),
+                        (0, _.jsx)("li", {
+                          children: (0, _.jsx)("a", {
+                            href: _,
+                            children: (0, _._)("#RSSModeration_SupportPage"),
+                          }),
+                        }),
+                        (0, _.jsx)("li", {
+                          children: (0, _.jsx)(_, {
+                            rgClanIDs: [_.clanAccountID],
+                          }),
+                        }),
+                      ],
                     }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().CreatorCtn,
-                },
-                _.createElement(_._, {
-                  bHideCreatorType: !0,
-                  creatorID: {
-                    name: null,
-                    clan_account_id: _.clanAccountID,
-                    type: "developer",
-                  },
-                  bSmallFormat: !0,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().CreatorCtn,
+                    children: (0, _.jsx)(_._, {
+                      bHideCreatorType: !0,
+                      creatorID: {
+                        name: null,
+                        clan_account_id: _.clanAccountID,
+                        type: "developer",
+                      },
+                      bSmallFormat: !0,
+                    }),
+                  }),
+                ],
+              }),
+              Boolean(_) &&
+                (0, _.jsx)(_.Fragment, {
+                  children: Boolean(__webpack_require__.BHasSavedRSSURL())
+                    ? (0, _.jsx)(_._, {
+                        strRssURL: __webpack_require__.GetRSSUrl(),
+                        admin: __webpack_require__,
+                      })
+                    : (0, _.jsx)("div", {
+                        children: (0, _._)("#RSSModeration_NoRSSFeed"),
+                      }),
                 }),
-              ),
-            ),
-            Boolean(_) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                Boolean(__webpack_require__.BHasSavedRSSURL())
-                  ? _.createElement(_._, {
-                      strRssURL: __webpack_require__.GetRSSUrl(),
-                      admin: __webpack_require__,
-                    })
-                  : _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#RSSModeration_NoRSSFeed"),
-                    ),
-              ),
-          );
+            ],
+          });
         },
         _ = (_) =>
-          _.createElement(
-            _._,
-            {
-              toolTipContent: (0, _._)("#RSSModeration_ReindexAndReload_ttip"),
-            },
-            _.createElement(
-              _._,
-              {
-                onClick: (_) => {
-                  (0, _._)(
-                    _.createElement(_, {
-                      ..._,
-                    }),
-                    (0, _._)(_),
-                  );
-                },
+          (0, _.jsx)(_._, {
+            toolTipContent: (0, _._)("#RSSModeration_ReindexAndReload_ttip"),
+            children: (0, _.jsx)(_._, {
+              onClick: (_) => {
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                  (0, _._)(_),
+                );
               },
-              (0, _._)("#RSSModeration_ReindexAndReload"),
-            ),
-          ),
+              children: (0, _._)("#RSSModeration_ReindexAndReload"),
+            }),
+          }),
         _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)(void 0),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(void 0),
             _ = () => _.closeModal && _.closeModal();
-          return _.createElement(
-            _._,
-            {
-              onEscKeypress: _,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                null,
-                " ",
-                (0, _._)("#RSSModeration_ReindexAndReload"),
-                " ",
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  void 0 === _
-                    ? _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(
-                            "#RSSModeration_Reindex_Verify",
-                            _.rgClanIDs.length,
-                          ),
-                        ),
-                        _.createElement(
-                          _._,
-                          {
-                            onClick: async () => {
-                              let _ = 0;
-                              __webpack_require__(_);
-                              for (let _ = 0; _ < _.rgClanIDs.length; ++_) {
-                                let _ = _.rgClanIDs[_];
-                                if (
-                                  !(await _.Get().ReindexClanEventsAndReloadAccount(
+          return (0, _.jsx)(_._, {
+            onEscKeypress: _,
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsxs)(_._, {
+                  children: [
+                    " ",
+                    (0, _._)("#RSSModeration_ReindexAndReload"),
+                    " ",
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      children: [
+                        void 0 === _
+                          ? (0, _.jsxs)(_.Fragment, {
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#RSSModeration_Reindex_Verify",
+                                    _.rgClanIDs.length,
+                                  ),
+                                }),
+                                (0, _.jsx)(_._, {
+                                  onClick: async () => {
+                                    let _ = 0;
+                                    __webpack_require__(_);
+                                    for (
+                                      let _ = 0;
+                                      _ < _.rgClanIDs.length;
+                                      ++_
+                                    ) {
+                                      let _ = _.rgClanIDs[_];
+                                      if (
+                                        !(await _.Get().ReindexClanEventsAndReloadAccount(
+                                          _,
+                                        ))
+                                      ) {
+                                        _((0, _._)("#Error_Generic_Label"));
+                                        break;
+                                      }
+                                      (_ += 1), __webpack_require__(_);
+                                    }
+                                    _(!0);
+                                  },
+                                  children: (0, _._)("#Button_Continue"),
+                                }),
+                              ],
+                            })
+                          : (0, _.jsxs)(_.Fragment, {
+                              children: [
+                                (0, _.jsx)("span", {
+                                  children: (0, _._)(
+                                    "#RSSModeration_Reindex_Action",
                                     _,
-                                  ))
-                                ) {
-                                  _((0, _._)("#Error_Generic_Label"));
-                                  break;
-                                }
-                                (_ += 1), __webpack_require__(_);
-                              }
-                              _(!0);
-                            },
-                          },
-                          (0, _._)("#Button_Continue"),
-                        ),
-                      )
-                    : _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          "span",
-                          null,
-                          (0, _._)(
-                            "#RSSModeration_Reindex_Action",
-                            _,
-                            _.rgClanIDs.length,
-                          ),
-                        ),
-                        _
-                          ? _.createElement(
-                              "span",
-                              null,
-                              (0, _._)(
-                                "#EventEditor_ImportFromHTML_ConvertFinished",
-                              ),
-                            )
-                          : _.createElement(_._, {
-                              size: "small",
-                              string: (0, _._)("#Updating"),
+                                    _.rgClanIDs.length,
+                                  ),
+                                }),
+                                _
+                                  ? (0, _.jsx)("span", {
+                                      children: (0, _._)(
+                                        "#EventEditor_ImportFromHTML_ConvertFinished",
+                                      ),
+                                    })
+                                  : (0, _.jsx)(_._, {
+                                      size: "small",
+                                      string: (0, _._)("#Updating"),
+                                    }),
+                              ],
                             }),
-                      ),
-                  Boolean(_) && _.createElement("span", null, _, " "),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: _,
-                    },
-                    (0, _._)(_ ? "#Button_OK" : "#Button_Cancel"),
-                  ),
-                ),
-              ),
-            ),
-          );
+                        Boolean(_) &&
+                          (0, _.jsxs)("span", {
+                            children: [_, " "],
+                          }),
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _._)(_ ? "#Button_OK" : "#Button_Cancel"),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3993,26 +3790,22 @@
                   let _ = _._.GetClanEventModel(_);
                   _ &&
                     _.push(
-                      _.createElement(
+                      (0, _.jsxs)(
                         "div",
                         {
-                          key: _,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              eventModel: _,
+                              route: _._.k_eView,
+                              children: _.GetNameWithFallback(0),
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _.Error,
+                              children: _.strMessage,
+                            }),
+                          ],
                         },
-                        _.createElement(
-                          _._,
-                          {
-                            eventModel: _,
-                            route: _._.k_eView,
-                          },
-                          _.GetNameWithFallback(0),
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.Error,
-                          },
-                          _.strMessage,
-                        ),
+                        _,
                       ),
                     );
                 }
@@ -4024,36 +3817,42 @@
           let _ = new Array();
           return (
             _.push(
-              _.createElement(
+              (0, _.jsxs)(
                 "div",
                 {
-                  key: "res_capsule",
+                  children: [
+                    "Capsule Resized: ",
+                    this.m_mapArtworkResizeSuccess.get("capsule"),
+                    " ",
+                  ],
                 },
-                "Capsule Resized: ",
-                this.m_mapArtworkResizeSuccess.get("capsule"),
-                " ",
+                "res_capsule",
               ),
             ),
             _.push(
-              _.createElement(
+              (0, _.jsxs)(
                 "div",
                 {
-                  key: "res_header",
+                  children: [
+                    "Header Resized: ",
+                    this.m_mapArtworkResizeSuccess.get("background"),
+                    " ",
+                  ],
                 },
-                "Header Resized: ",
-                this.m_mapArtworkResizeSuccess.get("background"),
-                " ",
+                "res_header",
               ),
             ),
             _.push(
-              _.createElement(
+              (0, _.jsxs)(
                 "div",
                 {
-                  key: "res_spotlightr",
+                  children: [
+                    "Spotlight Resized: ",
+                    this.m_mapArtworkResizeSuccess.get("spotlight"),
+                    " ",
+                  ],
                 },
-                "Spotlight Resized: ",
-                this.m_mapArtworkResizeSuccess.get("spotlight"),
-                " ",
+                "res_spotlightr",
               ),
             ),
             _
@@ -4064,65 +3863,69 @@
             _ = this.m_mapArtworkResizeSuccess.has("capsule")
               ? this.RenderResizeProgress()
               : void 0;
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "h2",
-              null,
-              "Partner Events Backfill Processing Page",
-            ),
-            null == this.state.eBackfillState &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "button",
-                  {
-                    onClick: this.OnArtworkResizeBackfill,
-                  },
-                  "Begin Artwork Resize Backfill",
-                ),
-              ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "button",
-                {
-                  onClick: () => _.CompleteBackfill("resize_image"),
-                },
-                "Stop Backfill",
-              ),
-            ),
-            this.state.strInfo &&
-              _.createElement("div", null, "Processing: ", this.state.strInfo),
-            _.createElement("div", null, "Events Processed: ", _.m_nProcessed),
-            _.createElement("div", null, "Events Succeeded: ", _.m_nSuccesses),
-            _.createElement("div", null, "Events Warning: ", _.m_nWarning),
-            _.createElement("div", null, "Events Failed: ", _.m_nFailures),
-            _.createElement("div", null, "Events Skipped: ", _.m_nSkipped),
-            _.length > 0 &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("h2", null, "Failure Info"),
-                _,
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement("h2", null, "Resizing Actions"),
-                _,
-              ),
-            "started" == this.state.eBackfillState &&
-              _.createElement(_._, {
-                size: "medium",
-                position: "center",
-                string: "Backfill In Progress",
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)("h2", {
+                children: "Partner Events Backfill Processing Page",
               }),
-          );
+              null == this.state.eBackfillState &&
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)("button", {
+                    onClick: this.OnArtworkResizeBackfill,
+                    children: "Begin Artwork Resize Backfill",
+                  }),
+                }),
+              (0, _.jsx)("div", {
+                children: (0, _.jsx)("button", {
+                  onClick: () => _.CompleteBackfill("resize_image"),
+                  children: "Stop Backfill",
+                }),
+              }),
+              this.state.strInfo &&
+                (0, _.jsxs)("div", {
+                  children: ["Processing: ", this.state.strInfo],
+                }),
+              (0, _.jsxs)("div", {
+                children: ["Events Processed: ", _.m_nProcessed],
+              }),
+              (0, _.jsxs)("div", {
+                children: ["Events Succeeded: ", _.m_nSuccesses],
+              }),
+              (0, _.jsxs)("div", {
+                children: ["Events Warning: ", _.m_nWarning],
+              }),
+              (0, _.jsxs)("div", {
+                children: ["Events Failed: ", _.m_nFailures],
+              }),
+              (0, _.jsxs)("div", {
+                children: ["Events Skipped: ", _.m_nSkipped],
+              }),
+              _.length > 0 &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("h2", {
+                      children: "Failure Info",
+                    }),
+                    _,
+                  ],
+                }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("h2", {
+                      children: "Resizing Actions",
+                    }),
+                    _,
+                  ],
+                }),
+              "started" == this.state.eBackfillState &&
+                (0, _.jsx)(_._, {
+                  size: "medium",
+                  position: "center",
+                  string: "Backfill In Progress",
+                }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnArtworkResizeBackfill", null),
@@ -4448,27 +4251,24 @@
         let _ =
           "https://steamsupport.valvesoftware.com/account/overview/" +
           _.ConvertTo64BitString();
-        return _.createElement(
-          "div",
-          null,
-          (0, _._)(
+        return (0, _.jsx)("div", {
+          children: (0, _._)(
             __webpack_require__,
-            _.createElement(
-              "a",
-              {
-                href: _,
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-              },
-              Boolean(_)
-                ? _.createElement(_.Fragment, null, _.m_strPlayerName)
-                : _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement("span", null, _),
-                  ),
-            ),
+            (0, _.jsx)("a", {
+              href: _,
+              target: _._.IN_CLIENT ? void 0 : "_blank",
+              children: Boolean(_)
+                ? (0, _.jsx)(_.Fragment, {
+                    children: _.m_strPlayerName,
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("span", {
+                      children: _,
+                    }),
+                  }),
+            }),
           ),
-        );
+        });
       }
       function _(_) {
         const { modAction: _ } = _,
@@ -4478,117 +4278,106 @@
             (0, _._)(_.m_rtWhen, {
               bForce24HourClock: !1,
             }),
-          _ = _.createElement(_, {
+          _ = (0, _.jsx)(_, {
             locToken: "#EventModTile_Moderator",
             accountID: _.m_moderator,
           });
         switch (_.m_action) {
           case _.k_ModReviewed:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_Reviewed",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
               ),
-            );
+            });
           case _.k_ModUnreviewed:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_UnReviewed",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
               ),
-            );
+            });
           case _.k_ChangeEventType:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_NewEventType",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
                 (0, _._)(_.m_newEventType),
               ),
-            );
+            });
           case _.k_UpdateSeasonTags:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_SeasonTagUpdate",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
                 _.m_newTagAdded,
               ),
-            );
+            });
           case _.k_ModReReviewed:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_ReReviewed",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
               ),
-            );
+            });
           case _.k_ModRemovedFromSteamChina:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_RemoveFromSC",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
               ),
-            );
+            });
           case _.k_ModFlagAdultOnlyContent:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_FlagAdultContent",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
               ),
-            );
+            });
           case _.k_ModRemoveAdultOnlyContent:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              (0, _._)(
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: (0, _._)(
                 "#EventModTile_Action_RemoveAdultContent",
-                _.createElement("span", null, _),
+                (0, _.jsx)("span", {
+                  children: _,
+                }),
                 _,
               ),
-            );
+            });
           default:
-            return _.createElement(
-              "div",
-              {
-                className: _.ModeratorAuditActionCtn,
-              },
-              _.ToModString(),
-            );
+            return (0, _.jsx)("div", {
+              className: _.ModeratorAuditActionCtn,
+              children: _.ToModString(),
+            });
         }
       }
       function _(_) {
@@ -4602,46 +4391,41 @@
         return 0 == _.length
           ? null
           : (_ && (_ = _.splice(0, 3)),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "h4",
-                null,
-                (0, _._)("#EventModTile_Action_Title"),
-              ),
-              ((_) => {
-                const { eventModel: __webpack_require__ } = _;
-                return _.map((_) => {
-                  const _ = new _();
-                  return (
-                    _.FromString(_),
-                    _.createElement(_, {
-                      key: __webpack_require__.GID + _,
-                      modAction: _,
-                    })
-                  );
-                });
-              })(_),
-              _ &&
-                _.createElement(
-                  "a",
-                  {
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("h4", {
+                  children: (0, _._)("#EventModTile_Action_Title"),
+                }),
+                ((_) => {
+                  const { eventModel: __webpack_require__ } = _;
+                  return _.map((_) => {
+                    const _ = new _();
+                    return (
+                      _.FromString(_),
+                      (0, _.jsx)(
+                        _,
+                        {
+                          modAction: _,
+                        },
+                        __webpack_require__.GID + _,
+                      )
+                    );
+                  });
+                })(_),
+                _ &&
+                  (0, _.jsx)("a", {
                     onClick: () => __webpack_require__(!1),
                     className: _.ExpandModActions,
-                  },
-                  (0, _._)("#EventModTile_Action_More", _ - 3),
-                ),
-              Boolean(!_ && _ > 3) &&
-                _.createElement(
-                  "a",
-                  {
+                    children: (0, _._)("#EventModTile_Action_More", _ - 3),
+                  }),
+                Boolean(!_ && _ > 3) &&
+                  (0, _.jsx)("a", {
                     onClick: () => __webpack_require__(!0),
                     className: _.ExpandModActions,
-                  },
-                  (0, _._)("#EventModTile_Action_Hide"),
-                ),
-            ));
+                    children: (0, _._)("#EventModTile_Action_Hide"),
+                  }),
+              ],
+            }));
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4780,10 +4564,13 @@
               : _.Get().GetAllSolrEvents()
             ).forEach((_) => {
               _.push(
-                _.createElement(_, {
-                  solrData: _,
-                  key: _.unique_id,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    solrData: _,
+                  },
+                  _.unique_id,
+                ),
               );
             }),
             _
@@ -4824,42 +4611,42 @@
         render() {
           let _ = this.RenderTiles();
           const _ = _.Get();
-          return _.createElement(
-            "div",
-            {
-              className: _.ModerationContainer,
-              ref: this.m_refScroll,
-            },
-            _.createElement(
-              "div",
-              null,
-              _.createElement("h2", null, (0, _._)("#EventModeration_Title")),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().FlexRowContainer),
-                  },
-                  _.createElement(_, {
-                    fnRequireRefetchEvents: this.RefetchAllEventTiles,
+          return (0, _.jsxs)("div", {
+            className: _.ModerationContainer,
+            ref: this.m_refScroll,
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: (0, _._)("#EventModeration_Title"),
                   }),
-                  Boolean(_.bUseCustomQuery) &&
-                    _.createElement(_, {
-                      fnRequireRefetchEvents: this.RefetchAllEventTiles,
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsxs)("div", {
+                      className: (0, _._)(_().FlexRowContainer),
+                      children: [
+                        (0, _.jsx)(_, {
+                          fnRequireRefetchEvents: this.RefetchAllEventTiles,
+                        }),
+                        Boolean(_.bUseCustomQuery) &&
+                          (0, _.jsx)(_, {
+                            fnRequireRefetchEvents: this.RefetchAllEventTiles,
+                          }),
+                      ],
                     }),
-                ),
-              ),
-            ),
-            _.createElement(_._, null, _),
-            this.state.bInfiniteScrollLoading &&
-              _.createElement(_._, {
-                position: "center",
-                size: "medium",
-                string: (0, _._)("#Loading"),
+                  }),
+                ],
               }),
-          );
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+              this.state.bInfiniteScrollLoading &&
+                (0, _.jsx)(_._, {
+                  position: "center",
+                  size: "medium",
+                  string: (0, _._)("#Loading"),
+                }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "HandleError", null),
@@ -4878,62 +4665,50 @@
         _ = (0, _._)((_) => {
           const _ = _.Get(),
             { fnRequireRefetchEvents: __webpack_require__ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
                 className: _.FilterContainer,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)(
                     "#EventModeration_ShowCustomFilter_ttip",
                   ),
-                },
-                _.createElement(_._, {
-                  label: (0, _._)("#EventModeration_ShowCustomFilter"),
-                  checked: _.bUseCustomQuery,
-                  onChange: (_) => {
-                    (_.bUseCustomQuery = _), __webpack_require__();
-                  },
+                  children: (0, _.jsx)(_._, {
+                    label: (0, _._)("#EventModeration_ShowCustomFilter"),
+                    checked: _.bUseCustomQuery,
+                    onChange: (_) => {
+                      (_.bUseCustomQuery = _), __webpack_require__();
+                    },
+                  }),
                 }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+              }),
+              (0, _.jsxs)("div", {
                 className: _.FilterContainer,
-              },
-              _.createElement(
-                "label",
-                {
-                  htmlFor: "EventPerLoad",
-                },
-                (0, _._)("#EventModeration_PerPageLoad"),
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("input", {
-                  type: "number",
-                  _: "EventPerLoad",
-                  min: "10",
-                  max: "200",
-                  value: _.eventsToLoadPerPaging,
-                  onChange: (_) => {
-                    let _ = Number.parseInt(_.currentTarget.value);
-                    _ &&
-                      _ > 0 &&
-                      _ != _.eventsToLoadPerPaging &&
-                      (_.eventsToLoadPerPaging = _);
-                  },
-                }),
-              ),
-            ),
-          );
+                children: [
+                  (0, _.jsx)("label", {
+                    htmlFor: "EventPerLoad",
+                    children: (0, _._)("#EventModeration_PerPageLoad"),
+                  }),
+                  (0, _.jsx)("div", {
+                    children: (0, _.jsx)("input", {
+                      type: "number",
+                      _: "EventPerLoad",
+                      min: "10",
+                      max: "200",
+                      value: _.eventsToLoadPerPaging,
+                      onChange: (_) => {
+                        let _ = Number.parseInt(_.currentTarget.value);
+                        _ &&
+                          _ > 0 &&
+                          _ != _.eventsToLoadPerPaging &&
+                          (_.eventsToLoadPerPaging = _);
+                      },
+                    }),
+                  }),
+                ],
+              }),
+            ],
+          });
         }),
         _ = (0, _._)((_) => {
           const _ = _.Get(),
@@ -4952,137 +4727,121 @@
                 color: "#444444",
               }),
             };
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.FilterContainer,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#EventModeration_FilterByTag"),
-              ),
-              _.createElement(_._, {
-                isSearchable: !0,
-                isMulti: !0,
-                onChange: (_) => {
-                  (_.selectedTags = _), __webpack_require__();
-                },
-                value: _.selectedTags,
-                options: _,
-                styles: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    children: (0, _._)("#EventModeration_FilterByTag"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    isSearchable: !0,
+                    isMulti: !0,
+                    onChange: (_) => {
+                      (_.selectedTags = _), __webpack_require__();
+                    },
+                    value: _.selectedTags,
+                    options: _,
+                    styles: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.FilterContainer,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#EventModeration_FilterExcludeByTag"),
-              ),
-              _.createElement(_._, {
-                isSearchable: !0,
-                isMulti: !0,
-                onChange: (_) => {
-                  (_.excludedTags = _), __webpack_require__();
-                },
-                value: _.excludedTags,
-                options: _,
-                styles: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    children: (0, _._)("#EventModeration_FilterExcludeByTag"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    isSearchable: !0,
+                    isMulti: !0,
+                    onChange: (_) => {
+                      (_.excludedTags = _), __webpack_require__();
+                    },
+                    value: _.excludedTags,
+                    options: _,
+                    styles: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.FilterContainer,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#EventModeration_FilterToType"),
-              ),
-              _.createElement(_._, {
-                isSearchable: !0,
-                isMulti: !0,
-                onChange: (_) => {
-                  (_.filterEventTypes = _), __webpack_require__();
-                },
-                value: _.filterEventTypes,
-                options: _,
-                styles: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    children: (0, _._)("#EventModeration_FilterToType"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    isSearchable: !0,
+                    isMulti: !0,
+                    onChange: (_) => {
+                      (_.filterEventTypes = _), __webpack_require__();
+                    },
+                    value: _.filterEventTypes,
+                    options: _,
+                    styles: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.FilterContainer,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#EventModeration_FilterToDate"),
-              ),
-              _.createElement(_(), {
-                timeFormat: !1,
-                onChange: (_) => {
-                  if ("string" == typeof _) {
-                    let _ = _(_, "M/D/YYYY", !0);
-                    if (!__webpack_require__.isValid())
-                      return void (_.filterDateAsString = _);
-                    _ = _;
-                  }
-                  _.filterDate != _ &&
-                    ((_.filterDateAsString = void 0),
-                    (_.filterDate = _),
-                    __webpack_require__());
-                },
-                value: _.filterDate,
-                isValidDate: (_) => {
-                  let _ = new Date();
-                  return (
-                    _.unix() <
-                    _.unix(_.getTime() / 1e3 + 86400)
-                      .hour(0)
-                      .seconds(0)
-                      .minute(0)
-                      .unix()
-                  );
-                },
-                inputProps: {
-                  placeholder: (0, _._)("#EventModeration_PickDatee"),
-                  className: _.TimeWidth,
-                },
+                children: [
+                  (0, _.jsx)("span", {
+                    children: (0, _._)("#EventModeration_FilterToDate"),
+                  }),
+                  (0, _.jsx)(_(), {
+                    timeFormat: !1,
+                    onChange: (_) => {
+                      if ("string" == typeof _) {
+                        let _ = _(_, "M/D/YYYY", !0);
+                        if (!__webpack_require__.isValid())
+                          return void (_.filterDateAsString = _);
+                        _ = _;
+                      }
+                      _.filterDate != _ &&
+                        ((_.filterDateAsString = void 0),
+                        (_.filterDate = _),
+                        __webpack_require__());
+                    },
+                    value: _.filterDate,
+                    isValidDate: (_) => {
+                      let _ = new Date();
+                      return (
+                        _.unix() <
+                        _.unix(_.getTime() / 1e3 + 86400)
+                          .hour(0)
+                          .seconds(0)
+                          .minute(0)
+                          .unix()
+                      );
+                    },
+                    inputProps: {
+                      placeholder: (0, _._)("#EventModeration_PickDatee"),
+                      className: _.TimeWidth,
+                    },
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.FilterContainer,
-              },
-              _.createElement("input", {
-                type: "checkbox",
-                _: "VisibilityStart",
-                checked: _.bOrderByVisibilityStartTime,
-                onChange: (_) => {
-                  (_.bOrderByVisibilityStartTime = _.currentTarget.checked),
-                    __webpack_require__();
-                },
+                children: [
+                  (0, _.jsx)("input", {
+                    type: "checkbox",
+                    _: "VisibilityStart",
+                    checked: _.bOrderByVisibilityStartTime,
+                    onChange: (_) => {
+                      (_.bOrderByVisibilityStartTime = _.currentTarget.checked),
+                        __webpack_require__();
+                    },
+                  }),
+                  (0, _.jsx)("label", {
+                    htmlFor: "VisibilityStart",
+                    children: (0, _._)("#EventModeration_OrderByFirstVisible"),
+                  }),
+                ],
               }),
-              _.createElement(
-                "label",
-                {
-                  htmlFor: "VisibilityStart",
-                },
-                (0, _._)("#EventModeration_OrderByFirstVisible"),
-              ),
-            ),
-          );
+            ],
+          });
         }),
         _ = (0, _._)((_) => {
           const { onClick: _, event: __webpack_require__, bSaving: _ } = _;
@@ -5097,19 +4856,18 @@
             _ &&
               ((_ = (0, _._)("#EventModTile_Moderate_Saving")),
               (_ = _.EventModerateSaving)),
-            _.createElement(
-              "button",
-              {
-                className: (0, _._)(_().Button, _.Button, _),
-                onClick: () => _(_),
-                disabled: _,
-              },
-              _ &&
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              _,
-            )
+            (0, _.jsxs)("button", {
+              className: (0, _._)(_().Button, _.Button, _),
+              onClick: () => _(_),
+              disabled: _,
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    size: "small",
+                  }),
+                _,
+              ],
+            })
           );
         }),
         _ = (0, _._)((_) => {
@@ -5122,19 +4880,18 @@
           );
           return (
             _ && (_ = (0, _._)("#EventModTile_Moderate_Saving")),
-            _.createElement(
-              "button",
-              {
-                className: (0, _._)(_().Button, _.Button),
-                onClick: () => _(!_),
-                disabled: _,
-              },
-              _ &&
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              _,
-            )
+            (0, _.jsxs)("button", {
+              className: (0, _._)(_().Button, _.Button),
+              onClick: () => _(!_),
+              disabled: _,
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    size: "small",
+                  }),
+                _,
+              ],
+            })
           );
         });
       function _(_) {
@@ -5148,19 +4905,18 @@
         _ && (_ = (0, _._)("#EventModTile_Moderate_Saving"));
         const _ = _._.GetTimeNowWithOverrideAsDate();
         return _.getMonth() >= 8 && _.getMonth() <= 10
-          ? _.createElement(
-              "button",
-              {
-                className: (0, _._)(_().Button, _.Button),
-                onClick: () => _(!_),
-                disabled: _,
-              },
-              _ &&
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              _,
-            )
+          ? (0, _.jsxs)("button", {
+              className: (0, _._)(_().Button, _.Button),
+              onClick: () => _(!_),
+              disabled: _,
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    size: "small",
+                  }),
+                _,
+              ],
+            })
           : null;
       }
       let _ = class extends _.Component {
@@ -5286,7 +5042,7 @@
           const { solrData: _ } = this.props;
           let _ = _._.GetClanEventModel(_.unique_id);
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               eventModel: _,
             }),
             (0, _._)(_),
@@ -5296,7 +5052,7 @@
           const { solrData: _ } = this.props;
           let _ = _._.GetClanEventModel(_.unique_id);
           (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               eventModel: _,
             }),
             (0, _._)(_),
@@ -5312,20 +5068,15 @@
             _ = null;
           if (_) {
             this.state.bShowAsModal &&
-              (_ = _.createElement(
-                _._,
-                {
-                  className: _.StoreHeaderAdjust,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(_._, {
+              (_ = (0, _.jsx)(_._, {
+                className: _.StoreHeaderAdjust,
+                children: (0, _.jsx)("div", {
+                  children: (0, _.jsx)(_._, {
                     event: _,
                     fnClose: this.HideModalEvent,
                   }),
-                ),
-              ));
+                }),
+              }));
             const _ = _.GetImageForSizeAsArrayWithFallback(
                 "capsule",
                 _,
@@ -5334,28 +5085,22 @@
               _ = _.BImageNeedScreenshotFallback("capsule", _);
             _ =
               _.length > 0
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(_._, {
-                      rgSources: _,
-                    }),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        rgSources: _,
+                      }),
+                      _ &&
+                        (0, _.jsx)("div", {
                           className: _.NoCapsuleFallback,
-                        },
-                        (0, _._)("#EventModTile_FallbackImageText"),
-                      ),
-                  )
-                : _.createElement(
-                    "div",
-                    {
-                      className: _.NoCapsule,
-                    },
-                    (0, _._)("#EventModTile_NoCapsule"),
-                  );
+                          children: (0, _._)("#EventModTile_FallbackImageText"),
+                        }),
+                    ],
+                  })
+                : (0, _.jsx)("div", {
+                    className: _.NoCapsule,
+                    children: (0, _._)("#EventModTile_NoCapsule"),
+                  });
           } else _ = (0, _._)("#Loading");
           const _ = _.last_modified_date
               ? Date.parse(_.last_modified_date) / 1e3
@@ -5366,169 +5111,148 @@
             _ = `${_._.STORE_BASE_URL}news/${_}/view/${_.announcement_gid}`,
             _ = Boolean(_ && _.BHasTag("adult_only_content")),
             _ = Boolean(_ && _.BHasTag("halloween"));
-          return _.createElement(
-            _._,
-            null,
-            _,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            children: [
+              _,
+              (0, _.jsxs)("div", {
                 className: (0, _._)({
                   [_.Tile]: !0,
                   [_.HalloweenEvent]: _,
                 }),
-              },
-              _.createElement(
-                "a",
-                {
-                  href: _,
-                  className: _.TileCapsule,
-                  onClick: this.ShowModalEvent,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.TileDetails,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DetailsLeft,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      className: _.EventTitle,
-                      href: _,
-                      onClick: this.ShowModalEvent,
-                    },
-                    _.event_name,
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.TileEventType,
-                        1 == _ ? _.TileEventOtherType : "",
-                      ),
-                    },
-                    _ ? _.GetCategoryAsString() : _.event_type,
-                  ),
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.HasAdultContent,
-                      },
-                      (0, _._)("#EventModTile_HasAdultContent"),
-                    ),
-                  this.state.bLoadingEvent &&
-                    _.createElement(_._, {
-                      size: "small",
-                      string: (0, _._)("#Loading"),
-                    }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ChannelInfo,
-                    },
-                    _.createElement(_, {
-                      appid: _,
-                      clanSteamID: new _._(_.clan_steamid),
-                    }),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DetailsMiddle,
-                  },
-                  _ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_, {
-                        onClick: this.SetModeratedState,
-                        bSaving: this.state.bSavingModeration,
-                        event: _,
-                      }),
-                      _.createElement(
-                        "button",
-                        {
-                          className: (0, _._)(_().Button, _.Button),
-                          onClick: this.OnChangeCategory,
-                        },
-                        (0, _._)("#EventModTile_ChangeEventType"),
-                      ),
-                      _.createElement(_, {
-                        onClick: this.SetAdultContentState,
-                        bSaving: this.state.bSavingModeration,
-                        event: _,
-                      }),
-                      _.createElement(_, {
-                        onClick: this.SetHalloweenEventState,
-                        bSaving: this.state.bSavingModeration,
-                        event: _,
-                      }),
-                      Boolean(_.BHasTag("halloween2019candidate")) &&
-                        _.createElement(
-                          "button",
-                          {
-                            className: (0, _._)(_().Button),
-                            onClick: this.OnUpdateSeasonalTag,
-                          },
-                          (0, _._)("#EventModTile_SeasonalTag"),
-                        ),
-                      _.createElement(_, {
-                        eventModel: _,
-                      }),
-                    ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DetailsRight,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.EventTimingBlock,
-                    },
-                    Boolean(_) &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.LastUpdateTime,
-                        },
-                        (0, _._)(
-                          "#EventModTile_LastModified",
-                          (0, _._)(_) +
-                            "@" +
-                            (0, _._)(_, {
-                              bForce24HourClock: !1,
+                children: [
+                  (0, _.jsx)("a", {
+                    href: _,
+                    className: _.TileCapsule,
+                    onClick: this.ShowModalEvent,
+                    children: _,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.TileDetails,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.DetailsLeft,
+                        children: [
+                          (0, _.jsx)("a", {
+                            className: _.EventTitle,
+                            href: _,
+                            onClick: this.ShowModalEvent,
+                            children: _.event_name,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _.TileEventType,
+                              1 == _ ? _.TileEventOtherType : "",
+                            ),
+                            children: _
+                              ? _.GetCategoryAsString()
+                              : _.event_type,
+                          }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _.HasAdultContent,
+                              children: (0, _._)(
+                                "#EventModTile_HasAdultContent",
+                              ),
                             }),
-                        ),
-                      ),
-                    _ &&
-                      _.createElement(_._, {
-                        event: _,
-                        stylesmodule: _,
-                        nOverrideEndTime: _.GetEndTimeAndDateUnixSeconds(),
-                        nOverrideStartTime: _.GetStartTimeAndDateUnixSeconds(),
+                          this.state.bLoadingEvent &&
+                            (0, _.jsx)(_._, {
+                              size: "small",
+                              string: (0, _._)("#Loading"),
+                            }),
+                          (0, _.jsx)("div", {
+                            className: _.ChannelInfo,
+                            children: (0, _.jsx)(_, {
+                              appid: _,
+                              clanSteamID: new _._(_.clan_steamid),
+                            }),
+                          }),
+                        ],
                       }),
-                  ),
-                  _ &&
-                    _.createElement(_, {
-                      event: _,
-                      hidden: _.hidden,
-                      published: _.published,
-                    }),
-                ),
-              ),
-            ),
-          );
+                      (0, _.jsx)("div", {
+                        className: _.DetailsMiddle,
+                        children:
+                          _ &&
+                          (0, _.jsxs)(_.Fragment, {
+                            children: [
+                              (0, _.jsx)(_, {
+                                onClick: this.SetModeratedState,
+                                bSaving: this.state.bSavingModeration,
+                                event: _,
+                              }),
+                              (0, _.jsx)("button", {
+                                className: (0, _._)(_().Button, _.Button),
+                                onClick: this.OnChangeCategory,
+                                children: (0, _._)(
+                                  "#EventModTile_ChangeEventType",
+                                ),
+                              }),
+                              (0, _.jsx)(_, {
+                                onClick: this.SetAdultContentState,
+                                bSaving: this.state.bSavingModeration,
+                                event: _,
+                              }),
+                              (0, _.jsx)(_, {
+                                onClick: this.SetHalloweenEventState,
+                                bSaving: this.state.bSavingModeration,
+                                event: _,
+                              }),
+                              Boolean(_.BHasTag("halloween2019candidate")) &&
+                                (0, _.jsx)("button", {
+                                  className: (0, _._)(_().Button),
+                                  onClick: this.OnUpdateSeasonalTag,
+                                  children: (0, _._)(
+                                    "#EventModTile_SeasonalTag",
+                                  ),
+                                }),
+                              (0, _.jsx)(_, {
+                                eventModel: _,
+                              }),
+                            ],
+                          }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.DetailsRight,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _.EventTimingBlock,
+                            children: [
+                              Boolean(_) &&
+                                (0, _.jsx)("div", {
+                                  className: _.LastUpdateTime,
+                                  children: (0, _._)(
+                                    "#EventModTile_LastModified",
+                                    (0, _._)(_) +
+                                      "@" +
+                                      (0, _._)(_, {
+                                        bForce24HourClock: !1,
+                                      }),
+                                  ),
+                                }),
+                              _ &&
+                                (0, _.jsx)(_._, {
+                                  event: _,
+                                  stylesmodule: _,
+                                  nOverrideEndTime:
+                                    _.GetEndTimeAndDateUnixSeconds(),
+                                  nOverrideStartTime:
+                                    _.GetStartTimeAndDateUnixSeconds(),
+                                }),
+                            ],
+                          }),
+                          _ &&
+                            (0, _.jsx)(_, {
+                              event: _,
+                              hidden: _.hidden,
+                              published: _.published,
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "ShowModalEvent", null),
@@ -5593,100 +5317,91 @@
             _ = _ + _ + _ + _,
             _ = this.CountLanguages(_.jsondata.localized_summary),
             _ = this.CountLanguages(_.jsondata.localized_subtitle);
-          return _.createElement(
-            "div",
-            {
-              className: _.AnalysisCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.AnalysisCtn,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.TileTitle,
-              },
-              (0, _._)("#EventModTile_Analysis"),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#EventModTile_Stats_Comments", _.nCommentCount),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#EventModTile_Stats_VoteUp", _.nVotesUp),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#EventModTile_Stats_VoteDown", _.nVotesDown),
-            ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _.ArtHeader,
-                },
-                (0, _._)("#EventModTile_ImageAnalysis_Header", _),
-                " ",
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventModTile_ImageAnalysis_Capsule", _),
-                " ",
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _.ArtSpotlight,
-                },
-                (0, _._)("#EventModTile_ImageAnalysis_Spotlight", _),
-                " ",
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventModTile_ImageAnalysis_Broadcast", _),
-                " ",
-              ),
-            0 == _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.AnalysisMissing,
-                },
-                (0, _._)("#EventModTile_ImageAnalysis_None"),
-                " ",
-              ),
-            0 == this.state.nLocLanguages &&
-              _.createElement(_._, {
-                size: "small",
-                string: (0, _._)("#EventModTile_LoadingLocs"),
+                children: (0, _._)("#EventModTile_Analysis"),
               }),
-            this.state.nLocLanguages > 0 &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventModTile_Languages", this.state.nLocLanguages),
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventModTile_Languages_Summary", _),
-                " ",
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventModTile_Languages_Subtitle", _),
-                " ",
-              ),
-          );
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#EventModTile_Stats_Comments",
+                  _.nCommentCount,
+                ),
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)("#EventModTile_Stats_VoteUp", _.nVotesUp),
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#EventModTile_Stats_VoteDown",
+                  _.nVotesDown,
+                ),
+              }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  className: _.ArtHeader,
+                  children: [
+                    (0, _._)("#EventModTile_ImageAnalysis_Header", _),
+                    " ",
+                  ],
+                }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#EventModTile_ImageAnalysis_Capsule", _),
+                    " ",
+                  ],
+                }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  className: _.ArtSpotlight,
+                  children: [
+                    (0, _._)("#EventModTile_ImageAnalysis_Spotlight", _),
+                    " ",
+                  ],
+                }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#EventModTile_ImageAnalysis_Broadcast", _),
+                    " ",
+                  ],
+                }),
+              0 == _ &&
+                (0, _.jsxs)("div", {
+                  className: _.AnalysisMissing,
+                  children: [(0, _._)("#EventModTile_ImageAnalysis_None"), " "],
+                }),
+              0 == this.state.nLocLanguages &&
+                (0, _.jsx)(_._, {
+                  size: "small",
+                  string: (0, _._)("#EventModTile_LoadingLocs"),
+                }),
+              this.state.nLocLanguages > 0 &&
+                (0, _.jsx)("div", {
+                  children: (0, _._)(
+                    "#EventModTile_Languages",
+                    this.state.nLocLanguages,
+                  ),
+                }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#EventModTile_Languages_Summary", _),
+                    " ",
+                  ],
+                }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#EventModTile_Languages_Subtitle", _),
+                    " ",
+                  ],
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -5736,87 +5451,67 @@
           }, [_]),
           _)
         )
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             size: "small",
             string: (0, _._)("#EventModTile_AppInfoLoading"),
           });
         if (_) {
           const _ = _._.Get().GetApp(_);
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.TileAppInfo,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.TileAppInfoTitle,
-                  },
-                  _.createElement(
-                    _._,
-                    {
+            ? (0, _.jsx)("div", {
+                className: _.TileAppInfo,
+                children: (0, _.jsxs)("div", {
+                  className: _.TileAppInfoTitle,
+                  children: [
+                    (0, _.jsx)(_._, {
                       _: _,
-                    },
-                    _.createElement(
-                      _._,
-                      {
+                      children: (0, _.jsx)(_._, {
                         href: (0, _._)(_.GetStorePageURL()),
-                      },
-                      _.createElement("img", {
-                        className: _.TileAppInfoImage,
-                        src: _.GetAssets().GetMainCapsuleURL(),
+                        children: (0, _.jsx)("img", {
+                          className: _.TileAppInfoImage,
+                          src: _.GetAssets().GetMainCapsuleURL(),
+                        }),
                       }),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                    }),
+                    (0, _.jsx)(_._, {
                       _: _,
-                    },
-                    _.createElement(
-                      _._,
-                      {
+                      children: (0, _.jsx)(_._, {
                         href: (0, _._)(_.GetStorePageURL()),
-                      },
-                      _.createElement("div", null, _.GetName()),
-                    ),
-                  ),
-                ),
-              )
+                        children: (0, _.jsx)("div", {
+                          children: _.GetName(),
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+              })
             : null;
         }
         if (__webpack_require__) {
           const _ = __webpack_require__.GetAccountID(),
             _ = _._.GetClanInfoByClanAccountID(_);
           if (_ && _.is_curator)
-            return _.createElement(
-              "div",
-              {
-                className: _.TileAppInfo,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TileAppInfoTitle,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    href: (0, _._)(_._.STORE_BASE_URL + "/curator/" + _ + "/"),
-                  },
-                  _.createElement("img", {
-                    className: _.TileAppInfoImage,
-                    src: _.avatar_full_url,
-                  }),
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#EventModTile_CuratorName", _.group_name),
-                  ),
-                ),
-              ),
-            );
+            return (0, _.jsx)("div", {
+              className: _.TileAppInfo,
+              children: (0, _.jsx)("div", {
+                className: _.TileAppInfoTitle,
+                children: (0, _.jsxs)(_._, {
+                  href: (0, _._)(_._.STORE_BASE_URL + "/curator/" + _ + "/"),
+                  children: [
+                    (0, _.jsx)("img", {
+                      className: _.TileAppInfoImage,
+                      src: _.avatar_full_url,
+                    }),
+                    (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#EventModTile_CuratorName",
+                        _.group_name,
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+            });
         }
         return null;
       });
@@ -5844,91 +5539,77 @@
               _ &&
               !_.BHasTag("hide_library_detail") &&
               !_.BHasTag("mod_hide_library_detail");
-          return _.createElement(
-            "div",
-            {
-              className: _.VisibiltyCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.VisibiltyCtn,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.TileTitle,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#EventModTile_Store_Visibility",
-                _
-                  ? (0, _._)("#WriteReview_Dialog_Yes")
-                  : (0, _._)("#WriteReview_Dialog_No"),
-                _
-                  ? ""
-                  : _
-                    ? (0, _._)(
-                        "#EventModTime_Hidden_EventType",
-                        _.GetEventTypeAsString(),
-                      )
-                    : _.BHasTag("hide_store")
-                      ? (0, _._)("#EventModTime_Hidden_OptOut")
-                      : (0, _._)("#EventModTime_Hidden_Moderator"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#EventModTile_LibraryHome_Visibility",
-                _
-                  ? (0, _._)("#WriteReview_Dialog_Yes")
-                  : (0, _._)("#WriteReview_Dialog_No"),
-                _
-                  ? ""
-                  : _
-                    ? (0, _._)(
-                        "#EventModTime_Hidden_EventType",
-                        _.GetEventTypeAsString(),
-                      )
-                    : _.BHasTag("hide_library_overview")
-                      ? (0, _._)("#EventModTime_Hidden_OptOut")
-                      : (0, _._)("#EventModTime_Hidden_Moderator"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#EventModTile_LibraryDetail_Visibility",
-                _
-                  ? (0, _._)("#WriteReview_Dialog_Yes")
-                  : (0, _._)("#WriteReview_Dialog_No"),
-                _
-                  ? ""
-                  : _
-                    ? (0, _._)(
-                        "#EventModTime_Hidden_EventType",
-                        _.GetEventTypeAsString(),
-                      )
-                    : _.BHasTag("hide_library_detail")
-                      ? (0, _._)("#EventModTime_Hidden_OptOut")
-                      : (0, _._)("#EventModTime_Hidden_Moderator"),
-              ),
-            ),
-            _.BHasTag("enable_steam_china") &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventModTile_SteamChina_Visibility"),
-              ),
-            _.BHasTag("disable_steam_global") &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventModTile_SteamGlobal_Hidden"),
-              ),
-          );
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#EventModTile_Store_Visibility",
+                  _
+                    ? (0, _._)("#WriteReview_Dialog_Yes")
+                    : (0, _._)("#WriteReview_Dialog_No"),
+                  _
+                    ? ""
+                    : _
+                      ? (0, _._)(
+                          "#EventModTime_Hidden_EventType",
+                          _.GetEventTypeAsString(),
+                        )
+                      : _.BHasTag("hide_store")
+                        ? (0, _._)("#EventModTime_Hidden_OptOut")
+                        : (0, _._)("#EventModTime_Hidden_Moderator"),
+                ),
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#EventModTile_LibraryHome_Visibility",
+                  _
+                    ? (0, _._)("#WriteReview_Dialog_Yes")
+                    : (0, _._)("#WriteReview_Dialog_No"),
+                  _
+                    ? ""
+                    : _
+                      ? (0, _._)(
+                          "#EventModTime_Hidden_EventType",
+                          _.GetEventTypeAsString(),
+                        )
+                      : _.BHasTag("hide_library_overview")
+                        ? (0, _._)("#EventModTime_Hidden_OptOut")
+                        : (0, _._)("#EventModTime_Hidden_Moderator"),
+                ),
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#EventModTile_LibraryDetail_Visibility",
+                  _
+                    ? (0, _._)("#WriteReview_Dialog_Yes")
+                    : (0, _._)("#WriteReview_Dialog_No"),
+                  _
+                    ? ""
+                    : _
+                      ? (0, _._)(
+                          "#EventModTime_Hidden_EventType",
+                          _.GetEventTypeAsString(),
+                        )
+                      : _.BHasTag("hide_library_detail")
+                        ? (0, _._)("#EventModTime_Hidden_OptOut")
+                        : (0, _._)("#EventModTime_Hidden_Moderator"),
+                ),
+              }),
+              _.BHasTag("enable_steam_china") &&
+                (0, _.jsx)("div", {
+                  children: (0, _._)("#EventModTile_SteamChina_Visibility"),
+                }),
+              _.BHasTag("disable_steam_global") &&
+                (0, _.jsx)("div", {
+                  children: (0, _._)("#EventModTile_SteamGlobal_Hidden"),
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -6085,53 +5766,47 @@
             8 == _.getMonth() || 9 == _.getMonth()
               ? __webpack_require__.unshift(..._)
               : __webpack_require__.push(..._),
-            _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#EventModTile_ChangeEventType"),
-                strDescription: (0, _._)(
-                  "#EventModTile_ChangeEventType_Desc",
-                  _.GetEventTypeAsString(),
-                ),
-                onCancel: _,
-                onOK: () =>
-                  this.setState(
-                    {
-                      bUpdating: !0,
-                    },
-                    this.ChangeCategoryForEvent,
-                  ),
-              },
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CategoryChangeDialog,
-                  },
-                  _.createElement("br", null),
-                  this.state.bUpdating &&
-                    _.createElement(_._, {
-                      size: "small",
-                    }),
-                  this.state.strErrorMsg &&
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#Chat_Settings_Error_ServerError"),
-                      _.createElement("br", null),
-                      this.state.strErrorMsg,
-                    ),
-                  _.createElement(_._, {
-                    isSearchable: !0,
-                    onChange: this.OnChangeSelection,
-                    value: this.state.newCategoryOption,
-                    options: _,
-                  }),
-                ),
+            (0, _.jsx)(_._, {
+              strTitle: (0, _._)("#EventModTile_ChangeEventType"),
+              strDescription: (0, _._)(
+                "#EventModTile_ChangeEventType_Desc",
+                _.GetEventTypeAsString(),
               ),
-            )
+              onCancel: _,
+              onOK: () =>
+                this.setState(
+                  {
+                    bUpdating: !0,
+                  },
+                  this.ChangeCategoryForEvent,
+                ),
+              children: (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)("div", {
+                  className: _.CategoryChangeDialog,
+                  children: [
+                    (0, _.jsx)("br", {}),
+                    this.state.bUpdating &&
+                      (0, _.jsx)(_._, {
+                        size: "small",
+                      }),
+                    this.state.strErrorMsg &&
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _._)("#Chat_Settings_Error_ServerError"),
+                          (0, _.jsx)("br", {}),
+                          this.state.strErrorMsg,
+                        ],
+                      }),
+                    (0, _.jsx)(_._, {
+                      isSearchable: !0,
+                      onChange: this.OnChangeSelection,
+                      value: this.state.newCategoryOption,
+                      options: _,
+                    }),
+                  ],
+                }),
+              }),
+            })
           );
         }
       };
@@ -6197,86 +5872,71 @@
         }
         render() {
           const { eventModel: _, closeModal: _ } = this.props;
-          return _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#EventModTile_SeasonalTag"),
-              onCancel: _,
-              onOK: () =>
-                this.setState(
-                  {
-                    bUpdating: !0,
-                  },
-                  this.ApplyAction,
-                ),
-            },
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
+          return (0, _.jsx)(_._, {
+            strTitle: (0, _._)("#EventModTile_SeasonalTag"),
+            onCancel: _,
+            onOK: () =>
+              this.setState(
                 {
-                  className: _.CategoryChangeDialog,
+                  bUpdating: !0,
                 },
-                _.createElement("input", {
-                  _: "Acceptance",
-                  type: "checkbox",
-                  checked: this.state.bAccept,
-                  onChange: this.ChangeAcceptance,
-                }),
-                _.createElement(
-                  "label",
-                  {
-                    htmlFor: "Acceptance",
-                  },
-                  (0, _._)("#EventModTile_SeasonalTag_Desc"),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#EventModTile_SeasonalTag_Desc_Secondary"),
-                ),
-                _.createElement("input", {
-                  _: "Horror",
-                  type: "checkbox",
-                  checked: this.state.bHorror,
-                  onChange: this.ChangeHorror,
-                }),
-                _.createElement(
-                  "label",
-                  {
-                    htmlFor: "Horror",
-                  },
-                  "Horror Tag",
-                ),
-                _.createElement("input", {
-                  _: "Cute",
-                  type: "checkbox",
-                  checked: this.state.bCute,
-                  onChange: this.ChangeCute,
-                }),
-                _.createElement(
-                  "label",
-                  {
-                    htmlFor: "Cute",
-                  },
-                  "Cute Tag",
-                ),
-                this.state.bUpdating &&
-                  _.createElement(_._, {
-                    size: "small",
-                  }),
-                this.state.strErrorMsg &&
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#Chat_Settings_Error_ServerError"),
-                    _.createElement("br", null),
-                    this.state.strErrorMsg,
-                  ),
+                this.ApplyAction,
               ),
-            ),
-          );
+            children: (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)("div", {
+                className: _.CategoryChangeDialog,
+                children: [
+                  (0, _.jsx)("input", {
+                    _: "Acceptance",
+                    type: "checkbox",
+                    checked: this.state.bAccept,
+                    onChange: this.ChangeAcceptance,
+                  }),
+                  (0, _.jsx)("label", {
+                    htmlFor: "Acceptance",
+                    children: (0, _._)("#EventModTile_SeasonalTag_Desc"),
+                  }),
+                  (0, _.jsx)("div", {
+                    children: (0, _._)(
+                      "#EventModTile_SeasonalTag_Desc_Secondary",
+                    ),
+                  }),
+                  (0, _.jsx)("input", {
+                    _: "Horror",
+                    type: "checkbox",
+                    checked: this.state.bHorror,
+                    onChange: this.ChangeHorror,
+                  }),
+                  (0, _.jsx)("label", {
+                    htmlFor: "Horror",
+                    children: "Horror Tag",
+                  }),
+                  (0, _.jsx)("input", {
+                    _: "Cute",
+                    type: "checkbox",
+                    checked: this.state.bCute,
+                    onChange: this.ChangeCute,
+                  }),
+                  (0, _.jsx)("label", {
+                    htmlFor: "Cute",
+                    children: "Cute Tag",
+                  }),
+                  this.state.bUpdating &&
+                    (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  this.state.strErrorMsg &&
+                    (0, _.jsxs)("div", {
+                      children: [
+                        (0, _._)("#Chat_Settings_Error_ServerError"),
+                        (0, _.jsx)("br", {}),
+                        this.state.strErrorMsg,
+                      ],
+                    }),
+                ],
+              }),
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "ChangeAcceptance", null),
@@ -6365,7 +6025,7 @@
             this.state.bLoadingApps ||
             this.state.bLoadingAssociatedDemoInfo
           )
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               string:
                 (0, _._)("#Loading") +
                 (this.state.bLoadingEvent
@@ -6380,29 +6040,30 @@
               position: "center",
             });
           if (!this.state.event)
-            return _.createElement("div", null, " Failed to load event");
+            return (0, _.jsx)("div", {
+              children: " Failed to load event",
+            });
           const { event: _ } = this.state;
           if (!_.jsondata.bSaleEnabled)
-            return _.createElement("div", null, "Not a sale event");
+            return (0, _.jsx)("div", {
+              children: "Not a sale event",
+            });
           let _ = new Array(),
             _ = new Array();
           this.state.rgAppIDs
             .filter((_) => !_._.Get().GetApp(_))
             .forEach((_) => {
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "div",
                   {
-                    key: "missing: " + _,
-                  },
-                  _.createElement(
-                    "a",
-                    {
+                    children: (0, _.jsx)("a", {
                       href: _._.STORE_BASE_URL + "app/" + _ + "/?beta=1",
                       target: "_blank",
-                    },
-                    _,
-                  ),
+                      children: _,
+                    }),
+                  },
+                  "missing: " + _,
                 ),
               ),
                 __webpack_require__.push(_);
@@ -6417,38 +6078,33 @@
             if (_ && !_.BHasDemo()) {
               let _ = _._.Get().GetApp(_);
               _.push(
-                _.createElement(
+                (0, _.jsxs)(
                   "div",
                   {
-                    key: "missingdemo_" + _,
+                    children: [
+                      1 == _?.GetAppType() &&
+                        (0, _.jsx)("b", {
+                          children:
+                            "--Error: Sale Page has Demo AppID, based game -- ",
+                        }),
+                      _?.GetName(),
+                      " (",
+                      _,
+                      ")",
+                      (0, _.jsx)("a", {
+                        href: (0, _._)(_.GetStorePageURL() + "?beta=0"),
+                        target: "_blank",
+                        children: "Store Page",
+                      }),
+                      " ",
+                      (0, _.jsx)("a", {
+                        href: _._.PARTNER_BASE_URL + "apps/landing/" + _,
+                        target: "_blank",
+                        children: "App Landing Page",
+                      }),
+                    ],
                   },
-                  1 == _?.GetAppType() &&
-                    _.createElement(
-                      "b",
-                      null,
-                      "--Error: Sale Page has Demo AppID, based game -- ",
-                    ),
-                  _?.GetName(),
-                  " (",
-                  _,
-                  ")",
-                  _.createElement(
-                    "a",
-                    {
-                      href: (0, _._)(_.GetStorePageURL() + "?beta=0"),
-                      target: "_blank",
-                    },
-                    "Store Page",
-                  ),
-                  " ",
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.PARTNER_BASE_URL + "apps/landing/" + _,
-                      target: "_blank",
-                    },
-                    "App Landing Page",
-                  ),
+                  "missingdemo_" + _,
                 ),
               );
             }
@@ -6473,158 +6129,163 @@
               const _ = _._.Get().GetApp(_);
               1 != _?.GetAppType() && (_ += 1);
             }),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "h1",
-                null,
-                _.GetNameWithFallback((0, _._)(_._.LANGUAGE)),
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Unique AppIDs:"),
-                " ",
-                this.state.rgAppIDs.length,
-                " ",
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "b",
-                  null,
-                  "Visible Apps in ",
-                  _._.COUNTRY,
-                  ":",
-                ),
-                " ",
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)("h1", {
+                  children: _.GetNameWithFallback((0, _._)(_._.LANGUAGE)),
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "Unique AppIDs:",
+                    }),
+                    " ",
+                    this.state.rgAppIDs.length,
+                    " ",
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsxs)("b", {
+                      children: ["Visible Apps in ", _._.COUNTRY, ":"],
+                    }),
+                    " ",
+                    _,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "Unknown AppID types:",
+                    }),
+                    " ",
+                    this.state.rgUnknownTypeAppIDs.length,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "Missing AppIDs:",
+                    }),
+                    " ",
+                    " ",
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "Demos:",
+                    }),
+                    " ",
+                    _,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "Visible apps missing demo store:",
+                    }),
+                    " ",
+                    _.length,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "CApplications Loaded:",
+                    }),
+                    " ",
+                    " ",
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "CApplication with Associated Demos:",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children:
+                        "  Associated with store page but not released: ",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "CApplication with demo without association:",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children:
+                        "  Released but not associated with store page: ",
+                    }),
+                    " ",
+                    0,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "CApplication missing:",
+                    }),
+                    " ",
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children:
+                        "CApplication without demo store and demo associations:",
+                    }),
+                    " ",
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "Released Demo: ",
+                    }),
+                    _,
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "Unreleased Demo: ",
+                    }),
+                    _,
+                  ],
+                }),
+                (0, _.jsx)("hr", {}),
+                (0, _.jsx)("h2", {
+                  children: "Missing Appids:",
+                }),
                 _,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Unknown AppID types:"),
-                " ",
-                this.state.rgUnknownTypeAppIDs.length,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Missing AppIDs:"),
-                " ",
-                " ",
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Demos:"),
-                " ",
+                (0, _.jsx)("h2", {
+                  children:
+                    "Missing BOTH demo list and associated demo on product page:",
+                }),
                 _,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Visible apps missing demo store:"),
-                " ",
-                _.length,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "CApplications Loaded:"),
-                " ",
-                " ",
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "b",
-                  null,
-                  "CApplication with Associated Demos:",
-                ),
-                " ",
-                0,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "b",
-                  null,
-                  "  Associated with store page but not released: ",
-                ),
-                " ",
-                0,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "b",
-                  null,
-                  "CApplication with demo without association:",
-                ),
-                " ",
-                0,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "b",
-                  null,
-                  "  Released but not associated with store page: ",
-                ),
-                " ",
-                0,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "CApplication missing:"),
-                " ",
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "b",
-                  null,
-                  "CApplication without demo store and demo associations:",
-                ),
-                " ",
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Released Demo: "),
+                (0, _.jsx)("h2", {
+                  children:
+                    "Missing Demos for Visible Appids via Demo Store (missing in link on Sale Page):",
+                }),
                 _,
-              ),
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Unreleased Demo: "),
-                _,
-              ),
-              _.createElement("hr", null),
-              _.createElement("h2", null, "Missing Appids:"),
-              _,
-              _.createElement(
-                "h2",
-                null,
-                "Missing BOTH demo list and associated demo on product page:",
-              ),
-              _,
-              _.createElement(
-                "h2",
-                null,
-                "Missing Demos for Visible Appids via Demo Store (missing in link on Sale Page):",
-              ),
-              _,
-            )
+              ],
+            })
           );
         }
       };
@@ -6682,52 +6343,48 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = () =>
-        _.createElement(
-          _,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                path: _._.EventGameFestivalDebug(),
-                render: (_) =>
-                  _.createElement(_, {
-                    ..._,
-                    clanAccountID: _.match.params.clanacountid,
-                    clanEventGID: _.match.params.claneventgid,
-                  }),
-              }),
-              _.createElement(_._, {
-                exact: !0,
-                path: _._.EventBackfill(),
-                render: (_) =>
-                  _.createElement(_, {
-                    ..._,
-                  }),
-              }),
-              _.createElement(_._, {
-                path: _._.EventRSSModeration(),
-                render: (_) =>
-                  _.createElement(_, {
-                    ..._,
-                  }),
-              }),
-              _.createElement(_._, {
-                path: _._.EventModeration(),
-                render: (_) =>
-                  _.createElement(_, {
-                    ..._,
-                    appid:
-                      _.match.params.appid &&
-                      Number.parseInt(_.match.params.appid),
-                  }),
-              }),
-            ),
-          ),
-        );
+        (0, _.jsx)(_, {
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  path: _._.EventGameFestivalDebug(),
+                  render: (_) =>
+                    (0, _.jsx)(_, {
+                      ..._,
+                      clanAccountID: _.match.params.clanacountid,
+                      clanEventGID: _.match.params.claneventgid,
+                    }),
+                }),
+                (0, _.jsx)(_._, {
+                  exact: !0,
+                  path: _._.EventBackfill(),
+                  render: (_) =>
+                    (0, _.jsx)(_, {
+                      ..._,
+                    }),
+                }),
+                (0, _.jsx)(_._, {
+                  path: _._.EventRSSModeration(),
+                  render: (_) =>
+                    (0, _.jsx)(_, {
+                      ..._,
+                    }),
+                }),
+                (0, _.jsx)(_._, {
+                  path: _._.EventModeration(),
+                  render: (_) =>
+                    (0, _.jsx)(_, {
+                      ..._,
+                      appid:
+                        _.match.params.appid &&
+                        Number.parseInt(_.match.params.appid),
+                    }),
+                }),
+              ],
+            }),
+          }),
+        });
     },
   },
 ]);

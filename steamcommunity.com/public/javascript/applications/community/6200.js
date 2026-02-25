@@ -12,61 +12,62 @@
     },
     42714: (e, t, n) => {
       "use strict";
-      n.d(t, { F: () => r });
+      n.d(t, { F: () => s });
       var o = n(26205);
-      function r(e, t, n, r) {
-        let s,
+      function s(e, t, n, s) {
+        let r,
           i = [];
-        for (; (s = t.match(o.O)); ) {
-          s.index > 0 && i.push(e.text(t.substring(0, s.index)));
-          const l = (0, o.S)(s[0]),
-            a = r && r(l);
+        for (; (r = t.match(o.O)); ) {
+          r.index > 0 && i.push(e.text(t.substring(0, r.index)));
+          const l = (0, o.S)(r[0]),
+            a = s && s(l);
           a && "default" !== a
             ? "remove" !== a && i.push(a)
-            : i.push(e.text(s[0], [n.create({ href: l })])),
-            (t = t.substring(s.index + s[0].length));
+            : i.push(e.text(r[0], [n.create({ href: l })])),
+            (t = t.substring(r.index + r[0].length));
         }
         if (0 != i.length) return t.length && i.push(e.text(t)), i;
       }
     },
     28106: (e, t, n) => {
       "use strict";
-      n.d(t, { W: () => u });
-      var o = n(57053),
+      n.d(t, { W: () => h });
+      var o = n(7850),
+        s = n(57053),
         r = n(52893),
-        s = n(90626),
-        i = n(61859),
-        l = n(17558),
-        a = n(22145),
-        c = n(59722),
-        d = n(42714);
-      const u = s.memo(function (e) {
+        i = n(90626),
+        l = n(61859),
+        a = n(17558),
+        c = n(22145),
+        d = n(59722),
+        u = n(42714);
+      const h = i.memo(function (e) {
         const {
             linkMarkType: t,
             onURLPasted: n,
-            schema: i,
-            onClickURL: c = h,
+            schema: l,
+            onClickURL: d = p,
           } = e,
-          u = s.useRef(c);
-        u.current = c;
-        const [p, f] = s.useState(),
-          [g, v] = s.useState(),
-          [w, P] = s.useState(),
-          [E, _] = (0, l.E)(i),
-          y = s.useMemo(
+          h = i.useRef(d);
+        h.current = d;
+        const [f, g] = i.useState(),
+          [v, w] = i.useState(),
+          [P, _] = i.useState(),
+          [x, y] = (0, a.E)(l),
+          R = i.useMemo(
             () =>
               new r.k_({
                 props: {
-                  handleClickOn(e, n, o, r, s, i) {
-                    if (i && (s.ctrlKey || 1 == s.button)) {
+                  handleClickOn(e, n, o, s, r, i) {
+                    if (i && (r.ctrlKey || 1 == r.button)) {
                       const e = o
-                        .resolve(n - r)
+                        .resolve(n - s)
                         .marks()
                         .find((e) => e.type == t);
                       if (e)
                         return (
-                          u.current(e.attrs.href, s.view),
-                          s.preventDefault(),
+                          h.current(e.attrs.href, r.view),
+                          r.preventDefault(),
                           !0
                         );
                     }
@@ -78,34 +79,34 @@
                       (!t.metaKey && !t.ctrlKey) ||
                       t.shiftKey ||
                       t.altKey
-                    ) && (E(e), !0),
-                  clipboardTextParser(e, r, s, l) {
-                    const a = (0, d.F)(i, e, t, n);
-                    return a && new o.Ji(o.FK.from(a), r.start(), r.end());
+                    ) && (x(e), !0),
+                  clipboardTextParser(e, o, r, i) {
+                    const a = (0, u.F)(l, e, t, n);
+                    return a && new s.Ji(s.FK.from(a), o.start(), o.end());
                   },
-                  handlePaste(e, r, s) {
-                    let l = [];
+                  handlePaste(e, o, r) {
+                    let i = [];
                     if (
-                      (s.content.descendants((e, o) => {
+                      (r.content.descendants((e, o) => {
                         if (e.isText) {
-                          const r = (0, d.F)(i, e.text, t, n);
-                          r && l.push({ node: e, pos: o, rgNodes: r });
+                          const s = (0, u.F)(l, e.text, t, n);
+                          s && i.push({ node: e, pos: o, rgNodes: s });
                         }
                       }),
-                      !l.length)
+                      !i.length)
                     )
                       return !1;
                     let a = e.state.tr;
                     a.selection.empty || a.deleteSelection();
                     let c = a.selection.from,
-                      u = 0;
-                    for (const e of l) {
-                      const { node: t, pos: n, rgNodes: r } = e,
-                        i = s.content.cut(u, n).append(o.FK.from(r));
-                      a.insert(c, i), (c += i.size + 2), (u = n + t.nodeSize);
+                      d = 0;
+                    for (const e of i) {
+                      const { node: t, pos: n, rgNodes: o } = e,
+                        i = r.content.cut(d, n).append(s.FK.from(o));
+                      a.insert(c, i), (c += i.size + 2), (d = n + t.nodeSize);
                     }
                     return (
-                      a.insert(c, s.content.cut(u)),
+                      a.insert(c, r.content.cut(d)),
                       a.scrollIntoView(),
                       e.dispatch(a),
                       !0
@@ -121,132 +122,133 @@
                         if ("A" == e.nodeName && "getBoundingClientRect" in e) {
                           const t = e.getBoundingClientRect();
                           return (
-                            f(t.left + t.width / 2), v(t.bottom + 2), void P(e)
+                            g(t.left + t.width / 2), w(t.bottom + 2), void _(e)
                           );
                         }
-                      P(void 0);
+                      _(void 0);
                     },
-                    mouseleave: (e, t) => (P(void 0), !1),
+                    mouseleave: (e, t) => (_(void 0), !1),
                   },
                 },
               }),
-            [t, E, n, i],
+            [t, x, n, l],
           );
-        (0, a.c$)(y);
+        (0, c.c$)(R);
         let k = null;
         return (
-          w &&
-            p &&
-            g &&
-            (k = s.createElement(m, {
-              top: g,
-              left: p,
-              href: w.getAttribute("href"),
+          P &&
+            f &&
+            v &&
+            (k = (0, o.jsx)(m, {
+              top: v,
+              left: f,
+              href: P.getAttribute("href"),
             })),
-          s.createElement(s.Fragment, null, k, _)
+          (0, o.jsxs)(o.Fragment, { children: [k, y] })
         );
       });
       function m(e) {
-        const { top: t, left: n, href: o } = e,
-          [r, l] = s.useState(0),
-          a = s.useRef(null);
-        s.useLayoutEffect(() => {
-          l(a.current.getBoundingClientRect().width);
-        }, [t, n, o]);
-        const d = { top: `${t}px`, left: `${Math.max(n - r / 2, 12)}px` };
-        return s.createElement(
-          "div",
-          { className: c.Hover, style: d, ref: a },
-          s.createElement("div", { className: c.Link }, o),
-          s.createElement(
-            "div",
-            { className: c.LinkHelp },
-            (0, i.we)("#UserGameNotes_ClickToOpenLink"),
-          ),
-        );
+        const { top: t, left: n, href: s } = e,
+          [r, a] = i.useState(0),
+          c = i.useRef(null);
+        i.useLayoutEffect(() => {
+          a(c.current.getBoundingClientRect().width);
+        }, [t, n, s]);
+        const u = { top: `${t}px`, left: `${Math.max(n - r / 2, 12)}px` };
+        return (0, o.jsxs)("div", {
+          className: d.Hover,
+          style: u,
+          ref: c,
+          children: [
+            (0, o.jsx)("div", { className: d.Link, children: s }),
+            (0, o.jsx)("div", {
+              className: d.LinkHelp,
+              children: (0, l.we)("#UserGameNotes_ClickToOpenLink"),
+            }),
+          ],
+        });
       }
-      function h(e, t) {
+      function p(e, t) {
         t.open(e);
       }
     },
     69956: (e, t, n) => {
       "use strict";
-      n.d(t, { M: () => u, U: () => a });
-      var o = n(91986),
+      n.d(t, { M: () => h, U: () => c });
+      var o = n(7850),
+        s = n(91986),
         r = n(52893),
-        s = n(90626),
-        i = n(72739),
-        l = n(22145);
-      const a = s.memo(function (e) {
+        i = n(90626),
+        l = n(72739),
+        a = n(22145);
+      const c = i.memo(function (e) {
         const { specs: t } = e,
-          [n, o] = s.useState([]),
-          i = s.useRef(0),
-          a = s.useCallback(
+          [n, s] = i.useState([]),
+          l = i.useRef(0),
+          c = i.useCallback(
             (e) => (
-              o((t) => [...t, { id: i.current++, nodeView: e }]),
-              () => o((t) => t.filter((t) => t.nodeView != e))
+              s((t) => [...t, { id: l.current++, nodeView: e }]),
+              () => s((t) => t.filter((t) => t.nodeView != e))
             ),
             [],
           ),
-          u = s.useMemo(() => {
+          h = i.useMemo(() => {
             const e = {};
             return (
               t
                 .filter(Boolean)
                 .forEach(
-                  (t) => (e[t.type.name] = (e, n, o) => new d(t, e, n, o, a)),
+                  (t) => (e[t.type.name] = (e, n, o) => new u(t, e, n, o, c)),
                 ),
               new r.k_({ props: { nodeViews: e } })
             );
-          }, [t, a]);
+          }, [t, c]);
         return (
-          (0, l.c$)(u),
-          n.map(({ id: e, nodeView: t }) =>
-            s.createElement(c, { key: e, nodeView: t }),
-          )
+          (0, a.c$)(h),
+          n.map(({ id: e, nodeView: t }) => (0, o.jsx)(d, { nodeView: t }, e))
         );
       });
-      function c(e) {
+      function d(e) {
         const {
             element: t,
             spec: n,
             getProps: o,
-            onPropsChanged: r,
-            actions: l,
+            onPropsChanged: s,
+            actions: r,
             isSelected: a,
           } = e.nodeView,
-          [c, d] = s.useReducer((e) => e + 1, 0);
+          [c, d] = i.useReducer((e) => e + 1, 0);
         return (
-          s.useEffect(() => r.Register(d).Unregister, [r, d]),
-          i.createPortal(
-            s.createElement(n.component, { ...o(), selected: a(), ...l }),
+          i.useEffect(() => s.Register(d).Unregister, [s, d]),
+          l.createPortal(
+            i.createElement(n.component, { ...o(), selected: a(), ...r }),
             t,
           )
         );
       }
-      class d {
-        constructor(e, t, n, r, s) {
+      class u {
+        constructor(e, t, n, o, r) {
           this.node = t;
           const i = n.dom.ownerDocument.createElement(
             e.type.isInline ? "span" : "div",
           );
           this.dom = i;
           const { selection: l } = n.state;
-          this.selected = r() >= l.from && r() + t.nodeSize <= l.to;
+          this.selected = o() >= l.from && o() + t.nodeSize <= l.to;
           const a = (e) => {
-              const o = e(n.state.tr, t, r());
-              o && n.dispatch(o);
+              const s = e(n.state.tr, t, o());
+              s && n.dispatch(s);
             },
             c = {
               update: a,
-              setAttrs: (e, t) => a((n, o, r) => n.setNodeMarkup(r, t, e)),
+              setAttrs: (e, t) => a((n, o, s) => n.setNodeMarkup(s, t, e)),
               removeNode: () => a((e, t, n) => e.delete(n, n + t.nodeSize)),
               focusView: () => {
                 window.setTimeout(() => n.focus(), 1);
               },
             },
-            d = new o.l();
-          (this.destroy = s({
+            d = new s.l();
+          (this.destroy = r({
             element: i,
             spec: e,
             getProps: () => e.readProps(this.node),
@@ -269,40 +271,41 @@
           (this.selected = !1), this.onPropsChanged();
         }
       }
-      function u(e) {
+      function h(e) {
         return (t, n, o) => t.replaceWith(o, o + n.nodeSize, e);
       }
     },
     86807: (e, t, n) => {
       "use strict";
-      n.d(t, { R: () => s });
-      var o = n(90626),
+      n.d(t, { R: () => i });
+      var o = n(7850),
+        s = n(90626),
         r = n(72739);
-      function s(e) {
+      function i(e) {
         const {
             id: t,
             role: n,
-            visible: s = !0,
-            className: i,
-            keepMounted: l = !1,
-            expandDirection: a = "height",
-            msAnimationDuration: c = 250,
-            children: d,
+            visible: i = !0,
+            className: l,
+            keepMounted: a = !1,
+            expandDirection: c = "height",
+            msAnimationDuration: d = 250,
+            children: u,
           } = e,
           {
-            style: u,
+            style: h,
             active: m,
-            refDiv: h,
+            refDiv: p,
           } = (function (e, t = "height", n = 250) {
-            const s = o.useRef(null),
-              i = o.useRef(!0),
-              [l, a] = o.useState("idle"),
-              [c, d] = o.useState(e ? {} : { [t]: "0px", overflow: "hidden" }),
-              [u, m] = o.useState(e);
-            o.useLayoutEffect(() => {
-              i.current || a("start"), e && m(e);
+            const o = s.useRef(null),
+              i = s.useRef(!0),
+              [l, a] = s.useState("idle"),
+              [c, d] = s.useState(e ? {} : { [t]: "0px", overflow: "hidden" }),
+              [u, h] = s.useState(e);
+            s.useLayoutEffect(() => {
+              i.current || a("start"), e && h(e);
             }, [e]),
-              o.useLayoutEffect(
+              s.useLayoutEffect(
                 () => (
                   (i.current = !1),
                   () => {
@@ -311,31 +314,31 @@
                 ),
                 [],
               ),
-              o.useLayoutEffect(() => {
-                const n = s.current,
-                  o = "height" == t ? "scrollHeight" : "scrollWidth",
+              s.useLayoutEffect(() => {
+                const n = o.current,
+                  s = "height" == t ? "scrollHeight" : "scrollWidth",
                   i = () => {
                     r.unstable_batchedUpdates(() => {
                       d(e ? {} : { [t]: "0px", overflow: "hidden" }),
                         a("idle"),
-                        m(e);
+                        h(e);
                     });
                   };
                 if ("start" == l) {
-                  const r = n[o];
-                  0 == r
+                  const o = n[s];
+                  0 == o
                     ? i()
                     : (d((n) => ({
-                        [t]: e ? "0px" : `${r}px`,
+                        [t]: e ? "0px" : `${o}px`,
                         ...n,
                         overflow: "hidden",
                       })),
                       a("active"));
                 } else if ("active" == l) {
                   n.scrollTop;
-                  const r = n[o];
+                  const o = n[s];
                   return (
-                    d({ overflow: "hidden", [t]: e ? `${r}px` : "0px" }),
+                    d({ overflow: "hidden", [t]: e ? `${o}px` : "0px" }),
                     n.addEventListener("transitionend", i),
                     () => {
                       n.removeEventListener("transitionend", i);
@@ -343,100 +346,106 @@
                   );
                 }
               }, [l, e]);
-            const h = { ...c, transition: `${t} ${n}ms` };
-            return { style: h, active: u, refDiv: s };
-          })(s, a, c);
-        return s || m || l
-          ? o.createElement(
-              "div",
-              { id: t, role: n, className: i, ref: h, style: u, inert: !s },
-              d,
-            )
+            const m = { ...c, transition: `${t} ${n}ms` };
+            return { style: m, active: u, refDiv: o };
+          })(i, c, d);
+        return i || m || a
+          ? (0, o.jsx)("div", {
+              id: t,
+              role: n,
+              className: l,
+              ref: p,
+              style: h,
+              inert: !i,
+              children: u,
+            })
           : null;
       }
     },
     71696: (e, t, n) => {
       "use strict";
-      n.d(t, { Xv: () => v, pw: () => w });
-      var o = n(81393),
+      n.d(t, { Xv: () => w, pw: () => P });
+      var o = n(7850),
+        s = n(81393),
         r = n(22145),
-        s = n(52893),
-        i = n(29287),
-        l = n(90626);
-      var a = n(72739),
-        c = n(78395),
-        d = n(21869),
-        u = n(22797),
+        i = n(52893),
+        l = n(29287),
+        a = n(90626);
+      var c = n(72739),
+        d = n(78395),
+        u = n(21869),
+        h = n(22797),
         m = n(6144),
-        h = n(61859),
-        p = n(27650),
-        f = n(64753),
-        g = n(73309);
-      function v(e) {
+        p = n(61859),
+        f = n(27650),
+        g = n(64753),
+        v = n(73309);
+      function w(e) {
         const {
             children: t,
             ProcessFileUpload: n,
-            FetchImageURL: o,
+            FetchImageURL: s,
             bAllowImageHotLinking: r = !1,
           } = e,
-          [s] = l.useState(() => ({ manager: new _(n, o, r) })),
-          { manager: i } = s;
+          [i] = a.useState(() => ({ manager: new y(n, s, r) })),
+          { manager: l } = i;
         return (
-          i.SetProps(n, o, r),
-          l.createElement(
-            y.Provider,
-            { value: s },
-            l.createElement(R, { manager: i }),
-            l.createElement(U, { manager: i }, t),
-          )
+          l.SetProps(n, s, r),
+          (0, o.jsxs)(R.Provider, {
+            value: i,
+            children: [
+              (0, o.jsx)(U, { manager: l }),
+              (0, o.jsx)(L, { manager: l, children: t }),
+            ],
+          })
         );
       }
-      const w = l.memo(function (e) {
+      const P = a.memo(function (e) {
         const { nodeType: t } = e,
           n = k(),
           {
-            placeholderElements: o,
-            createPlaceholder: a,
-            replacePlaceholder: c,
+            placeholderElements: s,
+            createPlaceholder: c,
+            replacePlaceholder: d,
           } = (function (e, t = "PlaceholderPlugin") {
-            const [n, o] = l.useState([]),
-              [a] = l.useState(
+            const [n, o] = a.useState([]),
+              [s] = a.useState(
                 () =>
-                  new s.k_({
-                    key: new s.hs(t),
+                  new i.k_({
+                    key: new i.hs(t),
                     state: {
-                      init: () => i.zF.empty,
+                      init: () => l.zF.empty,
                       apply(t, n) {
                         n = n.map(t.mapping, t.doc);
-                        const r = t.getMeta(this) || [];
-                        for (const s of r)
-                          if (null == s ? void 0 : s.add) {
-                            const { id: r, data: l } = s.add,
+                        const s = t.getMeta(this) || [];
+                        for (const r of s)
+                          if (null == r ? void 0 : r.add) {
+                            const { id: s, data: i } = r.add,
                               a = (t, n) => {
-                                const s = document.createElement(e);
+                                const r = document.createElement(e);
                                 return (
                                   o((e) => [
                                     ...e,
-                                    { id: r, element: s, data: l },
+                                    { id: s, element: r, data: i },
                                   ]),
-                                  s
+                                  r
                                 );
                               },
                               c = (e) => {
                                 o((t) => t.filter((t) => t.element != e));
                               },
-                              d = i.NZ.widget(s.add.pos, a, {
-                                id: r,
+                              d = l.NZ.widget(r.add.pos, a, {
+                                id: s,
                                 destroy: c,
                               });
                             n = n.add(t.doc, [d]);
                           } else
-                            (null == s ? void 0 : s.remove) &&
+                            (null == r ? void 0 : r.remove) &&
                               (n = n.remove(
                                 n.find(
                                   void 0,
                                   void 0,
-                                  (e) => e.id == s.remove.id,
+                                  (e) => e.id == r.remove.id,
                                 ),
                               ));
                         return n;
@@ -449,90 +458,90 @@
                     },
                   }),
               );
-            (0, r.c$)(a);
+            (0, r.c$)(s);
             const c = (0, r.Hd)(),
-              d = l.useRef(0),
-              u = l.useCallback(
+              d = a.useRef(0),
+              u = a.useCallback(
                 (e, n, o) => {
                   const r = `${t}_${d.current++}`;
-                  let s = o || c.state.tr;
+                  let i = o || c.state.tr;
                   void 0 === n &&
-                    (s.selection.empty || s.deleteSelection(),
-                    (n = s.selection.from));
-                  const i = (null == o ? void 0 : o.getMeta(a)) || [];
+                    (i.selection.empty || i.deleteSelection(),
+                    (n = i.selection.from));
+                  const l = (null == o ? void 0 : o.getMeta(s)) || [];
                   return (
-                    s.setMeta(a, [...i, { add: { id: r, pos: n, data: e } }]),
-                    o || c.dispatch(s),
+                    i.setMeta(s, [...l, { add: { id: r, pos: n, data: e } }]),
+                    o || c.dispatch(i),
                     r
                   );
                 },
-                [a, t, c],
+                [s, t, c],
               ),
-              m = l.useCallback(
+              h = a.useCallback(
                 (e) => {
-                  const t = a.getState(c.state),
+                  const t = s.getState(c.state),
                     n =
                       null == t
                         ? void 0
                         : t.find(void 0, void 0, (t) => t.id == e);
                   return (null == n ? void 0 : n.length) ? n[0].from : void 0;
                 },
-                [c, a],
+                [c, s],
               ),
-              h = l.useCallback(
+              m = a.useCallback(
                 (e, t) => {
-                  const n = m(e);
+                  const n = h(e);
                   return (
                     !!n &&
                     (t
                       ? c.dispatch(
                           c.state.tr
                             .replaceWith(n, n, t)
-                            .setMeta(a, [{ remove: { id: e } }]),
+                            .setMeta(s, [{ remove: { id: e } }]),
                         )
                       : c.dispatch(
-                          c.state.tr.setMeta(a, [{ remove: { id: e } }]),
+                          c.state.tr.setMeta(s, [{ remove: { id: e } }]),
                         ),
                     !0)
                   );
                 },
-                [a, m, c],
+                [s, h, c],
               );
             return {
               placeholderElements: n,
               createPlaceholder: u,
-              findPlaceholder: m,
-              replacePlaceholder: h,
+              findPlaceholder: h,
+              replacePlaceholder: m,
             };
           })("span", "FileUploadPlaceholder");
         !(function (e, t) {
           (0, r.c$)(
-            l.useMemo(
+            a.useMemo(
               () =>
-                new s.k_({
+                new i.k_({
                   props: {
-                    handlePaste(n, o, r) {
+                    handlePaste(n, o, s) {
                       if (e.BAllowImageHotLinking()) return !1;
-                      const s = [];
+                      const r = [];
                       if (
-                        (r.content.descendants((e, n) => {
-                          e.type == t && s.push({ url: e.attrs.src, pos: n });
+                        (s.content.descendants((e, n) => {
+                          e.type == t && r.push({ url: e.attrs.src, pos: n });
                         }),
-                        s.length)
+                        r.length)
                       ) {
                         let t = n.state.tr;
                         t.selection.empty || t.deleteSelection();
                         let o = t.selection.from,
                           i = 0;
-                        for (const n of s) {
-                          const s = r.content.cut(i, n.pos - 1);
-                          t.insert(o, s),
-                            (o += s.size),
+                        for (const n of r) {
+                          const r = s.content.cut(i, n.pos - 1);
+                          t.insert(o, r),
+                            (o += r.size),
                             e.QueueUploadFileByURL(n.url, o, t),
                             (i = n.pos + 1);
                         }
                         return (
-                          t.insert(o, r.content.cut(i)),
+                          t.insert(o, s.content.cut(i)),
                           t.scrollIntoView(),
                           n.dispatch(t),
                           !0
@@ -541,15 +550,15 @@
                     },
                     handleDOMEvents: {
                       paste(t, n) {
-                        var o, r;
+                        var o, s;
                         if (
                           (null ===
-                            (r =
+                            (s =
                               null === (o = n.clipboardData) || void 0 === o
                                 ? void 0
-                                : o.files) || void 0 === r
+                                : o.files) || void 0 === s
                             ? void 0
-                            : r.length) > 0
+                            : s.length) > 0
                         ) {
                           n.preventDefault();
                           for (const t of n.clipboardData.files)
@@ -564,62 +573,63 @@
             ),
           );
         })(n, t);
-        const d = (0, r.Hd)();
+        const u = (0, r.Hd)();
         return (
-          l.useEffect(() => n.RegisterEditor(d, a, c), [n, d, a, c]),
-          l.createElement(
-            l.Fragment,
-            null,
-            o.map(({ id: e, element: t, data: n }) =>
-              l.createElement(E, { key: e, element: t, data: n }),
+          a.useEffect(() => n.RegisterEditor(u, c, d), [n, u, c, d]),
+          (0, o.jsx)(o.Fragment, {
+            children: s.map(({ id: e, element: t, data: n }) =>
+              (0, o.jsx)(x, { element: t, data: n }, e),
             ),
-          )
+          })
         );
       });
-      class P extends Error {
+      class _ extends Error {
         constructor(e) {
           super(e);
         }
       }
-      function E(e) {
+      function x(e) {
         const { element: t, data: n } = e,
-          o = "file" in n ? n.file : void 0,
-          r = l.useMemo(() => o && URL.createObjectURL(o), [o]),
-          s = "url" in n ? n.url : r,
-          i = o.type.startsWith("video/");
-        return a.createPortal(
-          l.createElement(
-            "span",
-            { className: g.FileUploadPlaceholder },
-            l.createElement(
-              "div",
-              { className: g.ThrobberCtn },
-              l.createElement(
-                "div",
-                { className: g.ThrobberRow },
-                l.createElement(
-                  "div",
-                  { className: g.Throbber },
-                  l.createElement(u.t, { size: "medium", position: "center" }),
-                ),
-                (0, h.we)("#Prosemirror_FileUpload_Uploading"),
-              ),
-            ),
-            !i && l.createElement("img", { src: s, className: g.PendingImage }),
-            i &&
-              l.createElement("video", {
-                src: s,
-                className: g.PendingImage,
-                muted: !0,
-                loop: !0,
-                playsInline: !0,
-                autoPlay: !0,
+          s = "file" in n ? n.file : void 0,
+          r = a.useMemo(() => s && URL.createObjectURL(s), [s]),
+          i = "url" in n ? n.url : r,
+          l = s.type.startsWith("video/");
+        return c.createPortal(
+          (0, o.jsxs)("span", {
+            className: v.FileUploadPlaceholder,
+            children: [
+              (0, o.jsx)("div", {
+                className: v.ThrobberCtn,
+                children: (0, o.jsxs)("div", {
+                  className: v.ThrobberRow,
+                  children: [
+                    (0, o.jsx)("div", {
+                      className: v.Throbber,
+                      children: (0, o.jsx)(h.t, {
+                        size: "medium",
+                        position: "center",
+                      }),
+                    }),
+                    (0, p.we)("#Prosemirror_FileUpload_Uploading"),
+                  ],
+                }),
               }),
-          ),
+              !l && (0, o.jsx)("img", { src: i, className: v.PendingImage }),
+              l &&
+                (0, o.jsx)("video", {
+                  src: i,
+                  className: v.PendingImage,
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  autoPlay: !0,
+                }),
+            ],
+          }),
           t,
         );
       }
-      class _ {
+      class y {
         constructor(e, t, n) {
           (this.m_errors = (0, m.Jc)([])),
             (this.m_fnProcessFileUpload = e),
@@ -630,14 +640,14 @@
           (this.m_fnProcessFileUpload = e),
             (this.m_fnFetchImageURL = t),
             (this.m_bAllowImageHotLinking = n),
-            (0, o.wT)(
+            (0, s.wT)(
               !this.m_fnFetchImageURL || !this.m_bAllowImageHotLinking,
               "Not expected to have a URL fetch function and allow hotlinking.  URL fetch function will not be called.",
             );
         }
         RegisterEditor(e, t, n) {
           return (
-            (0, o.wT)(!this.m_view, "Duplicate registration"),
+            (0, s.wT)(!this.m_view, "Duplicate registration"),
             (this.m_view = e),
             (this.m_fnCreatePlaceholder = t),
             (this.m_fnReplacePlaceholder = n),
@@ -694,17 +704,17 @@
           var n;
           try {
             const o = new URL(e),
-              r = await this.m_fnFetchImageURL(e),
-              s = new File(
-                [r],
+              s = await this.m_fnFetchImageURL(e),
+              r = new File(
+                [s],
                 decodeURIComponent(
                   (null === (n = o.pathname) || void 0 === n
                     ? void 0
                     : n.replace(/^.*\//, "")) || "image",
                 ),
-                { type: r.type },
+                { type: s.type },
               );
-            await this.ProcessFile(s, t);
+            await this.ProcessFile(r, t);
           } catch (n) {
             this.AddError(`Unable to process URL: ${e}`),
               this.m_fnReplacePlaceholder(t);
@@ -716,7 +726,7 @@
             console.log(`Processing file upload: "${e.name}"`),
               (n = await this.m_fnProcessFileUpload(e));
           } catch (e) {
-            e instanceof P
+            e instanceof _
               ? this.AddError(e.message)
               : this.AddError(`Error proccessing file upload: ${e}`);
           }
@@ -725,41 +735,40 @@
             : this.m_fnReplacePlaceholder(t);
         }
       }
-      const y = l.createContext(void 0);
+      const R = a.createContext(void 0);
       function k() {
-        return l.useContext(y).manager;
+        return a.useContext(R).manager;
       }
-      const R = l.memo(function (e) {
+      const U = a.memo(function (e) {
         const { manager: t } = e,
-          n = (0, f.gc)(t.GetErrors());
+          n = (0, g.gc)(t.GetErrors());
         return n.length
-          ? l.createElement(
-              d.E,
-              { active: !0 },
-              l.createElement(c.o0, {
+          ? (0, o.jsx)(u.E, {
+              active: !0,
+              children: (0, o.jsx)(d.o0, {
                 bAlertDialog: !0,
-                strTitle: (0, h.we)("#Error_Generic"),
+                strTitle: (0, p.we)("#Error_Generic"),
                 strDescription: n.map((e, t) =>
-                  l.createElement("div", { key: t }, e),
+                  (0, o.jsx)("div", { children: e }, t),
                 ),
-                strOKButtonText: (0, h.we)("#Button_OK"),
+                strOKButtonText: (0, p.we)("#Button_OK"),
                 onOK: () => t.ClearErrors(),
                 onCancel: () => t.ClearErrors(),
               }),
-            )
+            })
           : null;
       });
-      function U(e) {
+      function L(e) {
         const { manager: t, children: n } = e,
-          o = l.useCallback(
+          o = a.useCallback(
             (e, n) => {
               for (const o of e)
                 t.UploadFile(o, t.GetViewPosition(n.clientX, n.clientY));
             },
             [t],
           ),
-          [r, s] = (0, p.hk)(o);
-        return l.cloneElement(n, { ...r, ...n.props });
+          [s, r] = (0, f.hk)(o);
+        return a.cloneElement(n, { ...s, ...n.props });
       }
     },
   },

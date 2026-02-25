@@ -460,7 +460,9 @@
               _ = _._.STORE_BASE_URL + "sale/" + _.strSalePage;
             let _ = (0, _._)(
               "#Summer_21_Story_Enter",
-              _.createElement("span", null, (0, _._)(_.strGenreName)),
+              (0, _.jsx)("span", {
+                children: (0, _._)(_.strGenreName),
+              }),
             );
             if (_.has(_)) {
               let _ = "";
@@ -468,152 +470,139 @@
                 ? (_ = _.strResultA + "_Summary")
                 : 2 == _.get(_).choice && (_ = _.strResultB + "_Summary"),
                 _.push(
-                  _.createElement(_, {
-                    key: _,
-                    strSubheader: _,
-                    bClaimed: !0,
-                    strBackgroundColor: _.strBackgroundColor,
-                    eGenre: _.eGenre,
-                    strTitle: _.strPageTitle,
-                    strSaleURL: _,
-                    strSummary: _,
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      strSubheader: _,
+                      bClaimed: !0,
+                      strBackgroundColor: _.strBackgroundColor,
+                      eGenre: _.eGenre,
+                      strTitle: _.strPageTitle,
+                      strSaleURL: _,
+                      strSummary: _,
+                    },
+                    _,
+                  ),
                 );
             } else {
               let _ = "";
               _.length || (_ = "next"),
                 _.push(
-                  _.createElement(_, {
-                    key: _,
-                    strID: _,
-                    strSubheader: _,
-                    strBackgroundColor: "#7C5F5A",
-                    bClaimed: !1,
-                    eGenre: _.eGenre,
-                    strTitle: _.strPageTitle,
-                    strSaleURL: _,
-                    strSummary: "#Summer_21_Story_Next_Intro",
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      strID: _,
+                      strSubheader: _,
+                      strBackgroundColor: "#7C5F5A",
+                      bClaimed: !1,
+                      eGenre: _.eGenre,
+                      strTitle: _.strPageTitle,
+                      strSaleURL: _,
+                      strSummary: "#Summer_21_Story_Next_Intro",
+                    },
+                    _,
+                  ),
                 );
             }
           });
           let _ = _.concat(_);
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.PageOuterContainer, _._.LANGUAGE),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.PageInnerContainer,
-              },
-              _.createElement(
-                "a",
-                {
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_.PageOuterContainer, _._.LANGUAGE),
+            children: (0, _.jsxs)("div", {
+              className: _.PageInnerContainer,
+              children: [
+                (0, _.jsxs)("a", {
                   href: _._.STORE_BASE_URL,
-                },
-                _ &&
-                  _.createElement("img", {
-                    className: _.LocalizedHeaderImg,
-                    src: _,
-                  }),
-                _ &&
-                  _.createElement("img", {
-                    className: _.LocalizedHeaderMobileImg,
-                    src: _,
-                  }),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    _ &&
+                      (0, _.jsx)("img", {
+                        className: _.LocalizedHeaderImg,
+                        src: _,
+                      }),
+                    _ &&
+                      (0, _.jsx)("img", {
+                        className: _.LocalizedHeaderMobileImg,
+                        src: _,
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
                   className: _.PageInnerBG,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageInnerContent,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.HeaderContainer,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.HeaderPrefix,
-                      },
-                      (0, _._)("#Summer_21_Overview_Title_Prefix"),
-                    ),
-                    (0, _._)("#Summer_21_Overview_Title"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.HeaderDesc, _.Noto),
-                    },
-                    (0, _._)("#Summer_21_Overview_Description1"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.HeaderDesc, _.Noto),
-                    },
-                    (0, _._)("#Summer_21_Overview_Description3"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.HeaderDesc, _.Noto),
-                    },
-                    (0, _._)("#Summer_21_Overview_Description4"),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      _: "wallpapers",
-                      href:
-                        _._.MEDIA_CDN_URL +
-                        "store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip",
-                      className: (0, _._)(_.HeaderDesc, _.Noto, _.Wallpapers),
-                    },
-                    "*",
-                    (0, _._)("#Summer21_Story_DownloadWallpaper"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.HeaderIntro, _.Noto),
-                    },
-                    (0, _._)("#Summer_21_Overview_Description2"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.HeaderIntro, _.Noto),
-                    },
-                    (0, _._)("#Summer_21_Story_Intro"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.ListHeader, _.Noto),
-                    },
-                    (0, _._)("#Summer_21_Story_Next"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.GenreListContainer),
-                    },
-                    _,
-                  ),
-                ),
-                _.createElement(_, null),
-              ),
-            ),
-          );
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.PageInnerContent,
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.HeaderContainer,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.HeaderPrefix,
+                              children: (0, _._)(
+                                "#Summer_21_Overview_Title_Prefix",
+                              ),
+                            }),
+                            (0, _._)("#Summer_21_Overview_Title"),
+                          ],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_.HeaderDesc, _.Noto),
+                          children: (0, _._)(
+                            "#Summer_21_Overview_Description1",
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_.HeaderDesc, _.Noto),
+                          children: (0, _._)(
+                            "#Summer_21_Overview_Description3",
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_.HeaderDesc, _.Noto),
+                          children: (0, _._)(
+                            "#Summer_21_Overview_Description4",
+                          ),
+                        }),
+                        (0, _.jsxs)("a", {
+                          _: "wallpapers",
+                          href:
+                            _._.MEDIA_CDN_URL +
+                            "store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip",
+                          className: (0, _._)(
+                            _.HeaderDesc,
+                            _.Noto,
+                            _.Wallpapers,
+                          ),
+                          children: [
+                            "*",
+                            (0, _._)("#Summer21_Story_DownloadWallpaper"),
+                          ],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_.HeaderIntro, _.Noto),
+                          children: (0, _._)(
+                            "#Summer_21_Overview_Description2",
+                          ),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_.HeaderIntro, _.Noto),
+                          children: (0, _._)("#Summer_21_Story_Intro"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_.ListHeader, _.Noto),
+                          children: (0, _._)("#Summer_21_Story_Next"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_.GenreListContainer),
+                          children: _,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_, {}),
+                  ],
+                }),
+              ],
+            }),
+          });
         },
         _ = (_) => {
           const _ = (0, _._)();
@@ -650,156 +639,117 @@
               badge_class: _.Badge_55,
             };
           }
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _.HeaderDesc,
                   _.Noto,
                   _.CompletedSummaryText,
                 ),
-              },
-              (0, _._)("#Summer21_Badge_Unlocked_Description"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#Summer21_Badge_Unlocked_Description"),
+              }),
+              (0, _.jsxs)("div", {
                 _: "badge",
                 className: (0, _._)(_.BadgeContainer, _.Noto),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Column,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubHeader,
-                  },
-                  (0, _._)("#Summer21_Badge_Prelude"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BadgeName,
-                  },
-                  (0, _._)(_.badge_name),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BadgeDesc,
-                  },
-                  (0, _._)(_.badge_desc),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Column,
-                },
-                _.createElement("a", {
-                  className: (0, _._)(_.BadgeImg, _.badge_class),
-                  href: _._.COMMUNITY_BASE_URL + "my/badges/" + _,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BadgeText,
-                  },
-                  (0, _._)("#Summer21_Badge_Congrats1"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BadgeText,
-                  },
-                  (0, _._)("#Summer21_Badge_Congrats2"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: _.BadgeLink,
-                    href: _._.COMMUNITY_BASE_URL + "my/edit/avatar/" + _,
-                  },
-                  (0, _._)("#Summer21_Badge_View"),
-                ),
-                _.createElement("a", {
-                  className: _.FrameExample,
-                  href: _._.COMMUNITY_BASE_URL + "my/edit/avatar/" + _,
-                }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.Column,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.SubHeader,
+                        children: (0, _._)("#Summer21_Badge_Prelude"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.BadgeName,
+                        children: (0, _._)(_.badge_name),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.BadgeDesc,
+                        children: (0, _._)(_.badge_desc),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.Column,
+                    children: [
+                      (0, _.jsx)("a", {
+                        className: (0, _._)(_.BadgeImg, _.badge_class),
+                        href: _._.COMMUNITY_BASE_URL + "my/badges/" + _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.BadgeText,
+                        children: (0, _._)("#Summer21_Badge_Congrats1"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.BadgeText,
+                        children: (0, _._)("#Summer21_Badge_Congrats2"),
+                      }),
+                      (0, _.jsx)("a", {
+                        className: _.BadgeLink,
+                        href: _._.COMMUNITY_BASE_URL + "my/edit/avatar/" + _,
+                        children: (0, _._)("#Summer21_Badge_View"),
+                      }),
+                      (0, _.jsx)("a", {
+                        className: _.FrameExample,
+                        href: _._.COMMUNITY_BASE_URL + "my/edit/avatar/" + _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
                 className: (0, _._)(_.TheEnd, _.Noto),
-              },
-              (0, _._)("#Summer21_Story_End"),
-            ),
-          );
+                children: (0, _._)("#Summer21_Story_End"),
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const _ = (0, _._)(_.eGenre);
-          return _.createElement(
-            "a",
-            {
-              _: _.strID,
-              href: _.strSaleURL,
-              style: {
-                backgroundColor: `${_.strBackgroundColor}`,
-              },
-              className: (0, _._)(_.GenreContainer, _.Claimed),
+          return (0, _.jsxs)("a", {
+            _: _.strID,
+            href: _.strSaleURL,
+            style: {
+              backgroundColor: `${_.strBackgroundColor}`,
             },
-            _.createElement(
-              "div",
-              {
+            className: (0, _._)(_.GenreContainer, _.Claimed),
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.LeftColumn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.GenreSubheader, _.Noto),
-                },
-                _.strSubheader,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.GenreTitle,
-                },
-                (0, _._)(_.strTitle),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.GenreStory, _.Noto),
-                },
-                (0, _._)(_.strSummary),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.GenreSubheader, _.Noto),
+                    children: _.strSubheader,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.GenreTitle,
+                    children: (0, _._)(_.strTitle),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_.GenreStory, _.Noto),
+                    children: (0, _._)(_.strSummary),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
                 className: _.RightColumn,
-              },
-              _ &&
-                _.createElement("div", {
-                  className: _.StickerPreview,
-                  style: {
-                    backgroundImage: `url(${_})`,
-                  },
-                }),
-              !_.bClaimed &&
-                _.createElement("div", {
-                  className: (0, _._)(_.StickerPreview, _.Unclaimed),
-                }),
-            ),
-          );
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.StickerPreview,
+                      style: {
+                        backgroundImage: `url(${_})`,
+                      },
+                    }),
+                  !_.bClaimed &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.StickerPreview, _.Unclaimed),
+                    }),
+                ],
+              }),
+            ],
+          });
         };
     },
   },

@@ -38,7 +38,7 @@ function PopulateHWCompatFacetData( rgCompatFacetData, rgSteamOSFacetData, bIncl
 
 	if ( bSteamOS )
 	{
-		let $Compatible = $Container.find( '.tab_filter_control_row[data-value=' + 2 + ']'); 
+		let $Compatible = $Container.find( '.tab_filter_control_row[data-value=' + 2 + ']');
 		let nCompatible = -1;
 
 		for ( var i = 0; i < rgSteamOSFacetData.length; i++ )
@@ -49,8 +49,8 @@ function PopulateHWCompatFacetData( rgCompatFacetData, rgSteamOSFacetData, bIncl
 
 		if ( nCompatible == -1 )
 			$Compatible.find('.tab_filter_control_count').css( {display: 'none' } );
-		else 
-			$Compatible.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nCompatible ) + ")" : v_numberformat( nCompatible ) ).css( {display: '' } ); 
+		else
+			$Compatible.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nCompatible ) + ")" : v_numberformat( nCompatible ) ).css( {display: '' } );
 	}
 	else // Show Deck Verified
 	{
@@ -69,13 +69,13 @@ function PopulateHWCompatFacetData( rgCompatFacetData, rgSteamOSFacetData, bIncl
 
 		if ( nVerified == -1 )
 			$Verified.find('.tab_filter_control_count').css( {display: 'none' } );
-		else 
-			$Verified.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nVerified ) + ")" : v_numberformat( nVerified ) ).css( {display: '' } ); 
+		else
+			$Verified.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nVerified ) + ")" : v_numberformat( nVerified ) ).css( {display: '' } );
 
 		if ( nPlayable == -1 )
 			$Playable.find('.tab_filter_control_count').css( {display: 'none' } );
-		else 
-			$Playable.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nPlayable ) + ")" : v_numberformat( nPlayable ) ).css( {display: '' } ); 
+		else
+			$Playable.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nPlayable ) + ")" : v_numberformat( nPlayable ) ).css( {display: '' } );
 	}
 }
 
@@ -121,9 +121,9 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 			continue;
 
 		rgDisplayedTags[ tagid ] = true;
-		
+
 		var textCount = v_numberformat( count );
-		
+
 		if(bHydrate){
 			if(count > 500)
 			{
@@ -148,7 +148,7 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 			textCount = v_numberformat( count );
 			textCount += "+";
 		}
-		
+
 		var $Tag = g_TagMap[tagid];
 		if ( !$Tag ) // Facet data may include banned or missing tags.
 			continue;
@@ -434,15 +434,11 @@ function AjaxSearchResults()
 // history interface, but will *not* appear in the URL.
 function UpdateUrl( rgParameters, oHistoryStash = {}, bPushState = true )
 {
-	var fnUpdateState = bPushState ? history.pushState : history.replaceState;
-
 	if ( g_bUseHistoryAPI )
 	{
 		oHistoryStash.params = rgParameters;
-		if ( history.state.legacy_web_root )
-			oHistoryStash['legacy_web_root'] = history.state.legacy_web_root; // preserve gamepad navigation history
 
-		fnUpdateState.call( history, oHistoryStash, '', '?' + Object.toQueryString( rgParameters ) );
+		ReplaceHistoryStateAndURL( function( state ) { return $J.extend( {}, state, oHistoryStash ); }, '?' + Object.toQueryString( rgParameters ), bPushState );
 	}
 	else
 		window.location = '#' + Object.toQueryString( rgParameters );
@@ -498,7 +494,7 @@ function ExecuteSearch( rgParameters )
 		return;
 
 	// On tablet hide the virtual keyboard
-	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() ) 
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		GPShowVirtualKeyboard( false );
 	}
@@ -605,16 +601,17 @@ function IsNavFromBackButton()
 // Smoothly scrolls us to the last element the user was viewing.
 function HandleBackReposition()
 {
+	let state = GetHistoryState();
 	// Nothing to do unless we've an itemkey stashed and they hit the back button.
-	if ( !( IsNavFromBackButton() && history.state && history.state.itemkey ) )
+	if ( !( IsNavFromBackButton() && state.itemkey ) )
 	{
 		SetGPFocusRestoreTimeout(); // If we're on Deck restore focus for gamepad navigation
 		return;
 	}
 
 	// Find the item we want to be scrolling to.
-	var sItemKey = history.state.itemkey;
-	var nodeItem = $J( "a[data-ds-itemkey='" + history.state.itemkey + "']" );
+	var sItemKey = state.itemkey;
+	var nodeItem = $J( "a[data-ds-itemkey='" + itemkey + "']" );
 
 	if ( nodeItem.length == 0 )
 	{
@@ -650,7 +647,10 @@ function HandleBackReposition()
 	}
 
 	// Remove our itemkey from the state to avoid risk of double-scrolls.
-	delete history.state.itemkey;
+	ReplaceHistoryState( function( state ) {
+		delete state.itemkey;
+		return state;
+	});
 }
 
 // Returns a boolean as to whether InfiniScroll should be used.
@@ -671,7 +671,7 @@ function BShouldUseInfiniscroll()
 		bEnable = false;
 
 	// But if the user has hit back and originally came from infiniscroll, reanable it.
-	if ( IsNavFromBackButton() && history.state && history.state.infiniscroll )
+	if ( IsNavFromBackButton() && GetHistoryState().infiniscroll )
 		bEnable = true;
 
 	return bEnable;
@@ -942,7 +942,7 @@ function InfiniteCleanupUrlParams()
 		params.delete('force_infinite');
 		params.delete('page');
 		url.search = params.toString();
-		history.replaceState( history.state, "", url.toString() );
+		ReplaceHistoryURL( url.toString() );
 
 		// We're only here if they've used the back-button with infinite-scroll, so enable the
 		// banner at the top to show results from the start.
@@ -964,7 +964,7 @@ function AddSearchPositionClickHandler( item )
 
 	if ( attrPageNo && sItemKey )
 	{
-		$J(item).click( fnStashSearchPositionHistory( parseInt( attrPageNo.value ), sItemKey ) ); 
+		$J(item).click( fnStashSearchPositionHistory( parseInt( attrPageNo.value ), sItemKey ) );
 
 		// Remove the page number, so we don't try to attach a click handler again.
 		item.removeAttributeNode(attrPageNo);
@@ -1125,7 +1125,7 @@ function OnClickClientFilter( $Control, strFilter, results_container )
             results_container.addClass(strFilter);
 			$Control.parent().addClass("checked");
         }
-		else 
+		else
 		{
             results_container.removeClass(strFilter);
 			$Control.parent().removeClass("checked");
@@ -1139,10 +1139,10 @@ function OnClickClientFilter( $Control, strFilter, results_container )
 		// Update the user's preferences back-end, so the toggles remain sticky. SavePrefs explicitly allows
 		// only a subset to be posted for update. There's no checking if this succeeds, as what would we
 		// do if it fails?
-		
+
 		var oPrefs = { 'sessionid' : g_sessionID };
 		oPrefs[strFilter] = bChecked ? 1 : 0;
-		
+
 		$J.post(
 			'https://store.steampowered.com/account/savesearchpreferences',
 			oPrefs

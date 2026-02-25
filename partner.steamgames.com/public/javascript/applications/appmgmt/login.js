@@ -5,21 +5,22 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6966],
   {
-    90023: (e, t, r) => {
-      r.r(t), r.d(t, { default: () => p });
-      var n = r(90626),
-        o = r(738),
-        a = r(9154),
-        i = r(97436),
+    90023: (e, o, r) => {
+      r.r(o), r.d(o, { default: () => c });
+      var t = r(7850),
+        n = r(90626),
+        i = r(738),
+        s = r(9154),
+        a = r(97436),
         l = r(96059),
-        s = r(78327),
-        c = r(28240);
-      function p() {
+        p = r(78327),
+        u = r(28240);
+      function c() {
         return (
           (0, n.useEffect)(
             () => (
               (window.g_ShowLoginDialog = (e) =>
-                (0, o.pg)(n.createElement(u, { redirectUrl: e }), window, {
+                (0, i.pg)((0, t.jsx)(d, { redirectUrl: e }), window, {
                   popupWidth: 700,
                   popupHeight: 440,
                 })),
@@ -32,30 +33,31 @@
           null
         );
       }
-      function u(e) {
-        const { redirectUrl: t = s.TS.PARTNER_BASE_URL, closeModal: r } = e,
-          o = (0, n.useRef)(
-            new l.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+      function d(e) {
+        const { redirectUrl: o = p.TS.PARTNER_BASE_URL, closeModal: r } = e,
+          i = (0, n.useRef)(
+            new l.D(p.TS.WEBAPI_BASE_URL).GetServiceTransport(),
           ).current,
-          [p, u] = (0, n.useState)(!1);
-        return n.createElement(
-          a.x_,
-          { onEscKeypress: r, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
-          p
-            ? n.createElement(i.Fn, null)
-            : n.createElement(i.YN, {
+          [c, d] = (0, n.useState)(!1);
+        return (0, t.jsx)(s.x_, {
+          onEscKeypress: r,
+          hideTopBar: !0,
+          bDisableBackgroundDismiss: !0,
+          children: c
+            ? (0, t.jsx)(a.Fn, {})
+            : (0, t.jsx)(a.YN, {
                 platform: 2,
-                transport: o,
+                transport: i,
                 onComplete: (e) => {
-                  e == c.wI.k_PrimaryDomainFail
-                    ? u(!0)
-                    : window.location.assign(t);
+                  e == u.wI.k_PrimaryDomainFail
+                    ? d(!0)
+                    : window.location.assign(o);
                 },
                 autoFocus: !0,
                 theme: "modal",
-                redirectUrl: t,
+                redirectUrl: o,
               }),
-        );
+        });
       }
     },
   },

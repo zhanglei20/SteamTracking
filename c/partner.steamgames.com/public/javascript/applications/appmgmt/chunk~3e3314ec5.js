@@ -2151,6 +2151,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         eConversionMethod: 1,
@@ -2171,13 +2172,10 @@
               rgAvailableConversionMethods: _,
             };
           }, [_, _, _]);
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _.children,
+        });
       }
       function _() {
         return _.useContext(_).eConversionMethod;

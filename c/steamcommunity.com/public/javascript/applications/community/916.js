@@ -197,7 +197,7 @@
 	"moderationaction_deleted": "Gelöscht",
 	"moderationaction_warned": "Verwarnung erteilt",
 	"moderationaction_banned_from_hub": "Vom Inhaltshub ausgeschlossen",
-	"moderationaction_banned_from_community": "Aus der Steam Community ausgeschlossen",
+	"moderationaction_banned_from_community": "Aus der Steam-Community ausgeschlossen",
 	"moderationaction_trade_banned": "Vom Handel ausgeschlossen",
 	"moderationaction_marked_as_suspicious": "Inhalt als verdächtigt gekennzeichnet",
 	"moderationaction_reset_content": "Inhalt des Erstellers zurückgesetzt",

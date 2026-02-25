@@ -9,6 +9,7 @@
         PriceCell: "_1sKIcxV1HaEWCa1x_sSuVT",
         PricePrefix: "gPcNwuh4LJPmwRZrAbrA5",
         PriceSuffix: "_3AEJb3AH01qQaG89JOYAh4",
+        PackagePricingContext: "_3_niTWrZ8h834BjbLqyByP",
         EditablePrice: "pm5xM6Dyy-9XY0g9TpjX1",
         PriceInput: "_1PcwXjG-2t5JOJuL7yhOYG",
         USD: "_1C7qRJ6YdGWEwEK4QsMRUX",
@@ -32,6 +33,41 @@
         HoverToolTip: "_36qS74l1tXSXwGdyfIFQ-G",
       };
     },
+    69041: (e) => {
+      e.exports = {
+        Button: "_0BH1ydyFmSnUvoVK2hIc",
+        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
+        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
+        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
+        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
+        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
+        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
+        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
+        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
+        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
+        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+      };
+    },
+    73406: (e) => {
+      e.exports = {
+        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
+        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
+        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
+        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
+        "Size-3": "_389OPmdZoebw42_AlsUFxi",
+        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
+        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
+        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
+        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
+        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
+      };
+    },
+    16180: (e) => {
+      e.exports = {
+        Option: "_3a3fNdwhCItYEc1SsUNP",
+        RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
+      };
+    },
     31389: (e) => {
       e.exports = {
         PriceGuidelinesPicker: "_2skmsPR7jCBo5xHN2v_E6A",
@@ -45,195 +81,226 @@
     65697: (e) => {
       e.exports = { PopoverMenu: "_2i2FUBZKGyiP5Sb6tuASpO" };
     },
-    28139: (e, r, t) => {
+    29903: (e, r, n) => {
       "use strict";
-      t.d(r, {
-        mK: () => K,
-        Gy: () => B,
-        sh: () => U,
-        T6: () => G,
-        Oo: () => O,
+      n.d(r, {
+        mK: () => B,
+        Gy: () => z,
+        sh: () => R,
+        T6: () => U,
+        Oo: () => W,
       });
-      var n = t(91934),
-        o = t(64238),
-        i = t.n(o),
-        s = t(90626),
-        l = t(56011),
-        c = t(65697);
-      function a(e) {
+      var t = n(7850),
+        o = n(91934),
+        i = n(64238),
+        s = n.n(i),
+        a = n(90626),
+        c = n(56011),
+        l = n(65697);
+      function d(e) {
         const {
             direction: r,
-            ignoreHorizontal: t,
-            ignoreVertical: o,
+            ignoreHorizontal: n,
+            ignoreVertical: t,
             dismissOnClick: i,
-            interactionMode: a = 0,
+            interactionMode: s = 0,
           } = e,
-          u = (0, s.useRef)(null),
-          b = (0, s.useRef)(!1),
-          m = (0, s.useRef)(!1),
-          d = (0, s.useRef)(null),
-          [y, S] = (0, s.useState)(!1),
-          [C, h] = (0, s.useMemo)(
+          d = (0, a.useRef)(null),
+          u = (0, a.useRef)(!1),
+          b = (0, a.useRef)(!1),
+          m = (0, a.useRef)(null),
+          [S, h] = (0, a.useState)(!1),
+          [p, y] = (0, a.useMemo)(
             () =>
               (function (e) {
-                const [r, t] = (0, n.x)(e, "-");
-                return "left" === r || "right" === r ? [void 0, r] : [r, t];
+                const [r, n] = (0, o.x)(e, "-");
+                return "left" === r || "right" === r ? [void 0, r] : [r, n];
               })(r),
             [r],
           ),
-          p = (0, s.useCallback)(() => {
-            if (!d.current || !u.current) return;
-            const e = d.current.getBoundingClientRect();
-            let r = h;
-            const n = d.current.matches(":dir(rtl)");
-            n && ("left" === h ? (r = "right") : "right" === h && (r = "left")),
-              u.current.style.setProperty("--parentWidth", `${e.width}px`),
-              u.current.style.setProperty("--parentHeight", `${e.height}px`),
-              t ||
+          C = (0, a.useCallback)(() => {
+            if (!m.current || !d.current) return;
+            const e = m.current.getBoundingClientRect();
+            let r = y;
+            const o = m.current.matches(":dir(rtl)");
+            o && ("left" === y ? (r = "right") : "right" === y && (r = "left")),
+              d.current.style.setProperty("--parentWidth", `${e.width}px`),
+              d.current.style.setProperty("--parentHeight", `${e.height}px`),
+              n ||
                 ("left" === r
-                  ? C
-                    ? ((u.current.style.left = "unset"),
-                      (u.current.style.right =
+                  ? p
+                    ? ((d.current.style.left = "unset"),
+                      (d.current.style.right =
                         document.documentElement.clientWidth - e.right + "px"))
-                    : ((u.current.style.left = "unset"),
-                      (u.current.style.right =
+                    : ((d.current.style.left = "unset"),
+                      (d.current.style.right =
                         document.documentElement.clientWidth - e.left + "px"))
                   : "right" === r
-                    ? C
-                      ? ((u.current.style.left = `${e.left}px`),
-                        (u.current.style.right = "unset"))
-                      : ((u.current.style.left = `${e.right}px`),
-                        (u.current.style.right = "unset"))
+                    ? p
+                      ? ((d.current.style.left = `${e.left}px`),
+                        (d.current.style.right = "unset"))
+                      : ((d.current.style.left = `${e.right}px`),
+                        (d.current.style.right = "unset"))
                     : void 0 === r &&
-                      (n
-                        ? ((u.current.style.left = "unset"),
-                          (u.current.style.right =
+                      (o
+                        ? ((d.current.style.left = "unset"),
+                          (d.current.style.right =
                             document.documentElement.clientWidth -
                             e.right +
                             "px"))
-                        : ((u.current.style.left = `${e.left}px`),
-                          (u.current.style.right = "unset")))),
-              o ||
-                ("down" === C
-                  ? ((u.current.style.top = `${e.bottom}px`),
-                    (u.current.style.bottom = "unset"),
-                    u.current.style.setProperty(
+                        : ((d.current.style.left = `${e.left}px`),
+                          (d.current.style.right = "unset")))),
+              t ||
+                ("down" === p
+                  ? ((d.current.style.top = `${e.bottom}px`),
+                    (d.current.style.bottom = "unset"),
+                    d.current.style.setProperty(
                       "--availableHeight",
                       document.documentElement.clientHeight - e.bottom + "px",
                     ))
-                  : "up" === C
-                    ? ((u.current.style.top = "unset"),
-                      (u.current.style.bottom =
+                  : "up" === p
+                    ? ((d.current.style.top = "unset"),
+                      (d.current.style.bottom =
                         document.documentElement.clientHeight - e.top + "px"),
-                      u.current.style.setProperty(
+                      d.current.style.setProperty(
                         "--availableHeight",
                         `${e.top}px`,
                       ))
-                    : void 0 === C &&
-                      ((u.current.style.top = `${e.top}px`),
-                      (u.current.style.bottom = "unset"),
-                      u.current.style.setProperty(
+                    : void 0 === p &&
+                      ((d.current.style.top = `${e.top}px`),
+                      (d.current.style.bottom = "unset"),
+                      d.current.style.setProperty(
                         "--availableHeight",
                         document.documentElement.clientHeight - e.top + "px",
                       )));
-          }, [h, t, o, C]),
-          P = (0, s.useMemo)(() => {
-            if (d.current) return (0, l._f)(d.current);
-          }, [d.current]);
-        (0, s.useEffect)(
+          }, [y, n, t, p]),
+          P = (0, a.useMemo)(() => {
+            if (m.current) return (0, c._f)(m.current);
+          }, [m.current]);
+        (0, a.useEffect)(
           () =>
-            y
-              ? (u.current?.showPopover(),
-                P?.addEventListener("scroll", p),
-                () => P?.removeEventListener("scroll", p))
+            S
+              ? (d.current?.showPopover(),
+                P?.addEventListener("scroll", C),
+                () => P?.removeEventListener("scroll", C))
               : ("true" !=
                   window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
-                  u.current?.hidePopover(),
+                  d.current?.hidePopover(),
                 () => {}),
-          [y, p, P],
+          [S, C, P],
         );
-        const f = (0, s.useCallback)(() => {
-            p(), S(!0), (m.current = !0);
-          }, [p]),
-          g = (0, s.useCallback)(() => {
-            (m.current = !1), b.current || S(!1);
+        const g = (0, a.useCallback)(() => {
+            C(), h(!0), (b.current = !0);
+          }, [C]),
+          _ = (0, a.useCallback)(() => {
+            (b.current = !1), u.current || h(!1);
           }, []),
-          E = (0, s.useCallback)(() => {
-            (b.current = !0), S(!0);
+          f = (0, a.useCallback)(() => {
+            (u.current = !0), h(!0);
           }, []),
-          _ = (0, s.useCallback)(() => {
-            (b.current = !1), m.current || S(!1);
-          }, []),
-          D = (0, s.useCallback)(() => {
-            _(), g();
-          }, [_, g]),
-          k = (0, s.useCallback)(
+          x = (0, a.useCallback)(
             (e) => {
-              "Enter" === e.key && (e.preventDefault(), y ? g() : f());
+              d.current?.contains(e.target) && f();
             },
-            [g, f, y],
+            [f],
           ),
-          I = (0, s.useCallback)(
+          D = (0, a.useCallback)(
+            (e) => {
+              d.current?.contains(e.target) && f();
+            },
+            [f],
+          ),
+          k = (0, a.useCallback)(() => {
+            (u.current = !1), b.current || h(!1);
+          }, []),
+          v = (0, a.useCallback)(
+            (e) => {
+              d.current?.contains(e.target) && k();
+            },
+            [k],
+          ),
+          I = (0, a.useCallback)(() => {
+            k(), _();
+          }, [k, _]),
+          E = (0, a.useCallback)(
+            (e) => {
+              "Enter" === e.key && (e.preventDefault(), S ? _() : g());
+            },
+            [_, g, S],
+          ),
+          T = (0, a.useCallback)(
             (e) => {
               e.currentTarget.contains(e.relatedTarget) ||
-                u.current?.contains(e.relatedTarget) ||
-                g();
-            },
-            [g],
-          ),
-          A = (0, s.useCallback)(
-            (e) => {
-              const r =
-                  e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
-                t = !e.relatedTarget && !b.current;
-              (r || t) && (_(), S(!1));
+                d.current?.contains(e.relatedTarget) ||
+                _();
             },
             [_],
           ),
-          x = (0, s.useCallback)(() => {
-            y && i ? D() : f();
-          }, [D, i, y, f]),
-          v = (0, s.useCallback)(
+          A = (0, a.useCallback)(
             (e) => {
-              "Enter" === e.key && y && i ? D() : f(),
-                "Escape" === e.key && y && (D(), e.stopPropagation());
+              2 === s && g();
             },
-            [D, i, y, f],
+            [s, g],
           ),
-          w = 0 === a;
-        let T;
-        w && !y
-          ? (T = (e) => {
-              e.preventDefault(), f();
-            })
-          : w || (T = y ? g : f);
+          j = (0, a.useCallback)(
+            (e) => {
+              const r =
+                  e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
+                n = !e.relatedTarget && !u.current;
+              (r || n) && (k(), h(!1));
+            },
+            [k],
+          ),
+          F = (0, a.useCallback)(
+            (e) => {
+              d.current?.contains(e.target) &&
+                (S && i ? I() : u.current && g());
+            },
+            [I, i, S, g],
+          ),
+          w = (0, a.useCallback)(
+            (e) => {
+              "Enter" === e.key && S && i ? I() : g(),
+                "Escape" === e.key && S && (I(), e.stopPropagation());
+            },
+            [I, i, S, g],
+          );
+        let O;
+        0 !== s || S
+          ? 1 === s && (O = S ? _ : g)
+          : (O = (e) => {
+              e.preventDefault(), g();
+            });
         const N = {
-            "aria-expanded": y,
+            "aria-expanded": S,
             role: "button",
-            onMouseEnter: w ? f : void 0,
-            onMouseLeave: w ? g : void 0,
-            onClick: T,
-            ref: d,
-            onKeyDown: k,
-            onBlur: I,
+            onMouseEnter: 0 === s ? g : void 0,
+            onMouseLeave: 0 === s ? _ : void 0,
+            onClick: O,
+            ref: m,
+            onKeyDown: E,
+            onFocus: A,
+            onBlur: T,
           },
-          F = {
+          R = {
             popover: "manual",
-            ref: u,
-            onMouseEnter: E,
-            onMouseLeave: _,
-            onFocus: E,
-            onBlur: A,
-            onClick: x,
-            onKeyDown: v,
-            className: c.PopoverMenu,
+            ref: d,
+            onMouseEnter: D,
+            onMouseLeave: v,
+            onFocus: x,
+            onBlur: j,
+            onClick: F,
+            onKeyDown: w,
+            className: l.PopoverMenu,
           };
-        return {
-          isShowingMenu: y,
-          triggerProps: N,
-          menuProps: F,
-          closeMenu: D,
-        };
+        return (
+          (0, a.useImperativeHandle)(
+            e.ref,
+            () => ({ show: g, hide: _, close: I }),
+            [g, _, I],
+          ),
+          { isShowingMenu: S, triggerProps: N, menuProps: R, closeMenu: I }
+        );
       }
       !(async function () {
         if (
@@ -241,493 +308,473 @@
           "object" != typeof HTMLElement.prototype ||
           !("popover" in HTMLElement.prototype)
         ) {
-          (await t.e(8433).then(t.bind(t, 8433))).apply();
+          (await n.e(8433).then(n.bind(n, 8433))).apply();
         }
       })();
-      var u = t(7445),
-        b = t(76217);
+      var u = n(7445),
+        b = n(76217);
       function m(e, r) {
-        return (t) => {
-          e?.(t), r?.(t);
+        return (n) => {
+          e?.(n), r?.(n);
         };
       }
-      function d(e) {
+      function S(e) {
         const {
             direction: r,
-            interactionMode: t = 0,
-            ignoreHorizontal: n,
-            ignoreVertical: o,
-            dismissOnClick: l,
-            menuTarget: c,
-            className: d,
-            children: y,
-            renderWhenClosed: S = !0,
-            ...C
+            interactionMode: n = 0,
+            ignoreHorizontal: o,
+            ignoreVertical: i,
+            dismissOnClick: c,
+            menuTarget: l,
+            className: S,
+            children: h,
+            renderWhenClosed: p = !0,
+            ...y
           } = e,
           {
-            isShowingMenu: h,
-            triggerProps: p,
-            menuProps: P,
-            closeMenu: f,
-          } = a(e),
-          g = s.useRef(null),
-          E = s.useRef(null);
+            isShowingMenu: C,
+            triggerProps: P,
+            menuProps: g,
+            closeMenu: _,
+          } = d(e),
+          f = a.useRef(null),
+          x = a.useRef(null);
         return (
-          s.useEffect(() => {
-            h
-              ? E.current?.TakeFocus()
-              : E.current?.BFocusWithin() && g.current?.TakeFocus();
-          }, [h]),
-          s.createElement(
-            s.Fragment,
-            null,
-            s.cloneElement(c, {
-              ...p,
-              onMouseEnter: m(c.props.onMouseEnter, p.onMouseEnter),
-              onMouseLeave: m(c.props.onMouseLeave, p.onMouseLeave),
-              navRef: g,
-            }),
-            s.createElement(
-              b.Z,
-              {
-                ...C,
+          a.useEffect(() => {
+            C
+              ? x.current?.TakeFocus()
+              : x.current?.BFocusWithin() && f.current?.TakeFocus();
+          }, [C]),
+          (0, t.jsxs)(t.Fragment, {
+            children: [
+              a.cloneElement(l, {
                 ...P,
-                className: i()(P.className, d),
-                navRef: E,
-                onCancel: f,
-                onFocusWithin: (e) => !e && f(),
-                childFocusDisabled: !h,
-              },
-              s.createElement(u.q, null, (S || h) && y),
-            ),
-          )
+                onMouseEnter: m(l.props.onMouseEnter, P.onMouseEnter),
+                onMouseLeave: m(l.props.onMouseLeave, P.onMouseLeave),
+                navRef: f,
+              }),
+              (0, t.jsx)(b.Z, {
+                ...y,
+                ...g,
+                className: s()(g.className, S),
+                navRef: x,
+                onCancel: _,
+                onFocusWithin: (e) => !e && _(),
+                childFocusDisabled: !C,
+                children: (0, t.jsx)(u.q, { children: (p || C) && h }),
+              }),
+            ],
+          })
         );
       }
-      var y = t(48174),
-        S = t(87864),
-        C = t(88267),
-        h = t(12155),
-        p = t(52038),
-        P = t(31389),
-        f = t.n(P),
-        g = t(42475);
-      const E = {};
-      (E.arabic = () => t.e(6873).then(t.t.bind(t, 46873, 19))),
-        (E.brazilian = () => t.e(1365).then(t.t.bind(t, 1365, 19))),
-        (E.bulgarian = () => t.e(3966).then(t.t.bind(t, 83966, 19))),
-        (E.czech = () => t.e(1360).then(t.t.bind(t, 51360, 19))),
-        (E.danish = () => t.e(8292).then(t.t.bind(t, 98292, 19))),
-        (E.dutch = () => t.e(4993).then(t.t.bind(t, 44993, 19))),
-        (E.english = () => t.e(3703).then(t.t.bind(t, 3703, 19))),
-        (E.finnish = () => t.e(6376).then(t.t.bind(t, 86376, 19))),
-        (E.french = () => t.e(7325).then(t.t.bind(t, 67325, 19))),
-        (E.german = () => t.e(9263).then(t.t.bind(t, 69263, 19))),
-        (E.greek = () => t.e(4399).then(t.t.bind(t, 14399, 19))),
-        (E.hungarian = () => t.e(1706).then(t.t.bind(t, 91706, 19))),
-        (E.indonesian = () => t.e(9341).then(t.t.bind(t, 69341, 19))),
-        (E.italian = () => t.e(7511).then(t.t.bind(t, 97511, 19))),
-        (E.japanese = () => t.e(330).then(t.t.bind(t, 40330, 19))),
-        (E.koreana = () => t.e(6252).then(t.t.bind(t, 96252, 19))),
-        (E.latam = () => t.e(204).then(t.t.bind(t, 90204, 19))),
-        (E.norwegian = () => t.e(839).then(t.t.bind(t, 40839, 19))),
-        (E.polish = () => t.e(8816).then(t.t.bind(t, 78816, 19))),
-        (E.portuguese = () => t.e(8160).then(t.t.bind(t, 98160, 19))),
-        (E.romanian = () => t.e(3546).then(t.t.bind(t, 73546, 19))),
-        (E.russian = () => t.e(4302).then(t.t.bind(t, 84302, 19))),
-        (E.schinese = () => t.e(6461).then(t.t.bind(t, 46461, 19))),
-        (E.spanish = () => t.e(8167).then(t.t.bind(t, 18167, 19))),
-        (E.swedish = () => t.e(2438).then(t.t.bind(t, 22438, 19))),
-        (E.tchinese = () => t.e(6006).then(t.t.bind(t, 46006, 19))),
-        (E.thai = () => t.e(6727).then(t.t.bind(t, 96727, 19))),
-        (E.turkish = () => t.e(1639).then(t.t.bind(t, 51639, 19))),
-        (E.ukrainian = () => t.e(4354).then(t.t.bind(t, 21973, 19))),
-        (E.vietnamese = () => t.e(3946).then(t.t.bind(t, 53946, 19)));
-      const _ = (0, g.l)(async function (e) {
-        if (E[e]) return E[e]();
-      });
+      var h = n(48174),
+        p = n(87864),
+        y = n(88267),
+        C = n(42836),
+        P = n(12155),
+        g = n(52038),
+        _ = n(31389),
+        f = n.n(_),
+        x = n(47184);
       function D(e) {
-        const r = s.createElement(
-          "button",
-          { className: f().PriceGuidelinesPicker },
-          s.createElement(h.GB9, null),
-        );
-        return s.createElement(
-          d,
-          {
-            menuTarget: r,
-            direction: "down",
-            interactionMode: 1,
-            dismissOnClick: !0,
-          },
-          s.createElement(k, { ...e }),
-        );
-      }
-      function k(e) {
-        const { fnGetUSDPriceInCents: r, fnOnUpdate: t, strDescription: n } = e,
-          o = (0, y.cT)(),
-          i = r();
-        if (!o) return null;
-        const l = o.GetUSDPricePointsInCents();
-        return s.createElement(
-          "div",
-          { className: f().GuidelinesPanel },
-          s.createElement(
-            "div",
-            { className: f().GuidelinesDescription },
-            n || _.Localize("#PricingGuideline_Default"),
-          ),
-          s.createElement(
-            "div",
-            { className: f().GuidelinesGrid },
-            l.map((e) =>
-              s.createElement(
-                "button",
-                {
-                  key: e,
-                  onClick: () => t(e),
-                  className: (0, p.A)(
-                    f().GridElement,
-                    i == e && f().CurrentPrice,
-                  ),
-                },
-                (0, S.x)(e, C.AI.k_ECurrencyCodeUSD),
-              ),
-            ),
-          ),
-        );
-      }
-      var I = t(17084),
-        A = t(9554),
-        x = t(16676),
-        v = t(32754),
-        w = t(61859),
-        T = t(96434),
-        N = t.n(T),
-        F = t(14336);
-      let W = null;
-      function R(e) {
-        const { packageID: r, strPriceKey: t } = e,
-          {
-            nPriceInCents: n,
-            nPublishedPriceInCents: o,
-            nProposedPriceInCents: i,
-            nSuggestedPriceInCents: l,
-            fnSetPrice: c,
-          } = (0, I.xQ)(r, t),
-          { nPriceInCents: a } = (0, I.xQ)(r, "USD"),
-          u = !(!i || (o && i == o)),
-          b = (0, I.d$)(r),
-          m = b && K(b.rtSubmitted),
-          { data: d } = (0, F.js)(b?.submitterID),
-          y = d ? d.m_strPlayerName : b?.submitterID;
-        return (o || u || l) && W == r + t
-          ? s.createElement(
-              "div",
-              { className: N().PricePopout },
-              !!o &&
-                s.createElement(
-                  v.he,
-                  {
-                    className: N().DetailRow,
-                    direction: "left",
-                    toolTipContent: (0, w.we)(
-                      "#PricingDashboard_CurrentPriceOnStore_ttip",
-                    ),
-                  },
-                  s.createElement(
-                    "div",
-                    { className: N().DetailLabel },
-                    (0, w.we)("#PricingDashboard_CurrentPriceOnStore"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: N().DetailPrice },
-                    (0, I.Wx)(o, t).join(""),
-                  ),
-                  s.createElement(
-                    v.he,
-                    {
-                      className: (0, p.A)(
-                        N().DetailButton,
-                        o == n && N().Disabled,
-                      ),
-                      onClick: () => c(o),
-                      bDisabled: o == n,
-                      toolTipContent: (0, w.we)(
-                        "#PricingDashboard_UseThisOldPrice_ttip",
-                      ),
-                    },
-                    (0, w.we)("#PricingDashboard_UseThisPrice_Button"),
-                  ),
-                ),
-              u &&
-                s.createElement(
-                  v.he,
-                  {
-                    className: N().DetailRow,
-                    direction: "left",
-                    toolTipContent: (0, w.we)(
-                      "#PricingDashboard_ProposedPrice_ttip",
-                      y,
-                      m,
-                    ),
-                  },
-                  s.createElement(
-                    "div",
-                    { className: N().DetailLabel },
-                    (0, w.we)("#PricingDashboard_ProposedPrice"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: N().DetailPrice },
-                    (0, I.Wx)(i, t).join(""),
-                  ),
-                  s.createElement(
-                    v.he,
-                    {
-                      className: (0, p.A)(
-                        N().DetailButton,
-                        i == n && N().Disabled,
-                      ),
-                      onClick: () => c(i),
-                      bDisabled: i == n,
-                      toolTipContent: (0, w.we)(
-                        "#PricingDashboard_UseThisNewPrice_ttip",
-                      ),
-                    },
-                    (0, w.we)("#PricingDashboard_UseThisPrice_Button"),
-                  ),
-                ),
-              !!l &&
-                s.createElement(
-                  v.he,
-                  {
-                    className: N().DetailRow,
-                    direction: "left",
-                    toolTipContent: (0, w.we)(
-                      "#PricingDashboard_SuggestedPrice_ttip",
-                      (0, I.Wx)(a, "USD").join(""),
-                    ),
-                  },
-                  s.createElement(
-                    "div",
-                    { className: N().DetailLabel },
-                    (0, w.we)("#PricingDashboard_SuggestedPrice"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: N().DetailPrice },
-                    (0, I.Wx)(l, t).join(""),
-                  ),
-                  s.createElement(
-                    v.he,
-                    {
-                      className: (0, p.A)(
-                        N().DetailButton,
-                        l == n && N().Disabled,
-                      ),
-                      onClick: () => c(l),
-                      bDisabled: l == n,
-                      toolTipContent: (0, w.we)(
-                        "#PricingDashboard_UseThisNewPrice_ttip",
-                      ),
-                    },
-                    (0, w.we)("#PricingDashboard_UseThisPrice_Button"),
-                  ),
-                ),
-            )
-          : null;
-      }
-      function U(e) {
-        const { cell: r, row: t } = e,
-          n = t.original.packageID,
-          o = r.getValue(),
-          {
-            nPriceInCents: i,
-            nPublishedPriceInCents: l,
-            nProposedPriceInCents: c,
-            fnSetPrice: a,
-          } = (0, I.xQ)(n, o),
-          [u, b, m] = (0, I.Wx)(i, o),
-          y = (0, I.Gs)(o),
-          S = s.useRef(void 0),
-          { strClassName: C } = L(n, o),
-          h = "USD" == o,
-          p = c ?? l,
-          P = i != p;
-        return s.createElement(
-          "div",
-          { ref: S, onKeyDown: A.nm, className: C },
-          P && s.createElement(B, { nPriceInCents: i, nSavedPriceInCents: p }),
-          u && s.createElement("div", { className: N().PricePrefix }, u),
-          s.createElement(
-            d,
-            {
-              menuTarget: s.createElement(
-                "div",
-                { className: N().EditablePrice },
-                s.createElement(x.pd, {
-                  value: b,
-                  className: N().PriceInput,
-                  onChange: (e) => {
-                    const r = e.target.value.replace(/[^0-9]/g, "");
-                    let t = Number(r || 0);
-                    if (Number.isNaN(t)) return;
-                    y.bWholeUnitsOnly && (t *= 100);
-                    const n = 2147483647;
-                    t > n && (t = n), a(t);
-                  },
-                  onFocus: () => {
-                    W = n + o;
-                  },
-                }),
-              ),
-              direction: "up",
-              interactionMode: 1,
-              dismissOnClick: !0,
-              renderWhenClosed: !1,
-            },
-            s.createElement(R, { packageID: n, strPriceKey: o }),
-          ),
-          m && s.createElement("div", { className: N().PriceSuffix }, m),
-          h && s.createElement(M, { packageID: n }),
-          s.createElement(G, { packageID: n, strPriceKey: o }),
-        );
-      }
-      function M(e) {
-        const { packageID: r } = e,
-          { fnApplyGuidelines: t } = (0, y.gC)((0, I.$i)());
-        return s.createElement(D, {
-          fnGetUSDPriceInCents: () => (0, I.FR)(r, "USD"),
-          fnOnUpdate: (e) => t(r, e),
-          strDescription: (0, w.we)(
-            "#PricingDashboard_GuidelinesPickerDescription",
-          ),
+        const r = (0, t.jsx)("button", {
+            className: f().PriceGuidelinesPicker,
+            children: (0, t.jsx)(P.GB9, {}),
+          }),
+          n = a.useRef(null);
+        return (0, t.jsx)(S, {
+          menuTarget: r,
+          direction: "down",
+          interactionMode: 1,
+          ref: n,
+          children: (0, t.jsx)(k, { onSelect: () => n.current?.close(), ...e }),
         });
       }
-      function G(e) {
-        const { packageID: r, strPriceKey: t } = e,
-          { strPriceWarning: n, bBadPrice: o, bShowWarningIcon: i } = L(r, t);
-        return i
-          ? s.createElement(
-              v.he,
-              {
-                className: N().PriceAlert,
-                strTooltipClassname: N().HoverToolTip,
-                toolTipContent: n,
-                direction: "top",
-              },
-              s.createElement(h.eTF, {
-                color: o ? "rgb(194, 45, 0)" : "#e5af37",
-              }),
-            )
+      function k(e) {
+        const {
+            fnGetUSDPriceInCents: r,
+            fnOnUpdate: n,
+            strDescription: o,
+            bCanSetToFree: i,
+            nPackageID: s,
+            onSelect: a,
+            appids: c,
+          } = e,
+          l = (0, h.cT)(),
+          d = r();
+        if (!l) return null;
+        const u = l.GetUSDPricePointsInCents();
+        return (0, t.jsxs)("div", {
+          className: f().GuidelinesPanel,
+          children: [
+            (0, t.jsx)("div", {
+              className: f().GuidelinesDescription,
+              children: o || x.g.Localize("#PricingGuideline_Default"),
+            }),
+            (0, t.jsxs)("div", {
+              className: f().GuidelinesGrid,
+              children: [
+                void 0 !== i &&
+                  (0, t.jsx)(
+                    "div",
+                    {
+                      className: f().GridElement,
+                      children: (0, t.jsx)(C.K, {
+                        nPackageID: s,
+                        strButtonOverride: x.g.Localize(
+                          "#FreeOnDemand_InlineOption",
+                        ),
+                        appids: c,
+                      }),
+                    },
+                    "settofree",
+                  ),
+                u.map((e) =>
+                  (0, t.jsx)(
+                    "button",
+                    {
+                      onClick: () => {
+                        a(), n(e);
+                      },
+                      className: (0, g.A)({
+                        [f().GridElement]: !0,
+                        [f().CurrentPrice]: d == e,
+                      }),
+                      children: (0, p.x)(e, y.AI.k_ECurrencyCodeUSD),
+                    },
+                    e,
+                  ),
+                ),
+              ],
+            }),
+          ],
+        });
+      }
+      var v = n(17084),
+        I = n(9554),
+        E = n(16676),
+        T = n(32754),
+        A = n(61859),
+        j = n(96434),
+        F = n.n(j),
+        w = n(14336);
+      let O = null;
+      function N(e) {
+        const { packageID: r, strPriceKey: n } = e,
+          {
+            nPriceInCents: o,
+            nPublishedPriceInCents: i,
+            nProposedPriceInCents: s,
+            nSuggestedPriceInCents: a,
+            fnSetPrice: c,
+          } = (0, v.xQ)(r, n),
+          { nPriceInCents: l } = (0, v.xQ)(r, "USD"),
+          d = !(!s || (i && s == i)),
+          u = (0, v.d$)(r),
+          b = u && B(u.rtSubmitted),
+          { data: m } = (0, w.js)(u?.submitterID),
+          S = m ? m.m_strPlayerName : u?.submitterID;
+        return (i || d || a) && O == r + n
+          ? (0, t.jsxs)("div", {
+              className: F().PricePopout,
+              children: [
+                !!i &&
+                  (0, t.jsxs)(T.he, {
+                    className: F().DetailRow,
+                    direction: "left",
+                    toolTipContent: (0, A.we)(
+                      "#PricingDashboard_CurrentPriceOnStore_ttip",
+                    ),
+                    children: [
+                      (0, t.jsx)("div", {
+                        className: F().DetailLabel,
+                        children: (0, A.we)(
+                          "#PricingDashboard_CurrentPriceOnStore",
+                        ),
+                      }),
+                      (0, t.jsx)("div", {
+                        className: F().DetailPrice,
+                        children: (0, v.Wx)(i, n).join(""),
+                      }),
+                      (0, t.jsx)(T.he, {
+                        className: (0, g.A)(
+                          F().DetailButton,
+                          i == o && F().Disabled,
+                        ),
+                        onClick: () => c(i),
+                        bDisabled: i == o,
+                        toolTipContent: (0, A.we)(
+                          "#PricingDashboard_UseThisOldPrice_ttip",
+                        ),
+                        children: (0, A.we)(
+                          "#PricingDashboard_UseThisPrice_Button",
+                        ),
+                      }),
+                    ],
+                  }),
+                d &&
+                  (0, t.jsxs)(T.he, {
+                    className: F().DetailRow,
+                    direction: "left",
+                    toolTipContent: (0, A.we)(
+                      "#PricingDashboard_ProposedPrice_ttip",
+                      S,
+                      b,
+                    ),
+                    children: [
+                      (0, t.jsx)("div", {
+                        className: F().DetailLabel,
+                        children: (0, A.we)("#PricingDashboard_ProposedPrice"),
+                      }),
+                      (0, t.jsx)("div", {
+                        className: F().DetailPrice,
+                        children: (0, v.Wx)(s, n).join(""),
+                      }),
+                      (0, t.jsx)(T.he, {
+                        className: (0, g.A)(
+                          F().DetailButton,
+                          s == o && F().Disabled,
+                        ),
+                        onClick: () => c(s),
+                        bDisabled: s == o,
+                        toolTipContent: (0, A.we)(
+                          "#PricingDashboard_UseThisNewPrice_ttip",
+                        ),
+                        children: (0, A.we)(
+                          "#PricingDashboard_UseThisPrice_Button",
+                        ),
+                      }),
+                    ],
+                  }),
+                !!a &&
+                  (0, t.jsxs)(T.he, {
+                    className: F().DetailRow,
+                    direction: "left",
+                    toolTipContent: (0, A.we)(
+                      "#PricingDashboard_SuggestedPrice_ttip",
+                      (0, v.Wx)(l, "USD").join(""),
+                    ),
+                    children: [
+                      (0, t.jsx)("div", {
+                        className: F().DetailLabel,
+                        children: (0, A.we)("#PricingDashboard_SuggestedPrice"),
+                      }),
+                      (0, t.jsx)("div", {
+                        className: F().DetailPrice,
+                        children: (0, v.Wx)(a, n).join(""),
+                      }),
+                      (0, t.jsx)(T.he, {
+                        className: (0, g.A)(
+                          F().DetailButton,
+                          a == o && F().Disabled,
+                        ),
+                        onClick: () => c(a),
+                        bDisabled: a == o,
+                        toolTipContent: (0, A.we)(
+                          "#PricingDashboard_UseThisNewPrice_ttip",
+                        ),
+                        children: (0, A.we)(
+                          "#PricingDashboard_UseThisPrice_Button",
+                        ),
+                      }),
+                    ],
+                  }),
+              ],
+            })
           : null;
       }
-      const O = 2;
-      function L(e, r) {
+      function R(e) {
+        const { cell: r, row: n } = e,
+          o = n.original.packageID,
+          i = r.getValue(),
+          {
+            nPriceInCents: s,
+            nPublishedPriceInCents: c,
+            nProposedPriceInCents: l,
+            fnSetPrice: d,
+          } = (0, v.xQ)(o, i),
+          [u, b, m] = (0, v.Wx)(s, i),
+          h = (0, v.Gs)(i),
+          p = a.useRef(void 0),
+          { strClassName: y } = M(o, i),
+          C = "USD" == i,
+          P = l ?? c,
+          g = s != P;
+        return (0, t.jsxs)("div", {
+          ref: p,
+          onKeyDown: I.nm,
+          className: y,
+          children: [
+            g && (0, t.jsx)(z, { nPriceInCents: s, nSavedPriceInCents: P }),
+            (0, t.jsx)("div", { className: F().PricePrefix, children: u && u }),
+            (0, t.jsx)(S, {
+              menuTarget: (0, t.jsx)("div", {
+                className: F().EditablePrice,
+                children: (0, t.jsx)(E.pd, {
+                  value: b,
+                  className: F().PriceInput,
+                  onChange: (e) => {
+                    const r = e.target.value.replace(/[^0-9]/g, "");
+                    let n = Number(r || 0);
+                    if (Number.isNaN(n)) return;
+                    h.bWholeUnitsOnly && (n *= 100);
+                    const t = 2147483647;
+                    n > t && (n = t), d(n);
+                  },
+                  onFocus: () => {
+                    O = o + i;
+                  },
+                }),
+              }),
+              direction: "up",
+              interactionMode: 2,
+              dismissOnClick: !0,
+              renderWhenClosed: !1,
+              children: (0, t.jsx)(N, { packageID: o, strPriceKey: i }),
+            }),
+            (0, t.jsx)("div", { className: F().PriceSuffix, children: m && m }),
+            C &&
+              (0, t.jsx)(L, {
+                packageID: o,
+                appids: n.original.appids,
+                bCanSetToFree: n.original.bCanSetToFree,
+              }),
+            (0, t.jsx)(U, { packageID: o, strPriceKey: i }),
+          ],
+        });
+      }
+      function L(e) {
+        const { packageID: r, appids: n, bCanSetToFree: o } = e,
+          { fnApplyGuidelines: i } = (0, h.gC)((0, v.$i)());
+        return (0, t.jsx)(D, {
+          fnGetUSDPriceInCents: () => (0, v.FR)(r, "USD"),
+          fnOnUpdate: (e) => i(r, e),
+          strDescription: (0, A.we)(
+            "#PricingDashboard_GuidelinesPickerDescription",
+          ),
+          nPackageID: r,
+          appids: n,
+          bCanSetToFree: o,
+        });
+      }
+      function U(e) {
+        const { packageID: r, strPriceKey: n } = e,
+          { strPriceWarning: o, bBadPrice: i, bShowWarningIcon: s } = M(r, n);
+        return s
+          ? (0, t.jsx)(T.he, {
+              className: F().PriceAlert,
+              strTooltipClassname: F().HoverToolTip,
+              toolTipContent: o,
+              direction: "top",
+              children: (0, t.jsx)(P.eTF, {
+                color: i ? "rgb(194, 45, 0)" : "#e5af37",
+              }),
+            })
+          : null;
+      }
+      const W = 2;
+      function M(e, r) {
         const {
-            nPriceInCents: t,
-            nPublishedPriceInCents: n,
+            nPriceInCents: n,
+            nPublishedPriceInCents: t,
             nProposedPriceInCents: o,
             nMinPriceInCents: i,
-            nMaxPriceInCents: l,
+            nMaxPriceInCents: s,
             nMaxDiscountPercentage: c,
-            nSuggestedPriceInCents: a,
-          } = (0, I.xQ)(e, r),
-          u = (0, I.d$)(e),
-          b = "USD" == r,
-          m = t != (o ?? n),
-          d = t < i,
-          y = !!l && t > l,
-          S = !!a && t > a * O,
-          C = !!a && t < a / O,
-          h = !!a && t < a && !!c,
-          P = !!a && t == a && !!c,
-          f =
-            (y && (0, w.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (d &&
-              (0, w.we)(
+            nSuggestedPriceInCents: l,
+          } = (0, v.xQ)(e, r),
+          d = (0, v.d$)(e),
+          u = "USD" == r,
+          b = n != (o ?? t),
+          m = n < i,
+          S = !!s && n > s,
+          h = !!l && n > l * W,
+          p = !!l && n < l / W,
+          y = !!l && n < l && !!c,
+          C = !!l && n == l && !!c,
+          P =
+            (S && (0, A.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
+            (m &&
+              (0, A.we)(
                 "#PricingDashboard_PriceTooLow",
-                (0, I.Wx)(i, r).join(""),
-              )) ||
-            (S &&
-              (0, w.we)(
-                "#PricingDashboard_PriceMuchHigherThanGuidelines",
-                (0, I.Wx)(a, r).join(""),
-              )) ||
-            (C &&
-              (0, w.we)(
-                "#PricingDashboard_PriceMuchLowerThanGuidelines",
-                (0, I.Wx)(a, r).join(""),
-              )) ||
-            (h &&
-              (0, w.we)(
-                "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                c,
-              )) ||
-            (P && (0, w.we)("#PricingDashboard_PriceCheap", c)),
-          g = y || d,
-          E = S || C,
-          _ = g || E || h,
-          D = !(m || !o || (n && o == n)),
-          k = 4 == u?.eState,
-          A = (0, p.A)(
-            N().PriceCell,
-            b && N().USD,
-            m && N().ChangedLocally,
-            D && N().ProposedPrice,
-            k && N().ApprovedCanPublish,
-            _ && N().WarningPrice,
-            E && N().SevereWarningPrice,
-            g && N().BadPrice,
+                (0, v.Wx)(i, r).join(""),
+              ))
+              ? (0, A.we)(
+                  "#PricingDashboard_PriceMuchHigherThanMethod",
+                  (0, v.Wx)(l, r).join(""),
+                )
+              : (0, A.we)(
+                  "#PricingDashboard_PriceMuchHigherThanGuidelines",
+                  (0, v.Wx)(l, r).join(""),
+                ) ||
+                (p &&
+                  (0, A.we)(
+                    "#PricingDashboard_PriceMuchLowerThanGuidelines",
+                    (0, v.Wx)(l, r).join(""),
+                  )) ||
+                (y &&
+                  (0, A.we)(
+                    "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
+                    c,
+                  )) ||
+                (C && (0, A.we)("#PricingDashboard_PriceCheap", c)),
+          _ = S || m,
+          f = h || p,
+          x = _ || f || y,
+          D = !(b || !o || (t && o == t)),
+          k = 4 == d?.eState,
+          I = (0, g.A)(
+            F().PriceCell,
+            u && F().USD,
+            b && F().ChangedLocally,
+            D && F().ProposedPrice,
+            k && F().ApprovedCanPublish,
+            x && F().WarningPrice,
+            f && F().SevereWarningPrice,
+            _ && F().BadPrice,
           );
-        return s.useMemo(
+        return a.useMemo(
           () => ({
-            strPriceWarning: f,
-            strClassName: A,
-            bBadPrice: g,
-            bShowSevereWarning: E,
-            bShowWarningIcon: _,
+            strPriceWarning: P,
+            strClassName: I,
+            bBadPrice: _,
+            bShowSevereWarning: f,
+            bShowWarningIcon: x,
           }),
-          [f, A, g, E, _],
+          [P, I, _, f, x],
         );
+      }
+      function z(e) {
+        const { nPriceInCents: r, nSavedPriceInCents: n } = e;
+        let o = null,
+          i = null,
+          s = null,
+          a = null;
+        if (n) {
+          const e = Math.ceil((100 * (r - n)) / n),
+            c = r > n;
+          (s = c
+            ? (0, A.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
+            : (0, A.we)("#PricingDashboard_PriceLowerBy", e + "%")),
+            (a = (0, g.A)(F().PriceChange, c && F().PriceIncrease)),
+            (i = (0, t.jsx)("div", {
+              className: F().PriceChangeArrow,
+              children: (0, t.jsx)(P.i3G, { angle: c ? 0 : 180 }),
+            })),
+            (o = e + "%");
+        } else
+          (o = (0, A.we)("#PricingDashboard_PriceIsNew_Short")),
+            (a = (0, g.A)(F().NewPrice));
+        return (0, t.jsxs)(T.he, {
+          className: a,
+          strTooltipClassname: F().HoverToolTip,
+          toolTipContent: s,
+          direction: "top",
+          children: [i, o],
+        });
       }
       function B(e) {
-        const { nPriceInCents: r, nSavedPriceInCents: t } = e;
-        let n = null,
-          o = null,
-          i = null,
-          l = null;
-        if (t) {
-          const e = Math.ceil((100 * (r - t)) / t),
-            c = r > t;
-          (i = c
-            ? (0, w.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
-            : (0, w.we)("#PricingDashboard_PriceLowerBy", e + "%")),
-            (l = (0, p.A)(N().PriceChange, c && N().PriceIncrease)),
-            (o = s.createElement(
-              "div",
-              { className: N().PriceChangeArrow },
-              s.createElement(h.i3G, { angle: c ? 0 : 180 }),
-            )),
-            (n = e + "%");
-        } else
-          (n = (0, w.we)("#PricingDashboard_PriceIsNew_Short")),
-            (l = (0, p.A)(N().NewPrice));
-        return s.createElement(
-          v.he,
-          {
-            className: l,
-            strTooltipClassname: N().HoverToolTip,
-            toolTipContent: i,
-            direction: "top",
-          },
-          o,
-          n,
-        );
-      }
-      function K(e) {
-        return new Date(1e3 * e).toLocaleString(w.pf.GetPreferredLocales(), {
+        return new Date(1e3 * e).toLocaleString(A.pf.GetPreferredLocales(), {
           weekday: "long",
           month: "long",
           day: "numeric",
@@ -736,17 +783,123 @@
         });
       }
     },
-    87864: (e, r, t) => {
+    53965: (e, r, n) => {
       "use strict";
-      t.d(r, { x: () => s });
-      var n = t(88267);
+      n.d(r, { $: () => p });
+      var t = n(7850),
+        o = n(64238),
+        i = n.n(o),
+        s = n(69041),
+        a = n(75659),
+        c = n(41324),
+        l = n(73406),
+        d = n(90534),
+        u = n(53971);
+      function b(e) {
+        const {
+          size: r = "3",
+          loading: n = !0,
+          children: o,
+          color: i,
+          variant: s,
+          ...a
+        } = e;
+        return o || !n
+          ? (0, t.jsxs)(d.az, {
+              position: "relative",
+              ...a,
+              width: "fit-content",
+              children: [
+                (0, t.jsx)("div", {
+                  "data-visibility": !n,
+                  className: l.ChildContainer,
+                  children: o,
+                }),
+                n &&
+                  (0, t.jsx)(u.s, {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                    children: (0, t.jsx)(m, { size: r, color: i, variant: s }),
+                  }),
+              ],
+            })
+          : (0, t.jsx)(m, { size: r, color: i, variant: s, ...a });
+      }
+      function m(e) {
+        const { className: r, color: n, ...o } = (0, c.mz)(e, S);
+        return (0, t.jsx)("div", {
+          "data-accent-color": n,
+          className: i()(r, l.Spinner),
+          ...o,
+        });
+      }
+      const S = [
+        ...a.L,
+        { prop: "size", responsive: !0, className: (e) => l[`Size-${e}`] },
+        { prop: "variant", className: (e) => l[`Variant-${e}`] },
+      ];
+      const h = [
+          ...a.L,
+          { prop: "size", responsive: !0, className: (e) => s[`Size-${e}`] },
+          { prop: "variant", className: (e) => s[`Variant-${e}`] },
+          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
+          {
+            prop: "width",
+            className: s.Width,
+            cssProperty: "--width",
+            responsive: !0,
+          },
+        ],
+        p = function (e) {
+          const {
+              variant: r = "default",
+              size: n = "2",
+              color: o,
+              loading: a,
+              children: l,
+              onClick: d,
+              icon: u,
+              ...m
+            } = e,
+            S = a
+              ? (0, t.jsx)(b, {
+                  size: n,
+                  color: o,
+                  variant: "bright",
+                  children: l,
+                })
+              : l,
+            p = a ? void 0 : d;
+          return (0, t.jsx)("button", {
+            type: "button",
+            ...(0, c.mz)(
+              {
+                ...m,
+                variant: r,
+                size: n,
+                color: o,
+                className: i()(s.Button, u && s.Icon),
+                onClick: p,
+              },
+              h,
+            ),
+            children: S,
+          });
+        };
+    },
+    87864: (e, r, n) => {
+      "use strict";
+      n.d(r, { x: () => s });
+      var t = n(88267);
       const o = {
-          [n.AI.k_ECurrencyCodeInvalid]: {},
-          [n.AI.k_ECurrencyCodeUSD]: { strSymbol: "$" },
-          [n.AI.k_ECurrencyCodeGBP]: { strSymbol: "£" },
-          [n.AI.k_ECurrencyCodeEUR]: { strSymbol: "€" },
-          [n.AI.k_ECurrencyCodeCHF]: { strSymbol: "CHF" },
-          [n.AI.k_ECurrencyCodeRUB]: {
+          [t.AI.k_ECurrencyCodeInvalid]: {},
+          [t.AI.k_ECurrencyCodeUSD]: { strSymbol: "$" },
+          [t.AI.k_ECurrencyCodeGBP]: { strSymbol: "£" },
+          [t.AI.k_ECurrencyCodeEUR]: { strSymbol: "€" },
+          [t.AI.k_ECurrencyCodeCHF]: { strSymbol: "CHF" },
+          [t.AI.k_ECurrencyCodeRUB]: {
             strSymbol: "руб.",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
@@ -754,227 +907,549 @@
             strDecimalSymbol: ",",
             strThousandsSeparator: "",
           },
-          [n.AI.k_ECurrencyCodePLN]: {
+          [t.AI.k_ECurrencyCodePLN]: {
             strSymbol: "zł",
             bSuffixSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [n.AI.k_ECurrencyCodeBRL]: {
+          [t.AI.k_ECurrencyCodeBRL]: {
             strSymbol: "R$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeJPY]: {
+          [t.AI.k_ECurrencyCodeJPY]: {
             strSymbol: "¥",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeNOK]: {
+          [t.AI.k_ECurrencyCodeNOK]: {
             strSymbol: "kr",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeIDR]: {
+          [t.AI.k_ECurrencyCodeIDR]: {
             strSymbol: "Rp",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [n.AI.k_ECurrencyCodeMYR]: { strSymbol: "RM" },
-          [n.AI.k_ECurrencyCodePHP]: { strSymbol: "P" },
-          [n.AI.k_ECurrencyCodeSGD]: { strSymbol: "S$" },
-          [n.AI.k_ECurrencyCodeTHB]: { strSymbol: "฿" },
-          [n.AI.k_ECurrencyCodeVND]: {
+          [t.AI.k_ECurrencyCodeMYR]: { strSymbol: "RM" },
+          [t.AI.k_ECurrencyCodePHP]: { strSymbol: "P" },
+          [t.AI.k_ECurrencyCodeSGD]: { strSymbol: "S$" },
+          [t.AI.k_ECurrencyCodeTHB]: { strSymbol: "฿" },
+          [t.AI.k_ECurrencyCodeVND]: {
             strSymbol: "₫",
             bWholeUnitsOnly: !0,
             bSuffixSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeKRW]: {
+          [t.AI.k_ECurrencyCodeKRW]: {
             strSymbol: "₩",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeTRY]: {
+          [t.AI.k_ECurrencyCodeTRY]: {
             strSymbol: "TL",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeUAH]: {
+          [t.AI.k_ECurrencyCodeUAH]: {
             strSymbol: "₴",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [n.AI.k_ECurrencyCodeMXN]: { strSymbol: "Mex$", bSpaceForSymbol: !0 },
-          [n.AI.k_ECurrencyCodeCAD]: { strSymbol: "CDN$", bSpaceForSymbol: !0 },
-          [n.AI.k_ECurrencyCodeAUD]: { strSymbol: "A$", bSpaceForSymbol: !0 },
-          [n.AI.k_ECurrencyCodeNZD]: { strSymbol: "NZ$", bSpaceForSymbol: !0 },
-          [n.AI.k_ECurrencyCodeCNY]: { strSymbol: "¥", bSpaceForSymbol: !0 },
-          [n.AI.k_ECurrencyCodeINR]: {
+          [t.AI.k_ECurrencyCodeMXN]: { strSymbol: "Mex$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeCAD]: { strSymbol: "CDN$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeAUD]: { strSymbol: "A$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeNZD]: { strSymbol: "NZ$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeCNY]: { strSymbol: "¥", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeINR]: {
             strSymbol: "₹",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
           },
-          [n.AI.k_ECurrencyCodeCLP]: {
+          [t.AI.k_ECurrencyCodeCLP]: {
             strSymbol: "CLP$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodePEN]: { strSymbol: "S/." },
-          [n.AI.k_ECurrencyCodeCOP]: {
+          [t.AI.k_ECurrencyCodePEN]: { strSymbol: "S/." },
+          [t.AI.k_ECurrencyCodeCOP]: {
             strSymbol: "COL$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeZAR]: {
+          [t.AI.k_ECurrencyCodeZAR]: {
             strSymbol: "R",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [n.AI.k_ECurrencyCodeHKD]: { strSymbol: "HK$", bSpaceForSymbol: !0 },
-          [n.AI.k_ECurrencyCodeTWD]: {
+          [t.AI.k_ECurrencyCodeHKD]: { strSymbol: "HK$", bSpaceForSymbol: !0 },
+          [t.AI.k_ECurrencyCodeTWD]: {
             strSymbol: "NT$",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeSAR]: {
+          [t.AI.k_ECurrencyCodeSAR]: {
             strSymbol: "SR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeAED]: {
+          [t.AI.k_ECurrencyCodeAED]: {
             strSymbol: "AED",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeSEK]: {
+          [t.AI.k_ECurrencyCodeSEK]: {
             strSymbol: "kr",
             bSpaceForSymbol: !0,
             bSuffixSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeARS]: {
+          [t.AI.k_ECurrencyCodeARS]: {
             strSymbol: "ARS$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeILS]: { strSymbol: "₪" },
-          [n.AI.k_ECurrencyCodeBYN]: { strSymbol: "Br" },
-          [n.AI.k_ECurrencyCodeKZT]: {
+          [t.AI.k_ECurrencyCodeILS]: { strSymbol: "₪" },
+          [t.AI.k_ECurrencyCodeBYN]: { strSymbol: "Br" },
+          [t.AI.k_ECurrencyCodeKZT]: {
             strSymbol: "₸",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [n.AI.k_ECurrencyCodeKWD]: {
+          [t.AI.k_ECurrencyCodeKWD]: {
             strSymbol: "KD",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeQAR]: {
+          [t.AI.k_ECurrencyCodeQAR]: {
             strSymbol: "QR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeCRC]: {
+          [t.AI.k_ECurrencyCodeCRC]: {
             strSymbol: "₡",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeUYU]: {
+          [t.AI.k_ECurrencyCodeUYU]: {
             strSymbol: "$U",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [n.AI.k_ECurrencyCodeBGN]: {
+          [t.AI.k_ECurrencyCodeBGN]: {
             strSymbol: "лв",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeHRK]: {
+          [t.AI.k_ECurrencyCodeHRK]: {
             strSymbol: "kn",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeCZK]: {
+          [t.AI.k_ECurrencyCodeCZK]: {
             strSymbol: "Kč",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeDKK]: {
+          [t.AI.k_ECurrencyCodeDKK]: {
             strSymbol: "kr.",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeHUF]: {
+          [t.AI.k_ECurrencyCodeHUF]: {
             strSymbol: "Ft",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeRON]: {
+          [t.AI.k_ECurrencyCodeRON]: {
             strSymbol: "lei",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [n.AI.k_ECurrencyCodeMax]: {},
+          [t.AI.k_ECurrencyCodeMax]: {},
         },
         i = {
           strSymbol: "",
           bSuffixSymbol: !1,
           bSpaceForSymbol: !1,
           bWholeUnitsOnly: !1,
-          eCurrency: n.AI.k_ECurrencyCodeInvalid,
+          eCurrency: t.AI.k_ECurrencyCodeInvalid,
           strDecimalSymbol: ".",
           strThousandsSeparator: ",",
         };
       function s(e, r) {
-        const t = (function (e) {
+        const n = (function (e) {
             return { ...i, ...o[e], eCurrency: e };
           })(r),
           {
-            strSymbol: n,
+            strSymbol: t,
             bSuffixSymbol: s,
-            bSpaceForSymbol: l,
+            bSpaceForSymbol: a,
             bWholeUnitsOnly: c,
-            strDecimalSymbol: a,
-            strThousandsSeparator: u,
-          } = t,
-          b = e < 0,
-          m = c && e % 100 == 0;
-        b && (e = -e);
-        const d = [];
+            strDecimalSymbol: l,
+            strThousandsSeparator: d,
+          } = n,
+          u = e < 0,
+          b = c && e % 100 == 0;
+        u && (e = -e);
+        const m = [];
         for (let r = 0; r < 2; r++)
-          m || d.push(e % 10), (e = Math.floor(e / 10));
-        !m && a && d.push(a);
-        let y = 0;
+          b || m.push(e % 10), (e = Math.floor(e / 10));
+        !b && l && m.push(l);
+        let S = 0;
         do {
-          y++ % 3 == 0 && y > 2 && u && d.push(u),
-            d.push(e % 10),
+          S++ % 3 == 0 && S > 2 && d && m.push(d),
+            m.push(e % 10),
             (e = Math.floor(e / 10));
         } while (e > 0);
-        const S = d.reverse().join(""),
-          C = l ? " " : "",
-          h = b ? "-" : "";
-        return s ? `${h}${S}${C}${n}` : `${h}${n}${C}${S}`;
+        const h = m.reverse().join(""),
+          p = a ? " " : "",
+          y = u ? "-" : "";
+        return s ? `${y}${h}${p}${t}` : `${y}${t}${p}${h}`;
       }
+    },
+    42836: (e, r, n) => {
+      "use strict";
+      n.d(r, { K: () => x, T: () => v });
+      var t = n(7850),
+        o = n(53965),
+        i = n(90534),
+        s = n(20187),
+        a = n(90626),
+        c = n(16180),
+        l = n(53971);
+      const d = Object.assign(
+          function (e) {
+            const {
+              value: r,
+              onValueChange: n,
+              options: o,
+              getOptionLabel: i,
+              ...s
+            } = e;
+            return (0, t.jsx)(d.Root, {
+              value: r,
+              onValueChange: n,
+              ...s,
+              children: o.map((e) => {
+                const r = i ? i(e) : e;
+                return (0, t.jsx)(d.Option, { value: e, children: r }, r);
+              }),
+            });
+          },
+          {
+            Root: function (e) {
+              const { value: r, onValueChange: n, ...o } = e,
+                i = (0, a.useMemo)(
+                  () => ({ value: r, onValueChange: n }),
+                  [r, n],
+                );
+              return (0, t.jsx)(u, {
+                value: i,
+                children: (0, t.jsx)(l.s, {
+                  direction: "column",
+                  gap: "2",
+                  role: "radiogroup",
+                  ...o,
+                }),
+              });
+            },
+            Option: function (e) {
+              const { value: r, ref: n, children: o } = e,
+                i = (0, a.useContext)(u);
+              if (!i)
+                return (
+                  console.error(
+                    "<RadioGroup.Option> must be rendered within a <RadioGroup.Root>",
+                  ),
+                  null
+                );
+              const { value: d, onValueChange: b } = i,
+                m = d === r,
+                S = () => {
+                  m || b(r);
+                };
+              return (0, t.jsxs)(l.s, {
+                ref: n,
+                role: "radio",
+                "aria-checked": m,
+                onClick: S,
+                onKeyDown: (e) => {
+                  " " === e.key &&
+                    (S(), e.preventDefault(), e.stopPropagation());
+                },
+                tabIndex: m ? 0 : -1,
+                cursor: "default",
+                gap: "2",
+                className: c.Option,
+                children: [
+                  (0, t.jsx)("div", { className: c.RadioCircle }),
+                  (0, t.jsx)(s.EY, { children: o }),
+                ],
+              });
+            },
+          },
+        ),
+        u = (0, a.createContext)(null);
+      var b,
+        m = n(64753),
+        S = n(9154),
+        h = n(32754),
+        p = n(24484),
+        y = n(47184),
+        C = n(30470);
+      !(function (e) {
+        (e.k_FreeToPlay = "freetoplay"), (e.k_Free = "free");
+      })(b || (b = {}));
+      var P = n(8527),
+        g = n(51614);
+      var _ = n(71298),
+        f = n(47911);
+      function x(e) {
+        const {
+            strButtonOverride: r,
+            appids: n,
+            nPackageID: i,
+            onClick: s,
+          } = e,
+          a = v(),
+          [c, l, d] = (0, m.uD)();
+        return (0, t.jsxs)(t.Fragment, {
+          children: [
+            (0, t.jsx)(h.Gq, {
+              toolTipContent: a
+                ? y.g.Localize("#FreeOnDemand_Button_ttip")
+                : y.g.Localize("#FreeOnDemand_Button_disabled_ttip"),
+              children: (0, t.jsx)(o.$, {
+                onClick: () => {
+                  s?.(), l();
+                },
+                children: r || y.g.Localize("#FreeOnDemand_Button"),
+              }),
+            }),
+            (0, t.jsx)(S.EN, {
+              active: c,
+              children:
+                a && n && 1 == n.length
+                  ? (0, t.jsx)(D, {
+                      closeModal: d,
+                      nPackageID: i,
+                      nAppID: n[0],
+                    })
+                  : (0, t.jsx)(k, { closeModal: d }),
+            }),
+          ],
+        });
+      }
+      function D(e) {
+        const { closeModal: r, nAppID: n, nPackageID: o } = e,
+          [c, l] = (0, a.useState)(b.k_FreeToPlay),
+          u = (function (e, r) {
+            return (0, g.n)({
+              mutationKey: ["settofree", r],
+              mutationFn: async (n) => {
+                const { displayOption: t, fnOnStoreSaveSucceed: o } = n;
+                if (!e || !r) throw new Error("Invalid parameters provided");
+                {
+                  const r = new FormData();
+                  if (
+                    (r.set("sessionid", (0, p.KC)()),
+                    r.set("appid", "" + e),
+                    r.set(
+                      "displaytext",
+                      t == b.k_Free
+                        ? "#PurchaseButton_Free"
+                        : "#PurchaseButton_FreeToPlay",
+                    ),
+                    !(
+                      await fetch(
+                        `${P.TS.PARTNER_BASE_URL}store/ajaxupdatef2pstore`,
+                        { method: "POST", credentials: "include", body: r },
+                      )
+                    ).ok)
+                  )
+                    throw new Error(
+                      y.g.Localize("#FreeOnDemand_Store_Error", e),
+                    );
+                }
+                o && o();
+                {
+                  const e = new FormData();
+                  if (
+                    (e.set("sessionid", (0, p.KC)()),
+                    e.set("action", "save"),
+                    e.set("billing_type", "12"),
+                    !(
+                      await fetch(
+                        `${P.TS.PARTNER_BASE_URL}store/ajaxpackagesave/${r}`,
+                        { method: "POST", credentials: "include", body: e },
+                      )
+                    ).ok)
+                  )
+                    throw new Error(
+                      y.g.Localize("#FreeOnDemand_Package_Error", r),
+                    );
+                }
+              },
+            });
+          })(n, o),
+          m = (0, _.vs)();
+        return m.bLoading
+          ? (0, t.jsx)(_.Hh, {
+              state: m,
+              strDialogTitle: y.g.Localize("#FreeOnDemand_Title"),
+              closeModal: () => {
+                window.location.replace(
+                  `${C.TS.PARTNER_BASE_URL}store/packagelanding/${o}`,
+                ),
+                  r();
+              },
+            })
+          : (0, t.jsxs)(S.o0, {
+              strTitle: y.g.Localize("#FreeOnDemand_Title"),
+              strDescription: y.g.Localize("#FreeOnDemand_Desc"),
+              strOKButtonText: y.g.Localize("#FreeOnDemand_Button_Confirm"),
+              onCancel: r,
+              onOK: async () => {
+                try {
+                  m.fnSetLoading(!0),
+                    m.fnSetThrobber(
+                      y.g.Localize("#FreeOnDemand_Convert_Store"),
+                    ),
+                    await u.mutateAsync({
+                      displayOption: c,
+                      fnOnStoreSaveSucceed: () => {
+                        m.fnSetThrobber(
+                          y.g.Localize("#FreeOnDemand_Convert_Package"),
+                        );
+                      },
+                    }),
+                    m.fnSetSuccess(!0),
+                    m.fnSetStrSuccess(
+                      y.g.Localize("#FreeOnDemand_ConvertSuccess"),
+                    );
+                } catch (e) {
+                  m.fnSetError(!0),
+                    m.fnSetStrError(
+                      e instanceof Error
+                        ? e.message
+                        : f.Z.Localize("#Error_ErrorCommunicatingWithNetwork"),
+                    );
+                }
+              },
+              children: [
+                (0, t.jsx)("br", {}),
+                (0, t.jsxs)(i.az, {
+                  paddingTop: "4",
+                  children: [
+                    (0, t.jsx)(s.EY, {
+                      size: "4",
+                      children: y.g.Localize("#FreeOnDemand_Radio"),
+                    }),
+                    (0, t.jsx)(i.az, {
+                      padding: "4",
+                      background: "greyneutral-6",
+                      radius: "sm",
+                      children: (0, t.jsx)(d, {
+                        value: c,
+                        options: [b.k_FreeToPlay, b.k_Free],
+                        getOptionLabel: (e) =>
+                          e == b.k_Free
+                            ? y.g.Localize("#FreeOnDemand_Radio_Free")
+                            : y.g.Localize("#FreeOnDemand_Radio_FreeToPlay"),
+                        onValueChange: l,
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            });
+      }
+      function k(e) {
+        const { closeModal: r } = e,
+          n = `${C.TS.SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915`;
+        return (0, t.jsxs)(S.KG, {
+          strTitle: y.g.Localize("#FreeOnDemand_Title"),
+          strDescription: y.g.Localize("#FreeOnDemand_Desc_NotPermitted"),
+          closeModal: r,
+          children: [
+            (0, t.jsx)("br", {}),
+            (0, t.jsx)("br", {}),
+            (0, t.jsx)("a", {
+              href: n,
+              target: "_blank",
+              rel: "noreferrer",
+              children: n,
+            }),
+          ],
+        });
+      }
+      function v() {
+        const [e] = (0, a.useState)(
+          (0, p.Tc)("bCanSetFree", "application_config"),
+        );
+        return e;
+      }
+    },
+    47184: (e, r, n) => {
+      "use strict";
+      n.d(r, { g: () => i });
+      var t = n(42475);
+      const o = {};
+      (o.arabic = () => n.e(6873).then(n.t.bind(n, 46873, 19))),
+        (o.brazilian = () => n.e(1365).then(n.t.bind(n, 1365, 19))),
+        (o.bulgarian = () => n.e(3966).then(n.t.bind(n, 83966, 19))),
+        (o.czech = () => n.e(1360).then(n.t.bind(n, 51360, 19))),
+        (o.danish = () => n.e(8292).then(n.t.bind(n, 98292, 19))),
+        (o.dutch = () => n.e(4993).then(n.t.bind(n, 44993, 19))),
+        (o.english = () => n.e(3703).then(n.t.bind(n, 3703, 19))),
+        (o.finnish = () => n.e(6376).then(n.t.bind(n, 86376, 19))),
+        (o.french = () => n.e(7325).then(n.t.bind(n, 67325, 19))),
+        (o.german = () => n.e(9263).then(n.t.bind(n, 69263, 19))),
+        (o.greek = () => n.e(4399).then(n.t.bind(n, 14399, 19))),
+        (o.hungarian = () => n.e(1706).then(n.t.bind(n, 91706, 19))),
+        (o.indonesian = () => n.e(9341).then(n.t.bind(n, 69341, 19))),
+        (o.italian = () => n.e(7511).then(n.t.bind(n, 97511, 19))),
+        (o.japanese = () => n.e(330).then(n.t.bind(n, 40330, 19))),
+        (o.koreana = () => n.e(6252).then(n.t.bind(n, 96252, 19))),
+        (o.latam = () => n.e(204).then(n.t.bind(n, 90204, 19))),
+        (o.norwegian = () => n.e(839).then(n.t.bind(n, 40839, 19))),
+        (o.polish = () => n.e(8816).then(n.t.bind(n, 78816, 19))),
+        (o.portuguese = () => n.e(8160).then(n.t.bind(n, 98160, 19))),
+        (o.romanian = () => n.e(3546).then(n.t.bind(n, 73546, 19))),
+        (o.russian = () => n.e(4302).then(n.t.bind(n, 84302, 19))),
+        (o.schinese = () => n.e(6461).then(n.t.bind(n, 46461, 19))),
+        (o.spanish = () => n.e(8167).then(n.t.bind(n, 18167, 19))),
+        (o.swedish = () => n.e(2438).then(n.t.bind(n, 22438, 19))),
+        (o.tchinese = () => n.e(6006).then(n.t.bind(n, 46006, 19))),
+        (o.thai = () => n.e(6727).then(n.t.bind(n, 96727, 19))),
+        (o.turkish = () => n.e(1639).then(n.t.bind(n, 51639, 19))),
+        (o.ukrainian = () => n.e(4354).then(n.t.bind(n, 21973, 19))),
+        (o.vietnamese = () => n.e(3946).then(n.t.bind(n, 53946, 19)));
+      const i = (0, t.l)(async function (e) {
+        if (o[e]) return o[e]();
+      });
     },
   },
 ]);

@@ -23,14 +23,14 @@
       n.d(e, {
         cR: () => G,
         E7: () => S,
-        yB: () => E,
+        yB: () => f,
         tW: () => _,
         vV: () => k,
         p6: () => v,
         sU: () => I,
         BG: () => C,
         ur: () => P,
-        wn: () => f,
+        wn: () => E,
       });
       var a = n(34629),
         s = n(41735),
@@ -377,10 +377,10 @@
       function _() {
         return h.Get().GetFutureDiscountEvents();
       }
-      function E() {
+      function f() {
         return h.Get().GetDiscountEventListCallback();
       }
-      function f(t) {
+      function E(t) {
         const { rgDiscountEvents: e, eResult: n } = I(0, t);
         let a = [];
         return (
@@ -494,8 +494,8 @@
       n.d(e, {
         D6: () => k,
         DC: () => C,
-        EF: () => f,
-        G7: () => E,
+        EF: () => E,
+        G7: () => f,
         Iy: () => I,
         O4: () => P,
         _q: () => L,
@@ -1024,7 +1024,7 @@
           );
         }
       }
-      function E(t, e) {
+      function f(t, e) {
         const n = t.jsondata?.dynamic_selection;
         try {
           if (n) {
@@ -1043,7 +1043,7 @@
         }
         return [];
       }
-      function f() {
+      function E() {
         return r.useMemo(
           () => ({
             fnLoadMultiOptInRegistration: _.Get().LoadMultiOptInRegistration,
@@ -1192,8 +1192,8 @@
         $p: () => B,
         CW: () => O,
         Fk: () => R,
-        Ko: () => E,
-        Lj: () => f,
+        Ko: () => f,
+        Lj: () => E,
         Mh: () => v,
         XA: () => w,
         XL: () => T,
@@ -1456,7 +1456,7 @@
             a.append("name", t.strDiscountName),
             a.append("description", t.strDiscountDescription),
             t.discountEventID &&
-              !E(t.discountEventID) &&
+              !f(t.discountEventID) &&
               a.append("type", t.discountEventID),
             a.append("percent", t.nDiscountPct.toString()),
             a.append("start_date", new Date(1e3 * t.rtStartDate).toISOString()),
@@ -1574,10 +1574,10 @@
       function _(t) {
         return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, u.Yz)(t.strDiscountName)}`;
       }
-      function E(t) {
+      function f(t) {
         return t.startsWith("custom-event-");
       }
-      function f(t) {
+      function E(t) {
         return h.Get().GetDiscountByID(t);
       }
       function I(t) {
@@ -1745,8 +1745,8 @@
     87924: (t, e, n) => {
       "use strict";
       n.d(e, {
-        C5: () => x,
-        Gq: () => H,
+        C5: () => H,
+        Gq: () => x,
         QD: () => y,
         T1: () => I,
         WV: () => A,
@@ -1778,7 +1778,7 @@
         D = n(14771),
         h = n(78327),
         _ = n(43552);
-      function E(t, e) {
+      function f(t, e) {
         return (
           !!t == !!e &&
           t?.packageID == e?.packageID &&
@@ -1786,12 +1786,12 @@
           t?.eState == e?.eState &&
           t?.rgConflictDetails?.length == e?.rgConflictDetails?.length &&
           t?.optInReg == e?.optInReg &&
-          f(t?.discount, e?.discount) &&
+          E(t?.discount, e?.discount) &&
           t?.nBaseAppID == e?.nBaseAppID &&
           t?.bChangedLocally == e?.bChangedLocally
         );
       }
-      function f(t, e) {
+      function E(t, e) {
         return (
           (!e && 0 == (t?.nDiscountPct ?? 0)) ||
           (!!e && e.nDiscountPct == t?.nDiscountPct)
@@ -1855,7 +1855,7 @@
               discountEventID: i.id,
               bChangedLocally: !0,
             };
-          return f(o, s)
+          return E(o, s)
             ? null
             : (this.m_mapLocalPackageDiscountOverrides.has(t) ||
                 this.m_mapLocalPackageDiscountOverrides.set(t, new Map()),
@@ -1882,7 +1882,7 @@
           return (
             this.m_mapLocalPackageDiscountOverrides.forEach((e) =>
               e.forEach((e) => {
-                f(e, e.nDiscountID && (0, i.Lj)(e.nDiscountID)) || t.push(e);
+                E(e, e.nDiscountID && (0, i.Lj)(e.nDiscountID)) || t.push(e);
               }),
             ),
             t.sort(L),
@@ -1917,7 +1917,7 @@
           );
           return (
             this.m_mapLocalPackageDiscountOverrides.get(t)?.forEach((t, e) => {
-              f(t, a.get(e)) || a.set(e, t);
+              E(t, a.get(e)) || a.set(e, t);
             }),
             a
           );
@@ -2019,7 +2019,7 @@
                   )));
               }
             }
-            E(i, m.get(s.id)) ||
+            f(i, m.get(s.id)) ||
               (m.set(s.id, i),
               this.GetDiscountPackageCallbackList(t).Dispatch(),
               this.GetDiscountGridCellCallbackList(t, s.id).Dispatch(i),
@@ -2396,7 +2396,7 @@
         const o = s.uL.Get().GetAllOptInRegistrations(n.opt_in_name);
         return !!o?.length && o.some((t) => !t.restricted && !t.pruned);
       }
-      function H(t) {
+      function x(t) {
         const e = (function () {
             const [t, e] = l.useState(v.IsInitialized());
             return (0, g.hL)(v.s_initializationCallbackList, e), t;
@@ -2416,7 +2416,7 @@
           n
         );
       }
-      function x(t) {
+      function H(t) {
         let [e, n] = l.useState(() => v.Get().GetHighestPackageDiscount(t)),
           a = l.useCallback(() => {
             n(v.Get().GetHighestPackageDiscount(t));
@@ -2427,13 +2427,13 @@
     43552: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Ad: () => f,
+        Ad: () => E,
         E1: () => m,
         Fs: () => S,
         Ix: () => _,
         Jn: () => k,
         Z6: () => D,
-        dp: () => E,
+        dp: () => f,
         ou: () => h,
         u7: () => I,
         zL: () => g,
@@ -2652,11 +2652,11 @@
         const [t, e] = a.useState(d.Get().m_rgDiscountEvents);
         return (0, o.hL)(d.Get().m_discountEventsCallbackList, e), t;
       }
-      function E() {
+      function f() {
         const [t, e] = a.useState(d.Get().m_setVisibleDiscountEventIDs);
         return (0, o.hL)(d.Get().m_visibleDiscountEventIDsCallbackList, e), t;
       }
-      function f(t) {
+      function E(t) {
         const [e, n] = a.useState(d.Get().m_mapDiscountEventsByID.get(t)),
           s = a.useCallback(
             () => n(d.Get().m_mapDiscountEventsByID.get(t)),
@@ -2694,162 +2694,163 @@
     33299: (t, e, n) => {
       "use strict";
       n.d(e, {
-        HA: () => f,
-        IR: () => y,
-        NP: () => A,
-        Xr: () => O,
-        ZN: () => w,
-        mE: () => L,
-        rK: () => I,
-        sF: () => b,
-        uv: () => P,
+        HA: () => I,
+        IR: () => O,
+        NP: () => R,
+        Xr: () => B,
+        ZN: () => y,
+        mE: () => b,
+        rK: () => S,
+        sF: () => A,
+        uv: () => C,
       });
-      var a = n(90626),
-        s = n(32754),
-        i = n(78327),
-        o = n(61859),
-        r = n(61010),
-        c = n.n(r),
-        l = n(75233),
-        u = n(17084),
-        p = n(64238),
-        d = n.n(p),
-        g = n(48996),
-        m = n(87924),
-        D = n(4869),
-        h = n(12155),
-        _ = n(9554);
-      const E = (0, a.createContext)(void 0);
-      function f() {
-        const t = (0, a.useContext)(E);
+      var a = n(7850),
+        s = n(90626),
+        i = n(32754),
+        o = n(78327),
+        r = n(61859),
+        c = n(61010),
+        l = n.n(c),
+        u = n(75233),
+        p = n(17084),
+        d = n(64238),
+        g = n.n(d),
+        m = n(48996),
+        D = n(87924),
+        h = n(4869),
+        _ = n(12155),
+        f = n(9554);
+      const E = (0, s.createContext)(void 0);
+      function I() {
+        const t = (0, s.useContext)(E);
         if (!t) throw new Error("Missing GridRowContextProvider");
         return t;
       }
-      function I(t) {
-        const { children: e, fnBLocalChangesExist: n, fnWarnUser: s } = t,
-          i = (0, l.jE)(),
-          o = a.useMemo(
-            () => ({ client: i, fnBLocalChangesExist: n, fnWarnUser: s }),
-            [n, s, i],
-          );
-        return a.createElement(E.Provider, { value: o }, e);
-      }
       function S(t) {
-        const { row: e } = t,
-          n = e.original.packageID || 0,
-          s = (0, m.C5)(n);
-        let i = (0, g.$p)(n) < s,
-          r = d()(
-            c().PackageNameColumn,
-            i && c().PackagePricesBelowMin,
-            e.original.packageType,
-          ),
-          l = i
-            ? (0, o.we)("#PackageGrid_VisitPackageDiscount_Tooltip_Error")
-            : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(G, { className: r, toolTip: l, ...t });
+        const { children: e, fnBLocalChangesExist: n, fnWarnUser: i } = t,
+          o = (0, u.jE)(),
+          r = s.useMemo(
+            () => ({ client: o, fnBLocalChangesExist: n, fnWarnUser: i }),
+            [n, i, o],
+          );
+        return (0, a.jsx)(E.Provider, { value: r, children: e });
       }
       function k(t) {
         const { row: e } = t,
           n = e.original.packageID || 0,
-          s = (0, u.nT)(n);
-        let i = d()(
-            c().PackageNameColumn,
-            s && c().PackagePricesBelowMin,
+          s = (0, D.C5)(n);
+        let i = (0, m.$p)(n) < s,
+          o = g()(
+            l().PackageNameColumn,
+            i && l().PackagePricesBelowMin,
             e.original.packageType,
           ),
-          r = s
-            ? (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip_Error")
-            : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(G, {
+          c = i
+            ? (0, r.we)("#PackageGrid_VisitPackageDiscount_Tooltip_Error")
+            : (0, r.we)("#PackageGrid_VisitPackagePricing_Tooltip");
+        return (0, a.jsx)(P, { className: o, toolTip: c, ...t });
+      }
+      function v(t) {
+        const { row: e } = t,
+          n = e.original.packageID || 0,
+          s = (0, p.nT)(n);
+        let i = g()(
+            l().PackageNameColumn,
+            s && l().PackagePricesBelowMin,
+            e.original.packageType,
+          ),
+          o = s
+            ? (0, r.we)("#PackageGrid_VisitPackagePricing_Tooltip_Error")
+            : (0, r.we)("#PackageGrid_VisitPackagePricing_Tooltip");
+        return (0, a.jsx)(P, {
           className: i,
-          toolTip: r,
+          toolTip: o,
           showUnreleased: !0,
           ...t,
         });
       }
-      function v(t) {
-        const { column: e } = t,
-          [n, s] = (0, a.useState)(e.getFilterValue() ?? "");
-        return a.createElement(
-          "div",
-          { className: c().PackageNameHeader },
-          (0, o.we)("#PackageGrid_Column_PackageName"),
-          a.createElement("input", {
-            placeholder: (0, o.we)("#PackageGrid_PackageNameFilterInputPrompt"),
-            value: n,
-            onChange: (e) => {
-              s(e.target.value.toString()),
-                (0, a.startTransition)(() =>
-                  t.column.setFilterValue(e.target.value.toString()),
-                );
-            },
-          }),
-        );
-      }
       function G(t) {
-        const { fnBLocalChangesExist: e, fnWarnUser: n } = f(),
-          { cell: r, row: l, className: u, toolTip: p } = t,
-          d = l.original.packageID,
-          g =
-            r.getValue() ??
-            a.createElement(
-              "span",
-              { className: c().UnknownValue },
-              " ",
-              (0, o.we)("#PackageGrid_PackageID", d),
-            );
-        return a.createElement(
-          O,
-          {
-            fnBLocalChangesExist: e,
-            fnWarnUser: n,
-            href: `${i.TS.PARTNER_BASE_URL}store/packagelanding/${d}`,
-            strToolTip: p,
-            strClassName: u,
-          },
-          a.createElement(h.eTF, {
-            color: "rgb(194, 45, 0)",
-            className: c().PriceWarningBad,
-          }),
-          t.showUnreleased &&
-            !("released" in l.original && l.original.released) &&
-            a.createElement(
-              a.Fragment,
-              null,
-              a.createElement(
-                s.Gq,
-                {
-                  toolTipContent: (0, o.we)(
-                    "#PackageGrid_PackageUnpublishedTooltip",
-                  ),
-                },
-                a.createElement(D.ZyV, { width: "14px", height: "14px" }),
+        const { column: e } = t,
+          [n, i] = (0, s.useState)(e.getFilterValue() ?? "");
+        return (0, a.jsxs)("div", {
+          className: l().PackageNameHeader,
+          children: [
+            (0, r.we)("#PackageGrid_Column_PackageName"),
+            (0, a.jsx)("input", {
+              placeholder: (0, r.we)(
+                "#PackageGrid_PackageNameFilterInputPrompt",
               ),
-              "  ",
-            ),
-          " ",
-          g,
-        );
+              value: n,
+              onChange: (e) => {
+                i(e.target.value.toString()),
+                  (0, s.startTransition)(() =>
+                    t.column.setFilterValue(e.target.value.toString()),
+                  );
+              },
+            }),
+          ],
+        });
       }
-      function P() {
-        return a.useMemo(
+      function P(t) {
+        const { fnBLocalChangesExist: e, fnWarnUser: n } = I(),
+          { cell: s, row: c, className: u, toolTip: p } = t,
+          d = c.original.packageID,
+          g =
+            s.getValue() ??
+            (0, a.jsxs)("span", {
+              className: l().UnknownValue,
+              children: [" ", (0, r.we)("#PackageGrid_PackageID", d)],
+            });
+        return (0, a.jsxs)(B, {
+          fnBLocalChangesExist: e,
+          fnWarnUser: n,
+          href: `${o.TS.PARTNER_BASE_URL}store/packagelanding/${d}`,
+          strToolTip: p,
+          strClassName: u,
+          children: [
+            (0, a.jsx)(_.eTF, {
+              color: "rgb(194, 45, 0)",
+              className: l().PriceWarningBad,
+            }),
+            t.showUnreleased &&
+              !("released" in c.original && c.original.released) &&
+              (0, a.jsxs)(a.Fragment, {
+                children: [
+                  (0, a.jsx)(i.Gq, {
+                    toolTipContent: (0, r.we)(
+                      "#PackageGrid_PackageUnpublishedTooltip",
+                    ),
+                    children: (0, a.jsx)(h.ZyV, {
+                      width: "14px",
+                      height: "14px",
+                    }),
+                  }),
+                  "  ",
+                ],
+              }),
+            " ",
+            g,
+          ],
+        });
+      }
+      function C() {
+        return s.useMemo(
           () => ({
             accessorKey: "packageID",
-            header: (0, o.we)("#PackageGrid_Column_PackageID"),
+            header: (0, r.we)("#PackageGrid_Column_PackageID"),
             enableSorting: !1,
             size: 90,
             cell: (t) =>
-              a.createElement(G, {
+              (0, a.jsx)(P, {
                 ...t,
-                toolTip: (0, o.we)("#PackageGrid_Column_PackageID_ttip"),
+                toolTip: (0, r.we)("#PackageGrid_Column_PackageID_ttip"),
               }),
-            meta: { cellClassname: c().PackageID },
+            meta: { cellClassname: l().PackageID },
           }),
           [],
         );
       }
-      function C(t, e, n) {
+      function L(t, e, n) {
         let a = /^\d+$/.test(n);
         const s = t.original.packageID;
         return (
@@ -2857,124 +2858,117 @@
           t.getValue(e).toLowerCase().includes(n.toLowerCase())
         );
       }
-      function L(t) {
-        return a.useMemo(
+      function b(t) {
+        return s.useMemo(
           () => ({
             accessorKey: "packageName",
-            header: v,
+            header: G,
             enableSorting: !1,
             meta: {
-              strHeaderTooltip: (0, o.we)(
+              strHeaderTooltip: (0, r.we)(
                 "#PackageGrid_Column_PackageName_ttip",
               ),
-              cellClassname: c().PackageName,
+              cellClassname: l().PackageName,
             },
-            filterFn: C,
-            cell: t ? S : k,
+            filterFn: L,
+            cell: t ? k : v,
             size: 300,
           }),
           [t],
         );
       }
-      function b() {
-        return a.useMemo(() => ({ accessorKey: "appids" }), []);
-      }
       function A() {
-        return a.useMemo(
+        return s.useMemo(() => ({ accessorKey: "appids" }), []);
+      }
+      function R() {
+        return s.useMemo(
           () => ({
             accessorKey: "packageType",
-            header: (0, o.we)("#PackageGrid_Column_PackageType"),
+            header: (0, r.we)("#PackageGrid_Column_PackageType"),
             enableSorting: !1,
             meta: {
-              strHeaderTooltip: (0, o.we)(
+              strHeaderTooltip: (0, r.we)(
                 "#PackageGrid_Column_PackageType_ttip",
               ),
-              cellClassname: c().PackageType,
+              cellClassname: l().PackageType,
             },
           }),
           [],
         );
       }
-      function R(t) {
+      function w(t) {
         const { row: e } = t,
-          { fnBLocalChangesExist: n, fnWarnUser: s } = f(),
-          r = e.original.appids,
-          c = r?.length ?? 0,
+          { fnBLocalChangesExist: n, fnWarnUser: s } = I(),
+          i = e.original.appids,
+          c = i?.length ?? 0,
           l = e.original.packageID;
-        return a.createElement(
-          O,
-          {
-            fnBLocalChangesExist: n,
-            fnWarnUser: s,
-            href: `${i.TS.PARTNER_BASE_URL}store/packagelanding/${l}`,
-            strToolTip: (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip"),
-          },
-          1 == c ? "1 appid" : c + " appids",
-        );
+        return (0, a.jsx)(B, {
+          fnBLocalChangesExist: n,
+          fnWarnUser: s,
+          href: `${o.TS.PARTNER_BASE_URL}store/packagelanding/${l}`,
+          strToolTip: (0, r.we)("#PackageGrid_VisitPackagePricing_Tooltip"),
+          children: 1 == c ? "1 appid" : c + " appids",
+        });
       }
-      function w() {
-        return a.useMemo(
+      function y() {
+        return s.useMemo(
           () => ({
             accessorKey: "appName",
-            header: (0, o.we)("#PackageGrid_Column_AppName"),
-            cell: R,
+            header: (0, r.we)("#PackageGrid_Column_AppName"),
+            cell: w,
             size: 80,
-            sortingFn: _.es,
+            sortingFn: f.es,
             meta: {
-              strHeaderTooltip: (0, o.we)("#PackageGrid_Column_AppName_ttip"),
+              strHeaderTooltip: (0, r.we)("#PackageGrid_Column_AppName_ttip"),
               bDisableSortButton: !0,
-              cellClassname: c().AppCount,
+              cellClassname: l().AppCount,
             },
           }),
           [],
-        );
-      }
-      function y(t) {
-        const e = t.groupingValue,
-          n = (0, o.we)("#PackageGrid_NoBaseGameFoundForPackage");
-        return a.createElement(
-          a.Fragment,
-          null,
-          e === n
-            ? a.createElement(
-                "span",
-                { title: (0, o.we)("#PackageGrid_NoBaseGameExplanation") },
-                e,
-                " (?)",
-              )
-            : e,
-          a.createElement(
-            "span",
-            { className: c().RowItemCount },
-            "(",
-            (0, o.Yp)("#PackageGrid_PackageCount", t.subRows.length),
-            ")",
-          ),
         );
       }
       function O(t) {
+        const e = t.groupingValue,
+          n = (0, r.we)("#PackageGrid_NoBaseGameFoundForPackage");
+        return (0, a.jsxs)(a.Fragment, {
+          children: [
+            e === n
+              ? (0, a.jsxs)("span", {
+                  title: (0, r.we)("#PackageGrid_NoBaseGameExplanation"),
+                  children: [e, " (?)"],
+                })
+              : e,
+            (0, a.jsxs)("span", {
+              className: l().RowItemCount,
+              children: [
+                "(",
+                (0, r.Yp)("#PackageGrid_PackageCount", t.subRows.length),
+                ")",
+              ],
+            }),
+          ],
+        });
+      }
+      function B(t) {
         const {
           fnBLocalChangesExist: e,
           fnWarnUser: n,
-          href: i,
+          href: s,
           children: o,
           strToolTip: r,
           strClassName: c,
         } = t;
-        return a.createElement(
-          s.he,
-          { toolTipContent: r, className: c },
-          a.createElement(
-            "a",
-            {
-              onClick: (t) => {
-                e() && (t.preventDefault(), n(t, i));
-              },
-              href: i,
+        return (0, a.jsx)(i.he, {
+          toolTipContent: r,
+          className: c,
+          children: (0, a.jsx)("a", {
+            onClick: (t) => {
+              e() && (t.preventDefault(), n(t, s));
             },
-            o,
-          ),
-        );
+            href: s,
+            children: o,
+          }),
+        });
       }
     },
     87641: (t, e, n) => {

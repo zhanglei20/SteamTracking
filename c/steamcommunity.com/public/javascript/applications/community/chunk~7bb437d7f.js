@@ -334,12 +334,6 @@
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
-        get bIsFollowingEnabled() {
-          return !(0, _._)();
-        }
-        get bIsCuratorsEnabled() {
-          return !(0, _._)();
-        }
         get bIncludeCurators() {
           return !0;
         }
@@ -423,24 +417,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: _.closeModal,
-            bDisableBackgroundDismiss: !0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, _.jsx)(_, {
             redirectURL: _.redirectURL,
             guestOption: _.guestOption,
           }),
-        );
+        });
       }
       function _() {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -456,31 +448,27 @@
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          "div",
-          null,
-          _
-            ? _.createElement(_._, null)
-            : _.createElement(
-                _._,
-                {
-                  autoFocus: !0,
-                  transport: _,
-                  platform: 2,
-                  onComplete: (_) => {
-                    _ == _._.k_PrimaryDomainFail
-                      ? _(!0)
-                      : window.location.assign(_);
-                  },
-                  redirectUrl: _,
-                  theme: "modal",
+        return (0, _.jsx)("div", {
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
+                autoFocus: !0,
+                transport: _,
+                platform: 2,
+                onComplete: (_) => {
+                  _ == _._.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(_);
                 },
-                __webpack_require__ &&
-                  _.createElement(_._, {
+                redirectUrl: _,
+                theme: "modal",
+                children:
+                  __webpack_require__ &&
+                  (0, _.jsx)(_._, {
                     redirectURL: _,
                   }),
-              ),
-        );
+              }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -495,6 +483,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -519,20 +508,19 @@
           _ = (0, _._)();
         return (
           _ && _.locale(_),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.format("LT"),
-            _
-              ? _.createElement(
-                  _._,
-                  {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _.format("LT"),
+              _
+                ? (0, _.jsx)(_._, {
                     toolTipContent: _.format("Z") + ", " + _,
-                  },
-                  _.createElement("span", null, " ", _.zoneAbbr()),
-                )
-              : null,
-          )
+                    children: (0, _.jsxs)("span", {
+                      children: [" ", _.zoneAbbr()],
+                    }),
+                  })
+                : null,
+            ],
+          })
         );
       }
       const _ = (0, _._)((_) => {
@@ -552,71 +540,60 @@
                 }
               : _();
           return __webpack_require__
-            ? _.createElement(
-                "span",
-                {
-                  className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
-                },
-                _ && _,
-                _ && _ ? _.createElement("span", null, " ") : void 0,
-                Boolean(_ && _) && _(_, _),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _.DateAndTime,
-                },
-                _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.LocalizedDate,
-                      },
-                      _,
-                    ),
-                    " ",
-                    _.createElement(
-                      "span",
-                      {
-                        className: _._,
-                      },
-                      (0, _._)("#EventDisplay_DateAndTimeCombiner"),
-                    ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LocalizedTime,
-                  },
+            ? (0, _.jsxs)("span", {
+                className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
+                children: [
+                  _ && _,
+                  _ && _
+                    ? (0, _.jsx)("span", {
+                        children: " ",
+                      })
+                    : void 0,
                   Boolean(_ && _) && _(_, _),
-                ),
-              );
+                ],
+              })
+            : (0, _.jsxs)("div", {
+                className: _.DateAndTime,
+                children: [
+                  _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.LocalizedDate,
+                          children: _,
+                        }),
+                        " ",
+                        (0, _.jsx)("span", {
+                          className: _._,
+                          children: (0, _._)(
+                            "#EventDisplay_DateAndTimeCombiner",
+                          ),
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.LocalizedTime,
+                    children: Boolean(_ && _) && _(_, _),
+                  }),
+                ],
+              });
         }),
         _ = (_) => {
-          const _ = _.createElement(
-            "div",
-            {
-              className: _.stylesmodule.DateToolTip,
-            },
-            _.createElement(_, {
+          const _ = (0, _.jsx)("div", {
+            className: _.stylesmodule.DateToolTip,
+            children: (0, _.jsx)(_, {
               dateAndTime: _.rtFullDate,
               bSingleLine: !0,
               stylesmodule: _.stylesmodule,
             }),
-          );
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: _,
-              direction: "top",
-              className: _.className,
-              bTopmost: !0,
-            },
-            _.children,
-          );
+          });
+          return (0, _.jsx)(_._, {
+            toolTipContent: _,
+            direction: "top",
+            className: _.className,
+            bTopmost: !0,
+            children: _.children,
+          });
         };
       let _ = class extends _.Component {
         render() {
@@ -632,116 +609,95 @@
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
           if (null == _ || 0 == _)
-            return _.createElement(
-              "div",
-              {
-                className: _.DateAndTime,
-              },
-              _.createElement(
-                "span",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.DateAndTime,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)("#EventDisplay_TimeRange"),
-              ),
-              (0, _._)("#EventDisplay_TimeDisplayNone"),
-            );
+                  children: (0, _._)("#EventDisplay_TimeRange"),
+                }),
+                (0, _._)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
           let _ = _._.GetTimeNowWithOverride();
           if (_)
-            return _.createElement(
-              "div",
-              {
-                className: _.StartDate,
-              },
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.StartDate,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming",
-                ),
-                " ",
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                dateAndTime: _,
-              }),
-            );
+                  children: [
+                    (0, _._)(
+                      _ < _
+                        ? "#EventDisplay_TimeInPast"
+                        : "#EventDisplay_TimeUpcoming",
+                    ),
+                    " ",
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  stylesmodule: _,
+                  dateAndTime: _,
+                }),
+              ],
+            });
           let _ = _ <= _ && _ <= _;
           const _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
-          return _.createElement(
-            "div",
-            {
-              className: _.MultiDateAndTime,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.MultiDateAndTime,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.StartDate,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ >= _
-                    ? "#EventDisplay_TimeBeginsOn"
-                    : _ >= _
-                      ? "#EventDisplay_TimeBeginsOn_Past"
-                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                ),
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                bSingleLine: !0,
-                dateAndTime: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
+                      _ >= _
+                        ? "#EventDisplay_TimeBeginsOn"
+                        : _ >= _
+                          ? "#EventDisplay_TimeBeginsOn_Past"
+                          : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    stylesmodule: _,
+                    bSingleLine: !0,
+                    dateAndTime: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.EndDate,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                bSingleLine: !0,
-                bOnlyTime: _,
-                dateAndTime: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
+                      _ < _
+                        ? "#EventDisplay_TimeEndsOn_Past"
+                        : "#EventDisplay_TimeEndsOn",
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    stylesmodule: _,
+                    bSingleLine: !0,
+                    bOnlyTime: _,
+                    dateAndTime: _,
+                  }),
+                ],
               }),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
+              _ &&
+                (0, _.jsx)("span", {
                   className: _.ActiveEvent,
-                },
-                _.createElement(
-                  "span",
-                  {
+                  children: (0, _.jsx)("span", {
                     className: (0, _._)(
                       _.RightSideTitles,
                       _.ActiveEventCallOut,
                     ),
-                  },
-                  (0, _._)("#Time_Now"),
-                ),
-              ),
-          );
+                    children: (0, _._)("#Time_Now"),
+                  }),
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -759,172 +715,147 @@
                 }
               : _();
           if (null == _ || 0 == _)
-            return _.createElement(
-              "div",
-              {
-                className: _.DateAndTime,
-              },
-              _.createElement(
-                "span",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.DateAndTime,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)("#EventDisplay_TimeRange"),
-              ),
-              (0, _._)("#EventDisplay_TimeDisplayNone"),
-            );
+                  children: (0, _._)("#EventDisplay_TimeRange"),
+                }),
+                (0, _._)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
           const _ = _._.GetTimeNowWithOverrideAsDate(),
             _ = _._.GetTimeNowWithOverride(),
             _ = (0, _._)(new Date(1e3 * _), _),
-            _ = _.createElement(
-              "div",
-              {
-                className: _.ShortDateAndTime,
-              },
-              (0, _._)(_, _),
-            );
-          let _ = _.createElement(
-            _,
-            {
-              rtFullDate: _,
-              stylesmodule: _,
-            },
-            _.createElement(
-              "div",
-              {
+            _ = (0, _.jsx)("div", {
+              className: _.ShortDateAndTime,
+              children: (0, _._)(_, _),
+            });
+          let _ = (0, _.jsxs)(_, {
+            rtFullDate: _,
+            stylesmodule: _,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.RightSideTitles,
-              },
-              (0, _._)(
-                _ < _
-                  ? "#EventDisplay_TimeInPast"
-                  : "#EventDisplay_TimeUpcoming",
-              ),
-            ),
-            _,
-          );
+                children: (0, _._)(
+                  _ < _
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
+                ),
+              }),
+              _,
+            ],
+          });
           if (
             (_ < _ &&
               _ < _ + _._.PerWeek &&
-              (_ = _.createElement(
-                _,
-                {
-                  rtFullDate: _,
-                  stylesmodule: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RightSideTitles,
-                  },
-                  (0, _._)(
+              (_ = (0, _.jsx)(_, {
+                rtFullDate: _,
+                stylesmodule: _,
+                children: (0, _.jsx)("div", {
+                  className: _.RightSideTitles,
+                  children: (0, _._)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     _,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ShortDateAndTime,
-                      },
-                      _(_),
-                      " ",
-                    ),
+                    (0, _.jsxs)("div", {
+                      className: _.ShortDateAndTime,
+                      children: [_(_), " "],
+                    }),
                   ),
-                ),
-              )),
+                }),
+              })),
             __webpack_require__ || null == _ || _ < 1)
           )
             return _;
           const _ = _ <= _ && _ <= _;
           _ &&
-            (_ = _.createElement(
-              _,
-              {
-                rtFullDate: _,
-                className: _.ActiveEvent,
-                stylesmodule: _,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.ActiveEventCallOut,
-                },
-                (0, _._)("#Time_Now"),
-              ),
-            ));
+            (_ = (0, _.jsx)(_, {
+              rtFullDate: _,
+              className: _.ActiveEvent,
+              stylesmodule: _,
+              children: (0, _.jsx)("span", {
+                className: _.ActiveEventCallOut,
+                children: (0, _._)("#Time_Now"),
+              }),
+            }));
           let _ = null;
           const _ = _ ? _ - _ : _ - _;
           if (_ <= _._.PerDay) {
-            const _ = _.createElement(
-              "div",
-              {
-                className: _.ShortDateAndTime,
-              },
-              (0, _._)(_, !0),
-            );
+            const _ = (0, _.jsx)("div", {
+              className: _.ShortDateAndTime,
+              children: (0, _._)(_, !0),
+            });
             _ =
               _ < _
-                ? _.createElement(
-                    "div",
-                    {
-                      className: _.RightSideTitles,
-                    },
-                    (0, _._)("#EventDisplay_TimeEndsOn_Ran"),
-                    _,
-                  )
-                : _.createElement(
-                    "div",
-                    {
-                      className: _.RightSideTitles,
-                    },
-                    (0, _._)(
+                ? (0, _.jsxs)("div", {
+                    className: _.RightSideTitles,
+                    children: [(0, _._)("#EventDisplay_TimeEndsOn_Ran"), _],
+                  })
+                : (0, _.jsx)("div", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
                       _
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       _,
                     ),
-                  );
+                  });
           } else {
             const _ = _.getFullYear() == new Date(1e3 * _).getFullYear();
-            _ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+            _ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)(
+                    _ < _
+                      ? "#EventDisplay_TimeEndsOn_Past"
+                      : "#EventDisplay_TimeEndsOn",
+                  ),
+                }),
+                (0, _.jsx)("div", {
                   className: _.ShortDateAndTime,
-                },
-                (0, _._)(_, _),
-              ),
-            );
+                  children: (0, _._)(_, _),
+                }),
+              ],
+            });
           }
-          const _ = _.createElement(
-            _,
-            {
-              rtFullDate: _,
-              stylesmodule: _,
-            },
-            _,
-          );
-          return _.createElement(
-            "div",
-            {
-              className: _.ShortDateRange,
-            },
-            _,
-            _,
-          );
+          const _ = (0, _.jsx)(_, {
+            rtFullDate: _,
+            stylesmodule: _,
+            children: _,
+          });
+          return (0, _.jsxs)("div", {
+            className: _.ShortDateRange,
+            children: [_, _],
+          });
         }
       };
+      function _(_, _, _) {
+        const _ = _._.GetTimeNowWithOverrideAsDate(),
+          _ = new Date(1e3 * _),
+          _ = new Date(1e3 * _),
+          _ = _.getFullYear() == _.getFullYear(),
+          _ = _.getFullYear() == _.getFullYear(),
+          _ = _.getFullYear() == _.getFullYear(),
+          _ = _ && _.getMonth() == _.getMonth(),
+          _ = _ && _.getDate() == _.getDate(),
+          _ = {
+            day: "numeric",
+            month: null != _ ? _ : "long",
+            year: _ ? void 0 : "numeric",
+          },
+          _ = _.toLocaleDateString(_._.GetPreferredLocales(), _);
+        if (_) return _;
+        {
+          const _ = {
+            day: "numeric",
+            month: _ && _ ? void 0 : null != _ ? _ : "long",
+            year: _ ? void 0 : "numeric",
+          };
+          return _ + " - " + _.toLocaleDateString(_._.GetPreferredLocales(), _);
+        }
+      }
       function _(_) {
         const {
           rtStartDate: _,
@@ -932,40 +863,10 @@
           strMonthFormat: _,
           className: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          (function (_, _, _) {
-            const _ = _._.GetTimeNowWithOverrideAsDate(),
-              _ = new Date(1e3 * _),
-              _ = new Date(1e3 * _),
-              _ = _.getFullYear() == _.getFullYear(),
-              _ = _.getFullYear() == _.getFullYear(),
-              _ = _.getFullYear() == _.getFullYear(),
-              _ = _ && _.getMonth() == _.getMonth(),
-              _ = _ && _.getDate() == _.getDate(),
-              _ = {
-                day: "numeric",
-                month: null != _ ? _ : "long",
-                year: _ ? void 0 : "numeric",
-              },
-              _ = _.toLocaleDateString(_._.GetPreferredLocales(), _);
-            if (_) return _;
-            {
-              const _ = {
-                day: "numeric",
-                month: _ && _ ? void 0 : null != _ ? _ : "long",
-                year: _ ? void 0 : "numeric",
-              };
-              return (
-                _ + " - " + _.toLocaleDateString(_._.GetPreferredLocales(), _)
-              );
-            }
-          })(_, __webpack_require__, _),
-          " ",
-        );
+        return (0, _.jsxs)("div", {
+          className: _,
+          children: [_(_, __webpack_require__, _), " "],
+        });
       }
       _ = (0, _._)([_._], _);
     },

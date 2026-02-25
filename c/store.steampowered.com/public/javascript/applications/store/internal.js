@@ -377,7 +377,7 @@
             ..._
           } = _,
           _ = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ref: __webpack_require__,
           ...(0, _._)(
             {
@@ -462,6 +462,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -527,7 +528,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -545,38 +545,31 @@
           ..._
         } = _;
         return _ || !__webpack_require__
-          ? _.createElement(
-              _._,
-              {
-                position: "relative",
-                ..._,
-                width: "fit-content",
-              },
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_._, {
+              position: "relative",
+              ..._,
+              width: "fit-content",
+              children: [
+                (0, _.jsx)("div", {
                   "data-visibility": !__webpack_require__,
                   className: _.ChildContainer,
-                },
-                _,
-              ),
-              __webpack_require__ &&
-                _.createElement(
-                  _._,
-                  {
+                  children: _,
+                }),
+                __webpack_require__ &&
+                  (0, _.jsx)(_._, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
                     align: "center",
-                  },
-                  _.createElement(_, {
-                    size: _,
-                    color: _,
-                    variant: _,
+                    children: (0, _.jsx)(_, {
+                      size: _,
+                      color: _,
+                      variant: _,
+                    }),
                   }),
-                ),
-            )
-          : _.createElement(_, {
+              ],
+            })
+          : (0, _.jsx)(_, {
               size: _,
               color: _,
               variant: _,
@@ -589,7 +582,7 @@
           color: __webpack_require__,
           ..._
         } = (0, _._)(_, _);
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           "data-accent-color": __webpack_require__,
           className: _()(_, _.Spinner),
           ..._,
@@ -641,37 +634,32 @@
               ..._
             } = _,
             _ = _
-              ? _.createElement(
-                  _,
-                  {
-                    size: __webpack_require__,
-                    color: _,
-                    variant: "bright",
-                  },
-                  _,
-                )
-              : _,
-            _ = _ ? void 0 : _;
-          return _.createElement(
-            "button",
-            {
-              type: "button",
-              ...(0, _._)(
-                {
-                  ..._,
-                  variant: _,
+              ? (0, _.jsx)(_, {
                   size: __webpack_require__,
                   color: _,
-                  className: _()(_.Button, _ && _.Icon),
-                  onClick: _,
-                },
-                _,
-              ),
-            },
-            _,
-          );
+                  variant: "bright",
+                  children: _,
+                })
+              : _,
+            _ = _ ? void 0 : _;
+          return (0, _.jsx)("button", {
+            type: "button",
+            ...(0, _._)(
+              {
+                ..._,
+                variant: _,
+                size: __webpack_require__,
+                color: _,
+                className: _()(_.Button, _ && _.Icon),
+                onClick: _,
+              },
+              _,
+            ),
+            children: _,
+          });
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -690,25 +678,22 @@
               [__webpack_require__],
             ),
             _ = (0, _.useCallback)((_) => _?.(_[0]), [_]);
-          return _.createElement(
-            _,
-            {
-              ..._,
-              min: _,
-              onValueChange: _,
-              onValueSettled: _,
-              value: _,
-            },
-            _.createElement(
-              _,
-              null,
-              _.createElement(_, {
-                start: _,
-                end: _,
+          return (0, _.jsxs)(_, {
+            ..._,
+            min: _,
+            onValueChange: _,
+            onValueSettled: _,
+            value: _,
+            children: [
+              (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
+                  start: _,
+                  end: _,
+                }),
               }),
-            ),
-            _.createElement(_, null),
-          );
+              (0, _.jsx)(_, {}),
+            ],
+          });
         },
         {
           Root: _,
@@ -732,79 +717,70 @@
           _ = (0, _.useRef)(-1),
           [_] = (0, _.useState)(() => new Set()),
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          _.Provider,
-          {
-            value: {
-              ..._,
-              handles: _,
-              bDragActive: _,
-            },
+        return (0, _.jsx)(_.Provider, {
+          value: {
+            ..._,
+            handles: _,
+            bDragActive: _,
           },
-          _.createElement(
-            "div",
-            {
-              className: _.SliderRoot,
-              "data-accent-color": __webpack_require__,
-              ref: _,
-              onPointerDown: (_) => {
-                if (_.current) {
-                  if (
-                    (_.target.setPointerCapture(_.pointerId),
-                    "number" != typeof _)
-                  ) {
-                    const _ = _.current.getBoundingClientRect(),
-                      _ = _(_.clientX - _.left, [0, _.width], [_, _]);
-                    _.current = _(_, _);
-                  }
-                  _(!0);
-                }
-              },
-              onPointerUp: (_) => {
-                const _ = _.target;
-                _.hasPointerCapture(_.pointerId) &&
-                  (_.releasePointerCapture(_.pointerId), _ && _(_), _(!1));
-              },
-              onPointerMove: (_) => {
-                if (_.target.hasPointerCapture(_.pointerId) && _.current) {
+          children: (0, _.jsx)("div", {
+            className: _.SliderRoot,
+            "data-accent-color": __webpack_require__,
+            ref: _,
+            onPointerDown: (_) => {
+              if (_.current) {
+                if (
+                  (_.target.setPointerCapture(_.pointerId),
+                  "number" != typeof _)
+                ) {
                   const _ = _.current.getBoundingClientRect(),
-                    _ = _({
-                      value: _(_.clientX - _.left, [0, _.width], [_, _]),
-                      min: _,
-                      max: _,
-                      step: _,
-                    }),
-                    _ = [..._];
-                  (_[_.current] = _),
-                    _.sort((_, _) => _ - _),
-                    (_.current = _.indexOf(_)),
-                    _(_);
+                    _ = _(_.clientX - _.left, [0, _.width], [_, _]);
+                  _.current = _(_, _);
                 }
-              },
-              onClick: (_) => {
-                if (!_.current) return;
+                _(!0);
+              }
+            },
+            onPointerUp: (_) => {
+              const _ = _.target;
+              _.hasPointerCapture(_.pointerId) &&
+                (_.releasePointerCapture(_.pointerId), _ && _(_), _(!1));
+            },
+            onPointerMove: (_) => {
+              if (_.target.hasPointerCapture(_.pointerId) && _.current) {
                 const _ = _.current.getBoundingClientRect(),
-                  _ = _(_.clientX - _.left, [0, _.width], [_, _]),
                   _ = _({
-                    value: _,
+                    value: _(_.clientX - _.left, [0, _.width], [_, _]),
                     min: _,
                     max: _,
                     step: _,
                   }),
-                  _ = _(_, _),
                   _ = [..._];
-                (_[_] = _), _(_);
-              },
+                (_[_.current] = _),
+                  _.sort((_, _) => _ - _),
+                  (_.current = _.indexOf(_)),
+                  _(_);
+              }
             },
-            _.createElement(
-              "div",
-              {
-                className: _.Inner,
-              },
-              _,
-            ),
-          ),
-        );
+            onClick: (_) => {
+              if (!_.current) return;
+              const _ = _.current.getBoundingClientRect(),
+                _ = _(_.clientX - _.left, [0, _.width], [_, _]),
+                _ = _({
+                  value: _,
+                  min: _,
+                  max: _,
+                  step: _,
+                }),
+                _ = _(_, _),
+                _ = [..._];
+              (_[_] = _), _(_);
+            },
+            children: (0, _.jsx)("div", {
+              className: _.Inner,
+              children: _,
+            }),
+          }),
+        });
       }
       function _(_, _) {
         if (_.length <= 1) return _.length - 1;
@@ -820,7 +796,7 @@
         const { render: _, ...__webpack_require__ } = _;
         return (0, _._)(
           _,
-          _.createElement("div", {
+          (0, _.jsx)("div", {
             className: _.SliderTrack,
           }),
           __webpack_require__,
@@ -836,7 +812,7 @@
           _ = 100 - _(__webpack_require__, _, _);
         return (0, _._)(
           _,
-          _.createElement("div", {
+          (0, _.jsx)("div", {
             className: _.SliderRange,
             style: {
               "--pct-left": `${_}%`,
@@ -923,7 +899,7 @@
         };
         return (0, _._)(
           _,
-          _.createElement("span", {
+          (0, _.jsx)("span", {
             className: _.SliderHandle,
             style: _,
           }),
@@ -959,17 +935,14 @@
       function _(_) {
         const { direction: _ = "down" } = _,
           _ = _[_];
-        return _.createElement(
-          _._,
-          {
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: (0, _.jsx)("path", {
             transform: _,
             _: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1022,6 +995,7 @@
               children: _,
               state: __webpack_require__,
               placement: _ = "bottom-end",
+              popoverWidth: _ = "dropdown",
               ..._
             } = _,
             [_, _] = (0, _.useState)(null),
@@ -1061,7 +1035,7 @@
             _ = (0, _._)({
               open: __webpack_require__.bOpen,
               onOpenChange: __webpack_require__.setOpen,
-              width: "dropdown",
+              width: _,
               placement: _,
               selectedIndex: _,
               setSelectedIndex: (_) =>
@@ -1078,19 +1052,13 @@
               role: "select",
               scroll: !0,
             });
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _._.Root,
-              {
-                state: _,
-              },
-              _,
-            ),
-          );
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_._.Root, {
+              state: _,
+              children: _,
+            }),
+          });
         },
         Option: function (_) {
           const { value: _, children: __webpack_require__, disabled: _ } = _,
@@ -1101,39 +1069,34 @@
             } = _("<SelectTrigger>"),
             _ = "string" == typeof _ ? _ : void 0,
             _ = _ ? _.includes(_) : _ === _;
-          return _.createElement(
-            _._.Item,
-            {
-              label: _,
-              onSelect: () => _(_),
-              selected: _,
-              disabled: _,
-            },
-            _ &&
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsxs)(_._.Item, {
+            label: _,
+            onSelect: () => _(_),
+            selected: _,
+            disabled: _,
+            children: [
+              _ &&
+                (0, _.jsxs)(_._, {
                   gap: "2",
                   align: "center",
-                },
-                _.createElement(_._, {
-                  checked: _,
-                  variant: "dark",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      checked: _,
+                      variant: "dark",
+                    }),
+                    __webpack_require__,
+                  ],
                 }),
-                __webpack_require__,
-              ),
-            !_ && __webpack_require__,
-          );
+              !_ && __webpack_require__,
+            ],
+          });
         },
         Options: function (_) {
           const { refPopover: _ } = _("<Select.Options>");
-          return _.createElement(
-            _._.Positioner,
-            {
-              ref: _,
-            },
-            _.children,
-          );
+          return (0, _.jsx)(_._.Positioner, {
+            ref: _,
+            children: _.children,
+          });
         },
         Trigger: function (_) {
           const { children: _, render: __webpack_require__ } = _,
@@ -1167,13 +1130,13 @@
             _ = _ ? Array.isArray(_) && _.length > 0 : !!_,
             _ =
               _ && _
-                ? _.createElement(_._, {
+                ? (0, _.jsx)(_._, {
                     onClick: _,
                     cursor: "pointer",
                     hitSlop: !0,
                   })
-                : _.createElement(_, null),
-            _ = _.createElement(_._, {
+                : (0, _.jsx)(_, {}),
+            _ = (0, _.jsx)(_._, {
               afterContent: _,
               variant: _,
               size: _,
@@ -1183,28 +1146,24 @@
               ..._,
             }),
             _ = (0, _._)(__webpack_require__, _, _, void 0);
-          return _.createElement(_._.Anchor, null, _);
+          return (0, _.jsx)(_._.Anchor, {
+            children: _,
+          });
         },
         Value: function (_) {
-          return _.createElement(
-            _._,
-            {
-              weight: "medium",
-              truncate: !0,
-              contrast: "title",
-            },
-            _.children,
-          );
+          return (0, _.jsx)(_._, {
+            weight: "medium",
+            truncate: !0,
+            contrast: "title",
+            children: _.children,
+          });
         },
         Placeholder: function (_) {
-          return _.createElement(
-            _._,
-            {
-              contrast: "description",
-              truncate: !0,
-            },
-            _.children,
-          );
+          return (0, _.jsx)(_._, {
+            contrast: "description",
+            truncate: !0,
+            children: _.children,
+          });
         },
       };
       function _(_) {
@@ -1239,33 +1198,36 @@
           }),
           _ = null != _,
           _ = _ ? _(_) : "";
-        return _.createElement(
-          _.Root,
-          {
-            state: _,
-            ..._,
-          },
-          _.createElement(
-            _.Trigger,
-            null,
-            _ && _.createElement(_.Value, null, _),
-            !_ && _.createElement(_.Placeholder, null, _),
-          ),
-          _.createElement(
-            _.Options,
-            null,
-            _.rgOptions.map((_) =>
-              _.createElement(
-                _.Option,
-                {
-                  value: _,
-                  key: _(_),
-                },
-                _(_),
+        return (0, _.jsxs)(_.Root, {
+          state: _,
+          ..._,
+          children: [
+            (0, _.jsxs)(_.Trigger, {
+              children: [
+                _ &&
+                  (0, _.jsx)(_.Value, {
+                    children: _,
+                  }),
+                !_ &&
+                  (0, _.jsx)(_.Placeholder, {
+                    children: _,
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_.Options, {
+              children: _.rgOptions.map((_) =>
+                (0, _.jsx)(
+                  _.Option,
+                  {
+                    value: _,
+                    children: _(_),
+                  },
+                  _(_),
+                ),
               ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }, _);
       const _ = _;
       const _ = Object.assign(function (_) {
@@ -1296,33 +1258,36 @@
                   ).format(_)
                 : _.join(", ");
           }
-          return _.createElement(
-            _.Root,
-            {
-              state: _,
-              ..._,
-            },
-            _.createElement(
-              _.Trigger,
-              null,
-              _ && _.createElement(_.Value, null, _),
-              !_ && _.createElement(_.Placeholder, null, _),
-            ),
-            _.createElement(
-              _.Options,
-              null,
-              _.rgOptions.map((_) =>
-                _.createElement(
-                  _.Option,
-                  {
-                    value: _,
-                    key: _(_),
-                  },
-                  _(_),
+          return (0, _.jsxs)(_.Root, {
+            state: _,
+            ..._,
+            children: [
+              (0, _.jsxs)(_.Trigger, {
+                children: [
+                  _ &&
+                    (0, _.jsx)(_.Value, {
+                      children: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_.Placeholder, {
+                      children: _,
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_.Options, {
+                children: _.rgOptions.map((_) =>
+                  (0, _.jsx)(
+                    _.Option,
+                    {
+                      value: _,
+                      children: _(_),
+                    },
+                    _(_),
+                  ),
                 ),
-              ),
-            ),
-          );
+              }),
+            ],
+          });
         }, _),
         _ = (0, _.createContext)(null);
       function _(_) {
@@ -1344,26 +1309,19 @@
         return `/gameexplorer/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nAppID).join()}/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nWeight.toFixed(0)).join()}/${_.nSelfFactor}/${_.nPopularity}/${_.bSimilar}`;
       }
       function _() {
-        return _.createElement(
-          _._,
-          {
-            className: _.GameExplorerHeader,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.GameExplorerHeader,
+          children: [
+            (0, _.jsx)(_._, {
               className: _.GameExplorerTitle,
-            },
-            "Game Explorer",
-          ),
-          _.createElement(
-            _._,
-            {
+              children: "Game Explorer",
+            }),
+            (0, _.jsx)(_._, {
               className: _.GameExplorerDescription,
-            },
-            "Explore and Mix Games",
-          ),
-        );
+              children: "Explore and Mix Games",
+            }),
+          ],
+        });
       }
       function _(_) {
         const [_] = (0, _._)(_.selectedAppInfo.nAppID, {
@@ -1372,48 +1330,39 @@
         });
         if (!_) return null;
         const _ = _.GetAssetsWithoutOverrides().GetMainCapsuleURL();
-        return _.createElement(
-          "div",
-          {
-            className: _.SelectedApp,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.SelectedApp,
+          children: [
+            (0, _.jsx)("div", {
               className: _.RemoveButttonContainer,
-            },
-            _.createElement(
-              _,
-              {
+              children: (0, _.jsx)(_, {
                 variant: "default",
                 size: "1",
                 color: "red",
                 onClick: () => _.onRemove(_.selectedAppInfo.nAppID),
-              },
-              "X",
-            ),
-          ),
-          _.createElement("img", {
-            className: _.CapsuleImage,
-            src: _,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.WeightContainer,
-            },
-            _.nNumSelected > 1 &&
-              _.createElement(_, {
-                value: _.selectedAppInfo.nWeight,
-                min: 0,
-                max: 100,
-                onValueChange: (_) =>
-                  _.onWeightChange(_.selectedAppInfo.nAppID, _, !1),
-                onValueSettled: (_) =>
-                  _.onWeightChange(_.selectedAppInfo.nAppID, _, !0),
+                children: "X",
               }),
-          ),
-        );
+            }),
+            (0, _.jsx)("img", {
+              className: _.CapsuleImage,
+              src: _,
+            }),
+            (0, _.jsx)("div", {
+              className: _.WeightContainer,
+              children:
+                _.nNumSelected > 1 &&
+                (0, _.jsx)(_, {
+                  value: _.selectedAppInfo.nWeight,
+                  min: 0,
+                  max: 100,
+                  onValueChange: (_) =>
+                    _.onWeightChange(_.selectedAppInfo.nAppID, _, !1),
+                  onValueSettled: (_) =>
+                    _.onWeightChange(_.selectedAppInfo.nAppID, _, !0),
+                }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(
@@ -1495,285 +1444,260 @@
           _ = (_) => {
             _(_, -1, !0);
           };
-        return _.createElement(
-          "div",
-          {
-            className: _.GameExplorerKnobs,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.AppList,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: _.GameExplorerKnobs,
+          children: (0, _.jsxs)("div", {
+            className: _.AppList,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.AppRow,
-              },
-              0 == _.state.arrSelectedAppInfos.length &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Empty,
-                  },
-                  "Add games to start exploring",
-                ),
-              _.state.arrSelectedAppInfos.map((_) =>
-                _.createElement(_, {
-                  key: _.nAppID,
-                  selectedAppInfo: _,
-                  onWeightChange: _,
-                  onRemove: _,
-                  nNumSelected: _.state.arrSelectedAppInfos.length,
-                }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  0 == _.state.arrSelectedAppInfos.length &&
+                    (0, _.jsx)("div", {
+                      className: _.Empty,
+                      children: "Add games to start exploring",
+                    }),
+                  _.state.arrSelectedAppInfos.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        selectedAppInfo: _,
+                        onWeightChange: _,
+                        onRemove: _,
+                        nNumSelected: _.state.arrSelectedAppInfos.length,
+                      },
+                      _.nAppID,
+                    ),
+                  ),
+                ],
+              }),
+              (0, _.jsxs)("div", {
                 className: _.AppSelectors,
-              },
-              _.createElement(_, {
-                fnSelectAppID: _,
-                arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
-                  (_) => _.nAppID,
-                ),
+                children: [
+                  (0, _.jsx)(_, {
+                    fnSelectAppID: _,
+                    arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
+                      (_) => _.nAppID,
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    fnSelectAppID: _,
+                    arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
+                      (_) => _.nAppID,
+                    ),
+                  }),
+                ],
               }),
-              _.createElement(_, {
-                fnSelectAppID: _,
-                arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
-                  (_) => _.nAppID,
-                ),
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.OtherControls,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.OtherControl,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ControlTitle,
-                  },
-                  "Popularity",
-                ),
-                _.createElement(_._, {
-                  options: ["Similar", "Any", "Popular", "Niche"],
-                  value: _,
-                  onValueChange: (_) =>
-                    ((_) => {
-                      switch (_) {
-                        case "Similar":
-                          _.onChange(
-                            {
-                              ..._.state,
-                              nPopularity: 0,
-                              bSimilar: !0,
-                            },
-                            !0,
-                          );
-                          break;
-                        case "Any":
-                          _.onChange(
-                            {
-                              ..._.state,
-                              nPopularity: 0,
-                              bSimilar: !1,
-                            },
-                            !0,
-                          );
-                          break;
-                        case "Popular":
-                          _.onChange(
-                            {
-                              ..._.state,
-                              nPopularity: 40,
-                              bSimilar: !1,
-                            },
-                            !0,
-                          );
-                          break;
-                        case "Niche":
-                          _.onChange(
-                            {
-                              ..._.state,
-                              nPopularity: 130,
-                              bSimilar: !1,
-                            },
-                            !0,
-                          );
-                      }
-                      __webpack_require__(_);
-                    })(_),
-                  radius: "sm",
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ControlDescription,
-                  },
-                  "Similar" == _ &&
-                    "Games with similar popularity to your input games",
-                  "Any" == _ && "No popularity restrictions, can be noisy",
-                  "Popular" == _ && "Higher popularity games",
-                  "Niche" == _ && "Lower popularity games, can be noisy",
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.OtherControl,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ControlTitle,
-                  },
-                  "Self Factor",
-                ),
-                _.createElement(_._, {
-                  options: ["None", "Some", "Lots"],
-                  value: _,
-                  onValueChange: (_) =>
-                    ((_) => {
-                      switch (_) {
-                        case "None":
-                          _.onChange(
-                            {
-                              ..._.state,
-                              nSelfFactor: 0,
-                            },
-                            !0,
-                          );
-                          break;
-                        case "Some":
-                          _.onChange(
-                            {
-                              ..._.state,
-                              nSelfFactor: 20,
-                            },
-                            !0,
-                          );
-                          break;
-                        case "Lots":
-                          _.onChange(
-                            {
-                              ..._.state,
-                              nSelfFactor: 40,
-                            },
-                            !0,
-                          );
-                      }
-                      _(_);
-                    })(_),
-                  radius: "sm",
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ControlDescription,
-                  },
-                  "None" == _ && "Your game preferences are not factored in",
-                  "Some" == _ && "A bit of your game preferences are mixed in",
-                  "Lots" == _ &&
-                    "Significantly biased towards your game preferences",
-                ),
-              ),
-            ),
-          ),
-        );
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.OtherControl,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ControlTitle,
+                        children: "Popularity",
+                      }),
+                      (0, _.jsx)(_._, {
+                        options: ["Similar", "Any", "Popular", "Niche"],
+                        value: _,
+                        onValueChange: (_) =>
+                          ((_) => {
+                            switch (_) {
+                              case "Similar":
+                                _.onChange(
+                                  {
+                                    ..._.state,
+                                    nPopularity: 0,
+                                    bSimilar: !0,
+                                  },
+                                  !0,
+                                );
+                                break;
+                              case "Any":
+                                _.onChange(
+                                  {
+                                    ..._.state,
+                                    nPopularity: 0,
+                                    bSimilar: !1,
+                                  },
+                                  !0,
+                                );
+                                break;
+                              case "Popular":
+                                _.onChange(
+                                  {
+                                    ..._.state,
+                                    nPopularity: 40,
+                                    bSimilar: !1,
+                                  },
+                                  !0,
+                                );
+                                break;
+                              case "Niche":
+                                _.onChange(
+                                  {
+                                    ..._.state,
+                                    nPopularity: 130,
+                                    bSimilar: !1,
+                                  },
+                                  !0,
+                                );
+                            }
+                            __webpack_require__(_);
+                          })(_),
+                        radius: "sm",
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.ControlDescription,
+                        children: [
+                          "Similar" == _ &&
+                            "Games with similar popularity to your input games",
+                          "Any" == _ &&
+                            "No popularity restrictions, can be noisy",
+                          "Popular" == _ && "Higher popularity games",
+                          "Niche" == _ &&
+                            "Lower popularity games, can be noisy",
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.OtherControl,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.ControlTitle,
+                        children: "Self Factor",
+                      }),
+                      (0, _.jsx)(_._, {
+                        options: ["None", "Some", "Lots"],
+                        value: _,
+                        onValueChange: (_) =>
+                          ((_) => {
+                            switch (_) {
+                              case "None":
+                                _.onChange(
+                                  {
+                                    ..._.state,
+                                    nSelfFactor: 0,
+                                  },
+                                  !0,
+                                );
+                                break;
+                              case "Some":
+                                _.onChange(
+                                  {
+                                    ..._.state,
+                                    nSelfFactor: 20,
+                                  },
+                                  !0,
+                                );
+                                break;
+                              case "Lots":
+                                _.onChange(
+                                  {
+                                    ..._.state,
+                                    nSelfFactor: 40,
+                                  },
+                                  !0,
+                                );
+                            }
+                            _(_);
+                          })(_),
+                        radius: "sm",
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.ControlDescription,
+                        children: [
+                          "None" == _ &&
+                            "Your game preferences are not factored in",
+                          "Some" == _ &&
+                            "A bit of your game preferences are mixed in",
+                          "Lots" == _ &&
+                            "Significantly biased towards your game preferences",
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const [_] = (0, _._)(_.nAppID, 0, _._);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.CapsuleContainer,
-              },
-              _.createElement(_._, {
-                capsule: {
-                  _: _.nAppID,
-                },
-                imageType: "library",
-                nWidthMultiplier: 2,
-                bShowName: !1,
-                bHidePlatforms: !0,
-                bHidePrice: !0,
-                bHideStatusBanners: !0,
-                bShowIgnoreButton: !0,
-                bShowDescriptionInHover: !0,
-                bPreferAssetWithoutOverride: !1,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Distance,
-                },
-                `${(100 * _.fDistance).toFixed(2)}%`,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.StartExplore,
+          ? (0, _.jsxs)("div", {
+              className: _.CapsuleContainer,
+              children: [
+                (0, _.jsx)(_._, {
+                  capsule: {
+                    _: _.nAppID,
                   },
-                  _.createElement(
-                    _,
-                    {
-                      variant: "default",
-                      size: "1",
-                      color: "green",
-                      onClick: () => _.fnSetApp(_.nAppID),
-                    },
-                    "Go",
-                  ),
-                ),
-              ),
-            )
+                  imageType: "library",
+                  nWidthMultiplier: 2,
+                  bShowName: !1,
+                  bHidePlatforms: !0,
+                  bHidePrice: !0,
+                  bHideStatusBanners: !0,
+                  bShowIgnoreButton: !0,
+                  bShowDescriptionInHover: !0,
+                  bPreferAssetWithoutOverride: !1,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.Distance,
+                  children: [
+                    `${(100 * _.fDistance).toFixed(2)}%`,
+                    (0, _.jsx)("div", {
+                      className: _.StartExplore,
+                      children: (0, _.jsx)(_, {
+                        variant: "default",
+                        size: "1",
+                        color: "green",
+                        onClick: () => _.fnSetApp(_.nAppID),
+                        children: "Go",
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
         return 0 == _.arrNearApps.length
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.GameExplorerResults,
-                  _.bIsPending && _.Pending,
-                ),
-              },
-              _.arrNearApps?.map((_) =>
-                _.createElement(_, {
-                  key: _.nAppID,
-                  nAppID: _.nAppID,
-                  fDistance: _.fDistance,
-                  fnSetApp: _.fnSetApp,
-                }),
+          : (0, _.jsx)("div", {
+              className: (0, _._)(
+                _.GameExplorerResults,
+                _.bIsPending && _.Pending,
               ),
-            );
+              children: _.arrNearApps?.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    nAppID: _.nAppID,
+                    fDistance: _.fDistance,
+                    fnSetApp: _.fnSetApp,
+                  },
+                  _.nAppID,
+                ),
+              ),
+            });
       }
       function _() {
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarLoginPrompt,
-          },
-          (0, _._)("#PersonalCalendar_LoginPrompt"),
-          _.createElement(
-            "button",
-            {
+        return (0, _.jsxs)(_._, {
+          className: _.PersonalCalendarLoginPrompt,
+          children: [
+            (0, _._)("#PersonalCalendar_LoginPrompt"),
+            (0, _.jsx)("button", {
               onClick: _._,
               className: _.LoginButton,
-            },
-            (0, _._)("#Login_SignIn"),
-          ),
-        );
+              children: (0, _._)("#Login_SignIn"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const [_] = (0, _._)(_.nAppID, {
@@ -1782,24 +1706,20 @@
         });
         if (!_) return null;
         const _ = _.GetAssetsWithoutOverrides().GetSmallCapsuleURL();
-        return _.createElement(
-          "div",
-          {
-            className: _.AppSelectorResult,
-            onPointerDown: () => _.onClick(_.nAppID),
-          },
-          _.createElement("img", {
-            className: _.Logo,
-            src: _,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.AppSelectorResult,
+          onPointerDown: () => _.onClick(_.nAppID),
+          children: [
+            (0, _.jsx)("img", {
+              className: _.Logo,
+              src: _,
+            }),
+            (0, _.jsx)("div", {
               className: _.RightSide,
-            },
-            _.GetName(),
-          ),
-        );
+              children: _.GetName(),
+            }),
+          ],
+        });
       }
       const _ = _.forwardRef(function (_, _) {
           const _ = (0, _._)(_.strSearch, null, 10),
@@ -1808,25 +1728,25 @@
             _.useEffect(() => {
               _(_.data?.rgItemIDs.map((_) => _.appid));
             }, [_, _.data]),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.AppSelectorResults,
-                  _.data?.rgItemIDs.length > 0 && _.Show,
-                ),
-                ref: _,
-              },
-              _.data?.rgItemIDs
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _.AppSelectorResults,
+                _.data?.rgItemIDs.length > 0 && _.Show,
+              ),
+              ref: _,
+              children: _.data?.rgItemIDs
                 .filter((_) => !_.arrIgnoreAppIDs.includes(_.appid))
                 .map((_) =>
-                  _.createElement(_, {
-                    key: _.appid,
-                    nAppID: _.appid,
-                    onClick: _.fnClickApp,
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      nAppID: _.appid,
+                      onClick: _.fnClickApp,
+                    },
+                    _.appid,
+                  ),
                 ),
-            )
+            })
           );
         }),
         _ = (_) => {
@@ -1850,53 +1770,49 @@
                 _(Date.now());
             },
             _ = _.arrSelectedAppIDs.length >= 3;
-          return _.createElement(
-            "div",
-            {
-              className: _.AppSelector,
-            },
-            _.createElement("input", {
-              type: "text",
-              className: (0, _._)(_.ValueInput, _ && _.Disabled),
-              value: _,
-              onChange: (_) => {
-                var _;
-                (_ = _.target.value) != _ &&
-                  (__webpack_require__(_), _(Date.now()), setTimeout(_, 300));
-              },
-              onKeyDown: (_) =>
-                ((_) => {
-                  switch (_) {
-                    case "Enter":
-                      _.length > 0 && _(_[0]);
-                      break;
-                    case "Escape":
-                      __webpack_require__("");
-                  }
-                })(_.key),
-              onBlur: (_) => __webpack_require__(""),
-              placeholder: _ ? "Max three games" : "Type any game name",
-              disabled: _,
-            }),
-            _.createElement(_, {
-              strSearch: _,
-              nSelectedResult: _,
-              fnSetResultApps: _,
-              fnClickApp: _,
-              arrIgnoreAppIDs: _.arrSelectedAppIDs,
-              ref: _,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            className: _.AppSelector,
+            children: [
+              (0, _.jsx)("input", {
+                type: "text",
+                className: (0, _._)(_.ValueInput, _ && _.Disabled),
+                value: _,
+                onChange: (_) => {
+                  var _;
+                  (_ = _.target.value) != _ &&
+                    (__webpack_require__(_), _(Date.now()), setTimeout(_, 300));
+                },
+                onKeyDown: (_) =>
+                  ((_) => {
+                    switch (_) {
+                      case "Enter":
+                        _.length > 0 && _(_[0]);
+                        break;
+                      case "Escape":
+                        __webpack_require__("");
+                    }
+                  })(_.key),
+                onBlur: (_) => __webpack_require__(""),
+                placeholder: _ ? "Max three games" : "Type any game name",
+                disabled: _,
+              }),
+              (0, _.jsx)(_, {
+                strSearch: _,
+                nSelectedResult: _,
+                fnSetResultApps: _,
+                fnClickApp: _,
+                arrIgnoreAppIDs: _.arrSelectedAppIDs,
+                ref: _,
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const _ = _().data,
             _ = _?.appids ?? [];
-          return _.createElement(
-            "div",
-            {
-              className: _.AppPlayedSelector,
-            },
-            _.createElement(_, {
+          return (0, _.jsx)("div", {
+            className: _.AppPlayedSelector,
+            children: (0, _.jsx)(_, {
               options: _,
               size: "1",
               selectedValue: 0,
@@ -1906,7 +1822,7 @@
                   ? "Select a recent game to add it"
                   : _?.names[_?.appids.indexOf(_)],
             }),
-          );
+          });
         },
         _ = function () {
           const _ = (function (_) {
@@ -1932,58 +1848,49 @@
               _.nPopularity,
               _.bSimilar,
             );
-          return _.createElement(
-            _._,
-            {
-              controller: "personalcalendar",
-              method: "default",
-              feature: "capsule",
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(
-                    _.GameExplorerApp,
-                    _.isFetching && _.Refreshing,
-                  ),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _.GameExplorerContainer,
-                  },
-                  _.createElement(_, null),
-                  !_._.steamid && _.createElement(_, null),
-                  _.createElement(_, {
-                    state: _,
-                    onChange: (_, _) => {
-                      __webpack_require__(_), _ && (_.push(_(_)), _(_));
-                    },
-                  }),
-                  _.data &&
-                    _.createElement(_, {
-                      arrNearApps: _.data,
-                      bIsPending: _.isFetching,
-                      fnSetApp: (_) => {
-                        const _ = {
-                          ..._,
-                          arrSelectedAppInfos: [
-                            {
-                              nAppID: _,
-                              nWeight: 100,
-                            },
-                          ],
-                        };
-                        __webpack_require__(_), _.push(_(_)), _(_);
+          return (0, _.jsx)(_._, {
+            controller: "personalcalendar",
+            method: "default",
+            feature: "capsule",
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                className: (0, _._)(
+                  _.GameExplorerApp,
+                  _.isFetching && _.Refreshing,
+                ),
+                children: (0, _.jsxs)(_._, {
+                  className: _.GameExplorerContainer,
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    !_._.steamid && (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      state: _,
+                      onChange: (_, _) => {
+                        __webpack_require__(_), _ && (_.push(_(_)), _(_));
                       },
                     }),
-                ),
-              ),
-            ),
-          );
+                    _.data &&
+                      (0, _.jsx)(_, {
+                        arrNearApps: _.data,
+                        bIsPending: _.isFetching,
+                        fnSetApp: (_) => {
+                          const _ = {
+                            ..._,
+                            arrSelectedAppInfos: [
+                              {
+                                nAppID: _,
+                                nWeight: 100,
+                              },
+                            ],
+                          };
+                          __webpack_require__(_), _.push(_(_)), _(_);
+                        },
+                      }),
+                  ],
+                }),
+              }),
+            }),
+          });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1993,6 +1900,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2307,25 +2215,26 @@
                 let _;
                 (_ = _?.data?.length
                   ? _.data.map((_) =>
-                      _.createElement(
+                      (0, _.jsxs)(
                         "div",
                         {
                           className: _.Suggestion,
-                          key: `suggestion-${_._}`,
                           onClickCapture: () =>
                             this.SetSelectedApp(parseInt(_._)),
+                          children: [
+                            (0, _.jsx)("img", {
+                              src: _.img,
+                              className: _.LogoImage,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _.AppName,
+                              children:
+                                _.name +
+                                (this.props.showAppIds ? ` (${_._})` : ""),
+                            }),
+                          ],
                         },
-                        _.createElement("img", {
-                          src: _.img,
-                          className: _.LogoImage,
-                        }),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.AppName,
-                          },
-                          _.name + (this.props.showAppIds ? ` (${_._})` : ""),
-                        ),
+                        `suggestion-${_._}`,
                       ),
                     )
                   : []),
@@ -2365,7 +2274,7 @@
         render() {
           const _ = this.props.classOverride ?? _.AppSelector;
           let _ = null;
-          const _ = _.createElement(_._, {
+          const _ = (0, _.jsx)(_._, {
             type: "text",
             onChange: this.UpdateAppSuggestions,
           });
@@ -2374,46 +2283,33 @@
               ? this.state.appinfo.name +
                 (this.props.showAppIds ? ` (${this.state.appid})` : "")
               : (this.props.strPrompt ?? "Select game");
-            _ = _.createElement(
-              "div",
-              {
-                className: _.AppDisplay,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.AppName,
-                },
-                _,
-              ),
-            );
+            _ = (0, _.jsx)("div", {
+              className: _.AppDisplay,
+              children: (0, _.jsx)("div", {
+                className: _.AppName,
+                children: _,
+              }),
+            });
           } else if ("select" == this.state.mode) {
             const _ = this.state.strSearch.length > 0;
-            _ = _.createElement(
-              "div",
-              {
-                className: _.AppSelect,
-              },
-              _,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+            _ = (0, _.jsxs)("div", {
+              className: _.AppSelect,
+              children: [
+                _,
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _.Suggestions,
-                  },
-                  this.state.rgSuggestions,
-                ),
-            );
+                    children: this.state.rgSuggestions,
+                  }),
+              ],
+            });
           }
-          return _.createElement(
-            "div",
-            {
-              className: _,
-              onClick: this.OnDisplayClicked,
-              onKeyUpCapture: this.OnKeyUp,
-            },
-            _,
-          );
+          return (0, _.jsx)("div", {
+            className: _,
+            onClick: this.OnDisplayClicked,
+            onKeyUpCapture: this.OnKeyUp,
+            children: _,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnDisplayClicked", null),
@@ -2422,52 +2318,51 @@
       class _ extends _.Component {
         render() {
           if (0 == this.props.appid)
-            return _.createElement("div", {
+            return (0, _.jsx)("div", {
               className: _.SimilarApp,
             });
           {
             const _ = _._.GetAppInfo(this.props.appid);
             if (!_ || !_.is_valid)
-              return _.createElement("div", {
+              return (0, _.jsx)("div", {
                 className: _.SimilarApp,
               });
             let _ = [];
             if (this.props.score) {
               _.push(
-                _.createElement("div", {
-                  className: _.Spacer,
-                  key: "score-spacer",
-                }),
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _.Spacer,
+                  },
+                  "score-spacer",
+                ),
               );
               const _ = Math.round(100 * this.props.score).toString() + "%";
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "div",
                   {
                     className: _.Score,
-                    key: "score-value",
+                    children: _,
                   },
-                  _,
+                  "score-value",
                 ),
               );
             }
             const _ = _.name + " (" + this.props.appid.toString() + ")",
               _ = this.props.fnOnSelected ? this.props.fnOnSelected : (_) => {};
-            return _.createElement(
-              "div",
-              {
-                className: _.SimilarApp,
-                onClick: () => _(this.props.appid),
-              },
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.SimilarApp,
+              onClick: () => _(this.props.appid),
+              children: [
+                (0, _.jsx)("div", {
                   className: _.AppName,
-                },
+                  children: _,
+                }),
                 _,
-              ),
-              _,
-            );
+              ],
+            });
           }
         }
       }
@@ -2505,39 +2400,41 @@
           const _ = this.state.score
             ? (100 * this.state.score).toFixed(1) + "%"
             : "";
-          return _.createElement(
-            "div",
-            {
-              className: _.LabsSimilarity,
-            },
-            _.createElement(_, {
-              fnOnSelection: this.OnAppSelected,
-              ref: this.ref_app_a,
-              showAppIds: !0,
-              appidInitial: 268500,
-              key: "similar_app_a",
-            }),
-            _.createElement("div", {
-              className: _.HorizontalSpacer,
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.LabsSimilarity,
+            children: [
+              (0, _.jsx)(
+                _,
+                {
+                  fnOnSelection: this.OnAppSelected,
+                  ref: this.ref_app_a,
+                  showAppIds: !0,
+                  appidInitial: 268500,
+                },
+                "similar_app_a",
+              ),
+              (0, _.jsx)("div", {
+                className: _.HorizontalSpacer,
+              }),
+              (0, _.jsx)("div", {
                 className: _.Score,
-              },
-              _,
-            ),
-            _.createElement("div", {
-              className: _.HorizontalSpacer,
-            }),
-            _.createElement(_, {
-              fnOnSelection: this.OnAppSelected,
-              ref: this.ref_app_b,
-              showAppIds: !0,
-              appidInitial: 200510,
-              key: "similar_app_b",
-            }),
-          );
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _.HorizontalSpacer,
+              }),
+              (0, _.jsx)(
+                _,
+                {
+                  fnOnSelection: this.OnAppSelected,
+                  ref: this.ref_app_b,
+                  showAppIds: !0,
+                  appidInitial: 200510,
+                },
+                "similar_app_b",
+              ),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnAppSelected", null);
@@ -2598,21 +2495,24 @@
             const _ = this.similar_apps[_],
               _ = this.similarity_scores[_];
             _.push(
-              _.createElement(_, {
-                appid: _,
-                score: _,
-                key: _,
-                fnOnSelected: this.SetSelectedApp,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  appid: _,
+                  score: _,
+                  fnOnSelected: this.SetSelectedApp,
+                },
+                _,
+              ),
             );
           }
           let _ = [];
           for (const _ of _.rgModelNames) {
             let _ = {
-              label: _.createElement(
+              label: (0, _.jsx)(
                 "div",
                 {
-                  key: _,
+                  children: _,
                 },
                 _,
               ),
@@ -2620,31 +2520,29 @@
             };
             _.push(_);
           }
-          return _.createElement(
-            "div",
-            {
-              className: _.LabsSimilarGames,
-            },
-            _.createElement(_._, {
-              rgOptions: _,
-              onChange: this.OnModelChanged,
-              selectedOption: "default",
-            }),
-            _.createElement("h1", null, "Games similar to:"),
-            _.createElement(_, {
-              fnOnSelection: this.OnSelectedApp,
-              ref: this.app_selector_ref,
-              appidInitial: 268500,
-              showAppIds: !0,
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.LabsSimilarGames,
+            children: [
+              (0, _.jsx)(_._, {
+                rgOptions: _,
+                onChange: this.OnModelChanged,
+                selectedOption: "default",
+              }),
+              (0, _.jsx)("h1", {
+                children: "Games similar to:",
+              }),
+              (0, _.jsx)(_, {
+                fnOnSelection: this.OnSelectedApp,
+                ref: this.app_selector_ref,
+                appidInitial: 268500,
+                showAppIds: !0,
+              }),
+              (0, _.jsx)("div", {
                 className: _.SimilarApps,
-              },
-              _,
-            ),
-          );
+                children: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "selected_app", void 0),
@@ -2677,46 +2575,42 @@
         render() {
           let _ = [
             {
-              label: _.createElement(
+              label: (0, _.jsx)(
                 "div",
                 {
-                  key: "Plus",
+                  children: "Plus",
                 },
                 "Plus",
               ),
               data: "Plus",
             },
             {
-              label: _.createElement(
+              label: (0, _.jsx)(
                 "div",
                 {
-                  key: "Minus",
+                  children: "Minus",
                 },
                 "Minus",
               ),
               data: "Minus",
             },
           ];
-          return _.createElement(
-            "div",
-            {
-              className: _.Operand,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.Operand,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.OperatorSelect,
-              },
-              _.createElement(_._, {
-                rgOptions: _,
-                onChange: this.OnSelectedOperator,
-                selectedOption: "Plus",
+                children: (0, _.jsx)(_._, {
+                  rgOptions: _,
+                  onChange: this.OnSelectedOperator,
+                  selectedOption: "Plus",
+                }),
               }),
-            ),
-            _.createElement(_, {
-              fnOnSelection: this.OnSelectedApp,
-            }),
-          );
+              (0, _.jsx)(_, {
+                fnOnSelection: this.OnSelectedApp,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "selected_app", void 0),
@@ -2802,10 +2696,10 @@
           let _ = [];
           for (const _ of _.rgModelNames) {
             let _ = {
-              label: _.createElement(
+              label: (0, _.jsx)(
                 "div",
                 {
-                  key: _,
+                  children: _,
                 },
                 _,
               ),
@@ -2817,25 +2711,25 @@
             _ = 0;
           for (const _ of this.operands)
             _.push(
-              _.createElement(_, {
-                app: _.app,
-                operator: _.operator,
-                key: _,
-                fnOnChange: this.OnOperandChanged,
-                ref: this.operand_refs[_],
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  app: _.app,
+                  operator: _.operator,
+                  fnOnChange: this.OnOperandChanged,
+                  ref: this.operand_refs[_],
+                },
+                _,
+              ),
             ),
               _++;
           let _ = null;
           this.operands.length < this.props.max_operands &&
-            (_ = _.createElement(
-              "div",
-              {
-                className: _.AddOperand,
-                onClick: this.OnAddOperand,
-              },
-              "+",
-            ));
+            (_ = (0, _.jsx)("div", {
+              className: _.AddOperand,
+              onClick: this.OnAddOperand,
+              children: "+",
+            }));
           let _ = [];
           const _ = Math.min(
             this.similar_apps.length,
@@ -2846,35 +2740,38 @@
             const _ = this.similar_apps[_],
               _ = this.similarity_scores[_];
             _.push(
-              _.createElement(_, {
-                appid: _,
-                score: _,
-                key: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  appid: _,
+                  score: _,
+                },
+                _,
+              ),
             );
           }
-          return _.createElement(
-            "div",
-            {
-              className: _.LabsMixer,
-            },
-            _.createElement(_._, {
-              rgOptions: _,
-              onChange: this.OnModelChanged,
-              selectedOption: "default",
-            }),
-            _.createElement("h1", null, "Mixture"),
-            _,
-            _,
-            _.createElement("h1", null, "Games similar to mixture"),
-            _.createElement(
-              "div",
-              {
-                className: _.SimilarApps,
-              },
+          return (0, _.jsxs)("div", {
+            className: _.LabsMixer,
+            children: [
+              (0, _.jsx)(_._, {
+                rgOptions: _,
+                onChange: this.OnModelChanged,
+                selectedOption: "default",
+              }),
+              (0, _.jsx)("h1", {
+                children: "Mixture",
+              }),
               _,
-            ),
-          );
+              _,
+              (0, _.jsx)("h1", {
+                children: "Games similar to mixture",
+              }),
+              (0, _.jsx)("div", {
+                className: _.SimilarApps,
+                children: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "operands", void 0),
@@ -2944,105 +2841,99 @@
             _ = _ ? _.ComputeButton : (0, _._)(_.ComputeButton, _.Disable);
           let _ = null;
           _ = this.in_progress
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ProgressMessage,
-                },
-                "Finding path, step " + this.progress_iteration,
-              )
+            ? (0, _.jsx)("div", {
+                className: _.ProgressMessage,
+                children: "Finding path, step " + this.progress_iteration,
+              })
             : this.found_path
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.ProgressMessage,
-                  },
-                  "Found path",
-                )
-              : _.createElement(
-                  "div",
-                  {
-                    className: _.ProgressMessage,
-                  },
-                  "No path found",
-                );
+              ? (0, _.jsx)("div", {
+                  className: _.ProgressMessage,
+                  children: "Found path",
+                })
+              : (0, _.jsx)("div", {
+                  className: _.ProgressMessage,
+                  children: "No path found",
+                });
           let _ = [];
           if (this.found_path)
             for (let _ = 0; _ < this.found_path.length; _++) {
               const _ = this.found_path[_];
               _.push(
-                _.createElement(_, {
-                  appid: _.appid,
-                  score: _.similarity,
-                  key: "pathstep" + _,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    appid: _.appid,
+                    score: _.similarity,
+                  },
+                  "pathstep" + _,
+                ),
               );
             }
-          return _.createElement(
-            "div",
-            {
-              className: _.LabsPathfinder,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.LabsPathfinder,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.SelectEndpoints,
-              },
-              _.createElement(_, {
-                fnOnSelection: this.OnSelectedStartApp,
-                strPrompt: "Select start game",
+                children: [
+                  (0, _.jsx)(_, {
+                    fnOnSelection: this.OnSelectedStartApp,
+                    strPrompt: "Select start game",
+                  }),
+                  (0, _.jsx)(_, {
+                    fnOnSelection: this.OnSelectedEndApp,
+                    strPrompt: "Select end game",
+                  }),
+                ],
               }),
-              _.createElement(_, {
-                fnOnSelection: this.OnSelectedEndApp,
-                strPrompt: "Select end game",
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 className: _,
                 onClick: _ ? this.Pathfind : () => {},
-              },
-              "Pathfind!",
-            ),
-            _,
-            _.createElement(
-              "div",
-              {
-                className: _.Path,
-              },
+                children: "Pathfind!",
+              }),
               _,
-            ),
-          );
+              (0, _.jsx)("div", {
+                className: _.Path,
+                children: _,
+              }),
+            ],
+          });
         }
       };
       function _() {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("h1", null, "Similar Games"),
-          _.createElement(_, {
-            max_similar: 10,
-          }),
-          _.createElement("div", {
-            className: _.Spacer,
-          }),
-          _.createElement("h1", null, "Similarity"),
-          _.createElement(_, null),
-          _.createElement("div", {
-            className: _.Spacer,
-          }),
-          _.createElement("h1", null, "Mixer"),
-          _.createElement(_, {
-            max_similar: 10,
-            max_operands: 6,
-          }),
-          _.createElement("div", {
-            className: _.Spacer,
-          }),
-          _.createElement("h1", null, "Pathfinder"),
-          _.createElement(_, null),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("h1", {
+              children: "Similar Games",
+            }),
+            (0, _.jsx)(_, {
+              max_similar: 10,
+            }),
+            (0, _.jsx)("div", {
+              className: _.Spacer,
+            }),
+            (0, _.jsx)("h1", {
+              children: "Similarity",
+            }),
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)("div", {
+              className: _.Spacer,
+            }),
+            (0, _.jsx)("h1", {
+              children: "Mixer",
+            }),
+            (0, _.jsx)(_, {
+              max_similar: 10,
+              max_operands: 6,
+            }),
+            (0, _.jsx)("div", {
+              className: _.Spacer,
+            }),
+            (0, _.jsx)("h1", {
+              children: "Pathfinder",
+            }),
+            (0, _.jsx)(_, {}),
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "app_start", void 0),
         (0, _._)([_._], _.prototype, "app_end", void 0),
@@ -3873,36 +3764,32 @@
           _ = _.useRef(void 0);
         return (
           _.current || (_.current = new _(_)),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "p",
-                null,
-                "This data is generated by analyzing games based on similar tags, and generating clusters from that.  We then look at your playtime history to see what games are in clusters together, and suggest other popular games in those clusters.",
-              ),
-              _.createElement(
-                "p",
-                null,
-                "You can also ",
-                _.createElement(
-                  "a",
-                  {
-                    href: "http://store-tc.k.steam.net/graph",
-                    target: "_blank",
-                  },
-                  "browse the cluster data graphically",
-                ),
-                " (requires Rack VPN).",
-              ),
-            ),
-            _.createElement(_, {
-              SimilarityStore: _.current,
-            }),
-          )
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("p", {
+                    children:
+                      "This data is generated by analyzing games based on similar tags, and generating clusters from that.  We then look at your playtime history to see what games are in clusters together, and suggest other popular games in those clusters.",
+                  }),
+                  (0, _.jsxs)("p", {
+                    children: [
+                      "You can also ",
+                      (0, _.jsx)("a", {
+                        href: "http://store-tc.k.steam.net/graph",
+                        target: "_blank",
+                        children: "browse the cluster data graphically",
+                      }),
+                      " (requires Rack VPN).",
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                SimilarityStore: _.current,
+              }),
+            ],
+          })
         );
       }
       const _ = {
@@ -3960,58 +3847,55 @@
             _,
             _,
           );
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)(_._, {
               className: _.ClusterConfig,
-            },
-            _.createElement(_._, {
-              label: "SteamID",
-              type: "text",
-              value: __webpack_require__,
-              onChange: _,
-              description: !_ && "Invalid SteamID",
+              children: [
+                (0, _.jsx)(_._, {
+                  label: "SteamID",
+                  type: "text",
+                  value: __webpack_require__,
+                  onChange: _,
+                  description: !_ && "Invalid SteamID",
+                }),
+                (0, _.jsx)(_._, {
+                  label: "Clusters to return (Set to blank for all clusters)",
+                  type: "text",
+                  value: _,
+                  onChange: _,
+                }),
+                (0, _.jsx)(_._, {
+                  label: "Sort clusters by",
+                  rgOptions: _,
+                  selectedOption: _,
+                  onChange: _,
+                }),
+              ],
             }),
-            _.createElement(_._, {
-              label: "Clusters to return (Set to blank for all clusters)",
-              type: "text",
-              value: _,
-              onChange: _,
-            }),
-            _.createElement(_._, {
-              label: "Sort clusters by",
-              rgOptions: _,
-              selectedOption: _,
-              onChange: _,
-            }),
-          ),
-          _ && !_ && _.createElement(_._, null),
-          _ &&
-            _.createElement(_, {
-              rgPlaytimeClusters: _,
-            }),
-        );
+            _ && !_ && (0, _.jsx)(_._, {}),
+            _ &&
+              (0, _.jsx)(_, {
+                rgPlaytimeClusters: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { rgPlaytimeClusters: _ } = _;
-        return _.createElement(
-          "div",
-          null,
-          _.map((_) =>
-            _.createElement(
+        return (0, _.jsx)("div", {
+          children: _.map((_) =>
+            (0, _.jsx)(
               _._,
               {
-                key: _.nClusterID,
+                children: (0, _.jsx)(_, {
+                  cluster: _,
+                }),
               },
-              _.createElement(_, {
-                cluster: _,
-              }),
+              _.nClusterID,
             ),
           ),
-        );
+        });
       }
       function _(_) {
         const { cluster: _ } = _,
@@ -4022,151 +3906,144 @@
           _ = (0, _._)({
             onEnter: _,
           });
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _.PlaytimeCluster,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          ref: _,
+          className: _.PlaytimeCluster,
+          children: [
+            (0, _.jsxs)("div", {
               className: _.ClusterInfo,
-            },
-            _.createElement("h1", null, "Cluster ", _.nClusterID),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _.Overview,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement("b", null, "Total Playtime:"),
-                  " ",
-                  Math.floor(_.nPlaytimeMinutes / 6) / 10,
-                  "hr",
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement("b", null, "Last Played:"),
-                  " ",
-                  (0, _._)(_.rtLastPlayed),
-                  " ",
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement("b", null, "Games played:"),
-                  " ",
-                  _ &&
-                    _.rgAppIDsPlayed.map((_) =>
-                      _.createElement(
-                        _.Fragment,
-                        {
-                          key: _,
-                        },
-                        _.createElement(_, {
-                          appid: _,
-                        }),
-                        ", ",
-                      ),
-                    ),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement("b", null, "Popularity Score:"),
-                  " ",
-                  Math.floor(100 * _.flPopularityScore),
-                  "%  ",
-                  _.createElement(
-                    "span",
-                    {
-                      title:
-                        "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
-                      style: {
-                        cursor: "default",
-                      },
-                    },
-                    "(?)",
-                  ),
-                ),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                (0, _.jsxs)("h1", {
+                  children: ["Cluster ", _.nClusterID],
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsxs)("div", {
+                    className: _.Overview,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("b", {
+                            children: "Total Playtime:",
+                          }),
+                          " ",
+                          Math.floor(_.nPlaytimeMinutes / 6) / 10,
+                          "hr",
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("b", {
+                            children: "Last Played:",
+                          }),
+                          " ",
+                          (0, _._)(_.rtLastPlayed),
+                          " ",
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("b", {
+                            children: "Games played:",
+                          }),
+                          " ",
+                          _ &&
+                            _.rgAppIDsPlayed.map((_) =>
+                              (0, _.jsxs)(
+                                _.Fragment,
+                                {
+                                  children: [
+                                    (0, _.jsx)(_, {
+                                      appid: _,
+                                    }),
+                                    ", ",
+                                  ],
+                                },
+                                _,
+                              ),
+                            ),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("b", {
+                            children: "Popularity Score:",
+                          }),
+                          " ",
+                          Math.floor(100 * _.flPopularityScore),
+                          "%  ",
+                          (0, _.jsx)("span", {
+                            title:
+                              "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
+                            style: {
+                              cursor: "default",
+                            },
+                            children: "(?)",
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _.ClusterMembers,
-            },
-            _.createElement("h3", null, "Similar titles:"),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "ul",
-                null,
-                _.rgSimilarItems.map((_, _) =>
-                  __webpack_require__ || _ < 4
-                    ? _.createElement(
-                        "li",
-                        {
-                          key: _.GetUniqueID(),
-                        },
-                        _.createElement(_, {
-                          item: _,
-                        }),
-                      )
-                    : null,
-                ),
-              ),
-            ),
-            !__webpack_require__ &&
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                },
-                "Show all ",
-                _.rgSimilarItems.length,
-              ),
-          ),
-        );
+              children: [
+                (0, _.jsx)("h3", {
+                  children: "Similar titles:",
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)("ul", {
+                    children: _.rgSimilarItems.map((_, _) =>
+                      __webpack_require__ || _ < 4
+                        ? (0, _.jsx)(
+                            "li",
+                            {
+                              children: (0, _.jsx)(_, {
+                                item: _,
+                              }),
+                            },
+                            _.GetUniqueID(),
+                          )
+                        : null,
+                    ),
+                  }),
+                }),
+                !__webpack_require__ &&
+                  (0, _.jsxs)(_._, {
+                    onClick: _,
+                    children: ["Show all ", _.rgSimilarItems.length],
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       const _ = {};
       function _(_) {
         const { appid: _ } = _,
           [__webpack_require__] = (0, _._)(_, _);
         return __webpack_require__
-          ? _.createElement(
-              "a",
-              {
-                className: _.PlayedGame,
-                href: __webpack_require__.GetStorePageURL(),
-              },
-              __webpack_require__.GetName(),
-            )
+          ? (0, _.jsx)("a", {
+              className: _.PlayedGame,
+              href: __webpack_require__.GetStorePageURL(),
+              children: __webpack_require__.GetName(),
+            })
           : null;
       }
       function _(_) {
         const { item: _ } = _;
-        return _.createElement(
-          "a",
-          {
-            className: _.SimilarTitle,
-            href: _.GetStorePageURL(),
-          },
-          _.createElement("img", {
-            src: _.GetAssets().GetSmallCapsuleURL(),
-            loading: "lazy",
-          }),
-          _.GetName(),
-        );
+        return (0, _.jsxs)("a", {
+          className: _.SimilarTitle,
+          href: _.GetStorePageURL(),
+          children: [
+            (0, _.jsx)("img", {
+              src: _.GetAssets().GetSmallCapsuleURL(),
+              loading: "lazy",
+            }),
+            _.GetName(),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4384,63 +4261,52 @@
             _ = (0, _._)(_().LoginDialog, __webpack_require__),
             _ = this.m_manager.GetCurrentStep(),
             _ = this.m_manager.GetErrorMessage();
-          return _.createElement(
-            "div",
-            {
-              className: _,
-              ..._,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _,
+            ..._,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().LoginPanelBackground,
-              },
-              _.createElement(_.Qte, null),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _.jsx)(_.Qte, {}),
+              }),
+              (0, _.jsxs)("div", {
                 className: _().LoginPanelContent,
-              },
-              _ &&
-                _.createElement(_, {
-                  text: _,
-                }),
-              _ == _.AccountName &&
-                _.createElement(_, {
-                  manager: this.m_manager,
-                  autoFocus: this.props.autoFocus,
-                }),
-              _ == _.TwoFactorCode &&
-                _.createElement(_, {
-                  manager: this.m_manager,
-                  authtype: _.TwoFactorCode,
-                }),
-              _ == _.EmailCode &&
-                _.createElement(_, {
-                  manager: this.m_manager,
-                  authtype: _.EmailCode,
-                }),
-              _ == _.Complete &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LoginComplete,
-                  },
-                  _.createElement(_._, null),
-                ),
-            ),
-          );
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      text: _,
+                    }),
+                  _ == _.AccountName &&
+                    (0, _.jsx)(_, {
+                      manager: this.m_manager,
+                      autoFocus: this.props.autoFocus,
+                    }),
+                  _ == _.TwoFactorCode &&
+                    (0, _.jsx)(_, {
+                      manager: this.m_manager,
+                      authtype: _.TwoFactorCode,
+                    }),
+                  _ == _.EmailCode &&
+                    (0, _.jsx)(_, {
+                      manager: this.m_manager,
+                      authtype: _.EmailCode,
+                    }),
+                  _ == _.Complete &&
+                    (0, _.jsx)("div", {
+                      className: _().LoginComplete,
+                      children: (0, _.jsx)(_._, {}),
+                    }),
+                ],
+              }),
+            ],
+          });
         }
       };
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().ErrorMessage,
-          },
-          _.text,
-        );
+        return (0, _.jsx)("div", {
+          className: _().ErrorMessage,
+          children: _.text,
+        });
       }
       _ = (0, _._)([_._], _);
       let _ = class extends _.Component {
@@ -4505,101 +4371,80 @@
                 : 2 == this.state.nNameSize
                   ? _().LargeName
                   : _().DefaultNAme),
-            _.createElement(
-              "div",
-              {
-                className: _().AccountPasswordPanel,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _().AccountPasswordPanel,
+              children: [
+                (0, _.jsx)("div", {
                   className: _().SigninTitle,
-                },
-                (0, _._)("#Login_SignInTitle"),
-              ),
-              _.createElement(
-                "form",
-                {
+                  children: (0, _._)("#Login_SignInTitle"),
+                }),
+                (0, _.jsxs)("form", {
                   className: _().AccountPasswordForm,
                   onSubmit: this.OnSubmit,
-                },
-                _.createElement(_._, {
-                  autoFocus: this.props.autoFocus,
-                  className: (0, _._)(_().AccountNameLabel, _),
-                  label: (0, _._)("#Login_AccountName"),
-                  type: "text",
-                  value: __webpack_require__.GetUserName(),
-                  focusOnMount: !0,
-                  maxLength: 64,
-                  onChange: this.OnChangeName,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      autoFocus: this.props.autoFocus,
+                      className: (0, _._)(_().AccountNameLabel, _),
+                      label: (0, _._)("#Login_AccountName"),
+                      type: "text",
+                      value: __webpack_require__.GetUserName(),
+                      focusOnMount: !0,
+                      maxLength: 64,
+                      onChange: this.OnChangeName,
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: (0, _._)(_().PasswordDots, _),
+                      label: (0, _._)("#Login_Password"),
+                      type: "password",
+                      autoComplete: "off",
+                      maxLength: 64,
+                      size: 64,
+                      value: __webpack_require__.GetPassword(),
+                      onChange: this.OnChangePassword,
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _().RememberMeCheck,
+                      label: (0, _._)("#Login_RememberMe"),
+                      disabled: !1,
+                      onChange: () => this.OnChangeRememberPass,
+                      checked: __webpack_require__.GetRememberPassword(),
+                    }),
+                    __webpack_require__.GetCaptchaURL() &&
+                      (0, _.jsx)(_, {
+                        manager: _,
+                      }),
+                    (0, _.jsx)(_._, {
+                      disabled: this.props.manager.IsRequestInFlight(),
+                      children: (0, _._)("#Login_SignIn").toLocaleUpperCase(),
+                    }),
+                  ],
                 }),
-                _.createElement(_._, {
-                  className: (0, _._)(_().PasswordDots, _),
-                  label: (0, _._)("#Login_Password"),
-                  type: "password",
-                  autoComplete: "off",
-                  maxLength: 64,
-                  size: 64,
-                  value: __webpack_require__.GetPassword(),
-                  onChange: this.OnChangePassword,
-                }),
-                _.createElement(_._, {
-                  className: _().RememberMeCheck,
-                  label: (0, _._)("#Login_RememberMe"),
-                  disabled: !1,
-                  onChange: () => this.OnChangeRememberPass,
-                  checked: __webpack_require__.GetRememberPassword(),
-                }),
-                __webpack_require__.GetCaptchaURL() &&
-                  _.createElement(_, {
-                    manager: _,
-                  }),
-                _.createElement(
-                  _._,
-                  {
-                    disabled: this.props.manager.IsRequestInFlight(),
-                  },
-                  (0, _._)("#Login_SignIn").toLocaleUpperCase(),
-                ),
-              ),
-              _.createElement(
-                "a",
-                {
+                (0, _.jsx)("a", {
                   className: _().NeedHelpLink,
                   href: _._.HELP_BASE_URL,
-                },
-                (0, _._)("#Login_ForgotPassword"),
-              ),
-              _.createElement("div", {
-                className: _().LoginCreateSeperator,
-              }),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#Login_ForgotPassword"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().LoginCreateSeperator,
+                }),
+                (0, _.jsxs)("div", {
                   className: _().SteamUpsellContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SteamUpsell,
-                  },
-                  (0, _._)("#Login_NoSteamAccount"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CreateAccountLink,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: `${_._.STORE_BASE_URL}join/`,
-                    },
-                    (0, _._)("#Login_CreateAccount"),
-                  ),
-                ),
-              ),
-            )
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().SteamUpsell,
+                      children: (0, _._)("#Login_NoSteamAccount"),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().CreateAccountLink,
+                      children: (0, _.jsx)("a", {
+                        href: `${_._.STORE_BASE_URL}join/`,
+                        children: (0, _._)("#Login_CreateAccount"),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            })
           );
         }
       };
@@ -4617,61 +4462,47 @@
         }
         render() {
           let _ = this.props.manager;
-          return _.createElement(
-            "div",
-            {
-              className: _().CaptchaContainer,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().CaptchaContainer,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().CaptchaBlock,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().CaptchaImageAndInput,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CaptchaImageBox,
-                  },
-                  _.createElement("img", {
-                    className: _().CaptchaImage,
-                    src: _.GetCaptchaURL(),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().CaptchaImageAndInput,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().CaptchaImageBox,
+                        children: (0, _.jsx)("img", {
+                          className: _().CaptchaImage,
+                          src: _.GetCaptchaURL(),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _().CaptchaInput,
+                        type: "text",
+                        autoComplete: "off",
+                        maxLength: 6,
+                        value: _.GetCaptchaText(),
+                        onChange: this.OnCaptchaText,
+                      }),
+                    ],
                   }),
-                ),
-                _.createElement(_._, {
-                  className: _().CaptchaInput,
-                  type: "text",
-                  autoComplete: "off",
-                  maxLength: 6,
-                  value: _.GetCaptchaText(),
-                  onChange: this.OnCaptchaText,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ErrorMessage,
-                },
-                (0, _._)("#Login_CaptchaVerification"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "span",
-                {
+                  (0, _.jsx)("div", {
+                    className: _().ErrorMessage,
+                    children: (0, _._)("#Login_CaptchaVerification"),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _.jsx)("span", {
                   className: _().RefreshCaptchaText,
                   onClick: this.RefreshCaptcha,
-                },
-                (0, _._)("#Login_RefreshCaptcha"),
-              ),
-            ),
-          );
+                  children: (0, _._)("#Login_RefreshCaptcha"),
+                }),
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnCaptchaText", null),
@@ -4697,82 +4528,72 @@
             case _.TwoFactorCode:
               (_ = _.GetTwoFactorCode()),
                 (_ = (0, _._)("#Login_Enter2FA")),
-                (_ = _.createElement(_.kaY, null)),
+                (_ = (0, _.jsx)(_.kaY, {})),
                 (_ = (0, _._)("#Login_Enter2FAHelp"));
               break;
             case _.EmailCode:
               (_ = _.GetEmailAuthCode()),
                 (_ = (0, _._)(
                   "#Login_SentSteamguard",
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().Highlight,
-                    },
-                    "@",
-                    _.GetEmailDomain(),
-                  ),
+                  (0, _.jsxs)("span", {
+                    className: _().Highlight,
+                    children: ["@", _.GetEmailDomain()],
+                  }),
                 )),
                 (_ = (0, _._)("#Login_EnterSteamguard")),
-                (_ = _.createElement(_.Lh2, null));
+                (_ = (0, _.jsx)(_.Lh2, {}));
           }
-          return _.createElement(
-            "div",
-            {
-              className: _().AuthenticationPanel,
-            },
-            _.createElement(_._, null, (0, _._)("#Login_SigningIn")),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().AuthenticationPanel,
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Login_SigningIn"),
+              }),
+              (0, _.jsx)("div", {
                 className: _().SigningInAccountName,
-              },
-              _.GetUserName(),
-            ),
-            _.createElement(_._, null, _),
-            _.createElement(
-              "div",
-              {
+                children: _.GetUserName(),
+              }),
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+              (0, _.jsxs)("div", {
                 className: _().AuthenticatorInputcontainer,
-              },
-              _,
-              _.createElement(
-                "form",
-                {
-                  className: _().AccountPasswordForm,
-                  onSubmit: this.OnSubmit,
-                },
-                _.createElement(_._, {
-                  className: (0, _._)(_().AccountName),
-                  label: "Steam Guard Code",
-                  type: "text",
-                  autoComplete: "off",
-                  focusOnMount: !0,
-                  maxLength: 64,
-                  value: _,
-                  onChange: this.OnChangeAuthCode,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    disabled: this.props.manager.IsRequestInFlight(),
-                  },
-                  (0, _._)("#Login_SteamguardSubmit").toLocaleUpperCase(),
-                ),
-              ),
-            ),
-            _.createElement(
-              "a",
-              {
+                children: [
+                  _,
+                  (0, _.jsxs)("form", {
+                    className: _().AccountPasswordForm,
+                    onSubmit: this.OnSubmit,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: (0, _._)(_().AccountName),
+                        label: "Steam Guard Code",
+                        type: "text",
+                        autoComplete: "off",
+                        focusOnMount: !0,
+                        maxLength: 64,
+                        value: _,
+                        onChange: this.OnChangeAuthCode,
+                      }),
+                      (0, _.jsx)(_._, {
+                        disabled: this.props.manager.IsRequestInFlight(),
+                        children: (0, _._)(
+                          "#Login_SteamguardSubmit",
+                        ).toLocaleUpperCase(),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)("a", {
                 className: (0, _._)(
                   _().NeedHelpLink,
                   _ ? _().NeedHelpHighlight : null,
                 ),
                 href: "http://help.steampowered.com/",
-              },
-              _,
-            ),
-          );
+                children: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnSubmit", null),
@@ -4782,13 +4603,13 @@
       const _ = [
         {
           path: "similarity",
-          render: () => _.createElement(_, null),
+          render: () => (0, _.jsx)(_, {}),
           name: "ML Similarity",
         },
         {
           path: "clustering",
           render: (_) =>
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               SteamInterface: _.SteamInterface,
             }),
           name: "Tag Clustering",
@@ -4805,100 +4626,85 @@
           }, [_]),
           !_)
         )
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: _.App,
           });
         const _ = {
           SteamInterface: _,
         };
-        return _.createElement(
-          "div",
-          {
-            className: _.App,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.Container,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: _.App,
+          children: (0, _.jsxs)("div", {
+            className: _.Container,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.TopSection,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Header,
-                },
-                "Labs Sandbox",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Body,
-                },
-                "Internal testbed page for Steam Labs experiments",
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: "Labs Sandbox",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Body,
+                    children:
+                      "Internal testbed page for Steam Labs experiments",
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
                 className: _.Tabs,
-              },
-              _.map((_) =>
-                _.createElement(
-                  _._,
-                  {
-                    key: _.path,
-                    _: `${_._.LabsSandbox()}/${_.path}`,
-                    className: _.Tab,
-                    activeClassName: _.Active,
-                  },
-                  _.name,
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SandboxSection,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  _.map((_, _) =>
-                    _.createElement(_._, {
-                      key: _.path,
-                      path: `${_._.LabsSandbox()}/${_.path}`,
-                      render: (_) =>
-                        !_.requires_login || _
-                          ? _.render({
-                              ..._,
-                              ..._,
-                            })
-                          : _.createElement(_, null),
-                    }),
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      _: `${_._.LabsSandbox()}/${_.path}`,
+                      className: _.Tab,
+                      activeClassName: _.Active,
+                      children: _.name,
+                    },
+                    _.path,
                   ),
                 ),
-              ),
-            ),
-          ),
-        );
+              }),
+              (0, _.jsx)("div", {
+                className: _.SandboxSection,
+                children: (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    children: _.map((_, _) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          path: `${_._.LabsSandbox()}/${_.path}`,
+                          render: (_) =>
+                            !_.requires_login || _
+                              ? _.render({
+                                  ..._,
+                                  ..._,
+                                })
+                              : (0, _.jsx)(_, {}),
+                        },
+                        _.path,
+                      ),
+                    ),
+                  }),
+                }),
+              }),
+            ],
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("h3", null, "Please login to view this page."),
-          _.createElement(_, {
-            baseURL: _._.STORE_BASE_URL,
-            onLoginComplete: () => window.location.reload(),
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("h3", {
+              children: "Please login to view this page.",
+            }),
+            (0, _.jsx)(_, {
+              baseURL: _._.STORE_BASE_URL,
+              onLoginComplete: () => window.location.reload(),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4908,6 +4714,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -4927,43 +4734,32 @@
             _ = (0, _._)(_);
           if (!_.data || !_.data) return null;
           const _ = (0, _._)(_.data, "header");
-          return _.createElement(
-            "div",
-            {
-              className: _.AppCapsule,
-            },
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)("div", {
+            className: _.AppCapsule,
+            children: [
+              (0, _.jsx)(_._, {
                 _: _,
-              },
-              _.createElement("img", {
-                className: _.Image,
-                src: _,
+                children: (0, _.jsx)("img", {
+                  className: _.Image,
+                  src: _,
+                }),
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.UnderInfo,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Name,
-                },
-                _.data.name,
-              ),
-              _.fWeight &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Weight,
-                  },
-                  `${(100 * _.fWeight).toFixed(2)}%`,
-                ),
-            ),
-          );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Name,
+                    children: _.data.name,
+                  }),
+                  _.fWeight &&
+                    (0, _.jsx)("div", {
+                      className: _.Weight,
+                      children: `${(100 * _.fWeight).toFixed(2)}%`,
+                    }),
+                ],
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const [_, __webpack_require__] = _.useState([]),
@@ -4991,96 +4787,79 @@
                 }
               })();
             }, [_.strName, _.nAccountID, _.bExclude]),
-            _.createElement(
-              "div",
-              {
-                className: _.RecommenderList,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _.RecommenderList,
+              children: [
+                (0, _.jsx)("div", {
                   className: _.Title,
-                },
-                _.strTitle,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _.strTitle,
+                }),
+                (0, _.jsx)("div", {
                   className: _.SubTitle,
-                },
-                _.strSubtitle,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _.strSubtitle,
+                }),
+                (0, _.jsx)("div", {
                   className: _.CapsuleList,
-                },
-                _?.map((_, _) =>
-                  _.createElement(_, {
-                    key: `${_.strName}_${_}`,
-                    nAppID: _,
-                    fWeight: _[_],
-                  }),
-                ),
-              ),
-            )
+                  children: _?.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        nAppID: _,
+                        fWeight: _[_],
+                      },
+                      `${_.strName}_${_}`,
+                    ),
+                  ),
+                }),
+              ],
+            })
           );
         },
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _.RecommenderList,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: _.RecommenderList,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.Title,
-              },
-              _.strName,
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _.strName,
+              }),
+              (0, _.jsx)("div", {
                 className: _.SubTitle,
-              },
-              (0, _._)("#RecommenderDemos_ReleasedGames"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#RecommenderDemos_ReleasedGames"),
+              }),
+              (0, _.jsx)("div", {
                 className: _.CapsuleList,
-              },
-              _.arrPlaytimeAppIDs.map((_, _) =>
-                _.createElement(_, {
-                  key: `${_.strName}_${_}`,
-                  nAppID: _,
-                }),
-              ),
-            ),
-            _.createElement("div", {
-              className: _.Spacer,
-            }),
-            _.createElement(
-              "div",
-              {
+                children: _.arrPlaytimeAppIDs.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      nAppID: _,
+                    },
+                    `${_.strName}_${_}`,
+                  ),
+                ),
+              }),
+              (0, _.jsx)("div", {
+                className: _.Spacer,
+              }),
+              (0, _.jsx)("div", {
                 className: _.SubTitle,
-              },
-              (0, _._)("#RecommenderDemos_UnreleasedGames"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#RecommenderDemos_UnreleasedGames"),
+              }),
+              (0, _.jsx)("div", {
                 className: _.CapsuleList,
-              },
-              _.arrWishlistAppIDs.map((_, _) =>
-                _.createElement(_, {
-                  key: `${_.strName}_${_}`,
-                  nAppID: _,
-                }),
-              ),
-            ),
-          ),
+                children: _.arrWishlistAppIDs.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      nAppID: _,
+                    },
+                    `${_.strName}_${_}`,
+                  ),
+                ),
+              }),
+            ],
+          }),
         _ = (_) => {
           const [_, __webpack_require__] = _.useState(void 0);
           return (
@@ -5105,22 +4884,22 @@
                 }
               })();
             }, [_.bExclude, _.nAccountID]),
-            _.createElement(
-              "div",
-              {
-                className: _.RecommenderFests,
-              },
-              _?.map((_) =>
-                _.createElement(_, {
-                  key: `Fest_${_.name}`,
-                  strName: _.title,
-                  nStartTime: _.start_date,
-                  nEndTime: _.end_date,
-                  arrPlaytimeAppIDs: _.playtime_appids,
-                  arrWishlistAppIDs: _.wishlist_appids,
-                }),
+            (0, _.jsx)("div", {
+              className: _.RecommenderFests,
+              children: _?.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    strName: _.title,
+                    nStartTime: _.start_date,
+                    nEndTime: _.end_date,
+                    arrPlaytimeAppIDs: _.playtime_appids,
+                    arrWishlistAppIDs: _.wishlist_appids,
+                  },
+                  `Fest_${_.name}`,
+                ),
               ),
-            )
+            })
           );
         },
         _ = () => {
@@ -5129,189 +4908,158 @@
             [_, _] = _.useState(""),
             [_, _] = _.useState(!0);
           if (!_._.logged_in)
-            return _.createElement(
-              "div",
-              {
-                className: _.App,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Login,
-                },
-                _.createElement(
-                  "div",
-                  {
+            return (0, _.jsx)("div", {
+              className: _.App,
+              children: (0, _.jsxs)("div", {
+                className: _.Login,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _.Text,
-                  },
-                  (0, _._)("#LoginText"),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: (0, _._)("#LoginText"),
+                  }),
+                  (0, _.jsx)("div", {
                     className: (0, _._)(
                       "btn_green_white_innerfade",
                       " btn_medium",
                     ),
                     onClick: _._,
-                  },
-                  _.createElement("span", null, (0, _._)("#LoginButton")),
-                ),
-              ),
-            );
-          return _.createElement(
-            _._,
-            {
-              controller: "recommenderdemos",
-              method: "default",
-              feature: "capsule",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.RecommenderDemosApp,
-              },
-              _.createElement(
-                "div",
-                {
+                    children: (0, _.jsx)("span", {
+                      children: (0, _._)("#LoginButton"),
+                    }),
+                  }),
+                ],
+              }),
+            });
+          return (0, _.jsx)(_._, {
+            controller: "recommenderdemos",
+            method: "default",
+            feature: "capsule",
+            children: (0, _.jsxs)("div", {
+              className: _.RecommenderDemosApp,
+              children: [
+                (0, _.jsx)("div", {
                   className: _.ValveOnly,
-                },
-                "(Valve-Only)",
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: "(Valve-Only)",
+                }),
+                (0, _.jsxs)("div", {
                   className: _.TopControls,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.AccountIDControl,
-                  },
-                  _.createElement("input", {
-                    type: "text",
-                    value: _,
-                    onChange: (_) => _(_.target.value),
-                  }),
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.RecDemoButton,
-                      onClick: () => {
-                        isNaN(parseInt(_)) || (_(!0), _(parseInt(_)));
-                      },
-                    },
-                    "Use AccountID",
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      disabled: !_,
-                      className: _.RecDemoButton,
-                      onClick: () => {
-                        _(!1), _(0), _("");
-                      },
-                    },
-                    "Clear",
-                  ),
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AccountIDOverride,
-                    },
-                    (0, _._)("#RecommenderDemos_OverrideAccountID"),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AccountID,
-                      },
-                      __webpack_require__,
-                    ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckBox,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "exclude_owned_wishlisted",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "exclude_owned_wishlisted",
-                    },
-                    (0, _._)("#RecommenderDemos_Exclude"),
-                  ),
-                ),
-              ),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "WishlistsOneWeek",
-                strTitle: (0, _._)("#RecommenderDemos_HotWishlists"),
-                strSubtitle: (0, _._)("#RecommenderDemos_HotWishlists_Desc"),
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "NextFest",
-                strTitle: (0, _._)("#RecommenderDemos_NextFest"),
-                strSubtitle: (0, _._)("#RecommenderDemos_NextFestDesc"),
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "RecAllTime",
-                strTitle: (0, _._)("#RecommenderDemos_RecAllTime"),
-                strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "RecFiveYear",
-                strTitle: (0, _._)("#RecommenderDemos_RecFiveYear"),
-                strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "RecTwoYear",
-                strTitle: (0, _._)("#RecommenderDemos_RecTwoYear"),
-                strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "RecOneYear",
-                strTitle: (0, _._)("#RecommenderDemos_RecOneYear"),
-                strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "RecSixMonths",
-                strTitle: (0, _._)("#RecommenderDemos_RecSixMonths"),
-                strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
-              }),
-              _.createElement(_, {
-                nAccountID: __webpack_require__,
-                bExclude: _,
-                strName: "RecEmbedding",
-                strTitle: (0, _._)("#RecommenderDemos_RecEmbedding"),
-                strSubtitle: "",
-              }),
-            ),
-          );
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.AccountIDControl,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "text",
+                          value: _,
+                          onChange: (_) => _(_.target.value),
+                        }),
+                        (0, _.jsx)(_._, {
+                          className: _.RecDemoButton,
+                          onClick: () => {
+                            isNaN(parseInt(_)) || (_(!0), _(parseInt(_)));
+                          },
+                          children: "Use AccountID",
+                        }),
+                        (0, _.jsx)(_._, {
+                          disabled: !_,
+                          className: _.RecDemoButton,
+                          onClick: () => {
+                            _(!1), _(0), _("");
+                          },
+                          children: "Clear",
+                        }),
+                      ],
+                    }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _.AccountIDOverride,
+                        children: [
+                          (0, _._)("#RecommenderDemos_OverrideAccountID"),
+                          (0, _.jsx)("div", {
+                            className: _.AccountID,
+                            children: __webpack_require__,
+                          }),
+                        ],
+                      }),
+                    (0, _.jsxs)("div", {
+                      className: _.CheckBox,
+                      children: [
+                        (0, _.jsx)("input", {
+                          type: "checkbox",
+                          _: "exclude_owned_wishlisted",
+                          checked: _,
+                          onChange: () => _(!_),
+                        }),
+                        (0, _.jsx)("label", {
+                          htmlFor: "exclude_owned_wishlisted",
+                          children: (0, _._)("#RecommenderDemos_Exclude"),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "WishlistsOneWeek",
+                  strTitle: (0, _._)("#RecommenderDemos_HotWishlists"),
+                  strSubtitle: (0, _._)("#RecommenderDemos_HotWishlists_Desc"),
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "NextFest",
+                  strTitle: (0, _._)("#RecommenderDemos_NextFest"),
+                  strSubtitle: (0, _._)("#RecommenderDemos_NextFestDesc"),
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "RecAllTime",
+                  strTitle: (0, _._)("#RecommenderDemos_RecAllTime"),
+                  strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "RecFiveYear",
+                  strTitle: (0, _._)("#RecommenderDemos_RecFiveYear"),
+                  strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "RecTwoYear",
+                  strTitle: (0, _._)("#RecommenderDemos_RecTwoYear"),
+                  strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "RecOneYear",
+                  strTitle: (0, _._)("#RecommenderDemos_RecOneYear"),
+                  strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "RecSixMonths",
+                  strTitle: (0, _._)("#RecommenderDemos_RecSixMonths"),
+                  strSubtitle: (0, _._)("#RecommenderDemos_Rec_Desc"),
+                }),
+                (0, _.jsx)(_, {
+                  nAccountID: __webpack_require__,
+                  bExclude: _,
+                  strName: "RecEmbedding",
+                  strTitle: (0, _._)("#RecommenderDemos_RecEmbedding"),
+                  strSubtitle: "",
+                }),
+              ],
+            }),
+          });
         };
     },
   },

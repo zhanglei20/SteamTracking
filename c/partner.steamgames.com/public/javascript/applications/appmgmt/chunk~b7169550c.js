@@ -573,6 +573,44 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        return (
+          !!_ &&
+          ("game" === _ ||
+            "dlc" === _ ||
+            "software" === _ ||
+            "music" === _ ||
+            "application" === _ ||
+            "demo" === _ ||
+            "hardware" === _ ||
+            "mod" === _ ||
+            "video" == _ ||
+            "beta" === _ ||
+            "advertising" === _)
+        );
+      }
+      function _(_) {
+        return (
+          null != _ &&
+          (0 == _ ||
+            4 == _ ||
+            6 == _ ||
+            11 == _ ||
+            1 == _ ||
+            10 == _ ||
+            2 == _ ||
+            7 == _ ||
+            12 == _ ||
+            14 == _)
+        );
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -651,7 +689,7 @@
             _,
           );
         if (void 0 === _ || !_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             size: "small",
             position: "center",
             string: (0, _._)("#Loading"),
@@ -661,7 +699,7 @@
           "library" === __webpack_require__ ||
           "vertical" == __webpack_require__
         )
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             _: _,
             bPreferAssetWithoutOverride: _,
           });
@@ -677,12 +715,9 @@
           (_ = _().headerCapsuleImgWidth),
             (_ = _().headerCapsuleImgHeight),
             (_ = _().HeaderCapsuleImageContainer);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_, "CapsuleImageCtn"),
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_, "CapsuleImageCtn"),
+          children: (0, _.jsx)(_._, {
             lazyLoad: !0,
             srcs: _,
             className: (0, _._)(_().CapsuleImage),
@@ -690,7 +725,7 @@
             height: _,
             alt: _.name,
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -727,6 +762,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -747,7 +783,7 @@
           ),
           [_, _] = _.useState(0);
         if (!_ || !_)
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: _().HeroCapsuleImageContainer,
           });
         const { strStoreVerticalURL: _, strLibraryVerticalURL: _ } = (0, _._)(
@@ -755,48 +791,46 @@
           _,
         );
         if (_ && (!__webpack_require__ || !_))
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().HeroCapsuleImageContainer,
-                "HeroCapsuleImageContainer",
-              ),
-            },
-            _.createElement("img", {
-              src: _,
-              className: _().CapsuleImage,
-              alt: _.name,
-            }),
-            Boolean(4 == _.type) &&
-              _.createElement("img", {
-                className: _().CornerSash,
-                src: `${_._.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
-                alt: "DLC",
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _().HeroCapsuleImageContainer,
+              "HeroCapsuleImageContainer",
+            ),
+            children: [
+              (0, _.jsx)("img", {
+                src: _,
+                className: _().CapsuleImage,
+                alt: _.name,
               }),
-          );
+              Boolean(4 == _.type) &&
+                (0, _.jsx)("img", {
+                  className: _().CornerSash,
+                  src: `${_._.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
+                  alt: "DLC",
+                }),
+            ],
+          });
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().LibraryFallbackAssetImageContainer,
-                _().VerticalCapsule,
-                __webpack_require__ ? _().ForceLibrarySizing : "",
-              ),
-            },
-            _.createElement("div", {
-              className: _().FallbackBackground,
-              style: {
-                backgroundImage: `url(${_})`,
-              },
-            }),
-            _.createElement("img", {
-              src: _,
-              className: _().CapsuleImage,
-              alt: _.name,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _().LibraryFallbackAssetImageContainer,
+              _().VerticalCapsule,
+              __webpack_require__ ? _().ForceLibrarySizing : "",
+            ),
+            children: [
+              (0, _.jsx)("div", {
+                className: _().FallbackBackground,
+                style: {
+                  backgroundImage: `url(${_})`,
+                },
+              }),
+              (0, _.jsx)("img", {
+                src: _,
+                className: _().CapsuleImage,
+                alt: _.name,
+              }),
+            ],
+          });
         const _ = (0, _._)(_, !0),
           _ = _.length - 1,
           _ = (_) => {
@@ -805,138 +839,28 @@
           };
         if (_ < _.length) {
           const _ = _[_];
-          return _.createElement(
-            "div",
-            {
-              className: _().LibraryFallbackAssetImageContainer,
-            },
-            _.createElement("div", {
-              className: _().FallbackBackground,
-              style: {
-                backgroundImage: `url(${_})`,
-              },
-            }),
-            _.createElement(_._, {
-              lazyLoad: !0,
-              srcs: _,
-              className: _().CapsuleImage,
-              alt: _.name,
-              onImageError: _,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            className: _().LibraryFallbackAssetImageContainer,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().FallbackBackground,
+                style: {
+                  backgroundImage: `url(${_})`,
+                },
+              }),
+              (0, _.jsx)(_._, {
+                lazyLoad: !0,
+                srcs: _,
+                className: _().CapsuleImage,
+                alt: _.name,
+                onImageError: _,
+              }),
+            ],
+          });
         }
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _().HeroCapsuleImageContainer,
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_) {
-        if (_) {
-          if ("appid" in _) return "app";
-          if ("bundleid" in _) return "bundle";
-          if ("packageid" in _) return "sub";
-        }
-      }
-      function _(_) {
-        const {
-            _: _,
-            hoverClassName: __webpack_require__,
-            fnGetIDOverride: _,
-            fnHoverState: _,
-            children: _,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _(_);
-              _ &&
-                (_ && _(!0),
-                window.GameHover &&
-                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
-                    type: _,
-                    _: (0, _._)(_)._,
-                    _: 1,
-                  }));
-            },
-            [_, _, _],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              _(_) &&
-                (_ && _.relatedTarget && _(!1),
-                window.HideGameHover &&
-                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
-            },
-            [_, _, _],
-          );
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: __webpack_require__,
-            onMouseEnter: _,
-            onMouseLeave: _,
-            onFocus: _,
-            onBlur: _,
-          },
-          _,
-        );
-      }
-      function _(_) {
-        const {
-            _: _,
-            strExtraParams: __webpack_require__,
-            fnOnClickOverride: _,
-            strOverrideURL: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(
-            _ ||
-              (_ && "creatorid" in _
-                ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
-                    _,
-                    _,
-                  )
-                : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
-                    _,
-                    _,
-                  )),
-          );
-        return _.createElement(
-          _,
-          {
-            ..._,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.className,
-              href: _ ? void 0 : _,
-              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-              rel: "noopener noreferrer",
-              onClick: _,
-            },
-            _.children,
-          ),
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1059,55 +983,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (_[_]) {
-          if ("community_icon" == _) {
-            const _ = _.asset_url_format
-              .replace(/^steam\//, "images/")
-              .replace("${FILENAME}", `${_[_]}.jpg`)
-              .replace(/\?.*$/, "");
-            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
-          }
-          {
-            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
-            return `${_._.STORE_ITEM_BASE_URL}${_}`;
-          }
-        }
-      }
-      function _(_, _ = "full") {
-        let _ = "";
-        switch (_) {
-          case "thumb":
-            _ = ".116x65";
-            break;
-          case "600x338":
-            _ = ".600x338";
-            break;
-          case "1920x1080":
-            _ = ".1920x1080";
-            break;
-          case "full":
-            _ = "";
-            break;
-          default:
-            (0, _._)(_, `Invalid size: ${_}`);
-        }
-        return (
-          _._.STORE_ITEM_BASE_URL + _.filename.replace(/\.[^.*]$/, `${_}$&`)
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = _.createContext({
         AddImpression: () => {
           console.log("Impression Tracking not enabled");
@@ -1155,86 +1034,29 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _ = !1) {
-        if (_)
-          return _ && (0, _._)(_)
-            ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
-            : `${_._.STORE_BASE_URL}${_.store_url_path}`;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], 31, !1);
-        m_bHasLocalizationContext = !1;
-        m_callback = new _._();
-        GetCallback() {
-          return this.m_callback;
-        }
-        GetCurEditLanguage() {
-          return this.m_eCurLang;
-        }
-        SetCurEditLanguage(_) {
-          return (
-            this.m_eCurLang != _ &&
-            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
-          );
-        }
-        SetHasLanguage(_) {
-          _.forEach((_, _) => {
-            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
-          });
-        }
-        BHasLanguageData(_) {
-          return this.m_rgHasData[_];
-        }
-        GetHasLocalizationContext() {
-          return this.m_bHasLocalizationContext;
-        }
-        SetHasLocalizationContext(_) {
-          _ != this.m_bHasLocalizationContext &&
-            (this.m_bHasLocalizationContext = _);
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-      }
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+        include_release: !0,
+        include_platforms: !0,
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
+        include_supported_languages: !0,
+      };
       function _() {
-        return (0, _._)(() => _.Get().GetCurEditLanguage());
+        return {
+          width: 231,
+          height: 87,
+        };
       }
-      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
-        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
-        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
-        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
-        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
-        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
-        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1478,6 +1300,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1495,13 +1318,13 @@
           } = this.props;
           this.props.bAllowUnsetOption &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 "option",
                 {
-                  key: "langpicker_unset",
                   value: -1,
+                  children: (0, _._)("#language_selection_none"),
                 },
-                (0, _._)("#language_selection_none"),
+                "langpicker_unset",
               ),
             );
           let _ = new Array();
@@ -1528,18 +1351,18 @@
           for (const _ of _) {
             _.bSupported != _ &&
               (_.push(
-                _.createElement(
+                (0, _.jsx)(
                   "option",
                   {
-                    key: _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
                     className: _().SupportedGroupLabel,
                     disabled: !0,
+                    children: (0, _._)(
+                      _.bSupported
+                        ? "#LanguageGroup_Supported"
+                        : "#LanguageGroup_Unsupported",
+                    ),
                   },
-                  (0, _._)(
-                    _.bSupported
-                      ? "#LanguageGroup_Supported"
-                      : "#LanguageGroup_Unsupported",
-                  ),
+                  _.bSupported ? "SupportedGroup" : "UnsupportedGroup",
                 ),
               ),
               (_ = _.bSupported));
@@ -1558,10 +1381,9 @@
                   }),
               ))),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "option",
                   {
-                    key: "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
                     value: _.eLang,
                     className: (0, _._)(
                       {
@@ -1571,8 +1393,9 @@
                         ? _().SupportedLanguage
                         : _().UnsupportedLanguage,
                     ),
+                    children: _,
                   },
-                  _,
+                  "langpicker" + _.eLang + (_ ? "_hasdata" : ""),
                 ),
               );
           }
@@ -1591,21 +1414,15 @@
             strTooltip: __webpack_require__,
           } = this.props;
           let _ = this.GenerateLanguageOptions();
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: __webpack_require__,
-            },
-            _.createElement(
-              "select",
-              {
-                value: _,
-                onChange: this.OnLanguageChange,
-                disabled: _,
-              },
-              _,
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            toolTipContent: __webpack_require__,
+            children: (0, _.jsx)("select", {
+              value: _,
+              onChange: this.OnLanguageChange,
+              disabled: _,
+              children: _,
+            }),
+          });
         }
       };
       function _(_) {
@@ -1613,7 +1430,7 @@
           _._.Get().GetHasLocalizationContext(),
           _._.Get().GetCurEditLanguage(),
         ]);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           selectedLang: __webpack_require__,
           fnLangHasData: _._.Get().BHasLanguageData,
           fnOnLanguageChanged: _._.Get().SetCurEditLanguage,
@@ -1637,7 +1454,7 @@
         });
         return (
           _.useEffect(() => _._.Get().SetHasLanguage(_), [_]),
-          _.createElement(_.Fragment, null)
+          (0, _.jsx)(_.Fragment, {})
         );
       }
       (0, _._)([_._], _.prototype, "OnLanguageChange", null),
@@ -1652,13 +1469,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _.bordered_live_stream_icon,
-          },
-          (0, _._)("#home_page_live_broadcast"),
-        );
+        return (0, _.jsx)("div", {
+          className: _.bordered_live_stream_icon,
+          children: (0, _._)("#home_page_live_broadcast"),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1667,6 +1481,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1752,42 +1567,39 @@
           _ = _ && !__webpack_require__,
           _ = _ && !__webpack_require__,
           _ = !__webpack_require__ && _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().CapsuleDecorators, "CapsuleDecorators"),
-          },
-          _ &&
-            _.createElement(
-              "span",
-              {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().CapsuleDecorators, "CapsuleDecorators"),
+          children: [
+            _ &&
+              (0, _.jsxs)("span", {
                 className: (0, _._)(_().Banner, _().Blue),
-              },
-              _.createElement("img", {
-                src: (0, _._)(_),
-                className: _().LinesImg,
+                children: [
+                  (0, _.jsx)("img", {
+                    src: (0, _._)(_),
+                    className: _().LinesImg,
+                  }),
+                  (0, _._)("#Sale_InLibrary"),
+                ],
               }),
-              (0, _._)("#Sale_InLibrary"),
-            ),
-          _ &&
-            _.createElement(
-              "span",
-              {
+            _ &&
+              (0, _.jsxs)("span", {
                 className: _().Banner,
-              },
-              _.createElement(_.qnF, {
-                className: _().LinesImg,
+                children: [
+                  (0, _.jsx)(_.qnF, {
+                    className: _().LinesImg,
+                  }),
+                  (0, _._)("#Sale_OnWishlist"),
+                ],
               }),
-              (0, _._)("#Sale_OnWishlist"),
-            ),
-          _ &&
-            !_ &&
-            !_ &&
-            _.createElement(_, {
-              appids: _,
-            }),
-          _ && _.createElement(_._, null),
-        );
+            _ &&
+              !_ &&
+              !_ &&
+              (0, _.jsx)(_, {
+                appids: _,
+              }),
+            _ && (0, _.jsx)(_._, {}),
+          ],
+        });
       }
       function _(_) {
         const { appids: _ } = _,
@@ -1815,13 +1627,10 @@
             );
           })(_);
         return _
-          ? _.createElement(
-              "span",
-              {
-                className: (0, _._)(_().Banner, _().EarlyAccessGradient),
-              },
-              (0, _._)("#Sale_EarlyAccess"),
-            )
+          ? (0, _.jsx)("span", {
+              className: (0, _._)(_().Banner, _().EarlyAccessGradient),
+              children: (0, _._)("#Sale_EarlyAccess"),
+            })
           : null;
       }
     },
@@ -1852,7 +1661,7 @@
               ? _(_)
               : _.startsWith("steam://") || (_.location.href = (0, _._)(_));
           },
-          onOKActionDescription: (0, _._)("#Sale_Gamepad_Action_Select"),
+          onOKActionDescription: _._.Localize("#Sale_Gamepad_Action_Select"),
         };
       }
     },
@@ -1878,21 +1687,15 @@
       }
       const _ = (_) => {
         const { appid: _ } = _,
-          _ = _.createElement(
-            "div",
-            {
-              className: "ImpressionTrackedElement",
-            },
-            _.children,
-          );
+          _ = (0, _.jsx)("div", {
+            className: "ImpressionTrackedElement",
+            children: _.children,
+          });
         return _
-          ? _.createElement(
-              _._,
-              {
-                appID: _,
-              },
-              _,
-            )
+          ? (0, _.jsx)(_._, {
+              appID: _,
+              children: _,
+            })
           : _;
       };
     },
@@ -1902,6 +1705,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
@@ -1924,16 +1728,13 @@
       function _() {
         const [_, _] = _.useState(void 0),
           _ = _.useCallback(() => _(void 0), []),
-          _ = _.createElement(
-            _._,
-            {
-              active: void 0 !== _,
-            },
-            _.createElement(_, {
+          _ = (0, _.jsx)(_._, {
+            active: void 0 !== _,
+            children: (0, _.jsx)(_, {
               closeModal: _,
               rgImageURL: _,
             }),
-          );
+          });
         return [_, _];
       }
       function _(_) {
@@ -1946,35 +1747,31 @@
           _ = _.useCallback(() => {
             _(__webpack_require__ && _ + 1 >= _ ? 0 : _ + 1);
           }, [_, __webpack_require__, _]);
-        return _.createElement(
-          _._,
-          {
-            title: (0, _._)("#SaleTech_Screenshot_Viewer"),
-            bAllowFullSize: !0,
-            bOKDisabled: !0,
-            closeModal: _,
-            bHideCloseIcon: !0,
-            modalClassName: _().PopupScreenshotModal,
-          },
-          _.createElement(_, {
-            index: _,
-            numElements: __webpack_require__?.length || 0,
-            fnForward: _,
-            fnBackwards: _,
-            fnClose: _,
-            bCircular: !0,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().PopupScreenshotContainer,
-            },
-            _.createElement("img", {
-              className: _().PopupScreenshot,
-              src: __webpack_require__?.[_],
+        return (0, _.jsxs)(_._, {
+          title: (0, _._)("#SaleTech_Screenshot_Viewer"),
+          bAllowFullSize: !0,
+          bOKDisabled: !0,
+          closeModal: _,
+          bHideCloseIcon: !0,
+          modalClassName: _().PopupScreenshotModal,
+          children: [
+            (0, _.jsx)(_, {
+              index: _,
+              numElements: __webpack_require__?.length || 0,
+              fnForward: _,
+              fnBackwards: _,
+              fnClose: _,
+              bCircular: !0,
             }),
-          ),
-        );
+            (0, _.jsx)("div", {
+              className: _().PopupScreenshotContainer,
+              children: (0, _.jsx)("img", {
+                className: _().PopupScreenshot,
+                src: __webpack_require__?.[_],
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1992,51 +1789,41 @@
           _("Escape", () => _ && _(), !0, !0),
           _("Esc", () => _ && _(), !0, !0);
         let _ = __webpack_require__ > 1;
-        return _.createElement(
-          "div",
-          {
-            className: _().ButtonCtn,
-          },
-          _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().ButtonIcon,
-                    0 !== _ || _ ? null : _().Disabled,
-                  ),
-                  onClick: _,
-                },
-                _.createElement(_.V5W, {
-                  angle: 270,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().ButtonIcon,
-                    _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
-                  ),
-                  onClick: _,
-                },
-                _.createElement(_.V5W, {
-                  angle: 90,
-                }),
-              ),
-            ),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().ButtonCtn,
+          children: [
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      0 !== _ || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 270,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 90,
+                    }),
+                  }),
+                ],
+              }),
+            (0, _.jsx)("div", {
               className: _().ButtonIcon,
               onClick: _,
-            },
-            _.createElement(_._, null),
-          ),
-        );
+              children: (0, _.jsx)(_._, {}),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2053,7 +1840,7 @@
       function _(_) {
         const { bAllowOutsideOfDeck: _ } = _;
         return (0, _._)() || _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
             })
           : null;
@@ -2085,7 +1872,7 @@
             case 1:
               _ = "unsupported";
           }
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_.CompatIcon, "ds_steam_deck_compat", _, _),
         });
       }
@@ -2097,6 +1884,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2122,7 +1910,7 @@
         }, [_, _]);
         return 0 == __webpack_require__.length
           ? null
-          : _.createElement("img", {
+          : (0, _.jsx)("img", {
               className: _,
               src: __webpack_require__[_],
               crossOrigin: _,
@@ -2145,20 +1933,23 @@
             crossOrigin: _,
           } = _;
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.ErrorDiv,
-              },
-              _.createElement("p", null, (0, _._)("#Image_ErrorTitle", _)),
-              _.createElement(
-                "ul",
-                null,
-                _.createElement("li", null, (0, _._)("#Image_Error_msg1")),
-              ),
-              _.createElement("p", null, (0, _._)("#Image_Error_suggestion")),
-            )
-          : _.createElement(_._, {
+          ? (0, _.jsxs)("div", {
+              className: _.ErrorDiv,
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Image_ErrorTitle", _),
+                }),
+                (0, _.jsx)("ul", {
+                  children: (0, _.jsx)("li", {
+                    children: (0, _._)("#Image_Error_msg1"),
+                  }),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Image_Error_suggestion"),
+                }),
+              ],
+            })
+          : (0, _.jsx)(_._, {
               className: _,
               src: _,
               onError: () => __webpack_require__(!0),
@@ -2176,6 +1967,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2205,32 +1997,28 @@
             }
           }, [_]),
           _
-            ? _.createElement(
-                "span",
-                {
-                  className: _.PreviewCtn,
-                },
-                _,
-                _.createElement(
-                  "span",
-                  {
+            ? (0, _.jsxs)("span", {
+                className: _.PreviewCtn,
+                children: [
+                  _,
+                  (0, _.jsx)("span", {
                     className: _.SVG,
-                  },
-                  _.createElement(_.YNO, null),
-                ),
-                _.createElement("img", {
-                  ..._,
-                  className: (0, _._)({
-                    ...(_.className && {
-                      [_.className]: !0,
-                    }),
+                    children: (0, _.jsx)(_.YNO, {}),
                   }),
-                  onClick: (_) => {
-                    _.src && _([_.src]);
-                  },
-                }),
-              )
-            : _.createElement("img", {
+                  (0, _.jsx)("img", {
+                    ..._,
+                    className: (0, _._)({
+                      ...(_.className && {
+                        [_.className]: !0,
+                      }),
+                    }),
+                    onClick: (_) => {
+                      _.src && _([_.src]);
+                    },
+                  }),
+                ],
+              })
+            : (0, _.jsx)("img", {
                 ..._,
                 ref: _,
                 onLoad: (_) => {
@@ -2269,6 +2057,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -2281,73 +2070,67 @@
             elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _,
                 _.SectionTitleHeader,
                 _.required_title,
                 "SectionTitleHeader",
               ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.CollapsableSectionTitle,
-                  "EventEditorTextTitle",
-                ),
-              },
-              _,
-              Boolean(__webpack_require__) &&
-                _.createElement(_._, {
-                  tooltip: __webpack_require__,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _.CollapsableSectionTitle,
+                    "EventEditorTextTitle",
+                  ),
+                  children: [
+                    _,
+                    Boolean(__webpack_require__) &&
+                      (0, _.jsx)(_._, {
+                        tooltip: __webpack_require__,
+                      }),
+                  ],
                 }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SectionTitleButtons,
-              },
-              _,
-              _.createElement(_, {
-                bIsMinimized: _,
-                fnToggleMinimize: _,
+                (0, _.jsxs)("div", {
+                  className: _.SectionTitleButtons,
+                  children: [
+                    _,
+                    (0, _.jsx)(_, {
+                      bIsMinimized: _,
+                      fnToggleMinimize: _,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            !_ &&
+              (0, _.jsx)(_._, {
+                children: _,
               }),
-            ),
-          ),
-          !_ && _.createElement(_._, null, _),
-        );
+          ],
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
-        return _.createElement(
-          _,
-          {
-            ..._,
-            getMinimized: () => _,
-            toggleMinimized: () => __webpack_require__(!_),
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_, {
+          ..._,
+          getMinimized: () => _,
+          toggleMinimized: () => __webpack_require__(!_),
+          children: _.children,
+        });
       }
       function _(_) {
         const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return _.createElement(
-          _._,
-          {
-            "data-tooltip-text": (0, _._)(_),
-            onClick: __webpack_require__,
-          },
-          _.bIsMinimized
-            ? _.createElement(_.hz4, null)
-            : _.createElement(_.Xjb, null),
-        );
+        return (0, _.jsx)(_._, {
+          "data-tooltip-text": (0, _._)(_),
+          onClick: __webpack_require__,
+          children: _.bIsMinimized
+            ? (0, _.jsx)(_.hz4, {})
+            : (0, _.jsx)(_.Xjb, {}),
+        });
       }
     },
   },

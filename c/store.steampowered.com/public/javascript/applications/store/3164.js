@@ -56,22 +56,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(_.d1w, null);
+        return (0, _.jsx)(_.d1w, {});
       }
       function _(_) {
-        return _.createElement(_.Bir, null);
+        return (0, _.jsx)(_.Bir, {});
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.RoleIcon, _.className),
-          },
-          2 == _.role ? _.createElement(_, null) : _.createElement(_, null),
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_.RoleIcon, _.className),
+          children: 2 == _.role ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {}),
+        });
       }
       function _(_) {
         const { steamid: _ } = _,
@@ -80,23 +78,18 @@
           _ = (0, _._)(),
           _ = _.data?.get(new _._(_).GetAccountID()),
           _ = _.data?.preferences().parenthesize_nicknames();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.data?.m_strPlayerName || " ",
-          " ",
-          _ &&
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.data?.m_strPlayerName || " ",
+            " ",
             _ &&
-            _.createElement(
-              "span",
-              {
+              _ &&
+              (0, _.jsxs)("span", {
                 className: _.playerNickname,
-              },
-              "(",
-              _,
-              ")",
-            ),
-        );
+                children: ["(", _, ")"],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { role: _, persona: __webpack_require__, isSelf: _ } = _;
@@ -105,107 +98,89 @@
           _ = (0, _._)(),
           _ = _.data?.get(__webpack_require__.GetAccountID()),
           _ = _.data?.preferences().parenthesize_nicknames();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
               className: _.ProfileLink,
-            },
-            _.createElement(_._, {
-              className: _.Avatar,
-              persona: __webpack_require__,
-              size: _,
-              statusPosition: "right",
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.Avatar,
+                  persona: __webpack_require__,
+                  size: _,
+                  statusPosition: "right",
+                }),
+                (0, _.jsx)(_._, {
+                  className: _.PlayerName,
+                  bIsSelf: _,
+                  bHideStatus: !1,
+                  bHidePersona: !1,
+                  bParenthesizeNicknames: _,
+                  bCompactView: !1,
+                  persona: __webpack_require__,
+                  strNickname: _,
+                  eFriendRelationship: 3,
+                  bEllipsisName: !0,
+                }),
+              ],
             }),
-            _.createElement(_._, {
-              className: _.PlayerName,
-              bIsSelf: _,
-              bHideStatus: !1,
-              bHidePersona: !1,
-              bParenthesizeNicknames: _,
-              bCompactView: !1,
-              persona: __webpack_require__,
-              strNickname: _,
-              eFriendRelationship: 3,
-              bEllipsisName: !0,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: _.RoleAndIcon,
-            },
-            _.createElement(_, {
-              className: _.ProfileRoleIcon,
-              role: _,
+              children: [
+                (0, _.jsx)(_, {
+                  className: _.ProfileRoleIcon,
+                  role: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.RoleName,
+                  children: (0, _._)(`#FamilyManagement_Role_${_}`),
+                }),
+              ],
             }),
-            _.createElement(
-              "div",
-              {
-                className: _.RoleName,
-              },
-              (0, _._)(`#FamilyManagement_Role_${_}`),
-            ),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _.useContext)(_._);
         return _.errorMessage
-          ? _.createElement(
-              "div",
-              {
-                className: _.FamilyErrorDisplay,
-              },
-              _.errorMessage,
-            )
+          ? (0, _.jsx)("div", {
+              className: _.FamilyErrorDisplay,
+              children: _.errorMessage,
+            })
           : null;
       }
       function _(_) {
         const { persona: _, role: __webpack_require__, invitePending: _ } = _,
           _ = (0, _._)() == _.GetSteamIDAsString();
-        return _.createElement(
-          "div",
-          {
-            className: _.FamilyMemberStatus,
-          },
-          _.createElement(_, {
-            role: __webpack_require__,
-            persona: _,
-            isSelf: _,
-          }),
-          _ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("div", {
+          className: _.FamilyMemberStatus,
+          children: [
+            (0, _.jsx)(_, {
+              role: __webpack_require__,
+              persona: _,
+              isSelf: _,
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _.InvitePending,
-              },
-              (0, _._)("#FamilyManagement_InvitePending"),
-            ),
-          _ &&
-            _.createElement(
-              "span",
-              {
+                children: (0, _._)("#FamilyManagement_InvitePending"),
+              }),
+            _ &&
+              (0, _.jsx)("span", {
                 className: _.MeBadge,
-              },
-              (0, _._)("#FamilyManagement_Me"),
-            ),
-        );
+                children: (0, _._)("#FamilyManagement_Me"),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { bExpanded: _, setExpanded: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
-            onClick: () => __webpack_require__(!_),
-          },
-          _.createElement(_.b8_, {
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
+          onClick: () => __webpack_require__(!_),
+          children: (0, _.jsx)(_.b8_, {
             direction: "down",
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -384,6 +359,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { familyGroupID: _ } = _,
@@ -392,24 +368,20 @@
           _ = _.data?.requests()?.length;
         if (!_) return null;
         const _ = (0, _._)("#PurchaseRequestBanner_PendingRequest", _);
-        return _.createElement(
-          "div",
-          {
-            className: _.PurchaseRequestBanner,
-          },
-          (0, _._)(
+        return (0, _.jsx)("div", {
+          className: _.PurchaseRequestBanner,
+          children: (0, _._)(
             "#PurchaseRequestBanner_YouHavePendingRequestsForFamilyName",
-            _.createElement(
-              "a",
-              {
-                href:
-                  _._.STORE_BASE_URL + "account/familymanagement?tab=requests",
-              },
-              _,
-            ),
-            _.createElement("span", null, _.data?.name()),
+            (0, _.jsx)("a", {
+              href:
+                _._.STORE_BASE_URL + "account/familymanagement?tab=requests",
+              children: _,
+            }),
+            (0, _.jsx)("span", {
+              children: _.data?.name(),
+            }),
           ),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -438,65 +410,62 @@
             }
           }, [_, _]),
           _.isError
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 familyGroupID: _,
               })
             : _.isLoading || !_ || (_ && !_)
-              ? _.createElement(_, null)
+              ? (0, _.jsx)(_, {})
               : _
                 ? _.is_completed
-                  ? _.createElement(_, {
+                  ? (0, _.jsx)(_, {
                       familyGroupID: _,
                     })
                   : _.requester_steamid === _
-                    ? _.createElement(_, {
+                    ? (0, _.jsx)(_, {
                         familyGroupID: _,
                       })
-                    : _.createElement(_, {
+                    : (0, _.jsx)(_, {
                         request: _,
                         cartID: _,
                       })
-                : _.createElement(_, {
+                : (0, _.jsx)(_, {
                     familyGroupID: _,
                   })
         );
       }
       function _(_) {
         const { familyGroupID: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           familyGroupID: _,
           headerLocToken: "#PurchaseRequest_RequestErrorHeader",
         });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().PurchaseRequestInfoPage,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().PurchaseRequestInfoPage,
+          children: (0, _.jsx)(_._, {
             size: "medium",
             msDelayAppear: 300,
           }),
-        );
+        });
       }
       function _(_) {
         const { familyGroupID: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           familyGroupID: _,
           headerLocToken: "#PurchaseRequest_RequestNotFoundHeader",
         });
       }
       function _(_) {
         const { familyGroupID: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           familyGroupID: _,
           headerLocToken: "#PurchaseRequest_RequestCompletedHeader",
         });
       }
       function _(_) {
         const { familyGroupID: _ } = _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           familyGroupID: _,
           headerLocToken: "#PurchaseRequest_RequestPendingHeader",
           infoLocToken: "#PurchaseRequest_RequestPendingInfo",
@@ -509,56 +478,40 @@
             infoLocToken: _,
           } = _,
           [_, _] = _.useState(null);
-        return _.createElement(
-          "div",
-          {
-            className: _().PurchaseRequestInfoPage,
-          },
-          _.createElement(
-            _._.Provider,
-            {
-              value: {
-                errorMessage: _,
-                setErrorMessage: _,
-              },
+        return (0, _.jsx)("div", {
+          className: _().PurchaseRequestInfoPage,
+          children: (0, _.jsxs)(_._.Provider, {
+            value: {
+              errorMessage: _,
+              setErrorMessage: _,
             },
-            _.createElement(
-              "div",
-              {
+            children: [
+              (0, _.jsx)("div", {
                 className: _().Header,
-              },
-              (0, _._)(__webpack_require__),
-            ),
-            _.createElement(_._, null),
-            _.createElement(_, {
-              familyGroupID: _,
-            }),
-            !!_ &&
-              _.createElement(
-                "div",
-                {
+                children: (0, _._)(__webpack_require__),
+              }),
+              (0, _.jsx)(_._, {}),
+              (0, _.jsx)(_, {
+                familyGroupID: _,
+              }),
+              !!_ &&
+                (0, _.jsx)("div", {
                   className: _().Info,
-                },
-                (0, _._)(_),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: (0, _._)(_),
+                }),
+              (0, _.jsx)("div", {
                 className: _().ButtonContainer,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   className: _().PrimaryButton,
                   onClick: () => {
                     window.location.assign(_._.STORE_BASE_URL);
                   },
-                },
-                (0, _._)("#PurchaseRequested_ReturnToStore"),
-              ),
-            ),
-          ),
-        );
+                  children: (0, _._)("#PurchaseRequested_ReturnToStore"),
+                }),
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { request: _, cartID: __webpack_require__ } = _,
@@ -569,7 +522,7 @@
           }),
           _ = _.useRef(() => {}).current,
           _ = (0, _._)("#Cart_PurchaseRequestTitle", _?.persona_name);
-        return _.createElement(_.BaseCartPage, {
+        return (0, _.jsx)(_.BaseCartPage, {
           cartID: __webpack_require__,
           step: "gifts",
           onStepChange: _,

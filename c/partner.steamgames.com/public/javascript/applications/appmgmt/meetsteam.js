@@ -1246,6 +1246,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1408,90 +1409,86 @@
               _(_.data.email_override ?? ""),
               _(_.data.allow_registration_if_full ?? !1)));
         }, [_.isLoading, _.isSuccess, _.data]);
-        return _.createElement(
-          _._,
-          {
-            strTitle: "Invite User",
-            bOKDisabled: !_ || _ || _.isLoading,
-            onOK: async () => {
-              _(!0);
-              const _ = Number.parseInt(_) > 0 ? Number.parseInt(_) : 0,
-                _ = await _(
-                  __webpack_require__,
-                  [
-                    {
-                      nAccountID: _,
-                      nPartnerID: _,
-                      strEmailOverride: _,
-                      bAllowRegistrationIfFull: _,
-                    },
-                  ],
-                  !0,
-                ),
-                _ = _ && 1 == _.success;
-              _ || _("We hit error during invite, check console: " + _?.msg),
-                _(!1),
-                _.refetch(),
-                _ && _();
-            },
-            onCancel: _,
+        return (0, _.jsxs)(_._, {
+          strTitle: "Invite User",
+          bOKDisabled: !_ || _ || _.isLoading,
+          onOK: async () => {
+            _(!0);
+            const _ = Number.parseInt(_) > 0 ? Number.parseInt(_) : 0,
+              _ = await _(
+                __webpack_require__,
+                [
+                  {
+                    nAccountID: _,
+                    nPartnerID: _,
+                    strEmailOverride: _,
+                    bAllowRegistrationIfFull: _,
+                  },
+                ],
+                !0,
+              ),
+              _ = _ && 1 == _.success;
+            _ || _("We hit error during invite, check console: " + _?.msg),
+              _(!1),
+              _.refetch(),
+              _ && _();
           },
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
+          onCancel: _,
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)("div", {
                 className: _.ErrorStylesWithIcon,
-              },
-              _,
-            ),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_._, {
-                type: "number",
-                label: "Account ID",
-                onChange: (_) => _(Number.parseInt(_.currentTarget.value)),
-                value: _,
+                children: _,
               }),
-              0 != _ &&
-                !_.isLoading &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_._, {
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
                     type: "number",
-                    label: "Partner ID (optional)",
-                    onChange: (_) => _(_.currentTarget.value),
+                    label: "Account ID",
+                    onChange: (_) => _(Number.parseInt(_.currentTarget.value)),
                     value: _,
                   }),
-                  _.createElement(_._, {
-                    type: "text",
-                    label: "Email override (optional)",
-                    onChange: (_) => _(_.currentTarget.value.trim()),
-                    value: _,
-                  }),
-                  _.createElement(_._, {
-                    controlled: !0,
-                    checked: _,
-                    onChange: _,
-                    label: "Allow if registration is full",
-                  }),
-                ),
-            ),
-          _ &&
-            _.createElement(_._, {
-              size: "small",
-              position: "center",
-              string: (0, _._)("#Saving"),
-            }),
-          _.isLoading &&
-            _.createElement(_._, {
-              size: "small",
-              position: "center",
-              string: (0, _._)("#Loading"),
-            }),
-        );
+                  0 != _ &&
+                    !_.isLoading &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          type: "number",
+                          label: "Partner ID (optional)",
+                          onChange: (_) => _(_.currentTarget.value),
+                          value: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          type: "text",
+                          label: "Email override (optional)",
+                          onChange: (_) => _(_.currentTarget.value.trim()),
+                          value: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          controlled: !0,
+                          checked: _,
+                          onChange: _,
+                          label: "Allow if registration is full",
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(_._, {
+                size: "small",
+                position: "center",
+                string: (0, _._)("#Saving"),
+              }),
+            _.isLoading &&
+              (0, _.jsx)(_._, {
+                size: "small",
+                position: "center",
+                string: (0, _._)("#Loading"),
+              }),
+          ],
+        });
       }
       function _(_) {
         const { hideModal: _, gid: __webpack_require__ } = _,
@@ -1500,130 +1497,139 @@
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(null);
-        return _.createElement(
-          _._,
-          {
-            strTitle: "Invite Users",
-            bOKDisabled: !_ || 0 == _.length || null != _,
-            strCancelButtonText: null !== _ ? "Close" : "Cancel",
-            onOK: async () => {
-              _(!0);
-              const _ = await _(__webpack_require__, _, !1);
-              1 == _?.success
-                ? (_(_.rgInvitedAccounts.length), _(_.rgSkippedAccounts.length))
-                : _("We hit error during invite, check console: " + _?.msg),
-                _(!1);
-            },
-            onCancel: () => {
-              _(null), _(null), _(!1), _(null), _();
-            },
+        return (0, _.jsxs)(_._, {
+          strTitle: "Invite Users",
+          bOKDisabled: !_ || 0 == _.length || null != _,
+          strCancelButtonText: null !== _ ? "Close" : "Cancel",
+          onOK: async () => {
+            _(!0);
+            const _ = await _(__webpack_require__, _, !1);
+            1 == _?.success
+              ? (_(_.rgInvitedAccounts.length), _(_.rgSkippedAccounts.length))
+              : _("We hit error during invite, check console: " + _?.msg),
+              _(!1);
           },
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
+          onCancel: () => {
+            _(null), _(null), _(!1), _(null), _();
+          },
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)("div", {
                 className: _.ErrorStylesWithIcon,
-              },
-              _,
-            ),
-          null != _ &&
-            _.createElement(
-              "div",
-              null,
-              "Invited ",
-              (0, _._)(_),
-              " accounts, skipped previously invited ",
-              (0, _._)(_),
-            ),
-          _ &&
-            _.createElement(_._, {
-              size: "small",
-              position: "center",
-              string: (0, _._)("#Saving"),
-            }),
-          null == _
-            ? _.createElement(_, {
-                setInvites: _,
-              })
-            : _.createElement(_, {
-                rgInvites: _,
+                children: _,
               }),
-        );
+            null != _ &&
+              (0, _.jsxs)("div", {
+                children: [
+                  "Invited ",
+                  (0, _._)(_),
+                  " accounts, skipped previously invited ",
+                  (0, _._)(_),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(_._, {
+                size: "small",
+                position: "center",
+                string: (0, _._)("#Saving"),
+              }),
+            null == _
+              ? (0, _.jsx)(_, {
+                  setInvites: _,
+                })
+              : (0, _.jsx)(_, {
+                  rgInvites: _,
+                }),
+          ],
+        });
       }
       function _(_) {
         const { rgInvites: _ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("div", null, "Total Invites Parsed: ", _.length, " "),
-          _.createElement(
-            "table",
-            null,
-            _.createElement(
-              "thead",
-              null,
-              _.createElement(
-                "tr",
-                null,
-                _.createElement("th", null, "AccountID"),
-                _.createElement("th", null, "PartnerID"),
-                _.createElement("th", null, "Email Override"),
-              ),
-            ),
-            _.createElement(
-              "tbody",
-              null,
-              _.map((_, _) =>
-                _.createElement(
-                  "tr",
-                  {
-                    key: "invite" + _.nAccountID + "_" + _,
-                  },
-                  _.createElement("td", null, _.nAccountID),
-                  _.createElement("td", null, _.nPartnerID),
-                  _.createElement("td", null, _.strEmailOverride),
-                ),
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
+              children: ["Total Invites Parsed: ", _.length, " "],
+            }),
+            (0, _.jsxs)("table", {
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "AccountID",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "PartnerID",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Email Override",
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("tbody", {
+                  children: _.map((_, _) =>
+                    (0, _.jsxs)(
+                      "tr",
+                      {
+                        children: [
+                          (0, _.jsx)("td", {
+                            children: _.nAccountID,
+                          }),
+                          (0, _.jsx)("td", {
+                            children: _.nPartnerID,
+                          }),
+                          (0, _.jsx)("td", {
+                            children: _.strEmailOverride,
+                          }),
+                        ],
+                      },
+                      "invite" + _.nAccountID + "_" + _,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { setInvites: _ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            null,
-            "Format for CSV File, please use the template below:",
-          ),
-          _.createElement(
-            "ul",
-            null,
-            _.createElement(
-              "li",
-              null,
-              _.createElement("b", null, "nAccountID"),
-              " - required, 32-bit integer value, not the 64-bit steam id",
-            ),
-            _.createElement(
-              "li",
-              null,
-              _.createElement("b", null, "nPartnerID"),
-              " - (preferred for biz contact)",
-            ),
-            _.createElement(
-              "li",
-              null,
-              _.createElement("b", null, "strOverrideEmail"),
-              " - (optional, we wil use the email associated with the account and partner or the steamid itself)",
-            ),
-          ),
-          _.createElement("br", null),
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              children: "Format for CSV File, please use the template below:",
+            }),
+            (0, _.jsxs)("ul", {
+              children: [
+                (0, _.jsxs)("li", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "nAccountID",
+                    }),
+                    " - required, 32-bit integer value, not the 64-bit steam id",
+                  ],
+                }),
+                (0, _.jsxs)("li", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "nPartnerID",
+                    }),
+                    " - (preferred for biz contact)",
+                  ],
+                }),
+                (0, _.jsxs)("li", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: "strOverrideEmail",
+                    }),
+                    " - (optional, we wil use the email associated with the account and partner or the steamid itself)",
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("a", {
               href: "#",
               onClick: async (_) => {
                 _.preventDefault(), _.stopPropagation();
@@ -1632,53 +1638,50 @@
                   _.push(["388445686", "1", "adils@valvesoftware.com"]);
                 _._.WriteCSVToFile(_, "invite_template.csv");
               },
-            },
-            "Download Template Example",
-          ),
-          _.createElement("br", null),
-          _.createElement("br", null),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              "label",
-              {
+              children: "Download Template Example",
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("label", {
                 className: _().ImportButtonLabel,
                 htmlFor: "import-discount-input",
-              },
-              "Choose CSV File",
-              _.createElement("input", {
-                _: "import-discount-input",
-                type: "file",
-                style: {
-                  display: "none",
-                },
-                onChange: async (_) => {
-                  if (_.target.files.length >= 1) {
-                    const _ = _.target.files[0],
-                      _ = await _._.ParseCSVFile(_);
-                    if (_?.data) {
-                      const _ = new Array();
-                      _.data.forEach((_) => {
-                        if (_.nAccountID) {
-                          const _ = {
-                            nAccountID: Number.parseInt(_.nAccountID),
-                          };
-                          _.nPartnerID &&
-                            (_.nPartnerID = Number.parseInt(_.nPartnerID)),
-                            _.strEmailOverride &&
-                              (_.strEmailOverride = _.strEmailOverride),
-                            _.push(_);
+                children: [
+                  "Choose CSV File",
+                  (0, _.jsx)("input", {
+                    _: "import-discount-input",
+                    type: "file",
+                    style: {
+                      display: "none",
+                    },
+                    onChange: async (_) => {
+                      if (_.target.files.length >= 1) {
+                        const _ = _.target.files[0],
+                          _ = await _._.ParseCSVFile(_);
+                        if (_?.data) {
+                          const _ = new Array();
+                          _.data.forEach((_) => {
+                            if (_.nAccountID) {
+                              const _ = {
+                                nAccountID: Number.parseInt(_.nAccountID),
+                              };
+                              _.nPartnerID &&
+                                (_.nPartnerID = Number.parseInt(_.nPartnerID)),
+                                _.strEmailOverride &&
+                                  (_.strEmailOverride = _.strEmailOverride),
+                                _.push(_);
+                            }
+                          }),
+                            _(_);
                         }
-                      }),
-                        _(_);
-                    }
-                  }
-                },
+                      }
+                    },
+                  }),
+                ],
               }),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       async function _(_, _, _) {
         const _ = _.map((_) => _.nAccountID).join(","),
@@ -1838,58 +1841,46 @@
         const { rgEventGIDs: _ } = _,
           [__webpack_require__, _, _] = (0, _._)(),
           [_, _] = (0, _.useState)(null);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("span", null, " | "),
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("span", {
+              children: " | ",
+            }),
+            (0, _.jsx)("a", {
               href: "#",
               onClick: (_) => {
                 _.preventDefault(), _.stopPropagation(), _();
               },
-            },
-            "Analyse Top Partner Coverage",
-          ),
-          _.createElement(
-            _._,
-            {
+              children: "Analyse Top Partner Coverage",
+            }),
+            (0, _.jsx)(_._, {
               active: __webpack_require__,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
                   closeModal: _,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
-                },
-                Boolean(null == _)
-                  ? _.createElement(_, {
-                      rgEventGIDs: _,
-                      fnSelectedEvents: _,
-                    })
-                  : _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_, {
-                        rgGidMeetSteamEvents: _,
+                  children: Boolean(null == _)
+                    ? (0, _.jsx)(_, {
+                        rgEventGIDs: _,
+                        fnSelectedEvents: _,
+                      })
+                    : (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)(_, {
+                            rgGidMeetSteamEvents: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            onClick: () => _(null),
+                            children: "Reset Selection",
+                          }),
+                        ],
                       }),
-                      _.createElement(
-                        _._,
-                        {
-                          onClick: () => _(null),
-                        },
-                        "Reset Selection",
-                      ),
-                    ),
-              ),
-            ),
-          ),
-        );
+                }),
+              }),
+            }),
+          ],
+        });
       }
       const _ = (0, _._)();
       function _(_) {
@@ -2007,84 +1998,85 @@
             ],
             [],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, null, "Partner Analysis"),
-          Boolean(_)
-            ? _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  columns: _,
-                  data: _,
-                  getRowKey: (_) => _,
-                  stickyHeader: !0,
-                  nItemHeight: 28,
-                  overscan: _.length,
-                }),
-                _.createElement("br", null),
-                _.createElement(
-                  _._,
-                  {
-                    _: "download-csv",
-                    onClick: function () {
-                      const _ = [],
-                        _ = [];
-                      for (const _ of _) _.push(_.header);
-                      _.push(_);
-                      for (const _ of _) {
-                        const _ = [];
-                        for (const _ of _) {
-                          const _ = _[_.accessorKey];
-                          __webpack_require__.push(
-                            "invitations" == _.accessorKey ||
-                              "registrations" == _.accessorKey
-                              ? _(_)
-                              : _.toString(),
-                          );
-                        }
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Partner Analysis",
+            }),
+            Boolean(_)
+              ? (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      columns: _,
+                      data: _,
+                      getRowKey: (_) => _,
+                      stickyHeader: !0,
+                      nItemHeight: 28,
+                      overscan: _.length,
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)(_._, {
+                      _: "download-csv",
+                      onClick: function () {
+                        const _ = [],
+                          _ = [];
+                        for (const _ of _) _.push(_.header);
                         _.push(_);
-                      }
-                      _._.WriteCSVToFile(_, "partneranalysis.csv");
-                    },
-                    style: {
-                      width: "120px",
-                    },
-                  },
-                  "Download CSV",
-                ),
-              )
-            : _.createElement(_._, {
-                string: (0, _._)("#Loading"),
-                position: "center",
-              }),
-        );
+                        for (const _ of _) {
+                          const _ = [];
+                          for (const _ of _) {
+                            const _ = _[_.accessorKey];
+                            __webpack_require__.push(
+                              "invitations" == _.accessorKey ||
+                                "registrations" == _.accessorKey
+                                ? _(_)
+                                : _.toString(),
+                            );
+                          }
+                          _.push(_);
+                        }
+                        _._.WriteCSVToFile(_, "partneranalysis.csv");
+                      },
+                      style: {
+                        width: "120px",
+                      },
+                      children: "Download CSV",
+                    }),
+                  ],
+                })
+              : (0, _.jsx)(_._, {
+                  string: (0, _._)("#Loading"),
+                  position: "center",
+                }),
+          ],
+        });
       }
       function _(_) {
         const { rgEventGIDs: _, fnSelectedEvents: __webpack_require__ } = _,
           [_, _] = (0, _.useState)([]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, null, "Choose Events"),
-          _.map((_) =>
-            _.createElement(_, {
-              key: _,
-              gidClanEvent: _,
-              rgSelected: _,
-              fnSetSelected: _,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Choose Events",
             }),
-          ),
-          _.createElement(
-            _._,
-            {
+            _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  gidClanEvent: _,
+                  rgSelected: _,
+                  fnSetSelected: _,
+                },
+                _,
+              ),
+            ),
+            (0, _.jsx)(_._, {
               disabled: 0 == _.length,
               onClick: () => __webpack_require__(_),
-            },
-            "Continue",
-          ),
-        );
+              children: "Continue",
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2093,7 +2085,7 @@
             fnSetSelected: _,
           } = _,
           _ = (0, _._)(_).GetNameWithFallback(0);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           label: _,
           checked: __webpack_require__.includes(_),
           onChange: (_) => {
@@ -2124,127 +2116,139 @@
                 : [0, 0],
             [_],
           );
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            bAllowFullSize: !0,
-            bDisableBackgroundDismiss: !0,
-            closeModal: _,
-            strDescription:
-              "This will show the users we have invited and their status. As well as individual who were just sent the registration page on their own.",
-            strTitle: "Invitation And Registration Status",
-          },
-          !_ &&
-            _.createElement(_._, {
-              size: "medium",
-              position: "center",
-              string: (0, _._)("#Loading"),
-            }),
-          _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("div", null, "There are ", _, " registrations."),
-              _ > 0 &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: async () => {
-                      await (async function (_, _) {
-                        let _ = new FormData();
-                        __webpack_require__.append("sessionid", _._.SESSIONID),
-                          __webpack_require__.append("gid", _);
-                        const _ = `${_._.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
-                        try {
-                          const _ = await _().post(_, _, {
-                            withCredentials: !0,
-                          });
-                          if (1 != _?.data?.success) {
+        return (0, _.jsxs)(_._, {
+          bAlertDialog: !0,
+          bAllowFullSize: !0,
+          bDisableBackgroundDismiss: !0,
+          closeModal: _,
+          strDescription:
+            "This will show the users we have invited and their status. As well as individual who were just sent the registration page on their own.",
+          strTitle: "Invitation And Registration Status",
+          children: [
+            !_ &&
+              (0, _.jsx)(_._, {
+                size: "medium",
+                position: "center",
+                string: (0, _._)("#Loading"),
+              }),
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: ["There are ", _, " registrations."],
+                  }),
+                  _ > 0 &&
+                    (0, _.jsxs)(_._, {
+                      onClick: async () => {
+                        await (async function (_, _) {
+                          let _ = new FormData();
+                          __webpack_require__.append(
+                            "sessionid",
+                            _._.SESSIONID,
+                          ),
+                            __webpack_require__.append("gid", _);
+                          const _ = `${_._.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
+                          try {
+                            const _ = await _().post(_, _, {
+                              withCredentials: !0,
+                            });
+                            if (1 != _?.data?.success) {
+                              let _ = (0, _._)(_);
+                              console.error(
+                                "AsyncSendInviteEmails error: " + _.strErrorMsg,
+                                _,
+                              );
+                            }
+                            return (
+                              _.invalidateQueries({
+                                queryKey: [
+                                  "useMeetSteamAllRegistrationStatus",
+                                  _,
+                                ],
+                              }),
+                              _?.data
+                            );
+                          } catch (_) {
                             let _ = (0, _._)(_);
                             console.error(
                               "AsyncSendInviteEmails error: " + _.strErrorMsg,
                               _,
                             );
                           }
-                          return (
-                            _.invalidateQueries({
-                              queryKey: [
-                                "useMeetSteamAllRegistrationStatus",
-                                _,
-                              ],
-                            }),
-                            _?.data
-                          );
-                        } catch (_) {
-                          let _ = (0, _._)(_);
-                          console.error(
-                            "AsyncSendInviteEmails error: " + _.strErrorMsg,
-                            _,
-                          );
-                        }
-                        return null;
-                      })(_, __webpack_require__);
-                    },
-                  },
-                  _,
-                  " Invites To Sent. Send now?",
-                ),
-              _.createElement(
-                "table",
-                null,
-                _.createElement(
-                  "thead",
-                  null,
-                  _.createElement(
-                    "tr",
-                    null,
-                    _.createElement("th", null, "SteamID"),
-                    _.createElement("th", null, "Name"),
-                    _.createElement("th", null, "invited"),
-                    _.createElement("th", null, "Invite Emailed"),
-                    _.createElement("th", null, "Partner"),
-                    _.createElement("th", null, "Email Override"),
-                  ),
-                ),
-                _.createElement(
-                  "tbody",
-                  null,
-                  _?.map((_) =>
-                    _.createElement(_, {
-                      key: "regentry_" + _.steamid,
-                      reg: _,
+                          return null;
+                        })(_, __webpack_require__);
+                      },
+                      children: [_, " Invites To Sent. Send now?"],
                     }),
-                  ),
-                ),
-              ),
-            ),
-        );
+                  (0, _.jsxs)("table", {
+                    children: [
+                      (0, _.jsx)("thead", {
+                        children: (0, _.jsxs)("tr", {
+                          children: [
+                            (0, _.jsx)("th", {
+                              children: "SteamID",
+                            }),
+                            (0, _.jsx)("th", {
+                              children: "Name",
+                            }),
+                            (0, _.jsx)("th", {
+                              children: "invited",
+                            }),
+                            (0, _.jsx)("th", {
+                              children: "Invite Emailed",
+                            }),
+                            (0, _.jsx)("th", {
+                              children: "Partner",
+                            }),
+                            (0, _.jsx)("th", {
+                              children: "Email Override",
+                            }),
+                          ],
+                        }),
+                      }),
+                      (0, _.jsx)("tbody", {
+                        children: _?.map((_) =>
+                          (0, _.jsx)(
+                            _,
+                            {
+                              reg: _,
+                            },
+                            "regentry_" + _.steamid,
+                          ),
+                        ),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { reg: _ } = _,
           [__webpack_require__] = (0, _._)(_.partner_id);
-        return _.createElement(
-          "tr",
-          null,
-          _.createElement("td", null, _.steamid),
-          _.createElement("td", null, _.name),
-          _.createElement("td", null, Boolean(_.invited) ? "YES" : ""),
-          _.createElement(
-            "td",
-            null,
-            Boolean(_.invitation_emailed) ? "YES" : "",
-          ),
-          _.createElement(
-            "td",
-            null,
-            __webpack_require__?.name,
-            " (",
-            _.partner_id,
-            ")",
-          ),
-          _.createElement("td", null, _.email_override),
-        );
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsx)("td", {
+              children: _.steamid,
+            }),
+            (0, _.jsx)("td", {
+              children: _.name,
+            }),
+            (0, _.jsx)("td", {
+              children: Boolean(_.invited) ? "YES" : "",
+            }),
+            (0, _.jsx)("td", {
+              children: Boolean(_.invitation_emailed) ? "YES" : "",
+            }),
+            (0, _.jsxs)("td", {
+              children: [__webpack_require__?.name, " (", _.partner_id, ")"],
+            }),
+            (0, _.jsx)("td", {
+              children: _.email_override,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2274,24 +2278,17 @@
             );
           }, [_, _]),
           _ = _?.filter((_) => _.has(new _._(_.steamid).GetAccountID()));
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            bAllowFullSize: !0,
-            bDisableBackgroundDismiss: !0,
-            closeModal: _,
-            strDescription: "Show who is registered for this session",
-            strTitle: "Session Registration",
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          bAlertDialog: !0,
+          bAllowFullSize: !0,
+          bDisableBackgroundDismiss: !0,
+          closeModal: _,
+          strDescription: "Show who is registered for this session",
+          strTitle: "Session Registration",
+          children: [
+            (0, _.jsx)("div", {
               className: _().ExportToCSV,
-            },
-            _.createElement(
-              "a",
-              {
+              children: (0, _.jsx)("a", {
                 onClick: () =>
                   (function (_, _, _, _, _) {
                     const _ = [],
@@ -2353,66 +2350,81 @@
                       ".csv";
                     _._.WriteCSVToFile(_, _);
                   })(_, _, _, _, _),
-              },
-              "Export to CSV",
-            ),
-          ),
-          _.createElement(
-            "table",
-            {
-              className: _().Table,
-            },
-            _.createElement(
-              "thead",
-              null,
-              _.createElement(
-                "tr",
-                null,
-                _.createElement("th", null, "SteamID"),
-                _.createElement("th", null, "Name"),
-                _.createElement("th", null, "Invited"),
-                _.createElement("th", null, "Partner"),
-                _.createElement("th", null, "Email Override"),
-                _.createElement(
-                  "th",
-                  null,
-                  "Guest Count ",
-                  _.createElement(_._, {
-                    tooltip:
-                      "Additional guests, doesn't include main registrant",
-                  }),
-                ),
-                _.createElement("th", null, "Reg Confirm Email Sent"),
-                _.ask_registration_question &&
-                  _.createElement("th", null, "Answer"),
-              ),
-            ),
-            _.createElement(
-              "tbody",
-              null,
-              _?.flatMap((_) => {
-                const _ = new _._(_.steamid).GetAccountID(),
-                  _ = [
-                    _.createElement(_, {
-                      key: "regrow" + _.steamid,
-                      group: _,
-                      regInfo: _.get(_),
-                      inviteInfo: _,
-                      preRegQuestions: _.get(_),
-                    }),
-                  ];
-                for (let _ = 0; _ < _.guest_names?.length; _++)
-                  __webpack_require__.push(
-                    _.createElement(_, {
-                      key: "regguestrow" + _.steamid + "_" + _,
-                      guestName: _.guest_names[_],
-                    }),
-                  );
-                return _;
+                children: "Export to CSV",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsxs)("table", {
+              className: _().Table,
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "SteamID",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Name",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Invited",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Partner",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Email Override",
+                      }),
+                      (0, _.jsxs)("th", {
+                        children: [
+                          "Guest Count ",
+                          (0, _.jsx)(_._, {
+                            tooltip:
+                              "Additional guests, doesn't include main registrant",
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Reg Confirm Email Sent",
+                      }),
+                      _.ask_registration_question &&
+                        (0, _.jsx)("th", {
+                          children: "Answer",
+                        }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("tbody", {
+                  children: _?.flatMap((_) => {
+                    const _ = new _._(_.steamid).GetAccountID(),
+                      _ = [
+                        (0, _.jsx)(
+                          _,
+                          {
+                            group: _,
+                            regInfo: _.get(_),
+                            inviteInfo: _,
+                            preRegQuestions: _.get(_),
+                          },
+                          "regrow" + _.steamid,
+                        ),
+                      ];
+                    for (let _ = 0; _ < _.guest_names?.length; _++)
+                      __webpack_require__.push(
+                        (0, _.jsx)(
+                          _,
+                          {
+                            guestName: _.guest_names[_],
+                          },
+                          "regguestrow" + _.steamid + "_" + _,
+                        ),
+                      );
+                    return _;
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_, _) {
         const _ = `registration_emailed_${_.group_id}_${_.session_id}`;
@@ -2428,102 +2440,101 @@
           } = _,
           [_] = (0, _._)(_.partner_id),
           _ = _(__webpack_require__, _);
-        return _.createElement(
-          "tr",
-          null,
-          _.createElement("td", null, _.steamid),
-          _.createElement("td", null, _.name),
-          _.createElement("td", null, Boolean(_.invited) ? "YES" : ""),
-          _.createElement(
-            "td",
-            null,
-            (_?.name ?? _.game) ? `Game: ${_.game}` : "",
-            " ",
-            _.partner_id ? `(${_.partner_id})` : "",
-          ),
-          _.createElement("td", null, _.email_override),
-          _.createElement(
-            "td",
-            null,
-            __webpack_require__.guests_registered
-              ? __webpack_require__.guests_registered - 1
-              : 0,
-          ),
-          _.createElement("td", null, _ ? (0, _._)(_) : ""),
-          _.ask_registration_question &&
-            _.createElement(
-              "td",
-              null,
-              _?.find((_) => _.group_id == _.group_id)?.question || "",
-            ),
-        );
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsx)("td", {
+              children: _.steamid,
+            }),
+            (0, _.jsx)("td", {
+              children: _.name,
+            }),
+            (0, _.jsx)("td", {
+              children: Boolean(_.invited) ? "YES" : "",
+            }),
+            (0, _.jsxs)("td", {
+              children: [
+                (_?.name ?? _.game) ? `Game: ${_.game}` : "",
+                " ",
+                _.partner_id ? `(${_.partner_id})` : "",
+              ],
+            }),
+            (0, _.jsx)("td", {
+              children: _.email_override,
+            }),
+            (0, _.jsx)("td", {
+              children: __webpack_require__.guests_registered
+                ? __webpack_require__.guests_registered - 1
+                : 0,
+            }),
+            (0, _.jsx)("td", {
+              children: _ ? (0, _._)(_) : "",
+            }),
+            _.ask_registration_question &&
+              (0, _.jsx)("td", {
+                children:
+                  _?.find((_) => _.group_id == _.group_id)?.question || "",
+              }),
+          ],
+        });
       }
       function _(_) {
         const { guestName: _ } = _;
-        return _.createElement(
-          "tr",
-          null,
-          _.createElement("td", null, "(guest)"),
-          _.createElement("td", null, _),
-        );
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsx)("td", {
+              children: "(guest)",
+            }),
+            (0, _.jsx)("td", {
+              children: _,
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { rgEventGIDs: _ } = _,
           [__webpack_require__, _, _] = (0, _._)(),
           [_, _] = (0, _.useState)(null);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("span", null, " | "),
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("span", {
+              children: " | ",
+            }),
+            (0, _.jsx)("a", {
               href: "#",
               onClick: (_) => {
                 _.preventDefault(), _.stopPropagation(), _();
               },
-            },
-            "Show Registration Across Events",
-          ),
-          _.createElement(
-            _._,
-            {
+              children: "Show Registration Across Events",
+            }),
+            (0, _.jsx)(_._, {
               active: __webpack_require__,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
                   closeModal: _,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
-                },
-                Boolean(null == _)
-                  ? _.createElement(_, {
-                      rgEventGIDs: _,
-                      fnSelectedEvents: _,
-                    })
-                  : _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_, {
-                        rgGidMeetSteamEvents: _,
+                  children: Boolean(null == _)
+                    ? (0, _.jsx)(_, {
+                        rgEventGIDs: _,
+                        fnSelectedEvents: _,
+                      })
+                    : (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)(_, {
+                            rgGidMeetSteamEvents: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            onClick: () => _(null),
+                            children: "Reset Selection",
+                          }),
+                        ],
                       }),
-                      _.createElement(
-                        _._,
-                        {
-                          onClick: () => _(null),
-                        },
-                        "Reset Selection",
-                      ),
-                    ),
-              ),
-            ),
-          ),
-        );
+                }),
+              }),
+            }),
+          ],
+        });
       }
       const _ = (0, _._)();
       function _(_) {
@@ -2608,82 +2619,74 @@
             [],
           );
         return _ && _ && _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_._, null, "Registations"),
-              Boolean(_)
-                ? _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_._, {
-                      columns: _,
-                      data: _,
-                      getRowKey: (_) => _,
-                      stickyHeader: !0,
-                      nItemHeight: 28,
-                      overscan: _.length,
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  children: "Registations",
+                }),
+                Boolean(_)
+                  ? (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          columns: _,
+                          data: _,
+                          getRowKey: (_) => _,
+                          stickyHeader: !0,
+                          nItemHeight: 28,
+                          overscan: _.length,
+                        }),
+                        (0, _.jsx)("br", {}),
+                        (0, _.jsx)(_._, {
+                          _: "download-csv",
+                          onClick: () =>
+                            (0, _._)(
+                              "registrationdump.csv",
+                              _,
+                              _.map((_) => ({
+                                accessorKey: _.accessorKey,
+                                header:
+                                  "string" == typeof _.header
+                                    ? _.header
+                                    : (_.accessorKey ?? ""),
+                              })),
+                            ),
+                          style: {
+                            width: "120px",
+                          },
+                          children: "Download CSV",
+                        }),
+                      ],
+                    })
+                  : (0, _.jsx)(_._, {
+                      string: (0, _._)("#Loading"),
+                      position: "center",
                     }),
-                    _.createElement("br", null),
-                    _.createElement(
-                      _._,
-                      {
-                        _: "download-csv",
-                        onClick: () =>
-                          (0, _._)(
-                            "registrationdump.csv",
-                            _,
-                            _.map((_) => ({
-                              accessorKey: _.accessorKey,
-                              header:
-                                "string" == typeof _.header
-                                  ? _.header
-                                  : (_.accessorKey ?? ""),
-                            })),
-                          ),
-                        style: {
-                          width: "120px",
-                        },
-                      },
-                      "Download CSV",
-                    ),
-                  )
-                : _.createElement(_._, {
-                    string: (0, _._)("#Loading"),
-                    position: "center",
-                  }),
-            )
-          : _.createElement(_._, {
+              ],
+            })
+          : (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
             });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "ol",
-            null,
-            Array.from(_.entries()).map(([_, _]) =>
-              _.createElement(
+        return (0, _.jsx)("div", {
+          children: (0, _.jsx)("ol", {
+            children: Array.from(_.entries()).map(([_, _]) =>
+              (0, _.jsx)(
                 "li",
                 {
-                  key: _,
-                },
-                _.createElement(
-                  "a",
-                  {
+                  children: (0, _.jsx)("a", {
                     href: `${_._.PARTNER_BASE_URL}meetsteam/surveyresults/${_}`,
                     target: "_blank",
-                  },
-                  _,
-                ),
+                    children: _,
+                  }),
+                },
+                _,
               ),
             ),
-          ),
-        );
+          }),
+        });
       }
       function _() {
         const [_] = (0, _.useState)(() => {
@@ -2719,42 +2722,42 @@
             return _?.sort((_) => -_[0]), _;
           }, [_, _]);
         return _
-          ? _.createElement(_._, null)
+          ? (0, _.jsx)(_._, {})
           : _
-            ? _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "a",
-                    {
-                      href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/`,
-                    },
-                    "Open Meet Steam Event Dashboard",
+            ? (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("a", {
+                        href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/`,
+                        children: "Open Meet Steam Event Dashboard",
+                      }),
+                      (0, _.jsx)(_, {
+                        rgEventGIDs: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        rgEventGIDs: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    checked: _,
+                    onChange: _,
+                    label: "Show Past Events",
+                  }),
+                  (0, _.jsx)("hr", {}),
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        month: new Date(1e3 * _[0]),
+                        events: _[1],
+                      },
+                      _[0],
+                    ),
                   ),
-                  _.createElement(_, {
-                    rgEventGIDs: _,
-                  }),
-                  _.createElement(_, {
-                    rgEventGIDs: _,
-                  }),
-                ),
-                _.createElement(_._, {
-                  checked: _,
-                  onChange: _,
-                  label: "Show Past Events",
-                }),
-                _.createElement("hr", null),
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: _[0],
-                    month: new Date(1e3 * _[0]),
-                    events: _[1],
-                  }),
-                ),
-              )
+                ],
+              })
             : null;
       }
       function _(_) {
@@ -2767,29 +2770,26 @@
             year: "numeric",
             month: "long",
           }).format(_);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("div", {
               className: _().MonthTitle,
-            },
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _,
+            }),
+            (0, _.jsx)("div", {
               className: _().MonthEvents,
-            },
-            _.map((_) =>
-              _.createElement(_, {
-                oEvent: _,
-                key: _.GID,
-              }),
-            ),
-          ),
-        );
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    oEvent: _,
+                  },
+                  _.GID,
+                ),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { oEvent: _ } = _,
@@ -2814,343 +2814,288 @@
               _
             );
           }, [_.jsondata.meet_steam_groups]);
-        return _.createElement(
-          "div",
-          {
-            className: _().EventRow,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().EventRow,
+          children: [
+            (0, _.jsxs)("div", {
               className: _().EventMainDetails,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().TitleLine,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Title,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().StartDate,
-                },
-                (0, _._)(_?.startTime),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ActionLine,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "a",
-                  {
-                    href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${_}`,
-                  },
-                  "Edit",
-                ),
-              ),
-              _.createElement(
-                "div",
-                null,
-                " | ",
-                _.createElement(
-                  "a",
-                  {
-                    href: `${_._.STORE_BASE_URL}meetsteam/${_}`,
-                  },
-                  "View",
-                ),
-              ),
-              Boolean(
-                _.BIsUnlistedEvent() &&
-                  _.jsondata.meet_steam_groups?.length > 0,
-              ) &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    gid: _,
-                  }),
-                  " | ",
-                  _.createElement(
-                    "a",
-                    {
-                      href: `${_._.STORE_BASE_URL}meetsteam/attendance?gid=${_}&accountid=${_._.accountid}`,
-                    },
-                    "QR Page",
-                  ),
-                  " | ",
-                  _.createElement(
-                    "a",
-                    {
-                      href: `${_._.STORE_BASE_URL}meetsteam/attendeelist?gid=${_}`,
-                    },
-                    "Attendance List",
-                  ),
-                  _.createElement(_, {
-                    gid: _,
-                  }),
-                  _.createElement(_, {
-                    gid: _,
-                  }),
-                  _.createElement(_, {
-                    gid: _,
-                  }),
-                  _.createElement(_, {
-                    gid: _,
-                  }),
-                ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "table",
-              {
-                className: "landingTable",
-              },
-              _.createElement(
-                "thead",
-                null,
-                _.createElement(
-                  "tr",
-                  null,
-                  _.createElement("th", null, "Group"),
-                  _.createElement("th", null, "Session Start"),
-                  _.createElement("th", null, "Session Duration"),
-                  _.createElement("th", null, "Seats"),
-                  _.createElement(
-                    "th",
-                    {
-                      style: {
-                        width: "50px",
-                      },
-                    },
-                    "Registered",
-                  ),
-                  _.createElement(
-                    "th",
-                    {
-                      style: {
-                        width: "50px",
-                      },
-                    },
-                    "Guests",
-                  ),
-                  _.createElement(
-                    "th",
-                    {
-                      style: {
-                        width: "100px",
-                      },
-                    },
-                    "Details",
-                  ),
-                ),
-              ),
-              _.createElement(
-                "tbody",
-                null,
-                _.createElement(
-                  "tr",
-                  null,
-                  Boolean(_.length > 0)
-                    ? _.createElement(_, {
-                        key: _[0].session._,
-                        gid: _,
-                        group: _[0].group,
-                        session: _[0].session,
-                        rgAvailability: _,
-                      })
-                    : _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement("td", null, "None"),
-                        _.createElement("td", null),
-                        _.createElement("td", null),
-                        _.createElement("td", null),
-                        _.createElement("td", null),
-                        _.createElement("td", null),
-                      ),
-                  _.createElement(
-                    "td",
-                    null,
-                    !Boolean(
-                      _?.BIsUnlistedEvent() &&
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().TitleLine,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().Title,
+                      children: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().StartDate,
+                      children: (0, _._)(_?.startTime),
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().ActionLine,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _.jsx)("a", {
+                        href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${_}`,
+                        children: "Edit",
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      children: [
+                        " | ",
+                        (0, _.jsx)("a", {
+                          href: `${_._.STORE_BASE_URL}meetsteam/${_}`,
+                          children: "View",
+                        }),
+                      ],
+                    }),
+                    Boolean(
+                      _.BIsUnlistedEvent() &&
                         _.jsondata.meet_steam_groups?.length > 0,
                     ) &&
-                      _.createElement(
-                        "div",
-                        null,
-                        "Invite Disabled. Event need to publish into Unlisted State",
-                      ),
-                  ),
-                ),
-                _.filter((_, _) => _ > 0).map((_) =>
-                  _.createElement(
-                    "tr",
-                    {
-                      key: _.session._,
-                    },
-                    _.createElement(_, {
-                      group: _.group,
-                      gid: _,
-                      session: _.session,
-                      rgAvailability: _,
-                      firstSession: _.firstSession,
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)(_, {
+                            gid: _,
+                          }),
+                          " | ",
+                          (0, _.jsx)("a", {
+                            href: `${_._.STORE_BASE_URL}meetsteam/attendance?gid=${_}&accountid=${_._.accountid}`,
+                            children: "QR Page",
+                          }),
+                          " | ",
+                          (0, _.jsx)("a", {
+                            href: `${_._.STORE_BASE_URL}meetsteam/attendeelist?gid=${_}`,
+                            children: "Attendance List",
+                          }),
+                          (0, _.jsx)(_, {
+                            gid: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            gid: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            gid: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            gid: _,
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              children: (0, _.jsxs)("table", {
+                className: "landingTable",
+                children: [
+                  (0, _.jsx)("thead", {
+                    children: (0, _.jsxs)("tr", {
+                      children: [
+                        (0, _.jsx)("th", {
+                          children: "Group",
+                        }),
+                        (0, _.jsx)("th", {
+                          children: "Session Start",
+                        }),
+                        (0, _.jsx)("th", {
+                          children: "Session Duration",
+                        }),
+                        (0, _.jsx)("th", {
+                          children: "Seats",
+                        }),
+                        (0, _.jsx)("th", {
+                          style: {
+                            width: "50px",
+                          },
+                          children: "Registered",
+                        }),
+                        (0, _.jsx)("th", {
+                          style: {
+                            width: "50px",
+                          },
+                          children: "Guests",
+                        }),
+                        (0, _.jsx)("th", {
+                          style: {
+                            width: "100px",
+                          },
+                          children: "Details",
+                        }),
+                      ],
                     }),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
+                  }),
+                  (0, _.jsxs)("tbody", {
+                    children: [
+                      (0, _.jsxs)("tr", {
+                        children: [
+                          Boolean(_.length > 0)
+                            ? (0, _.jsx)(
+                                _,
+                                {
+                                  gid: _,
+                                  group: _[0].group,
+                                  session: _[0].session,
+                                  rgAvailability: _,
+                                },
+                                _[0].session._,
+                              )
+                            : (0, _.jsxs)(_.Fragment, {
+                                children: [
+                                  (0, _.jsx)("td", {
+                                    children: "None",
+                                  }),
+                                  (0, _.jsx)("td", {}),
+                                  (0, _.jsx)("td", {}),
+                                  (0, _.jsx)("td", {}),
+                                  (0, _.jsx)("td", {}),
+                                  (0, _.jsx)("td", {}),
+                                ],
+                              }),
+                          (0, _.jsx)("td", {
+                            children:
+                              !Boolean(
+                                _?.BIsUnlistedEvent() &&
+                                  _.jsondata.meet_steam_groups?.length > 0,
+                              ) &&
+                              (0, _.jsx)("div", {
+                                children:
+                                  "Invite Disabled. Event need to publish into Unlisted State",
+                              }),
+                          }),
+                        ],
+                      }),
+                      _.filter((_, _) => _ > 0).map((_) =>
+                        (0, _.jsx)(
+                          "tr",
+                          {
+                            children: (0, _.jsx)(_, {
+                              group: _.group,
+                              gid: _,
+                              session: _.session,
+                              rgAvailability: _,
+                              firstSession: _.firstSession,
+                            }),
+                          },
+                          _.session._,
+                        ),
+                      ),
+                    ],
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { gid: _ } = _,
           _ = _();
         return Array.from(__webpack_require__.keys()).includes(_)
-          ? _.createElement(
-              _.Fragment,
-              null,
-              " | ",
-              _.createElement(
-                "a",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                " | ",
+                (0, _.jsx)("a", {
                   href: `${_._.PARTNER_BASE_URL}meetsteam/survey/${_}`,
-                },
-                "Survey",
-              ),
-            )
+                  children: "Survey",
+                }),
+              ],
+            })
           : null;
       }
       function _(_) {
         const { gid: _ } = _,
           [__webpack_require__, _, _] = (0, _._)();
-        return _.createElement(
-          "div",
-          null,
-          " | ",
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            " | ",
+            (0, _.jsxs)("a", {
               href: "#",
               onClick: (_) => {
                 _.preventDefault(), _.stopPropagation(), _();
               },
-            },
-            "Invite via CSV",
-            _.createElement(_._, {
-              tooltip:
-                "This will email invitee and show the users on the dashboard (if not already invited).  We need csv with accountid,partnerid,email_override (optional)",
+              children: [
+                "Invite via CSV",
+                (0, _.jsx)(_._, {
+                  tooltip:
+                    "This will email invitee and show the users on the dashboard (if not already invited).  We need csv with accountid,partnerid,email_override (optional)",
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
                 active: __webpack_require__,
-              },
-              _.createElement(_, {
-                hideModal: _,
-                gid: _,
+                children: (0, _.jsx)(_, {
+                  hideModal: _,
+                  gid: _,
+                }),
               }),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const { gid: _ } = _,
           [__webpack_require__, _, _] = (0, _._)();
-        return _.createElement(
-          "div",
-          null,
-          " | ",
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            " | ",
+            (0, _.jsx)("a", {
               href: "#",
               onClick: (_) => {
                 _.preventDefault(), _.stopPropagation(), _();
               },
-            },
-            "Invite",
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
+              children: "Invite",
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
                 active: __webpack_require__,
-              },
-              _.createElement(_, {
-                hideModal: _,
-                gid: _,
+                children: (0, _.jsx)(_, {
+                  hideModal: _,
+                  gid: _,
+                }),
               }),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const { gid: _ } = _,
           [__webpack_require__, _, _] = (0, _._)();
-        return _.createElement(
-          "div",
-          null,
-          " | ",
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            " | ",
+            (0, _.jsx)("a", {
               href: "#",
               onClick: (_) => {
                 _.preventDefault(), _.stopPropagation(), _();
               },
-            },
-            "Show Invites",
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
+              children: "Show Invites",
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
                 active: __webpack_require__,
-              },
-              _.createElement(_, {
-                hideModal: _,
-                gid: _,
+                children: (0, _.jsx)(_, {
+                  hideModal: _,
+                  gid: _,
+                }),
               }),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const { gid: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null);
-        return _.createElement(
-          "div",
-          null,
-          " | ",
-          _.createElement(
-            "a",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            " | ",
+            (0, _.jsx)("a", {
               href: "#",
               onClick: async (_) => {
                 _.preventDefault(), _.stopPropagation(), _(!0);
@@ -3166,44 +3111,47 @@
                 })(_, _);
                 _(_);
               },
-            },
-            "Email Self",
-          ),
-          _.createElement(
-            _._,
-            {
+              children: "Email Self",
+            }),
+            (0, _.jsx)(_._, {
               active: _,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsxs)(_._, {
                 bAlertDialog: !0,
                 strTitle: "Test Emails",
                 closeModal: () => {
                   _(!1), _(null);
                 },
                 onOK: () => {},
-              },
-              _.createElement(
-                "div",
-                null,
-                "This will temporarily register and then de-register you from the event as a way to test the email sending code.",
-              ),
-              Boolean(null == _) &&
-                _.createElement(_._, {
-                  string: (0, _._)("#Loading"),
-                }),
-              Boolean(1 == _) &&
-                _.createElement("div", null, "Test Emails Sent"),
-              Boolean(_ && 1 != _) &&
-                _.createElement(
-                  "div",
-                  null,
-                  "Email Failed to Send. Check console",
-                ),
-            ),
-          ),
-        );
+                children: [
+                  (0, _.jsx)("div", {
+                    children:
+                      "This will temporarily register and then de-register you from the event as a way to test the email sending code.",
+                  }),
+                  Boolean(null == _) &&
+                    (0, _.jsx)(_._, {
+                      string: (0, _._)("#Loading"),
+                    }),
+                  Boolean(1 == _) &&
+                    (0, _.jsx)("div", {
+                      children: "Test Emails Sent",
+                    }),
+                  Boolean(_ && 1 != _) &&
+                    (0, _.jsx)("div", {
+                      children: "Email Failed to Send. Check console",
+                    }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_, _) {
+        const _ = _().unix(_),
+          _ = _().unix(_)._(_),
+          _ = _.utcOffset() - __webpack_require__.utcOffset(),
+          _ = new Date(1e3 * (_ + 60 * _)),
+          _ = new Date();
+        return `${_.getFullYear() == _.getFullYear() ? ((0, _._))(_, !1, !1) : ((0, _._))(_, !1, !1)} ${(0, _._)(_ + 60 * _)} ${_.format("z")}`;
       }
       function _(_) {
         const {
@@ -3239,110 +3187,91 @@
             "in_person" === _.location_type
               ? (_.in_person_time_zone ?? _._)
               : _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ && Boolean(__webpack_require__)
-            ? _.createElement(
-                "td",
-                null,
-                _,
-                _.createElement(_._, {
-                  tooltip: _,
-                }),
-                Boolean(_) && _.createElement("div", null, _),
-              )
-            : _.createElement("td", null),
-          _.createElement(
-            "td",
-            null,
-            _.createElement(
-              "span",
-              null,
-              (function (_, _) {
-                const _ = _().unix(_),
-                  _ = _().unix(_)._(_),
-                  _ = _.utcOffset() - __webpack_require__.utcOffset(),
-                  _ = new Date(1e3 * (_ + 60 * _)),
-                  _ = new Date();
-                return `${_.getFullYear() == _.getFullYear() ? ((0, _._))(_, !1, !1) : ((0, _._))(_, !1, !1)} ${(0, _._)(_ + 60 * _)} ${_.format("z")}`;
-              })(_.rtime_start, _),
-            ),
-          ),
-          _.createElement("td", null, (0, _._)(_.rtime_end - _.rtime_start)),
-          _.createElement(
-            "td",
-            null,
-            _?.guest_count || 0,
-            " / ",
-            _.max_capacity,
-            _.createElement("br", null),
-            _.createElement(
-              "div",
-              {
-                className: _().CapacityBarMax,
-              },
-              _.createElement("div", {
-                className: (0, _._)(_().CapacityBarCurrent, _ ? _().Full : ""),
-                style: {
-                  width: _,
-                },
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ && Boolean(__webpack_require__)
+              ? (0, _.jsxs)("td", {
+                  children: [
+                    _,
+                    (0, _.jsx)(_._, {
+                      tooltip: _,
+                    }),
+                    Boolean(_) &&
+                      (0, _.jsx)("div", {
+                        children: _,
+                      }),
+                  ],
+                })
+              : (0, _.jsx)("td", {}),
+            (0, _.jsx)("td", {
+              children: (0, _.jsx)("span", {
+                children: _(_.rtime_start, _),
               }),
-            ),
-          ),
-          _.createElement(
-            "td",
-            null,
-            _.isSuccess &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.data?.filter((_) => _.session_id == _._).length,
-              ),
-          ),
-          _.createElement(
-            "td",
-            null,
-            _.isSuccess &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.data
-                  ?.filter((_) => _.session_id == _._)
-                  .reduce((_, _) => _ + _.guests_registered - 1, 0),
-              ),
-          ),
-          _.createElement(
-            "td",
-            null,
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-              },
-              "Details",
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  active: _,
-                },
-                _.createElement(_, {
-                  gid: _,
-                  title: _,
-                  group: __webpack_require__,
-                  session: _,
-                  hideModal: _,
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _._)(_.rtime_end - _.rtime_start),
+            }),
+            (0, _.jsxs)("td", {
+              children: [
+                _?.guest_count || 0,
+                " / ",
+                _.max_capacity,
+                (0, _.jsx)("br", {}),
+                (0, _.jsx)("div", {
+                  className: _().CapacityBarMax,
+                  children: (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().CapacityBarCurrent,
+                      _ ? _().Full : "",
+                    ),
+                    style: {
+                      width: _,
+                    },
+                  }),
                 }),
-              ),
-            ),
-          ),
-        );
+              ],
+            }),
+            (0, _.jsx)("td", {
+              children:
+                _.isSuccess &&
+                (0, _.jsx)(_.Fragment, {
+                  children: _.data?.filter((_) => _.session_id == _._).length,
+                }),
+            }),
+            (0, _.jsx)("td", {
+              children:
+                _.isSuccess &&
+                (0, _.jsx)(_.Fragment, {
+                  children: _.data
+                    ?.filter((_) => _.session_id == _._)
+                    .reduce((_, _) => _ + _.guests_registered - 1, 0),
+                }),
+            }),
+            (0, _.jsxs)("td", {
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  children: "Details",
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    active: _,
+                    children: (0, _.jsx)(_, {
+                      gid: _,
+                      title: _,
+                      group: __webpack_require__,
+                      session: _,
+                      hideModal: _,
+                    }),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3373,49 +3302,45 @@
               _
             );
           }, [_]);
-        return _.createElement(
-          "div",
-          {
-            className: _().EventList,
-          },
-          _.createElement(_._, {
-            type: "text",
-            value: _,
-            onChange: (_) => _(_.currentTarget.value.trim()),
-            label: "Filter",
-          }),
-          _.createElement(
-            "div",
-            null,
-            "Total Survey Responses: ",
-            (0, _._)(_?.length || 0),
-          ),
-          _.createElement(
-            "div",
-            null,
-            "Link to partner-facing survey: ",
-            _.createElement(
-              "a",
-              {
-                href: _,
-              },
-              _,
+        return (0, _.jsxs)("div", {
+          className: _().EventList,
+          children: [
+            (0, _.jsx)(_._, {
+              type: "text",
+              value: _,
+              onChange: (_) => _(_.currentTarget.value.trim()),
+              label: "Filter",
+            }),
+            (0, _.jsxs)("div", {
+              children: ["Total Survey Responses: ", (0, _._)(_?.length || 0)],
+            }),
+            (0, _.jsxs)("div", {
+              children: [
+                "Link to partner-facing survey: ",
+                (0, _.jsx)("a", {
+                  href: _,
+                  children: _,
+                }),
+              ],
+            }),
+            _.filter(
+              (_) => 0 == _.length || _.name.includes(_) || _._.includes(_),
+            ).map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  conf: _,
+                  nInterestCount: _.get(_._) ?? 0,
+                  rgSurveyInterest: _,
+                },
+                _._,
+              ),
             ),
-          ),
-          _.filter(
-            (_) => 0 == _.length || _.name.includes(_) || _._.includes(_),
-          ).map((_) =>
-            _.createElement(_, {
-              key: _._,
-              conf: _,
-              nInterestCount: _.get(_._) ?? 0,
+            (0, _.jsx)(_, {
               rgSurveyInterest: _,
             }),
-          ),
-          _.createElement(_, {
-            rgSurveyInterest: _,
-          }),
-        );
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3423,17 +3348,14 @@
           nInterestCount: __webpack_require__,
           rgSurveyInterest: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            title: `${_.name} in ${_.place} around ${_.time}: Interest: ${(0, _._)(__webpack_require__)}`,
-            bStartMinimized: !0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          title: `${_.name} in ${_.place} around ${_.time}: Interest: ${(0, _._)(__webpack_require__)}`,
+          bStartMinimized: !0,
+          children: (0, _.jsx)(_, {
             conf: _,
             rgSurveyInterest: _,
           }),
-        );
+        });
       }
       function _(_) {
         if ("number" == typeof _) return _;
@@ -3494,16 +3416,18 @@
         return _
           ? _?.length
             ? _ && 0 != _.length
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   conf: _,
                   rgSurveyInterest: _,
                 })
-              : _.createElement("div", null, "No users with interest")
-            : _.createElement(_._, {
+              : (0, _.jsx)("div", {
+                  children: "No users with interest",
+                })
+            : (0, _.jsx)(_._, {
                 position: "center",
                 string: "Loading Valve Account info (this shouldn't take long)",
               })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               position: "center",
               string: `Loading ${_} of ${_.length}`,
             });
@@ -3511,12 +3435,9 @@
       function _(_) {
         const { conf: _, rgSurveyInterest: __webpack_require__ } = _,
           _ = (0, _._)();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_._, {
               onClick: () => {
                 const _ = [];
                 _.push([
@@ -3596,84 +3517,101 @@
                 const _ = _.name.replace(" ", "_") + "_conference_interest.csv";
                 _._.WriteCSVToFile(_, _);
               },
-            },
-            "Export to CSV",
-          ),
-          _.createElement(
-            "table",
-            {
+              children: "Export to CSV",
+            }),
+            (0, _.jsxs)("table", {
               className: "landingTable",
-            },
-            _.createElement(
-              "thead",
-              null,
-              _.createElement(
-                "tr",
-                null,
-                _.createElement("th", null, "Name and Email"),
-                _.createElement("th", null, "Have you met steam?"),
-                _.createElement("th", null, "Partner"),
-                _.createElement("th", null, "Valve Contacts"),
-                _.createElement("th", null, "Partner Revenue"),
-                _.createElement("th", null, "Biggest Game"),
-                _.createElement("th", null, "Long Term Sales Rank"),
-                _.createElement("th", null, "Attending count?"),
-                _.createElement("th", null, "Alt Language"),
-                _.createElement("th", null, "Country"),
-                _.createElement("th", null, "Submit Survey Time"),
-              ),
-            ),
-            _.createElement(
-              "tbody",
-              null,
-              __webpack_require__.map((_) =>
-                _.createElement(_, {
-                  key: _._ + "_" + _.steamid,
-                  strsteamid: _.steamid,
-                  partnerID: _.results.partner_id,
-                  registration: _.results,
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Name and Email",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Have you met steam?",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Partner",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Valve Contacts",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Partner Revenue",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Biggest Game",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Long Term Sales Rank",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Attending count?",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Alt Language",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Country",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Submit Survey Time",
+                      }),
+                    ],
+                  }),
                 }),
-              ),
-            ),
-          ),
-        );
+                (0, _.jsx)("tbody", {
+                  children: __webpack_require__.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        strsteamid: _.steamid,
+                        partnerID: _.results.partner_id,
+                        registration: _.results,
+                      },
+                      _._ + "_" + _.steamid,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { partnerID: _, registration: __webpack_require__ } = _;
-        return _.createElement(
-          "tr",
-          null,
-          _.createElement(
-            "td",
-            null,
-            _.createElement(_, {
-              ..._,
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsx)("td", {
+              children: (0, _.jsx)(_, {
+                ..._,
+              }),
             }),
-          ),
-          _.createElement(
-            "td",
-            null,
-            __webpack_require__.have_you_met_steam ? "" : "NO",
-          ),
-          _.createElement(_, {
-            nPartnerID: _,
-          }),
-          _.createElement("td", null, __webpack_require__.attending.length),
-          _.createElement(
-            "td",
-            null,
-            __webpack_require__.english_not_good &&
-              __webpack_require__.preferred_language
-              ? (0, _._)(__webpack_require__.preferred_language)
-              : "",
-          ),
-          _.createElement("td", null, __webpack_require__.country_code),
-          _.createElement(
-            "td",
-            null,
-            (0, _._)(__webpack_require__.submit_time),
-          ),
-        );
+            (0, _.jsx)("td", {
+              children: __webpack_require__.have_you_met_steam ? "" : "NO",
+            }),
+            (0, _.jsx)(_, {
+              nPartnerID: _,
+            }),
+            (0, _.jsx)("td", {
+              children: __webpack_require__.attending.length,
+            }),
+            (0, _.jsx)("td", {
+              children:
+                __webpack_require__.english_not_good &&
+                __webpack_require__.preferred_language
+                  ? (0, _._)(__webpack_require__.preferred_language)
+                  : "",
+            }),
+            (0, _.jsx)("td", {
+              children: __webpack_require__.country_code,
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _._)(__webpack_require__.submit_time),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3684,13 +3622,17 @@
           _ = (0, _._)(_),
           _ = _(new _._(_).GetAccountID(), __webpack_require__),
           _ = _?.realname || _.data?.m_strPlayerName;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("span", null, _),
-          _.createElement("br", null),
-          _.createElement("span", null, _.email_override || _?.email),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("span", {
+              children: _,
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("span", {
+              children: _.email_override || _?.email,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { nPartnerID: _ } = _,
@@ -3705,50 +3647,45 @@
           })(_),
           _ = (0, _._)(_),
           _ = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "td",
-            null,
-            __webpack_require__ ? __webpack_require__?.name + ` (${_})` : _,
-          ),
-          _.createElement(
-            "td",
-            null,
-            _?.map((_) => (0, _._)(_, _)?.displayName || "" + _).join(","),
-          ),
-          _.createElement("td", null, "$", _?.strGrossUSD),
-          _.createElement(
-            "td",
-            null,
-            _?.nBestAppID > 0
-              ? _.createElement(_, {
-                  appid: _?.nBestAppID,
-                })
-              : "N/A",
-          ),
-          _.createElement("td", null, _?.nBestAppLongTermSalesRank),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("td", {
+              children: __webpack_require__
+                ? __webpack_require__?.name + ` (${_})`
+                : _,
+            }),
+            (0, _.jsx)("td", {
+              children: _?.map(
+                (_) => (0, _._)(_, _)?.displayName || "" + _,
+              ).join(","),
+            }),
+            (0, _.jsxs)("td", {
+              children: ["$", _?.strGrossUSD],
+            }),
+            (0, _.jsx)("td", {
+              children:
+                _?.nBestAppID > 0
+                  ? (0, _.jsx)(_, {
+                      appid: _?.nBestAppID,
+                    })
+                  : "N/A",
+            }),
+            (0, _.jsx)("td", {
+              children: _?.nBestAppLongTermSalesRank,
+            }),
+          ],
+        });
       }
-      const _ = {};
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _),
-          _ = (0, _.useMemo)(
-            () => ({
-              _: _,
-              type: "game",
-            }),
-            [_],
-          );
-        return _.createElement(
-          _._,
-          {
-            item: _,
-          },
-          _.createElement("span", null, __webpack_require__?.GetName() || _),
-        );
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsx)(_._, {
+          _: _,
+          children: (0, _.jsx)("span", {
+            children: _?.name || _,
+          }),
+        });
       }
       function _(_) {
         const { rgSurveyInterest: _ } = _,
@@ -3762,15 +3699,11 @@
                 ),
               [_],
             ));
-        return _.createElement(
-          _._,
-          {
-            title: `Alternative Suggestions (${_.length})`,
-            bStartMinimized: !0,
-          },
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          title: `Alternative Suggestions (${_.length})`,
+          bStartMinimized: !0,
+          children: [
+            (0, _.jsx)(_._, {
               onClick: () => {
                 const _ = [];
                 _.push([
@@ -3820,62 +3753,74 @@
                   });
                 _._.WriteCSVToFile(_, "suggestsion.csv");
               },
-            },
-            "Export to CSV (wait until the table populates fully)",
-          ),
-          _.createElement(
-            "table",
-            {
+              children: "Export to CSV (wait until the table populates fully)",
+            }),
+            (0, _.jsxs)("table", {
               className: "landingTable",
-            },
-            _.createElement(
-              "thead",
-              null,
-              _.createElement(
-                "tr",
-                null,
-                _.createElement("th", null, "Name and Email"),
-                _.createElement("th", null, "Partner"),
-                _.createElement("th", null, "Valve Contacts"),
-                _.createElement("th", null, "Partner Revenue"),
-                _.createElement("th", null, "Biggest Game"),
-                _.createElement("th", null, "Long Term Sales Rank"),
-                _.createElement("th", null, "Suggestions"),
-              ),
-            ),
-            _.createElement(
-              "tbody",
-              null,
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "suggested" + _.steamid,
-                  survey: _,
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Name and Email",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Partner",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Valve Contacts",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Partner Revenue",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Biggest Game",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Long Term Sales Rank",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Suggestions",
+                      }),
+                    ],
+                  }),
                 }),
-              ),
-            ),
-          ),
-        );
+                (0, _.jsx)("tbody", {
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        survey: _,
+                      },
+                      "suggested" + _.steamid,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const { survey: _ } = _;
         new _._(_.steamid);
-        return _.createElement(
-          "tr",
-          null,
-          _.createElement(
-            "td",
-            null,
-            _.createElement(_, {
-              strsteamid: _.steamid,
-              partnerID: _.results.partner_id,
-              registration: _.results,
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsx)("td", {
+              children: (0, _.jsx)(_, {
+                strsteamid: _.steamid,
+                partnerID: _.results.partner_id,
+                registration: _.results,
+              }),
             }),
-          ),
-          _.createElement(_, {
-            nPartnerID: _.results.partner_id,
-          }),
-          _.createElement("td", null, _.results.suggestion.trim()),
-        );
+            (0, _.jsx)(_, {
+              nPartnerID: _.results.partner_id,
+            }),
+            (0, _.jsx)("td", {
+              children: _.results.suggestion.trim(),
+            }),
+          ],
+        });
       }
       const _ = _.createContext({
         loadUserEmailAndLangs: async (_) =>
@@ -3951,12 +3896,9 @@
             );
           }, [_, _]);
         return _
-          ? _.createElement(
-              "div",
-              null,
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsxs)(_._, {
                   onClick: () => {
                     const _ = [];
                     _.push(["User Name", "account id", "Email", "Event Count"]),
@@ -3975,39 +3917,47 @@
                       });
                     _._.WriteCSVToFile(_, "sale_operators.csv");
                   },
-                },
-                "CSV Export",
-                _.createElement(_._, {
-                  tooltip: "Wait until the page finishes loading before export",
-                }),
-              ),
-              _.createElement(
-                "table",
-                null,
-                _.createElement(
-                  "thead",
-                  null,
-                  _.createElement(
-                    "tr",
-                    null,
-                    _.createElement("th", null, "User"),
-                    _.createElement("th", null, "Email"),
-                    _.createElement("th", null, "Events"),
-                  ),
-                ),
-                _.createElement(
-                  "tbody",
-                  null,
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: _.accountid,
-                      organizer: _,
+                  children: [
+                    "CSV Export",
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Wait until the page finishes loading before export",
                     }),
-                  ),
-                ),
-              ),
-            )
-          : _.createElement(_._, {
+                  ],
+                }),
+                (0, _.jsxs)("table", {
+                  children: [
+                    (0, _.jsx)("thead", {
+                      children: (0, _.jsxs)("tr", {
+                        children: [
+                          (0, _.jsx)("th", {
+                            children: "User",
+                          }),
+                          (0, _.jsx)("th", {
+                            children: "Email",
+                          }),
+                          (0, _.jsx)("th", {
+                            children: "Events",
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, _.jsx)("tbody", {
+                      children: _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            organizer: _,
+                          },
+                          _.accountid,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            })
+          : (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
               size: "medium",
             });
@@ -4024,78 +3974,75 @@
             return (0, _._)(_(_, _));
           })(_.accountid),
           _ = _.data?.m_strPlayerName || "";
-        return _.createElement(
-          "tr",
-          null,
-          _.createElement("td", null, _, " (", _.accountid, ")"),
-          _.createElement("td", null, _?.data?.email_address),
-          _.createElement(
-            "td",
-            null,
-            _.createElement(_, {
-              name: _,
-              rgClanEventGIDs: _.clan_event_gids,
+        return (0, _.jsxs)("tr", {
+          children: [
+            (0, _.jsxs)("td", {
+              children: [_, " (", _.accountid, ")"],
             }),
-          ),
-        );
+            (0, _.jsx)("td", {
+              children: _?.data?.email_address,
+            }),
+            (0, _.jsx)("td", {
+              children: (0, _.jsx)(_, {
+                name: _,
+                rgClanEventGIDs: _.clan_event_gids,
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { name: _, rgClanEventGIDs: __webpack_require__ } = _,
           [_, _, _] = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
               onClick: _,
-            },
-            "See ",
-            (0, _._)(__webpack_require__.length),
-            " Events",
-          ),
-          _.createElement(
-            _._,
-            {
+              children: [
+                "See ",
+                (0, _._)(__webpack_require__.length),
+                " Events",
+              ],
+            }),
+            (0, _.jsx)(_._, {
               active: _,
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 bAlertDialog: !0,
                 closeModal: _,
                 strTitle: `${_}'s Events`,
-              },
-              __webpack_require__.map((_) =>
-                _.createElement(_, {
-                  gid: _,
-                  key: _,
-                }),
-              ),
-            ),
-          ),
-        );
+                children: __webpack_require__.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      gid: _,
+                    },
+                    _,
+                  ),
+                ),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { gid: _ } = _,
           _ = (0, _._)(_);
         return _
-          ? _.createElement(
-              "a",
-              {
-                href: `${_._.COMMUNITY_BASE_URL}gid/${_.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${_}`,
-                target: "_blank",
-              },
-              _.createElement(
-                "div",
-                null,
-                __webpack_require__.GetNameWithFallback("chunkid"),
-              ),
-              _.createElement("img", {
-                src: __webpack_require__.GetImageURL("capsule", 0),
-              }),
-            )
-          : _.createElement("div", null, "Loading ", _);
+          ? (0, _.jsxs)("a", {
+              href: `${_._.COMMUNITY_BASE_URL}gid/${_.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${_}`,
+              target: "_blank",
+              children: [
+                (0, _.jsx)("div", {
+                  children: __webpack_require__.GetNameWithFallback("chunkid"),
+                }),
+                (0, _.jsx)("img", {
+                  src: __webpack_require__.GetImageURL("capsule", 0),
+                }),
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              children: ["Loading ", _],
+            });
       }
       function _(_) {
         const _ = (_) =>
@@ -4104,50 +4051,56 @@
             {
               name: "Interest Survey Results",
               key: "survey",
-              contents: _.createElement(_._, null, _.createElement(_, null)),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {}),
+              }),
               onClick: _,
             },
             {
               name: "Event Management",
               key: "event",
-              contents: _.createElement(_._, null, _.createElement(_, null)),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {}),
+              }),
               onClick: _,
             },
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: _.createElement(_._, null, _.createElement(_, null)),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {}),
+              }),
               onClick: _,
             },
             {
               name: "Post Event Surveys",
               key: "postsurvey",
-              contents: _.createElement(_._, null, _.createElement(_, null)),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {}),
+              }),
               onClick: _,
             },
           ];
-        return _.createElement(
-          "div",
-          {
-            className: _().AdminPageCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().AdminPageCtn,
+          children: [
+            (0, _.jsxs)("div", {
               className: _().PageTitle,
-            },
-            "Meet Steam Admin Dashboard ",
-            (0, _._)("current_year", "application_config"),
-          ),
-          _.createElement("hr", null),
-          _.createElement(_._, {
-            tabs: _,
-          }),
-          _.createElement("div", {
-            className: _().ClearThings,
-          }),
-          _.createElement("br", null),
-        );
+              children: [
+                "Meet Steam Admin Dashboard ",
+                (0, _._)("current_year", "application_config"),
+              ],
+            }),
+            (0, _.jsx)("hr", {}),
+            (0, _.jsx)(_._, {
+              tabs: _,
+            }),
+            (0, _.jsx)("div", {
+              className: _().ClearThings,
+            }),
+            (0, _.jsx)("br", {}),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4175,278 +4128,247 @@
           [_, _] = (0, _.useState)(() => JSON.parse(JSON.stringify(_)));
         return _
           ? !_ || _.m_bPlayerNamePending
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 size: "medium",
                 position: "center",
                 string: (0, _._)("#Loading"),
               })
-            : _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().AdminPageCtn, _().Ctn),
-                },
-                _.createElement(
-                  "div",
-                  {
+            : (0, _.jsxs)("div", {
+                className: (0, _._)(_().AdminPageCtn, _().Ctn),
+                children: [
+                  (0, _.jsx)("div", {
                     className: _().PageTitle,
-                  },
-                  (0, _._)("#MeetSteam_MainTitle"),
-                ),
-                _.createElement("hr", null),
-                _.createElement(
-                  "div",
-                  {
+                    children: (0, _._)("#MeetSteam_MainTitle"),
+                  }),
+                  (0, _.jsx)("hr", {}),
+                  (0, _.jsx)("div", {
                     className: _().ColumnCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                    children: (0, _.jsxs)("div", {
                       className: _().LeftCol,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().SectionCtn,
-                      },
-                      _.createElement(
-                        "h1",
-                        null,
-                        " ",
-                        (0, _._)(
-                          "#MeetSteam_Intro",
-                          _.m_strPlayerName,
-                          _.createElement("br", null),
-                        ),
-                      ),
-                      _.createElement(
-                        "p",
-                        {
-                          className: _().IntroText,
-                        },
-                        (0, _._)("#MeetSteam_Desc1"),
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().SectionCtn,
-                      },
-                      _.createElement(_, {
-                        oRegistration: _,
-                        fnSetRegistration: _,
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().SectionCtn,
-                      },
-                      _.createElement(_, {
-                        oRegistration: _,
-                        fnSetRegistration: _,
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().SectionCtn, _().ActionBar),
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          onClick: async () => {
-                            _(!0), _(!1), _(!1);
-                            const _ = `${_._.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
-                              _ = new FormData();
-                            _.append("sessionid", _._.SESSIONID),
-                              _.append("registrationJson", JSON.stringify(_));
-                            try {
-                              const _ = await _().post(_, _, {
-                                withCredentials: !0,
-                              });
-                              1 != _.data.success
-                                ? (console.error(
-                                    "MeetSteamLanding failed " + _.data.success,
-                                  ),
-                                  _(!0))
-                                : _(!0);
-                            } catch (_) {
-                              console.error(
-                                "MeetSteamLanding failed caught",
-                                _,
-                              );
-                            }
-                            _(!1);
-                          },
-                        },
-                        (0, _._)("#Button_Submit"),
-                      ),
-                      _ &&
-                        _.createElement(_._, {
-                          size: "medium",
-                          position: "center",
-                          string: (0, _._)("#Saving"),
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _().SectionCtn,
+                          children: [
+                            (0, _.jsxs)("h1", {
+                              children: [
+                                " ",
+                                (0, _._)(
+                                  "#MeetSteam_Intro",
+                                  _.m_strPlayerName,
+                                  (0, _.jsx)("br", {}),
+                                ),
+                              ],
+                            }),
+                            (0, _.jsx)("p", {
+                              className: _().IntroText,
+                              children: (0, _._)("#MeetSteam_Desc1"),
+                            }),
+                          ],
                         }),
-                      _ &&
-                        _.createElement("div", null, (0, _._)("#Button_Saved")),
-                      _ &&
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.ErrorStylesWithIcon,
-                          },
-                          (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-                        ),
-                    ),
-                  ),
-                ),
-              )
-          : _.createElement(
-              "div",
-              {
-                className: _().Ctn,
-              },
-              (0, _._)("#MeetSteam_closed"),
-            );
+                        (0, _.jsx)("div", {
+                          className: _().SectionCtn,
+                          children: (0, _.jsx)(_, {
+                            oRegistration: _,
+                            fnSetRegistration: _,
+                          }),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().SectionCtn,
+                          children: (0, _.jsx)(_, {
+                            oRegistration: _,
+                            fnSetRegistration: _,
+                          }),
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(_().SectionCtn, _().ActionBar),
+                          children: [
+                            (0, _.jsx)(_._, {
+                              onClick: async () => {
+                                _(!0), _(!1), _(!1);
+                                const _ = `${_._.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
+                                  _ = new FormData();
+                                _.append("sessionid", _._.SESSIONID),
+                                  _.append(
+                                    "registrationJson",
+                                    JSON.stringify(_),
+                                  );
+                                try {
+                                  const _ = await _().post(_, _, {
+                                    withCredentials: !0,
+                                  });
+                                  1 != _.data.success
+                                    ? (console.error(
+                                        "MeetSteamLanding failed " +
+                                          _.data.success,
+                                      ),
+                                      _(!0))
+                                    : _(!0);
+                                } catch (_) {
+                                  console.error(
+                                    "MeetSteamLanding failed caught",
+                                    _,
+                                  );
+                                }
+                                _(!1);
+                              },
+                              children: (0, _._)("#Button_Submit"),
+                            }),
+                            _ &&
+                              (0, _.jsx)(_._, {
+                                size: "medium",
+                                position: "center",
+                                string: (0, _._)("#Saving"),
+                              }),
+                            _ &&
+                              (0, _.jsx)("div", {
+                                children: (0, _._)("#Button_Saved"),
+                              }),
+                            _ &&
+                              (0, _.jsx)("div", {
+                                className: _.ErrorStylesWithIcon,
+                                children: (0, _._)(
+                                  "#Error_ErrorCommunicatingWithNetwork",
+                                ),
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
+              })
+          : (0, _.jsx)("div", {
+              className: _().Ctn,
+              children: (0, _._)("#MeetSteam_closed"),
+            });
       }
       function _(_) {
         const { oRegistration: _, fnSetRegistration: __webpack_require__ } = _,
           { rgEvents: _, rgOldEvents: _, selectConference: _ } = _();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement("h1", null, (0, _._)("#MeetSteam_Events_Interest")),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)(
-              "#MeetSteam_Events_title",
-              (0, _._)("meet_steam_year", "application_config") || "2025",
-            ),
-          ),
-          _.createElement(
-            "p",
-            null,
-            _.createElement(
-              "span",
-              {
-                className: _().Indicator,
-              },
-              "*",
-            ),
-            " ",
-            (0, _._)("#MeetSteam_Events_desc"),
-          ),
-          Boolean(_) &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("hr", null),
-              _.createElement("p", null, (0, _._)("#MeetSteam_ConferenceOrg")),
-              _.createElement(_, {
-                ..._,
-                rgConference: [_],
-              }),
-              _.createElement("br", null),
-              _.createElement("br", null),
-              _.createElement("hr", null),
-              _.createElement(
-                "h2",
-                null,
-                (0, _._)("#MeetSteam_OtherConference"),
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("h1", {
+              children: (0, _._)("#MeetSteam_Events_Interest"),
+            }),
+            (0, _.jsx)("p", {
+              children: (0, _._)(
+                "#MeetSteam_Events_title",
+                (0, _._)("meet_steam_year", "application_config") || "2025",
               ),
-            ),
-          _.createElement(_, {
-            ..._,
-            rgConference: _,
-          }),
-          _.createElement("br", null),
-          _.createElement(_._, {
-            type: "text",
-            value: _.suggestion || "",
-            onChange: (_) =>
-              __webpack_require__({
-                ..._,
-                suggestion: _.currentTarget.value,
+            }),
+            (0, _.jsxs)("p", {
+              children: [
+                (0, _.jsx)("span", {
+                  className: _().Indicator,
+                  children: "*",
+                }),
+                " ",
+                (0, _._)("#MeetSteam_Events_desc"),
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("hr", {}),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#MeetSteam_ConferenceOrg"),
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                    rgConference: [_],
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("hr", {}),
+                  (0, _.jsx)("h2", {
+                    children: (0, _._)("#MeetSteam_OtherConference"),
+                  }),
+                ],
               }),
-            label: (0, _._)("#MeetSteam_others"),
-          }),
-          Boolean(_?.length > 0) &&
-            _.createElement(
-              _._,
-              {
+            (0, _.jsx)(_, {
+              ..._,
+              rgConference: _,
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              type: "text",
+              value: _.suggestion || "",
+              onChange: (_) =>
+                __webpack_require__({
+                  ..._,
+                  suggestion: _.currentTarget.value,
+                }),
+              label: (0, _._)("#MeetSteam_others"),
+            }),
+            Boolean(_?.length > 0) &&
+              (0, _.jsx)(_._, {
                 bStartMinimized: !0,
                 title: (0, _._)("#MeetSteam_PastEvents", _.length),
-              },
-              _.createElement(_, {
-                ..._,
-                rgConference: _,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  rgConference: _,
+                }),
               }),
-            ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { rgConference: _ } = _;
-        return _.createElement(
-          "table",
-          null,
-          _.createElement(
-            "thead",
-            null,
-            _.createElement(
-              "tr",
-              null,
-              _.createElement("th", null),
-              _.createElement("th", null),
-              _.createElement("th", null),
-              _.createElement("th", null),
-            ),
-          ),
-          _.createElement(
-            "tbody",
-            null,
-            _.map((_) =>
-              _.createElement(
-                "tr",
-                {
-                  key: _._,
-                },
-                _.createElement(
-                  "td",
-                  null,
-                  _.attending
-                    ? _.createElement(
-                        "span",
-                        {
-                          className: _().Indicator,
-                        },
-                        "*",
-                      )
-                    : "",
-                ),
-                _.createElement(
-                  "td",
-                  null,
-                  _.createElement("div", null, _.name),
-                  _.createElement("div", null, _.place),
-                ),
-                _.createElement(
-                  "td",
-                  null,
-                  _.createElement("div", null, _.time),
-                ),
-                _.createElement(
-                  "td",
-                  null,
-                  _.createElement(_, {
-                    ..._,
-                    conf: _,
-                  }),
+        return (0, _.jsxs)("table", {
+          children: [
+            (0, _.jsx)("thead", {
+              children: (0, _.jsxs)("tr", {
+                children: [
+                  (0, _.jsx)("th", {}),
+                  (0, _.jsx)("th", {}),
+                  (0, _.jsx)("th", {}),
+                  (0, _.jsx)("th", {}),
+                ],
+              }),
+            }),
+            (0, _.jsx)("tbody", {
+              children: _.map((_) =>
+                (0, _.jsxs)(
+                  "tr",
+                  {
+                    children: [
+                      (0, _.jsx)("td", {
+                        children: _.attending
+                          ? (0, _.jsx)("span", {
+                              className: _().Indicator,
+                              children: "*",
+                            })
+                          : "",
+                      }),
+                      (0, _.jsxs)("td", {
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: _.name,
+                          }),
+                          (0, _.jsx)("div", {
+                            children: _.place,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("td", {
+                        children: (0, _.jsx)("div", {
+                          children: _.time,
+                        }),
+                      }),
+                      (0, _.jsx)("td", {
+                        children: (0, _.jsx)(_, {
+                          ..._,
+                          conf: _,
+                        }),
+                      }),
+                    ],
+                  },
+                  _._,
                 ),
               ),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -4454,7 +4376,7 @@
           fnSetRegistration: __webpack_require__,
           conf: _,
         } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           checked: _.attending?.includes(_._),
           onChange: (_) => {
             let _ = _.attending ? [..._.attending] : [];
@@ -4504,120 +4426,117 @@
             _.preferred_language,
           ]);
         return _.data
-          ? _.createElement(
-              "div",
-              null,
-              _.createElement("h1", null, (0, _._)("#MeetSteam_You")),
-              _.createElement("p", null, (0, _._)("#MeetSteam_You_Desc")),
-              _.createElement(_, {
-                nPartnerID: _.partner_id,
-                label: (0, _._)("#MeetSteam_You_Company"),
-                setPartnerID: (_) =>
-                  __webpack_require__({
-                    ..._,
-                    partner_id: _,
-                  }),
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().EmailInfoRow,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EmailField,
-                  },
-                  _.createElement(_._, {
-                    type: "string",
-                    label: (0, _._)("#MeetSteam_You_Email"),
-                    disabled: !_,
-                    value: _.email_override || _ || "",
-                    placeholder: (0, _._)("#MeetSteam_You_EmailMissing"),
-                    mustBeEmail: !0,
-                    onChange: (_) =>
-                      __webpack_require__({
-                        ..._,
-                        email_override: _.currentTarget.value,
-                      }),
-                  }),
-                ),
-                !_ &&
-                  _.createElement(_._, {
-                    checked: _,
-                    onChange: _,
-                    label: (0, _._)("#MeetSteam_You_Update"),
-                    tooltip: (0, _._)("#MeetSteam_You_Update_ttip"),
-                  }),
-              ),
-              _.createElement(_._, null, (0, _._)("#MeetSteam_NeverMet")),
-              _.createElement(_._, {
-                label: (0, _._)("#MeetSteam_NeverMetNo"),
-                checked: _,
-                onChange: (_) =>
-                  __webpack_require__({
-                    ..._,
-                    have_you_met_steam: !_,
-                  }),
-              }),
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#MeetSteam_CapabableEnglish"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().RadioButtonCtn,
-                },
-                _.createElement(_._, {
-                  className: _().RadioButtons,
-                  checked: !_,
-                  onChange: (_) =>
-                    _ &&
+          ? (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("h1", {
+                  children: (0, _._)("#MeetSteam_You"),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#MeetSteam_You_Desc"),
+                }),
+                (0, _.jsx)(_, {
+                  nPartnerID: _.partner_id,
+                  label: (0, _._)("#MeetSteam_You_Company"),
+                  setPartnerID: (_) =>
                     __webpack_require__({
                       ..._,
-                      english_not_good: void 0,
-                      preferred_language: void 0,
+                      partner_id: _,
                     }),
-                  label: (0, _._)("#MeetSteam_CapabableEnglish_Yes"),
                 }),
-                _.createElement(_._, {
-                  className: _().RadioButtons,
+                (0, _.jsxs)("div", {
+                  className: _().EmailInfoRow,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().EmailField,
+                      children: (0, _.jsx)(_._, {
+                        type: "string",
+                        label: (0, _._)("#MeetSteam_You_Email"),
+                        disabled: !_,
+                        value: _.email_override || _ || "",
+                        placeholder: (0, _._)("#MeetSteam_You_EmailMissing"),
+                        mustBeEmail: !0,
+                        onChange: (_) =>
+                          __webpack_require__({
+                            ..._,
+                            email_override: _.currentTarget.value,
+                          }),
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        checked: _,
+                        onChange: _,
+                        label: (0, _._)("#MeetSteam_You_Update"),
+                        tooltip: (0, _._)("#MeetSteam_You_Update_ttip"),
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#MeetSteam_NeverMet"),
+                }),
+                (0, _.jsx)(_._, {
+                  label: (0, _._)("#MeetSteam_NeverMetNo"),
                   checked: _,
                   onChange: (_) =>
-                    _ &&
                     __webpack_require__({
                       ..._,
-                      english_not_good: !0,
-                      preferred_language: (0, _._)(_._.LANGUAGE),
+                      have_you_met_steam: !_,
                     }),
-                  label: (0, _._)("#MeetSteam_CapabableEnglish_No"),
                 }),
-              ),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement("br", null),
-                  _.createElement(
-                    _._,
-                    null,
-                    (0, _._)("#MeetSteam_LanguagePref"),
-                  ),
-                  _.createElement(_._, {
-                    selectedLang: _,
-                    bAllowUnsetOption: !1,
-                    strTooltip: (0, _._)("#MeetSteam_LanguagePref_ttip"),
-                    fnOnLanguageChanged: (_) =>
-                      __webpack_require__({
-                        ..._,
-                        preferred_language: _,
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#MeetSteam_CapabableEnglish"),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().RadioButtonCtn,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _().RadioButtons,
+                      checked: !_,
+                      onChange: (_) =>
+                        _ &&
+                        __webpack_require__({
+                          ..._,
+                          english_not_good: void 0,
+                          preferred_language: void 0,
+                        }),
+                      label: (0, _._)("#MeetSteam_CapabableEnglish_Yes"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _().RadioButtons,
+                      checked: _,
+                      onChange: (_) =>
+                        _ &&
+                        __webpack_require__({
+                          ..._,
+                          english_not_good: !0,
+                          preferred_language: (0, _._)(_._.LANGUAGE),
+                        }),
+                      label: (0, _._)("#MeetSteam_CapabableEnglish_No"),
+                    }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("br", {}),
+                      (0, _.jsx)(_._, {
+                        children: (0, _._)("#MeetSteam_LanguagePref"),
                       }),
+                      (0, _.jsx)(_._, {
+                        selectedLang: _,
+                        bAllowUnsetOption: !1,
+                        strTooltip: (0, _._)("#MeetSteam_LanguagePref_ttip"),
+                        fnOnLanguageChanged: (_) =>
+                          __webpack_require__({
+                            ..._,
+                            preferred_language: _,
+                          }),
+                      }),
+                    ],
                   }),
-                ),
-            )
-          : _.createElement(_._, {
+              ],
+            })
+          : (0, _.jsx)(_._, {
               size: "medium",
               position: "center",
               string: (0, _._)("#Loading"),
@@ -4631,7 +4550,7 @@
           } = _,
           _ = (0, _._)(_._.accountid);
         if (!_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             size: "small",
             position: "center",
             string: (0, _._)("#Loading"),
@@ -4645,7 +4564,7 @@
               data: _.partnerid,
             }),
           ),
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             layout: "inline",
             label: _,
             rgOptions: _,
@@ -4679,109 +4598,103 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1);
         return !_ || _.m_bPlayerNamePending
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               size: "medium",
               position: "center",
               string: (0, _._)("#Loading"),
             })
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().AdminPageCtn, _().Ctn),
-              },
-              _.createElement(
-                "div",
-                {
+          : (0, _.jsxs)("div", {
+              className: (0, _._)(_().AdminPageCtn, _().Ctn),
+              children: [
+                (0, _.jsx)("div", {
                   className: _().PageTitle,
-                },
-                (0, _._)("#MeetSteam_PostSurvey_Title", _),
-              ),
-              _.createElement("hr", null),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)("#MeetSteam_PostSurvey_Title", _),
+                }),
+                (0, _.jsx)("hr", {}),
+                (0, _.jsx)("div", {
                   className: _().ColumnCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: _().LeftCol,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SectionCtn,
-                    },
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#MeetSteam_PostSurvey_Question"),
-                    ),
-                    _.createElement("textarea", {
-                      rows: 10,
-                      onChange: (_) => _(_.currentTarget.value),
-                      value: _,
-                      autoFocus: !0,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().SectionCtn, _().ActionBar),
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: async () => {
-                          _(!0), _(!1), _(!1);
-                          const _ = `${_._.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${_}`,
-                            _ = new FormData();
-                          _.append("gid", _),
-                            _.append("sessionid", _._.SESSIONID);
-                          let _ = {
-                            gid: _,
-                            simple_response: _,
-                            submit_time: Math.floor(new Date().getTime() / 1e3),
-                          };
-                          _.append("surveyjson", JSON.stringify(_));
-                          try {
-                            const _ = await _().post(_, _, {
-                              withCredentials: !0,
-                            });
-                            1 != _.data.success
-                              ? (console.error(
-                                  "MeetSteamLanding failed " + _.data.success,
-                                ),
-                                _(!0))
-                              : _(!0);
-                          } catch (_) {
-                            console.error("MeetSteamLanding failed caught", _);
-                          }
-                          _(!1);
-                        },
-                      },
-                      (0, _._)("#Button_Submit"),
-                    ),
-                    _ &&
-                      _.createElement(_._, {
-                        size: "medium",
-                        position: "center",
-                        string: (0, _._)("#Saving"),
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _().SectionCtn,
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#MeetSteam_PostSurvey_Question",
+                            ),
+                          }),
+                          (0, _.jsx)("textarea", {
+                            rows: 10,
+                            onChange: (_) => _(_.currentTarget.value),
+                            value: _,
+                            autoFocus: !0,
+                          }),
+                        ],
                       }),
-                    _ &&
-                      _.createElement("div", null, (0, _._)("#Button_Saved")),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ErrorStylesWithIcon,
-                        },
-                        (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-                      ),
-                  ),
-                ),
-              ),
-            );
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().SectionCtn, _().ActionBar),
+                        children: [
+                          (0, _.jsx)(_._, {
+                            onClick: async () => {
+                              _(!0), _(!1), _(!1);
+                              const _ = `${_._.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${_}`,
+                                _ = new FormData();
+                              _.append("gid", _),
+                                _.append("sessionid", _._.SESSIONID);
+                              let _ = {
+                                gid: _,
+                                simple_response: _,
+                                submit_time: Math.floor(
+                                  new Date().getTime() / 1e3,
+                                ),
+                              };
+                              _.append("surveyjson", JSON.stringify(_));
+                              try {
+                                const _ = await _().post(_, _, {
+                                  withCredentials: !0,
+                                });
+                                1 != _.data.success
+                                  ? (console.error(
+                                      "MeetSteamLanding failed " +
+                                        _.data.success,
+                                    ),
+                                    _(!0))
+                                  : _(!0);
+                              } catch (_) {
+                                console.error(
+                                  "MeetSteamLanding failed caught",
+                                  _,
+                                );
+                              }
+                              _(!1);
+                            },
+                            children: (0, _._)("#Button_Submit"),
+                          }),
+                          _ &&
+                            (0, _.jsx)(_._, {
+                              size: "medium",
+                              position: "center",
+                              string: (0, _._)("#Saving"),
+                            }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              children: (0, _._)("#Button_Saved"),
+                            }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _.ErrorStylesWithIcon,
+                              children: (0, _._)(
+                                "#Error_ErrorCommunicatingWithNetwork",
+                              ),
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4848,12 +4761,12 @@
           _ = (0, _._)(_),
           _ = (0, _._)(_);
         return !_ && _ && _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               rgSurveyResults: _,
               mapAccountsToReg: _,
               meetSteamEvents: _,
             })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               string: "Loading Event, Partner and User Info",
             });
       }
@@ -4937,25 +4850,16 @@
             [],
           );
         return _
-          ? _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().AdminPageCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("div", {
+                className: _().AdminPageCtn,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _().PageTitle,
-                  },
-                  "Survey Results",
-                ),
-                _.createElement("hr", null),
-                _.createElement(
-                  _._,
-                  {
+                    children: "Survey Results",
+                  }),
+                  (0, _.jsx)("hr", {}),
+                  (0, _.jsx)(_._, {
                     _: "download-csv",
                     onClick: () =>
                       (0, _._)(
@@ -4972,28 +4876,28 @@
                     style: {
                       width: "120px",
                     },
-                  },
-                  "Download CSV",
-                ),
-                _.createElement("br", null),
-                _.createElement(_._, {
-                  columns: _,
-                  data: _,
-                  getRowKey: (_) => _,
-                  stickyHeader: !0,
-                  nItemHeight: 28,
-                  overscan: _.length,
-                }),
-              ),
-            )
-          : _.createElement(_._, {
+                    children: "Download CSV",
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)(_._, {
+                    columns: _,
+                    data: _,
+                    getRowKey: (_) => _,
+                    stickyHeader: !0,
+                    nItemHeight: 28,
+                    overscan: _.length,
+                  }),
+                ],
+              }),
+            })
+          : (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
             });
       }
       function _(_) {
         const _ = _.getValue();
         return _?.length > 0
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               text: _.getValue(),
               regExp: /\|/,
             })
@@ -5010,52 +4914,47 @@
           (0, _.useEffect)(() => {
             _._.Init();
           }, []),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                basename: (0, _._)() + "meetsteam/",
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _._.DiagData(),
-                  render: (_) =>
-                    _.createElement(_._, {
-                      ..._,
-                      strConfigID: "application_config",
-                    }),
-                }),
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _.AdminDashboard(),
-                  component: _,
-                }),
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _.YearlySurvery(":year(\\d+)"),
-                  component: _,
-                }),
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _.PostEventSurvey(":surveyGID(\\d+)"),
-                  component: _,
-                }),
-                _.createElement(_._, {
-                  exact: !0,
-                  path: _.PostEventSurveyResults(":surveyGID(\\d+)"),
-                  component: _,
-                }),
-                _.createElement(_._, {
-                  component: _._,
-                }),
-              ),
-            ),
-          )
+          (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              basename: (0, _._)() + "meetsteam/",
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    exact: !0,
+                    path: _._.DiagData(),
+                    render: (_) =>
+                      (0, _.jsx)(_._, {
+                        ..._,
+                        strConfigID: "application_config",
+                      }),
+                  }),
+                  (0, _.jsx)(_._, {
+                    exact: !0,
+                    path: _.AdminDashboard(),
+                    component: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    exact: !0,
+                    path: _.YearlySurvery(":year(\\d+)"),
+                    component: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    exact: !0,
+                    path: _.PostEventSurvey(":surveyGID(\\d+)"),
+                    component: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    exact: !0,
+                    path: _.PostEventSurveyResults(":surveyGID(\\d+)"),
+                    component: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    component: _._,
+                  }),
+                ],
+              }),
+            }),
+          })
         );
       }
     },

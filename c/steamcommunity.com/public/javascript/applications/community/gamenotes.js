@@ -79,6 +79,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         List: () => "/notes/list",
@@ -4790,13 +4791,10 @@
             }),
             [_, __webpack_require__, _, _, _, _, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _() {
         return _.useContext(_).closePopup;
@@ -4909,78 +4907,65 @@
             setSpellcheckEnabled: _,
           } = _,
           [_, _] = (0, _._)("FormattingToolbar_Expanded", !1);
-        return _.createElement(
-          _._,
-          {
-            refUpdateToolbar: _,
-            view: __webpack_require__,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Toolbar, _),
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, null),
-              _.createElement(_._, null),
-              _.createElement(_._, {
-                schema: _,
-              }),
-              _.createElement(_._, null),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(!_),
-                  tooltip: "#FormattingToolbar_ExpandOptions",
-                },
-                _.createElement(_.cLJ, {
-                  direction: _ ? "up" : "down",
-                }),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                visible: _,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  schema: _,
-                }),
-                _.createElement(_._, {
-                  schema: _,
-                  levels: 5,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    nodeType: _.nodes.code_block,
-                    tooltip: (0, _._)("#FormattingToolbar_CodeBlock"),
-                  },
-                  _.createElement(_.kNE, null),
-                ),
-                _.createElement(_._, null),
-                _.createElement(_._, {
-                  schema: _,
-                }),
-                _.createElement(_._, null),
-                _.createElement(_._, {
-                  schema: _,
-                }),
-                _.createElement(_._, null),
-                _ &&
-                  _.createElement(_._, {
-                    bSpellcheckEnabled: _,
-                    setSpellcheckEnabled: _,
+        return (0, _.jsx)(_._, {
+          refUpdateToolbar: _,
+          view: __webpack_require__,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_.Toolbar, _),
+            children: [
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)(_._, {
+                    schema: _,
                   }),
-              ),
-            ),
-          ),
-        );
+                  (0, _.jsx)(_._, {}),
+                  (0, _.jsx)(_._, {
+                    onClick: () => _(!_),
+                    tooltip: "#FormattingToolbar_ExpandOptions",
+                    children: (0, _.jsx)(_.cLJ, {
+                      direction: _ ? "up" : "down",
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                visible: _,
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      schema: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      schema: _,
+                      levels: 5,
+                    }),
+                    (0, _.jsx)(_._, {
+                      nodeType: _.nodes.code_block,
+                      tooltip: (0, _._)("#FormattingToolbar_CodeBlock"),
+                      children: (0, _.jsx)(_.kNE, {}),
+                    }),
+                    (0, _.jsx)(_._, {}),
+                    (0, _.jsx)(_._, {
+                      schema: _,
+                    }),
+                    (0, _.jsx)(_._, {}),
+                    (0, _.jsx)(_._, {
+                      schema: _,
+                    }),
+                    (0, _.jsx)(_._, {}),
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        bSpellcheckEnabled: _,
+                        setSpellcheckEnabled: _,
+                      }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5009,33 +4994,30 @@
                 window.matchMedia(`(max-width: ${_.narrowWidth})`).matches) ||
                 _.focus());
           }, [_, __webpack_require__]),
-          _.createElement(
-            _.Fragment,
-            null,
-            !_ &&
-              _.createElement(_, {
-                schema: _.pm_schema,
-                view: _,
-                refUpdateToolbar: _,
-                className: _.Toolbar,
-                bSpellcheckEnabled: _,
-                setSpellcheckEnabled: _,
-              }),
-            _.createElement(
-              _._,
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              !_ &&
+                (0, _.jsx)(_, {
+                  schema: _.pm_schema,
+                  view: _,
+                  refUpdateToolbar: _,
+                  className: _.Toolbar,
+                  bSpellcheckEnabled: _,
+                  setSpellcheckEnabled: _,
+                }),
+              (0, _.jsx)(_._, {
                 pmState: _,
                 className: _.EditorInput,
                 refOnUpdate: _,
                 refView: _,
                 bSpellcheckEnabled: _,
                 panelProps: _,
-              },
-              _.createElement(_, {
-                schema: _.pm_schema,
+                children: (0, _.jsx)(_, {
+                  schema: _.pm_schema,
+                }),
               }),
-            ),
-          )
+            ],
+          })
         );
       }
       const _ = _.memo(function (_) {
@@ -5053,21 +5035,21 @@
             ],
             [_.nodes.cloudimage],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            nodeType: _.nodes.image,
-          }),
-          _.createElement(_._, {
-            linkMarkType: _.marks.link,
-            schema: _,
-            onClickURL: _,
-          }),
-          _.createElement(_._, {
-            specs: _,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              nodeType: _.nodes.image,
+            }),
+            (0, _.jsx)(_._, {
+              linkMarkType: _.marks.link,
+              schema: _,
+              onClickURL: _,
+            }),
+            (0, _.jsx)(_._, {
+              specs: _,
+            }),
+          ],
+        });
       });
       function _(_) {
         const { src: _, selected: __webpack_require__ } = _,
@@ -5086,7 +5068,7 @@
             );
           }, [_, _]),
           _
-            ? _.createElement("img", {
+            ? (0, _.jsx)("img", {
                 className: _()(
                   _().Image,
                   __webpack_require__ && "ProseMirror-selectednode",
@@ -5246,49 +5228,42 @@
           })(_.appid, _.pm_schema),
           _ = _(),
           _ = _(_, _);
-        return _.createElement(
-          _._,
-          {
-            ProcessFileUpload: _,
-            bAllowImageHotLinking: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.NoteEditorArea,
-            },
-            _.createElement(_, {
-              error: _,
-              dismissError: () => _(void 0),
-            }),
-            _.createElement(_, {
-              deleteNote: _.mutate,
-              hidden: __webpack_require__,
-              pmState: _,
-            }),
-            !_ &&
-              _.createElement(_, {
-                note: _,
-                bDirty: _,
+        return (0, _.jsx)(_._, {
+          ProcessFileUpload: _,
+          bAllowImageHotLinking: !0,
+          children: (0, _.jsxs)("div", {
+            className: _.NoteEditorArea,
+            children: [
+              (0, _.jsx)(_, {
+                error: _,
+                dismissError: () => _(void 0),
               }),
-          ),
-        );
+              (0, _.jsx)(_, {
+                deleteNote: _.mutate,
+                hidden: __webpack_require__,
+                pmState: _,
+              }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  note: _,
+                  bDirty: _,
+                }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { error: _, dismissError: __webpack_require__ } = _;
         return _
-          ? _.createElement(
-              _._,
-              {
-                active: !0,
-              },
-              _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
+              active: !0,
+              children: (0, _.jsx)(_._, {
                 bAlertDialog: !0,
                 strTitle: (0, _._)("#Error_Generic"),
                 strDescription: (0, _._)("#UserGameNotes_ErrorSavingNotes", _),
                 closeModal: __webpack_require__,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -5300,58 +5275,45 @@
           _ = _.useCallback(() => {
             !__webpack_require__ && _.not_persisted ? _() : _();
           }, [__webpack_require__, _, _, _]);
-        return _.createElement(
-          "div",
-          {
-            className: _.NoteActions,
-          },
-          _ &&
-            _.createElement(_, {
-              note: _,
-              closeModal: _,
-              deleteNote: _,
-              deletePending: _,
-            }),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          className: _.NoteActions,
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                note: _,
+                closeModal: _,
+                deleteNote: _,
+                deletePending: _,
+              }),
+            (0, _.jsx)(_._, {
               toolTipContent: "#UserGameNotes_DeleteNote",
               direction: "top",
-            },
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
                 onClick: _,
-              },
-              _.createElement(_.lMJ, null),
-            ),
-          ),
-          _ &&
-            _.createElement(_, {
-              bDirty: __webpack_require__,
+                children: (0, _.jsx)(_.lMJ, {}),
+              }),
             }),
-        );
+            _ &&
+              (0, _.jsx)(_, {
+                bDirty: __webpack_require__,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { bDirty: _ } = _,
           _ = _();
         return _
-          ? _.createElement(
-              _._,
-              {
-                onClick: () => __webpack_require__(),
-                className: _.CloseWindowButton,
-              },
-              (0, _._)("#Button_SaveAndClose"),
-            )
-          : _.createElement(
-              _._,
-              {
-                onClick: () => __webpack_require__(),
-                className: _.CloseWindowButton,
-              },
-              (0, _._)("#Button_Close"),
-            );
+          ? (0, _.jsx)(_._, {
+              onClick: () => __webpack_require__(),
+              className: _.CloseWindowButton,
+              children: (0, _._)("#Button_SaveAndClose"),
+            })
+          : (0, _.jsx)(_._, {
+              onClick: () => __webpack_require__(),
+              className: _.CloseWindowButton,
+              children: (0, _._)("#Button_Close"),
+            });
       }
       function _(_) {
         const {
@@ -5360,12 +5322,9 @@
           deleteNote: _,
           deletePending: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_._, {
             strTitle: (0, _._)("#UserGameNotes_DeleteNote"),
             strDescription: (0, _._)("#UserGameNotes_PromptDelete"),
             onOK: () => _(),
@@ -5373,7 +5332,7 @@
             strOKButtonText: (0, _._)("#Button_Delete"),
             closeModal: __webpack_require__,
           }),
-        );
+        });
       }
       function _(_) {
         let _ = "";
@@ -5489,26 +5448,20 @@
           _.useEffect(() => {
             _ && _(_, void 0, !0);
           }, [_, _, _]);
-        const _ = _.createElement(
-          _._,
-          {
-            toolTipContent: "#UserGameNotes_NewNote",
-            direction: "top",
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.NewNoteButton,
-              onClick: () => {
-                const _ = _();
-                _(_, _);
-              },
+        const _ = (0, _.jsx)(_._, {
+          toolTipContent: "#UserGameNotes_NewNote",
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            className: _.NewNoteButton,
+            onClick: () => {
+              const _ = _();
+              _(_, _);
             },
-            _.createElement(_.qY3, null),
-          ),
-        );
+            children: (0, _.jsx)(_.qY3, {}),
+          }),
+        });
         return _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               noteParent: _,
               notes: _,
               activeNoteID: null == _ ? void 0 : _._,
@@ -5538,7 +5491,7 @@
                   ? _.title
                   : (0, _._)("#UserGameNotes_Untitled"),
               identifier: _._,
-              content: _.createElement(_, {
+              content: (0, _.jsx)(_, {
                 noteParent: _,
                 note: _,
               }),
@@ -5550,11 +5503,11 @@
           _ = _.useCallback((_) => _(_, _), [_, _]),
           _ = _._.IN_STEAMUI
             ? (0, _._)("#UserGameNotes_NotesList")
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 noteParent: _,
               });
         return _ && _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               title: _,
               pages: _,
               className: (0, _._)(_.NotesPagedSettings, _ && _.PinnedView, _),
@@ -5564,7 +5517,7 @@
               hideList: _,
               toggleHideList: _ || _ ? void 0 : () => _(!_),
             })
-          : _.createElement(_._, {
+          : (0, _.jsx)(_._, {
               title: _,
               pages: _,
               className: (0, _._)(_.NotesPagedSettings, _ && _.PinnedView, _),
@@ -5581,11 +5534,9 @@
         let _;
         return (
           (_ = "appid" in _ ? (null == _ ? void 0 : _.name) : _.shortcut),
-          _.createElement(
-            _.Fragment,
-            null,
-            (0, _._)("#UserGameNotes_NotesForGame", _),
-          )
+          (0, _.jsx)(_.Fragment, {
+            children: (0, _._)("#UserGameNotes_NotesForGame", _),
+          })
         );
       }
       function _(_) {
@@ -5594,18 +5545,18 @@
           _ = _(),
           _ = _.useCallback(() => _(_), [_, _]),
           _ = _();
-        return _.createElement(
-          _.Fragment,
-          null,
-          !_ &&
-            _.createElement(_._, {
-              onActivate: _,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsx)(_._, {
+                onActivate: _,
+              }),
+            (0, _.jsx)(_, {
+              note: __webpack_require__,
+              hidden: !_,
             }),
-          _.createElement(_, {
-            note: __webpack_require__,
-            hidden: !_,
-          }),
-        );
+          ],
+        });
       }
       function _(_ = !1) {
         const _ = (0, _._)(),
@@ -5644,52 +5595,50 @@
             [_],
           );
         return _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               msDelayAppear: 300,
             })
-          : _.createElement(
-              "div",
-              null,
-              _.createElement("h1", null, (0, _._)("#UserGameNotes_NotesList")),
-              _.createElement(
-                "ul",
-                null,
-                __webpack_require__.map((_) =>
-                  _.createElement(_, {
-                    key: _.appid || _.shortcut_name,
-                    game: _,
-                  }),
-                ),
-              ),
-            );
+          : (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("h1", {
+                  children: (0, _._)("#UserGameNotes_NotesList"),
+                }),
+                (0, _.jsx)("ul", {
+                  children: __webpack_require__.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        game: _,
+                      },
+                      _.appid || _.shortcut_name,
+                    ),
+                  ),
+                }),
+              ],
+            });
       }
       function _(_) {
         const { game: _ } = _;
-        return _.createElement(
-          "li",
-          null,
-          _.createElement(
-            _._,
-            {
-              _:
-                ((__webpack_require__ = _.appid
-                  ? {
-                      appid: _.appid,
-                    }
-                  : {
-                      shortcut: _.shortcut_name,
-                    }),
-                "appid" in __webpack_require__
-                  ? _.AppNotes(__webpack_require__.appid, _)
-                  : _.ShortcutNotes(__webpack_require__.shortcut, _)),
-            },
-            _.appid
-              ? _.createElement(_, {
+        return (0, _.jsx)("li", {
+          children: (0, _.jsx)(_._, {
+            _:
+              ((__webpack_require__ = _.appid
+                ? {
+                    appid: _.appid,
+                  }
+                : {
+                    shortcut: _.shortcut_name,
+                  }),
+              "appid" in __webpack_require__
+                ? _.AppNotes(__webpack_require__.appid, _)
+                : _.ShortcutNotes(__webpack_require__.shortcut, _)),
+            children: _.appid
+              ? (0, _.jsx)(_, {
                   appid: _.appid,
                 })
               : _.shortcut_name,
-          ),
-        );
+          }),
+        });
         var _, _;
       }
       function _(_) {
@@ -5822,38 +5771,27 @@
           const [_] = _.useState(() => new _(_.current));
           return _;
         })();
-        return _.createElement(
-          _,
-          {
-            mode: "page",
-            store: _,
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsx)(_, {
+          mode: "page",
+          store: _,
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
                 path: _.List(),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _._,
-              {
-                path: _.AppNotes(":appid", ":noteid?"),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                _: `${_.List()}`,
+                children: (0, _.jsx)(_, {}),
               }),
-            ),
-          ),
-        );
+              (0, _.jsx)(_._, {
+                path: _.AppNotes(":appid", ":noteid?"),
+                children: (0, _.jsx)(_, {}),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  _: `${_.List()}`,
+                }),
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -6160,98 +6098,12 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = new _._("ReactUsageReporting").Debug,
-        _ = 1e3 * _._.PerMinute;
-      class _ {
-        constructor() {
-          (this.m_transport = null),
-            (this.m_mapRoutes = new Map()),
-            (this.m_mapComponents = new Map()),
-            (this.m_mapActions = new Map()),
-            (this.m_reportCount = 0),
-            (this.m_bInitialized = !1);
-        }
-        Init(_, _, _) {
-          (this.m_bInitialized = !0),
-            (this.m_strProduct = _),
-            (this.m_strVersion = _),
-            (this.m_transport = _),
-            this.ScheduleSend();
-        }
-        ScheduleSend() {
-          setTimeout(() => this.CheckSend(), _);
-        }
-        CheckSend() {
-          this.m_reportCount > 0 && this.SendMetrics(), this.ScheduleSend();
-        }
-        ReportInternal(_, _) {
-          _.has(_) || _.set(_, 0),
-            _.set(_, _.get(_) + 1),
-            this.m_reportCount++,
-            this.ShouldSendMetricsImmediately() && this.SendMetrics();
-        }
-        ReportRouteMatch(_) {
-          _("Route match: " + _), this.ReportInternal(_, this.m_mapRoutes);
-        }
-        ReportTrackedComponent(_) {
-          _("Tracked component: " + _),
-            this.ReportInternal(_, this.m_mapComponents);
-        }
-        ReportTrackedAction(_) {
-          _("User action: " + _), this.ReportInternal(_, this.m_mapActions);
-        }
-        ShouldSendMetricsImmediately() {
-          return this.m_reportCount >= 100;
-        }
-        SendMetrics() {
-          if (!this.m_bInitialized) return;
-          const _ = _._.Init(_._);
-          _.Body().set_product(this.m_strProduct),
-            _.Body().set_version(this.m_strVersion),
-            this.m_mapRoutes.forEach((_, _) => {
-              let _ = new _._();
-              _.set_route(_), _.set_count(_), _.Body().add_routes(_);
-            }),
-            this.m_mapComponents.forEach((_, _) => {
-              let _ = new _._();
-              _.set_component(_), _.set_count(_), _.Body().add_components(_);
-            }),
-            this.m_mapActions.forEach((_, _) => {
-              let _ = new _._();
-              _.set_action(_), _.set_count(_), _.Body().add_actions(_);
-            }),
-            this.m_mapRoutes.clear(),
-            this.m_mapComponents.clear(),
-            this.m_mapActions.clear(),
-            (this.m_reportCount = 0),
-            _._.ReportReactUsage(this.m_transport, _);
-        }
-        get version() {
-          return this.m_strVersion;
-        }
-        get product() {
-          return this.m_strProduct;
-        }
-      }
-      (0, _._)([_._], _.prototype, "CheckSend", null);
-      const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -6266,21 +6118,18 @@
           _ = _.useCallback(() => _.current.click(), []);
         return [
           _.createPortal(
-            _.createElement(
-              "form",
-              {
-                onSubmit: _,
-                style: {
-                  display: "none",
-                },
+            (0, _.jsx)("form", {
+              onSubmit: _,
+              style: {
+                display: "none",
               },
-              _.createElement("input", {
+              children: (0, _.jsx)("input", {
                 ..._,
                 type: "file",
                 ref: _,
                 onChange: _,
               }),
-            ),
+            }),
             window.document.body,
           ),
           _,

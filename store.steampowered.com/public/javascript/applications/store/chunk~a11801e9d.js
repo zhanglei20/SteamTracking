@@ -297,145 +297,197 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
+    33924: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
+        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
+        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
+        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
+        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
+        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
+        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
+        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
+        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
+        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
+        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
+        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+      };
+    },
+    91291: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
+        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
+        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
+        Reason: "_2h0GKAYcXRP10ryZHFn79d",
+        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+      };
+    },
     57757: (e, t, r) => {
       "use strict";
       r.d(t, { S: () => c });
-      var s = r(90626),
-        o = r(53971),
-        n = r(40704);
+      var s = r(7850),
+        n = r(53971),
+        o = r(40704);
       function i(e) {
-        return s.createElement(
-          n.I,
-          { ...e, viewBoxSize: 16 },
-          s.createElement("path", {
+        return (0, s.jsx)(o.I, {
+          ...e,
+          viewBoxSize: 16,
+          children: (0, s.jsx)("path", {
             d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       var a = r(21895),
-        p = r(64238),
-        l = r.n(p);
+        l = r(64238),
+        p = r.n(l);
       function c(e) {
         const {
             checked: t,
             onChange: r,
-            disabled: n,
-            children: p,
+            disabled: o,
+            children: l,
             ref: c,
-            variant: u = "default",
+            variant: m = "default",
             ...f
           } = e,
           _ = "indeterminate" === t,
-          g = _ ? m : i,
-          v = () => {
+          h = _ ? u : i,
+          x = () => {
             r && r(!!_ || !t);
           };
-        return s.createElement(
-          o.s,
-          {
-            ref: c,
-            role: "checkbox",
-            "aria-checked": _ ? "mixed" : t,
-            "data-state": d(t),
-            className: l()(a.Root, a[`Variant-${u}`]),
-            onClick: v,
-            tabIndex: 0,
-            onKeyDown: (e) => {
-              " " === e.key && (v(), e.preventDefault(), e.stopPropagation());
-            },
-            cursor: "default",
-            ...f,
+        return (0, s.jsxs)(n.s, {
+          ref: c,
+          role: "checkbox",
+          "aria-checked": _ ? "mixed" : t,
+          "data-state": d(t),
+          className: p()(a.Root, a[`Variant-${m}`]),
+          onClick: x,
+          tabIndex: 0,
+          onKeyDown: (e) => {
+            " " === e.key && (x(), e.preventDefault(), e.stopPropagation());
           },
-          s.createElement(
-            "div",
-            { className: a.Checkbox },
-            t && s.createElement(g, { className: a.Icon }),
-          ),
-          p,
-        );
+          cursor: "default",
+          ...f,
+          children: [
+            (0, s.jsx)("div", {
+              className: a.Checkbox,
+              children: t && (0, s.jsx)(h, { className: a.Icon }),
+            }),
+            l,
+          ],
+        });
       }
       function d(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function m(e) {
-        return s.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          s.createElement("path", {
+      function u(e) {
+        return (0, s.jsx)("svg", {
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, s.jsx)("path", {
             d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
     },
     61023: (e, t, r) => {
       "use strict";
-      r.d(t, { j: () => l });
-      var s = r(90626),
-        o = r(64238),
-        n = r.n(o),
-        i = r(90534),
-        a = r(53971),
-        p = r(38878);
-      function l(e) {
+      r.d(t, { j: () => d });
+      var s = r(7850),
+        n = r(64238),
+        o = r.n(n),
+        i = r(38878),
+        a = r(90534),
+        l = r(53971),
+        p = r(75659),
+        c = r(41324);
+      function d(e) {
         const {
-            variant: t = "default",
-            size: r = "2",
-            radius: o,
-            focusable: l = !0,
-            hoverable: c = !0,
-            clickable: d = !0,
-            className: m,
-            children: u,
-            beforeContent: f,
-            afterContent: _,
-            hasValue: g,
-            ...v
+            children: t,
+            beforeContent: r,
+            afterContent: n,
+            hasValue: d,
+            ...u
           } = e,
-          x = "underline" === t ? "none" : o;
-        return s.createElement(
-          a.s,
-          {
-            ...v,
-            radius: x,
-            className: n()(
-              p.ControlBox,
-              l && p.Focusable,
-              c && p.Hoverable,
-              d && p.Clickable,
-              p[`Variant-${t}`],
-              p[`Size-${r}`],
-              m,
-            ),
-            align: "center",
-            "data-has-value": !!g,
-          },
-          f && s.createElement(a.s, { paddingRight: "2" }, f),
-          s.createElement(i.az, { flexGrow: "1", minWidth: "0" }, u),
-          _ && s.createElement(a.s, { paddingLeft: "2" }, _),
-        );
+          m = (function (e) {
+            const {
+                variant: t = "default",
+                size: r = "2",
+                radius: s,
+                focusable: n = !0,
+                hoverable: a = !0,
+                clickable: l = !0,
+                className: d,
+                ...u
+              } = e,
+              m = "underline" === t ? "none" : s;
+            return (0, c.mz)(
+              {
+                ...u,
+                radius: m,
+                className: o()(
+                  i.ControlBox,
+                  n && i.Focusable,
+                  a && i.Hoverable,
+                  l && i.Clickable,
+                  i[`Variant-${t}`],
+                  i[`Size-${r}`],
+                  d,
+                ),
+              },
+              p.h,
+            );
+          })(u);
+        return (0, s.jsxs)(l.s, {
+          ...m,
+          align: "center",
+          "data-has-value": !!d,
+          children: [
+            r && (0, s.jsx)(l.s, { paddingRight: "2", children: r }),
+            (0, s.jsx)(a.az, { flexGrow: "1", minWidth: "0", children: t }),
+            n && (0, s.jsx)(l.s, { paddingLeft: "2", children: n }),
+          ],
+        });
       }
     },
     95013: (e, t, r) => {
       "use strict";
-      r.d(t, { k: () => f, T: () => u });
-      var s = r(90626),
+      r.d(t, { k: () => _, T: () => f });
+      var s = r(7850),
+        n = r(90626),
         o = r(73788),
-        n = r(28505),
-        i = r(90534),
-        a = r(80797),
+        i = r(28505),
+        a = r(90534),
+        l = r(80797),
         p = r(48093);
-      const l = Object.assign(
+      const c = Object.assign(
         function (e) {
           const { render: t, ...r } = e;
-          return (0, a.Q)(
+          return (0, l.Q)(
             t,
-            s.createElement(i.az, {
+            (0, s.jsx)(a.az, {
               radius: "sm",
               background: "dull-8",
               className: p.ListBox,
@@ -448,54 +500,54 @@
             const {
                 selected: t,
                 focused: r,
-                label: o = null,
-                render: n,
-                disabled: l,
+                label: n = null,
+                render: o,
+                disabled: i,
                 ...c
               } = e,
               d = t ? "true" : "false",
-              m = r ? "true" : void 0;
-            return (0, a.Q)(
-              n,
-              s.createElement(i.az, {
+              u = r ? "true" : void 0;
+            return (0, l.Q)(
+              o,
+              (0, s.jsx)(a.az, {
                 "data-selected": d,
-                "data-focused": m,
-                "aria-disabled": l,
+                "data-focused": u,
+                "aria-disabled": i,
                 className: p.ListBoxOption,
                 paddingY: "2",
                 paddingX: "3",
               }),
               { role: "option", ...c },
-              { selected: t, focused: r, disabled: l },
+              { selected: t, focused: r, disabled: i },
             );
           },
         },
       );
-      var c = r(94621);
+      var d = r(94621);
       r(8871);
-      (0, s.createContext)(null);
-      function d(e) {
+      (0, n.createContext)(null);
+      function u(e) {
         const { gutter: t = 0, placement: r } = e,
           s = [],
-          o = r && "object" == typeof r;
+          n = r && "object" == typeof r;
         return (
-          o && r.offset
-            ? s.push((0, c.cY)(r.offset))
-            : (o && void 0 !== r.offset) || s.push((0, c.cY)(2)),
-          o && r.flip
-            ? s.push((0, c.UU)(r.flip))
-            : (o && void 0 !== r.flip) || s.push((0, c.UU)()),
-          o && r.shift
-            ? s.push((0, c.BN)(r.shift))
-            : (o && void 0 !== r.shift) || s.push((0, c.BN)()),
+          n && r.offset
+            ? s.push((0, d.cY)(r.offset))
+            : (n && void 0 !== r.offset) || s.push((0, d.cY)(2)),
+          n && r.flip
+            ? s.push((0, d.UU)(r.flip))
+            : (n && void 0 !== r.flip) || s.push((0, d.UU)()),
+          n && r.shift
+            ? s.push((0, d.BN)(r.shift))
+            : (n && void 0 !== r.shift) || s.push((0, d.BN)()),
           s.push(
-            (0, c.Ej)({
+            (0, d.Ej)({
               apply: (r) => {
-                const { rects: s, elements: o, availableHeight: n } = r,
+                const { rects: s, elements: n, availableHeight: o } = r,
                   i =
                     "number" == typeof t
-                      ? n - t + "px"
-                      : `calc( ${n}px - var(--spacing-${t}) )`,
+                      ? o - t + "px"
+                      : `calc( ${o}px - var(--spacing-${t}) )`,
                   a = { maxHeight: i, boxSizing: "border-box", zIndex: "1" };
                 switch ((e.scroll && (a.overflowY = "auto"), e.width)) {
                   case "target":
@@ -515,128 +567,122 @@
                     unContentWidth: s.floating.width,
                     unTargetWidth: s.reference.width,
                   })),
-                  Object.assign(o.floating.style, a),
-                  o.floating.style.setProperty("--popover-max-height", i);
+                  Object.assign(n.floating.style, a),
+                  n.floating.style.setProperty("--popover-max-height", i);
               },
             }),
           ),
           s
         );
       }
-      const m = (0, s.createContext)(null);
-      function u(e) {
+      const m = (0, n.createContext)(null);
+      function f(e) {
         const {
           open: t,
           onOpenChange: r,
-          activeIndex: i,
+          activeIndex: s,
           setActiveIndex: a,
-          selectedIndex: p,
-          setSelectedIndex: l,
+          selectedIndex: l,
+          setSelectedIndex: p,
           interactions: c = {},
-          role: m,
-          placement: u,
+          role: d,
+          placement: m,
         } = e;
         let f = t;
         const _ = (0, o.we)({
             open: f,
             onOpenChange: r,
-            middleware: d(e),
-            whileElementsMounted: n.ll,
-            placement: u && "object" == typeof u ? u.initial : u,
+            middleware: u(e),
+            whileElementsMounted: i.ll,
+            placement: m && "object" == typeof m ? m.initial : m,
           }),
-          g = (0, o.kp)(_.context, { enabled: !!c.click }),
-          v = (0, o.iQ)(_.context, { enabled: !!c.focus }),
-          x = (0, o.s9)(_.context),
-          y = (0, s.useRef)([]),
-          h = (0, o.C1)(_.context, {
-            listRef: y,
-            activeIndex: i,
-            selectedIndex: p,
+          h = (0, o.kp)(_.context, { enabled: !!c.click }),
+          x = (0, o.iQ)(_.context, { enabled: !!c.focus }),
+          g = (0, o.s9)(_.context),
+          v = (0, n.useRef)([]),
+          b = (0, o.C1)(_.context, {
+            listRef: v,
+            activeIndex: s,
+            selectedIndex: l,
             onNavigate: a,
             virtual: !!c.virtualItemFocus,
             loop: !0,
             focusItemOnOpen: !1,
           }),
-          N = (0, s.useRef)([]),
-          P = (0, s.useRef)(!1),
-          b = (0, o.lY)(_.context, {
+          y = (0, n.useRef)([]),
+          P = (0, n.useRef)(!1),
+          N = (0, o.lY)(_.context, {
             enabled: !!c.typeahead,
-            listRef: N,
-            activeIndex: i,
-            selectedIndex: p,
-            onMatch: f ? a : l,
+            listRef: y,
+            activeIndex: s,
+            selectedIndex: l,
+            onMatch: f ? a : p,
             onTypingChange: (e) => (P.current = e),
           }),
-          I = (0, o.It)(_.context, { role: m }),
+          I = (0, o.It)(_.context, { role: d }),
           {
-            getFloatingProps: E,
-            getReferenceProps: S,
+            getFloatingProps: S,
+            getReferenceProps: w,
             getItemProps: C,
-          } = (0, o.bv)([I, g, v, x, h, b]);
+          } = (0, o.bv)([I, h, x, g, b, N]);
         return {
           floating: _,
-          getFloatingProps: E,
-          getReferenceProps: S,
+          getFloatingProps: S,
+          getReferenceProps: w,
           getItemProps: C,
           open: f,
-          activeIndex: i,
-          selectedIndex: p,
-          setSelectedIndex: l,
-          elementsRef: y,
-          labelsRef: N,
+          activeIndex: s,
+          selectedIndex: l,
+          setSelectedIndex: p,
+          elementsRef: v,
+          labelsRef: y,
           typingRef: P,
           initialFocus: c.virtualItemFocus ? -1 : void 0,
         };
       }
-      const f = {
+      const _ = {
         Root: function (e) {
           const { children: t, state: r } = e;
-          return s.createElement(m.Provider, { value: r }, t);
+          return (0, s.jsx)(m.Provider, { value: r, children: t });
         },
         Anchor: function (e) {
           const { children: t } = e,
-            r = s.Children.only(t),
-            n = (0, s.useContext)(m),
-            i = (0, o.SV)([n?.floating.refs.setReference, r?.props.ref]);
+            r = n.Children.only(t),
+            s = (0, n.useContext)(m),
+            i = (0, o.SV)([s?.floating.refs.setReference, r?.props.ref]);
           if (!r) return null;
-          if (!n)
+          if (!s)
             return (
               console.error(
                 "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
               ),
               null
             );
-          const { ref: a, ...p } = r.props;
-          return (0, s.cloneElement)(r, { ref: i, ...n.getReferenceProps(p) });
+          const { ref: a, ...l } = r.props;
+          return (0, n.cloneElement)(r, { ref: i, ...s.getReferenceProps(l) });
         },
         Positioner: function (e) {
-          const { children: t, render: r, ref: n } = e,
-            i = (0, s.useContext)(m),
-            a = (0, o.SV)([n, i?.floating.refs.setFloating]);
-          return i
-            ? i.open
-              ? s.createElement(
-                  o.s3,
-                  {
-                    context: i.floating.context,
-                    initialFocus: i.initialFocus,
-                    returnFocus: !1,
-                  },
-                  s.createElement(
-                    l,
-                    {
-                      ref: a,
-                      style: i.floating.floatingStyles,
-                      ...i.getFloatingProps(),
-                      render: r,
-                    },
-                    s.createElement(
-                      o.ph,
-                      { elementsRef: i.elementsRef, labelsRef: i.labelsRef },
-                      t,
-                    ),
-                  ),
-                )
+          const { children: t, render: r, ref: i } = e,
+            a = (0, n.useContext)(m),
+            l = (0, o.SV)([i, a?.floating.refs.setFloating]);
+          return a
+            ? a.open
+              ? (0, s.jsx)(o.s3, {
+                  context: a.floating.context,
+                  initialFocus: a.initialFocus,
+                  returnFocus: !1,
+                  children: (0, s.jsx)(c, {
+                    ref: l,
+                    style: a.floating.floatingStyles,
+                    ...a.getFloatingProps(),
+                    render: r,
+                    children: (0, s.jsx)(o.ph, {
+                      elementsRef: a.elementsRef,
+                      labelsRef: a.labelsRef,
+                      children: t,
+                    }),
+                  }),
+                })
               : null
             : (console.error(
                 "<PopoverListPositioner> must be a child of <PopoverListRoot>.",
@@ -647,78 +693,74 @@
           const {
               children: t,
               label: r,
-              selected: n,
-              onSelect: i,
-              ref: a,
+              selected: i,
+              onSelect: a,
+              ref: l,
               disabled: p,
-              ...c
+              ...d
             } = e,
-            d = (0, s.useContext)(m),
-            { ref: u, index: f } = (0, o.rm)({ label: r }),
-            _ = (0, o.SV)([a, u]);
-          if (!d)
+            u = (0, n.useContext)(m),
+            { ref: f, index: _ } = (0, o.rm)({ label: r }),
+            h = (0, o.SV)([l, f]);
+          if (!u)
             return (
               console.error(
                 "<PopoverListItem> must be a child of <PopoverListRoot>.",
               ),
               null
             );
-          const g = f === d.activeIndex,
-            v = f === d.selectedIndex || !!n;
-          return s.createElement(
-            l.Option,
-            {
-              ref: _,
-              selected: v,
-              focused: g,
-              role: "option",
-              tabIndex: g ? 0 : -1,
-              ...d.getItemProps({
-                onClick: p ? void 0 : i,
-                onKeyDown: (e) => {
-                  p ||
-                    ("Enter" !== e.key &&
-                      (" " !== e.key || d.typingRef.current)) ||
-                    (i(e), e.preventDefault(), e.stopPropagation());
-                },
-                active: g,
-                selected: v,
-                disabled: p,
-                ...c,
-              }),
-            },
-            t,
-          );
+          const x = _ === u.activeIndex,
+            g = _ === u.selectedIndex || !!i;
+          return (0, s.jsx)(c.Option, {
+            ref: h,
+            selected: g,
+            focused: x,
+            role: "option",
+            tabIndex: x ? 0 : -1,
+            ...u.getItemProps({
+              onClick: p ? void 0 : a,
+              onKeyDown: (e) => {
+                p ||
+                  ("Enter" !== e.key &&
+                    (" " !== e.key || u.typingRef.current)) ||
+                  (a(e), e.preventDefault(), e.stopPropagation());
+              },
+              active: x,
+              selected: g,
+              disabled: p,
+              ...d,
+            }),
+            children: t,
+          });
         },
       };
     },
     86632: (e, t, r) => {
       "use strict";
       r.d(t, { I: () => m });
-      var s = r(90626),
+      var s = r(7850),
+        n = r(90626),
         o = r(61023),
-        n = r(90534),
-        i = r(81393),
-        a = r(64238),
-        p = r.n(a),
-        l = r(53011),
-        c = r(53971);
-      const d = (0, s.createContext)(null);
+        i = r(90534),
+        a = r(81393),
+        l = r(64238),
+        p = r.n(l),
+        c = r(53011),
+        d = r(53971);
+      const u = (0, n.createContext)(null);
       function m(e) {
-        const { options: t, getOptionLabel: r = (e) => e, ...o } = e;
-        return s.createElement(
-          m.Root,
-          { ...o },
-          t.map((e) => s.createElement(m.Item, { value: e, key: e }, r(e))),
-        );
-      }
-      function u(e) {
-        return s.createElement(n.az, {
-          className: l.Indicator,
-          radius: e.radius,
+        const { options: t, getOptionLabel: r = (e) => e, ...n } = e;
+        return (0, s.jsx)(m.Root, {
+          ...n,
+          children: t.map((e) =>
+            (0, s.jsx)(m.Item, { value: e, children: r(e) }, e),
+          ),
         });
       }
-      function f(e, t) {
+      function f(e) {
+        return (0, s.jsx)(i.az, { className: c.Indicator, radius: e.radius });
+      }
+      function _(e, t) {
         const r = e.compareDocumentPosition(t);
         return r & Node.DOCUMENT_POSITION_FOLLOWING
           ? -1
@@ -728,143 +770,134 @@
       }
       (m.Item = function (e) {
         const { value: t, children: r } = e,
-          o = (0, s.useContext)(d),
-          [n, i] = (0, s.useState)(),
-          { register: a, unregister: m } = o || {};
+          o = (0, n.useContext)(u),
+          [i, a] = (0, n.useState)(),
+          { register: l, unregister: m } = o || {};
         if (
-          ((0, s.useEffect)(
-            () => (n && a && m ? (a(n, t), () => m(n, t)) : () => {}),
-            [a, m, t, n],
+          ((0, n.useEffect)(
+            () => (i && l && m ? (l(i, t), () => m(i, t)) : () => {}),
+            [l, m, t, i],
           ),
           !o)
         )
           return null;
-        const { value: u, onValueChange: f, radius: _, size: g } = o,
-          v = t === u,
-          x = v ? void 0 : () => f(t),
-          y = void 0 === r ? t : r;
-        return s.createElement(
-          c.s,
-          {
-            justify: "center",
-            align: "center",
-            radius: _,
-            ref: i,
-            onClick: x,
-            "data-selected": v ? "true" : "false",
-            className: p()(l.Item, g && l[`Size-${g}`]),
-          },
-          y,
-        );
+        const { value: f, onValueChange: _, radius: h, size: x } = o,
+          g = t === f,
+          v = g ? void 0 : () => _(t),
+          b = void 0 === r ? t : r;
+        return (0, s.jsx)(d.s, {
+          justify: "center",
+          align: "center",
+          radius: h,
+          ref: a,
+          onClick: v,
+          "data-selected": g ? "true" : "false",
+          className: p()(c.Item, x && c[`Size-${x}`]),
+          children: b,
+        });
       }),
         (m.Root = function (e) {
           const {
               variant: t = "default",
               radius: r,
-              size: n,
-              children: a,
-              value: c,
+              size: i,
+              children: l,
+              value: d,
               onValueChange: m,
             } = e,
-            [_, g] = (0, s.useState)({}),
-            v = (0, s.useCallback)((e, t) => g((r) => ({ ...r, [t]: e })), []),
-            x = (0, s.useCallback)(
+            [h, x] = (0, n.useState)({}),
+            g = (0, n.useCallback)((e, t) => x((r) => ({ ...r, [t]: e })), []),
+            v = (0, n.useCallback)(
               (e, t) =>
-                g((r) => {
+                x((r) => {
                   const s = { ...r };
                   return s[t] === e && delete s[t], s;
                 }),
               [],
             ),
-            y = (0, s.useMemo)(
+            b = (0, n.useMemo)(
               () => ({
-                value: c,
+                value: d,
                 onValueChange: m,
-                register: v,
-                unregister: x,
+                register: g,
+                unregister: v,
                 radius: r,
-                size: n,
+                size: i,
               }),
-              [c, m, v, x, r, n],
+              [d, m, g, v, r, i],
             );
-          return s.createElement(
-            o.j,
-            {
-              clickable: !1,
-              hoverable: !1,
-              focusable: !1,
-              variant: t,
-              radius: r,
-              size: n,
-              className: p()(l.SegmentedControlBox, l[`Variant-${t}`]),
-              tabIndex: 0,
-              onKeyDown: (e) => {
-                let t = 0;
-                switch (e.key) {
-                  case " ":
-                  case "Enter":
-                  case "ArrowRight":
-                    t = 1;
-                    break;
-                  case "ArrowLeft":
-                    t = -1;
+          return (0, s.jsx)(o.j, {
+            clickable: !1,
+            hoverable: !1,
+            focusable: !1,
+            variant: t,
+            radius: r,
+            size: i,
+            className: p()(c.SegmentedControlBox, c[`Variant-${t}`]),
+            tabIndex: 0,
+            onKeyDown: (e) => {
+              let t = 0;
+              switch (e.key) {
+                case " ":
+                case "Enter":
+                case "ArrowRight":
+                  t = 1;
+                  break;
+                case "ArrowLeft":
+                  t = -1;
+              }
+              if (t) {
+                const r = Array.from(Object.values(h)).sort(_);
+                let s;
+                if (null === d) s = t > 0 ? 0 : r.length - 1;
+                else {
+                  const e = h[d],
+                    n = r.findIndex((t) => t === e);
+                  (0, a.wT)(
+                    "number" == typeof n,
+                    "Could not find current segmented value position",
+                  ),
+                    (s = n + t);
                 }
-                if (t) {
-                  const r = Array.from(Object.values(_)).sort(f);
-                  let s;
-                  if (null === c) s = t > 0 ? 0 : r.length - 1;
-                  else {
-                    const e = _[c],
-                      o = r.findIndex((t) => t === e);
-                    (0, i.wT)(
-                      "number" == typeof o,
-                      "Could not find current segmented value position",
-                    ),
-                      (s = o + t);
-                  }
-                  const o = r[s < 0 ? r.length + s : s % r.length],
-                    n = Object.keys(_).find((e) => _[e] === o);
-                  "string" != typeof n
-                    ? console.error("Could not find next segmeneted value")
-                    : (m(n), e.stopPropagation(), e.preventDefault());
-                }
-              },
+                const n = r[s < 0 ? r.length + s : s % r.length],
+                  o = Object.keys(h).find((e) => h[e] === n);
+                "string" != typeof o
+                  ? console.error("Could not find next segmeneted value")
+                  : (m(o), e.stopPropagation(), e.preventDefault());
+              }
             },
-            s.createElement(
-              d.Provider,
-              { value: y },
-              s.createElement(
-                "div",
-                { className: l.SegmentedControl },
-                a,
-                null !== c && s.createElement(u, { radius: r }),
-              ),
-            ),
-          );
+            children: (0, s.jsx)(u.Provider, {
+              value: b,
+              children: (0, s.jsxs)("div", {
+                className: c.SegmentedControl,
+                children: [l, null !== d && (0, s.jsx)(f, { radius: r })],
+              }),
+            }),
+          });
         });
     },
     40704: (e, t, r) => {
       "use strict";
       r.d(t, { I: () => a });
-      var s = r(90626),
-        o = r(41324),
-        n = r(75659),
+      var s = r(7850),
+        n = r(41324),
+        o = r(75659),
         i = r(16619);
       function a(e) {
         const { viewBoxSize: t = 20, ...r } = e,
-          n = r.size ? void 0 : i.IconSizeDefault;
-        return s.createElement("svg", {
+          o = r.size ? void 0 : i.IconSizeDefault;
+        return (0, s.jsx)("svg", {
           viewBox: `0 0 ${t} ${t}`,
-          ...(0, o.mz)({ className: n, ...r }, p),
+          ...(0, n.mz)({ className: o, ...r }, l),
         });
       }
-      const p = [
-        ...n.L,
+      const l = [
+        ...o.L,
         { prop: "size", responsive: !0, className: (e) => i[`IconSize-${e}`] },
         {
           prop: "color",
           className: i.Color,
-          cssProperty: (e) => ["--icon-color", (0, o.Fd)(e)],
+          cssProperty: (e) => ["--icon-color", (0, n.Fd)(e)],
         },
         {
           prop: "hitSlop",
@@ -874,72 +907,76 @@
             "string" == typeof e ? e : "",
           ],
         },
-        n.h.find(({ prop: e }) => "cursor" === e),
+        o.h.find(({ prop: e }) => "cursor" === e),
       ];
     },
     77914: (e, t, r) => {
       "use strict";
-      r.d(t, { g: () => n });
-      var s = r(90626),
-        o = r(40704);
-      function n(e) {
-        return s.createElement(
-          o.I,
-          { ...e, viewBoxSize: 12 },
-          s.createElement("path", {
+      r.d(t, { g: () => o });
+      var s = r(7850),
+        n = r(40704);
+      function o(e) {
+        return (0, s.jsx)(n.I, {
+          ...e,
+          viewBoxSize: 12,
+          children: (0, s.jsx)("path", {
             d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
     },
     90534: (e, t, r) => {
       "use strict";
-      r.d(t, { Ay: () => d, az: () => l });
-      var s = r(90626),
-        o = r(64238),
-        n = r.n(o),
+      r.d(t, { A4: () => d, az: () => p });
+      var s = r(7850),
+        n = r(64238),
+        o = r.n(n),
         i = r(41324),
         a = r(75659),
-        p = r(44041);
-      function l(e) {
-        const t = (0, i.mz)({ ...e, className: n()(p.Box, e.className) }, c);
-        return s.createElement("div", { ...t });
+        l = r(44041);
+      function p(e) {
+        const { as: t = "div", ref: r, ...n } = e,
+          a = (0, i.mz)({ ...n, className: o()(l.Box, e.className) }, c),
+          p = t;
+        return (0, s.jsx)(p, { ref: r, ...a });
       }
       const c = a.h;
       function d(e) {
-        return (0, i.Ef)(e, a.h);
+        return (0, i.Ef)(e, a.L);
       }
     },
     53971: (e, t, r) => {
       "use strict";
-      r.d(t, { s: () => u });
-      var s = r(8871),
+      r.d(t, { s: () => f });
+      var s = r(7850),
+        n = r(8871),
         o = r(90626),
-        n = r(7745),
-        i = r(90665);
-      function a(e) {
-        const { children: t, "flow-children": r, ...a } = e;
-        r && (a.layout = (0, n.O)(r));
-        const { ref: p, node: l } = (0, i.qp)(a),
-          c = (0, s.Ue)(p, t.props?.ref);
-        return o.createElement(
-          i.TJ.Provider,
-          { value: l },
-          o.cloneElement(t, { ...t.props, ref: c }),
-        );
+        i = r(7745),
+        a = r(90665);
+      function l(e) {
+        const { children: t, "flow-children": r, ...l } = e;
+        r && (l.layout = (0, i.O)(r));
+        const { ref: p, node: c } = (0, a.qp)(l),
+          d = (0, n.Ue)(p, t.props?.ref);
+        return (0, s.jsx)(a.TJ.Provider, {
+          value: c,
+          children: o.cloneElement(t, { ...t.props, ref: d }),
+        });
       }
       var p = r(41324),
-        l = r(75659),
-        c = r(64238),
-        d = r.n(c),
+        c = r(75659),
+        d = r(64238),
+        u = r.n(d),
         m = r(68875);
-      function u(e) {
-        const t = (0, p.mz)({ ...e, className: d()(e.className, m.Flex) }, f);
-        return o.createElement(a, null, o.createElement("div", { ...t }));
+      function f(e) {
+        const { as: t = "div", ref: r, ...n } = e,
+          o = (0, p.mz)({ ...n, className: u()(e.className, m.Flex) }, _),
+          i = t;
+        return (0, s.jsx)(l, { children: (0, s.jsx)(i, { ref: r, ...o }) });
       }
-      const f = [
-        ...l.h,
+      const _ = [
+        ...c.h,
         {
           prop: "direction",
           responsive: !0,
@@ -950,7 +987,7 @@
           prop: "justify",
           responsive: !0,
           className: m.Justify,
-          cssProperty: (e) => ["--justify", _(e)],
+          cssProperty: (e) => ["--justify", h(e)],
         },
         {
           prop: "align",
@@ -984,273 +1021,273 @@
         },
         { prop: "inline", responsive: !0, className: m.Inline },
       ];
-      function _(e) {
+      function h(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
     },
     75659: (e, t, r) => {
       "use strict";
-      r.d(t, { L: () => n, h: () => i });
+      r.d(t, { L: () => o, h: () => i });
       var s = r(41324),
-        o = r(88122);
-      const n = [
-          { prop: "margin", responsive: !0, className: (e) => o[`m-${e}`] },
-          { prop: "marginX", responsive: !0, className: (e) => o[`mx-${e}`] },
-          { prop: "marginY", responsive: !0, className: (e) => o[`my-${e}`] },
-          { prop: "marginTop", responsive: !0, className: (e) => o[`mt-${e}`] },
+        n = r(88122);
+      const o = [
+          { prop: "margin", responsive: !0, className: (e) => n[`m-${e}`] },
+          { prop: "marginX", responsive: !0, className: (e) => n[`mx-${e}`] },
+          { prop: "marginY", responsive: !0, className: (e) => n[`my-${e}`] },
+          { prop: "marginTop", responsive: !0, className: (e) => n[`mt-${e}`] },
           {
             prop: "marginRight",
             responsive: !0,
-            className: (e) => o[`mr-${e}`],
+            className: (e) => n[`mr-${e}`],
           },
           {
             prop: "marginBottom",
             responsive: !0,
-            className: (e) => o[`mb-${e}`],
+            className: (e) => n[`mb-${e}`],
           },
           {
             prop: "marginLeft",
             responsive: !0,
-            className: (e) => o[`ml-${e}`],
+            className: (e) => n[`ml-${e}`],
           },
           {
             prop: "marginStart",
             responsive: !0,
-            className: (e) => o[`ms-${e}`],
+            className: (e) => n[`ms-${e}`],
           },
-          { prop: "marginEnd", responsive: !0, className: (e) => o[`me-${e}`] },
+          { prop: "marginEnd", responsive: !0, className: (e) => n[`me-${e}`] },
         ],
         i = [
-          ...n,
-          { prop: "padding", responsive: !0, className: (e) => o[`p-${e}`] },
-          { prop: "paddingX", responsive: !0, className: (e) => o[`px-${e}`] },
-          { prop: "paddingY", responsive: !0, className: (e) => o[`py-${e}`] },
+          ...o,
+          { prop: "padding", responsive: !0, className: (e) => n[`p-${e}`] },
+          { prop: "paddingX", responsive: !0, className: (e) => n[`px-${e}`] },
+          { prop: "paddingY", responsive: !0, className: (e) => n[`py-${e}`] },
           {
             prop: "paddingTop",
             responsive: !0,
-            className: (e) => o[`pt-${e}`],
+            className: (e) => n[`pt-${e}`],
           },
           {
             prop: "paddingRight",
             responsive: !0,
-            className: (e) => o[`pr-${e}`],
+            className: (e) => n[`pr-${e}`],
           },
           {
             prop: "paddingBottom",
             responsive: !0,
-            className: (e) => o[`pb-${e}`],
+            className: (e) => n[`pb-${e}`],
           },
           {
             prop: "paddingLeft",
             responsive: !0,
-            className: (e) => o[`pl-${e}`],
+            className: (e) => n[`pl-${e}`],
           },
           {
             prop: "paddingStart",
             responsive: !0,
-            className: (e) => o[`ps-${e}`],
+            className: (e) => n[`ps-${e}`],
           },
           {
             prop: "paddingEnd",
             responsive: !0,
-            className: (e) => o[`pe-${e}`],
+            className: (e) => n[`pe-${e}`],
           },
           {
             prop: "width",
             responsive: !0,
-            className: o.Width,
+            className: n.Width,
             cssProperty: "--width",
           },
           {
             prop: "minWidth",
             responsive: !0,
-            className: o.MinWidth,
+            className: n.MinWidth,
             cssProperty: "--min-width",
           },
           {
             prop: "maxWidth",
             responsive: !0,
-            className: o.MaxWidth,
+            className: n.MaxWidth,
             cssProperty: "--max-width",
           },
           {
             prop: "height",
             responsive: !0,
-            className: o.Height,
+            className: n.Height,
             cssProperty: "--height",
           },
           {
             prop: "minHeight",
             responsive: !0,
-            className: o.MinHeight,
+            className: n.MinHeight,
             cssProperty: "--min-height",
           },
           {
             prop: "maxHeight",
             responsive: !0,
-            className: o.MaxHeight,
+            className: n.MaxHeight,
             cssProperty: "--max-height",
           },
           {
             prop: "flexBasis",
             responsive: !0,
-            className: o.FlexBasis,
+            className: n.FlexBasis,
             cssProperty: "--flex-basis",
           },
           {
             prop: "flexGrow",
             responsive: !0,
-            className: o.FlexGrow,
+            className: n.FlexGrow,
             cssProperty: "--flex-grow",
           },
           {
             prop: "flexShrink",
             responsive: !0,
-            className: o.FlexShrink,
+            className: n.FlexShrink,
             cssProperty: "--flex-shrink",
           },
           {
             prop: "radius",
             responsive: !0,
-            className: (e) => o[`Radius-${e}`],
+            className: (e) => n[`Radius-${e}`],
           },
           {
             prop: "cursor",
             responsive: !0,
-            className: o.Cursor,
+            className: n.Cursor,
             cssProperty: "--cursor",
           },
           {
             prop: "position",
             responsive: !0,
-            className: o.Position,
+            className: n.Position,
             cssProperty: "--position",
           },
           {
             prop: "inset",
             responsive: !0,
-            className: o.Inset,
+            className: n.Inset,
             cssProperty: (e) => ["--inset", (0, s.ti)(e)],
           },
           {
             prop: "gridColumn",
             responsive: !0,
-            className: o.GridColumn,
+            className: n.GridColumn,
             cssProperty: "--grid-column",
           },
           {
             prop: "gridColumnStart",
             responsive: !0,
-            className: o.GridColumnStart,
+            className: n.GridColumnStart,
             cssProperty: "--grid-column-start",
           },
           {
             prop: "gridColumnEnd",
             responsive: !0,
-            className: o.GridColumnEnd,
+            className: n.GridColumnEnd,
             cssProperty: "--grid-column-end",
           },
           {
             prop: "gridRow",
             responsive: !0,
-            className: o.GridRow,
+            className: n.GridRow,
             cssProperty: "--grid-row",
           },
           {
             prop: "gridRowStart",
             responsive: !0,
-            className: o.GridRowStart,
+            className: n.GridRowStart,
             cssProperty: "--grid-row-start",
           },
           {
             prop: "gridRowEnd",
             responsive: !0,
-            className: o.GridRowEnd,
+            className: n.GridRowEnd,
             cssProperty: "--grid-row-end",
           },
           {
             prop: "gridArea",
             responsive: !0,
-            className: o.GridArea,
+            className: n.GridArea,
             cssProperty: "--grid-area",
           },
           {
             prop: "alignSelf",
             responsive: !0,
-            className: o.AlignSelf,
+            className: n.AlignSelf,
             cssProperty: "--align-self",
           },
           {
             prop: "justifySelf",
             responsive: !0,
-            className: o.JustifySelf,
+            className: n.JustifySelf,
             cssProperty: "--justify-self",
           },
           {
             prop: "background",
             responsive: !0,
-            className: o.Background,
+            className: n.Background,
             cssProperty: (e) => ["--background", (0, s.Fd)(e)],
           },
           {
             prop: "overflow",
             responsive: !0,
-            className: o.Overflow,
+            className: n.Overflow,
             cssProperty: "--overflow",
           },
           {
             prop: "zIndex",
             responsive: !0,
-            className: o.ZIndex,
+            className: n.ZIndex,
             cssProperty: "--z-index",
           },
           {
             prop: "display",
             responsive: !0,
-            className: o.Display,
+            className: n.Display,
             cssProperty: "--display",
           },
           {
             prop: "elevation",
             responsive: !0,
-            className: o.Elevation,
+            className: n.Elevation,
             dataProperty: "elevation",
           },
           {
             prop: "border",
             responsive: !0,
-            className: o.Border,
+            className: n.Border,
             cssProperty: "--border",
           },
           {
             prop: "borderColor",
             responsive: !0,
-            className: [o.Border, o.BorderColor].join(" "),
+            className: [n.Border, n.BorderColor].join(" "),
             cssProperty: (e) => ["--border-color", (0, s.Fd)(e)],
           },
           {
             prop: "outline",
             responsive: !0,
-            className: o.Outline,
+            className: n.Outline,
             cssProperty: (e) => ["--outline-color", (0, s.Fd)(e)],
           },
           {
             prop: "textAlign",
             responsive: !0,
-            className: o.TextAlign,
+            className: n.TextAlign,
             cssProperty: "--text-align",
           },
         ];
     },
     80797: (e, t, r) => {
       "use strict";
-      r.d(t, { Q: () => n });
+      r.d(t, { Q: () => o });
       var s = r(90626);
-      function o(e, t, r) {
+      function n(e, t, r) {
         return "function" == typeof e ? e(t, r) : s.cloneElement(e, t);
       }
-      function n(e, t, r, s) {
-        return o(e || t, r, s);
+      function o(e, t, r, s) {
+        return n(e || t, r, s);
       }
     },
     41324: (e, t, r) => {
@@ -1258,15 +1295,15 @@
       r.d(t, {
         Ef: () => a,
         Fd: () => c,
-        ti: () => l,
+        ti: () => p,
         To: () => d,
-        mz: () => p,
+        mz: () => l,
       });
       var s = r(10430);
-      const o = s.IE.reduce((e, t, r) => ((e[t] = r), e), {});
-      function n(e, t) {
+      const n = s.IE.reduce((e, t, r) => ((e[t] = r), e), {});
+      function o(e, t) {
         if ("object" != typeof e) return e;
-        for (let r = o[t]; r >= 0; r--) if (s.IE[r] in e) return e[s.IE[r]];
+        for (let r = n[t]; r >= 0; r--) if (s.IE[r] in e) return e[s.IE[r]];
         return e.initial;
       }
       const i = {
@@ -1290,17 +1327,17 @@
         }
         return r;
       }
-      function p(e, t) {
+      function l(e, t) {
         return (function (e, t, r) {
           const s = [],
-            o = {},
+            n = {},
             i = {},
-            { extracted: p, remaining: l } = a(e, t);
+            { extracted: l, remaining: p } = a(e, t);
           for (const a of t) {
-            if (!(a.prop in p)) continue;
-            let t = p[a.prop];
+            if (!(a.prop in l)) continue;
+            let t = l[a.prop];
             if (void 0 !== t) {
-              if ((a.responsive && (t = n(t, r.formFactor)), a.className)) {
+              if ((a.responsive && (t = o(t, r.formFactor)), a.className)) {
                 if (
                   !a.cssProperty &&
                   !a.dataProperty &&
@@ -1318,12 +1355,12 @@
                 if ("function" == typeof a.cssProperty) {
                   const r = a.cssProperty(t, e);
                   if (r.length && Array.isArray(r[0]))
-                    r.forEach(([e, t]) => (o[e] = t));
+                    r.forEach(([e, t]) => (n[e] = t));
                   else {
                     const e = r;
-                    o[e[0]] = e[1];
+                    n[e[0]] = e[1];
                   }
-                } else o[a.cssProperty] = t;
+                } else n[a.cssProperty] = t;
               if (a.dataProperty)
                 if ("function" == typeof a.dataProperty) {
                   const [e, r] = a.dataProperty(t);
@@ -1332,18 +1369,18 @@
             }
           }
           return (
-            "className" in l &&
-              "string" == typeof l.className &&
-              s.push(l.className),
-            "style" in l &&
-              l.style &&
-              "object" == typeof l.style &&
-              Object.assign(o, l.style),
-            { ...i, ...l, className: s.join(" "), style: o }
+            "className" in p &&
+              "string" == typeof p.className &&
+              s.push(p.className),
+            "style" in p &&
+              p.style &&
+              "object" == typeof p.style &&
+              Object.assign(n, p.style),
+            { ...i, ...p, className: s.join(" "), style: n }
           );
         })(e, t, { formFactor: (0, s.xC)() });
       }
-      function l(e) {
+      function p(e) {
         return (function (e) {
           return !!i[e];
         })(e)
@@ -1357,6 +1394,466 @@
       }
       function d(e, t) {
         return e.startsWith("text") ? `var(--color-${e}-${t})` : c(e);
+      }
+    },
+    75152: (e, t, r) => {
+      "use strict";
+      r.d(t, { q: () => f });
+      var s = r(7850),
+        n = r(99171),
+        o = r(39777),
+        i = r(90626),
+        a = r(43976),
+        l = r(18654),
+        p = r.n(l),
+        c = r(72237),
+        d = r(3740),
+        u = r(14326),
+        m = r(52038);
+      function f(e) {
+        const {
+            id: t,
+            bShowAsMuted: r,
+            bHidePrice: n,
+            bShowInLibraryInsteadOfPrice: l,
+            bHidePlatforms: f,
+            strClassName: x,
+            creatorAccountID: g,
+            bShowName: v,
+            onlyOneDiscountPct: b,
+            bShowAddToCart: y,
+            bShowWishlistButton: P,
+          } = e,
+          N = (0, i.useRef)(null),
+          [I, S] = (0, i.useState)(!1),
+          { data: w } = (0, o.J$)(t);
+        if (
+          ((0, i.useEffect)(() => {
+            N.current && S(N.current.offsetWidth < 370);
+          }, [N]),
+          !t || !("appid" in t || "bundleid" in t || "packageid" in t))
+        )
+          return null;
+        const C = Boolean(P && 0 == w?.item_type),
+          j = Boolean(!g && !y && !C && f && n);
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            !j &&
+              (0, s.jsxs)("div", {
+                ref: N,
+                className: (0, m.A)(
+                  p().CapsuleBottomBar,
+                  "CapsuleBottomBar",
+                  r && p().Muted,
+                  x,
+                ),
+                children: [
+                  g && (0, s.jsx)(h, { creatorAccountID: g, ...e }),
+                  y &&
+                    (0, s.jsx)(a.h, {
+                      id: t,
+                      className: (0, m.A)(
+                        p().MaxActionButtonWidth,
+                        p().AddToCartButton,
+                      ),
+                    }),
+                  C &&
+                    "appid" in t &&
+                    (0, s.jsx)(u.r, {
+                      appid: t.appid,
+                      className: (0, m.A)(
+                        p().MaxActionButtonWidth,
+                        p().AddToWishlistButton,
+                      ),
+                    }),
+                  !f && (0, s.jsx)(c.Q, { id: t, bMinimizePlatforms: I }),
+                  !n &&
+                    (0, s.jsx)("span", {
+                      className: p().BottomBarPriceInfo,
+                      children: (0, s.jsx)(d.N, {
+                        id: t,
+                        bShowInLibrary: l,
+                        onlyOneDiscountPct: b,
+                      }),
+                    }),
+                ],
+              }),
+            v && (0, s.jsx)(_, { id: t }),
+          ],
+        });
+      }
+      function _(e) {
+        const { id: t } = e,
+          { data: r } = (0, o.J$)(t);
+        return r?.name
+          ? (0, s.jsx)("div", { className: p().CapsuleName, children: r.name })
+          : null;
+      }
+      function h(e) {
+        const { creatorAccountID: t, bShowAsMuted: r, strClassName: a } = e,
+          l = (0, i.useMemo)(() => ({ creatorid: t }), [t]),
+          { data: c } = (0, o.J$)(l),
+          { data: d } = (0, o.lv)(l);
+        if (!c) return null;
+        const u = (0, n.t)(d?.clan_avatar, "Medium"),
+          f = c.name || "";
+        return (0, s.jsxs)("div", {
+          className: (0, m.A)(p().BottomCreatorRow, r && p().Muted, a),
+          children: [
+            (0, s.jsx)("img", {
+              className: (0, m.A)(p().CreatorLogo),
+              src: u,
+              alt: f,
+            }),
+            (0, s.jsx)("span", { className: p().CreatorName, children: f }),
+          ],
+        });
+      }
+    },
+    82477: (e, t, r) => {
+      "use strict";
+      r.d(t, { Cg: () => m, pZ: () => _, vg: () => f });
+      var s = r(7850),
+        n = r(90626),
+        o = r(738),
+        i = r(61859),
+        a = r(78327),
+        l = r(97436),
+        p = r(72034),
+        c = r(28240),
+        d = r(51706);
+      function u(e) {
+        return (0, s.jsx)(o.x_, {
+          onEscKeypress: e.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, s.jsx)(h, {
+            redirectURL: e.redirectURL,
+            guestOption: e.guestOption,
+          }),
+        });
+      }
+      function m(e) {
+        const { redirectURL: t = window.location.href } = e;
+        return (0, s.jsx)(d.EN, {
+          active: !0,
+          children: (0, s.jsx)(u, { redirectURL: t }),
+        });
+      }
+      function f() {
+        (0, o.pg)(
+          (0, s.jsx)(u, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          { strTitle: (0, i.we)("#Login_SignInTitle") },
+        );
+      }
+      function _(e, t) {
+        (0, o.pg)(
+          (0, s.jsx)(u, { ownerWin: window, redirectURL: e, guestOption: t }),
+          window,
+          { strTitle: (0, i.we)("#Login_SignInTitle") },
+        );
+      }
+      function h(e) {
+        const { redirectURL: t, guestOption: r } = e,
+          [o] = (0, n.useState)(
+            new p.D(a.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [i, d] = (0, n.useState)(!1);
+        return (0, s.jsx)("div", {
+          children: i
+            ? (0, s.jsx)(l.Fn, {})
+            : (0, s.jsx)(l.YN, {
+                autoFocus: !0,
+                transport: o,
+                platform: 2,
+                onComplete: (e) => {
+                  e == c.wI.k_PrimaryDomainFail
+                    ? d(!0)
+                    : window.location.assign(t);
+                },
+                redirectUrl: t,
+                theme: "modal",
+                children: r && (0, s.jsx)(l.Mk, { redirectURL: t }),
+              }),
+        });
+      }
+    },
+    46416: (e, t, r) => {
+      "use strict";
+      r.d(t, { J: () => B, W: () => O });
+      var s = r(7850),
+        n = r(45699),
+        o = r(76217),
+        i = r(23310),
+        a = r(78588),
+        l = r(39777),
+        p = r(14987),
+        c = r(60014),
+        d = r(58918),
+        u = r(90626),
+        m = r(57876),
+        f = r(35380),
+        _ = r(55963),
+        h = r(62792),
+        x = r(55263),
+        g = r(33924),
+        v = r(706),
+        b = r(75152),
+        y = r(80696),
+        P = r(18654),
+        N = r.n(P),
+        I = r(88961),
+        S = r(72860),
+        w = r(70300),
+        C = r(12424),
+        j = r(20433),
+        D = r(54492),
+        A = r(49411),
+        E = r(52038),
+        k = r(61859),
+        R = r(61336),
+        H = r(78327),
+        z = r(91291),
+        L = r.n(z),
+        T = r(99956),
+        W = r(75279);
+      const B = "capsule_index_";
+      function O(e) {
+        const {
+            capsule: t,
+            bShowParentApp: r,
+            elElementToAppendToHover: n,
+            index: a,
+            navKey: l,
+            bHideStoreHover: p,
+            onlyOneDiscountPct: c,
+            bPreferDemoStorePage: d,
+            bShowEarlyAccessBanner: _,
+          } = e,
+          [g, b] = u.useState(!1),
+          [y] = (0, x.G6)(t.id, (0, h.SW)(t.type), m.Xh),
+          [P] = (0, x.t7)(r ? y?.GetParentAppID() : void 0, m.Xh),
+          I = (0, f.rt)(t);
+        if (!y) return null;
+        const S = Boolean(P),
+          C = (0, s.jsx)(G, {
+            ...e,
+            strExtraParams: e.strExtraParams,
+            info: t,
+            bIsHovered: g,
+            bHasParentAppToDisplay: S,
+            onlyOneDiscountPct: c,
+            bShowEarlyAccessBanner: _,
+          });
+        return (0, s.jsxs)(o.Z, {
+          className: (0, E.A)({
+            [N().OuterCapsuleContainer]: !0,
+            [B + a]: 0 == a,
+          }),
+          navEntryPreferPosition: i.iU.PREFERRED_CHILD,
+          navKey: l,
+          children: [
+            (0, s.jsxs)(w.oj, {
+              appid: y.GetAppID(),
+              children: [
+                Boolean(p)
+                  ? (0, s.jsx)("div", {
+                      onMouseEnter: () => b(!0),
+                      onMouseLeave: () => b(!1),
+                      children: C,
+                    })
+                  : (0, s.jsx)(v.Q, {
+                      className: N().CapsuleContainer,
+                      id: I,
+                      elElementToAppend: e.elElementToAppendToHover,
+                      bShowDemoButton: e.bShowDemoButton,
+                      bPreferDemoStorePage: e.bPreferDemoStorePage,
+                      bShowDeckCompatibilityDialog:
+                        e.bShowDeckCompatibilityDialog,
+                      bHidePrice: e.bHidePrice,
+                      bUseSubscriptionLayout: e.bUseSubscriptionLayout,
+                      strExtraParams: e.strExtraParams,
+                      nCreatorAccountID: e.creatorAccountID,
+                      nWidthMultiplier: e.nWidthMultiplier,
+                      bShowIgnoreButton: e.bShowIgnoreButton,
+                      bShowDescription: e.bShowDescriptionInHover,
+                      children: C,
+                    }),
+                Boolean(n) && (0, s.jsx)(s.Fragment, { children: n }),
+              ],
+            }),
+            S &&
+              (0, s.jsx)(F, {
+                strExtraParams: e.strExtraParams,
+                parentStoreItem: P,
+                childAppType: y.GetAppType(),
+                bPreferDemoStorePage: d,
+              }),
+          ],
+        });
+      }
+      function F(e) {
+        const {
+            strExtraParams: t,
+            parentStoreItem: r,
+            childAppType: o,
+            bPreferDemoStorePage: i,
+          } = e,
+          a = (0, W.DJ)(r),
+          { data: p } = (0, l.J$)(a),
+          d = (0, c.n9)(),
+          u = (0, H.Qn)();
+        return p
+          ? (0, s.jsx)(n.ml, {
+              className: N().CapsuleParentInfo,
+              ...(0, S.S)(p, d, u, i, t),
+              children: (0, s.jsxs)(w.oj, {
+                appid: r.GetAppID(),
+                children: [
+                  (0, s.jsx)("div", {
+                    className: N().ParentType,
+                    children: (0, k.we)(
+                      11 == o
+                        ? "#SalePage_ParentApp_SoundTrack"
+                        : "#SalePage_ParentApp_DLC",
+                    ),
+                  }),
+                  (0, s.jsx)(j.u, {
+                    id: a,
+                    strExtraParams: t,
+                    children: (0, s.jsx)("img", {
+                      loading: "lazy",
+                      className: g.AppCapsuleImage,
+                      alt: r.GetName(),
+                      src: r.GetAssets().GetSmallCapsuleURL(),
+                      ...(0, m.Jw)(),
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      function G(e) {
+        const {
+            info: t,
+            bHideStatusBanners: r,
+            strExtraParams: o,
+            index: i,
+            imageType: l,
+            bHasParentAppToDisplay: d,
+            bIsHovered: u,
+            strDoubleCapsuleMessage: g,
+            bPreferDemoStorePage: v,
+            bShowEarlyAccessBanner: b,
+            bPreferAssetWithoutOverride: P,
+          } = e,
+          [N] = (0, x.G6)(t.id, (0, h.SW)(t.type), m.Xh),
+          S = (0, f.rt)(t),
+          w = (0, c.n9)(),
+          C = (0, A.w)(),
+          j = (0, p._)(S);
+        if (!N) return null;
+        const k = (0, R.NT)(
+          (0, _.It)(`${N.GetStorePageURL(v)}${o ? `?${o}` : ""}`, w, C),
+        );
+        let H;
+        "overrideNavigation" in t &&
+          (H = (e) => (
+            t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
+          ));
+        const z = Boolean(g);
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsxs)("div", {
+              className: (0, E.A)({ [L().TwoWidthCtn]: z }),
+              children: [
+                (0, s.jsxs)(n.Ii, {
+                  href: H ? void 0 : k,
+                  style: { display: "block", cursor: "pointer" },
+                  className: (0, E.A)({ [L().TwoWidthCapsule]: z }),
+                  preferredFocus: d,
+                  onClick: H,
+                  children: [
+                    (0, s.jsx)(I.V, {
+                      appids: j,
+                      hide_status_banners: r,
+                      show_early_access: e.bShowEarlyAccessBanner,
+                    }),
+                    "none" != l &&
+                      (0, s.jsx)(a.a, {
+                        imageType: l,
+                        id: S,
+                        bPreferAssetWithoutOverride: P,
+                      }),
+                    (0, s.jsx)(D.J, { id: S }),
+                    (0, s.jsx)(y.m, { id: S, active: u, bIsHoverMode: !0 }),
+                  ],
+                }),
+                z &&
+                  (0, s.jsxs)("div", {
+                    className: (0, E.A)(
+                      L().TwoWidthSideInfo,
+                      "TwoWidthSideInfo",
+                    ),
+                    children: [
+                      (0, s.jsx)("div", { className: L().Reason, children: g }),
+                      (0, s.jsx)("div", {
+                        className: L().StoreSaleItemRelease,
+                        children: (0, s.jsx)("span", {
+                          children: N.GetFormattedSteamReleaseDate(),
+                        }),
+                      }),
+                      (0, s.jsx)(T.n, {
+                        bHideTitle: !0,
+                        rgTagIDs: N.GetTagIDs(),
+                        instanceNum: i,
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, s.jsx)(M, { ...e }),
+          ],
+        });
+      }
+      function M(e) {
+        const {
+            info: t,
+            bHidePriceIfOwned: r,
+            bHideStatusBanners: n,
+            bUseSubscriptionLayout: o,
+            elElementToAppendToHover: i,
+            bHidePrice: a,
+            bHidePlatforms: p,
+            creatorAccountID: c,
+            bIsHovered: u,
+            onlyOneDiscountPct: m,
+            strDoubleCapsuleMessage: _,
+          } = e,
+          h = (0, f.rt)(t),
+          { data: x } = (0, l.J$)(h),
+          { bIsOwned: g } = (0, d.ZJ)(h),
+          v = g && !n;
+        if (o && x && 0 == x.item_type && x.appid)
+          return (0, s.jsx)(C.E, { appid: x.appid, bIsMuted: u });
+        if (i) return null;
+        const y = Boolean(g && r),
+          P = Boolean(v);
+        return (0, s.jsx)(b.q, {
+          id: h,
+          bShowAsMuted: P,
+          bHidePrice: a,
+          bShowInLibraryInsteadOfPrice: y,
+          bHidePlatforms: p,
+          creatorAccountID: c,
+          bShowName: e.bShowName,
+          onlyOneDiscountPct: m,
+          bShowWishlistButton: Boolean(_),
+        });
       }
     },
   },

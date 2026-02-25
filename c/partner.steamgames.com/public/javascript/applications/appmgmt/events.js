@@ -35,6 +35,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -142,181 +143,165 @@
             "ogg/" +
             _.appId +
             "/partnerevents/create/";
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsxs)("div", {
               className: _.BuildNoteCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.BuildTitle,
-              },
-              (0, _._)(
-                "#BuildNotes_Title",
-                _.Get().GetPostedBuildVersion(),
-                _.Get().GetBuildBranch() || "default",
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.SplitPanel,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.DescriptionPanel,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BuildSubTitle,
-                  },
-                  (0, _._)("#BuildNotes_SubTitle"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.InfoText,
-                  },
-                  (0, _._)("#BuildNotes_Desc1"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.InfoText,
-                  },
-                  (0, _._)("#BuildNotes_Desc2"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    href: _,
-                  },
-                  _.createElement(
-                    _._,
-                    null,
-                    (0, _._)("#BuildNotes_OpenFullEditor"),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.BuildTitle,
+                  children: (0, _._)(
+                    "#BuildNotes_Title",
+                    _.Get().GetPostedBuildVersion(),
+                    _.Get().GetBuildBranch() || "default",
                   ),
-                ),
-              ),
-              "editing" === _ &&
-                _.createElement(_, {
-                  sError: _,
-                  eLanguage: _,
-                  realms: _,
-                  fnHasLanguage: _,
-                  fnSetLanguage: _,
-                  fnGetTitle: (_) => _(_, _),
-                  fnSetTitle: (_, _) => _(_(_, _, _)),
-                  fnGetDescription: (_) => _(_, _),
-                  fnSetDescription: (_, _) => _(_(_, _, _)),
-                  fnOnPreviewEvent: () =>
-                    _(
-                      (function (_, _) {
-                        let _ = new _._();
-                        (_.GID = "PreviewPartnerEventRow_0"),
-                          (_.clanSteamID = new _._(_._.steamid)),
-                          (_.postTime = Date.now() / 1e3),
-                          (_.startTime = Date.now() / 1e3),
-                          (_.type = 12);
-                        for (let _ = 0; _ < 31; _++)
-                          _.name.set(_, _(_, _)), _.description.set(_, _(_, _));
-                        return _;
-                      })(_, _),
-                    ),
-                  fnApplyLoc: (_, _) => {
-                    const _ = new Array();
-                    let _ = _,
-                      _ = _;
-                    for (const _ of _) {
-                      const _ = _.GetLocalization("Title", _) || "",
-                        _ = _.GetLocalization("Description", _) || "";
-                      (_ || _) && __webpack_require__.push(_),
-                        _ && (_ = _(_, _, _)),
-                        _ && (_ = _(_, _, _));
-                    }
-                    return _(_), _(_), _;
-                  },
                 }),
-              "submitting" === _ && _.createElement(_, null),
-              "failed" === _ &&
-                _.createElement(_, {
-                  fnOnReturnToEditor: () => _("editing"),
+                (0, _.jsxs)("div", {
+                  className: _.SplitPanel,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _.DescriptionPanel,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.BuildSubTitle,
+                          children: (0, _._)("#BuildNotes_SubTitle"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.InfoText,
+                          children: (0, _._)("#BuildNotes_Desc1"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.InfoText,
+                          children: (0, _._)("#BuildNotes_Desc2"),
+                        }),
+                        (0, _.jsx)("a", {
+                          href: _,
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _._)("#BuildNotes_OpenFullEditor"),
+                          }),
+                        }),
+                      ],
+                    }),
+                    "editing" === _ &&
+                      (0, _.jsx)(_, {
+                        sError: _,
+                        eLanguage: _,
+                        realms: _,
+                        fnHasLanguage: _,
+                        fnSetLanguage: _,
+                        fnGetTitle: (_) => _(_, _),
+                        fnSetTitle: (_, _) => _(_(_, _, _)),
+                        fnGetDescription: (_) => _(_, _),
+                        fnSetDescription: (_, _) => _(_(_, _, _)),
+                        fnOnPreviewEvent: () =>
+                          _(
+                            (function (_, _) {
+                              let _ = new _._();
+                              (_.GID = "PreviewPartnerEventRow_0"),
+                                (_.clanSteamID = new _._(_._.steamid)),
+                                (_.postTime = Date.now() / 1e3),
+                                (_.startTime = Date.now() / 1e3),
+                                (_.type = 12);
+                              for (let _ = 0; _ < 31; _++)
+                                _.name.set(_, _(_, _)),
+                                  _.description.set(_, _(_, _));
+                              return _;
+                            })(_, _),
+                          ),
+                        fnApplyLoc: (_, _) => {
+                          const _ = new Array();
+                          let _ = _,
+                            _ = _;
+                          for (const _ of _) {
+                            const _ = _.GetLocalization("Title", _) || "",
+                              _ = _.GetLocalization("Description", _) || "";
+                            (_ || _) && __webpack_require__.push(_),
+                              _ && (_ = _(_, _, _)),
+                              _ && (_ = _(_, _, _));
+                          }
+                          return _(_), _(_), _;
+                        },
+                      }),
+                    "submitting" === _ && (0, _.jsx)(_, {}),
+                    "failed" === _ &&
+                      (0, _.jsx)(_, {
+                        fnOnReturnToEditor: () => _("editing"),
+                      }),
+                    "submitted" === _ &&
+                      (0, _.jsx)(_, {
+                        appId: _.appId,
+                        eventGid: _,
+                      }),
+                  ],
                 }),
-              "submitted" === _ &&
-                _.createElement(_, {
-                  appId: _.appId,
-                  eventGid: _,
-                }),
-            ),
-          ),
-          Boolean(_ && "editing" === _) &&
-            _.createElement(_, {
-              event: _,
-              eLanguage: _,
-              realms: _,
-              fnOnClose: () => _(null),
-              fnOnSubmitEvent: async () => {
-                _(null), _("submitting");
-                const _ = await (async function (_, _, _) {
-                  if (_(_, _)) return null;
-                  const _ = Boolean(_(_, 29).trim()),
-                    _ = new FormData();
-                  _.append("sessionid", _._.SESSIONID),
-                    _.append("appid", "" + _),
-                    _.append("post_steam_china", "" + _),
-                    _.append("titles", JSON.stringify(_)),
-                    _.append("descriptions", JSON.stringify(_)),
-                    _.append("build_id", "" + _.Get().GetPostedBuildVersion()),
-                    _.append("build_branch", _.Get().GetBuildBranch());
-                  const _ =
-                    _._.PARTNER_BASE_URL +
-                    "partnerevents/ajaxpublishpatchnotes";
-                  try {
-                    const _ = await _().post(_, _, {
-                      withCredentials: !0,
-                    });
-                    if (1 == _?.data?.success) return _.data;
-                    console.error(
-                      "buildpatchnotes: OnSubmitCreateEvent error code  " +
-                        _?.data?.success +
-                        " msg: " +
-                        _?.data?.msg,
-                    );
-                  } catch (_) {
-                    const _ = (0, _._)(_);
-                    console.error(
-                      "buildpatchnotes: OnSubmitCreateEvent " + _.strErrorMsg,
-                      _,
-                    );
-                  }
-                  return null;
-                })(_.appId, _, _);
-                _
-                  ? (_(_.clan_event_gid),
-                    (function () {
-                      const _ = new URLSearchParams(window.location.search);
-                      _.delete("submittedbuild"), _.delete("buildbranch");
-                      const _ = _.toString(),
-                        _ =
-                          window.location.origin +
-                          window.location.pathname +
-                          (_ ? "?" + _ : "") +
-                          window.location.hash;
-                      window.history.replaceState({}, "", _);
-                    })(),
-                    _("submitted"))
-                  : _("failed");
-              },
-              fnHasLanguage: _,
-              fnSetLanguage: _,
+              ],
             }),
-        );
+            Boolean(_ && "editing" === _) &&
+              (0, _.jsx)(_, {
+                event: _,
+                eLanguage: _,
+                realms: _,
+                fnOnClose: () => _(null),
+                fnOnSubmitEvent: async () => {
+                  _(null), _("submitting");
+                  const _ = await (async function (_, _, _) {
+                    if (_(_, _)) return null;
+                    const _ = Boolean(_(_, 29).trim()),
+                      _ = new FormData();
+                    _.append("sessionid", _._.SESSIONID),
+                      _.append("appid", "" + _),
+                      _.append("post_steam_china", "" + _),
+                      _.append("titles", JSON.stringify(_)),
+                      _.append("descriptions", JSON.stringify(_)),
+                      _.append(
+                        "build_id",
+                        "" + _.Get().GetPostedBuildVersion(),
+                      ),
+                      _.append("build_branch", _.Get().GetBuildBranch());
+                    const _ =
+                      _._.PARTNER_BASE_URL +
+                      "partnerevents/ajaxpublishpatchnotes";
+                    try {
+                      const _ = await _().post(_, _, {
+                        withCredentials: !0,
+                      });
+                      if (1 == _?.data?.success) return _.data;
+                      console.error(
+                        "buildpatchnotes: OnSubmitCreateEvent error code  " +
+                          _?.data?.success +
+                          " msg: " +
+                          _?.data?.msg,
+                      );
+                    } catch (_) {
+                      const _ = (0, _._)(_);
+                      console.error(
+                        "buildpatchnotes: OnSubmitCreateEvent " + _.strErrorMsg,
+                        _,
+                      );
+                    }
+                    return null;
+                  })(_.appId, _, _);
+                  _
+                    ? (_(_.clan_event_gid),
+                      (function () {
+                        const _ = new URLSearchParams(window.location.search);
+                        _.delete("submittedbuild"), _.delete("buildbranch");
+                        const _ = _.toString(),
+                          _ =
+                            window.location.origin +
+                            window.location.pathname +
+                            (_ ? "?" + _ : "") +
+                            window.location.hash;
+                        window.history.replaceState({}, "", _);
+                      })(),
+                      _("submitted"))
+                    : _("failed");
+                },
+                fnHasLanguage: _,
+                fnSetLanguage: _,
+              }),
+          ],
+        });
       }
       const _ = (_) => {
           const {
@@ -341,113 +326,91 @@
                 : "#BuildNotes_SteamChina_NotProvided",
             );
           }
-          return _.createElement(
-            "div",
-            {
-              className: _.RightPanel,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.RightPanel,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.EditTopBar,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.EditTitle,
-                },
-                (0, _._)("#BuildNotes_PatchnotesTitle"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.LangPicker,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {
-                      const _ = new _._(),
-                        _ = (0, _._)("#BuildNotes_SampleTitle"),
-                        _ = (0, _._)("#BuildNotes_SampleDescription");
-                      for (let _ = 0; _ < 31; _++)
-                        _.SetLocalization("Title", _, _),
-                          _.SetLocalization("Description", _, _);
-                      (0, _._)(
-                        _.createElement(_._, {
-                          sampleLocData: _,
-                          sampleFilename: "patchnote_loc_sample",
-                          fnOnImportLocData: _,
-                        }),
-                        window,
-                      );
-                    },
-                  },
-                  (0, _._)("#BuildNotes_ImportLocalization"),
-                ),
-                _.createElement(_._, {
-                  selectedLang: __webpack_require__,
-                  fnOnLanguageChanged: _,
-                  fnLangHasData: _,
-                  realms: _,
-                }),
-              ),
-            ),
-            _.createElement(_._, {
-              value: _(__webpack_require__),
-              placeholder: (0, _._)("#BuildNotes_TitlePlaceholder"),
-              onChange: (_) => _(__webpack_require__, _.currentTarget.value),
-              maxLength: _._,
-            }),
-            _.createElement(
-              "div",
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.EditTitle,
+                    children: (0, _._)("#BuildNotes_PatchnotesTitle"),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.LangPicker,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: () => {
+                          const _ = new _._(),
+                            _ = (0, _._)("#BuildNotes_SampleTitle"),
+                            _ = (0, _._)("#BuildNotes_SampleDescription");
+                          for (let _ = 0; _ < 31; _++)
+                            _.SetLocalization("Title", _, _),
+                              _.SetLocalization("Description", _, _);
+                          (0, _._)(
+                            (0, _.jsx)(_._, {
+                              sampleLocData: _,
+                              sampleFilename: "patchnote_loc_sample",
+                              fnOnImportLocData: _,
+                            }),
+                            window,
+                          );
+                        },
+                        children: (0, _._)("#BuildNotes_ImportLocalization"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        selectedLang: __webpack_require__,
+                        fnOnLanguageChanged: _,
+                        fnLangHasData: _,
+                        realms: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                value: _(__webpack_require__),
+                placeholder: (0, _._)("#BuildNotes_TitlePlaceholder"),
+                onChange: (_) => _(__webpack_require__, _.currentTarget.value),
+                maxLength: _._,
+              }),
+              (0, _.jsx)("div", {
                 className: _.EditTitle,
-              },
-              (0, _._)("#BuildNotes_PatchnotesDesc"),
-            ),
-            _.createElement(_._, {
-              fnGetCurText: () => _(__webpack_require__),
-              fnOnTextChange: (_) =>
-                _(__webpack_require__, _.currentTarget.value),
-              fnSetText: (_) => _(__webpack_require__, _),
-              strPlaceholder: (0, _._)("#BuildNotes_DescPlaceholder"),
-              emoticonStore: _._,
-              bSupportHTMLImport: !0,
-              showFormatHelp: "PartnerEvents",
-              classNameForTextArea: _.BBCodeEditor,
-            }),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#BuildNotes_PatchnotesDesc"),
+              }),
+              (0, _.jsx)(_._, {
+                fnGetCurText: () => _(__webpack_require__),
+                fnOnTextChange: (_) =>
+                  _(__webpack_require__, _.currentTarget.value),
+                fnSetText: (_) => _(__webpack_require__, _),
+                strPlaceholder: (0, _._)("#BuildNotes_DescPlaceholder"),
+                emoticonStore: _._,
+                bSupportHTMLImport: !0,
+                showFormatHelp: "PartnerEvents",
+                classNameForTextArea: _.BBCodeEditor,
+              }),
+              (0, _.jsxs)("div", {
                 className: _.SubmitButtonCtn,
-              },
-              !Boolean(_) &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  (0, _._)("#BuildNotes_Preview"),
-                ),
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ErrorMsg,
-                  },
-                  _,
-                ),
-              Boolean(!_ && _) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SteamChinaMsg,
-                  },
-                  _,
-                ),
-            ),
-          );
+                children: [
+                  !Boolean(_) &&
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      children: (0, _._)("#BuildNotes_Preview"),
+                    }),
+                  Boolean(_) &&
+                    (0, _.jsx)("div", {
+                      className: _.ErrorMsg,
+                      children: _,
+                    }),
+                  Boolean(!_ && _) &&
+                    (0, _.jsx)("div", {
+                      className: _.SteamChinaMsg,
+                      children: _,
+                    }),
+                ],
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const {
@@ -459,121 +422,92 @@
             fnHasLanguage: _,
             fnSetLanguage: _,
           } = _;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.PreviewHeader,
-              },
-              _.createElement(_._, {
-                selectedLang: __webpack_require__,
-                fnOnLanguageChanged: _,
-                fnFilterLanguage: _,
-                realms: _,
+                children: [
+                  (0, _.jsx)(_._, {
+                    selectedLang: __webpack_require__,
+                    fnOnLanguageChanged: _,
+                    fnFilterLanguage: _,
+                    realms: _,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.SubmitButtonCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _._)("#BuildNotes_Close"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        onClick: _,
+                        children: (0, _._)("#BuildNotes_PostNotes"),
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubmitButtonCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  (0, _._)("#BuildNotes_Close"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  (0, _._)("#BuildNotes_PostNotes"),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(_._, {
-                event: _,
-                fnClose: _,
-                langOverride: __webpack_require__,
-                isPreview: !0,
+              (0, _.jsx)("div", {
+                children: (0, _.jsx)(_._, {
+                  event: _,
+                  fnClose: _,
+                  langOverride: __webpack_require__,
+                  isPreview: !0,
+                }),
               }),
-            ),
-          );
+            ],
+          });
         },
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.RightPanel, _.SubmitPanel),
-            },
-            _.createElement(_._, {
-              className: _.SubmitThrobber,
-            }),
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.RightPanel, _.SubmitPanel),
+            children: [
+              (0, _.jsx)(_._, {
+                className: _.SubmitThrobber,
+              }),
+              (0, _.jsx)("div", {
                 className: _.SubmitText,
-              },
-              (0, _._)("#BuildNotes_Submitting"),
-            ),
-          ),
+                children: (0, _._)("#BuildNotes_Submitting"),
+              }),
+            ],
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.RightPanel, _.FailedPanel),
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.RightPanel, _.FailedPanel),
+            children: [
+              (0, _.jsx)("div", {
                 className: _.FailedText,
-              },
-              (0, _._)("#BuildNotes_FailedDescription"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#BuildNotes_FailedDescription"),
+              }),
+              (0, _.jsx)("div", {
                 className: _.FailedButton,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   onClick: _.fnOnReturnToEditor,
-                },
-                (0, _._)("#BuildNotes_ReturnToEditor"),
-              ),
-            ),
-          ),
+                  children: (0, _._)("#BuildNotes_ReturnToEditor"),
+                }),
+              }),
+            ],
+          }),
         _ = (_) => {
           const { appId: _, eventGid: __webpack_require__ } = _,
             _ = `${_._.STORE_BASE_URL}news/app/${_}/view/${__webpack_require__}`;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.RightPanel, _.SuccessPanel),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.RightPanel, _.SuccessPanel),
+            children: [
+              (0, _.jsx)("div", {
                 className: _.SuccessText,
-              },
-              (0, _._)("#BuildNotes_Success"),
-            ),
-            _.createElement(
-              "a",
-              {
+                children: (0, _._)("#BuildNotes_Success"),
+              }),
+              (0, _.jsx)("a", {
                 href: _,
                 className: _.ViewEventButton,
-              },
-              _.createElement(_._, null, (0, _._)("#BuildNotes_ViewPublished")),
-            ),
-          );
+                children: (0, _.jsx)(_._, {
+                  children: (0, _._)("#BuildNotes_ViewPublished"),
+                }),
+              }),
+            ],
+          });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -634,79 +568,81 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("h2", null, "Unmigrated Sales Pages"),
-          _.createElement("hr", null),
-          _.Get()
-            .GetUnmigratedSalesPages()
-            .map((_) =>
-              _.createElement(_, {
-                key: _.pageid,
-                pageid: _.pageid,
-              }),
-            ),
-        );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("h2", {
+              children: "Unmigrated Sales Pages",
+            }),
+            (0, _.jsx)("hr", {}),
+            _.Get()
+              .GetUnmigratedSalesPages()
+              .map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    pageid: _.pageid,
+                  },
+                  _.pageid,
+                ),
+              ),
+          ],
+        });
       }
       function _(_) {
         let _ = _.Get().GetPageByID(_.pageid);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("div", null, _.pageid),
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("div", {
+              children: _.pageid,
+            }),
+            (0, _.jsx)(_._, {
               _: _.SaleMigrationPageDebug(_.pageid),
-            },
-            "Debug Data",
-          ),
-        );
+              children: "Debug Data",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { pageid: _ } = _,
           _ = _.Get().GetPageByID(_),
           _ = (0, _._)(_.accountid);
         return _
-          ? _.createElement(
-              "div",
-              null,
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)(_._, {
                   _: _.SaleMigrationTool(),
-                },
-                "< Return to Migration Toolset",
-              ),
-              _.createElement("h2", null, "Debug: ", _.pageid),
-              _.createElement("hr", null),
-              _.createElement("div", null, "Name: ", _.display_name),
-              _.createElement(
-                "div",
-                null,
-                "Creator: ",
-                _.accountid,
-                " - ",
-                _.persona,
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Last Modified: ",
-                _.last_modified,
-                Boolean(0 != _.last_modified) &&
-                  _.createElement(_._, {
-                    dateAndTime: _.last_modified,
-                    bSingleLine: !0,
-                  }),
-              ),
-              _.createElement("h1", null, "Sale Page Body Raw"),
-              _.createElement(_._, {
-                data: _,
-              }),
-            )
-          : _.createElement(_._, {
+                  children: "< Return to Migration Toolset",
+                }),
+                (0, _.jsxs)("h2", {
+                  children: ["Debug: ", _.pageid],
+                }),
+                (0, _.jsx)("hr", {}),
+                (0, _.jsxs)("div", {
+                  children: ["Name: ", _.display_name],
+                }),
+                (0, _.jsxs)("div", {
+                  children: ["Creator: ", _.accountid, " - ", _.persona],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    "Last Modified: ",
+                    _.last_modified,
+                    Boolean(0 != _.last_modified) &&
+                      (0, _.jsx)(_._, {
+                        dateAndTime: _.last_modified,
+                        bSingleLine: !0,
+                      }),
+                  ],
+                }),
+                (0, _.jsx)("h1", {
+                  children: "Sale Page Body Raw",
+                }),
+                (0, _.jsx)(_._, {
+                  data: _,
+                }),
+              ],
+            })
+          : (0, _.jsx)(_._, {
               string: "Loading User Info",
             });
       }
@@ -717,46 +653,43 @@
         SaleMigrationPageDebug: (_) => `/migration/debug/${_}/`,
       };
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            basename: (0, _._)() + "sales/",
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              exact: !0,
-              path: _._.DiagData(),
-              render: (_) =>
-                _.createElement(_._, {
-                  ..._,
-                  strConfigID: "application_config",
-                }),
-            }),
-            _.createElement(_._, {
-              exact: !0,
-              path: _.SaleDashboardView(),
-              component: _._,
-            }),
-            _.createElement(_._, {
-              exact: !0,
-              path: _.SaleMigrationTool(),
-              component: _,
-            }),
-            _.createElement(_._, {
-              exact: !0,
-              path: _.SaleMigrationPageDebug(":pageid"),
-              render: (_) =>
-                _.createElement(_, {
-                  pageid: _.match.params.pageid,
-                }),
-            }),
-            _.createElement(_._, {
-              component: _._,
-            }),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          basename: (0, _._)() + "sales/",
+          children: (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
+                exact: !0,
+                path: _._.DiagData(),
+                render: (_) =>
+                  (0, _.jsx)(_._, {
+                    ..._,
+                    strConfigID: "application_config",
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                exact: !0,
+                path: _.SaleDashboardView(),
+                component: _._,
+              }),
+              (0, _.jsx)(_._, {
+                exact: !0,
+                path: _.SaleMigrationTool(),
+                component: _,
+              }),
+              (0, _.jsx)(_._, {
+                exact: !0,
+                path: _.SaleMigrationPageDebug(":pageid"),
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    pageid: _.match.params.pageid,
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                component: _._,
+              }),
+            ],
+          }),
+        });
       }
     },
   },

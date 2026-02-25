@@ -59,6 +59,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -73,26 +74,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          "span",
-          {
-            className: (0, _._)(_.GenericLabeledItem, _.className),
-          },
-          _.createElement(
-            "span",
-            {
+        return (0, _.jsxs)("span", {
+          className: (0, _._)(_.GenericLabeledItem, _.className),
+          children: [
+            (0, _.jsx)("span", {
               className: _.CxnGenericDataLabel,
-            },
-            _.label,
-          ),
-          _.createElement(
-            "span",
-            {
+              children: _.label,
+            }),
+            (0, _.jsx)("span", {
               className: _.CxnGenericData,
-            },
-            _.children,
-          ),
-        );
+              children: _.children,
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = _.host,
@@ -101,139 +95,98 @@
           _ = null;
         if (_.data_center)
           (_ = "Gameserver"),
-            (_ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "span",
-                {
+            (_ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("span", {
                   className: _.host_id,
-                },
-                _,
-              ),
-              " in ",
-              _.createElement(
-                "span",
-                {
+                  children: _,
+                }),
+                " in ",
+                (0, _.jsx)("span", {
                   className: _.GameServerDataCenter,
-                },
-                _.data_center,
-              ),
-            ));
+                  children: _.data_center,
+                }),
+              ],
+            }));
         else if (_.steam_persona) {
           const _ = _._.COMMUNITY_BASE_URL + "/profiles/" + _._;
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "span",
-              {
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("span", {
                 className: _.host_id,
-              },
-              _.createElement(
-                "a",
-                {
+                children: (0, _.jsx)("a", {
                   href: _,
-                },
-                _.steam_persona,
-              ),
-            ),
-            " (",
-            _.createElement(
-              "span",
-              {
+                  children: _.steam_persona,
+                }),
+              }),
+              " (",
+              (0, _.jsx)("span", {
                 className: _.host_id,
-              },
-              _,
-            ),
-            ")",
-          );
+                children: _,
+              }),
+              ")",
+            ],
+          });
         } else
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "span",
-              {
-                className: _.host_id,
-              },
-              _,
-            ),
-          );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _.ConnectionClientInfo,
-              _.data_center && _.HostIsGameserver,
-            ),
-          },
-          _.createElement(
-            "div",
-            {
+          _ = (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsx)("span", {
+              className: _.host_id,
+              children: _,
+            }),
+          });
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _.ConnectionClientInfo,
+            _.data_center && _.HostIsGameserver,
+          ),
+          children: [
+            (0, _.jsxs)("div", {
               className: _.HostIDAndConnectionCtr,
-            },
-            _.createElement(
-              _,
-              {
-                className: _.HostIDInfo,
-                label: _,
-              },
-              _,
-            ),
-            null != _.connection_id &&
-              _.createElement(
-                _,
-                {
-                  className: _.HostConnectionID,
-                  label: "ConnectionID",
-                },
-                _.connection_id,
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: [
+                (0, _.jsx)(_, {
+                  className: _.HostIDInfo,
+                  label: _,
+                  children: _,
+                }),
+                null != _.connection_id &&
+                  (0, _.jsx)(_, {
+                    className: _.HostConnectionID,
+                    label: "ConnectionID",
+                    children: _.connection_id,
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
               className: _.ClientIPInfo,
-            },
-            _.addr &&
-              _.createElement(
-                _,
-                {
-                  className: "addr",
-                  label: "IP",
-                },
-                _.addr,
-              ),
-            _.city_name &&
-              _.createElement(
-                _,
-                {
-                  className: "city_name",
-                  label: "City",
-                },
-                _.city_name,
-              ),
-            _.country_code &&
-              _.createElement(
-                _,
-                {
-                  className: "country_code",
-                  label: "Country",
-                },
-                _.country_code,
-              ),
-            _._ &&
-              _.createElement(
-                _,
-                {
-                  className: "as",
-                  label: "AS",
-                },
-                _._,
-              ),
-          ),
-        );
+              children: [
+                _.addr &&
+                  (0, _.jsx)(_, {
+                    className: "addr",
+                    label: "IP",
+                    children: _.addr,
+                  }),
+                _.city_name &&
+                  (0, _.jsx)(_, {
+                    className: "city_name",
+                    label: "City",
+                    children: _.city_name,
+                  }),
+                _.country_code &&
+                  (0, _.jsx)(_, {
+                    className: "country_code",
+                    label: "Country",
+                    children: _.country_code,
+                  }),
+                _._ &&
+                  (0, _.jsx)(_, {
+                    className: "as",
+                    label: "AS",
+                    children: _._,
+                  }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_, _) {
         return (
@@ -272,42 +225,35 @@
       function _(_, _, _) {
         const _ = _ > 0 ? _ / _ : 0,
           _ = (100 * _).toFixed(1) + "%";
-        return _.createElement(
+        return (0, _.jsxs)(
           "tr",
           {
-            key: _,
+            children: [
+              (0, _.jsx)("th", {
+                className: _.Label,
+                children: _,
+              }),
+              (0, _.jsx)("td", {
+                className: _.Pct,
+                children: _,
+              }),
+              (0, _.jsxs)("td", {
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.Bar,
+                    style: {
+                      width: 90 * _ + 1 + "px",
+                    },
+                  }),
+                  (0, _.jsx)("span", {
+                    className: _.Num,
+                    children: _(_),
+                  }),
+                ],
+              }),
+            ],
           },
-          _.createElement(
-            "th",
-            {
-              className: _.Label,
-            },
-            _,
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _.Pct,
-            },
-            _,
-          ),
-          _.createElement(
-            "td",
-            null,
-            _.createElement("span", {
-              className: _.Bar,
-              style: {
-                width: 90 * _ + 1 + "px",
-              },
-            }),
-            _.createElement(
-              "span",
-              {
-                className: _.Num,
-              },
-              _(_),
-            ),
-          ),
+          _,
         );
       }
       function _(_, _) {
@@ -315,13 +261,12 @@
         let _ = [];
         for (let _ = 0; _ < _.length; ++_)
           __webpack_require__.push(_(_[_][0], _[_][1], _));
-        return _.createElement(
-          "table",
-          {
-            className: _.Histogram,
-          },
-          _.createElement("tbody", null, _),
-        );
+        return (0, _.jsx)("table", {
+          className: _.Histogram,
+          children: (0, _.jsx)("tbody", {
+            children: _,
+          }),
+        });
       }
       function _(_) {
         let _ = [];
@@ -329,373 +274,324 @@
           const [_, _] = _[_];
           null != _ &&
             _.push(
-              _.createElement(
+              (0, _.jsxs)(
                 "tr",
                 {
-                  key: _,
+                  children: [
+                    (0, _.jsxs)("th", {
+                      className: _.NTile,
+                      children: [_, "% <="],
+                    }),
+                    (0, _.jsx)("td", {
+                      className: _.Value,
+                      children: _,
+                    }),
+                  ],
                 },
-                _.createElement(
-                  "th",
-                  {
-                    className: _.NTile,
-                  },
-                  _,
-                  "% <=",
-                ),
-                _.createElement(
-                  "td",
-                  {
-                    className: _.Value,
-                  },
-                  _,
-                ),
+                _,
               ),
             );
         }
         return _.length
-          ? _.createElement(
-              "table",
-              {
-                className: _.Distribution,
-              },
-              _.createElement("tbody", null, _),
-            )
+          ? (0, _.jsx)("table", {
+              className: _.Distribution,
+              children: (0, _.jsx)("tbody", {
+                children: _,
+              }),
+            })
           : null;
       }
       function _(_) {
         return _ >= 0 ? _.toFixed(0) + "ms" : "???";
       }
       function _(_) {
-        const _ = _.flow;
-        return _.createElement(
-          "div",
-          {
-            className: _.FlowQualityStats,
+        const _ = function (_) {
+            const _ = _ >= 0 ? _(_) : "?";
+            return (0, _.jsx)("td", {
+              className: _.NumPkts,
+              children: _ + " pkts",
+            });
           },
-          _.createElement(
-            "div",
-            {
+          _ = function (_) {
+            const _ = _ >= 0 ? _(_) : "?";
+            return (0, _.jsx)("td", {
+              className: _._,
+              children: _ + "kb",
+            });
+          },
+          _ = function (_, _) {
+            let _ = "";
+            return (
+              _ > 0 && _ >= 0 && (_ = ((_ / _) * 100).toFixed(3) + "%"),
+              (0, _.jsx)("td", {
+                className: _.Pct,
+                children: _,
+              })
+            );
+          };
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.FlowPacketCounts, _.FlowStatsSection),
+          children: [
+            (0, _.jsx)("div", {
+              className: _.FlowSectionTitle,
+              children: "Summary counters",
+            }),
+            (0, _.jsx)("table", {
+              children: (0, _.jsxs)("tbody", {
+                children: [
+                  (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Sent",
+                      }),
+                      _(_.sent_pkt),
+                      __webpack_require__(_.sent_kb),
+                      (0, _.jsx)("td", {
+                        className: _.Spacer,
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Dropped",
+                      }),
+                      _(_.drop),
+                      _(_.drop, _.recv_seq),
+                    ],
+                  }),
+                  (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Recv",
+                      }),
+                      _(_.recv_pkt),
+                      __webpack_require__(_.recv_kb),
+                      (0, _.jsx)("td", {
+                        className: _.Spacer,
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Duplicate",
+                      }),
+                      _(_.dup),
+                      _(_.dup, _.recv_seq),
+                    ],
+                  }),
+                  (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Recv w/ seq",
+                      }),
+                      _(_.recv_seq),
+                      (0, _.jsx)("td", {}),
+                      (0, _.jsx)("td", {
+                        className: _.Spacer,
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Out of order",
+                      }),
+                      _(_.ooo),
+                      _(_.ooo, _.recv_seq),
+                    ],
+                  }),
+                  (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Summary",
+                      }),
+                      (0, _.jsx)("td", {
+                        colSpan: 2,
+                        className: _.FlowQualityClass,
+                        children: (0, _.jsx)("span", {
+                          className: "flowqualityclass_" + _.quality_class,
+                          children: _.quality_class,
+                        }),
+                      }),
+                      (0, _.jsx)("td", {
+                        className: _.Spacer,
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Seq num lurch",
+                      }),
+                      _(_.seqlurch),
+                      _(_.seqlurch, _.recv_seq),
+                    ],
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        let _ = null,
+          _ = null,
+          _ = 0;
+        const _ = _.quality_hist;
+        if (_) {
+          const _ = [
+            ["Perfect", _[100] || 0],
+            [">99%", _[99] || 0],
+            ["97-99%", _[97] || 0],
+            ["95-97%", _[95] || 0],
+            ["90-95%", _[90] || 0],
+            ["75-90%", _[75] || 0],
+            ["50-75%", _[50] || 0],
+            ["<50%", _[1] || 0],
+            ["Dead", _[0] || 0],
+          ];
+          for (let _ = 0; _ < _.length; ++_) _ += _[_][1];
+          _ = _(_, _);
+        }
+        if (_ <= 0) return null;
+        const _ = _.quality_pctile;
+        if (_) {
+          const _ = (_) => (null == _ ? void 0 : _ + "%");
+          _ = _([
+            [50, _(_[50])],
+            [25, _(_[25])],
+            [5, _(_[5])],
+            [2, _(_[2])],
+          ]);
+        }
+        const _ = _(_) + " measurement intervals";
+        return (0, _.jsxs)("div", {
+          className: _.QualityBreakdown,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.FlowSectionTitle,
+              children: "Quality interval breakdown",
+            }),
+            (0, _.jsx)("div", {
+              className: _.numSamples,
+              children: _,
+            }),
+            _,
+            _,
+          ],
+        });
+      }
+      function _(_) {
+        let _ = null;
+        const _ = _.ping_hist;
+        let _ = 0;
+        if (_) {
+          const _ = [
+            [0, _[25] || 0],
+            [25, _[50] || 0],
+            [50, _[75] || 0],
+            [75, _[100] || 0],
+            [100, _[125] || 0],
+            [125, _[150] || 0],
+            [150, _[200] || 0],
+            [200, _[300] || 0],
+            [300, _.max || 0],
+          ];
+          let _,
+            _ = 0;
+          for (let _ = 0; _ < _.length; ++_)
+            _[_][1] > 0 && (null == _ && (_ = _), (_ = _ + 1), (_ += _[_][1]));
+          if (_ > 0) {
+            (_ = Math.max(0, _ - 2)), (_ = Math.min(_.length, _ + 2));
+            let _ = [];
+            for (let _ = _; _ < _; ++_) {
+              let _,
+                [_, _] = _[_];
+              _ == _ && 0 == _ && (_ = 0),
+                (_ =
+                  _ + 1 >= _.length || (_ + 1 >= _ && 0 == _)
+                    ? _(_) + "+"
+                    : _ + "-" + _(_[_ + 1][0])),
+                __webpack_require__.push(_(_, _, _));
+            }
+            _ = (0, _.jsx)("table", {
+              className: _.Histogram,
+              children: (0, _.jsx)("tbody", {
+                children: _,
+              }),
+            });
+          }
+        }
+        let _ = null;
+        const _ = _.ping_pctile;
+        if (_) {
+          const _ = (_) => (null == _ ? void 0 : _(_));
+          _ = _([
+            [5, _(_[5])],
+            [50, _(_[50])],
+            [75, _(_[75])],
+            [95, _(_[95])],
+            [98, _(_[98])],
+          ]);
+        }
+        let _ = null,
+          _ = 0;
+        const _ = _.jitter_hist;
+        if (_) {
+          const _ = [
+            ["<1ms", _[0] || 0],
+            ["1-2ms", _[1] || 0],
+            ["2-5ms", _[2] || 0],
+            ["5-10ms", _[5] || 0],
+            ["10-20ms", _[10] || 0],
+            ["20ms+", _[20] || 0],
+          ];
+          for (let _ = 0; _ < _.length; ++_) _ += _[_][1];
+          _ = _(_, _);
+        }
+        if (!_ && !_ && !_) return null;
+        const _ = _(_) + " samples",
+          _ = _(_) + " samples";
+        return (0, _.jsxs)("div", {
+          className: _.PingBreakdown,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.PingSection,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.FlowSectionTitle,
+                  children: "Round Trip Latency",
+                }),
+                (0, _.jsx)("div", {
+                  className: _.NumSamples,
+                  children: _,
+                }),
+                _,
+                _,
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _.JitterSection,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.FlowSectionTitle,
+                  children: "Jitter",
+                }),
+                (0, _.jsx)("div", {
+                  className: _.NumSamples,
+                  children: _,
+                }),
+                _,
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const _ = _.flow;
+        return (0, _.jsxs)("div", {
+          className: _.FlowQualityStats,
+          children: [
+            (0, _.jsx)("div", {
               className: _.FlowQualityTitle,
-            },
-            _.title,
-          ),
-          _
-            ? _.createElement(
-                _.Fragment,
-                null,
-                (function (_) {
-                  const _ = function (_) {
-                      const _ = _ >= 0 ? _(_) : "?";
-                      return _.createElement(
-                        "td",
-                        {
-                          className: _.NumPkts,
-                        },
-                        _ + " pkts",
-                      );
-                    },
-                    _ = function (_) {
-                      const _ = _ >= 0 ? _(_) : "?";
-                      return _.createElement(
-                        "td",
-                        {
-                          className: _._,
-                        },
-                        _ + "kb",
-                      );
-                    },
-                    _ = function (_, _) {
-                      let _ = "";
-                      return (
-                        _ > 0 &&
-                          _ >= 0 &&
-                          (_ = ((_ / _) * 100).toFixed(3) + "%"),
-                        _.createElement(
-                          "td",
-                          {
-                            className: _.Pct,
-                          },
-                          _,
-                        )
-                      );
-                    };
-                  return _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.FlowPacketCounts,
-                        _.FlowStatsSection,
-                      ),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.FlowSectionTitle,
-                      },
-                      "Summary counters",
-                    ),
-                    _.createElement(
-                      "table",
-                      null,
-                      _.createElement(
-                        "tbody",
-                        null,
-                        _.createElement(
-                          "tr",
-                          null,
-                          _.createElement("th", null, "Sent"),
-                          _(_.sent_pkt),
-                          __webpack_require__(_.sent_kb),
-                          _.createElement("td", {
-                            className: _.Spacer,
-                          }),
-                          _.createElement("th", null, "Dropped"),
-                          _(_.drop),
-                          _(_.drop, _.recv_seq),
-                        ),
-                        _.createElement(
-                          "tr",
-                          null,
-                          _.createElement("th", null, "Recv"),
-                          _(_.recv_pkt),
-                          __webpack_require__(_.recv_kb),
-                          _.createElement("td", {
-                            className: _.Spacer,
-                          }),
-                          _.createElement("th", null, "Duplicate"),
-                          _(_.dup),
-                          _(_.dup, _.recv_seq),
-                        ),
-                        _.createElement(
-                          "tr",
-                          null,
-                          _.createElement("th", null, "Recv w/ seq"),
-                          _(_.recv_seq),
-                          _.createElement("td", null),
-                          _.createElement("td", {
-                            className: _.Spacer,
-                          }),
-                          _.createElement("th", null, "Out of order"),
-                          _(_.ooo),
-                          _(_.ooo, _.recv_seq),
-                        ),
-                        _.createElement(
-                          "tr",
-                          null,
-                          _.createElement("th", null, "Summary"),
-                          _.createElement(
-                            "td",
-                            {
-                              colSpan: 2,
-                              className: _.FlowQualityClass,
-                            },
-                            _.createElement(
-                              "span",
-                              {
-                                className:
-                                  "flowqualityclass_" + _.quality_class,
-                              },
-                              _.quality_class,
-                            ),
-                          ),
-                          _.createElement("td", {
-                            className: _.Spacer,
-                          }),
-                          _.createElement("th", null, "Seq num lurch"),
-                          _(_.seqlurch),
-                          _(_.seqlurch, _.recv_seq),
-                        ),
-                      ),
-                    ),
-                  );
-                })(_),
-                (function (_) {
-                  let _ = null,
-                    _ = null,
-                    _ = 0;
-                  const _ = _.quality_hist;
-                  if (_) {
-                    const _ = [
-                      ["Perfect", _[100] || 0],
-                      [">99%", _[99] || 0],
-                      ["97-99%", _[97] || 0],
-                      ["95-97%", _[95] || 0],
-                      ["90-95%", _[90] || 0],
-                      ["75-90%", _[75] || 0],
-                      ["50-75%", _[50] || 0],
-                      ["<50%", _[1] || 0],
-                      ["Dead", _[0] || 0],
-                    ];
-                    for (let _ = 0; _ < _.length; ++_) _ += _[_][1];
-                    _ = _(_, _);
-                  }
-                  if (_ <= 0) return null;
-                  const _ = _.quality_pctile;
-                  if (_) {
-                    const _ = (_) => (null == _ ? void 0 : _ + "%");
-                    _ = _([
-                      [50, _(_[50])],
-                      [25, _(_[25])],
-                      [5, _(_[5])],
-                      [2, _(_[2])],
-                    ]);
-                  }
-                  const _ = _(_) + " measurement intervals";
-                  return _.createElement(
-                    "div",
-                    {
-                      className: _.QualityBreakdown,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.FlowSectionTitle,
-                      },
-                      "Quality interval breakdown",
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.numSamples,
-                      },
-                      _,
-                    ),
-                    _,
-                    _,
-                  );
-                })(_),
-                (function (_) {
-                  let _ = null;
-                  const _ = _.ping_hist;
-                  let _ = 0;
-                  if (_) {
-                    const _ = [
-                      [0, _[25] || 0],
-                      [25, _[50] || 0],
-                      [50, _[75] || 0],
-                      [75, _[100] || 0],
-                      [100, _[125] || 0],
-                      [125, _[150] || 0],
-                      [150, _[200] || 0],
-                      [200, _[300] || 0],
-                      [300, _.max || 0],
-                    ];
-                    let _,
-                      _ = 0;
-                    for (let _ = 0; _ < _.length; ++_)
-                      _[_][1] > 0 &&
-                        (null == _ && (_ = _), (_ = _ + 1), (_ += _[_][1]));
-                    if (_ > 0) {
-                      (_ = Math.max(0, _ - 2)), (_ = Math.min(_.length, _ + 2));
-                      let _ = [];
-                      for (let _ = _; _ < _; ++_) {
-                        let _,
-                          [_, _] = _[_];
-                        _ == _ && 0 == _ && (_ = 0),
-                          (_ =
-                            _ + 1 >= _.length || (_ + 1 >= _ && 0 == _)
-                              ? _(_) + "+"
-                              : _ + "-" + _(_[_ + 1][0])),
-                          __webpack_require__.push(_(_, _, _));
-                      }
-                      _ = _.createElement(
-                        "table",
-                        {
-                          className: _.Histogram,
-                        },
-                        _.createElement("tbody", null, _),
-                      );
-                    }
-                  }
-                  let _ = null;
-                  const _ = _.ping_pctile;
-                  if (_) {
-                    const _ = (_) => (null == _ ? void 0 : _(_));
-                    _ = _([
-                      [5, _(_[5])],
-                      [50, _(_[50])],
-                      [75, _(_[75])],
-                      [95, _(_[95])],
-                      [98, _(_[98])],
-                    ]);
-                  }
-                  let _ = null,
-                    _ = 0;
-                  const _ = _.jitter_hist;
-                  if (_) {
-                    const _ = [
-                      ["<1ms", _[0] || 0],
-                      ["1-2ms", _[1] || 0],
-                      ["2-5ms", _[2] || 0],
-                      ["5-10ms", _[5] || 0],
-                      ["10-20ms", _[10] || 0],
-                      ["20ms+", _[20] || 0],
-                    ];
-                    for (let _ = 0; _ < _.length; ++_) _ += _[_][1];
-                    _ = _(_, _);
-                  }
-                  if (!_ && !_ && !_) return null;
-                  const _ = _(_) + " samples",
-                    _ = _(_) + " samples";
-                  return _.createElement(
-                    "div",
-                    {
-                      className: _.PingBreakdown,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.PingSection,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.FlowSectionTitle,
-                        },
-                        "Round Trip Latency",
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.NumSamples,
-                        },
-                        _,
-                      ),
-                      _,
-                      _,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.JitterSection,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.FlowSectionTitle,
-                        },
-                        "Jitter",
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.NumSamples,
-                        },
-                        _,
-                      ),
-                      _,
-                    ),
-                  );
-                })(_),
-              )
-            : _.createElement(
-                "div",
-                {
+              children: _.title,
+            }),
+            _
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [_(_), _(_), _(_)],
+                })
+              : (0, _.jsx)("div", {
                   className: _.NoFlowDataAvailable,
-                },
-                "(No data available)",
-              ),
-        );
+                  children: "(No data available)",
+                }),
+          ],
+        });
       }
       function _(_) {
         const _ = _.sess,
@@ -707,72 +603,59 @@
             "ded" == _.kind
               ? "Front side statistics reported by client"
               : "Front side statistics reported by player";
-          _ = _.createElement(
-            "div",
-            {
-              className: _.QualityFlowPairCtr,
-            },
-            _.createElement(_, {
-              title: _,
-              flow: _.client_front,
-            }),
-            _.createElement(_, {
-              title: "Front side statistics reported by relay",
-              flow: _.router_front,
-            }),
-          );
+          _ = (0, _.jsxs)("div", {
+            className: _.QualityFlowPairCtr,
+            children: [
+              (0, _.jsx)(_, {
+                title: _,
+                flow: _.client_front,
+              }),
+              (0, _.jsx)(_, {
+                title: "Front side statistics reported by relay",
+                flow: _.router_front,
+              }),
+            ],
+          });
         }
         return (
           (_.router_back || _.gameserver_back) &&
-            (_ = _.createElement(
-              "div",
-              {
-                className: _.QualityFlowPairCtr,
-              },
-              _.createElement(_, {
-                title: "Back side statistics reported by relay",
-                flow: _.router_back,
-              }),
-              _.createElement(_, {
-                title: "Back side statistics reported by gameserver",
-                flow: _.gameserver_back,
-              }),
-            )),
-          _.createElement(
-            "div",
-            {
-              className: _.RelaySessionCtr,
-            },
-            _.createElement(
-              "div",
-              {
+            (_ = (0, _.jsxs)("div", {
+              className: _.QualityFlowPairCtr,
+              children: [
+                (0, _.jsx)(_, {
+                  title: "Back side statistics reported by relay",
+                  flow: _.router_back,
+                }),
+                (0, _.jsx)(_, {
+                  title: "Back side statistics reported by gameserver",
+                  flow: _.gameserver_back,
+                }),
+              ],
+            })),
+          (0, _.jsxs)("div", {
+            className: _.RelaySessionCtr,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.RelayInfoCtr,
-              },
-              _.createElement(
-                _,
-                {
-                  label: "Relay address",
-                },
-                _.client.relay_addr,
-              ),
-              _.createElement(
-                _,
-                {
-                  label: "Relay POP",
-                },
-                _.client.relay_cluster,
-              ),
-              _.createElement(
-                _,
-                {
-                  label: "Active",
-                },
-                (0, _._)(_.active_time),
-              ),
-            ),
-            _,
-            _,
-          )
+                children: [
+                  (0, _.jsx)(_, {
+                    label: "Relay address",
+                    children: _.client.relay_addr,
+                  }),
+                  (0, _.jsx)(_, {
+                    label: "Relay POP",
+                    children: _.client.relay_cluster,
+                  }),
+                  (0, _.jsx)(_, {
+                    label: "Active",
+                    children: (0, _._)(_.active_time),
+                  }),
+                ],
+              }),
+              _,
+              _,
+            ],
+          })
         );
       }
       function _(_) {
@@ -829,63 +712,47 @@
                 timeZoneName: "short",
               }),
               _ = (0, _._)(_.duration);
-            _ = _.createElement(
-              "span",
-              {
-                className: _.CxnTimeAndDuration,
-              },
-              _.createElement(
-                _,
-                {
+            _ = (0, _.jsxs)("span", {
+              className: _.CxnTimeAndDuration,
+              children: [
+                (0, _.jsxs)(_, {
                   label: "Time",
-                },
-                _,
-                " ",
-                _,
-                "--",
-                _,
-              ),
-              _.createElement(
-                _,
-                {
+                  children: [_, " ", _, "--", _],
+                }),
+                (0, _.jsx)(_, {
                   label: "Duration",
-                },
-                _,
-              ),
-            );
+                  children: _,
+                }),
+              ],
+            });
           }
           if (
             (_.close_code &&
-              (_ = _.createElement(
-                _,
-                {
-                  label: "Closed",
-                  className: _.CxnCloseInfo,
-                },
-                _.close_type,
-                " ",
-                _.close_msg,
-                " (",
-                _.close_code,
-                ")",
-              )),
+              (_ = (0, _.jsxs)(_, {
+                label: "Closed",
+                className: _.CxnCloseInfo,
+                children: [
+                  _.close_type,
+                  " ",
+                  _.close_msg,
+                  " (",
+                  _.close_code,
+                  ")",
+                ],
+              })),
             _.experience_class)
           ) {
             const _ = _.class_reason ? ` (${_.class_reason})` : "";
-            _ = _.createElement(
-              _,
-              {
-                label: "Experience",
-              },
-              _.createElement(
-                "span",
-                {
+            _ = (0, _.jsxs)(_, {
+              label: "Experience",
+              children: [
+                (0, _.jsx)("span", {
                   className: "experience_" + _.experience_class,
-                },
-                _.experience_class,
-              ),
-              _,
-            );
+                  children: _.experience_class,
+                }),
+                _,
+              ],
+            });
           }
         }
         if (_.app) {
@@ -895,28 +762,21 @@
             let _ = [];
             for (let _ of _)
               __webpack_require__.push(
-                _.createElement(
-                  _,
-                  {
-                    label: _,
-                  },
-                  _.app[_],
-                ),
+                (0, _.jsx)(_, {
+                  label: _,
+                  children: _.app[_],
+                }),
               );
-            _ = _.createElement(
-              "div",
-              {
-                className: _.AppFieldsCtr,
-              },
-              _.createElement(
-                "span",
-                {
+            _ = (0, _.jsxs)("div", {
+              className: _.AppFieldsCtr,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.AppFieldsTitle,
-                },
-                "Application fields:",
-              ),
-              _,
-            );
+                  children: "Application fields:",
+                }),
+                _,
+              ],
+            });
           }
         }
         if (_ || _) {
@@ -929,13 +789,10 @@
               0.03 * _ + 2 < _
                 ? `${_}--${_}ms`
                 : Math.floor((_ + _) / 2 + 0.5) + "ms";
-            _ = _.createElement(
-              _,
-              {
-                label: "Ping",
-              },
-              _,
-            );
+            _ = (0, _.jsx)(_, {
+              label: "Ping",
+              children: _,
+            });
           }
           const _ = _(_),
             _ = _(_),
@@ -943,13 +800,10 @@
           if (
             (_ >= 0 &&
               _ <= 100 &&
-              (_ = _.createElement(
-                _,
-                {
-                  label: "Packet delivery",
-                },
-                `${_.toFixed(2)}%`,
-              )),
+              (_ = (0, _.jsx)(_, {
+                label: "Packet delivery",
+                children: `${_.toFixed(2)}%`,
+              })),
             _)
           ) {
             const _ = "End-to-end statistics reported by client",
@@ -957,20 +811,19 @@
                 "ded" == _.kind
                   ? "End-to-end statistics reported by gameserver"
                   : "End-to-end statistics reported by peer";
-            _ = _.createElement(
-              "div",
-              {
-                className: _.QualityFlowPairCtr,
-              },
-              _.createElement(_, {
-                title: _,
-                flow: _,
-              }),
-              _.createElement(_, {
-                title: _,
-                flow: _,
-              }),
-            );
+            _ = (0, _.jsxs)("div", {
+              className: _.QualityFlowPairCtr,
+              children: [
+                (0, _.jsx)(_, {
+                  title: _,
+                  flow: _,
+                }),
+                (0, _.jsx)(_, {
+                  title: _,
+                  flow: _,
+                }),
+              ],
+            });
           }
         }
         if (_) {
@@ -985,26 +838,20 @@
           if (_) {
             "p2p" == _.kind || _
               ? _.push(
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SessionsGroupHeader,
-                    },
-                    "Client relay sessions",
-                  ),
+                  (0, _.jsx)("div", {
+                    className: _.SessionsGroupHeader,
+                    children: "Client relay sessions",
+                  }),
                 )
               : _.push(
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SessionsGroupHeader,
-                    },
-                    "Relay sessions",
-                  ),
+                  (0, _.jsx)("div", {
+                    className: _.SessionsGroupHeader,
+                    children: "Relay sessions",
+                  }),
                 );
             for (const _ of _(_.client_sessions))
               _.push(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   cxn: _,
                   sess: _,
                   host_role: "client",
@@ -1013,17 +860,14 @@
           }
           if (_) {
             _.push(
-              _.createElement(
-                "div",
-                {
-                  className: _.SessionsGroupHeader,
-                },
-                "Peer relay sessions",
-              ),
+              (0, _.jsx)("div", {
+                className: _.SessionsGroupHeader,
+                children: "Peer relay sessions",
+              }),
             );
             for (const _ of _(_.peer_sessions))
               _.push(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   cxn: _,
                   sess: _,
                   host_role: "peer",
@@ -1031,52 +875,44 @@
               );
           }
         }
-        return _.createElement(
+        return (0, _.jsxs)(
           "div",
           {
             className: _.ConnectionCtr,
-            key: _.key,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _.ConnectionHeader,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.CxnSummary,
+                    children: [_, _, _, _, _, _],
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.ExpandDetailsCheckbox,
+                    label: "Details",
+                    checked: _,
+                    onChange: _,
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                className: _.CxnPeersCtr,
+                children: [
+                  (0, _.jsx)(_, {
+                    host: _.client,
+                    host_role: "client",
+                  }),
+                  (0, _.jsx)(_, {
+                    host: _.peer,
+                    host_role: "peer",
+                  }),
+                ],
+              }),
+              _,
+              _,
+            ],
           },
-          _.createElement(
-            "div",
-            {
-              className: _.ConnectionHeader,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.CxnSummary,
-              },
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-            ),
-            _.createElement(_._, {
-              className: _.ExpandDetailsCheckbox,
-              label: "Details",
-              checked: _,
-              onChange: _,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.CxnPeersCtr,
-            },
-            _.createElement(_, {
-              host: _.client,
-              host_role: "client",
-            }),
-            _.createElement(_, {
-              host: _.peer,
-              host_role: "peer",
-            }),
-          ),
-          _,
-          _,
+          _.key,
         );
       }
       function _(_) {
@@ -1131,183 +967,158 @@
           for (const _ of _) {
             const _ = (_.client._ || "") + "-" + (_.client.connection_id || "");
             _.push(
-              _.createElement(_, {
-                key: _,
-                cxn: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  cxn: _,
+                },
+                _,
+              ),
             );
           }
-          _ = _.createElement(
-            "div",
-            {
-              className: _.SearchResultsCtr,
-            },
-            _.createElement(
-              "div",
-              {
+          _ = (0, _.jsxs)("div", {
+            className: _.SearchResultsCtr,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.SearchResultsTitle,
-              },
-              "Found ",
-              _.length,
-              " connection(s)",
-            ),
-            _,
-          );
+                children: ["Found ", _.length, " connection(s)"],
+              }),
+              _,
+            ],
+          });
         }
         const _ = "ded" == _ ? "Gameserver" : "Peer",
           _ = !1,
           _ = _.useId();
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.SDRConnectionsAppCtn,
-            },
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            className: _.SDRConnectionsAppCtn,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.SDRConnectionsAppTitle,
-              },
-              _.createElement(_.Fragment, null, "SDR Connections - "),
-              _.appId > 0
-                ? _.createElement(_.Fragment, null, "App ", _.appId)
-                : _.createElement(_.Fragment, null, "All apps"),
-              _.createElement(_.Fragment, null, " [BETA feature]"),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                children: [
+                  (0, _.jsx)(_.Fragment, {
+                    children: "SDR Connections - ",
+                  }),
+                  _.appId > 0
+                    ? (0, _.jsxs)(_.Fragment, {
+                        children: ["App ", _.appId],
+                      })
+                    : (0, _.jsx)(_.Fragment, {
+                        children: "All apps",
+                      }),
+                  (0, _.jsx)(_.Fragment, {
+                    children: " [BETA feature]",
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
                   className: _.ErrMsg,
-                },
-                _,
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: _,
+                }),
+              (0, _.jsxs)("div", {
                 className: _.SearchParamsCtr,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    "DialogInputLabelGroup",
-                    _.ConnectionKindGroup,
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    _: _,
-                    className: "DialogLabel",
-                  },
-                  "Connection kind",
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    labelId: _,
-                    value: _,
-                    onChange: (_) => _(_),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      value: "",
-                    },
-                    "Any",
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      value: "ded",
-                    },
-                    "Dedicated server",
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      value: "p2p",
-                    },
-                    "Peer-to-Peer",
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.AppFieldPair,
-                },
-                _.createElement(_._, {
-                  type: "text",
-                  value: _,
-                  disabled: _,
-                  label: "Client",
-                  onChange: (_) => _(_.currentTarget.value),
-                }),
-                _.createElement(_._, {
-                  type: "text",
-                  value: _,
-                  disabled: _,
-                  label: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.AppFieldPair,
-                },
-                _.createElement(_._, {
-                  type: "text",
-                  value: _,
-                  disabled: _,
-                  label: "App field name 1",
-                  onChange: (_) => _(_.currentTarget.value),
-                }),
-                _.createElement(_._, {
-                  type: "text",
-                  value: _,
-                  disabled: _,
-                  label: "App field value 1",
-                  onChange: (_) => _(_.currentTarget.value),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubmitButtonCtn,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {
-                      let _ = new URLSearchParams();
-                      _ && _.set("client_id", _),
-                        _ && _.set("peer_id", _),
-                        _ && _.set("kind", _),
-                        _ &&
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      "DialogInputLabelGroup",
+                      _.ConnectionKindGroup,
+                    ),
+                    children: [
+                      (0, _.jsx)("div", {
+                        _: _,
+                        className: "DialogLabel",
+                        children: "Connection kind",
+                      }),
+                      (0, _.jsxs)(_._, {
+                        labelId: _,
+                        value: _,
+                        onChange: (_) => _(_),
+                        children: [
+                          (0, _.jsx)(_._, {
+                            value: "",
+                            children: "Any",
+                          }),
+                          (0, _.jsx)(_._, {
+                            value: "ded",
+                            children: "Dedicated server",
+                          }),
+                          (0, _.jsx)(_._, {
+                            value: "p2p",
+                            children: "Peer-to-Peer",
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.AppFieldPair,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        value: _,
+                        disabled: _,
+                        label: "Client",
+                        onChange: (_) => _(_.currentTarget.value),
+                      }),
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        value: _,
+                        disabled: _,
+                        label: _,
+                        onChange: (_) => _(_.currentTarget.value),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.AppFieldPair,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        value: _,
+                        disabled: _,
+                        label: "App field name 1",
+                        onChange: (_) => _(_.currentTarget.value),
+                      }),
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        value: _,
+                        disabled: _,
+                        label: "App field value 1",
+                        onChange: (_) => _(_.currentTarget.value),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.SubmitButtonCtn,
+                    children: (0, _.jsx)(_._, {
+                      onClick: () => {
+                        let _ = new URLSearchParams();
+                        _ && _.set("client_id", _),
+                          _ && _.set("peer_id", _),
+                          _ && _.set("kind", _),
                           _ &&
-                          (_.set("app_name1", _), _.set("app_value1", _));
-                      let _ = {
-                        ..._.location,
-                      };
-                      (_.search = _.toString()),
-                        _ != _.location && _.push(_),
-                        _(_ + 1);
-                    },
-                    disabled: _,
-                  },
-                  "Search ",
-                ),
-              ),
-            ),
-            _ && _.createElement(_._, null),
-            _,
-          ),
-        );
+                            _ &&
+                            (_.set("app_name1", _), _.set("app_value1", _));
+                        let _ = {
+                          ..._.location,
+                        };
+                        (_.search = _.toString()),
+                          _ != _.location && _.push(_),
+                          _(_ + 1);
+                      },
+                      disabled: _,
+                      children: "Search ",
+                    }),
+                  }),
+                ],
+              }),
+              _ && (0, _.jsx)(_._, {}),
+              _,
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

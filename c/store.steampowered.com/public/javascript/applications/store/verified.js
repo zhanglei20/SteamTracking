@@ -281,927 +281,97 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _(_) {
-        const _ = (0, _._)(_, _.options);
-        return _.createElement("span", {
-          ref: _,
-          style: {
-            fontSize: 0,
-          },
-        });
+        if (_) {
+          if ("appid" in _) return "app";
+          if ("bundleid" in _) return "bundle";
+          if ("packageid" in _) return "sub";
+        }
       }
-      const _ = _.forwardRef(function (_, _) {
+      function _(_) {
         const {
-            onLeave: __webpack_require__,
-            onEnter: _,
-            options: _,
-            ..._
+            _: _,
+            hoverClassName: __webpack_require__,
+            fnGetIDOverride: _,
+            fnHoverState: _,
+            children: _,
           } = _,
-          _ = (0, _._)(_, _.options),
-          _ = (0, _._)(_, _);
-        return _.createElement("div", {
-          ref: _,
-          ..._,
-        });
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.version || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  version: {
+          _ = _.useRef(null),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _(_);
+              _ &&
+                (_ && _(!0),
+                window.GameHover &&
+                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
+                    type: _,
+                    _: (0, _._)(_)._,
                     _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  preference_state: {
-                    _: 2,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  content_customization: {
-                    _: 3,
-                    _,
-                  },
-                  valve_analytics: {
-                    _: 4,
-                    _: _,
-                  },
-                  third_party_analytics: {
-                    _: 5,
-                    _: _,
-                  },
-                  third_party_content: {
-                    _: 6,
-                    _: _,
-                  },
-                  utm_enabled: {
-                    _: 7,
-                    _: !0,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacyCookiePreferences";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.recentapps || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  recentapps: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacyCookiePreferences_ContentCustomization";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.product_impressions_tracking || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  product_impressions_tracking: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.google_analytics || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  google_analytics: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.youtube || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  youtube: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  vimeo: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  sketchfab: {
-                    _: 3,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  twitter: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacy_GetCookiePreferences_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.preferences || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  preferences: {
-                    _: 1,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacy_GetCookiePreferences_Response";
-        }
-      }
-      !(function (_) {
-        _.GetCookiePreferences = function (_, _) {
-          return _.SendMsg(
-            "AccountPrivacy.GetCookiePreferences#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
+                  }));
             },
+            [_, _, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(_) &&
+                (_ && _.relatedTarget && _(!1),
+                window.HideGameHover &&
+                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
+            },
+            [_, _, _],
           );
-        };
-      })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = JSON.parse(`{
-	"h": {
-		"countries": {
-			"AF": "Afghanistan",
-			"AX": "Aland Islands",
-			"AL": "Albania",
-			"DZ": "Algeria",
-			"AS": "American Samoa",
-			"AD": "Andorra",
-			"AO": "Angola",
-			"AI": "Anguilla",
-			"AQ": "Antarctica",
-			"AG": "Antigua and Barbuda",
-			"AR": "Argentina",
-			"AM": "Armenia",
-			"AW": "Aruba",
-			"AU": "Australia",
-			"AT": "Austria",
-			"AZ": "Azerbaijan",
-			"BS": "Bahamas",
-			"BH": "Bahrain",
-			"BD": "Bangladesh",
-			"BB": "Barbados",
-			"BY": "Belarus",
-			"BE": "Belgium",
-			"BZ": "Belize",
-			"BJ": "Benin",
-			"BM": "Bermuda",
-			"BT": "Bhutan",
-			"BO": "Bolivia",
-			"BA": "Bosnia and Herzegovina",
-			"BW": "Botswana",
-			"BV": "Bouvet Island",
-			"BR": "Brazil",
-			"IO": "British Indian Ocean Territory",
-			"BN": "Brunei Darussalam",
-			"BG": "Bulgaria",
-			"BF": "Burkina Faso",
-			"BI": "Burundi",
-			"KH": "Cambodia",
-			"CM": "Cameroon",
-			"CA": "Canada",
-			"CV": "Cabo Verde",
-			"KY": "Cayman Islands",
-			"CF": "Central African Republic",
-			"TD": "Chad",
-			"CL": "Chile",
-			"CN": "China",
-			"XC": "China",
-			"CX": "Christmas Island",
-			"CC": "Cocos (Keeling) Islands",
-			"CO": "Colombia",
-			"KM": "Comoros",
-			"CG": "Congo",
-			"CD": "Congo, the Democratic Republic of the",
-			"CK": "Cook Islands",
-			"CR": "Costa Rica",
-			"CI": "Cote d'Ivoire",
-			"HR": "Croatia",
-			"CY": "Cyprus",
-			"CZ": "Czech Republic",
-			"DK": "Denmark",
-			"DJ": "Djibouti",
-			"DM": "Dominica",
-			"DO": "Dominican Republic",
-			"EC": "Ecuador",
-			"EG": "Egypt",
-			"SV": "El Salvador",
-			"GQ": "Equatorial Guinea",
-			"ER": "Eritrea",
-			"EE": "Estonia",
-			"ET": "Ethiopia",
-			"FK": "Falkland Islands (Malvinas)",
-			"FO": "Faroe Islands",
-			"FJ": "Fiji",
-			"FI": "Finland",
-			"FR": "France",
-			"GF": "French Guiana",
-			"PF": "French Polynesia",
-			"TF": "French Southern Territories",
-			"GA": "Gabon",
-			"GM": "Gambia",
-			"GE": "Georgia",
-			"DE": "Germany",
-			"GH": "Ghana",
-			"GI": "Gibraltar",
-			"GR": "Greece",
-			"GL": "Greenland",
-			"GD": "Grenada",
-			"GP": "Guadeloupe",
-			"GU": "Guam",
-			"GT": "Guatemala",
-			"GN": "Guinea",
-			"GW": "Guinea-Bissau",
-			"GG": "Guernsey",
-			"GY": "Guyana",
-			"HT": "Haiti",
-			"HM": "Heard and Mc Donald Islands",
-			"VA": "Holy See(Vatican City State)",
-			"HN": "Honduras",
-			"HK": "Hong Kong",
-			"HU": "Hungary",
-			"IS": "Iceland",
-			"IN": "India",
-			"ID": "Indonesia",
-			"IQ": "Iraq",
-			"IE": "Ireland",
-			"IM": "Isle of Man",
-			"IL": "Israel",
-			"IT": "Italy",
-			"JM": "Jamaica",
-			"JP": "Japan",
-			"JE": "Jersey",
-			"JO": "Jordan",
-			"KZ": "Kazakhstan",
-			"KE": "Kenya",
-			"KI": "Kiribati",
-			"KR": "Korea, Republic of",
-			"KW": "Kuwait",
-			"KG": "Kyrgyzstan",
-			"LA": "Lao People's Democratic Republic",
-			"LV": "Latvia",
-			"LB": "Lebanon",
-			"LS": "Lesotho",
-			"LR": "Liberia",
-			"LI": "Liechtenstein",
-			"LT": "Lithuania",
-			"LU": "Luxembourg",
-			"LY": "Libya",
-			"MO": "Macau",
-			"MK": "North Macedonia, Republic of",
-			"MG": "Madagascar",
-			"MW": "Malawi",
-			"MY": "Malaysia",
-			"MV": "Maldives",
-			"ML": "Mali",
-			"MT": "Malta",
-			"MH": "Marshall Islands",
-			"MQ": "Martinique",
-			"MR": "Mauritania",
-			"MU": "Mauritius",
-			"YT": "Mayotte",
-			"MX": "Mexico",
-			"FM": "Micronesia, Federated States of",
-			"MD": "Moldova, Republic of",
-			"MC": "Monaco",
-			"MN": "Mongolia",
-			"ME": "Montenegro",
-			"MS": "Montserrat",
-			"MA": "Morocco",
-			"MZ": "Mozambique",
-			"MM": "Myanmar",
-			"NA": "Namibia",
-			"NR": "Nauru",
-			"NP": "Nepal",
-			"NL": "Netherlands",
-			"AN": "Netherlands Antilles",
-			"NC": "New Caledonia",
-			"NZ": "New Zealand",
-			"NI": "Nicaragua",
-			"NE": "Niger",
-			"NG": "Nigeria",
-			"NU": "Niue",
-			"NF": "Norfolk Island",
-			"MP": "Northern Mariana Islands",
-			"NO": "Norway",
-			"OM": "Oman",
-			"PK": "Pakistan",
-			"PW": "Palau",
-			"PS": "Palestinian Territory, Occupied",
-			"PA": "Panama",
-			"PG": "Papua New Guinea",
-			"PY": "Paraguay",
-			"PE": "Peru",
-			"PH": "Philippines",
-			"PN": "Pitcairn",
-			"PL": "Poland",
-			"PT": "Portugal",
-			"PR": "Puerto Rico",
-			"QA": "Qatar",
-			"RE": "Reunion",
-			"RO": "Romania",
-			"RU": "Russian Federation",
-			"RW": "Rwanda",
-			"SH": "Saint Helena",
-			"KN": "Saint Kitts and Nevis",
-			"LC": "Saint Lucia",
-			"PM": "Saint Pierre and Miquelon",
-			"VC": "Saint Vincent and the Grenadines",
-			"WS": "Samoa",
-			"SM": "San Marino",
-			"ST": "Sao Tome and Principe",
-			"SA": "Saudi Arabia",
-			"SN": "Senegal",
-			"RS": "Serbia",
-			"SC": "Seychelles",
-			"SL": "Sierra Leone",
-			"SG": "Singapore",
-			"SK": "Slovakia",
-			"SI": "Slovenia",
-			"SB": "Solomon Islands",
-			"SO": "Somalia",
-			"ZA": "South Africa",
-			"GS": "South Georgia and the South Sandwich Islands",
-			"ES": "Spain",
-			"LK": "Sri Lanka",
-			"SD": "Sudan",
-			"SR": "Suriname",
-			"SJ": "Svalbard and Jan Mayen",
-			"SY": "Syria",
-			"SZ": "Eswatini",
-			"SE": "Sweden",
-			"CH": "Switzerland",
-			"TW": "Taiwan",
-			"TJ": "Tajikistan",
-			"TZ": "Tanzania, United Republic of",
-			"TH": "Thailand",
-			"TL": "Timor-Leste",
-			"TG": "Togo",
-			"TK": "Tokelau",
-			"TO": "Tonga",
-			"TT": "Trinidad and Tobago",
-			"TN": "Tunisia",
-			"TR": "Turkey",
-			"TM": "Turkmenistan",
-			"TC": "Turks and Caicos Islands",
-			"TV": "Tuvalu",
-			"UG": "Uganda",
-			"UA": "Ukraine",
-			"AE": "United Arab Emirates",
-			"GB": "United Kingdom",
-			"US": "United States",
-			"UM": "United States Minor Outlying Islands",
-			"UY": "Uruguay",
-			"UZ": "Uzbekistan",
-			"VU": "Vanuatu",
-			"VE": "Venezuela",
-			"VN": "Viet Nam",
-			"VG": "Virgin Islands, British",
-			"VI": "Virgin Islands, U.S.",
-			"WF": "Wallis and Futuna",
-			"EH": "Western Sahara",
-			"YE": "Yemen",
-			"ZM": "Zambia",
-			"ZW": "Zimbabwe"
-		},
-		"eucountries": {
-			"AT": "Austria",
-			"BE": "Belgium",
-			"BG": "Bulgaria",
-			"HR": "Croatia",
-			"CY": "Cyprus",
-			"CZ": "Czech Republic",
-			"DK": "Denmark",
-			"EE": "Estonia",
-			"FI": "Finland",
-			"FR": "France",
-			"DE": "Germany",
-			"GR": "Greece",
-			"HU": "Hungary",
-			"IE": "Ireland",
-			"IT": "Italy",
-			"LV": "Latvia",
-			"LT": "Lithuania",
-			"LU": "Luxembourg",
-			"MT": "Malta",
-			"NL": "Netherlands",
-			"PL": "Poland",
-			"PT": "Portugal",
-			"RO": "Romania",
-			"SK": "Slovakia",
-			"SI": "Slovenia",
-			"ES": "Spain",
-			"SE": "Sweden",
-			"GB": "United Kingdom"
-		},
-		"eeacountries": {
-			"NO": "Norway",
-			"IS": "Iceland",
-			"LI": "Liechtenstein"
-		},
-		"usstates": {
-			"AL": "Alabama",
-			"AK": "Alaska",
-			"AS": "American Samoa",
-			"AZ": "Arizona",
-			"AR": "Arkansas",
-			"CA": "California",
-			"CO": "Colorado",
-			"CT": "Connecticut",
-			"DE": "Delaware",
-			"DC": "District of Columbia",
-			"FM": "Federated States of Micronesia",
-			"FL": "Florida",
-			"GA": "Georgia",
-			"GU": "Guam",
-			"HI": "Hawaii",
-			"ID": "Idaho",
-			"IL": "Illinois",
-			"IN": "Indiana",
-			"IA": "Iowa",
-			"KS": "Kansas",
-			"KY": "Kentucky",
-			"LA": "Louisiana",
-			"ME": "Maine",
-			"MH": "Marshall Islands",
-			"MD": "Maryland",
-			"MA": "Massachusetts",
-			"MI": "Michigan",
-			"MN": "Minnesota",
-			"MS": "Mississippi",
-			"MO": "Missouri",
-			"MT": "Montana",
-			"NE": "Nebraska",
-			"NV": "Nevada",
-			"NH": "New Hampshire",
-			"NJ": "New Jersey",
-			"NM": "New Mexico",
-			"NY": "New York",
-			"NC": "North Carolina",
-			"ND": "North Dakota",
-			"MP": "Northern Mariana Islands",
-			"OH": "Ohio",
-			"OK": "Oklahoma",
-			"OR": "Oregon",
-			"PW": "Palau",
-			"PA": "Pennsylvania",
-			"PR": "Puerto Rico",
-			"RI": "Rhode Island",
-			"SC": "South Carolina",
-			"SD": "South Dakota",
-			"TN": "Tennessee",
-			"TX": "Texas",
-			"UT": "Utah",
-			"VT": "Vermont",
-			"VI": "U.S. Virgin Islands",
-			"VA": "Virginia",
-			"WA": "Washington",
-			"WV": "West Virginia",
-			"WI": "Wisconsin",
-			"WY": "Wyoming",
-			"AA": "Armed Forces Americas",
-			"AE": "Armed Forces",
-			"AP": "Armed Forces Pacific"
-		}
-	}
-}`)._;
-      var _ = __webpack_require__("chunkid");
-      async function _(_) {
-        if ((0, _._)(_._.EREALM))
-          return {
-            version: 1,
-            preference_state: 0,
-          };
-        if (_._.logged_in) {
-          const _ = (await _.GetCookiePreferences(_, {}))
-            .Body()
-            .toObject().preferences;
-          if (_ && void 0 !== _.version && 0 != _.version) return _;
-        }
-        try {
-          const _ = (0, _._)(_._);
-          if (_) {
-            const _ = JSON.parse(_);
-            if (_ && void 0 !== _.version && 0 != _.version) return _;
-          }
-        } catch (_) {}
-        const _ = _._.COUNTRY;
-        return _ in _.eucountries || _ in _.eeacountries || "CH" === _
-          ? {
-              version: 1,
-              preference_state: 4,
-            }
-          : {
-              version: 1,
-              preference_state: 0,
-            };
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = (0, _._)();
-        return (0, _._)(
-          (function (_) {
-            return {
-              queryKey: ["CookiePreferences"],
-              queryFn: () => _(_),
-            };
-          })(_),
-        );
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: __webpack_require__,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          onFocus: _,
+          onBlur: _,
+          children: _,
+        });
       }
       function _(_) {
-        const { data: _ } = _();
-        return _
-          ? (function (_, _) {
-              switch (_.preference_state) {
-                case 0:
-                case 1:
-                  return !0;
-                case 2:
-                  return !1;
-                default:
-                  switch (_) {
-                    case "youtube":
-                      return _.third_party_content?.youtube;
-                    case "vimeo":
-                      return _.third_party_content?.vimeo;
-                    case "sketchfab":
-                      return _.third_party_content?.sketchfab;
-                    case "generic":
-                      return !1;
-                  }
-              }
-            })(_, _)
-          : void 0;
-      }
-      function _() {
-        const { data: _ } = _();
-        return _
-          ? !(function (_) {
-              switch (_.preference_state) {
-                case 0:
-                case 1:
-                  return !1;
-                default:
-                  return !0;
-              }
-            })(_)
-          : void 0;
+        const {
+            _: _,
+            strExtraParams: __webpack_require__,
+            fnOnClickOverride: _,
+            strOverrideURL: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(
+            _ ||
+              (_ && "creatorid" in _
+                ? (0, _._)(
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )
+                : (0, _._)(
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )),
+          );
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            className: _.className,
+            href: _ ? void 0 : _,
+            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+            rel: "noopener noreferrer",
+            onClick: _,
+            children: _.children,
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1223,6 +393,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1248,13 +419,10 @@
           "b",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "b",
-                {
-                  className: _().Bold,
-                },
-                _.children,
-              );
+              return (0, _.jsx)("b", {
+                className: _().Bold,
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1263,13 +431,10 @@
           "i",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "i",
-                {
-                  className: (0, _._)(_().Italic, "BB_Italic"),
-                },
-                _.children,
-              );
+              return (0, _.jsx)("i", {
+                className: (0, _._)(_().Italic, "BB_Italic"),
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1328,14 +493,11 @@
                 _.length > 0 &&
                 "#" === _[0] &&
                 (_ = _.substring(1));
-              return _.createElement(
-                "span",
-                {
-                  _: _ || void 0,
-                  className: (0, _._)(_().CenterSpan, "BB_Center"),
-                },
-                _.children,
-              );
+              return (0, _.jsx)("span", {
+                _: _ || void 0,
+                className: (0, _._)(_().CenterSpan, "BB_Center"),
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1354,13 +516,10 @@
           "u",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "u",
-                {
-                  className: _().Underline,
-                },
-                _.children,
-              );
+              return (0, _.jsx)("u", {
+                className: _().Underline,
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1369,13 +528,10 @@
           "strike",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "s",
-                {
-                  className: _().Strike,
-                },
-                _.children,
-              );
+              return (0, _.jsx)("s", {
+                className: _().Strike,
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1388,24 +544,18 @@
                 _ = _.useCallback(() => {
                   __webpack_require__(!_);
                 }, [_]);
-              return _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().Spoiler, _ && _().Revealed),
-                  focusable: !0,
-                  onActivate: _,
-                  onOKActionDescription: (0, _._)(
-                    _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
-                  ),
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _().SpoilerText,
-                  },
-                  _.children,
+              return (0, _.jsx)(_._, {
+                className: (0, _._)(_().Spoiler, _ && _().Revealed),
+                focusable: !0,
+                onActivate: _,
+                onOKActionDescription: (0, _._)(
+                  _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
                 ),
-              );
+                children: (0, _.jsx)("span", {
+                  className: _().SpoilerText,
+                  children: _.children,
+                }),
+              });
             },
             autocloses: !1,
           },
@@ -1414,7 +564,7 @@
           "hr",
           {
             Constructor: function (_) {
-              return _.createElement("hr", {
+              return (0, _.jsx)("hr", {
                 className: _()._,
               });
             },
@@ -1452,26 +602,20 @@
                 void 0 === _ ||
                 ("string" == typeof _ && _.length > 0 && "#" == _[0])
               )
-                return _.createElement(
-                  "a",
-                  {
-                    href: _ ?? null,
-                    _: _,
-                  },
-                  _.children,
-                );
-              return _.createElement(
-                _,
-                {
-                  className: _,
-                  href: _,
+                return (0, _.jsx)("a", {
+                  href: _ ?? null,
                   _: _,
-                  style: {
-                    backgroundColor: _,
-                  },
+                  children: _.children,
+                });
+              return (0, _.jsx)(_, {
+                className: _,
+                href: _,
+                _: _,
+                style: {
+                  backgroundColor: _,
                 },
-                _.children,
-              );
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1487,13 +631,10 @@
           "pullquote",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "div",
-                {
-                  className: _().PullQuote,
-                },
-                _.children,
-              );
+              return (0, _.jsx)("div", {
+                className: _().PullQuote,
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1502,13 +643,10 @@
           "code",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "code",
-                {
-                  className: _().CodeBlock,
-                },
-                _.children,
-              );
+              return (0, _.jsx)("code", {
+                className: _().CodeBlock,
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1517,13 +655,10 @@
           "c",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "code",
-                {
-                  className: _().Code,
-                },
-                _.children,
-              );
+              return (0, _.jsx)("code", {
+                className: _().Code,
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1559,29 +694,31 @@
               const _ = _(_.args, "noborder"),
                 _ = _(_.args, "equalcells"),
                 _ = _(_.args, "colwidth");
-              return _.createElement(
-                "table",
-                {
-                  className: (0, _._)(
-                    _().Table,
-                    "BB_Table",
-                    _ && _().NoBorder,
-                    _ && _().EqualCells,
-                  ),
-                },
-                _ &&
-                  _.createElement(
-                    "colgroup",
-                    null,
-                    _.split(",").map((_, _) =>
-                      _.createElement(_, {
-                        key: _,
-                        width: _,
-                      }),
-                    ),
-                  ),
-                _.createElement("tbody", null, _.children),
-              );
+              return (0, _.jsxs)("table", {
+                className: (0, _._)(
+                  _().Table,
+                  "BB_Table",
+                  _ && _().NoBorder,
+                  _ && _().EqualCells,
+                ),
+                children: [
+                  _ &&
+                    (0, _.jsx)("colgroup", {
+                      children: _.split(",").map((_, _) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            width: _,
+                          },
+                          _,
+                        ),
+                      ),
+                    }),
+                  (0, _.jsx)("tbody", {
+                    children: _.children,
+                  }),
+                ],
+              });
             },
             autocloses: !1,
             skipInternalNewline: !0,
@@ -1591,13 +728,10 @@
           "tr",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "tr",
-                {
-                  className: (0, _._)(_().TableRow, "BB_TableRow"),
-                },
-                _.children,
-              );
+              return (0, _.jsx)("tr", {
+                className: (0, _._)(_().TableRow, "BB_TableRow"),
+                children: _.children,
+              });
             },
             autocloses: !1,
             skipInternalNewline: !0,
@@ -1664,44 +798,36 @@
                       };
                   }
                 })(_(_.args, "type"), _, _, _);
-              return _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_().ExpandSectionBlock]: !0,
-                    [_.style]: null != _.style,
-                    [_().ExpandSectionExpanded]: __webpack_require__,
-                    [_().ExpandSectionCollapsed]: !__webpack_require__,
-                    BBCodeExpanded: __webpack_require__,
-                    BBCodeCollapsed: !__webpack_require__,
-                  }),
-                },
-                _.createElement(
-                  "div",
-                  {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)({
+                  [_().ExpandSectionBlock]: !0,
+                  [_.style]: null != _.style,
+                  [_().ExpandSectionExpanded]: __webpack_require__,
+                  [_().ExpandSectionCollapsed]: !__webpack_require__,
+                  BBCodeExpanded: __webpack_require__,
+                  BBCodeCollapsed: !__webpack_require__,
+                }),
+                children: [
+                  (0, _.jsxs)("div", {
                     className: _().ExpandSectionHeader,
                     onClick: () => _(!__webpack_require__),
-                  },
-                  (0, _._)(__webpack_require__ ? _.expanded : _.collapsed),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EmbedArrow,
-                    },
-                    _.createElement(_.DK4, {
-                      angle: __webpack_require__ ? 180 : 0,
-                    }),
-                  ),
-                ),
-                __webpack_require__ &&
-                  _.createElement(
-                    "div",
-                    {
+                    children: [
+                      (0, _._)(__webpack_require__ ? _.expanded : _.collapsed),
+                      (0, _.jsx)("div", {
+                        className: _().EmbedArrow,
+                        children: (0, _.jsx)(_.DK4, {
+                          angle: __webpack_require__ ? 180 : 0,
+                        }),
+                      }),
+                    ],
+                  }),
+                  __webpack_require__ &&
+                    (0, _.jsx)("div", {
                       className: _().ExpandSectionBody,
-                    },
-                    _.children,
-                  ),
-              );
+                      children: _.children,
+                    }),
+                ],
+              });
             },
             autocloses: !1,
             skipInternalNewline: !0,
@@ -1716,13 +842,13 @@
                   _.context,
                 _ = _(_.args);
               if (_)
-                return _.createElement(_._, {
+                return (0, _.jsx)(_._, {
                   eventGID: _,
                   bPreviewMode: __webpack_require__,
                 });
               if (_) {
                 const _ = (0, _._)(_._.LANGUAGE);
-                return _.createElement(_._, {
+                return (0, _.jsx)(_._, {
                   eventModel: _,
                   lang: _,
                 });
@@ -1792,19 +918,15 @@
                     _.preventDefault();
                 }
               };
-              return _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    "SaleSectionCalendarEventContainer",
-                    _().CalendarEventContainer,
-                  ),
-                  _: _,
-                },
-                _ &&
-                  _.createElement(
-                    "a",
-                    {
+              return (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  "SaleSectionCalendarEventContainer",
+                  _().CalendarEventContainer,
+                ),
+                _: _,
+                children: [
+                  _ &&
+                    (0, _.jsx)("a", {
                       className: (0, _._)(
                         "SaleSectionCalendarEventLink",
                         _().CalendarEventLink,
@@ -1812,24 +934,18 @@
                       href: _,
                       onClick: _,
                       download: "calendar.ics",
-                    },
-                    "Apple",
-                  ),
-                _.createElement(
-                  "a",
-                  {
+                      children: "Apple",
+                    }),
+                  (0, _.jsx)("a", {
                     className: (0, _._)(
                       "SaleSectionCalendarEventLink",
                       _().CalendarEventLink,
                     ),
                     href: _,
-                  },
-                  "Google",
-                ),
-                _ &&
-                  _.createElement(
-                    "a",
-                    {
+                    children: "Google",
+                  }),
+                  _ &&
+                    (0, _.jsx)("a", {
                       className: (0, _._)(
                         "SaleSectionCalendarEventLink",
                         _().CalendarEventLink,
@@ -1837,10 +953,10 @@
                       href: _,
                       onClick: _,
                       download: "calendar.ics",
-                    },
-                    "Outlook",
-                  ),
-              );
+                      children: "Outlook",
+                    }),
+                ],
+              });
             },
             autocloses: !0,
           },
@@ -1852,17 +968,14 @@
               const _ = _(_.args),
                 _ = "button" == _(_.args, "style") ? _().LinkButton : null,
                 _ = _ && _(_.args, "buttoncolor");
-              return _.createElement(
-                _,
-                {
-                  className: _,
-                  style: {
-                    backgroundColor: _,
-                  },
-                  href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+              return (0, _.jsx)(_, {
+                className: _,
+                style: {
+                  backgroundColor: _,
                 },
-                _.children,
-              );
+                href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1872,15 +985,12 @@
           {
             Constructor: function (_) {
               const _ = _(_.args);
-              return _.createElement(
-                "span",
-                {
-                  style: {
-                    color: _,
-                  },
+              return (0, _.jsx)("span", {
+                style: {
+                  color: _,
                 },
-                _.children,
-              );
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1890,15 +1000,12 @@
           {
             Constructor: function (_) {
               const _ = _(_.args);
-              return _.createElement(
-                "span",
-                {
-                  style: {
-                    backgroundColor: _,
-                  },
+              return (0, _.jsx)("span", {
+                style: {
+                  backgroundColor: _,
                 },
-                _.children,
-              );
+                children: _.children,
+              });
             },
             autocloses: !1,
           },
@@ -1907,14 +1014,10 @@
           "p",
           {
             Constructor: function (_) {
-              return _.createElement(
-                "p",
-                {
-                  className: _().Paragraph,
-                },
-                _.children,
-                _.createElement("wbr", null),
-              );
+              return (0, _.jsxs)("p", {
+                className: _().Paragraph,
+                children: [_.children, (0, _.jsx)("wbr", {})],
+              });
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -2000,14 +1103,11 @@
             _.length > 0 &&
             "#" === _[0] &&
             (_ = _.substring(1)),
-          _.createElement(
-            _,
-            {
-              _: _ || void 0,
-              className: (0, _._)(_, _.className),
-            },
-            _.children,
-          )
+          (0, _.jsx)(_, {
+            _: _ || void 0,
+            className: (0, _._)(_, _.className),
+            children: _.children,
+          })
         );
       }
       function _(_) {
@@ -2035,60 +1135,48 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _,
-            direction: "top",
-          },
-          _.createElement(
-            _._,
-            {
-              ...__webpack_require__,
-              href: _,
-              rel: _,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            ...__webpack_require__,
+            href: _,
+            rel: _,
+            children: _.children,
+          }),
+        });
       };
       function _(_) {
         const _ = _(_.args, "author");
-        return _.createElement(
-          "blockquote",
-          {
-            className: (0, _._)(_().BlockQuote, _.className),
-          },
-          !!_ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)("blockquote", {
+          className: (0, _._)(_().BlockQuote, _.className),
+          children: [
+            !!_ &&
+              (0, _.jsxs)("div", {
                 className: _().QuoteAuthor,
-              },
-              (0, _._)("#Bbcode_Originally_Posted_By") + " ",
-              " ",
-              _.createElement("b", null, _ + ":"),
-            ),
-          _.children,
-        );
+                children: [
+                  (0, _._)("#Bbcode_Originally_Posted_By") + " ",
+                  " ",
+                  (0, _.jsx)("b", {
+                    children: _ + ":",
+                  }),
+                ],
+              }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "ul",
-          {
-            className: (0, _._)(_().List, "bullets"),
-          },
-          _.children,
-        );
+        return (0, _.jsx)("ul", {
+          className: (0, _._)(_().List, "bullets"),
+          children: _.children,
+        });
       }
       function _(_) {
-        return _.createElement(
-          "ol",
-          {
-            className: _().OrderedList,
-          },
-          _.children,
-        );
+        return (0, _.jsx)("ol", {
+          className: _().OrderedList,
+          children: _.children,
+        });
       }
       function _(_) {
         let _ = _(_.args, "id");
@@ -2098,14 +1186,11 @@
             _.length > 0 &&
             "#" === _[0] &&
             (_ = _.substring(1)),
-          _.createElement(
-            "li",
-            {
-              className: _().ListItem,
-              _: _ || void 0,
-            },
-            _.children,
-          )
+          (0, _.jsx)("li", {
+            className: _().ListItem,
+            _: _ || void 0,
+            children: _.children,
+          })
         );
       }
       function _(_) {
@@ -2117,7 +1202,7 @@
             (_ = {
               width: `${_}px`,
             }),
-          _.createElement("col", {
+          (0, _.jsx)("col", {
             style: _,
           })
         );
@@ -2130,17 +1215,14 @@
         return (
           _ && parseInt(_) > 1 && (_.colSpan = parseInt(_)),
           _ && parseInt(_) > 1 && (_.rowSpan = parseInt(_)),
-          _.createElement(
-            _,
-            {
-              className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
-              ..._,
-              style: _ && {
-                width: _,
-              },
+          (0, _.jsx)(_, {
+            className: (0, _._)(_().TableCell, "td" == _ && "BB_TableData"),
+            ..._,
+            style: _ && {
+              width: _,
             },
-            _.children,
-          )
+            children: _.children,
+          })
         );
       }
       function _(_) {
@@ -2190,7 +1272,7 @@
       }
       function _(_) {
         const _ = _(_.args);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           video: _,
           bAutoPlay: !0,
           bControls: !1,
@@ -2212,7 +1294,7 @@
           _ = "0" !== _ && "off" !== _ && "false" !== _,
           _ = _(_.args, "loop"),
           _ = "0" !== _ && "off" !== _ && "false" !== _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           video: _,
           bAutoPlay: _,
           bControls: _,
@@ -2318,6 +1400,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         m_elCanvas;
@@ -2364,7 +1447,7 @@
           _(), (this.m_bSetupComplete = !0);
         }
         render() {
-          return _.createElement("canvas", {
+          return (0, _.jsx)("canvas", {
             _: this.props._,
             className: this.props.className,
             ref: this.BindCanvasRef,
@@ -2395,24 +1478,21 @@
             ...(_ || {}),
             transitionDuration: __webpack_require__ / 1e3 + "s",
           };
-          return _.createElement(
-            _._,
-            {
-              ..._,
-              className: (0, _._)("crossfade", _),
-            },
-            _.createElement(
+          return (0, _.jsx)(_._, {
+            ..._,
+            className: (0, _._)("crossfade", _),
+            children: (0, _.jsx)(
               _._,
               {
                 nodeRef: _,
                 classNames: "crossfade-anim",
                 timeout: __webpack_require__,
-                key: _(),
                 style: _,
+                children: _,
               },
-              _,
+              _(),
             ),
-          );
+          });
         }
       }
       function _(_) {
@@ -2421,19 +1501,16 @@
             backgroundImage: `url(${_})`,
           },
           _ = _.useRef(null);
-        return _.createElement(
-          _,
-          {
-            style: _,
-            keyExtractor: () => _,
-            childRef: _,
-            ...__webpack_require__,
-          },
-          _.createElement("div", {
+        return (0, _.jsx)(_, {
+          style: _,
+          keyExtractor: () => _,
+          childRef: _,
+          ...__webpack_require__,
+          children: (0, _.jsx)("div", {
             ref: _,
             className: "crossfade-img",
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2451,13 +1528,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: "STV_ReplayBanner",
-          },
-          (0, _._)("#DASHPlayerControls_IsReplay"),
-        );
+        return (0, _.jsx)("div", {
+          className: "STV_ReplayBanner",
+          children: (0, _._)("#DASHPlayerControls_IsReplay"),
+        });
       }
       const _ = (0, _._)((_) => {
         let _ = _.video;
@@ -2473,43 +1547,36 @@
         if (_ && _ != _._.Error && _.GetUserInputNeeded()) return null;
         if (_ == _._.Ready) return null;
         let _ = _ == _._.Loading;
-        return _.createElement(
-          "div",
-          {
-            className: "BroadcastVideoWatchState",
-            style: {
-              filter: "hue-rotate(40deg)",
-            },
+        return (0, _.jsxs)("div", {
+          className: "BroadcastVideoWatchState",
+          style: {
+            filter: "hue-rotate(40deg)",
           },
-          _ && _.createElement(_._, null),
-          !_ &&
-            _.createElement(
-              "div",
-              {
+          children: [
+            _ && (0, _.jsx)(_._, {}),
+            !_ &&
+              (0, _.jsx)("div", {
                 className: "BroadcastVideoWatchState_Text",
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       });
       class _ extends _.Component {
         OnClick() {
           _._.UserInputClickVideo(this.props.video);
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastVideoUserInputNeeded",
-              onClick: this.OnClick,
-            },
-            _.createElement(_.jGG, null),
-            _.createElement(
-              "span",
-              null,
-              (0, _._)("#DASHPlayerControls_ClickToPlay"),
-            ),
-          );
+          return (0, _.jsxs)("div", {
+            className: "BroadcastVideoUserInputNeeded",
+            onClick: this.OnClick,
+            children: [
+              (0, _.jsx)(_.jGG, {}),
+              (0, _.jsx)("span", {
+                children: (0, _._)("#DASHPlayerControls_ClickToPlay"),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnClick", null);
@@ -2522,127 +1589,99 @@
         }
         render() {
           let _ = this.props.stats;
-          return _.createElement(
-            "div",
-            {
-              className: "dash_video_stats",
-            },
-            _.createElement(
-              "button",
-              {
+          return (0, _.jsxs)("div", {
+            className: "dash_video_stats",
+            children: [
+              (0, _.jsx)("button", {
                 className: "dash_stat_close_button",
                 onClick: this.HideStats,
-              },
-              _.createElement(_.sED, null),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BufferingResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBufferingResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_PlaybackResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPlaybackResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_HtmlResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetHTMLVideoResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_ContentServer"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetContentServerToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_StallEvents"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetStalledEventsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_FailedDownloads"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetFailedDownloadsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_TimeToFirstFrame"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetTimeToFirstFrameToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_PlaybackRate"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPlaybackRateForDisplay(),
-              ),
-            ),
-            _.createElement(_, {
-              stats: _,
-            }),
-          );
+                children: (0, _.jsx)(_.sED, {}),
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BufferingResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBufferingResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_PlaybackResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPlaybackResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_HtmlResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetHTMLVideoResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_ContentServer"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetContentServerToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_StallEvents"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetStalledEventsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_FailedDownloads"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetFailedDownloadsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_TimeToFirstFrame"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetTimeToFirstFrameToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_PlaybackRate"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPlaybackRateForDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                stats: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "HideStats", null), (_ = (0, _._)([_._], _));
@@ -2669,20 +1708,19 @@
                   ? _.GetBufferedVideoSegmentForDisplay(_)
                   : _.GetBufferedAudioSegmentForDisplay(_);
               __webpack_require__.push(
-                _.createElement(
+                (0, _.jsxs)(
                   "div",
                   {
-                    key: _ + _,
+                    children: [
+                      _,
+                      " ",
+                      (0, _.jsx)("span", {
+                        className: "videoStatsValue",
+                        children: _,
+                      }),
+                    ],
                   },
-                  _,
-                  " ",
-                  _.createElement(
-                    "span",
-                    {
-                      className: "videoStatsValue",
-                    },
-                    _,
-                  ),
+                  _ + _,
                 ),
               );
             }
@@ -2693,12 +1731,12 @@
                 : "#DASHPlayerStats_AudioNoRangeInformation",
             );
             __webpack_require__.push(
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
-                  key: _ + "none",
+                  children: _,
                 },
-                _,
+                _ + "none",
               ),
             );
           }
@@ -2706,173 +1744,134 @@
         }
         render() {
           let _ = this.props.stats;
-          return _.createElement(
-            "div",
-            {
-              className: "dash_video_quick_stats",
-            },
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BytesReceived"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBytesReceivedToDisplay(),
-              ),
-            ),
-            this.props.stats.BHasFrameInformation() &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#DASHPlayerStats_DroppedFrames"),
-                " ",
-                _.createElement(
-                  "span",
-                  {
+          return (0, _.jsxs)("div", {
+            className: "dash_video_quick_stats",
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BytesReceived"),
+                  " ",
+                  (0, _.jsx)("span", {
                     className: "videoStatsValue",
-                  },
-                  _.GetDroppedFramesToDisplay(),
-                ),
-              ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_VideoBuffered"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetVideoBufferedToDisplay(),
-                " ",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_AudioBuffered"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetAudioBufferedToDisplay(),
-                " ",
-              ),
-            ),
-            this.createBufferedRange(!0),
-            this.createBufferedRange(!1),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthRequired"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwidthRequiredToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthVideo"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwithVideoToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthNums"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwidthStatsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_DownloadNums"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetDownloadTimeStatsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_ActiveDownloads"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetActiveDownloadsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_VideoDownloadProgress"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetVideoDownloadProgressToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_DroppingFrames"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPersistentFrameDropsForDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_CurrentFPS"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetCurrentFPSForDisplay(),
-              ),
-            ),
-          );
+                    children: _.GetBytesReceivedToDisplay(),
+                  }),
+                ],
+              }),
+              this.props.stats.BHasFrameInformation() &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#DASHPlayerStats_DroppedFrames"),
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: "videoStatsValue",
+                      children: _.GetDroppedFramesToDisplay(),
+                    }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_VideoBuffered"),
+                  " ",
+                  (0, _.jsxs)("span", {
+                    className: "videoStatsValue",
+                    children: [_.GetVideoBufferedToDisplay(), " "],
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_AudioBuffered"),
+                  " ",
+                  (0, _.jsxs)("span", {
+                    className: "videoStatsValue",
+                    children: [_.GetAudioBufferedToDisplay(), " "],
+                  }),
+                ],
+              }),
+              this.createBufferedRange(!0),
+              this.createBufferedRange(!1),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthRequired"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwidthRequiredToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthVideo"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwithVideoToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthNums"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwidthStatsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_DownloadNums"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetDownloadTimeStatsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_ActiveDownloads"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetActiveDownloadsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_VideoDownloadProgress"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetVideoDownloadProgressToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_DroppingFrames"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPersistentFrameDropsForDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_CurrentFPS"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetCurrentFPSForDisplay(),
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -2958,19 +1957,21 @@
           let _,
             _,
             _ = 0,
-            _ = _.createElement("div", {
-              key: "separator",
-              className: "settingsMenuSeparator",
-            });
+            _ = (0, _.jsx)(
+              "div",
+              {
+                className: "settingsMenuSeparator",
+              },
+              "separator",
+            );
           if (
             (this.state.bSettingsOpen &&
               ((_ = !0),
               (_ = this.props.video.GetVideoRepresentations()),
               (_ = _.map((_) =>
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: _._,
                     onClick: () => {
                       this.props.video.SetVideoRepresentation(_),
                         this.setState({
@@ -2978,20 +1979,23 @@
                         });
                     },
                     bChecked: _.selected,
+                    children: _.displayName,
                   },
-                  _.displayName,
+                  _._,
                 ),
               )),
               _.push(_),
               _.push(
-                _.createElement(
+                (0, _.jsxs)(
                   _._,
                   {
-                    key: "statsToggle",
                     onClick: this.OnShowStats,
+                    children: [
+                      (0, _._)("#Broadcast_VideoContext_ToggleStats"),
+                      "\t",
+                    ],
                   },
-                  (0, _._)("#Broadcast_VideoContext_ToggleStats"),
-                  "\t",
+                  "statsToggle",
                 ),
               ),
               (_ = 0 - (21 * _.length + 32))),
@@ -3000,10 +2004,9 @@
             (_ = !0),
               (_ = []),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: "none",
                     onClick: () => {
                       this.props.video.SetSubtitles(null),
                         this.setState({
@@ -3012,17 +2015,17 @@
                     },
                     className: "NoSubtitles",
                     bChecked: !1,
+                    children: (0, _._)("#Broadcast_None"),
                   },
-                  (0, _._)("#Broadcast_None"),
+                  "none",
                 ),
               );
             for (let _ = 0; _ < this.props.video.ListSubtitles().length; _++) {
               const _ = this.props.video.ListSubtitles()[_];
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: _.language,
                     onClick: () => {
                       this.props.video.SetSubtitles(_.language),
                         this.setState({
@@ -3030,8 +2033,9 @@
                         });
                     },
                     bChecked: "showing" === _.mode,
+                    children: _.label,
                   },
-                  _.label,
+                  _.language,
                 ),
               );
             }
@@ -3039,51 +2043,41 @@
           }
           const _ =
             this.props.video.BHasPlayer() && this.props.video.BHasTimedText();
-          return _.createElement(
-            "div",
-            {
-              className: "STV_BroadcastSettings",
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            className: "STV_BroadcastSettings",
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className:
                     "videoControlButton" + (_ ? " ClosedCaptionsActive" : ""),
                   onClick: this.OnSubtitlesClick,
                   ref: this.m_elSubtitlesButton,
-                },
-                _.createElement(_.N8C, null),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: (0, _.jsx)(_.N8C, {}),
+                }),
+              (0, _.jsx)("div", {
                 className:
                   "videoControlButton VideoSettings " +
                   (_ ? " VideoSettingsOpen" : ""),
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
-              },
-              _.createElement(_.wB_, null),
-            ),
-            _.createElement(_, {
-              video: __webpack_require__,
-            }),
-            _ &&
-              _.map((_) =>
-                _.createElement(
-                  "div",
-                  {
-                    key: _.key,
-                    className: "videoControlButton videoControlFitWidth",
-                  },
-                  _,
+                children: (0, _.jsx)(_.wB_, {}),
+              }),
+              (0, _.jsx)(_, {
+                video: __webpack_require__,
+              }),
+              _ &&
+                _.map((_) =>
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: "videoControlButton videoControlFitWidth",
+                      children: _,
+                    },
+                    _.key,
+                  ),
                 ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+              _ &&
+                (0, _.jsx)("div", {
                   ref: this.BindSettingsPanel,
                   className: "STV_BroadcastSettingsPanel",
                   style: {
@@ -3091,19 +2085,13 @@
                     top: this.m_SettingsButtonPos[1],
                     marginTop: _,
                   },
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                  },
-                  _,
-                ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                    children: _,
+                  }),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
                   ref: this.m_elSubtitlesPanel,
                   className: "STV_BroadcastSettingsPanel SubtitlesMenu",
                   style: {
@@ -3112,16 +2100,13 @@
                     top: this.m_SubtitlesButtonPos[1],
                     marginTop: _,
                   },
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                  },
-                  _,
-                ),
-              ),
-          );
+                    children: _,
+                  }),
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnVideoControlClick", null),
@@ -3183,32 +2168,25 @@
           return (
             this.m_bShowSlider && (_ += " ShowVolumeSlider"),
             _ && (_ += " muted"),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                onMouseEnter: this.OnMouseEnter,
-                onMouseLeave: this.OnMouseLeave,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "BroadcastVolumeControl_FixedLayout",
-                },
-                _.createElement(
-                  "div",
-                  {
+            (0, _.jsx)("div", {
+              className: _,
+              onMouseEnter: this.OnMouseEnter,
+              onMouseLeave: this.OnMouseLeave,
+              children: (0, _.jsxs)("div", {
+                className: "BroadcastVolumeControl_FixedLayout",
+                children: [
+                  (0, _.jsx)("div", {
                     className: _,
                     onClick: this.ToggleMute,
-                  },
-                  _.createElement(_.fSs, null),
-                ),
-                _.createElement(_, {
-                  video: _,
-                  onDrag: this.OnChildDrag,
-                }),
-              ),
-            )
+                    children: (0, _.jsx)(_.fSs, {}),
+                  }),
+                  (0, _.jsx)(_, {
+                    video: _,
+                    onDrag: this.OnChildDrag,
+                  }),
+                ],
+              }),
+            })
           );
         }
       };
@@ -3277,24 +2255,23 @@
             _ = {
               width: `${_}%`,
             };
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastVolumeSlider",
-              onMouseDown: this.OnMouseDown,
-            },
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Track",
-            }),
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Fill",
-              style: _,
-            }),
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Thumb",
-              style: _,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            className: "BroadcastVolumeSlider",
+            onMouseDown: this.OnMouseDown,
+            children: [
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Track",
+              }),
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Fill",
+                style: _,
+              }),
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Thumb",
+                style: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -3499,7 +2476,9 @@
         OnContextMenu(_) {
           this.state.bFullscreen ||
             ((0, _._)(
-              _.createElement(_._, null, this.GetContextMenuItems()),
+              (0, _.jsx)(_._, {
+                children: this.GetContextMenuItems(),
+              }),
               _,
             ),
             _.preventDefault());
@@ -3527,31 +2506,31 @@
           let _ = _.GetBroadcastInfo();
           return (
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "togglestats",
                   bChecked: this.state.bShowStats,
                   onSelected: (_) => {
                     this.ToggleStatsView(_);
                   },
+                  children: (0, _._)("#Broadcast_VideoContext_ToggleStats"),
                 },
-                (0, _._)("#Broadcast_VideoContext_ToggleStats"),
+                "togglestats",
               ),
             ),
             _ &&
               "0" != _.m_strAppId &&
               Number.parseInt(_.m_strAppId) != _._ &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: "visitstore",
                     onSelected: (_) => {
                       this.ShowStorePage(_);
                     },
+                    children: (0, _._)("#Broadcast_VideoContext_OpenStore"),
                   },
-                  (0, _._)("#Broadcast_VideoContext_OpenStore"),
+                  "visitstore",
                 ),
               ),
             _
@@ -3609,108 +2588,110 @@
             !this.state.bFullscreen &&
               this.props.onTheaterMode &&
               _.push(
-                _.createElement("div", {
-                  key: "ChatPosToggle ChatTheaterToggle",
-                  onClick: this.props.onTheaterMode,
-                  title: (0, _._)("#Broadcast_View_Theater"),
-                  className: "BroadcastTheaterToggle",
-                }),
+                (0, _.jsx)(
+                  "div",
+                  {
+                    onClick: this.props.onTheaterMode,
+                    title: (0, _._)("#Broadcast_View_Theater"),
+                    className: "BroadcastTheaterToggle",
+                  },
+                  "ChatPosToggle ChatTheaterToggle",
+                ),
               ),
             _.push(
-              _.createElement("div", {
-                key: "FullscreenToggle",
-                title: (0, _._)("#Broadcast_View_Fullscreen"),
-                onClick: this.OnToggleFullscreen,
-                className: "BroadcastFullscreenToggle",
-              }),
+              (0, _.jsx)(
+                "div",
+                {
+                  title: (0, _._)("#Broadcast_View_Fullscreen"),
+                  onClick: this.OnToggleFullscreen,
+                  className: "BroadcastFullscreenToggle",
+                },
+                "FullscreenToggle",
+              ),
             );
           const _ = _ && !this.BHideVideoControls(),
             _ = _ && !this.state.bFullscreen,
             _ =
               this.props.fnRenderBroadcastContext &&
               this.props.fnRenderBroadcastContext();
-          return _.createElement(
-            "div",
-            {
-              ref: this.BindBroadcastPlayerRef,
-              className: _,
-              onMouseMove: this.OnMouseMove,
-              onClick: this.OnMouseMove,
-              onMouseLeave: this.OnMouseLeave,
-              onContextMenu: this.OnContextMenu,
-              onMouseDown: this.OnMouseDown,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            ref: this.BindBroadcastPlayerRef,
+            className: _,
+            onMouseMove: this.OnMouseMove,
+            onClick: this.OnMouseMove,
+            onMouseLeave: this.OnMouseLeave,
+            onContextMenu: this.OnContextMenu,
+            onMouseDown: this.OnMouseDown,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _().BroadcastContext,
-                },
-                _,
-              ),
-            _ && _.createElement(_, null),
-            this.props.showVideoBackgroundBlur &&
-              _.createElement(_, {
-                className: "videoBlur",
-                elementRef: this.m_elVideo,
-                updateRate: 33,
-                width: 320,
-                height: 180,
-                reductionFactor: 10,
-                blurAmount: 5,
+                  children: _,
+                }),
+              _ && (0, _.jsx)(_, {}),
+              this.props.showVideoBackgroundBlur &&
+                (0, _.jsx)(_, {
+                  className: "videoBlur",
+                  elementRef: this.m_elVideo,
+                  updateRate: 33,
+                  width: 320,
+                  height: 180,
+                  reductionFactor: 10,
+                  blurAmount: 5,
+                }),
+              (0, _.jsx)("video", {
+                className: "videoSrc",
+                ref: this.BindVideoRef,
+                muted: this.props.bMuted ?? !0,
+                autoPlay: !0,
+                playsInline: !0,
+                controls: !1,
+                onVolumeChange: this.props.fnVolumeChanged,
+                onClick: this.props.fnVideoClick,
               }),
-            _.createElement("video", {
-              className: "videoSrc",
-              ref: this.BindVideoRef,
-              muted: this.props.bMuted ?? !0,
-              autoPlay: !0,
-              playsInline: !0,
-              controls: !1,
-              onVolumeChange: this.props.fnVolumeChanged,
-              onClick: this.props.fnVideoClick,
-            }),
-            this.props.linkRegions
-              ? _.createElement(_, {
-                  linkRegions: this.props.linkRegions,
-                  editMode: this.props.editMode,
-                  onSaveLinkRegions: this.props.onSaveLinkRegions,
-                })
-              : null,
-            this.props.linkElement,
-            _ &&
-              _.createElement("img", {
-                loading: "lazy",
-                className: (0, _._)(
-                  _().BroadcastPlaceholderImg,
-                  "BroadcastPlaceholderImg",
-                ),
-                src: this.state.strInitialCapsuleImageUrl,
-              }),
-            _ &&
-              _.createElement(_, {
-                video: _,
-                actions: _,
-                onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
-                onShowStats: this.ToggleStatsView,
-                bIncludeClipEditor: this.props.bIncludeClipEditor,
-              }),
-            _ &&
-              _.createElement(_, {
-                onClick: this.props.onRequestClose,
-              }),
-            _ &&
-              _.createElement(_, {
-                stats: _.GetDASHPlayerStats(),
-                closeStats: this.CloseStats,
-              }),
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(_, {
+              this.props.linkRegions
+                ? (0, _.jsx)(_, {
+                    linkRegions: this.props.linkRegions,
+                    editMode: this.props.editMode,
+                    onSaveLinkRegions: this.props.onSaveLinkRegions,
+                  })
+                : null,
+              this.props.linkElement,
+              _ &&
+                (0, _.jsx)("img", {
+                  loading: "lazy",
+                  className: (0, _._)(
+                    _().BroadcastPlaceholderImg,
+                    "BroadcastPlaceholderImg",
+                  ),
+                  src: this.state.strInitialCapsuleImageUrl,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                  actions: _,
+                  onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
+                  onShowStats: this.ToggleStatsView,
+                  bIncludeClipEditor: this.props.bIncludeClipEditor,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  onClick: this.props.onRequestClose,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  stats: _.GetDASHPlayerStats(),
+                  closeStats: this.CloseStats,
+                }),
+              (0, _.jsx)(_, {
                 video: _,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "BindBroadcastPlayerRef", null),
@@ -3735,62 +2716,56 @@
           const { video: _ } = this.props;
           if (!_) return null;
           let _ = _.has_segments;
-          return _.createElement(
-            "div",
-            {
-              className: "videoControls",
-            },
-            _.createElement(_, {
-              steamID: this.props.video.GetBroadcastSteamID(),
-              bHideThumbnail: !0,
-              bVerticalBroadcastChat: !0,
-              onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: "videoControlsBottom" + (_ ? "" : " noSegments"),
-              },
-              _.createElement(_, {
-                video: _,
-                bIncludeClipEditor: this.props.bIncludeClipEditor,
+          return (0, _.jsxs)("div", {
+            className: "videoControls",
+            children: [
+              (0, _.jsx)(_, {
+                steamID: this.props.video.GetBroadcastSteamID(),
+                bHideThumbnail: !0,
+                bVerticalBroadcastChat: !0,
+                onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
               }),
-              _.createElement(
-                "div",
-                {
-                  className: "STV_BroadcastController",
-                },
-                _.createElement("div", {
-                  className: "videoControlsButtons LeftSpacer",
-                }),
-                _.createElement(_, {
-                  video: _,
-                }),
-                _.createElement(_, {
-                  video: _,
-                }),
-                _.createElement(_, {
-                  video: _,
-                  actions: this.props.actions,
-                  onShowStats: this.props.onShowStats,
-                }),
-              ),
-            ),
-          );
+              (0, _.jsxs)("div", {
+                className: "videoControlsBottom" + (_ ? "" : " noSegments"),
+                children: [
+                  (0, _.jsx)(_, {
+                    video: _,
+                    bIncludeClipEditor: this.props.bIncludeClipEditor,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "STV_BroadcastController",
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "videoControlsButtons LeftSpacer",
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                        actions: this.props.actions,
+                        onShowStats: this.props.onShowStats,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
       class _ extends _.PureComponent {
         render() {
           return this.props.onClick
-            ? _.createElement(
-                "div",
-                {
-                  className: "STV_BroadcastClose",
-                  onClick: this.props.onClick,
-                },
-                _.createElement(_.sED, null),
-              )
+            ? (0, _.jsx)("div", {
+                className: "STV_BroadcastClose",
+                onClick: this.props.onClick,
+                children: (0, _.jsx)(_.sED, {}),
+              })
             : null;
         }
       }
@@ -3804,64 +2779,55 @@
         render() {
           let _ = this.props.video,
             _ = _.CanSeek();
-          return _.createElement(
-            "div",
-            {
-              className: "videoControlsButtons PlayControls",
-            },
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "videoControlButton videoControlJump controlFlip",
-                  onClick: this.OnJumpBackward,
-                },
-                _.createElement(_.tID, {
-                  bHidePostArrow: !0,
-                  bHidePreArrow: !0,
-                  bShowJumpAheadBox: !0,
-                  bFlipHorizontal: !0,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: "jumpAheadValue",
-                  },
-                  _,
-                ),
-              ),
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "videoControlButton videoControlJump",
-                  onClick: this.OnJumpForward,
-                },
-                _.createElement(_.tID, {
-                  bHidePostArrow: !0,
-                  bHidePreArrow: !0,
-                  bShowJumpAheadBox: !0,
-                  bFlipHorizontal: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: "jumpAheadValue",
-                  },
-                  _,
-                ),
-              ),
-            _ &&
-              _.createElement(_, {
+          return (0, _.jsxs)("div", {
+            className: "videoControlsButtons PlayControls",
+            children: [
+              (0, _.jsx)(_, {
                 video: _,
               }),
-          );
+              _ &&
+                (0, _.jsxs)("div", {
+                  className: "videoControlButton videoControlJump controlFlip",
+                  onClick: this.OnJumpBackward,
+                  children: [
+                    (0, _.jsx)(_.tID, {
+                      bHidePostArrow: !0,
+                      bHidePreArrow: !0,
+                      bShowJumpAheadBox: !0,
+                      bFlipHorizontal: !0,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "jumpAheadValue",
+                      children: _,
+                    }),
+                  ],
+                }),
+              (0, _.jsx)(_, {
+                video: _,
+              }),
+              _ &&
+                (0, _.jsxs)("div", {
+                  className: "videoControlButton videoControlJump",
+                  onClick: this.OnJumpForward,
+                  children: [
+                    (0, _.jsx)(_.tID, {
+                      bHidePostArrow: !0,
+                      bHidePreArrow: !0,
+                      bShowJumpAheadBox: !0,
+                      bFlipHorizontal: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "jumpAheadValue",
+                      children: _,
+                    }),
+                  ],
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnJumpBackward", null),
@@ -3869,39 +2835,34 @@
       const _ = (0, _._)((_) => {
         if (_.video.IsBroadcastClip() || _.video.IsBroadcastVOD()) return null;
         let _ = _.video.IsOnLiveEdge();
-        return _.createElement(
-          "div",
-          {
-            className: "videoControlsButtons GoLive",
-          },
-          _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton videoControlGoLive" +
-                (_ ? " isLiveEdge" : ""),
-              onClick: _
-                ? null
-                : (_) => {
-                    _.video.JumpToLiveEdge();
-                  },
-            },
-            _.createElement(_.tID, {
-              bHidePreArrow: !0,
-              bHidePostArrow: !0,
-              bFlipHorizontal: !1,
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: "videoControlsButtons GoLive",
+          children: (0, _.jsxs)("div", {
+            className:
+              "videoControlButton videoControlGoLive" +
+              (_ ? " isLiveEdge" : ""),
+            onClick: _
+              ? null
+              : (_) => {
+                  _.video.JumpToLiveEdge();
+                },
+            children: [
+              (0, _.jsx)(_.tID, {
+                bHidePreArrow: !0,
+                bHidePostArrow: !0,
+                bFlipHorizontal: !1,
+              }),
+              (0, _.jsx)("div", {
                 className: "jumpGoLive",
-              },
-              (0, _._)(
-                _ ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive",
-              ),
-            ),
-          ),
-        );
+                children: (0, _._)(
+                  _
+                    ? "#DASHPlayerControls_IsLive"
+                    : "#DASHPlayerControls_GoLive",
+                ),
+              }),
+            ],
+          }),
+        });
       });
       let _ = class extends _.Component {
         OnTogglePlayPause() {
@@ -3909,14 +2870,11 @@
         }
         render() {
           let _ = this.props.video.IsPaused();
-          return _.createElement(
-            "div",
-            {
-              className: "videoControlButton buttonPlayPause",
-              onClick: this.OnTogglePlayPause,
-            },
-            _ ? _.createElement(_.jGG, null) : _.createElement(_.vRz, null),
-          );
+          return (0, _.jsx)("div", {
+            className: "videoControlButton buttonPlayPause",
+            onClick: this.OnTogglePlayPause,
+            children: _ ? (0, _.jsx)(_.jGG, {}) : (0, _.jsx)(_.vRz, {}),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnTogglePlayPause", null),
@@ -3945,20 +2903,17 @@
         }
         render() {
           let _ = this.props.video.BHasMarkersOrSegments();
-          return _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton jumpToMarker controlFlip" +
-                (_ ? "" : " noMarkersOrSegments") +
-                (this.has_previous_marker ? "" : " noMarkersInDirection"),
-              onClick: this.OnJumpToPreviousMarkerClicked,
-            },
-            _.createElement(_.tID, {
+          return (0, _.jsx)("div", {
+            className:
+              "videoControlButton jumpToMarker controlFlip" +
+              (_ ? "" : " noMarkersOrSegments") +
+              (this.has_previous_marker ? "" : " noMarkersInDirection"),
+            onClick: this.OnJumpToPreviousMarkerClicked,
+            children: (0, _.jsx)(_.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !0,
             }),
-          );
+          });
         }
       };
       (0, _._)([_._], _.prototype, "video", void 0),
@@ -3989,20 +2944,17 @@
         }
         render() {
           let _ = this.props.video.BHasMarkersOrSegments();
-          return _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton jumpToMarker" +
-                (_ ? "" : " noMarkersOrSegments") +
-                (this.has_next_marker ? "" : " noMarkersInDirection"),
-              onClick: this.OnJumpToNextMarkerClicked,
-            },
-            _.createElement(_.tID, {
+          return (0, _.jsx)("div", {
+            className:
+              "videoControlButton jumpToMarker" +
+              (_ ? "" : " noMarkersOrSegments") +
+              (this.has_next_marker ? "" : " noMarkersInDirection"),
+            onClick: this.OnJumpToNextMarkerClicked,
+            children: (0, _.jsx)(_.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !1,
             }),
-          );
+          });
         }
       };
       (0, _._)([_._], _.prototype, "video", void 0),
@@ -4010,26 +2962,20 @@
         (0, _._)([_._], _.prototype, "OnJumpToNextMarkerClicked", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) =>
-        _.createElement(
-          "div",
-          {
-            className: "timelineMarker",
-            title: _.label,
-            style: {
-              left: _.pos + "%",
-            },
-            onMouseEnter: () => _.onMouseEnter(_.pos),
-            onMouseLeave: _.onMouseLeave,
-            onMouseDown: _.onMouseDown ? _.onMouseDown : void 0,
+        (0, _.jsx)("div", {
+          className: "timelineMarker",
+          title: _.label,
+          style: {
+            left: _.pos + "%",
           },
-          _.createElement(
-            "div",
-            {
-              className: "timelineMarkerIcon",
-            },
-            _.createElement(_.Dp6, null),
-          ),
-        );
+          onMouseEnter: () => _.onMouseEnter(_.pos),
+          onMouseLeave: _.onMouseLeave,
+          onMouseDown: _.onMouseDown ? _.onMouseDown : void 0,
+          children: (0, _.jsx)("div", {
+            className: "timelineMarkerIcon",
+            children: (0, _.jsx)(_.Dp6, {}),
+          }),
+        });
       function _(_) {
         let _ = _.startPos,
           _ = _.endPos,
@@ -4037,40 +2983,36 @@
           _ = 1;
         return (
           _ < 0 && ((_ = (_ - _) / 10), (_ = 0), (_ = " hideFront")),
-          _.createElement(
-            "div",
-            {
-              className: "STV_timelineSegment" + _,
-              style: {
-                left: _ + "%",
-                width: _ - _ + "%",
-                opacity: _,
-              },
-              onClick: _.onClick,
+          (0, _.jsxs)("div", {
+            className: "STV_timelineSegment" + _,
+            style: {
+              left: _ + "%",
+              width: _ - _ + "%",
+              opacity: _,
             },
-            _.createElement("div", {
-              className: "STV_timelineSegmentFrontFill",
-              style: {
-                borderColor: "rgb(" + _.color + ")",
-              },
-            }),
-            _.createElement(
-              "div",
-              {
+            onClick: _.onClick,
+            children: [
+              (0, _.jsx)("div", {
+                className: "STV_timelineSegmentFrontFill",
+                style: {
+                  borderColor: "rgb(" + _.color + ")",
+                },
+              }),
+              (0, _.jsx)("div", {
                 className: "STV_timelineSegmentLabel",
                 style: {
                   color: "rgb(" + _.color + ")",
                 },
-              },
-              _.label,
-            ),
-            _.createElement("div", {
-              className: "STV_timelineSegmentBackFill",
-              style: {
-                borderColor: "rgb(" + _.color + ")",
-              },
-            }),
-          )
+                children: _.label,
+              }),
+              (0, _.jsx)("div", {
+                className: "STV_timelineSegmentBackFill",
+                style: {
+                  borderColor: "rgb(" + _.color + ")",
+                },
+              }),
+            ],
+          })
         );
       }
       let _ = class extends _.Component {
@@ -4238,13 +3180,16 @@
             _ < 0 ||
               _ > 100 ||
               _.push(
-                _.createElement(_, {
-                  key: _,
-                  pos: _,
-                  label: _.strTemplateName,
-                  onMouseEnter: this.OnMarkerMouseEnter,
-                  onMouseLeave: this.OnMarkerMouseLeave,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    pos: _,
+                    label: _.strTemplateName,
+                    onMouseEnter: this.OnMarkerMouseEnter,
+                    onMouseLeave: this.OnMarkerMouseLeave,
+                  },
+                  _,
+                ),
               );
           });
           let _ = [];
@@ -4254,14 +3199,17 @@
             let _ = _.GetPercentOffsetFromTime(_.nTimeEnd, _._.Timeline);
             _ < 0 ||
               _.push(
-                _.createElement(_, {
-                  key: _,
-                  startPos: _,
-                  endPos: _,
-                  label: _.strTemplateName,
-                  color: _.color,
-                  onClick: (_) => this.OnSegmentClick(_.nTimeStart),
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    startPos: _,
+                    endPos: _,
+                    label: _.strTemplateName,
+                    color: _.color,
+                    onClick: (_) => this.OnSegmentClick(_.nTimeStart),
+                  },
+                  _,
+                ),
               );
           });
           const _ = _.GetPercentOffsetFromTime(
@@ -4271,141 +3219,120 @@
             _ = _.GetPercentOffsetFromTime(_.m_editorEndTime, _._.Timeline),
             _ = this.props.bIncludeClipEditor
               ? [
-                  _.createElement(_, {
-                    key: "start",
-                    pos: _,
-                    label: (0, _._)("#DASHPlayerControls_Start"),
-                    onMouseEnter: this.OnMarkerMouseEnter,
-                    onMouseLeave: this.OnMarkerMouseLeave,
-                    onMouseDown: (_) => this.OnMouseDown(_, "start"),
-                  }),
-                  _.createElement(_, {
-                    key: "end",
-                    pos: _,
-                    label: (0, _._)("#DASHPlayerControls_End"),
-                    onMouseEnter: this.OnMarkerMouseEnter,
-                    onMouseLeave: this.OnMarkerMouseLeave,
-                    onMouseDown: (_) => this.OnMouseDown(_, "end"),
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      pos: _,
+                      label: (0, _._)("#DASHPlayerControls_Start"),
+                      onMouseEnter: this.OnMarkerMouseEnter,
+                      onMouseLeave: this.OnMarkerMouseLeave,
+                      onMouseDown: (_) => this.OnMouseDown(_, "start"),
+                    },
+                    "start",
+                  ),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      pos: _,
+                      label: (0, _._)("#DASHPlayerControls_End"),
+                      onMouseEnter: this.OnMarkerMouseEnter,
+                      onMouseLeave: this.OnMarkerMouseLeave,
+                      onMouseDown: (_) => this.OnMouseDown(_, "end"),
+                    },
+                    "end",
+                  ),
                 ]
               : [];
-          return _.createElement(
-            "div",
-            {
-              className: "videoTimelineMain",
-              tabIndex: 0,
-              onKeyDown: this.OnKeyDown,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: "videoTimelineMain",
+            tabIndex: 0,
+            onKeyDown: this.OnKeyDown,
+            children: (0, _.jsxs)("div", {
+              className: _,
+              children: [
+                (0, _.jsx)("div", {
                   className: "DialogLabel",
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   className: "STV_timelineSegmentsContainer",
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   onMouseDown: this.OnMouseDown,
                   onMouseMove: this.OnMouseHoverMove,
                   onMouseLeave: this.OnMouseHoverLeave,
                   ref: this.m_elSlider,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: "VideoTimelineSlider",
-                  },
-                  _.createElement("div", {
-                    className: "STV_timelineValue",
-                    style: _,
-                  }),
-                  _.createElement("div", {
-                    className: "STV_timelineGhostValue",
-                    style: _,
-                  }),
-                  _.createElement("div", {
-                    className: "STV_timelineNoVideo",
-                    style: _,
-                  }),
-                  _,
-                  _,
-                  Boolean(this.state.hoverX) &&
-                    _.createElement(
-                      "div",
-                      {
-                        key: "grabbertime",
-                        style: {
-                          position: "absolute",
-                          left: this.state.hoverX - 75,
-                          bottom: "30px",
-                        },
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          style: {
-                            position: "relative",
-                            display: "flex",
-                            justifyContent: "center",
-                          },
-                        },
-                        this.state.thumbnailURL &&
-                          _.createElement("img", {
-                            style: {
-                              width: "150px",
-                            },
-                            src: this.state.thumbnailURL,
-                          }),
-                        _.createElement(
-                          "span",
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineValue",
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineGhostValue",
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineNoVideo",
+                        style: _,
+                      }),
+                      _,
+                      _,
+                      Boolean(this.state.hoverX) &&
+                        (0, _.jsx)(
+                          "div",
                           {
-                            className: "STV_timelineGrabberValue",
                             style: {
                               position: "absolute",
-                              bottom: "4px",
+                              left: this.state.hoverX - 75,
+                              bottom: "30px",
                             },
+                            children: (0, _.jsxs)("div", {
+                              style: {
+                                position: "relative",
+                                display: "flex",
+                                justifyContent: "center",
+                              },
+                              children: [
+                                this.state.thumbnailURL &&
+                                  (0, _.jsx)("img", {
+                                    style: {
+                                      width: "150px",
+                                    },
+                                    src: this.state.thumbnailURL,
+                                  }),
+                                (0, _.jsx)("span", {
+                                  className: "STV_timelineGrabberValue",
+                                  style: {
+                                    position: "absolute",
+                                    bottom: "4px",
+                                  },
+                                  children: _,
+                                }),
+                              ],
+                            }),
                           },
-                          _,
+                          "grabbertime",
                         ),
-                      ),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "STV_timelineGrabber_Wrapper",
-                      style: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: "STV_timelineGrabber" + _,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: "STV_timelineGrabberArrow",
-                        },
-                        _.createElement(_.apU, null),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineGrabber_Wrapper",
+                        style: _,
+                        children: (0, _.jsx)("div", {
+                          className: "STV_timelineGrabber" + _,
+                          children: (0, _.jsx)("div", {
+                            className: "STV_timelineGrabberArrow",
+                            children: (0, _.jsx)(_.apU, {}),
+                          }),
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -4440,7 +3367,7 @@
         RenderStreamSwitcher() {
           const _ = this.props.steamID;
           return _._.stream[_]
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 value: _,
                 options: _._.stream,
                 onChange: this.props.onLocalStreamChange,
@@ -4462,96 +3389,78 @@
             this.props.bVerticalBroadcastChat &&
             _ &&
             _._.gidEvent;
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastDetails",
-            },
-            !this.props.bHideThumbnail &&
-              _.createElement(_, {
-                className: "broadcastDetailsThumbBlur",
-                src: _.m_strThumbnailUrl,
-                draggable: !1,
-                duration: 2500,
-              }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastDetails",
+            children: [
+              !this.props.bHideThumbnail &&
+                (0, _.jsx)(_, {
+                  className: "broadcastDetailsThumbBlur",
+                  src: _.m_strThumbnailUrl,
+                  draggable: !1,
+                  duration: 2500,
+                }),
+              (0, _.jsxs)("div", {
                 className: "BroadcastDetailsHeader",
-              },
-              _ &&
-                _.m_strAppTitle &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "displayColumn",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: "Info",
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        className: "AppTitle",
-                      },
-                      _.m_strAppTitle,
-                    ),
-                    _.m_strTitle &&
-                      _.createElement(
-                        "span",
-                        {
-                          className: "BroadcastTitle",
-                        },
-                        " - ",
-                        _.m_strTitle,
-                      ),
-                    this.props.onLocalStreamChange &&
-                      this.RenderStreamSwitcher(),
-                  ),
+                children: [
                   _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: "BroadcastDetailsHeader_ViewerCount",
-                      },
-                      _.createElement(_.y_e, null),
-                      (0, _._)("#Broadcast_ViewerCount", _),
-                    ),
-                ),
+                    _.m_strAppTitle &&
+                    (0, _.jsxs)("div", {
+                      className: "displayColumn",
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: "Info",
+                          children: [
+                            (0, _.jsx)("span", {
+                              className: "AppTitle",
+                              children: _.m_strAppTitle,
+                            }),
+                            _.m_strTitle &&
+                              (0, _.jsxs)("span", {
+                                className: "BroadcastTitle",
+                                children: [" - ", _.m_strTitle],
+                              }),
+                            this.props.onLocalStreamChange &&
+                              this.RenderStreamSwitcher(),
+                          ],
+                        }),
+                        _ &&
+                          (0, _.jsxs)("div", {
+                            className: "BroadcastDetailsHeader_ViewerCount",
+                            children: [
+                              (0, _.jsx)(_.y_e, {}),
+                              (0, _._)("#Broadcast_ViewerCount", _),
+                            ],
+                          }),
+                      ],
+                    }),
+                  _ &&
+                    this.props.onOpenLinkInNewWindow &&
+                    (0, _.jsx)("div", {
+                      className: "Actions",
+                      children: (0, _.jsx)("div", {
+                        onClick: (_) =>
+                          this.props.onOpenLinkInNewWindow(_, _._.link),
+                        className: "BroadcastLink",
+                        children: _._.linkName,
+                      }),
+                    }),
+                ],
+              }),
               _ &&
-                this.props.onOpenLinkInNewWindow &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "Actions",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      onClick: (_) =>
-                        this.props.onOpenLinkInNewWindow(_, _._.link),
-                      className: "BroadcastLink",
-                    },
-                    _._.linkName,
-                  ),
-                ),
-            ),
-            _ &&
-              _.createElement(_._, {
-                gidEvent: _._.gidEvent,
-              }),
-            _ &&
-              _.createElement(_._, {
-                _:
-                  _._.bValid && _._.stream && _._.stream[_.m_steamIDBroadcast]
-                    ? _._.appID
-                    : parseInt(_.m_strAppId),
-                type: "game",
-                bPreferAssetWithoutOverride: !1,
-              }),
-          );
+                (0, _.jsx)(_._, {
+                  gidEvent: _._.gidEvent,
+                }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  _:
+                    _._.bValid && _._.stream && _._.stream[_.m_steamIDBroadcast]
+                      ? _._.appID
+                      : parseInt(_.m_strAppId),
+                  type: "game",
+                  bPreferAssetWithoutOverride: !1,
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -4563,36 +3472,39 @@
               onChange: _,
             } = this.props,
             _ = Object.keys(_).map((_) =>
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: _,
                   onSelected: () => _(_),
                   bChecked: _ === __webpack_require__,
+                  children: (0, _._)(_[_]),
                 },
-                (0, _._)(_[_]),
+                _,
               ),
             );
-          (0, _._)(_.createElement(_._, null, _), _);
+          (0, _._)(
+            (0, _.jsx)(_._, {
+              children: _,
+            }),
+            _,
+          );
         }
         render() {
           const { value: _, options: _ } = this.props,
             _ = _[_];
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastLanguage",
-              onClick: this.showContextMenu,
-            },
-            _.createElement("span", null, " - ", (0, _._)(_)),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastLanguage",
+            onClick: this.showContextMenu,
+            children: [
+              (0, _.jsxs)("span", {
+                children: [" - ", (0, _._)(_)],
+              }),
+              (0, _.jsx)("div", {
                 className: "ContextMenuButton",
-              },
-              _.createElement(_.GB9, null),
-            ),
-          );
+                children: (0, _.jsx)(_.GB9, {}),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "showContextMenu", null);
@@ -4680,87 +3592,73 @@
             );
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: "LinkOverlayContainer",
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "LinkOverlayContainer",
+            children: [
+              (0, _.jsxs)("div", {
                 className: "LinkOverlayValidRegion",
-              },
-              !this.props.editMode && this.props.linkRegions
-                ? this.props.linkRegions.map((_) => {
-                    const _ = (0, _._)(_.url);
-                    return _.createElement(
-                      _._,
-                      {
-                        key: _.link_index,
-                        href: _.url,
-                        bForceExternal: _,
-                        bUseLinkFilter: _,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: "LinkRegion",
-                          style: {
-                            left: _.left + "%",
-                            top: _.top + "%",
-                            width: _.width + "%",
-                            height: _.height + "%",
-                          },
-                        },
-                        _.createElement(
-                          "div",
+                children: [
+                  !this.props.editMode && this.props.linkRegions
+                    ? this.props.linkRegions.map((_) => {
+                        const _ = (0, _._)(_.url);
+                        return (0, _.jsx)(
+                          _._,
                           {
-                            className: "LinkRegionText",
+                            href: _.url,
+                            bForceExternal: _,
+                            bUseLinkFilter: _,
+                            children: (0, _.jsx)("div", {
+                              className: "LinkRegion",
+                              style: {
+                                left: _.left + "%",
+                                top: _.top + "%",
+                                width: _.width + "%",
+                                height: _.height + "%",
+                              },
+                              children: (0, _.jsxs)("div", {
+                                className: "LinkRegionText",
+                                children: [_.link_description, " "],
+                              }),
+                            }),
                           },
-                          _.link_description,
-                          " ",
-                        ),
+                          _.link_index,
+                        );
+                      })
+                    : null,
+                  this.props.editMode &&
+                    this.state.sizableRegion.map((_, _) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          index: _,
+                          deleteFn: this.DeleteRegion,
+                          updateFn: this.UpdatePanel,
+                          xPosPct: _.xPosPct,
+                          yPosPct: _.yPosPct,
+                          widthPct: _.widthPct,
+                          heightPct: _.heightPct,
+                          link_url: _.link_url,
+                          link_description: _.link_description,
+                        },
+                        100 * _ + _.xPosPct,
                       ),
-                    );
-                  })
-                : null,
-              this.props.editMode &&
-                this.state.sizableRegion.map((_, _) =>
-                  _.createElement(_._, {
-                    key: 100 * _ + _.xPosPct,
-                    index: _,
-                    deleteFn: this.DeleteRegion,
-                    updateFn: this.UpdatePanel,
-                    xPosPct: _.xPosPct,
-                    yPosPct: _.yPosPct,
-                    widthPct: _.widthPct,
-                    heightPct: _.heightPct,
-                    link_url: _.link_url,
-                    link_description: _.link_description,
-                  }),
-                ),
-              this.props.editMode &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "AddLinkRegion",
-                    onClick: this.AddLinkRegion,
-                  },
-                  (0, _._)("#SteamTV_AddLinkRegion"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
+                    ),
+                  this.props.editMode &&
+                    (0, _.jsx)("div", {
+                      className: "AddLinkRegion",
+                      onClick: this.AddLinkRegion,
+                      children: (0, _._)("#SteamTV_AddLinkRegion"),
+                    }),
+                ],
+              }),
+              (0, _.jsx)("div", {
                 className: "LinkOverlayInvalidRegion",
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#SteamTV_LinkRegionReserved"),
-              ),
-            ),
-          );
+                children: (0, _.jsx)("div", {
+                  children: (0, _._)("#SteamTV_LinkRegionReserved"),
+                }),
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "AddLinkRegion", null),
@@ -5073,6 +3971,94 @@
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
+          (_[(_.k_eWishlist = 2)] = "k_eWishlist"),
+          (_[(_.k_eFollowing = 4)] = "k_eFollowing"),
+          (_[(_.k_eRecommended = 8)] = "k_eRecommended"),
+          (_[(_.k_eSteam = 16)] = "k_eSteam"),
+          (_[(_.k_eRequired = 32)] = "k_eRequired"),
+          (_[(_.k_eFeatured = 64)] = "k_eFeatured"),
+          (_[(_.k_eCurator = 128)] = "k_eCurator"),
+          (_[(_.k_eReposted = 256)] = "k_eReposted");
+      })(_ || (_ = {}));
+      class _ {
+        clanid;
+        unique_id;
+        event_type;
+        appid;
+        start_time;
+        appInfo;
+        clanInfo;
+        score;
+        GetSource() {
+          return this.appInfo ? this.appInfo.source : this.clanInfo.source;
+        }
+        static GetEntityNameForID(_, _) {
+          if (_) return _._.Get().GetApp(_)?.GetName();
+          if (_) {
+            const _ = _._.GetClanInfoByClanAccountID(_);
+            if (_) return _.group_name;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+        static BHasEntityNameForID(_, _) {
+          return _
+            ? Boolean(_._.Get().GetApp(_)?.GetName())
+            : !!_ && !!_._.GetClanInfoByClanAccountID(_)?.group_name;
+        }
+        GetEntityName() {
+          return _.GetEntityNameForID(this.appid, this.clanid);
+        }
+        GetGameCapsule() {
+          if (this.appInfo)
+            return _._.Get()
+              .GetApp(this.appInfo.appid)
+              ?.GetAssets()
+              ?.GetMainCapsuleURL();
+          if (this.clanInfo) {
+            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+            if (_) return _.avatar_full_url;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+        GetGameIcon() {
+          if (this.appInfo)
+            return _._.Get()
+              .GetApp(this.appInfo.appid)
+              ?.GetAssets()
+              ?.GetCommunityIconURL();
+          if (this.clanInfo) {
+            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+            if (_) return _.avatar_full_url;
+          }
+          return (0, _._)("#EventCalendar_MuteApp_Unknown");
+        }
+      }
+      class _ {
+        appid;
+        source;
+        playtime;
+        last_played;
+        wishlist_added;
+      }
+      class _ {
+        clanid;
+        source;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -6850,863 +5836,434 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_eDiscussions = 0)] = "k_eDiscussions"),
+          (_[(_.k_eThumbsUp = 1)] = "k_eThumbsUp"),
+          (_[(_.k_eClickThrough = 2)] = "k_eClickThrough"),
+          (_[(_.k_eMuted = 3)] = "k_eMuted"),
+          (_[(_.k_ePlayedVideo = 4)] = "k_ePlayedVideo"),
+          (_[(_.k_eReminder_Opened = 5)] = "k_eReminder_Opened"),
+          (_[(_.k_eReminder_MobilePush = 6)] = "k_eReminder_MobilePush"),
+          (_[(_.k_eReminder_Email = 7)] = "k_eReminder_Email"),
+          (_[(_.k_eReminder_CalendarApple = 8)] = "k_eReminder_CalendarApple"),
+          (_[(_.k_eReminder_CalendarGoogle = 9)] =
+            "k_eReminder_CalendarGoogle"),
+          (_[(_.k_eReminder_CalendarOutlook = 10)] =
+            "k_eReminder_CalendarOutlook"),
+          (_[(_.k_eReminder_EmailUnverified = 11)] =
+            "k_eReminder_EmailUnverified"),
+          (_[(_.k_eReminder_MobilePushMissing = 12)] =
+            "k_eReminder_MobilePushMissing");
+      })(_ || (_ = {}));
+      const _ = new (class {
+        m_nPastViewedIndex = 0;
+        m_nPastViewedDays = 0;
+        m_nFutureViewedIndex = 0;
+        m_nFutureViewableEvents = 0;
+        m_nLastRecordedFilter = 0;
+        m_sBrowserID = void 0;
+        m_scheduledFilterChange = new _._();
+        m_scheduledFutureStats = new _._();
+        m_scheduledPastStats = new _._();
+        RecordViewedEvent(_, _) {
+          const _ = _.GetStoreInitializationTimestamp().getTime() / 1e3;
+          this.m_nFutureViewableEvents = 0;
+          let _,
+            _ = 0,
+            _ = null;
+          const _ = _.GetCurrentlyLoadedItemsForStats();
+          for (const _ of _) {
+            const _ = _.start_time > _;
+            if ((_.unique_id == _ && ((_ = _), (_ = _)), _))
+              this.m_nFutureViewableEvents++;
+            else if (void 0 !== _) break;
+            _++;
+          }
+          if (void 0 !== _)
+            if (_ < this.m_nFutureViewableEvents) {
+              const _ = this.m_nFutureViewableEvents - _;
+              if (this.m_nFutureViewedIndex < _) {
+                this.m_nFutureViewedIndex = _;
+                const _ = () => {
+                    const _ =
+                      Math.min(this.m_nFutureViewedIndex, 4095) |
+                      (Math.min(this.m_nFutureViewableEvents, 255) << 12) |
+                      (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
+                    _.SendExperimentEventToSteam(18, _);
+                  },
+                  _ = 500;
+                this.m_scheduledFutureStats.Schedule(_, _);
+              }
+            } else {
+              const _ = _ - this.m_nFutureViewableEvents;
+              if (this.m_nPastViewedIndex < _) {
+                (this.m_nPastViewedIndex = _),
+                  (this.m_nPastViewedDays = Math.floor(
+                    (_ - _.start_time) / 86400,
+                  ));
+                const _ = () => {
+                    const _ =
+                      Math.min(this.m_nPastViewedIndex, 4095) |
+                      (Math.min(this.m_nPastViewedDays, 255) << 12) |
+                      (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
+                    _.SendExperimentEventToSteam(17, _);
+                  },
+                  _ = 500;
+                this.m_scheduledPastStats.Schedule(_, _);
+              }
+            }
+        }
+        RecordFilterChangeEvent(_) {
+          this.m_scheduledFilterChange.Schedule(1e3, () => {
+            let _ = 0;
+            _.BIsGameSourceAllowed(_._.k_ELibrary) && (_ |= 1),
+              _.BIsGameSourceAllowed(_._.k_EWishlist) && (_ |= 2),
+              _.BIsGameSourceAllowed(_._.k_EFollowing) && (_ |= 4),
+              _.BIsGameSourceAllowed(_._.k_ERecommended) && (_ |= 8),
+              _.BIsGameSourceAllowed(_._.k_ESteam) && (_ |= 16),
+              _.BIsGameSourceAllowed(_._.k_EFeatured) && (_ |= 32),
+              _.BIsGameSourceAllowed(_._.k_ERecent) && (_ |= 64),
+              _.BIsEventTypeGroupAllowed(_._.k_ENews) && (_ |= 1024),
+              _.BIsEventTypeGroupAllowed(_._.k_EEvents) && (_ |= 2048),
+              _.BIsEventTypeGroupAllowed(_._.k_EStreaming) && (_ |= 4096),
+              _.BIsEventTypeGroupAllowed(_._.k_EUpdates) && (_ |= 8192),
+              _.BIsEventTypeGroupAllowed(_._.k_EReleases) && (_ |= 16384),
+              _.BIsEventTypeGroupAllowed(_._.k_ESales) && (_ |= 32768),
+              _ != this.m_nLastRecordedFilter &&
+                ((this.m_nLastRecordedFilter = _),
+                this.SendExperimentEventToSteam(16, _));
+          });
+        }
+        GetTimeSpentOnPageS(_) {
+          const _ = _.GetStoreInitializationTimestamp(),
+            _ = new Date();
+          return Math.max(
+            0,
+            Math.floor((__webpack_require__.getTime() - _.getTime()) / 1e3),
+          );
+        }
+        RecordAppInteractionEvent(_, _) {
+          this.SendExperimentEventToSteam(19, _);
+        }
+        SendExperimentEventToSteam(_, _) {
+          this.InitBrowserID();
+          const _ = _._.STORE_BASE_URL + "events/ajaxreportnewshubstats/",
+            _ = new URLSearchParams();
+          _.append("page_action", "" + _),
+            _.append("snr", _._.SNR),
+            _.append("uint_data", "" + _),
+            _.append("str_data", this.m_sBrowserID),
+            _().post(_, _);
+        }
+        InitBrowserID() {
+          if (void 0 === this.m_sBrowserID)
+            if (_._.IN_CLIENT) this.m_sBrowserID = "steam";
+            else {
+              const _ = navigator.userAgent;
+              /iPhone|iPad|iPod/i.test(_) ||
+              (/Macintosh/i.test(_) && /Safari/i.test(_))
+                ? (this.m_sBrowserID = "ios")
+                : /Android/i.test(_)
+                  ? (this.m_sBrowserID = "android")
+                  : (this.m_sBrowserID = "");
+            }
+        }
+      })();
+      window.g_EventCalendarTrackingStore = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.k_ERecent = "recent"),
+          (_.k_ELibrary = "library"),
+          (_.k_EWishlist = "wishlist"),
+          (_.k_EFollowing = "following"),
+          (_.k_ERecommended = "recommended"),
+          (_.k_ESteam = "steam"),
+          (_.k_EFeatured = "featured"),
+          (_.k_ECurator = "curator");
+      })(_ || (_ = {}));
+      const _ = [
+          _.k_ELibrary,
+          _.k_EWishlist,
+          _.k_EFollowing,
+          _.k_ERecommended,
+          _.k_ESteam,
+          _.k_ECurator,
+        ],
+        _ = [..._, _.k_EFeatured],
+        _ = [_.k_EFeatured];
+      var _;
+      !(function (_) {
+        (_.k_ENews = "news"),
+          (_.k_EEvents = "events"),
+          (_.k_EStreaming = "streaming"),
+          (_.k_EUpdates = "updates"),
+          (_.k_EReleases = "releases"),
+          (_.k_ESales = "sales");
+      })(_ || (_ = {}));
+      const _ = [
+          _.k_ENews,
+          _.k_EEvents,
+          _.k_EStreaming,
+          _.k_EUpdates,
+          _.k_EReleases,
+          _.k_ESales,
+        ],
+        _ = new Map([
+          [_.k_ENews, [28]],
+          [_.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
+          [_.k_EStreaming, [11]],
+          [_.k_EUpdates, [12, 13, 14]],
+          [_.k_EReleases, [10, 29, 16, 15, 32]],
+          [_.k_ESales, [20, 21, 31, 34]],
+        ]);
+      function _(_) {
+        return new Map(_.map((_) => [_, !0]));
+      }
       class _ {
-        static s_VODStore;
-        m_mapAppToVOD = new Map();
-        GetVODForAppID(_) {
-          return this.m_mapAppToVOD.get(_);
-        }
-        async LoadVODForAppID(_, _) {
-          if (this.m_mapAppToVOD.has(_)) return this.m_mapAppToVOD.get(_);
-          const _ = _._.STORE_BASE_URL + "video/details/" + _ + "/0",
-            _ = {};
-          try {
-            let _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-              cancelToken: _ ? _.token : void 0,
+        m_mapEventTypeGroupsAllowed = new Map();
+        m_mapGameSources = new Map();
+        m_bCuratorUnhideOnFollowDialogDismissed = !1;
+        m_mapHiddenApps = new Map();
+        m_mapHiddenClans = new Map();
+        m_bInitializedForUpdatesOnly;
+        m_eStorageType = "session";
+        m_strStorageKey;
+        constructor(_) {
+          (0, _._)(this),
+            (0, _._)(() => {
+              _?.rgHiddenApps &&
+                _.rgHiddenApps.forEach((_) => this.m_mapHiddenApps.set(_, !0)),
+                _?.rgHiddenClans &&
+                  _.rgHiddenClans.forEach((_) =>
+                    this.m_mapHiddenClans.set(_, !0),
+                  );
             });
-            if (_ && _.token.reason) return null;
-            if (
-              _ &&
-              200 == _.status &&
-              _.data &&
-              (1 == _.data.success || "ready" == _.data.success)
-            ) {
-              let _ = (0, _._)({
-                appid: _,
-                video_url: _.data.video_url,
-                bookmark: _.data.bookmark,
-              });
+        }
+        GetGameSources() {
+          return Array.from(this.m_mapGameSources.keys());
+        }
+        GetStorageObject() {
+          return this.m_strStorageKey
+            ? "session" === this.m_eStorageType
+              ? window.sessionStorage
+              : window.localStorage
+            : null;
+        }
+        GetPreferencesStorageKey() {
+          return `${this.m_strStorageKey}-event-calendar-prefs`;
+        }
+        get enabledEventTypeSet() {
+          const _ = new Set();
+          for (const _ of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
+            _.get(_).forEach((_) => _.add(_));
+          return _;
+        }
+        MapClanEventTypeToGroup(_) {
+          let _ = null;
+          return (
+            _.forEach((_, _) => {
+              -1 !== __webpack_require__.indexOf(_) && (_ = _);
+            }),
+            _ || _.k_EEvents
+          );
+        }
+        InitDefaultCheckboxes(_, _, _) {
+          (this.m_bInitializedForUpdatesOnly = _),
+            (this.m_mapEventTypeGroupsAllowed = _(_ ? [_.k_EUpdates] : _));
+          const _ = (0, _._)() ? _ : _;
+          (this.m_mapGameSources = _(_ ? _ : _)),
+            _ && this.m_mapGameSources.set(_.k_EFeatured, !0);
+        }
+        Init(_, _, _, _, _) {
+          (this.m_eStorageType = _), (this.m_strStorageKey = _);
+          const _ = this.GetStorageObject(),
+            _ = _ ? _.getItem(this.GetPreferencesStorageKey()) : null;
+          if (_) {
+            const _ = JSON.parse(_);
+            if (_.rgEventTypeGroupsAllowed && _.rgGameSources) {
+              const { rgEventTypeGroupsAllowed: _, rgGameSources: _ } = _;
               return (
-                _.data.bookmark
-                  ? _._.Get().SetBookmarkForApp(_, _.data.bookmark)
-                  : _._.Get().InitializeBookmarkForApp(_),
-                this.m_mapAppToVOD.set(_, _),
-                _
+                (this.m_mapEventTypeGroupsAllowed = _(_)),
+                (this.m_mapGameSources = _(_)),
+                void (
+                  void 0 !== _.bCuratorUnhideOnFollowDismissed &&
+                  (this.m_bCuratorUnhideOnFollowDialogDismissed =
+                    _.bCuratorUnhideOnFollowDismissed)
+                )
               );
             }
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error(
-              "CVideoOnDemandStore:LoadVODForAppID: Failed " + _.strErrorMsg,
-              _,
-            );
           }
-          return null;
-        }
-        static Get() {
-          return (
-            _.s_VODStore || ((_.s_VODStore = new _()), _.s_VODStore.Init()),
-            _.s_VODStore
-          );
-        }
-        Init() {}
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.video_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  video_id: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  client_cellid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_ClientGetVideoURL_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.video_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  video_id: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  video_url: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_ClientGetVideoURL_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.encryption_key || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  encryption_key: {
-                    _: 1,
-                    _: _._.readBytes,
-                    _: _._.writeBytes,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_UnlockedH264_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.app_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  app_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  client_cellid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFovasVideo_ClientGetOPFSettings_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.app_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  app_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  opf_settings: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFovasVideo_ClientGetOPFSettings_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.app_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  app_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  playback_position_in_seconds: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  video_track_id: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  audio_track_id: {
-                    _: 4,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  timedtext_track_id: {
-                    _: 5,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  last_modified: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  hide_from_watch_history: {
-                    _: 7,
-                    _: !1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  hide_from_library: {
-                    _: 8,
-                    _: !1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "VideoBookmark";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.bookmarks || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  bookmarks: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_SetVideoBookmark_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appids: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                  updated_since: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GetVideoBookmarks_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.bookmarks || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  bookmarks: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GetVideoBookmarks_Response";
-        }
-      }
-      !(function (_) {
-        (_.ClientGetVideoURL = function (_, _) {
-          return _.SendMsg("Video.ClientGetVideoURL#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-          });
-        }),
-          (_.SetVideoBookmark = function (_, _) {
-            return _.SendNotification(
-              "Video.SetVideoBookmark#1",
-              (0, _._)(_, _),
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetVideoBookmarks = function (_, _) {
-            return _.SendMsg("Video.GetVideoBookmarks#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          });
-      })(_ || (_ = {})),
-        (function (_) {
-          _.NotifyUnlockedH264Handler = {
-            name: "VideoClient.NotifyUnlockedH264#1",
-            request: _,
+          this.InitDefaultCheckboxes(_, _, _);
+        }
+        SaveFilterPreferences() {
+          const _ = this.GetStorageObject();
+          if (!_) return;
+          const _ = {
+            rgEventTypeGroupsAllowed: Array.from(
+              this.m_mapEventTypeGroupsAllowed.keys(),
+            ),
+            rgGameSources: Array.from(this.m_mapGameSources.keys()),
+            bCuratorUnhideOnFollowDismissed:
+              this.m_bCuratorUnhideOnFollowDialogDismissed,
           };
-        })(_ || (_ = {})),
-        (function (_) {
-          _.ClientGetOPFSettings = function (_, _) {
-            return _.SendMsg(
-              "FovasVideo.ClientGetOPFSettings#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          };
-        })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        static s_VODStore;
-        m_LoadingOAuth = null;
-        m_transport;
-        m_mapBookmarks = new Map();
-        SetBookmarkForApp(_, _) {
-          this.ValidateBookmarkData(_)
-            ? this.m_mapBookmarks.set(_, _.fromObject(_))
-            : this.InitializeBookmarkForApp(_);
+          _.setItem(this.GetPreferencesStorageKey(), JSON.stringify(_));
         }
-        ValidateBookmarkData(_) {
-          const _ = _;
+        BCuratorUnhideOnFollowDialogDismissed() {
+          return this.m_bCuratorUnhideOnFollowDialogDismissed;
+        }
+        SetCuratorUnhideOnFollowDialogDismissed(_) {
+          (this.m_bCuratorUnhideOnFollowDialogDismissed = _),
+            this.SaveFilterPreferences();
+        }
+        BIsEventTypeGroupAllowed(_) {
+          return this.m_mapEventTypeGroupsAllowed.has(_);
+        }
+        BIsGameSourceAllowed(_) {
           return (
-            "object" == typeof _ &&
-            Number.isInteger(_.playback_position_in_seconds) &&
-            Number.isInteger(_.app_id)
+            !(_ === _.k_EFollowing && !(0, _._)()) &&
+            !(_ === _.k_ECurator && !(0, _._)()) &&
+            this.m_mapGameSources.has(_)
           );
         }
-        InitializeBookmarkForApp(_) {
-          if (!this.m_mapBookmarks.has(_)) {
-            let _ = {
-              app_id: _,
-              playback_position_in_seconds: 0,
-              video_track_id: "0",
-              audio_track_id: "0",
-              timedtext_track_id: "0",
-              hide_from_watch_history: !1,
-              hide_from_library: !1,
-            };
-            this.m_mapBookmarks.set(_, new _(_));
-          }
+        SetEventTypeGroupAllowed(_, _) {
+          _
+            ? this.m_mapEventTypeGroupsAllowed.set(_, !0)
+            : this.m_mapEventTypeGroupsAllowed.delete(_),
+            this.SaveFilterPreferences(),
+            _._.RecordFilterChangeEvent(this);
         }
-        GetBookmarkPlayTimeInSeconds(_) {
-          if (this.m_mapBookmarks.has(_)) {
-            let _ = this.m_mapBookmarks.get(_).playback_position_in_seconds();
-            if (Number.isInteger(_)) return _;
-          }
-          return 0;
+        SetGameSourceAllowed(_, _) {
+          _
+            ? (this.m_mapGameSources.set(_, !0),
+              _ == _.k_ERecent
+                ? this.m_mapGameSources.delete(_.k_ELibrary)
+                : _ == _.k_ELibrary &&
+                  ((0, _._)(
+                    !this.m_mapGameSources.has(_.k_ERecent),
+                    "Setting Library although Recent already set - illusion was broken",
+                  ),
+                  this.m_mapGameSources.delete(_.k_ERecent)))
+            : (this.m_mapGameSources.delete(_),
+              _ == _.k_ERecent
+                ? this.m_mapGameSources.set(_.k_ELibrary, !0)
+                : _ == _.k_ELibrary &&
+                  this.m_mapGameSources.delete(_.k_ERecent)),
+            this.SaveFilterPreferences(),
+            _._.RecordFilterChangeEvent(this);
         }
-        async SendBookMarkedTimeToServer(_, _, _, _, _) {
-          if (!_._.logged_in) return;
-          if (
-            !this.m_transport &&
-            (await this.m_LoadingOAuth, !this.m_transport)
-          )
-            return void console.warn(
-              "CVideoBookmarkStore:SetBookMark no auth token / transport",
+        BShouldDisplayEvent(_) {
+          const _ = _.GetSource(),
+            _ = Boolean(
+              _.appInfo &&
+                _.appInfo.last_played &&
+                _.appInfo.last_played + 15552e3 >= _._.GetTimeNowWithOverride(),
             );
-          const _ = _._.Init(_);
-          if (this.m_mapBookmarks.has(_)) {
-            let _ = this.m_mapBookmarks.get(_),
-              _ = !1;
-            _.app_id() != _ && ((_ = !0), _.set_app_id(_)),
-              _.playback_position_in_seconds() != _ &&
-                ((_ = !0), _.set_playback_position_in_seconds(_)),
-              (_ = _ || "0"),
-              _.video_track_id() != _ && (_.set_video_track_id(_), (_ = !0)),
-              (_ = _ || "0"),
-              _.audio_track_id() != _ && (_.set_audio_track_id(_), (_ = !0)),
-              (_ = _ || "0") != _.timedtext_track_id() &&
-                (_.set_timedtext_track_id(_), (_ = !0)),
-              _ &&
-                (_.Body().add_bookmarks(_),
-                _.SetVideoBookmark(this.m_transport, _));
-          }
-        }
-        static Get() {
           return (
-            _.s_VODStore || ((_.s_VODStore = new _()), _.s_VODStore.Init()),
-            _.s_VODStore
+            !!(
+              this.enabledEventTypeSet.has(_.event_type) ||
+              (this.m_bInitializedForUpdatesOnly &&
+                this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
+                28 == _.event_type &&
+                _.start_time < 1599202800)
+            ) &&
+            !this.m_mapHiddenApps.has(_.appid) &&
+              !this.m_mapHiddenClans.has(_.clanid) &&
+            (!!(_ & _._.k_eRequired || _ & _._.k_eReposted) ||
+              Boolean(
+                (this.BIsGameSourceAllowed(_.k_ERecent) && _) ||
+                  (this.BIsGameSourceAllowed(_.k_ELibrary) &&
+                    _ & _._.k_eLibrary) ||
+                  (this.BIsGameSourceAllowed(_.k_EWishlist) &&
+                    _ & _._.k_eWishlist) ||
+                  (this.BIsGameSourceAllowed(_.k_EFollowing) &&
+                    _ & _._.k_eFollowing) ||
+                  (this.BIsGameSourceAllowed(_.k_ERecommended) &&
+                    _ & _._.k_eRecommended) ||
+                  (this.BIsGameSourceAllowed(_.k_ESteam) && _ & _._.k_eSteam) ||
+                  (this.BIsGameSourceAllowed(_.k_EFeatured) &&
+                    _ & _._.k_eFeatured) ||
+                  (this.BIsGameSourceAllowed(_.k_ECurator) &&
+                    _ & _._.k_eCurator),
+              ))
           );
         }
-        Init() {
-          _._.logged_in && this.LoadWatchVideoOAuthToken();
+        BAreAllEventsHidden() {
+          return (
+            0 == this.m_mapEventTypeGroupsAllowed.size ||
+            0 == this.m_mapGameSources.size
+          );
         }
-        async LoadWatchVideoOAuthToken() {
-          const _ =
-              "community" == (0, _._)()
-                ? _._.COMMUNITY_BASE_URL + "actions/ajaxgetwatchvodtoken"
-                : _._.STORE_BASE_URL + "actions/ajaxgetwatchvodtoken",
-            _ = {};
-          try {
-            let _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-            });
-            if (
-              _ &&
-              200 == _.status &&
-              _.data &&
-              1 == _.data.success &&
-              _.data.webapi_token
-            )
-              return (
-                (this.m_transport = new _._(
-                  _._.WEBAPI_BASE_URL,
-                  _.data.webapi_token,
-                ).GetServiceTransport()),
-                this.m_transport
-              );
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error(
-              "CVideoBookmarkStore:LoadWatchVideoOAuthToken: Failed " +
-                _.strErrorMsg,
-              _,
-            );
-          }
-          return null;
+        BAreAnyEventsFiltered(_) {
+          const _ = (0, _._)() ? _ : _;
+          return (
+            (_ ? _ : _).some((_) => !this.BIsGameSourceAllowed(_)) ||
+            _.some((_) => !this.BIsEventTypeGroupAllowed(_))
+          );
+        }
+        BIsClanVisible(_) {
+          return !this.m_mapHiddenClans.has(_);
+        }
+        SetClanVisibility(_, _) {
+          _
+            ? this.m_mapHiddenClans.has(_) && this.m_mapHiddenClans.delete(_)
+            : this.m_mapHiddenClans.has(_) || this.m_mapHiddenClans.set(_, !0);
+        }
+        BIsAppVisible(_) {
+          return !this.m_mapHiddenApps.has(_);
+        }
+        SetAppVisibility(_, _) {
+          _
+            ? this.m_mapHiddenApps.has(_) && this.m_mapHiddenApps.delete(_)
+            : this.m_mapHiddenApps.has(_) || this.m_mapHiddenApps.set(_, !0);
         }
       }
-      class _ {
-        m_appid;
-        constructor(_) {
-          this.m_appid = _;
-        }
-        async SetBookmark(_, _, _, _) {
-          _._.logged_in &&
-            _.Get().SendBookMarkedTimeToServer(
-              this.m_appid,
-              Math.floor(_),
-              _,
-              _,
-              _,
-            );
-        }
-        GetBeginPlaytime() {
-          return _._.logged_in
-            ? _.Get().GetBookmarkPlayTimeInSeconds(this.m_appid)
-            : 0;
-        }
-      }
+      (0, _._)([_._], _.prototype, "m_mapEventTypeGroupsAllowed", void 0),
+        (0, _._)([_._], _.prototype, "m_mapGameSources", void 0),
+        (0, _._)(
+          [_._],
+          _.prototype,
+          "m_bCuratorUnhideOnFollowDialogDismissed",
+          void 0,
+        ),
+        (0, _._)([_._], _.prototype, "m_mapHiddenApps", void 0),
+        (0, _._)([_._], _.prototype, "m_mapHiddenClans", void 0),
+        (0, _._)(
+          [
+            (0, _._)({
+              keepAlive: !0,
+              equals: _._.structural,
+            }),
+          ],
+          _.prototype,
+          "enabledEventTypeSet",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "SetEventTypeGroupAllowed", null),
+        (0, _._)([_._], _.prototype, "SetGameSourceAllowed", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -7716,6 +6273,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7736,7 +6294,7 @@
             let _ = _[0],
               _ = _[1].toLocaleLowerCase();
             const { sizeStr: _, alignStr: _ } = _(_);
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               videoID: _,
               classNameAlign: _,
               classNameSize: _,
@@ -7744,7 +6302,7 @@
             });
           }
         }
-        return _.createElement(_.Fragment, null);
+        return (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
         if ((0, _._)() || "CN" == _._.COUNTRY.toLocaleUpperCase())
@@ -7753,7 +6311,7 @@
           _ = (0, _._)(_.args, "size"),
           _ = (0, _._)(_.args, "seconds"),
           { sizeStr: _, alignStr: _ } = _(_);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           videoID: _,
           nStartSeconds: _ ? Number.parseInt(_) : void 0,
           classNameAlign: _,
@@ -7774,6 +6332,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7819,77 +6378,67 @@
           const _ = _.title,
             _ = _.views,
             _ = _.description;
-          return _.createElement(
-            "div",
-            {
-              className: _().DynamicLinkBox,
-              onClick: () => _(!1),
-            },
-            _.createElement("img", {
-              className: _().DynamicLink_Preview,
-              src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().DynamicLinkBox,
+            onClick: () => _(!1),
+            children: [
+              (0, _.jsx)("img", {
+                className: _().DynamicLink_Preview,
+                src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
+              }),
+              (0, _.jsxs)("div", {
                 className: _().DynamicLink_Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_Name,
-                },
-                (0, _._)("#EventEditor_YouTubeVideoTitle", _),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_YoutubeViews,
-                },
-                (0, _._)("#EventEditor_YouTubeVideoViews", (0, _._)(Number(_))),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Dynamiclink_Content,
-                },
-                _ && _,
-                !_ &&
-                  _.createElement(_._, {
-                    size: "medium",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().DynamicLink_Name,
+                    children: (0, _._)("#EventEditor_YouTubeVideoTitle", _),
                   }),
-              ),
-            ),
-          );
+                  (0, _.jsx)("div", {
+                    className: _().DynamicLink_YoutubeViews,
+                    children: (0, _._)(
+                      "#EventEditor_YouTubeVideoViews",
+                      (0, _._)(Number(_)),
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().Dynamiclink_Content,
+                    children: [
+                      _ && _,
+                      !_ &&
+                        (0, _.jsx)(_._, {
+                          size: "medium",
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
-        return _.createElement(
-          _._,
-          {
-            video: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().PreviewYouTubeVideo, _, _),
-              _: _,
-            },
-            _.createElement("img", {
-              className: _().PlaceholderImg,
-              src:
-                _._.COMMUNITY_CDN_URL +
-                "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-            }),
-            _.createElement(_._, {
-              video: _,
-              autoplay: _ ?? !1,
-              startSeconds: _,
-              controls: !0,
-              playsInline: !0,
-              autopause: !0,
-              showFullscreenBtn: !0,
-            }),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          video: _,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().PreviewYouTubeVideo, _, _),
+            _: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _().PlaceholderImg,
+                src:
+                  _._.COMMUNITY_CDN_URL +
+                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+              }),
+              (0, _.jsx)(_._, {
+                video: _,
+                autoplay: _ ?? !1,
+                startSeconds: _,
+                controls: !0,
+                playsInline: !0,
+                autopause: !0,
+                showFullscreenBtn: !0,
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -7925,11 +6474,11 @@
           _ = (0, _._)(_, __webpack_require__);
         return _
           ? "string" == typeof _
-            ? _.createElement("img", {
+            ? (0, _.jsx)("img", {
                 src: _,
                 alt: _,
               })
-            : _.createElement(_._, {
+            : (0, _.jsx)(_._, {
                 rgSources: _,
                 strAltText: _,
               })
@@ -7943,6 +6492,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8091,7 +6641,7 @@
               _.stopPropagation(),
               _.preventDefault())
             : (0, _._)(
-                _.createElement(_._, {
+                (0, _.jsx)(_._, {
                   strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
                   strDescription: (0, _._)(
                     "#EventDisplay_Share_NotLoggedIn_Description",
@@ -8103,7 +6653,7 @@
               );
         }
         ShowMenu() {
-          let _ = _.createElement(_, {
+          let _ = (0, _.jsx)(_, {
               ...this.props,
               fnHasReminderSet: (_) => this.BHasSomeNotificationSetting(_),
               fnHidePanel: this.HideMenu,
@@ -8159,47 +6709,37 @@
           return this.props.eventModel.startTime < _ ||
             this.props.eventModel.BIsUnlistedEvent()
             ? null
-            : _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_.ReminderCheckBox]: !0,
-                    [_().ReminderCtn]: !0,
-                    [_.IconMode]: _,
-                    [_.TextMode]: !_,
-                    ReminderSet: _,
-                    RemindMeWidget: !0,
-                  }),
-                  onClick: this.ToggleMenu,
-                  ref: this.m_elDropDownRef,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RemindCheck,
-                    },
-                    _.createElement(_.Jlk, null),
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.RemindBell,
-                    },
-                    _.createElement(_.IrQ, null),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ReminderDefault,
-                  },
-                  (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                ),
-                _.createElement("div", {
-                  className: _.ReminderOptions,
+            : (0, _.jsxs)("div", {
+                className: (0, _._)({
+                  [_.ReminderCheckBox]: !0,
+                  [_().ReminderCtn]: !0,
+                  [_.IconMode]: _,
+                  [_.TextMode]: !_,
+                  ReminderSet: _,
+                  RemindMeWidget: !0,
                 }),
-              );
+                onClick: this.ToggleMenu,
+                ref: this.m_elDropDownRef,
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindCheck,
+                      children: (0, _.jsx)(_.Jlk, {}),
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.RemindBell,
+                      children: (0, _.jsx)(_.IrQ, {}),
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderDefault,
+                    children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.ReminderOptions,
+                  }),
+                ],
+              });
         }
       };
       function _(_) {
@@ -8207,19 +6747,16 @@
           _ = (0, _._)(__webpack_require__);
         if (!_)
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ErrorDiv,
-                },
-                (0, _._)(
+            ? (0, _.jsx)("div", {
+                className: _.ErrorDiv,
+                children: (0, _._)(
                   "#EventDidplay_Reminder_EventNotVisible",
                   __webpack_require__,
                 ),
-              )
+              })
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           lang: _,
           ..._,
           eventModel: _,
@@ -8262,22 +6799,19 @@
                         _(_._.k_eReminder_MobilePush));
               } catch (_) {
                 (0, _._)(
-                  _.createElement(
-                    _._,
-                    {
-                      strTitle: (0, _._)(
-                        _
-                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                          : "#EventDisplay_Reminder_FollowEvent_Error",
-                      ),
-                      strDescription: (0, _._)(
-                        _
-                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                      ),
-                    },
-                    (0, _._)(_).strErrorMsg,
-                  ),
+                  (0, _.jsx)(_._, {
+                    strTitle: (0, _._)(
+                      _
+                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                        : "#EventDisplay_Reminder_FollowEvent_Error",
+                    ),
+                    strDescription: (0, _._)(
+                      _
+                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                    ),
+                    children: (0, _._)(_).strErrorMsg,
+                  }),
                   window,
                 );
               }
@@ -8299,258 +6833,225 @@
           _ = _.BHasValidatedEmail(),
           _ = _.BHasPushNotification(),
           _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.ReminderCheckBox,
                 _ ? _.IconMode : _.TextMode,
                 "RemindMeWidget",
               ),
               onClick: _,
-            },
-            _(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _.RemindCheck,
-                },
-                _.createElement(_.Jlk, null),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.RemindBell,
-                },
-                _.createElement(_.IrQ, null),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ReminderDefault,
-              },
-              (0, _._)("#EventDisplay_Reminder_SetReminder"),
-            ),
-            _.createElement("div", {
-              className: _.ReminderOpennedOptions,
+              children: [
+                _(_) &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindCheck,
+                    children: (0, _.jsx)(_.Jlk, {}),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.RemindBell,
+                    children: (0, _.jsx)(_.IrQ, {}),
+                  }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderDefault,
+                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ReminderOpennedOptions,
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.FlexColumnContainer,
                 _.ReminderBackground,
                 _ && _.ReminderExpandsLeft,
               ),
-            },
-            _ &&
-              _.createElement(_._, {
-                className: _.RpcThrobber,
-                size: "xlarge",
-                position: "center",
-              }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.FullStartTime,
-                },
-                (0, _._)(
-                  "#EventDisplay_EventUpcoming_WithDateAndTime",
-                  (0, _._)(
-                    _,
-                    (0, _._)(
-                      new Date(1e3 * _),
-                      _._.GetTimeNowWithOverrideAsDate(),
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    className: _.RpcThrobber,
+                    size: "xlarge",
+                    position: "center",
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.FullStartTime,
+                    children: (0, _._)(
+                      "#EventDisplay_EventUpcoming_WithDateAndTime",
+                      (0, _._)(
+                        _,
+                        (0, _._)(
+                          new Date(1e3 * _),
+                          _._.GetTimeNowWithOverrideAsDate(),
+                        ),
+                      ),
+                      (0, _._)(_, !0),
                     ),
-                  ),
-                  (0, _._)(_, !0),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ReminderOptionsHeader,
-              },
-              (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.CheckboxWrapper,
-                  bTopmost: !0,
-                  toolTipContent: (0, _._)(
-                    _
-                      ? "#EventReminder_NotifyByEmail_ttip"
-                      : "#EventReminder_NotifyByEmail_Missing",
-                  ),
-                },
-                _.createElement(_._, {
-                  label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                  disabled: !_,
-                  checked: _._.Get().BFollowsEventAndNotifiedBy(
-                    _.clanSteamID,
-                    _.GID,
-                    _._.k_ENotifyFlagByEmail,
-                  ),
-                  onChange: (_) => {
-                    _(_, !1, _._.k_ENotifyFlagByEmail);
-                  },
-                }),
-              ),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.FlexColumnContainer,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "account/",
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      onClick: () => _(_._.k_eReminder_EmailUnverified),
-                    },
-                    (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
-                  ),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.CheckboxWrapper,
-                  bTopmost: !0,
-                  toolTipContent: (0, _._)(
-                    _
-                      ? "#EventReminder_NotifyByMobile_ttip"
-                      : "#EventReminder_NotifyByMobile_Missing",
-                  ),
-                },
-                _.createElement(_._, {
-                  label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                  disabled: !_,
-                  checked: _._.Get().BFollowsEventAndNotifiedBy(
-                    _.clanSteamID,
-                    _.GID,
-                    _._.k_ENotifyFlagByPush,
-                  ),
-                  onChange: (_) => {
-                    _(_, !1, _._.k_ENotifyFlagByPush);
-                  },
-                }),
-              ),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.FlexColumnContainer,
-                  },
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      onClick: () => _(_._.k_eReminder_MobilePushMissing),
-                    },
-                    (0, _._)("#EventReminder_NotifyByMobile_Install"),
-                  ),
-                ),
-            ),
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+                  }),
+                (0, _.jsx)("div", {
                   className: _.ReminderOptionsHeader,
-                },
-                (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.ReminderCalendarOptions,
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    href: _("ics"),
-                    onClick: () => _(_._.k_eReminder_CalendarApple),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    target: _._.IN_CLIENT ? void 0 : "_blank",
-                    href: (() => {
-                      const _ = encodeURIComponent(
-                          (() => {
-                            const _ = _.GetNameWithFallback(_);
-                            if (
-                              _._.BHasEntityNameForID(
-                                _.appid,
-                                _.clanSteamID.GetAccountID(),
-                              )
-                            )
-                              return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-                            return _;
+                  children: (0, _._)(
+                    "#EventDisplay_Reminder_GetNotification_Via",
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByEmail_ttip"
+                          : "#EventReminder_NotifyByEmail_Missing",
+                      ),
+                      children: (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                        disabled: !_,
+                        checked: _._.Get().BFollowsEventAndNotifiedBy(
+                          _.clanSteamID,
+                          _.GID,
+                          _._.k_ENotifyFlagByEmail,
+                        ),
+                        onChange: (_) => {
+                          _(_, !1, _._.k_ENotifyFlagByEmail);
+                        },
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "account/",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () => _(_._.k_eReminder_EmailUnverified),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByEmail_Missing_Add",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _.CheckboxWrapper,
+                      bTopmost: !0,
+                      toolTipContent: (0, _._)(
+                        _
+                          ? "#EventReminder_NotifyByMobile_ttip"
+                          : "#EventReminder_NotifyByMobile_Missing",
+                      ),
+                      children: (0, _.jsx)(_._, {
+                        label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
+                        disabled: !_,
+                        checked: _._.Get().BFollowsEventAndNotifiedBy(
+                          _.clanSteamID,
+                          _.GID,
+                          _._.k_ENotifyFlagByPush,
+                        ),
+                        onChange: (_) => {
+                          _(_, !1, _._.k_ENotifyFlagByPush);
+                        },
+                      }),
+                    }),
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: _.FlexColumnContainer,
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          onClick: () => _(_._.k_eReminder_MobilePushMissing),
+                          children: (0, _._)(
+                            "#EventReminder_NotifyByMobile_Install",
+                          ),
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.ReminderOptionsHeader,
+                      children: (0, _._)(
+                        "#EventDisplay_Reminder_AddToCalendar",
+                      ),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.ReminderCalendarOptions,
+                      children: [
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("ics"),
+                          onClick: () => _(_._.k_eReminder_CalendarApple),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_AppleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          target: _._.IN_CLIENT ? void 0 : "_blank",
+                          href: (() => {
+                            const _ = encodeURIComponent(
+                                (() => {
+                                  const _ = _.GetNameWithFallback(_);
+                                  if (
+                                    _._.BHasEntityNameForID(
+                                      _.appid,
+                                      _.clanSteamID.GetAccountID(),
+                                    )
+                                  )
+                                    return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
+                                  return _;
+                                })(),
+                              ),
+                              _ = encodeURIComponent(
+                                (() => {
+                                  let _ = _.GetSubTitleWithLanguageFallback(_);
+                                  return (
+                                    (_ = _ ? `${_}\n\n\n` : ""),
+                                    `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                                  );
+                                })(),
+                              ),
+                              _ = _.GetStartTimeAndDateUnixSeconds(),
+                              _ = _(_),
+                              _ = _(
+                                _.GetEndTimeAndDateUnixSeconds() ||
+                                  _ + _._.PerHour,
+                              ),
+                              _ =
+                                (_._.IN_CLIENT
+                                  ? "steam://openurl_external/"
+                                  : "") +
+                                `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                            return (0, _._)(_);
                           })(),
-                        ),
-                        _ = encodeURIComponent(
-                          (() => {
-                            let _ = _.GetSubTitleWithLanguageFallback(_);
-                            return (
-                              (_ = _ ? `${_}\n\n\n` : ""),
-                              `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
-                            );
-                          })(),
-                        ),
-                        _ = _.GetStartTimeAndDateUnixSeconds(),
-                        _ = _(_),
-                        _ = _(
-                          _.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour,
-                        ),
-                        _ =
-                          (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
-                          `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-                      return (0, _._)(_);
-                    })(),
-                    onClick: () => _(_._.k_eReminder_CalendarGoogle),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: _.ReminderOption,
-                    href: _("outlook"),
-                    onClick: () => _(_._.k_eReminder_CalendarOutlook),
-                  },
-                  (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
-                ),
-              ),
-            ),
-            !1,
-          ),
-        );
+                          onClick: () => _(_._.k_eReminder_CalendarGoogle),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_GoogleCalendar_Short",
+                          ),
+                        }),
+                        (0, _.jsx)("a", {
+                          className: _.ReminderOption,
+                          href: _("outlook"),
+                          onClick: () => _(_._.k_eReminder_CalendarOutlook),
+                          children: (0, _._)(
+                            "#EventDisplay_Reminder_OutlookCalendar_Short",
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                !1,
+              ],
+            }),
+          ],
+        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -8561,6 +7062,96 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, _.jsx)(_, {
+            redirectURL: _.redirectURL,
+            guestOption: _.guestOption,
+          }),
+        });
+      }
+      function _(_) {
+        const { redirectURL: _ = window.location.href } = _;
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_, {
+            redirectURL: _,
+          }),
+        });
+      }
+      function _() {
+        (0, _._)(
+          (0, _.jsx)(_, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          {
+            strTitle: (0, _._)("#Login_SignInTitle"),
+          },
+        );
+      }
+      function _(_, _) {
+        (0, _._)(
+          (0, _.jsx)(_, {
+            ownerWin: window,
+            redirectURL: _,
+            guestOption: _,
+          }),
+          window,
+          {
+            strTitle: (0, _._)("#Login_SignInTitle"),
+          },
+        );
+      }
+      function _(_) {
+        const { redirectURL: _, guestOption: __webpack_require__ } = _,
+          [_] = (0, _.useState)(
+            new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [_, _] = (0, _.useState)(!1);
+        return (0, _.jsx)("div", {
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
+                autoFocus: !0,
+                transport: _,
+                platform: 2,
+                onComplete: (_) => {
+                  _ == _._.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(_);
+                },
+                redirectUrl: _,
+                theme: "modal",
+                children:
+                  __webpack_require__ &&
+                  (0, _.jsx)(_._, {
+                    redirectURL: _,
+                  }),
+              }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8609,26 +7200,25 @@
             );
           }, [__webpack_require__]);
         return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().SaleTagBlockCtn, "SaleTagBlockCtn"),
-              },
-              Boolean(_?.length > 0)
-                ? _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().TagBox, _().Categories),
-                    },
-                    _.map((_) =>
-                      _.createElement(_, {
-                        key: "cat_" + _,
-                        categoryID: _,
-                      }),
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(_().SaleTagBlockCtn, "SaleTagBlockCtn"),
+              children: Boolean(_?.length > 0)
+                ? (0, _.jsx)("div", {
+                    className: (0, _._)(_().TagBox, _().Categories),
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          categoryID: _,
+                        },
+                        "cat_" + _,
+                      ),
                     ),
-                  )
-                : _.createElement("div", null, (0, _._)("#Broadcast_None")),
-            )
+                  })
+                : (0, _.jsx)("div", {
+                    children: (0, _._)("#Broadcast_None"),
+                  }),
+            })
           : null;
       }
       class _ {
@@ -8648,24 +7238,18 @@
         const { categoryID: _ } = _,
           _ = _.Get().m_rgCategories.find((_) => _.categoryid == _);
         return _
-          ? _.createElement(
-              "div",
-              {
-                className: _().Category,
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: _.name,
-                },
-                _.createElement("div", {
+          ? (0, _.jsx)("div", {
+              className: _().Category,
+              children: (0, _.jsx)(_._, {
+                toolTipContent: _.name,
+                children: (0, _.jsx)("div", {
                   className: _().CategoryIcon,
                   style: {
                     background: `url(${_._.STORE_CDN_URL}/public/images/${_.image_path}) no-repeat center center/cover`,
                   },
                 }),
-              ),
-            )
+              }),
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid");
@@ -8683,17 +7267,14 @@
             _ && (__webpack_require__ ? _(!0) : _((_) => !_));
           }, [_, __webpack_require__]);
         if (!_)
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().HilightGrid, _().MediaContainer),
-            },
-            _.createElement(_._, {
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_().HilightGrid, _().MediaContainer),
+            children: (0, _.jsx)(_._, {
               size: "medium",
             }),
-          );
+          });
         const _ = _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               trailer: _,
               bPlayVideo: _,
               fnTogglePlayTrailer: _,
@@ -8701,32 +7282,31 @@
           : null;
         return _ ||
           (_ && _.all_ages_screenshots && _.all_ages_screenshots.length > 0)
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HilightGrid, _().MediaContainer),
-              },
-              _.createElement(_, {
-                elFeaturedInCenter: _,
-                storeItemScreenshots: _,
-                trailer: _,
-                _: _,
-                name: _.name || "",
-              }),
-              Boolean(__webpack_require__)
-                ? _.createElement(_, {
-                    _: _,
-                    bShowModal: _,
-                    hideModal: () => _(!1),
-                  })
-                : _.createElement(_, {
-                    name: _.name || "",
-                    trailer: _,
-                    bPlayVideo: _,
-                    fnTogglePlayTrailer: _,
-                    bControls: !0,
-                  }),
-            )
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(_().HilightGrid, _().MediaContainer),
+              children: [
+                (0, _.jsx)(_, {
+                  elFeaturedInCenter: _,
+                  storeItemScreenshots: _,
+                  trailer: _,
+                  _: _,
+                  name: _.name || "",
+                }),
+                Boolean(__webpack_require__)
+                  ? (0, _.jsx)(_, {
+                      _: _,
+                      bShowModal: _,
+                      hideModal: () => _(!1),
+                    })
+                  : (0, _.jsx)(_, {
+                      name: _.name || "",
+                      trailer: _,
+                      bPlayVideo: _,
+                      fnTogglePlayTrailer: _,
+                      bControls: !0,
+                    }),
+              ],
+            })
           : null;
       }
       function _(_) {
@@ -8740,14 +7320,11 @@
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(_);
         return _ && _ && _
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
-              },
-              _.createElement(_, {
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
+              children: (0, _.jsx)(_, {
                 _: _,
-                elFeaturedInCenter: _.createElement(_, {
+                elFeaturedInCenter: (0, _.jsx)(_, {
                   _: _,
                   bUseAssetWithoutOverride: Boolean(_),
                   fnOnClickButton: __webpack_require__,
@@ -8759,16 +7336,13 @@
                 bNoScreenShotModals: !0,
                 name: _.name || "",
               }),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
-              },
-              _.createElement(_._, {
+            })
+          : (0, _.jsx)("div", {
+              className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
+              children: (0, _.jsx)(_._, {
                 size: "medium",
               }),
-            );
+            });
       }
       function _(_) {
         const {
@@ -8793,29 +7367,35 @@
         _ &&
           _ &&
           (_.push(
-            _.createElement(_, {
-              key: "trail_thumb_",
-              trailer: _,
-              bPlayVideo: !1,
-              fnTogglePlayTrailer: () => {},
-              onMouseEnter: () => _(0),
-              onMouseLeave: () => {
-                const _ = _.current;
-                _ && _(_.currentTime);
+            (0, _.jsx)(
+              _,
+              {
+                trailer: _,
+                bPlayVideo: !1,
+                fnTogglePlayTrailer: () => {},
+                onMouseEnter: () => _(0),
+                onMouseLeave: () => {
+                  const _ = _.current;
+                  _ && _(_.currentTime);
+                },
               },
-            }),
+              "trail_thumb_",
+            ),
           ),
           _.push(
-            _.createElement(_, {
-              key: "trail_inline",
-              ref: _,
-              name: _,
-              trailer: _,
-              bControls: !1,
-              bPlayVideo: !0,
-              startTime: _,
-              fnTogglePlayTrailer: () => {},
-            }),
+            (0, _.jsx)(
+              _,
+              {
+                ref: _,
+                name: _,
+                trailer: _,
+                bControls: !1,
+                bPlayVideo: !0,
+                startTime: _,
+                fnTogglePlayTrailer: () => {},
+              },
+              "trail_inline",
+            ),
           ));
         const _ = (
           _ ? _?.all_ages_screenshots : _?.mature_content_screenshots
@@ -8827,43 +7407,43 @@
                 _ = (0, _._)(_, "full"),
                 _ = _.length;
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   "div",
                   {
-                    key: _ + "_small_" + _,
                     className: (0, _._)({
                       [_().ThumbnailCtn]: !0,
                       [_().ThumbnialClickable]: !_,
                     }),
-                  },
-                  _.createElement("img", {
-                    src: _,
-                    onClick: _
-                      ? void 0
-                      : () => {
-                          const _ = [...(_ || [])];
-                          if (_.length > 0) {
-                            for (let _ = 0; _ < _; ++_) {
-                              const _ = _.shift();
-                              _ && _.push(_);
+                    children: (0, _.jsx)("img", {
+                      src: _,
+                      onClick: _
+                        ? void 0
+                        : () => {
+                            const _ = [...(_ || [])];
+                            if (_.length > 0) {
+                              for (let _ = 0; _ < _; ++_) {
+                                const _ = _.shift();
+                                _ && _.push(_);
+                              }
+                              _(_.map((_) => (0, _._)(_, "full")));
                             }
-                            _(_.map((_) => (0, _._)(_, "full")));
-                          }
-                        },
-                    onMouseEnter: () => _(_),
-                  }),
+                          },
+                      onMouseEnter: () => _(_),
+                    }),
+                  },
+                  _ + "_small_" + _,
                 ),
               ),
                 _.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     "div",
                     {
-                      key: _ + "_big_" + _,
                       className: _().ScreenshotDisplayCtn,
+                      children: (0, _.jsx)("img", {
+                        src: _,
+                      }),
                     },
-                    _.createElement("img", {
-                      src: _,
-                    }),
+                    _ + "_big_" + _,
                   ),
                 );
             }
@@ -8875,35 +7455,38 @@
           _ = Array.from({
             length: Math.max(0, 3 - _.length),
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsx)("div", {
               className: _ || _().MainMediaCtn,
-            },
-            Boolean(_ && (-1 === _ || void 0 === _))
-              ? _.createElement(_.Fragment, null, _)
-              : _.createElement(_.Fragment, null, void 0 !== _ && _[_]),
-          ),
-          Boolean(_.length > 0) &&
-            _.createElement(
-              "div",
-              {
+              children: Boolean(_ && (-1 === _ || void 0 === _))
+                ? (0, _.jsx)(_.Fragment, {
+                    children: _,
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: void 0 !== _ && _[_],
+                  }),
+            }),
+            Boolean(_.length > 0) &&
+              (0, _.jsxs)("div", {
                 className: _().ScreenshotThumbnailRow,
                 onMouseLeave: () => _(-1),
-              },
-              _,
-              _.map((_, _) =>
-                _.createElement("div", {
-                  key: `app_${(0, _._)(__webpack_require__)}_${_}`,
-                  className: _().ThumbnailCtn,
-                }),
-              ),
-            ),
-        );
+                children: [
+                  _,
+                  _.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _().ThumbnailCtn,
+                      },
+                      `app_${(0, _._)(__webpack_require__)}_${_}`,
+                    ),
+                  ),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -8934,22 +7517,18 @@
         )
           return null;
         let _ = (0, _._)(_().VideoLargeContainer, _ && _().videoPlaying);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-          },
-          _.createElement(_._, {
-            name: __webpack_require__,
-            trailerCategory: _.trailer_category,
-            trailerDisplay: 1,
-            mouseOver: !1,
-          }),
-          Boolean(_ && _.microtrailer) &&
-            _.createElement(
-              "video",
-              {
+        return (0, _.jsxs)("div", {
+          className: _,
+          onClick: _,
+          children: [
+            (0, _.jsx)(_._, {
+              name: __webpack_require__,
+              trailerCategory: _.trailer_category,
+              trailerDisplay: 1,
+              mouseOver: !1,
+            }),
+            Boolean(_ && _.microtrailer) &&
+              (0, _.jsx)("video", {
                 className: _().VideoLarge,
                 ref: _,
                 controls: _,
@@ -8957,26 +7536,26 @@
                 loop: !0,
                 muted: !0,
                 poster: null != _ && _ > 0 ? void 0 : _.screenshot_full,
-              },
-              _.microtrailer?.map((_) =>
-                _._.IN_CLIENT && "video/mp4" == _.type
-                  ? null
-                  : _.createElement("source", {
-                      key: _.filename,
-                      src: (0, _._)(_, _.filename || ""),
-                      type: _.type,
-                    }),
-              ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: _.microtrailer?.map((_) =>
+                  _._.IN_CLIENT && "video/mp4" == _.type
+                    ? null
+                    : (0, _.jsx)(
+                        "source",
+                        {
+                          src: (0, _._)(_, _.filename || ""),
+                          type: _.type,
+                        },
+                        _.filename,
+                      ),
+                ),
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 onClick: _,
-              },
-              _.createElement(_.sED, null),
-            ),
-        );
+                children: (0, _.jsx)(_.sED, {}),
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -9002,54 +7581,41 @@
         const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
         return 0 == _?.length
           ? null
-          : _.createElement(
-              _._,
-              {
-                active: __webpack_require__,
-              },
-              _.createElement(
-                _._,
-                {
-                  "aria-labelledby": (0, _._)(_, _),
-                  bAllowFullSize: !0,
-                  bOKDisabled: !0,
-                  closeModal: _,
-                },
-                _.createElement(
-                  "div",
-                  {
+          : (0, _.jsx)(_._, {
+              active: __webpack_require__,
+              children: (0, _.jsxs)(_._, {
+                "aria-labelledby": (0, _._)(_, _),
+                bAllowFullSize: !0,
+                bOKDisabled: !0,
+                closeModal: _,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _().VideoPopupContainers,
-                  },
-                  _.createElement(_._, {
-                    dashManifests: _ || [],
-                    hlsManifest: (_.length > 0 && _?.[0]) || "",
-                    screenshot: (0, _._)(_),
-                    altText: _.trailer_name,
-                    muteWhenAutoplayBlocked: !0,
+                    children: (0, _.jsx)(_._, {
+                      dashManifests: _ || [],
+                      hlsManifest: (_.length > 0 && _?.[0]) || "",
+                      screenshot: (0, _._)(_),
+                      altText: _.trailer_name,
+                      muteWhenAutoplayBlocked: !0,
+                    }),
                   }),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                  (0, _.jsx)("div", {
                     _: _,
                     style: {
                       display: "none",
                     },
-                  },
-                  _?.name || "",
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: _?.name || "",
+                  }),
+                  (0, _.jsx)("div", {
                     _: _,
                     style: {
                       display: "none",
                     },
-                  },
-                  _.trailer_name,
-                ),
-              ),
-            );
+                    children: _.trailer_name,
+                  }),
+                ],
+              }),
+            });
       }
       function _(_) {
         const {
@@ -9059,29 +7625,25 @@
           onMouseEnter: _,
           onMouseLeave: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().VideoThumbnail]: !_,
-              [_().videoPlaying]: _,
-              [_().ThumbnailCtn]: !0,
-            }),
-            onClick: __webpack_require__,
-            onMouseEnter: _,
-            onMouseLeave: _,
-          },
-          _.createElement("img", {
-            src: (0, _._)(_),
+        return (0, _.jsxs)("div", {
+          className: (0, _._)({
+            [_().VideoThumbnail]: !_,
+            [_().videoPlaying]: _,
+            [_().ThumbnailCtn]: !0,
           }),
-          _.createElement(
-            "div",
-            {
+          onClick: __webpack_require__,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          children: [
+            (0, _.jsx)("img", {
+              src: (0, _._)(_),
+            }),
+            (0, _.jsx)("div", {
               className: _().VideoPlayButton,
-            },
-            _.createElement(_.jGG, null),
-          ),
-        );
+              children: (0, _.jsx)(_.jGG, {}),
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -9096,51 +7658,42 @@
           { data: _ } = (0, _._)(_);
         if (!_ || !_ || !_) return null;
         const _ = (0, _._)(_, "main_capsule");
-        return _.createElement(
-          _._,
-          {
-            focusable: !0,
-            noFocusRing: !0,
-            className: _().MainCapsuleWithHover,
-            ..._,
-            onActivate: __webpack_require__,
-          },
-          _.createElement("img", {
-            className: _().MainCapsule,
-            src: _,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_._, {
+          focusable: !0,
+          noFocusRing: !0,
+          className: _().MainCapsuleWithHover,
+          ..._,
+          onActivate: __webpack_require__,
+          children: [
+            (0, _.jsx)("img", {
+              className: _().MainCapsule,
+              src: _,
+            }),
+            (0, _.jsxs)("div", {
               className: _().AppDetails,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().GameName),
-              },
-              _.name || "",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ShortDesc,
-              },
-              _.short_description,
-              " ",
-            ),
-            _.createElement(_._, {
-              rgTagIDs: _ ? _.map((_) => _.tagid || 0) : [],
-              instanceNum: 0,
-              bLargeText: !0,
-              bHideTitle: !0,
-              bNoStoreLinks: !0,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().GameName),
+                  children: _.name || "",
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().ShortDesc,
+                  children: [_.short_description, " "],
+                }),
+                (0, _.jsx)(_._, {
+                  rgTagIDs: _ ? _.slice(0, 10).map((_) => _.tagid || 0) : [],
+                  instanceNum: 0,
+                  bLargeText: !0,
+                  bHideTitle: !0,
+                  bNoStoreLinks: !0,
+                }),
+                (0, _.jsx)(_, {
+                  _: _,
+                }),
+              ],
             }),
-            _.createElement(_, {
-              _: _,
-            }),
-          ),
-        );
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9149,6 +7702,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9183,21 +7737,20 @@
             return [null, null];
           }, [_]);
         return _?.length > 0 && _?.length > 0
-          ? _.createElement(
-              "a",
-              {
-                href: (0, _._)(__webpack_require__.GetSaleURL()),
-                className: _.Link,
-              },
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Big),
-              }),
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Mobile),
-              }),
-            )
+          ? (0, _.jsxs)("a", {
+              href: (0, _._)(__webpack_require__.GetSaleURL()),
+              className: _.Link,
+              children: [
+                (0, _.jsx)("img", {
+                  src: _,
+                  className: (0, _._)(_.Banner, _.Big),
+                }),
+                (0, _.jsx)("img", {
+                  src: _,
+                  className: (0, _._)(_.Banner, _.Mobile),
+                }),
+              ],
+            })
           : null;
       }
     },
@@ -9219,19 +7772,15 @@
             type: __webpack_require__,
           }),
           { data: _ } = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().SaleItemBrowserRow,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().SaleItemBrowserRow,
+          children: (0, _.jsx)(_._, {
             ..._,
-            bLoadShortDescription: !0,
             bShowReviewSummary: !0,
             bShowDemoButton: _.bShowDemoButton || 1 == _?.type,
             bPreferDemoStorePage: _.bPreferDemoStorePage,
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9259,443 +7808,380 @@
         } = _;
         if (!_) return null;
         if (__webpack_require__)
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PlaceholderBox,
-              },
-              _.createElement("div", {
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsx)("div", {
+              className: _().PlaceholderBox,
+              children: (0, _.jsx)("div", {
                 className: _().ShineCtn,
               }),
-            ),
-          );
+            }),
+          });
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PlaceholderVideo,
-              },
-              _.createElement("div", {
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsx)("div", {
+              className: _().PlaceholderVideo,
+              children: (0, _.jsx)("div", {
                 className: _().ShineCtn,
               }),
-            ),
-          );
+            }),
+          });
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().GhostCtn,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _().TrailerCarouselRow,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().VideoPlaceholder,
-                },
-                _.createElement("div", {
-                  className: _().ShineCtn,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ItemDescPlaceholer,
-                },
-                _.createElement("div", {
-                  className: _().ShineCtn,
-                }),
-              ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().VideoPlaceholder,
+                    children: (0, _.jsx)("div", {
+                      className: _().ShineCtn,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().ItemDescPlaceholer,
+                    children: (0, _.jsx)("div", {
+                      className: _().ShineCtn,
+                    }),
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
                   className: _().AutoAdvanceBar,
-                },
-                _.createElement("div", {
-                  className: _().ShineCtn,
+                  children: (0, _.jsx)("div", {
+                    className: _().ShineCtn,
+                  }),
                 }),
-              ),
-          );
+            ],
+          });
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().EventRow,
-              },
-              _.createElement("div", {
-                className: (0, _._)(
-                  _().PlaceholderGroupImage,
-                  _().PlaceholderCap,
-                ),
-              }),
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().EventRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().PlaceholderGroupImage,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                (0, _.jsxs)("div", {
                   className: (0, _._)(_().DetailsPlaceholder),
-                },
-                _.createElement("div", {
-                  className: (0, _._)(_().PlaceholderTitle, _().PlaceholderCap),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderSubtitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderButtons,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                  ],
                 }),
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().PlaceholderSubtitle,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().PlaceholderButtons,
-                    _().PlaceholderCap,
-                  ),
-                }),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().SpotlightsRow,
-              },
-              _.createElement("div", {
-                className: _().PlaceholderCap,
-              }),
-              _.createElement("div", {
-                className: _().PlaceholderCap,
-              }),
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().SpotlightsRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsxs)("div", {
                   className: _().DailyDealsColumn,
-                },
-                _.createElement("div", {
-                  className: _().PlaceholderCap,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ],
                 }),
-                _.createElement("div", {
-                  className: _().PlaceholderCap,
-                }),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)({
-                  [_().MainCapRow]: !0,
-                  [_().MainCapRowExpanded]: _,
-                }),
-              },
-              _.createElement("div", {
-                className: _().PlaceholderCap,
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_().MainCapRow]: !0,
+                [_().MainCapRowExpanded]: _,
               }),
-              _.createElement(
-                "div",
-                {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsxs)("div", {
                   className: (0, _._)(_().DetailsPlaceholder),
-                },
-                _.createElement("div", {
-                  className: (0, _._)(_().PlaceholderTitle, _().PlaceholderCap),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderSubtitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderRelease,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderReviews,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTags,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                  ],
                 }),
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().PlaceholderSubtitle,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().PlaceholderRelease,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().PlaceholderReviews,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                _.createElement("div", {
-                  className: (0, _._)(_().PlaceholderTags, _().PlaceholderCap),
-                }),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         if (_)
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ExpandedItemRow,
-              },
-              _.createElement("div", {
-                className: (0, _._)(_().CapsulePlaceholder, _().PlaceholderCap),
-              }),
-              _.createElement("div", {
-                className: (0, _._)(_().ItemDefPlaceholder, _().PlaceholderCap),
-              }),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().ExpandedItemRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().CapsulePlaceholder,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().ItemDefPlaceholder,
+                    _().PlaceholderCap,
+                  ),
+                }),
+              ],
+            }),
+          });
         if (_) {
           const _ = [];
           for (let _ = 0; _ < _[0]; _++)
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
-                  key: "item_browse_ghost_" + _,
                   className: _().ItemBrowserCapsule,
+                  children: (0, _.jsx)("div", {
+                    className: _().PlaceholderCap,
+                  }),
                 },
-                _.createElement("div", {
-                  className: _().PlaceholderCap,
-                }),
+                "item_browse_ghost_" + _,
               ),
             );
-          return _.createElement(
-            "div",
-            {
-              className: _().GhostCtn,
-            },
-            _,
-          );
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: _,
+          });
         }
         return 1 == _?.length
           ? 1 == _[0]
-            ? _.createElement(
-                "div",
-                {
-                  className: _().GhostCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CapsuleRowSuperCapsule,
-                  },
-                  _.createElement("div", {
+            ? (0, _.jsx)("div", {
+                className: _().GhostCtn,
+                children: (0, _.jsx)("div", {
+                  className: _().CapsuleRowSuperCapsule,
+                  children: (0, _.jsx)("div", {
                     className: _().PlaceholderCap,
                   }),
-                ),
-              )
+                }),
+              })
             : 4 == _[0]
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _().GhostCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().CapsuleRow4,
-                    },
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ),
-                )
-              : _.createElement(
-                  "div",
-                  {
-                    className: _().GhostCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().CapsuleRow3,
-                    },
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ),
-                )
+              ? (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow4,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ],
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow3,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ],
+                  }),
+                })
           : 2 == _?.length
             ? 3 == _[0] && 3 == _[1]
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _().GhostCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().CapsuleRow23,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                      },
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                      },
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ),
-                  ),
-                )
-              : _.createElement(
-                  "div",
-                  {
-                    className: _().GhostCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().CapsuleRow23,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().CapRow, _().Caps2),
-                      },
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                      },
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      _.createElement("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ),
-                  ),
-                )
-            : _.createElement(
-                "div",
-                {
+              ? (0, _.jsx)("div", {
                   className: _().GhostCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CapsuleRow234,
-                  },
-                  _.createElement(
-                    "div",
-                    {
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow23,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow23,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps2),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+            : (0, _.jsx)("div", {
+                className: _().GhostCtn,
+                children: (0, _.jsxs)("div", {
+                  className: _().CapsuleRow234,
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: (0, _._)(_().CapRow, _().Caps2),
-                    },
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
                     }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
+                    (0, _.jsxs)("div", {
                       className: (0, _._)(_().CapRow, _().Caps3),
-                    },
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
                     }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
+                    (0, _.jsxs)("div", {
                       className: (0, _._)(_().CapRow, _().Caps4),
-                    },
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
                     }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    _.createElement("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ),
-                ),
-              );
+                  ],
+                }),
+              });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9705,6 +8191,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9752,64 +8239,51 @@
           { data: _ } = (0, _._)(_),
           _ = (0, _.useRef)(null);
         return _
-          ? _.createElement(
-              _._,
-              {
-                nodeRef: _,
-                _: __webpack_require__,
-                mountOnEnter: !0,
-                unmountOnExit: !0,
-                timeout: 2e3,
-                classNames: {
-                  enterActive: _().Expanding,
-                  enterDone: _().Expanded,
-                  exit: _().Expanded,
-                  exitActive: _().Collapsing,
-                },
+          ? (0, _.jsx)(_._, {
+              nodeRef: _,
+              _: __webpack_require__,
+              mountOnEnter: !0,
+              unmountOnExit: !0,
+              timeout: 2e3,
+              classNames: {
+                enterActive: _().Expanding,
+                enterDone: _().Expanded,
+                exit: _().Expanded,
+                exitActive: _().Collapsing,
               },
-              _.createElement(
-                "div",
-                {
-                  ref: _,
-                  className: _().BundleContentsCtnTransition,
-                },
-                _.createElement(
-                  "div",
-                  {
+              children: (0, _.jsxs)("div", {
+                ref: _,
+                className: _().BundleContentsCtnTransition,
+                children: [
+                  (0, _.jsx)("div", {
                     className: _().BundleContentsCtn,
-                  },
-                  _.filter((_) => Boolean(_.packageid)).map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: "purchaseitem_" + (0, _._)(_) + "_" + _.packageid,
-                        className: _().BundleContentItem,
-                      },
-                      _.createElement(_._, {
-                        _: _.packageid || 0,
-                        type: "sub",
-                        bForceSmallCapsuleArt: !0,
-                        bPreferAssetWithoutOverride: _,
-                      }),
+                    children: _.filter((_) => Boolean(_.packageid)).map((_) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _().BundleContentItem,
+                          children: (0, _.jsx)(_._, {
+                            _: _.packageid || 0,
+                            type: "sub",
+                            bForceSmallCapsuleArt: !0,
+                            bPreferAssetWithoutOverride: _,
+                          }),
+                        },
+                        "purchaseitem_" + (0, _._)(_) + "_" + _.packageid,
+                      ),
                     ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
+                  }),
+                  (0, _.jsx)("div", {
                     onClick: _,
                     className: _().BundleShowButton,
-                  },
-                  _.createElement(
-                    "button",
-                    {
+                    children: (0, _.jsx)("button", {
                       className: _().ShowContentsButton,
-                    },
-                    (0, _._)("#Button_Close"),
-                  ),
-                ),
-              ),
-            )
+                      children: (0, _._)("#Button_Close"),
+                    }),
+                  }),
+                ],
+              }),
+            })
           : null;
       }
       var _ = __webpack_require__("chunkid"),
@@ -9883,7 +8357,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)();
         if (!_ || !_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
@@ -9893,210 +8367,171 @@
               _.HasDemoStandaloneStorePage() &&
               _.GetDemoStandaloneStorePageAppIDs()[0],
             0 == _.item_type);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().StoreSaleWidgetContainer,
-              _().LibraryAssetExpandedDisplay,
-              "LibraryAssetExpandedDisplay",
-            ),
-          },
-          _.createElement(
-            _._,
-            {
-              appid: _ ? _.appid : void 0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().StoreSaleWidgetLibraryAssetExtendedTop,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().StoreSaleWidgetLeft),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    _: _,
-                    fnHoverState: __webpack_require__,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreSaleWidgetImage,
-                    },
-                    _.createElement(_._, {
-                      appids: _,
-                    }),
-                    _.createElement(_._, {
-                      _: _,
-                      imageType: "library",
-                      bPreferAssetWithoutOverride: _,
-                    }),
-                    _.createElement(_._, {
-                      _: _,
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().StoreSaleWidgetCrossCenterRight,
-                },
-                _ &&
-                  _.createElement(_._, {
-                    _: _,
-                    classOverride: (0, _._)(
-                      _().WishlistButtonNotTop,
-                      "WishlistButton",
-                    ),
-                    snr: _,
-                  }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().StoreSaleWidgetContents,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreSaleWidgetCenter,
-                    },
-                    _.GetShortDescription()?.length > 0 &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(
-                            _().StoreSaleWidgetShortDesc,
-                            "StoreSaleWidgetShortDesc",
-                          ),
-                        },
-                        _.GetShortDescription(),
-                      ),
-                    _.createElement(_._, {
-                      rgTagIDs: _.GetTagIDs(),
-                      instanceNum: _,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().StoreMetaDataCtn,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StoreSaleItemRelease,
-                        },
-                        (0, _._)(
-                          "#Sale_ReleaseDate",
-                          _.createElement(
-                            "span",
-                            null,
-                            _.GetFormattedSteamReleaseDate(),
-                          ),
-                        ),
-                      ),
-                      Boolean(_.GetDeveloperNames()?.length) &&
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().StoreSaleItemDev,
-                          },
-                          (0, _._)("#CreatorHome_DevelopedBy"),
-                          _.createElement(
-                            "span",
-                            null,
-                            _.GetDeveloperNames()[0],
-                          ),
-                        ),
-                      Boolean(_.GetPublisherNames()?.length) &&
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().StoreSaleItemDev,
-                          },
-                          (0, _._)("#CreatorHome_PublishedBy"),
-                          _.createElement(
-                            "span",
-                            null,
-                            _.GetPublisherNames()[0],
-                          ),
-                        ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreSaleLibraryAssetWidgetRight,
-                    },
-                    _.createElement(_._, {
-                      _: _,
-                      bPopOutTrailerPlayback: !0,
-                    }),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().StoreSaleItemReview,
-                  },
-                  _.createElement(_._, {
-                    _: _,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CapsuleBottomBar,
-                  },
-                  Boolean(_ && _)
-                    ? _.createElement(_._, {
-                        appid: _.GetAppID(),
-                        bIsMuted: !1,
-                      })
-                    : _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(_._, {
-                          _: _,
-                        }),
-                        _.createElement(_._, {
-                          _: _,
-                          bShowDemoButton: _,
-                          bHidePrice: _,
-                          bShowPurchaseOptionsButton: _,
-                          fnOnPurchaseOptionsClick: _,
-                          bHideWishlistButton: !_.BIsComingSoon(),
-                        }),
-                      ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().StoreSaleWidgetBgTint,
-                  },
-                  _.createElement(_._, {
-                    _: _,
-                    bPreferAssetWithoutOverride: _,
-                  }),
-                  _.createElement(_._, {
-                    _: _,
-                  }),
-                ),
-              ),
-            ),
-            _.createElement(_, {
-              _: _,
-              bPurchaseOptionsExpanded: _,
-              fnCollapseOptions: _,
-              bPreferAssetWithoutOverride: _,
-            }),
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().StoreSaleWidgetContainer,
+            _().LibraryAssetExpandedDisplay,
+            "LibraryAssetExpandedDisplay",
           ),
-        );
+          children: (0, _.jsxs)(_._, {
+            appid: _ ? _.appid : void 0,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().StoreSaleWidgetLibraryAssetExtendedTop,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().StoreSaleWidgetLeft),
+                    children: (0, _.jsx)(_._, {
+                      _: _,
+                      fnHoverState: __webpack_require__,
+                      children: (0, _.jsxs)("div", {
+                        className: _().StoreSaleWidgetImage,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            appids: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            _: _,
+                            imageType: "library",
+                            bPreferAssetWithoutOverride: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            _: _,
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().StoreSaleWidgetCrossCenterRight,
+                    children: [
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          _: _,
+                          classOverride: (0, _._)(
+                            _().WishlistButtonNotTop,
+                            "WishlistButton",
+                          ),
+                          snr: _,
+                        }),
+                      (0, _.jsxs)("div", {
+                        className: _().StoreSaleWidgetContents,
+                        children: [
+                          (0, _.jsxs)("div", {
+                            className: _().StoreSaleWidgetCenter,
+                            children: [
+                              _.GetShortDescription()?.length > 0 &&
+                                (0, _.jsx)("div", {
+                                  className: (0, _._)(
+                                    _().StoreSaleWidgetShortDesc,
+                                    "StoreSaleWidgetShortDesc",
+                                  ),
+                                  children: _.GetShortDescription(),
+                                }),
+                              (0, _.jsx)(_._, {
+                                rgTagIDs: _.GetTagIDs(),
+                                instanceNum: _,
+                              }),
+                              (0, _.jsxs)("div", {
+                                className: _().StoreMetaDataCtn,
+                                children: [
+                                  (0, _.jsx)("div", {
+                                    className: _().StoreSaleItemRelease,
+                                    children: (0, _._)(
+                                      "#Sale_ReleaseDate",
+                                      (0, _.jsx)("span", {
+                                        children:
+                                          _.GetFormattedSteamReleaseDate(),
+                                      }),
+                                    ),
+                                  }),
+                                  Boolean(_.GetDeveloperNames()?.length) &&
+                                    (0, _.jsxs)("div", {
+                                      className: _().StoreSaleItemDev,
+                                      children: [
+                                        (0, _._)("#CreatorHome_DevelopedBy"),
+                                        (0, _.jsx)("span", {
+                                          children: _.GetDeveloperNames()[0],
+                                        }),
+                                      ],
+                                    }),
+                                  Boolean(_.GetPublisherNames()?.length) &&
+                                    (0, _.jsxs)("div", {
+                                      className: _().StoreSaleItemDev,
+                                      children: [
+                                        (0, _._)("#CreatorHome_PublishedBy"),
+                                        (0, _.jsx)("span", {
+                                          children: _.GetPublisherNames()[0],
+                                        }),
+                                      ],
+                                    }),
+                                ],
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().StoreSaleLibraryAssetWidgetRight,
+                            children: (0, _.jsx)(_._, {
+                              _: _,
+                              bPopOutTrailerPlayback: !0,
+                            }),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().StoreSaleItemReview,
+                        children: (0, _.jsx)(_._, {
+                          _: _,
+                        }),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().CapsuleBottomBar,
+                        children: Boolean(_ && _)
+                          ? (0, _.jsx)(_._, {
+                              appid: _.GetAppID(),
+                              bIsMuted: !1,
+                            })
+                          : (0, _.jsxs)(_.Fragment, {
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  _: _,
+                                }),
+                                (0, _.jsx)(_._, {
+                                  _: _,
+                                  bShowDemoButton: _,
+                                  bHidePrice: _,
+                                  bShowPurchaseOptionsButton: _,
+                                  fnOnPurchaseOptionsClick: _,
+                                  bHideWishlistButton: !_.BIsComingSoon(),
+                                }),
+                              ],
+                            }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().StoreSaleWidgetBgTint,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            _: _,
+                            bPreferAssetWithoutOverride: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            _: _,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                _: _,
+                bPurchaseOptionsExpanded: _,
+                fnCollapseOptions: _,
+                bPreferAssetWithoutOverride: _,
+              }),
+            ],
+          }),
+        });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10119,71 +8554,58 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = 0 == _?.item_type;
-        return _.createElement(
-          _._,
-          {
-            appid: _ ? _._ : void 0,
-          },
-          _.createElement(
-            _._,
-            {
-              "flow-children": "grid",
-              navEntryPreferPosition: _._.PREFERRED_CHILD,
-              autoFocus: _,
-              navKey: "purchase_only_" + _?._,
-            },
-            "\t",
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          appid: _ ? _._ : void 0,
+          children: (0, _.jsxs)(_._, {
+            "flow-children": "grid",
+            navEntryPreferPosition: _._.PREFERRED_CHILD,
+            autoFocus: _,
+            navKey: "purchase_only_" + _?._,
+            children: [
+              "\t",
+              (0, _.jsxs)("div", {
                 className: _.PurchaseOnlyCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.PurchaseOnlyNameCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Name,
-                  },
-                  _?.name,
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.PurchaseAndPlatformCtn,
-                },
-                Boolean(!_ && 10 != _?.type) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _._,
-                    },
-                    _.createElement(_._, {
-                      _: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.PurchaseOnlyNameCtn,
+                    children: (0, _.jsx)("div", {
+                      className: _.Name,
+                      children: _?.name,
                     }),
-                    Boolean(_ && 0 == _?.item_type && _) &&
-                      _.createElement(_._, {
-                        className: _.DeckCompatIcon,
-                        category: _?.steam_deck_compat_category,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.PurchaseAndPlatformCtn,
+                    children: [
+                      Boolean(!_ && 10 != _?.type) &&
+                        (0, _.jsxs)("div", {
+                          className: _._,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              _: _,
+                            }),
+                            Boolean(_ && 0 == _?.item_type && _) &&
+                              (0, _.jsx)(_._, {
+                                className: _.DeckCompatIcon,
+                                category: _?.steam_deck_compat_category,
+                              }),
+                          ],
+                        }),
+                      (0, _.jsx)(_._, {
+                        _: _,
+                        className: _.PurchaseOnlyActionCtn,
+                        bShowDemoButton: _,
+                        bShowCartButton: !0,
+                        bHidePrice: _,
+                        bHideWishlistButton: !0,
+                        bShowDeckCompatibilityDialog: _,
                       }),
-                  ),
-                _.createElement(_._, {
-                  _: _,
-                  className: _.PurchaseOnlyActionCtn,
-                  bShowDemoButton: _,
-                  bShowCartButton: !0,
-                  bHidePrice: _,
-                  bHideWishlistButton: !0,
-                  bShowDeckCompatibilityDialog: _,
-                }),
-              ),
-            ),
-          ),
-        );
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {
@@ -10194,34 +8616,34 @@
           { type: _ } = _,
           _ = (0, _._)();
         if ("purchaseonlydisplay" === _)
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ..._,
           });
         if (_)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
           });
         if (__webpack_require__ && !(0, _._)())
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
           });
         if ("bundle" == _ || "sub" == _)
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
           });
         if ((0, _._)() && ("library" == _ || "animated" == _))
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
             bShowReviewSummary: !0,
           });
         switch (_) {
           case "library":
           case "animated":
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               ..._,
             });
           default:
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               ..._,
               bShowReviewSummary: !0,
             });
@@ -10237,6 +8659,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10306,52 +8729,51 @@
         (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
         const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
           _ = __webpack_require__.sPoster ? _(__webpack_require__.sPoster) : "";
-        return _.createElement(
-          "video",
-          {
-            width: "100%",
-            height: "auto",
-            autoPlay: _,
-            muted: _,
-            playsInline: !0,
-            controls: _,
-            poster: _,
-            loop: _,
-            crossOrigin: _,
-            onVolumeChange: (_) => {
-              const _ = _.target,
-                _ = _.muted ? 0 : _.volume;
-              _ && _.Get().SetVolumePreference(_);
-            },
-            onPlay: (_) => {
-              const _ = _.target,
-                _ = 0 == _.currentTime,
-                _ = _.Get().BUserHasVolumePreference();
-              if ((_(!0), _))
-                if (_ || _)
-                  _ &&
-                    ((_.volume = _.Get().GetVolumePreference()),
-                    (_.muted = _.Get().BVolumePreferenceMuted()));
-                else {
-                  const _ = _.muted ? 0 : _.volume;
-                  _.Get().SetVolumePreference(_);
-                }
-            },
-            ref: _,
-            className: _,
-            onClick: _,
-            "aria-label": _,
-            style: {
-              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-            },
+        return (0, _.jsxs)("video", {
+          width: "100%",
+          height: "auto",
+          autoPlay: _,
+          muted: _,
+          playsInline: !0,
+          controls: _,
+          poster: _,
+          loop: _,
+          crossOrigin: _,
+          onVolumeChange: (_) => {
+            const _ = _.target,
+              _ = _.muted ? 0 : _.volume;
+            _ && _.Get().SetVolumePreference(_);
           },
-          _.createElement(_, {
-            rgVideoSources: __webpack_require__.rgVideoSources,
-          }),
-          _.createElement(_, {
-            rgVideoTracks: __webpack_require__.rgVideoTracks,
-          }),
-        );
+          onPlay: (_) => {
+            const _ = _.target,
+              _ = 0 == _.currentTime,
+              _ = _.Get().BUserHasVolumePreference();
+            if ((_(!0), _))
+              if (_ || _)
+                _ &&
+                  ((_.volume = _.Get().GetVolumePreference()),
+                  (_.muted = _.Get().BVolumePreferenceMuted()));
+              else {
+                const _ = _.muted ? 0 : _.volume;
+                _.Get().SetVolumePreference(_);
+              }
+          },
+          ref: _,
+          className: _,
+          onClick: _,
+          "aria-label": _,
+          style: {
+            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+          },
+          children: [
+            (0, _.jsx)(_, {
+              rgVideoSources: __webpack_require__.rgVideoSources,
+            }),
+            (0, _.jsx)(_, {
+              rgVideoTracks: __webpack_require__.rgVideoTracks,
+            }),
+          ],
+        });
       });
       function _(_) {
         if (_)
@@ -10369,22 +8791,28 @@
       function _(_) {
         const { rgVideoSources: _ } = _;
         return _.filter((_) => Boolean(_.sURL)).map((_) =>
-          _.createElement("source", {
-            key: _.sURL,
-            src: _(_.sURL),
-            type: _.sFormat,
-          }),
+          (0, _.jsx)(
+            "source",
+            {
+              src: _(_.sURL),
+              type: _.sFormat,
+            },
+            _.sURL,
+          ),
         );
       }
       function _(_) {
         const { rgVideoTracks: _ } = _;
         return _
           ? _.map((_, _) =>
-              _.createElement(_, {
-                key: _,
-                track: _,
-                rgVideoTracks: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  track: _,
+                  rgVideoTracks: _,
+                },
+                _,
+              ),
             )
           : null;
       }
@@ -10405,7 +8833,7 @@
           }
         else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
           return null;
-        return _.createElement("track", {
+        return (0, _.jsx)("track", {
           src: _(_.sURL),
           kind: _.sKind,
           default: _.bDefault,
@@ -10432,6 +8860,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = __webpack_require__("chunkid");
@@ -10449,20 +8878,19 @@
           _ = (0, _._)();
         return (
           _ && _.locale(_),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.format("LT"),
-            _
-              ? _.createElement(
-                  _._,
-                  {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _.format("LT"),
+              _
+                ? (0, _.jsx)(_._, {
                     toolTipContent: _.format("Z") + ", " + _,
-                  },
-                  _.createElement("span", null, " ", _.zoneAbbr()),
-                )
-              : null,
-          )
+                    children: (0, _.jsxs)("span", {
+                      children: [" ", _.zoneAbbr()],
+                    }),
+                  })
+                : null,
+            ],
+          })
         );
       }
       const _ = (0, _._)((_) => {
@@ -10482,71 +8910,60 @@
                 }
               : _();
           return __webpack_require__
-            ? _.createElement(
-                "span",
-                {
-                  className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
-                },
-                _ && _,
-                _ && _ ? _.createElement("span", null, " ") : void 0,
-                Boolean(_ && _) && _(_, _),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _.DateAndTime,
-                },
-                _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.LocalizedDate,
-                      },
-                      _,
-                    ),
-                    " ",
-                    _.createElement(
-                      "span",
-                      {
-                        className: _._,
-                      },
-                      (0, _._)("#EventDisplay_DateAndTimeCombiner"),
-                    ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LocalizedTime,
-                  },
+            ? (0, _.jsxs)("span", {
+                className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
+                children: [
+                  _ && _,
+                  _ && _
+                    ? (0, _.jsx)("span", {
+                        children: " ",
+                      })
+                    : void 0,
                   Boolean(_ && _) && _(_, _),
-                ),
-              );
+                ],
+              })
+            : (0, _.jsxs)("div", {
+                className: _.DateAndTime,
+                children: [
+                  _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.LocalizedDate,
+                          children: _,
+                        }),
+                        " ",
+                        (0, _.jsx)("span", {
+                          className: _._,
+                          children: (0, _._)(
+                            "#EventDisplay_DateAndTimeCombiner",
+                          ),
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.LocalizedTime,
+                    children: Boolean(_ && _) && _(_, _),
+                  }),
+                ],
+              });
         }),
         _ = (_) => {
-          const _ = _.createElement(
-            "div",
-            {
-              className: _.stylesmodule.DateToolTip,
-            },
-            _.createElement(_, {
+          const _ = (0, _.jsx)("div", {
+            className: _.stylesmodule.DateToolTip,
+            children: (0, _.jsx)(_, {
               dateAndTime: _.rtFullDate,
               bSingleLine: !0,
               stylesmodule: _.stylesmodule,
             }),
-          );
-          return _.createElement(
-            _._,
-            {
-              toolTipContent: _,
-              direction: "top",
-              className: _.className,
-              bTopmost: !0,
-            },
-            _.children,
-          );
+          });
+          return (0, _.jsx)(_._, {
+            toolTipContent: _,
+            direction: "top",
+            className: _.className,
+            bTopmost: !0,
+            children: _.children,
+          });
         };
       let _ = class extends _.Component {
         render() {
@@ -10562,116 +8979,95 @@
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
           if (null == _ || 0 == _)
-            return _.createElement(
-              "div",
-              {
-                className: _.DateAndTime,
-              },
-              _.createElement(
-                "span",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.DateAndTime,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)("#EventDisplay_TimeRange"),
-              ),
-              (0, _._)("#EventDisplay_TimeDisplayNone"),
-            );
+                  children: (0, _._)("#EventDisplay_TimeRange"),
+                }),
+                (0, _._)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
           let _ = _._.GetTimeNowWithOverride();
           if (_)
-            return _.createElement(
-              "div",
-              {
-                className: _.StartDate,
-              },
-              _.createElement(
-                "div",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.StartDate,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming",
-                ),
-                " ",
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                dateAndTime: _,
-              }),
-            );
+                  children: [
+                    (0, _._)(
+                      _ < _
+                        ? "#EventDisplay_TimeInPast"
+                        : "#EventDisplay_TimeUpcoming",
+                    ),
+                    " ",
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  stylesmodule: _,
+                  dateAndTime: _,
+                }),
+              ],
+            });
           let _ = _ <= _ && _ <= _;
           const _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
-          return _.createElement(
-            "div",
-            {
-              className: _.MultiDateAndTime,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.MultiDateAndTime,
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.StartDate,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ >= _
-                    ? "#EventDisplay_TimeBeginsOn"
-                    : _ >= _
-                      ? "#EventDisplay_TimeBeginsOn_Past"
-                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                ),
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                bSingleLine: !0,
-                dateAndTime: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
+                      _ >= _
+                        ? "#EventDisplay_TimeBeginsOn"
+                        : _ >= _
+                          ? "#EventDisplay_TimeBeginsOn_Past"
+                          : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    stylesmodule: _,
+                    bSingleLine: !0,
+                    dateAndTime: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.EndDate,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              _.createElement(_, {
-                stylesmodule: _,
-                bSingleLine: !0,
-                bOnlyTime: _,
-                dateAndTime: _,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
+                      _ < _
+                        ? "#EventDisplay_TimeEndsOn_Past"
+                        : "#EventDisplay_TimeEndsOn",
+                    ),
+                  }),
+                  (0, _.jsx)(_, {
+                    stylesmodule: _,
+                    bSingleLine: !0,
+                    bOnlyTime: _,
+                    dateAndTime: _,
+                  }),
+                ],
               }),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
+              _ &&
+                (0, _.jsx)("span", {
                   className: _.ActiveEvent,
-                },
-                _.createElement(
-                  "span",
-                  {
+                  children: (0, _.jsx)("span", {
                     className: (0, _._)(
                       _.RightSideTitles,
                       _.ActiveEventCallOut,
                     ),
-                  },
-                  (0, _._)("#Time_Now"),
-                ),
-              ),
-          );
+                    children: (0, _._)("#Time_Now"),
+                  }),
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -10689,170 +9085,120 @@
                 }
               : _();
           if (null == _ || 0 == _)
-            return _.createElement(
-              "div",
-              {
-                className: _.DateAndTime,
-              },
-              _.createElement(
-                "span",
-                {
+            return (0, _.jsxs)("div", {
+              className: _.DateAndTime,
+              children: [
+                (0, _.jsx)("span", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)("#EventDisplay_TimeRange"),
-              ),
-              (0, _._)("#EventDisplay_TimeDisplayNone"),
-            );
+                  children: (0, _._)("#EventDisplay_TimeRange"),
+                }),
+                (0, _._)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
           const _ = _._.GetTimeNowWithOverrideAsDate(),
             _ = _._.GetTimeNowWithOverride(),
             _ = (0, _._)(new Date(1e3 * _), _),
-            _ = _.createElement(
-              "div",
-              {
-                className: _.ShortDateAndTime,
-              },
-              (0, _._)(_, _),
-            );
-          let _ = _.createElement(
-            _,
-            {
-              rtFullDate: _,
-              stylesmodule: _,
-            },
-            _.createElement(
-              "div",
-              {
+            _ = (0, _.jsx)("div", {
+              className: _.ShortDateAndTime,
+              children: (0, _._)(_, _),
+            });
+          let _ = (0, _.jsxs)(_, {
+            rtFullDate: _,
+            stylesmodule: _,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.RightSideTitles,
-              },
-              (0, _._)(
-                _ < _
-                  ? "#EventDisplay_TimeInPast"
-                  : "#EventDisplay_TimeUpcoming",
-              ),
-            ),
-            _,
-          );
+                children: (0, _._)(
+                  _ < _
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
+                ),
+              }),
+              _,
+            ],
+          });
           if (
             (_ < _ &&
               _ < _ + _._.PerWeek &&
-              (_ = _.createElement(
-                _,
-                {
-                  rtFullDate: _,
-                  stylesmodule: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RightSideTitles,
-                  },
-                  (0, _._)(
+              (_ = (0, _.jsx)(_, {
+                rtFullDate: _,
+                stylesmodule: _,
+                children: (0, _.jsx)("div", {
+                  className: _.RightSideTitles,
+                  children: (0, _._)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     _,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ShortDateAndTime,
-                      },
-                      _(_),
-                      " ",
-                    ),
+                    (0, _.jsxs)("div", {
+                      className: _.ShortDateAndTime,
+                      children: [_(_), " "],
+                    }),
                   ),
-                ),
-              )),
+                }),
+              })),
             __webpack_require__ || null == _ || _ < 1)
           )
             return _;
           const _ = _ <= _ && _ <= _;
           _ &&
-            (_ = _.createElement(
-              _,
-              {
-                rtFullDate: _,
-                className: _.ActiveEvent,
-                stylesmodule: _,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.ActiveEventCallOut,
-                },
-                (0, _._)("#Time_Now"),
-              ),
-            ));
+            (_ = (0, _.jsx)(_, {
+              rtFullDate: _,
+              className: _.ActiveEvent,
+              stylesmodule: _,
+              children: (0, _.jsx)("span", {
+                className: _.ActiveEventCallOut,
+                children: (0, _._)("#Time_Now"),
+              }),
+            }));
           let _ = null;
           const _ = _ ? _ - _ : _ - _;
           if (_ <= _._.PerDay) {
-            const _ = _.createElement(
-              "div",
-              {
-                className: _.ShortDateAndTime,
-              },
-              (0, _._)(_, !0),
-            );
+            const _ = (0, _.jsx)("div", {
+              className: _.ShortDateAndTime,
+              children: (0, _._)(_, !0),
+            });
             _ =
               _ < _
-                ? _.createElement(
-                    "div",
-                    {
-                      className: _.RightSideTitles,
-                    },
-                    (0, _._)("#EventDisplay_TimeEndsOn_Ran"),
-                    _,
-                  )
-                : _.createElement(
-                    "div",
-                    {
-                      className: _.RightSideTitles,
-                    },
-                    (0, _._)(
+                ? (0, _.jsxs)("div", {
+                    className: _.RightSideTitles,
+                    children: [(0, _._)("#EventDisplay_TimeEndsOn_Ran"), _],
+                  })
+                : (0, _.jsx)("div", {
+                    className: _.RightSideTitles,
+                    children: (0, _._)(
                       _
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       _,
                     ),
-                  );
+                  });
           } else {
             const _ = _.getFullYear() == new Date(1e3 * _).getFullYear();
-            _ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+            _ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: _.RightSideTitles,
-                },
-                (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: (0, _._)(
+                    _ < _
+                      ? "#EventDisplay_TimeEndsOn_Past"
+                      : "#EventDisplay_TimeEndsOn",
+                  ),
+                }),
+                (0, _.jsx)("div", {
                   className: _.ShortDateAndTime,
-                },
-                (0, _._)(_, _),
-              ),
-            );
+                  children: (0, _._)(_, _),
+                }),
+              ],
+            });
           }
-          const _ = _.createElement(
-            _,
-            {
-              rtFullDate: _,
-              stylesmodule: _,
-            },
-            _,
-          );
-          return _.createElement(
-            "div",
-            {
-              className: _.ShortDateRange,
-            },
-            _,
-            _,
-          );
+          const _ = (0, _.jsx)(_, {
+            rtFullDate: _,
+            stylesmodule: _,
+            children: _,
+          });
+          return (0, _.jsxs)("div", {
+            className: _.ShortDateRange,
+            children: [_, _],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -10863,6 +9209,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -10927,14 +9274,17 @@
             } = this.props,
             _ = this.src,
             _ = this.state.nPropChangeCounter;
-          return _.createElement("img", {
-            key: _,
-            ref: this.m_refImage,
-            ..._,
-            src: _,
-            onError: this.OnImageError,
-            alt: _,
-          });
+          return (0, _.jsx)(
+            "img",
+            {
+              ref: this.m_refImage,
+              ..._,
+              src: _,
+              onError: this.OnImageError,
+              alt: _,
+            },
+            _,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "OnImageError", null);
@@ -10946,6 +9296,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -11036,74 +9387,66 @@
         }, [_, _]);
         const _ = _.GetScreenshots("allowed" != _),
           _ = _ && _.length > 0 ? _[0] : _.GetAssets().GetMainCapsuleURL();
-        return _.createElement(
-          _._,
-          {
-            className: _().AppCarouselTrailerCtn,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-          },
-          _.createElement("img", {
-            className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
-            src: _,
-            onClick: _,
-          }),
-          !_ &&
-            _.createElement(_, {
-              storeItem: _,
-              bAutoplayVideos: _,
-              autoplayCheckboxPosition: _,
-              fnSetAutoPlayVideos: (_) => {
-                (0, _._)(_ ?? _, String(!_), 3650), _(_), _(_);
-              },
+        return (0, _.jsxs)(_._, {
+          className: _().AppCarouselTrailerCtn,
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
+          children: [
+            (0, _.jsx)("img", {
+              className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
+              src: _,
+              onClick: _,
             }),
-          _.createElement(_._, {
-            name: _.GetName(),
-            trailerCategory: _?.GetTrailerCategory(),
-            trailerDisplay: _,
-            mouseOver: _,
-          }),
-          _.createElement(_, {
-            eTrailerDisplay: _,
-            setTrailerDisplay: _,
-            featuredTrailer: _,
-            refMicroTrailer: _,
-            refMainTrailer: _,
-            loadedAndActive: _ && __webpack_require__,
-            setVideoShouldStart: _,
-            bMouseOverVideo: _,
-            storeItem: _,
-            broadcastVideo: _,
-            fnSetBroadcastVideo: _,
-            fnTogglePlayPause: _,
-            bAutoplayVideos: _,
-            bVideoShouldStart: _,
-            bPlayWithBroadcastPlayer: _,
-            ..._,
-          }),
-          _ &&
+            !_ &&
+              (0, _.jsx)(_, {
+                storeItem: _,
+                bAutoplayVideos: _,
+                autoplayCheckboxPosition: _,
+                fnSetAutoPlayVideos: (_) => {
+                  (0, _._)(_ ?? _, String(!_), 3650), _(_), _(_);
+                },
+              }),
+            (0, _.jsx)(_._, {
+              name: _.GetName(),
+              trailerCategory: _?.GetTrailerCategory(),
+              trailerDisplay: _,
+              mouseOver: _,
+            }),
+            (0, _.jsx)(_, {
+              eTrailerDisplay: _,
+              setTrailerDisplay: _,
+              featuredTrailer: _,
+              refMicroTrailer: _,
+              refMainTrailer: _,
+              loadedAndActive: _ && __webpack_require__,
+              setVideoShouldStart: _,
+              bMouseOverVideo: _,
+              storeItem: _,
+              broadcastVideo: _,
+              fnSetBroadcastVideo: _,
+              fnTogglePlayPause: _,
+              bAutoplayVideos: _,
+              bVideoShouldStart: _,
+              bPlayWithBroadcastPlayer: _,
+              ..._,
+            }),
             _ &&
-            _.createElement(
-              "div",
-              {
+              _ &&
+              (0, _.jsxs)("div", {
                 className: _().AOWarning,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Text,
-                },
-                (0, _._)("#StoreTrailer_AOWarning_1"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Text,
-                },
-                (0, _._)("#StoreTrailer_AOWarning_2"),
-              ),
-            ),
-        );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Text,
+                    children: (0, _._)("#StoreTrailer_AOWarning_1"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Text,
+                    children: (0, _._)("#StoreTrailer_AOWarning_2"),
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -11237,63 +9580,59 @@
           })(_, _, _.current, _, _.current, _, _),
           _ && _.BIsVisible()
             ? (__webpack_require__ || _) &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _ &&
-                  !_ &&
-                  _.createElement(
-                    _._,
-                    {
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  _ &&
+                    !_ &&
+                    (0, _.jsx)(_._, {
                       focusable: !0,
                       onClick: _,
                       className: _().PlayButton,
-                    },
-                    _.createElement(_.IOc, null),
-                  ),
-                _ &&
-                  _.createElement(
-                    "video",
-                    {
+                      children: (0, _.jsx)(_.IOc, {}),
+                    }),
+                  _ &&
+                    (0, _.jsxs)("video", {
                       className: _(!0, _),
                       ref: _,
                       preload: "auto",
                       playsInline: !0,
                       muted: !0,
                       onClick: _,
-                    },
-                    _.createElement("source", {
-                      src: _.strWebMURL,
-                      type: "video/webm",
+                      children: [
+                        (0, _.jsx)("source", {
+                          src: _.strWebMURL,
+                          type: "video/webm",
+                        }),
+                        Boolean(!_._.IN_CLIENT) &&
+                          (0, _.jsx)("source", {
+                            src: _.strMP4URL,
+                            type: "video/mp4",
+                          }),
+                      ],
                     }),
-                    Boolean(!_._.IN_CLIENT) &&
-                      _.createElement("source", {
-                        src: _.strMP4URL,
-                        type: "video/mp4",
-                      }),
-                  ),
-                __webpack_require__ &&
-                  !_ &&
-                  _.createElement(_, {
-                    ref: _,
-                    trailer: __webpack_require__,
-                    eTrailerDisplay: _,
-                    fadeRatio: _,
-                    onPlayPauseChange: _,
-                    onPlaybackEnd: _,
-                  }),
-                _ &&
-                  _.createElement(_.default, {
-                    classes: _(!1, _),
-                    nAppIDVOD: _.GetAppID(),
-                    watchLocation: 15,
-                    fnOnVideoEnd: _,
-                    fnVideoClick: _,
-                    fnSetBroadcastVideo: _,
-                    bStartWithSubtitles: !0,
-                    bStartMuted: !0,
-                  }),
-              )
+                  __webpack_require__ &&
+                    !_ &&
+                    (0, _.jsx)(_, {
+                      ref: _,
+                      trailer: __webpack_require__,
+                      eTrailerDisplay: _,
+                      fadeRatio: _,
+                      onPlayPauseChange: _,
+                      onPlaybackEnd: _,
+                    }),
+                  _ &&
+                    (0, _.jsx)(_.default, {
+                      classes: _(!1, _),
+                      nAppIDVOD: _.GetAppID(),
+                      watchLocation: 15,
+                      fnOnVideoEnd: _,
+                      fnVideoClick: _,
+                      fnSetBroadcastVideo: _,
+                      bStartWithSubtitles: !0,
+                      bStartMuted: !0,
+                    }),
+                ],
+              })
             : null
         );
       }
@@ -11315,15 +9654,10 @@
         }, [_, _]);
         let _ = 2 != _,
           _ = _(!1, _);
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _,
-            },
-            _.createElement(_._, {
+        return (0, _.jsx)(_, {
+          children: (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)(_._, {
               ref: _,
               dashManifests: __webpack_require__.GetTrailersDash(),
               hlsManifest: __webpack_require__.GetTrailerHls(),
@@ -11334,23 +9668,20 @@
               onPlaybackEnd: _,
               onPlayPauseChange: _,
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         let { children: _ } = _;
         const [__webpack_require__, _] = (0, _._)(_, 0.8),
           [_, _] = (0, _._)(_, !0);
-        return _.createElement(
-          _._,
-          {
-            playerVolume: __webpack_require__,
-            setPlayerVolume: _,
-            audioMuted: _,
-            setAudioMuted: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          playerVolume: __webpack_require__,
+          setPlayerVolume: _,
+          audioMuted: _,
+          setAudioMuted: _,
+          children: _,
+        });
       }
       function _(_, _) {
         return (0, _._)({
@@ -11372,255 +9703,25 @@
           _ = {
             [_ || "top"]: 0,
           };
-        return _.createElement(
-          "div",
-          {
-            onClick: (_) => {
-              _.preventDefault(), _.stopPropagation();
-            },
-            className: _().AutoplayCheckboxCtn,
+        return (0, _.jsx)("div", {
+          onClick: (_) => {
+            _.preventDefault(), _.stopPropagation();
           },
-          _.createElement(_._, {
-            controlled: !0,
-            checked: __webpack_require__,
-            key: _.GetAppID(),
-            className: _().AutoplayCheckbox,
-            style: _,
-            label: (0, _._)("#StoreTrailer_AutoPlayVideos"),
-            onChange: _,
-          }),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.NotLoaded = 0)] = "NotLoaded"),
-          (_[(_.Loading = 1)] = "Loading"),
-          (_[(_.Loaded = 2)] = "Loaded");
-      })(_ || (_ = {}));
-      let _ = _.NotLoaded,
-        _ = [];
-      function _(_) {
-        if (_ != _.Loaded) {
-          if (_ == _.NotLoaded) {
-            let _ = document.createElement("script");
-            _.src = "https://www.youtube.com/iframe_api";
-            let _ = document.getElementsByTagName("script")[0];
-            _.parentNode.insertBefore(_, _),
-              (window.onYouTubeIframeAPIReady = _);
-          }
-          _ && (_.includes(_) || _.push(_));
-        } else _ && _();
-      }
-      function _(_ = !0) {
-        const _ = (0, _._)("youtube");
-        (0, _.useEffect)(() => {
-          _ && _ && _();
-        }, [_, _]);
-      }
-      function _() {
-        _ = _.Loaded;
-        for (let _ of _) _();
-        _ = [];
-      }
-      class _ extends _.Component {
-        m_strPlayerID = "";
-        m_player = null;
-        m_playerContainer = null;
-        m_bPlayerReady = !1;
-        static s_nPlayerIndex = 0;
-        constructor(_) {
-          super(_),
-            (this.m_strPlayerID = "YoutubePlayer_" + _.s_nPlayerIndex++),
-            (this.state = {
-              bYoutubeLoaded: !1,
-            });
-        }
-        componentWillUnmount() {
-          var _;
-          this.DestroyPlayer(), (_ = this.OnYoutubeScriptsReady), _._(_, _);
-        }
-        shouldComponentUpdate(_, _) {
-          if (!this.m_player) return !1;
-          const _ = this.props;
-          return _.autoplay != _.autoplay ||
-            _.controls != _.controls ||
-            _.showInfo != _.showInfo ||
-            _.video != _.video
-            ? (this.CreatePlayer(_), !1)
-            : ((_.width == _.width && _.height == _.height) ||
-                (this.m_bPlayerReady &&
-                  _.width &&
-                  _.height &&
-                  this.m_player.setSize(_.width, _.height)),
-              _.forcePause != _.forcePause);
-        }
-        componentDidUpdate(_) {
-          _.forcePause != this.props.forcePause &&
-            (this.props.forcePause
-              ? this.m_player.pauseVideo()
-              : this.m_player.playVideo());
-        }
-        DestroyPlayer() {
-          if (this.m_player)
-            try {
-              this.m_player.stopVideo && this.m_player.stopVideo(),
-                this.m_player.destroy && this.m_player.destroy();
-            } catch (_) {
-            } finally {
-              this.m_player = null;
-            }
-        }
-        BindPlayerContainer(_) {
-          this.m_playerContainer != _ &&
-            ((this.m_playerContainer = _),
-            this.DestroyPlayer(),
-            this.m_playerContainer && _(this.OnYoutubeScriptsReady));
-        }
-        OnYoutubeScriptsReady() {
-          this.CreatePlayer(this.props);
-        }
-        CreatePlayer(_) {
-          if ((this.DestroyPlayer(), !this.m_playerContainer)) return;
-          const _ = !1 === _.autoplay ? 0 : 1,
-            _ = !0 === _.showInfo ? 1 : 0,
-            _ = !0 === _.controls ? 1 : 0,
-            _ = !0 === _.showFullscreenBtn ? 1 : 0,
-            _ = !0 === _.playsInline ? 1 : 0;
-          let _ = {
-              width: void 0 !== _.width ? String(_.width) : void 0,
-              height: void 0 !== _.height ? String(_.height) : void 0,
-              videoId: _.video,
-              host: "https://www.youtube-nocookie.com",
-              playerVars: {
-                autoplay: _,
-                showinfo: _,
-                autohide: 1,
-                _: _,
-                modestbranding: 1,
-                rel: 0,
-                playsinline: _,
-                iv_load_policy: 3,
-                controls: _,
-                start: _.startSeconds,
-              },
-              events: {
-                onReady: this.OnPlayerReady,
-                onStateChange: this.OnPlayerStateChange,
-                onError: this.OnError,
-              },
-            },
-            _ = this.m_playerContainer.firstElementChild;
-          (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
-        }
-        OnPlayerReady(_) {
-          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
-            let _ = this.m_player.getVideoData(),
-              _ = {
-                strAuthor: "",
-                strTitle: "",
-                strVideoID: "",
-              };
-            _.author && (_.strAuthor = _.author),
-              _.title && (_.strTitle = _.title),
-              _.video_id && (_.strVideoID = _.video_id),
-              this.props.onVideoInfoChanged(_);
-          }
-          this.props.width &&
-            this.props.height &&
-            this.m_player.setSize(this.props.width, this.props.height),
-            this.props.autoplay && this.m_player.playVideo(),
-            this.props.onPlayerReady && this.props.onPlayerReady();
-        }
-        OnPlayerStateChange(_) {
-          switch (_.data) {
-            case _.PlayerState.UNSTARTED:
-              break;
-            case _.PlayerState.BUFFERING:
-              this.props.onBuffering && this.props.onBuffering();
-              break;
-            case _.PlayerState.PLAYING:
-              this.props.onPlaying && this.props.onPlaying();
-              break;
-            case _.PlayerState.PAUSED:
-              this.props.onPaused && this.props.onPaused();
-              break;
-            case _.PlayerState.ENDED:
-              this.props.onMovieEnd && this.props.onMovieEnd();
-          }
-        }
-        OnError(_) {
-          console.log("Youtube: Playback failed", _),
-            this.props.onError && this.props.onError(_);
-        }
-        OnPlayerLeftView() {
-          this.props.autopause &&
-            this.m_player &&
-            this.m_bPlayerReady &&
-            this.m_player.pauseVideo();
-        }
-        PlayVideo(_) {
-          this.m_player &&
-            this.m_bPlayerReady &&
-            (_ && this.m_player.seekTo(0, !0), this.m_player.playVideo());
-        }
-        render() {
-          return _.createElement(
-            _,
+          className: _().AutoplayCheckboxCtn,
+          children: (0, _.jsx)(
+            _._,
             {
-              video: this.props.video,
+              controlled: !0,
+              checked: __webpack_require__,
+              className: _().AutoplayCheckbox,
+              style: _,
+              label: (0, _._)("#StoreTrailer_AutoPlayVideos"),
+              onChange: _,
             },
-            _.createElement(
-              _._,
-              {
-                key: this.m_strPlayerID,
-                onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
-                ref: this.BindPlayerContainer,
-                className: (0, _._)("YoutubePlayer", this.props.classnames),
-              },
-              _.createElement(_._, {
-                className: "YoutubePlayerThrobber",
-              }),
-            ),
-          );
-        }
+            _.GetAppID(),
+          ),
+        });
       }
-      function _(_) {
-        const { video: _, children: __webpack_require__ } = _;
-        return (0, _._)("youtube")
-          ? __webpack_require__
-          : _.createElement(
-              "a",
-              {
-                href: `https://www.youtube.com/watch?v=${_}`,
-              },
-              (0, _._)("#EventCalendar_WatchYouTubeVideo"),
-            );
-      }
-      (0, _._)([_._], _.prototype, "BindPlayerContainer", null),
-        (0, _._)([_._], _.prototype, "OnYoutubeScriptsReady", null),
-        (0, _._)([_._], _.prototype, "CreatePlayer", null),
-        (0, _._)([_._], _.prototype, "OnPlayerReady", null),
-        (0, _._)([_._], _.prototype, "OnPlayerStateChange", null),
-        (0, _._)([_._], _.prototype, "OnError", null),
-        (0, _._)([_._], _.prototype, "OnPlayerLeftView", null),
-        (0, _._)([_._], _.prototype, "PlayVideo", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -11629,6 +9730,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11663,19 +9765,14 @@
                 window.history.replaceState({}, "", _);
             }
           }, [_]),
-          _.createElement(
-            _._,
-            {
-              method: "verifiedprogram",
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
+          (0, _.jsx)(_._, {
+            method: "verifiedprogram",
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
                 storeItem: _,
               }),
-            ),
-          )
+            }),
+          })
         );
       }
       function _(_) {
@@ -11683,44 +9780,37 @@
           _ = (0, _._)(
             "https://clan.akamai.steamstatic.com/images/41316928/846f603df6057b070667f2741730c2038648955d.png",
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: _().Headline,
-            },
-            (0, _._)(
-              "#VerifiedProgram_DeckTitle",
-              _.GetName(),
-              _.createElement(
-                "span",
-                {
+              children: (0, _._)(
+                "#VerifiedProgram_DeckTitle",
+                _.GetName(),
+                (0, _.jsxs)("span", {
                   className: _().Verified,
-                },
-                _.createElement("img", {
-                  src: _,
-                  alt: (0, _._)("#VerifiedProgram_DeckAlt"),
+                  children: [
+                    (0, _.jsx)("img", {
+                      src: _,
+                      alt: (0, _._)("#VerifiedProgram_DeckAlt"),
+                    }),
+                    (0, _._)("#VerifiedProgram_DeckTitle_Verified"),
+                  ],
                 }),
-                (0, _._)("#VerifiedProgram_DeckTitle_Verified"),
               ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
+            }),
+            (0, _.jsx)("div", {
               className: _().Subtitle,
-            },
-            (0, _._)(
-              "#VerifiedProgram_DeckSubTitle",
-              _.createElement(_._, {
-                className: _().Link,
-                href: `${_._.STORE_BASE_URL}greatondeck`,
-              }),
-            ),
-          ),
-        );
+              children: (0, _._)(
+                "#VerifiedProgram_DeckSubTitle",
+                (0, _.jsx)(_._, {
+                  className: _().Link,
+                  href: `${_._.STORE_BASE_URL}greatondeck`,
+                }),
+              ),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { storeItem: _ } = _;
@@ -11728,59 +9818,48 @@
         const _ =
           _.GetAssets().GetLibraryHeroURL_2x() ??
           _.GetAssets().GetLibraryHeroURL();
-        return _.createElement(
-          "div",
-          {
-            className: _().Ctn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().Ctn,
+          children: [
+            (0, _.jsx)("div", {
               className: _().BackgroundImageCtn,
-            },
-            _.createElement("img", {
-              src: _,
-              alt: "",
+              children: (0, _.jsx)("img", {
+                src: _,
+                alt: "",
+              }),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _().BackgroundImageBlurCtn,
-            },
-            _.createElement("img", {
-              src: _,
-              alt: "",
+              children: (0, _.jsx)("img", {
+                src: _,
+                alt: "",
+              }),
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsxs)("div", {
               className: (0, _._)("page_content"),
-            },
-            _.createElement(_, {
-              storeItem: _,
+              children: [
+                (0, _.jsx)(_, {
+                  storeItem: _,
+                }),
+                (0, _.jsx)(_, {
+                  storeItem: _,
+                }),
+                (0, _.jsx)(_, {
+                  storeItem: _,
+                }),
+                (0, _.jsx)(_, {
+                  storeItem: _,
+                }),
+              ],
             }),
-            _.createElement(_, {
-              storeItem: _,
-            }),
-            _.createElement(_, {
-              storeItem: _,
-            }),
-            _.createElement(_, {
-              storeItem: _,
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { storeItem: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().CapsuleWrapper,
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _().CapsuleWrapper,
+          children: (0, _.jsx)(_._, {
             _: _.GetID(),
             type: "game",
             bShowDeckCompatibilityDialog: !1,
@@ -11789,7 +9868,7 @@
             displayStyle: "library",
             bPreferAssetWithoutOverride: !1,
           }),
-        );
+        });
       }
       function _(_) {
         const { storeItem: _ } = _,
@@ -11797,14 +9876,11 @@
             `${_._.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
             "banner",
           );
-        return _.createElement(
-          _._,
-          {
-            href: _,
-            className: (0, _._)(_().HardwareBannerCtn),
-          },
-          _.createElement(_, null),
-        );
+        return (0, _.jsx)(_._, {
+          href: _,
+          className: (0, _._)(_().HardwareBannerCtn),
+          children: (0, _.jsx)(_, {}),
+        });
       }
       function _(_) {
         const { storeItem: _ } = _,
@@ -11818,51 +9894,41 @@
           _ = _?.[0]?.GetTrailersDash(),
           _ = _?.[0]?.GetTrailerHls(),
           _ = _?.[0]?.GetScreenshot();
-        return _.createElement(
-          "div",
-          {
-            className: _().DeviceFullWidthShadow,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().DeviceFullWidthShadow,
+          children: [
+            (0, _.jsxs)("div", {
               className: (0, _._)(_().DeviceWrapper),
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().TrailerCtn,
-                },
-                _.createElement(_._, {
-                  dashManifests: _,
-                  hlsManifest: _,
-                  screenshot: _,
-                  altText: _.GetName(),
-                  muteWhenAutoplayBlocked: !0,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)("div", {
+                    className: _().TrailerCtn,
+                    children: (0, _.jsx)(_._, {
+                      dashManifests: _,
+                      hlsManifest: _,
+                      screenshot: _,
+                      altText: _.GetName(),
+                      muteWhenAutoplayBlocked: !0,
+                    }),
+                  }),
                 }),
-              ),
-            ),
-            _.createElement("img", {
-              src: _,
-              alt: (0, _._)("#VerifiedProgram_DeckDeviceAlt"),
+                (0, _.jsx)("img", {
+                  src: _,
+                  alt: (0, _._)("#VerifiedProgram_DeckDeviceAlt"),
+                }),
+              ],
             }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: _().VideoDisclaimer,
-            },
-            (0, _._)("#VerifiedProgram_DeckDisclaimer"),
-          ),
-        );
+              children: (0, _._)("#VerifiedProgram_DeckDisclaimer"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)(_._.LANGUAGE);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           language: _,
           strAltText: (0, _._)("#VerifiedProgram_DeckShopBannerAlt"),
           strImageToken: _

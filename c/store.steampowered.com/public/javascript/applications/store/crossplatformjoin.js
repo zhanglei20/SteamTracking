@@ -31,35 +31,30 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: _.closeModal,
-            bDisableBackgroundDismiss: !0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, _.jsx)(_, {
             redirectURL: _.redirectURL,
             guestOption: _.guestOption,
           }),
-        );
+        });
       }
       function _(_) {
         const { redirectURL: _ = window.location.href } = _;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_, {
             redirectURL: _,
           }),
-        );
+        });
       }
       function _() {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -71,7 +66,7 @@
       }
       function _(_, _) {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ownerWin: window,
             redirectURL: _,
             guestOption: _,
@@ -88,169 +83,28 @@
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          "div",
-          null,
-          _
-            ? _.createElement(_._, null)
-            : _.createElement(
-                _._,
-                {
-                  autoFocus: !0,
-                  transport: _,
-                  platform: 2,
-                  onComplete: (_) => {
-                    _ == _._.k_PrimaryDomainFail
-                      ? _(!0)
-                      : window.location.assign(_);
-                  },
-                  redirectUrl: _,
-                  theme: "modal",
+        return (0, _.jsx)("div", {
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
+                autoFocus: !0,
+                transport: _,
+                platform: 2,
+                onComplete: (_) => {
+                  _ == _._.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(_);
                 },
-                __webpack_require__ &&
-                  _.createElement(_._, {
+                redirectUrl: _,
+                theme: "modal",
+                children:
+                  __webpack_require__ &&
+                  (0, _.jsx)(_._, {
                     redirectURL: _,
                   }),
-              ),
-        );
+              }),
+        });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _,
-        _: () => _._,
-        _: () => _._,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
-      __webpack_require__("chunkid");
-      function _(_) {
-        const { labelledBy: _ } = _ || {},
-          [__webpack_require__, _] = _.useState(void 0);
-        return {
-          headerId: _ || __webpack_require__,
-          context: _.useMemo(
-            () => ({
-              setHeaderId: _,
-            }),
-            [],
-          ),
-        };
-      }
-      function _(_) {
-        const {
-            active: _,
-            onDismiss: __webpack_require__,
-            className: _,
-            modalClassName: _,
-            children: _,
-            ..._
-          } = _,
-          { headerId: _, context: _ } = _({
-            labelledBy: _["aria-labelledby"],
-          });
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(
-              _._,
-              {
-                onEscKeypress: __webpack_require__,
-                className: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  role: "dialog",
-                  "aria-labelledby": _,
-                  className: _,
-                  ..._,
-                },
-                _,
-              ),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { className: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _,
-            },
-            __webpack_require__,
-          ),
-        );
-      }
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, navID: __webpack_require__, closeModal: _ } = _,
-          _ = _.createRef(),
-          _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
-        return (0, _._)() && !_._.IN_STEAMUI
-          ? _.createElement(
-              _._,
-              {
-                navID: __webpack_require__,
-                navTreeRef: _,
-                onCancelButton: _,
-                className: _.GamepadOnlyModalWrapper,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    className: _.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: _,
-                    focusableIfEmpty: !0,
-                  },
-                  _,
-                ),
-              ),
-            )
-          : _.createElement(_.Fragment, null, _);
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -342,186 +196,140 @@
         return `?joinsessionid=${_}`;
       }
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            className: _().JoinSessionButton,
-            onClick: () =>
-              (window.location.href =
-                `steam://launch/${_.steamAppId}` + _(_.sessionID)),
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_._, {
+          className: _().JoinSessionButton,
+          onClick: () =>
+            (window.location.href =
+              `steam://launch/${_.steamAppId}` + _(_.sessionID)),
+          children: _.children,
+        });
       }
       function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)();
         return _.isSuccess
           ? _.data?.sessions?.length > 0
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  {
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
                     className: _().AvailableSessionsText,
-                  },
-                  "Available Steam Sessions:",
-                ),
-                _.createElement(
-                  "div",
-                  {
+                    children: "Available Steam Sessions:",
+                  }),
+                  (0, _.jsx)("div", {
                     className: _().SessionList,
-                  },
-                  _.data?.sessions.map((_) =>
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Session,
-                        key: _.client_instanceid,
-                      },
-                      _.createElement(
+                    children: _.data?.sessions.map((_) =>
+                      (0, _.jsxs)(
                         "div",
                         {
-                          className: _().MachineName,
+                          className: _().Session,
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _().MachineName,
+                              children: _.machine_name,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _().OsName,
+                              children: _.os_name,
+                            }),
+                            (0, _.jsx)(_._, {
+                              className: _().JoinSessionButton,
+                              onClick: () =>
+                                (0, _._)(
+                                  _,
+                                  _.client_instanceid,
+                                  _.steamAppId,
+                                  _(_.sessionID),
+                                ),
+                              children: "Launch Game",
+                            }),
+                          ],
                         },
-                        _.machine_name,
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().OsName,
-                        },
-                        _.os_name,
-                      ),
-                      _.createElement(
-                        _._,
-                        {
-                          className: _().JoinSessionButton,
-                          onClick: () =>
-                            (0, _._)(
-                              _,
-                              _.client_instanceid,
-                              _.steamAppId,
-                              _(_.sessionID),
-                            ),
-                        },
-                        "Launch Game",
+                        _.client_instanceid,
                       ),
                     ),
-                  ),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().Error,
-                },
-                "No logged in sessions",
-              )
+                  }),
+                ],
+              })
+            : (0, _.jsx)("div", {
+                className: _().Error,
+                children: "No logged in sessions",
+              })
           : _.isFetching || _.isRefetching
-            ? _.createElement(_._, null)
-            : _.createElement(
-                "div",
-                {
-                  className: _().Error,
-                },
-                "Error ",
-                _.error.message,
-              );
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsxs)("div", {
+                className: _().Error,
+                children: ["Error ", _.error.message],
+              });
       }
       function _(_) {
         const _ = _(_.steamAppId);
         return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
                   className: _().Header,
-                },
-                "Join Game Session",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Explanation,
-                },
-                "You've been invited to join a game! Click below to launch ",
-                _.friendly_name || _.name,
-                " on Steam and start playing.",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SessionInfoCtr,
-                },
-                _.createElement("iframe", {
-                  src: _.sessionLiveDataUrl,
+                  children: "Join Game Session",
                 }),
-              ),
-              _._.IN_CLIENT
-                ? _.createElement(
-                    "div",
-                    {
+                (0, _.jsxs)("div", {
+                  className: _().Explanation,
+                  children: [
+                    "You've been invited to join a game! Click below to launch ",
+                    _.friendly_name || _.name,
+                    " on Steam and start playing.",
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().SessionInfoCtr,
+                  children: (0, _.jsx)("iframe", {
+                    src: _.sessionLiveDataUrl,
+                  }),
+                }),
+                _._.IN_CLIENT
+                  ? (0, _.jsx)("div", {
                       className: _().SectionCtr,
-                    },
-                    _.createElement(
-                      _,
-                      {
+                      children: (0, _.jsx)(_, {
                         ..._,
-                      },
-                      "Launch Game",
-                    ),
-                  )
-                : _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().SectionCtr,
-                      },
-                      _._.logged_in
-                        ? _.createElement(_, {
-                            ..._,
-                          })
-                        : _.createElement(
-                            _.Fragment,
-                            null,
-                            _.createElement(
-                              _._,
-                              null,
-                              "Login to join on another device",
-                            ),
-                            _.createElement(
-                              _._,
-                              {
-                                onClick: _._,
-                              },
-                              (0, _._)("#Login_SignIn"),
-                            ),
-                          ),
-                    ),
-                    !_._.IN_MOBILE_WEBVIEW &&
-                      _.createElement(
-                        "div",
-                        {
+                        children: "Launch Game",
+                      }),
+                    })
+                  : (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("div", {
                           className: _().SectionCtr,
-                        },
-                        _.createElement(_._, null, "Or launch on this PC"),
-                        _.createElement(
-                          _,
-                          {
-                            ..._,
-                          },
-                          "Launch Game Here",
-                        ),
-                      ),
-                  ),
-            )
-          : _.createElement(_._, null);
+                          children: _._.logged_in
+                            ? (0, _.jsx)(_, {
+                                ..._,
+                              })
+                            : (0, _.jsxs)(_.Fragment, {
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    children: "Login to join on another device",
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    onClick: _._,
+                                    children: (0, _._)("#Login_SignIn"),
+                                  }),
+                                ],
+                              }),
+                        }),
+                        !_._.IN_MOBILE_WEBVIEW &&
+                          (0, _.jsxs)("div", {
+                            className: _().SectionCtr,
+                            children: [
+                              (0, _.jsx)(_._, {
+                                children: "Or launch on this PC",
+                              }),
+                              (0, _.jsx)(_, {
+                                ..._,
+                                children: "Launch Game Here",
+                              }),
+                            ],
+                          }),
+                      ],
+                    }),
+              ],
+            })
+          : (0, _.jsx)(_._, {});
       }
       function _() {
         const _ = (0, _._)("multiplayersession_join", "application_config"),
@@ -535,20 +343,21 @@
           _ = _[_.jws_livedata_url_key];
         return (
           "string" == typeof _ && (_ = parseInt(_)),
-          _.createElement(
-            "div",
-            {
-              className: _().JoinApp,
-            },
-            _ && _ && _
-              ? _.createElement(_, {
-                  steamAppId: _,
-                  sessionLiveDataUrl: _,
-                  sessionID: _,
-                })
-              : _.createElement("div", null, "Invalid session link"),
-            " ",
-          )
+          (0, _.jsxs)("div", {
+            className: _().JoinApp,
+            children: [
+              _ && _ && _
+                ? (0, _.jsx)(_, {
+                    steamAppId: _,
+                    sessionLiveDataUrl: _,
+                    sessionID: _,
+                  })
+                : (0, _.jsx)("div", {
+                    children: "Invalid session link",
+                  }),
+              " ",
+            ],
+          })
         );
       }
     },

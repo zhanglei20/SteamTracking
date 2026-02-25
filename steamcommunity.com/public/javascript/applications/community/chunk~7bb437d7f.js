@@ -16,7 +16,7 @@
         ShortDateRange: "_3CN6I3krBRNzD7kCuKQ_w7",
       };
     },
-    61738: (e, t, s) => {
+    61738: (e, s, t) => {
       var n = {
         "./af": 30911,
         "./af.js": 30911,
@@ -293,49 +293,43 @@
         "./zh-tw": 34518,
         "./zh-tw.js": 34518,
       };
-      function a(e) {
-        var t = r(e);
-        return s(t);
+      function i(e) {
+        var s = a(e);
+        return t(s);
       }
-      function r(e) {
-        if (!s.o(n, e)) {
-          var t = new Error("Cannot find module '" + e + "'");
-          throw ((t.code = "MODULE_NOT_FOUND"), t);
+      function a(e) {
+        if (!t.o(n, e)) {
+          var s = new Error("Cannot find module '" + e + "'");
+          throw ((s.code = "MODULE_NOT_FOUND"), s);
         }
         return n[e];
       }
-      (a.keys = function () {
+      (i.keys = function () {
         return Object.keys(n);
       }),
-        (a.resolve = r),
-        (e.exports = a),
-        (a.id = 61738);
+        (i.resolve = a),
+        (e.exports = i),
+        (i.id = 61738);
     },
-    44165: (e, t, s) => {
+    44165: (e, s, t) => {
       "use strict";
-      s.d(t, { HD: () => d, P_: () => u, f1: () => g, sB: () => D });
-      var n = s(34629),
-        a = s(14947),
-        r = s(19367),
-        l = s.n(r),
-        i = s(90626),
-        o = s(4434),
-        m = s(78327);
+      t.d(s, { HD: () => m, P_: () => j, f1: () => g, sB: () => D });
+      var n = t(34629),
+        i = t(14947),
+        a = t(19367),
+        r = t.n(a),
+        l = t(90626),
+        o = t(4434),
+        d = t(78327);
       class c {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
             (this.nOverrideDateNow = void 0),
-            (0, a.Gn)(this);
+            (0, i.Gn)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
-        }
-        get bIsFollowingEnabled() {
-          return !(0, m.Y2)();
-        }
-        get bIsCuratorsEnabled() {
-          return !(0, m.Y2)();
         }
         get bIncludeCurators() {
           return !0;
@@ -355,84 +349,85 @@
         }
         ParseDevOverrides(e) {
           if (!e || 0 == e.length) return;
-          const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
+          const s = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
-            t.has("t") &&
-            ("dev" == m.TS.WEB_UNIVERSE || "beta" == m.TS.WEB_UNIVERSE)
+            s.has("t") &&
+            ("dev" == d.TS.WEB_UNIVERSE || "beta" == d.TS.WEB_UNIVERSE)
           ) {
-            const e = t.get("t");
-            let s = /^\d+$/.test(null != e ? e : "")
-              ? l().unix(Number.parseInt(null != e ? e : "0"))
-              : l()(e);
-            (this.nOverrideDateNow = Math.floor(s.unix())),
+            const e = s.get("t");
+            let t = /^\d+$/.test(null != e ? e : "")
+              ? r().unix(Number.parseInt(null != e ? e : "0"))
+              : r()(e);
+            (this.nOverrideDateNow = Math.floor(t.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  s.format(),
+                  t.format(),
               );
           }
         }
       }
-      (0, n.Cg)([a.sH], c.prototype, "nOverrideDateNow", void 0);
-      const d = new c();
-      function u(e = 1) {
-        const [t, s] = i.useState(() => E()),
+      (0, n.Cg)([i.sH], c.prototype, "nOverrideDateNow", void 0);
+      const m = new c();
+      function j(e = 1) {
+        const [s, t] = l.useState(() => v()),
           n = (0, o.m)("useTimeNowWithOverride"),
-          a = i.useCallback(() => {
-            n.token.reason || s(E());
+          i = l.useCallback(() => {
+            n.token.reason || t(v());
           }, []);
         return (
-          i.useEffect(() => {
-            const t = 1e3 * e,
-              s = t - (Date.now() % t),
-              n = window.setTimeout(a, s);
+          l.useEffect(() => {
+            const s = 1e3 * e,
+              t = s - (Date.now() % s),
+              n = window.setTimeout(i, t);
             return () => {
               window.clearTimeout(n);
             };
-          }, [t, e, a]),
-          t
+          }, [s, e, i]),
+          s
         );
       }
-      window.g_EventCalendarDevFeatures = d;
-      const j = new Date(),
-        v = Math.floor(j.getTime() / 1e3);
-      function E() {
+      window.g_EventCalendarDevFeatures = m;
+      const u = new Date(),
+        h = Math.floor(u.getTime() / 1e3);
+      function v() {
         const e = Math.floor(Date.now() / 1e3);
-        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - v) : e;
+        return m.nOverrideDateNow ? m.nOverrideDateNow + (e - h) : e;
       }
       function D() {
         var e;
-        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : v;
+        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : h;
       }
       function g() {
-        return i.useMemo(() => D(), []);
+        return l.useMemo(() => D(), []);
       }
     },
-    82477: (e, t, s) => {
+    82477: (e, s, t) => {
       "use strict";
-      s.d(t, { vg: () => d });
-      var n = s(90626),
-        a = s(738),
-        r = s(61859),
-        l = s(78327),
-        i = s(97436),
-        o = s(96059),
-        m = s(28240);
-      s(9154);
-      function c(e) {
-        return n.createElement(
-          a.x_,
-          { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          n.createElement(u, {
+      t.d(s, { vg: () => j });
+      var n = t(7850),
+        i = t(90626),
+        a = t(738),
+        r = t(61859),
+        l = t(78327),
+        o = t(97436),
+        d = t(96059),
+        c = t(28240);
+      t(9154);
+      function m(e) {
+        return (0, n.jsx)(a.x_, {
+          onEscKeypress: e.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, n.jsx)(u, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
-        );
+        });
       }
-      function d() {
+      function j() {
         (0, a.pg)(
-          n.createElement(c, {
+          (0, n.jsx)(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -441,431 +436,425 @@
         );
       }
       function u(e) {
-        const { redirectURL: t, guestOption: s } = e,
-          [a] = (0, n.useState)(
-            new o.D(l.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+        const { redirectURL: s, guestOption: t } = e,
+          [a] = (0, i.useState)(
+            new d.D(l.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [r, c] = (0, n.useState)(!1);
-        return n.createElement(
-          "div",
-          null,
-          r
-            ? n.createElement(i.Fn, null)
-            : n.createElement(
-                i.YN,
-                {
-                  autoFocus: !0,
-                  transport: a,
-                  platform: 2,
-                  onComplete: (e) => {
-                    e == m.wI.k_PrimaryDomainFail
-                      ? c(!0)
-                      : window.location.assign(t);
-                  },
-                  redirectUrl: t,
-                  theme: "modal",
+          [r, m] = (0, i.useState)(!1);
+        return (0, n.jsx)("div", {
+          children: r
+            ? (0, n.jsx)(o.Fn, {})
+            : (0, n.jsx)(o.YN, {
+                autoFocus: !0,
+                transport: a,
+                platform: 2,
+                onComplete: (e) => {
+                  e == c.wI.k_PrimaryDomainFail
+                    ? m(!0)
+                    : window.location.assign(s);
                 },
-                s && n.createElement(i.Mk, { redirectURL: t }),
-              ),
-        );
+                redirectUrl: s,
+                theme: "modal",
+                children: t && (0, n.jsx)(o.Mk, { redirectURL: s }),
+              }),
+        });
       }
     },
-    76684: (e, t, s) => {
+    76684: (e, s, t) => {
       "use strict";
-      s.d(t, {
-        K4: () => D,
-        X0: () => T,
-        gS: () => g,
+      t.d(s, {
+        K4: () => g,
+        X0: () => f,
+        gS: () => p,
         pg: () => v,
-        u1: () => h,
-        v9: () => p,
-        yi: () => E,
+        u1: () => w,
+        v9: () => T,
+        yi: () => D,
       });
-      var n = s(34629),
-        a = s(90626),
-        r = s(32754),
-        l = s(61859),
-        i = s(75844),
-        o = s(52038),
-        m = s(14771),
-        c = s(55351),
-        d = s.n(c),
-        u = s(44165);
-      const j = s(87937);
+      var n = t(34629),
+        i = t(7850),
+        a = t(90626),
+        r = t(32754),
+        l = t(61859),
+        o = t(75844),
+        d = t(52038),
+        c = t(14771),
+        m = t(55351),
+        j = t.n(m),
+        u = t(44165);
+      const h = t(87937);
       function v(e) {
-        const t = j.tz.guess(),
-          s = j.unix(e).tz(t),
+        const s = h.tz.guess(),
+          t = h.unix(e).tz(s),
           n = (0, l.l4)();
-        return n && s.locale(n), s.format("LT");
+        return n && t.locale(n), t.format("LT");
       }
-      function E(e, t) {
-        const s = j.tz.guess(),
-          n = j.unix(e).tz(s),
-          i = (0, l.l4)();
+      function D(e, s) {
+        const t = h.tz.guess(),
+          n = h.unix(e).tz(t),
+          o = (0, l.l4)();
         return (
-          i && n.locale(i),
-          a.createElement(
-            a.Fragment,
-            null,
-            n.format("LT"),
-            t
-              ? a.createElement(
-                  r.Gq,
-                  { toolTipContent: n.format("Z") + ", " + s },
-                  a.createElement("span", null, " ", n.zoneAbbr()),
-                )
-              : null,
-          )
+          o && n.locale(o),
+          (0, i.jsxs)(a.Fragment, {
+            children: [
+              n.format("LT"),
+              s
+                ? (0, i.jsx)(r.Gq, {
+                    toolTipContent: n.format("Z") + ", " + t,
+                    children: (0, i.jsxs)("span", {
+                      children: [" ", n.zoneAbbr()],
+                    }),
+                  })
+                : null,
+            ],
+          })
         );
       }
-      const D = (0, i.PA)((e) => {
+      const g = (0, o.PA)((e) => {
           const {
-              dateAndTime: t,
-              bSingleLine: s,
+              dateAndTime: s,
+              bSingleLine: t,
               bOnlyTime: n,
-              bOnlyDate: r,
+              bOnlyDate: a,
             } = e,
-            i = !n && Boolean(t),
-            o = !r && Boolean(t),
-            m = i && (0, l.TW)(t),
-            c = e.stylesmodule ? { ...d(), ...e.stylesmodule } : d();
-          return s
-            ? a.createElement(
-                "span",
-                { className: n || r ? c.DateAndTimeInline : c.DateAndTime },
-                i && m,
-                i && o ? a.createElement("span", null, " ") : void 0,
-                Boolean(t && o) && E(t, o),
-              )
-            : a.createElement(
-                "div",
-                { className: c.DateAndTime },
-                i &&
-                  a.createElement(
-                    a.Fragment,
-                    null,
-                    a.createElement("div", { className: c.LocalizedDate }, m),
-                    " ",
-                    a.createElement(
-                      "span",
-                      { className: c.At },
-                      (0, l.we)("#EventDisplay_DateAndTimeCombiner"),
-                    ),
-                  ),
-                a.createElement(
-                  "div",
-                  { className: c.LocalizedTime },
-                  Boolean(t && o) && E(t, o),
-                ),
-              );
+            r = !n && Boolean(s),
+            o = !a && Boolean(s),
+            d = r && (0, l.TW)(s),
+            c = e.stylesmodule ? { ...j(), ...e.stylesmodule } : j();
+          return t
+            ? (0, i.jsxs)("span", {
+                className: n || a ? c.DateAndTimeInline : c.DateAndTime,
+                children: [
+                  r && d,
+                  r && o ? (0, i.jsx)("span", { children: " " }) : void 0,
+                  Boolean(s && o) && D(s, o),
+                ],
+              })
+            : (0, i.jsxs)("div", {
+                className: c.DateAndTime,
+                children: [
+                  r &&
+                    (0, i.jsxs)(i.Fragment, {
+                      children: [
+                        (0, i.jsx)("div", {
+                          className: c.LocalizedDate,
+                          children: d,
+                        }),
+                        " ",
+                        (0, i.jsx)("span", {
+                          className: c.At,
+                          children: (0, l.we)(
+                            "#EventDisplay_DateAndTimeCombiner",
+                          ),
+                        }),
+                      ],
+                    }),
+                  (0, i.jsx)("div", {
+                    className: c.LocalizedTime,
+                    children: Boolean(s && o) && D(s, o),
+                  }),
+                ],
+              });
         }),
-        g = (e) => {
-          const t = a.createElement(
-            "div",
-            { className: e.stylesmodule.DateToolTip },
-            a.createElement(D, {
+        p = (e) => {
+          const s = (0, i.jsx)("div", {
+            className: e.stylesmodule.DateToolTip,
+            children: (0, i.jsx)(g, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
             }),
-          );
-          return a.createElement(
-            r.m9,
-            {
-              toolTipContent: t,
-              direction: "top",
-              className: e.className,
-              bTopmost: !0,
-            },
-            e.children,
-          );
+          });
+          return (0, i.jsx)(r.m9, {
+            toolTipContent: s,
+            direction: "top",
+            className: e.className,
+            bTopmost: !0,
+            children: e.children,
+          });
         };
-      let p = class extends a.Component {
+      let T = class extends a.Component {
         render() {
-          const { startDateAndTime: e, endDateAndTime: t } = this.props,
-            s = this.props.stylesmodule
-              ? { ...d(), ...this.props.stylesmodule }
-              : d();
+          const { startDateAndTime: e, endDateAndTime: s } = this.props,
+            t = this.props.stylesmodule
+              ? { ...j(), ...this.props.stylesmodule }
+              : j();
           let n =
             this.props.bHideEndTime ||
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
           if (null == e || 0 == e)
-            return a.createElement(
-              "div",
-              { className: s.DateAndTime },
-              a.createElement(
-                "span",
-                { className: s.RightSideTitles },
-                (0, l.we)("#EventDisplay_TimeRange"),
-              ),
-              (0, l.we)("#EventDisplay_TimeDisplayNone"),
-            );
-          let r = u.HD.GetTimeNowWithOverride();
+            return (0, i.jsxs)("div", {
+              className: t.DateAndTime,
+              children: [
+                (0, i.jsx)("span", {
+                  className: t.RightSideTitles,
+                  children: (0, l.we)("#EventDisplay_TimeRange"),
+                }),
+                (0, l.we)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
+          let a = u.HD.GetTimeNowWithOverride();
           if (n)
-            return a.createElement(
-              "div",
-              { className: s.StartDate },
-              a.createElement(
-                "div",
-                { className: s.RightSideTitles },
-                (0, l.we)(
-                  e < r
-                    ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming",
-                ),
-                " ",
-              ),
-              a.createElement(D, { stylesmodule: s, dateAndTime: e }),
-            );
-          let i = e <= r && r <= t;
-          const c = (0, m.JD)(new Date(1e3 * e), new Date(1e3 * t));
-          return a.createElement(
-            "div",
-            { className: s.MultiDateAndTime },
-            a.createElement(
-              "div",
-              { className: s.StartDate },
-              a.createElement(
-                "span",
-                { className: s.RightSideTitles },
-                (0, l.we)(
-                  e >= r
-                    ? "#EventDisplay_TimeBeginsOn"
-                    : t >= r
-                      ? "#EventDisplay_TimeBeginsOn_Past"
-                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                ),
-              ),
-              a.createElement(D, {
-                stylesmodule: s,
-                bSingleLine: !0,
-                dateAndTime: e,
-              }),
-            ),
-            a.createElement(
-              "div",
-              { className: s.EndDate },
-              a.createElement(
-                "span",
-                { className: s.RightSideTitles },
-                (0, l.we)(
-                  t < r
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              a.createElement(D, {
-                stylesmodule: s,
-                bSingleLine: !0,
-                bOnlyTime: c,
-                dateAndTime: t,
-              }),
-            ),
-            i &&
-              a.createElement(
-                "span",
-                { className: s.ActiveEvent },
-                a.createElement(
-                  "span",
-                  {
-                    className: (0, o.A)(
-                      s.RightSideTitles,
-                      s.ActiveEventCallOut,
+            return (0, i.jsxs)("div", {
+              className: t.StartDate,
+              children: [
+                (0, i.jsxs)("div", {
+                  className: t.RightSideTitles,
+                  children: [
+                    (0, l.we)(
+                      e < a
+                        ? "#EventDisplay_TimeInPast"
+                        : "#EventDisplay_TimeUpcoming",
                     ),
-                  },
-                  (0, l.we)("#Time_Now"),
-                ),
-              ),
-          );
+                    " ",
+                  ],
+                }),
+                (0, i.jsx)(g, { stylesmodule: t, dateAndTime: e }),
+              ],
+            });
+          let r = e <= a && a <= s;
+          const o = (0, c.JD)(new Date(1e3 * e), new Date(1e3 * s));
+          return (0, i.jsxs)("div", {
+            className: t.MultiDateAndTime,
+            children: [
+              (0, i.jsxs)("div", {
+                className: t.StartDate,
+                children: [
+                  (0, i.jsx)("span", {
+                    className: t.RightSideTitles,
+                    children: (0, l.we)(
+                      e >= a
+                        ? "#EventDisplay_TimeBeginsOn"
+                        : s >= a
+                          ? "#EventDisplay_TimeBeginsOn_Past"
+                          : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                    ),
+                  }),
+                  (0, i.jsx)(g, {
+                    stylesmodule: t,
+                    bSingleLine: !0,
+                    dateAndTime: e,
+                  }),
+                ],
+              }),
+              (0, i.jsxs)("div", {
+                className: t.EndDate,
+                children: [
+                  (0, i.jsx)("span", {
+                    className: t.RightSideTitles,
+                    children: (0, l.we)(
+                      s < a
+                        ? "#EventDisplay_TimeEndsOn_Past"
+                        : "#EventDisplay_TimeEndsOn",
+                    ),
+                  }),
+                  (0, i.jsx)(g, {
+                    stylesmodule: t,
+                    bSingleLine: !0,
+                    bOnlyTime: o,
+                    dateAndTime: s,
+                  }),
+                ],
+              }),
+              r &&
+                (0, i.jsx)("span", {
+                  className: t.ActiveEvent,
+                  children: (0, i.jsx)("span", {
+                    className: (0, d.A)(
+                      t.RightSideTitles,
+                      t.ActiveEventCallOut,
+                    ),
+                    children: (0, l.we)("#Time_Now"),
+                  }),
+                }),
+            ],
+          });
         }
       };
-      p = (0, n.Cg)([i.PA], p);
-      let h = class extends a.Component {
+      T = (0, n.Cg)([o.PA], T);
+      let w = class extends a.Component {
         render() {
           const {
               startDateAndTime: e,
-              endDateAndTime: t,
-              bHideEndTime: s,
+              endDateAndTime: s,
+              bHideEndTime: t,
             } = this.props,
             n = this.props.stylesmodule
-              ? { ...d(), ...this.props.stylesmodule }
-              : d();
+              ? { ...j(), ...this.props.stylesmodule }
+              : j();
           if (null == e || 0 == e)
-            return a.createElement(
-              "div",
-              { className: n.DateAndTime },
-              a.createElement(
-                "span",
-                { className: n.RightSideTitles },
-                (0, l.we)("#EventDisplay_TimeRange"),
-              ),
-              (0, l.we)("#EventDisplay_TimeDisplayNone"),
-            );
+            return (0, i.jsxs)("div", {
+              className: n.DateAndTime,
+              children: [
+                (0, i.jsx)("span", {
+                  className: n.RightSideTitles,
+                  children: (0, l.we)("#EventDisplay_TimeRange"),
+                }),
+                (0, l.we)("#EventDisplay_TimeDisplayNone"),
+              ],
+            });
           const r = u.HD.GetTimeNowWithOverrideAsDate(),
-            i = u.HD.GetTimeNowWithOverride(),
-            o = (0, m.Ct)(new Date(1e3 * e), r),
-            c = a.createElement(
-              "div",
-              { className: n.ShortDateAndTime },
-              (0, l.TW)(e, o),
-            );
-          let j = a.createElement(
-            g,
-            { rtFullDate: e, stylesmodule: n },
-            a.createElement(
-              "div",
-              { className: n.RightSideTitles },
-              (0, l.we)(
-                e < i
-                  ? "#EventDisplay_TimeInPast"
-                  : "#EventDisplay_TimeUpcoming",
-              ),
-            ),
-            c,
-          );
-          if (
-            (i < e &&
-              e < i + m.Kp.PerWeek &&
-              (j = a.createElement(
-                g,
-                { rtFullDate: e, stylesmodule: n },
-                a.createElement(
-                  "div",
-                  { className: n.RightSideTitles },
-                  (0, l.PP)(
-                    "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    c,
-                    a.createElement(
-                      "div",
-                      { className: n.ShortDateAndTime },
-                      E(e),
-                      " ",
-                    ),
-                  ),
+            o = u.HD.GetTimeNowWithOverride(),
+            d = (0, c.Ct)(new Date(1e3 * e), r),
+            m = (0, i.jsx)("div", {
+              className: n.ShortDateAndTime,
+              children: (0, l.TW)(e, d),
+            });
+          let h = (0, i.jsxs)(p, {
+            rtFullDate: e,
+            stylesmodule: n,
+            children: [
+              (0, i.jsx)("div", {
+                className: n.RightSideTitles,
+                children: (0, l.we)(
+                  e < o
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
                 ),
-              )),
-            s || null == t || t < 1)
+              }),
+              m,
+            ],
+          });
+          if (
+            (o < e &&
+              e < o + c.Kp.PerWeek &&
+              (h = (0, i.jsx)(p, {
+                rtFullDate: e,
+                stylesmodule: n,
+                children: (0, i.jsx)("div", {
+                  className: n.RightSideTitles,
+                  children: (0, l.PP)(
+                    "#EventDisplay_EventUpcoming_WithDateAndTime",
+                    m,
+                    (0, i.jsxs)("div", {
+                      className: n.ShortDateAndTime,
+                      children: [D(e), " "],
+                    }),
+                  ),
+                }),
+              })),
+            t || null == s || s < 1)
           )
-            return j;
-          const v = e <= i && i <= t;
+            return h;
+          const v = e <= o && o <= s;
           v &&
-            (j = a.createElement(
-              g,
-              { rtFullDate: e, className: n.ActiveEvent, stylesmodule: n },
-              a.createElement(
-                "span",
-                { className: n.ActiveEventCallOut },
-                (0, l.we)("#Time_Now"),
-              ),
-            ));
-          let D = null;
-          const p = v ? t - i : t - e;
-          if (p <= m.Kp.PerDay) {
-            const e = a.createElement(
-              "div",
-              { className: n.ShortDateAndTime },
-              (0, l.Hq)(p, !0),
-            );
-            D =
-              t < i
-                ? a.createElement(
-                    "div",
-                    { className: n.RightSideTitles },
-                    (0, l.we)("#EventDisplay_TimeEndsOn_Ran"),
-                    e,
-                  )
-                : a.createElement(
-                    "div",
-                    { className: n.RightSideTitles },
-                    (0, l.PP)(
+            (h = (0, i.jsx)(p, {
+              rtFullDate: e,
+              className: n.ActiveEvent,
+              stylesmodule: n,
+              children: (0, i.jsx)("span", {
+                className: n.ActiveEventCallOut,
+                children: (0, l.we)("#Time_Now"),
+              }),
+            }));
+          let g = null;
+          const T = v ? s - o : s - e;
+          if (T <= c.Kp.PerDay) {
+            const e = (0, i.jsx)("div", {
+              className: n.ShortDateAndTime,
+              children: (0, l.Hq)(T, !0),
+            });
+            g =
+              s < o
+                ? (0, i.jsxs)("div", {
+                    className: n.RightSideTitles,
+                    children: [(0, l.we)("#EventDisplay_TimeEndsOn_Ran"), e],
+                  })
+                : (0, i.jsx)("div", {
+                    className: n.RightSideTitles,
+                    children: (0, l.PP)(
                       v
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e,
                     ),
-                  );
+                  });
           } else {
-            const e = r.getFullYear() == new Date(1e3 * t).getFullYear();
-            D = a.createElement(
-              a.Fragment,
-              null,
-              a.createElement(
-                "div",
-                { className: n.RightSideTitles },
-                (0, l.we)(
-                  t < i
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              a.createElement(
-                "div",
-                { className: n.ShortDateAndTime },
-                (0, l.TW)(t, e),
-              ),
-            );
+            const e = r.getFullYear() == new Date(1e3 * s).getFullYear();
+            g = (0, i.jsxs)(a.Fragment, {
+              children: [
+                (0, i.jsx)("div", {
+                  className: n.RightSideTitles,
+                  children: (0, l.we)(
+                    s < o
+                      ? "#EventDisplay_TimeEndsOn_Past"
+                      : "#EventDisplay_TimeEndsOn",
+                  ),
+                }),
+                (0, i.jsx)("div", {
+                  className: n.ShortDateAndTime,
+                  children: (0, l.TW)(s, e),
+                }),
+              ],
+            });
           }
-          const h = a.createElement(g, { rtFullDate: t, stylesmodule: n }, D);
-          return a.createElement("div", { className: n.ShortDateRange }, j, h);
+          const w = (0, i.jsx)(p, {
+            rtFullDate: s,
+            stylesmodule: n,
+            children: g,
+          });
+          return (0, i.jsxs)("div", {
+            className: n.ShortDateRange,
+            children: [h, w],
+          });
         }
       };
-      function T(e) {
-        const {
-          rtStartDate: t,
-          rtEndDate: s,
-          strMonthFormat: n,
-          className: r,
-        } = e;
-        return a.createElement(
-          "div",
-          { className: r },
-          (function (e, t, s) {
-            const n = u.HD.GetTimeNowWithOverrideAsDate(),
-              a = new Date(1e3 * e),
-              r = new Date(1e3 * t),
-              i = n.getFullYear() == a.getFullYear(),
-              o = n.getFullYear() == r.getFullYear(),
-              m = a.getFullYear() == r.getFullYear(),
-              c = m && a.getMonth() == r.getMonth(),
-              d = c && a.getDate() == r.getDate(),
-              j = {
-                day: "numeric",
-                month: null != s ? s : "long",
-                year: i ? void 0 : "numeric",
-              },
-              v = a.toLocaleDateString(l.pf.GetPreferredLocales(), j);
-            if (d) return v;
-            {
-              const e = {
-                day: "numeric",
-                month: c && o ? void 0 : null != s ? s : "long",
-                year: m ? void 0 : "numeric",
-              };
-              return (
-                v + " - " + r.toLocaleDateString(l.pf.GetPreferredLocales(), e)
-              );
-            }
-          })(t, s, n),
-          " ",
-        );
+      function y(e, s, t) {
+        const n = u.HD.GetTimeNowWithOverrideAsDate(),
+          i = new Date(1e3 * e),
+          a = new Date(1e3 * s),
+          r = n.getFullYear() == i.getFullYear(),
+          o = n.getFullYear() == a.getFullYear(),
+          d = i.getFullYear() == a.getFullYear(),
+          c = d && i.getMonth() == a.getMonth(),
+          m = c && i.getDate() == a.getDate(),
+          j = {
+            day: "numeric",
+            month: null != t ? t : "long",
+            year: r ? void 0 : "numeric",
+          },
+          h = i.toLocaleDateString(l.pf.GetPreferredLocales(), j);
+        if (m) return h;
+        {
+          const e = {
+            day: "numeric",
+            month: c && o ? void 0 : null != t ? t : "long",
+            year: d ? void 0 : "numeric",
+          };
+          return (
+            h + " - " + a.toLocaleDateString(l.pf.GetPreferredLocales(), e)
+          );
+        }
       }
-      h = (0, n.Cg)([i.PA], h);
+      function f(e) {
+        const {
+          rtStartDate: s,
+          rtEndDate: t,
+          strMonthFormat: n,
+          className: a,
+        } = e;
+        return (0, i.jsxs)("div", {
+          className: a,
+          children: [y(s, t, n), " "],
+        });
+      }
+      w = (0, n.Cg)([o.PA], w);
     },
-    4434: (e, t, s) => {
+    4434: (e, s, t) => {
       "use strict";
-      s.d(t, { m: () => l });
-      var n = s(41735),
-        a = s.n(n),
-        r = s(90626);
-      function l(e) {
-        const t = r.useRef(a().CancelToken.source());
+      t.d(s, { m: () => r });
+      var n = t(41735),
+        i = t.n(n),
+        a = t(90626);
+      function r(e) {
+        const s = a.useRef(i().CancelToken.source());
         return (
-          r.useEffect(() => {
-            const s = t.current;
-            return () => s.cancel(e ? `${e}: unmounting` : "unmounting");
+          a.useEffect(() => {
+            const t = s.current;
+            return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
-          t.current
+          s.current
         );
       }
     },

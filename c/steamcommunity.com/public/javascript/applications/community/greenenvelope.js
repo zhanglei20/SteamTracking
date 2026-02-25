@@ -47,6 +47,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -80,13 +81,10 @@
           }, [_]);
           const _ = _();
           return _
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, null),
-                _.createElement(_, null),
-              )
-            : _.createElement(_, {
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+              })
+            : (0, _.jsx)(_, {
                 nTotalUnviewed: _.nUnviewed,
               });
         });
@@ -117,7 +115,7 @@
         _.useEffect(() => {
           _.current ||
             ((_.current = (0, _._)(
-              _.createElement(_, {
+              (0, _.jsx)(_, {
                 popupRef: _,
               }),
               document.getElementById("green_envelope_menu_root"),
@@ -141,40 +139,32 @@
           },
           [_],
         );
-        return _.createElement(
-          _._,
-          {
-            trigger: "repeated",
-            onVisibilityChange: _,
-          },
-          _.createElement(
-            "button",
-            {
-              onClick: () => {
-                var _, _;
-                if (
-                  !(null === (_ = _.current) || void 0 === _
-                    ? void 0
-                    : _.visible)
-                ) {
-                  null === (_ = _.current) || void 0 === _ || _.Show();
-                  -1 != _.findIndex((_) => !_.item.viewed) &&
-                    _.MarkAllItemsViewed();
-                }
-              },
-              _: "green_envelope_menu_root",
-              className: (0, _._)(
-                _().NotificationsButton,
-                _ ? _().Green : _().Grey,
-                _,
-              ),
+        return (0, _.jsx)(_._, {
+          trigger: "repeated",
+          onVisibilityChange: _,
+          children: (0, _.jsx)("button", {
+            onClick: () => {
+              var _, _;
+              if (
+                !(null === (_ = _.current) || void 0 === _ ? void 0 : _.visible)
+              ) {
+                null === (_ = _.current) || void 0 === _ || _.Show();
+                -1 != _.findIndex((_) => !_.item.viewed) &&
+                  _.MarkAllItemsViewed();
+              }
             },
-            _.createElement(_.$0s, {
+            _: "green_envelope_menu_root",
+            className: (0, _._)(
+              _().NotificationsButton,
+              _ ? _().Green : _().Grey,
+              _,
+            ),
+            children: (0, _.jsx)(_.$0s, {
               className: _().SVGNotifications,
               "aria-label": (0, _._)("#NotificationsMenu_Title"),
             }),
-          ),
-        );
+          }),
+        });
       }
       const _ = (_) => {
           var _;
@@ -197,87 +187,63 @@
             _,
           ]);
           const _ = _ ? void 0 : _().MenuScrollbarHidden;
-          return _.createElement(
-            "div",
-            {
-              className: _().NotificationsMenu,
-              onClick: () => {
-                var _;
-                return null ===
-                  (_ =
-                    null == __webpack_require__
-                      ? void 0
-                      : __webpack_require__.current) || void 0 === _
-                  ? void 0
-                  : _.Hide();
-              },
+          return (0, _.jsxs)("div", {
+            className: _().NotificationsMenu,
+            onClick: () => {
+              var _;
+              return null ===
+                (_ =
+                  null == __webpack_require__
+                    ? void 0
+                    : __webpack_require__.current) || void 0 === _
+                ? void 0
+                : _.Hide();
             },
-            _.createElement(_, null),
-            _.createElement(
-              "div",
-              {
+            children: [
+              (0, _.jsx)(_, {}),
+              (0, _.jsxs)("div", {
                 className: (0, _._)(_().NotificationsMenuScrollable, _),
                 ref: _,
-              },
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-            ),
-          );
+                children: [
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                ],
+              }),
+            ],
+          });
         },
         _ = () => {
           const _ = `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/notifications`;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().NotificationHeader),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_().NotificationHeader),
+            children: [
+              (0, _.jsx)("div", {
                 className: _().AllNotificationsTitle,
-              },
-              (0, _._)("#NotificationsMenu_Title"),
-            ),
-            _.createElement(
-              "a",
-              {
+                children: (0, _._)("#NotificationsMenu_Title"),
+              }),
+              (0, _.jsx)("a", {
                 href: _,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _().AllNotificationsButton,
-                },
-                (0, _._)("#NotificationsMenu_ViewAll"),
-              ),
-            ),
-          );
+                  children: (0, _._)("#NotificationsMenu_ViewAll"),
+                }),
+              }),
+            ],
+          });
         },
         _ = () => {
           const _ = `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/notifications`;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().NotificationHeader,
-                _().ResponsiveViewAll,
-              ),
-            },
-            _.createElement(
-              "a",
-              {
-                href: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().AllNotificationsButton,
-                },
-                (0, _._)("#NotificationsMenu_ViewAll"),
-              ),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_().NotificationHeader, _().ResponsiveViewAll),
+            children: (0, _.jsx)("a", {
+              href: _,
+              children: (0, _.jsx)("div", {
+                className: _().AllNotificationsButton,
+                children: (0, _._)("#NotificationsMenu_ViewAll"),
+              }),
+            }),
+          });
         };
       function _(_, _, _) {
         _.read ||
@@ -290,21 +256,21 @@
         const _ = _();
         return 0 == _.length
           ? null
-          : _.createElement(
-              "div",
-              {
-                className: _().NotificationsMenuEntriesContainer,
-              },
-              _.map((_, _) =>
-                _.createElement(_._, {
-                  key: _,
-                  rollup: _,
-                  onNotificationClick: _,
-                  uimode: 3,
-                  location: 3,
-                }),
+          : (0, _.jsx)("div", {
+              className: _().NotificationsMenuEntriesContainer,
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    rollup: _,
+                    onNotificationClick: _,
+                    uimode: 3,
+                    location: 3,
+                  },
+                  _,
+                ),
               ),
-            );
+            });
       }
       const _ = [
         {
@@ -377,42 +343,36 @@
       ];
       function _() {
         const _ = _();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.map((_) =>
-            _.createElement(_._, {
-              key: _.countItem,
-              url: _.fnUrl(),
-              count: _.summary[_.countItem],
-              icon: _.icon,
-              strLocToken: _.strLocToken,
-              eFeature: _.feature,
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _._,
+              {
+                url: _.fnUrl(),
+                count: _.summary[_.countItem],
+                icon: _.icon,
+                strLocToken: _.strLocToken,
+                eFeature: _.feature,
+              },
+              _.countItem,
+            ),
           ),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().EmptyNotificationsCtn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().EmptyNotificationsCtn,
+          children: [
+            (0, _.jsx)("div", {
               className: _().EmptyNotificationsTitle,
-            },
-            (0, _._)("#NotificationsList_EmptyTitle_New"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#NotificationsList_EmptyTitle_New"),
+            }),
+            (0, _.jsx)("div", {
               className: _().EmptyNotificationsBody,
-            },
-            (0, _._)("#NotificationsList_EmptyBody"),
-          ),
-        );
+              children: (0, _._)("#NotificationsList_EmptyBody"),
+            }),
+          ],
+        });
       }
       const _ = _;
     },
@@ -422,6 +382,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -518,14 +479,11 @@
             horizontal: _,
             ..._
           } = this.props;
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_refElement,
-              ..._,
-            },
-            this.props.children,
-          );
+          return (0, _.jsx)("div", {
+            ref: this.m_refElement,
+            ..._,
+            children: this.props.children,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnIntersection", null);

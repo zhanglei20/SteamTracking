@@ -767,30 +767,6 @@
       (0, _._)([_._], _.prototype, "OnKeyDown", null),
         (0, _._)([_._], _.prototype, "OnKeyUp", null),
         (0, _._)([_._], _.prototype, "Reset", null);
-      class _ {
-        async GetObject(_, _) {
-          try {
-            const _ = await this.GetString(_);
-            return _ ? JSON.parse(_, _) : null;
-          } catch {
-            return null;
-          }
-        }
-        async StoreObject(_, _) {
-          return this.StoreString(_, JSON.stringify(_));
-        }
-      }
-      class _ extends _ {
-        GetString(_) {
-          return Promise.resolve(localStorage.getItem(_));
-        }
-        StoreString(_, _) {
-          return localStorage.setItem(_, _), Promise.resolve();
-        }
-        RemoveObject(_) {
-          return localStorage.removeItem(_), Promise.resolve();
-        }
-      }
       var _,
         _ = __webpack_require__("chunkid");
       !(function (_) {
@@ -843,14 +819,13 @@
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
         static s_Singleton = null;
-        m_Storage = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
         m_SettingsChangedCallback = new _._();
-        m_bLoading = !1;
+        m_bLoading = !0;
         constructor() {
-          (this.m_Storage = new _()), this.LoadSettings();
+          this.LoadSettings();
         }
         LogAsLogManager(..._) {
           _(
@@ -863,13 +838,14 @@
           );
         }
         async LoadSettings() {
-          (this.m_bLoading = !0),
-            (this.m_bIncludeBacktraceInLog = !!(await this.m_Storage?.GetObject(
-              _.k_IncludeBacktraceInLog_StorageKey,
-            )));
-          const _ = await this.m_Storage?.GetObject(
-            _.k_EnabledLogNames_StorageKey,
+          const _ = (_) => {
+            const _ = localStorage.getItem(_);
+            return _ ? JSON.parse(_) : void 0;
+          };
+          this.m_bIncludeBacktraceInLog = !!_(
+            _.k_IncludeBacktraceInLog_StorageKey,
           );
+          const _ = _(_.k_EnabledLogNames_StorageKey);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -881,13 +857,13 @@
           (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
         }
         async SaveSettings() {
-          await this.m_Storage?.StoreObject(
+          localStorage.setItem(
             _.k_EnabledLogNames_StorageKey,
-            Array.from(this.m_setEnabledDebugLogs),
+            JSON.stringify(Array.from(this.m_setEnabledDebugLogs)),
           ),
-            await this.m_Storage?.StoreObject(
+            localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
-              this.m_bIncludeBacktraceInLog,
+              JSON.stringify(this.m_bIncludeBacktraceInLog),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -1187,28 +1163,29 @@
         static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
           return {
             root: _.SerializeNavNode(_, _, __webpack_require__),
-            bHadFocus: _.BFocusWithin(),
+            bHadFocus: _.BFocusWithin() && _.Tree.BIsActiveWithinContext(),
           };
         }
         static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
-          let _ = null;
+          let _;
           const [_, _] = _.GetChildren();
+          _.length &&
+            -1 != _ &&
+            _ &&
+            (_ = _.map((_, _) =>
+              _.SerializeNavNode(
+                _,
+                _ == _ || __webpack_require__,
+                __webpack_require__,
+              ),
+            ));
+          const _ = {
+            rgChildren: _,
+          };
           return (
-            _.length &&
-              -1 != _ &&
-              _ &&
-              (_ = _.map((_, _) =>
-                _.SerializeNavNode(
-                  _,
-                  _ == _ || __webpack_require__,
-                  __webpack_require__,
-                ),
-              )),
-            {
-              sNavKey: _.NavKey,
-              iActiveChild: _,
-              rgChildren: _,
-            }
+            _.NavKey && (_.sNavKey = _.NavKey),
+            -1 != _ && (_.iActiveChild = _),
+            _
           );
         }
         static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
@@ -1220,7 +1197,7 @@
           });
         }
         static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
-          const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
+          const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
           _ && _(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
             ? `[${_.Tree._}]${(function (_) {
@@ -3072,7 +3049,10 @@
         m_wrappedTree;
         m_rgCallbackRegistrations = [];
         constructor(_, _) {
-          super(_.m_Tree, _, _.m_FocusRing);
+          super(_.m_Tree, _, _.m_FocusRing),
+            this.SetProperties({
+              navKey: `FocusNavTreeWrapper_${_}`,
+            });
         }
         OnMount(_) {
           super.OnMount(_), (_.__nav_wrapper = this);
@@ -3129,6 +3109,83 @@
         (0, _._)([_._], _.prototype, "OnWrappedTreeUnhandledButton", null);
       const _ = new _("FocusHistory").Debug;
       function _(_) {
+        const _ = (_) => {
+            _(`preserving state and suppressing focus for tree ${_._}`);
+            const _ = "replace" == _.navigationType ? void 0 : _(_.Root);
+            window.navigation.updateCurrentEntry({
+              state: {
+                ...window.navigation.currentEntry?.getState(),
+                [_(_)]: _,
+              },
+            }),
+              _.DeferredFocus.SuppressFocus();
+          },
+          _ = (_) => {
+            _(_)
+              ? _.DeferredFocus.Reset()
+              : _.DeferredFocus.ExecuteQueuedFocus();
+          },
+          _ = new _();
+        return (
+          window.navigation.addEventListener("navigate", _),
+          _.Push(() => window.navigation.removeEventListener("navigate", _)),
+          window.navigation.addEventListener("navigatesuccess", _),
+          _.Push(() =>
+            window.navigation.removeEventListener("navigatesuccess", _),
+          ),
+          (function () {
+            if (!_) {
+              _ = new _._();
+              const _ = performance.now(),
+                _ = (_) => {
+                  "string" == typeof _.data &&
+                    "FocusRestoreReady" == _.data &&
+                    (_(
+                      `Got FocusRestoreReady event from page after ${performance.now() - _}ms, will record in history.  ${_.CountRegistered()} trees waiting.`,
+                    ),
+                    window.navigation.updateCurrentEntry({
+                      state: {
+                        ...window.navigation.currentEntry?.getState(),
+                        [_]: !0,
+                      },
+                    }),
+                    _.Dispatch(),
+                    _.ClearAllCallbacks(),
+                    window.clearTimeout(_));
+                };
+              window.addEventListener("message", _);
+              const _ = window.setTimeout(() => {
+                _.CountRegistered() &&
+                  (console.warn(
+                    "Waited 4000ms for FocusRestoreReady, proceeding",
+                  ),
+                  _.Dispatch());
+              }, 4e3);
+            }
+          })(),
+          (function () {
+            const _ = window.navigation.currentEntry?.getState();
+            return _(`Wait for page? ${_?.[_] ? "wait" : "no"} `, _), !!_?.[_];
+          })()
+            ? (function (_, _) {
+                if (window.__bFocusRestoreReady) return void _(_);
+                _(
+                  `Wait for page enabled, suppressing focus in ${_._} until we hear that page is ready`,
+                ),
+                  _.DeferredFocus.SuppressFocus();
+                const _ = () => {
+                    _(_)
+                      ? _.DeferredFocus.Reset()
+                      : _.DeferredFocus.ExecuteQueuedFocus();
+                  },
+                  _ = _.Register(_).Unregister;
+                _.Push(_);
+              })(_, _)
+            : _(_),
+          _.GetUnregisterFunc()
+        );
+      }
+      function _(_) {
         const _ = (function (_) {
           const _ = window.navigation.currentEntry?.getState();
           return _?.[_(_)];
@@ -3143,6 +3200,8 @@
       function _(_) {
         return `FocusHistory_${_._}`;
       }
+      let _;
+      const _ = "FocusHistoryWaitForPage";
       const _ = new _("FocusNavigation").Debug,
         _ = new _("GamepadEvents").Debug;
       class _ {
@@ -3323,41 +3382,7 @@
                 this.m_ParentNavTree.AddChildNavTree(this),
               ),
             "navigationapi" == this.m_Properties.historyMode &&
-              __webpack_require__.Push(
-                (function (_) {
-                  const _ = (_) => {
-                      _(
-                        `preserving state and suppressing focus for tree ${_._}`,
-                      );
-                      const _ =
-                        "replace" == _.navigationType ? void 0 : _(_.Root);
-                      window.navigation.updateCurrentEntry({
-                        state: {
-                          ...window.navigation.currentEntry?.getState(),
-                          [_(_)]: _,
-                        },
-                      }),
-                        _.DeferredFocus.SuppressFocus();
-                    },
-                    _ = (_) => {
-                      _(_)
-                        ? _.DeferredFocus.Reset()
-                        : _.DeferredFocus.ExecuteQueuedFocus();
-                    };
-                  return (
-                    window.navigation.addEventListener("navigate", _),
-                    window.navigation.addEventListener("navigatesuccess", _),
-                    _(_),
-                    () => {
-                      window.navigation.removeEventListener("navigate", _),
-                        window.navigation.removeEventListener(
-                          "navigatesuccess",
-                          _,
-                        );
-                    }
-                  );
-                })(this),
-              ),
+              __webpack_require__.Push(_(this)),
             __webpack_require__.GetUnregisterFunc()
           );
         }
@@ -4501,38 +4526,6 @@
         }
         return !1;
       }
-      const _ = new _("FocusHistory").Debug;
-      function _(_) {
-        const { name: _, root: __webpack_require__, navState: _ } = _;
-        _
-          ? (_(
-              `Restore ${_} history snapshot ${(function (_) {
-                const { root: _, bHadFocus: __webpack_require__ } = _;
-                let _ = "ROOT",
-                  _ = _;
-                for (; _; ) {
-                  const _ =
-                    -1 != _.iActiveChild
-                      ? _.rgChildren?.[_.iActiveChild]
-                      : null;
-                  _ && (_ += `=> [${_.sNavKey ?? _.iActiveChild}]`), (_ = _);
-                }
-                return __webpack_require__ && (_ += " (with focus)"), _;
-              })(_)}`,
-            ),
-            _(__webpack_require__, _),
-            __webpack_require__.Tree.DeferredFocus.Reset())
-          : (_(`No focus state in history for ${_}`),
-            __webpack_require__.Tree.DeferredFocus.ExecuteQueuedFocus());
-      }
-      function _(_, _) {
-        const _ = window.history.state;
-        return {
-          name: _,
-          root: _,
-          navState: _?.[_],
-        };
-      }
       const _ = new _("FocusNavigation").Debug;
       var _;
       !(function (_) {
@@ -4558,7 +4551,9 @@
             _()("html").addClass("gpnav_active");
             const _ = _()("body"),
               _ = _.GetDefaultContext(),
-              _ = _.NewGamepadNavigationTree(_, "legacy", void 0, {});
+              _ = _.NewGamepadNavigationTree(_, "legacy", void 0, {
+                historyMode: "navigationapi",
+              });
             _()(window)._("touchstart mousedown focus", () =>
               __webpack_require__.OnActivate(window),
             ),
@@ -4595,41 +4590,14 @@
               childList: !0,
               subtree: !0,
             }),
-              (_ = !0),
-              (_ = _),
-              (function (_, _) {
-                if (
-                  (_.Tree.DeferredFocus.SuppressFocus(),
-                  window.addEventListener("popstate", () => _(_(_, _))),
-                  window.history.state?.notify_focus_restore_ready)
-                ) {
-                  _(
-                    "waiting to restore focus until focus_restore_ready is sent",
-                  );
-                  let _ = _(_, _);
-                  window.addEventListener("focus_restore_ready", function (_) {
-                    _("focus_restore_ready received"),
-                      window.setTimeout(function () {
-                        _(_);
-                      }, 100);
-                  });
-                } else
-                  _("immediately restoring focus from history"), _(_(_, _));
-                !(function (_, _) {
-                  _.Tree.WindowContext.FocusChangedCallbacks.Register(() => {
-                    window.history.replaceState(
-                      {
-                        ...window.history.state,
-                        [_]: _(_),
-                      },
-                      null,
-                    );
-                  });
-                })(_, _);
-              })("legacy_web_root", _.Root),
-              Object.assign(window, _),
-              window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
-            var _;
+              (function (_) {
+                _ = _;
+              })(!0),
+              (function () {
+                Object.assign(window, _),
+                  window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
+              })(),
+              !1;
           })(_)),
           (_ = !0);
       }

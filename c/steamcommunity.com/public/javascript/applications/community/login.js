@@ -17,6 +17,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { redirectUrl: _ = _._.COMMUNITY_BASE_URL } = _,
@@ -24,14 +25,11 @@
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          "div",
-          {
-            className: _.LoginContainer,
-          },
-          _
-            ? _.createElement(_._, null)
-            : _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          className: _.LoginContainer,
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
                 autoFocus: !0,
                 transport: __webpack_require__,
                 platform: 2,
@@ -42,7 +40,7 @@
                 },
                 redirectUrl: _,
               }),
-        );
+        });
       }
     },
   },

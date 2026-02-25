@@ -1292,17 +1292,18 @@
         (0, n.Cg)([l.XI], D.prototype, "BRebuildFilter", null);
     },
     60383: (e, t, r) => {
-      r.d(t, { J: () => o });
+      r.d(t, { J: () => l });
       var i = r(34629),
-        n = r(90626),
-        a = r(56011),
-        s = r(84933);
-      class o extends n.Component {
+        n = r(7850),
+        a = r(90626),
+        s = r(56011),
+        o = r(84933);
+      class l extends a.Component {
         static GetScrollableClassname() {
           return "vt-scrollable";
         }
         m_observer = null;
-        m_refElement = n.createRef();
+        m_refElement = a.createRef();
         m_elTracked = null;
         m_bPreviouslyIntersecting = !1;
         BTriggerOnce() {
@@ -1346,7 +1347,7 @@
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
               this.props.thresholds && (e.threshold = this.props.thresholds),
-              (this.m_observer = (0, s.md)(t, this.OnIntersection, e));
+              (this.m_observer = (0, o.md)(t, this.OnIntersection, e));
           }
           this.m_observer &&
             t &&
@@ -1354,14 +1355,14 @@
             (this.m_observer.observe(t), (this.m_elTracked = t));
         }
         FindScrollableAncestor(e) {
-          return a.Kf(e, (e) => {
+          return s.Kf(e, (e) => {
             const t = this.props.horizontal
               ? window.getComputedStyle(e).overflowX
               : window.getComputedStyle(e).overflowY;
             return (
               "scroll" == t ||
               "auto" == t ||
-              !!e.classList.contains(o.GetScrollableClassname())
+              !!e.classList.contains(l.GetScrollableClassname())
             );
           });
         }
@@ -1385,14 +1386,14 @@
             horizontal: i,
             ...a
           } = this.props;
-          return n.createElement(
-            "div",
-            { ref: this.m_refElement, ...a },
-            this.props.children,
-          );
+          return (0, n.jsx)("div", {
+            ref: this.m_refElement,
+            ...a,
+            children: this.props.children,
+          });
         }
       }
-      (0, i.Cg)([s.oI], o.prototype, "OnIntersection", null);
+      (0, i.Cg)([o.oI], l.prototype, "OnIntersection", null);
     },
   },
 ]);

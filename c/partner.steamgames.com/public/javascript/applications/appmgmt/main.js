@@ -163,9 +163,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        RootDataAttributes: "_3zHvvIxS4vSW6Qh5GqLflX",
         Root: "_2KPA3I9eXE9r251_-GX_iv",
-        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
       };
     },
     chunkid: (module) => {
@@ -1020,237 +1018,222 @@
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) =>
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, null),
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)("div", {
                 className: "agenda_title",
-              },
-              (0, _._)("#SteamworksEvents_BuildingCommunity_Speakers"),
-            ),
-            _.createElement(_, null),
-          ),
+                children: (0, _._)(
+                  "#SteamworksEvents_BuildingCommunity_Speakers",
+                ),
+              }),
+              (0, _.jsx)(_, {}),
+            ],
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _.Container,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)("div", {
+            className: _.Container,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.AgendaImageCtn,
-              },
-              _.createElement("img", {
-                className: _.AgendaScreenshot,
-                src: _._.COMMUNITY_CDN_ASSET_URL + _.screenshot,
+                children: (0, _.jsx)("img", {
+                  className: _.AgendaScreenshot,
+                  src: _._.COMMUNITY_CDN_ASSET_URL + _.screenshot,
+                }),
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.RightColumn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.BubbleCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BubbleTopLine,
-                  },
-                  _.strSpeakers,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BubbleTime,
-                  },
-                  _.strTime,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BubbleTitle,
-                  },
-                  _.strTitle,
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.AgendaDescCtn,
-                },
-                _.strDesc,
-              ),
-            ),
-          ),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.BubbleCtn,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.BubbleTopLine,
+                        children: _.strSpeakers,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.BubbleTime,
+                        children: _.strTime,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.BubbleTitle,
+                        children: _.strTitle,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.AgendaDescCtn,
+                    children: _.strDesc,
+                  }),
+                ],
+              }),
+            ],
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _.CarouselContainer,
-            },
-            _.createElement(
-              _._,
-              {
-                hideArrows: !1,
-                visibleElements: 1,
-                useTestScrollbar: !1,
-                bLazyRenderChildren: !1,
-                disableEdgeWrap: !1,
-                className: (0, _._)(_.CarouselItems),
-              },
-              _.createElement(_, {
-                key: 1,
-                strDesc: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session1_Desc",
+          (0, _.jsx)("div", {
+            className: _.CarouselContainer,
+            children: (0, _.jsxs)(_._, {
+              hideArrows: !1,
+              visibleElements: 1,
+              useTestScrollbar: !1,
+              bLazyRenderChildren: !1,
+              disableEdgeWrap: !1,
+              className: (0, _._)(_.CarouselItems),
+              children: [
+                (0, _.jsx)(
+                  _,
+                  {
+                    strDesc: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session1_Desc",
+                    ),
+                    screenshot: "steamworksevents/screenshot_gautam.png",
+                    strTime: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session1_Time",
+                    ),
+                    strTitle: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session1_Title",
+                    ),
+                    strSpeakers: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session1_Speakers",
+                    ),
+                  },
+                  1,
                 ),
-                screenshot: "steamworksevents/screenshot_gautam.png",
-                strTime: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session1_Time",
+                (0, _.jsx)(
+                  _,
+                  {
+                    strDesc: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session2_Desc",
+                    ),
+                    screenshot:
+                      "steamworksevents/screenshot_alden_and_adil.png",
+                    strTime: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session2_Time",
+                    ),
+                    strTitle: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session2_Title",
+                    ),
+                    strSpeakers: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session2_Speakers",
+                    ),
+                  },
+                  2,
                 ),
-                strTitle: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session1_Title",
+                (0, _.jsx)(
+                  _,
+                  {
+                    strDesc: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session3_Desc",
+                    ),
+                    screenshot: "steamworksevents/screenshot_jenny.png",
+                    strTime: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session3_Time",
+                    ),
+                    strTitle: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session3_Title",
+                    ),
+                    strSpeakers: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session3_Speakers",
+                    ),
+                  },
+                  3,
                 ),
-                strSpeakers: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session1_Speakers",
+                (0, _.jsx)(
+                  _,
+                  {
+                    strDesc: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session4_Desc",
+                    ),
+                    screenshot: "steamworksevents/screenshot_joe.png",
+                    strTime: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session4_Time",
+                    ),
+                    strTitle: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session4_Title",
+                    ),
+                    strSpeakers: (0, _._)(
+                      "#SteamworksEvents_BuildingCommunity_Session4_Speakers",
+                    ),
+                  },
+                  4,
                 ),
-              }),
-              _.createElement(_, {
-                key: 2,
-                strDesc: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session2_Desc",
-                ),
-                screenshot: "steamworksevents/screenshot_alden_and_adil.png",
-                strTime: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session2_Time",
-                ),
-                strTitle: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session2_Title",
-                ),
-                strSpeakers: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session2_Speakers",
-                ),
-              }),
-              _.createElement(_, {
-                key: 3,
-                strDesc: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session3_Desc",
-                ),
-                screenshot: "steamworksevents/screenshot_jenny.png",
-                strTime: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session3_Time",
-                ),
-                strTitle: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session3_Title",
-                ),
-                strSpeakers: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session3_Speakers",
-                ),
-              }),
-              _.createElement(_, {
-                key: 4,
-                strDesc: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session4_Desc",
-                ),
-                screenshot: "steamworksevents/screenshot_joe.png",
-                strTime: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session4_Time",
-                ),
-                strTitle: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session4_Title",
-                ),
-                strSpeakers: (0, _._)(
-                  "#SteamworksEvents_BuildingCommunity_Session4_Speakers",
-                ),
-              }),
-            ),
-          ),
-        _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _.SpeakerContainer,
-            },
-            _.createElement("img", {
-              title: _.strTitle,
-              src: _._.COMMUNITY_CDN_ASSET_URL + _.imgHeadshot,
+              ],
             }),
-            _.createElement(
-              "div",
-              {
+          }),
+        _ = (_) =>
+          (0, _.jsxs)("div", {
+            className: _.SpeakerContainer,
+            children: [
+              (0, _.jsx)("img", {
+                title: _.strTitle,
+                src: _._.COMMUNITY_CDN_ASSET_URL + _.imgHeadshot,
+              }),
+              (0, _.jsxs)("div", {
                 className: _.SpeakerBio,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.SpeakerTitle,
-                },
-                _.strTitle,
-              ),
-              _.strBio,
-            ),
-          ),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.SpeakerTitle,
+                    children: _.strTitle,
+                  }),
+                  _.strBio,
+                ],
+              }),
+            ],
+          }),
         _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _.SpeakersListContainer,
-            },
-            _.createElement(_, {
-              imgHeadshot: "steamworksevents/gautam_headshot.png",
-              strTitle: (0, _._)(
-                "#SteamworksEvents_BuildingCommunity_GautamTitle",
-              ),
-              strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Gautam"),
-            }),
-            _.createElement(_, {
-              imgHeadshot: "steamworksevents/alden_headshot.png",
-              strTitle: (0, _._)(
-                "#SteamworksEvents_BuildingCommunity_AldenTitle",
-              ),
-              strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Alden"),
-            }),
-            _.createElement(_, {
-              imgHeadshot: "steamworksevents/adil_headshot.png",
-              strTitle: (0, _._)(
-                "#SteamworksEvents_BuildingCommunity_AdilTitle",
-              ),
-              strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Adil"),
-            }),
-            _.createElement(_, {
-              imgHeadshot: "steamworksevents/jenny_headshot.png",
-              strTitle: (0, _._)(
-                "#SteamworksEvents_BuildingCommunity_JennyTitle",
-              ),
-              strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Jenny"),
-            }),
-            _.createElement(_, {
-              imgHeadshot: "steamworksevents/joe_headshot.png",
-              strTitle: (0, _._)(
-                "#SteamworksEvents_BuildingCommunity_JoeTitle",
-              ),
-              strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Joe"),
-            }),
-          );
+          (0, _.jsxs)("div", {
+            className: _.SpeakersListContainer,
+            children: [
+              (0, _.jsx)(_, {
+                imgHeadshot: "steamworksevents/gautam_headshot.png",
+                strTitle: (0, _._)(
+                  "#SteamworksEvents_BuildingCommunity_GautamTitle",
+                ),
+                strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Gautam"),
+              }),
+              (0, _.jsx)(_, {
+                imgHeadshot: "steamworksevents/alden_headshot.png",
+                strTitle: (0, _._)(
+                  "#SteamworksEvents_BuildingCommunity_AldenTitle",
+                ),
+                strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Alden"),
+              }),
+              (0, _.jsx)(_, {
+                imgHeadshot: "steamworksevents/adil_headshot.png",
+                strTitle: (0, _._)(
+                  "#SteamworksEvents_BuildingCommunity_AdilTitle",
+                ),
+                strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Adil"),
+              }),
+              (0, _.jsx)(_, {
+                imgHeadshot: "steamworksevents/jenny_headshot.png",
+                strTitle: (0, _._)(
+                  "#SteamworksEvents_BuildingCommunity_JennyTitle",
+                ),
+                strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Jenny"),
+              }),
+              (0, _.jsx)(_, {
+                imgHeadshot: "steamworksevents/joe_headshot.png",
+                strTitle: (0, _._)(
+                  "#SteamworksEvents_BuildingCommunity_JoeTitle",
+                ),
+                strBio: (0, _._)("#SteamworksEvents_BuildingCommunity_Joe"),
+              }),
+            ],
+          });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1316,89 +1299,75 @@
           })(),
           [_, _] = (0, _.useState)(1),
           [_, _] = (0, _.useState)("");
-        return _.createElement(
-          "div",
-          {
-            className: _().Ctn,
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _().Ctn,
+          children: [
+            (0, _.jsx)("div", {
               className: "title2",
-            },
-            (0, _._)("#KeyWizard_Title"),
-          ),
-          _.createElement(
-            "div",
-            {
+              children: (0, _._)("#KeyWizard_Title"),
+            }),
+            (0, _.jsx)("div", {
               className: "titleHelper",
-            },
-            _.createElement(
-              "a",
-              {
+              children: (0, _.jsx)("a", {
                 href: `${_._.PARTNER_BASE_URL}doc/features/playtest#4`,
                 target: "_blank",
-              },
-              (0, _._)("#ViewDocumentation"),
-            ),
-          ),
-          _.createElement("br", {
-            style: {
-              clear: "left",
-            },
-          }),
-          _.createElement(
-            "div",
-            {
-              className: "instructions",
-            },
-            _.createElement("p", null, (0, _._)("#KeyWizard_Playtest_Desc")),
-            _.createElement("p", null, (0, _._)("#KeyWizard_Request_notes")),
-            _.createElement(
-              "div",
-              {
-                className: _().KeyCountCtn,
-              },
-              _.createElement(_._, {
-                type: "number",
-                label: (0, _._)("#KeyWizard_NumKeys", _.name),
-                min: 1,
-                max: 1e8,
-                value: _,
-                onChange: (_) => _(Number.parseInt(_.currentTarget.value)),
+                children: (0, _._)("#ViewDocumentation"),
               }),
-            ),
-            _.createElement(_._, null, (0, _._)("#KeyWizard_KeyUsage")),
-            _.createElement("textarea", {
-              className: (0, _._)("DialogTextInputBase", _().KeyUseCtn),
-              value: _ || "",
-              onChange: (_) => _(_?.currentTarget?.value || ""),
             }),
-            _.createElement(
-              "div",
-              {
-                className: _().ButtonCtn,
+            (0, _.jsx)("br", {
+              style: {
+                clear: "left",
               },
-              _.createElement(
-                _._,
-                {
-                  onClick: (_) =>
-                    (0, _._)(
-                      _.createElement(_, {
-                        unAppID: _,
-                        oPackage: _,
-                        nKeys: _,
-                        strNotes: _,
-                      }),
-                      (0, _._)(_),
-                    ),
-                  disabled: _ <= 0,
-                },
-                (0, _._)("#Button_Submit"),
-              ),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsxs)("div", {
+              className: "instructions",
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#KeyWizard_Playtest_Desc"),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#KeyWizard_Request_notes"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().KeyCountCtn,
+                  children: (0, _.jsx)(_._, {
+                    type: "number",
+                    label: (0, _._)("#KeyWizard_NumKeys", _.name),
+                    min: 1,
+                    max: 1e8,
+                    value: _,
+                    onChange: (_) => _(Number.parseInt(_.currentTarget.value)),
+                  }),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _._)("#KeyWizard_KeyUsage"),
+                }),
+                (0, _.jsx)("textarea", {
+                  className: (0, _._)("DialogTextInputBase", _().KeyUseCtn),
+                  value: _ || "",
+                  onChange: (_) => _(_?.currentTarget?.value || ""),
+                }),
+                (0, _.jsx)("div", {
+                  className: _().ButtonCtn,
+                  children: (0, _.jsx)(_._, {
+                    onClick: (_) =>
+                      (0, _._)(
+                        (0, _.jsx)(_, {
+                          unAppID: _,
+                          oPackage: _,
+                          nKeys: _,
+                          strNotes: _,
+                        }),
+                        (0, _._)(_),
+                      ),
+                    disabled: _ <= 0,
+                    children: (0, _._)("#Button_Submit"),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -1418,7 +1387,7 @@
           (0, _.useEffect)(() => {
             _.fnSetLoading(!0), _.mutate();
           }, []),
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             state: _,
             strDialogTitle: (0, _._)("#KeyWizard_Dialog_Title"),
             closeModal: _,
@@ -1442,218 +1411,250 @@
           })(),
           [__webpack_require__] = (0, _._)("year", new Date().getFullYear());
         new Date().getMonth();
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().DashboardCtn,
-            },
-            _.createElement(
-              "h1",
-              null,
-              "Steam Replay Progress Monitoring: ",
-              __webpack_require__,
-            ),
-            _.createElement("hr", null),
-            _.createElement(
-              "p",
-              null,
-              "We are running batches in ",
-              (0, _._)(_.queue_batch_size),
-              " accounts at a time. Active phase 2 queue size is ",
-              (0, _._)(_.monthly_active_queue_size),
-            ),
-            _.progress.map((_) =>
-              _.createElement(_, {
-                key: _.month,
-                oMonth: _,
-                nActiveQueue: _.monthly_active_queue_size,
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            className: _().DashboardCtn,
+            children: [
+              (0, _.jsxs)("h1", {
+                children: [
+                  "Steam Replay Progress Monitoring: ",
+                  __webpack_require__,
+                ],
               }),
-            ),
-          ),
-        );
+              (0, _.jsx)("hr", {}),
+              (0, _.jsxs)("p", {
+                children: [
+                  "We are running batches in ",
+                  (0, _._)(_.queue_batch_size),
+                  " accounts at a time. Active phase 2 queue size is ",
+                  (0, _._)(_.monthly_active_queue_size),
+                ],
+              }),
+              _.progress.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    oMonth: _,
+                    nActiveQueue: _.monthly_active_queue_size,
+                  },
+                  _.month,
+                ),
+              ),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { oMonth: _, nActiveQueue: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().OptInAdminRow, _().TileContainer),
-          },
-          _.createElement(
-            "h3",
-            null,
-            "Month: ",
-            [
-              "January",
-              "February",
-              "March",
-              "April",
-              "May",
-              "June",
-              "July",
-              "August",
-              "September",
-              "October",
-              "November",
-              "December",
-            ][_.month - 1],
-          ),
-          _.createElement(
-            "div",
-            null,
-            _.createElement("b", null, "Phase 1:"),
-            " Pre-Fetching Accounts to Process ",
-            Boolean(!_.rt_start_processing) &&
-              _.createElement("span", null, "- In Progress"),
-          ),
-          _.createElement(
-            "div",
-            null,
-            "Started: ",
-            _.createElement(_, {
-              rtTime: _.rt_start_finding_accounts,
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().OptInAdminRow, _().TileContainer),
+          children: [
+            (0, _.jsxs)("h3", {
+              children: [
+                "Month: ",
+                [
+                  "January",
+                  "February",
+                  "March",
+                  "April",
+                  "May",
+                  "June",
+                  "July",
+                  "August",
+                  "September",
+                  "October",
+                  "November",
+                  "December",
+                ][_.month - 1],
+              ],
             }),
-          ),
-          _.createElement(
-            "div",
-            null,
-            "Account prefetched ",
-            (0, _._)(_.prefetched_accounts_count),
-          ),
-          Boolean(_.rt_end_finding_accounts)
-            ? _.createElement(
-                "div",
-                null,
-                "Completed ",
-                _.createElement(_, {
-                  rtTime: _.rt_end_finding_accounts,
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("b", {
+                  children: "Phase 1:",
                 }),
-                " prefetched upto accountid ",
-                (0, _._)(_.largest_account_id_prefetched),
-              )
-            : _.createElement(
-                "div",
-                null,
-                "Pre-fetched upto Account ID ",
-                (0, _._)(_.largest_account_id_prefetched),
-              ),
-          Boolean(_.rt_start_processing) &&
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Phase 2:"),
-                " Processing Monthly Playtime Summary ",
-                Boolean(!_.rt_end_processing) &&
-                  _.createElement("span", null, "- In Progress"),
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Started:",
-                _.createElement(_, {
-                  rtTime: _.rt_start_processing,
-                }),
-              ),
-              Boolean(_.rt_end_processing)
-                ? _.createElement(
-                    "div",
-                    null,
-                    "Completed ",
-                    _.createElement(_, {
-                      rtTime: _.rt_end_processing,
-                    }),
-                    "  queue'ed upto account ID ",
-                    (0, _._)(_.largest_account_queued),
-                    "total accounts queued ",
-                    (0, _._)(_.queued_accounts),
-                  )
-                : _.createElement(
-                    "div",
-                    null,
-                    "Queue'ed upto Account ID ",
-                    (0, _._)(_.largest_account_queued),
-                    "total accounts queued ",
-                    (0, _._)(_.queued_accounts),
-                  ),
-            ),
-          Boolean(
-            (_.rt_end_processing && 0 == __webpack_require__) ||
-              _.rt_platform_summary ||
-              _.rt_queue_empty,
-          ) &&
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "div",
-                null,
-                _.createElement("b", null, "Phase 3:"),
-                " Global Playtime Distribution",
-              ),
-              _.createElement(
-                "div",
-                null,
+                " Pre-Fetching Accounts to Process ",
+                Boolean(!_.rt_start_processing) &&
+                  (0, _.jsx)("span", {
+                    children: "- In Progress",
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              children: [
                 "Started: ",
-                _.createElement(_, {
-                  rtTime: _.rt_queue_empty,
+                (0, _.jsx)(_, {
+                  rtTime: _.rt_start_finding_accounts,
                 }),
-              ),
-              Boolean(_.rt_platform_summary)
-                ? _.createElement(
-                    "div",
-                    null,
-                    "Completed at ",
-                    _.createElement(_, {
-                      rtTime: _.rt_platform_summary,
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              children: [
+                "Account prefetched ",
+                (0, _._)(_.prefetched_accounts_count),
+              ],
+            }),
+            Boolean(_.rt_end_finding_accounts)
+              ? (0, _.jsxs)("div", {
+                  children: [
+                    "Completed ",
+                    (0, _.jsx)(_, {
+                      rtTime: _.rt_end_finding_accounts,
                     }),
-                  )
-                : _.createElement("div", null, "In progress started at"),
-            ),
-          Boolean(_.rt_community_stats) &&
-            _.createElement(
-              "div",
-              null,
-              _.createElement("b", null, "Phase Idependant:"),
-              " Community Stats calculation Completed at ",
-              _.createElement(_, {
-                rtTime: _.rt_community_stats,
+                    " prefetched upto accountid ",
+                    (0, _._)(_.largest_account_id_prefetched),
+                  ],
+                })
+              : (0, _.jsxs)("div", {
+                  children: [
+                    "Pre-fetched upto Account ID ",
+                    (0, _._)(_.largest_account_id_prefetched),
+                  ],
+                }),
+            Boolean(_.rt_start_processing) &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("b", {
+                        children: "Phase 2:",
+                      }),
+                      " Processing Monthly Playtime Summary ",
+                      Boolean(!_.rt_end_processing) &&
+                        (0, _.jsx)("span", {
+                          children: "- In Progress",
+                        }),
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Started:",
+                      (0, _.jsx)(_, {
+                        rtTime: _.rt_start_processing,
+                      }),
+                    ],
+                  }),
+                  Boolean(_.rt_end_processing)
+                    ? (0, _.jsxs)("div", {
+                        children: [
+                          "Completed ",
+                          (0, _.jsx)(_, {
+                            rtTime: _.rt_end_processing,
+                          }),
+                          "  queue'ed upto account ID ",
+                          (0, _._)(_.largest_account_queued),
+                          "total accounts queued ",
+                          (0, _._)(_.queued_accounts),
+                        ],
+                      })
+                    : (0, _.jsxs)("div", {
+                        children: [
+                          "Queue'ed upto Account ID ",
+                          (0, _._)(_.largest_account_queued),
+                          "total accounts queued ",
+                          (0, _._)(_.queued_accounts),
+                        ],
+                      }),
+                ],
               }),
-            ),
-        );
+            Boolean(
+              (_.rt_end_processing && 0 == __webpack_require__) ||
+                _.rt_platform_summary ||
+                _.rt_queue_empty,
+            ) &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("b", {
+                        children: "Phase 3:",
+                      }),
+                      " Global Playtime Distribution",
+                    ],
+                  }),
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "Started: ",
+                      (0, _.jsx)(_, {
+                        rtTime: _.rt_queue_empty,
+                      }),
+                    ],
+                  }),
+                  Boolean(_.rt_platform_summary)
+                    ? (0, _.jsxs)("div", {
+                        children: [
+                          "Completed at ",
+                          (0, _.jsx)(_, {
+                            rtTime: _.rt_platform_summary,
+                          }),
+                        ],
+                      })
+                    : (0, _.jsx)("div", {
+                        children: "In progress started at",
+                      }),
+                ],
+              }),
+            Boolean(_.rt_community_stats) &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("b", {
+                    children: "Phase Idependant:",
+                  }),
+                  " Community Stats calculation Completed at ",
+                  (0, _.jsx)(_, {
+                    rtTime: _.rt_community_stats,
+                  }),
+                ],
+              }),
+          ],
+        });
       }
       function _(_) {
         const { rtTime: _ } = _;
-        return _.createElement("span", null, (0, _._)(_), " as ", (0, _._)(_));
+        return (0, _.jsxs)("span", {
+          children: [(0, _._)(_), " as ", (0, _._)(_)],
+        });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)({}),
         _ = (0, _.createContext)(() => {});
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)({});
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            _.Provider,
-            {
-              value: __webpack_require__,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_.Provider, {
+            value: __webpack_require__,
+            children: _.children,
+          }),
+        });
       }
       function _() {
         return (0, _.useContext)(_);
       }
-      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          accentColor: _,
+          dullColor: __webpack_require__,
+          bodyTextColor: _,
+          children: _,
+        } = _;
+        return (0, _.jsx)("div", {
+          "data-accent-color": _,
+          "data-dull-color": __webpack_require__,
+          "data-body-text-color": _,
+          style: {
+            display: "contents",
+          },
+          children: (0, _.jsx)("div", {
+            style: {
+              display: "contents",
+              color: "var(--color-text-body-body)",
+            },
+            children: _,
+          }),
+        });
+      }
       const _ = _.memo(function (_) {
         const {
           defaultTextSize: _,
@@ -1672,56 +1673,32 @@
               "--default-line-height": `var(--line-height-${_})`,
               "--default-letter-spacing": `var(--letter-spacing-${_})`,
             }),
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              _._,
-              {
-                breakpoints: _,
-              },
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _()(_.Root, "noOpinionatedGlobalStyles"),
-                    style: _,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      "data-accent-color": __webpack_require__,
-                      "data-dull-color": _,
-                      "data-body-text-color": _,
-                      className: _.RootDataAttributes,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AfterDataAttributes,
-                      },
-                      _,
-                      !1,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          )
+          (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
+              breakpoints: _,
+              children: (0, _.jsx)(_, {
+                children: (0, _.jsx)("div", {
+                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                  style: _,
+                  children: (0, _.jsxs)(_, {
+                    accentColor: __webpack_require__,
+                    dullColor: _,
+                    bodyTextColor: _,
+                    children: [_, !1],
+                  }),
+                }),
+              }),
+            }),
+          })
         );
       });
       function _(_) {
         const { children: _ } = _,
           { formFactorOverride: __webpack_require__ } = _();
-        return _.createElement(
-          _._,
-          {
-            formFactor: __webpack_require__,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          formFactor: __webpack_require__,
+          children: _,
+        });
       }
       const _ = _.lazy(() =>
           Promise.all([
@@ -1763,41 +1740,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -1805,42 +1747,6 @@
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1911,30 +1817,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -1966,10 +1848,114 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2026,77 +2012,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2140,12 +2060,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -2154,10 +2068,86 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2190,50 +2180,34 @@
             }),
             [],
           );
-        return _.createElement(
-          _._,
-          {
-            IN_DESKTOPUI: !1,
-            IN_GAMEPADUI: !1,
-            IN_VR: !1,
-          },
-          _.createElement(
-            _._.Provider,
-            {
-              value: parseInt(_),
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    context: _,
-                  },
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(_._, null, _.children),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          IN_DESKTOPUI: !1,
+          IN_GAMEPADUI: !1,
+          IN_VR: !1,
+          children: (0, _.jsx)(_._.Provider, {
+            value: parseInt(_),
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
+                children: (0, _.jsx)(_._, {
+                  context: _,
+                  children: (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_._, {
+                      children: _.children,
+                    }),
+                  }),
+                }),
+              }),
+            }),
+          }),
+        });
       }
       function _(_) {
         let { children: _ } = _,
           _ = (0, _._)([_._.PricingTools(), _._.PromotionTools()]);
-        return _.createElement(
-          "div",
-          {
-            className: _()(_().App, _ && _().FillBrowserVertically),
-          },
-          _,
-        );
+        return (0, _.jsx)("div", {
+          className: _()(_().App, _ && _().FillBrowserVertically),
+          children: _,
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = _.useState(!1);
@@ -2246,273 +2220,265 @@
               __webpack_require__(!0);
           }, []),
           _
-            ? _.createElement(
-                _._,
-                {
-                  basename: (0, _._)(),
-                },
-                _.createElement(
-                  _,
-                  null,
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(
-                      _.Suspense,
-                      {
-                        fallback: null,
-                      },
-                      _.createElement(
-                        _._,
-                        null,
-                        _.createElement(_._, {
-                          exact: !0,
-                          path: "/",
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          exact: !0,
-                          path: _._.DiagData(),
-                          render: (_) =>
-                            _.createElement(_._, {
-                              ..._,
-                              key: _.match.params.gid,
-                              strConfigID: "application_config",
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.SalePages(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.OptInPages(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.ContentHubPages(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.RecapPages(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.DeadlinesAdmin(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.StoreGameAdminRoot(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.StoreAdminReviewPriceProposals(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.PackageLanding(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.StoreAdminRoot(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.BundlesEditor(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.AppCommunityItem(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.AppLandingPage(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.AppInstallerPage(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.AppEconomyPage(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.PackageAdminRoot(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.SteamML(),
-                          render: () => _.createElement(_, null),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.SteamLearn(),
-                          render: () => _.createElement(_, null),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.BuildPatchNotes(),
-                          render: (_) =>
-                            _.createElement(_, {
-                              appId: _.match.params.appid,
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.SteamworksEvents(),
-                          render: () => _.createElement(_, null),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.PromotionTools(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.PricingTools(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.DeckVerifiedAdmin(),
-                          render: () =>
-                            _.createElement(_._, {
-                              config: {
-                                "deck-verified-results": (_) =>
-                                  _.createElement(_, {
-                                    dataprops: _,
-                                    results: (0, _._)(
-                                      "deckcompatibility",
-                                      "application_config",
-                                    ),
-                                  }),
-                              },
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.DeckCompatTestingDashboard(),
-                          render: () =>
-                            _.createElement(_._, {
-                              config: {
-                                "deck-verified-results-inflight": (_) =>
-                                  _.createElement(_, {
-                                    dataprops: _,
-                                    results: (0, _._)(
-                                      "deckcompatibility_inflight",
-                                      "application_config",
-                                    ),
-                                  }),
-                                "deck-verified-results-submitted": (_) =>
-                                  _.createElement(_, {
-                                    dataprops: _,
-                                    results: (0, _._)(
-                                      "deckcompatibility_submitted",
-                                      "application_config",
-                                    ),
-                                  }),
-                                "deck-verified-results-published": (_) =>
-                                  _.createElement(_, {
-                                    dataprops: _,
-                                    results: (0, _._)(
-                                      "deckcompatibility_published",
-                                      "application_config",
-                                    ),
-                                  }),
-                              },
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.DeckCompatTestingAppHistory(),
-                          render: () =>
-                            _.createElement(_._, {
-                              config: {
-                                "deck-verified-results-reports": (_) =>
-                                  _.createElement(_, {
-                                    dataprops: _,
-                                    results: (0, _._)(
-                                      "deckcompatibility_reports",
-                                      "application_config",
-                                    ),
-                                  }),
-                              },
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.DeckVerified(),
-                          render: () =>
-                            _.createElement(_._, {
-                              config: {
-                                "deck-verified-results": () =>
-                                  _.createElement(_, {
-                                    results: (0, _._)(
-                                      "deckcompatibility",
-                                      "application_config",
-                                    ),
-                                    bIncludeSteamOS: !0,
-                                  }),
-                              },
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.SDRConnections(),
-                          render: (_) =>
-                            _.createElement(_, {
-                              appId: _.match.params.appid,
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.PublisherDashboard(),
-                          render: () =>
-                            _.createElement(_._, {
-                              config: {
-                                "publisher-dashboard": () =>
-                                  _.createElement(_, null),
-                                "promotion-review-dashboard": () =>
-                                  _.createElement(_, null),
-                              },
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.TimelineMarkerEditor(),
-                          render: (_) =>
-                            _.createElement(_._, {
-                              config: {
-                                "timeline-marker-editor": () =>
-                                  _.createElement(_, {
-                                    appId: _.match.params.appid,
-                                  }),
-                              },
-                            }),
-                        }),
-                        !1,
-                        _.createElement(_._, {
-                          path: _._.HardwareReservationQueueMessaging(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.KeyWizardPackagePage(),
-                          render: (_) =>
-                            _.createElement(_._, {
-                              config: {
-                                "key-wizard": () =>
-                                  _.createElement(_, {
-                                    appId: _.match.params.appid,
-                                  }),
-                              },
-                            }),
-                        }),
-                        _.createElement(_._, {
-                          path: _._.YearInReviewProgressMonitor(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.TaxRequirement(),
-                          component: _,
-                        }),
-                        _.createElement(_._, {
-                          path: _._.MeetSteam(),
-                          component: _,
-                        }),
-                        _.createElement(_._, null, _.createElement(_._, null)),
-                      ),
-                    ),
-                  ),
-                ),
-              )
+            ? (0, _.jsx)(_._, {
+                basename: (0, _._)(),
+                children: (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_.Suspense, {
+                      fallback: null,
+                      children: (0, _.jsxs)(_._, {
+                        children: [
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: "/",
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.DiagData(),
+                            render: (_) =>
+                              (0, _.createElement)(_._, {
+                                ..._,
+                                key: _.match.params.gid,
+                                strConfigID: "application_config",
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.SalePages(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.OptInPages(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.ContentHubPages(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.RecapPages(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.DeadlinesAdmin(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.StoreGameAdminRoot(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.StoreAdminReviewPriceProposals(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.PackageLanding(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.StoreAdminRoot(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.BundlesEditor(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.AppCommunityItem(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.AppLandingPage(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.AppInstallerPage(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.AppEconomyPage(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.PackageAdminRoot(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.SteamML(),
+                            render: () => (0, _.jsx)(_, {}),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.SteamLearn(),
+                            render: () => (0, _.jsx)(_, {}),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.BuildPatchNotes(),
+                            render: (_) =>
+                              (0, _.jsx)(_, {
+                                appId: _.match.params.appid,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.SteamworksEvents(),
+                            render: () => (0, _.jsx)(_, {}),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.PromotionTools(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.PricingTools(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.DeckVerifiedAdmin(),
+                            render: () =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "deck-verified-results": (_) =>
+                                    (0, _.jsx)(_, {
+                                      dataprops: _,
+                                      results: (0, _._)(
+                                        "deckcompatibility",
+                                        "application_config",
+                                      ),
+                                    }),
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.DeckCompatTestingDashboard(),
+                            render: () =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "deck-verified-results-inflight": (_) =>
+                                    (0, _.jsx)(_, {
+                                      dataprops: _,
+                                      results: (0, _._)(
+                                        "deckcompatibility_inflight",
+                                        "application_config",
+                                      ),
+                                    }),
+                                  "deck-verified-results-submitted": (_) =>
+                                    (0, _.jsx)(_, {
+                                      dataprops: _,
+                                      results: (0, _._)(
+                                        "deckcompatibility_submitted",
+                                        "application_config",
+                                      ),
+                                    }),
+                                  "deck-verified-results-published": (_) =>
+                                    (0, _.jsx)(_, {
+                                      dataprops: _,
+                                      results: (0, _._)(
+                                        "deckcompatibility_published",
+                                        "application_config",
+                                      ),
+                                    }),
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.DeckCompatTestingAppHistory(),
+                            render: () =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "deck-verified-results-reports": (_) =>
+                                    (0, _.jsx)(_, {
+                                      dataprops: _,
+                                      results: (0, _._)(
+                                        "deckcompatibility_reports",
+                                        "application_config",
+                                      ),
+                                    }),
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.DeckVerified(),
+                            render: () =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "deck-verified-results": () =>
+                                    (0, _.jsx)(_, {
+                                      results: (0, _._)(
+                                        "deckcompatibility",
+                                        "application_config",
+                                      ),
+                                      bIncludeSteamOS: !0,
+                                    }),
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.SDRConnections(),
+                            render: (_) =>
+                              (0, _.jsx)(_, {
+                                appId: _.match.params.appid,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.PublisherDashboard(),
+                            render: () =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "publisher-dashboard": () =>
+                                    (0, _.jsx)(_, {}),
+                                  "promotion-review-dashboard": () =>
+                                    (0, _.jsx)(_, {}),
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.TimelineMarkerEditor(),
+                            render: (_) =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "timeline-marker-editor": () =>
+                                    (0, _.jsx)(_, {
+                                      appId: _.match.params.appid,
+                                    }),
+                                },
+                              }),
+                          }),
+                          !1,
+                          (0, _.jsx)(_._, {
+                            path: _._.HardwareReservationQueueMessaging(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.KeyWizardPackagePage(),
+                            render: (_) =>
+                              (0, _.jsx)(_._, {
+                                config: {
+                                  "key-wizard": () =>
+                                    (0, _.jsx)(_, {
+                                      appId: _.match.params.appid,
+                                    }),
+                                },
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.YearInReviewProgressMonitor(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.TaxRequirement(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            path: _._.MeetSteam(),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            children: (0, _.jsx)(_._, {}),
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                }),
+              })
             : null
         );
       }
@@ -2523,14 +2489,11 @@
       function _(_) {
         const _ = (0, _._)(_),
           _ = (0, _._)(_.useCallback(() => new _._(), []));
-        return _.createElement(
-          _._,
-          {
-            useActiveSteamInterface: _,
-            useStorage: _,
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_._, {
+          useActiveSteamInterface: _,
+          useStorage: _,
+          children: _.children,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2638,7 +2601,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = "function" == typeof matchMedia ? matchMedia : _,
           _ = (0, _.useMemo)(() => _(_), [_, _]),
@@ -2682,25 +2646,21 @@
               _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
             );
           })(__webpack_require__);
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _(_) {
         const { formFactor: _, children: __webpack_require__ } = _;
         return _
-          ? _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              __webpack_require__,
-            )
-          : _.createElement(_.Fragment, null, __webpack_require__);
+          ? (0, _.jsx)(_.Provider, {
+              value: _,
+              children: __webpack_require__,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: __webpack_require__,
+            });
       }
       function _() {
         return (0, _.useContext)(_);
@@ -3199,6 +3159,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return _.createRef();
@@ -3215,7 +3176,7 @@
         }),
         _ = _.forwardRef(function (_, _) {
           const { href: __webpack_require__ = "#", ..._ } = _;
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ref: _,
             href: __webpack_require__,
             ..._,
@@ -3243,6 +3204,7 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(void 0);
@@ -3266,6 +3228,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
@@ -3276,6 +3239,7 @@
             enabled: _,
             modal: _,
             virtualFocus: _,
+            historyMode: _,
             parentEmbeddedNavTree: _,
             onGlobalButtonDown: _,
             disableFocusClasses: _,
@@ -3285,30 +3249,28 @@
           } = _,
           { elemProps: _, navOptions: _, gamepadEvents: _ } = (0, _._)(_);
         return (0, _._)()
-          ? _.createElement(
-              _,
-              {
-                navID: __webpack_require__,
-                onActivated: _,
-                onDeactivated: _,
-                navTreeRef: _,
-                enabled: _,
-                modal: _,
-                virtualFocus: _,
-                parentEmbeddedNavTree: _,
-                onGlobalButtonDown: _,
-                disableFocusClasses: _,
-                disabledRoot: _,
-                "flow-children": _,
-                ..._,
-                ..._,
-              },
-              _.createElement("div", {
+          ? (0, _.jsx)(_, {
+              navID: __webpack_require__,
+              onActivated: _,
+              onDeactivated: _,
+              navTreeRef: _,
+              enabled: _,
+              modal: _,
+              virtualFocus: _,
+              historyMode: _,
+              parentEmbeddedNavTree: _,
+              onGlobalButtonDown: _,
+              disableFocusClasses: _,
+              disabledRoot: _,
+              "flow-children": _,
+              ..._,
+              ..._,
+              children: (0, _.jsx)("div", {
                 ..._,
                 ref: _,
               }),
-            )
-          : _.createElement("div", {
+            })
+          : (0, _.jsx)("div", {
               ..._,
               ref: _,
             });
@@ -3404,24 +3366,18 @@
             });
           });
         const _ = (0, _._)(_, _.props.ref);
-        return _.createElement(
-          _,
-          {
-            tree: _ ? null : _,
-            disableFocusClasses: _ || _,
-          },
-          _.createElement(
-            _._.Provider,
-            {
-              value: _ ? null : _.Root,
-            },
-            _.cloneElement(_, {
+        return (0, _.jsx)(_, {
+          tree: _ ? null : _,
+          disableFocusClasses: _ || _,
+          children: (0, _.jsx)(_._.Provider, {
+            value: _ ? null : _.Root,
+            children: _.cloneElement(_, {
               _: _,
               "data-react-nav-root": _,
               ref: _,
             }),
-          ),
-        );
+          }),
+        });
       }
       const _ = _.createContext({
         bActiveTree: !1,
@@ -3458,13 +3414,10 @@
           }),
           [_, __webpack_require__, _, _],
         );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
       function _() {
         return _.useContext(_);
@@ -3476,6 +3429,7 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         focusNavWindow: null,
@@ -3501,6 +3455,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -3745,12 +3700,9 @@
                 bFocusableByDefault: _,
                 className: _()(_.className, "Focusable"),
               }),
-              _.createElement(
-                _.Provider,
-                {
-                  value: _,
-                },
-                _
+              (0, _.jsx)(_.Provider, {
+                value: _,
+                children: _
                   ? _.createElement(
                       _,
                       {
@@ -3760,7 +3712,7 @@
                       _,
                     )
                   : _.createElement(_, _, _),
-              ))
+              }))
             : _.createElement(
                 _,
                 {
@@ -3821,6 +3773,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3869,23 +3822,20 @@
             }),
             [_],
           );
-        return _.createElement(
-          _.Fragment,
-          null,
-          !__webpack_require__ &&
-            _.createElement(_, {
-              ..._,
-              ..._,
-              refMeasure: _,
-            }),
-          _.createElement(
-            _._.Provider,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !__webpack_require__ &&
+              (0, _.jsx)(_, {
+                ..._,
+                ..._,
+                refMeasure: _,
+              }),
+            (0, _.jsx)(_._.Provider, {
               value: _,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3900,13 +3850,10 @@
           _ = (0, _._)(),
           _ = (0, _._)(!1);
         return _ || _
-          ? _.createElement(
-              "div",
-              {
-                className: _()(_().FocusRingRoot, _),
-                ref: _,
-              },
-              _.createElement(_, {
+          ? (0, _.jsx)("div", {
+              className: _()(_().FocusRingRoot, _),
+              ref: _,
+              children: (0, _.jsx)(_, {
                 refMeasure: _,
                 className: _()(__webpack_require__, _ && _().DebugFocusRing),
                 bFocusWithin: _ && (_ || _),
@@ -3914,7 +3861,7 @@
                 elContainer: _,
                 bDebug: _,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -4011,7 +3958,7 @@
             return __webpack_require__(), () => cancelAnimationFrame(_);
           }, [_, _, _, _]),
           _ && _
-            ? _.createElement(_, {
+            ? (0, _.createElement)(_, {
                 ..._,
                 key: _,
                 className: _()(_, _ && _().FocusRingOnHiddenItem),
@@ -4035,7 +3982,7 @@
             height: _ + "px",
             width: _ + "px",
           };
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _()(_().FocusRing, _),
           style: _,
         });
@@ -4047,6 +3994,7 @@
         _: () => _,
         _: () => _,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4131,6 +4079,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4177,24 +4126,21 @@
             (__webpack_require__ || _.onOKButton) &&
             (_.role ??= "button");
         const _ = (0, _.useContext)(_).Component;
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _
-            ? _.createElement(_, {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: _
+            ? (0, _.jsx)(_, {
                 ..._,
                 divRef: _,
                 node: _,
                 focusClassName: _()(_, "gpfocus"),
                 focusWithinClassName: _()(_, "gpfocuswithin"),
               })
-            : _.createElement("div", {
+            : (0, _.jsx)("div", {
                 ..._,
                 ref: _,
               }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4203,6 +4149,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -4247,17 +4194,16 @@
           const { ref: _, navRef: _ } = (0, _._)(),
             _ = (0, _._)(_, _.navRef),
             _ = (0, _._)(_, _);
-          return _.createElement(
-            _._,
-            {
-              ..._,
-              style: _,
-              className: _()(_, _().ScrollPanel, _),
-              ref: _,
-              navRef: _,
-            },
-            _.createElement(_._, null, _),
-          );
+          return (0, _.jsx)(_._, {
+            ..._,
+            style: _,
+            className: _()(_, _().ScrollPanel, _),
+            ref: _,
+            navRef: _,
+            children: (0, _.jsx)(_._, {
+              children: _,
+            }),
+          });
         }),
         _ = _.forwardRef(function (_, _) {
           const {
@@ -4269,7 +4215,7 @@
             _ = _.useCallback((_) => _.currentTarget != _.target, []),
             _ = (0, _._)(_, _, __webpack_require__, _),
             _ = (0, _._)(_, _);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ..._,
             onGamepadDirection: _,
             ref: _,
@@ -4283,21 +4229,18 @@
           onScroll: _,
           ..._
         } = _;
-        return _.createElement(
-          _,
-          {
-            name: __webpack_require__,
-            msScrollRestoreDelay: _,
-            parentOnScroll: _,
-            refDiv: _,
-          },
-          (_, _) =>
-            _.createElement(_, {
+        return (0, _.jsx)(_, {
+          name: __webpack_require__,
+          msScrollRestoreDelay: _,
+          parentOnScroll: _,
+          refDiv: _,
+          children: (_, _) =>
+            (0, _.jsx)(_, {
               ..._,
               onScroll: _,
               ref: _,
             }),
-        );
+        });
       }),
         _.forwardRef(function (_, _) {
           const {
@@ -4306,21 +4249,18 @@
             onScroll: _,
             ..._
           } = _;
-          return _.createElement(
-            _,
-            {
-              name: __webpack_require__,
-              msScrollRestoreDelay: _,
-              parentOnScroll: _,
-              refDiv: _,
-            },
-            (_, _) =>
-              _.createElement(_, {
+          return (0, _.jsx)(_, {
+            name: __webpack_require__,
+            msScrollRestoreDelay: _,
+            parentOnScroll: _,
+            refDiv: _,
+            children: (_, _) =>
+              (0, _.jsx)(_, {
                 ..._,
                 onScroll: _,
                 ref: _,
               }),
-          );
+          });
         });
       function _(_) {
         const {
@@ -4540,28 +4480,29 @@
         static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
           return {
             root: _.SerializeNavNode(_, _, __webpack_require__),
-            bHadFocus: _.BFocusWithin(),
+            bHadFocus: _.BFocusWithin() && _.Tree.BIsActiveWithinContext(),
           };
         }
         static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
-          let _ = null;
+          let _;
           const [_, _] = _.GetChildren();
+          _.length &&
+            -1 != _ &&
+            _ &&
+            (_ = _.map((_, _) =>
+              _.SerializeNavNode(
+                _,
+                _ == _ || __webpack_require__,
+                __webpack_require__,
+              ),
+            ));
+          const _ = {
+            rgChildren: _,
+          };
           return (
-            _.length &&
-              -1 != _ &&
-              _ &&
-              (_ = _.map((_, _) =>
-                _.SerializeNavNode(
-                  _,
-                  _ == _ || __webpack_require__,
-                  __webpack_require__,
-                ),
-              )),
-            {
-              sNavKey: _.NavKey,
-              iActiveChild: _,
-              rgChildren: _,
-            }
+            _.NavKey && (_.sNavKey = _.NavKey),
+            -1 != _ && (_.iActiveChild = _),
+            _
           );
         }
         static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
@@ -4573,7 +4514,7 @@
           });
         }
         static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
-          const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
+          const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
             ? `[${_.Tree._}]${(function (_) {
@@ -8967,11 +8908,6 @@
                   },
                   dx_driver_version: {
                     _: 12,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_driver_name: {
-                    _: 13,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -19573,6 +19509,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
@@ -19599,7 +19536,7 @@
                 _.add(_),
                   _.has(_) ||
                     ("top_tags" == _
-                      ? (_.include_tag_count = 10)
+                      ? (_.include_tag_count = 20)
                       : "default_info" != _ && (_[_] = !0),
                     _.add(_));
                 let _ = _.get(_);
@@ -19646,7 +19583,7 @@
                       _.has(_) ||
                         ((_ = !0),
                         "top_tags" == _
-                          ? (_.include_tag_count = 10)
+                          ? (_.include_tag_count = 20)
                           : _ && "default_info" != _ && (_[_] = !0));
                     }),
                       _ && _(_, _);
@@ -19737,13 +19674,10 @@
             }),
             [_, _, _],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -21508,11 +21442,12 @@
             (_[(_.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
             (_[(_.Keyboard = 2)] = "Keyboard"),
             (_[(_.ControllerConfigurator = 3)] = "ControllerConfigurator"),
-            (_[(_._ = 4)] = "VR"),
+            (_[(_.MainVRGamepadUI = 4)] = "MainVRGamepadUI"),
             (_[(_.MainDesktopUI = 5)] = "MainDesktopUI"),
             (_[(_.DesktopLogin = 6)] = "DesktopLogin"),
             (_[(_.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
-            (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher");
+            (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher"),
+            (_[(_.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -22355,6 +22290,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = _.createContext({
         body_class: "",
       });
@@ -22731,6 +22667,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -22861,31 +22798,22 @@
             _,
           ),
           _ = !__webpack_require__ || __webpack_require__.visible;
-        return _.createElement(
-          "div",
-          {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
+          children: (0, _.jsx)("div", {
+            ..._,
             className: (0, _._)(
-              _().HoverPositionOuter,
-              _ && _().HoverAboveModal,
+              _().HoverPosition,
+              _ && _ && _().Ready,
+              _ && _().NoSpace,
+              _ && _().EnablePointerEvents,
+              _,
             ),
-          },
-          _.createElement(
-            "div",
-            {
-              ..._,
-              className: (0, _._)(
-                _().HoverPosition,
-                _ && _ && _().Ready,
-                _ && _().NoSpace,
-                _ && _().EnablePointerEvents,
-                _,
-              ),
-              style: _,
-              ref: _,
-            },
-            _,
-          ),
-        );
+            style: _,
+            ref: _,
+            children: _,
+          }),
+        });
       }
       function _(_, _, _, _, _, _, _) {
         const _ = _,
@@ -23682,6 +23610,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -23690,32 +23619,26 @@
             children: _,
             bLazyRenderChildren: _,
           } = _,
-          _ = _.createElement(
-            "div",
-            {
-              style: {
-                gap: __webpack_require__ ? __webpack_require__ + "px" : "unset",
-              },
-              className: (0, _._)({
-                [_.ScrollSnapCarousel]: !0,
-                ScrollSnapCarousel: !0,
-                SaleSectionCarousel: !0,
-                SaleSectionCarouselPadding: _,
-                ["" + _.className]: !!_.className,
-              }),
+          _ = (0, _.jsx)("div", {
+            style: {
+              gap: __webpack_require__ ? __webpack_require__ + "px" : "unset",
             },
-            _,
-          );
+            className: (0, _._)({
+              [_.ScrollSnapCarousel]: !0,
+              ScrollSnapCarousel: !0,
+              SaleSectionCarousel: !0,
+              SaleSectionCarouselPadding: _,
+              ["" + _.className]: !!_.className,
+            }),
+            children: _,
+          });
         return _
-          ? _.createElement(
-              _._,
-              {
-                horizontal: !1,
-                placeholderWidth: 1,
-                placeholderHeight: 1,
-              },
-              _,
-            )
+          ? (0, _.jsx)(_._, {
+              horizontal: !1,
+              placeholderWidth: 1,
+              placeholderHeight: 1,
+              children: _,
+            })
           : _;
       }
       var _ = __webpack_require__("chunkid"),
@@ -23737,97 +23660,83 @@
             _ = 100 * (1 - Math.min(_ + _, _) / _),
             _ = _ + (50 * _) / _,
             _ = 100 - _;
-          return _.createElement(
-            "div",
-            {
-              className: _.pipScrollerContainer,
-            },
-            _ &&
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsxs)("div", {
+            className: _.pipScrollerContainer,
+            children: [
+              _ &&
+                (0, _.jsx)(_._, {
                   className: (0, _._)(
                     _.pipScrollButton,
                     _.left,
                     _.carouselNavButton,
                   ),
-                },
-                _.createElement(_._, {
-                  arrowFill: _,
-                  arrowStyle: __webpack_require__,
-                  direction: "left",
+                  children: (0, _.jsx)(_._, {
+                    arrowFill: _,
+                    arrowStyle: __webpack_require__,
+                    direction: "left",
+                  }),
                 }),
-              ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.pipScroller,
-              },
-              _.createElement("div", {
-                className: _.scrollBackground,
-              }),
-              _.createElement("div", {
-                className: _.scrollForeground,
-                style: {
-                  left: _ + "%",
-                  right: _ + "%",
-                },
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.scrollNavDiv,
-                  style: {
-                    left: "0%",
-                    width: _ + "%",
-                  },
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(_.carouselNavButton, _.scrollNavButton),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.scrollBackground,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.scrollForeground,
                     style: {
-                      color: "red",
+                      left: _ + "%",
+                      right: _ + "%",
                     },
-                  },
-                  _.createElement("div", null),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.scrollNavDiv,
-                  style: {
-                    right: "0%",
-                    width: _ + "%",
-                  },
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(_.carouselNavButton, _.scrollNavButton),
-                  },
-                  _.createElement("div", null),
-                ),
-              ),
-            ),
-            _ &&
-              _.createElement(
-                _._,
-                {
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.scrollNavDiv,
+                    style: {
+                      left: "0%",
+                      width: _ + "%",
+                    },
+                    children: (0, _.jsx)(_._, {
+                      className: (0, _._)(
+                        _.carouselNavButton,
+                        _.scrollNavButton,
+                      ),
+                      style: {
+                        color: "red",
+                      },
+                      children: (0, _.jsx)("div", {}),
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.scrollNavDiv,
+                    style: {
+                      right: "0%",
+                      width: _ + "%",
+                    },
+                    children: (0, _.jsx)(_._, {
+                      className: (0, _._)(
+                        _.carouselNavButton,
+                        _.scrollNavButton,
+                      ),
+                      children: (0, _.jsx)("div", {}),
+                    }),
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)(_._, {
                   className: (0, _._)(
                     _.pipScrollButton,
                     _.right,
                     _.carouselNavButton,
                   ),
-                },
-                _.createElement(_._, {
-                  arrowFill: _,
-                  arrowStyle: __webpack_require__,
-                  direction: "right",
+                  children: (0, _.jsx)(_._, {
+                    arrowFill: _,
+                    arrowStyle: __webpack_require__,
+                    direction: "right",
+                  }),
                 }),
-              ),
-          );
+            ],
+          });
         }
       }
       const _ = (0, _._)(_, (_) => ({
@@ -23839,20 +23748,14 @@
         const { bPreventSnapCarousel: _ } = _,
           _ = (0, _._)();
         return _ || ((_.screenIsWide || _) && !_.bForceSimpleCarousel)
-          ? _.createElement(
-              _,
-              {
-                ..._,
-              },
-              _.children,
-            )
-          : _.createElement(
-              _,
-              {
-                ..._,
-              },
-              _.children,
-            );
+          ? (0, _.jsx)(_, {
+              ..._,
+              children: _.children,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+              children: _.children,
+            });
       }
       function _(_) {
         const _ = (0, _._)(),
@@ -23867,90 +23770,74 @@
           _ = !0;
         _.slideAspectRatio && ((_ = _.slideAspectRatio), (_ = !1));
         const _ = `items_in_row_${_.visibleElements}`;
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "row",
-            className: (0, _._)(_.carouselBody, _.className, _),
-            navKey: _.navKey,
-          },
-          _.createElement(
-            _._,
-            {
-              visibleSlides: _.visibleElements,
-              totalSlides: __webpack_require__(),
-              naturalSlideWidth: 100 * _,
-              naturalSlideHeight: 100,
-              step: _.visibleElements,
-              infinite: !_.disableEdgeWrap,
-              isIntrinsicHeight: _,
-              dragEnabled: !1,
-              touchEnabled: !1,
-              lockOnWindowScroll: !0,
-              orientation: "horizontal",
-              disableKeyboard: !0,
-            },
-            _.createElement(
-              _,
-              {
+        return (0, _.jsx)(_._, {
+          "flow-children": "row",
+          className: (0, _._)(_.carouselBody, _.className, _),
+          navKey: _.navKey,
+          children: (0, _.jsxs)(_._, {
+            visibleSlides: _.visibleElements,
+            totalSlides: __webpack_require__(),
+            naturalSlideWidth: 100 * _,
+            naturalSlideHeight: 100,
+            step: _.visibleElements,
+            infinite: !_.disableEdgeWrap,
+            isIntrinsicHeight: _,
+            dragEnabled: !1,
+            touchEnabled: !1,
+            lockOnWindowScroll: !0,
+            orientation: "horizontal",
+            disableKeyboard: !0,
+            children: [
+              (0, _.jsx)(_, {
                 bHideArrows: _,
                 bAutoAdvance: _.bAutoAdvance && !_,
                 onSlide: _.onSlide,
                 arrowFill: _.arrowFill,
                 arrowStyle: _.arrowStyle,
-              },
-              _.Children.map(_.children, (_, _) => {
-                const _ = _.bLazyRenderChildren
-                  ? _.createElement(
-                      _._,
-                      {
+                children: _.Children.map(_.children, (_, _) => {
+                  const _ = _.bLazyRenderChildren
+                    ? (0, _.jsx)(_._, {
                         rootMargin: "0px -5px 0px 100%",
                         horizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
-                      },
-                      _,
-                    )
-                  : _;
-                return _.createElement(
-                  _._,
-                  {
-                    className: _.innerSlide,
-                    key: "slide_" + _,
-                    index: _,
-                    role: "listitem",
-                    "aria-label": void 0,
-                  },
-                  _,
-                );
-              }),
-            ),
-            !_ &&
-              (_.useTestScrollbar
-                ? _.createElement(_, {
-                    showArrows: _,
-                    carouselStore: null,
-                  })
-                : _.createElement(
-                    "div",
+                        children: _,
+                      })
+                    : _;
+                  return (0, _.jsx)(
+                    _._,
                     {
+                      className: _.innerSlide,
+                      index: _,
+                      role: "listitem",
+                      "aria-label": void 0,
+                      children: _,
+                    },
+                    "slide_" + _,
+                  );
+                }),
+              }),
+              !_ &&
+                (_.useTestScrollbar
+                  ? (0, _.jsx)(_, {
+                      showArrows: _,
+                      carouselStore: null,
+                    })
+                  : (0, _.jsx)("div", {
                       className: _()({
                         [_.breadcrumbContainer]: !0,
                         [_.breadcrumbContainerTemplate]:
                           _.className?.includes("template-carousel"),
                       }),
-                    },
-                    _.createElement(
-                      _,
-                      {
+                      children: (0, _.jsx)(_, {
                         ..._,
                         nPageSize: _,
-                      },
-                      _.children,
-                    ),
-                  )),
-          ),
-        );
+                        children: _.children,
+                      }),
+                    })),
+            ],
+          }),
+        });
       }
       function _(_) {
         const { nPageSize: _ } = _,
@@ -23964,26 +23851,24 @@
               }),
             [_],
           ),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.Children.map(_.children, (_, _) => {
+          (0, _.jsx)(_.Fragment, {
+            children: _.Children.map(_.children, (_, _) => {
               if (_ % _ !== 0) return null;
               const _ = _ >= _ && _ < _ + _;
-              return _.createElement(
+              return (0, _.jsx)(
                 _._,
                 {
-                  key: _,
                   slide: _,
                   className: _.pip,
+                  children: (0, _.jsx)(_._, {
+                    ..._,
+                    bIsActive: _,
+                  }),
                 },
-                _.createElement(_._, {
-                  ..._,
-                  bIsActive: _,
-                }),
+                _,
               );
             }),
-          )
+          })
         );
       }
       function _(_) {
@@ -24041,15 +23926,11 @@
           );
         }, [_, _]);
         const _ = !!_ && "CarouselSliding" + _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.sliderBody, "SliderBody", _),
-          },
-          !_ &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.sliderBody, "SliderBody", _),
+          children: [
+            !_ &&
+              (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _.carouselBtnCtn,
                   _.left,
@@ -24057,27 +23938,23 @@
                   "CarouselBtnLeft",
                 ),
                 "aria-label": (0, _._)("#Carousel_Prev"),
-              },
-              _.createElement(_._, {
-                arrowFill: _,
-                arrowStyle: _,
-                direction: "left",
+                children: (0, _.jsx)(_._, {
+                  arrowFill: _,
+                  arrowStyle: _,
+                  direction: "left",
+                }),
               }),
-            ),
-          _.createElement(
-            _._,
-            {
+            (0, _.jsx)(_._, {
               className: _._.GetScrollableClassname(),
               classNameTray: _.slideTrayCustomize,
               classNameAnimation: _.DisableSliderMotion,
               role: "list",
-            },
-            _.createElement(_._, null, _),
-          ),
-          !_ &&
-            _.createElement(
-              _._,
-              {
+              children: (0, _.jsx)(_._, {
+                children: _,
+              }),
+            }),
+            !_ &&
+              (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _.carouselBtnCtn,
                   _.right,
@@ -24085,14 +23962,14 @@
                   "CarouselBtnRight",
                 ),
                 "aria-label": (0, _._)("#Carousel_Next"),
-              },
-              _.createElement(_._, {
-                arrowFill: _,
-                arrowStyle: _,
-                direction: "right",
+                children: (0, _.jsx)(_._, {
+                  arrowFill: _,
+                  arrowStyle: _,
+                  direction: "right",
+                }),
               }),
-            ),
-        );
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -24102,6 +23979,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         render() {
@@ -24113,36 +23991,37 @@
             _.getAttributeNames().forEach((_) => {
               __webpack_require__.toLocaleLowerCase().startsWith("data-") &&
                 (_.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     "h1",
                     {
-                      key: "header-" + _,
+                      children: _,
                     },
-                    _,
+                    "header-" + _,
                   ),
                 ),
                 _.push(
-                  _.createElement(_, {
-                    key: "body-" + _,
-                    data: JSON.parse(_.getAttribute(_)),
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      data: JSON.parse(_.getAttribute(_)),
+                    },
+                    "body-" + _,
+                  ),
                 ));
             }),
-            _.createElement("div", null, _)
+            (0, _.jsx)("div", {
+              children: _,
+            })
           );
         }
       }
       class _ extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "pre",
-              null,
-              JSON.stringify(this.props.data, null, 2),
-            ),
-          );
+          return (0, _.jsx)("div", {
+            children: (0, _.jsx)("pre", {
+              children: JSON.stringify(this.props.data, null, 2),
+            }),
+          });
         }
       }
     },
@@ -24158,6 +24037,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -24238,23 +24118,20 @@
           const _ = this.context.styles ?? _();
           let _ = _ ?? "#Button_Cancel";
           if (1 != this.context.presentation || _)
-            return _.createElement(
-              "div",
-              {
-                ref: _,
-                style: _,
-                ..._,
-                className: (0, _._)(
-                  {
-                    [_.contextMenuContents]: !0,
-                    [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    [_.ForceDesktop]: _,
-                  },
-                  _,
-                ),
-              },
-              _,
-            );
+            return (0, _.jsx)("div", {
+              ref: _,
+              style: _,
+              ..._,
+              className: (0, _._)(
+                {
+                  [_.contextMenuContents]: !0,
+                  [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                  [_.ForceDesktop]: _,
+                },
+                _,
+              ),
+              children: _,
+            });
           {
             const _ = () => {
               _ && _(), this.instance.Hide();
@@ -24263,68 +24140,61 @@
               (_.overflowY = this.instance.BIsSubMenuVisible()
                 ? "hidden"
                 : void 0),
-              _.createElement(
-                _._,
-                {
-                  ..._,
-                  className: (0, _._)(
-                    _.contextMenuContents,
-                    {
-                      [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    },
-                    _,
-                  ),
-                  "flow-children": "column",
-                  onMoveLeft: this.HideIfSubmenu,
-                  onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
-                  style: _,
-                  navEntryPreferPosition: _._.PREFERRED_CHILD,
-                  navRef: this.m_navRef,
-                  ref: _,
-                  role: _,
-                  "aria-labelledby": __webpack_require__ ? _ : void 0,
-                  ..._,
-                },
-                _,
-                __webpack_require__ &&
-                  _.createElement(
-                    "div",
-                    {
+              (0, _.jsxs)(_._, {
+                ..._,
+                className: (0, _._)(
+                  _.contextMenuContents,
+                  {
+                    [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                  },
+                  _,
+                ),
+                "flow-children": "column",
+                onMoveLeft: this.HideIfSubmenu,
+                onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
+                style: _,
+                navEntryPreferPosition: _._.PREFERRED_CHILD,
+                navRef: this.m_navRef,
+                ref: _,
+                role: _,
+                "aria-labelledby": __webpack_require__ ? _ : void 0,
+                ..._,
+                children: [
+                  _,
+                  __webpack_require__ &&
+                    (0, _.jsx)("div", {
                       _: _,
                       style: {
                         display: "none",
                       },
-                    },
-                    __webpack_require__,
-                  ),
-                !this.instance.BIsSubMenu() &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(_, null),
-                    _.createElement(
-                      _,
-                      {
-                        className: _.Cancel,
-                        onSelected: _,
-                      },
-                      (0, _._)(_),
-                    ),
-                    _,
-                  ),
-                this.instance.BIsSubMenuVisible() &&
-                  _.createElement("div", {
-                    className: _.contextMenuFade,
-                    onClick: () => this.instance.HideSubMenu(),
-                  }),
-              )
+                      children: __webpack_require__,
+                    }),
+                  !this.instance.BIsSubMenu() &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_, {}),
+                        (0, _.jsx)(_, {
+                          className: _.Cancel,
+                          onSelected: _,
+                          children: (0, _._)(_),
+                        }),
+                        _,
+                      ],
+                    }),
+                  this.instance.BIsSubMenuVisible() &&
+                    (0, _.jsx)("div", {
+                      className: _.contextMenuFade,
+                      onClick: () => this.instance.HideSubMenu(),
+                    }),
+                ],
+              })
             );
           }
         }
       };
       function _(_) {
         const _ = _.useId();
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           labelId: _,
           ..._,
         });
@@ -24371,50 +24241,44 @@
             } = this.props,
             _ = this.context?.styles ?? _();
           return 1 == this.context.presentation
-            ? _.createElement(
-                _._,
-                {
-                  noFocusRing: !0,
-                  preferredFocus: this.props.selected,
-                  ref: this.m_refDiv,
-                  navRef: this.m_ref,
-                  onMouseEnter: this.OnMouseEnter,
-                  ..._,
-                  className: (0, _._)(
-                    this.props.className,
-                    _.contextMenuItem,
-                    "contextMenuItem",
-                    this.props.disabled && "disabled",
-                    this.props.selected && _.Selected,
-                    "positive" == this.props.tone && _.Positive,
-                    "emphasis" == this.props.tone && _.Emphasis,
-                    "destructive" == this.props.tone && _.Destructive,
-                  ),
-                  focusClassName: _.Focused,
-                  onClick: this.props.disabled ? void 0 : this.OnClick,
-                  focusable: !this.props.disabled,
-                  onOKButton: this.OnOKButton,
-                  onMoveRight: __webpack_require__,
-                  unselectable: this.props.unselectable,
-                  role: _.role ?? "menuitem",
-                  "aria-selected": this.props.selected,
-                },
-                this.props.children,
-              )
-            : _.createElement(
-                _._,
-                {
-                  ref: this.m_refDiv,
-                  onMouseEnter: this.OnMouseEnter,
-                  ..._,
-                  onClick: this.OnClick,
-                  unselectable: this.props.unselectable,
-                  className: this.props.className,
-                  role: _.role ?? "menuitem",
-                  "aria-selected": this.props.selected,
-                },
-                this.props.children,
-              );
+            ? (0, _.jsx)(_._, {
+                noFocusRing: !0,
+                preferredFocus: this.props.selected,
+                ref: this.m_refDiv,
+                navRef: this.m_ref,
+                onMouseEnter: this.OnMouseEnter,
+                ..._,
+                className: (0, _._)(
+                  this.props.className,
+                  _.contextMenuItem,
+                  "contextMenuItem",
+                  this.props.disabled && "disabled",
+                  this.props.selected && _.Selected,
+                  "positive" == this.props.tone && _.Positive,
+                  "emphasis" == this.props.tone && _.Emphasis,
+                  "destructive" == this.props.tone && _.Destructive,
+                ),
+                focusClassName: _.Focused,
+                onClick: this.props.disabled ? void 0 : this.OnClick,
+                focusable: !this.props.disabled,
+                onOKButton: this.OnOKButton,
+                onMoveRight: __webpack_require__,
+                unselectable: this.props.unselectable,
+                role: _.role ?? "menuitem",
+                "aria-selected": this.props.selected,
+                children: this.props.children,
+              })
+            : (0, _.jsx)(_._, {
+                ref: this.m_refDiv,
+                onMouseEnter: this.OnMouseEnter,
+                ..._,
+                onClick: this.OnClick,
+                unselectable: this.props.unselectable,
+                className: this.props.className,
+                role: _.role ?? "menuitem",
+                "aria-selected": this.props.selected,
+                children: this.props.children,
+              });
         }
       }
       (0, _._)([_._], _.prototype, "OnClick", null),
@@ -24429,23 +24293,22 @@
             className: __webpack_require__,
             ..._
           } = this.props;
-          return _.createElement(
-            _,
-            {
-              ..._,
-              className: (0, _._)(__webpack_require__, _ && "menuChecked"),
-            },
-            _.createElement("div", {
-              className: "contextMenuCheckMark",
-            }),
-            _,
-          );
+          return (0, _.jsxs)(_, {
+            ..._,
+            className: (0, _._)(__webpack_require__, _ && "menuChecked"),
+            children: [
+              (0, _.jsx)("div", {
+                className: "contextMenuCheckMark",
+              }),
+              _,
+            ],
+          });
         }
       }
       _.PureComponent;
       function _(_) {
         const _ = _.useContext(_).styles ?? _();
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _.ContextMenuSeparator,
           role: "separator",
         });
@@ -24487,14 +24350,11 @@
           );
         }
         RenderSubMenu() {
-          return _.createElement(
-            _,
-            {
-              onMouseEnter: this.OnSubMenuMouseEnter,
-              label: this.props.label,
-            },
-            this.props.children,
-          );
+          return (0, _.jsx)(_, {
+            onMouseEnter: this.OnSubMenuMouseEnter,
+            label: this.props.label,
+            children: this.props.children,
+          });
         }
         OnMouseEnter(_) {
           0 == this.context.presentation && this.ShowSubMenu(_.currentTarget);
@@ -24516,33 +24376,26 @@
             ..._
           } = this.props;
           const _ = this.context.styles ?? _();
-          return _.createElement(
-            _,
-            {
-              ..._,
-              ref: this.m_refItem,
-              onClick: this.OnClick,
-              selected: _ && !this.state.bActive,
-              className: (0, _._)(_, _.SubMenu, this.state.bActive && _.active),
-              onMouseEnter: this.OnMouseEnter,
-              bInteractableItem: !0,
-              onMoveRight: () => this.ShowSubMenu(),
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_, {
+            ..._,
+            ref: this.m_refItem,
+            onClick: this.OnClick,
+            selected: _ && !this.state.bActive,
+            className: (0, _._)(_, _.SubMenu, this.state.bActive && _.active),
+            onMouseEnter: this.OnMouseEnter,
+            bInteractableItem: !0,
+            onMoveRight: () => this.ShowSubMenu(),
+            children: [
+              (0, _.jsx)("div", {
                 className: _.Label,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
+                children: _,
+              }),
+              (0, _.jsx)("div", {
                 className: _.Arrow,
-              },
-              _.createElement(_.GB9, null),
-            ),
-          );
+                children: (0, _.jsx)(_.GB9, {}),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnSubMenuMouseEnter", null),
@@ -24861,23 +24714,20 @@
             this.props.instance.visible && this.state.ready && (_ += " ready"),
             (_ += " " + _().ContextMenuPosition),
             this.props.options.bStandalone && (_ += " " + _().Standalone),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                ref: this.BindMenuElement,
-                style: _,
-                onBlur: this.OnBlur,
-                onKeyDown: this.OnKeyDown,
-                tabIndex: 0,
-              },
-              this.props.children,
-            )
+            (0, _.jsx)("div", {
+              className: _,
+              ref: this.BindMenuElement,
+              style: _,
+              onBlur: this.OnBlur,
+              onKeyDown: this.OnKeyDown,
+              tabIndex: 0,
+              children: this.props.children,
+            })
           );
         }
       };
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: _().ContextMenuMouseOverlay,
         });
       }
@@ -24902,10 +24752,9 @@
             (_ &&
               _.forEach((_, _) => {
                 _.push(
-                  _.createElement(
+                  (0, _.jsx)(
                     _,
                     {
-                      key: `spelling_${_}_${_}`,
                       onSelected: () => {
                         _.setRangeText(_),
                           (function (_, _) {
@@ -24917,8 +24766,9 @@
                           _.focus();
                       },
                       className: _().NoSeparation,
+                      children: _,
                     },
-                    _,
+                    `spelling_${_}_${_}`,
                   ),
                 );
               }),
@@ -24927,17 +24777,17 @@
             const _ = 30;
             (_ = _.trim()),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _,
                   {
-                    key: `addtodictionary_${_}`,
                     onSelected: () =>
                       _.SteamClient.Browser.AddWordToDictionary(_),
+                    children: (0, _._)(
+                      "#ContextMenu_AddToDictionary",
+                      _.length < _ ? _ : _.substring(0, _) + "...",
+                    ),
                   },
-                  (0, _._)(
-                    "#ContextMenu_AddToDictionary",
-                    _.length < _ ? _ : _.substring(0, _) + "...",
-                  ),
+                  `addtodictionary_${_}`,
                 ),
               );
           }
@@ -24945,45 +24795,45 @@
         if (
           ((_.document.queryCommandEnabled("cut") || (_ && _)) &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "cut",
                   onSelected: () => {
                     _.document.execCommand("cut");
                   },
+                  children: (0, _._)("#ContextMenu_Cut"),
                 },
-                (0, _._)("#ContextMenu_Cut"),
+                "cut",
               ),
             ),
           (_.document.queryCommandEnabled("copy") || _) &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "copy",
                   onSelected: () => {
                     _.document.execCommand("copy");
                   },
                   className: _().NoSeparation,
+                  children: (0, _._)("#ContextMenu_Copy"),
                 },
-                (0, _._)("#ContextMenu_Copy"),
+                "copy",
               ),
             ),
           _._.IN_CLIENT &&
             _ &&
             (0, _._)(_, "Browser.Paste") &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "paste",
                   onSelected: () => {
                     _.focus(), _.SteamClient.Browser.Paste();
                   },
                   className: _().NoSeparation,
+                  children: (0, _._)("#ContextMenu_Paste"),
                 },
-                (0, _._)("#ContextMenu_Paste"),
+                "paste",
               ),
             ),
           _._.IN_CLIENT && _._.DEV_MODE)
@@ -24991,43 +24841,44 @@
           const _ = [];
           (0, _._)(_, "Browser.OpenDevTools") &&
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _,
                 {
-                  key: "opendevtools",
                   onSelected: () => {
                     _.focus(), _.SteamClient.Browser.OpenDevTools();
                   },
+                  children: "Open Dev Tools",
                 },
-                "Open Dev Tools",
+                "opendevtools",
               ),
             ),
             (0, _._)(_, "Browser.InspectElement") &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _,
                   {
-                    key: "inspectelement",
                     onSelected: () => {
                       _.focus(), _.SteamClient.Browser.InspectElement(_, _);
                     },
                     className: _().NoSeparation,
+                    children: "Inspect Element",
                   },
-                  "Inspect Element",
+                  "inspectelement",
                 ),
               ),
             _.length > 0 &&
-              (_.push(
-                _.createElement(_, {
-                  key: "devtools-separator",
-                }),
-              ),
-              _.push(..._));
+              (_.push((0, _.jsx)(_, {}, "devtools-separator")), _.push(..._));
         }
         if (_.length)
-          (0, _._)(_.createElement(_, null, _), _, {
-            bRootContextMenu: !0,
-          });
+          (0, _._)(
+            (0, _.jsx)(_, {
+              children: _,
+            }),
+            _,
+            {
+              bRootContextMenu: !0,
+            },
+          );
         else {
           if (_.shiftKey) return;
           _.preventDefault(), _.stopPropagation();
@@ -25055,6 +24906,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.forwardRef((_, _) => {
         const {
@@ -25063,7 +24915,7 @@
           disabled: _,
           ..._
         } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           ..._,
           ref: _,
           className: (0, _._)(
@@ -25081,17 +24933,16 @@
           className: _,
           ..._
         } = _;
-        return _.createElement(
-          _,
-          {
-            ..._,
-            className: (0, _._)(_, _ && "menuChecked"),
-          },
-          _.createElement("div", {
-            className: "contextMenuCheckMark",
-          }),
-          __webpack_require__,
-        );
+        return (0, _.jsxs)(_, {
+          ..._,
+          className: (0, _._)(_, _ && "menuChecked"),
+          children: [
+            (0, _.jsx)("div", {
+              className: "contextMenuCheckMark",
+            }),
+            __webpack_require__,
+          ],
+        });
       }
       _.displayName = "MenuItem";
     },
@@ -25149,10 +25000,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.forwardRef(function (_, _) {
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
             className: (0, _._)(_, _.className),
             ref: _,
@@ -25170,7 +25022,7 @@
             _.useEffect(() => {
               _ && _(_);
             }, [_, _]),
-            _.createElement("div", {
+            (0, _.jsx)("div", {
               _: _,
               role: "heading",
               "aria-level": 2,
@@ -25203,7 +25055,7 @@
           (0, _._)("DialogColumn _DialogLayout"));
       function _(_) {
         const _ = (0, _._)("Content", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -25219,21 +25071,15 @@
             (_.className ? " " + _.className : "");
         return (
           __webpack_require__ && (_ += " _DialogCenterVertically"),
-          _.createElement(
-            "div",
-            {
-              ..._,
-              ref: _,
-              className: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: "DialogContent_InnerWidth",
-              },
-              _,
-            ),
-          )
+          (0, _.jsx)("div", {
+            ..._,
+            ref: _,
+            className: _,
+            children: (0, _.jsx)("div", {
+              className: "DialogContent_InnerWidth",
+              children: _,
+            }),
+          })
         );
       }
       class _ extends _.Component {
@@ -25243,7 +25089,7 @@
             this.props.onSubmit && this.props.onSubmit(_);
         }
         render() {
-          return _.createElement("form", {
+          return (0, _.jsx)("form", {
             ...this.props,
             onSubmit: this.OnSubmit,
           });
@@ -25255,16 +25101,13 @@
           bCenterVertically: __webpack_require__,
           ..._
         } = _;
-        return _.createElement(
-          _,
-          {
-            className: _,
-            bCenterVertically: __webpack_require__,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          className: _,
+          bCenterVertically: __webpack_require__,
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -25273,25 +25116,24 @@
           className: _,
           children: _,
         } = _;
-        return _.createElement(
-          "label",
-          {
-            className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
-          },
-          _ &&
-            _.createElement(
-              _,
-              null,
-              _,
-              " ",
-              __webpack_require__ &&
-                _.createElement(_._, {
-                  tooltip: __webpack_require__,
-                }),
-              " ",
-            ),
-          _,
-        );
+        return (0, _.jsxs)("label", {
+          className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
+          children: [
+            _ &&
+              (0, _.jsxs)(_, {
+                children: [
+                  _,
+                  " ",
+                  __webpack_require__ &&
+                    (0, _.jsx)(_._, {
+                      tooltip: __webpack_require__,
+                    }),
+                  " ",
+                ],
+              }),
+            _,
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "OnSubmit", null);
       const _ = _.forwardRef(function (_, _) {
@@ -25309,32 +25151,28 @@
                   _.stopPropagation(), _(_);
                 };
             };
-          return _.createElement(
-            _._,
-            {
-              ref: _,
-              onOKActionDescription: _.disabled ? null : void 0,
-              noFocusRing: !!_.strButtonClassName,
-              ..._,
-              className: _,
-              disabled: !1,
-              onClick: _(_.onClick),
-              onPointerDown: _(_.onPointerDown),
-              onPointerUp: _(_.onPointerUp),
-              onPointerCancel: _(_.onPointerCancel),
-              onMouseDown: _(_.onMouseDown),
-              onMouseUp: _(_.onMouseUp),
-              onTouchStart: _(_.onTouchStart),
-              onTouchEnd: _(_.onTouchEnd),
-              onTouchCancel: _(_.onTouchCancel),
-              onSubmit: _(_.onSubmit),
-            },
-            _ && _(),
-            _.children,
-          );
+          return (0, _.jsxs)(_._, {
+            ref: _,
+            onOKActionDescription: _.disabled ? null : void 0,
+            noFocusRing: !!_.strButtonClassName,
+            ..._,
+            className: _,
+            disabled: !1,
+            onClick: _(_.onClick),
+            onPointerDown: _(_.onPointerDown),
+            onPointerUp: _(_.onPointerUp),
+            onPointerCancel: _(_.onPointerCancel),
+            onMouseDown: _(_.onMouseDown),
+            onMouseUp: _(_.onMouseUp),
+            onTouchStart: _(_.onTouchStart),
+            onTouchEnd: _(_.onTouchEnd),
+            onTouchCancel: _(_.onTouchCancel),
+            onSubmit: _(_.onSubmit),
+            children: [_ && _(), _.children],
+          });
         }),
         _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             preferredFocus: !0,
             type: _.onClick ? "button" : "submit",
             ..._,
@@ -25348,7 +25186,7 @@
           });
         }),
         _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             type: "button",
             ..._,
             ref: _,
@@ -25361,7 +25199,7 @@
           });
         }),
         _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             type: "button",
             ..._,
             ref: _,
@@ -25374,7 +25212,7 @@
           });
         }),
         _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             type: "button",
             ..._,
             ref: _,
@@ -25385,7 +25223,7 @@
           });
         });
       _.forwardRef(function (_, _) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           type: "button",
           ..._,
           ref: _,
@@ -25393,65 +25231,46 @@
         });
       });
       function _(_) {
-        return _.createElement(
-          _,
-          {
-            className: _.className,
-          },
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          className: _.className,
+          children: [
+            (0, _.jsxs)(_, {
               onClick: _.onOK,
               disabled: _.bOKDisabled,
               autoFocus: "primary" == _.focusButton,
-            },
-            _.strOKText || (0, _._)("#Button_Confirm"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
+              children: [_.strOKText || (0, _._)("#Button_Confirm"), " "],
+            }),
+            (0, _.jsx)(_, {
               onClick: _.onCancel,
               disabled: _.bCancelDisabled,
               autoFocus: "secondary" == _.focusButton,
-            },
-            _.strCancelText || (0, _._)("#Button_Cancel"),
-          ),
-        );
+              children: _.strCancelText || (0, _._)("#Button_Cancel"),
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = _.bOKDisabled ? _ : _,
           _ = _.bOKDisabled ? _ : _;
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            {
+        return (0, _.jsxs)(_, {
+          children: [
+            (0, _.jsxs)(_, {
               onClick: _.onOK,
               disabled: _.bOKDisabled,
-            },
-            _.strOKText || (0, _._)("#Button_Confirm"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
+              children: [_.strOKText || (0, _._)("#Button_Confirm"), " "],
+            }),
+            (0, _.jsxs)(_, {
               onClick: _.onUpdate,
               disabled: _.bUpdateDisabled,
-            },
-            _.strUpdateText || (0, _._)("#Button_Update"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
+              children: [_.strUpdateText || (0, _._)("#Button_Update"), " "],
+            }),
+            (0, _.jsx)(_, {
               onClick: _.onCancel,
               disabled: _.bCancelDisabled,
-            },
-            _.strCancelText || (0, _._)("#Button_Cancel"),
-          ),
-        );
+              children: _.strCancelText || (0, _._)("#Button_Cancel"),
+            }),
+          ],
+        });
       }
       class _ extends _.Component {
         constructor(_) {
@@ -25543,65 +25362,56 @@
           return (
             1 == this.state.disabled && (_ += " Disabled"),
             this.props.label
-              ? _.createElement(
-                  _._,
-                  {
-                    role: "checkbox",
-                    "aria-checked": this.checked,
-                    className:
-                      "DialogCheckbox_Container _DialogLayout " +
-                      (this.props.className ? this.props.className : "") +
-                      (this.state.disabled ? " Disabled" : ""),
-                    ...this.GetPanelElementProps(),
-                  },
-                  _.createElement(
-                    "div",
-                    {
+              ? (0, _.jsxs)(_._, {
+                  role: "checkbox",
+                  "aria-checked": this.checked,
+                  className:
+                    "DialogCheckbox_Container _DialogLayout " +
+                    (this.props.className ? this.props.className : "") +
+                    (this.state.disabled ? " Disabled" : ""),
+                  ...this.GetPanelElementProps(),
+                  children: [
+                    (0, _.jsx)("div", {
                       className: _,
-                    },
-                    _.createElement(_.X4B, {
-                      color: this.props.color,
-                      highlightColor: this.props.highlightColor,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggle_Label",
-                    },
-                    "string" == typeof this.props.label &&
-                      _.createElement("span", null, this.props.label),
-                    "string" != typeof this.props.label && this.props.label,
-                    this.props.tooltip &&
-                      _.createElement(_._, {
-                        tooltip: this.props.tooltip,
+                      children: (0, _.jsx)(_.X4B, {
+                        color: this.props.color,
+                        highlightColor: this.props.highlightColor,
                       }),
-                  ),
-                  _.createElement("div", {
-                    style: {
-                      clear: "left",
-                    },
-                  }),
-                  this.props.description &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: "DialogToggle_Description",
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: "DialogToggle_Label",
+                      children: [
+                        "string" == typeof this.props.label &&
+                          (0, _.jsx)("span", {
+                            children: this.props.label,
+                          }),
+                        "string" != typeof this.props.label && this.props.label,
+                        this.props.tooltip &&
+                          (0, _.jsx)(_._, {
+                            tooltip: this.props.tooltip,
+                          }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      style: {
+                        clear: "left",
                       },
-                      this.props.description,
-                    ),
-                  this.props.children,
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    role: "checkbox",
-                    "aria-checked": this.checked,
-                    className: _,
-                    ...this.GetPanelElementProps(),
-                  },
-                  _.createElement(_.X4B, null),
-                )
+                    }),
+                    this.props.description &&
+                      (0, _.jsx)("div", {
+                        className: "DialogToggle_Description",
+                        children: this.props.description,
+                      }),
+                    this.props.children,
+                  ],
+                })
+              : (0, _.jsx)(_._, {
+                  role: "checkbox",
+                  "aria-checked": this.checked,
+                  className: _,
+                  ...this.GetPanelElementProps(),
+                  children: (0, _.jsx)(_.X4B, {}),
+                })
           );
         }
       }
@@ -25610,57 +25420,48 @@
           let _ = this.checked ? " Active" : "";
           return (
             1 == this.state.disabled && (_ += " Disabled"),
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  "DialogRoundCheckboxField_Container",
-                  this.props.className,
-                  this.props.label ? "WithLabel" : "",
-                  _,
-                ),
-                ...this.GetPanelElementProps(),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "DialogRoundCheckboxField",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogRoundCheckboxField_Control" + _,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogRoundCheckboxField_OuterCircle",
-                    },
-                    _.createElement("div", {
-                      className: "DialogRoundCheckboxField_InnerCircle",
-                    }),
-                  ),
-                ),
+            (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                "DialogRoundCheckboxField_Container",
+                this.props.className,
+                this.props.label ? "WithLabel" : "",
+                _,
               ),
-              this.props.label &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogToggle_Label",
-                  },
-                  _.createElement("span", null, this.props.label),
-                  this.props.tooltip &&
-                    _.createElement(_._, {
-                      tooltip: this.props.tooltip,
+              ...this.GetPanelElementProps(),
+              children: [
+                (0, _.jsx)("div", {
+                  className: "DialogRoundCheckboxField",
+                  children: (0, _.jsx)("div", {
+                    className: "DialogRoundCheckboxField_Control" + _,
+                    children: (0, _.jsx)("div", {
+                      className: "DialogRoundCheckboxField_OuterCircle",
+                      children: (0, _.jsx)("div", {
+                        className: "DialogRoundCheckboxField_InnerCircle",
+                      }),
                     }),
-                ),
-            )
+                  }),
+                }),
+                this.props.label &&
+                  (0, _.jsxs)("div", {
+                    className: "DialogToggle_Label",
+                    children: [
+                      (0, _.jsx)("span", {
+                        children: this.props.label,
+                      }),
+                      this.props.tooltip &&
+                        (0, _.jsx)(_._, {
+                          tooltip: this.props.tooltip,
+                        }),
+                    ],
+                  }),
+              ],
+            })
           );
         }
       }
       const _ = _.forwardRef(function (_, _) {
         const _ = (0, _._)("ToggleField", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ref: _,
           ..._,
         });
@@ -25681,83 +25482,66 @@
             (this.props.className ? this.props.className : "");
           return (
             this.props.disabled && (_ += " Disabled"),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                tabIndex: this.props.tabIndex || 0,
-                onKeyDown: this.OnOffKeyDown,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _,
+              tabIndex: this.props.tabIndex || 0,
+              onKeyDown: this.OnOffKeyDown,
+              children: [
+                (0, _.jsxs)("div", {
                   className: "displayColumn alignSelfCenter",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogToggle_Label",
-                  },
-                  _.createElement("span", null, this.props.label),
-                  this.props.tooltip &&
-                    _.createElement(_._, {
-                      tooltip: this.props.tooltip,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: "DialogToggle_Label",
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: this.props.label,
+                        }),
+                        this.props.tooltip &&
+                          (0, _.jsx)(_._, {
+                            tooltip: this.props.tooltip,
+                          }),
+                      ],
                     }),
-                ),
-                this.props.description &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggle_Description",
-                    },
-                    this.props.description,
-                  ),
-                this.props.children,
-              ),
-              this.props.useToggleRail
-                ? _.createElement(
-                    "div",
-                    {
+                    this.props.description &&
+                      (0, _.jsx)("div", {
+                        className: "DialogToggle_Description",
+                        children: this.props.description,
+                      }),
+                    this.props.children,
+                  ],
+                }),
+                this.props.useToggleRail
+                  ? (0, _.jsx)("div", {
                       className: "DialogToggleField_NewUIContainer",
-                    },
-                    _.createElement(_._, {
-                      onChange: this.OnNewUIToggle,
-                      value: this.checked,
-                    }),
-                  )
-                : _.createElement(
-                    "div",
-                    {
+                      children: (0, _.jsx)(_._, {
+                        onChange: this.OnNewUIToggle,
+                        value: this.checked,
+                      }),
+                    })
+                  : (0, _.jsx)("div", {
                       className: "DialogToggleField_Control",
                       onClick: this.Toggle,
-                    },
-                    _.createElement(
-                      _._,
-                      {
+                      children: (0, _.jsxs)(_._, {
                         className: "DialogToggleField_OptionPanel",
                         onOKButton: this.Toggle,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className:
-                            "DialogToggleField_Option Off" +
-                            (this.checked ? "" : " Active"),
-                        },
-                        (0, _._)("#Dialog_Off"),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className:
-                            "DialogToggleField_Option On" +
-                            (this.checked ? " Active" : ""),
-                        },
-                        (0, _._)("#Dialog_On"),
-                      ),
-                    ),
-                  ),
-            )
+                        children: [
+                          (0, _.jsx)("div", {
+                            className:
+                              "DialogToggleField_Option Off" +
+                              (this.checked ? "" : " Active"),
+                            children: (0, _._)("#Dialog_Off"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className:
+                              "DialogToggleField_Option On" +
+                              (this.checked ? " Active" : ""),
+                            children: (0, _._)("#Dialog_On"),
+                          }),
+                        ],
+                      }),
+                    }),
+              ],
+            })
           );
         }
       }
@@ -25818,6 +25602,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_component;
@@ -25862,7 +25647,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const _ = (0, _._)("InputElement", _._);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
           ref: _,
         });
@@ -26036,162 +25821,141 @@
           let _ = {};
           void 0 !== this.state.m_CopiedYPos &&
             (_.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-          let _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
+          let _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_._, {
                 className: "DialogInput_Wrapper _DialogLayout",
                 "flow-children": "row",
                 ref: this.ref,
-              },
-              _.createElement(_, {
-                type: "text",
-                ..._,
-                className: _,
-                ref: this.OnInputRef,
-                onChange: this.OnChanged,
+                children: [
+                  (0, _.jsx)(_, {
+                    type: "text",
+                    ..._,
+                    className: _,
+                    ref: this.OnInputRef,
+                    onChange: this.OnChanged,
+                  }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: "displayRow",
+                      children: [
+                        (0, _.jsx)(_._, {
+                          className: "DialogInput_CopyAction Primary",
+                          onClick: this.OnCopyClick,
+                          children: (0, _._)("#Button_Copy"),
+                        }),
+                        (0, _.jsx)("div", {
+                          style: _,
+                          className: _,
+                          children: (0, _._)("#Button_Copied"),
+                        }),
+                      ],
+                    }),
+                  (_ || (_ && _.value)) &&
+                    (0, _.jsx)("div", {
+                      className: "DialogInput_ClearAction",
+                      onClick: this.OnClearClick,
+                      children: (0, _.jsx)(_.sED, {}),
+                    }),
+                  _,
+                ],
               }),
               _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "displayRow",
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: "DialogInput_CopyAction Primary",
-                      onClick: this.OnCopyClick,
-                    },
-                    (0, _._)("#Button_Copy"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      style: _,
-                      className: _,
-                    },
-                    (0, _._)("#Button_Copied"),
-                  ),
-                ),
-              (_ || (_ && _.value)) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogInput_ClearAction",
-                    onClick: this.OnClearClick,
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              _,
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                (0, _.jsx)("div", {
                   className: "DialogLabelExplainer",
-                },
-                _,
-              ),
-          );
+                  children: _,
+                }),
+            ],
+          });
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className:
-                    "DialogInputLabelGroup _DialogLayout DialogRequirementLabel",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
+            ? (0, _.jsx)("div", {
+                className:
+                  "DialogInputLabelGroup _DialogLayout DialogRequirementLabel",
+                children: (0, _.jsxs)("label", {
+                  children: [
+                    (0, _.jsxs)("div", {
                       className: "DialogLabel",
-                    },
+                      children: [
+                        _,
+                        " ",
+                        this.props.tooltip &&
+                          (0, _.jsx)(_._, {
+                            tooltip: this.props.tooltip,
+                          }),
+                        (0, _.jsx)("span", {
+                          className: "DialogInputRequirementLabel",
+                          children: this.props.requiredLabel,
+                        }),
+                        " ",
+                      ],
+                    }),
                     _,
-                    " ",
-                    this.props.tooltip &&
-                      _.createElement(_._, {
-                        tooltip: this.props.tooltip,
-                      }),
-                    _.createElement(
-                      "span",
-                      {
-                        className: "DialogInputRequirementLabel",
-                      },
-                      this.props.requiredLabel,
-                    ),
-                    " ",
-                  ),
-                  _,
-                  this.state.m_bNumberBelowMinRange
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_NumberTooSmall"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bNumberAboveMaxRange
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_NumberTooLarge"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsInvalidURL
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeURL"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_strInvalidURLMessage
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        this.state.m_strInvalidURLMessage,
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsInvalidEmail
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeEmail"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsNotNumeric
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeNumber"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bAboveMaxChars
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_TooManyCharacters", _),
-                        " ",
-                      )
-                    : null,
-                ),
-              )
+                    this.state.m_bNumberBelowMinRange
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_NumberTooSmall"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bNumberAboveMaxRange
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_NumberTooLarge"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bIsInvalidURL
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_MustBeURL"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_strInvalidURLMessage
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            this.state.m_strInvalidURLMessage,
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bIsInvalidEmail
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_MustBeEmail"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bIsNotNumeric
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_MustBeNumber"),
+                            " ",
+                          ],
+                        })
+                      : null,
+                    this.state.m_bAboveMaxChars
+                      ? (0, _.jsxs)("div", {
+                          children: [
+                            " ",
+                            (0, _._)("#Input_Error_TooManyCharacters", _),
+                            " ",
+                          ],
+                        })
+                      : null,
+                  ],
+                }),
+              })
             : _;
         }
       }
@@ -26234,71 +25998,58 @@
             children: _,
             ..._
           } = this.props;
-          return _.createElement(
-            "div",
-            {
-              className:
-                "DialogInputLabelGroup _DialogLayout DialogListBuilderInput",
-            },
-            _.createElement(
-              "label",
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+          return (0, _.jsx)("div", {
+            className:
+              "DialogInputLabelGroup _DialogLayout DialogListBuilderInput",
+            children: (0, _.jsxs)("label", {
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
                     className: "DialogLabel",
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
+                    children: _,
+                  }),
+                (0, _.jsx)("div", {
                   className: (0, _._)(
                     "_DialogInputContainer",
                     "DialogTextInputBase",
                     this.m_bFocused && "Active",
                   ),
                   onClick: this.OnBackgroundClick,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsxs)(_._, {
                     className: "DialogListBuilderInput_List",
                     "flow-children": "row",
-                  },
-                  _.Children.map(_, (_, _) =>
-                    _.createElement(
-                      "div",
-                      {
-                        className: "DialogListBuilderInput_ListItem",
-                        key: _,
-                      },
-                      _,
-                    ),
-                  ),
-                  _.createElement(_._, {
-                    type: "text",
-                    ..._,
-                    className:
-                      "DialogListBuilderInput_Input DialogInputPlaceholder",
-                    ref: this.OnInputRef,
-                    onFocus: this.OnInputFocus,
-                    onBlur: this.OnInputBlur,
-                    size: 4,
+                    children: [
+                      _.Children.map(_, (_, _) =>
+                        (0, _.jsx)(
+                          "div",
+                          {
+                            className: "DialogListBuilderInput_ListItem",
+                            children: _,
+                          },
+                          _,
+                        ),
+                      ),
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        ..._,
+                        className:
+                          "DialogListBuilderInput_Input DialogInputPlaceholder",
+                        ref: this.OnInputRef,
+                        onFocus: this.OnInputFocus,
+                        onBlur: this.OnInputBlur,
+                        size: 4,
+                      }),
+                    ],
                   }),
-                ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
                     className: "DialogLabelExplainer",
-                  },
-                  _,
-                ),
-            ),
-          );
+                    children: _,
+                  }),
+              ],
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
@@ -26308,7 +26059,7 @@
           "" + (null != _ ? Number.parseFloat(_.toFixed(3)) : null) + (_ ?? ""),
         _ = (_) => {
           const _ = (0, _._)("SliderField", _);
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ..._,
           });
         };
@@ -26437,60 +26188,51 @@
           }
           const { label: _, description: _, tooltip: _, ..._ } = this.props,
             _ = this.props.renderValue ?? _;
-          return _.createElement(
-            "div",
-            {
-              className:
-                "DialogSlider_Container _DialogInputContainer _DialogLayout" +
-                (this.props.className ? " " + this.props.className : ""),
-              onKeyDown: this.OnKeyDown,
-              tabIndex: this.props.tabIndex || 0,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            className:
+              "DialogSlider_Container _DialogInputContainer _DialogLayout" +
+              (this.props.className ? " " + this.props.className : ""),
+            onKeyDown: this.OnKeyDown,
+            tabIndex: this.props.tabIndex || 0,
+            children: [
+              _ &&
+                (0, _.jsxs)("div", {
                   className: "DialogLabel",
-                },
-                _,
-                Boolean(_) &&
-                  _.createElement(_._, {
-                    tooltip: _,
-                  }),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: [
+                    _,
+                    Boolean(_) &&
+                      (0, _.jsx)(_._, {
+                        tooltip: _,
+                      }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
                 className: "DialogSlider_Slider",
                 onMouseDown: this.OnMouseDown,
                 onTouchStart: this.OnTouchStart,
-              },
-              _.createElement("div", {
-                className: "DialogSlider_Value",
-                style: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogSlider_Value",
+                    style: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "DialogSlider_Grabber",
+                    style: _,
+                  }),
+                ],
               }),
-              _.createElement("div", {
-                className: "DialogSlider_Grabber",
-                style: _,
-              }),
-            ),
-            this.props.showValue &&
-              _.createElement(
-                "div",
-                {
+              this.props.showValue &&
+                (0, _.jsx)("div", {
                   className: "DialogLabelExplainer",
-                },
-                _(this.props.value, this.props.valueSuffix),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                  children: _(this.props.value, this.props.valueSuffix),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
                   className: "DialogLabelExplainer",
-                },
-                _,
-              ),
-          );
+                  children: _,
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -26524,30 +26266,24 @@
             setValue: __webpack_require__,
             disabled: _,
           };
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            _._,
-            {
-              role: _,
-              "aria-labelledby": _,
-              "aria-describedby": _,
-              ..._,
-              className: (0, _._)(
-                _().Group,
-                "Shared_Radio_Group",
-                _,
-                _ && _().Disabled,
-                _.bVertical && _().VerticalGrouping,
-                _ && _().CenteredPill,
-              ),
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_._, {
+            role: _,
+            "aria-labelledby": _,
+            "aria-describedby": _,
+            ..._,
+            className: (0, _._)(
+              _().Group,
+              "Shared_Radio_Group",
+              _,
+              _ && _().Disabled,
+              _.bVertical && _().VerticalGrouping,
+              _ && _().CenteredPill,
+            ),
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -26559,23 +26295,20 @@
           { value: _, setValue: _, disabled: _ } = _.useContext(_);
         let _ = _;
         const _ = _ === _;
-        return _.createElement(
-          _._,
-          {
-            role: _,
-            "aria-checked": _,
-            "aria-selected": _,
-            className: (0, _._)(
-              _().Button,
-              "RadioButton",
-              _ && _().Active,
-              _ && _().Disabled,
-            ),
-            onClick: _ ? void 0 : () => _(_),
-            ..._,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)(_._, {
+          role: _,
+          "aria-checked": _,
+          "aria-selected": _,
+          className: (0, _._)(
+            _().Button,
+            "RadioButton",
+            _ && _().Active,
+            _ && _().Disabled,
+          ),
+          onClick: _ ? void 0 : () => _(_),
+          ..._,
+          children: __webpack_require__,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -26623,7 +26356,7 @@
       }
       function _(_) {
         const _ = (0, _._)("DropDownField", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -26635,67 +26368,57 @@
           dropDownControlRef: _,
           ..._
         } = _;
-        return _.createElement(
-          _._,
-          {
-            label: _,
-            tooltip: __webpack_require__,
-            className: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          label: _,
+          tooltip: __webpack_require__,
+          className: _,
+          children: (0, _.jsx)(_, {
             menuLabel: _,
             ..._,
             ref: _,
           }),
-        );
+        });
       }
       const _ = _.forwardRef(function (_, _) {
-        return _.createElement(
-          _._,
-          {
-            _: _._,
-            focusable: _.focusable,
-            className: (0, _._)(
-              _.className,
-              "DialogDropDown",
-              "_DialogInputContainer",
-              {
-                Active: _.opened,
-                Disabled: _.disabled,
-              },
-            ),
-            tabIndex: _.tabIndex,
-            onClick: _.onClick,
-            onKeyDown: _.onKeyDown,
-            disabled: _.disabled,
-            type: "button",
-            ref: _,
-            noFocusRing: _.noFocusRing,
-            role: _.role ?? "combobox",
-            "aria-controls": _["aria-controls"],
-            "aria-expanded": _.opened,
-            "aria-label": _["aria-label"],
-            "aria-labelledby": _["aria-labelledby"],
-            "aria-describedby": _["aria-describedby"],
-          },
-          _.createElement(
-            "div",
+        return (0, _.jsxs)(_._, {
+          _: _._,
+          focusable: _.focusable,
+          className: (0, _._)(
+            _.className,
+            "DialogDropDown",
+            "_DialogInputContainer",
             {
-              className: "DialogDropDown_CurrentDisplay",
+              Active: _.opened,
+              Disabled: _.disabled,
             },
-            _.children,
           ),
-          !_.disabled &&
-            _.createElement(
-              "div",
-              {
+          tabIndex: _.tabIndex,
+          onClick: _.onClick,
+          onKeyDown: _.onKeyDown,
+          disabled: _.disabled,
+          type: "button",
+          ref: _,
+          noFocusRing: _.noFocusRing,
+          role: _.role ?? "combobox",
+          "aria-controls": _["aria-controls"],
+          "aria-expanded": _.opened,
+          "aria-label": _["aria-label"],
+          "aria-labelledby": _["aria-labelledby"],
+          "aria-describedby": _["aria-describedby"],
+          children: [
+            (0, _.jsx)("div", {
+              className: "DialogDropDown_CurrentDisplay",
+              children: _.children,
+            }),
+            !_.disabled &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(_.arrowClassName, "DialogDropDown_Arrow"),
-              },
-              _.createElement(_.GB9, {
-                role: "presentation",
+                children: (0, _.jsx)(_.GB9, {
+                  role: "presentation",
+                }),
               }),
-            ),
-        );
+          ],
+        });
       });
       class _ extends _.Component {
         static contextType = _._;
@@ -26792,7 +26515,7 @@
             },
             _ = this.props.contextMenuPositionOptions?.onCancel;
           (this.m_iMenuInstance = (0, _._)(
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               rgOptions: this.props.rgOptions,
               onValueSelected: this.OnValueSelected,
               onCancel: _,
@@ -26841,29 +26564,26 @@
               this.props.renderButton ||
               this.context.DropDownControlButton ||
               _;
-          return _.createElement(
-            _,
-            {
-              focusable: _,
-              disabled: this.props.disabled ?? !1,
-              opened: this.state.bOpened,
-              onClick: this.props.disabled ? void 0 : this.ToggleMenu,
-              onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
-              tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
-              ref: this.OnInputRef,
-              className: this.props.strDropDownButtonClassName,
-              arrowClassName: this.props.arrowClassName,
-              role: "combobox",
-              "aria-controls": this.m_iMenuInstance
-                ? `dropdownmenu_${this.m_iMenuInstance.key}`
-                : void 0,
-              "aria-expanded": this.state.bOpened,
-              "aria-label": this.props["aria-label"],
-              "aria-labelledby": this.props["aria-labelledby"],
-              "aria-describedby": this.props["aria-describedby"],
-            },
-            _,
-          );
+          return (0, _.jsx)(_, {
+            focusable: _,
+            disabled: this.props.disabled ?? !1,
+            opened: this.state.bOpened,
+            onClick: this.props.disabled ? void 0 : this.ToggleMenu,
+            onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
+            tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
+            ref: this.OnInputRef,
+            className: this.props.strDropDownButtonClassName,
+            arrowClassName: this.props.arrowClassName,
+            role: "combobox",
+            "aria-controls": this.m_iMenuInstance
+              ? `dropdownmenu_${this.m_iMenuInstance.key}`
+              : void 0,
+            "aria-expanded": this.state.bOpened,
+            "aria-label": this.props["aria-label"],
+            "aria-labelledby": this.props["aria-labelledby"],
+            "aria-describedby": this.props["aria-describedby"],
+            children: _,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnInputRef", null),
@@ -26875,15 +26595,12 @@
       const _ = _.createContext(null);
       function _(_) {
         const _ = (0, _._)("DropDownMenu", _);
-        return _.createElement(
-          _.Provider,
-          {
-            value: {},
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_.Provider, {
+          value: {},
+          children: (0, _.jsx)(_, {
             ..._,
           }),
-        );
+        });
       }
       function _(_, _, _, _) {
         let _;
@@ -26910,47 +26627,53 @@
             },
             [_, _],
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().DialogDropDownMenu,
-              "_DialogInputContainer",
-              _.strDropDownMenuCtnClass,
-            ),
-            onKeyDown: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().DialogDropDownMenu,
+            "_DialogInputContainer",
+            _.strDropDownMenuCtnClass,
+          ),
+          onKeyDown: _,
+          children: (0, _.jsx)(_, {
             rgOptions: _,
             strDropDownItemClassName: __webpack_require__,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
           }),
-        );
+        });
       }
       function _(_) {
         const { rgOptions: _, ...__webpack_require__ } = _;
         return _.map((_, _) =>
           _(_)
-            ? _.createElement("hr", {
-                key: _,
-                className: (0, _._)(
-                  _().DialogDropDownMenu_Item,
-                  _().DialogDropDownMenu_Separator,
-                ),
-              })
+            ? (0, _.jsx)(
+                "hr",
+                {
+                  className: (0, _._)(
+                    _().DialogDropDownMenu_Item,
+                    _().DialogDropDownMenu_Separator,
+                  ),
+                },
+                _,
+              )
             : _(_)
-              ? _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  rgOptions: _.options,
-                })
-              : _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  option: _,
-                }),
+              ? (0, _.jsx)(
+                  _,
+                  {
+                    ...__webpack_require__,
+                    rgOptions: _.options,
+                  },
+                  _,
+                )
+              : (0, _.jsx)(
+                  _,
+                  {
+                    ...__webpack_require__,
+                    option: _,
+                  },
+                  _,
+                ),
         );
       }
       function _(_) {
@@ -26966,34 +26689,30 @@
             _(_.data);
           }, [_, _]),
           _ = _.data === _;
-        return _.createElement(
-          "button",
-          {
-            type: "button",
-            className: (0, _._)(
-              _().DialogDropDownMenu_Item,
-              __webpack_require__,
-              _.strOptionClass,
-              _ && "ContextMenuAutoFocus",
-            ),
-            onClick: (_) => _(_, _),
-            ref: _ ? _ : void 0,
-            onMouseEnter: _,
-            role: "option",
-            "aria-selected": _,
-          },
-          Boolean(_.tooltip)
-            ? _.createElement(
-                _._,
-                {
-                  toolTipContent: _.tooltip,
-                  bTopmost: !0,
-                  className: "TooltipContainer",
-                },
-                _.label,
-              )
-            : _.createElement("div", null, _.label),
-        );
+        return (0, _.jsx)("button", {
+          type: "button",
+          className: (0, _._)(
+            _().DialogDropDownMenu_Item,
+            __webpack_require__,
+            _.strOptionClass,
+            _ && "ContextMenuAutoFocus",
+          ),
+          onClick: (_) => _(_, _),
+          ref: _ ? _ : void 0,
+          onMouseEnter: _,
+          role: "option",
+          "aria-selected": _,
+          children: Boolean(_.tooltip)
+            ? (0, _.jsx)(_._, {
+                toolTipContent: _.tooltip,
+                bTopmost: !0,
+                className: "TooltipContainer",
+                children: _.label,
+              })
+            : (0, _.jsx)("div", {
+                children: _.label,
+              }),
+        });
       }
       class _ extends _.Component {
         state = {
@@ -27026,7 +26745,7 @@
                   ]),
                   (_.selectedOption = __webpack_require__))
                 : (_ = [])),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               ..._,
               rgOptions: _,
               onMenuOpened: this.OnMenuOpened,
@@ -27050,43 +26769,46 @@
           let _ = [];
           return (
             _.push(
-              _.createElement(_, {
-                coordinator: this.m_coordinator,
-                key: "dropregion_top",
-                fnBAcceptDraggable: (_) => 0 != _.props.data,
-                fnOnDrop: (_) => this.OnDrop(_.props.data, 0),
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  coordinator: this.m_coordinator,
+                  fnBAcceptDraggable: (_) => 0 != _.props.data,
+                  fnOnDrop: (_) => this.OnDrop(_.props.data, 0),
+                },
+                "dropregion_top",
+              ),
             ),
             _.Children.forEach(this.props.children, (_, _) => {
               const _ = _.props._ || "__list_" + _,
                 _ = _ + 1;
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _,
                   {
                     coordinator: this.m_coordinator,
                     data: _,
-                    key: _,
+                    children: _,
                   },
                   _,
                 ),
               ),
                 _.push(
-                  _.createElement(_, {
-                    coordinator: this.m_coordinator,
-                    key: "dropregion_" + _,
-                    fnBAcceptDraggable: (_) => _.props.data != _,
-                    fnOnDrop: (_) => this.OnDrop(_.props.data, _),
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      coordinator: this.m_coordinator,
+                      fnBAcceptDraggable: (_) => _.props.data != _,
+                      fnOnDrop: (_) => this.OnDrop(_.props.data, _),
+                    },
+                    "dropregion_" + _,
+                  ),
                 );
             }),
-            _.createElement(
-              "div",
-              {
-                className: "DialogReorderableList",
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              className: "DialogReorderableList",
+              children: _,
+            })
           );
         }
       }
@@ -27468,30 +27190,27 @@
                       onMouseDown: this.OnMouseDown,
                       onTouchStart: this.OnTouchStart,
                     }),
-            _.createElement(
-              "div",
-              {
-                ref: this.m_divRef,
-                className: _,
-                ..._,
-                ..._,
-                draggable: __webpack_require__,
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              ref: this.m_divRef,
+              className: _,
+              ..._,
+              ..._,
+              draggable: __webpack_require__,
+              children: _,
+            })
           );
         }
         renderDropGhost() {
           return this.props.fnRenderDropGhost
             ? this.props.fnRenderDropGhost()
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 elContent: this.GetClone(),
               });
         }
         renderDragGhost() {
           return this.props.fnRenderDragGhost
             ? this.props.fnRenderDragGhost()
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 elContent: this.GetClone(),
                 offsetX: this.m_DragInfo.startOffsetX,
                 offsetY: this.m_DragInfo.startOffsetY,
@@ -27526,7 +27245,7 @@
           _ && this.props.elContent && _.appendChild(this.props.elContent);
         }
         render() {
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: "DialogDraggable_DropGhost",
             ref: this.OnRef,
           });
@@ -27554,7 +27273,7 @@
             void 0 === this.state.clientX ||
             void 0 === this.state.clientY
           )
-            return _.createElement("div", null);
+            return (0, _.jsx)("div", {});
           let _ = {
               left: this.state.clientX - (this.props.offsetX || 0),
               top: this.state.clientY - (this.props.offsetY || 0),
@@ -27575,17 +27294,14 @@
               filter: "brightness(" + _ + ")",
             };
           const _ = this.props.className || "DialogDraggable_DragGhost";
-          return _.createElement(
-            "div",
-            {
-              className: _,
-              style: _,
-            },
-            _.createElement("div", {
+          return (0, _.jsx)("div", {
+            className: _,
+            style: _,
+            children: (0, _.jsx)("div", {
               ref: this.OnRef,
               style: _,
             }),
-          );
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnRef", null);
@@ -27664,17 +27380,13 @@
               _ || "DialogDropRegion",
               this.state.bDraggableActive && (_ || "Active"),
             );
-          return _.createElement(
-            _._,
-            {
-              ref: (0, _._)(_, this.m_divRef),
-              className: _,
-              ..._,
-              focusable: void 0 === _ ? !!_.onClick : _,
-            },
-            this.state.dropGhost,
-            _,
-          );
+          return (0, _.jsxs)(_._, {
+            ref: (0, _._)(_, this.m_divRef),
+            className: _,
+            ..._,
+            focusable: void 0 === _ ? !!_.onClick : _,
+            children: [this.state.dropGhost, _],
+          });
         }
       }
       class _ extends _ {
@@ -27740,36 +27452,45 @@
             const _ = _ === _;
             if (_ === _) {
               const _ = _ === _ + 1 || _ === _ - 1;
-              return _.createElement(_, {
-                role: "separator",
-                key: _,
-                bTransparent: _,
-              });
+              return (0, _.jsx)(
+                _,
+                {
+                  role: "separator",
+                  bTransparent: _,
+                },
+                _,
+              );
             }
             if (_ === _)
-              return _.createElement("div", {
-                key: _,
-                className: _().PageListSpacer,
-              });
+              return (0, _.jsx)(
+                "div",
+                {
+                  className: _().PageListSpacer,
+                },
+                _,
+              );
             {
               if (!1 === _.visible) return null;
               const _ =
                   _.identifier || _.title || __webpack_require__.toString(),
                 _ = () => _(_, _);
-              return _.createElement(_, {
-                className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
-                  [_.Active]: _,
-                }),
-                key: _,
-                onClick: _,
-                title: _.title,
-                icon: _.icon,
-                active: _,
-                _: _ + _.identifier,
-                role: "tab",
-                "aria-selected": _,
-                "aria-controls": _ + _.identifier + "_Content",
-              });
+              return (0, _.jsx)(
+                _,
+                {
+                  className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
+                    [_.Active]: _,
+                  }),
+                  onClick: _,
+                  title: _.title,
+                  icon: _.icon,
+                  active: _,
+                  _: _ + _.identifier,
+                  role: "tab",
+                  "aria-selected": _,
+                  "aria-controls": _ + _.identifier + "_Content",
+                },
+                _,
+              );
             }
           });
       }
@@ -27782,60 +27503,56 @@
           onClick: _,
           ..._
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-            ..._,
-          },
-          __webpack_require__
-            ? _.createElement(
-                "div",
-                {
+        return (0, _.jsxs)("div", {
+          className: _,
+          onClick: _,
+          ..._,
+          children: [
+            __webpack_require__
+              ? (0, _.jsx)("div", {
                   className: _().PageListItem_Icon,
-                },
-                __webpack_require__,
-              )
-            : null,
-          _.createElement(
-            "div",
-            {
+                  children: __webpack_require__,
+                })
+              : null,
+            (0, _.jsx)("div", {
               className: _().PageListItem_Title,
               ..._,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
       const _ = _.forwardRef(function (_, _) {
         const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
           _ = _.useContext(_),
           _ = __webpack_require__?.padding ?? "standard";
-        return _.createElement(
-          _._,
-          {
-            style: _,
-            className: (0, _._)(
-              _?.PagedSettingsDialog_PageContent,
-              __webpack_require__?.pageClassName,
-              "none" == _ && _?.NoPadding,
-            ),
-            refElem: _,
-            role: "tabpanel",
-            "aria-labelledby": _ + __webpack_require__?.identifier,
-            _: _ + __webpack_require__?.identifier + "_Content",
-          },
-          __webpack_require__?.header,
-          !__webpack_require__?.hideTitle &&
-            _.createElement(_._, null, __webpack_require__?.title),
-          _.createElement(_._, null, __webpack_require__?.content),
-        );
+        return (0, _.jsxs)(_._, {
+          style: _,
+          className: (0, _._)(
+            _?.PagedSettingsDialog_PageContent,
+            __webpack_require__?.pageClassName,
+            "none" == _ && _?.NoPadding,
+          ),
+          refElem: _,
+          role: "tabpanel",
+          "aria-labelledby": _ + __webpack_require__?.identifier,
+          _: _ + __webpack_require__?.identifier + "_Content",
+          children: [
+            __webpack_require__?.header,
+            !__webpack_require__?.hideTitle &&
+              (0, _.jsx)(_._, {
+                children: __webpack_require__?.title,
+              }),
+            (0, _.jsx)(_._, {
+              children: __webpack_require__?.content,
+            }),
+          ],
+        });
       });
       function _(_) {
         const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(__webpack_require__, _().PageListSeparator, {
             [_().Transparent]: _,
           }),
@@ -27932,23 +27649,16 @@
               refForPage: _,
             };
           })();
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  __webpack_require__.PagedSettingsDialog,
-                  _.className,
-                ),
-                ref: _,
-              },
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                __webpack_require__.PagedSettingsDialog,
+                _.className,
+              ),
+              ref: _,
+              children: [
+                (0, _.jsxs)(_._, {
                   className: (0, _._)(
                     __webpack_require__.PagedSettingsDialog_PageListColumn,
                     _.hideList && _().Hidden,
@@ -27960,67 +27670,69 @@
                       _.current?.TakeFocus(_.detail.button);
                   },
                   onFocusWithin: _,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: __webpack_require__.PagedSettingsDialog_Title,
-                    },
-                    _.title,
-                  ),
-                _.topControls && _.createElement("div", null, _.topControls),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      __webpack_require__.PagedSettingsDialog_PageList,
-                      _.disablePageListScrolling &&
-                        __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
-                      _ &&
-                        __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
-                      _.bNoHeaderPadding &&
-                        __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
-                    ),
-                    role: "tablist",
-                    "aria-orientation": "vertical",
-                    navEntryPreferPosition: _._.PREFERRED_CHILD,
-                    ref: _,
-                  },
-                  _.createElement(_, {
-                    stylesheet: __webpack_require__,
-                    pages: _,
-                    iActivePage: _,
-                    onPageSelected: _,
-                    PageListItemComponent: _.PageListItemComponent,
-                    PageListSeparatorComponent: _.PageListSeparatorComponent,
-                  }),
-                ),
-                _.bottomControls &&
-                  _.createElement("div", null, _.bottomControls),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: [
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className:
+                          __webpack_require__.PagedSettingsDialog_Title,
+                        children: _.title,
+                      }),
+                    _.topControls &&
+                      (0, _.jsx)("div", {
+                        children: _.topControls,
+                      }),
+                    (0, _.jsx)(_._, {
+                      className: (0, _._)(
+                        __webpack_require__.PagedSettingsDialog_PageList,
+                        _.disablePageListScrolling &&
+                          __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
+                        _ &&
+                          __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
+                        _.bNoHeaderPadding &&
+                          __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
+                      ),
+                      role: "tablist",
+                      "aria-orientation": "vertical",
+                      navEntryPreferPosition: _._.PREFERRED_CHILD,
+                      ref: _,
+                      children: (0, _.jsx)(_, {
+                        stylesheet: __webpack_require__,
+                        pages: _,
+                        iActivePage: _,
+                        onPageSelected: _,
+                        PageListItemComponent: _.PageListItemComponent,
+                        PageListSeparatorComponent:
+                          _.PageListSeparatorComponent,
+                      }),
+                    }),
+                    _.bottomControls &&
+                      (0, _.jsx)("div", {
+                        children: _.bottomControls,
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
                   className: _,
                   onCancelButton: _,
                   navRef: _,
-                },
-                _.toggleHideList &&
-                  _.createElement(_, {
-                    hideList: _.hideList,
-                    toggleHideList: _.toggleHideList,
-                  }),
-                _.renderPageContent
-                  ? _.renderPageContent(_, _, _)
-                  : _.createElement(_, {
-                      ref: _,
-                      activePage: _,
-                      stylesheet: __webpack_require__,
-                    }),
-              ),
-            ),
-          );
+                  children: [
+                    _.toggleHideList &&
+                      (0, _.jsx)(_, {
+                        hideList: _.hideList,
+                        toggleHideList: _.toggleHideList,
+                      }),
+                    _.renderPageContent
+                      ? _.renderPageContent(_, _, _)
+                      : (0, _.jsx)(_, {
+                          ref: _,
+                          activePage: _,
+                          stylesheet: __webpack_require__,
+                        }),
+                  ],
+                }),
+              ],
+            }),
+          });
         });
       const _ = _.createContext(!1);
       _.memo(function (_) {
@@ -28040,12 +27752,9 @@
           : {
               display: "none",
             };
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_, {
             ref: __webpack_require__,
             style: _,
             activePage: _,
@@ -28054,24 +27763,21 @@
             "aria-labelledby": _ + _.identifier,
             _: _ + _.identifier + "_Content",
           }),
-        );
+        });
       });
       function _(_) {
         const { hideList: _, toggleHideList: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
-            onClick: __webpack_require__,
-          },
-          _
-            ? _.createElement(_.b8_, {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
+          onClick: __webpack_require__,
+          children: _
+            ? (0, _.jsx)(_.b8_, {
                 direction: "right",
               })
-            : _.createElement(_.b8_, {
+            : (0, _.jsx)(_.b8_, {
                 direction: "left",
               }),
-        );
+        });
       }
       class _ extends _.Component {
         m_refTextArea = _.createRef();
@@ -28158,7 +27864,7 @@
             nMaxHeight: _,
             ...__webpack_require__
           } = this.props;
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ...__webpack_require__,
             ref: this.m_refTextArea,
             onKeyUp: this.OnKeyUp,
@@ -28254,126 +27960,106 @@
             },
             [_],
           );
-        return _.createElement(
-          _._,
-          {
-            focusable: _,
-            noFocusRing: !0,
-            scrollIntoViewWhenChildFocused: !0,
-            onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
-            ref: _,
-            onMouseDown: _ ? void 0 : _,
-            ..._,
-            ..._,
-            navRef: _,
-            className: (0, _._)(
-              _,
-              _().Field,
-              _ && _().Disabled,
-              _ && _().WithFirstRow,
-              _ && _().WithChildrenInline,
-              _ && _().WithChildrenBelow,
-              "center" == _ && _().VerticalAlignCenter,
-              "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
-              !!_ && _().WithDescription,
-              "standard" == _ && _().WithBottomSeparatorStandard,
-              "thick" == _ && _().WithBottomSeparatorThick,
-              "fixed" == _ && _().ChildrenWidthFixed,
-              "max" == _ && _().ChildrenWidthGrow,
-              "standard" == _ && _().ExtraPaddingOnChildrenBelow,
-              "standard" == _ && _().StandardPadding,
-              "compact" == _ && _().CompactPadding,
-              _ && _().Clickable,
-              _ && _().HighlightOnFocus,
-            ),
-            style: {
-              "--indent-level": _,
-            },
+        return (0, _.jsxs)(_._, {
+          focusable: _,
+          noFocusRing: !0,
+          scrollIntoViewWhenChildFocused: !0,
+          onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
+          ref: _,
+          onMouseDown: _ ? void 0 : _,
+          ..._,
+          ..._,
+          navRef: _,
+          className: (0, _._)(
+            _,
+            _().Field,
+            _ && _().Disabled,
+            _ && _().WithFirstRow,
+            _ && _().WithChildrenInline,
+            _ && _().WithChildrenBelow,
+            "center" == _ && _().VerticalAlignCenter,
+            "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
+            !!_ && _().WithDescription,
+            "standard" == _ && _().WithBottomSeparatorStandard,
+            "thick" == _ && _().WithBottomSeparatorThick,
+            "fixed" == _ && _().ChildrenWidthFixed,
+            "max" == _ && _().ChildrenWidthGrow,
+            "standard" == _ && _().ExtraPaddingOnChildrenBelow,
+            "standard" == _ && _().StandardPadding,
+            "compact" == _ && _().CompactPadding,
+            _ && _().Clickable,
+            _ && _().HighlightOnFocus,
+          ),
+          style: {
+            "--indent-level": _,
           },
-          _ &&
-            _.createElement(
-              "div",
-              {
+          children: [
+            _ &&
+              (0, _.jsxs)("div", {
                 className: _().FieldLabelRow,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().FieldLabel,
-                  _: _(__webpack_require__),
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().FieldIcon, _().Front),
-                    },
-                    _,
-                  ),
-                _,
-                _ &&
-                  _.createElement(_._, {
-                    tooltip: _,
-                  }),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().FieldChildrenWithIcon,
-                  },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                      },
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().FieldLabel,
+                    _: _(__webpack_require__),
+                    children: [
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(_().FieldIcon, _().Front),
+                          children: _,
+                        }),
                       _,
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().FieldChildrenInner,
-                    },
-                    _,
-                  ),
-                ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          tooltip: _,
+                        }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsxs)("div", {
+                      className: _().FieldChildrenWithIcon,
+                      children: [
+                        _ &&
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _().FieldIcon,
+                              _().BeforeChildren,
+                            ),
+                            children: _,
+                          }),
+                        (0, _.jsx)("div", {
+                          className: _().FieldChildrenInner,
+                          children: _,
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            _ &&
+              (0, _.jsxs)("div", {
                 className: _().FieldChildrenWithIcon,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().FieldChildrenInner,
-                },
-                _,
-              ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_().FieldIcon, _().BeforeChildren),
+                      children: _,
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _().FieldChildrenInner,
+                    children: _,
+                  }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().FieldDescription,
                 _: _(__webpack_require__),
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       });
       _.forwardRef(function (_, _) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ref: _,
           accessibilityId: null,
           ..._,
@@ -28401,35 +28087,34 @@
           } = _,
           { refWithValue: _, refForElement: _ } = (0, _._)(_),
           _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            label: __webpack_require__,
-            indentLevel: _,
-            description: _,
-            icon: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenLayout: _ ?? "inline",
-            childrenContainerWidth: _ ?? "min",
-            onMouseDown: (_) => {
-              _.current?.focus(), _.preventDefault();
-            },
-            padding: _,
-            inlineWrap: _,
-            explainer: _,
-            className: _,
-            disabled: _,
-            onActivate: _ ? _ : void 0,
+        return (0, _.jsxs)(_, {
+          accessibilityId: _,
+          label: __webpack_require__,
+          indentLevel: _,
+          description: _,
+          icon: _,
+          bottomSeparator: _,
+          highlightOnFocus: _,
+          childrenLayout: _ ?? "inline",
+          childrenContainerWidth: _ ?? "min",
+          onMouseDown: (_) => {
+            _.current?.focus(), _.preventDefault();
           },
-          _.createElement(_, {
-            accessibilityId: _,
-            ..._,
-            ref: _,
-          }),
-          _,
-        );
+          padding: _,
+          inlineWrap: _,
+          explainer: _,
+          className: _,
+          disabled: _,
+          onActivate: _ ? _ : void 0,
+          children: [
+            (0, _.jsx)(_, {
+              accessibilityId: _,
+              ..._,
+              ref: _,
+            }),
+            _,
+          ],
+        });
       });
       const _ = _.forwardRef(function (_, _) {
           const {
@@ -28467,7 +28152,7 @@
                 _
               );
             })(__webpack_require__, _, _);
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
             ..._,
             disabled: _,
@@ -28486,27 +28171,24 @@
             } = _,
             { refWithValue: _, refForElement: _ } = (0, _._)(_),
             _ = _.useId();
-          return _.createElement(
-            _,
-            {
-              accessibilityId: _,
-              label: __webpack_require__,
-              description: _,
-              icon: _,
-              bottomSeparator: _,
-              highlightOnFocus: _,
-              childrenLayout: _ ?? "inline",
-              childrenContainerWidth: "fixed",
-              onMouseDown: (_) => {
-                _.current?.element?.focus(), _.preventDefault();
-              },
+          return (0, _.jsx)(_, {
+            accessibilityId: _,
+            label: __webpack_require__,
+            description: _,
+            icon: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenLayout: _ ?? "inline",
+            childrenContainerWidth: "fixed",
+            onMouseDown: (_) => {
+              _.current?.element?.focus(), _.preventDefault();
             },
-            _.createElement(_, {
+            children: (0, _.jsx)(_, {
               ..._(_, _),
               ..._,
               ref: _,
             }),
-          );
+          });
         });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -28523,24 +28205,21 @@
             sizeClass: _,
           } = _,
           _ = (0, _._)(_().TransitionGroup, _);
-        return _.createElement(
-          _._,
-          {
-            className: _,
-            appear: !1,
-            enter: _,
-            exit: _,
-          },
-          _.createElement(
+        return (0, _.jsx)(_._, {
+          className: _,
+          appear: !1,
+          enter: _,
+          exit: _,
+          children: (0, _.jsx)(
             _,
             {
-              key: _,
               childrenClasses: __webpack_require__,
               sizeClass: _,
+              children: _,
             },
             _,
           ),
-        );
+        });
       }
       function _(_) {
         const {
@@ -28609,35 +28288,26 @@
           };
         return _.current && !_.current.ownerDocument.defaultView
           ? null
-          : _.createElement(
-              _._,
-              {
-                nodeRef: _,
-                classNames: _,
-                _: !0,
-                timeout: 1e4,
-                addEndListener: _,
-                onEntering: _,
-                onExiting: _,
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
-                  ref: _,
-                  className: (0, _._)(_().ContentWrapper, _, _.base),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _,
-                    fnCanTakeFocus: _,
-                    navKey: _,
-                  },
-                  _.children,
-                ),
-              ),
-            );
+          : (0, _.jsx)(_._, {
+              nodeRef: _,
+              classNames: _,
+              _: !0,
+              timeout: 1e4,
+              addEndListener: _,
+              onEntering: _,
+              onExiting: _,
+              ..._,
+              children: (0, _.jsx)("div", {
+                ref: _,
+                className: (0, _._)(_().ContentWrapper, _.base),
+                children: (0, _.jsx)(_._, {
+                  className: _,
+                  fnCanTakeFocus: _,
+                  navKey: _,
+                  children: _.children,
+                }),
+              }),
+            });
       }
       function _(_, _) {
         return {
@@ -28663,36 +28333,29 @@
         const _ = _.useContext(_),
           _ = (0, _._)().IN_VR,
           { title: _, icon: _, active: _, ..._ } = _;
-        return _.createElement(
-          _._,
-          {
-            preferredFocus: _,
-            navRef: _ && _ ? _ : void 0,
-            noFocusRing: !0,
-            onActivate: _ ? void 0 : _.onClick,
-            onFocus: _ ? void 0 : _.onClick,
-            ..._,
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_._, {
+          preferredFocus: _,
+          navRef: _ && _ ? _ : void 0,
+          noFocusRing: !0,
+          onActivate: _ ? void 0 : _.onClick,
+          onFocus: _ ? void 0 : _.onClick,
+          ..._,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
                 className: _().PageListItem_Icon,
-              },
-              _,
-            ),
-          _.createElement(
-            "div",
-            {
+                children: _,
+              }),
+            (0, _.jsx)("div", {
               className: _().PageListItem_Title,
-            },
-            _,
-          ),
-        );
+              children: _,
+            }),
+          ],
+        });
       }
       function _(_) {
         const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(__webpack_require__, _().Separator),
           ..._,
         });
@@ -28708,12 +28371,9 @@
         _.useEffect(() => {
           (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
         }, [__webpack_require__, _]);
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_, {
             ..._,
             stylesheet: _(),
             showTitle: _,
@@ -28722,14 +28382,14 @@
             renderPageContent:
               _.renderPageContent ||
               ((_, _, _) =>
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   pages: _.pages,
                   activePage: _,
                   refForPage: _,
                   PageComponent: _,
                 })),
           }),
-        );
+        });
       });
       function _(_) {
         const {
@@ -28788,22 +28448,23 @@
                   ? _.Down
                   : "");
         var _, _;
-        return _.createElement(
-          _,
-          {
-            childrenKey: __webpack_require__?.identifier,
-            childrenClasses: _(_(), _().ContentTransition),
-            directionClass: _,
-            animate: _ != _.None,
-          },
-          __webpack_require__ &&
-            _.createElement(_, {
-              ref: _(__webpack_require__.identifier),
-              key: __webpack_require__.identifier,
-              stylesheet: _(),
-              activePage: __webpack_require__,
-            }),
-        );
+        return (0, _.jsx)(_, {
+          childrenKey: __webpack_require__?.identifier,
+          childrenClasses: _(_(), _().ContentTransition),
+          directionClass: _,
+          animate: _ != _.None,
+          children:
+            __webpack_require__ &&
+            (0, _.jsx)(
+              _,
+              {
+                ref: _(__webpack_require__.identifier),
+                stylesheet: _(),
+                activePage: __webpack_require__,
+              },
+              __webpack_require__.identifier,
+            ),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -28819,12 +28480,9 @@
           } = _,
           _ = _.useId(),
           _ = _.useId();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               _: _,
               className: (0, _._)(
                 _().DropDownControlButton,
@@ -28833,36 +28491,29 @@
               "aria-labelledby": _ || _,
               ..._,
               ref: _,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsxs)("div", {
                 className: _().DropDownControlButtonContents,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "DialogDropDown_CurrentDisplay",
-                },
-                _.children,
-              ),
-              _.createElement(_.u49, {
-                direction: "down",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "DialogDropDown_CurrentDisplay",
+                    children: _.children,
+                  }),
+                  (0, _.jsx)(_.u49, {
+                    direction: "down",
+                  }),
+                ],
               }),
-            ),
-          ),
-          _ &&
-            _.createElement(
-              "div",
-              {
+            }),
+            _ &&
+              (0, _.jsx)("div", {
                 _: _,
                 style: {
                   display: "none",
                 },
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
@@ -28873,34 +28524,28 @@
           _ = _.useCallback(() => {
             _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
           }, []);
-        return _.createElement(
-          _._,
-          {
-            className: __webpack_require__,
-            onOptionsButton: _,
-            onOptionsActionDescription: (0, _._)(
-              _ ? "#Login_HidePassword" : "#Login_ShowPassword",
-            ),
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          className: __webpack_require__,
+          onOptionsButton: _,
+          onOptionsActionDescription: (0, _._)(
+            _ ? "#Login_HidePassword" : "#Login_ShowPassword",
+          ),
+          children: (0, _.jsx)(_, {
             autoComplete: "off",
             ref: _,
-            inlineControls: _.createElement(
-              _._,
-              {
-                "aria-label": (0, _._)(
-                  _ ? "#Login_HidePassword" : "#Login_ShowPassword",
-                ),
-                className: _.TogglePasswordVisibilityBtn,
-                onPointerDown: _,
-                onOKButton: _,
-              },
-              _ ? _.createElement(_.rxV, null) : _.createElement(_.ZyV, null),
-            ),
+            inlineControls: (0, _.jsx)(_._, {
+              "aria-label": (0, _._)(
+                _ ? "#Login_HidePassword" : "#Login_ShowPassword",
+              ),
+              className: _.TogglePasswordVisibilityBtn,
+              onPointerDown: _,
+              onOKButton: _,
+              children: _ ? (0, _.jsx)(_.rxV, {}) : (0, _.jsx)(_.ZyV, {}),
+            }),
             ..._,
             type: _ ? "text" : "password",
           }),
-        );
+        });
       });
       _.forwardRef(function (_, _) {
         const {
@@ -28913,29 +28558,26 @@
             ..._
           } = _,
           _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            className: _,
-            label: __webpack_require__,
-            description: _,
-            icon: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenContainerWidth: "fixed",
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          accessibilityId: _,
+          className: _,
+          label: __webpack_require__,
+          description: _,
+          icon: _,
+          bottomSeparator: _,
+          highlightOnFocus: _,
+          childrenContainerWidth: "fixed",
+          children: (0, _.jsx)(_, {
             ..._(_, _),
             ..._,
             ref: _,
           }),
-        );
+        });
       });
       _.forwardRef(function (_, _) {
         const { className: __webpack_require__, value: _, ..._ } = _,
           _ = _ ?? "";
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           autoComplete: "off",
           value: _,
           ref: _,
@@ -28983,7 +28625,7 @@
             onExplicitFocusLevelChanged: __webpack_require__,
           }),
           _ = (0, _._)(_, _);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ..._,
           onOKButton: _,
           onCancelButton: _,
@@ -29011,7 +28653,7 @@
           }),
           _ = (0, _._)(_, _),
           _ = (0, _._)(_, _);
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ..._,
           onOKButton: (_) => _?.(_),
           onCancelButton: _,
@@ -29842,18 +29484,13 @@
         }
         OnContextMenu(_) {
           if (null != this.props.resetValue) {
-            const _ = _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  disabled: !this.CanResetToDefault,
-                  onSelected: this.ResetToDefault,
-                },
-                (0, _._)("#ResetToDefault"),
-              ),
-            );
+            const _ = (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                disabled: !this.CanResetToDefault,
+                onSelected: this.ResetToDefault,
+                children: (0, _._)("#ResetToDefault"),
+              }),
+            });
             (0, _._)(_, _);
           }
         }
@@ -29936,136 +29573,119 @@
                 "SliderHandleContainer",
               )));
           const _ = _(__webpack_require__);
-          return _.createElement(
-            _,
-            {
-              noFocusRing: !0,
-              className: (0, _._)(
-                _().SliderControlPanelGroup,
-                "SliderControlPanelGroup",
-                _,
-              ),
-              navRef: _,
-              onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
-              onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
-              onOKActionDescription: _
-                ? null
-                : (0, _._)("#Slider_AdjustSlider"),
-              focusable: _,
-              childFocusDisabled: _ || !_,
-              onContextMenu: this.OnContextMenu,
-              onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
-              onSecondaryButton: this.CanResetToDefault
-                ? this.ResetToDefault
-                : void 0,
-              onSecondaryActionDescription: this.CanResetToDefault
-                ? (0, _._)("#ResetToDefault")
-                : void 0,
-              actionDescriptionMap: _,
-              "aria-roledescription": (0, _._)("#Slider_Button"),
-              "aria-labelledby": _["aria-labelledby"],
-              "aria-label": _["aria-label"],
-            },
-            _.createElement(
-              _._,
-              {
-                role: "slider",
-                "aria-valuenow": __webpack_require__,
-                "aria-valuetext": _,
-                ..._,
-                className: (0, _._)(
-                  _().SliderControlAndNotches,
-                  _ && _().Disabled,
-                  _ && _().WithDefaultValue,
-                  _ && _ && _().DefaultValueIsColorRange,
-                  _ && _ && "left" == _.side && _().DefaultValueColorLeft,
-                  _ && _ && "left" != _.side && _().DefaultValueColorRight,
-                  !_ && _().ForegroundInvisible,
-                ),
-                focusable: this.isKeyNavTarget,
-                noFocusRing: !0,
-                onFocus: this.OnInnerSliderFocus,
-                onBlur: this.OnInnerSliderBlur,
-                style: {
-                  "--normalized-slider-value": this.normalizedClampedValue,
-                  "--normalized-slider-default-value": _,
-                  "--normalized-slider-origin": _,
-                  "--default-value-track-color": _
-                    ? _.trackForegroundColor
-                    : void 0,
-                  "--slider-extra-notch-padding": _ ?? "0px",
-                },
-                ref: (0, _._)(this.m_refSlider, _),
-                navRef: this.m_navRefSlider,
-                onGamepadDirection: this.OnGamepadDirection,
-                onOKButton: this.BlurInnerSlider,
-                onOKActionDescription: null,
-                onCancelButton: this.BlurInnerSlider,
-                onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SliderControl, "SliderControl"),
-                },
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().SliderTrack,
-                    null != _ && _ && _().SliderHasNotches,
-                    {
-                      [_().SliderTrackDark]: "dark" === _,
-                    },
-                    _,
-                    "SliderTrack",
-                  ),
-                  style: this.props.trackStyleOverride,
-                }),
-                _ &&
-                  _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DefaultValueTickContainer,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().DefaultValueTick,
-                      },
-                      _.createElement(_.u49, {
-                        direction: "down",
-                      }),
-                    ),
-                  ),
-                this.validRange &&
-                  null != __webpack_require__ &&
-                  !isNaN(__webpack_require__) &&
-                  this.showHandle &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _,
-                        ref: this.m_refHandle,
-                      },
-                      "leftparen" == _ && _.createElement(_.Epp, null),
-                      "rightparen" == _ && _.createElement(_.jvG, null),
-                    ),
-                  ),
-              ),
-              _.createElement(_, {
-                notchCount: _,
-                notchLabels: _,
-                sliderValue: this.normalizedClampedValue,
-                notchTicksVisible: _,
-                renderNotch: _,
-              }),
+          return (0, _.jsx)(_, {
+            noFocusRing: !0,
+            className: (0, _._)(
+              _().SliderControlPanelGroup,
+              "SliderControlPanelGroup",
+              _,
             ),
-          );
+            navRef: _,
+            onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
+            onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
+            onOKActionDescription: _ ? null : (0, _._)("#Slider_AdjustSlider"),
+            focusable: _,
+            childFocusDisabled: _ || !_,
+            onContextMenu: this.OnContextMenu,
+            onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
+            onSecondaryButton: this.CanResetToDefault
+              ? this.ResetToDefault
+              : void 0,
+            onSecondaryActionDescription: this.CanResetToDefault
+              ? (0, _._)("#ResetToDefault")
+              : void 0,
+            actionDescriptionMap: _,
+            "aria-roledescription": (0, _._)("#Slider_Button"),
+            "aria-labelledby": _["aria-labelledby"],
+            "aria-label": _["aria-label"],
+            children: (0, _.jsxs)(_._, {
+              role: "slider",
+              "aria-valuenow": __webpack_require__,
+              "aria-valuetext": _,
+              ..._,
+              className: (0, _._)(
+                _().SliderControlAndNotches,
+                _ && _().Disabled,
+                _ && _().WithDefaultValue,
+                _ && _ && _().DefaultValueIsColorRange,
+                _ && _ && "left" == _.side && _().DefaultValueColorLeft,
+                _ && _ && "left" != _.side && _().DefaultValueColorRight,
+                !_ && _().ForegroundInvisible,
+              ),
+              focusable: this.isKeyNavTarget,
+              noFocusRing: !0,
+              onFocus: this.OnInnerSliderFocus,
+              onBlur: this.OnInnerSliderBlur,
+              style: {
+                "--normalized-slider-value": this.normalizedClampedValue,
+                "--normalized-slider-default-value": _,
+                "--normalized-slider-origin": _,
+                "--default-value-track-color": _
+                  ? _.trackForegroundColor
+                  : void 0,
+                "--slider-extra-notch-padding": _ ?? "0px",
+              },
+              ref: (0, _._)(this.m_refSlider, _),
+              navRef: this.m_navRefSlider,
+              onGamepadDirection: this.OnGamepadDirection,
+              onOKButton: this.BlurInnerSlider,
+              onOKActionDescription: null,
+              onCancelButton: this.BlurInnerSlider,
+              onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().SliderControl, "SliderControl"),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().SliderTrack,
+                        null != _ && _ && _().SliderHasNotches,
+                        {
+                          [_().SliderTrackDark]: "dark" === _,
+                        },
+                        _,
+                        "SliderTrack",
+                      ),
+                      style: this.props.trackStyleOverride,
+                    }),
+                    _ &&
+                      _ &&
+                      (0, _.jsx)("div", {
+                        className: _().DefaultValueTickContainer,
+                        children: (0, _.jsx)("div", {
+                          className: _().DefaultValueTick,
+                          children: (0, _.jsx)(_.u49, {
+                            direction: "down",
+                          }),
+                        }),
+                      }),
+                    this.validRange &&
+                      null != __webpack_require__ &&
+                      !isNaN(__webpack_require__) &&
+                      this.showHandle &&
+                      (0, _.jsx)("div", {
+                        className: _,
+                        children: (0, _.jsxs)("div", {
+                          className: _,
+                          ref: this.m_refHandle,
+                          children: [
+                            "leftparen" == _ && (0, _.jsx)(_.Epp, {}),
+                            "rightparen" == _ && (0, _.jsx)(_.jvG, {}),
+                          ],
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  notchCount: _,
+                  notchLabels: _,
+                  sliderValue: this.normalizedClampedValue,
+                  notchTicksVisible: _,
+                  renderNotch: _,
+                }),
+              ],
+            }),
+          });
         }
       }
       function _(_) {
@@ -30084,24 +29704,24 @@
           let _ = _.find((_) => _.notchIndex == _);
           _ && (_ = !0),
             _.push(
-              _.createElement(_, {
-                key: _,
-                notchIndex: _,
-                sliderValue: _,
-                notchLabel: _,
-                notchCount: __webpack_require__,
-                notchTicksVisible: _,
-                renderNotch: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  notchIndex: _,
+                  sliderValue: _,
+                  notchLabel: _,
+                  notchCount: __webpack_require__,
+                  notchTicksVisible: _,
+                  renderNotch: _,
+                },
+                _,
+              ),
             );
         }
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().SliderNotchContainer),
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_().SliderNotchContainer),
+          children: _,
+        });
       }
       function _(_) {
         const _ = _.notchIndex <= (_.notchCount - 1) * _.sliderValue,
@@ -30114,17 +29734,14 @@
             alignRightEnd: _,
             active: _,
           };
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().SliderNotch, _ && _().AlignToEnds),
-          },
-          _.renderNotch
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().SliderNotch, _ && _().AlignToEnds),
+          children: _.renderNotch
             ? _.renderNotch(_)
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 ..._,
               }),
-        );
+        });
       }
       function _(_) {
         const {
@@ -30132,26 +29749,23 @@
           alignRightEnd: __webpack_require__,
           active: _,
         } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.notchTicksVisible &&
-            _.createElement("div", {
-              className: (0, _._)(_().SliderNotchTick, _ && _().TickActive),
-            }),
-          _.notchLabel &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.notchTicksVisible &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().SliderNotchTick, _ && _().TickActive),
+              }),
+            _.notchLabel &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().SliderNotchLabel,
                   _ && _().AlignToLeft,
                   __webpack_require__ && _().AlignToRight,
                 ),
-              },
-              _.notchLabel?.label,
-            ),
-        );
+                children: _.notchLabel?.label,
+              }),
+          ],
+        });
       }
       (0, _._)([_._], _.prototype, "RecomputeSliderBounds", null),
         (0, _._)([_._], _.prototype, "SetDragMode", null),
@@ -30189,25 +29803,19 @@
           ),
           _ = (0, _._)(_),
           _ = (0, _._)(_, _);
-        return _.createElement(
-          "div",
-          {
-            className: _().CompoundSliderSubSliderLabel,
-            ref: _,
-            onMouseDown: _,
-            onTouchStart: _,
-            style: {
-              transform: `translateX(${_}px)`,
-            },
+        return (0, _.jsx)("div", {
+          className: _().CompoundSliderSubSliderLabel,
+          ref: _,
+          onMouseDown: _,
+          onTouchStart: _,
+          style: {
+            transform: `translateX(${_}px)`,
           },
-          _.createElement(
-            "div",
-            {
-              className: _().CompoundSliderSubSliderLabelInternal,
-            },
-            __webpack_require__,
-          ),
-        );
+          children: (0, _.jsx)("div", {
+            className: _().CompoundSliderSubSliderLabelInternal,
+            children: __webpack_require__,
+          }),
+        });
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
@@ -30221,35 +29829,34 @@
           navRef: _,
           ..._
         } = _;
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            noFocusRing: !0,
-            className: (0, _._)(_, _().Toggle, {
-              [_().Disabled]: !!_,
-              [_()._]: !!__webpack_require__,
-            }),
-            onClick: () => {
-              if (!_ && _) {
-                const _ = !__webpack_require__;
-                _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
-              }
-            },
-            ref: _,
-            navRef: _,
-            focusable: _,
-            role: "checkbox",
-            "aria-checked": !!__webpack_require__,
+        return (0, _.jsxs)(_._, {
+          ..._,
+          noFocusRing: !0,
+          className: (0, _._)(_, _().Toggle, {
+            [_().Disabled]: !!_,
+            [_()._]: !!__webpack_require__,
+          }),
+          onClick: () => {
+            if (!_ && _) {
+              const _ = !__webpack_require__;
+              _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
+            }
           },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: _().ToggleSwitch,
-          }),
-          _,
-        );
+          ref: _,
+          navRef: _,
+          focusable: _,
+          role: "checkbox",
+          "aria-checked": !!__webpack_require__,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().ToggleRail,
+            }),
+            (0, _.jsx)("div", {
+              className: _().ToggleSwitch,
+            }),
+            _,
+          ],
+        });
       });
       function _(_) {
         const _ = !!_.disabled,
@@ -30257,28 +29864,25 @@
           _._)(_),
           _ = _.useId(),
           { "aria-expanded": _, "aria-controls": _ } = _;
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            className: _.className,
-            disabled: _,
-            label: _.label,
-            icon: _.icon,
-            description: _.description,
-            explainer: _.explainer,
-            explainerTitle: _.explainerTitle,
-            padding: _.padding,
-            bottomSeparator: _.bottomSeparator,
-            highlightOnFocus: _.highlightOnFocus,
-            inlineWrap: "keep-inline",
-            onContextMenu: _.onContextMenu,
-            actionDescriptionMap: __webpack_require__,
-            onClick: _.onClick,
-            indentLevel: _.indentLevel,
-            ..._,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_, {
+          accessibilityId: _,
+          className: _.className,
+          disabled: _,
+          label: _.label,
+          icon: _.icon,
+          description: _.description,
+          explainer: _.explainer,
+          explainerTitle: _.explainerTitle,
+          padding: _.padding,
+          bottomSeparator: _.bottomSeparator,
+          highlightOnFocus: _.highlightOnFocus,
+          inlineWrap: "keep-inline",
+          onContextMenu: _.onContextMenu,
+          actionDescriptionMap: __webpack_require__,
+          onClick: _.onClick,
+          indentLevel: _.indentLevel,
+          ..._,
+          children: (0, _.jsx)(_, {
             "aria-expanded": _,
             "aria-controls": _,
             ..._(_, _),
@@ -30287,14 +29891,14 @@
             disabled: _,
             navRef: _.navRef,
           }),
-        );
+        });
       }
       class _ extends _._ {
         OnToggleChange(_) {
           this.props.disabled || _ === this.checked || this.Toggle();
         }
         render() {
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             ...this.props,
             OnToggleChange: this.OnToggleChange,
             checked: this.checked,
@@ -30310,6 +29914,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -30360,50 +29965,43 @@
             strThrobber: _,
           } = __webpack_require__;
         return _ || _ || _
-          ? _.createElement(
-              _._,
-              {
+          ? (0, _.jsxs)(_._, {
+              strTitle: _,
+              bAlertDialog: !0,
+              closeModal: _,
+              className: _.SuccessErrorDialog,
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _.ErrorStylesWithIcon,
+                    children:
+                      _ || (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+                  }),
+                Boolean(_) && _,
+              ],
+            })
+          : _ || _ || _
+            ? (0, _.jsx)(_._, {
                 strTitle: _,
+                strDescription: _ || (0, _._)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
                 closeModal: _,
-                className: _.SucessErrorDialog,
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ErrorStylesWithIcon,
-                  },
-                  _ || (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-                ),
-              Boolean(_) && _,
-            )
-          : _ || _ || _
-            ? _.createElement(
-                _._,
-                {
-                  strTitle: _,
-                  strDescription: _ || (0, _._)("#EventDisplay_Share_Success"),
-                  bAlertDialog: !0,
-                  closeModal: _,
-                  className: _.SucessErrorDialog,
-                },
-                _.createElement(_.Fragment, null, Boolean(_) && _),
-              )
-            : _.createElement(
-                _._,
-                {
-                  strTitle: _,
-                  className: _.SucessErrorDialog,
-                  bProgressDialog: !0,
-                  closeModal: () => {},
-                },
-                _.createElement(_._, {
+                className: _.SuccessErrorDialog,
+                children: (0, _.jsx)(_.Fragment, {
+                  children: Boolean(_) && _,
+                }),
+              })
+            : (0, _.jsx)(_._, {
+                strTitle: _,
+                className: _.SuccessErrorDialog,
+                bProgressDialog: !0,
+                closeModal: () => {},
+                children: (0, _.jsx)(_._, {
                   string: _ || _ || (0, _._)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
-              );
+              });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -30418,32 +30016,31 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = (0, _._)("ToggleControl", _);
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
       function _(_) {
         const { value: _, onChange: __webpack_require__, disabled: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().Toggle, _ && _().Disabled),
-            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
-          },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: (0, _._)(
-              _().ToggleRail,
-              _().Highlight,
-              _ ? _()._ : _().Off,
-            ),
-          }),
-          _.createElement("div", {
-            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
-          }),
-        );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().Toggle, _ && _().Disabled),
+          onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          children: [
+            (0, _.jsx)("div", {
+              className: _().ToggleRail,
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().ToggleRail,
+                _().Highlight,
+                _ ? _()._ : _().Off,
+              ),
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -30454,16 +30051,15 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return function (_) {
-          return _.createElement(
-            _,
-            null,
-            _.createElement(_, {
+          return (0, _.jsx)(_, {
+            children: (0, _.jsx)(_, {
               ..._,
             }),
-          );
+          });
         };
       }
       class _ extends _.Component {
@@ -30519,13 +30115,13 @@
                 : _
               : _.sm_ErrorReportingStore &&
                   _.sm_ErrorReportingStore.reporting_enabled
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     error: _,
                     identifierHash: _,
                     store: _.sm_ErrorReportingStore,
                     onRefresh: this.Reset,
                   })
-                : _.createElement(_, {
+                : (0, _.jsx)(_, {
                     error: _,
                     onDismiss: this.Reset,
                   })
@@ -30537,26 +30133,29 @@
           let _ = _.error ? _.error.stack : "Stack missing",
             _ = _.info ? _.info.componentStack : "",
             _ = (_.error && _.error.message) || "unknown error";
-          return _.createElement(
-            _,
-            null,
-            _.createElement(_, null, 'Error: "', _, '"'),
-            "   ",
-            _.createElement(
-              "span",
-              {
+          return (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: ['Error: "', _, '"'],
+              }),
+              "   ",
+              (0, _.jsx)("span", {
                 style: {
                   textDecoration: "underline",
                   cursor: "pointer",
                 },
                 onClick: _,
-              },
-              "(x) Dismiss",
-            ),
-            _.createElement("br", null),
-            _.createElement(_, null, _),
-            _.createElement(_, null, "The error occurred while rendering:", _),
-          );
+                children: "(x) Dismiss",
+              }),
+              (0, _.jsx)("br", {}),
+              (0, _.jsx)(_, {
+                children: _,
+              }),
+              (0, _.jsxs)(_, {
+                children: ["The error occurred while rendering:", _],
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const {
@@ -30567,70 +30166,62 @@
             } = _,
             _ = (_.error && _.error.message) || "unknown error",
             _ = `${_.product}_${_.version}_${_}`;
-          return _.createElement(
-            _,
-            null,
-            _.createElement(
-              _,
-              null,
-              "Something went wrong while displaying this content. ",
-              _.createElement(
-                "span",
-                {
-                  style: {
-                    textDecoration: "underline",
-                    cursor: "pointer",
-                  },
-                  onClick: __webpack_require__,
-                },
-                "Refresh",
-              ),
-            ),
-            _.createElement(_, null, "Error Reference: ", _),
-            _.createElement(_, null, _),
-          );
+          return (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: [
+                  "Something went wrong while displaying this content. ",
+                  (0, _.jsx)("span", {
+                    style: {
+                      textDecoration: "underline",
+                      cursor: "pointer",
+                    },
+                    onClick: __webpack_require__,
+                    children: "Refresh",
+                  }),
+                ],
+              }),
+              (0, _.jsxs)(_, {
+                children: ["Error Reference: ", _],
+              }),
+              (0, _.jsx)(_, {
+                children: _,
+              }),
+            ],
+          });
         },
         _ = ({ children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              style: {
-                overflow: "auto",
-                marginLeft: "15px",
-                color: "white",
-                fontSize: "16px",
-                userSelect: "auto",
-                backgroundColor: "black",
-              },
-              className: "ErrorBoundary",
+          (0, _.jsx)("div", {
+            style: {
+              overflow: "auto",
+              marginLeft: "15px",
+              color: "white",
+              fontSize: "16px",
+              userSelect: "auto",
+              backgroundColor: "black",
             },
-            _,
-          ),
+            className: "ErrorBoundary",
+            children: _,
+          }),
         _ = ({ children: _ }) =>
-          _.createElement(
-            "h1",
-            {
-              style: {
-                fontSize: "20px",
-                display: "inline-block",
-                marginTop: "15px",
-                userSelect: "auto",
-              },
+          (0, _.jsx)("h1", {
+            style: {
+              fontSize: "20px",
+              display: "inline-block",
+              marginTop: "15px",
+              userSelect: "auto",
             },
-            _,
-          ),
+            children: _,
+          }),
         _ = ({ children: _ }) =>
-          _.createElement(
-            "pre",
-            {
-              style: {
-                marginTop: "15px",
-                opacity: 0.7,
-                userSelect: "auto",
-              },
+          (0, _.jsx)("pre", {
+            style: {
+              marginTop: "15px",
+              opacity: 0.7,
+              userSelect: "auto",
             },
-            _,
-          );
+            children: _,
+          });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -30769,163 +30360,169 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M33 20.38V15.62L29.07 14.9C28.8121 14.015 28.453 13.1628 28 12.36L30.27 9.08L26.92 5.71L23.64 8C22.8372 7.54696 21.985 7.18793 21.1 6.93L20.38 3H15.62L14.9 6.93C14.015 7.18793 13.1628 7.54696 12.36 8L9.08 5.71L5.71 9.08L8 12.36C7.54696 13.1628 7.18793 14.015 6.93 14.9L3 15.62V20.38L6.93 21.1C7.18793 21.985 7.54696 22.8372 8 23.64L5.71 26.92L9.08 30.29L12.36 28C13.1637 28.4461 14.0159 28.7984 14.9 29.05L15.62 33H20.38L21.1 29.07C21.985 28.8121 22.8372 28.453 23.64 28L26.92 30.27L30.29 26.9L28 23.64C28.4461 22.8363 28.7984 21.9841 29.05 21.1L33 20.38ZM18 23C17.0111 23 16.0444 22.7068 15.2221 22.1573C14.3999 21.6079 13.759 20.827 13.3806 19.9134C13.0022 18.9998 12.9031 17.9945 13.0961 17.0245C13.289 16.0546 13.7652 15.1637 14.4645 14.4645C15.1637 13.7652 16.0546 13.289 17.0245 13.0961C17.9945 12.9031 18.9998 13.0022 19.9134 13.3806C20.827 13.759 21.6079 14.3999 22.1573 15.2221C22.7068 16.0444 23 17.0111 23 18C23 18.6566 22.8707 19.3068 22.6194 19.9134C22.3681 20.52 21.9998 21.0712 21.5355 21.5355C21.0712 21.9998 20.52 22.3681 19.9134 22.6194C19.3068 22.8707 18.6566 23 18 23Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { none: _, partial: __webpack_require__, ..._ } = _;
         return _
-          ? _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+          ? (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M36 24.2C36 27.68 31 30 31 30L25 24H17.36L26.55 14.81C27.0058 14.9963 27.5066 15.0439 27.9893 14.9467C28.4721 14.8494 28.9154 14.6118 29.2636 14.2636C29.6118 13.9154 29.8494 13.4721 29.9466 12.9893C30.0438 12.5066 29.9963 12.0059 29.81 11.55L32.76 8.55002C33.39 10.79 36 20.12 36 24.2ZM33.56 3.56002L2.56 34.56L0.44 32.44L3.65 29.23C2.17 28.28 0 26.49 0 24.2C0 19.56 3.38 8.14002 3.38 8.14002C3.38 8.14002 7.5 4.00002 18 4.00002C21.2151 3.94797 24.4172 4.42085 27.48 5.40002L31.48 1.40002L33.56 3.56002ZM6 16H9V19H12V16H15V13H12V10H9V13H6V16Z",
                 fill: "currentColor",
               }),
-            )
+            })
           : __webpack_require__
-            ? _.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  version: "1.1",
-                  _: "Layer_1",
-                  _: "0px",
-                  _: "0px",
-                  viewBox: "0 0 36 36",
-                  ..._,
-                },
-                _.createElement("path", {
-                  fill: "currentColor",
-                  opacity: "0.5",
-                  _: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
-                }),
-                _.createElement("path", {
-                  fill: "currentColor",
-                  _: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
-                }),
-              )
-            : _.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  version: "1.1",
-                  _: "Layer_1",
-                  _: "0px",
-                  _: "0px",
-                  viewBox: "0 0 36 36",
-                  ..._,
-                },
-                _.createElement("path", {
+            ? (0, _.jsxs)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                version: "1.1",
+                _: "Layer_1",
+                _: "0px",
+                _: "0px",
+                viewBox: "0 0 36 36",
+                ..._,
+                children: [
+                  (0, _.jsx)("path", {
+                    fill: "currentColor",
+                    opacity: "0.5",
+                    _: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
+                  }),
+                  (0, _.jsx)("path", {
+                    fill: "currentColor",
+                    _: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
+                  }),
+                ],
+              })
+            : (0, _.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                version: "1.1",
+                _: "Layer_1",
+                _: "0px",
+                _: "0px",
+                viewBox: "0 0 36 36",
+                ..._,
+                children: (0, _.jsx)("path", {
                   fill: "currentColor",
                   _: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H12.9c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1c-0.4,0.3-0.8,0.7-1.1,1  C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2c1.7-0.6,14.1-0.6,15.8,0  c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2  s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1  c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z M27.6,8.7c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4  S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4  s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4  C31.5,13.4,30.9,14.1,30.1,14.1z",
                 }),
-              );
+              });
       }
       function _(_) {
         const { type: _, partial: __webpack_require__, ..._ } = _,
           [_, _] = (0, _._)();
         return "triton" == _
-          ? _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement(
-                "g",
-                {
+          ? (0, _.jsxs)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: [
+                (0, _.jsx)("g", {
                   clipPath: _,
-                },
-                _.createElement("path", {
-                  fill: "currentColor",
-                  _: "M34.5489 14.8979C34.0471 13.107 33.4146 11.3703 32.6633 9.69886C31.5496 7.22244 29.0787 5.63623 26.3628 5.63623H9.539C6.82361 5.63623 4.35214 7.22244 3.23897 9.69886C2.48764 11.3703 1.85526 13.107 1.35345 14.8979C0.452174 18.1113 -0.0302734 21.4994 -0.0302734 25.0005C-0.0302734 25.6495 -0.0136754 26.2952 0.0189672 26.9359C0.121874 28.9492 1.77614 30.5332 3.79169 30.5332C5.15659 30.5332 6.41639 29.7979 7.0836 28.6073C7.09136 28.5929 7.09967 28.5791 7.10742 28.5647C7.86815 27.2191 9.29118 26.3837 10.837 26.3837H25.0637C26.6095 26.3837 28.0325 27.2191 28.7932 28.5647C28.801 28.5785 28.8092 28.5929 28.817 28.6067C29.4843 29.7974 30.744 30.5327 32.1089 30.5327C34.1251 30.5327 35.7788 28.9492 35.8817 26.9353C35.9143 26.294 35.9309 25.649 35.9309 25C35.9309 21.4989 35.4485 18.1107 34.5477 14.8973L34.5489 14.8979ZM25.2634 8.40256C26.0274 8.40256 26.6466 9.02167 26.6466 9.78573C26.6466 10.5498 26.0274 11.1689 25.2634 11.1689C24.4993 11.1689 23.8802 10.5498 23.8802 9.78573C23.8802 9.02167 24.4993 8.40256 25.2634 8.40256ZM26.6466 15.3184C26.6466 16.0825 26.0274 16.7016 25.2634 16.7016C24.4993 16.7016 23.8802 16.0825 23.8802 15.3184C23.8802 14.5544 24.4993 13.9352 25.2634 13.9352C26.0274 13.9352 26.6466 14.5544 26.6466 15.3184ZM10.6383 9.78573C12.1659 9.78573 13.4047 11.0245 13.4047 12.552C13.4047 14.0796 12.1659 15.3184 10.6383 15.3184C9.11076 15.3184 7.87203 14.0796 7.87203 12.552C7.87203 11.0245 9.11076 9.78573 10.6383 9.78573ZM13.6913 19.262L13.0506 23.3059C12.9886 23.6982 12.6202 23.9659 12.2279 23.904L8.18409 23.2633C7.79179 23.2013 7.52403 22.8328 7.58597 22.4406L8.2267 18.3968C8.28864 18.0045 8.65712 17.7367 9.04936 17.7987L13.0932 18.4394C13.4855 18.5013 13.7532 18.8698 13.6913 19.262ZM21.1139 12.552C21.1139 11.788 21.733 11.1689 22.4971 11.1689C23.2611 11.1689 23.8802 11.788 23.8802 12.552C23.8802 13.3161 23.2611 13.9352 22.4971 13.9352C21.733 13.9352 21.1139 13.3161 21.1139 12.552ZM27.7177 23.2633L23.6738 23.904C23.2816 23.9659 22.9131 23.6987 22.8511 23.3059L22.2105 19.262C22.1485 18.8698 22.4157 18.5013 22.8086 18.4394L26.8524 17.7987C27.2446 17.7367 27.6131 18.0045 27.6751 18.3968L28.3158 22.4406C28.3777 22.8328 28.11 23.2013 27.7177 23.2633ZM28.0297 13.9352C27.2657 13.9352 26.6466 13.3161 26.6466 12.552C26.6466 11.788 27.2657 11.1689 28.0297 11.1689C28.7938 11.1689 29.4129 11.788 29.4129 12.552C29.4129 13.3161 28.7938 13.9352 28.0297 13.9352Z",
+                  children: (0, _.jsx)("path", {
+                    fill: "currentColor",
+                    _: "M34.5489 14.8979C34.0471 13.107 33.4146 11.3703 32.6633 9.69886C31.5496 7.22244 29.0787 5.63623 26.3628 5.63623H9.539C6.82361 5.63623 4.35214 7.22244 3.23897 9.69886C2.48764 11.3703 1.85526 13.107 1.35345 14.8979C0.452174 18.1113 -0.0302734 21.4994 -0.0302734 25.0005C-0.0302734 25.6495 -0.0136754 26.2952 0.0189672 26.9359C0.121874 28.9492 1.77614 30.5332 3.79169 30.5332C5.15659 30.5332 6.41639 29.7979 7.0836 28.6073C7.09136 28.5929 7.09967 28.5791 7.10742 28.5647C7.86815 27.2191 9.29118 26.3837 10.837 26.3837H25.0637C26.6095 26.3837 28.0325 27.2191 28.7932 28.5647C28.801 28.5785 28.8092 28.5929 28.817 28.6067C29.4843 29.7974 30.744 30.5327 32.1089 30.5327C34.1251 30.5327 35.7788 28.9492 35.8817 26.9353C35.9143 26.294 35.9309 25.649 35.9309 25C35.9309 21.4989 35.4485 18.1107 34.5477 14.8973L34.5489 14.8979ZM25.2634 8.40256C26.0274 8.40256 26.6466 9.02167 26.6466 9.78573C26.6466 10.5498 26.0274 11.1689 25.2634 11.1689C24.4993 11.1689 23.8802 10.5498 23.8802 9.78573C23.8802 9.02167 24.4993 8.40256 25.2634 8.40256ZM26.6466 15.3184C26.6466 16.0825 26.0274 16.7016 25.2634 16.7016C24.4993 16.7016 23.8802 16.0825 23.8802 15.3184C23.8802 14.5544 24.4993 13.9352 25.2634 13.9352C26.0274 13.9352 26.6466 14.5544 26.6466 15.3184ZM10.6383 9.78573C12.1659 9.78573 13.4047 11.0245 13.4047 12.552C13.4047 14.0796 12.1659 15.3184 10.6383 15.3184C9.11076 15.3184 7.87203 14.0796 7.87203 12.552C7.87203 11.0245 9.11076 9.78573 10.6383 9.78573ZM13.6913 19.262L13.0506 23.3059C12.9886 23.6982 12.6202 23.9659 12.2279 23.904L8.18409 23.2633C7.79179 23.2013 7.52403 22.8328 7.58597 22.4406L8.2267 18.3968C8.28864 18.0045 8.65712 17.7367 9.04936 17.7987L13.0932 18.4394C13.4855 18.5013 13.7532 18.8698 13.6913 19.262ZM21.1139 12.552C21.1139 11.788 21.733 11.1689 22.4971 11.1689C23.2611 11.1689 23.8802 11.788 23.8802 12.552C23.8802 13.3161 23.2611 13.9352 22.4971 13.9352C21.733 13.9352 21.1139 13.3161 21.1139 12.552ZM27.7177 23.2633L23.6738 23.904C23.2816 23.9659 22.9131 23.6987 22.8511 23.3059L22.2105 19.262C22.1485 18.8698 22.4157 18.5013 22.8086 18.4394L26.8524 17.7987C27.2446 17.7367 27.6131 18.0045 27.6751 18.3968L28.3158 22.4406C28.3777 22.8328 28.11 23.2013 27.7177 23.2633ZM28.0297 13.9352C27.2657 13.9352 26.6466 13.3161 26.6466 12.552C26.6466 11.788 27.2657 11.1689 28.0297 11.1689C28.7938 11.1689 29.4129 11.788 29.4129 12.552C29.4129 13.3161 28.7938 13.9352 28.0297 13.9352Z",
+                  }),
                 }),
-              ),
-              _.createElement(
-                "defs",
-                null,
-                _.createElement(
-                  "clipPath",
-                  {
+                (0, _.jsx)("defs", {
+                  children: (0, _.jsx)("clipPath", {
                     _: _,
-                  },
-                  _.createElement("rect", {
-                    fill: "currentColor",
-                    width: "36",
-                    height: "36",
-                  }),
-                ),
-              ),
-            )
-          : "steam" == _
-            ? _.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ..._,
-                },
-                _.createElement(
-                  "g",
-                  {
-                    clipPath: _,
-                  },
-                  _.createElement("path", {
-                    fill: "currentColor",
-                    _: "M5.625 31.0429C0.0351562 31.0429 0.0351562 24.75 0.0351562 24.75C0.0351562 23.2708 0.691018 18.9574 1.67867 14.9078C2.09604 21.229 4.23237 26.4107 7.46967 30.1342C6.94663 30.6907 6.34611 31.0429 5.625 31.0429Z",
-                  }),
-                  _.createElement("path", {
-                    fill: "currentColor",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M8.16687 29.2194C4.59849 25.0137 2.43205 18.8213 2.76162 11.0707C3.47054 8.93505 4.26138 7.27235 5.0625 6.76752C8.1706 5.06632 27.6869 4.8903 31.0078 6.76752C31.7909 7.26099 32.5642 8.86083 33.2607 10.9273C33.6225 18.7277 31.4618 24.9603 27.8856 29.1914C27.4035 28.4325 26.984 27.5272 26.5768 26.6483C25.7189 24.7967 24.9154 23.0625 23.6953 23.0625H12.375C11.1549 23.0625 10.3514 24.7967 9.49349 26.6483C9.08125 27.538 8.65647 28.4548 8.16687 29.2194ZM18 12.9375C18.7766 12.9375 19.4062 12.3079 19.4062 11.5312C19.4062 10.7546 18.7766 10.125 18 10.125C17.2234 10.125 16.5938 10.7546 16.5938 11.5312C16.5938 12.3079 17.2234 12.9375 18 12.9375ZM22.5 15.75C22.5 16.3713 21.9963 16.875 21.375 16.875C20.7537 16.875 20.25 16.3713 20.25 15.75C20.25 15.1286 20.7537 14.625 21.375 14.625C21.9963 14.625 22.5 15.1286 22.5 15.75ZM15.75 18.8437C15.75 19.931 14.8686 20.8125 13.7812 20.8125C12.6939 20.8125 11.8125 19.931 11.8125 18.8437C11.8125 17.7564 12.6939 16.875 13.7812 16.875C14.8686 16.875 15.75 17.7564 15.75 18.8437ZM24.75 18C24.75 18.6213 24.2463 19.125 23.625 19.125C23.0037 19.125 22.5 18.6213 22.5 18C22.5 17.3786 23.0037 16.875 23.625 16.875C24.2463 16.875 24.75 17.3786 24.75 18ZM21.375 21.375C21.9963 21.375 22.5 20.8713 22.5 20.25C22.5 19.6286 21.9963 19.125 21.375 19.125C20.7537 19.125 20.25 19.6286 20.25 20.25C20.25 20.8713 20.7537 21.375 21.375 21.375ZM20.25 18C20.25 18.6213 19.7463 19.125 19.125 19.125C18.5037 19.125 18 18.6213 18 18C18 17.3786 18.5037 16.875 19.125 16.875C19.7463 16.875 20.25 17.3786 20.25 18ZM13.5 12.375C13.5 14.8602 11.4853 16.875 9 16.875C6.51472 16.875 4.5 14.8602 4.5 12.375C4.5 9.88969 6.51472 7.87497 9 7.87497C11.4853 7.87497 13.5 9.88969 13.5 12.375ZM27 16.875C29.4853 16.875 31.5 14.8602 31.5 12.375C31.5 9.88969 29.4853 7.87497 27 7.87497C24.5147 7.87497 22.5 9.88969 22.5 12.375C22.5 14.8602 24.5147 16.875 27 16.875Z",
-                  }),
-                  _.createElement("path", {
-                    fill: "currentColor",
-                    _: "M28.5791 30.1112C29.1072 30.6809 29.7143 31.0429 30.4453 31.0429C36.0352 31.0429 36.0352 24.75 36.0352 24.75C36.0352 23.2544 35.3647 18.8614 34.3587 14.7732C33.9637 21.1424 31.8281 26.3629 28.5791 30.1112Z",
-                  }),
-                ),
-                _.createElement(
-                  "defs",
-                  null,
-                  _.createElement(
-                    "clipPath",
-                    {
-                      _: _,
-                    },
-                    _.createElement("rect", {
+                    children: (0, _.jsx)("rect", {
                       fill: "currentColor",
                       width: "36",
                       height: "36",
                     }),
-                  ),
-                ),
-              )
+                  }),
+                }),
+              ],
+            })
+          : "steam" == _
+            ? (0, _.jsxs)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ..._,
+                children: [
+                  (0, _.jsxs)("g", {
+                    clipPath: _,
+                    children: [
+                      (0, _.jsx)("path", {
+                        fill: "currentColor",
+                        _: "M5.625 31.0429C0.0351562 31.0429 0.0351562 24.75 0.0351562 24.75C0.0351562 23.2708 0.691018 18.9574 1.67867 14.9078C2.09604 21.229 4.23237 26.4107 7.46967 30.1342C6.94663 30.6907 6.34611 31.0429 5.625 31.0429Z",
+                      }),
+                      (0, _.jsx)("path", {
+                        fill: "currentColor",
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M8.16687 29.2194C4.59849 25.0137 2.43205 18.8213 2.76162 11.0707C3.47054 8.93505 4.26138 7.27235 5.0625 6.76752C8.1706 5.06632 27.6869 4.8903 31.0078 6.76752C31.7909 7.26099 32.5642 8.86083 33.2607 10.9273C33.6225 18.7277 31.4618 24.9603 27.8856 29.1914C27.4035 28.4325 26.984 27.5272 26.5768 26.6483C25.7189 24.7967 24.9154 23.0625 23.6953 23.0625H12.375C11.1549 23.0625 10.3514 24.7967 9.49349 26.6483C9.08125 27.538 8.65647 28.4548 8.16687 29.2194ZM18 12.9375C18.7766 12.9375 19.4062 12.3079 19.4062 11.5312C19.4062 10.7546 18.7766 10.125 18 10.125C17.2234 10.125 16.5938 10.7546 16.5938 11.5312C16.5938 12.3079 17.2234 12.9375 18 12.9375ZM22.5 15.75C22.5 16.3713 21.9963 16.875 21.375 16.875C20.7537 16.875 20.25 16.3713 20.25 15.75C20.25 15.1286 20.7537 14.625 21.375 14.625C21.9963 14.625 22.5 15.1286 22.5 15.75ZM15.75 18.8437C15.75 19.931 14.8686 20.8125 13.7812 20.8125C12.6939 20.8125 11.8125 19.931 11.8125 18.8437C11.8125 17.7564 12.6939 16.875 13.7812 16.875C14.8686 16.875 15.75 17.7564 15.75 18.8437ZM24.75 18C24.75 18.6213 24.2463 19.125 23.625 19.125C23.0037 19.125 22.5 18.6213 22.5 18C22.5 17.3786 23.0037 16.875 23.625 16.875C24.2463 16.875 24.75 17.3786 24.75 18ZM21.375 21.375C21.9963 21.375 22.5 20.8713 22.5 20.25C22.5 19.6286 21.9963 19.125 21.375 19.125C20.7537 19.125 20.25 19.6286 20.25 20.25C20.25 20.8713 20.7537 21.375 21.375 21.375ZM20.25 18C20.25 18.6213 19.7463 19.125 19.125 19.125C18.5037 19.125 18 18.6213 18 18C18 17.3786 18.5037 16.875 19.125 16.875C19.7463 16.875 20.25 17.3786 20.25 18ZM13.5 12.375C13.5 14.8602 11.4853 16.875 9 16.875C6.51472 16.875 4.5 14.8602 4.5 12.375C4.5 9.88969 6.51472 7.87497 9 7.87497C11.4853 7.87497 13.5 9.88969 13.5 12.375ZM27 16.875C29.4853 16.875 31.5 14.8602 31.5 12.375C31.5 9.88969 29.4853 7.87497 27 7.87497C24.5147 7.87497 22.5 9.88969 22.5 12.375C22.5 14.8602 24.5147 16.875 27 16.875Z",
+                      }),
+                      (0, _.jsx)("path", {
+                        fill: "currentColor",
+                        _: "M28.5791 30.1112C29.1072 30.6809 29.7143 31.0429 30.4453 31.0429C36.0352 31.0429 36.0352 24.75 36.0352 24.75C36.0352 23.2544 35.3647 18.8614 34.3587 14.7732C33.9637 21.1424 31.8281 26.3629 28.5791 30.1112Z",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("defs", {
+                    children: (0, _.jsx)("clipPath", {
+                      _: _,
+                      children: (0, _.jsx)("rect", {
+                        fill: "currentColor",
+                        width: "36",
+                        height: "36",
+                      }),
+                    }),
+                  }),
+                ],
+              })
             : "xbox" == _
               ? __webpack_require__
-                ? _.createElement(
-                    "svg",
-                    {
+                ? (0, _.jsxs)("svg", {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    version: "1.1",
+                    _: "Layer_1",
+                    _: "0px",
+                    _: "0px",
+                    viewBox: "0 0 36 36",
+                    ..._,
+                    children: [
+                      (0, _.jsx)("path", {
+                        fill: "currentColor",
+                        opacity: "0.5",
+                        _: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
+                      }),
+                      (0, _.jsx)("path", {
+                        fill: "currentColor",
+                        _: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)("svg", {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 36 36",
+                    fill: "none",
+                    ..._,
+                    children: (0, _.jsx)("path", {
+                      fill: "currentColor",
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      _: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
+                    }),
+                  })
+              : "ps4" == _
+                ? __webpack_require__
+                  ? (0, _.jsxs)("svg", {
                       xmlns: "http://www.w3.org/2000/svg",
                       version: "1.1",
                       _: "Layer_1",
@@ -30933,37 +30530,69 @@
                       _: "0px",
                       viewBox: "0 0 36 36",
                       ..._,
-                    },
-                    _.createElement("path", {
-                      fill: "currentColor",
-                      opacity: "0.5",
-                      _: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
-                    }),
-                    _.createElement("path", {
-                      fill: "currentColor",
-                      _: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
-                    }),
-                  )
-                : _.createElement(
-                    "svg",
-                    {
+                      children: [
+                        (0, _.jsx)("path", {
+                          fill: "currentColor",
+                          opacity: "0.5",
+                          _: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
+                        }),
+                        (0, _.jsx)("path", {
+                          fill: "currentColor",
+                          _: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
+                        }),
+                        (0, _.jsx)("rect", {
+                          fill: "currentColor",
+                          opacity: "0.5",
+                          _: "12.9",
+                          _: "8",
+                          width: "5.1",
+                          height: "4.5",
+                        }),
+                        (0, _.jsx)("rect", {
+                          fill: "currentColor",
+                          _: "18",
+                          _: "8",
+                          width: "5.1",
+                          height: "4.5",
+                        }),
+                      ],
+                    })
+                  : (0, _.jsxs)("svg", {
                       xmlns: "http://www.w3.org/2000/svg",
                       viewBox: "0 0 36 36",
                       fill: "none",
                       ..._,
-                    },
-                    _.createElement("path", {
-                      fill: "currentColor",
-                      fillRule: "evenodd",
-                      clipRule: "evenodd",
-                      _: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
-                    }),
-                  )
-              : "ps4" == _
-                ? __webpack_require__
-                  ? _.createElement(
-                      "svg",
-                      {
+                      children: [
+                        (0, _.jsxs)("g", {
+                          clipPath: _,
+                          children: [
+                            (0, _.jsx)("path", {
+                              fill: "currentColor",
+                              fillRule: "evenodd",
+                              clipRule: "evenodd",
+                              _: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
+                            }),
+                            (0, _.jsx)("path", {
+                              fill: "currentColor",
+                              _: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)("defs", {
+                          children: (0, _.jsx)("clipPath", {
+                            _: _,
+                            children: (0, _.jsx)("rect", {
+                              fill: "currentColor",
+                              width: "36",
+                              height: "36",
+                            }),
+                          }),
+                        }),
+                      ],
+                    })
+                : "ps5" == _
+                  ? __webpack_require__
+                    ? (0, _.jsxs)("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
                         version: "1.1",
                         _: "Layer_1",
@@ -30971,302 +30600,190 @@
                         _: "0px",
                         viewBox: "0 0 36 36",
                         ..._,
-                      },
-                      _.createElement("path", {
-                        fill: "currentColor",
-                        opacity: "0.5",
-                        _: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
-                      }),
-                      _.createElement("path", {
-                        fill: "currentColor",
-                        _: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
-                      }),
-                      _.createElement("rect", {
-                        fill: "currentColor",
-                        opacity: "0.5",
-                        _: "12.9",
-                        _: "8",
-                        width: "5.1",
-                        height: "4.5",
-                      }),
-                      _.createElement("rect", {
-                        fill: "currentColor",
-                        _: "18",
-                        _: "8",
-                        width: "5.1",
-                        height: "4.5",
-                      }),
-                    )
-                  : _.createElement(
-                      "svg",
-                      {
+                        children: [
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            opacity: "0.5",
+                            _: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            _: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            opacity: "0.5",
+                            _: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            opacity: "0.5",
+                            _: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            _: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            _: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
+                          }),
+                        ],
+                      })
+                    : (0, _.jsxs)("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
                         viewBox: "0 0 36 36",
                         fill: "none",
                         ..._,
-                      },
-                      _.createElement(
-                        "g",
-                        {
-                          clipPath: _,
-                        },
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          fillRule: "evenodd",
-                          clipRule: "evenodd",
-                          _: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          _: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
-                        }),
-                      ),
-                      _.createElement(
-                        "defs",
-                        null,
-                        _.createElement(
-                          "clipPath",
-                          {
-                            _: _,
-                          },
-                          _.createElement("rect", {
+                        children: [
+                          (0, _.jsx)("path", {
                             fill: "currentColor",
-                            width: "36",
-                            height: "36",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            _: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
                           }),
-                        ),
-                      ),
-                    )
-                : "ps5" == _
-                  ? __webpack_require__
-                    ? _.createElement(
-                        "svg",
-                        {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          version: "1.1",
-                          _: "Layer_1",
-                          _: "0px",
-                          _: "0px",
-                          viewBox: "0 0 36 36",
-                          ..._,
-                        },
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          opacity: "0.5",
-                          _: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          _: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          opacity: "0.5",
-                          _: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          opacity: "0.5",
-                          _: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          _: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          _: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
-                        }),
-                      )
-                    : _.createElement(
-                        "svg",
-                        {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          viewBox: "0 0 36 36",
-                          fill: "none",
-                          ..._,
-                        },
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          fillRule: "evenodd",
-                          clipRule: "evenodd",
-                          _: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          _: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          fillRule: "evenodd",
-                          clipRule: "evenodd",
-                          _: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          fillRule: "evenodd",
-                          clipRule: "evenodd",
-                          _: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
-                        }),
-                      )
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            _: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            _: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            _: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
+                          }),
+                        ],
+                      })
                   : "switchpro" == _
-                    ? _.createElement(
-                        "svg",
-                        {
+                    ? (0, _.jsxs)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 36 36",
+                        fill: "none",
+                        ..._,
+                        children: [
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            _: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            _: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
+                          }),
+                          (0, _.jsx)("path", {
+                            fill: "currentColor",
+                            _: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
+                          }),
+                        ],
+                      })
+                    : "hori" == _
+                      ? (0, _.jsx)("svg", {
                           xmlns: "http://www.w3.org/2000/svg",
-                          viewBox: "0 0 36 36",
+                          viewBox: "0 0 279 190",
                           fill: "none",
                           ..._,
-                        },
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          _: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          fillRule: "evenodd",
-                          clipRule: "evenodd",
-                          _: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
-                        }),
-                        _.createElement("path", {
-                          fill: "currentColor",
-                          _: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
-                        }),
-                      )
-                    : "hori" == _
-                      ? _.createElement(
-                          "svg",
-                          {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            viewBox: "0 0 279 190",
-                            fill: "none",
-                            ..._,
-                          },
-                          _.createElement("path", {
+                          children: (0, _.jsx)("path", {
                             fill: "currentColor",
                             _: "M276.557 118.966L276.377 117.587C276.377 117.575 274.727 107.206 273.807 102.575C269.077 78.747 262.957 53.718 255.596 28.199C255.448 27.679 255.207 27.26 255.037 26.988C254.957 26.869 254.867 26.759 254.766 26.658C254.766 26.658 249.118 21.029 248.778 20.67C248.038 19.889 247.266 19.08 246.438 18.549C246.297 18.459 245.557 18.139 245.288 18.01C244.495 17.629 243.956 17.379 243.556 17.209C243.546 17.17 243.536 17.129 243.527 17.09C243.496 17.01 243.476 16.94 243.447 16.86C243.426 16.819 243.406 16.78 243.386 16.751C242.585 15.05 241.675 13.36 240.796 11.72L240.505 11.159C240.386 10.94 240.263 10.751 240.073 10.591C239.891 10.402 239.675 10.28 239.565 10.21C239.545 10.2 239.276 10.03 239.165 9.98C233.625 7.511 222.858 3.701 222.846 3.701C219.718 2.41 216.278 1.191 212.038 -0.149C210.688 -0.579 208.877 -1.079 206.926 -1.079C206.127 -1.079 205.346 -0.989 204.617 -0.819C202.926 -1.13 201.287 -1.409 199.717 -1.639C199.688 -1.649 197.457 -1.94 197.197 -1.969C197.047 -1.998 196.916 -1.998 196.787 -1.998C196.057 -1.998 195.346 -1.719 194.807 -1.219C194.647 -1.1 194.516 -0.949 194.397 -0.78C194.137 -0.44 192.708 1.441 191.688 2.762C177.307 1.89 161.506 1.431 142.077 1.332C142.067 1.332 126.397 1.41 126.097 1.41C126.097 1.41 106.898 1.832 98.2062 2.192C96.7762 2.262 95.4972 2.311 94.2672 2.362C91.9492 2.442 89.7382 2.522 87.0972 2.741C86.2072 1.568 85.1272 0.138 84.3972 -0.842C84.2972 -0.981 84.1762 -1.102 84.0472 -1.201C83.5862 -1.592 82.8462 -2 81.7762 -2C81.1862 -2 80.6712 -1.873 80.2082 -1.791C79.9482 -1.744 75.8272 -1.121 74.1872 -0.82C73.4472 -0.99 72.6672 -1.08 71.8472 -1.08C70.7772 -1.08 69.6172 -0.932 68.4272 -0.631C68.3982 -0.621 68.3662 -0.621 68.3372 -0.611C64.0462 0.649 59.8762 2.1 55.9682 3.69C55.9472 3.7 55.9272 3.71 55.9072 3.719C50.6372 5.408 45.1672 7.51 39.6372 9.979C39.3262 10.12 39.0262 10.35 38.8262 10.629L38.7172 10.779C38.7172 10.779 38.4242 11.22 38.2662 11.439C36.8362 13.548 35.8972 15.429 35.4162 17.148C34.9962 17.308 34.4262 17.58 33.5252 18.009C33.2552 18.138 32.7962 18.339 32.7752 18.349C32.0862 18.599 31.5152 19.148 30.6562 20.038C30.5062 20.188 30.4062 20.308 30.3362 20.368C30.3162 20.388 28.7562 21.948 28.7562 21.948C28.0572 22.657 26.4672 24.237 26.4362 24.268C26.2172 24.508 25.8872 24.817 25.5462 25.147C24.8362 25.829 24.1162 26.518 23.6062 27.249C23.5462 27.339 23.4972 27.429 23.4472 27.519C23.4072 27.619 23.3562 27.738 23.3272 27.839C22.5872 30.359 21.8172 33.038 21.1062 35.577C19.0462 42.827 16.9662 50.677 14.5372 60.247C10.0162 78.858 5.34716 98.065 2.43616 117.526C2.43616 117.546 2.33616 118.296 2.33616 118.296C0.536161 131.837 -1.33384 145.837 1.32616 159.616C2.81616 167.177 5.24616 173.155 8.77516 177.915C12.3162 182.905 17.4162 186.677 23.0952 188.507C26.2162 189.446 29.3752 189.927 32.5352 189.927C38.5052 189.927 44.0242 188.245 48.4852 185.075C59.3742 177.235 65.4952 162.106 70.8852 148.757C71.9242 146.187 73.9052 141.437 73.9142 141.405C74.1642 140.745 74.4532 139.995 74.7732 139.266C74.9942 138.846 75.9742 137.455 76.1442 137.196C76.3042 137.016 76.9842 136.257 77.1542 136.065C79.5332 133.805 82.6482 132.481 85.7182 132.45C85.7182 132.45 85.8862 132.448 86.1632 132.427H188.003C189.583 132.427 191.153 132.427 192.714 132.437C196.464 132.447 200.064 134.107 202.343 136.857C203.105 137.796 203.663 138.607 204.083 139.377C204.083 139.377 206.903 146.246 207.954 148.848C213.263 161.996 219.294 176.897 230.013 184.858C234.542 188.178 240.152 189.938 246.254 189.938C249.404 189.938 252.574 189.458 255.674 188.518C261.225 186.717 266.235 183.077 269.805 178.247C273.616 173.108 276.225 166.667 277.555 159.099C280.077 145.726 278.288 132.117 276.557 118.966ZM59.3422 67.242C51.7742 67.242 45.6172 61.086 45.6172 53.519C45.6172 45.951 51.7732 39.796 59.3422 39.796C66.9082 39.796 73.0652 45.95 73.0652 53.519C73.0652 61.085 66.9092 67.242 59.3422 67.242ZM121.963 93.212C121.965 93.267 121.955 93.294 121.947 93.335C121.586 95.048 120.058 96.29 118.31 96.29H108.806C108.769 96.29 108.755 96.292 108.701 96.29C108.453 96.347 108.267 96.546 108.267 96.811L108.3 106.147C108.3 106.182 108.302 106.217 108.302 106.258C108.302 108.006 107.062 109.535 105.349 109.893C105.337 109.897 105.324 109.899 105.312 109.899C103.865 110.2 102.408 110.35 100.951 110.35C99.4922 110.35 98.0332 110.198 96.5842 109.897C96.5742 109.897 96.5642 109.895 96.5552 109.893C94.8522 109.538 93.6142 108.022 93.6022 106.282V106.276V96.831C93.6022 96.788 93.6062 96.802 93.6022 96.759C93.5862 96.519 93.3872 96.325 93.1512 96.29C93.1162 96.292 93.0962 96.29 93.0632 96.29H83.6492C83.6452 96.29 83.6372 96.29 83.6332 96.29C81.8832 96.29 80.3562 95.048 79.9962 93.335C79.9922 93.323 79.9922 93.312 79.9902 93.3C79.3882 90.404 79.3882 87.47 79.9922 84.575C79.9922 84.563 79.9942 84.552 79.9962 84.54C80.3552 82.829 81.8812 81.622 83.6292 81.622C83.6762 81.622 83.7112 81.626 83.7642 81.624H93.0632C93.3482 81.624 93.5752 81.433 93.6272 81.179C93.6352 81.138 93.6312 81.113 93.6312 81.079L93.6022 71.6C93.6022 69.834 94.8442 68.303 96.5552 67.946C96.6062 67.936 96.6332 67.928 96.6862 67.919C99.5162 67.345 102.403 67.343 105.235 67.919C105.309 67.939 105.309 67.939 105.35 67.948C107.063 68.303 108.26 69.835 108.26 71.583C108.26 71.63 108.27 71.665 108.268 71.714V81.066C108.268 81.375 108.518 81.625 108.825 81.625L118.198 81.594C118.255 81.594 118.272 81.588 118.311 81.588C120.059 81.588 121.532 82.83 121.891 84.541C121.901 84.59 121.914 84.621 121.936 84.697C122.51 87.527 122.541 90.38 121.963 93.212ZM139.012 41.652C132.371 41.652 126.967 36.25 126.967 29.608C126.967 22.965 132.371 17.561 139.012 17.561C145.657 17.561 151.059 22.965 151.059 29.608C151.059 36.249 145.657 41.652 139.012 41.652ZM177.129 102.644C169.563 102.644 163.406 96.488 163.406 88.921C163.406 81.353 169.562 75.198 177.129 75.198C184.697 75.198 190.854 81.352 190.854 88.921C190.854 96.488 184.698 102.644 177.129 102.644ZM201.75 62.714C196.811 62.714 192.791 58.694 192.791 53.755C192.791 48.816 196.811 44.794 201.75 44.794C206.691 44.794 210.711 48.815 210.711 53.755C210.711 58.695 206.692 62.714 201.75 62.714ZM222.356 82.827C217.417 82.827 213.397 78.811 213.397 73.87C213.397 68.929 217.417 64.909 222.356 64.909C227.297 64.909 231.316 68.929 231.316 73.87C231.316 78.811 227.297 82.827 222.356 82.827ZM222.356 41.673C217.417 41.673 213.397 37.653 213.397 32.715C213.397 27.774 217.417 23.756 222.356 23.756C227.297 23.756 231.316 27.774 231.316 32.715C231.317 37.654 227.297 41.673 222.356 41.673ZM242.657 62.714C237.715 62.714 233.696 58.694 233.696 53.755C233.696 48.816 237.716 44.794 242.657 44.794C247.598 44.794 251.618 48.815 251.618 53.755C251.618 58.695 247.598 62.714 242.657 62.714Z",
                           }),
-                        )
+                        })
                       : "gamecube" == _
-                        ? _.createElement(
-                            "svg",
-                            {
-                              viewBox: "0 0 36 26",
-                              fill: "none",
-                              xmlns: "http://www.w3.org/2000/svg",
-                              ..._,
-                            },
-                            _.createElement("path", {
+                        ? (0, _.jsx)("svg", {
+                            viewBox: "0 0 36 26",
+                            fill: "none",
+                            xmlns: "http://www.w3.org/2000/svg",
+                            ..._,
+                            children: (0, _.jsx)("path", {
                               fill: "currentColor",
                               _: "M16.1827 0.0781004C17.6081 -0.0426998 19.0335 -0.0183863 20.4571 0.121069C23.1735 0.386856 25.7983 1.04207 28.3604 1.96775C28.3933 1.97962 28.4272 1.98854 28.4707 2.00193C28.4909 1.96528 28.5193 1.93316 28.5264 1.89744C28.5625 1.71211 28.6809 1.67014 28.8555 1.66892C29.6045 1.66433 30.3068 1.85492 30.9815 2.16013C31.946 2.59683 32.798 3.20275 33.5821 3.90916C33.6515 3.97184 33.6587 4.0229 33.6211 4.10544C33.5517 4.25805 33.4959 4.41663 33.4317 4.5781C33.8532 4.96729 34.223 5.39899 34.5352 5.87986C35.1214 6.78349 35.4179 7.78243 35.5371 8.84568C35.7968 11.1614 35.9333 13.4849 35.9893 15.8135C36.0312 17.563 35.9522 19.308 35.7452 21.0459C35.6396 21.9318 35.484 22.8097 35.1397 23.6406C34.9085 24.1987 34.6002 24.7018 34.0889 25.0547C33.3268 25.5809 31.8525 25.6874 31.0977 24.4013C30.7916 23.8796 30.6396 23.3065 30.5069 22.7236C30.164 21.2205 29.8132 19.7187 29.4649 18.2168C29.3652 17.7865 29.2627 17.3565 29.1563 16.9033C28.9289 17.0598 28.7547 17.247 28.6407 17.4707C28.4287 17.8872 28.233 18.3132 28.0498 18.7431C27.8101 19.3059 27.5943 19.8836 27.1934 20.3554C25.8977 21.881 23.8114 22.5708 21.6748 21.6279C20.7231 21.2077 19.9131 20.6151 19.417 19.6777C18.6868 18.2976 18.5895 16.8836 19.337 15.4814C19.7143 14.7738 20.2355 14.1607 20.8174 13.6045C20.9131 13.513 21.0054 13.4171 21.0987 13.3232C21.1053 13.3165 21.1081 13.3056 21.125 13.2715C19.0201 12.8742 16.9252 12.8754 14.7891 13.2461C14.8996 13.3584 14.9835 13.4489 15.0733 13.5332C15.6865 14.109 16.2264 14.7504 16.6319 15.4853C17.252 16.6089 17.2713 17.7935 16.8594 18.9892C16.4264 20.2467 15.5363 21.0751 14.3409 21.6045C13.0659 22.169 11.7798 22.2381 10.4932 21.6592C9.31318 21.1283 8.49376 20.2528 8.03227 19.0361C7.8451 18.5422 7.62199 18.0604 7.39262 17.584C7.24337 17.2739 7.00619 17.0271 6.70317 16.8174C6.62981 17.1331 6.55966 17.4332 6.49027 17.7334C6.16674 19.1315 5.84402 20.5299 5.51957 21.9277C5.38381 22.5117 5.2609 23.1001 5.1016 23.6777C4.99151 24.0771 4.78572 24.4377 4.51078 24.7549C3.77431 25.6032 2.45123 25.5179 1.74027 24.9228C1.27551 24.5338 0.998936 24.0235 0.790079 23.4697C0.51363 22.7361 0.370845 21.9703 0.275431 21.1963C0.0625906 19.4694 -0.0391154 17.7349 0.0146884 15.9961C0.0639243 14.4025 0.145108 12.8095 0.239298 11.2177C0.293428 10.303 0.380001 9.38862 0.487345 8.47849C0.644598 7.14865 1.20265 5.99432 2.10746 5.00876C2.25884 4.84393 2.42083 4.68749 2.58598 4.53611C2.65364 4.47384 2.67533 4.42018 2.62895 4.3408C2.61888 4.32371 2.61641 4.30211 2.60941 4.28318C2.46019 3.87647 2.45845 3.87395 2.80668 3.60154C3.75687 2.85869 4.77722 2.24333 5.95219 1.92283C6.43149 1.79205 6.91854 1.72986 7.41801 1.7656C7.56878 1.7763 7.65507 1.82431 7.68168 1.97263C7.6861 1.9963 7.70206 2.01729 7.70024 2.01365H7.70121C8.85964 1.6644 9.99349 1.30045 11.1397 0.982397C12.7909 0.524039 14.4739 0.222765 16.1827 0.0781004ZM11.6436 14.5459C11.5481 14.5459 11.4554 14.584 11.3877 14.6513C11.3203 14.7187 11.2825 14.8109 11.2823 14.9062V16.5761H9.60942C9.51394 16.5762 9.42124 16.6143 9.35356 16.6816C9.28616 16.749 9.24829 16.8412 9.24809 16.9365V17.8388C9.24816 17.9343 9.2861 18.0262 9.35356 18.0937C9.42128 18.1613 9.51371 18.1992 9.60942 18.1992H11.2823V19.8681C11.2823 19.9637 11.3202 20.0564 11.3877 20.124C11.4555 20.1915 11.5479 20.2294 11.6436 20.2295H12.5469L12.6182 20.2226C12.6874 20.2088 12.7521 20.1745 12.8028 20.124C12.8702 20.0564 12.9082 19.9636 12.9082 19.8681V18.1992H14.5811L14.6524 18.1924C14.7216 18.1785 14.7863 18.1443 14.837 18.0937C14.9043 18.0262 14.9423 17.9342 14.9424 17.8388V16.9365C14.9422 16.8412 14.9044 16.749 14.837 16.6816C14.7693 16.6143 14.6766 16.5762 14.5811 16.5761H12.9082V14.9062C12.908 14.8109 12.8703 14.7187 12.8028 14.6513C12.7351 14.584 12.6424 14.5459 12.5469 14.5459H11.6436ZM23.6299 16.0361C22.8392 16.0362 22.1979 16.6768 22.1973 17.4668C22.1973 18.2572 22.8389 18.8984 23.6299 18.8984C24.4208 18.8981 25.0625 18.2571 25.0625 17.4668C25.0619 16.6769 24.4204 16.0364 23.6299 16.0361ZM24.9141 10.0381C24.1027 10.0382 23.4448 10.6961 23.4444 11.5068C23.4446 12.3176 24.1026 12.9745 24.9141 12.9746C25.7257 12.9746 26.3836 12.3177 26.3838 11.5068C26.3834 10.6961 25.7256 10.0381 24.9141 10.0381ZM29.0166 7.02048C27.7316 7.02074 26.6898 8.06175 26.6895 9.34568C26.6895 10.6298 27.7314 11.6706 29.0166 11.6709C30.3019 11.6707 31.3447 10.6299 31.3448 9.34568C31.3445 8.06172 30.3017 7.0207 29.0166 7.02048ZM7.16703 7.51755C6.06435 7.51791 5.17021 8.41113 5.16996 9.51267C5.17006 10.6143 6.06425 11.5074 7.16703 11.5078C8.27012 11.5078 9.16498 10.6146 9.16508 9.51267C9.16483 8.41091 8.27002 7.51755 7.16703 7.51755ZM32.4268 5.96091C32.1773 5.89397 31.9081 5.92981 31.6358 6.12107L31.6875 6.19529L31.6348 6.12009L31.625 6.12888C31.3844 6.3549 31.2555 6.56575 31.2139 6.77048C31.1722 6.97658 31.2224 7.16409 31.3106 7.33689C31.3977 7.50721 31.5271 7.67288 31.6495 7.83396C31.7732 7.99695 31.8926 8.15982 31.9766 8.33494C32.0646 8.56462 32.0999 8.79776 32.1211 9.02244C32.1419 9.24271 32.1507 9.46898 32.1866 9.65818C32.2233 9.85102 32.2925 10.0294 32.4493 10.1562C32.6054 10.2822 32.8337 10.3456 33.1602 10.3457H33.1661C33.5007 10.3247 33.7197 10.1432 33.8516 9.88669C33.9805 9.63579 34.0277 9.31221 34.0313 8.99021C34.0348 8.66633 33.9945 8.33347 33.9434 8.05955C33.8927 7.7881 33.8297 7.56499 33.7832 7.46189C33.6977 7.27222 33.4405 6.75768 33.0733 6.37888C32.8896 6.18958 32.6713 6.02681 32.4268 5.96091ZM28.626 4.45212C28.3017 4.44856 27.9687 4.48892 27.6944 4.54001C27.4226 4.59065 27.2 4.6538 27.0967 4.70017C26.9075 4.78524 26.3924 5.04199 26.0127 5.40915C25.8229 5.59275 25.6598 5.81104 25.5938 6.05564C25.5267 6.30496 25.5625 6.57357 25.7539 6.84568L25.7627 6.85544C25.9891 7.09596 26.1994 7.22518 26.4043 7.26658C26.611 7.30822 26.7985 7.25829 26.9717 7.1699C27.1424 7.08278 27.3074 6.95331 27.4688 6.83103C27.5919 6.73776 27.7148 6.64721 27.8428 6.57224L27.9737 6.5029C28.2026 6.41596 28.4344 6.38139 28.6582 6.36033C28.8788 6.33958 29.1046 6.33173 29.294 6.29587C29.4874 6.25918 29.6659 6.18939 29.793 6.0322C29.8876 5.91515 29.947 5.75785 29.9707 5.5488L29.9834 5.32224L29.9825 5.31638C29.9613 4.98226 29.7801 4.76252 29.5235 4.63083C29.2723 4.50218 28.9483 4.45568 28.626 4.45212Z",
                             }),
-                          )
+                          })
                         : "8bitdo_sn30" == _
-                          ? _.createElement(
-                              "svg",
-                              {
-                                viewBox: "0 0 36 36",
-                                fill: "none",
-                                xmlns: "http://www.w3.org/2000/svg",
-                                ..._,
-                              },
-                              _.createElement(
-                                "g",
-                                {
+                          ? (0, _.jsxs)("svg", {
+                              viewBox: "0 0 36 36",
+                              fill: "none",
+                              xmlns: "http://www.w3.org/2000/svg",
+                              ..._,
+                              children: [
+                                (0, _.jsx)("g", {
                                   clipPath: _,
-                                },
-                                _.createElement("path", {
-                                  fill: "currentColor",
-                                  _: "M11.2168 10.004C11.2667 10.004 11.3173 10.0048 11.3672 10.007C11.5907 10.0171 11.7075 10.136 11.7139 10.3605V10.5197H11.8965C15.9638 10.5197 20.0313 10.5188 24.0986 10.5226C24.239 10.5226 24.2877 10.4877 24.2861 10.3439C24.2837 10.1215 24.407 10.0095 24.6426 10.0079C25.5809 10.0033 26.5196 9.99799 27.458 10.0021C27.9951 10.0045 28.534 9.99883 29.0683 10.0431C30.1561 10.133 31.1802 10.4534 32.1455 10.965C32.3761 11.0871 32.5061 11.2487 32.4639 11.5187C32.4349 11.7034 32.5097 11.814 32.668 11.9269C34.3326 13.1148 35.399 14.705 35.8115 16.714C36.1472 18.3488 36.0615 19.9547 35.3359 21.4796C34.1526 23.9665 32.214 25.5049 29.4902 26.0021C28.1318 26.2499 26.8154 26.0562 25.5508 25.5109C25.3928 25.4427 25.2679 25.4444 25.1074 25.5246C23.4412 26.358 21.4298 25.8397 20.3681 24.3107C20.3086 24.2249 20.2442 24.1962 20.1426 24.1964C18.7123 24.1994 17.2818 24.2 15.8515 24.1964C15.7425 24.1962 15.6803 24.2342 15.6191 24.3224C14.5809 25.825 12.5275 26.3527 10.8974 25.5314C10.7321 25.4481 10.5977 25.4363 10.4277 25.5109C9.50667 25.9146 8.54336 26.127 7.53514 26.0997C5.65293 26.0489 4.00893 25.3806 2.60643 24.1339C1.39697 23.0585 0.587029 21.7317 0.197251 20.1554C-0.0490111 19.1589 -0.0459867 18.154 0.103501 17.1447C0.327081 15.6367 0.938596 14.308 1.94139 13.1603C2.37813 12.6607 2.87171 12.2238 3.42186 11.8527C3.50003 11.7999 3.52651 11.7413 3.52733 11.6505C3.52983 11.2987 3.69023 11.0423 4.00877 10.882C5.17119 10.2965 6.40354 10.0013 7.70506 10.0001C8.87562 9.99932 10.0462 10.0024 11.2168 10.004ZM12.5498 20.5704C11.7008 20.5706 11.0121 21.2596 11.0117 22.1085C11.0117 22.9578 11.7006 23.6465 12.5498 23.6466C13.399 23.6465 14.0879 22.9578 14.0879 22.1085C14.0874 21.2596 13.3988 20.5706 12.5498 20.5704ZM23.4736 20.5704C22.6246 20.5706 21.936 21.2596 21.9355 22.1085C21.9355 22.9578 22.6244 23.6465 23.4736 23.6466C24.3228 23.6465 25.0117 22.9578 25.0117 22.1085C25.0113 21.2596 24.3226 20.5706 23.4736 20.5704ZM28.6064 17.8507C27.9106 17.8511 27.3461 18.4157 27.3457 19.1115C27.3457 19.8076 27.9103 20.3728 28.6064 20.3732C29.3028 20.3732 29.8681 19.8079 29.8681 19.1115C29.8677 18.4154 29.3025 17.8507 28.6064 17.8507ZM6.7119 13.465C6.53797 13.4652 6.39674 13.6065 6.39647 13.7804V15.3331C6.39645 15.4095 6.33405 15.4707 6.25877 15.4708H4.70604C4.53211 15.471 4.39093 15.6124 4.39061 15.7863V17.1974C4.39084 17.3714 4.53205 17.5117 4.70604 17.5119H6.25877C6.33487 17.512 6.39602 17.5746 6.39647 17.6496V19.2033C6.39665 19.3773 6.53791 19.5185 6.7119 19.5187H8.12303C8.29688 19.5183 8.43731 19.3772 8.43748 19.2033V17.6496C8.43793 17.5736 8.50031 17.5122 8.57518 17.5119H10.1289C10.3027 17.5115 10.4441 17.3713 10.4443 17.1974V15.7863C10.444 15.6125 10.3027 15.4712 10.1289 15.4708H8.57518C8.50006 15.4705 8.4375 15.4094 8.43748 15.3331V13.7804C8.43721 13.6066 8.29682 13.4654 8.12303 13.465H6.7119ZM25.5478 15.2316C24.8521 15.2321 24.2875 15.7966 24.2871 16.4923C24.2871 17.1884 24.8519 17.7536 25.5478 17.754C26.2442 17.754 26.8095 17.1887 26.8096 16.4923C26.8091 15.7963 26.244 15.2316 25.5478 15.2316ZM31.667 15.2316C30.9711 15.2319 30.4067 15.7965 30.4062 16.4923C30.4063 17.1885 30.9709 17.7537 31.667 17.754C32.3633 17.7539 32.9287 17.1886 32.9287 16.4923C32.9283 15.7964 32.363 15.2317 31.667 15.2316ZM28.6064 12.5988C27.9106 12.5991 27.3461 13.1637 27.3457 13.8595C27.3458 14.5556 27.9104 15.1209 28.6064 15.1212C29.3027 15.1212 29.868 14.5558 29.8681 13.8595C29.8677 13.1635 29.3025 12.5988 28.6064 12.5988Z",
+                                  children: (0, _.jsx)("path", {
+                                    fill: "currentColor",
+                                    _: "M11.2168 10.004C11.2667 10.004 11.3173 10.0048 11.3672 10.007C11.5907 10.0171 11.7075 10.136 11.7139 10.3605V10.5197H11.8965C15.9638 10.5197 20.0313 10.5188 24.0986 10.5226C24.239 10.5226 24.2877 10.4877 24.2861 10.3439C24.2837 10.1215 24.407 10.0095 24.6426 10.0079C25.5809 10.0033 26.5196 9.99799 27.458 10.0021C27.9951 10.0045 28.534 9.99883 29.0683 10.0431C30.1561 10.133 31.1802 10.4534 32.1455 10.965C32.3761 11.0871 32.5061 11.2487 32.4639 11.5187C32.4349 11.7034 32.5097 11.814 32.668 11.9269C34.3326 13.1148 35.399 14.705 35.8115 16.714C36.1472 18.3488 36.0615 19.9547 35.3359 21.4796C34.1526 23.9665 32.214 25.5049 29.4902 26.0021C28.1318 26.2499 26.8154 26.0562 25.5508 25.5109C25.3928 25.4427 25.2679 25.4444 25.1074 25.5246C23.4412 26.358 21.4298 25.8397 20.3681 24.3107C20.3086 24.2249 20.2442 24.1962 20.1426 24.1964C18.7123 24.1994 17.2818 24.2 15.8515 24.1964C15.7425 24.1962 15.6803 24.2342 15.6191 24.3224C14.5809 25.825 12.5275 26.3527 10.8974 25.5314C10.7321 25.4481 10.5977 25.4363 10.4277 25.5109C9.50667 25.9146 8.54336 26.127 7.53514 26.0997C5.65293 26.0489 4.00893 25.3806 2.60643 24.1339C1.39697 23.0585 0.587029 21.7317 0.197251 20.1554C-0.0490111 19.1589 -0.0459867 18.154 0.103501 17.1447C0.327081 15.6367 0.938596 14.308 1.94139 13.1603C2.37813 12.6607 2.87171 12.2238 3.42186 11.8527C3.50003 11.7999 3.52651 11.7413 3.52733 11.6505C3.52983 11.2987 3.69023 11.0423 4.00877 10.882C5.17119 10.2965 6.40354 10.0013 7.70506 10.0001C8.87562 9.99932 10.0462 10.0024 11.2168 10.004ZM12.5498 20.5704C11.7008 20.5706 11.0121 21.2596 11.0117 22.1085C11.0117 22.9578 11.7006 23.6465 12.5498 23.6466C13.399 23.6465 14.0879 22.9578 14.0879 22.1085C14.0874 21.2596 13.3988 20.5706 12.5498 20.5704ZM23.4736 20.5704C22.6246 20.5706 21.936 21.2596 21.9355 22.1085C21.9355 22.9578 22.6244 23.6465 23.4736 23.6466C24.3228 23.6465 25.0117 22.9578 25.0117 22.1085C25.0113 21.2596 24.3226 20.5706 23.4736 20.5704ZM28.6064 17.8507C27.9106 17.8511 27.3461 18.4157 27.3457 19.1115C27.3457 19.8076 27.9103 20.3728 28.6064 20.3732C29.3028 20.3732 29.8681 19.8079 29.8681 19.1115C29.8677 18.4154 29.3025 17.8507 28.6064 17.8507ZM6.7119 13.465C6.53797 13.4652 6.39674 13.6065 6.39647 13.7804V15.3331C6.39645 15.4095 6.33405 15.4707 6.25877 15.4708H4.70604C4.53211 15.471 4.39093 15.6124 4.39061 15.7863V17.1974C4.39084 17.3714 4.53205 17.5117 4.70604 17.5119H6.25877C6.33487 17.512 6.39602 17.5746 6.39647 17.6496V19.2033C6.39665 19.3773 6.53791 19.5185 6.7119 19.5187H8.12303C8.29688 19.5183 8.43731 19.3772 8.43748 19.2033V17.6496C8.43793 17.5736 8.50031 17.5122 8.57518 17.5119H10.1289C10.3027 17.5115 10.4441 17.3713 10.4443 17.1974V15.7863C10.444 15.6125 10.3027 15.4712 10.1289 15.4708H8.57518C8.50006 15.4705 8.4375 15.4094 8.43748 15.3331V13.7804C8.43721 13.6066 8.29682 13.4654 8.12303 13.465H6.7119ZM25.5478 15.2316C24.8521 15.2321 24.2875 15.7966 24.2871 16.4923C24.2871 17.1884 24.8519 17.7536 25.5478 17.754C26.2442 17.754 26.8095 17.1887 26.8096 16.4923C26.8091 15.7963 26.244 15.2316 25.5478 15.2316ZM31.667 15.2316C30.9711 15.2319 30.4067 15.7965 30.4062 16.4923C30.4063 17.1885 30.9709 17.7537 31.667 17.754C32.3633 17.7539 32.9287 17.1886 32.9287 16.4923C32.9283 15.7964 32.363 15.2317 31.667 15.2316ZM28.6064 12.5988C27.9106 12.5991 27.3461 13.1637 27.3457 13.8595C27.3458 14.5556 27.9104 15.1209 28.6064 15.1212C29.3027 15.1212 29.868 14.5558 29.8681 13.8595C29.8677 13.1635 29.3025 12.5988 28.6064 12.5988Z",
+                                  }),
                                 }),
-                              ),
-                              _.createElement(
-                                "defs",
-                                null,
-                                _.createElement(
-                                  "clipPath",
-                                  {
+                                (0, _.jsx)("defs", {
+                                  children: (0, _.jsx)("clipPath", {
                                     _: _,
-                                  },
-                                  _.createElement("rect", {
-                                    fill: "currentColor",
-                                    width: "36",
-                                    height: "36",
-                                  }),
-                                ),
-                              ),
-                            )
-                          : "8bitdo_pro" == _
-                            ? _.createElement(
-                                "svg",
-                                {
-                                  viewBox: "0 0 36 36",
-                                  fill: "none",
-                                  xmlns: "http://www.w3.org/2000/svg",
-                                  ..._,
-                                },
-                                _.createElement(
-                                  "g",
-                                  {
-                                    clipPath: _,
-                                  },
-                                  _.createElement("path", {
-                                    fill: "currentColor",
-                                    _: "M27.7734 6.01249C28.9788 6.03744 30.1205 6.33782 31.1855 6.91483C31.3082 6.98141 31.3941 7.0615 31.4326 7.16971H31.0996V7.17362H31.4335C31.4524 7.22852 31.4594 7.29064 31.4521 7.3621C31.4407 7.47552 31.4843 7.54171 31.5859 7.60721C33.2663 8.68591 34.2958 10.2253 34.7167 12.1609C35.0706 13.7884 35.3234 15.4352 35.5361 17.0877C35.7469 18.7244 35.8609 20.3682 35.9335 22.0154C35.9671 22.7781 36.004 23.542 35.9999 24.3055C35.9944 25.303 35.8569 26.2831 35.4531 27.2088C34.9562 28.347 34.1485 29.1542 32.9384 29.5017C31.6727 29.8653 30.6028 29.5341 29.7509 28.5262C29.2715 27.9585 28.9464 27.3013 28.7177 26.6014C28.5088 25.9616 28.344 25.3077 28.1474 24.6639C27.6047 22.8866 26.5032 21.5482 24.9238 20.5887C24.9213 20.5871 24.9184 20.5862 24.916 20.5848L25.1503 20.2723L25.1718 20.2469L25.1728 20.2478L25.1904 20.2273C25.2862 20.2759 25.3768 20.3034 25.4365 20.323L25.7773 20.4256C25.8937 20.4577 26.012 20.487 26.124 20.5115L26.4384 20.573C27.1766 20.6984 27.9391 20.7019 28.6767 20.5828L28.6757 20.5818C31.2157 20.1944 33.4046 18.277 34.166 15.8308L34.165 15.8299C35.6102 11.3723 32.3235 6.65548 27.5917 6.65506V6.65409H8.4062V6.65506C5.37767 6.6497 2.70335 8.67037 1.81049 11.5506C1.00503 14.1045 1.74193 16.9571 3.68745 18.7879L3.87983 18.9617C4.91492 19.8713 6.23159 20.462 7.60053 20.6228H7.60151C8.67153 20.7459 9.79336 20.6306 10.8066 20.2273C10.8114 20.2327 10.8176 20.2378 10.8222 20.243L10.8886 20.1834L10.8222 20.2439L10.8271 20.2488L10.833 20.2557C10.8366 20.2598 10.842 20.2657 10.8476 20.2723C10.8594 20.2862 10.8744 20.3052 10.8915 20.326C10.9263 20.3681 10.9694 20.4197 11.0126 20.4724C11.0418 20.508 11.072 20.5445 11.0996 20.5779C11.0938 20.581 11.0879 20.5842 11.082 20.5877C9.89406 21.2973 8.98056 22.2657 8.32905 23.4842C8.03441 24.0355 7.85478 24.6298 7.69721 25.2303C7.50206 25.9733 7.29989 26.7134 6.96284 27.408C6.64138 28.0702 6.24258 28.6754 5.63471 29.1131C4.81567 29.7026 3.91714 29.77 2.98042 29.4724C1.77578 29.0895 0.984754 28.2619 0.511667 27.1101C0.206212 26.3666 0.0705524 25.5865 0.0243618 24.7879C-0.046774 23.562 0.0538517 22.3407 0.122018 21.1189C0.161122 20.4188 0.195563 19.7179 0.265573 19.0203C0.368012 18.003 0.474778 16.9846 0.627877 15.9744C0.821202 14.6994 1.02971 13.4249 1.29194 12.1629C1.69465 10.2234 2.74378 8.70172 4.4062 7.61405C4.51078 7.54554 4.57148 7.47897 4.55659 7.3494C4.53428 7.15242 4.62772 7.02617 4.79975 6.93046C5.59838 6.48682 6.45226 6.20819 7.35444 6.09159C7.80468 6.03349 8.26203 6.01478 8.71674 6.00956C9.68191 5.99838 10.6481 6.00686 11.6132 6.0076C11.6623 6.00761 11.7116 6.00867 11.7607 6.01053C12.0309 6.02025 12.1172 6.09801 12.1552 6.37186V6.37088H23.8154C23.8752 6.26485 23.9075 6.14249 23.9863 6.08768C24.0726 6.02812 24.2031 6.01093 24.3144 6.01053C25.4672 6.00532 26.621 5.98866 27.7734 6.01249ZM27.5878 7.23026L27.9902 7.24296C31.9701 7.49058 34.7257 11.4172 33.7294 15.2713L33.6171 15.656L33.6152 15.659C32.9396 17.8298 31.0302 19.5502 28.8037 19.9764L28.5878 20.0135H28.5849C27.9099 20.1225 27.211 20.1195 26.5351 20.0047L26.247 19.949C26.0499 19.9059 25.8293 19.8435 25.6337 19.7801C26.2276 19.1014 26.5334 18.1831 26.4589 17.283H26.4599C26.3463 15.5899 24.908 14.1684 23.207 14.1199H23.041C21.3039 14.1281 19.8318 15.5696 19.7148 17.283H19.7158C19.6765 17.7706 19.7462 18.2662 19.914 18.7244V18.7254L19.9277 18.7674L19.9287 18.7713L19.9423 18.8123L19.9521 18.8435L19.9648 18.8963L19.9716 18.9441H19.9726L19.9765 18.9793V18.9812L19.9804 19.0144L19.9824 19.0428V19.0603L19.9814 19.073L19.9804 19.0955V19.1033L19.9277 19.2693L20.2021 19.3562L20.2548 19.3728V19.4764H20.2568L20.3339 19.3982L20.4765 19.4432L20.5292 19.2781L20.5302 19.2693L20.5322 19.2703L20.5341 19.2644L20.5371 19.2488L20.538 19.2469L20.5507 19.1873L20.5527 19.1697V19.1668L20.5546 19.1473L20.5566 19.1189V19.1033L20.5576 19.0916L20.5585 19.0701V19.0428L20.5576 19.0242L20.5537 18.9627L20.5527 18.9471L20.5449 18.8807L20.5429 18.867L20.5312 18.7937L20.5263 18.7683L20.5068 18.6902H20.5078L20.5039 18.6775L20.4921 18.6385L20.4892 18.6307L20.4755 18.5896L20.4628 18.5506H20.4638L20.4589 18.5379L20.4091 18.3914C20.3029 18.0482 20.2617 17.6837 20.291 17.326L20.0136 17.3025L20.289 17.3221C20.3864 15.8966 21.6228 14.7 23.0488 14.6961L23.0546 14.6951C24.5067 14.66 25.787 15.8694 25.8847 17.3211V17.3269C25.9568 18.1839 25.6106 19.0661 24.9697 19.6355L25.1601 19.8504L24.9687 19.6346L24.9609 19.6433L24.9042 19.698L24.8515 19.7478L24.8437 19.7557L24.7949 19.8064L24.791 19.8113L24.748 19.8582L24.7451 19.8611L24.7128 19.8982L24.6962 19.9168L24.4111 20.2976L24.3974 20.3142L24.3857 20.3299L24.3935 20.3357L24.3544 20.3758L24.3525 20.3797L24.5966 20.5017L24.6025 20.5125L24.6415 20.5906C23.0992 21.3439 21.1855 20.8778 20.166 19.4949C20.1056 19.4133 20.0441 19.3832 19.9443 19.3836C18.6485 19.3869 17.3524 19.387 16.0566 19.3855C15.9769 19.3855 15.9142 19.394 15.8613 19.4685C14.9119 20.8074 12.9767 21.3814 11.3662 20.5935L11.4335 20.5242L11.6328 20.3162C11.6285 20.3115 11.6106 20.2916 11.5771 20.2517C11.5429 20.211 11.5006 20.1592 11.458 20.1072C11.3816 20.0142 11.2904 19.9026 11.2539 19.8621H11.2548C11.1885 19.787 11.1037 19.7023 11.0273 19.6346H11.0263C10.3864 19.0651 10.0392 18.1831 10.1113 17.3269L10.1123 17.324C10.2204 15.8833 11.4308 14.7105 12.872 14.6961L12.874 14.6951C14.3453 14.6707 15.5979 15.855 15.708 17.324V17.325C15.7357 17.6841 15.6956 18.0487 15.5898 18.3914L15.54 18.5379L15.538 18.5428C15.4742 18.7262 15.4041 18.9852 15.4599 19.2488L15.7421 19.1883L15.7695 19.1824L15.7441 19.1902L15.4687 19.2752L15.5195 19.4402L16.0703 19.2723L16.0214 19.114C16.0052 19.0154 16.0275 18.8903 16.08 18.7381C16.2308 18.3318 16.3013 17.8967 16.291 17.4646L16.2822 17.2801C16.15 15.5194 14.6532 14.0912 12.8662 14.1199H12.8642C11.1679 14.1378 9.75791 15.4668 9.55366 17.1199L9.53706 17.281C9.46215 18.1795 9.76702 19.0975 10.3583 19.7762C9.50533 20.0699 8.57082 20.1545 7.66694 20.0506H7.66596C6.49271 19.9124 5.35766 19.4282 4.4394 18.6814L4.25874 18.5281H4.25776C2.34413 16.8601 1.59604 14.1449 2.35932 11.7244L2.3603 11.7224L2.44135 11.4773C3.33297 8.9628 5.72246 7.22514 8.4062 7.23026H27.5878ZM12.8828 15.7625C12.0828 15.7627 11.4339 16.4123 11.4335 17.2127C11.4335 18.0134 12.0825 18.6627 12.8828 18.6629C13.6832 18.6629 14.332 18.0136 14.332 17.2127C14.3316 16.4121 13.6829 15.7625 12.8828 15.7625ZM23.1162 15.7625C22.3163 15.7629 21.6673 16.4123 21.6669 17.2127C21.6669 18.0133 22.316 18.6625 23.1162 18.6629C23.9166 18.6629 24.5654 18.0136 24.5654 17.2127C24.565 16.4121 23.9163 15.7625 23.1162 15.7625ZM27.8808 13.1892C27.1708 13.1893 26.5948 13.7659 26.5947 14.4764C26.5947 15.1868 27.1708 15.7624 27.8808 15.7625C28.5908 15.7623 29.1669 15.1868 29.1669 14.4764C29.1668 13.766 28.5908 13.1894 27.8808 13.1892ZM7.45405 9.20682C7.28806 9.20699 7.1525 9.34261 7.15229 9.50858V10.9764C7.15205 11.0454 7.09514 11.1031 7.02631 11.1033H5.55952C5.39342 11.1034 5.25786 11.239 5.25776 11.4051V12.7381C5.258 12.904 5.39351 13.0397 5.55952 13.0398H7.02631C7.09523 13.04 7.15219 13.0977 7.15229 13.1668V14.6346C7.15264 14.8004 7.28815 14.9362 7.45405 14.9363H8.78706C8.9528 14.936 9.08749 14.8003 9.08784 14.6346V13.1668C9.08794 13.0976 9.14581 13.0399 9.21479 13.0398H10.6816C10.8474 13.0395 10.9821 12.9039 10.9824 12.7381V11.4051C10.9823 11.2401 10.8491 11.1052 10.6845 11.1033L10.6796 11.1014H9.21284C9.14395 11.1013 9.08808 11.0454 9.08784 10.9764V9.50858C9.08763 9.34273 8.95288 9.20717 8.78706 9.20682H7.45405ZM25.0615 10.7459C24.3517 10.7462 23.7756 11.3228 23.7753 12.033C23.7754 12.7433 24.3516 13.3188 25.0615 13.3191C25.7716 13.3191 26.3475 12.7435 26.3476 12.033C26.3474 11.3226 25.7715 10.7459 25.0615 10.7459ZM30.6874 10.7459C29.9775 10.746 29.4016 11.3227 29.4013 12.033C29.4014 12.7435 29.9774 13.319 30.6874 13.3191C31.3976 13.3191 31.9735 12.7435 31.9736 12.033C31.9733 11.3226 31.3974 10.7459 30.6874 10.7459ZM27.8808 8.28788C27.1708 8.28797 26.5948 8.86454 26.5947 9.57499C26.5949 10.2853 27.1709 10.861 27.8808 10.8611C28.5907 10.8609 29.1667 10.2852 29.1669 9.57499C29.1668 8.8646 28.5908 8.28807 27.8808 8.28788Z",
-                                  }),
-                                ),
-                                _.createElement(
-                                  "defs",
-                                  null,
-                                  _.createElement(
-                                    "clipPath",
-                                    {
-                                      _: _,
-                                    },
-                                    _.createElement("rect", {
+                                    children: (0, _.jsx)("rect", {
                                       fill: "currentColor",
                                       width: "36",
                                       height: "36",
                                     }),
-                                  ),
-                                ),
-                              )
-                            : "8bitdo_ultimate" == _
-                              ? _.createElement(
-                                  "svg",
-                                  {
-                                    viewBox: "0 0 36 36",
-                                    fill: "none",
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    ..._,
-                                  },
-                                  _.createElement(
-                                    "g",
-                                    {
-                                      clipPath: _,
-                                    },
-                                    _.createElement("path", {
+                                  }),
+                                }),
+                              ],
+                            })
+                          : "8bitdo_pro" == _
+                            ? (0, _.jsxs)("svg", {
+                                viewBox: "0 0 36 36",
+                                fill: "none",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                ..._,
+                                children: [
+                                  (0, _.jsx)("g", {
+                                    clipPath: _,
+                                    children: (0, _.jsx)("path", {
                                       fill: "currentColor",
-                                      _: "M25.3865 5.11825C26.755 4.90005 28.1094 4.97923 29.4236 5.39462C30.4285 5.71216 31.3614 6.19989 32.1726 6.89462C32.3276 7.02768 32.4119 7.17257 32.408 7.37704C32.4056 7.49827 32.4255 7.61963 32.4314 7.69345C32.5721 7.80286 32.6969 7.87505 32.7898 7.97567C33.7307 8.99583 34.2022 10.2489 34.5398 11.5626C34.9787 13.2716 35.2054 15.0185 35.4158 16.7657C35.5919 18.2301 35.751 19.6978 35.8796 21.1671C36.0269 22.851 36.0917 24.5378 35.7634 26.212C35.5761 27.1675 35.2593 28.0684 34.5789 28.7999C33.9668 29.458 33.1821 29.8296 32.3533 30.1241C31.7359 30.3438 31.5771 30.317 31.2107 29.7599C30.651 28.9095 30.1303 28.0326 29.5935 27.1671C28.9629 26.149 28.3487 25.1202 27.6961 24.1163C27.2547 23.4372 26.6937 22.8717 25.8972 22.6016C25.2789 22.3918 24.6367 22.3551 23.991 22.3556C19.8645 22.3575 15.7376 22.3624 11.6111 22.3614C10.178 22.3614 9.04967 22.9302 8.28492 24.1524C7.43808 25.5056 6.61368 26.8734 5.77515 28.2325C5.46691 28.7316 5.1469 29.2242 4.82887 29.7169C4.76726 29.8121 4.68876 29.8965 4.61695 29.9845C4.40805 30.2398 4.16884 30.3079 3.84058 30.1925C2.86063 29.848 1.9303 29.4329 1.25465 28.5997C0.678281 27.8888 0.403921 27.0492 0.233162 26.169C-0.034456 24.7888 -0.0493176 23.3911 0.0759357 22.0011C0.277018 19.7696 0.510949 17.5401 0.783944 15.3165C0.992378 13.6187 1.26467 11.9263 1.85328 10.3067C2.16201 9.45791 2.57326 8.66447 3.19508 7.99716C3.29517 7.88989 3.42374 7.80944 3.57496 7.68954C3.49832 7.16883 3.8053 6.87846 4.18922 6.60555C6.15956 5.20425 8.33914 4.74637 10.7107 5.12997C11.05 5.18473 11.0504 5.18936 11.4265 5.58016C11.5389 5.56107 11.6476 5.52694 11.7566 5.52645C14.8635 5.51177 17.97 5.49081 21.0769 5.49227C22.2174 5.49277 23.3574 5.5474 24.4978 5.57235C24.5492 5.57333 24.6169 5.53872 24.6502 5.49813C24.842 5.26328 25.09 5.16571 25.3865 5.11825ZM12.2996 14.6524C12.1182 14.6524 11.9696 14.8002 11.9695 14.9815V16.6192C11.9695 16.7005 11.9009 16.7683 11.8181 16.7686H10.1697C9.98837 16.7687 9.8397 16.9165 9.83961 17.0977V18.586C9.83976 18.7673 9.98841 18.914 10.1697 18.9141H11.8181C11.9008 18.9145 11.9693 18.9825 11.9695 19.0636V20.7022C11.9696 20.8836 12.1182 21.0304 12.2996 21.0304H13.7976C13.9786 21.0298 14.1276 20.8832 14.1277 20.7022V19.0636C14.1279 18.9823 14.1952 18.9142 14.2781 18.9141H15.9265C16.1076 18.9138 16.2564 18.7671 16.2566 18.586V17.0977C16.2565 16.9175 16.1094 16.7704 15.9295 16.7686L15.9246 16.7667H14.2761C14.193 16.7667 14.1277 16.7007 14.1277 16.6192V14.9815C14.1276 14.8005 13.9786 14.653 13.7976 14.6524H12.2996ZM22.9158 15.9591C21.8797 15.9591 21.0382 16.7996 21.0378 17.835C21.0379 18.8707 21.8795 19.711 22.9158 19.711C23.9516 19.7105 24.7927 18.8704 24.7927 17.835C24.7924 16.7999 23.9514 15.9596 22.9158 15.9591ZM28.3132 13.3809C27.6194 13.3809 27.0564 13.9433 27.0564 14.6368C27.0564 15.3303 27.6194 15.8927 28.3132 15.8927C29.0066 15.8922 29.5691 15.3299 29.5691 14.6368C29.5691 13.9436 29.0066 13.3814 28.3132 13.3809ZM7.63648 10.2296C6.60034 10.2296 5.75873 11.07 5.75855 12.1056C5.75883 13.141 6.6004 13.9815 7.63648 13.9815C8.67212 13.981 9.51316 13.1407 9.51344 12.1056C9.51326 11.0703 8.67218 10.2301 7.63648 10.2296ZM25.7566 10.8233C25.0622 10.8233 24.4999 11.3851 24.4998 12.0792C24.4998 12.7733 25.0621 13.335 25.7566 13.335C26.4507 13.3346 27.0124 12.773 27.0125 12.0792C27.0124 11.3854 26.4507 10.8238 25.7566 10.8233ZM30.8826 10.8233C30.1888 10.8233 29.6258 11.3858 29.6257 12.0792C29.6258 12.7726 30.1888 13.335 30.8826 13.335C31.5761 13.3347 32.1384 12.7724 32.1384 12.0792C32.1383 11.386 31.576 10.8237 30.8826 10.8233ZM28.3289 8.26376C27.635 8.26376 27.072 8.82614 27.072 9.51962C27.0722 10.2129 27.6352 10.7755 28.3289 10.7755C29.0221 10.775 29.5845 10.2126 29.5847 9.51962C29.5847 8.82643 29.0223 8.26424 28.3289 8.26376Z",
+                                      _: "M27.7734 6.01249C28.9788 6.03744 30.1205 6.33782 31.1855 6.91483C31.3082 6.98141 31.3941 7.0615 31.4326 7.16971H31.0996V7.17362H31.4335C31.4524 7.22852 31.4594 7.29064 31.4521 7.3621C31.4407 7.47552 31.4843 7.54171 31.5859 7.60721C33.2663 8.68591 34.2958 10.2253 34.7167 12.1609C35.0706 13.7884 35.3234 15.4352 35.5361 17.0877C35.7469 18.7244 35.8609 20.3682 35.9335 22.0154C35.9671 22.7781 36.004 23.542 35.9999 24.3055C35.9944 25.303 35.8569 26.2831 35.4531 27.2088C34.9562 28.347 34.1485 29.1542 32.9384 29.5017C31.6727 29.8653 30.6028 29.5341 29.7509 28.5262C29.2715 27.9585 28.9464 27.3013 28.7177 26.6014C28.5088 25.9616 28.344 25.3077 28.1474 24.6639C27.6047 22.8866 26.5032 21.5482 24.9238 20.5887C24.9213 20.5871 24.9184 20.5862 24.916 20.5848L25.1503 20.2723L25.1718 20.2469L25.1728 20.2478L25.1904 20.2273C25.2862 20.2759 25.3768 20.3034 25.4365 20.323L25.7773 20.4256C25.8937 20.4577 26.012 20.487 26.124 20.5115L26.4384 20.573C27.1766 20.6984 27.9391 20.7019 28.6767 20.5828L28.6757 20.5818C31.2157 20.1944 33.4046 18.277 34.166 15.8308L34.165 15.8299C35.6102 11.3723 32.3235 6.65548 27.5917 6.65506V6.65409H8.4062V6.65506C5.37767 6.6497 2.70335 8.67037 1.81049 11.5506C1.00503 14.1045 1.74193 16.9571 3.68745 18.7879L3.87983 18.9617C4.91492 19.8713 6.23159 20.462 7.60053 20.6228H7.60151C8.67153 20.7459 9.79336 20.6306 10.8066 20.2273C10.8114 20.2327 10.8176 20.2378 10.8222 20.243L10.8886 20.1834L10.8222 20.2439L10.8271 20.2488L10.833 20.2557C10.8366 20.2598 10.842 20.2657 10.8476 20.2723C10.8594 20.2862 10.8744 20.3052 10.8915 20.326C10.9263 20.3681 10.9694 20.4197 11.0126 20.4724C11.0418 20.508 11.072 20.5445 11.0996 20.5779C11.0938 20.581 11.0879 20.5842 11.082 20.5877C9.89406 21.2973 8.98056 22.2657 8.32905 23.4842C8.03441 24.0355 7.85478 24.6298 7.69721 25.2303C7.50206 25.9733 7.29989 26.7134 6.96284 27.408C6.64138 28.0702 6.24258 28.6754 5.63471 29.1131C4.81567 29.7026 3.91714 29.77 2.98042 29.4724C1.77578 29.0895 0.984754 28.2619 0.511667 27.1101C0.206212 26.3666 0.0705524 25.5865 0.0243618 24.7879C-0.046774 23.562 0.0538517 22.3407 0.122018 21.1189C0.161122 20.4188 0.195563 19.7179 0.265573 19.0203C0.368012 18.003 0.474778 16.9846 0.627877 15.9744C0.821202 14.6994 1.02971 13.4249 1.29194 12.1629C1.69465 10.2234 2.74378 8.70172 4.4062 7.61405C4.51078 7.54554 4.57148 7.47897 4.55659 7.3494C4.53428 7.15242 4.62772 7.02617 4.79975 6.93046C5.59838 6.48682 6.45226 6.20819 7.35444 6.09159C7.80468 6.03349 8.26203 6.01478 8.71674 6.00956C9.68191 5.99838 10.6481 6.00686 11.6132 6.0076C11.6623 6.00761 11.7116 6.00867 11.7607 6.01053C12.0309 6.02025 12.1172 6.09801 12.1552 6.37186V6.37088H23.8154C23.8752 6.26485 23.9075 6.14249 23.9863 6.08768C24.0726 6.02812 24.2031 6.01093 24.3144 6.01053C25.4672 6.00532 26.621 5.98866 27.7734 6.01249ZM27.5878 7.23026L27.9902 7.24296C31.9701 7.49058 34.7257 11.4172 33.7294 15.2713L33.6171 15.656L33.6152 15.659C32.9396 17.8298 31.0302 19.5502 28.8037 19.9764L28.5878 20.0135H28.5849C27.9099 20.1225 27.211 20.1195 26.5351 20.0047L26.247 19.949C26.0499 19.9059 25.8293 19.8435 25.6337 19.7801C26.2276 19.1014 26.5334 18.1831 26.4589 17.283H26.4599C26.3463 15.5899 24.908 14.1684 23.207 14.1199H23.041C21.3039 14.1281 19.8318 15.5696 19.7148 17.283H19.7158C19.6765 17.7706 19.7462 18.2662 19.914 18.7244V18.7254L19.9277 18.7674L19.9287 18.7713L19.9423 18.8123L19.9521 18.8435L19.9648 18.8963L19.9716 18.9441H19.9726L19.9765 18.9793V18.9812L19.9804 19.0144L19.9824 19.0428V19.0603L19.9814 19.073L19.9804 19.0955V19.1033L19.9277 19.2693L20.2021 19.3562L20.2548 19.3728V19.4764H20.2568L20.3339 19.3982L20.4765 19.4432L20.5292 19.2781L20.5302 19.2693L20.5322 19.2703L20.5341 19.2644L20.5371 19.2488L20.538 19.2469L20.5507 19.1873L20.5527 19.1697V19.1668L20.5546 19.1473L20.5566 19.1189V19.1033L20.5576 19.0916L20.5585 19.0701V19.0428L20.5576 19.0242L20.5537 18.9627L20.5527 18.9471L20.5449 18.8807L20.5429 18.867L20.5312 18.7937L20.5263 18.7683L20.5068 18.6902H20.5078L20.5039 18.6775L20.4921 18.6385L20.4892 18.6307L20.4755 18.5896L20.4628 18.5506H20.4638L20.4589 18.5379L20.4091 18.3914C20.3029 18.0482 20.2617 17.6837 20.291 17.326L20.0136 17.3025L20.289 17.3221C20.3864 15.8966 21.6228 14.7 23.0488 14.6961L23.0546 14.6951C24.5067 14.66 25.787 15.8694 25.8847 17.3211V17.3269C25.9568 18.1839 25.6106 19.0661 24.9697 19.6355L25.1601 19.8504L24.9687 19.6346L24.9609 19.6433L24.9042 19.698L24.8515 19.7478L24.8437 19.7557L24.7949 19.8064L24.791 19.8113L24.748 19.8582L24.7451 19.8611L24.7128 19.8982L24.6962 19.9168L24.4111 20.2976L24.3974 20.3142L24.3857 20.3299L24.3935 20.3357L24.3544 20.3758L24.3525 20.3797L24.5966 20.5017L24.6025 20.5125L24.6415 20.5906C23.0992 21.3439 21.1855 20.8778 20.166 19.4949C20.1056 19.4133 20.0441 19.3832 19.9443 19.3836C18.6485 19.3869 17.3524 19.387 16.0566 19.3855C15.9769 19.3855 15.9142 19.394 15.8613 19.4685C14.9119 20.8074 12.9767 21.3814 11.3662 20.5935L11.4335 20.5242L11.6328 20.3162C11.6285 20.3115 11.6106 20.2916 11.5771 20.2517C11.5429 20.211 11.5006 20.1592 11.458 20.1072C11.3816 20.0142 11.2904 19.9026 11.2539 19.8621H11.2548C11.1885 19.787 11.1037 19.7023 11.0273 19.6346H11.0263C10.3864 19.0651 10.0392 18.1831 10.1113 17.3269L10.1123 17.324C10.2204 15.8833 11.4308 14.7105 12.872 14.6961L12.874 14.6951C14.3453 14.6707 15.5979 15.855 15.708 17.324V17.325C15.7357 17.6841 15.6956 18.0487 15.5898 18.3914L15.54 18.5379L15.538 18.5428C15.4742 18.7262 15.4041 18.9852 15.4599 19.2488L15.7421 19.1883L15.7695 19.1824L15.7441 19.1902L15.4687 19.2752L15.5195 19.4402L16.0703 19.2723L16.0214 19.114C16.0052 19.0154 16.0275 18.8903 16.08 18.7381C16.2308 18.3318 16.3013 17.8967 16.291 17.4646L16.2822 17.2801C16.15 15.5194 14.6532 14.0912 12.8662 14.1199H12.8642C11.1679 14.1378 9.75791 15.4668 9.55366 17.1199L9.53706 17.281C9.46215 18.1795 9.76702 19.0975 10.3583 19.7762C9.50533 20.0699 8.57082 20.1545 7.66694 20.0506H7.66596C6.49271 19.9124 5.35766 19.4282 4.4394 18.6814L4.25874 18.5281H4.25776C2.34413 16.8601 1.59604 14.1449 2.35932 11.7244L2.3603 11.7224L2.44135 11.4773C3.33297 8.9628 5.72246 7.22514 8.4062 7.23026H27.5878ZM12.8828 15.7625C12.0828 15.7627 11.4339 16.4123 11.4335 17.2127C11.4335 18.0134 12.0825 18.6627 12.8828 18.6629C13.6832 18.6629 14.332 18.0136 14.332 17.2127C14.3316 16.4121 13.6829 15.7625 12.8828 15.7625ZM23.1162 15.7625C22.3163 15.7629 21.6673 16.4123 21.6669 17.2127C21.6669 18.0133 22.316 18.6625 23.1162 18.6629C23.9166 18.6629 24.5654 18.0136 24.5654 17.2127C24.565 16.4121 23.9163 15.7625 23.1162 15.7625ZM27.8808 13.1892C27.1708 13.1893 26.5948 13.7659 26.5947 14.4764C26.5947 15.1868 27.1708 15.7624 27.8808 15.7625C28.5908 15.7623 29.1669 15.1868 29.1669 14.4764C29.1668 13.766 28.5908 13.1894 27.8808 13.1892ZM7.45405 9.20682C7.28806 9.20699 7.1525 9.34261 7.15229 9.50858V10.9764C7.15205 11.0454 7.09514 11.1031 7.02631 11.1033H5.55952C5.39342 11.1034 5.25786 11.239 5.25776 11.4051V12.7381C5.258 12.904 5.39351 13.0397 5.55952 13.0398H7.02631C7.09523 13.04 7.15219 13.0977 7.15229 13.1668V14.6346C7.15264 14.8004 7.28815 14.9362 7.45405 14.9363H8.78706C8.9528 14.936 9.08749 14.8003 9.08784 14.6346V13.1668C9.08794 13.0976 9.14581 13.0399 9.21479 13.0398H10.6816C10.8474 13.0395 10.9821 12.9039 10.9824 12.7381V11.4051C10.9823 11.2401 10.8491 11.1052 10.6845 11.1033L10.6796 11.1014H9.21284C9.14395 11.1013 9.08808 11.0454 9.08784 10.9764V9.50858C9.08763 9.34273 8.95288 9.20717 8.78706 9.20682H7.45405ZM25.0615 10.7459C24.3517 10.7462 23.7756 11.3228 23.7753 12.033C23.7754 12.7433 24.3516 13.3188 25.0615 13.3191C25.7716 13.3191 26.3475 12.7435 26.3476 12.033C26.3474 11.3226 25.7715 10.7459 25.0615 10.7459ZM30.6874 10.7459C29.9775 10.746 29.4016 11.3227 29.4013 12.033C29.4014 12.7435 29.9774 13.319 30.6874 13.3191C31.3976 13.3191 31.9735 12.7435 31.9736 12.033C31.9733 11.3226 31.3974 10.7459 30.6874 10.7459ZM27.8808 8.28788C27.1708 8.28797 26.5948 8.86454 26.5947 9.57499C26.5949 10.2853 27.1709 10.861 27.8808 10.8611C28.5907 10.8609 29.1667 10.2852 29.1669 9.57499C29.1668 8.8646 28.5908 8.28807 27.8808 8.28788Z",
                                     }),
-                                  ),
-                                  _.createElement(
-                                    "defs",
-                                    null,
-                                    _.createElement(
-                                      "clipPath",
-                                      {
-                                        _: _,
-                                      },
-                                      _.createElement("rect", {
+                                  }),
+                                  (0, _.jsx)("defs", {
+                                    children: (0, _.jsx)("clipPath", {
+                                      _: _,
+                                      children: (0, _.jsx)("rect", {
                                         fill: "currentColor",
                                         width: "36",
                                         height: "36",
                                       }),
-                                    ),
-                                  ),
-                                )
-                              : _.createElement(_, {
+                                    }),
+                                  }),
+                                ],
+                              })
+                            : "8bitdo_ultimate" == _
+                              ? (0, _.jsxs)("svg", {
+                                  viewBox: "0 0 36 36",
+                                  fill: "none",
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  ..._,
+                                  children: [
+                                    (0, _.jsx)("g", {
+                                      clipPath: _,
+                                      children: (0, _.jsx)("path", {
+                                        fill: "currentColor",
+                                        _: "M25.3865 5.11825C26.755 4.90005 28.1094 4.97923 29.4236 5.39462C30.4285 5.71216 31.3614 6.19989 32.1726 6.89462C32.3276 7.02768 32.4119 7.17257 32.408 7.37704C32.4056 7.49827 32.4255 7.61963 32.4314 7.69345C32.5721 7.80286 32.6969 7.87505 32.7898 7.97567C33.7307 8.99583 34.2022 10.2489 34.5398 11.5626C34.9787 13.2716 35.2054 15.0185 35.4158 16.7657C35.5919 18.2301 35.751 19.6978 35.8796 21.1671C36.0269 22.851 36.0917 24.5378 35.7634 26.212C35.5761 27.1675 35.2593 28.0684 34.5789 28.7999C33.9668 29.458 33.1821 29.8296 32.3533 30.1241C31.7359 30.3438 31.5771 30.317 31.2107 29.7599C30.651 28.9095 30.1303 28.0326 29.5935 27.1671C28.9629 26.149 28.3487 25.1202 27.6961 24.1163C27.2547 23.4372 26.6937 22.8717 25.8972 22.6016C25.2789 22.3918 24.6367 22.3551 23.991 22.3556C19.8645 22.3575 15.7376 22.3624 11.6111 22.3614C10.178 22.3614 9.04967 22.9302 8.28492 24.1524C7.43808 25.5056 6.61368 26.8734 5.77515 28.2325C5.46691 28.7316 5.1469 29.2242 4.82887 29.7169C4.76726 29.8121 4.68876 29.8965 4.61695 29.9845C4.40805 30.2398 4.16884 30.3079 3.84058 30.1925C2.86063 29.848 1.9303 29.4329 1.25465 28.5997C0.678281 27.8888 0.403921 27.0492 0.233162 26.169C-0.034456 24.7888 -0.0493176 23.3911 0.0759357 22.0011C0.277018 19.7696 0.510949 17.5401 0.783944 15.3165C0.992378 13.6187 1.26467 11.9263 1.85328 10.3067C2.16201 9.45791 2.57326 8.66447 3.19508 7.99716C3.29517 7.88989 3.42374 7.80944 3.57496 7.68954C3.49832 7.16883 3.8053 6.87846 4.18922 6.60555C6.15956 5.20425 8.33914 4.74637 10.7107 5.12997C11.05 5.18473 11.0504 5.18936 11.4265 5.58016C11.5389 5.56107 11.6476 5.52694 11.7566 5.52645C14.8635 5.51177 17.97 5.49081 21.0769 5.49227C22.2174 5.49277 23.3574 5.5474 24.4978 5.57235C24.5492 5.57333 24.6169 5.53872 24.6502 5.49813C24.842 5.26328 25.09 5.16571 25.3865 5.11825ZM12.2996 14.6524C12.1182 14.6524 11.9696 14.8002 11.9695 14.9815V16.6192C11.9695 16.7005 11.9009 16.7683 11.8181 16.7686H10.1697C9.98837 16.7687 9.8397 16.9165 9.83961 17.0977V18.586C9.83976 18.7673 9.98841 18.914 10.1697 18.9141H11.8181C11.9008 18.9145 11.9693 18.9825 11.9695 19.0636V20.7022C11.9696 20.8836 12.1182 21.0304 12.2996 21.0304H13.7976C13.9786 21.0298 14.1276 20.8832 14.1277 20.7022V19.0636C14.1279 18.9823 14.1952 18.9142 14.2781 18.9141H15.9265C16.1076 18.9138 16.2564 18.7671 16.2566 18.586V17.0977C16.2565 16.9175 16.1094 16.7704 15.9295 16.7686L15.9246 16.7667H14.2761C14.193 16.7667 14.1277 16.7007 14.1277 16.6192V14.9815C14.1276 14.8005 13.9786 14.653 13.7976 14.6524H12.2996ZM22.9158 15.9591C21.8797 15.9591 21.0382 16.7996 21.0378 17.835C21.0379 18.8707 21.8795 19.711 22.9158 19.711C23.9516 19.7105 24.7927 18.8704 24.7927 17.835C24.7924 16.7999 23.9514 15.9596 22.9158 15.9591ZM28.3132 13.3809C27.6194 13.3809 27.0564 13.9433 27.0564 14.6368C27.0564 15.3303 27.6194 15.8927 28.3132 15.8927C29.0066 15.8922 29.5691 15.3299 29.5691 14.6368C29.5691 13.9436 29.0066 13.3814 28.3132 13.3809ZM7.63648 10.2296C6.60034 10.2296 5.75873 11.07 5.75855 12.1056C5.75883 13.141 6.6004 13.9815 7.63648 13.9815C8.67212 13.981 9.51316 13.1407 9.51344 12.1056C9.51326 11.0703 8.67218 10.2301 7.63648 10.2296ZM25.7566 10.8233C25.0622 10.8233 24.4999 11.3851 24.4998 12.0792C24.4998 12.7733 25.0621 13.335 25.7566 13.335C26.4507 13.3346 27.0124 12.773 27.0125 12.0792C27.0124 11.3854 26.4507 10.8238 25.7566 10.8233ZM30.8826 10.8233C30.1888 10.8233 29.6258 11.3858 29.6257 12.0792C29.6258 12.7726 30.1888 13.335 30.8826 13.335C31.5761 13.3347 32.1384 12.7724 32.1384 12.0792C32.1383 11.386 31.576 10.8237 30.8826 10.8233ZM28.3289 8.26376C27.635 8.26376 27.072 8.82614 27.072 9.51962C27.0722 10.2129 27.6352 10.7755 28.3289 10.7755C29.0221 10.775 29.5845 10.2126 29.5847 9.51962C29.5847 8.82643 29.0223 8.26424 28.3289 8.26376Z",
+                                      }),
+                                    }),
+                                    (0, _.jsx)("defs", {
+                                      children: (0, _.jsx)("clipPath", {
+                                        _: _,
+                                        children: (0, _.jsx)("rect", {
+                                          fill: "currentColor",
+                                          width: "36",
+                                          height: "36",
+                                        }),
+                                      }),
+                                    }),
+                                  ],
+                                })
+                              : (0, _.jsx)(_, {
                                   ..._,
                                 });
       }
@@ -31278,35 +30795,35 @@
         } = _;
         switch (_) {
           case 4:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               ..._,
             });
           case 34:
           case 47:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: "ps4",
               ..._,
             });
           case 45:
           case 48:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: "ps5",
               ..._,
             });
           case 2:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: "steam",
               ..._,
             });
           case 10:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: "triton",
               ..._,
             });
           case 31:
           case 32:
           case 46:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: "xbox",
               ..._,
             });
@@ -31316,37 +30833,37 @@
           case 41:
           case 38:
           case 44:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: "switchpro",
               ..._,
             });
           case 49:
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               type: "hori",
               ..._,
             });
           default:
             return 2 == __webpack_require__
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   type: "gamecube",
                   ..._,
                 })
               : 3 == __webpack_require__
-                ? _.createElement(_, {
+                ? (0, _.jsx)(_, {
                     type: "8bitdo_sn30",
                     ..._,
                   })
                 : 4 == __webpack_require__
-                  ? _.createElement(_, {
+                  ? (0, _.jsx)(_, {
                       type: "8bitdo_pro",
                       ..._,
                     })
                   : 5 == __webpack_require__
-                    ? _.createElement(_, {
+                    ? (0, _.jsx)(_, {
                         type: "8bitdo_ultimate",
                         ..._,
                       })
-                    : _.createElement(_, {
+                    : (0, _.jsx)(_, {
                         type: "generic",
                         ..._,
                       });
@@ -31354,1421 +30871,1227 @@
       }
       function _(_) {
         const { type: _, partial: __webpack_require__, ..._ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
           }),
-        );
+        });
       }
       function _(_) {
         const { color: _ = "currentColor", ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...__webpack_require__,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ...__webpack_require__,
+          children: (0, _.jsx)("path", {
             _: "M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z",
             fill: _,
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(_.className, _().FlipInRTL),
-          },
-          _.createElement("path", {
-            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)(_.className, _().FlipInRTL),
+          children: [
+            (0, _.jsx)("path", {
+              _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(_.className, _().FlipInRTL),
-          },
-          _.createElement("path", {
-            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
-            fill: "currentColor",
-            fillOpacity: "0.5",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)(_.className, _().FlipInRTL),
+          children: [
+            (0, _.jsx)("path", {
+              _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+              fill: "currentColor",
+              fillOpacity: "0.5",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(_.className, _().FlipInRTL),
-          },
-          _.createElement("path", {
-            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
-            fill: "currentColor",
-            fillOpacity: "0.25",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
-            fill: "currentColor",
-            fillOpacity: "0.5",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)(_.className, _().FlipInRTL),
+          children: [
+            (0, _.jsx)("path", {
+              _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+              fill: "currentColor",
+              fillOpacity: "0.25",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+              fill: "currentColor",
+              fillOpacity: "0.5",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(_.className, _().FlipInRTL),
-          },
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M14.15 6.00818L14.16 6H14.15V6.00818ZM14.15 18.27V6.00818L7.10342 11.77L14.15 18.27ZM14.15 26.039L1 13.909V23.27H5.11L14.15 30.67V26.039Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
-            fill: "currentColor",
-            fillOpacity: "0.25",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
-            fill: "currentColor",
-            fillOpacity: "0.25",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
-            fill: "currentColor",
-            fillOpacity: "0.25",
-          }),
-          _.createElement(
-            "rect",
-            {
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)(_.className, _().FlipInRTL),
+          children: [
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M14.15 6.00818L14.16 6H14.15V6.00818ZM14.15 18.27V6.00818L7.10342 11.77L14.15 18.27ZM14.15 26.039L1 13.909V23.27H5.11L14.15 30.67V26.039Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+              fill: "currentColor",
+              fillOpacity: "0.25",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+              fill: "currentColor",
+              fillOpacity: "0.25",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+              fill: "currentColor",
+              fillOpacity: "0.25",
+            }),
+            (0, _.jsx)("rect", {
               _: "0.728821",
               _: "10",
               width: "3",
               height: "27",
               transform: "rotate(-46.9546 0.728821 9.47668)",
               fill: "currentColor",
-            },
-            _.createElement("animate", {
-              attributeName: "y",
-              begin: "0",
-              dur: "150ms",
-              from: "0",
-              _: "10",
-              values: "0; 5; 10",
-              keyTimes: "0; .8; 1",
-              fill: "freeze",
+              children: (0, _.jsx)("animate", {
+                attributeName: "y",
+                begin: "0",
+                dur: "150ms",
+                from: "0",
+                _: "10",
+                values: "0; 5; 10",
+                keyTimes: "0; .8; 1",
+                fill: "freeze",
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const { direction: _, className: __webpack_require__, ..._ } = _;
         switch (_) {
           case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                className: (0, _._)(_().FlipInRTL, __webpack_require__),
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                className: (0, _._)(_().FlipInRTL, __webpack_require__),
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                className: (0, _._)(_().FlipInRTL, __webpack_require__),
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "right":
-            return _.createElement(
-              "svg",
-              {
-                viewBox: "0 0 36 36",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: (0, _._)(_().FlipInRTL, __webpack_require__),
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: (0, _._)(_().FlipInRTL, __webpack_require__),
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
                 fill: "currentColor",
               }),
-            );
+            });
         }
       }
       function _(_) {
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
           case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M17.98 10.23L3.20996 25H32.75L17.98 10.23Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M17.98 26.54L3.20996 11.77H32.75L17.98 26.54Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M9.82497 18.385L24.595 3.61499L24.595 33.155L9.82497 18.385Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "right":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M26.135 18.385L11.365 33.155L11.365 3.61503L26.135 18.385Z",
                 fill: "currentColor",
               }),
-            );
+            });
         }
       }
       function _(_) {
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
           case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 _: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
               }),
-            );
+            });
           case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 _: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
               }),
-            );
+            });
           case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M14.23 30.75L1.45996 18L14.23 5.20999L17.77 8.74999L8.53996 18L17.77 27.23L14.23 30.75ZM31.77 27.21L22.54 18L31.77 8.76999L28.23 5.20999L15.46 18L28.23 30.75L31.77 27.21Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "right":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M19 30.75L31.77 18L19 5.20999L15.46 8.74999L24.69 18L15.46 27.23L19 30.75ZM1.46002 27.21L10.69 18L1.46002 8.76999L5.00002 5.20999L17.77 18L5.00002 30.75L1.46002 27.21Z",
                 fill: "currentColor",
               }),
-            );
+            });
         }
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            _: "Layer_1",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 1200 1200",
-            ..._,
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
-              _: "M590.4,883.4H363.8c-6.3,0-12.3-2.5-16.7-6.9c-4.4-4.4-6.9-10.4-6.9-16.7V505.5h519.5V614h44.4c0.9,0,1.9,0,2.8,0.1V387.5   c0-18.8-7.5-36.8-20.8-50.1c-13.3-13.3-31.3-20.8-50.1-20.8h-47.2V293c0-13-10.6-23.6-23.6-23.6S741.7,280,741.7,293v23.6H623.6   V293c0-13-10.6-23.6-23.6-23.6S576.4,280,576.4,293v23.6H458.3V293c0-13-10.6-23.6-23.6-23.6c-13,0-23.6,10.6-23.6,23.6v23.6h-47.2   c-18.8,0-36.8,7.5-50.1,20.8c-13.3,13.3-20.8,31.3-20.8,50.1v472.3c0,18.8,7.5,36.8,20.8,50.1c13.3,13.3,31.3,20.8,50.1,20.8h226.7   c-0.1-0.9-0.1-1.9-0.1-2.8V883.4z M340.2,387.5c0-6.3,2.5-12.3,6.9-16.7c4.4-4.4,10.4-6.9,16.7-6.9h47.2l0,23.6   c0,13,10.6,23.6,23.6,23.6c13,0,23.6-10.6,23.6-23.6v-23.6h118.1v23.6c0,13,10.6,23.6,23.6,23.6s23.6-10.6,23.6-23.6v-23.6h118.1   v23.6c0,13,10.6,23.6,23.6,23.6s23.6-10.6,23.6-23.6v-23.6h47.2c6.3,0,12.3,2.5,16.7,6.9c4.4,4.4,6.9,10.4,6.9,16.7v70.8H340.2   V387.5z",
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          _: "Layer_1",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 1200 1200",
+          ..._,
+          children: (0, _.jsxs)("g", {
+            children: [
+              (0, _.jsx)("path", {
+                _: "M590.4,883.4H363.8c-6.3,0-12.3-2.5-16.7-6.9c-4.4-4.4-6.9-10.4-6.9-16.7V505.5h519.5V614h44.4c0.9,0,1.9,0,2.8,0.1V387.5   c0-18.8-7.5-36.8-20.8-50.1c-13.3-13.3-31.3-20.8-50.1-20.8h-47.2V293c0-13-10.6-23.6-23.6-23.6S741.7,280,741.7,293v23.6H623.6   V293c0-13-10.6-23.6-23.6-23.6S576.4,280,576.4,293v23.6H458.3V293c0-13-10.6-23.6-23.6-23.6c-13,0-23.6,10.6-23.6,23.6v23.6h-47.2   c-18.8,0-36.8,7.5-50.1,20.8c-13.3,13.3-20.8,31.3-20.8,50.1v472.3c0,18.8,7.5,36.8,20.8,50.1c13.3,13.3,31.3,20.8,50.1,20.8h226.7   c-0.1-0.9-0.1-1.9-0.1-2.8V883.4z M340.2,387.5c0-6.3,2.5-12.3,6.9-16.7c4.4-4.4,10.4-6.9,16.7-6.9h47.2l0,23.6   c0,13,10.6,23.6,23.6,23.6c13,0,23.6-10.6,23.6-23.6v-23.6h118.1v23.6c0,13,10.6,23.6,23.6,23.6s23.6-10.6,23.6-23.6v-23.6h118.1   v23.6c0,13,10.6,23.6,23.6,23.6s23.6-10.6,23.6-23.6v-23.6h47.2c6.3,0,12.3,2.5,16.7,6.9c4.4,4.4,6.9,10.4,6.9,16.7v70.8H340.2   V387.5z",
+              }),
+              (0, _.jsx)("path", {
+                _: "M904.2,629h-267c-17.6,0-31.8,14.2-31.8,31.8v267c0,17.6,14.2,31.8,31.8,31.8h267c17.6,0,31.8-14.2,31.8-31.8v-267   C936,643.2,921.8,629,904.2,629z M860.5,829.8l-87.7,87.7L685,829.8c-6.6-6.6-6.6-17.4,0-24c6.6-6.6,17.4-6.6,24,0l46.7,46.7v-164   c0-9.4,7.6-17,17-17s17,7.6,17,17v164l46.7-46.7c6.6-6.6,17.4-6.6,24,0C867.1,812.4,867.1,823.2,860.5,829.8z",
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M24 4H4V24H8V8H24V4Z",
+              fill: "currentColor",
             }),
-            _.createElement("path", {
-              _: "M904.2,629h-267c-17.6,0-31.8,14.2-31.8,31.8v267c0,17.6,14.2,31.8,31.8,31.8h267c17.6,0,31.8-14.2,31.8-31.8v-267   C936,643.2,921.8,629,904.2,629z M860.5,829.8l-87.7,87.7L685,829.8c-6.6-6.6-6.6-17.4,0-24c6.6-6.6,17.4-6.6,24,0l46.7,46.7v-164   c0-9.4,7.6-17,17-17s17,7.6,17,17v164l46.7-46.7c6.6-6.6,17.4-6.6,24,0C867.1,812.4,867.1,823.2,860.5,829.8z",
+            (0, _.jsx)("path", {
+              _: "M12 12V32H32V12H12ZM28 24H24V28H20V24H16V20H20V16H24V20H28V24Z",
+              fill: "currentColor",
             }),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M24 4H4V24H8V8H24V4Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M12 12V32H32V12H12ZM28 24H24V28H20V24H16V20H20V16H24V20H28V24Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M28.1684 2.16431L23.5793 6.75343L29.2362 12.4103L33.8253 7.82116L28.1684 2.16431Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M20.76 9.58999L5.67 24.67L4 32L11.33 30.33L26.41 15.24L20.76 9.58999Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M28.1684 2.16431L23.5793 6.75343L29.2362 12.4103L33.8253 7.82116L28.1684 2.16431Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M20.76 9.58999L5.67 24.67L4 32L11.33 30.33L26.41 15.24L20.76 9.58999Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: [
+            (0, _.jsx)("rect", {
+              _: "5",
+              _: "8",
+              width: "26",
+              height: "4",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "13",
+              _: "3",
+              width: "10",
+              height: "3",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M27 32.2952H9L7 14.2952H29L27 32.2952ZM12 29.2952H14V17.2952H12V29.2952ZM17 17.2952V29.2952H19V17.2952H17ZM22 29.2952H24V17.2952H22V29.2952Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("rect", {
-            _: "5",
-            _: "8",
-            width: "26",
-            height: "4",
-            fill: "currentColor",
-          }),
-          _.createElement("rect", {
-            _: "13",
-            _: "3",
-            width: "10",
-            height: "3",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M27 32.2952H9L7 14.2952H29L27 32.2952ZM12 29.2952H14V17.2952H12V29.2952ZM17 17.2952V29.2952H19V17.2952H17ZM22 29.2952H24V17.2952H22V29.2952Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M9.66645 5.52796C12.1332 3.87973 15.0333 3 18 3C19.9698 3 21.9204 3.38799 23.7403 4.14181C25.5601 4.89563 27.2137 6.00052 28.6066 7.3934C29.9995 8.78628 31.1044 10.4399 31.8582 12.2597C32.612 14.0796 33 16.0302 33 18C33 20.9667 32.1203 23.8668 30.472 26.3336C28.8238 28.8003 26.4811 30.7229 23.7403 31.8582C20.9994 32.9935 17.9834 33.2906 15.0737 32.7118C12.1639 32.133 9.49119 30.7044 7.3934 28.6066C5.29562 26.5088 3.86701 23.8361 3.28823 20.9264C2.70945 18.0166 3.0065 15.0006 4.14181 12.2597C5.27713 9.51886 7.19972 7.17618 9.66645 5.52796ZM9.5056 13.3333C9.17595 13.8266 9.00001 14.4067 9.00001 15C9.00001 15.7956 9.31608 16.5587 9.87869 17.1213C10.4413 17.6839 11.2044 18 12 18C12.5934 18 13.1734 17.8241 13.6667 17.4944C14.1601 17.1648 14.5446 16.6962 14.7716 16.1481C14.9987 15.5999 15.0581 14.9967 14.9424 14.4147C14.8266 13.8328 14.5409 13.2982 14.1213 12.8787C13.7018 12.4591 13.1672 12.1734 12.5853 12.0576C12.0033 11.9419 11.4001 12.0013 10.852 12.2284C10.3038 12.4554 9.83524 12.8399 9.5056 13.3333ZM22.3333 17.4944C22.8266 17.8241 23.4067 18 24 18C24.7957 18 25.5587 17.6839 26.1213 17.1213C26.6839 16.5587 27 15.7956 27 15C27 14.4067 26.8241 13.8266 26.4944 13.3333C26.1648 12.8399 25.6962 12.4554 25.1481 12.2284C24.5999 12.0013 23.9967 11.9419 23.4147 12.0576C22.8328 12.1734 22.2982 12.4591 21.8787 12.8787C21.4591 13.2982 21.1734 13.8328 21.0576 14.4147C20.9419 14.9967 21.0013 15.5999 21.2284 16.1481C21.4554 16.6962 21.8399 17.1648 22.3333 17.4944ZM23 22C23 23.3261 22.4732 24.5979 21.5355 25.5355C20.5979 26.4732 19.3261 27 18 27C16.6739 27 15.4021 26.4732 14.4645 25.5355C13.5268 24.5979 13 23.3261 13 22H23Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M2 6.05005V30.05H34V6.05005H2ZM25 10.05C25.5933 10.05 26.1734 10.226 26.6667 10.5556C27.1601 10.8853 27.5446 11.3538 27.7716 11.902C27.9987 12.4502 28.0581 13.0534 27.9424 13.6353C27.8266 14.2173 27.5409 14.7518 27.1213 15.1714C26.7018 15.5909 26.1672 15.8766 25.5853 15.9924C25.0033 16.1082 24.4001 16.0488 23.8519 15.8217C23.3038 15.5946 22.8352 15.2101 22.5056 14.7168C22.1759 14.2234 22 13.6434 22 13.05C22 12.2544 22.3161 11.4913 22.8787 10.9287C23.4413 10.3661 24.2044 10.05 25 10.05ZM23 26.05H6L14.5 15.05L19.4 21.39L22 18.05L28.22 26.05H23Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M2 6.05005V30.05H34V6.05005H2ZM8 27.05H5V23.05H8V27.05ZM8 20.05H5V16.05H8V20.05ZM8 13.05H5V9.05005H8V13.05ZM14 23.82V12.28L24 18.05L14 23.82ZM31 27.05H28V23.05H31V27.05ZM31 20.05H28V16.05H31V20.05ZM31 13.05H28V9.05005H31V13.05Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 24 24",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M3 6H21V17.9857H11.174V16.7846H19.9239V8.68161L4.08514 8.68175V9.85254H3V6Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M10.4285 10.5567V16.1991H8.54908V13.7682L4.33155 17.9887V18H3V16.6675H3.00181L7.22877 12.4375H4.79018V10.5567H10.4285Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 24 24",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M3 6H21V17.9857H11.174V16.7846H19.9239V8.68161L4.08514 8.68175V9.85254H3V6Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M10.4285 10.5567V16.1991H8.54908V13.7682L4.33155 17.9887V18H3V16.6675H3.00181L7.22877 12.4375H4.79018V10.5567H10.4285Z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M14 14H4V10H10V4H14V14ZM32 10H26V4H22V14H32V10ZM26 26H32V22H22V32H26V26ZM14 22H4V26H10V32H14V22Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57C28 10 26.5 9 23.94 7.94C20.9843 6.77796 17.7541 6.50244 14.6444 7.14712C11.5346 7.7918 8.68012 9.32875 6.43 11.57L0 18L6.43 24.43C8.10419 26.1042 10.2596 27.5 12.73 28.34ZM18 25C21.866 25 25 21.866 25 18C25 14.134 21.866 11 18 11C14.134 11 11 14.134 11 18C11 21.866 14.134 25 18 25Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M29.57 11.57L24.82 16.32C24.9485 16.8705 25.0089 17.4347 25 18C25 19.8565 24.2625 21.637 22.9497 22.9497C21.637 24.2625 19.8565 25 18 25C17.423 24.9983 16.8486 24.9244 16.29 24.78L12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M28.94 2.94L23.94 7.94C20.9843 6.77797 17.7541 6.50244 14.6444 7.14712C11.5346 7.79181 8.68012 9.32876 6.43 11.57L0 18L6.43 24.43C6.6 24.6 6.79 24.75 6.97 24.91L3.44 28.44L5.56 30.56L31.06 5.06L28.94 2.94ZM11 18C11.0002 16.8706 11.2736 15.7581 11.7969 14.7573C12.3203 13.7565 13.078 12.8971 14.0054 12.2527C14.9328 11.6082 16.0024 11.1977 17.1229 11.0561C18.2434 10.9146 19.3815 11.0463 20.44 11.44L11.44 20.44C11.1493 19.6593 11.0003 18.833 11 18Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M29.57 11.57L24.82 16.32C24.9485 16.8705 25.0089 17.4347 25 18C25 19.8565 24.2625 21.637 22.9497 22.9497C21.637 24.2625 19.8565 25 18 25C17.423 24.9983 16.8486 24.9244 16.29 24.78L12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0966 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M28.94 2.94L23.94 7.94C20.9843 6.77797 17.7541 6.50244 14.6444 7.14712C11.5346 7.79181 8.68012 9.32876 6.43 11.57L0 18L6.43 24.43C6.6 24.6 6.79 24.75 6.97 24.91L3.44 28.44L5.56 30.56L31.06 5.06L28.94 2.94ZM11 18C11.0002 16.8706 11.2736 15.7581 11.7969 14.7573C12.3203 13.7565 13.078 12.8971 14.0054 12.2527C14.9328 11.6082 16.0024 11.1977 17.1229 11.0561C18.2434 10.9146 19.3815 11.0463 20.44 11.44L11.44 20.44C11.1493 19.6593 11.0003 18.833 11 18Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 20 20",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 20 20",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M5.37033 3.07108C6.74074 2.15541 8.35191 1.66666 10.0001 1.66666C11.0944 1.66666 12.1781 1.88221 13.1891 2.301C14.2002 2.71979 15.1188 3.33362 15.8926 4.10744C16.6665 4.88126 17.2803 5.79992 17.6991 6.81097C18.1179 7.82202 18.3334 8.90565 18.3334 10C18.3334 11.6482 17.8447 13.2593 16.929 14.6297C16.0133 16.0002 14.7118 17.0683 13.1891 17.699C11.6664 18.3297 9.99084 18.4948 8.37433 18.1732C6.75782 17.8517 5.27297 17.058 4.10753 15.8926C2.94209 14.7271 2.14842 13.2423 1.82687 11.6258C1.50533 10.0092 1.67036 8.33369 2.30109 6.81097C2.93182 5.28825 3.99992 3.98676 5.37033 3.07108ZM12.2223 5L11.389 10H8.61119L7.77786 5H12.2223ZM11.9445 13.0556C11.9445 14.1294 11.074 15 10.0001 15C8.92619 15 8.05564 14.1294 8.05564 13.0556C8.05564 11.9817 8.92619 11.1111 10.0001 11.1111C11.074 11.1111 11.9445 11.9817 11.9445 13.0556Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "5",
-            height: "19",
-            viewBox: "0 0 5 19",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "5",
+          height: "19",
+          viewBox: "0 0 5 19",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M5 0H3C1.34315 0 0 1.34315 0 3V16C0 17.6569 1.34315 19 3 19H5V0Z",
             fill: "white",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "5",
-            height: "19",
-            viewBox: "0 0 5 19",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "5",
+          height: "19",
+          viewBox: "0 0 5 19",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M0 0H2C3.65685 0 5 1.34315 5 3V16C5 17.6569 3.65685 19 2 19H0V0Z",
             fill: "white",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Undo",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Undo",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M32.584 17.998a13.87 13.87 0 0 0-24.05-9.421V5.974a1.857 1.857 0 1 0-3.715 0v7.397a1.857 1.857 0 0 0 1.857 1.857h7.41a1.857 1.857 0 0 0 0-3.714H10.86a10.176 10.176 0 1 1 7.85 16.657 1.857 1.857 0 0 0 0 3.713h.036a13.871 13.871 0 0 0 13.838-13.886Z",
               fill: "#fff",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Redo",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Redo",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M4.819 17.998a13.869 13.869 0 0 1 24.05-9.421V5.974a1.857 1.857 0 1 1 3.714 0v7.397a1.857 1.857 0 0 1-1.857 1.857h-7.409a1.857 1.857 0 0 1 0-3.714h3.225a10.176 10.176 0 1 0-7.849 16.657 1.857 1.857 0 0 1 0 3.713h-.037A13.871 13.871 0 0 1 4.82 17.998Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextBold",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextBold",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M21.917 30.767c4.862 0 7.427-3.062 7.427-6.89 0-3.216-2.182-5.858-4.9-6.28 2.412-.497 4.402-2.64 4.402-5.857 0-3.407-2.488-6.508-7.35-6.508H10.793A2.735 2.735 0 0 0 8.06 7.967v20.066a2.734 2.734 0 0 0 2.734 2.734h11.124ZM20.31 15.492h-5.72c-.604 0-1.094-.49-1.094-1.094v-3.44c0-.604.49-1.093 1.094-1.093h5.72c1.838 0 2.986 1.225 2.986 2.794 0 1.646-1.148 2.833-2.986 2.833Zm.192 10.643h-5.912c-.604 0-1.094-.49-1.094-1.094v-3.823c0-.604.49-1.093 1.094-1.093H20.5c2.144 0 3.292 1.378 3.292 2.985 0 1.838-1.225 3.025-3.292 3.025Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextBullets",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextBullets",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M5.275 26.414c0-.609.24-1.192.669-1.623a2.275 2.275 0 0 1 3.226 0 2.301 2.301 0 0 1 0 3.245 2.275 2.275 0 0 1-3.226 0 2.301 2.301 0 0 1-.669-1.622Zm2.282-14.532c.605 0 1.186-.242 1.613-.672a2.3 2.3 0 0 0 0-3.245 2.275 2.275 0 0 0-3.226 0 2.3 2.3 0 0 0 0 3.245c.428.43 1.008.672 1.613.672Zm0 8.413c.605 0 1.186-.242 1.613-.672a2.3 2.3 0 0 0 0-3.245 2.275 2.275 0 0 0-3.226 0 2.3 2.3 0 0 0 0 3.245c.428.43 1.008.672 1.613.672Zm7.606-9.178h15.443a1.52 1.52 0 0 0 1.317-.765 1.537 1.537 0 0 0 0-1.53 1.52 1.52 0 0 0-1.317-.764H15.163a1.52 1.52 0 0 0-1.318.765 1.537 1.537 0 0 0 0 1.53 1.52 1.52 0 0 0 1.318.764Zm0 8.413h15.443a1.52 1.52 0 0 0 1.317-.764 1.537 1.537 0 0 0 0-1.53 1.52 1.52 0 0 0-1.317-.765H15.163a1.52 1.52 0 0 0-1.318.765 1.537 1.537 0 0 0 0 1.53 1.52 1.52 0 0 0 1.318.764Zm0 8.414h15.443a1.52 1.52 0 0 0 1.317-.765 1.537 1.537 0 0 0 0-1.53 1.52 1.52 0 0 0-1.317-.765H15.163a1.52 1.52 0 0 0-1.318.765 1.537 1.537 0 0 0 0 1.53 1.52 1.52 0 0 0 1.318.765Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextBullets",
-            baseProfile: "tiny",
-            version: "1.2",
-            viewBox: "0 0 36 36",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M15.2,11.1h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15.2,19.5h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15.2,27.9h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8Z",
-            fill: "#fff",
-            strokeWidth: "0",
-          }),
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
-              _: "M5.8,12.5v-1h1.6v1h-1.6ZM5.9,7.9v-1.1l1.4-.5v1.1l-1.4.5ZM7.3,12.5v-6.2h1.2v6.2h-1.2ZM8.4,12.5v-1h1.4v1h-1.4Z",
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextBullets",
+          baseProfile: "tiny",
+          version: "1.2",
+          viewBox: "0 0 36 36",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M15.2,11.1h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15.2,19.5h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15.2,27.9h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8Z",
               fill: "#fff",
               strokeWidth: "0",
             }),
-            _.createElement("path", {
-              _: "M5.7,21v-1.2c.9-.5,1.6-1,2.1-1.5.5-.5.7-1.1.7-1.6s0-.5-.2-.6c-.1-.1-.4-.2-.6-.2s-.5,0-.8.2c-.3.1-.5.3-.7.5l-.7-.8c.2-.3.5-.6.9-.8.4-.2.8-.3,1.3-.3.7,0,1.2.2,1.5.5.3.3.5.8.5,1.4s-.2,1.1-.5,1.7c-.3.5-.9,1-1.6,1.5v1.2h-1.8ZM6,21v-1.1h3.9v1.1h-3.9Z",
-              fill: "#fff",
-              strokeWidth: "0",
+            (0, _.jsxs)("g", {
+              children: [
+                (0, _.jsx)("path", {
+                  _: "M5.8,12.5v-1h1.6v1h-1.6ZM5.9,7.9v-1.1l1.4-.5v1.1l-1.4.5ZM7.3,12.5v-6.2h1.2v6.2h-1.2ZM8.4,12.5v-1h1.4v1h-1.4Z",
+                  fill: "#fff",
+                  strokeWidth: "0",
+                }),
+                (0, _.jsx)("path", {
+                  _: "M5.7,21v-1.2c.9-.5,1.6-1,2.1-1.5.5-.5.7-1.1.7-1.6s0-.5-.2-.6c-.1-.1-.4-.2-.6-.2s-.5,0-.8.2c-.3.1-.5.3-.7.5l-.7-.8c.2-.3.5-.6.9-.8.4-.2.8-.3,1.3-.3.7,0,1.2.2,1.5.5.3.3.5.8.5,1.4s-.2,1.1-.5,1.7c-.3.5-.9,1-1.6,1.5v1.2h-1.8ZM6,21v-1.1h3.9v1.1h-3.9Z",
+                  fill: "#fff",
+                  strokeWidth: "0",
+                }),
+                (0, _.jsx)("path", {
+                  _: "M6.8,26.9v-1c.3,0,.6-.1.9-.2.3,0,.4-.2.6-.4s.2-.3.2-.5,0-.3-.2-.4c-.1,0-.3-.1-.5-.1s-.5,0-.8.1-.5.2-.8.4l-.6-.9c.3-.3.6-.5,1-.6.4-.1.8-.2,1.2-.2s1.1.1,1.4.4c.3.2.5.6.5,1s-.1.7-.4,1c-.3.3-.6.5-1,.6v.5l-1.4.2ZM7.4,29.6c-.3,0-.6,0-.9,0-.3,0-.5,0-.7-.2v-1.1c.3,0,.5.1.8.2.2,0,.5,0,.9,0s.7,0,.9-.2c.2-.1.3-.3.3-.6s0-.3-.2-.5c-.1-.1-.3-.2-.6-.3-.2,0-.5,0-.9,0h-.1v-1c-.1,0,1.2.5,1.2.5.5,0,1,.1,1.3.4.3.3.5.6.5,1.1s-.2,1-.6,1.3c-.4.3-1,.5-1.8.5Z",
+                  fill: "#fff",
+                  strokeWidth: "0",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              _: "M6.8,26.9v-1c.3,0,.6-.1.9-.2.3,0,.4-.2.6-.4s.2-.3.2-.5,0-.3-.2-.4c-.1,0-.3-.1-.5-.1s-.5,0-.8.1-.5.2-.8.4l-.6-.9c.3-.3.6-.5,1-.6.4-.1.8-.2,1.2-.2s1.1.1,1.4.4c.3.2.5.6.5,1s-.1.7-.4,1c-.3.3-.6.5-1,.6v.5l-1.4.2ZM7.4,29.6c-.3,0-.6,0-.9,0-.3,0-.5,0-.7-.2v-1.1c.3,0,.5.1.8.2.2,0,.5,0,.9,0s.7,0,.9-.2c.2-.1.3-.3.3-.6s0-.3-.2-.5c-.1-.1-.3-.2-.6-.3-.2,0-.5,0-.9,0h-.1v-1c-.1,0,1.2.5,1.2.5.5,0,1,.1,1.3.4.3.3.5.6.5,1.1s-.2,1-.6,1.3c-.4.3-1,.5-1.8.5Z",
-              fill: "#fff",
-              strokeWidth: "0",
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextCode",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextCode",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M25.026 26.735a1.402 1.402 0 0 0 1.997-.07l7.29-7.71a1.402 1.402 0 0 0 0-1.927l-7.29-7.71a1.402 1.402 0 0 0-2.032 1.927l6.343 6.764-6.378 6.729a1.401 1.401 0 0 0 .07 1.997ZM12.34 9.285a1.402 1.402 0 0 0-1.997.07l-7.254 7.71a1.402 1.402 0 0 0 0 1.927l7.29 7.71a1.402 1.402 0 0 0 2.032-1.927L6.033 18.01l6.378-6.729a1.401 1.401 0 0 0-.07-1.997ZM15.25 32.134h.351a1.402 1.402 0 0 0 1.332-1.051l6.238-25.478a1.407 1.407 0 0 0-2.733-.666l-6.239 25.478a1.402 1.402 0 0 0 1.052 1.717Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextH1",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextH1",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M15.08 16.38V9h3.754v18h-3.755v-7.38H6.902V27h-3.78V9h3.78v7.38h8.177ZM30.861 9v14.734h3.42V27H22.787v-3.266h4.243V13.166l-3.78 1.594-1.209-2.829L27.955 9h2.906Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextH2",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextH2",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M14.47 16.559V9.303h3.69V27h-3.69v-7.256H6.43V27H2.714V9.303H6.43v7.256h8.04ZM26.168 23.79h8.52V27H21.466v-3.084l5.107-4.247.43-.38c.775-.657 1.364-1.188 1.769-1.592a5.49 5.49 0 0 0 1.011-1.29 3.02 3.02 0 0 0 .38-1.491c0-.877-.32-1.534-.961-1.972-.624-.455-1.433-.683-2.427-.683a6.83 6.83 0 0 0-2.174.354 7.617 7.617 0 0 0-1.82.885l-1.265-2.73c.776-.54 1.66-.97 2.655-1.29A10.66 10.66 0 0 1 27.407 9c2.04 0 3.674.447 4.904 1.34s1.846 2.166 1.846 3.817a5.58 5.58 0 0 1-1.062 3.312c-.708.978-1.795 2.073-3.261 3.287l-3.666 3.033Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextH3",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextH3",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M14.683 16.45V9.394h3.59v17.214h-3.59v-7.058h-7.82v7.058H3.25V9.393h3.615v7.058h7.82ZM27.243 9c2.016 0 3.549.402 4.598 1.205 1.05.803 1.574 1.844 1.574 3.123 0 .869-.262 1.647-.787 2.336-.508.672-1.23 1.188-2.164 1.55v.073c1.098.23 1.984.705 2.656 1.426.688.705 1.033 1.648 1.033 2.828 0 1.082-.312 2.041-.935 2.877-.623.82-1.475 1.459-2.557 1.918-1.082.443-2.279.664-3.59.664-1.246 0-2.435-.172-3.566-.516-1.115-.345-2.057-.828-2.828-1.451l1.55-2.656c1.278 1.033 2.794 1.55 4.549 1.55 1.114 0 1.983-.23 2.606-.69.64-.458.959-1.09.959-1.893 0-1.574-1.205-2.36-3.615-2.36h-2.213v-2.73h1.992c.95 0 1.713-.18 2.287-.54.59-.378.885-.902.885-1.575 0-.623-.279-1.123-.836-1.5-.54-.377-1.295-.565-2.262-.565-.738 0-1.451.123-2.14.369-.672.23-1.278.549-1.82.959l-1.524-2.312a9.046 9.046 0 0 1 2.779-1.549C24.923 9.181 26.046 9 27.243 9Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextH4",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextH4",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M14.122 16.38V9h3.755v18h-3.755v-7.38H5.945V27h-3.78V9h3.78v7.38h8.177ZM33.17 9v11.006h2.597v2.905H33.17V27h-3.832v-4.089h-8.485v-2.468L29.673 9h3.497Zm-3.677 4.5-4.963 6.506h4.963V13.5Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextH5",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextH5",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M13.948 16.215V9h3.67v17.598h-3.67v-7.215H5.953v7.215H2.258V9h3.695v7.215h7.995ZM33.198 9v3.143h-7.692v4.122a5.22 5.22 0 0 1 1.634-.653c.62-.151 1.24-.226 1.86-.226 1.575 0 2.832.452 3.77 1.357.956.888 1.434 2.187 1.434 3.897 0 1.273-.302 2.388-.905 3.343-.587.956-1.45 1.701-2.59 2.238-1.122.52-2.455.779-3.997.779-1.14 0-2.204-.15-3.192-.453-.99-.301-1.81-.729-2.464-1.282l1.307-2.815a7.513 7.513 0 0 0 4.299 1.307c1.19 0 2.112-.26 2.765-.78.654-.519.98-1.265.98-2.237 0-.854-.25-1.508-.753-1.96-.486-.453-1.157-.68-2.012-.68-.636 0-1.223.11-1.76.327a5.755 5.755 0 0 0-1.583.93l-2.338-1.282V9h11.237Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-            className: "SVGIcon_Button SVGIcon_TextH5",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M12 3L7 17H9L10.2 13H13.8L15 17H17L12 3ZM11.1 11L12 8L12.9 11H11.1Z",
-            fill: "currentColor",
-          }),
-          _.createElement("rect", {
-            _: "4",
-            _: "19",
-            width: "16",
-            height: "2",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "24",
+          height: "24",
+          viewBox: "0 0 24 24",
+          fill: "none",
+          className: "SVGIcon_Button SVGIcon_TextH5",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M12 3L7 17H9L10.2 13H13.8L15 17H17L12 3ZM11.1 11L12 8L12.9 11H11.1Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "4",
+              _: "19",
+              width: "16",
+              height: "2",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-            className: "SVGIcon_Button SVGIcon_TextH5",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("rect", {
-            _: "3",
-            _: "14",
-            width: "18",
-            height: "6",
-            fill: "currentColor",
-            opacity: "0.4",
-          }),
-          _.createElement("path", {
-            _: "M12 3L7 17H9L10.2 13H13.8L15 17H17L12 3ZM11.1 11L12 8L12.9 11H11.1Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "24",
+          height: "24",
+          viewBox: "0 0 24 24",
+          fill: "none",
+          className: "SVGIcon_Button SVGIcon_TextH5",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "3",
+              _: "14",
+              width: "18",
+              height: "6",
+              fill: "currentColor",
+              opacity: "0.4",
+            }),
+            (0, _.jsx)("path", {
+              _: "M12 3L7 17H9L10.2 13H13.8L15 17H17L12 3ZM11.1 11L12 8L12.9 11H11.1Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _() {
         const [_, _] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextOutdent",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextOutdent",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: [
+            (0, _.jsxs)("g", {
               clipPath: _,
-            },
-            _.createElement("path", {
-              _: "M6.469 17.281a.825.825 0 0 0 0 1.375l6.267 4.148a.825.825 0 0 0 1.28-.688v-8.294a.825.825 0 0 0-1.28-.688L6.47 17.28Z",
+              children: [
+                (0, _.jsx)("path", {
+                  _: "M6.469 17.281a.825.825 0 0 0 0 1.375l6.267 4.148a.825.825 0 0 0 1.28-.688v-8.294a.825.825 0 0 0-1.28-.688L6.47 17.28Z",
+                }),
+                (0, _.jsx)("rect", {
+                  width: 6.91,
+                  height: 2.734,
+                  _: 0.825,
+                  transform: "matrix(-1 0 0 1 19.263 16.65)",
+                }),
+                (0, _.jsx)("path", {
+                  _: "M7.634 10.385h22.652c.602 0 1.16-.324 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.634c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Zm15.168 9.33h7.484c.602 0 1.16-.324 1.46-.849a1.705 1.705 0 0 0 0-1.696 1.685 1.685 0 0 0-1.46-.848h-7.484c-.603 0-1.16.323-1.461.848a1.705 1.705 0 0 0 0 1.696c.301.525.858.848 1.46.848ZM7.634 29.043h22.652c.602 0 1.16-.323 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.634c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Z",
+                }),
+              ],
             }),
-            _.createElement("rect", {
-              width: 6.91,
-              height: 2.734,
-              _: 0.825,
-              transform: "matrix(-1 0 0 1 19.263 16.65)",
-            }),
-            _.createElement("path", {
-              _: "M7.634 10.385h22.652c.602 0 1.16-.324 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.634c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Zm15.168 9.33h7.484c.602 0 1.16-.324 1.46-.849a1.705 1.705 0 0 0 0-1.696 1.685 1.685 0 0 0-1.46-.848h-7.484c-.603 0-1.16.323-1.461.848a1.705 1.705 0 0 0 0 1.696c.301.525.858.848 1.46.848ZM7.634 29.043h22.652c.602 0 1.16-.323 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.634c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Z",
-            }),
-          ),
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "clipPath",
-              {
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
                 _: _,
-              },
-              _.createElement("path", {
-                transform: "translate(.701)",
-                _: "M0 0h36v36H0z",
+                children: (0, _.jsx)("path", {
+                  transform: "translate(.701)",
+                  _: "M0 0h36v36H0z",
+                }),
               }),
-            ),
-          ),
-        );
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextItalic",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextItalic",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M21.255 7.786H14.87a1.277 1.277 0 1 1 0-2.554h15.32a1.277 1.277 0 0 1 0 2.554h-6.383l-7.66 20.428h6.383a1.277 1.277 0 0 1 0 2.553H7.211a1.277 1.277 0 1 1 0-2.553h6.383l7.66-20.428Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextLink",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextLink",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M14.232 31.152a8.408 8.408 0 0 1-7.767-5.193 8.427 8.427 0 0 1 1.81-9.172l1.632-1.623a1.784 1.784 0 0 1 2.518 2.527l-1.62 1.618a4.854 4.854 0 0 0 3.427 8.282 4.845 4.845 0 0 0 3.427-1.42l1.622-1.624a1.782 1.782 0 0 1 2.525 2.515l-1.627 1.64a8.376 8.376 0 0 1-5.947 2.45Zm15.41-11.923a8.428 8.428 0 0 0 0-11.914 8.413 8.413 0 0 0-11.903 0L16.116 8.95a1.784 1.784 0 0 0 2.53 2.516l1.613-1.62a4.845 4.845 0 0 1 8.275 3.43 4.855 4.855 0 0 1-1.42 3.431l-1.62 1.618a1.784 1.784 0 0 0 2.518 2.527l1.63-1.623Zm-6.813-2.563a1.782 1.782 0 0 0-2.522-2.52l-5.493 5.498a1.782 1.782 0 0 0 2.522 2.52l5.493-5.498Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextLink",
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-          },
-          _.createElement("rect", {
-            _: "2",
-            _: "4",
-            width: "20",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "2",
-            _: "8",
-            width: "14",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "2",
-            _: "12",
-            width: "18",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "2",
-            _: "16",
-            width: "10",
-            height: "2",
-            fill: "currentcolor",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextLink",
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-          },
-          _.createElement("rect", {
-            _: "2",
-            _: "4",
-            width: "20",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "8",
-            _: "8",
-            width: "14",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "4",
-            _: "12",
-            width: "18",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "12",
-            _: "16",
-            width: "10",
-            height: "2",
-            fill: "currentcolor",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextLink",
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-          },
-          _.createElement("rect", {
-            _: "2",
-            _: "4",
-            width: "20",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "5",
-            _: "8",
-            width: "14",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "3",
-            _: "12",
-            width: "18",
-            height: "2",
-            fill: "currentcolor",
-          }),
-          _.createElement("rect", {
-            _: "7",
-            _: "16",
-            width: "10",
-            height: "2",
-            fill: "currentcolor",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextIndent",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
-              _: "M18.224 17.281a.825.825 0 0 1 0 1.375l-6.268 4.148a.825.825 0 0 1-1.28-.688v-8.294a.825.825 0 0 1 1.28-.688l6.268 4.147Z",
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextLink",
+          width: "24",
+          height: "24",
+          viewBox: "0 0 24 24",
+          fill: "none",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "2",
+              _: "4",
+              width: "20",
+              height: "2",
+              fill: "currentcolor",
             }),
-            _.createElement("rect", {
-              _: 5.43,
-              _: 16.65,
-              width: 6.91,
-              height: 2.734,
-              _: 0.825,
+            (0, _.jsx)("rect", {
+              _: "2",
+              _: "8",
+              width: "14",
+              height: "2",
+              fill: "currentcolor",
             }),
-            _.createElement("path", {
-              _: "M7.635 10.385h22.652c.603 0 1.16-.324 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.635c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Zm15.168 9.33h7.484c.603 0 1.16-.324 1.46-.849a1.705 1.705 0 0 0 0-1.696 1.685 1.685 0 0 0-1.46-.848h-7.484c-.603 0-1.16.323-1.461.848a1.705 1.705 0 0 0 0 1.696c.301.525.858.848 1.46.848ZM7.635 29.043h22.652c.603 0 1.16-.323 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.635c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Z",
+            (0, _.jsx)("rect", {
+              _: "2",
+              _: "12",
+              width: "18",
+              height: "2",
+              fill: "currentcolor",
             }),
-          ),
-        );
+            (0, _.jsx)("rect", {
+              _: "2",
+              _: "16",
+              width: "10",
+              height: "2",
+              fill: "currentcolor",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextLink",
+          width: "24",
+          height: "24",
+          viewBox: "0 0 24 24",
+          fill: "none",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "2",
+              _: "4",
+              width: "20",
+              height: "2",
+              fill: "currentcolor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "8",
+              _: "8",
+              width: "14",
+              height: "2",
+              fill: "currentcolor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "4",
+              _: "12",
+              width: "18",
+              height: "2",
+              fill: "currentcolor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "12",
+              _: "16",
+              width: "10",
+              height: "2",
+              fill: "currentcolor",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextLink",
+          width: "24",
+          height: "24",
+          viewBox: "0 0 24 24",
+          fill: "none",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "2",
+              _: "4",
+              width: "20",
+              height: "2",
+              fill: "currentcolor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "5",
+              _: "8",
+              width: "14",
+              height: "2",
+              fill: "currentcolor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "3",
+              _: "12",
+              width: "18",
+              height: "2",
+              fill: "currentcolor",
+            }),
+            (0, _.jsx)("rect", {
+              _: "7",
+              _: "16",
+              width: "10",
+              height: "2",
+              fill: "currentcolor",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextIndent",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsxs)("g", {
+            children: [
+              (0, _.jsx)("path", {
+                _: "M18.224 17.281a.825.825 0 0 1 0 1.375l-6.268 4.148a.825.825 0 0 1-1.28-.688v-8.294a.825.825 0 0 1 1.28-.688l6.268 4.147Z",
+              }),
+              (0, _.jsx)("rect", {
+                _: 5.43,
+                _: 16.65,
+                width: 6.91,
+                height: 2.734,
+                _: 0.825,
+              }),
+              (0, _.jsx)("path", {
+                _: "M7.635 10.385h22.652c.603 0 1.16-.324 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.635c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Zm15.168 9.33h7.484c.603 0 1.16-.324 1.46-.849a1.705 1.705 0 0 0 0-1.696 1.685 1.685 0 0 0-1.46-.848h-7.484c-.603 0-1.16.323-1.461.848a1.705 1.705 0 0 0 0 1.696c.301.525.858.848 1.46.848ZM7.635 29.043h22.652c.603 0 1.16-.323 1.46-.848a1.705 1.705 0 0 0 0-1.697 1.685 1.685 0 0 0-1.46-.848H7.635c-.603 0-1.16.323-1.46.848a1.705 1.705 0 0 0 0 1.697c.3.524.857.848 1.46.848Z",
+              }),
+            ],
+          }),
+        });
       }
       function _() {
         const [_, _] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextParagraph",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextParagraph",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: [
+            (0, _.jsx)("g", {
               clipPath: _,
-            },
-            _.createElement("path", {
-              _: "M29.582 9.65V7.328a.528.528 0 0 0-.527-.527H16.059c-2.638 0-4.607.566-6.016 1.731-1.475 1.22-2.224 2.95-2.224 5.139 0 2.402.724 4.184 2.214 5.447 1.483 1.257 3.638 1.894 6.403 1.894h2.407v7.662c0 .29.236.527.527.527h1.645a.528.528 0 0 0 .528-.527V10.177h2.12v18.496c0 .291.236.528.527.528h1.593a.528.528 0 0 0 .528-.528V10.177h2.743a.528.528 0 0 0 .528-.527Z",
-            }),
-          ),
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "clipPath",
-              {
-                _: _,
-              },
-              _.createElement("path", {
-                transform: "translate(.701)",
-                _: "M0 0h36v36H0z",
+              children: (0, _.jsx)("path", {
+                _: "M29.582 9.65V7.328a.528.528 0 0 0-.527-.527H16.059c-2.638 0-4.607.566-6.016 1.731-1.475 1.22-2.224 2.95-2.224 5.139 0 2.402.724 4.184 2.214 5.447 1.483 1.257 3.638 1.894 6.403 1.894h2.407v7.662c0 .29.236.527.527.527h1.645a.528.528 0 0 0 .528-.527V10.177h2.12v18.496c0 .291.236.528.527.528h1.593a.528.528 0 0 0 .528-.528V10.177h2.743a.528.528 0 0 0 .528-.527Z",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("path", {
+                  transform: "translate(.701)",
+                  _: "M0 0h36v36H0z",
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _() {
         const [_, _] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextStrikethrough",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextStrikethrough",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: [
+            (0, _.jsx)("g", {
               clipPath: _,
-            },
-            _.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M30.614 17.086a1.324 1.324 0 0 1 0 2.648H26.98c.714.96 1.145 2.18 1.145 3.77 0 3.594-2.446 7.263-9.117 7.263-2.329 0-4.853-.864-7.573-2.593l-.684-.45-.073-.053a1.425 1.425 0 0 1-.25-2 1.483 1.483 0 0 1 2.044-.288c2.42 1.761 4.635 2.642 6.647 2.642 4.41 0 5.818-2.372 5.818-4.262 0-2.27-1.76-3.28-4.047-4.028l-14.102-.001a1.324 1.324 0 0 1 0-2.647h23.825ZM18.786 5.232c2.2 0 4.712.876 7.534 2.628a1.314 1.314 0 0 1 .323 1.95c-.52.634-1.427.789-2.128.363-2.414-1.465-4.398-2.198-5.95-2.198-2.965 0-5.078 1.594-5.078 3.928 0 1.167.63 1.95 1.625 2.54l-4.382-.001c-.276-.67-.43-1.446-.43-2.353 0-4.077 3.632-6.856 8.487-6.856Z",
-            }),
-          ),
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "clipPath",
-              {
-                _: _,
-              },
-              _.createElement("path", {
-                transform: "translate(.701)",
-                _: "M0 0h36v36H0z",
+              children: (0, _.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M30.614 17.086a1.324 1.324 0 0 1 0 2.648H26.98c.714.96 1.145 2.18 1.145 3.77 0 3.594-2.446 7.263-9.117 7.263-2.329 0-4.853-.864-7.573-2.593l-.684-.45-.073-.053a1.425 1.425 0 0 1-.25-2 1.483 1.483 0 0 1 2.044-.288c2.42 1.761 4.635 2.642 6.647 2.642 4.41 0 5.818-2.372 5.818-4.262 0-2.27-1.76-3.28-4.047-4.028l-14.102-.001a1.324 1.324 0 0 1 0-2.647h23.825ZM18.786 5.232c2.2 0 4.712.876 7.534 2.628a1.314 1.314 0 0 1 .323 1.95c-.52.634-1.427.789-2.128.363-2.414-1.465-4.398-2.198-5.95-2.198-2.965 0-5.078 1.594-5.078 3.928 0 1.167.63 1.95 1.625 2.54l-4.382-.001c-.276-.67-.43-1.446-.43-2.353 0-4.077 3.632-6.856 8.487-6.856Z",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("path", {
+                  transform: "translate(.701)",
+                  _: "M0 0h36v36H0z",
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _() {
         const [_, _] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TextUnderline",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TextUnderline",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: [
+            (0, _.jsx)("g", {
               clipPath: _,
-            },
-            _.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M29.447 33.171a1.343 1.343 0 1 1 0 2.687H7.956a1.343 1.343 0 0 1 0-2.687h21.49ZM27.365 5.232c.862 0 1.56.7 1.56 1.561V20.54c0 6.243-3.422 10.23-10.23 10.23-6.807 0-10.23-4.025-10.23-10.193V6.794a1.56 1.56 0 1 1 3.122 0v13.709c0 4.588 2.483 7.484 7.109 7.484 4.626 0 7.108-2.896 7.108-7.484V6.793c0-.861.699-1.56 1.56-1.56Z",
-              fill: "#fff",
-            }),
-          ),
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "clipPath",
-              {
-                _: _,
-              },
-              _.createElement("path", {
-                fill: "currentColor",
-                transform: "translate(.701)",
-                _: "M0 0h36v36H0z",
+              children: (0, _.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M29.447 33.171a1.343 1.343 0 1 1 0 2.687H7.956a1.343 1.343 0 0 1 0-2.687h21.49ZM27.365 5.232c.862 0 1.56.7 1.56 1.561V20.54c0 6.243-3.422 10.23-10.23 10.23-6.807 0-10.23-4.025-10.23-10.193V6.794a1.56 1.56 0 1 1 3.122 0v13.709c0 4.588 2.483 7.484 7.109 7.484 4.626 0 7.108-2.896 7.108-7.484V6.793c0-.861.699-1.56 1.56-1.56Z",
+                fill: "#fff",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  transform: "translate(.701)",
+                  _: "M0 0h36v36H0z",
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { bGreyOutRightSide: _, ...__webpack_require__ } = _;
         return _
-          ? _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "-3 0 25 15",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                fill: "currentColor",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M11.3699 2.1855H7.84997C7.1763 2.1855 6.52367 2.03814 5.8921 1.82761C2.57518 0.642996 1.92458 2.62958 1.05846 5.27426C0.924084 5.68458 0.78452 6.11073 0.629005 6.54335C-0.528876 9.78541 -0.0446708 12.9012 1.72373 13.5327C3.13424 14.038 4.94474 12.7538 6.20789 10.5222C6.46052 10.6486 6.75525 10.7328 7.07103 10.7328C7.28247 10.7328 7.48656 10.6985 7.67799 10.6352L11.3699 2.1855ZM4.41843 7.40649C4.41843 7.4907 4.48159 7.55386 4.5658 7.55386V7.53281H5.42895C5.51316 7.53281 5.57632 7.46965 5.57632 7.38544V6.22756H6.7342C6.83946 6.22756 6.90262 6.1644 6.90262 6.08019V5.2381C6.90262 5.15389 6.81841 5.09073 6.7342 5.09073H5.57632V3.93285C5.57632 3.84864 5.51316 3.78548 5.42895 3.78548H4.5658C4.48159 3.78548 4.41843 3.84864 4.41843 3.93285V5.09073H3.26055C3.15529 5.09073 3.09213 5.15389 3.09213 5.2381V6.10125C3.09213 6.18546 3.17634 6.24861 3.26055 6.24861H4.41843V7.40649ZM6.14473 8.7749C6.14473 9.28016 6.54473 9.7012 7.04998 9.7012C7.55524 9.7012 7.97629 9.28016 7.97629 8.7749C7.97629 8.29069 7.55524 7.86965 7.04998 7.86965C6.56578 7.86965 6.14473 8.26964 6.14473 8.7749Z",
-              }),
-              _.createElement("path", {
-                fill: "grey",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M13.828 2.92182C13.8318 2.92822 13.8354 2.93477 13.839 2.94132C13.8436 2.94968 13.8481 2.95804 13.8532 2.96608C13.86 2.97684 13.8674 2.98708 13.8748 2.99732L13.8748 2.99736L13.8748 2.9974C13.8798 3.00433 13.8848 3.01126 13.8897 3.01835C14.0485 3.25263 14.2573 3.45281 14.5086 3.59687L14.5127 3.59947C14.5584 3.62555 14.6063 3.64869 14.6546 3.67094C14.6589 3.67292 14.6631 3.67511 14.6673 3.67731L14.6673 3.67731C14.6721 3.67986 14.677 3.68241 14.682 3.6846C14.7397 3.71 14.7992 3.73269 14.8603 3.75245C14.865 3.75395 14.8698 3.7552 14.8746 3.75644L14.8746 3.75644C14.8788 3.75754 14.883 3.75864 14.8872 3.7599L14.8881 3.76002C15.2353 3.86547 15.6028 3.86558 15.9504 3.76002L15.9512 3.75985L15.9521 3.75968C15.9562 3.7584 15.9604 3.75733 15.9645 3.75625C15.9692 3.75504 15.9738 3.75383 15.9785 3.75234C16.0447 3.731 16.1087 3.70503 16.1714 3.67658C16.1885 3.66881 16.2052 3.66017 16.2218 3.65153L16.2437 3.64023C16.2799 3.62182 16.3158 3.60274 16.3507 3.58208C16.3798 3.56481 16.4081 3.54663 16.4361 3.52777C16.4636 3.50937 16.4905 3.49006 16.5169 3.47019C16.5466 3.44795 16.5762 3.42548 16.6045 3.40144C16.6231 3.38577 16.6409 3.36911 16.6586 3.35246L16.6703 3.3416L16.6888 3.3244L16.6888 3.32438C16.7113 3.30361 16.7338 3.28286 16.7549 3.26064C16.7681 3.24682 16.7804 3.23217 16.7927 3.21749L16.7927 3.21747L16.7927 3.21745C16.7991 3.20984 16.8054 3.20222 16.8119 3.19471C16.8559 3.14413 16.897 3.09129 16.9356 3.03608L16.9462 3.02092C16.9636 2.99614 16.9809 2.97142 16.9969 2.94553C17.0115 2.92184 17.0249 2.89721 17.0382 2.87262L17.0382 2.8726L17.0464 2.85747C17.1084 2.74389 17.1621 2.62455 17.2009 2.49798C17.5113 1.48671 16.9628 0.406 15.9783 0.0888548C15.7942 0.0294676 15.6053 0 15.4174 0C15.1269 0 14.8385 0.0703387 14.5726 0.209322C14.1217 0.444952 13.7898 0.847565 13.6377 1.34321C13.4833 1.84608 13.5417 2.36611 13.7602 2.8009C13.7811 2.84256 13.8045 2.88219 13.828 2.92182ZM15.4233 0.661048C15.464 0.534258 15.5996 0.464032 15.7264 0.505129C16.4892 0.751032 16.915 1.58494 16.6758 2.36408C16.6441 2.46795 16.5487 2.53456 16.4458 2.53456C16.4223 2.53456 16.3984 2.53106 16.3749 2.52373C16.2478 2.48455 16.1764 2.34952 16.2156 2.22216C16.3776 1.69411 16.0921 1.13005 15.579 0.964758C15.4524 0.923887 15.3827 0.787951 15.4233 0.661048ZM15.7794 7.10124V8.4729C15.7794 8.67172 15.6177 8.8334 15.4192 8.8334C15.2205 8.8334 15.0589 8.67172 15.0589 8.4729V7.10124V5.77417V4.29458C15.1785 4.31354 15.2988 4.32325 15.4192 4.32325C15.5395 4.32325 15.6599 4.31354 15.7794 4.29458V5.77406V7.10124ZM15.4192 11.1944C13.9757 11.1944 12.8014 10.0184 12.8014 8.573C12.8014 7.44668 13.5323 6.44692 14.5773 6.09093V6.94821C13.9729 7.26129 13.5902 7.88214 13.5902 8.57311C13.5902 9.58314 14.4108 10.4049 15.4192 10.4049C16.4277 10.4049 17.2482 9.58314 17.2482 8.57311C17.2482 7.88203 16.8655 7.2614 16.261 6.9481V6.09082C17.3059 6.44692 18.037 7.44679 18.037 8.573C18.037 10.0184 16.8627 11.1944 15.4192 11.1944ZM14.5773 7.51953V8.47289C14.5773 8.93782 14.9551 9.31616 15.4192 9.31616C15.8833 9.31616 16.261 8.93782 16.261 8.47289V7.51953C16.5762 7.77097 16.7665 8.15461 16.7665 8.57292C16.7665 9.31672 16.1621 9.92189 15.4192 9.92189C14.6763 9.92189 14.0719 9.31672 14.0719 8.57292C14.0719 8.15473 14.2622 7.77108 14.5773 7.51953ZM10 9.51902V14.0001H16.6L20.8387 4.29884V3.14599H17.4399C17.4033 3.20899 17.3638 3.26973 17.322 3.32878L17.3209 3.33036C17.1532 3.56655 16.9447 3.76989 16.7053 3.9301L16.7052 3.93021C16.5914 4.00642 16.4707 4.07281 16.3441 4.12824C16.3326 4.13333 16.321 4.13829 16.3094 4.14315L16.2899 4.1516C16.2803 4.15579 16.2708 4.15998 16.2612 4.16381V5.58797C17.58 5.96123 18.5189 7.18487 18.5189 8.57313C18.5189 10.2847 17.1284 11.6773 15.4194 11.6773C13.7103 11.6773 12.3198 10.2846 12.3198 8.57302C12.3198 7.18476 13.2586 5.96112 14.5774 5.58786V4.16133L14.5516 4.15149L14.5516 4.15149C14.5331 4.14452 14.5146 4.13756 14.4966 4.12971C14.4859 4.12505 14.4755 4.11987 14.4652 4.1147L14.4652 4.11469C14.4614 4.11278 14.4576 4.11087 14.4537 4.10898C14.4503 4.10732 14.447 4.10569 14.4435 4.10408C14.3911 4.0797 14.3392 4.05441 14.2891 4.02641C14.2787 4.02057 14.2687 4.01439 14.2587 4.00821L14.2404 3.99705C14.1902 3.96736 14.1407 3.93642 14.093 3.903C14.0844 3.89705 14.0762 3.89081 14.0679 3.88457L14.0679 3.88455L14.0536 3.87387C14.0047 3.8382 13.9569 3.80094 13.911 3.76154C13.9042 3.75576 13.8976 3.7498 13.891 3.74384L13.891 3.74381L13.8787 3.73275C13.8328 3.69187 13.7884 3.64942 13.7457 3.60494C13.7377 3.59661 13.7299 3.58813 13.722 3.57963L13.7159 3.57299C13.6752 3.52907 13.6363 3.48357 13.5989 3.43649C13.5882 3.42305 13.5777 3.40939 13.5673 3.39573C13.5335 3.35113 13.5012 3.30529 13.4704 3.2581C13.4587 3.24015 13.4469 3.22208 13.4356 3.20379C13.4306 3.19569 13.4254 3.18779 13.4201 3.17988C13.4127 3.16872 13.4054 3.15757 13.3986 3.14587H12.7846L10 9.51902ZM11.0839 12.5368C11.0839 12.8356 11.3275 13.0786 11.6272 13.0786C11.9268 13.0786 12.1707 12.8356 12.1706 12.5368C12.1706 12.238 11.9267 11.9949 11.6272 11.9949C11.3276 11.9949 11.0839 12.238 11.0839 12.5368Z",
-              }),
-            )
-          : _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "-3 0 25 15",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                fill: "currentColor",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M11.3699 2.1855H7.84997C7.1763 2.1855 6.52367 2.03814 5.8921 1.82761C2.57518 0.642996 1.92458 2.62958 1.05846 5.27426C0.924084 5.68458 0.78452 6.11073 0.629006 6.54335C-0.528876 9.78541 -0.0446708 12.9012 1.72373 13.5327C3.13424 14.038 4.94474 12.7538 6.20789 10.5222C6.46052 10.6486 6.75525 10.7328 7.07103 10.7328C7.28247 10.7328 7.48656 10.6985 7.67799 10.6352L11.3699 2.1855ZM4.41843 7.40649C4.41843 7.4907 4.48159 7.55386 4.5658 7.55386V7.53281H5.42895C5.51316 7.53281 5.57632 7.46965 5.57632 7.38544V6.22756H6.7342C6.83946 6.22756 6.90262 6.1644 6.90262 6.08019V5.2381C6.90262 5.15389 6.81841 5.09073 6.7342 5.09073H5.57632V3.93285C5.57632 3.84864 5.51316 3.78548 5.42895 3.78548H4.5658C4.48159 3.78548 4.41843 3.84864 4.41843 3.93285V5.09073H3.26055C3.15529 5.09073 3.09213 5.15389 3.09213 5.2381V6.10125C3.09213 6.18546 3.17634 6.24861 3.26055 6.24861H4.41843V7.40649ZM6.14473 8.7749C6.14473 9.28016 6.54473 9.7012 7.04998 9.7012C7.55524 9.7012 7.97629 9.28016 7.97629 8.7749C7.97629 8.29069 7.55524 7.86965 7.04998 7.86965C6.56578 7.86965 6.14473 8.26964 6.14473 8.7749Z",
-              }),
-              _.createElement("path", {
-                fill: "currentColor",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M13.828 2.92182C13.8318 2.92822 13.8354 2.93477 13.839 2.94132C13.8436 2.94968 13.8481 2.95804 13.8532 2.96608C13.86 2.97684 13.8674 2.98708 13.8748 2.99732L13.8748 2.99736L13.8748 2.9974C13.8798 3.00433 13.8848 3.01126 13.8897 3.01835C14.0485 3.25263 14.2573 3.45281 14.5086 3.59687L14.5127 3.59947C14.5584 3.62555 14.6063 3.64869 14.6546 3.67094C14.6589 3.67292 14.6631 3.67511 14.6673 3.67731L14.6673 3.67731C14.6721 3.67986 14.677 3.68241 14.682 3.6846C14.7397 3.71 14.7992 3.73269 14.8603 3.75245C14.865 3.75395 14.8698 3.7552 14.8746 3.75644L14.8746 3.75644C14.8788 3.75754 14.883 3.75864 14.8872 3.7599L14.8881 3.76002C15.2353 3.86547 15.6028 3.86558 15.9504 3.76002L15.9512 3.75985L15.9521 3.75968C15.9562 3.7584 15.9604 3.75733 15.9645 3.75625C15.9692 3.75504 15.9738 3.75383 15.9785 3.75234C16.0447 3.731 16.1087 3.70503 16.1714 3.67658C16.1885 3.66881 16.2052 3.66017 16.2218 3.65153L16.2437 3.64023C16.2799 3.62182 16.3158 3.60274 16.3507 3.58208C16.3798 3.56481 16.4081 3.54663 16.4361 3.52777C16.4636 3.50937 16.4905 3.49006 16.5169 3.47019C16.5466 3.44795 16.5762 3.42548 16.6045 3.40144C16.6231 3.38577 16.6409 3.36911 16.6586 3.35246L16.6703 3.3416L16.6888 3.3244L16.6888 3.32438C16.7113 3.30361 16.7338 3.28286 16.7549 3.26064C16.7681 3.24682 16.7804 3.23217 16.7927 3.21749L16.7927 3.21747L16.7927 3.21745C16.7991 3.20984 16.8054 3.20222 16.8119 3.19471C16.8559 3.14413 16.897 3.09129 16.9356 3.03608L16.9462 3.02092C16.9636 2.99614 16.9809 2.97142 16.9969 2.94553C17.0115 2.92184 17.0249 2.89721 17.0382 2.87262L17.0382 2.8726L17.0464 2.85747C17.1084 2.74389 17.1621 2.62455 17.2009 2.49798C17.5113 1.48671 16.9628 0.406 15.9783 0.0888548C15.7942 0.0294676 15.6053 0 15.4174 0C15.1269 0 14.8385 0.0703387 14.5726 0.209322C14.1217 0.444952 13.7898 0.847565 13.6377 1.34321C13.4833 1.84608 13.5417 2.36611 13.7602 2.8009C13.7811 2.84256 13.8045 2.88219 13.828 2.92182ZM15.4233 0.661048C15.464 0.534258 15.5996 0.464032 15.7264 0.505129C16.4892 0.751032 16.915 1.58494 16.6758 2.36408C16.6441 2.46795 16.5487 2.53456 16.4458 2.53456C16.4223 2.53456 16.3984 2.53106 16.3749 2.52373C16.2478 2.48455 16.1764 2.34952 16.2156 2.22216C16.3776 1.69411 16.0921 1.13005 15.579 0.964758C15.4524 0.923887 15.3827 0.787951 15.4233 0.661048ZM15.7794 7.10124V8.4729C15.7794 8.67172 15.6177 8.8334 15.4192 8.8334C15.2205 8.8334 15.0589 8.67172 15.0589 8.4729V7.10124V5.77417V4.29458C15.1785 4.31354 15.2988 4.32325 15.4192 4.32325C15.5395 4.32325 15.6599 4.31354 15.7794 4.29458V5.77406V7.10124ZM15.4192 11.1944C13.9757 11.1944 12.8014 10.0184 12.8014 8.573C12.8014 7.44668 13.5323 6.44692 14.5773 6.09093V6.94821C13.9729 7.26129 13.5902 7.88214 13.5902 8.57311C13.5902 9.58314 14.4108 10.4049 15.4192 10.4049C16.4277 10.4049 17.2482 9.58314 17.2482 8.57311C17.2482 7.88203 16.8655 7.2614 16.261 6.9481V6.09082C17.3059 6.44692 18.037 7.44679 18.037 8.573C18.037 10.0184 16.8627 11.1944 15.4192 11.1944ZM14.5773 7.51953V8.47289C14.5773 8.93782 14.9551 9.31616 15.4192 9.31616C15.8833 9.31616 16.261 8.93782 16.261 8.47289V7.51953C16.5762 7.77097 16.7665 8.15461 16.7665 8.57292C16.7665 9.31672 16.1621 9.92189 15.4192 9.92189C14.6763 9.92189 14.0719 9.31672 14.0719 8.57292C14.0719 8.15473 14.2622 7.77108 14.5773 7.51953ZM10 9.51902V14.0001H16.6L20.8387 4.29884V3.14599H17.4399C17.4033 3.20899 17.3638 3.26973 17.322 3.32878L17.3209 3.33036C17.1532 3.56655 16.9447 3.76989 16.7053 3.9301L16.7052 3.93021C16.5914 4.00642 16.4707 4.07281 16.3441 4.12824C16.3326 4.13333 16.321 4.13829 16.3094 4.14315L16.2899 4.1516C16.2803 4.15579 16.2708 4.15998 16.2612 4.16381V5.58797C17.58 5.96123 18.5189 7.18487 18.5189 8.57313C18.5189 10.2847 17.1284 11.6773 15.4194 11.6773C13.7103 11.6773 12.3198 10.2846 12.3198 8.57302C12.3198 7.18476 13.2586 5.96112 14.5774 5.58786V4.16133L14.5516 4.15149L14.5516 4.15149C14.5331 4.14452 14.5146 4.13756 14.4966 4.12971C14.4859 4.12505 14.4755 4.11987 14.4652 4.1147L14.4652 4.11469C14.4614 4.11278 14.4576 4.11087 14.4537 4.10898C14.4503 4.10732 14.447 4.10569 14.4435 4.10408C14.3911 4.0797 14.3392 4.05441 14.2891 4.02641C14.2787 4.02057 14.2687 4.01439 14.2587 4.00821L14.2404 3.99705C14.1902 3.96736 14.1407 3.93642 14.093 3.903C14.0844 3.89705 14.0762 3.89081 14.0679 3.88457L14.0679 3.88455L14.0536 3.87387C14.0047 3.8382 13.9569 3.80094 13.911 3.76154C13.9042 3.75576 13.8976 3.7498 13.891 3.74384L13.891 3.74381L13.8787 3.73275C13.8328 3.69187 13.7884 3.64942 13.7457 3.60494C13.7377 3.59661 13.7299 3.58813 13.722 3.57963L13.7159 3.57299C13.6752 3.52907 13.6363 3.48357 13.5989 3.43649C13.5882 3.42305 13.5777 3.40939 13.5673 3.39573C13.5335 3.35113 13.5012 3.30529 13.4704 3.2581C13.4587 3.24015 13.4469 3.22208 13.4356 3.20379C13.4306 3.19569 13.4254 3.18779 13.4201 3.17988C13.4127 3.16872 13.4054 3.15757 13.3986 3.14587H12.7846L10 9.51902ZM11.0839 12.5368C11.0839 12.8356 11.3275 13.0786 11.6272 13.0786C11.9268 13.0786 12.1707 12.8356 12.1706 12.5368C12.1706 12.238 11.9267 11.9949 11.6272 11.9949C11.3276 11.9949 11.0839 12.238 11.0839 12.5368Z",
-              }),
-            );
+          ? (0, _.jsxs)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "-3 0 25 15",
+              fill: "none",
+              ...__webpack_require__,
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M11.3699 2.1855H7.84997C7.1763 2.1855 6.52367 2.03814 5.8921 1.82761C2.57518 0.642996 1.92458 2.62958 1.05846 5.27426C0.924084 5.68458 0.78452 6.11073 0.629005 6.54335C-0.528876 9.78541 -0.0446708 12.9012 1.72373 13.5327C3.13424 14.038 4.94474 12.7538 6.20789 10.5222C6.46052 10.6486 6.75525 10.7328 7.07103 10.7328C7.28247 10.7328 7.48656 10.6985 7.67799 10.6352L11.3699 2.1855ZM4.41843 7.40649C4.41843 7.4907 4.48159 7.55386 4.5658 7.55386V7.53281H5.42895C5.51316 7.53281 5.57632 7.46965 5.57632 7.38544V6.22756H6.7342C6.83946 6.22756 6.90262 6.1644 6.90262 6.08019V5.2381C6.90262 5.15389 6.81841 5.09073 6.7342 5.09073H5.57632V3.93285C5.57632 3.84864 5.51316 3.78548 5.42895 3.78548H4.5658C4.48159 3.78548 4.41843 3.84864 4.41843 3.93285V5.09073H3.26055C3.15529 5.09073 3.09213 5.15389 3.09213 5.2381V6.10125C3.09213 6.18546 3.17634 6.24861 3.26055 6.24861H4.41843V7.40649ZM6.14473 8.7749C6.14473 9.28016 6.54473 9.7012 7.04998 9.7012C7.55524 9.7012 7.97629 9.28016 7.97629 8.7749C7.97629 8.29069 7.55524 7.86965 7.04998 7.86965C6.56578 7.86965 6.14473 8.26964 6.14473 8.7749Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "grey",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M13.828 2.92182C13.8318 2.92822 13.8354 2.93477 13.839 2.94132C13.8436 2.94968 13.8481 2.95804 13.8532 2.96608C13.86 2.97684 13.8674 2.98708 13.8748 2.99732L13.8748 2.99736L13.8748 2.9974C13.8798 3.00433 13.8848 3.01126 13.8897 3.01835C14.0485 3.25263 14.2573 3.45281 14.5086 3.59687L14.5127 3.59947C14.5584 3.62555 14.6063 3.64869 14.6546 3.67094C14.6589 3.67292 14.6631 3.67511 14.6673 3.67731L14.6673 3.67731C14.6721 3.67986 14.677 3.68241 14.682 3.6846C14.7397 3.71 14.7992 3.73269 14.8603 3.75245C14.865 3.75395 14.8698 3.7552 14.8746 3.75644L14.8746 3.75644C14.8788 3.75754 14.883 3.75864 14.8872 3.7599L14.8881 3.76002C15.2353 3.86547 15.6028 3.86558 15.9504 3.76002L15.9512 3.75985L15.9521 3.75968C15.9562 3.7584 15.9604 3.75733 15.9645 3.75625C15.9692 3.75504 15.9738 3.75383 15.9785 3.75234C16.0447 3.731 16.1087 3.70503 16.1714 3.67658C16.1885 3.66881 16.2052 3.66017 16.2218 3.65153L16.2437 3.64023C16.2799 3.62182 16.3158 3.60274 16.3507 3.58208C16.3798 3.56481 16.4081 3.54663 16.4361 3.52777C16.4636 3.50937 16.4905 3.49006 16.5169 3.47019C16.5466 3.44795 16.5762 3.42548 16.6045 3.40144C16.6231 3.38577 16.6409 3.36911 16.6586 3.35246L16.6703 3.3416L16.6888 3.3244L16.6888 3.32438C16.7113 3.30361 16.7338 3.28286 16.7549 3.26064C16.7681 3.24682 16.7804 3.23217 16.7927 3.21749L16.7927 3.21747L16.7927 3.21745C16.7991 3.20984 16.8054 3.20222 16.8119 3.19471C16.8559 3.14413 16.897 3.09129 16.9356 3.03608L16.9462 3.02092C16.9636 2.99614 16.9809 2.97142 16.9969 2.94553C17.0115 2.92184 17.0249 2.89721 17.0382 2.87262L17.0382 2.8726L17.0464 2.85747C17.1084 2.74389 17.1621 2.62455 17.2009 2.49798C17.5113 1.48671 16.9628 0.406 15.9783 0.0888548C15.7942 0.0294676 15.6053 0 15.4174 0C15.1269 0 14.8385 0.0703387 14.5726 0.209322C14.1217 0.444952 13.7898 0.847565 13.6377 1.34321C13.4833 1.84608 13.5417 2.36611 13.7602 2.8009C13.7811 2.84256 13.8045 2.88219 13.828 2.92182ZM15.4233 0.661048C15.464 0.534258 15.5996 0.464032 15.7264 0.505129C16.4892 0.751032 16.915 1.58494 16.6758 2.36408C16.6441 2.46795 16.5487 2.53456 16.4458 2.53456C16.4223 2.53456 16.3984 2.53106 16.3749 2.52373C16.2478 2.48455 16.1764 2.34952 16.2156 2.22216C16.3776 1.69411 16.0921 1.13005 15.579 0.964758C15.4524 0.923887 15.3827 0.787951 15.4233 0.661048ZM15.7794 7.10124V8.4729C15.7794 8.67172 15.6177 8.8334 15.4192 8.8334C15.2205 8.8334 15.0589 8.67172 15.0589 8.4729V7.10124V5.77417V4.29458C15.1785 4.31354 15.2988 4.32325 15.4192 4.32325C15.5395 4.32325 15.6599 4.31354 15.7794 4.29458V5.77406V7.10124ZM15.4192 11.1944C13.9757 11.1944 12.8014 10.0184 12.8014 8.573C12.8014 7.44668 13.5323 6.44692 14.5773 6.09093V6.94821C13.9729 7.26129 13.5902 7.88214 13.5902 8.57311C13.5902 9.58314 14.4108 10.4049 15.4192 10.4049C16.4277 10.4049 17.2482 9.58314 17.2482 8.57311C17.2482 7.88203 16.8655 7.2614 16.261 6.9481V6.09082C17.3059 6.44692 18.037 7.44679 18.037 8.573C18.037 10.0184 16.8627 11.1944 15.4192 11.1944ZM14.5773 7.51953V8.47289C14.5773 8.93782 14.9551 9.31616 15.4192 9.31616C15.8833 9.31616 16.261 8.93782 16.261 8.47289V7.51953C16.5762 7.77097 16.7665 8.15461 16.7665 8.57292C16.7665 9.31672 16.1621 9.92189 15.4192 9.92189C14.6763 9.92189 14.0719 9.31672 14.0719 8.57292C14.0719 8.15473 14.2622 7.77108 14.5773 7.51953ZM10 9.51902V14.0001H16.6L20.8387 4.29884V3.14599H17.4399C17.4033 3.20899 17.3638 3.26973 17.322 3.32878L17.3209 3.33036C17.1532 3.56655 16.9447 3.76989 16.7053 3.9301L16.7052 3.93021C16.5914 4.00642 16.4707 4.07281 16.3441 4.12824C16.3326 4.13333 16.321 4.13829 16.3094 4.14315L16.2899 4.1516C16.2803 4.15579 16.2708 4.15998 16.2612 4.16381V5.58797C17.58 5.96123 18.5189 7.18487 18.5189 8.57313C18.5189 10.2847 17.1284 11.6773 15.4194 11.6773C13.7103 11.6773 12.3198 10.2846 12.3198 8.57302C12.3198 7.18476 13.2586 5.96112 14.5774 5.58786V4.16133L14.5516 4.15149L14.5516 4.15149C14.5331 4.14452 14.5146 4.13756 14.4966 4.12971C14.4859 4.12505 14.4755 4.11987 14.4652 4.1147L14.4652 4.11469C14.4614 4.11278 14.4576 4.11087 14.4537 4.10898C14.4503 4.10732 14.447 4.10569 14.4435 4.10408C14.3911 4.0797 14.3392 4.05441 14.2891 4.02641C14.2787 4.02057 14.2687 4.01439 14.2587 4.00821L14.2404 3.99705C14.1902 3.96736 14.1407 3.93642 14.093 3.903C14.0844 3.89705 14.0762 3.89081 14.0679 3.88457L14.0679 3.88455L14.0536 3.87387C14.0047 3.8382 13.9569 3.80094 13.911 3.76154C13.9042 3.75576 13.8976 3.7498 13.891 3.74384L13.891 3.74381L13.8787 3.73275C13.8328 3.69187 13.7884 3.64942 13.7457 3.60494C13.7377 3.59661 13.7299 3.58813 13.722 3.57963L13.7159 3.57299C13.6752 3.52907 13.6363 3.48357 13.5989 3.43649C13.5882 3.42305 13.5777 3.40939 13.5673 3.39573C13.5335 3.35113 13.5012 3.30529 13.4704 3.2581C13.4587 3.24015 13.4469 3.22208 13.4356 3.20379C13.4306 3.19569 13.4254 3.18779 13.4201 3.17988C13.4127 3.16872 13.4054 3.15757 13.3986 3.14587H12.7846L10 9.51902ZM11.0839 12.5368C11.0839 12.8356 11.3275 13.0786 11.6272 13.0786C11.9268 13.0786 12.1707 12.8356 12.1706 12.5368C12.1706 12.238 11.9267 11.9949 11.6272 11.9949C11.3276 11.9949 11.0839 12.238 11.0839 12.5368Z",
+                }),
+              ],
+            })
+          : (0, _.jsxs)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "-3 0 25 15",
+              fill: "none",
+              ...__webpack_require__,
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M11.3699 2.1855H7.84997C7.1763 2.1855 6.52367 2.03814 5.8921 1.82761C2.57518 0.642996 1.92458 2.62958 1.05846 5.27426C0.924084 5.68458 0.78452 6.11073 0.629006 6.54335C-0.528876 9.78541 -0.0446708 12.9012 1.72373 13.5327C3.13424 14.038 4.94474 12.7538 6.20789 10.5222C6.46052 10.6486 6.75525 10.7328 7.07103 10.7328C7.28247 10.7328 7.48656 10.6985 7.67799 10.6352L11.3699 2.1855ZM4.41843 7.40649C4.41843 7.4907 4.48159 7.55386 4.5658 7.55386V7.53281H5.42895C5.51316 7.53281 5.57632 7.46965 5.57632 7.38544V6.22756H6.7342C6.83946 6.22756 6.90262 6.1644 6.90262 6.08019V5.2381C6.90262 5.15389 6.81841 5.09073 6.7342 5.09073H5.57632V3.93285C5.57632 3.84864 5.51316 3.78548 5.42895 3.78548H4.5658C4.48159 3.78548 4.41843 3.84864 4.41843 3.93285V5.09073H3.26055C3.15529 5.09073 3.09213 5.15389 3.09213 5.2381V6.10125C3.09213 6.18546 3.17634 6.24861 3.26055 6.24861H4.41843V7.40649ZM6.14473 8.7749C6.14473 9.28016 6.54473 9.7012 7.04998 9.7012C7.55524 9.7012 7.97629 9.28016 7.97629 8.7749C7.97629 8.29069 7.55524 7.86965 7.04998 7.86965C6.56578 7.86965 6.14473 8.26964 6.14473 8.7749Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M13.828 2.92182C13.8318 2.92822 13.8354 2.93477 13.839 2.94132C13.8436 2.94968 13.8481 2.95804 13.8532 2.96608C13.86 2.97684 13.8674 2.98708 13.8748 2.99732L13.8748 2.99736L13.8748 2.9974C13.8798 3.00433 13.8848 3.01126 13.8897 3.01835C14.0485 3.25263 14.2573 3.45281 14.5086 3.59687L14.5127 3.59947C14.5584 3.62555 14.6063 3.64869 14.6546 3.67094C14.6589 3.67292 14.6631 3.67511 14.6673 3.67731L14.6673 3.67731C14.6721 3.67986 14.677 3.68241 14.682 3.6846C14.7397 3.71 14.7992 3.73269 14.8603 3.75245C14.865 3.75395 14.8698 3.7552 14.8746 3.75644L14.8746 3.75644C14.8788 3.75754 14.883 3.75864 14.8872 3.7599L14.8881 3.76002C15.2353 3.86547 15.6028 3.86558 15.9504 3.76002L15.9512 3.75985L15.9521 3.75968C15.9562 3.7584 15.9604 3.75733 15.9645 3.75625C15.9692 3.75504 15.9738 3.75383 15.9785 3.75234C16.0447 3.731 16.1087 3.70503 16.1714 3.67658C16.1885 3.66881 16.2052 3.66017 16.2218 3.65153L16.2437 3.64023C16.2799 3.62182 16.3158 3.60274 16.3507 3.58208C16.3798 3.56481 16.4081 3.54663 16.4361 3.52777C16.4636 3.50937 16.4905 3.49006 16.5169 3.47019C16.5466 3.44795 16.5762 3.42548 16.6045 3.40144C16.6231 3.38577 16.6409 3.36911 16.6586 3.35246L16.6703 3.3416L16.6888 3.3244L16.6888 3.32438C16.7113 3.30361 16.7338 3.28286 16.7549 3.26064C16.7681 3.24682 16.7804 3.23217 16.7927 3.21749L16.7927 3.21747L16.7927 3.21745C16.7991 3.20984 16.8054 3.20222 16.8119 3.19471C16.8559 3.14413 16.897 3.09129 16.9356 3.03608L16.9462 3.02092C16.9636 2.99614 16.9809 2.97142 16.9969 2.94553C17.0115 2.92184 17.0249 2.89721 17.0382 2.87262L17.0382 2.8726L17.0464 2.85747C17.1084 2.74389 17.1621 2.62455 17.2009 2.49798C17.5113 1.48671 16.9628 0.406 15.9783 0.0888548C15.7942 0.0294676 15.6053 0 15.4174 0C15.1269 0 14.8385 0.0703387 14.5726 0.209322C14.1217 0.444952 13.7898 0.847565 13.6377 1.34321C13.4833 1.84608 13.5417 2.36611 13.7602 2.8009C13.7811 2.84256 13.8045 2.88219 13.828 2.92182ZM15.4233 0.661048C15.464 0.534258 15.5996 0.464032 15.7264 0.505129C16.4892 0.751032 16.915 1.58494 16.6758 2.36408C16.6441 2.46795 16.5487 2.53456 16.4458 2.53456C16.4223 2.53456 16.3984 2.53106 16.3749 2.52373C16.2478 2.48455 16.1764 2.34952 16.2156 2.22216C16.3776 1.69411 16.0921 1.13005 15.579 0.964758C15.4524 0.923887 15.3827 0.787951 15.4233 0.661048ZM15.7794 7.10124V8.4729C15.7794 8.67172 15.6177 8.8334 15.4192 8.8334C15.2205 8.8334 15.0589 8.67172 15.0589 8.4729V7.10124V5.77417V4.29458C15.1785 4.31354 15.2988 4.32325 15.4192 4.32325C15.5395 4.32325 15.6599 4.31354 15.7794 4.29458V5.77406V7.10124ZM15.4192 11.1944C13.9757 11.1944 12.8014 10.0184 12.8014 8.573C12.8014 7.44668 13.5323 6.44692 14.5773 6.09093V6.94821C13.9729 7.26129 13.5902 7.88214 13.5902 8.57311C13.5902 9.58314 14.4108 10.4049 15.4192 10.4049C16.4277 10.4049 17.2482 9.58314 17.2482 8.57311C17.2482 7.88203 16.8655 7.2614 16.261 6.9481V6.09082C17.3059 6.44692 18.037 7.44679 18.037 8.573C18.037 10.0184 16.8627 11.1944 15.4192 11.1944ZM14.5773 7.51953V8.47289C14.5773 8.93782 14.9551 9.31616 15.4192 9.31616C15.8833 9.31616 16.261 8.93782 16.261 8.47289V7.51953C16.5762 7.77097 16.7665 8.15461 16.7665 8.57292C16.7665 9.31672 16.1621 9.92189 15.4192 9.92189C14.6763 9.92189 14.0719 9.31672 14.0719 8.57292C14.0719 8.15473 14.2622 7.77108 14.5773 7.51953ZM10 9.51902V14.0001H16.6L20.8387 4.29884V3.14599H17.4399C17.4033 3.20899 17.3638 3.26973 17.322 3.32878L17.3209 3.33036C17.1532 3.56655 16.9447 3.76989 16.7053 3.9301L16.7052 3.93021C16.5914 4.00642 16.4707 4.07281 16.3441 4.12824C16.3326 4.13333 16.321 4.13829 16.3094 4.14315L16.2899 4.1516C16.2803 4.15579 16.2708 4.15998 16.2612 4.16381V5.58797C17.58 5.96123 18.5189 7.18487 18.5189 8.57313C18.5189 10.2847 17.1284 11.6773 15.4194 11.6773C13.7103 11.6773 12.3198 10.2846 12.3198 8.57302C12.3198 7.18476 13.2586 5.96112 14.5774 5.58786V4.16133L14.5516 4.15149L14.5516 4.15149C14.5331 4.14452 14.5146 4.13756 14.4966 4.12971C14.4859 4.12505 14.4755 4.11987 14.4652 4.1147L14.4652 4.11469C14.4614 4.11278 14.4576 4.11087 14.4537 4.10898C14.4503 4.10732 14.447 4.10569 14.4435 4.10408C14.3911 4.0797 14.3392 4.05441 14.2891 4.02641C14.2787 4.02057 14.2687 4.01439 14.2587 4.00821L14.2404 3.99705C14.1902 3.96736 14.1407 3.93642 14.093 3.903C14.0844 3.89705 14.0762 3.89081 14.0679 3.88457L14.0679 3.88455L14.0536 3.87387C14.0047 3.8382 13.9569 3.80094 13.911 3.76154C13.9042 3.75576 13.8976 3.7498 13.891 3.74384L13.891 3.74381L13.8787 3.73275C13.8328 3.69187 13.7884 3.64942 13.7457 3.60494C13.7377 3.59661 13.7299 3.58813 13.722 3.57963L13.7159 3.57299C13.6752 3.52907 13.6363 3.48357 13.5989 3.43649C13.5882 3.42305 13.5777 3.40939 13.5673 3.39573C13.5335 3.35113 13.5012 3.30529 13.4704 3.2581C13.4587 3.24015 13.4469 3.22208 13.4356 3.20379C13.4306 3.19569 13.4254 3.18779 13.4201 3.17988C13.4127 3.16872 13.4054 3.15757 13.3986 3.14587H12.7846L10 9.51902ZM11.0839 12.5368C11.0839 12.8356 11.3275 13.0786 11.6272 13.0786C11.9268 13.0786 12.1707 12.8356 12.1706 12.5368C12.1706 12.238 11.9267 11.9949 11.6272 11.9949C11.3276 11.9949 11.0839 12.238 11.0839 12.5368Z",
+                }),
+              ],
+            });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-            className: (0, _._)(_.className),
-          },
-          _.createElement("path", {
-            _: "M18 10C17.4696 10 16.9609 9.78929 16.5858 9.41421C16.2107 9.03914 16 8.53043 16 8V3H20V8C20 8.53043 19.7893 9.03914 19.4142 9.41421C19.0391 9.78929 18.5304 10 18 10Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M23.66 12.34C23.2875 11.9653 23.0784 11.4584 23.0784 10.93C23.0784 10.4016 23.2875 9.89473 23.66 9.52L27.19 6L30 8.81L26.47 12.34C26.0957 12.7095 25.5909 12.9166 25.065 12.9166C24.5391 12.9166 24.0343 12.7095 23.66 12.34Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M33 20H28C27.4696 20 26.9609 19.7893 26.5858 19.4142C26.2107 19.0391 26 18.5304 26 18C26 17.4696 26.2107 16.9609 26.5858 16.5858C26.9609 16.2107 27.4696 16 28 16H33V20Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M27.19 30L23.66 26.46C23.2875 26.0853 23.0784 25.5783 23.0784 25.05C23.0784 24.5216 23.2875 24.0147 23.66 23.64C23.8458 23.454 24.0663 23.3065 24.3091 23.2059C24.5519 23.1052 24.8122 23.0534 25.075 23.0534C25.3378 23.0534 25.5981 23.1052 25.8409 23.2059C26.0837 23.3065 26.3043 23.454 26.49 23.64L30 27.19L27.19 30Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M20 33H16V28C16 27.4696 16.2107 26.9609 16.5858 26.5858C16.9609 26.2107 17.4696 26 18 26C18.5304 26 19.0391 26.2107 19.4142 26.5858C19.7893 26.9609 20 27.4696 20 28V33Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M8.81 30L6 27.19L9.53 23.66C9.71575 23.474 9.93632 23.3265 10.1791 23.2259C10.4219 23.1252 10.6822 23.0734 10.945 23.0734C11.2078 23.0734 11.4681 23.1252 11.7109 23.2259C11.9537 23.3265 12.1743 23.474 12.36 23.66C12.7325 24.0347 12.9416 24.5416 12.9416 25.07C12.9416 25.5984 12.7325 26.1053 12.36 26.48L8.81 30Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M8 20H3V16H8C8.53043 16 9.03914 16.2107 9.41421 16.5858C9.78929 16.9609 10 17.4696 10 18C10 18.5304 9.78929 19.0391 9.41421 19.4142C9.03914 19.7893 8.53043 20 8 20Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M9.51 12.34L6 8.81L8.81 6L12.34 9.54C12.7125 9.91472 12.9216 10.4216 12.9216 10.95C12.9216 11.4784 12.7125 11.9853 12.34 12.36C12.1529 12.5446 11.9313 12.6906 11.6878 12.7895C11.4443 12.8885 11.1837 12.9385 10.9209 12.9366C10.658 12.9347 10.3981 12.8811 10.156 12.7787C9.91396 12.6764 9.69443 12.5273 9.51 12.34Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          className: (0, _._)(_.className),
+          children: [
+            (0, _.jsx)("path", {
+              _: "M18 10C17.4696 10 16.9609 9.78929 16.5858 9.41421C16.2107 9.03914 16 8.53043 16 8V3H20V8C20 8.53043 19.7893 9.03914 19.4142 9.41421C19.0391 9.78929 18.5304 10 18 10Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M23.66 12.34C23.2875 11.9653 23.0784 11.4584 23.0784 10.93C23.0784 10.4016 23.2875 9.89473 23.66 9.52L27.19 6L30 8.81L26.47 12.34C26.0957 12.7095 25.5909 12.9166 25.065 12.9166C24.5391 12.9166 24.0343 12.7095 23.66 12.34Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M33 20H28C27.4696 20 26.9609 19.7893 26.5858 19.4142C26.2107 19.0391 26 18.5304 26 18C26 17.4696 26.2107 16.9609 26.5858 16.5858C26.9609 16.2107 27.4696 16 28 16H33V20Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M27.19 30L23.66 26.46C23.2875 26.0853 23.0784 25.5783 23.0784 25.05C23.0784 24.5216 23.2875 24.0147 23.66 23.64C23.8458 23.454 24.0663 23.3065 24.3091 23.2059C24.5519 23.1052 24.8122 23.0534 25.075 23.0534C25.3378 23.0534 25.5981 23.1052 25.8409 23.2059C26.0837 23.3065 26.3043 23.454 26.49 23.64L30 27.19L27.19 30Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M20 33H16V28C16 27.4696 16.2107 26.9609 16.5858 26.5858C16.9609 26.2107 17.4696 26 18 26C18.5304 26 19.0391 26.2107 19.4142 26.5858C19.7893 26.9609 20 27.4696 20 28V33Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M8.81 30L6 27.19L9.53 23.66C9.71575 23.474 9.93632 23.3265 10.1791 23.2259C10.4219 23.1252 10.6822 23.0734 10.945 23.0734C11.2078 23.0734 11.4681 23.1252 11.7109 23.2259C11.9537 23.3265 12.1743 23.474 12.36 23.66C12.7325 24.0347 12.9416 24.5416 12.9416 25.07C12.9416 25.5984 12.7325 26.1053 12.36 26.48L8.81 30Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M8 20H3V16H8C8.53043 16 9.03914 16.2107 9.41421 16.5858C9.78929 16.9609 10 17.4696 10 18C10 18.5304 9.78929 19.0391 9.41421 19.4142C9.03914 19.7893 8.53043 20 8 20Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M9.51 12.34L6 8.81L8.81 6L12.34 9.54C12.7125 9.91472 12.9216 10.4216 12.9216 10.95C12.9216 11.4784 12.7125 11.9853 12.34 12.36C12.1529 12.5446 11.9313 12.6906 11.6878 12.7895C11.4443 12.8885 11.1837 12.9385 10.9209 12.9366C10.658 12.9347 10.3981 12.8811 10.156 12.7787C9.91396 12.6764 9.69443 12.5273 9.51 12.34Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "21",
-            height: "16",
-            viewBox: "0 0 21 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-            className: (0, _._)(_.className),
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "21",
+          height: "16",
+          viewBox: "0 0 21 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          className: (0, _._)(_.className),
+          children: (0, _.jsx)("path", {
             _: "M19.8036 8.20159L17.1427 2.47984C16.8199 1.77029 16.2208 1.26744 15.5477 0.983445C14.8911 0.761343 14.239 0.803399 13.6699 1.15492C13.2079 1.41139 12.7957 1.85353 12.6023 2.36971L5.5464 4.26032C5.12084 3.90999 4.60466 3.71661 4.01445 3.74208C3.36234 3.78414 2.77658 4.07377 2.30245 4.5325C1.78302 5.0697 1.59409 5.85004 1.66932 6.62593L2.22581 12.9115C2.35523 14.1373 3.35116 15.1308 4.53158 15.0799C5.71201 15.0289 6.64366 14.0496 6.63803 12.7907L6.65342 11.8578C7.10771 12.0678 7.59072 12.1374 8.08586 12.0047C9.19995 11.7062 9.87959 10.529 9.58107 9.41495L11.7473 8.8345C12.0459 9.94858 13.223 10.6282 14.3371 10.3297C14.8323 10.197 15.2158 9.89526 15.5208 9.54818L16.0006 10.3484C16.5135 11.2723 17.5624 11.721 18.4908 11.4722C18.6146 11.439 18.8003 11.3893 18.9075 11.2942C19.9387 10.6862 20.3044 9.32782 19.8036 8.20159ZM5.60416 7.69439L5.62075 7.75628C5.72026 8.12764 5.53902 8.44156 5.16766 8.54106C4.79629 8.64057 4.48238 8.45933 4.38288 8.08797L4.36629 8.02608L4.3044 8.04266C3.93304 8.14217 3.61912 7.96093 3.51962 7.58957C3.42011 7.21821 3.60135 6.90429 3.97271 6.80479L4.03461 6.7882L4.01802 6.72631C3.91851 6.35495 4.09975 6.04103 4.47111 5.94153C4.84248 5.84202 5.15639 6.02326 5.25589 6.39462L5.27248 6.45652L5.33437 6.43993C5.70573 6.34042 6.01965 6.52166 6.11915 6.89302C6.21866 7.26439 6.03742 7.5783 5.66606 7.6778L5.60416 7.69439ZM7.6757 10.7215C7.24244 10.8376 6.77158 10.5658 6.65549 10.1325C6.6389 10.0706 6.62232 10.0087 6.58915 9.88495L6.61787 9.74458C6.65874 9.40194 6.91845 9.13334 7.22792 9.05041C7.53739 8.96749 7.89661 9.07025 8.10332 9.34655C8.19838 9.45375 8.23155 9.57754 8.26472 9.70133C8.38081 10.1346 8.10895 10.6055 7.6757 10.7215ZM10.5557 6.36764L9.31778 6.69933C8.94642 6.79883 8.63251 6.6176 8.533 6.24623C8.4335 5.87487 8.61474 5.56096 8.9861 5.46145L10.224 5.12977C10.5953 5.03026 10.9092 5.2115 11.0087 5.58286C11.1083 5.95422 10.927 6.26813 10.5557 6.36764ZM13.9889 9.02994C13.5556 9.14603 13.0847 8.87417 12.9686 8.44092C12.9355 8.31713 12.9023 8.19334 12.931 8.05297C12.9719 7.71033 13.2316 7.44173 13.5411 7.35881C13.603 7.34223 13.7268 7.30906 13.8052 7.35437L13.8671 7.33778C13.929 7.3212 14.0075 7.36651 14.0075 7.36651L14.086 7.41182C14.1479 7.39523 14.1645 7.45713 14.2263 7.44054L14.3048 7.48585C14.3214 7.54774 14.3833 7.53116 14.3999 7.59305C14.3999 7.59305 14.3999 7.59305 14.4165 7.65495L14.5281 7.82404C14.5447 7.88594 14.5447 7.88594 14.5613 7.94783C14.7559 8.4264 14.4221 8.91385 13.9889 9.02994ZM15.569 5.02431L15.5071 5.04089L15.5237 5.10279C15.6232 5.47415 15.442 5.78806 15.0706 5.88757C14.6993 5.98707 14.3854 5.80583 14.2859 5.43447L14.2693 5.37258L14.2074 5.38916C13.836 5.48867 13.5221 5.30743 13.4226 4.93607C13.3231 4.56471 13.5043 4.2508 13.8757 4.15129L13.9376 4.13471L13.921 4.07281C13.8215 3.70145 14.0027 3.38754 14.3741 3.28803C14.7455 3.18853 15.0594 3.36976 15.1589 3.74112L15.1755 3.80302L15.2374 3.78643C15.6087 3.68693 15.9226 3.86817 16.0221 4.23953C16.1216 4.61089 15.8785 4.94139 15.569 5.02431Z",
             fill: "black",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "20",
-            height: "20",
-            viewBox: "6 6 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-            className: (0, _._)(_.className),
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "20",
+          height: "20",
+          viewBox: "6 6 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          className: (0, _._)(_.className),
+          children: (0, _.jsx)("path", {
             _: "M16.9511 6.69098L16 3.76393L15.0489 6.69098L13.0283 12.9098H6.48944H3.41175L5.90165 14.7188L11.1917 18.5623L9.17109 24.7812L8.22003 27.7082L10.7099 25.8992L16 22.0557L21.2901 25.8992L23.78 27.7082L22.8289 24.7812L20.8083 18.5623L26.0984 14.7188L28.5882 12.9098H25.5106H18.9717L16.9511 6.69098Z",
             fill: "white",
             stroke: "#141E2B",
             strokeWidth: "2",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M24 3.53537C24 4.4769 23.6308 5.36305 22.9662 6.02766L20.6124 8.39073L19.3108 9.69226L20.0401 10.4215C20.4001 10.7815 20.4001 11.3722 20.0401 11.7322C19.8555 11.9076 19.6247 11.9999 19.3847 11.9999C19.1447 11.9999 18.9139 11.9076 18.7293 11.7322L12.2678 5.27074C11.9078 4.91074 11.9078 4.31998 12.2678 3.95998C12.6278 3.59998 13.2186 3.59998 13.5786 3.95998L14.3078 4.68921L17.9632 1.03384C18.637 0.369229 19.5231 0 20.4646 0C22.4122 0 23.9998 1.58768 23.9998 3.53524L24 3.53537Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M3.68306 15.323C3.20306 15.803 2.77845 16.3384 2.43691 16.9199L0.341537 20.4091C0.119999 20.7784 0 21.203 0 21.6276C0 22.9384 1.06153 23.9999 2.3723 23.9999C2.79691 23.9999 3.22152 23.8799 3.59075 23.6584L7.07996 21.563C7.6615 21.2122 8.20611 20.7968 8.67688 20.3168L16.6985 12.3046L11.6954 7.30151L3.68306 15.323Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "24",
+          height: "24",
+          viewBox: "0 0 24 24",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M24 3.53537C24 4.4769 23.6308 5.36305 22.9662 6.02766L20.6124 8.39073L19.3108 9.69226L20.0401 10.4215C20.4001 10.7815 20.4001 11.3722 20.0401 11.7322C19.8555 11.9076 19.6247 11.9999 19.3847 11.9999C19.1447 11.9999 18.9139 11.9076 18.7293 11.7322L12.2678 5.27074C11.9078 4.91074 11.9078 4.31998 12.2678 3.95998C12.6278 3.59998 13.2186 3.59998 13.5786 3.95998L14.3078 4.68921L17.9632 1.03384C18.637 0.369229 19.5231 0 20.4646 0C22.4122 0 23.9998 1.58768 23.9998 3.53524L24 3.53537Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M3.68306 15.323C3.20306 15.803 2.77845 16.3384 2.43691 16.9199L0.341537 20.4091C0.119999 20.7784 0 21.203 0 21.6276C0 22.9384 1.06153 23.9999 2.3723 23.9999C2.79691 23.9999 3.22152 23.8799 3.59075 23.6584L7.07996 21.563C7.6615 21.2122 8.20611 20.7968 8.67688 20.3168L16.6985 12.3046L11.6954 7.30151L3.68306 15.323Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -32777,6 +32100,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -32831,26 +32155,20 @@
               });
           }
           const _ = this.BLoadAndUnload() ? "repeated" : "once";
-          let _ = _.createElement(
-            _._,
-            {
-              ref: this.m_refContainer,
-              style: _,
-              ..._,
-              onVisibilityChange: this.OnVisibilityChange,
-              trigger: _,
-            },
-            _ && this.props.children,
-          );
+          let _ = (0, _.jsx)(_._, {
+            ref: this.m_refContainer,
+            style: _,
+            ..._,
+            onVisibilityChange: this.OnVisibilityChange,
+            trigger: _,
+            children: _ && this.props.children,
+          });
           return (
             _ &&
-              (_ = _.createElement(
-                _._,
-                {
-                  focusableIfEmpty: !0,
-                },
-                _,
-              )),
+              (_ = (0, _.jsx)(_._, {
+                focusableIfEmpty: !0,
+                children: _,
+              })),
             _
           );
         }
@@ -32864,6 +32182,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -32901,51 +32220,33 @@
           { headerId: _, context: _ } = _({
             labelledBy: _["aria-labelledby"],
           });
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(
-              _._,
-              {
-                onEscKeypress: __webpack_require__,
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: (0, _.jsx)(_._, {
+            active: _,
+            children: (0, _.jsx)(_._, {
+              onEscKeypress: __webpack_require__,
+              className: _,
+              children: (0, _.jsx)(_._, {
+                role: "dialog",
+                "aria-labelledby": _,
                 className: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  role: "dialog",
-                  "aria-labelledby": _,
-                  className: _,
-                  ..._,
-                },
-                _,
-              ),
-            ),
-          ),
-        );
+                ..._,
+                children: _,
+              }),
+            }),
+          }),
+        });
       }
       function _(_) {
         const { className: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _,
-            },
-            __webpack_require__,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)("div", {
+            className: _,
+            children: __webpack_require__,
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -32954,7 +32255,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(!0);
         return (
@@ -33041,34 +32343,27 @@
               : void 0;
         return _
           ? _.createPortal(
-              _.createElement(
-                _._,
-                {
-                  ownerWindow: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "PopupFullWindow",
-                    onContextMenu: _._,
-                  },
-                  _.createElement(_._, {
-                    hideMin: !0,
-                    hideMax: !0,
-                    popup: _,
-                    hideActions: _,
-                    style: _,
-                  }),
-                  _.createElement(
-                    _._,
-                    {
+              (0, _.jsx)(_._, {
+                ownerWindow: _,
+                children: (0, _.jsxs)("div", {
+                  className: "PopupFullWindow",
+                  onContextMenu: _._,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      hideMin: !0,
+                      hideMax: !0,
+                      popup: _,
+                      hideActions: _,
+                      style: _,
+                    }),
+                    (0, _.jsx)(_._, {
                       browserInfo: _.browserContext,
                       bCenterPopupsOnWindow: _.bCenterOnWindow,
-                    },
-                    _.element,
-                  ),
-                ),
-              ),
+                      children: _.element,
+                    }),
+                  ],
+                }),
+              }),
               _,
             )
           : null;
@@ -33097,11 +32392,14 @@
             });
         }, []);
         return __webpack_require__
-          ? _.createElement(_, {
-              key: _.current,
-              onMeasureComplete: _,
-              request: __webpack_require__,
-            })
+          ? (0, _.jsx)(
+              _,
+              {
+                onMeasureComplete: _,
+                request: __webpack_require__,
+              },
+              _.current,
+            )
           : null;
       }
       function _(_) {
@@ -33123,7 +32421,7 @@
           }, [_]),
           _
             ? _.createPortal(
-                _.createElement(_, {
+                (0, _.jsx)(_, {
                   ..._,
                   elContainer: _,
                 }),
@@ -33160,7 +32458,9 @@
               () => _(void 0)
             );
           }, [_, __webpack_require__, _]),
-          _.createElement(_._, null, _.rctToMeasure)
+          (0, _.jsx)(_._, {
+            children: _.rctToMeasure,
+          })
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -33226,14 +32526,14 @@
                     rctActiveContextMenus: _ && _ ? _ : void 0,
                   };
                 return _ instanceof _._
-                  ? _.createElement(_, {
+                  ? (0, _.createElement)(_, {
                       ..._,
                       key: _.key,
                       modal: _,
                       Component: _ ?? _,
                     })
                   : _ instanceof _._
-                    ? _.createElement(_, {
+                    ? (0, _.createElement)(_, {
                         ..._,
                         key: _.key,
                         modal: _,
@@ -33246,34 +32546,33 @@
                 ..._,
                 display: "none",
               })),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                "div",
-                {
-                  ..._,
-                  style: _,
-                  ref: _,
-                  className: (0, _._)(_.className, "FullModalOverlay"),
-                },
-                _.createElement("div", {
-                  className: "ModalOverlayContent ModalOverlayBackground",
-                }),
-                _,
-              ),
-              _ && _,
-            ),
-            _.createElement(_, {
-              ModalManager: _,
-            }),
-            _.createElement(_, {
-              ModalManager: _,
-            }),
-          )
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsxs)("div", {
+                    ..._,
+                    style: _,
+                    ref: _,
+                    className: (0, _._)(_.className, "FullModalOverlay"),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "ModalOverlayContent ModalOverlayBackground",
+                      }),
+                      _,
+                    ],
+                  }),
+                  _ && _,
+                ],
+              }),
+              (0, _.jsx)(_, {
+                ModalManager: _,
+              }),
+              (0, _.jsx)(_, {
+                ModalManager: _,
+              }),
+            ],
+          })
         );
       }
       function _(_) {
@@ -33292,26 +32591,23 @@
               }
             );
         }, [_, _]);
-        const _ = _.createElement(
-          _._,
-          null,
-          _.createElement("div", {
-            className: (0, _._)(
-              "ModalOverlayContent",
-              _ ? "active" : "inactive",
-            ),
-            ref: _.RefModalElement,
-          }),
-          __webpack_require__,
-        );
+        const _ = (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                "ModalOverlayContent",
+                _ ? "active" : "inactive",
+              ),
+              ref: _.RefModalElement,
+            }),
+            __webpack_require__,
+          ],
+        });
         return _
-          ? _.createElement(
-              _,
-              {
-                active: _,
-              },
-              _,
-            )
+          ? (0, _.jsx)(_, {
+              active: _,
+              children: _,
+            })
           : _;
       }
       function _(_) {
@@ -33324,45 +32620,31 @@
           _ = (0, _._)();
         return (
           (0, _._)(_.ModalUpdatedCallback, _),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              {
-                className: (0, _._)(
-                  "ModalOverlayContent",
-                  __webpack_require__ ? "active" : "inactive",
-                ),
-                active: __webpack_require__,
-                modalKey: _.key,
-              },
-              _,
-              _.element,
-            ),
-          )
+          (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_, {
+              className: (0, _._)(
+                "ModalOverlayContent",
+                __webpack_require__ ? "active" : "inactive",
+              ),
+              active: __webpack_require__,
+              modalKey: _.key,
+              children: [_, _.element],
+            }),
+          })
         );
       }
       function _(_) {
         const { className: _, active: __webpack_require__, children: _ } = _;
-        return _.createElement(
-          _,
-          {
-            active: __webpack_require__,
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _,
-                tabIndex: -1,
-              },
-              _,
-            ),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          active: __webpack_require__,
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)("div", {
+              className: _,
+              tabIndex: -1,
+              children: _,
+            }),
+          }),
+        });
       }
       function _(_) {
         const { active: _, children: __webpack_require__ } = _,
@@ -33375,16 +32657,13 @@
           _.useLayoutEffect(() => {
             _ && _.current.showModal();
           }, [_]),
-          _.createElement(
-            "dialog",
-            {
-              ref: _,
-              className: _.ModalDialog,
-              onClose: () => _(!1),
-              onCancel: (_) => _.preventDefault(),
-            },
-            __webpack_require__,
-          )
+          (0, _.jsx)("dialog", {
+            ref: _,
+            className: _.ModalDialog,
+            onClose: () => _(!1),
+            onCancel: (_) => _.preventDefault(),
+            children: __webpack_require__,
+          })
         );
       }
       function _(_) {
@@ -33392,16 +32671,17 @@
           _ = (0, _._)();
         return (
           (0, _._)(_.LegacyPopupModalCountChangedCallbacks, _),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.legacy_popup_modals.map((_) =>
-              _.createElement(_, {
-                key: _.key,
-                Modal: _,
-              }),
+          (0, _.jsx)(_.Fragment, {
+            children: _.legacy_popup_modals.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  Modal: _,
+                },
+                _.key,
+              ),
             ),
-          )
+          })
         );
       }
     },
@@ -33414,6 +32694,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33439,7 +32720,7 @@
             ..._
           } = _,
           _ = _ || (0, _._)("#Button_Close");
-        let _ = _.createElement(_._, {
+        let _ = (0, _.jsx)(_._, {
           bOKDisabled: _.bOKDisabled,
           bCancelDisabled: _.bCancelDisabled,
           strOKText: _,
@@ -33450,9 +32731,11 @@
         _
           ? (_ = void 0)
           : _
-            ? (_ = _.createElement(_._, null, _))
+            ? (_ = (0, _.jsx)(_._, {
+                children: _,
+              }))
             : _ &&
-              (_ = _.createElement(_._, {
+              (_ = (0, _.jsx)(_._, {
                 bOKDisabled: _.bOKDisabled,
                 bCancelDisabled: _.bCancelDisabled,
                 strOKText: _,
@@ -33465,37 +32748,35 @@
                 bUpdateDisabled: _.bMiddleDisabled,
               }));
         const _ = _.useId();
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            title:
-              __webpack_require__ || _.createElement(_.Fragment, null, " "),
-            "aria-describedby": _,
-          },
-          _.createElement(
-            _._,
-            {
-              onCancelButton: _(_ || _.onCancel),
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  _: _,
-                  style: {
-                    display: "contents",
-                  },
-                },
-                _,
-              ),
-              _,
-            ),
-            _.createElement(_._, null, _),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          ..._,
+          title:
+            __webpack_require__ ||
+            (0, _.jsx)(_.Fragment, {
+              children: " ",
+            }),
+          "aria-describedby": _,
+          children: (0, _.jsxs)(_._, {
+            onCancelButton: _(_ || _.onCancel),
+            children: [
+              (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)("div", {
+                    _: _,
+                    style: {
+                      display: "contents",
+                    },
+                    children: _,
+                  }),
+                  _,
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const _ = {
@@ -33507,7 +32788,7 @@
           onCancel: () => {},
           ..._,
         };
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -33515,27 +32796,22 @@
         let _ = {
           onOK: () => {},
           onCancel: () => {},
-          strDescription: _.createElement(
-            "span",
-            {
-              style: {
-                whiteSpace: "pre-line",
-              },
+          strDescription: (0, _.jsxs)("span", {
+            style: {
+              whiteSpace: "pre-line",
             },
-            " ",
-            _.strDescription,
-            " ",
-          ),
+            children: [" ", _.strDescription, " "],
+          }),
           bAlertDialog: !0,
           ..._,
         };
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
       function _(_, _, _) {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             strTitle: _,
             strDescription: _,
           }),
@@ -33549,6 +32825,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33582,33 +32859,27 @@
           _ = _.useCallback(async () => {
             _ || (_ && (await _()), _ && _ && _());
           }, [_, _, _, _]);
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: _,
-            className: __webpack_require__,
-            bDestructiveWarning: _,
-            bDisableBackgroundDismiss: _,
-            bHideCloseIcon: _,
-          },
-          _.createElement(
-            _._,
-            {
-              role: "dialog",
-              "aria-labelledby": _ || void 0,
-              ..._,
-              classNameContent: (0, _._)(
-                "GenericDialogBase",
-                "GenericConfirmDialog",
-                _ && "DialogContentFullSize",
-                _,
-              ),
-              onSubmit: _,
-              bCenterVertically: !_,
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _,
+          className: __webpack_require__,
+          bDestructiveWarning: _,
+          bDisableBackgroundDismiss: _,
+          bHideCloseIcon: _,
+          children: (0, _.jsx)(_._, {
+            role: "dialog",
+            "aria-labelledby": _ || void 0,
+            ..._,
+            classNameContent: (0, _._)(
+              "GenericDialogBase",
+              "GenericConfirmDialog",
+              _ && "DialogContentFullSize",
+              _,
+            ),
+            onSubmit: _,
+            bCenterVertically: !_,
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -33618,23 +32889,19 @@
             ..._
           } = _,
           _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            "aria-labelledby": _ ? _ : "",
-            ..._,
-          },
-          _ &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)(_, {
+          "aria-labelledby": _ ? _ : "",
+          ..._,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
                 _: _,
                 className: __webpack_require__,
-              },
-              _,
-            ),
-          _,
-        );
+                children: _,
+              }),
+            _,
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -33656,35 +32923,30 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, navID: __webpack_require__, closeModal: _ } = _,
           _ = _.createRef(),
           _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
         return (0, _._)() && !_._.IN_STEAMUI
-          ? _.createElement(
-              _._,
-              {
-                navID: __webpack_require__,
-                navTreeRef: _,
-                onCancelButton: _,
-                className: _.GamepadOnlyModalWrapper,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    className: _.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: _,
-                    focusableIfEmpty: !0,
-                  },
-                  _,
-                ),
-              ),
-            )
-          : _.createElement(_.Fragment, null, _);
+          ? (0, _.jsx)(_._, {
+              navID: __webpack_require__,
+              navTreeRef: _,
+              onCancelButton: _,
+              className: _.GamepadOnlyModalWrapper,
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  className: _.GamepadOnlyPanelWrapper,
+                  onGamepadDirection: _,
+                  focusableIfEmpty: !0,
+                  children: _,
+                }),
+              }),
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33774,6 +33036,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(null);
       function _(_) {
@@ -33798,13 +33061,10 @@
             () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
             [_],
           ),
-          _.createElement(
-            _.Provider,
-            {
-              value: _.current,
-            },
-            _,
-          )
+          (0, _.jsx)(_.Provider, {
+            value: _.current,
+            children: _,
+          })
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -33827,23 +33087,23 @@
         (0, _._)(_.OnMenusChanged, _);
         const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
           _ = _.GetAllMenus();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ && _.createElement(_._, null),
-          _.map((_) =>
-            _.createElement(
-              _._,
-              {
-                key: _.key,
-              },
-              _.createElement(_, {
-                instance: _,
-                browserInfo: _,
-              }),
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ && (0, _.jsx)(_._, {}),
+            _.map((_) =>
+              (0, _.jsx)(
+                _._,
+                {
+                  children: (0, _.jsx)(_, {
+                    instance: _,
+                    browserInfo: _,
+                  }),
+                },
+                _.key,
+              ),
             ),
-          ),
-        );
+          ],
+        });
       }
       function _(_) {
         const {
@@ -33867,32 +33127,26 @@
             [_],
           ),
           _ = _ || _.ReactElement;
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.current
-            ? _.createElement(_, {
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: _.current
+            ? (0, _.jsx)(_, {
                 instance: _,
                 browserInfo: __webpack_require__,
                 children: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 instance: _,
                 children: _,
               }),
-        );
+        });
       }
       function _(_) {
         const { instance: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            ..._.position,
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)(_._, {
+          ..._.position,
+          children: __webpack_require__,
+        });
       }
       function _(_) {
         const {
@@ -33980,16 +33234,13 @@
           }, [_, _]),
           _
             ? _.createPortal(
-                _.createElement(
-                  _._,
-                  {
-                    ref: _,
-                    ..._.position,
-                    parentWin: _,
-                    popup: _,
-                  },
-                  _,
-                ),
+                (0, _.jsx)(_._, {
+                  ref: _,
+                  ..._.position,
+                  parentWin: _,
+                  popup: _,
+                  children: _,
+                }),
                 _,
               )
             : null
@@ -34016,13 +33267,13 @@
             } = _,
             _ = _.useRef(void 0);
           _.current || (_.current = new _._());
-          let _ = _.createElement(_._, {
+          let _ = (0, _.jsx)(_._, {
             ..._,
             DialogWrapper: _,
             ModalManager: _.current,
             bUseDialogElement: _,
             bRegisterModalManager: _,
-            rctActiveContextMenus: _.createElement(_, null),
+            rctActiveContextMenus: (0, _.jsx)(_, {}),
           });
           _.bRenderOverlayAtRoot &&
             "undefined" != typeof document &&
@@ -34040,21 +33291,19 @@
             }),
             [_],
           );
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _,
-              {
-                refContextMenuManager: _,
-                bRegisterMenuManager: _,
-              },
-              _.createElement(_._, null, _),
-              _.children,
-            ),
-          );
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsxs)(_, {
+              refContextMenuManager: _,
+              bRegisterMenuManager: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: _,
+                }),
+                _.children,
+              ],
+            }),
+          });
         });
       function _() {
         return _.useContext(_).ModalManager;
@@ -34323,12 +33572,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({}),
         _ = () => _.useContext(_);
       function _(_) {
         const _ = _().ModalPosition ?? _;
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           ..._,
         });
       }
@@ -34354,48 +33604,41 @@
         const _ =
             _.renderContent ||
             ((_) =>
-              _.createElement("div", {
+              (0, _.jsx)("div", {
                 ..._,
               })),
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            !_.hideTopBar &&
-              _.createElement("div", {
-                className: "ModalPosition_TopBar",
-              }),
-            _.onEscKeypress &&
-              !_.bHideCloseIcon &&
-              _.createElement(
-                "div",
-                {
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              !_.hideTopBar &&
+                (0, _.jsx)("div", {
+                  className: "ModalPosition_TopBar",
+                }),
+              _.onEscKeypress &&
+                !_.bHideCloseIcon &&
+                (0, _.jsx)("div", {
                   className: "ModalPosition_Dismiss",
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "closeButton",
                     onClick: (_) => {
                       _.stopPropagation(), _.onEscKeypress();
                     },
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              ),
-            _.createElement(_._, null, _.children),
-          );
-        return _.createElement(
-          "div",
-          {
-            className: _.join(" "),
-            ..._,
-            ref: _,
-          },
-          _({
+                    children: (0, _.jsx)(_.sED, {}),
+                  }),
+                }),
+              (0, _.jsx)(_._, {
+                children: _.children,
+              }),
+            ],
+          });
+        return (0, _.jsx)("div", {
+          className: _.join(" "),
+          ..._,
+          ref: _,
+          children: _({
             className: "ModalPosition_Content",
             children: _,
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -34404,6 +33647,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -34436,17 +33680,16 @@
           !_ || !_)
         )
           return null;
-        let _ = _.createElement(_._, null, __webpack_require__);
+        let _ = (0, _.jsx)(_._, {
+          children: __webpack_require__,
+        });
         return (
           _ &&
-            (_ = _.createElement(
-              _,
-              {
-                active: _,
-                modalKey: _.current,
-              },
-              _,
-            )),
+            (_ = (0, _.jsx)(_, {
+              active: _,
+              modalKey: _.current,
+              children: _,
+            })),
           _.createPortal(_, _)
         );
       }
@@ -34461,20 +33704,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _({ config: _, isDynamic: _ }) {
         const _ = _ ? _ : _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          Object.keys(_ || {}).map((_) =>
-            _.createElement(_, {
-              key: _,
-              featureName: _,
-              render: _[_],
-            }),
+        return (0, _.jsx)(_.Fragment, {
+          children: Object.keys(_ || {}).map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                featureName: _,
+                render: _[_],
+              },
+              _,
+            ),
           ),
-        );
+        });
       }
       function _(_) {
         const { featureName: _, render: __webpack_require__ } = _,
@@ -34486,18 +33731,19 @@
             [_],
           );
         return _.length
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  featureName: _,
-                  elem: _,
-                  render: __webpack_require__,
-                }),
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    featureName: _,
+                    elem: _,
+                    render: __webpack_require__,
+                  },
+                  _,
+                ),
               ),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -34542,18 +33788,19 @@
               () => _.disconnect()
             );
           }, [_, _]),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.current.map(({ key: _, elem: _ }) =>
-              _.createElement(_, {
-                key: _,
-                elem: _,
-                featureName: _,
-                render: __webpack_require__,
-              }),
+          (0, _.jsx)(_.Fragment, {
+            children: _.current.map(({ key: _, elem: _ }) =>
+              (0, _.jsx)(
+                _,
+                {
+                  elem: _,
+                  featureName: _,
+                  render: __webpack_require__,
+                },
+                _,
+              ),
             ),
-          )
+          })
         );
       }
       function _(_) {
@@ -34581,7 +33828,9 @@
             [__webpack_require__, _],
           );
         return (0, _.createPortal)(
-          _.createElement(_._, null, _(_)),
+          (0, _.jsx)(_._, {
+            children: _(_),
+          }),
           __webpack_require__,
         );
       }
@@ -34598,6 +33847,7 @@
         _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -34667,14 +33917,11 @@
           });
         if (_((_ = _ || (0, _._)(_)), _) && _ && _) {
           if (_.bHideMainWindowForPopouts) {
-            const _ = _.createElement(
-              _._,
-              {
-                className: "Hidden",
-                onEscKeypress: _.props.bDisableBackgroundDismiss ? void 0 : _,
-              },
-              _.createElement("div", null),
-            );
+            const _ = (0, _.jsx)(_._, {
+              className: "Hidden",
+              onEscKeypress: _.props.bDisableBackgroundDismiss ? void 0 : _,
+              children: (0, _.jsx)("div", {}),
+            });
             _ = _.ShowModal(_);
           }
           const _ = {
@@ -34812,130 +34059,107 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, __webpack_require__] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 15 23",
-            fill: "none",
-            ..._,
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 15 23",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("g", {
               clipPath: __webpack_require__,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
-            }),
-          ),
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "clipPath",
-              {
-                _: _,
-              },
-              _.createElement("rect", {
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
-                width: "15",
-                height: "23",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("rect", {
+                  fill: "currentColor",
+                  width: "15",
+                  height: "23",
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _._)("SVGIcon_Button", "SVGIcon_Settings", _.className);
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _,
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "-305.5 396.5 256 256",
-            enableBackground: "new -305.5 396.5 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _,
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "-305.5 396.5 256 256",
+          enableBackground: "new -305.5 396.5 256 256",
+          children: (0, _.jsx)("path", {
             _: "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DownArrowContextMenu",
-            "data-name": "Layer 1",
-            viewBox: "0 0 128 128",
-            _: "0px",
-            _: "0px",
-            ..._,
-          },
-          _.createElement("polygon", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_DownArrowContextMenu",
+          "data-name": "Layer 1",
+          viewBox: "0 0 128 128",
+          _: "0px",
+          _: "0px",
+          ..._,
+          children: (0, _.jsx)("polygon", {
             points:
               "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            style: {
-              transform: `rotate(${_.angle}deg)`,
-            },
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            width: "24.833px",
-            height: "21.917px",
-            viewBox: "0 0 24.833 21.917",
+        return (0, _.jsx)("svg", {
+          style: {
+            transform: `rotate(${_.angle}deg)`,
           },
-          _.createElement("polygon", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          width: "24.833px",
+          height: "21.917px",
+          viewBox: "0 0 24.833 21.917",
+          children: (0, _.jsx)("polygon", {
             points:
               "12.5,14.873 3.302,5.723 1.185,7.848 12.5,19.103 23.814,7.848 21.697,5.723 ",
           }),
-        );
+        });
       }
       function _(_) {
         let _ = "SVGIcon_Button SVGIcon_MagnifyingGlass";
         return (
           _.className && (_ += ` ${_.className}`),
-          _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: _,
-              version: "1.1",
-              _: "0px",
-              _: "0px",
-              viewBox: "0 0 100 100",
-            },
-            _.createElement(
-              "g",
-              {
-                transform: "translate(0,-952.36218)",
-              },
-              _.createElement("path", {
+          (0, _.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: _,
+            version: "1.1",
+            _: "0px",
+            _: "0px",
+            viewBox: "0 0 100 100",
+            children: (0, _.jsx)("g", {
+              transform: "translate(0,-952.36218)",
+              children: (0, _.jsx)("path", {
                 className: "ColorSelector",
                 _: "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
                 fill: "currentColor",
@@ -34945,322 +34169,282 @@
                 display: "inline",
                 overflow: "visible",
               }),
-            ),
-          )
+            }),
+          })
         );
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            className: "SVGIcon_Button SVGIcon_Clock",
-            version: "1.1",
-            _: "0px",
-            _: "0px",
-            width: "20px",
-            height: "20px",
-            viewBox: "0 0 20 20",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: "SVGIcon_Button SVGIcon_Clock",
+          version: "1.1",
+          _: "0px",
+          _: "0px",
+          width: "20px",
+          height: "20px",
+          viewBox: "0 0 20 20",
+          children: (0, _.jsx)("path", {
             _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "24",
-            height: "24",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)("SVGIcon_Button SVGIcon_Submit", _().FlipInRTL),
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          width: "24",
+          height: "24",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button SVGIcon_Submit", _().FlipInRTL),
+          ..._,
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M4.16683 8.982C4.10732 8.3908 3.83847 7.42693 4.15486 7.17995C4.46877 6.93489 4.7797 6.90487 5.90123 7.31306L31.1931 17.2282C32.2693 17.6503 32.2686 18.335 31.1931 18.7564L5.90123 28.6715C4.77972 29.1235 4.46864 29.0497 4.15487 28.8049C3.83836 28.5579 4.0953 27.5939 4.15484 27.0028L4.7797 21.2151C4.89862 20.0374 5.92644 18.9801 7.0706 18.854L15.467 18.4429C24.1686 17.9924 24.1686 17.9924 15.467 17.5419L7.0706 17.1313C5.92423 17.0053 4.89825 15.9476 4.7797 14.7706L4.16683 8.982Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)("SVGIcon_LangOptions", _.className),
-            _: "0px",
-            _: "0px",
-            width: "100px",
-            height: "91.582px",
-            viewBox: "0 0 100 91.582",
-            enableBackground: "new 0 0 100 91.582",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_LangOptions", _.className),
+          _: "0px",
+          _: "0px",
+          width: "100px",
+          height: "91.582px",
+          viewBox: "0 0 100 91.582",
+          enableBackground: "new 0 0 100 91.582",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               clipPath: __webpack_require__,
               _: "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            fill: "#FFFFFF",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Popout",
-            viewBox: "0 0 8 8",
-            _: "0px",
-            _: "0px",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          fill: "#FFFFFF",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Popout",
+          viewBox: "0 0 8 8",
+          _: "0px",
+          _: "0px",
+          children: (0, _.jsx)("path", {
             _: "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            fill: "#FFFFFF",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_X",
-            version: "1.1",
-            _: "0px",
-            _: "0px",
-            viewBox: "-165 95 100 100",
-            ..._,
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("polygon", {
+        return (0, _.jsx)("svg", {
+          fill: "#FFFFFF",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_X",
+          version: "1.1",
+          _: "0px",
+          _: "0px",
+          viewBox: "-165 95 100 100",
+          ..._,
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("polygon", {
               points:
                 "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const { color: _ = "#FFFFFF", ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(
-              "SVGIcon_Button",
-              "SVGIcon_X_Line",
-              _.className,
-            ),
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            ...__webpack_require__,
-          },
-          _.createElement("line", {
-            fill: "none",
-            stroke: _,
-            strokeWidth: "45",
-            strokeMiterlimit: "10",
-            _: "212",
-            _: "212",
-            _: "44",
-            _: "44",
-          }),
-          _.createElement("line", {
-            fill: "none",
-            stroke: _,
-            strokeWidth: "45",
-            strokeMiterlimit: "10",
-            _: "44",
-            _: "212",
-            _: "212",
-            _: "44",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_X_Line", _.className),
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          ...__webpack_require__,
+          children: [
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: _,
+              strokeWidth: "45",
+              strokeMiterlimit: "10",
+              _: "212",
+              _: "212",
+              _: "44",
+              _: "44",
+            }),
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: _,
+              strokeWidth: "45",
+              strokeMiterlimit: "10",
+              _: "44",
+              _: "212",
+              _: "212",
+              _: "44",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_5",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Paperclip",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_5",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Paperclip",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             fill: "none",
             strokeWidth: "10",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
             _: "M167.768,62.647 l-0.012,123.052c0,24.729-19.334,44.856-43.096,44.866c-23.765-0.006-43.099-20.134-43.096-44.872L81.557,48.851 c0-15.345,14.483-27.827,29.83-27.83c15.342,0.003,27.827,12.488,27.833,27.833l-0.002,139.245 c0.003,6.376-8.546,12.925-14.925,12.925c0,0-13.929-0.166-13.929-12.928l0.003-124.839",
           }),
-        );
+        });
       }
       function _(_) {
         const { muted: _, className: __webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(
-              "SVGIcon_Button",
-              "SVGIcon_Volume",
-              __webpack_require__,
-            ),
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "255.999px",
-            viewBox: "0 0 256 255.999",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)(
+            "SVGIcon_Button",
+            "SVGIcon_Volume",
+            __webpack_require__,
+          ),
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "255.999px",
+          viewBox: "0 0 256 255.999",
+          children: [
+            (0, _.jsx)("g", {
               className: "Speaker",
-            },
-            _.createElement("path", {
-              _: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
+              children: (0, _.jsx)("path", {
+                _: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
+              }),
             }),
-          ),
-          !_ &&
-            _.createElement(
-              "g",
-              {
+            !_ &&
+              (0, _.jsxs)("g", {
                 className: "SoundWaves",
-              },
-              _.createElement("path", {
-                className: "SoundWavesHighest",
-                _: "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
+                children: [
+                  (0, _.jsx)("path", {
+                    className: "SoundWavesHighest",
+                    _: "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: "SoundWavesHigh",
+                    _: "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: "SoundWavesMed",
+                    _: "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: "SoundWavesLow",
+                    _: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
+                  }),
+                ],
               }),
-              _.createElement("path", {
-                className: "SoundWavesHigh",
-                _: "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
-              }),
-              _.createElement("path", {
-                className: "SoundWavesMed",
-                _: "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
-              }),
-              _.createElement("path", {
-                className: "SoundWavesLow",
-                _: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
-              }),
-            ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               className: "SoundX",
-            },
-            _.createElement("line", {
-              fill: "none",
-              strokeWidth: _ ? 10 : 0,
-              stroke: "#fff",
-              strokeMiterlimit: "10",
-              _: "137",
-              _: "170.667",
-              _: "223.167",
-              _: "84.5",
+              children: [
+                (0, _.jsx)("line", {
+                  fill: "none",
+                  strokeWidth: _ ? 10 : 0,
+                  stroke: "#fff",
+                  strokeMiterlimit: "10",
+                  _: "137",
+                  _: "170.667",
+                  _: "223.167",
+                  _: "84.5",
+                }),
+                (0, _.jsx)("line", {
+                  fill: "none",
+                  strokeWidth: _ ? 10 : 0,
+                  stroke: "#fff",
+                  strokeMiterlimit: "10",
+                  _: "137",
+                  _: "84.5",
+                  _: "223.167",
+                  _: "170.667",
+                }),
+              ],
             }),
-            _.createElement("line", {
-              fill: "none",
-              strokeWidth: _ ? 10 : 0,
-              stroke: "#fff",
-              strokeMiterlimit: "10",
-              _: "137",
-              _: "84.5",
-              _: "223.167",
-              _: "170.667",
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Play",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Play",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             className: "playTriangle",
             _: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Pause",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            _: "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z",
-          }),
-          _.createElement("path", {
-            _: "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Pause",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { color: _ = "#fff", ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Check",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            strokeWidth: "24",
-            stroke: _,
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
-            ...__webpack_require__,
-          },
-          _.createElement("polyline", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Check",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          strokeWidth: "24",
+          stroke: _,
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeMiterlimit: "10",
+          ...__webpack_require__,
+          children: (0, _.jsx)("polyline", {
             fill: "none",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
           }),
-        );
+        });
       }
       function _(_) {
         let _ = _.highlightColor || "#00ccff",
@@ -35268,464 +34452,427 @@
         const [_, _] = (0, _._)(),
           [_, _] = (0, _._)(),
           [_] = (0, _.useState)(Math.random().toString());
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DialogCheck",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "linearGradient",
-              {
-                _: _,
-                _: "0%",
-                _: "0%",
-                _: "100%",
-                _: "100%",
-              },
-              _.createElement("stop", {
-                offset: "0%",
-                stopColor: _,
-              }),
-              _.createElement("stop", {
-                offset: "100%",
-                stopColor: _,
-              }),
-            ),
-            _.createElement(
-              "filter",
-              {
-                _: _,
-                _: "0",
-                _: "0",
-                width: "200%",
-                height: "200%",
-              },
-              _.createElement("feOffset", {
-                result: "offOut",
-                _: "SourceAlpha",
-                _: "20",
-                _: "20",
-              }),
-              _.createElement("feGaussianBlur", {
-                result: "blurOut",
-                _: "offOut",
-                stdDeviation: "10",
-              }),
-              _.createElement("feBlend", {
-                _: "SourceGraphic",
-                in2: "blurOut",
-                mode: "normal",
-              }),
-            ),
-          ),
-          _.createElement("path", {
-            fill: "none",
-            stroke: _,
-            strokeWidth: "24",
-            strokeLinecap: "round",
-            strokeLinejoin: "miter",
-            strokeMiterlimit: "10",
-            _: "M206.5,45.25L95,210.75l-45.5-63",
-            strokeDasharray: "365.19 365.19",
-            strokeDashoffset: "0.00",
-          }),
-          _.createElement("path", {
-            fill: "none",
-            opacity: ".2",
-            filter: _,
-            stroke: _,
-            strokeWidth: "24",
-            strokeLinecap: "round",
-            strokeLinejoin: "miter",
-            strokeMiterlimit: "10",
-            _: "M206.5,45.25L95,210.75l-45.5-63",
-            strokeDasharray: "365.19 365.19",
-            strokeDashoffset: "0.00",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_DialogCheck",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsxs)("defs", {
+              children: [
+                (0, _.jsxs)("linearGradient", {
+                  _: _,
+                  _: "0%",
+                  _: "0%",
+                  _: "100%",
+                  _: "100%",
+                  children: [
+                    (0, _.jsx)("stop", {
+                      offset: "0%",
+                      stopColor: _,
+                    }),
+                    (0, _.jsx)("stop", {
+                      offset: "100%",
+                      stopColor: _,
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("filter", {
+                  _: _,
+                  _: "0",
+                  _: "0",
+                  width: "200%",
+                  height: "200%",
+                  children: [
+                    (0, _.jsx)("feOffset", {
+                      result: "offOut",
+                      _: "SourceAlpha",
+                      _: "20",
+                      _: "20",
+                    }),
+                    (0, _.jsx)("feGaussianBlur", {
+                      result: "blurOut",
+                      _: "offOut",
+                      stdDeviation: "10",
+                    }),
+                    (0, _.jsx)("feBlend", {
+                      _: "SourceGraphic",
+                      in2: "blurOut",
+                      mode: "normal",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: _,
+              strokeWidth: "24",
+              strokeLinecap: "round",
+              strokeLinejoin: "miter",
+              strokeMiterlimit: "10",
+              _: "M206.5,45.25L95,210.75l-45.5-63",
+              strokeDasharray: "365.19 365.19",
+              strokeDashoffset: "0.00",
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              opacity: ".2",
+              filter: _,
+              stroke: _,
+              strokeWidth: "24",
+              strokeLinecap: "round",
+              strokeLinejoin: "miter",
+              strokeMiterlimit: "10",
+              _: "M206.5,45.25L95,210.75l-45.5-63",
+              strokeDasharray: "365.19 365.19",
+              strokeDashoffset: "0.00",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, color: __webpack_require__ = "#020202" } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)("SVGIcon_Button", "SVGIcon_Caution", _),
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_Caution", _),
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsxs)("g", {
               className: "triangle",
-            },
-            _.createElement("path", {
-              stroke: __webpack_require__,
-              strokeWidth: "16",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              _: "M127.9,76.632",
+              children: [
+                (0, _.jsx)("path", {
+                  stroke: __webpack_require__,
+                  strokeWidth: "16",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "10",
+                  _: "M127.9,76.632",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "none",
+                  stroke: __webpack_require__,
+                  strokeWidth: "11",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeMiterlimit: "5",
+                  _: "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606",
+                }),
+                (0, _.jsx)("path", {
+                  fill: __webpack_require__,
+                  _: "M127.9,208.12",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              fill: "none",
-              stroke: __webpack_require__,
-              strokeWidth: "11",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "5",
-              _: "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606",
-            }),
-            _.createElement("path", {
-              fill: __webpack_require__,
-              _: "M127.9,208.12",
-            }),
-          ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsxs)("g", {
               className: "exclamation",
-            },
-            _.createElement("line", {
-              fill: "none",
-              stroke: __webpack_require__,
-              strokeWidth: "16",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              _: "127.9",
-              _: "76.632",
-              _: "127.9",
-              _: "160.07",
+              children: [
+                (0, _.jsx)("line", {
+                  fill: "none",
+                  stroke: __webpack_require__,
+                  strokeWidth: "16",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "10",
+                  _: "127.9",
+                  _: "76.632",
+                  _: "127.9",
+                  _: "160.07",
+                }),
+                (0, _.jsx)("path", {
+                  fill: __webpack_require__,
+                  _: "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12",
+                }),
+              ],
             }),
-            _.createElement("path", {
-              fill: __webpack_require__,
-              _: "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12",
-            }),
-          ),
-        );
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Video",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            className: "videoPlayButton",
-            _: "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z",
-          }),
-          _.createElement("path", {
-            _: "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Video",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              className: "videoPlayButton",
+              _: "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z",
+            }),
+          ],
+        });
       }
       function _(_) {
         return (0, _._)()
-          ? _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                className: "SVGIcon_Button SVGIcon_Bell",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+          ? (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_Bell",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 _: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24ZM18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
                 fill: "currentColor",
               }),
-            )
-          : _.createElement(
-              "svg",
-              {
-                version: "1.1",
-                _: "base",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: "SVGIcon_Button SVGIcon_Bell",
-                _: "0px",
-                _: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "0 0 256 256",
-              },
-              _.createElement("path", {
+            })
+          : (0, _.jsx)("svg", {
+              version: "1.1",
+              _: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_Bell",
+              _: "0px",
+              _: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+              children: (0, _.jsx)("path", {
                 _: "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
               }),
-            );
+            });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            style: {
-              transform: `rotate(${_.angle}deg)`,
-            },
-            version: "1.1",
-            _: "arrowBase",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Arrow",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
+        return (0, _.jsxs)("svg", {
+          style: {
+            transform: `rotate(${_.angle}deg)`,
           },
-          _.createElement("polyline", {
-            fill: "none",
-            stroke: "#ffffff",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
-            points: "128,247.688 128,8.313 181.061,61.674 ",
-          }),
-          _.createElement("polyline", {
-            fill: "none",
-            stroke: "#ffffff",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
-            points: "128,247.688 128,8.313 74.939,61.674 ",
-          }),
-        );
+          version: "1.1",
+          _: "arrowBase",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Arrow",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("polyline", {
+              fill: "none",
+              stroke: "#ffffff",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeMiterlimit: "10",
+              points: "128,247.688 128,8.313 181.061,61.674 ",
+            }),
+            (0, _.jsx)("polyline", {
+              fill: "none",
+              stroke: "#ffffff",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeMiterlimit: "10",
+              points: "128,247.688 128,8.313 74.939,61.674 ",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
           case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "36px",
-                height: "36px",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: "36px",
+              height: "36px",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
                 fill: _.fill || "currentColor",
               }),
-            );
+            });
           case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "36px",
-                height: "36px",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: "36px",
+              height: "36px",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
                 fill: _.fill || "currentColor",
               }),
-            );
+            });
           case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "36px",
-                height: "36px",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: "36px",
+              height: "36px",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
                 fill: _.fill || "currentColor",
               }),
-            );
+            });
           case "right":
-            return _.createElement(
-              "svg",
-              {
-                viewBox: "0 0 36 36",
-                width: "36px",
-                height: "36px",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              viewBox: "0 0 36 36",
+              width: "36px",
+              height: "36px",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              ...__webpack_require__,
+              children: (0, _.jsx)("path", {
                 _: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
                 fill: _.fill || "currentColor",
               }),
-            );
+            });
         }
       }
       function _(_) {
         const { angle: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)("SVGIcon_CutArrow", _().HasHorizontalDirection),
-            style: {
-              transform: `rotate(${_ || 0}deg)`,
-            },
-            _: "0px",
-            _: "0px",
-            width: "50px",
-            height: "100px",
-            viewBox: "0 0 50 100",
-            fill: _.fill || "#ffffff",
-            ...__webpack_require__,
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_CutArrow", _().HasHorizontalDirection),
+          style: {
+            transform: `rotate(${_ || 0}deg)`,
           },
-          _.createElement("polygon", {
+          _: "0px",
+          _: "0px",
+          width: "50px",
+          height: "100px",
+          viewBox: "0 0 50 100",
+          fill: _.fill || "#ffffff",
+          ...__webpack_require__,
+          children: (0, _.jsx)("polygon", {
             points:
               "0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 ",
           }),
-        );
+        });
       }
       function _(_) {
         const { angle: _, singlearrow: __webpack_require__, ..._ } = _;
-        return _.createElement(
-          "svg",
-          {
-            style: {
-              transform: `rotate(${_}deg)`,
-            },
-            version: "1.1",
-            _: "arrowBase",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(
-              "SVGIcon_Button SVGIcon_DoubleArrow",
-              _().HasHorizontalDirection,
-            ),
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            ..._,
+        return (0, _.jsxs)("svg", {
+          style: {
+            transform: `rotate(${_}deg)`,
           },
-          _.createElement("polyline", {
-            className: "Arrow1",
-            fill: "none",
-            stroke: _.fill || "#ffffff",
-            strokeWidth: "23",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
-          }),
-          !__webpack_require__ &&
-            _.createElement("polyline", {
-              className: "Arrow2",
+          version: "1.1",
+          _: "arrowBase",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)(
+            "SVGIcon_Button SVGIcon_DoubleArrow",
+            _().HasHorizontalDirection,
+          ),
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          ..._,
+          children: [
+            (0, _.jsx)("polyline", {
+              className: "Arrow1",
               fill: "none",
               stroke: _.fill || "#ffffff",
               strokeWidth: "23",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
-              points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
+              points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
             }),
-        );
+            !__webpack_require__ &&
+              (0, _.jsx)("polyline", {
+                className: "Arrow2",
+                fill: "none",
+                stroke: _.fill || "#ffffff",
+                strokeWidth: "23",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
+              }),
+          ],
+        });
       }
       function _(_) {
         const { angle: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            style: {
-              transform: `rotate(${_}deg)`,
-            },
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _().HasHorizontalDirection,
-            viewBox: "0 0 32 32",
-            fill: "none",
-            ...__webpack_require__,
+        return (0, _.jsx)("svg", {
+          style: {
+            transform: `rotate(${_}deg)`,
           },
-          _.createElement("path", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _().HasHorizontalDirection,
+          viewBox: "0 0 32 32",
+          fill: "none",
+          ...__webpack_require__,
+          children: (0, _.jsx)("path", {
             fill: _.fill || "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Maximize",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("rect", {
-            _: "24",
-            _: "42.167",
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "18",
-            strokeMiterlimit: "10",
-            width: "208",
-            height: "171.667",
-          }),
-          _.createElement("line", {
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "42",
-            strokeMiterlimit: "10",
-            _: "24",
-            _: "54.01",
-            _: "232",
-            _: "54.01",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Maximize",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "24",
+              _: "42.167",
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "18",
+              strokeMiterlimit: "10",
+              width: "208",
+              height: "171.667",
+            }),
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "42",
+              strokeMiterlimit: "10",
+              _: "24",
+              _: "54.01",
+              _: "232",
+              _: "54.01",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Minimize",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("line", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Minimize",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("line", {
             fill: "none",
             stroke: "currentColor",
             strokeWidth: "18",
@@ -35735,189 +34882,178 @@
             _: "232",
             _: "209.01",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Restore",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("polyline", {
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "12",
-            strokeMiterlimit: "10",
-            points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
-          }),
-          _.createElement("rect", {
-            _: "24",
-            _: "90.861",
-            fill: "none",
-            stroke: "currentColor",
-            strokeWidth: "18",
-            strokeMiterlimit: "10",
-            width: "149",
-            height: "122.973",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Restore",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("polyline", {
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "12",
+              strokeMiterlimit: "10",
+              points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
+            }),
+            (0, _.jsx)("rect", {
+              _: "24",
+              _: "90.861",
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "18",
+              strokeMiterlimit: "10",
+              width: "149",
+              height: "122.973",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Undo",
-            viewBox: "0 0 100 100",
-            _: "0px",
-            _: "0px",
-            width: "16px",
-            height: "16px",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Undo",
+          viewBox: "0 0 100 100",
+          _: "0px",
+          _: "0px",
+          width: "16px",
+          height: "16px",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M94.83,50A44.81,44.81,0,0,0,17.12,19.56V11.15a6,6,0,1,0-12,0v23.9a6,6,0,0,0,6,6H35.06a6,6,0,0,0,0-12H24.64A32.88,32.88,0,1,1,50,82.87h0a6,6,0,1,0,0,12h.12A44.82,44.82,0,0,0,94.83,50Z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Reload",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#ffffff",
-            strokeWidth: "30",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
-          }),
-          _.createElement("polygon", {
-            points: "147.639,108.361 245.755,10.166 245.834,108.361 ",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Reload",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#ffffff",
+              strokeWidth: "30",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
+            }),
+            (0, _.jsx)("polygon", {
+              points: "147.639,108.361 245.755,10.166 245.834,108.361 ",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { angle: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            style: {
-              transform: `rotate(${_.angle}deg)`,
-            },
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_FlatArrow",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            ...__webpack_require__,
+        return (0, _.jsx)("svg", {
+          style: {
+            transform: `rotate(${_.angle}deg)`,
           },
-          _.createElement("polygon", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_FlatArrow",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          ...__webpack_require__,
+          children: (0, _.jsx)("polygon", {
             points: "13.913,141 128,59 242.087,141 ",
             fill: _.fill || "#ffffff",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DoNotDisturb",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("circle", {
-            fill: "none",
-            stroke: "#ffffff",
-            strokeWidth: "24",
-            strokeMiterlimit: "10",
-            _: "128",
-            _: "128",
-            _: "101.5",
-          }),
-          _.createElement("line", {
-            fill: "none",
-            stroke: "#ffffff",
-            strokeWidth: "24",
-            strokeMiterlimit: "10",
-            _: "73",
-            _: "128",
-            _: "183",
-            _: "128",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_DoNotDisturb",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("circle", {
+              fill: "none",
+              stroke: "#ffffff",
+              strokeWidth: "24",
+              strokeMiterlimit: "10",
+              _: "128",
+              _: "128",
+              _: "101.5",
+            }),
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: "#ffffff",
+              strokeWidth: "24",
+              strokeMiterlimit: "10",
+              _: "73",
+              _: "128",
+              _: "183",
+              _: "128",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            style: {
-              transform: `scaleX(${_.bFlipHorizontal ? -1 : 1})`,
-            },
-            className: "SVGIcon_Button SVGIcon_MediaControls",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          style: {
+            transform: `scaleX(${_.bFlipHorizontal ? -1 : 1})`,
           },
-          _.createElement("path", {
-            className: "Arrow",
-            _: "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003",
-          }),
-          _.createElement("polyline", {
-            className: "preArrowBox",
-            opacity: _.bHidePreArrow ? "0" : "1",
-            points: "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t",
-          }),
-          _.createElement("polyline", {
-            className: "jumpAheadBox",
-            opacity: _.bShowJumpAheadBox ? "1" : "0",
-            points:
-              "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t",
-          }),
-          _.createElement("polyline", {
-            className: "postArrowBox",
-            opacity: _.bHidePostArrow ? "0" : "1",
-            points:
-              "209.29,54.763 249.167,54.763 249.167,201.236 209.29,201.236 \t",
-          }),
-        );
+          className: "SVGIcon_Button SVGIcon_MediaControls",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              className: "Arrow",
+              _: "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003",
+            }),
+            (0, _.jsx)("polyline", {
+              className: "preArrowBox",
+              opacity: _.bHidePreArrow ? "0" : "1",
+              points:
+                "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t",
+            }),
+            (0, _.jsx)("polyline", {
+              className: "jumpAheadBox",
+              opacity: _.bShowJumpAheadBox ? "1" : "0",
+              points:
+                "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t",
+            }),
+            (0, _.jsx)("polyline", {
+              className: "postArrowBox",
+              opacity: _.bHidePostArrow ? "0" : "1",
+              points:
+                "209.29,54.763 249.167,54.763 249.167,201.236 209.29,201.236 \t",
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _._)(
@@ -35925,478 +35061,427 @@
           "SVGIcon_SteamLogo",
           _ && _.className,
         );
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            fill: "#FFFFFF",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 256 256",
-            ..._,
-            className: _,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          fill: "#FFFFFF",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 256 256",
+          ..._,
+          className: _,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Viewers",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            className: "frontGuy",
-            fill: "#666666",
-            _: "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z",
-          }),
-          _.createElement("path", {
-            className: "backGuy",
-            fill: "rgb(144, 153, 161)",
-            _: "M84.204,34.396c-20.068,0-36.385,15.38-36.385,38.074v29.258c0,20.818,27.945,24.382,28.32,24.944 c-12.378,3.189-36.01,9.565-47.638,18.006c-9.753,7.127-13.504,21.006-15.379,26.632c-0.75,2.251-1.876,6.002-1.876,8.253  c0,0,0,11.44,0,23.257c0,11.815,15.004,19.13,20.819,19.13h104.279c5.814,0,20.818-6.564,20.818-19.13c0-12.566,0-23.257,0-23.257 c0-2.438-1.125-6.564-2.063-8.815c-5.063-12.566-5.438-18.942-15.566-26.069c-11.628-8.065-34.885-14.067-47.076-17.443 c0.375-0.563,28.133-4.876,28.133-25.695V72.469C120.59,49.775,104.272,34.396,84.204,34.396L84.204,34.396z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Viewers",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              className: "frontGuy",
+              fill: "#666666",
+              _: "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z",
+            }),
+            (0, _.jsx)("path", {
+              className: "backGuy",
+              fill: "rgb(144, 153, 161)",
+              _: "M84.204,34.396c-20.068,0-36.385,15.38-36.385,38.074v29.258c0,20.818,27.945,24.382,28.32,24.944 c-12.378,3.189-36.01,9.565-47.638,18.006c-9.753,7.127-13.504,21.006-15.379,26.632c-0.75,2.251-1.876,6.002-1.876,8.253  c0,0,0,11.44,0,23.257c0,11.815,15.004,19.13,20.819,19.13h104.279c5.814,0,20.818-6.564,20.818-19.13c0-12.566,0-23.257,0-23.257 c0-2.438-1.125-6.564-2.063-8.815c-5.063-12.566-5.438-18.942-15.566-26.069c-11.628-8.065-34.885-14.067-47.076-17.443 c0.375-0.563,28.133-4.876,28.133-25.695V72.469C120.59,49.775,104.272,34.396,84.204,34.396L84.204,34.396z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_5",
-            className: (0, _._)(
-              "SVGIcon_Button SVGIcon_ChatBubble",
-              _().FlipInRTL,
-            ),
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 64 64",
-            role: "presentation",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_5",
+          className: (0, _._)(
+            "SVGIcon_Button SVGIcon_ChatBubble",
+            _().FlipInRTL,
+          ),
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 64 64",
+          role: "presentation",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_5",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 64 64",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_5",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 64 64",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               _: "M40.6,32.7l15.1-15.1c2.6-2.6,2.6-6.7,0-9.3c-2.6-2.6-6.7-2.6-9.3,0L31.3,23.4L16.2,8.3c-2.6-2.6-6.7-2.6-9.3,0c-2.6,2.6-2.6,6.7,0,9.3L22,32.7L6.9,47.8c-2.6,2.6-2.6,6.7,0,9.3c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9L31.3,42l15.1,15.1c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9c2.6-2.6,2.6-6.7,0-9.3L40.6,32.7z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_STVTimelineGrabber",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_STVTimelineGrabber",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("g", {
               className: "leftarrow",
               opacity: "0",
-            },
-            _.createElement("polygon", {
-              points: "127.817,4.403 4,128 127.817,251.598",
+              children: (0, _.jsx)("polygon", {
+                points: "127.817,4.403 4,128 127.817,251.598",
+              }),
             }),
-          ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsx)("g", {
               className: "rightarrow",
               opacity: "0",
-            },
-            _.createElement("polygon", {
-              points: "127.816,4.403 251.633,128 127.816,251.598",
+              children: (0, _.jsx)("polygon", {
+                points: "127.816,4.403 251.633,128 127.816,251.598",
+              }),
             }),
-          ),
-          _.createElement(
-            "g",
-            {
+            (0, _.jsx)("g", {
               className: "grabber",
-            },
-            _.createElement("polygon", {
-              points:
-                "145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403",
+              children: (0, _.jsx)("polygon", {
+                points:
+                  "145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403",
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_STVTimelineMarker",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("polygon", {
-            className: "pointer",
-            points:
-              "128,154.979 46.374,230.548 46.374,253.333 209.626,253.333 209.626,230.548 \t",
-          }),
-          _.createElement("rect", {
-            className: "line",
-            _: "116.271",
-            _: "3.168",
-            width: "23.459",
-            height: "137.332",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_STVTimelineMarker",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("polygon", {
+              className: "pointer",
+              points:
+                "128,154.979 46.374,230.548 46.374,253.333 209.626,253.333 209.626,230.548 \t",
+            }),
+            (0, _.jsx)("rect", {
+              className: "line",
+              _: "116.271",
+              _: "3.168",
+              width: "23.459",
+              height: "137.332",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_BigPicture",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_BigPicture",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             _: "M213.771,68.659c-4.108-7.066-46.007-7.231-49.293-7.231H128H91.522c-3.286,0-45.186,0.165-49.293,7.231 c-19.555,29.248-27.385,100.263-27.276,104.01c0.238,8.294,2.11,24.583,16.595,35.162c9.201,6.72,22.183,8.709,29.083,3.614 c4.989-3.682,11.995-19.224,19.061-32.204c7.064-12.981,9.202-11.174,12.98-12.159c3.78-0.986,36.066-0.74,36.066-0.74 s30.809-0.247,34.588,0.74c3.777,0.985,5.915-0.822,12.98,12.159c7.064,12.98,14.07,28.522,19.061,32.204 c6.9,5.095,19.882,3.106,29.083-3.614c14.485-10.58,16.356-26.868,16.595-35.162C241.154,168.922,233.325,97.906,213.771,68.659z M67.251,128.14c-14.974,0-27.112-12.137-27.112-27.111c0-14.975,12.137-27.112,27.112-27.112 c14.973,0,27.111,12.137,27.111,27.112C94.362,116.003,82.224,128.14,67.251,128.14z M188.749,128.14 c-14.974,0-27.111-12.137-27.111-27.111c0-14.975,12.138-27.112,27.111-27.112c14.973,0,27.111,12.137,27.111,27.112 C215.86,116.003,203.722,128.14,188.749,128.14z",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _ } = _;
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)("SVGIcon_Button", "SVGIcon_MobilePhone", _),
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_MobilePhone", _),
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             _: "M165.693,45.186H91.368c-7.963,0-14.41,6.447-14.41,14.41V210.9c0,7.964,6.447,14.41,14.41,14.41h74.134 c7.965,0,14.41-6.447,14.41-14.41V59.596C180.102,51.633,173.657,45.186,165.693,45.186z M113.172,57.509h30.717 c1.707,0,3.223,1.327,3.223,3.224c0,1.896-1.328,3.223-3.223,3.223h-30.717c-1.707,0-3.223-1.328-3.223-3.223 C109.949,58.837,111.465,57.509,113.172,57.509z M128.529,213.554c-4.551,0-8.152-3.603-8.152-8.153c0-4.55,3.604-8.152,8.152-8.152 s8.151,3.603,8.151,8.152C136.682,209.761,133.081,213.554,128.529,213.554z M169.105,186.819h-81.15V74.384h81.15V186.819 L169.105,186.819z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _._)();
-        return _.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)("SVGIcon_Button", "SVGIcon_VRIcon"),
-            ..._,
-          },
-          _.createElement(
-            "g",
-            {
+        return (0, _.jsxs)("svg", {
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_VRIcon"),
+          ..._,
+          children: [
+            (0, _.jsx)("g", {
               clipPath: __webpack_require__,
-            },
-            _.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
-              fill: "currentColor",
-            }),
-          ),
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "clipPath",
-              {
-                _: _,
-              },
-              _.createElement("rect", {
-                width: "36",
-                height: "36",
+              children: (0, _.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
                 fill: "currentColor",
-                transform: "translate(0.400879 0.825195)",
               }),
-            ),
-          ),
-        );
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("rect", {
+                  width: "36",
+                  height: "36",
+                  fill: "currentColor",
+                  transform: "translate(0.400879 0.825195)",
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Info",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("circle", {
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            _: "128",
-            _: "75.835",
-            _: "17.679",
-          }),
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            _: "M98.821,116.865c0,0,0.159,11,2.71,16.407 c2.451,5.198,8.789,2.938,8.789,10.33c0,13.388,0,42.604,0,42.604s-1.065,10.435,6,10.652c7.065,0.216,29.358,0,29.358,0 s0-50.383,0-68.859c0-5.181-6.328-11.135-11.848-11.135C123.181,116.865,98.821,116.865,98.821,116.865z",
-          }),
-          _.createElement("circle", {
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            _: "128",
-            _: "128",
-            _: "122.334",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Info",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("circle", {
+              fill: "none",
+              stroke: "#000000",
+              strokeWidth: "10",
+              strokeMiterlimit: "10",
+              _: "128",
+              _: "75.835",
+              _: "17.679",
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#000000",
+              strokeWidth: "10",
+              strokeMiterlimit: "10",
+              _: "M98.821,116.865c0,0,0.159,11,2.71,16.407 c2.451,5.198,8.789,2.938,8.789,10.33c0,13.388,0,42.604,0,42.604s-1.065,10.435,6,10.652c7.065,0.216,29.358,0,29.358,0 s0-50.383,0-68.859c0-5.181-6.328-11.135-11.848-11.135C123.181,116.865,98.821,116.865,98.821,116.865z",
+            }),
+            (0, _.jsx)("circle", {
+              fill: "none",
+              stroke: "#000000",
+              strokeWidth: "10",
+              strokeMiterlimit: "10",
+              _: "128",
+              _: "128",
+              _: "122.334",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_3",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Twitter",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_3",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Twitter",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             _: "M250.151,128.021c0,67.418-54.604,122.022-122.022,122.022S6.107,195.439,6.107,128.021C6.107,60.604,60.712,6,128.129,6 S250.151,60.604,250.151,128.021z M105.799,192.389c54.117,0,83.707-44.842,83.707-83.707c0-1.282,0-2.563-0.062-3.783 c5.736-4.148,10.739-9.335,14.705-15.252c-5.247,2.318-10.922,3.905-16.901,4.637c6.103-3.661,10.738-9.396,12.936-16.29 c-5.675,3.355-11.959,5.796-18.67,7.138c-5.369-5.734-12.995-9.273-21.477-9.273c-16.228,0-29.406,13.179-29.406,29.407 c0,2.318,0.243,4.576,0.793,6.711c-24.466-1.22-46.125-12.934-60.646-30.75c-2.501,4.332-3.965,9.396-3.965,14.765 c0,10.189,5.186,19.218,13.117,24.465c-4.819-0.122-9.334-1.464-13.3-3.661c0,0.122,0,0.244,0,0.366 c0,14.275,10.128,26.113,23.611,28.857c-2.44,0.672-5.064,1.039-7.748,1.039c-1.892,0-3.723-0.184-5.553-0.551 c3.722,11.714,14.581,20.195,27.455,20.44c-10.067,7.868-22.757,12.566-36.546,12.566c-2.379,0-4.697-0.122-7.016-0.427 C73.707,187.507,89.204,192.389,105.799,192.389",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_3",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_TwitchTV",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_3",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_TwitchTV",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             _: "M28.176,8.026L11.763,49.97v171.427h58.358v31.003h32.826l31.003-31.003h47.414l63.829-63.829V8.026H28.176z M223.311,146.625l-36.474,36.474h-58.359l-31.002,31.003v-31.003H48.237V29.91h175.074V146.625z M186.837,71.855v63.829h-21.885 V71.855H186.837z M128.478,71.855v63.829h-21.883V71.855H128.478z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_CSGO",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_CSGO",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M236.979,138.059c0.548,0.078,6.91,0.101,7.772,0.032 c1.215-0.095,1.396,0.068,1.388,0.708c-0.01,0.397,0.012,3.039-2.365,7.32c-3.301,5.948-12.079,10.436-12.55,10.672 c-0.47,0.233-0.53,0.484-0.136,0.75c0.434,0.295,8.068,1.454,9.084,1.611c1.017,0.154,0.637,1.001,0.637,1.001 s-0.704,2.621-2.895,5.36c-2.189,2.738-9.311,6.123-8.583,6.123c0.731,0,7.187,0.159,6.181,1.422 c-3.019,3.786-13.603,9.528-18.43,13.813c-13.388,11.885-13.217,12.864-15.52,15.09c-0.983-3.298-3.02-12.658-3.02-12.658 l-6.105-11.467c4.413,0.18,6.364,0.081,8.952,0.081c9.214,0,17.525-2.185,22.234-5.841l2.371-1.843l-2.911-0.728 c-2.131-0.528-7.121-1.782-11.896-2.979c2.184-0.104,10.803-1.299,14.413-5.339c0.136-0.151,0.276-0.321,0.406-0.494l1.245-1.664 l-2.404-0.735c-2.607-0.799-5.948-1.682-8.517-2.335c3.173-1.572,7.585-3.942,10.048-6.088c4.83-4.203,7.226-9.709,7.322-9.943 l0.9-2.098l-10.772,0.318c1.503-1.483,3.218-3.197,3.939-3.991c1.43-1.571,4.053-6.221,4.198-9.896l0.072-1.787l-1.763,0.288 c-1.979,0.322-5.301,1.279-8.179,2.173c2.025-2.193,4.296-4.767,5.46-6.484c2.687-3.964,2.76-8.371,2.597-12.916l-0.104-2.881 l-2.261,1.79c-2.559,2.028-7.595,5.031-11.097,7.047c1.538-3.644,3.54-8.752,3.813-11.276c0.5-4.681-0.248-10.196-0.248-10.196 l-10.76,9.394c0.885-1.953,1.684-4.013,2.117-5.832c1.735-7.29,0.055-17.892-0.021-18.338l-0.452-2.807l-7.777,7.739 c0.722-3.535,1.465-8.253,1.23-11.789c-0.426-6.321-2.278-10.517-2.359-10.694l-1.01-2.251l-6.465,8.577 c0.231-4.285,0.27-10.24-0.948-13.547c-1.934-5.262-3.651-8.007-3.723-8.121l-1.232-1.958l-3.057,4.85 c0.018-2.967-0.11-6.475-0.69-8.68c-1.202-4.543-2.825-6.396-3.002-6.592l-1.325-1.433l-1.623,2.705 c-0.278-3.19-1.112-7.084-3.343-9.478l-0.814-0.872l-1.012,0.623c-0.327,0.201-0.714,0.497-1.104,0.823 c-0.154-1.135-0.365-2.451-0.639-3.691c0.563-4.733,1.186-10.03,1.206-10.452c0.027-0.547,0.274-0.767,1.017-0.391 c0.898,0.452,3.156,2.064,5.187,6.133c2.036,4.067,3.132,11.324,3.117,12.044c-0.009,0.383,0.291,0.757,0.438,0.151 c0.145-0.607,0.478-7.591,0.623-8.312c0.081-0.383,0.199-0.484,0.737-0.212c0.496,0.249,2.959,2.181,4.899,6.463 c1.179,2.599,1.634,11.946,1.574,12.653c-0.106,1.278,0.313,0.891,0.339,0.883c-0.009,0.013-0.025,0.04-0.03,0.049 c0.03-0.041,0.036-0.049,0.03-0.049c0.573-0.841,4.21-8.99,4.519-9.377c0.313-0.39,0.521-0.395,0.835,0.002 c0.262,0.33,2.095,1.717,4.049,10.088c1.902,8.135,1.949,11.542,1.848,12.682c-0.08,0.86,0.339,0.993,0.731,0.524 c0.389-0.47,5.104-9.201,5.497-9.515c0.389-0.313,0.613-0.309,0.927,0.161c0.312,0.469,2.718,4.762,3.684,11.448 c0.861,5.947,0.608,13.599,0.375,14.381c-0.235,0.782-0.135,1.077,0.493,0.53c0.623-0.548,10.299-8.412,11.004-9.038 c0.703-0.627,1.18-0.65,1.34-0.046c0.172,0.654,0.822,8.654,0.275,15.225c-0.549,6.571-2.626,12.752-2.94,13.145 c-0.312,0.391,0.087,0.712,0.478,0.555c0.394-0.157,11.902-10.018,12.645-10.402c0.711-0.367,1.043,0.005,1.105,0.507 c0.068,0.544,0.966,3.098-0.419,11.269c-0.959,5.65-3.54,11.876-3.855,12.033c-0.313,0.157-0.077,0.336,0.234,0.259 c0.315-0.079,8.324-3.488,8.872-3.567c0.546-0.079,0.671,0.339,0.514,0.808c-0.158,0.469-0.458,6.273-2.534,11.639 c-2.603,6.732-6.056,11.001-6.056,11.001s-0.252,0.519,0.217,0.519s9.266-0.186,9.813-0.263c0.547-0.079,0.627,0.156,0.547,0.704 c-0.077,0.547,0.858,9.116-8.624,14.601C236.524,137.734,236.432,137.979,236.979,138.059z M174.473,24.823 c1.981,3.34,2.018,9.248,1.836,11.469l-0.52,6.238l5.25-8.744c0.395,0.843,0.85,2.003,1.25,3.524 c1.02,3.877,0.422,13.082,0.417,13.173l-0.384,5.752l6.435-10.212c0.628,1.27,1.45,3.097,2.32,5.459 c1.466,3.983,0.772,13.806,0.381,17.257l-0.602,5.308l9.568-12.69c0.493,1.707,1.058,4.21,1.259,7.227 c0.39,5.821-2.272,15.731-2.299,15.83l-1.428,5.26l11.125-11.068c0.377,3.586,0.772,9.774-0.304,14.302 c-1.2,5.057-5.778,12.588-5.823,12.664l-1.806,3.992l16.878-14.09c-0.116,1.366-0.262,2.944-0.423,4.435 c-0.312,2.935-3.954,11.389-5.335,14.399l-1.827,4.002l3.856-2.115c0.381-0.208,8.027-4.41,12.979-7.778 c-0.039,3.484-0.537,6.042-2.139,8.4c-2.189,3.234-9.05,10.198-9.118,10.268l-4.352,4.408l5.861-2.004 c0.08-0.025,6.868-2.34,11.188-3.41c-0.675,2.445-2.208,5.125-3.11,6.118c-1.319,1.449-6.429,6.429-6.48,6.482l-2.682,2.614 l13.475-0.404c-1.06,1.837-2.89,4.549-5.457,6.783c-3.727,3.244-12.956,7.341-13.048,7.383l-3.952,1.746l4.201,1.008 c0.062,0.015,5.637,1.354,10.266,2.67c-3.412,2.191-9.291,3.081-10.948,3.138c-2.06,0.072-11.075,0.125-11.075,0.125l-11.51,0.069 l11.162,2.804c0,0,12.587,3.164,19.486,4.894c-4.398,2.216-10.717,3.493-17.657,3.493c-3.102,0-10.335-0.284-15.048-0.483 c4.064,6.069,7.041,11.004,7.992,13.681c2.813,7.915,6.777,28.269,6.889,48.907c0.039,6.572-1.081,11.649-9.022,11.649 c-0.288,0-0.597-0.038-0.908-0.092c-1.846,0.339-4.351,0.595-5.438-0.095c-1.805-1.149-3.163-2.627-3.544-3.957 c-0.383-1.334-1.146-9.374-3.106-20.675c-1.92-11.046-4.038-19.431-4.237-19.525c-1.535-0.731-9.358-18.45-9.358-18.45 l-37.23-47.615c0,0-20.737,23.917-37.455,47.8c-0.867,1.235-5.994,11.251-9.275,17.989c-0.212,0.437-0.181,0.475-0.281,0.808 c-0.604,2.015-2.396,9.525-4.039,18.994c-1.962,11.301-2.725,19.341-3.105,20.675c-0.384,1.33-1.74,2.808-3.546,3.957 c-1.085,0.689-3.592,0.434-5.437,0.095c-0.313,0.054-0.621,0.092-0.909,0.092c-7.941,0-9.061-5.077-9.024-11.649 c0.114-20.639,4.078-40.992,6.892-48.907c0.95-2.677,3.926-7.611,7.993-13.681c-4.714,0.199-11.946,0.483-15.051,0.483 c-6.939,0-13.26-1.277-17.653-3.493c6.896-1.729,19.486-4.894,19.486-4.894l11.159-2.804l-11.508-0.069 c0,0-9.019-0.053-11.076-0.125c-1.66-0.057-7.537-0.946-10.949-3.138c4.629-1.315,10.202-2.655,10.264-2.67l4.201-1.008l-3.95-1.746 c-0.094-0.042-9.324-4.139-13.049-7.383c-2.566-2.234-4.397-4.946-5.458-6.783l13.477,0.404l-2.684-2.614 c-0.05-0.054-5.16-5.033-6.48-6.482c-0.9-0.993-2.436-3.673-3.108-6.118c4.319,1.069,11.108,3.384,11.188,3.41l5.861,2.004 l-4.352-4.408c-0.069-0.069-6.928-7.033-9.12-10.268c-1.601-2.358-2.099-4.916-2.139-8.4c4.953,3.368,12.601,7.57,12.98,7.778 l3.858,2.115l-1.829-4.002c-1.379-3.011-5.022-11.465-5.334-14.399c-0.161-1.491-0.305-3.068-0.421-4.435l16.877,14.09l-1.806-3.992 c-0.046-0.076-4.622-7.607-5.821-12.664c-1.078-4.528-0.682-10.716-0.307-14.302L58.57,89.672l-1.426-5.26 c-0.025-0.098-2.688-10.008-2.3-15.83c0.203-3.017,0.767-5.52,1.26-7.227l9.566,12.69l-0.601-5.308 c-0.391-3.451-1.083-13.274,0.381-17.257c0.871-2.362,1.693-4.189,2.32-5.459l6.435,10.212l-0.382-5.752 c-0.006-0.091-0.604-9.295,0.416-13.173c0.401-1.521,0.854-2.681,1.251-3.524l5.249,8.744l-0.52-6.238 c-0.181-2.221-0.144-8.129,1.836-11.469c0.596,0.522,1.248,1.148,1.67,1.575l2.215,2.245l0.276-3.142 c0.162-1.838,0.783-7.003,1.703-8.813c1.342-2.635,4.69-3.91,7.104-4.505c-6.691,13.614-36.889,77.59-36.889,122.937 c0,23.658,16.206,23.931,16.368,23.931c4.881,0,6.947-7.914,6.947-11.063V133.45c0-2.744,1.148-2.744,1.835-2.744 c5.807,0,10.48,3.196,13.855,6.69c8.813-11.615,15.81-20.526,15.81-20.526s0.16-0.182,0.248-0.345 c-1.03-2.443-7.165-16.995-7.165-16.995l1.708-43.717c0,0-0.278-3.797,1.044-6.052c1.314-2.245,4.247-3.175,4.247-3.175 l13.307,41.443c0,0-4.107,0.866-4.107,5.585c0,2.982,2.658,4.99,6.227,5.013c3.572-0.022,6.227-2.031,6.227-5.013 c0-4.719-4.109-5.585-4.109-5.585l13.311-41.443c0,0,2.93,0.93,4.245,3.175c1.322,2.255,1.043,6.052,1.043,6.052l1.709,43.717 l-7.309,17.34c0,0,6.997,8.911,15.809,20.526c3.375-3.494,8.048-6.69,13.855-6.69c0.687,0,1.833,0,1.833,2.744v14.538 c0,3.148,2.068,11.063,6.95,11.063c0.159,0,16.367-0.272,16.367-23.931c0-45.347-30.197-109.322-36.888-122.937 c2.412,0.595,5.761,1.87,7.104,4.505c0.92,1.809,1.541,6.975,1.705,8.813l0.275,3.142l2.213-2.245 C173.226,25.972,173.875,25.345,174.473,24.823z M176.157,181.396c-1.644-2.189-41.07-55.856-41.07-55.856l-6.723,8.809 l-0.946-1.233l-0.829-1.082l-5.053-6.594l-0.095,0.101c0,0-39.427,53.667-41.07,55.856c-1.643,2.191-4.777,6.708-6.058,9.322 c-1.279,2.614-8.946,39.306-8.946,42.592c0,2.005,0.041,8.618,0.071,13.47c1.536,0.2,3.411,0.761,4.357,0.125 c1.624-1.093,2.363-2.323,2.491-3.372c0.128-1.048,1.367-12.969,2.69-20.812c1.779-10.547,4.571-19.005,4.415-18.97 c3.213-6.672,8.966-17.938,9.887-19.252c17.808-25.439,38.994-49.947,38.994-49.947s21.166,24.502,38.978,49.947 c0.921,1.313,6.672,12.58,9.888,19.252c-0.158-0.035,2.635,8.423,4.414,18.97c1.322,7.843,2.562,19.764,2.688,20.812 c0.131,1.049,0.87,2.279,2.493,3.372c0.944,0.636,2.818,0.075,4.355-0.125c0.032-4.852,0.073-11.465,0.073-13.47 c0-3.286-7.667-39.978-8.948-42.592C180.936,188.104,177.801,183.588,176.157,181.396z M82.538,21.517l-1.014-0.623l-0.813,0.872 c-2.231,2.394-3.063,6.287-3.342,9.478l-1.624-2.705l-1.323,1.433c-0.179,0.197-1.801,2.049-3.004,6.592 c-0.581,2.205-0.709,5.712-0.689,8.68l-3.057-4.85l-1.234,1.958c-0.072,0.114-1.787,2.859-3.722,8.121 c-1.22,3.307-1.179,9.262-0.949,13.547l-6.463-8.577l-1.012,2.251c-0.08,0.177-1.934,4.373-2.359,10.694 c-0.234,3.536,0.51,8.253,1.231,11.789l-7.778-7.739l-0.453,2.807c-0.073,0.446-1.754,11.048-0.02,18.338 c0.433,1.819,1.231,3.879,2.117,5.832l-10.759-9.394c0,0-0.749,5.515-0.248,10.196c0.271,2.523,2.272,7.632,3.813,11.276 c-3.503-2.016-8.539-5.019-11.099-7.047l-2.259-1.79l-0.106,2.881c-0.162,4.545-0.087,8.952,2.6,12.916 c1.161,1.717,3.433,4.291,5.459,6.484c-2.877-0.894-6.201-1.851-8.179-2.173l-1.763-0.288l0.071,1.787 c0.148,3.675,2.771,8.324,4.198,9.896c0.723,0.794,2.436,2.508,3.941,3.991L21.93,137.83l0.896,2.098 c0.1,0.234,2.493,5.74,7.324,9.943c2.464,2.146,6.876,4.516,10.047,6.088c-2.57,0.653-5.908,1.536-8.518,2.335l-2.402,0.735 l1.246,1.664c0.13,0.173,0.27,0.343,0.407,0.494c3.608,4.04,12.229,5.234,14.412,5.339c-4.774,1.197-9.767,2.451-11.896,2.979 l-2.911,0.728l2.371,1.843c4.708,3.656,13.02,5.841,22.233,5.841c2.588,0,4.539,0.099,8.954-0.081l-6.105,11.467 c0,0-2.038,9.36-3.02,12.658c-2.304-2.226-2.133-3.205-15.52-15.09c-4.829-4.284-15.411-10.026-18.429-13.813 c-1.005-1.263,5.449-1.422,6.179-1.422c0.73,0-6.393-3.385-8.582-6.123c-2.191-2.739-2.895-5.36-2.895-5.36s-0.38-0.847,0.637-1.001 c1.018-0.157,8.65-1.316,9.084-1.611c0.395-0.266,0.332-0.517-0.137-0.75c-0.469-0.236-9.248-4.724-12.548-10.672 c-2.375-4.281-2.357-6.923-2.364-7.32c-0.01-0.64,0.17-0.803,1.385-0.708c0.862,0.068,7.226,0.046,7.774-0.032 c0.546-0.08,0.453-0.324,0.019-0.576c-9.483-5.484-8.546-14.054-8.624-14.601c-0.079-0.548,0-0.783,0.548-0.704 c0.546,0.077,9.342,0.263,9.812,0.263c0.469,0,0.218-0.519,0.218-0.519s-3.452-4.27-6.056-11.001 c-2.077-5.366-2.377-11.169-2.533-11.639c-0.157-0.469-0.034-0.887,0.514-0.808c0.549,0.079,8.558,3.488,8.87,3.567 c0.313,0.077,0.548-0.103,0.235-0.259c-0.314-0.157-2.896-6.383-3.855-12.033c-1.384-8.17-0.488-10.725-0.42-11.269 c0.063-0.502,0.397-0.874,1.105-0.507c0.743,0.385,12.255,10.245,12.646,10.402c0.391,0.157,0.79-0.164,0.477-0.555 c-0.313-0.392-2.392-6.574-2.938-13.145c-0.548-6.571,0.1-14.571,0.274-15.225c0.161-0.604,0.635-0.581,1.339,0.046 c0.704,0.626,10.381,8.489,11.006,9.038c0.625,0.547,0.727,0.252,0.492-0.53c-0.235-0.782-0.484-8.435,0.375-14.381 c0.965-6.686,3.372-10.979,3.685-11.448s0.536-0.474,0.927-0.161c0.391,0.313,5.106,9.045,5.497,9.515 c0.391,0.469,0.809,0.336,0.732-0.524c-0.104-1.14-0.057-4.547,1.845-12.682c1.956-8.371,3.789-9.758,4.052-10.088 c0.313-0.396,0.521-0.392,0.833-0.002c0.309,0.387,3.945,8.536,4.519,9.377c-0.005,0,0,0.008,0.031,0.049 c-0.007-0.009-0.022-0.036-0.031-0.049c0.025,0.008,0.446,0.395,0.34-0.883c-0.058-0.707,0.396-10.055,1.574-12.653 c1.941-4.282,4.404-6.214,4.899-6.463c0.54-0.272,0.658-0.171,0.737,0.212c0.146,0.721,0.478,7.705,0.625,8.312 c0.146,0.606,0.444,0.232,0.437-0.151c-0.015-0.72,1.081-7.977,3.115-12.044c2.033-4.069,4.292-5.681,5.188-6.133 c0.742-0.376,0.989-0.156,1.018,0.391c0.022,0.422,0.645,5.719,1.206,10.452c-0.272,1.24-0.484,2.556-0.639,3.691 C83.251,22.014,82.866,21.718,82.538,21.517z M127.35,141.814c-1.158,12.032-4.978,23.045-6.326,29.486 c-1.643,7.849-4.788,18.061-6.793,20.931c-4.433,6.343-18.036,18.547-20.403,19.732c-1.094,0.547-6.376-4.115-6.56-4.846 c-0.182-0.728,2.883-3.993,2.154-3.627c-0.731,0.364-4.104,0.906-5.06,0.87c-0.753-0.026,0.633-2.728,0.633-2.728 s-1.484,2.217-3.021,2.947c-0.03,0.015,9.433-18.119,9.433-18.119S127.52,140.043,127.35,141.814z M119.7,169.39l3.104-10.647 l-1.869-0.559l-3.152,10.656L119.7,169.39z M114.072,167.242l4.687-10.051l-1.764-0.838l-4.735,10.055L114.072,167.242z  M126.961,159.319l-0.82,11.06l-1.991-0.139l0.867-11.079L126.961,159.319z M131.727,170.391l-1.986,0.167l-0.828-11.078 l1.944-0.144L131.727,170.391z M164.422,186.462c0,0,9.463,18.134,9.434,18.119c-1.54-0.73-3.021-2.947-3.021-2.947 s1.384,2.701,0.633,2.728c-0.957,0.036-4.33-0.506-5.06-0.87c-0.731-0.366,2.334,2.899,2.153,3.627 c-0.185,0.73-5.467,5.393-6.56,4.846c-2.368-1.186-15.973-13.39-20.404-19.732c-2.007-2.87-5.149-13.082-6.792-20.931 c-1.349-6.441-4.621-17.127-5.778-29.16C128.854,140.373,164.422,186.462,164.422,186.462z M142.029,167.242l1.813-0.834 l-4.735-10.055l-1.762,0.838L142.029,167.242z M136.402,169.39l1.917-0.55l-3.152-10.656l-1.868,0.559L136.402,169.39z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_ClosedCaption",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            className: "CCBox",
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            _: "M238,210c0,6.627-5.373,12-12,12H30 c-6.627,0-12-5.373-12-12V46c0-6.627,5.373-12,12-12h196c6.627,0,12,5.373,12,12V210z",
-          }),
-          _.createElement("path", {
-            className: "C1",
-            _: "M90.505,173.207c11.431,0,22.338-4.276,30.72-12.036c2.6-2.407,2.753-6.47,0.347-9.068c-2.41-2.604-6.47-2.757-9.072-0.349 c-5.998,5.559-13.811,8.62-21.995,8.62c-17.852,0-32.373-14.524-32.373-32.372c0-17.849,14.521-32.373,32.373-32.373 c8.177,0,15.981,3.055,21.979,8.603c2.603,2.407,6.662,2.25,9.072-0.353c2.407-2.602,2.249-6.662-0.353-9.068 c-8.375-7.751-19.276-12.019-30.694-12.019c-24.931,0-45.209,20.281-45.209,45.209C45.3,152.93,65.574,173.207,90.505,173.207z",
-          }),
-          _.createElement("path", {
-            className: "C1",
-            _: "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_ClosedCaption",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              className: "CCBox",
+              fill: "none",
+              stroke: "#000000",
+              strokeWidth: "10",
+              strokeMiterlimit: "10",
+              _: "M238,210c0,6.627-5.373,12-12,12H30 c-6.627,0-12-5.373-12-12V46c0-6.627,5.373-12,12-12h196c6.627,0,12,5.373,12,12V210z",
+            }),
+            (0, _.jsx)("path", {
+              className: "C1",
+              _: "M90.505,173.207c11.431,0,22.338-4.276,30.72-12.036c2.6-2.407,2.753-6.47,0.347-9.068c-2.41-2.604-6.47-2.757-9.072-0.349 c-5.998,5.559-13.811,8.62-21.995,8.62c-17.852,0-32.373-14.524-32.373-32.372c0-17.849,14.521-32.373,32.373-32.373 c8.177,0,15.981,3.055,21.979,8.603c2.603,2.407,6.662,2.25,9.072-0.353c2.407-2.602,2.249-6.662-0.353-9.068 c-8.375-7.751-19.276-12.019-30.694-12.019c-24.931,0-45.209,20.281-45.209,45.209C45.3,152.93,65.574,173.207,90.505,173.207z",
+            }),
+            (0, _.jsx)("path", {
+              className: "C1",
+              _: "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Hidden",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#FFFFFF",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M62.499,172.263 c-32.755-16.197-47.415-39.509-47.415-39.509",
-          }),
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#FFFFFF",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M177.948,85.392 c48.213,14.998,68.451,47.362,68.451,47.362s-36.393,54.737-115.689,54.737c-17.938,0-33.591-2.671-47.096-6.832",
-          }),
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#FFFFFF",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M15.084,132.754 c0,0,32.933-56.576,115.674-54.785c8.505,0.185,16.486,0.913,23.96,2.072",
-          }),
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#FFFFFF",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M93.981,141.131 c-0.475-2.385-0.725-4.852-0.725-7.377c0-20.711,16.789-37.5,37.5-37.5c2.42,0,4.787,0.229,7.08,0.668",
-          }),
-          _.createElement("path", {
-            fill: "none",
-            stroke: "#FFFFFF",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "M156.528,106.512 c7.223,6.836,11.729,16.513,11.729,27.242c0,20.711-16.789,37.5-37.5,37.5c-10.609,0-20.189-4.405-27.012-11.487",
-          }),
-          _.createElement("line", {
-            fill: "none",
-            stroke: "#FFFFFF",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            _: "53.007",
-            _: "210.504",
-            _: "208.507",
-            _: "55.004",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Hidden",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M62.499,172.263 c-32.755-16.197-47.415-39.509-47.415-39.509",
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M177.948,85.392 c48.213,14.998,68.451,47.362,68.451,47.362s-36.393,54.737-115.689,54.737c-17.938,0-33.591-2.671-47.096-6.832",
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M15.084,132.754 c0,0,32.933-56.576,115.674-54.785c8.505,0.185,16.486,0.913,23.96,2.072",
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M93.981,141.131 c-0.475-2.385-0.725-4.852-0.725-7.377c0-20.711,16.789-37.5,37.5-37.5c2.42,0,4.787,0.229,7.08,0.668",
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "M156.528,106.512 c7.223,6.836,11.729,16.513,11.729,27.242c0,20.711-16.789,37.5-37.5,37.5c-10.609,0-20.189-4.405-27.012-11.487",
+            }),
+            (0, _.jsx)("line", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              strokeWidth: "10",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "53.007",
+              _: "210.504",
+              _: "208.507",
+              _: "55.004",
+            }),
+          ],
+        });
       }
       function _(_) {
         const _ = (0, _._)(
@@ -36404,393 +35489,361 @@
           "SVGIcon_Button",
           _.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled",
         );
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _,
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _,
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             fill: _.filled ? "currentColor" : "none",
             stroke: "currentColor",
             strokeWidth: "10",
             strokeMiterlimit: "10",
             _: "M127.755,18.624 c-2.061,0.101-3.846,1.465-4.485,3.427L98.312,96.933H18.379c-2.745,0.01-4.963,2.242-4.955,4.989 c0.006,1.572,0.754,3.05,2.019,3.984l64.925,47.476L55.41,230.873c-0.848,2.612,0.582,5.417,3.192,6.265 c1.521,0.495,3.186,0.228,4.475-0.719L128,188.945l64.926,47.474c2.212,1.624,5.324,1.144,6.947-1.071 c0.944-1.29,1.211-2.954,0.719-4.475l-24.959-77.492l64.922-47.476c2.211-1.63,2.681-4.743,1.049-6.953 c-0.934-1.265-2.41-2.015-3.984-2.02H157.69l-24.959-74.882C132.033,19.917,129.997,18.513,127.755,18.624z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Download",
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M29 23V27H7V23H2V32H34V23H29Z",
-            fill: "currentColor",
-          }),
-          _.createElement(
-            "svg",
-            {
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Download",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: [
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M29 23V27H7V23H2V32H34V23H29Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("svg", {
               _: "0",
               _: "0",
               width: "32",
               height: "25",
-            },
-            _.createElement("path", {
-              className: "DownloadArrow",
-              _: "M20 14.1716L24.5858 9.58578L27.4142 12.4142L18 21.8284L8.58582 12.4142L11.4142 9.58578L16 14.1715V2H20V14.1716Z",
-              fill: "currentColor",
+              children: (0, _.jsx)("path", {
+                className: "DownloadArrow",
+                _: "M20 14.1716L24.5858 9.58578L27.4142 12.4142L18 21.8284L8.58582 12.4142L11.4142 9.58578L16 14.1715V2H20V14.1716Z",
+                fill: "currentColor",
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_3",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Filter",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_3",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Filter",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: (0, _.jsx)("path", {
             _: "M236.445,23.522c-1.085-2.35-3.438-3.855-6.025-3.855H25.58c-2.586,0-4.936,1.501-6.024,3.855 c-1.08,2.349-0.698,5.112,0.983,7.083l80.328,94.039v104.181c0,2.74,1.682,5.194,4.237,6.188c0.778,0.3,1.588,0.445,2.392,0.445 c1.832,0,3.626-0.762,4.91-2.17l41.012-45.13c1.111-1.219,1.724-2.811,1.724-4.459v-59.054l80.325-94.04 C237.144,28.634,237.526,25.867,236.445,23.522z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Edit",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("path", {
-            _: "M16.757,233.795c-1.324,3.973,2.455,7.752,6.427,6.428l50.912-16.971l-40.368-40.367L16.757,233.795z",
-          }),
-          _.createElement("rect", {
-            _: "83.614",
-            _: "75.466",
-            transform:
-              "matrix(-0.7071 -0.7071 0.7071 -0.7071 93.7468 324.5916)",
-            width: "60.971",
-            height: "134.827",
-          }),
-          _.createElement("rect", {
-            _: "149.28",
-            _: "68.116",
-            transform:
-              "matrix(-0.7071 -0.7071 0.7071 -0.7071 252.0431 259.4951)",
-            width: "60.971",
-            height: "18.862",
-          }),
-          _.createElement("path", {
-            _: "M233.545,37.803l-14.368-14.369c-7.928-7.928-20.846-7.897-28.809,0.064l-14.305,14.307l43.112,43.111l14.306-14.305 C241.511,58.582,241.513,45.771,233.545,37.803z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Edit",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M16.757,233.795c-1.324,3.973,2.455,7.752,6.427,6.428l50.912-16.971l-40.368-40.367L16.757,233.795z",
+            }),
+            (0, _.jsx)("rect", {
+              _: "83.614",
+              _: "75.466",
+              transform:
+                "matrix(-0.7071 -0.7071 0.7071 -0.7071 93.7468 324.5916)",
+              width: "60.971",
+              height: "134.827",
+            }),
+            (0, _.jsx)("rect", {
+              _: "149.28",
+              _: "68.116",
+              transform:
+                "matrix(-0.7071 -0.7071 0.7071 -0.7071 252.0431 259.4951)",
+              width: "60.971",
+              height: "18.862",
+            }),
+            (0, _.jsx)("path", {
+              _: "M233.545,37.803l-14.368-14.369c-7.928-7.928-20.846-7.897-28.809,0.064l-14.305,14.307l43.112,43.111l14.306-14.305 C241.511,58.582,241.513,45.771,233.545,37.803z",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Information",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("polyline", {
-            className: "I",
-            points:
-              "86.883,110.957 152.894,110.957 152.894,181.406 177.117,181.406 177.117,202.485 86.883,202.485 86.883,181.775 109.441,181.775 109.441,130.372 86.883,130.372 ",
-          }),
-          _.createElement("circle", {
-            className: "I",
-            _: "128.47",
-            _: "67.607",
-            _: "25.517",
-          }),
-          _.createElement("circle", {
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "14",
-            strokeMiterlimit: "10",
-            _: "128",
-            _: "128",
-            _: "116.833",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Information",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("polyline", {
+              className: "I",
+              points:
+                "86.883,110.957 152.894,110.957 152.894,181.406 177.117,181.406 177.117,202.485 86.883,202.485 86.883,181.775 109.441,181.775 109.441,130.372 86.883,130.372 ",
+            }),
+            (0, _.jsx)("circle", {
+              className: "I",
+              _: "128.47",
+              _: "67.607",
+              _: "25.517",
+            }),
+            (0, _.jsx)("circle", {
+              fill: "none",
+              stroke: "#000000",
+              strokeWidth: "14",
+              strokeMiterlimit: "10",
+              _: "128",
+              _: "128",
+              _: "116.833",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_AppleLogo",
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M138.365,26.557c16.139-21.272,38.578-21.376,38.578-21.376s3.336,19.999-12.696,39.266 c-17.12,20.572-36.58,17.206-36.58,17.206S124.012,45.473,138.365,26.557z",
-          }),
-          _.createElement("path", {
-            _: "M129.719,75.662c8.305,0,23.713-11.413,43.771-11.413c34.527,0,48.109,24.566,48.109,24.566s-26.565,13.583-26.565,46.54 c0,37.179,33.093,49.991,33.093,49.991s-23.134,65.112-54.38,65.112c-14.353,0-25.509-9.672-40.631-9.672 c-15.41,0-30.702,10.032-40.662,10.032c-28.533,0-64.581-61.765-64.581-111.414c0-48.849,30.512-74.474,59.13-74.474 C105.61,64.933,120.047,75.662,129.719,75.662z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_AppleLogo",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M138.365,26.557c16.139-21.272,38.578-21.376,38.578-21.376s3.336,19.999-12.696,39.266 c-17.12,20.572-36.58,17.206-36.58,17.206S124.012,45.473,138.365,26.557z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M129.719,75.662c8.305,0,23.713-11.413,43.771-11.413c34.527,0,48.109,24.566,48.109,24.566s-26.565,13.583-26.565,46.54 c0,37.179,33.093,49.991,33.093,49.991s-23.134,65.112-54.38,65.112c-14.353,0-25.509-9.672-40.631-9.672 c-15.41,0-30.702,10.032-40.662,10.032c-28.533,0-64.581-61.765-64.581-111.414c0-48.849,30.512-74.474,59.13-74.474 C105.61,64.933,120.047,75.662,129.719,75.662z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            className: "SVGIcon_Button SVGIcon_WindowsLogo",
-            width: "100%",
-            height: "100%",
-            viewBox: "0 0 128 128",
-            enableBackground: "new 0 0 128 128",
-            ..._,
-          },
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "60.834",
-            height: "60.835",
-          }),
-          _.createElement("rect", {
-            _: "67.165",
-            fill: "currentColor",
-            width: "60.835",
-            height: "60.835",
-          }),
-          _.createElement("rect", {
-            _: "67.164",
-            fill: "currentColor",
-            width: "60.834",
-            height: "60.836",
-          }),
-          _.createElement("rect", {
-            _: "67.165",
-            _: "67.164",
-            fill: "currentColor",
-            width: "60.835",
-            height: "60.836",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          className: "SVGIcon_Button SVGIcon_WindowsLogo",
+          width: "100%",
+          height: "100%",
+          viewBox: "0 0 128 128",
+          enableBackground: "new 0 0 128 128",
+          ..._,
+          children: [
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "60.834",
+              height: "60.835",
+            }),
+            (0, _.jsx)("rect", {
+              _: "67.165",
+              fill: "currentColor",
+              width: "60.835",
+              height: "60.835",
+            }),
+            (0, _.jsx)("rect", {
+              _: "67.164",
+              fill: "currentColor",
+              width: "60.834",
+              height: "60.836",
+            }),
+            (0, _.jsx)("rect", {
+              _: "67.165",
+              _: "67.164",
+              fill: "currentColor",
+              width: "60.835",
+              height: "60.836",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 256 256",
-          },
-          _.createElement("circle", {
-            _: "126",
-            _: "134",
-            _: "20.6",
-          }),
-          _.createElement("circle", {
-            _: "189.4",
-            _: "134",
-            _: "20.6",
-          }),
-          _.createElement("circle", {
-            _: "62.6",
-            _: "134",
-            _: "20.6",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("circle", {
+              _: "126",
+              _: "134",
+              _: "20.6",
+            }),
+            (0, _.jsx)("circle", {
+              _: "189.4",
+              _: "134",
+              _: "20.6",
+            }),
+            (0, _.jsx)("circle", {
+              _: "62.6",
+              _: "134",
+              _: "20.6",
+            }),
+          ],
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 18 18",
-            version: "1.1",
-            _: "0px",
-            _: "0px",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "1.41421",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 18 18",
+          version: "1.1",
+          _: "0px",
+          _: "0px",
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          strokeLinejoin: "round",
+          strokeMiterlimit: "1.41421",
+          children: (0, _.jsx)("path", {
             _: "M12.621,2.491c-0.021,0.019 -0.042,0.039 -0.063,0.06l-5.125,5.201c-0.579,0.587 -0.575,1.527 -0.001,2.109l0.691,0.702c0.576,0.584 1.505,0.582 2.079,-0.001l5.126,-5.201c0.021,-0.021 0.04,-0.042 0.059,-0.063l1.573,1.595c0.573,0.582 1.04,0.386 1.04,-0.439l0,-5.957c0,-0.276 -0.219,-0.497 -0.49,-0.497l-5.87,0c-0.82,0 -1.008,0.473 -0.434,1.056l1.415,1.435Zm-9.618,-2.491c-1.665,0 -3.003,1.344 -3.003,3.003l0,11.994c0,1.665 1.344,3.003 3.003,3.003l11.994,0c1.665,0 3.003,-1.344 3.003,-3.003l0,-7.746l0,4.249l-3,-2.488l0,4.492c0,0.826 -0.671,1.496 -1.496,1.496l-9.008,0c-0.826,0 -1.496,-0.671 -1.496,-1.496l0,-9.008c0,-0.826 0.671,-1.496 1.496,-1.496l4.504,0l-2.5,-3l4.249,0l-7.746,0Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 100 100",
-            _: "0px",
-            _: "0px",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            _: "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 100 100",
+          _: "0px",
+          _: "0px",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _.className,
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 409.6 409.6",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _.className,
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 409.6 409.6",
+          children: (0, _.jsx)("path", {
             _: "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\n\t\t\t\tc-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\n\t\t\t\tl0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\n\t\t\t\tc0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\n\t\t\t\tl-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\n\t\t\t\tc-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\n\t\t\t\tc-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\n\t\t\t\tc-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            width: "100%",
-            height: "100%",
-            viewBox: "0 0 50 50",
-          },
-          _.createElement("rect", {
-            _: "0",
-            _: "10",
-            width: "40",
-            height: "5",
-            _: "5",
-          }),
-          _.createElement("rect", {
-            _: "0",
-            _: "20",
-            width: "40",
-            height: "5",
-            _: "5",
-          }),
-          _.createElement("rect", {
-            _: "0",
-            _: "30",
-            width: "40",
-            height: "5",
-            _: "5",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "100%",
+          height: "100%",
+          viewBox: "0 0 50 50",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "0",
+              _: "10",
+              width: "40",
+              height: "5",
+              _: "5",
+            }),
+            (0, _.jsx)("rect", {
+              _: "0",
+              _: "20",
+              width: "40",
+              height: "5",
+              _: "5",
+            }),
+            (0, _.jsx)("rect", {
+              _: "0",
+              _: "30",
+              width: "40",
+              height: "5",
+              _: "5",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM9.00001 15C9.00001 14.4067 9.17595 13.8266 9.5056 13.3333C9.83524 12.8399 10.3038 12.4554 10.852 12.2284C11.4001 12.0013 12.0033 11.9419 12.5853 12.0576C13.1672 12.1734 13.7018 12.4591 14.1213 12.8787C14.5409 13.2982 14.8266 13.8328 14.9424 14.4147C15.0581 14.9967 14.9987 15.5999 14.7716 16.1481C14.5446 16.6962 14.1601 17.1648 13.6667 17.4944C13.1734 17.8241 12.5934 18 12 18C11.2044 18 10.4413 17.6839 9.87869 17.1213C9.31608 16.5587 9.00001 15.7956 9.00001 15ZM24 18C23.4067 18 22.8266 17.8241 22.3333 17.4944C21.8399 17.1648 21.4554 16.6962 21.2284 16.1481C21.0013 15.5999 20.9419 14.9967 21.0576 14.4147C21.1734 13.8328 21.4591 13.2982 21.8787 12.8787C22.2982 12.4591 22.8328 12.1734 23.4147 12.0576C23.9967 11.9419 24.5999 12.0013 25.1481 12.2284C25.6962 12.4554 26.1648 12.8399 26.4944 13.3333C26.8241 13.8266 27 14.4067 27 15C27 15.7956 26.6839 16.5587 26.1213 17.1213C25.5587 17.6839 24.7957 18 24 18ZM26.3149 23.6788C26.7672 22.8295 27 21.9193 27 21H18H9C9 21.9193 9.23279 22.8295 9.68508 23.6788C10.1374 24.5281 10.8003 25.2997 11.636 25.9497C12.4718 26.5998 13.4639 27.1154 14.5558 27.4672C15.6478 27.8189 16.8181 28 18 28C19.1819 28 20.3522 27.8189 21.4442 27.4672C22.5361 27.1154 23.5282 26.5998 24.364 25.9497C25.1997 25.2997 25.8626 24.5281 26.3149 23.6788Z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            height: "100px",
-            width: "100px",
-            fill: "#000000",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 101 101",
-            enableBackground: "new 0 0 101 101",
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
-              _: "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z",
-            }),
-            _.createElement("path", {
-              _: "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z",
-            }),
-            _.createElement("circle", {
-              _: "26.695",
-              _: "74.305",
-              _: "9.812",
-            }),
-          ),
-        );
+        return (0, _.jsx)("svg", {
+          height: "100px",
+          width: "100px",
+          fill: "#000000",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 101 101",
+          enableBackground: "new 0 0 101 101",
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          children: (0, _.jsxs)("g", {
+            children: [
+              (0, _.jsx)("path", {
+                _: "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z",
+              }),
+              (0, _.jsx)("path", {
+                _: "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z",
+              }),
+              (0, _.jsx)("circle", {
+                _: "26.695",
+                _: "74.305",
+                _: "9.812",
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 100 100",
-            ..._,
-          },
-          _.createElement("polygon", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 100 100",
+          ..._,
+          children: (0, _.jsx)("polygon", {
             stroke: "currentColor",
             fill: "currentColor",
             points:
@@ -36798,17 +35851,14 @@
             strokeLinejoin: "round",
             strokeWidth: "5",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 100 100",
-            ..._,
-          },
-          _.createElement("polygon", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 100 100",
+          ..._,
+          children: (0, _.jsx)("polygon", {
             stroke: "currentColor",
             fill: "none",
             points:
@@ -36816,981 +35866,848 @@
             strokeLinejoin: "round",
             strokeWidth: "5",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 1200 1200",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 1200 1200",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             _: "M600,96c-277.2,0-504,226.8-504,504s226.8,504,504,504,504-226.8,504-504S877.2,96,600,96ZM600,222c83.2,0,158.8,26.5,220.5,70.6L292.6,820.5c-44.1-61.7-70.6-137.3-70.6-220.5,0-209.2,168.8-378,378-378ZM907.4,379.5c44.1,61.7,70.6,137.3,70.6,220.5,0,209.2-168.8,378-378,378s-158.8-26.5-220.5-70.6L907.4,379.5Z",
             strokeWidth: "0",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 32 32",
-            enableBackground: "new 0 0 32 32",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 32 32",
+          enableBackground: "new 0 0 32 32",
+          children: (0, _.jsx)("path", {
             fill: "white",
             _: "M24.68,19.53l6.9-5.69c0.98-0.81,0.47-2.39-0.81-2.46l-8.89-0.54c-0.54-0.03-1.01-0.37-1.21-0.88L17.4,1.61\n\t\t\tc-0.47-1.18-2.12-1.18-2.59,0l-3.27,8.32c-0.2,0.51-0.67,0.84-1.21,0.88l-8.92,0.54c-1.28,0.07-1.78,1.65-0.81,2.46l6.9,5.66\n\t\t\tc0.4,0.34,0.61,0.91,0.47,1.41l-2.26,8.65c-0.3,1.21,1.01,2.19,2.09,1.52l7.51-4.81c0.47-0.3,1.04-0.3,1.48,0l7.54,4.81\n\t\t\tc1.08,0.67,2.39-0.3,2.09-1.52l-2.26-8.62C24.07,20.4,24.24,19.86,24.68,19.53z",
           }),
-        );
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 32 32",
-            enableBackground: "new 0 0 32 32",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 32 32",
+          enableBackground: "new 0 0 32 32",
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("path", {
               fill: "white",
               _: "M28.4,1.49H3.79c-1.99,0-3.6,1.61-3.6,3.6v14.88c0,1.99,1.61,3.6,3.6,3.6h2.37c0,1.61-0.38,3.7-1.51,5.88\n\t\t\tc-0.28,0.57-0.19,1.33,0.19,1.8c0.28,0.38,0.76,0.47,1.14,0.47c0.19,0,0.38,0,0.57-0.09c4.07-1.61,7.57-5.59,9.47-8.05h12.4\n\t\t\tc1.99,0,3.6-1.61,3.6-3.6V5.1C31.91,3.11,30.3,1.49,28.4,1.49z M8.23,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\n\t\t\ts2.37,1.04,2.37,2.37S9.56,14.97,8.23,14.97z M15.99,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S17.32,14.97,15.99,14.97z M23.85,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S25.18,14.97,23.85,14.97z",
             }),
-          ),
-        );
+          }),
+        });
       }
       function _() {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            _: "0px",
-            _: "0px",
-            viewBox: "0 0 32 32",
-            enableBackground: "new 0 0 32 32",
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement("path", {
-              fill: "white",
-              _: "M23.32,28.28C23,25.55,20.68,23.52,18,23.52h-3.78c-2.73,0-5,2.03-5.33,4.76L8.56,30.8h15.09L23.32,28.28z",
-            }),
-            _.createElement("path", {
-              fill: "white",
-              _: "M16.08,22.15c2.82,0,5.1-2.28,5.1-5.1c0-2.82-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1\n\t\t\tC10.98,19.86,13.27,22.15,16.08,22.15z",
-            }),
-            _.createElement(
-              "g",
-              null,
-              _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 32 32",
+          enableBackground: "new 0 0 32 32",
+          children: (0, _.jsxs)("g", {
+            children: [
+              (0, _.jsx)("path", {
                 fill: "white",
-                _: "M24.09,10.21c-0.94-1.22-2.18-2.23-3.57-2.9c-1.39-0.68-2.94-1.02-4.48-1.01l-0.02,0L16,6.3\n\t\t\t\tc-0.03,0-0.05,0-0.08,0c-1.52,0-3.04,0.35-4.4,1.01c-1.39,0.68-2.62,1.68-3.57,2.9c-0.94,1.22-1.6,2.67-1.91,4.18\n\t\t\t\tc-0.3,1.51-0.25,3.1,0.15,4.59c0.14,0.55,0.62,0.92,1.18,0.92c0.01,0,0.02,0,0.04,0h0.27l0.03-0.01c0.32-0.08,0.59-0.29,0.76-0.57\n\t\t\t\tl0.07-0.1c0.14-0.21,0.18-0.46,0.11-0.7L8.6,18.38c-0.18-0.62-0.27-1.27-0.29-1.92c0-4.24,3.45-7.68,7.69-7.68h0.04\n\t\t\t\tc4.24,0,7.69,3.45,7.69,7.68c-0.02,0.65-0.11,1.3-0.29,1.92l-0.04,0.15c-0.07,0.24-0.03,0.49,0.11,0.7l0.07,0.1\n\t\t\t\tc0.17,0.28,0.44,0.49,0.76,0.57l0.03,0.01l0.26,0c0.01,0,0.02,0,0.04,0c0.56,0,1.04-0.37,1.18-0.92c0.4-1.49,0.46-3.08,0.15-4.59\n\t\t\t\tC25.69,12.88,25.04,11.44,24.09,10.21z",
+                _: "M23.32,28.28C23,25.55,20.68,23.52,18,23.52h-3.78c-2.73,0-5,2.03-5.33,4.76L8.56,30.8h15.09L23.32,28.28z",
               }),
-              _.createElement("path", {
+              (0, _.jsx)("path", {
                 fill: "white",
-                _: "M16.02,0.68c-8.83,0-15.99,7.16-16,15.99h0.01c-0.02,2.68,0.74,5.31,2.18,7.57l0,0.01l0.01,0.01\n\t\t\t\tc0.37,0.43,1,0.51,1.47,0.19c0.47-0.32,0.62-0.94,0.36-1.44l0,0l0,0c-1.19-1.89-1.81-4.09-1.79-6.32v0v0\n\t\t\t\tc0-7.6,6.16-13.76,13.76-13.76c7.6,0,13.76,6.16,13.76,13.76v0v0c0.03,2.24-0.59,4.43-1.79,6.32l0,0l0,0\n\t\t\t\tc-0.26,0.5-0.11,1.12,0.36,1.44c0.47,0.32,1.1,0.24,1.47-0.19l0.01-0.01l0-0.01c1.45-2.26,2.2-4.89,2.18-7.57h0.01\n\t\t\t\tC32.02,7.84,24.86,0.68,16.02,0.68",
+                _: "M16.08,22.15c2.82,0,5.1-2.28,5.1-5.1c0-2.82-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1\n\t\t\tC10.98,19.86,13.27,22.15,16.08,22.15z",
               }),
-            ),
-          ),
-        );
+              (0, _.jsxs)("g", {
+                children: [
+                  (0, _.jsx)("path", {
+                    fill: "white",
+                    _: "M24.09,10.21c-0.94-1.22-2.18-2.23-3.57-2.9c-1.39-0.68-2.94-1.02-4.48-1.01l-0.02,0L16,6.3\n\t\t\t\tc-0.03,0-0.05,0-0.08,0c-1.52,0-3.04,0.35-4.4,1.01c-1.39,0.68-2.62,1.68-3.57,2.9c-0.94,1.22-1.6,2.67-1.91,4.18\n\t\t\t\tc-0.3,1.51-0.25,3.1,0.15,4.59c0.14,0.55,0.62,0.92,1.18,0.92c0.01,0,0.02,0,0.04,0h0.27l0.03-0.01c0.32-0.08,0.59-0.29,0.76-0.57\n\t\t\t\tl0.07-0.1c0.14-0.21,0.18-0.46,0.11-0.7L8.6,18.38c-0.18-0.62-0.27-1.27-0.29-1.92c0-4.24,3.45-7.68,7.69-7.68h0.04\n\t\t\t\tc4.24,0,7.69,3.45,7.69,7.68c-0.02,0.65-0.11,1.3-0.29,1.92l-0.04,0.15c-0.07,0.24-0.03,0.49,0.11,0.7l0.07,0.1\n\t\t\t\tc0.17,0.28,0.44,0.49,0.76,0.57l0.03,0.01l0.26,0c0.01,0,0.02,0,0.04,0c0.56,0,1.04-0.37,1.18-0.92c0.4-1.49,0.46-3.08,0.15-4.59\n\t\t\t\tC25.69,12.88,25.04,11.44,24.09,10.21z",
+                  }),
+                  (0, _.jsx)("path", {
+                    fill: "white",
+                    _: "M16.02,0.68c-8.83,0-15.99,7.16-16,15.99h0.01c-0.02,2.68,0.74,5.31,2.18,7.57l0,0.01l0.01,0.01\n\t\t\t\tc0.37,0.43,1,0.51,1.47,0.19c0.47-0.32,0.62-0.94,0.36-1.44l0,0l0,0c-1.19-1.89-1.81-4.09-1.79-6.32v0v0\n\t\t\t\tc0-7.6,6.16-13.76,13.76-13.76c7.6,0,13.76,6.16,13.76,13.76v0v0c0.03,2.24-0.59,4.43-1.79,6.32l0,0l0,0\n\t\t\t\tc-0.26,0.5-0.11,1.12,0.36,1.44c0.47,0.32,1.1,0.24,1.47-0.19l0.01-0.01l0-0.01c1.45-2.26,2.2-4.89,2.18-7.57h0.01\n\t\t\t\tC32.02,7.84,24.86,0.68,16.02,0.68",
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            ..._,
-            height: "100px",
-            width: "100px",
-            fill: "#000000",
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 32 32",
-            _: "0px",
-            _: "0px",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          ..._,
+          height: "100px",
+          width: "100px",
+          fill: "#000000",
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 32 32",
+          _: "0px",
+          _: "0px",
+          children: (0, _.jsx)("path", {
             _: "M26.286 0c-3.142 0-5.714 2.572-5.714 5.714 0 0.512 0.074 1.006 0.202 1.479l-10.573 5.287c-1.049-1.332-2.67-2.194-4.487-2.194-3.142 0-5.714 2.572-5.714 5.714s2.572 5.714 5.714 5.714c1.815 0 3.437-0.862 4.486-2.193l10.574 5.287c-0.127 0.473-0.202 0.966-0.202 1.478 0 3.142 2.572 5.714 5.714 5.714s5.714-2.572 5.714-5.714c0-3.142-2.572-5.714-5.714-5.714-1.817 0-3.438 0.862-4.487 2.194l-10.573-5.287c0.128-0.473 0.202-0.967 0.202-1.479s-0.074-1.005-0.202-1.478l10.574-5.287c1.049 1.331 2.67 2.193 4.486 2.193 3.142 0 5.714-2.572 5.714-5.714s-2.572-5.714-5.714-5.714zM26.286 2.286c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM5.714 12.571c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM26.286 22.857c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            ..._,
-            fill: "#000000",
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 16 16",
-            _: "0px",
-            _: "0px",
-          },
-          _.createElement("path", {
-            _: "M8,11c-0.2,0-0.5-0.1-0.6-0.2c-0.2-0.2-0.3-0.3-0.3-0.6l0-7.7L5.7,3.6C5.5,3.8,5.3,3.9,5.1,3.9\n\t\t\t\t\tc-0.2,0-0.4-0.1-0.6-0.2C4.4,3.5,4.3,3.4,4.3,3.2c0-0.2,0.1-0.4,0.3-0.5l2.7-2.4C7.5,0.1,7.7,0,8,0s0.5,0.1,0.7,0.3l2.8,2.4\n\t\t\t\t\tc0.2,0.2,0.3,0.3,0.3,0.5c0,0.2-0.1,0.4-0.2,0.5c-0.1,0.1-0.3,0.2-0.6,0.2c-0.2,0-0.4-0.1-0.6-0.2L8.8,2.5l0,7.7\n\t\t\t\t\tc0,0.2-0.1,0.4-0.3,0.6C8.4,10.9,8.2,11,8,11z",
-          }),
-          _.createElement("path", {
-            _: "M4,16c-0.8,0-1.3-0.2-1.7-0.6c-0.4-0.4-0.6-0.9-0.6-1.7V7.9c0-0.7,0.2-1.3,0.6-1.7c0.4-0.4,1-0.6,1.7-0.6h1.9\n\t\t\t\tV7H4.1c-0.7,0-1,0.3-1,1v5.6c0,0.7,0.3,1,1,1h7.9c0.3,0,0.6-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7V8c0-0.3-0.1-0.6-0.3-0.7\n\t\t\t\tC12.5,7.1,12.2,7,11.9,7h-1.8V5.6H12c0.8,0,1.3,0.2,1.7,0.6c0.4,0.4,0.6,0.9,0.6,1.7v5.8c0,0.7-0.2,1.3-0.6,1.7\n\t\t\t\tc-0.4,0.4-1,0.6-1.7,0.6H4z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          ..._,
+          fill: "#000000",
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 16 16",
+          _: "0px",
+          _: "0px",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M8,11c-0.2,0-0.5-0.1-0.6-0.2c-0.2-0.2-0.3-0.3-0.3-0.6l0-7.7L5.7,3.6C5.5,3.8,5.3,3.9,5.1,3.9\n\t\t\t\t\tc-0.2,0-0.4-0.1-0.6-0.2C4.4,3.5,4.3,3.4,4.3,3.2c0-0.2,0.1-0.4,0.3-0.5l2.7-2.4C7.5,0.1,7.7,0,8,0s0.5,0.1,0.7,0.3l2.8,2.4\n\t\t\t\t\tc0.2,0.2,0.3,0.3,0.3,0.5c0,0.2-0.1,0.4-0.2,0.5c-0.1,0.1-0.3,0.2-0.6,0.2c-0.2,0-0.4-0.1-0.6-0.2L8.8,2.5l0,7.7\n\t\t\t\t\tc0,0.2-0.1,0.4-0.3,0.6C8.4,10.9,8.2,11,8,11z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M4,16c-0.8,0-1.3-0.2-1.7-0.6c-0.4-0.4-0.6-0.9-0.6-1.7V7.9c0-0.7,0.2-1.3,0.6-1.7c0.4-0.4,1-0.6,1.7-0.6h1.9\n\t\t\t\tV7H4.1c-0.7,0-1,0.3-1,1v5.6c0,0.7,0.3,1,1,1h7.9c0.3,0,0.6-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7V8c0-0.3-0.1-0.6-0.3-0.7\n\t\t\t\tC12.5,7.1,12.2,7,11.9,7h-1.8V5.6H12c0.8,0,1.3,0.2,1.7,0.6c0.4,0.4,0.6,0.9,0.6,1.7v5.8c0,0.7-0.2,1.3-0.6,1.7\n\t\t\t\tc-0.4,0.4-1,0.6-1.7,0.6H4z",
+            }),
+          ],
+        });
       }
       function _(_) {
         return (0, _._)()
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
             })
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               ..._,
             });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_().SteamDeckCompatLogo, _),
-            ...__webpack_require__,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_().SteamDeckCompatLogo, _),
+          ...__webpack_require__,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             opacity: "0.84",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
             fill: "white",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(
-              _().SteamDeckCompatIcon,
-              _().SteamOSCompatCompatible,
-              _,
-            ),
-            ...__webpack_require__,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(
+            _().SteamDeckCompatIcon,
+            _().SteamOSCompatCompatible,
+            _,
+          ),
+          ...__webpack_require__,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(
-              _().SteamDeckCompatIcon,
-              _().SteamOSCompatInformation,
-              _,
-            ),
-            ...__webpack_require__,
-            viewBox: "0 0 48 48",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(
+            _().SteamDeckCompatIcon,
+            _().SteamOSCompatInformation,
+            _,
+          ),
+          ...__webpack_require__,
+          viewBox: "0 0 48 48",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M24.0001 45.6002C35.9295 45.6002 45.6002 35.9295 45.6002 24.0001C45.6002 12.0708 35.9295 2.40015 24.0001 2.40015C12.0708 2.40015 2.40015 12.0708 2.40015 24.0001C2.40015 35.9295 12.0708 45.6002 24.0001 45.6002ZM20.6659 36H27.3326V22.6667H20.6659V36ZM21.777 19.3259C22.4348 19.7654 23.2081 20 23.9993 20C25.0601 20 26.0775 19.5786 26.8277 18.8285C27.5778 18.0783 27.9993 17.0609 27.9993 16C27.9993 15.2089 27.7647 14.4355 27.3251 13.7777C26.8856 13.1199 26.2609 12.6073 25.53 12.3045C24.7991 12.0018 23.9948 11.9225 23.2189 12.0769C22.443 12.2312 21.7302 12.6122 21.1708 13.1716C20.6114 13.731 20.2305 14.4437 20.0761 15.2197C19.9218 15.9956 20.001 16.7999 20.3037 17.5308C20.6065 18.2617 21.1192 18.8864 21.777 19.3259Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(
-              _().SteamDeckCompatIcon,
-              _().SteamDeckCompatVerified,
-              _,
-            ),
-            ...__webpack_require__,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(
+            _().SteamDeckCompatIcon,
+            _().SteamDeckCompatVerified,
+            _,
+          ),
+          ...__webpack_require__,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(
-              _().SteamDeckCompatIcon,
-              _().SteamDeckCompatPlayable,
-              _,
-            ),
-            ...__webpack_require__,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(
+            _().SteamDeckCompatIcon,
+            _().SteamDeckCompatPlayable,
+            _,
+          ),
+          ...__webpack_require__,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.61079 9.44444V15H11.3886V9.44444H8.61079ZM9.07372 8.05245C9.34781 8.23558 9.67004 8.33333 9.99967 8.33333C10.4417 8.33333 10.8656 8.15774 11.1782 7.84518C11.4907 7.53262 11.6663 7.10869 11.6663 6.66667C11.6663 6.33703 11.5686 6.0148 11.3855 5.74072C11.2023 5.46663 10.942 5.25301 10.6375 5.12687C10.3329 5.00072 9.99783 4.96771 9.67452 5.03202C9.35122 5.09633 9.05425 5.25507 8.82116 5.48815C8.58808 5.72124 8.42934 6.01821 8.36503 6.34152C8.30072 6.66482 8.33373 6.99993 8.45988 7.30447C8.58602 7.60902 8.79964 7.86931 9.07372 8.05245Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(
-              _().SteamDeckCompatIcon,
-              _().SteamDeckCompatUnsupported,
-              _,
-            ),
-            ...__webpack_require__,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(
+            _().SteamDeckCompatIcon,
+            _().SteamDeckCompatUnsupported,
+            _,
+          ),
+          ...__webpack_require__,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M14.1931 15.6064C13.0246 16.4816 11.5733 17 10.001 17C6.13498 17 3.00098 13.866 3.00098 10C3.00098 8.42766 3.51938 6.97641 4.39459 5.80783L14.1931 15.6064ZM15.6074 14.1922C16.4826 13.0236 17.001 11.5723 17.001 10C17.001 6.13401 13.867 3 10.001 3C8.42864 3 6.97739 3.5184 5.80881 4.39362L15.6074 14.1922ZM19.001 10C19.001 14.9706 14.9715 19 10.001 19C5.03041 19 1.00098 14.9706 1.00098 10C1.00098 5.02944 5.03041 1 10.001 1C14.9715 1 19.001 5.02944 19.001 10Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(
-              _().SteamDeckCompatIcon,
-              _().SteamDeckCompatUnknown,
-              _,
-            ),
-            ...__webpack_require__,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(
+            _().SteamDeckCompatIcon,
+            _().SteamDeckCompatUnknown,
+            _,
+          ),
+          ...__webpack_require__,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M17.3972 11.2461L18.8767 11.4932C18.9578 11.0075 19 10.5087 19 10C19 9.49131 18.9578 8.99248 18.8767 8.50682L17.3972 8.75386C17.4647 9.15821 17.5 9.57442 17.5 10C17.5 10.4256 17.4647 10.8418 17.3972 11.2461ZM17.0295 7.3783L18.4348 6.8539C18.0814 5.90668 17.5729 5.03501 16.9403 4.26971L15.7842 5.22538C16.3119 5.86387 16.7354 6.59021 17.0295 7.3783ZM14.7746 4.21582L15.7303 3.05967C14.965 2.42708 14.0933 1.91864 13.1461 1.56519L12.6217 2.97054C13.4098 3.26461 14.1361 3.68805 14.7746 4.21582ZM11.2461 2.60281L11.4932 1.1233C11.0075 1.0422 10.5087 1 10 1C9.49131 1 8.99248 1.0422 8.50682 1.1233L8.75386 2.60281C9.15821 2.5353 9.57442 2.5 10 2.5C10.4256 2.5 10.8418 2.5353 11.2461 2.60281ZM7.3783 2.97054L6.8539 1.56519C5.90668 1.91864 5.03501 2.42708 4.26971 3.05967L5.22538 4.21582C5.86387 3.68805 6.59021 3.26461 7.3783 2.97054ZM4.21582 5.22538L3.05967 4.26971C2.42708 5.03501 1.91864 5.90668 1.56519 6.8539L2.97054 7.3783C3.26461 6.59022 3.68805 5.86387 4.21582 5.22538ZM1 10C1 9.49131 1.0422 8.99248 1.1233 8.50682L2.60281 8.75386C2.5353 9.15821 2.5 9.57442 2.5 10C2.5 10.4256 2.5353 10.8418 2.60281 11.2461L1.1233 11.4932C1.0422 11.0075 1 10.5087 1 10ZM2.97054 12.6217L1.56519 13.1461C1.91864 14.0933 2.42708 14.965 3.05967 15.7303L4.21582 14.7746C3.68805 14.1361 3.26461 13.4098 2.97054 12.6217ZM5.22538 15.7842L4.26971 16.9403C5.03501 17.5729 5.90668 18.0814 6.8539 18.4348L7.3783 17.0295C6.59022 16.7354 5.86387 16.3119 5.22538 15.7842ZM8.75386 17.3972L8.50682 18.8767C8.99248 18.9578 9.49131 19 10 19C10.5087 19 11.0075 18.9578 11.4932 18.8767L11.2461 17.3972C10.8418 17.4647 10.4256 17.5 10 17.5C9.57442 17.5 9.15821 17.4647 8.75386 17.3972ZM12.6217 17.0295L13.1461 18.4348C14.0933 18.0814 14.965 17.5729 15.7303 16.9403L14.7746 15.7842C14.1361 16.3119 13.4098 16.7354 12.6217 17.0295ZM15.7842 14.7746L16.9403 15.7303C17.5729 14.965 18.0814 14.0933 18.4348 13.1461L17.0295 12.6217C16.7354 13.4098 16.3119 14.1361 15.7842 14.7746ZM9.2425 14.7702C9.46679 14.92 9.73048 15 10.0002 15C10.362 15 10.7089 14.8563 10.9646 14.6006C11.2204 14.3448 11.3641 13.998 11.3641 13.6363C11.3641 13.3666 11.2841 13.1029 11.1343 12.8787C10.9844 12.6544 10.7714 12.4796 10.5222 12.3764C10.2729 12.2732 9.99872 12.2462 9.73415 12.2988C9.46958 12.3514 9.22656 12.4813 9.03582 12.672C8.84508 12.8628 8.71518 13.1057 8.66255 13.3703C8.60993 13.6348 8.63694 13.909 8.74016 14.1582C8.84339 14.4074 9.01821 14.6203 9.2425 14.7702ZM11.0981 10.3552C11.1722 10.2348 11.2765 10.1358 11.4005 10.068C11.8099 9.82315 12.1479 9.47526 12.3808 9.05903C12.6137 8.64279 12.7333 8.17276 12.7278 7.69584C12.7223 7.21892 12.5918 6.75179 12.3493 6.34105C12.1069 5.93031 11.7609 5.59033 11.346 5.35502C10.9311 5.11972 10.4617 4.99732 9.98466 5.00004C9.50764 5.00277 9.03969 5.13052 8.62748 5.37054C8.21527 5.61057 7.87321 5.95448 7.63545 6.36796C7.39769 6.78144 7.27253 7.25004 7.27246 7.72699H9.23191C9.23191 7.6261 9.25178 7.52621 9.29039 7.43301C9.32901 7.3398 9.3856 7.25511 9.45694 7.18378C9.52829 7.11244 9.61299 7.05586 9.70621 7.01725C9.79942 6.97865 9.89933 6.95878 10.0002 6.95878C10.1659 6.96387 10.3255 7.02207 10.4556 7.12479C10.5856 7.22751 10.6792 7.3693 10.7225 7.52925C10.7658 7.6892 10.7565 7.85883 10.6961 8.01311C10.6356 8.16739 10.5271 8.29816 10.3867 8.3861C9.97322 8.62846 9.63003 8.97429 9.39088 9.38955C9.15173 9.80482 9.02487 10.2752 9.02278 10.7544V11.3635H10.9777V10.7544C10.9825 10.6131 11.024 10.4755 11.0981 10.3552Z",
             fill: "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            width: "23",
-            height: "25",
-            viewBox: "0 0 23 25",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M4.69484 16.275V10.9611C4.69484 10.8919 4.72235 10.8255 4.77132 10.7765C4.82028 10.7275 4.8867 10.7 4.95595 10.7H6.70039C7.00391 10.6976 7.30673 10.7293 7.60317 10.7945C7.86613 10.8506 8.11537 10.9582 8.33651 11.1111C8.54843 11.2597 8.71945 11.4594 8.83373 11.6917C8.96393 11.9704 9.02673 12.2759 9.01706 12.5833C9.02406 12.8888 8.96136 13.1919 8.83373 13.4695C8.71807 13.7108 8.54784 13.9219 8.33651 14.0861C8.12019 14.2512 7.87401 14.3729 7.61151 14.4445C7.32667 14.5238 7.03217 14.563 6.73651 14.5611H6.26984C6.20107 14.5619 6.13537 14.5897 6.087 14.6386C6.03863 14.6875 6.0115 14.7535 6.01151 14.8222V16.2778C6.01151 16.347 5.984 16.4135 5.93503 16.4624C5.88606 16.5114 5.81965 16.5389 5.75039 16.5389H4.95595C4.92143 16.5389 4.88724 16.5321 4.85538 16.5188C4.82352 16.5055 4.79461 16.486 4.77033 16.4614C4.74604 16.4369 4.72687 16.4078 4.71391 16.3758C4.70095 16.3438 4.69447 16.3095 4.69484 16.275ZM6.01151 13.25C6.0115 13.3188 6.03863 13.3848 6.087 13.4337C6.13537 13.4826 6.20107 13.5104 6.26984 13.5111H6.65595C7.37076 13.5111 7.72817 13.2009 7.72817 12.5806C7.74184 12.4583 7.72341 12.3345 7.6747 12.2215C7.62599 12.1085 7.54868 12.0102 7.4504 11.9361C7.1968 11.7937 6.90728 11.7281 6.61706 11.7472H6.26984C6.20107 11.748 6.13537 11.7758 6.087 11.8247C6.03863 11.8736 6.0115 11.9396 6.01151 12.0084V13.25Z",
-            fill: "white",
-          }),
-          _.createElement("path", {
-            _: "M11.3615 16.6417C10.9725 16.6403 10.5869 16.5697 10.2226 16.4334C9.93059 16.3269 9.65765 16.174 9.41429 15.9806C9.38607 15.9594 9.36245 15.9327 9.34485 15.9021C9.32725 15.8715 9.31603 15.8376 9.31187 15.8026C9.30772 15.7675 9.31072 15.732 9.32068 15.6981C9.33064 15.6643 9.34737 15.6328 9.36984 15.6056L9.78929 15.0917C9.83025 15.0411 9.889 15.008 9.95353 14.9992C10.0181 14.9904 10.0835 15.0066 10.1365 15.0445C10.2956 15.1588 10.4659 15.2565 10.6448 15.3361C10.879 15.4453 11.1338 15.503 11.3921 15.5056C11.6097 15.5234 11.8272 15.4698 12.0115 15.3528C12.076 15.3059 12.128 15.2439 12.1629 15.1722C12.1977 15.1005 12.2144 15.0214 12.2115 14.9417C12.2138 14.8609 12.1936 14.7811 12.1532 14.7111C12.111 14.6405 12.053 14.5806 11.9837 14.5361C11.8965 14.4784 11.8034 14.43 11.706 14.3917L11.3615 14.2445L10.6226 13.9222C10.4687 13.8616 10.3224 13.7833 10.1865 13.6889C10.0391 13.5959 9.90538 13.4828 9.78929 13.3528C9.67576 13.2204 9.58643 13.069 9.5254 12.9056C9.45716 12.7217 9.42418 12.5266 9.42818 12.3306C9.43275 12.1002 9.48774 11.8736 9.58929 11.6667C9.69168 11.453 9.83847 11.2636 10.0198 11.1111C10.2145 10.9475 10.4377 10.8213 10.6782 10.7389C10.9462 10.6466 11.228 10.6006 11.5115 10.6028C11.857 10.6045 12.1991 10.6715 12.5198 10.8C12.7638 10.8972 12.9914 11.0312 13.1948 11.1972C13.2462 11.2428 13.2789 11.3057 13.2866 11.374C13.2943 11.4422 13.2764 11.5108 13.2365 11.5667L12.8726 12.0139C12.833 12.0643 12.7759 12.0981 12.7126 12.1083C12.6493 12.1186 12.5845 12.1048 12.531 12.0695C12.4099 11.9884 12.2815 11.9186 12.1476 11.8611C11.9458 11.779 11.7294 11.7384 11.5115 11.7417C11.3163 11.7282 11.1219 11.7769 10.956 11.8806C10.8919 11.9227 10.8399 11.9806 10.8048 12.0487C10.7698 12.1169 10.7529 12.1929 10.756 12.2695C10.7537 12.3505 10.777 12.4302 10.8226 12.4972C10.8731 12.5653 10.9363 12.6228 11.0087 12.6667C11.0975 12.7218 11.1904 12.7701 11.2865 12.8111L11.6365 12.9584L12.3865 13.2611C12.7093 13.3858 12.9957 13.5892 13.2198 13.8528C13.437 14.1374 13.5462 14.4897 13.5282 14.8472C13.5291 15.0857 13.4789 15.3215 13.381 15.5389C13.2905 15.7549 13.1562 15.9497 12.9865 16.1111C12.7803 16.2816 12.5437 16.4117 12.2893 16.4945C11.991 16.5975 11.677 16.6474 11.3615 16.6417Z",
-            fill: "white",
-          }),
-          _.createElement("path", {
-            _: "M14.2003 16.275V10.9611C14.2003 10.8924 14.2275 10.8264 14.2758 10.7775C14.3242 10.7286 14.3899 10.7008 14.4587 10.7H15.8476C16.2566 10.6955 16.6639 10.7526 17.0559 10.8695C17.3969 10.9728 17.7108 11.1502 17.9753 11.3889C18.24 11.6387 18.4426 11.9469 18.567 12.2889C18.7124 12.7056 18.7821 13.1449 18.7725 13.5861C18.7813 14.03 18.7117 14.472 18.567 14.8917C18.4447 15.2376 18.2452 15.551 17.9837 15.8084C17.7297 16.058 17.4231 16.2478 17.0864 16.3639C16.7092 16.488 16.3141 16.549 15.917 16.5445H14.4587C14.4239 16.5441 14.3895 16.5368 14.3576 16.523C14.3257 16.5092 14.2969 16.4892 14.2728 16.4641C14.2488 16.439 14.23 16.4093 14.2175 16.3769C14.2051 16.3444 14.1992 16.3098 14.2003 16.275ZM15.5142 15.4695H15.7642C15.9985 15.4747 16.2321 15.4418 16.4559 15.3722C16.652 15.3101 16.8303 15.2015 16.9753 15.0556C17.1218 14.8888 17.229 14.6914 17.2892 14.4778C17.3762 14.1907 17.4166 13.8916 17.4087 13.5917C17.4164 13.2964 17.3761 13.0018 17.2892 12.7195C17.2226 12.5103 17.1075 12.3199 16.9531 12.1639C16.8157 12.0212 16.6448 11.9152 16.4559 11.8556C16.2346 11.7928 16.0053 11.7629 15.7753 11.7667H15.5253L15.5142 15.4695Z",
-            fill: "white",
-          }),
-          _.createElement("path", {
-            _: "M22.0115 5.65L17.5448 0.763889C17.325 0.523608 17.0577 0.331628 16.7598 0.200128C16.4619 0.0686279 16.1399 0.000477439 15.8143 0H3.18649C2.56493 0.000735139 1.96903 0.247974 1.52952 0.687484C1.09002 1.12699 0.842776 1.72288 0.842041 2.34444V22.6556C0.842776 23.2771 1.09002 23.873 1.52952 24.3125C1.96903 24.752 2.56493 24.9993 3.18649 25H20.2809C20.9025 24.9993 21.4984 24.752 21.9379 24.3125C22.3774 23.873 22.6246 23.2771 22.6254 22.6556V7.22222C22.6236 6.64001 22.4047 6.0794 22.0115 5.65ZM20.5309 6.34722H17.6532C17.5498 6.34686 17.4476 6.32606 17.3523 6.28601C17.257 6.24596 17.1706 6.18745 17.0981 6.11387C17.0255 6.04028 16.9683 5.95306 16.9296 5.85724C16.8909 5.76142 16.8715 5.65889 16.8726 5.55556V2.34444L20.5309 6.34722ZM20.2809 23.4389H3.18649C2.97873 23.4389 2.77949 23.3564 2.63259 23.2095C2.48568 23.0626 2.40315 22.8633 2.40315 22.6556V2.34444C2.40315 2.13669 2.48568 1.93745 2.63259 1.79054C2.77949 1.64364 2.97873 1.56111 3.18649 1.56111H15.3087V5.55556C15.3094 6.17712 15.5567 6.77301 15.9962 7.21252C16.4357 7.65203 17.0316 7.89926 17.6532 7.9H21.0643V22.6556C21.0635 22.8631 20.9808 23.0619 20.834 23.2086C20.6873 23.3554 20.4885 23.4382 20.2809 23.4389Z",
-            fill: "white",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "23",
+          height: "25",
+          viewBox: "0 0 23 25",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M4.69484 16.275V10.9611C4.69484 10.8919 4.72235 10.8255 4.77132 10.7765C4.82028 10.7275 4.8867 10.7 4.95595 10.7H6.70039C7.00391 10.6976 7.30673 10.7293 7.60317 10.7945C7.86613 10.8506 8.11537 10.9582 8.33651 11.1111C8.54843 11.2597 8.71945 11.4594 8.83373 11.6917C8.96393 11.9704 9.02673 12.2759 9.01706 12.5833C9.02406 12.8888 8.96136 13.1919 8.83373 13.4695C8.71807 13.7108 8.54784 13.9219 8.33651 14.0861C8.12019 14.2512 7.87401 14.3729 7.61151 14.4445C7.32667 14.5238 7.03217 14.563 6.73651 14.5611H6.26984C6.20107 14.5619 6.13537 14.5897 6.087 14.6386C6.03863 14.6875 6.0115 14.7535 6.01151 14.8222V16.2778C6.01151 16.347 5.984 16.4135 5.93503 16.4624C5.88606 16.5114 5.81965 16.5389 5.75039 16.5389H4.95595C4.92143 16.5389 4.88724 16.5321 4.85538 16.5188C4.82352 16.5055 4.79461 16.486 4.77033 16.4614C4.74604 16.4369 4.72687 16.4078 4.71391 16.3758C4.70095 16.3438 4.69447 16.3095 4.69484 16.275ZM6.01151 13.25C6.0115 13.3188 6.03863 13.3848 6.087 13.4337C6.13537 13.4826 6.20107 13.5104 6.26984 13.5111H6.65595C7.37076 13.5111 7.72817 13.2009 7.72817 12.5806C7.74184 12.4583 7.72341 12.3345 7.6747 12.2215C7.62599 12.1085 7.54868 12.0102 7.4504 11.9361C7.1968 11.7937 6.90728 11.7281 6.61706 11.7472H6.26984C6.20107 11.748 6.13537 11.7758 6.087 11.8247C6.03863 11.8736 6.0115 11.9396 6.01151 12.0084V13.25Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              _: "M11.3615 16.6417C10.9725 16.6403 10.5869 16.5697 10.2226 16.4334C9.93059 16.3269 9.65765 16.174 9.41429 15.9806C9.38607 15.9594 9.36245 15.9327 9.34485 15.9021C9.32725 15.8715 9.31603 15.8376 9.31187 15.8026C9.30772 15.7675 9.31072 15.732 9.32068 15.6981C9.33064 15.6643 9.34737 15.6328 9.36984 15.6056L9.78929 15.0917C9.83025 15.0411 9.889 15.008 9.95353 14.9992C10.0181 14.9904 10.0835 15.0066 10.1365 15.0445C10.2956 15.1588 10.4659 15.2565 10.6448 15.3361C10.879 15.4453 11.1338 15.503 11.3921 15.5056C11.6097 15.5234 11.8272 15.4698 12.0115 15.3528C12.076 15.3059 12.128 15.2439 12.1629 15.1722C12.1977 15.1005 12.2144 15.0214 12.2115 14.9417C12.2138 14.8609 12.1936 14.7811 12.1532 14.7111C12.111 14.6405 12.053 14.5806 11.9837 14.5361C11.8965 14.4784 11.8034 14.43 11.706 14.3917L11.3615 14.2445L10.6226 13.9222C10.4687 13.8616 10.3224 13.7833 10.1865 13.6889C10.0391 13.5959 9.90538 13.4828 9.78929 13.3528C9.67576 13.2204 9.58643 13.069 9.5254 12.9056C9.45716 12.7217 9.42418 12.5266 9.42818 12.3306C9.43275 12.1002 9.48774 11.8736 9.58929 11.6667C9.69168 11.453 9.83847 11.2636 10.0198 11.1111C10.2145 10.9475 10.4377 10.8213 10.6782 10.7389C10.9462 10.6466 11.228 10.6006 11.5115 10.6028C11.857 10.6045 12.1991 10.6715 12.5198 10.8C12.7638 10.8972 12.9914 11.0312 13.1948 11.1972C13.2462 11.2428 13.2789 11.3057 13.2866 11.374C13.2943 11.4422 13.2764 11.5108 13.2365 11.5667L12.8726 12.0139C12.833 12.0643 12.7759 12.0981 12.7126 12.1083C12.6493 12.1186 12.5845 12.1048 12.531 12.0695C12.4099 11.9884 12.2815 11.9186 12.1476 11.8611C11.9458 11.779 11.7294 11.7384 11.5115 11.7417C11.3163 11.7282 11.1219 11.7769 10.956 11.8806C10.8919 11.9227 10.8399 11.9806 10.8048 12.0487C10.7698 12.1169 10.7529 12.1929 10.756 12.2695C10.7537 12.3505 10.777 12.4302 10.8226 12.4972C10.8731 12.5653 10.9363 12.6228 11.0087 12.6667C11.0975 12.7218 11.1904 12.7701 11.2865 12.8111L11.6365 12.9584L12.3865 13.2611C12.7093 13.3858 12.9957 13.5892 13.2198 13.8528C13.437 14.1374 13.5462 14.4897 13.5282 14.8472C13.5291 15.0857 13.4789 15.3215 13.381 15.5389C13.2905 15.7549 13.1562 15.9497 12.9865 16.1111C12.7803 16.2816 12.5437 16.4117 12.2893 16.4945C11.991 16.5975 11.677 16.6474 11.3615 16.6417Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              _: "M14.2003 16.275V10.9611C14.2003 10.8924 14.2275 10.8264 14.2758 10.7775C14.3242 10.7286 14.3899 10.7008 14.4587 10.7H15.8476C16.2566 10.6955 16.6639 10.7526 17.0559 10.8695C17.3969 10.9728 17.7108 11.1502 17.9753 11.3889C18.24 11.6387 18.4426 11.9469 18.567 12.2889C18.7124 12.7056 18.7821 13.1449 18.7725 13.5861C18.7813 14.03 18.7117 14.472 18.567 14.8917C18.4447 15.2376 18.2452 15.551 17.9837 15.8084C17.7297 16.058 17.4231 16.2478 17.0864 16.3639C16.7092 16.488 16.3141 16.549 15.917 16.5445H14.4587C14.4239 16.5441 14.3895 16.5368 14.3576 16.523C14.3257 16.5092 14.2969 16.4892 14.2728 16.4641C14.2488 16.439 14.23 16.4093 14.2175 16.3769C14.2051 16.3444 14.1992 16.3098 14.2003 16.275ZM15.5142 15.4695H15.7642C15.9985 15.4747 16.2321 15.4418 16.4559 15.3722C16.652 15.3101 16.8303 15.2015 16.9753 15.0556C17.1218 14.8888 17.229 14.6914 17.2892 14.4778C17.3762 14.1907 17.4166 13.8916 17.4087 13.5917C17.4164 13.2964 17.3761 13.0018 17.2892 12.7195C17.2226 12.5103 17.1075 12.3199 16.9531 12.1639C16.8157 12.0212 16.6448 11.9152 16.4559 11.8556C16.2346 11.7928 16.0053 11.7629 15.7753 11.7667H15.5253L15.5142 15.4695Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              _: "M22.0115 5.65L17.5448 0.763889C17.325 0.523608 17.0577 0.331628 16.7598 0.200128C16.4619 0.0686279 16.1399 0.000477439 15.8143 0H3.18649C2.56493 0.000735139 1.96903 0.247974 1.52952 0.687484C1.09002 1.12699 0.842776 1.72288 0.842041 2.34444V22.6556C0.842776 23.2771 1.09002 23.873 1.52952 24.3125C1.96903 24.752 2.56493 24.9993 3.18649 25H20.2809C20.9025 24.9993 21.4984 24.752 21.9379 24.3125C22.3774 23.873 22.6246 23.2771 22.6254 22.6556V7.22222C22.6236 6.64001 22.4047 6.0794 22.0115 5.65ZM20.5309 6.34722H17.6532C17.5498 6.34686 17.4476 6.32606 17.3523 6.28601C17.257 6.24596 17.1706 6.18745 17.0981 6.11387C17.0255 6.04028 16.9683 5.95306 16.9296 5.85724C16.8909 5.76142 16.8715 5.65889 16.8726 5.55556V2.34444L20.5309 6.34722ZM20.2809 23.4389H3.18649C2.97873 23.4389 2.77949 23.3564 2.63259 23.2095C2.48568 23.0626 2.40315 22.8633 2.40315 22.6556V2.34444C2.40315 2.13669 2.48568 1.93745 2.63259 1.79054C2.77949 1.64364 2.97873 1.56111 3.18649 1.56111H15.3087V5.55556C15.3094 6.17712 15.5567 6.77301 15.9962 7.21252C16.4357 7.65203 17.0316 7.89926 17.6532 7.9H21.0643V22.6556C21.0635 22.8631 20.9808 23.0619 20.834 23.2086C20.6873 23.3554 20.4885 23.4382 20.2809 23.4389Z",
+              fill: "white",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            width: "24",
-            height: "25",
-            viewBox: "0 0 24 25",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M5.83642 17.6544L11.1103 8.49123C11.3014 8.11205 11.3354 7.67284 11.2048 7.2688C11.0743 6.86477 10.7898 6.52846 10.4129 6.33279C10.0085 6.09741 9.52857 6.02807 9.07408 6.13935C8.71066 6.24593 8.40357 6.49087 8.21885 6.82149L4.65539 13.027C4.58789 13.1445 4.56981 13.2839 4.60513 13.4147C4.64045 13.5455 4.72628 13.6569 4.84375 13.7244C4.96121 13.7919 5.10067 13.81 5.23146 13.7747C5.36226 13.7394 5.47366 13.6535 5.54116 13.5361L9.10462 7.33056C9.15274 7.23444 9.23692 7.16124 9.33879 7.12693C9.43346 7.10335 9.53194 7.09931 9.62821 7.11507C9.72449 7.13082 9.81655 7.16604 9.89876 7.21856C10.0402 7.28047 10.153 7.39363 10.2143 7.5353C10.2757 7.67697 10.2812 7.83663 10.2297 7.98216L4.95574 17.1453C4.85186 17.316 4.7119 17.4618 4.5457 17.5726C4.37949 17.6834 4.19106 17.7565 3.99361 17.7868C3.51917 17.8652 3.03226 17.7733 2.61913 17.5271C1.74354 17.0181 1.36174 15.9999 1.77917 15.3025L7.29744 5.71682C7.61091 5.20551 8.11435 4.83937 8.69737 4.69869C9.53455 4.49469 10.4184 4.63011 11.1562 5.0754C12.5968 5.90518 13.1924 7.55964 12.5154 8.75594L10.5555 12.1514C10.5186 12.2093 10.4939 12.2741 10.4827 12.3419C10.4716 12.4096 10.4743 12.4789 10.4906 12.5456C10.507 12.6123 10.5366 12.675 10.5778 12.7299C10.619 12.7849 10.6709 12.8309 10.7303 12.8652C10.7897 12.8996 10.8555 12.9216 10.9237 12.9299C10.9918 12.9381 11.061 12.9325 11.1269 12.9134C11.1928 12.8943 11.2542 12.862 11.3074 12.8185C11.3605 12.7751 11.4043 12.7213 11.4361 12.6605L13.396 9.26501C14.3684 7.58 13.5946 5.30448 11.6652 4.17435C10.6915 3.59863 9.53056 3.4286 8.43265 3.70092C8.00868 3.80714 7.61018 3.99694 7.26052 4.25918C6.91086 4.52143 6.61708 4.85085 6.39639 5.22812L0.883219 14.7935C0.190891 15.9999 0.735591 17.6188 2.11007 18.4078C2.58193 18.6822 3.1169 18.8296 3.66271 18.8354C3.8334 18.8348 4.00372 18.8194 4.17178 18.7896C4.51534 18.7335 4.84242 18.6028 5.13002 18.4066C5.41762 18.2105 5.65874 17.9537 5.83642 17.6544Z",
-            fill: "white",
-          }),
-          _.createElement("path", {
-            _: "M23.6994 4.07252L19.9272 0.300349C19.8325 0.205068 19.7199 0.129475 19.5958 0.0779264C19.4717 0.0263781 19.3387 -0.000106136 19.2044 3.19658e-07H5.96866C5.6194 0.00268705 5.28535 0.143319 5.03933 0.391246C4.79331 0.639173 4.65526 0.974294 4.65527 1.32357V4.58159C4.65527 4.7166 4.70891 4.84608 4.80438 4.94155C4.89984 5.03702 5.02933 5.09065 5.16434 5.09065C5.29935 5.09065 5.42883 5.03702 5.5243 4.94155C5.61977 4.84608 5.6734 4.7166 5.6734 4.58159V1.32357C5.6734 1.24256 5.70558 1.16487 5.76286 1.10759C5.82015 1.05031 5.89784 1.01813 5.97884 1.01813H19.2145L22.9816 4.7903V23.1166C22.9816 23.1977 22.9494 23.2753 22.8922 23.3326C22.8349 23.3899 22.7572 23.4221 22.6762 23.4221H5.97884C5.89784 23.4221 5.82015 23.3899 5.76286 23.3326C5.70558 23.2753 5.6734 23.1977 5.6734 23.1166V19.8535C5.6734 19.7185 5.61977 19.589 5.5243 19.4936C5.42883 19.3981 5.29935 19.3445 5.16434 19.3445C5.02933 19.3445 4.89984 19.3981 4.80438 19.4936C4.70891 19.589 4.65527 19.7185 4.65527 19.8535V23.1116C4.65527 23.4626 4.79472 23.7992 5.04294 24.0475C5.29116 24.2957 5.62781 24.4351 5.97884 24.4351H22.6762C23.0268 24.4338 23.3627 24.2939 23.6106 24.046C23.8585 23.7981 23.9984 23.4622 23.9997 23.1116V4.78521C23.9973 4.51739 23.8894 4.26133 23.6994 4.07252Z",
-            fill: "white",
-          }),
-          _.createElement("path", {
-            _: "M20.4365 18.3264H9.23706V19.3445H20.4365V18.3264Z",
-            fill: "white",
-          }),
-          _.createElement("path", {
-            _: "M20.4365 14.2538H13.3096V15.2719H20.4365V14.2538Z",
-            fill: "white",
-          }),
-          _.createElement("path", {
-            _: "M20.4364 10.1813H15.3457V11.1995H20.4364V10.1813Z",
-            fill: "white",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "24",
+          height: "25",
+          viewBox: "0 0 24 25",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M5.83642 17.6544L11.1103 8.49123C11.3014 8.11205 11.3354 7.67284 11.2048 7.2688C11.0743 6.86477 10.7898 6.52846 10.4129 6.33279C10.0085 6.09741 9.52857 6.02807 9.07408 6.13935C8.71066 6.24593 8.40357 6.49087 8.21885 6.82149L4.65539 13.027C4.58789 13.1445 4.56981 13.2839 4.60513 13.4147C4.64045 13.5455 4.72628 13.6569 4.84375 13.7244C4.96121 13.7919 5.10067 13.81 5.23146 13.7747C5.36226 13.7394 5.47366 13.6535 5.54116 13.5361L9.10462 7.33056C9.15274 7.23444 9.23692 7.16124 9.33879 7.12693C9.43346 7.10335 9.53194 7.09931 9.62821 7.11507C9.72449 7.13082 9.81655 7.16604 9.89876 7.21856C10.0402 7.28047 10.153 7.39363 10.2143 7.5353C10.2757 7.67697 10.2812 7.83663 10.2297 7.98216L4.95574 17.1453C4.85186 17.316 4.7119 17.4618 4.5457 17.5726C4.37949 17.6834 4.19106 17.7565 3.99361 17.7868C3.51917 17.8652 3.03226 17.7733 2.61913 17.5271C1.74354 17.0181 1.36174 15.9999 1.77917 15.3025L7.29744 5.71682C7.61091 5.20551 8.11435 4.83937 8.69737 4.69869C9.53455 4.49469 10.4184 4.63011 11.1562 5.0754C12.5968 5.90518 13.1924 7.55964 12.5154 8.75594L10.5555 12.1514C10.5186 12.2093 10.4939 12.2741 10.4827 12.3419C10.4716 12.4096 10.4743 12.4789 10.4906 12.5456C10.507 12.6123 10.5366 12.675 10.5778 12.7299C10.619 12.7849 10.6709 12.8309 10.7303 12.8652C10.7897 12.8996 10.8555 12.9216 10.9237 12.9299C10.9918 12.9381 11.061 12.9325 11.1269 12.9134C11.1928 12.8943 11.2542 12.862 11.3074 12.8185C11.3605 12.7751 11.4043 12.7213 11.4361 12.6605L13.396 9.26501C14.3684 7.58 13.5946 5.30448 11.6652 4.17435C10.6915 3.59863 9.53056 3.4286 8.43265 3.70092C8.00868 3.80714 7.61018 3.99694 7.26052 4.25918C6.91086 4.52143 6.61708 4.85085 6.39639 5.22812L0.883219 14.7935C0.190891 15.9999 0.735591 17.6188 2.11007 18.4078C2.58193 18.6822 3.1169 18.8296 3.66271 18.8354C3.8334 18.8348 4.00372 18.8194 4.17178 18.7896C4.51534 18.7335 4.84242 18.6028 5.13002 18.4066C5.41762 18.2105 5.65874 17.9537 5.83642 17.6544Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              _: "M23.6994 4.07252L19.9272 0.300349C19.8325 0.205068 19.7199 0.129475 19.5958 0.0779264C19.4717 0.0263781 19.3387 -0.000106136 19.2044 3.19658e-07H5.96866C5.6194 0.00268705 5.28535 0.143319 5.03933 0.391246C4.79331 0.639173 4.65526 0.974294 4.65527 1.32357V4.58159C4.65527 4.7166 4.70891 4.84608 4.80438 4.94155C4.89984 5.03702 5.02933 5.09065 5.16434 5.09065C5.29935 5.09065 5.42883 5.03702 5.5243 4.94155C5.61977 4.84608 5.6734 4.7166 5.6734 4.58159V1.32357C5.6734 1.24256 5.70558 1.16487 5.76286 1.10759C5.82015 1.05031 5.89784 1.01813 5.97884 1.01813H19.2145L22.9816 4.7903V23.1166C22.9816 23.1977 22.9494 23.2753 22.8922 23.3326C22.8349 23.3899 22.7572 23.4221 22.6762 23.4221H5.97884C5.89784 23.4221 5.82015 23.3899 5.76286 23.3326C5.70558 23.2753 5.6734 23.1977 5.6734 23.1166V19.8535C5.6734 19.7185 5.61977 19.589 5.5243 19.4936C5.42883 19.3981 5.29935 19.3445 5.16434 19.3445C5.02933 19.3445 4.89984 19.3981 4.80438 19.4936C4.70891 19.589 4.65527 19.7185 4.65527 19.8535V23.1116C4.65527 23.4626 4.79472 23.7992 5.04294 24.0475C5.29116 24.2957 5.62781 24.4351 5.97884 24.4351H22.6762C23.0268 24.4338 23.3627 24.2939 23.6106 24.046C23.8585 23.7981 23.9984 23.4622 23.9997 23.1116V4.78521C23.9973 4.51739 23.8894 4.26133 23.6994 4.07252Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              _: "M20.4365 18.3264H9.23706V19.3445H20.4365V18.3264Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              _: "M20.4365 14.2538H13.3096V15.2719H20.4365V14.2538Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              _: "M20.4364 10.1813H15.3457V11.1995H20.4364V10.1813Z",
+              fill: "white",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 26 26",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 26 26",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M17.5133 4.65595C15.8046 6.36468 17.0366 9.2803 19.4284 9.28035C20.446 9.28035 21.0261 8.76331 21.2519 8.56209C21.2963 8.5225 21.327 8.49513 21.3447 8.48633C22.4018 7.42917 22.4024 5.71423 21.3441 4.65595C20.2817 3.59714 18.5699 3.59936 17.5133 4.65595ZM18.5553 7.44735C17.4045 6.30173 19.1522 4.54882 20.301 5.69597V5.69586C20.7836 6.18159 20.783 6.96269 20.301 7.44422C19.8189 7.92684 19.0348 7.92415 18.5553 7.44735ZM0.583974 13.873L14.455 0L24.4165 1.583L26 11.5449L12.1289 25.416C11.7368 25.805 11.2252 26 10.7156 26C10.2065 26 9.69489 25.805 9.30552 25.416L0.583974 16.6976C0.194954 16.305 0 15.7933 0 15.2843C0 14.7742 0.194948 14.2625 0.583974 13.873ZM9.26632 17.5853L8.88665 17.965C8.62416 18.2274 8.43667 18.5227 8.32418 18.8509C8.21403 19.1766 8.19645 19.5106 8.27145 19.8528C8.34879 20.1926 8.53979 20.5148 8.84446 20.8195C9.14445 21.1195 9.46318 21.307 9.80066 21.382C10.1428 21.457 10.4756 21.4382 10.7991 21.3257C11.1272 21.2132 11.4225 21.0257 11.6849 20.7633L12.0646 20.3836C12.3271 20.1211 12.5146 19.8281 12.6271 19.5047C12.7419 19.179 12.7618 18.8473 12.6868 18.5099C12.6142 18.17 12.4255 17.8478 12.1209 17.5431C11.8209 17.2431 11.4986 17.0545 11.1541 16.9771C10.8143 16.8998 10.4791 16.9162 10.1487 17.0263C9.82293 17.1365 9.5288 17.3228 9.26632 17.5853ZM9.6038 18.6821L9.98347 18.3024C10.2014 18.0845 10.4487 17.9427 10.7252 17.8771C11.0065 17.8115 11.2701 17.9017 11.5162 18.1478C11.7693 18.4009 11.8584 18.6634 11.7834 18.9352C11.7107 19.2047 11.5654 19.4485 11.3475 19.6664L10.9678 20.0461C10.7498 20.2641 10.5026 20.4082 10.226 20.4785C9.95417 20.5488 9.6952 20.4609 9.44912 20.2148C9.19601 19.9617 9.10344 19.6981 9.1714 19.4239C9.24171 19.1473 9.38584 18.9001 9.6038 18.6821ZM9.80066 9.87944L9.421 10.2591C9.15851 10.5216 8.97102 10.8169 8.85853 11.145C8.74837 11.4708 8.7308 11.8047 8.80579 12.1469C8.88313 12.4867 9.07414 12.809 9.37881 13.1136C9.6788 13.4136 9.99753 13.6011 10.335 13.6761C10.6772 13.7511 11.01 13.7324 11.3334 13.6199C11.6615 13.5074 11.9568 13.3199 12.2193 13.0574L12.599 12.6777C12.8614 12.4152 13.0489 12.1223 13.1614 11.7989C13.2763 11.4731 13.2962 11.1415 13.2212 10.804C13.1485 10.4642 12.9599 10.1419 12.6552 9.83725C12.3552 9.53727 12.033 9.34861 11.6885 9.27127C11.3486 9.19393 11.0135 9.21033 10.683 9.32048C10.3573 9.43063 10.0632 9.61695 9.80066 9.87944ZM10.1381 10.9763L10.5178 10.5966C10.7358 10.3786 10.983 10.2368 11.2596 10.1712C11.5408 10.1056 11.8045 10.1958 12.0506 10.4419C12.3037 10.695 12.3927 10.9575 12.3177 11.2294C12.2451 11.4989 12.0998 11.7426 11.8818 11.9606L11.5021 12.3403C11.2842 12.5582 11.0369 12.7023 10.7604 12.7726C10.4885 12.843 10.2295 12.7551 9.98347 12.509C9.73036 12.2559 9.63778 11.9922 9.70575 11.718C9.77606 11.4415 9.92019 11.1942 10.1381 10.9763ZM16.3675 13.7464L4.21814 15.9963L5.01966 16.7978L17.169 14.5479L16.3675 13.7464Z",
           }),
-        );
+        });
       }
       function _(_) {
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
           case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 _: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
               }),
-            );
+            });
           case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 _: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
               }),
-            );
+            });
           case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M14.23 30.75L1.45996 18L14.23 5.20999L17.77 8.74999L8.53996 18L17.77 27.23L14.23 30.75ZM31.77 27.21L22.54 18L31.77 8.76999L28.23 5.20999L15.46 18L28.23 30.75L31.77 27.21Z",
                 fill: "currentColor",
               }),
-            );
+            });
           case "right":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ..._,
-              },
-              _.createElement("path", {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
                 _: "M19 30.75L31.77 18L19 5.20999L15.46 8.74999L24.69 18L15.46 27.23L19 30.75ZM1.46002 27.21L10.69 18L1.46002 8.76999L5.00002 5.20999L17.77 18L5.00002 30.75L1.46002 27.21Z",
                 fill: "currentColor",
               }),
-            );
+            });
         }
       }
       function _(_) {
         const { className: _ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)("SVGIcon_Button", "SVGIcon_SteamDeck", _),
-            viewBox: "0 0 36 36",
-            fill: "none",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_SteamDeck", _),
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M805.7,241.8h-51.3l44.3-45.3c10.1-10.1,15.1-22.8,15.1-38.2s-5-28.2-15.1-38.2c-10.1-10.1-22.8-15.1-38.2-15.1s-28.5,5-39.2,15.1l-128.8,121.7h-153.9l-129.8-121.7c-10.1-10.1-22.8-15.1-38.2-15.1s-28.2,5-38.2,15.1c-10.1,10.1-15.1,22.8-15.1,38.2s5,28.2,15.1,38.2l44.3,45.3h-51.3c-46.3,1.3-84.3,17.1-114.2,47.3-29.9,30.2-45.5,68.1-46.8,113.7v348.1c1.3,49.6,16.9,89.8,46.8,120.2,29.9,30.4,67.9,46.5,114.2,47.8h573.5c46.3-1.3,84.5-16.9,114.7-46.8,30.2-29.9,45.6-67.9,46.3-114.2v-355.2c2-45.6-11.6-83.5-40.8-113.7s-66.9-46-113.2-47.3h-.2ZM851,751c-.7,16.1-6.5,29.9-17.6,41.3-11.1,11.4-24.7,17.1-40.8,17.1H232.2c-16.1,0-29.9-5.7-41.3-17.1-11.4-11.4-17.1-25.2-17.1-41.3v-341.1c.7-16.8,6.3-30.5,17.1-41.3s24.5-16.4,41.3-17.1h560.4c16.8.7,30.5,6.3,41.3,17.1s16.4,24.5,17.1,41.3v341.1h0ZM347.9,467.2c-16.1.7-29.7,6.5-40.8,17.6-11.1,11.1-16.9,24.7-17.6,40.8v58.4c.7,16.1,6.3,29.7,17.1,40.8,10.8,11.1,24.5,16.6,41.3,16.6s30.5-5.5,41.3-16.6,16.4-24.7,17.1-40.8v-58.4c-.7-16.1-6.5-29.7-17.6-40.8-11.1-11.1-24.7-16.9-40.8-17.6h0ZM683,467.2c-16.1.7-29.7,6.5-40.8,17.6s-16.9,24.7-17.6,40.8v58.4c.7,16.1,6.3,29.7,17.1,40.8s24.5,16.6,41.3,16.6,30.5-5.5,41.3-16.6,16.4-24.7,17.1-40.8v-58.4c-.7-16.1-6.5-29.7-17.6-40.8-11.1-11.1-24.7-16.9-40.8-17.6h0Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M823,229.3c-58.9-27-121-46.1-184.9-56.9-8.7,15.6-16.6,31.7-23.7,48.1-68-10.2-137.1-10.2-205.1,0-7-16.4-14.9-32.5-23.7-48.1-63.9,10.9-126.1,30.1-185,57-117,173.1-148.7,341.9-132.8,508.3h0c68.5,50.6,145.2,89.1,226.7,113.8,18.4-24.7,34.6-50.9,48.6-78.3-26.5-9.9-52.1-22.1-76.5-36.5,6.4-4.7,12.7-9.4,18.7-14.1,143.6,67.5,309.7,67.5,453.3,0,6.1,5,12.4,9.8,18.7,14.1-24.4,14.4-50,26.7-76.6,36.6,13.9,27.4,30.2,53.6,48.6,78.2,81.6-24.6,158.3-63.1,226.9-113.7h0c18.6-193-31.8-360.2-133.2-508.5h0ZM363.2,635.4c-44.2,0-80.7-40.1-80.7-89.4s35.2-89.8,80.6-89.8,81.5,40.5,80.8,89.8c-.8,49.3-35.6,89.4-80.6,89.4h-.1ZM660.8,635.4c-44.3,0-80.6-40.1-80.6-89.4s35.2-89.8,80.6-89.8,81.3,40.5,80.6,89.8c-.8,49.3-35.5,89.4-80.6,89.4Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M512,66c-246.3,0-446,199.7-446,446s144,384.7,338.3,432.9v-296.6h-92v-136.3h92v-58.7c0-151.8,68.7-222.2,217.7-222.2s77,5.5,97,11.1v123.5c-10.5-1.1-28.8-1.7-51.5-1.7-73.1,0-101.4,27.7-101.4,99.7v48.2h145.7l-25,136.3h-120.7v306.4c220.8-26.7,392-214.7,392-442.7S758.3,66,512,66Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M327.6,69.9c-47.4,2.2-79.7,9.8-108,20.9-29.3,11.4-54.1,26.7-78.8,51.5-24.7,24.8-39.9,49.6-51.2,78.9-11,28.3-18.4,60.7-20.5,108.1-2.1,47.4-2.6,62.6-2.3,183.5.2,120.9.8,136.1,3.1,183.6,2.3,47.4,9.8,79.7,20.9,108,11.4,29.3,26.7,54.1,51.5,78.8,24.8,24.7,49.6,39.9,79,51.2,28.3,10.9,60.7,18.4,108.1,20.5,47.4,2.1,62.6,2.6,183.5,2.3,120.9-.2,136.1-.8,183.6-3s79.7-9.8,108-20.9c29.3-11.5,54.1-26.7,78.8-51.5,24.7-24.8,39.9-49.6,51.2-79,11-28.3,18.4-60.7,20.5-108.1,2.1-47.5,2.6-62.7,2.3-183.6-.2-120.9-.8-136.1-3-183.5s-9.8-79.7-20.9-108c-11.4-29.3-26.7-54.1-51.5-78.8-24.8-24.7-49.6-39.9-79-51.2-28.3-11-60.7-18.4-108.1-20.5s-62.6-2.6-183.6-2.3-136.1.7-183.5,3.1M332.8,874.8c-43.4-1.9-67-9.1-82.7-15.1-20.8-8-35.6-17.7-51.3-33.2-15.7-15.5-25.3-30.4-33.4-51.1-6.1-15.7-13.4-39.3-15.5-82.7-2.2-46.9-2.7-61-2.9-179.9s.2-132.9,2.3-179.9c1.9-43.4,9.1-67,15.1-82.7,8-20.8,17.7-35.6,33.2-51.3,15.5-15.6,30.4-25.3,51.1-33.4,15.7-6.1,39.2-13.4,82.6-15.5,47-2.2,61-2.7,179.9-2.9,118.9-.3,133,.2,179.9,2.3,43.4,1.9,67,9.1,82.7,15.1,20.8,8,35.6,17.6,51.3,33.2,15.6,15.6,25.3,30.3,33.4,51.2,6.1,15.6,13.4,39.2,15.5,82.6,2.2,47,2.7,61,3,179.9.2,118.8-.2,133-2.3,179.9-1.9,43.4-9.1,67-15.1,82.7-8,20.8-17.7,35.6-33.2,51.3-15.5,15.6-30.4,25.3-51.1,33.4-15.7,6.1-39.2,13.4-82.6,15.5-47,2.2-61,2.7-179.9,2.9-118.9.3-132.9-.2-179.9-2.3M695.8,274c0,29.5,24,53.4,53.5,53.3s53.4-24,53.3-53.5c0-29.5-24-53.4-53.5-53.3,0,0,0,0,0,0-29.5,0-53.4,24-53.3,53.5M283.4,512.4c.2,126.3,102.8,228.4,229,228.2,126.2-.2,228.4-102.8,228.2-229.1-.2-126.3-102.8-228.4-229.1-228.2s-228.4,102.8-228.2,229.1M363.6,512.3c-.2-82,66.2-148.6,148.1-148.7,82-.2,148.6,66.2,148.7,148.1.2,82-66.2,148.6-148.1,148.7-82,.2-148.5-66.1-148.7-148.1h0",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M892.3,65.9H131.7c-36.4,0-65.9,29.5-65.9,65.9v760.5c0,36.4,29.5,65.9,65.9,65.9h760.5c36.4,0,65.9-29.5,65.9-65.9V131.7c0-36.4-29.5-65.9-65.9-65.9ZM331.8,826h-134.1v-426.1h134.1v426.1ZM264.7,340.8c-42.7,0-77.3-32.5-77.3-77s34.6-77,77.3-77,77.3,32.5,77.3,77-34.6,77-77.3,77ZM826.3,826.3h-134.1v-232.7c0-68.7-29.2-89.8-66.8-89.8s-78.8,30-78.8,91.6v231h-134.1v-426.1h129v59h1.7c13-26.2,58.3-71,127.5-71s155.7,44.4,155.7,174.6v263.6Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M861.6,624.9c-8-25.6-18.8-55.5-29.8-84.2h0l-40.2-100.3c0-1.2.5-20.9.5-31.1,0-171.5-81-343.9-280.1-343.9S231.9,237.8,231.9,409.3s.5,29.9.5,31.1h0l-40.2,100.3h0c-11,28.7-21.9,58.6-29.8,84.2-38,122.2-25.7,172.8-16.3,173.9,20.1,2.4,78.2-92,78.2-92,0,54.7,28.2,126,89.1,177.6-22.8,7-50.7,17.8-68.6,31.1-16.1,11.9-14.1,24-11.2,28.9,12.8,21.5,218.9,13.8,278.4,7.1h0c59.5,6.7,265.7,14.5,278.4-7.1,2.9-4.9,4.9-17-11.2-28.9-18-13.3-45.9-24.1-68.7-31.1,60.9-51.5,89-122.9,89-177.5,0,0,58.1,94.4,78.2,92,9.4-1.1,21.7-51.7-16.3-173.9h.2Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M829.1,381c-29.9,0-57.5,10.1-79.5,27.1-60-37.1-135.6-60.4-218.5-63.5v-.3c0-55.5,41.3-101.6,94.7-109.1,9.7,41.1,46.6,71.8,90.7,71.8s93.2-41.7,93.2-93.2-41.7-93.2-93.2-93.2-82.6,31.9-91.3,74.3c-75.4,8.1-134.3,72-134.3,149.5v.5c-82,3.5-156.8,26.8-216.3,63.6-22.1-17.1-49.8-27.3-79.8-27.3-72.2,0-130.6,58.5-130.6,130.6s30.8,97.5,75.2,118.3c4.3,151.6,169.6,273.6,372.8,273.6s368.7-122.1,372.8-273.9c44.1-21,74.6-65.9,74.6-118s-58.5-130.6-130.6-130.6h0Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M512,66c-246.3,0-446,199.7-446,446s199.7,446,446,446,446-199.7,446-446S758.3,66,512,66ZM718.7,369.3c-6.7,70.5-35.8,241.7-50.5,320.7-6.3,33.4-18.6,44.6-30.5,45.7-25.9,2.4-45.6-17.1-70.7-33.6-39.3-25.7-61.4-41.7-99.5-66.9-44-29-15.5-45,9.6-71,6.6-6.8,120.7-110.6,122.9-120,.3-1.2.5-5.6-2.1-7.9-2.6-2.3-6.5-1.5-9.2-.9-3.9.9-66.6,42.3-188.1,124.3-17.8,12.2-33.9,18.2-48.4,17.9-15.9-.3-46.6-9-69.3-16.4-27.9-9.1-50.1-13.9-48.2-29.3,1-8,12.1-16.2,33.2-24.6,130-56.6,216.7-94,260.1-112,123.9-51.5,149.6-60.5,166.4-60.8,3.7,0,11.9.8,17.3,5.2,4.5,3.7,5.8,8.6,6.3,12.1.6,3.5,1.3,11.4.7,17.6Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M534.1,714.7c0-74.7,0-149.3,0-224,0-16.4,0-16.4,16.4-16.4,24.6,0,49.2,0,73.9,0,12.4,0,13.3-.7,13.3-14,.1-41.7,0-83.5,0-125.2,0-84.8.1-169.7,0-254.5,0-6.6,1.8-9,8.6-8.9,27.6.3,55.1.1,82.7,0,6.2,0,9.1,1.8,9,8.8-.3,26.5,0,53,0,79.5,0,13.3.4,13.9,14,13.9,31.8.2,63.7.1,95.5.1,34.5,0,69,0,103.6-.3,6.5,0,8.4,2.1,8.3,8.3-.3,27.3-.6,54.6-.3,81.9,0,7.8-2.5,10-10.1,10-61.5-.2-123.1,0-184.6,0-5.9,0-11.8.4-17.7,0-6.8-.4-8.8,2.6-8.8,9.1,0,42.3,0,84.6-.1,126.8,0,17.7-.1,35.3.2,53,.2,10.1,2.2,11.7,12,11.7,64.2,0,128.4-.1,192.7-.3,15.4,0,15.5-.1,15.5,15.2,0,107.8.5,215.7-.3,323.5-.2,30-11.4,57.2-29.7,81.3-15.9,20.9-35.7,36.7-59.9,46.8-16.1,6.7-32.9,11-50.6,11-90.4,0-180.9,0-271.3.1-11.5,0-11.9,0-12-11.7-.3-36.4-.2-72.8-.2-109.2,0-38.8,0-77.6,0-116.4h0ZM634.5,712.9c0,42.8.1,85.6-.1,128.4,0,7.7,3,10.6,10.4,10.6,54.8-.1,109.7,0,164.5-.3,6.8,0,14.2-1,20.3-3.7,19-8.4,27.8-23.6,27.8-44.6-.2-72.8,0-145.5,0-218.3,0-9.7-.5-10.3-10.6-10.3-66.9-.1-133.8-.2-200.7-.3-9.9,0-11.6,1.7-11.6,11.7,0,42.3,0,84.5,0,126.8Z",
-          }),
-          _.createElement("path", {
-            _: "M488.8,390.4c0,101.2,0,202.3,0,303.5,0,16.5-.1,16.4-16.4,16.4-24.4,0-48.7,0-73.1.1-11,0-11.2,0-11.2-11,0-168.9,0-337.7,0-506.6,0-25.3,1.5-20.7-21.1-20.8-50.3-.2-100.6-.4-150.9.3-9,.1-18.3,3.1-26.7,6.5-17.1,6.8-22.3,21.8-23.6,38.7-.3,4.5-.1,9.1-.1,13.6,0,151.2,0,302.4,0,453.6,0,5.9-1.1,11.8-.8,17.6.4,7.2-3.4,8.5-9.4,8.4-16.9-.2-33.7-.2-50.6-.1-10.4,0-20.9,0-31.3.4-6,.2-8.4-1.7-8.4-8.3.1-65.8-.1-131.7-.2-197.5,0-92.3.3-184.6-.3-277-.2-30.8,5.4-59.6,21.6-85.8,24-38.8,58.9-62,104.2-68.5,12.9-1.8,26.1-2,39.2-2,82.2-.2,164.3-.1,246.5-.1,11.3,0,12.6,1,12.6,10.3,0,102.8,0,205.5,0,308.3Z",
-          }),
-          _.createElement("path", {
-            _: "M328.1,480.5c0,76-.5,152,.2,228,.4,37.7,15.9,69.6,42.1,96.8,12.2,12.7,26.1,22.9,41.7,30.6,18.8,9.3,38.7,14.9,60.1,14.8,19.8-.1,17.9-2,17.9,18.3,0,24.4-.4,48.7-.1,73.1,0,7.5-2.9,9.7-10,9.6-45.4-.8-88.1-10.6-127.7-34.1-26.1-15.5-48.8-34.3-68.3-57.4-5.7-6.8-6.8-6.7-12.7.4-30,36.3-67.3,62.6-111.5,78.1-27.5,9.6-56.2,14.7-85.8,13.7-8.8-.3-9.2-5.8-9.2-11.8,0-24.6,0-49.2.2-73.9.1-15.3.3-15.2,15.3-15.3,46.2-.4,83.7-19.2,112.9-54.6,22.6-27.3,33.8-58.9,33.7-94.5-.1-63.7.1-127.4.2-191.1.2-88.1.5-176.1.4-264.2,0-7.9,2.6-10.2,10.1-10.1,26.8.3,53.5.3,80.3,0,7.2,0,9.4,2.7,9.3,9.4-.2,22.5,0,45,0,67.4,0,55.7.6,111.3.6,167,.3,0-.1,0,.1,0Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M534.1,714.7c0-74.7,0-149.3,0-224,0-16.4,0-16.4,16.4-16.4,24.6,0,49.2,0,73.9,0,12.4,0,13.3-.7,13.3-14,.1-41.7,0-83.5,0-125.2,0-84.8.1-169.7,0-254.5,0-6.6,1.8-9,8.6-8.9,27.6.3,55.1.1,82.7,0,6.2,0,9.1,1.8,9,8.8-.3,26.5,0,53,0,79.5,0,13.3.4,13.9,14,13.9,31.8.2,63.7.1,95.5.1,34.5,0,69,0,103.6-.3,6.5,0,8.4,2.1,8.3,8.3-.3,27.3-.6,54.6-.3,81.9,0,7.8-2.5,10-10.1,10-61.5-.2-123.1,0-184.6,0-5.9,0-11.8.4-17.7,0-6.8-.4-8.8,2.6-8.8,9.1,0,42.3,0,84.6-.1,126.8,0,17.7-.1,35.3.2,53,.2,10.1,2.2,11.7,12,11.7,64.2,0,128.4-.1,192.7-.3,15.4,0,15.5-.1,15.5,15.2,0,107.8.5,215.7-.3,323.5-.2,30-11.4,57.2-29.7,81.3-15.9,20.9-35.7,36.7-59.9,46.8-16.1,6.7-32.9,11-50.6,11-90.4,0-180.9,0-271.3.1-11.5,0-11.9,0-12-11.7-.3-36.4-.2-72.8-.2-109.2,0-38.8,0-77.6,0-116.4h0ZM634.5,712.9c0,42.8.1,85.6-.1,128.4,0,7.7,3,10.6,10.4,10.6,54.8-.1,109.7,0,164.5-.3,6.8,0,14.2-1,20.3-3.7,19-8.4,27.8-23.6,27.8-44.6-.2-72.8,0-145.5,0-218.3,0-9.7-.5-10.3-10.6-10.3-66.9-.1-133.8-.2-200.7-.3-9.9,0-11.6,1.7-11.6,11.7,0,42.3,0,84.5,0,126.8Z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M488.8,390.4c0,101.2,0,202.3,0,303.5,0,16.5-.1,16.4-16.4,16.4-24.4,0-48.7,0-73.1.1-11,0-11.2,0-11.2-11,0-168.9,0-337.7,0-506.6,0-25.3,1.5-20.7-21.1-20.8-50.3-.2-100.6-.4-150.9.3-9,.1-18.3,3.1-26.7,6.5-17.1,6.8-22.3,21.8-23.6,38.7-.3,4.5-.1,9.1-.1,13.6,0,151.2,0,302.4,0,453.6,0,5.9-1.1,11.8-.8,17.6.4,7.2-3.4,8.5-9.4,8.4-16.9-.2-33.7-.2-50.6-.1-10.4,0-20.9,0-31.3.4-6,.2-8.4-1.7-8.4-8.3.1-65.8-.1-131.7-.2-197.5,0-92.3.3-184.6-.3-277-.2-30.8,5.4-59.6,21.6-85.8,24-38.8,58.9-62,104.2-68.5,12.9-1.8,26.1-2,39.2-2,82.2-.2,164.3-.1,246.5-.1,11.3,0,12.6,1,12.6,10.3,0,102.8,0,205.5,0,308.3Z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M328.1,480.5c0,76-.5,152,.2,228,.4,37.7,15.9,69.6,42.1,96.8,12.2,12.7,26.1,22.9,41.7,30.6,18.8,9.3,38.7,14.9,60.1,14.8,19.8-.1,17.9-2,17.9,18.3,0,24.4-.4,48.7-.1,73.1,0,7.5-2.9,9.7-10,9.6-45.4-.8-88.1-10.6-127.7-34.1-26.1-15.5-48.8-34.3-68.3-57.4-5.7-6.8-6.8-6.7-12.7.4-30,36.3-67.3,62.6-111.5,78.1-27.5,9.6-56.2,14.7-85.8,13.7-8.8-.3-9.2-5.8-9.2-11.8,0-24.6,0-49.2.2-73.9.1-15.3.3-15.2,15.3-15.3,46.2-.4,83.7-19.2,112.9-54.6,22.6-27.3,33.8-58.9,33.7-94.5-.1-63.7.1-127.4.2-191.1.2-88.1.5-176.1.4-264.2,0-7.9,2.6-10.2,10.1-10.1,26.8.3,53.5.3,80.3,0,7.2,0,9.4,2.7,9.3,9.4-.2,22.5,0,45,0,67.4,0,55.7.6,111.3.6,167,.3,0-.1,0,.1,0Z",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M785.4,244.2c-60.7-39.4-97.3-106.9-97.4-179.2h-153.7l-.3,616c-2.7,71.3-62.7,126.8-134,124.1-71.3-2.7-126.8-62.7-124.1-134,2.7-69.4,59.7-124.2,129.1-124.2,12.9,0,25.8,2.1,38.1,6v-156.9c-12.6-1.8-25.4-2.7-38.1-2.8-156,0-282.9,126.9-282.9,282.9.2,156.2,126.8,282.7,283,282.9,156,0,282.9-126.9,282.9-282.9v-312.3c62.3,44.8,137.1,68.9,213.8,68.8v-153.7c-41.4,0-81.8-12-116.4-34.6Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M615.8,959c-134.7,0-234.6-69-234.6-234.6v-264.9h-122.3v-143.7c134.7-34.8,190.8-150.4,197-250.9h139.7v227.8h162.7v166.7h-162.7v230.7c0,69,34.8,93.2,90.4,93.2h79.1v175.7h-149.3Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M288.5,65l-159.6,159.6v574.7h191.6v159.6l159.6-159.6h127.7l287.4-287.4V65H288.5ZM831.3,480.1l-127.7,127.7h-127.7l-111.7,111.7v-111.7h-143.7V128.9h510.9v351.2Z",
-          }),
-          _.createElement("rect", {
-            _: "671.6",
-            _: "240.6",
-            width: "63.9",
-            height: "191.6",
-          }),
-          _.createElement("rect", {
-            _: "496",
-            _: "240.6",
-            width: "63.9",
-            height: "191.6",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M288.5,65l-159.6,159.6v574.7h191.6v159.6l159.6-159.6h127.7l287.4-287.4V65H288.5ZM831.3,480.1l-127.7,127.7h-127.7l-111.7,111.7v-111.7h-143.7V128.9h510.9v351.2Z",
+            }),
+            (0, _.jsx)("rect", {
+              _: "671.6",
+              _: "240.6",
+              width: "63.9",
+              height: "191.6",
+            }),
+            (0, _.jsx)("rect", {
+              _: "496",
+              _: "240.6",
+              width: "63.9",
+              height: "191.6",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M595.2,443.5L920.9,65h-77.2l-282.8,328.7L335.1,65H74.6l341.5,497L74.6,959h77.2l298.6-347.1,238.5,347.1h260.5l-354.2-515.5h0ZM489.5,566.4l-34.6-49.5L179.6,123.1h118.5l222.2,317.8,34.6,49.5,288.8,413.1h-118.5l-235.7-337.1h0Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M896.1,127.9c-62.8-62.9-164-62.9-366.3-62.9h-35.8c-202.3,0-303.4,0-366.3,62.9-62.9,62.8-62.9,164-62.9,366.3v35.8c0,202.3,0,303.4,62.9,366.3,62.8,62.9,164,62.9,366.3,62.9h35.8c202.3,0,303.4,0,366.3-62.9,62.9-62.8,62.9-164,62.9-366.3v-35.8c0-202.3,0-303.4-62.9-366.3ZM704.8,716.9c-22.3-70.8-77.2-125.6-150.6-133v133h-11.7c-201.7,0-324.1-139.9-328.9-372.5h102.2c3.2,170.8,80.9,243.2,140.5,258.1v-258.1h97.9v147.4c57.5-6.4,117.6-73.4,137.8-147.4h96.4c-15.5,91-80.9,158-127.2,185.7,46.3,22.4,120.8,80.9,149.6,186.8h-105.9Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M496.2,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M280.9,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M388.6,147.8c-178.9,0-323.8,121.4-323.8,271.2s43.7,155.4,111.7,204.8c5.7,4,8.9,10.5,8.9,17.8s-.8,4.9-.8,7.3c-5.7,20.2-13.8,53.4-14.6,55-.8,2.4-1.6,4.9-1.6,8.1,0,5.7,4.9,10.5,10.5,10.5s4-.8,6.5-1.6l70.4-41.3c5.7-3.2,11.3-4.9,17-4.9s6.5.8,9.7,1.6c33.2,9.7,68.8,14.6,105.2,14.6s12.1,0,17.8-.8c-7.3-21-10.5-43.7-10.5-66.4,0-136.8,131.9-247.7,294.6-247.7s7.3,0,13,.8c-24.3-130.3-153-229.1-314.1-229.1",
-          }),
-          _.createElement("path", {
-            _: "M779.5,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M599.8,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M866.1,794.5c56.7-41.3,93.1-102.8,93.1-170.8,0-124.7-120.6-225.8-269.5-225.8s-269.5,101.2-269.5,225.8,120.6,225.8,269.5,225.8,60.7-4,88.2-12.1c2.4-.8,4.9-.8,8.1-.8,4.9,0,9.7,1.6,14.6,4l59.1,34c1.6.8,3.2,1.6,4.9,1.6,4.9,0,8.9-4,8.9-8.9s-.8-4.9-1.6-6.5c0-1.6-7.3-28.3-12.1-45.3-.8-1.6-.8-4-.8-5.7-.8-6.5,2.4-12.1,7.3-15.4",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M496.2,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M280.9,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M388.6,147.8c-178.9,0-323.8,121.4-323.8,271.2s43.7,155.4,111.7,204.8c5.7,4,8.9,10.5,8.9,17.8s-.8,4.9-.8,7.3c-5.7,20.2-13.8,53.4-14.6,55-.8,2.4-1.6,4.9-1.6,8.1,0,5.7,4.9,10.5,10.5,10.5s4-.8,6.5-1.6l70.4-41.3c5.7-3.2,11.3-4.9,17-4.9s6.5.8,9.7,1.6c33.2,9.7,68.8,14.6,105.2,14.6s12.1,0,17.8-.8c-7.3-21-10.5-43.7-10.5-66.4,0-136.8,131.9-247.7,294.6-247.7s7.3,0,13,.8c-24.3-130.3-153-229.1-314.1-229.1",
+            }),
+            (0, _.jsx)("path", {
+              _: "M779.5,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M599.8,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M866.1,794.5c56.7-41.3,93.1-102.8,93.1-170.8,0-124.7-120.6-225.8-269.5-225.8s-269.5,101.2-269.5,225.8,120.6,225.8,269.5,225.8,60.7-4,88.2-12.1c2.4-.8,4.9-.8,8.1-.8,4.9,0,9.7,1.6,14.6,4l59.1,34c1.6.8,3.2,1.6,4.9,1.6,4.9,0,8.9-4,8.9-8.9s-.8-4.9-1.6-6.5c0-1.6-7.3-28.3-12.1-45.3-.8-1.6-.8-4-.8-5.7-.8-6.5,2.4-12.1,7.3-15.4",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M455.3,544.1c-70.6-18.3-150.3,16.8-181,79-31.2,63.4-1,133.8,70.3,156.8,73.8,23.8,160.9-12.6,191.1-81.2,29.7-67-7.5-135.8-80.4-154.6h0ZM401.4,706c-14.3,22.9-45.1,32.9-68.2,22.4-22.8-10.4-29.5-37-15.1-59.3,14.2-22.2,43.8-32.1,66.8-22.5,23.2,9.8,30.7,36.3,16.6,59.4h0ZM448.6,645.4c-5.2,8.9-16.7,13.2-25.6,9.4-8.8-3.6-11.6-13.6-6.6-22.3,5.2-8.7,16.2-12.9,25-9.4,9,3.3,12.2,13.4,7.3,22.3ZM795.3,441c15.5,5,32.1-3.5,37.2-19,12.2-37.9,4.6-81.3-24-113-27.6-30.6-69.5-44.2-109.9-35.6-15.9,3.4-26.1,19-22.7,35,0,0,0,0,0,0,3.4,15.9,19,26,34.9,22.6,0,0,0,0,.1,0,19.1-4,39.7,1.9,53.8,17.3,13.5,15,18,36.1,11.7,55.2-5.1,15.5,3.3,32.1,18.7,37.3,0,0,0,0,.1,0ZM898.7,227.5c-58.8-65.2-145.5-90.1-225.6-73.1-18.5,3.9-30.3,22-26.4,40.5,0,0,0,.1,0,.2,3.9,18.5,22.2,30.4,40.7,26.4,0,0,0,0,0,0,57-12.1,118.6,5.6,160.5,51.9,41.8,46.3,53.1,109.6,35.2,164.9-5.8,18,4,37.3,22.1,43.2,18,5.8,37.3-4,43.1-22h0c25-78.3,9.2-167.1-49.6-232.2h0ZM736.9,498.5c-12.6-3.7-21.2-6.3-14.6-22.9,14.3-36,15.8-67.1.3-89.1-29-41.6-108.6-39.3-199.8-1.1,0,0-28.6,12.5-21.4-10.2,14-45.1,11.9-82.8-10-104.7-49.4-49.5-181,1.9-293.8,114.6-84.4,84.5-133.4,174-133.4,251.5,0,148.1,189.9,238.2,375.7,238.2s405.6-141.5,405.6-253.9-57.2-106.3-108.6-122.3ZM440.5,821.7c-148.2,14.6-276.2-52.3-285.9-149.8-9.6-97.3,102.8-188.1,251-202.7,148.2-14.7,276.2,52.3,285.9,149.7,9.5,97.3-102.8,188.1-251,202.8Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M941.3,294.9c-10.3-38.8-40.7-69.4-79.2-79.7-69.9-18.8-350.1-18.8-350.1-18.8,0,0-280.2,0-350.1,18.8-38.6,10.4-68.9,40.9-79.2,79.7-18.7,70.3-18.7,217.1-18.7,217.1,0,0,0,146.7,18.7,217.1,10.3,38.8,40.7,69.4,79.2,79.7,69.9,18.8,350.1,18.8,350.1,18.8,0,0,280.2,0,350.1-18.8,38.6-10.4,68.9-40.9,79.2-79.7,18.7-70.3,18.7-217.1,18.7-217.1,0,0,0-146.7-18.7-217.1ZM420.4,645.2v-266.4l234.2,133.2-234.2,133.2Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M785.4,244.2c-60.7-39.4-97.3-106.9-97.4-179.2h-153.7l-.3,616c-2.7,71.3-62.7,126.8-134,124.1-71.3-2.7-126.8-62.7-124.1-134,2.7-69.4,59.7-124.2,129.1-124.2,12.9,0,25.8,2.1,38.1,6v-156.9c-12.6-1.8-25.4-2.7-38.1-2.8-156,0-282.9,126.9-282.9,282.9.2,156.2,126.8,282.7,283,282.9,156,0,282.9-126.9,282.9-282.9v-312.3c62.3,44.8,137.1,68.9,213.8,68.8v-153.7c-41.4,0-81.8-12-116.4-34.6Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M258.2,170.6c102.7,77.1,213.2,233.5,253.8,317.4,40.6-83.9,151.1-240.3,253.8-317.4,74.1-55.6,194.2-98.7,194.2,38.3s-15.7,229.9-24.9,262.7c-32,114.3-148.5,143.4-252.2,125.8,181.2,30.8,227.3,133,127.8,235.2-189.1,194-271.7-48.7-292.9-110.9-3.9-11.4-5.7-16.7-5.7-12.2,0-4.5-1.8.8-5.7,12.2-21.2,62.2-103.9,304.9-292.9,110.9-99.6-102.2-53.5-204.3,127.8-235.2-103.7,17.6-220.2-11.5-252.2-125.8-9.2-32.9-24.9-235.4-24.9-262.7,0-137,120.1-93.9,194.2-38.3h0Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M929.4,264.8c-13-95.3-96.9-170.4-196.5-185-16.8-2.5-80.4-11.4-227.9-11.4h-1.1c-147.5,0-179.1,9-195.9,11.4-96.8,14.2-185.2,81.6-206.6,178.1-10.3,47.5-11.4,100.2-9.5,148.5,2.7,69.3,3.3,138.4,9.6,207.4,4.4,45.8,12.1,91.3,23,136,20.4,82.7,102.9,151.4,183.7,179.5,86.6,29.3,179.6,34.1,268.8,14,9.8-2.3,19.5-4.9,29.1-7.9,21.6-6.8,47-14.4,65.7-27.8.3-.2.5-.4.6-.7.1-.3.2-.6.2-.9v-66.9c0-.3,0-.6-.2-.8-.1-.3-.3-.5-.6-.7-.2-.2-.5-.3-.8-.4-.3,0-.6,0-.9,0-57.1,13.5-115.7,20.3-174.4,20.2-101.1,0-128.3-47.5-136.1-67.2-6.3-17.1-10.2-34.9-11.8-53,0-.3,0-.6.2-.9.1-.3.3-.5.6-.7.2-.2.5-.3.8-.4.3,0,.6,0,.9,0,56.2,13.4,113.8,20.2,171.6,20.2,13.9,0,27.8,0,41.7-.4,58.1-1.6,119.4-4.6,176.6-15.6,1.4-.3,2.9-.5,4.1-.9,90.2-17.1,176.1-70.9,184.8-207.1.3-5.4,1.1-56.2,1.1-61.7,0-18.9,6.2-134.1-.9-204.9ZM790.6,604.7h-94.9v-229.8c0-48.4-20.4-73.1-61.8-73.1s-68.4,29.2-68.4,86.8v125.8h-94.3v-125.8c0-57.7-22.9-86.8-68.4-86.8s-61.8,24.7-61.8,73.1v229.8h-94.8v-236.8c0-48.4,12.5-86.8,37.5-115.3,25.8-28.4,59.6-43,101.5-43s85.2,18.5,109.7,55.4l23.6,39.2,23.6-39.2c24.5-36.9,61.2-55.4,109.6-55.4s75.7,14.6,101.6,43c25,28.5,37.5,66.9,37.5,115.3v236.8Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("path", {
             _: "M518.9,959h-.3c-133.4-.9-235.9-44.9-304.9-130.7-61.2-76.4-92.9-182.7-94-315.9v-.6c1.1-133.3,32.7-239.5,94-315.9,68.8-85.9,171.5-129.9,304.8-130.8h.5c102.3.7,187.8,27,254.3,78.1,62.5,48.1,106.5,116.6,130.7,203.7l-76,21.2c-41.1-147.5-145.2-222.9-309.3-224-108.4.8-190.3,34.9-243.6,101.2-49.8,62.1-75.5,151.9-76.5,266.9,1,115,26.7,204.7,76.6,266.9,53.3,66.4,135.3,100.5,243.6,101.2,97.7-.7,162.4-23.5,216.1-76.2,61.3-60.1,60.3-133.8,40.6-178.7-11.5-26.5-32.5-48.5-60.9-65.2-7.2,50.3-23.2,91.1-47.8,121.9-33,41-79.7,63.5-138.9,66.7-44.8,2.4-88-8.1-121.4-29.9-39.6-25.7-62.8-64.8-65.3-110.4-2.4-44.3,15.2-85.1,49.5-114.8,32.8-28.3,78.9-45,133.5-48.1,40.1-2.2,77.8-.4,112.5,5.3-4.6-27.6-13.9-49.6-27.9-65.4-19.1-21.8-48.7-32.9-87.9-33.2h-1.1c-31.5,0-74.2,8.7-101.4,49.2l-65.4-43.9c36.5-54.2,95.7-84,166.8-84h1.6c119,.7,189.9,73.6,196.9,200.7,4,1.7,8,3.5,12,5.3,55.5,26.1,96.1,65.6,117.5,114.3,29.7,67.9,32.5,178.4-57.7,266.7-68.9,67.4-152.5,97.9-271.1,98.7h-.3ZM556.3,523.5c-9,0-18.1.3-27.5.8-68.4,3.8-111,35.2-108.6,79.8,2.5,46.8,54.1,68.5,103.7,65.8,45.6-2.4,105-20.2,115-138.2-25.2-5.5-52.8-8.2-82.5-8.2Z",
           }),
-        );
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            viewBox: "0 0 1024 1024",
-            ..._,
-          },
-          _.createElement(
-            "g",
-            null,
-            _.createElement(
-              "g",
-              {
-                _: "Layer_1",
-              },
-              _.createElement(
-                "g",
-                null,
-                _.createElement("path", {
-                  _: "M236.8,355.7h-58.6c-.7,85.4-.3,170.9-.7,256.4.2.8.3,1.7.3,2.5-.2,5-4.4,8.8-9.4,8.6-10.3.6-20.6.3-30.9.3,6.9,17,14.4,33.8,22.1,50.4,19.5-.7,41.6,3.6,58.2-9.3,15.1-11.1,19.7-30.8,19.4-48.6,0-86.8.2-173.7-.4-260.5Z",
-                }),
-                _.createElement("path", {
-                  _: "M455.9,539.6c14.1-35.5,30.9-69.9,45.9-104.9-18.3-2.1-39,3.8-55.9-3.3,8.2-27.5,23-52.8,33.5-79.5-19.9,0-40.1-.3-60.2,0-14.6,33.4-29.6,66.8-44.8,100-4.3,9.9-9.5,23.1-.5,32.1,11.6,10.5,28.5,6.4,42.7,7.4-9.8,24.9-22.8,48.5-31.1,73.9-4.6,12.6,6.9,25.5,19.4,25.5,22.7,1.5,45.6.2,68.4.6,7.4-16.6,14.9-33.2,22.2-50-13.3,0-26.9.9-39.8-1.7Z",
-                }),
-                _.createElement("path", {
-                  _: "M959.8,585.9c-1.2-25.2,4.9-53.6-10.7-75.6-13.3-18.7-37.3-23.7-58.8-24.1-1.3-30,5.9-65.3-16.3-89.8-20.6-23.1-53.9-23.2-82.4-22.1v-22.4h-59.5l-.4,22.7h-39.5v59.9c13.2-.1,26.4,0,39.5.3.4,17.4.4,34.7,0,51.9-19.8.3-39.6.3-59.4.3v59.8h59.5v127.2h59.5c0-42.4,0-84.7,0-127.1,29,0,57.9-.4,86.9,0,10.1-.9,21.8,6.3,21.5,17.5.8,15.9.8,31.8,0,47.6.3,5.4-3.8,10-9.1,10.3-16.6,1.2-33.1,0-49.7.6,7.3,17.2,14.4,34.6,22.7,51.4,27.3-1.6,60.7,5.3,81.5-17.2,19.8-18.3,13.8-47.2,14.7-71.2ZM831.8,486.9h-40.2c-.3-17.5-.4-35-.4-52.5,12.9,1.8,30.1-5.2,39.9,5.2,1.6,15.8.6,31.6.6,47.3Z",
-                }),
-                _.createElement("path", {
-                  _: "M618.5,434.3h37.5v-59.9h-136.4c0,19.9,0,40,.1,60h37.4v179.5c-17.8.2-35.7.2-53.6.2-9.2,19.9-18.3,39.8-27.3,59.8h199.7v-59.8c-19.1-.2-38.3,0-57.4-.2v-179.6Z",
-                }),
-                _.createElement("path", {
-                  _: "M900.4,433.7c11.1,0,22.3.6,33.4-.4,17.9-1.6,31.3-22.5,24.2-39.3-5.6-18.4-30.6-26.5-45.7-14.1-16.7,12.5-11.2,35.8-12,53.8Z",
-                }),
-                _.createElement("path", {
-                  _: "M78.6,434.2c-3.1,39.2-6.2,78.6-8.9,117.5-.7,8.9-2.6,17.7-5.7,26.1,10.1,23.1,20.1,46.1,30.9,68.8,24.1-32.2,33-72.8,35.5-112.2,2.1-33.5,5.8-67,7.1-100.6-19.6.8-39.2.5-58.9.5Z",
-                }),
-                _.createElement("path", {
-                  _: "M345.2,551.5c-2.8-39.1-5.9-78.2-8.9-117.2h-59.5c2.9,36.4,5.3,73,8.4,109.3s12.6,73.5,34.8,103.2c10.6-22.8,20.8-45.8,30.8-68.8-3.2-8.5-5.1-17.4-5.7-26.4Z",
-                }),
-                _.createElement("path", {
-                  _: "M378.1,609.4c-9.3,19.9-18.4,39.9-27.5,60,30.4,9,62.7,2.8,93.9,4.5,9.2-19.9,18.4-39.9,27.3-59.9-31.3-1.2-63.1,3.3-93.7-4.6Z",
-                }),
-              ),
-            ),
-          ),
-        );
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          version: "1.1",
+          viewBox: "0 0 1024 1024",
+          ..._,
+          children: (0, _.jsx)("g", {
+            children: (0, _.jsx)("g", {
+              _: "Layer_1",
+              children: (0, _.jsxs)("g", {
+                children: [
+                  (0, _.jsx)("path", {
+                    _: "M236.8,355.7h-58.6c-.7,85.4-.3,170.9-.7,256.4.2.8.3,1.7.3,2.5-.2,5-4.4,8.8-9.4,8.6-10.3.6-20.6.3-30.9.3,6.9,17,14.4,33.8,22.1,50.4,19.5-.7,41.6,3.6,58.2-9.3,15.1-11.1,19.7-30.8,19.4-48.6,0-86.8.2-173.7-.4-260.5Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    _: "M455.9,539.6c14.1-35.5,30.9-69.9,45.9-104.9-18.3-2.1-39,3.8-55.9-3.3,8.2-27.5,23-52.8,33.5-79.5-19.9,0-40.1-.3-60.2,0-14.6,33.4-29.6,66.8-44.8,100-4.3,9.9-9.5,23.1-.5,32.1,11.6,10.5,28.5,6.4,42.7,7.4-9.8,24.9-22.8,48.5-31.1,73.9-4.6,12.6,6.9,25.5,19.4,25.5,22.7,1.5,45.6.2,68.4.6,7.4-16.6,14.9-33.2,22.2-50-13.3,0-26.9.9-39.8-1.7Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    _: "M959.8,585.9c-1.2-25.2,4.9-53.6-10.7-75.6-13.3-18.7-37.3-23.7-58.8-24.1-1.3-30,5.9-65.3-16.3-89.8-20.6-23.1-53.9-23.2-82.4-22.1v-22.4h-59.5l-.4,22.7h-39.5v59.9c13.2-.1,26.4,0,39.5.3.4,17.4.4,34.7,0,51.9-19.8.3-39.6.3-59.4.3v59.8h59.5v127.2h59.5c0-42.4,0-84.7,0-127.1,29,0,57.9-.4,86.9,0,10.1-.9,21.8,6.3,21.5,17.5.8,15.9.8,31.8,0,47.6.3,5.4-3.8,10-9.1,10.3-16.6,1.2-33.1,0-49.7.6,7.3,17.2,14.4,34.6,22.7,51.4,27.3-1.6,60.7,5.3,81.5-17.2,19.8-18.3,13.8-47.2,14.7-71.2ZM831.8,486.9h-40.2c-.3-17.5-.4-35-.4-52.5,12.9,1.8,30.1-5.2,39.9,5.2,1.6,15.8.6,31.6.6,47.3Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    _: "M618.5,434.3h37.5v-59.9h-136.4c0,19.9,0,40,.1,60h37.4v179.5c-17.8.2-35.7.2-53.6.2-9.2,19.9-18.3,39.8-27.3,59.8h199.7v-59.8c-19.1-.2-38.3,0-57.4-.2v-179.6Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    _: "M900.4,433.7c11.1,0,22.3.6,33.4-.4,17.9-1.6,31.3-22.5,24.2-39.3-5.6-18.4-30.6-26.5-45.7-14.1-16.7,12.5-11.2,35.8-12,53.8Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    _: "M78.6,434.2c-3.1,39.2-6.2,78.6-8.9,117.5-.7,8.9-2.6,17.7-5.7,26.1,10.1,23.1,20.1,46.1,30.9,68.8,24.1-32.2,33-72.8,35.5-112.2,2.1-33.5,5.8-67,7.1-100.6-19.6.8-39.2.5-58.9.5Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    _: "M345.2,551.5c-2.8-39.1-5.9-78.2-8.9-117.2h-59.5c2.9,36.4,5.3,73,8.4,109.3s12.6,73.5,34.8,103.2c10.6-22.8,20.8-45.8,30.8-68.8-3.2-8.5-5.1-17.4-5.7-26.4Z",
+                  }),
+                  (0, _.jsx)("path", {
+                    _: "M378.1,609.4c-9.3,19.9-18.4,39.9-27.5,60,30.4,9,62.7,2.8,93.9,4.5,9.2-19.9,18.4-39.9,27.3-59.9-31.3-1.2-63.1,3.3-93.7-4.6Z",
+                  }),
+                ],
+              }),
+            }),
+          }),
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "4 1 24 30",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ..._,
-          },
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M16.2114 23.9054C18.1701 23.9054 19.7587 25.494 19.7587 27.4527C19.7587 29.4114 18.1701 31 16.2114 31C14.2526 31 12.6641 29.4114 12.6641 27.4527C12.6641 25.494 14.2527 23.9054 16.2114 23.9054Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M7.01091 9.7964C7.11325 7.49343 8.06952 5.32707 9.69945 3.69779C11.4318 1.96544 13.7608 1 16.2108 1C18.6611 1 20.9899 1.96534 22.7222 3.69779C24.4545 5.42937 25.42 7.75911 25.42 10.2092C25.42 11.8776 24.9663 13.5012 24.109 14.9322C23.2523 16.3624 22.0178 17.5368 20.5477 18.324C20.1242 18.5512 19.761 18.8723 19.5136 19.2866C19.2654 19.7001 19.1616 20.179 19.1616 20.6579V21.3933C19.1616 21.6584 18.9457 21.8743 18.6815 21.8743H13.7404C13.4761 21.8743 13.2602 21.6584 13.2602 21.3933V20.6579C13.2602 19.1043 13.6626 17.5963 14.4611 16.2636C15.2603 14.928 16.4065 13.8673 17.7764 13.1333C18.3057 12.85 18.7488 12.4238 19.0573 11.9085C19.365 11.394 19.5178 10.8078 19.5178 10.2092C19.5178 9.32859 19.1722 8.49295 18.5496 7.87046C17.9264 7.2479 17.0914 6.90227 16.2109 6.90227C15.3303 6.90227 14.4947 7.24788 13.8722 7.87046C13.312 8.43062 12.972 9.16814 12.9131 9.9582L12.8963 10.1818C12.8774 10.4363 12.6643 10.6313 12.4091 10.6271L7.47227 10.5422C7.3377 10.5394 7.22265 10.4889 7.13086 10.3907C7.03828 10.2926 6.99482 10.1748 7.00049 10.0402L7.01104 9.79628L7.01091 9.7964Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          viewBox: "4 1 24 30",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M16.2114 23.9054C18.1701 23.9054 19.7587 25.494 19.7587 27.4527C19.7587 29.4114 18.1701 31 16.2114 31C14.2526 31 12.6641 29.4114 12.6641 27.4527C12.6641 25.494 14.2527 23.9054 16.2114 23.9054Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M7.01091 9.7964C7.11325 7.49343 8.06952 5.32707 9.69945 3.69779C11.4318 1.96544 13.7608 1 16.2108 1C18.6611 1 20.9899 1.96534 22.7222 3.69779C24.4545 5.42937 25.42 7.75911 25.42 10.2092C25.42 11.8776 24.9663 13.5012 24.109 14.9322C23.2523 16.3624 22.0178 17.5368 20.5477 18.324C20.1242 18.5512 19.761 18.8723 19.5136 19.2866C19.2654 19.7001 19.1616 20.179 19.1616 20.6579V21.3933C19.1616 21.6584 18.9457 21.8743 18.6815 21.8743H13.7404C13.4761 21.8743 13.2602 21.6584 13.2602 21.3933V20.6579C13.2602 19.1043 13.6626 17.5963 14.4611 16.2636C15.2603 14.928 16.4065 13.8673 17.7764 13.1333C18.3057 12.85 18.7488 12.4238 19.0573 11.9085C19.365 11.394 19.5178 10.8078 19.5178 10.2092C19.5178 9.32859 19.1722 8.49295 18.5496 7.87046C17.9264 7.2479 17.0914 6.90227 16.2109 6.90227C15.3303 6.90227 14.4947 7.24788 13.8722 7.87046C13.312 8.43062 12.972 9.16814 12.9131 9.9582L12.8963 10.1818C12.8774 10.4363 12.6643 10.6313 12.4091 10.6271L7.47227 10.5422C7.3377 10.5394 7.22265 10.4889 7.13086 10.3907C7.03828 10.2926 6.99482 10.1748 7.00049 10.0402L7.01104 9.79628L7.01091 9.7964Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 26 19",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            width: "16",
-            height: "4",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            _: "5",
-            width: "16",
-            height: "4",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            _: "10",
-            width: "16",
-            height: "4",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            _: "15",
-            width: "16",
-            height: "4",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "9",
-            height: "4",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "5",
-            width: "9",
-            height: "4",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            width: "9",
-            height: "4",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "15",
-            width: "9",
-            height: "4",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 26 19",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              width: "16",
+              height: "4",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              _: "5",
+              width: "16",
+              height: "4",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              _: "10",
+              width: "16",
+              height: "4",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              _: "15",
+              width: "16",
+              height: "4",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "9",
+              height: "4",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "5",
+              width: "9",
+              height: "4",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              width: "9",
+              height: "4",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "15",
+              width: "9",
+              height: "4",
+            }),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 26 19",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            width: "16",
-            height: "9",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            _: "10",
-            width: "16",
-            height: "9",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "9",
-            height: "9",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            width: "9",
-            height: "9",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 26 19",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              width: "16",
+              height: "9",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              _: "10",
+              width: "16",
+              height: "9",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "9",
+              height: "9",
+            }),
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              _: "10",
+              width: "9",
+              height: "9",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { fill: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 10 10",
-            width: "10",
-            height: "10",
-            fill: "none",
-            ...__webpack_require__,
-          },
-          _.createElement("circle", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 10 10",
+          width: "10",
+          height: "10",
+          fill: "none",
+          ...__webpack_require__,
+          children: (0, _.jsx)("circle", {
             _: "5",
             _: "5",
             _: "4",
             fill: _.fill || "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { fill: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 16 8",
-            width: "16",
-            height: "8",
-            fill: "none",
-            ...__webpack_require__,
-          },
-          _.createElement("rect", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 16 8",
+          width: "16",
+          height: "8",
+          fill: "none",
+          ...__webpack_require__,
+          children: (0, _.jsx)("rect", {
             _: "0",
             _: "0",
             width: "16",
@@ -37798,28 +36715,25 @@
             _: "4",
             fill: _.fill || "currentColor",
           }),
-        );
+        });
       }
       function _(_) {
         const { fill: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 10 10",
-            width: "10",
-            height: "10",
-            fill: "none",
-            ...__webpack_require__,
-          },
-          _.createElement("rect", {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 10 10",
+          width: "10",
+          height: "10",
+          fill: "none",
+          ...__webpack_require__,
+          children: (0, _.jsx)("rect", {
             _: "1",
             _: "1",
             width: "8",
             height: "8",
             fill: _.fill || "currentColor",
           }),
-        );
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -37843,6 +36757,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -37876,41 +36791,31 @@
           void 0 === _ && _.push(_().noString),
           _ && _.push(_),
           _ && _.push(_().Static),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                "center" == _ && _().throbber_center_wrapper,
-                !!_ && _().ThrobberDelayAppear,
-                _ && _().Visible,
-              ),
-            },
-            _ &&
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
               _ &&
-              _.createElement(
-                "div",
-                {
+                _ &&
+                (0, _.jsx)("div", {
                   className: _.join(" "),
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _().NewThrobber,
-                  },
-                  _.createElement("img", {
-                    src: (0, _._)(_),
+                    children: (0, _.jsx)("img", {
+                      src: (0, _._)(_),
+                    }),
                   }),
-                ),
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
                   className: _().ThrobberText,
-                },
-                _,
-              ),
-          )
+                  children: _,
+                }),
+            ],
+          })
         );
       });
       _.memo(function (_) {
@@ -37937,43 +36842,35 @@
           void 0 === _ && _.push(_().noString),
           _ && _.push(_),
           _ && _.push(_().Static),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                "center" == _ && _().throbber_center_wrapper,
-                !!_ && _().ThrobberDelayAppear,
-                _ && _().Visible,
-              ),
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _.join(" "),
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: _().Throbber,
-                  },
-                  _.createElement(_, {
-                    className: _().base,
+                    children: [
+                      (0, _.jsx)(_, {
+                        className: _().base,
+                      }),
+                      (0, _.jsx)(_, {
+                        className: _().blur,
+                      }),
+                    ],
                   }),
-                  _.createElement(_, {
-                    className: _().blur,
-                  }),
-                ),
-              ),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
                   className: _().ThrobberText,
-                },
-                _,
-              ),
-          )
+                  children: _,
+                }),
+            ],
+          })
         );
       });
       function _(_) {
@@ -37994,233 +36891,224 @@
         let _ = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           _.className && (_ += _.className),
-          _.createElement(
-            "svg",
-            {
-              version: "1.1",
-              _: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: _,
-              _: "0px",
-              _: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            _.createElement(
-              "g",
-              {
+          (0, _.jsxs)("svg", {
+            version: "1.1",
+            _: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: _,
+            _: "0px",
+            _: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, _.jsxs)("g", {
                 className: _().partCircle,
-              },
-              _.createElement("path", {
-                className: _().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M201.432,101.166",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                  }),
+                ],
               }),
-              _.createElement("path", {
-                className: _().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M201.432,101.166",
-              }),
-              _.createElement("path", {
-                className: _().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-              }),
-            ),
-            _.createElement(
-              "g",
-              {
+              (0, _.jsxs)("g", {
                 className: _().mainOutline,
-              },
-              _.createElement("path", {
-                className: _().roundFill,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundFill,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuterOutline,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber01,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber02,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber03,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber04,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber05,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber06,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber07,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber08,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber09,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber10,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber11,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber12,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber13,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber14,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber15,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                ],
               }),
-              _.createElement("path", {
-                className: _().roundOuterOutline,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber01,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber02,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber03,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber04,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber05,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber06,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber07,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber08,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber09,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber10,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber11,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber12,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber13,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber14,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              _.createElement("path", {
-                className: _().roundThrobber15,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-            ),
-            _.createElement(
-              "g",
-              {
+              (0, _.jsx)("g", {
                 className: _().bottomCircle,
-              },
-              _.createElement("path", {
-                fill: "#ffffff",
-                _: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                children: (0, _.jsx)("path", {
+                  fill: "#ffffff",
+                  _: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                }),
               }),
-            ),
-            _.createElement(
-              "g",
-              {
+              (0, _.jsx)("g", {
                 className: _().topCircle,
-              },
-              _.createElement("circle", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                _: "161.731",
-                _: "101.274",
-                _: "23.019",
+                children: (0, _.jsx)("circle", {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  _: "161.731",
+                  _: "101.274",
+                  _: "23.019",
+                }),
               }),
-            ),
-          )
+            ],
+          })
         );
       }
     },
@@ -38230,6 +37118,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38244,32 +37133,25 @@
               : (0, _._)(_, "Window.ToggleMaximize") &&
                 _.SteamClient.Window.ToggleMaximize();
           }, [_, __webpack_require__]);
-        return _.createElement(
-          _,
-          {
-            className: (0, _._)(
-              _ ? "restoreButton" : "maximizeButton",
-              "windowControlButton",
-            ),
-            onClick: _,
-          },
-          !_ &&
-            (_ ? _.createElement(_.ZWw, null) : _.createElement(_.hz4, null)),
-        );
+        return (0, _.jsx)(_, {
+          className: (0, _._)(
+            _ ? "restoreButton" : "maximizeButton",
+            "windowControlButton",
+          ),
+          onClick: _,
+          children: !_ && (_ ? (0, _.jsx)(_.ZWw, {}) : (0, _.jsx)(_.hz4, {})),
+        });
       }
       function _(_) {
         const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _.SteamClient.Window.Minimize();
           }, [_]);
-        return _.createElement(
-          _,
-          {
-            className: "minimizeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
-          },
-          !_ && _.createElement(_.Xjb, null),
-        );
+        return (0, _.jsx)(_, {
+          className: "minimizeButton windowControlButton",
+          onClick: __webpack_require__ ?? _,
+          children: !_ && (0, _.jsx)(_.Xjb, {}),
+        });
       }
       function _(_) {
         const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
@@ -38279,14 +37161,11 @@
                 ? _.SteamClient.Window.Close()
                 : _.close());
           }, [_]);
-        return _.createElement(
-          _,
-          {
-            className: "closeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
-          },
-          !_ && _.createElement(_.sED, null),
-        );
+        return (0, _.jsx)(_, {
+          className: "closeButton windowControlButton",
+          onClick: __webpack_require__ ?? _,
+          children: !_ && (0, _.jsx)(_.sED, {}),
+        });
       }
       function _(_) {
         const { className: _, onClick: __webpack_require__, children: _ } = _,
@@ -38297,20 +37176,14 @@
             },
             [__webpack_require__],
           );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)("title-area-icon", _),
-            onClick: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: "title-area-icon-inner",
-            },
-            _,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          className: (0, _._)("title-area-icon", _),
+          onClick: _,
+          children: (0, _.jsx)("div", {
+            className: "title-area-icon-inner",
+            children: _,
+          }),
+        });
       }
       function _(_) {
         const {
@@ -38330,66 +37203,58 @@
             children: _,
           } = _,
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              "TitleBar",
-              "title-area",
-              _ && "OSX",
-              (_ || _) && "WindowFocus",
-              _,
-            ),
-            style: __webpack_require__,
-          },
-          _.createElement("div", {
-            className: "title-area-highlight",
-          }),
-          _.createElement(
-            "div",
-            {
-              className: "title-area-children",
-            },
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            "TitleBar",
+            "title-area",
+            _ && "OSX",
+            (_ || _) && "WindowFocus",
             _,
           ),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "title-bar-actions extra-actions",
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: "title-bar-actions window-controls",
-                },
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onClose: _,
-                    bOSX: _,
+          style: __webpack_require__,
+          children: [
+            (0, _.jsx)("div", {
+              className: "title-area-highlight",
+            }),
+            (0, _.jsx)("div", {
+              className: "title-area-children",
+              children: _,
+            }),
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: "title-bar-actions extra-actions",
+                      children: _,
+                    }),
+                  (0, _.jsxs)("div", {
+                    className: "title-bar-actions window-controls",
+                    children: [
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          popup: _,
+                          onClose: _,
+                          bOSX: _,
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          popup: _,
+                          onMaximize: _,
+                          bOSX: _,
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_, {
+                          popup: _,
+                          onMinimize: _,
+                          bOSX: _,
+                        }),
+                    ],
                   }),
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onMaximize: _,
-                    bOSX: _,
-                  }),
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onMinimize: _,
-                    bOSX: _,
-                  }),
-              ),
-            ),
-        );
+                ],
+              }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -38411,6 +37276,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.createContext({}),
         _ = () => _.useContext(_);
@@ -38422,73 +37288,74 @@
             }),
             [_],
           );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement("div", {
-            ref: __webpack_require__,
-          }),
-          _.children,
-        );
+        return (0, _.jsxs)(_.Provider, {
+          value: _,
+          children: [
+            (0, _.jsx)("div", {
+              ref: __webpack_require__,
+            }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { divProps: _, tooltipProps: __webpack_require__ } = _({
           ..._,
           toolTipContent: _.toolTipContent
-            ? _.createElement(_, null, _(_.toolTipContent))
+            ? (0, _.jsx)(_, {
+                children: _(_.toolTipContent),
+              })
             : null,
         });
-        return _.createElement(
-          _._,
-          {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: _.bNavStop ?? !!_.onClick,
-            ..._,
-          },
-          _.createElement(_, {
-            ...__webpack_require__,
-          }),
-          _.children,
-        );
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ...__webpack_require__,
+            }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { divProps: _, tooltipProps: __webpack_require__ } = _(_);
-        return _.createElement(
-          _._,
-          {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: _.bNavStop ?? !!_.onClick,
-            ..._,
-          },
-          _.createElement(_, {
-            ...__webpack_require__,
-          }),
-          _.children,
-        );
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ...__webpack_require__,
+            }),
+            _.children,
+          ],
+        });
       }
       function _(_) {
         const { children: _ } = _,
           { divProps: __webpack_require__, tooltipProps: _ } = _({
             ..._,
             toolTipContent: _.toolTipContent
-              ? _.createElement(_, null, _(_.toolTipContent))
+              ? (0, _.jsx)(_, {
+                  children: _(_.toolTipContent),
+                })
               : null,
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.cloneElement(_, {
-            ...__webpack_require__,
-            ..._.props,
-          }),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.cloneElement(_, {
+              ...__webpack_require__,
+              ..._.props,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -38568,20 +37435,20 @@
         return {
           divProps: _,
           stateHandlers: _,
-          tooltip: _.createElement(_, {
+          tooltip: (0, _.jsx)(_, {
             ...__webpack_require__,
           }),
         };
       }
       function _(_) {
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           ..._,
           className: (0, _._)(_().TextToolTip, _.className),
         });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_().ToolTipCustom, _),
           ...__webpack_require__,
         });
@@ -38612,14 +37479,11 @@
         if (!_ || !__webpack_require__) return null;
         const { targetElement: _ } = _;
         return _.createPortal(
-          _.createElement(
-            _._,
-            {
-              target: __webpack_require__,
-              ..._,
-            },
-            _,
-          ),
+          (0, _.jsx)(_._, {
+            target: __webpack_require__,
+            ..._,
+            children: _,
+          }),
           _ ?? __webpack_require__.ownerDocument.body,
         );
       }
@@ -38635,11 +37499,11 @@
         const _ = (0, _._)();
         return _.pathname.includes("//")
           ? (console.error(`Malformed path: "${_.pathname}"`),
-            _.createElement(_._, {
+            (0, _.jsx)(_._, {
               _: _.pathname.replace(/\/\//g, "/"),
             }))
           : _.redirect
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 push: !0,
                 _: _.redirect || "/",
               })
@@ -38659,6 +37523,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38695,62 +37560,51 @@
         _ || __webpack_require__ || (__webpack_require__ = _),
           _ && _ && (_ = (0, _._)(_)),
           _ || (_ = () => 0);
-        return _.createElement(
-          "a",
-          {
-            ..._,
-            href: _,
-            onClick: (_) => {
-              _.preventDefault(),
-                _ &&
-                  _(window, _, {
-                    bForceExternal: !!_,
-                    bUseLinkFilter: !!_,
-                    unPID: _(_),
-                  });
-            },
-            onContextMenu: __webpack_require__,
-            rel: _ ? "noopener noreferrer" : void 0,
+        return (0, _.jsx)("a", {
+          ..._,
+          href: _,
+          onClick: (_) => {
+            _.preventDefault(),
+              _ &&
+                _(window, _, {
+                  bForceExternal: !!_,
+                  bUseLinkFilter: !!_,
+                  unPID: _(_),
+                });
           },
-          _.children,
-        );
+          onContextMenu: __webpack_require__,
+          rel: _ ? "noopener noreferrer" : void 0,
+          children: _.children,
+        });
       }
       function _(_) {
         const { strURL: _, opts: __webpack_require__ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
               onSelected: () => {
                 _._(_);
               },
-            },
-            (0, _._)("#ContextMenu_CopyLinkURL"),
-          ),
-          _.createElement(
-            _._,
-            {
+              children: (0, _._)("#ContextMenu_CopyLinkURL"),
+            }),
+            (0, _.jsx)(_._, {
               onSelected: (_) => {
                 _(_, _, __webpack_require__);
               },
-            },
-            (0, _._)("#ContextMenu_OpenLinkInNewWindow"),
-          ),
-        );
+              children: (0, _._)("#ContextMenu_OpenLinkInNewWindow"),
+            }),
+          ],
+        });
       }
       function _(_, _) {
         let _ = _.currentTarget;
         return (0, _._)(
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_, {
+          (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
               strURL: _.href,
               opts: _,
             }),
-          ),
+          }),
           _,
         );
       }
@@ -38776,14 +37630,12 @@
                 );
       }
       const _ = (_) =>
-        _.createElement(
-          _.Fragment,
-          null,
-          Boolean(_.condition) ? _.wrap(_.children) : _.children,
-        );
+        (0, _.jsx)(_.Fragment, {
+          children: Boolean(_.condition) ? _.wrap(_.children) : _.children,
+        });
       function _(_, _, _) {
         return _.forwardRef(function (_, _) {
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             ..._,
             role: _,
             ..._,
@@ -38851,7 +37703,7 @@
           default:
           case _._.k_ECutArrowStyle: {
             const _ = "right" == _ ? 0 : 180;
-            return _.createElement(_.uMb, {
+            return (0, _.jsx)(_.uMb, {
               fill: _ || "white",
               role: "presentation",
               angle: _,
@@ -38859,7 +37711,7 @@
           }
           case _._.k_EDoubleArrowStyle: {
             const _ = "right" == _ ? 180 : 0;
-            return _.createElement(_.F2T, {
+            return (0, _.jsx)(_.F2T, {
               fill: _ || "white",
               role: "presentation",
               angle: _,
@@ -38867,7 +37719,7 @@
           }
           case _._.k_EThickChevron: {
             const _ = "right" == _ ? 0 : 180;
-            return _.createElement(_.l8x, {
+            return (0, _.jsx)(_.l8x, {
               fill: _ || "white",
               role: "presentation",
               angle: _,
@@ -38875,14 +37727,14 @@
           }
           case _._.k_EFilledArrow: {
             const _ = "right" == _ ? 90 : 270;
-            return _.createElement(_.V5W, {
+            return (0, _.jsx)(_.V5W, {
               fill: _ || "white",
               role: "presentation",
               angle: _,
             });
           }
           case _._.k_EPointyArrow:
-            return _.createElement(_.L0X, {
+            return (0, _.jsx)(_.L0X, {
               fill: _ || "white",
               role: "presentation",
               direction: _ || "left",
@@ -38900,17 +37752,17 @@
         switch (_) {
           default:
           case _._.k_EPillCrumb:
-            return _.createElement(_.IGf, {
+            return (0, _.jsx)(_.IGf, {
               fill: _,
               role: "presentation",
             });
           case _._.k_ECircularCrumb:
-            return _.createElement(_.az8, {
+            return (0, _.jsx)(_.az8, {
               fill: _,
               role: "presentation",
             });
           case _._.k_ESquareCrumb:
-            return _.createElement(_.koA, {
+            return (0, _.jsx)(_.koA, {
               fill: _,
               role: "presentation",
             });
@@ -38938,26 +37790,20 @@
           _ = _ ? _._ : _._;
         let _ = _;
         return (
-          (_ ??= _ ? _.createElement(_.Jru, null) : void 0),
-          (_ ??= _.createElement(
-            _.Fragment,
-            null,
-            " ",
-            _.createElement(_._VW, null),
-          )),
-          _.createElement(
-            _,
-            {
-              toolTipContent: __webpack_require__,
-              className: (0, _._)(
-                _.HelperTooltip,
-                "HelperTooltip",
-                _ && _.Small,
-                _,
-              ),
-            },
-            _,
-          )
+          (_ ??= _ ? (0, _.jsx)(_.Jru, {}) : void 0),
+          (_ ??= (0, _.jsxs)(_.Fragment, {
+            children: [" ", (0, _.jsx)(_._VW, {})],
+          })),
+          (0, _.jsx)(_, {
+            toolTipContent: __webpack_require__,
+            className: (0, _._)(
+              _.HelperTooltip,
+              "HelperTooltip",
+              _ && _.Small,
+              _,
+            ),
+            children: _,
+          })
         );
       }
     },
@@ -38967,6 +37813,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -39060,14 +37907,11 @@
             horizontal: _,
             ..._
           } = this.props;
-          return _.createElement(
-            "div",
-            {
-              ref: this.m_refElement,
-              ..._,
-            },
-            this.props.children,
-          );
+          return (0, _.jsx)("div", {
+            ref: this.m_refElement,
+            ..._,
+            children: this.props.children,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnIntersection", null);
@@ -40616,7 +39460,6 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.Debug = 0)] = "Debug"),
@@ -40668,14 +39511,13 @@
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
         static s_Singleton = null;
-        m_Storage = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
         m_SettingsChangedCallback = new _._();
-        m_bLoading = !1;
+        m_bLoading = !0;
         constructor() {
-          (this.m_Storage = new _._()), this.LoadSettings();
+          this.LoadSettings();
         }
         LogAsLogManager(..._) {
           _(
@@ -40688,13 +39530,14 @@
           );
         }
         async LoadSettings() {
-          (this.m_bLoading = !0),
-            (this.m_bIncludeBacktraceInLog = !!(await this.m_Storage?.GetObject(
-              _.k_IncludeBacktraceInLog_StorageKey,
-            )));
-          const _ = await this.m_Storage?.GetObject(
-            _.k_EnabledLogNames_StorageKey,
+          const _ = (_) => {
+            const _ = localStorage.getItem(_);
+            return _ ? JSON.parse(_) : void 0;
+          };
+          this.m_bIncludeBacktraceInLog = !!_(
+            _.k_IncludeBacktraceInLog_StorageKey,
           );
+          const _ = _(_.k_EnabledLogNames_StorageKey);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -40706,13 +39549,13 @@
           (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
         }
         async SaveSettings() {
-          await this.m_Storage?.StoreObject(
+          localStorage.setItem(
             _.k_EnabledLogNames_StorageKey,
-            Array.from(this.m_setEnabledDebugLogs),
+            JSON.stringify(Array.from(this.m_setEnabledDebugLogs)),
           ),
-            await this.m_Storage?.StoreObject(
+            localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
-              this.m_bIncludeBacktraceInLog,
+              JSON.stringify(this.m_bIncludeBacktraceInLog),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -41751,7 +40594,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 85966), _((_._ = _));
+      return (_ = 69903), _((_._ = _));
       var _;
     });
     _._();

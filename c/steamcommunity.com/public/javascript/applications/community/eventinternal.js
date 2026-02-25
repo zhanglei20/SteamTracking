@@ -39,6 +39,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -95,7 +96,7 @@
                     const _ = await _._.SearchCreatorHomeStore(_, _, _);
                     if (_.token.reason) return;
                     _.current = (0, _._)(
-                      _.createElement(_, {
+                      (0, _.jsx)(_, {
                         list: _,
                         fnSetCurator: _,
                       }),
@@ -122,10 +123,8 @@
             },
             [_, _],
           );
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
               type: "text",
               label: _,
               onChange: _,
@@ -134,45 +133,38 @@
               ref: _,
               tooltip: __webpack_require__,
             }),
-          );
+          });
         },
         _ = (_) => {
           const { list: _, fnSetCurator: __webpack_require__ } = _;
-          return _.createElement(
-            _._,
-            {
-              className: _.SearchResults,
-            },
-            _.map((_) =>
-              _.createElement(
+          return (0, _.jsx)(_._, {
+            className: _.SearchResults,
+            children: _.map((_) =>
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "curatorresult" + _.GetClanAccountID(),
                   onSelected: () => __webpack_require__(_),
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     style: {
                       display: "flex",
                       alignItems: "center",
                     },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.GameImageContainer,
-                    },
-                    _.createElement("img", {
-                      src: _.GetAvatarURLFullSize(),
-                      className: _.AvatarImage,
-                    }),
-                  ),
-                  (0, _._)(_.GetName()),
-                ),
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.GameImageContainer,
+                        children: (0, _.jsx)("img", {
+                          src: _.GetAvatarURLFullSize(),
+                          className: _.AvatarImage,
+                        }),
+                      }),
+                      (0, _._)(_.GetName()),
+                    ],
+                  }),
+                },
+                "curatorresult" + _.GetClanAccountID(),
               ),
             ),
-          );
+          });
         };
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -189,7 +181,7 @@
             );
           })();
           if (!_)
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
               position: "center",
               size: "medium",
@@ -205,34 +197,35 @@
             ),
             _ = _.filter((_) => Boolean(_.gid_clan_event && _.hidden)),
             _ = _.filter((_) => Boolean(_.gid_clan_event && !_.hidden));
-          return _.createElement(
-            "div",
-            null,
-            _.createElement("h1", null, "Migration Sale Tool:"),
-            _.createElement(
-              "p",
-              null,
-              "For unmigrated or migrated but unpublished pages, you can view the existing sale page using a not logged in browser (or incognito mode). You can see the new sale page being built on the store if logged in using a Valve Admin account.",
-            ),
-            _.createElement(_, {
-              strName: "Unmigrated Franchises",
-              records: _,
-            }),
-            _.createElement(_, {
-              strName: "Unmigrated Generic Sale PAges",
-              records: _,
-              bHideByDefault: !0,
-            }),
-            _.createElement(_, {
-              strName: "Migrated but Hidden",
-              records: _,
-            }),
-            _.createElement(_, {
-              strName: "Migrated and Visible",
-              records: _,
-              bHideByDefault: !0,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)("h1", {
+                children: "Migration Sale Tool:",
+              }),
+              (0, _.jsx)("p", {
+                children:
+                  "For unmigrated or migrated but unpublished pages, you can view the existing sale page using a not logged in browser (or incognito mode). You can see the new sale page being built on the store if logged in using a Valve Admin account.",
+              }),
+              (0, _.jsx)(_, {
+                strName: "Unmigrated Franchises",
+                records: _,
+              }),
+              (0, _.jsx)(_, {
+                strName: "Unmigrated Generic Sale PAges",
+                records: _,
+                bHideByDefault: !0,
+              }),
+              (0, _.jsx)(_, {
+                strName: "Migrated but Hidden",
+                records: _,
+              }),
+              (0, _.jsx)(_, {
+                strName: "Migrated and Visible",
+                records: _,
+                bHideByDefault: !0,
+              }),
+            ],
+          });
         }),
         _ = (_) => {
           const {
@@ -241,132 +234,104 @@
               bHideByDefault: _,
             } = _,
             [_, _] = (0, _.useState)(_);
-          return _.createElement(
-            "div",
-            {
-              className: _.SectionContainer,
-            },
-            _.createElement(
-              "h2",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.SectionContainer,
+            children: [
+              (0, _.jsxs)("h2", {
                 className: _.SectionTitle,
                 onDoubleClick: () => _(!_),
-              },
-              _,
-              " (",
-              __webpack_require__.length,
-              ")",
-              _.createElement("span", null, " "),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(!_),
-                },
-                _ ? _.createElement(_.hz4, null) : _.createElement(_.Xjb, null),
-              ),
-            ),
-            _.createElement("hr", null),
-            Boolean(_)
-              ? _.createElement(
-                  _._,
-                  {
+                children: [
+                  _,
+                  " (",
+                  __webpack_require__.length,
+                  ")",
+                  (0, _.jsx)("span", {
+                    children: " ",
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: () => _(!_),
+                    children: _ ? (0, _.jsx)(_.hz4, {}) : (0, _.jsx)(_.Xjb, {}),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("hr", {}),
+              Boolean(_)
+                ? (0, _.jsx)(_._, {
                     onClick: () => _(!1),
-                  },
-                  (0, _._)("#Sale_ShowContents"),
-                )
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  __webpack_require__.map((_) =>
-                    _.createElement(_, {
-                      key: _.sale_page_id,
-                      record: _,
-                    }),
-                  ),
-                ),
-          );
+                    children: (0, _._)("#Sale_ShowContents"),
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: __webpack_require__.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          record: _,
+                        },
+                        _.sale_page_id,
+                      ),
+                    ),
+                  }),
+            ],
+          });
         },
         _ = (0, _._)((_) => {
           const { record: _ } = _,
             _ = (0, _._)(_.clan_account_id);
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)("div", {
                 className: _.RecordCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.RecordInfoCtn,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "sale/" + _.vanity,
-                    },
-                    _.createElement(
-                      "b",
-                      null,
-                      `${_.display_name} - (${_.vanity})`,
-                    ),
-                  ),
-                ),
-                Boolean(_) &&
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href: _.vanity_url,
-                      },
-                      "Sale Page part of ",
-                      _.group_name,
-                    ),
-                  ),
-                Boolean(_.gid_clan_event) &&
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      "a",
-                      {
-                        href:
-                          _._.COMMUNITY_BASE_URL +
-                          "gid/" +
-                          _._.InitFromClanID(
-                            _.clan_account_id,
-                          ).ConvertTo64BitString() +
-                          "/partnerevents/edit/" +
-                          _.gid_clan_event,
-                      },
-                      `Migrated: Event Editor Links: State hidden: ${_.hidden} published: ${_.published} sale/ vanity?: ${_.valve_approved_sale_vanity_id}`,
-                    ),
-                  ),
-              ),
-              Boolean(!_.gid_clan_event || (_.hidden && !_.published)) &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: (_) =>
-                      (0, _._)(
-                        _.createElement(_, {
-                          record: _,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.RecordInfoCtn,
+                    children: [
+                      (0, _.jsx)("div", {
+                        children: (0, _.jsx)("a", {
+                          href: _._.STORE_BASE_URL + "sale/" + _.vanity,
+                          children: (0, _.jsx)("b", {
+                            children: `${_.display_name} - (${_.vanity})`,
+                          }),
                         }),
-                        (0, _._)(_),
-                      ),
-                  },
-                  "Migrate Sale Page",
-                ),
-            ),
-            _.createElement("hr", null),
-          );
+                      }),
+                      Boolean(_) &&
+                        (0, _.jsx)("div", {
+                          children: (0, _.jsxs)("a", {
+                            href: _.vanity_url,
+                            children: ["Sale Page part of ", _.group_name],
+                          }),
+                        }),
+                      Boolean(_.gid_clan_event) &&
+                        (0, _.jsx)("div", {
+                          children: (0, _.jsx)("a", {
+                            href:
+                              _._.COMMUNITY_BASE_URL +
+                              "gid/" +
+                              _._.InitFromClanID(
+                                _.clan_account_id,
+                              ).ConvertTo64BitString() +
+                              "/partnerevents/edit/" +
+                              _.gid_clan_event,
+                            children: `Migrated: Event Editor Links: State hidden: ${_.hidden} published: ${_.published} sale/ vanity?: ${_.valve_approved_sale_vanity_id}`,
+                          }),
+                        }),
+                    ],
+                  }),
+                  Boolean(!_.gid_clan_event || (_.hidden && !_.published)) &&
+                    (0, _.jsx)(_._, {
+                      onClick: (_) =>
+                        (0, _._)(
+                          (0, _.jsx)(_, {
+                            record: _,
+                          }),
+                          (0, _._)(_),
+                        ),
+                      children: "Migrate Sale Page",
+                    }),
+                ],
+              }),
+              (0, _.jsx)("hr", {}),
+            ],
+          });
         }),
         _ = (_) => {
           const { record: _, closeModal: __webpack_require__ } = _,
@@ -376,145 +341,129 @@
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(_.gid_clan_event),
             [_, _] = (0, _.useState)(null);
-          return _.createElement(
-            _._,
-            {
-              strTitle: "Migrate Sale page",
-              strDescription: `Will migrate the sale page ${_.vanity} to the below clan `,
-              bOKDisabled: !_ || _,
-              onOK: () => {
-                _(!0),
-                  _.Get()
-                    .MigrateOrUpdateSalePage(
-                      _.sale_page_id,
-                      _,
-                      _.gid_clan_event,
-                    )
-                    .then(([_, _, __webpack_require__]) => {
-                      _(_), _(_), _(__webpack_require__);
-                    });
-              },
-              onCancel: __webpack_require__,
+          return (0, _.jsxs)(_._, {
+            strTitle: "Migrate Sale page",
+            strDescription: `Will migrate the sale page ${_.vanity} to the below clan `,
+            bOKDisabled: !_ || _,
+            onOK: () => {
+              _(!0),
+                _.Get()
+                  .MigrateOrUpdateSalePage(_.sale_page_id, _, _.gid_clan_event)
+                  .then(([_, _, __webpack_require__]) => {
+                    _(_), _(_), _(__webpack_require__);
+                  });
             },
-            Boolean(_.clan_account_id)
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    null,
-                    "Sale page already migrated. This will update the hidden page with latest migration code",
-                  ),
-                  _.createElement("div", null, "ClanID = ", _.clan_account_id),
-                  _.createElement("div", null, "GID = ", _.gid_clan_event),
-                )
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    bLimitToCreatorHome: !0,
-                    strLabel: "Search for Creator Home to house the Sale Event",
-                    strToolTip:
-                      "Partner Event sales must belong to a creator home (which is a curator with games associated to it from the partner site)",
-                    fnSetCurator: (_) => {
-                      _(_.GetClanAccountID()), _(_);
-                    },
+            onCancel: __webpack_require__,
+            children: [
+              Boolean(_.clan_account_id)
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        children:
+                          "Sale page already migrated. This will update the hidden page with latest migration code",
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: ["ClanID = ", _.clan_account_id],
+                      }),
+                      (0, _.jsxs)("div", {
+                        children: ["GID = ", _.gid_clan_event],
+                      }),
+                    ],
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        bLimitToCreatorHome: !0,
+                        strLabel:
+                          "Search for Creator Home to house the Sale Event",
+                        strToolTip:
+                          "Partner Event sales must belong to a creator home (which is a curator with games associated to it from the partner site)",
+                        fnSetCurator: (_) => {
+                          _(_.GetClanAccountID()), _(_);
+                        },
+                      }),
+                      Boolean(_) &&
+                        (0, _.jsx)(_, {
+                          creatorHome: _,
+                        }),
+                    ],
                   }),
-                  Boolean(_) &&
-                    _.createElement(_, {
-                      creatorHome: _,
+              Boolean(_ && !_) &&
+                (0, _.jsx)(_._, {
+                  position: "center",
+                  size: "medium",
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  children: _,
+                }),
+              Boolean(_) &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _.jsx)("a", {
+                        href: _._.STORE_BASE_URL + "sale/" + _.vanity,
+                        target: "_blank",
+                        children: "Sale Page",
+                      }),
                     }),
-                ),
-            Boolean(_ && !_) &&
-              _.createElement(_._, {
-                position: "center",
-                size: "medium",
-              }),
-            Boolean(_) && _.createElement("div", null, _),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "a",
-                    {
-                      href: _._.STORE_BASE_URL + "sale/" + _.vanity,
-                      target: "_blank",
-                    },
-                    "Sale Page",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "a",
-                    {
-                      href:
-                        _._.COMMUNITY_BASE_URL +
-                        "gid/" +
-                        _._.InitFromClanID(_).ConvertTo64BitString() +
-                        "/partnerevents/edit/" +
-                        _,
-                      target: "_blank",
-                    },
-                    "New Sale Page Editor",
-                  ),
-                ),
-              ),
-          );
+                    (0, _.jsx)("div", {
+                      children: (0, _.jsx)("a", {
+                        href:
+                          _._.COMMUNITY_BASE_URL +
+                          "gid/" +
+                          _._.InitFromClanID(_).ConvertTo64BitString() +
+                          "/partnerevents/edit/" +
+                          _,
+                        target: "_blank",
+                        children: "New Sale Page Editor",
+                      }),
+                    }),
+                  ],
+                }),
+            ],
+          });
         },
         _ = (_) => {
           const { creatorHome: _ } = _,
             _ = _._.InitFromClanID(_.GetClanAccountID()),
             _ = _.GetClanAccountID();
           return _
-            ? _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  null,
-                  "ClanID = ",
-                  _,
-                  " - SteamID ",
-                  __webpack_require__.ConvertTo64BitString(),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "a",
-                    {
+            ? (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      "ClanID = ",
+                      _,
+                      " - SteamID ",
+                      __webpack_require__.ConvertTo64BitString(),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    children: (0, _.jsx)("a", {
                       href:
                         "https://steamsupport.valvesoftware.com/clan/overview/" +
                         __webpack_require__.ConvertTo64BitString(),
-                    },
-                    "Group Support Page",
-                  ),
-                ),
-                Boolean(!_.BIsPartnerEventEditorEnabled()) &&
-                  _.createElement(
-                    "div",
-                    null,
-                    "To use this Creator Home for the sale page migration, the process will need to enable partner event editing on the clan. This both updates the creator home but also puts a small limitation upon it.",
-                    _.createElement(
-                      "a",
-                      {
-                        href: "https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta",
-                        target: "_blank",
-                      },
-                      "Read more about the state here.",
-                    ),
-                  ),
-                _.createElement(_._, {
-                  creatorID: _.GetCreatorHomeIdentifier(),
-                  bHideCreatorType: !0,
-                }),
-              )
+                      children: "Group Support Page",
+                    }),
+                  }),
+                  Boolean(!_.BIsPartnerEventEditorEnabled()) &&
+                    (0, _.jsxs)("div", {
+                      children: [
+                        "To use this Creator Home for the sale page migration, the process will need to enable partner event editing on the clan. This both updates the creator home but also puts a small limitation upon it.",
+                        (0, _.jsx)("a", {
+                          href: "https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta",
+                          target: "_blank",
+                          children: "Read more about the state here.",
+                        }),
+                      ],
+                    }),
+                  (0, _.jsx)(_._, {
+                    creatorID: _.GetCreatorHomeIdentifier(),
+                    bHideCreatorType: !0,
+                  }),
+                ],
+              })
             : null;
         };
       class _ {
@@ -838,71 +787,62 @@
                 (_.current += _),
                 _(new Set(_)));
             };
-          return _.createElement(
-            "div",
-            {
-              className: _().MigrateToolCtn,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _().MigrateToolCtn,
+            children: [
+              (0, _.jsx)("div", {
                 className: _().ToolHeader,
-              },
-              "Partner Events Migration Tools",
-            ),
-            _.map((_) =>
-              _.createElement(_, {
-                key: _._,
-                app: _,
-                bAutoLoad: _,
-                bAutoMigrate: _ || _,
-                nMigrateBatchSize: _,
-                fnOnCompletion: _,
+                children: "Partner Events Migration Tools",
               }),
-            ),
-            _ &&
-              _.createElement(_._, {
-                size: "xlarge",
-                position: "center",
-                string: "initializing",
-              }),
-            !_.length &&
-              _.createElement(_._, {
-                size: "xlarge",
-                position: "center",
-                string: "loading apps",
-              }),
-            _.createElement(
-              "div",
-              {
+              _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    app: _,
+                    bAutoLoad: _,
+                    bAutoMigrate: _ || _,
+                    nMigrateBatchSize: _,
+                    fnOnCompletion: _,
+                  },
+                  _._,
+                ),
+              ),
+              _ &&
+                (0, _.jsx)(_._, {
+                  size: "xlarge",
+                  position: "center",
+                  string: "initializing",
+                }),
+              !_.length &&
+                (0, _.jsx)(_._, {
+                  size: "xlarge",
+                  position: "center",
+                  string: "loading apps",
+                }),
+              (0, _.jsx)("div", {
                 className: _().LoadEventsButton,
                 onClick: () => {
                   _(!1), _(new Set()), _(_ + _);
                 },
-              },
-              "LOAD NEXT PAGE",
-            ),
-            !_ &&
-              _.createElement(
-                "div",
-                {
+                children: "LOAD NEXT PAGE",
+              }),
+              !_ &&
+                (0, _.jsx)("div", {
                   className: _().LoadEventsButton,
                   onClick: () => _(!0),
-                },
-                "MIGRATE ALL ON PAGE",
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: "MIGRATE ALL ON PAGE",
+                }),
+              (0, _.jsx)("div", {
                 className: _().StatusMessage,
-              },
-              _.size +
-                " OF " +
-                _.length +
-                " APPS COMPLETE. #EVENTS: " +
-                _.current,
-            ),
-          );
+                children:
+                  _.size +
+                  " OF " +
+                  _.length +
+                  " APPS COMPLETE. #EVENTS: " +
+                  _.current,
+              }),
+            ],
+          });
         }),
         _ = (0, _._)((_) => {
           const _ = Number(_.app._),
@@ -1002,71 +942,51 @@
             (0, _.useEffect)(() => {
               _ || _ || _ || _.fnOnCompletion(_, _.current);
             }),
-            _.createElement(
-              "div",
-              {
-                className: _().ClanRow,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _().ClanRow,
+              children: [
+                (0, _.jsx)("div", {
                   className: _()._,
-                },
-                _,
-              ),
-              _.createElement(
-                "a",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("a", {
                   className: _().ClanName,
                   href: _,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsxs)("div", {
                   className: _().Counts,
-                },
-                `Loaded: ${_}\tVisible: ${_}\tOld: ${_}`,
-                _ > 0 &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().LinkedAnnouncements,
-                    },
-                    `Linked: ${_}`,
-                  ),
-              ),
-              _
-                ? _.createElement(
-                    "div",
-                    {
+                  children: [
+                    `Loaded: ${_}\tVisible: ${_}\tOld: ${_}`,
+                    _ > 0 &&
+                      (0, _.jsx)("span", {
+                        className: _().LinkedAnnouncements,
+                        children: `Linked: ${_}`,
+                      }),
+                  ],
+                }),
+                _
+                  ? (0, _.jsx)("div", {
                       className: _().LoadEventsButton,
                       onClick: _,
-                    },
-                    "LOAD EVENTS",
-                  )
-                : _
-                  ? _.createElement(_._, {
-                      size: "small",
+                      children: "LOAD EVENTS",
                     })
                   : _
-                    ? _.createElement(
-                        "div",
-                        {
+                    ? (0, _.jsx)(_._, {
+                        size: "small",
+                      })
+                    : _
+                      ? (0, _.jsx)("div", {
                           className: _().MigrateEventsButton,
                           onClick: _,
-                        },
-                        "MIGRATE EVENTS",
-                      )
-                    : _.createElement(
-                        "div",
-                        {
+                          children: "MIGRATE EVENTS",
+                        })
+                      : (0, _.jsx)("div", {
                           className: _().CompleteMessage,
-                        },
-                        "NOTHING TO MIGRATE",
-                      ),
-            )
+                          children: "NOTHING TO MIGRATE",
+                        }),
+              ],
+            })
           );
         });
       var _ = __webpack_require__("chunkid"),
@@ -1079,25 +999,25 @@
             _._.Init(), Promise.all([]).then(() => __webpack_require__(!1));
           }, []),
           _
-            ? _.createElement(_._, {
+            ? (0, _.jsx)(_._, {
                 position: "center",
                 size: "medium",
               })
-            : _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  path: _._.MigrateSaleEvents(),
-                  component: _,
-                }),
-                _.createElement(_._, {
-                  path: _._.MigrateEvents(),
-                  component: _,
-                }),
-                _.createElement(_._, {
-                  component: _._,
-                }),
-              )
+            : (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    path: _._.MigrateSaleEvents(),
+                    component: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    path: _._.MigrateEvents(),
+                    component: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    component: _._,
+                  }),
+                ],
+              })
         );
       }
     },

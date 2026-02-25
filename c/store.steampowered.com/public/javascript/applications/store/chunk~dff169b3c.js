@@ -2950,6 +2950,28 @@
           link: (_) =>
             _._.STORE_BASE_URL + "account/gatedaccess?appid=" + _.appid,
         },
+        30: {
+          titleLoc: (_) => {
+            switch (_.status) {
+              case 1:
+                return "#Notification_ReportedContentAction_Received";
+              case 2:
+                return "#Notification_ReportedContentAction_Sanctioned";
+              case 3:
+                return "#Notification_ReportedContentAction_Acquitted";
+              case 4:
+                return "#Notification_ReportedContentAction_DisputeReceived";
+              case 5:
+                return "#Notification_ReportedContentAction_DisputeSanctioned";
+              case 6:
+                return "#Notification_ReportedContentAction_DisputeAcquitted";
+              default:
+                return "#Notification_ReportedContentAction_Unknown";
+            }
+          },
+          link: (_) =>
+            `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_.subject_type}-${_.subject_group_id}-${_.subject_id}`,
+        },
       };
       function _(_) {
         if (void 0 !== _) return _[_];
@@ -3464,6 +3486,39 @@
                 this.AddNotificationToRollupByAppID(_, _, _, _, _, _);
               }
               break;
+            case 30:
+              const _ = _(_),
+                _ = _?.report_id,
+                _ = _?.subject_type,
+                _ = _?.subject_group_id,
+                _ = _?.subject_id,
+                _ = `contentreport_${_}`;
+              let _ = _.findIndex((_) => _.rollup_key == _);
+              if (-1 == _)
+                _.push({
+                  type: _,
+                  rollup_key: _,
+                  item: _,
+                  rollup_count: 1,
+                  timestamp: _.timestamp,
+                  rgunread: _.read ? [] : [_.notification_id],
+                  rgread: _.read ? [_.notification_id] : [],
+                  bSendToCallbackAsNew: _,
+                  url: `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`,
+                });
+              else {
+                let _ = _[_];
+                this.BReplaceRollupItem(_, _.item) &&
+                  ((_.url = `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}-${_}-${_}`),
+                  (_.item = _),
+                  (_.timestamp = _.timestamp),
+                  (_.bSendToCallbackAsNew = _)),
+                  (_.rollup_count = _.rollup_count + 1),
+                  _.read
+                    ? _.rgread.push(_.notification_id)
+                    : _.rgunread.push(_.notification_id);
+              }
+              break;
             case 8:
               const _ = _(_)?.appid;
               _ &&
@@ -3699,6 +3754,14 @@
               rtExpiration: _.expiration,
               thumbnailURL: _.thumbnail_url,
             };
+          case 30:
+            return {
+              report_id: _.report_id ?? "",
+              subject_type: _.subject_type ?? 0,
+              subject_group_id: _.subject_group_id ?? "0",
+              subject_id: _.subject_id ?? "0",
+              status: _.status ?? 0,
+            };
           default:
             return (
               _(
@@ -3827,6 +3890,10 @@
         29: {
           rollup_field: void 0,
           eFeature: 6,
+        },
+        30: {
+          rollup_field: void 0,
+          eFeature: _._,
         },
       };
       function _(_) {

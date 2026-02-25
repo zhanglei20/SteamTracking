@@ -1065,6 +1065,301 @@
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      var _ = {
+        "./af": 30911,
+        "./af.js": 30911,
+        "./ar": 63595,
+        "./ar-dz": 99358,
+        "./ar-dz.js": 99358,
+        "./ar-kw": 46830,
+        "./ar-kw.js": 46830,
+        "./ar-ly": 26067,
+        "./ar-ly.js": 26067,
+        "./ar-ma": 64154,
+        "./ar-ma.js": 64154,
+        "./ar-ps": 90753,
+        "./ar-ps.js": 90753,
+        "./ar-sa": 53616,
+        "./ar-sa.js": 53616,
+        "./ar-tn": 19026,
+        "./ar-tn.js": 19026,
+        "./ar.js": 63595,
+        "./az": 87043,
+        "./az.js": 87043,
+        "./be": 28437,
+        "./be.js": 28437,
+        "./bg": 29843,
+        "./bg.js": 29843,
+        "./bm": 39421,
+        "./bm.js": 39421,
+        "./bn": 41300,
+        "./bn-bd": 54487,
+        "./bn-bd.js": 54487,
+        "./bn.js": 41300,
+        "./bo": 40827,
+        "./bo.js": 40827,
+        "./br": 35120,
+        "./br.js": 35120,
+        "./bs": 41991,
+        "./bs.js": 41991,
+        "./ca": 47504,
+        "./ca.js": 47504,
+        "./cs": 98346,
+        "./cs.js": 98346,
+        "./cv": 17525,
+        "./cv.js": 17525,
+        "./cy": 80872,
+        "./cy.js": 80872,
+        "./da": 48787,
+        "./da.js": 48787,
+        "./de": 30199,
+        "./de-at": 33461,
+        "./de-at.js": 33461,
+        "./de-ch": 97995,
+        "./de-ch.js": 97995,
+        "./de.js": 30199,
+        "./dv": 14682,
+        "./dv.js": 14682,
+        "./el": 52549,
+        "./el.js": 52549,
+        "./en-au": 5706,
+        "./en-au.js": 5706,
+        "./en-ca": 50584,
+        "./en-ca.js": 50584,
+        "./en-gb": 41685,
+        "./en-gb.js": 41685,
+        "./en-ie": 32050,
+        "./en-ie.js": 32050,
+        "./en-il": 35545,
+        "./en-il.js": 35545,
+        "./en-in": 42551,
+        "./en-in.js": 42551,
+        "./en-nz": 10620,
+        "./en-nz.js": 10620,
+        "./en-sg": 16222,
+        "./en-sg.js": 16222,
+        "./eo": 88124,
+        "./eo.js": 88124,
+        "./es": 59784,
+        "./es-do": 30300,
+        "./es-do.js": 30300,
+        "./es-mx": 47292,
+        "./es-mx.js": 47292,
+        "./es-us": 36469,
+        "./es-us.js": 36469,
+        "./es.js": 59784,
+        "./et": 56349,
+        "./et.js": 56349,
+        "./eu": 6782,
+        "./eu.js": 6782,
+        "./fa": 86749,
+        "./fa.js": 86749,
+        "./fi": 52469,
+        "./fi.js": 52469,
+        "./fil": 2989,
+        "./fil.js": 2989,
+        "./fo": 50743,
+        "./fo.js": 50743,
+        "./fr": 34916,
+        "./fr-ca": 96853,
+        "./fr-ca.js": 96853,
+        "./fr-ch": 81566,
+        "./fr-ch.js": 81566,
+        "./fr.js": 34916,
+        "./fy": 82949,
+        "./fy.js": 82949,
+        "./ga": 80932,
+        "./ga.js": 80932,
+        "./gd": 82671,
+        "./gd.js": 82671,
+        "./gl": 95687,
+        "./gl.js": 95687,
+        "./gom-deva": 67330,
+        "./gom-deva.js": 67330,
+        "./gom-latn": 7021,
+        "./gom-latn.js": 7021,
+        "./gu": 78728,
+        "./gu.js": 78728,
+        "./he": 28211,
+        "./he.js": 28211,
+        "./hi": 15487,
+        "./hi.js": 15487,
+        "./hr": 94106,
+        "./hr.js": 94106,
+        "./hu": 14147,
+        "./hu.js": 14147,
+        "./hy-am": 23862,
+        "./hy-am.js": 23862,
+        "./id": 78825,
+        "./id.js": 78825,
+        "./is": 57612,
+        "./is.js": 57612,
+        "./it": 9497,
+        "./it-ch": 75653,
+        "./it-ch.js": 75653,
+        "./it.js": 9497,
+        "./ja": 2209,
+        "./ja.js": 2209,
+        "./jv": 85668,
+        "./jv.js": 85668,
+        "./ka": 6904,
+        "./ka.js": 6904,
+        "./kk": 2138,
+        "./kk.js": 2138,
+        "./km": 81660,
+        "./km.js": 81660,
+        "./kn": 88613,
+        "./kn.js": 88613,
+        "./ko": 57894,
+        "./ko.js": 57894,
+        "./ku": 28468,
+        "./ku-kmr": 57123,
+        "./ku-kmr.js": 57123,
+        "./ku.js": 28468,
+        "./ky": 91808,
+        "./ky.js": 91808,
+        "./lb": 47070,
+        "./lb.js": 47070,
+        "./lo": 56505,
+        "./lo.js": 56505,
+        "./lt": 53656,
+        "./lt.js": 53656,
+        "./lv": 83746,
+        "./lv.js": 83746,
+        "./me": 42486,
+        "./me.js": 42486,
+        "./mi": 82,
+        "./mi.js": 82,
+        "./mk": 14792,
+        "./mk.js": 14792,
+        "./ml": 10845,
+        "./ml.js": 10845,
+        "./mn": 46939,
+        "./mn.js": 46939,
+        "./mr": 5575,
+        "./mr.js": 5575,
+        "./ms": 81424,
+        "./ms-my": 43179,
+        "./ms-my.js": 43179,
+        "./ms.js": 81424,
+        "./mt": 30341,
+        "./mt.js": 30341,
+        "./my": 72834,
+        "./my.js": 72834,
+        "./nb": 75292,
+        "./nb.js": 75292,
+        "./ne": 23753,
+        "./ne.js": 23753,
+        "./nl": 53922,
+        "./nl-be": 77542,
+        "./nl-be.js": 77542,
+        "./nl.js": 53922,
+        "./nn": 81304,
+        "./nn.js": 81304,
+        "./oc-lnc": 41156,
+        "./oc-lnc.js": 41156,
+        "./pa-in": 17851,
+        "./pa-in.js": 17851,
+        "./pl": 66636,
+        "./pl.js": 66636,
+        "./pt": 13252,
+        "./pt-br": 95189,
+        "./pt-br.js": 95189,
+        "./pt.js": 13252,
+        "./ro": 5451,
+        "./ro.js": 5451,
+        "./ru": 981,
+        "./ru.js": 981,
+        "./sd": 49139,
+        "./sd.js": 49139,
+        "./se": 24684,
+        "./se.js": 24684,
+        "./si": 85448,
+        "./si.js": 85448,
+        "./sk": 61682,
+        "./sk.js": 61682,
+        "./sl": 17595,
+        "./sl.js": 17595,
+        "./sq": 61360,
+        "./sq.js": 61360,
+        "./sr": 45897,
+        "./sr-cyrl": 80616,
+        "./sr-cyrl.js": 80616,
+        "./sr.js": 45897,
+        "./ss": 15034,
+        "./ss.js": 15034,
+        "./sv": 78213,
+        "./sv.js": 78213,
+        "./sw": 47494,
+        "./sw.js": 47494,
+        "./ta": 48387,
+        "./ta.js": 48387,
+        "./te": 90951,
+        "./te.js": 90951,
+        "./tet": 83675,
+        "./tet.js": 83675,
+        "./tg": 99753,
+        "./tg.js": 99753,
+        "./th": 59844,
+        "./th.js": 59844,
+        "./tk": 84429,
+        "./tk.js": 84429,
+        "./tl-ph": 54645,
+        "./tl-ph.js": 54645,
+        "./tlh": 56946,
+        "./tlh.js": 56946,
+        "./tr": 8630,
+        "./tr.js": 8630,
+        "./tzl": 79480,
+        "./tzl.js": 79480,
+        "./tzm": 13839,
+        "./tzm-latn": 36313,
+        "./tzm-latn.js": 36313,
+        "./tzm.js": 13839,
+        "./ug-cn": 26648,
+        "./ug-cn.js": 26648,
+        "./uk": 24192,
+        "./uk.js": 24192,
+        "./ur": 8335,
+        "./ur.js": 8335,
+        "./uz": 21351,
+        "./uz-latn": 60785,
+        "./uz-latn.js": 60785,
+        "./uz.js": 21351,
+        "./vi": 9541,
+        "./vi.js": 9541,
+        "./x-pseudo": 309,
+        "./x-pseudo.js": 309,
+        "./yo": 21512,
+        "./yo.js": 21512,
+        "./zh-cn": 98562,
+        "./zh-cn.js": 98562,
+        "./zh-hk": 7374,
+        "./zh-hk.js": 7374,
+        "./zh-mo": 87107,
+        "./zh-mo.js": 87107,
+        "./zh-tw": 34518,
+        "./zh-tw.js": 34518,
+      };
+      function _(_) {
+        var _ = _(_);
+        return __webpack_require__(_);
+      }
+      function _(_) {
+        if (!__webpack_require__._(_, _)) {
+          var _ = new Error("Cannot find module '" + _ + "'");
+          throw ((_.code = "MODULE_NOT_FOUND"), _);
+        }
+        return _[_];
+      }
+      (_.keys = function () {
+        return Object.keys(_);
+      }),
+        (_.resolve = _),
+        (module.exports = _),
+        (_._ = 61738);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -1527,20 +1822,176 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        bOpenEventLandingPage = !1;
+        bIncludeFeaturedAsGameSource = !0;
+        nOverrideDateNow = void 0;
+        get bRequireAllEventsLoadedInTimeBlock() {
+          return !1;
+        }
+        get bIncludeCurators() {
+          return !0;
+        }
+        GetTimeNowWithOverride() {
+          return this.nOverrideDateNow
+            ? this.nOverrideDateNow
+            : Math.floor(Date.now() / 1e3);
+        }
+        GetTimeNowWithOverrideAsDate() {
+          return this.nOverrideDateNow
+            ? new Date(1e3 * this.nOverrideDateNow)
+            : new Date();
+        }
+        BHasTimeOverride() {
+          return Boolean(this.nOverrideDateNow);
+        }
+        ParseDevOverrides(_) {
+          if (!_ || 0 == _.length) return;
+          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
+          if (
+            _.has("t") &&
+            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
+          ) {
+            const _ = _.get("t");
+            let _ = /^\d+$/.test(_ ?? "")
+              ? _().unix(Number.parseInt(_ ?? "0"))
+              : _()(_);
+            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
+              console.log(
+                "CEventCalendarDevFeatures overriding partner event time: " +
+                  this.nOverrideDateNow +
+                  " " +
+                  __webpack_require__.format(),
+              );
+          }
+        }
+      }
+      (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
+      const _ = new _();
+      window.g_EventCalendarDevFeatures = _;
+      const _ = new Date(),
+        _ = Math.floor(_.getTime() / 1e3);
+      function _() {
+        return _.nOverrideDateNow ?? _;
+      }
+      function _() {
+        return _.useMemo(() => _(), []);
+      }
+      function _() {
+        return _.useMemo(() => _.GetTimeNowWithOverrideAsDate(), []);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, ...__webpack_require__ } = _,
           _ = _.useRef(null);
-        return _.createElement(
-          _._,
-          {
-            nodeRef: _,
-            ...__webpack_require__,
-          },
-          _.children(_),
-        );
+        return (0, _.jsx)(_._, {
+          nodeRef: _,
+          ...__webpack_require__,
+          children: _.children(_),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        let _;
+        if ("string" == typeof _) _ = _;
+        else if ("location" in _) _ = _.location.search;
+        else {
+          if (!("search" in _)) return;
+          _ = _.search;
+        }
+        const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
+        if (_.has(_)) {
+          const _ = _.getAll(_);
+          return _[_.length - 1];
+        }
+      }
+      function _(_, _, _, _ = !1) {
+        const _ = new URLSearchParams(_.location.search.substring(1));
+        if (null != _ && null != _) {
+          if (_.get(_) == _) return;
+          _.set(_, _);
+        } else {
+          if (!_.has(_)) return;
+          _.delete(_);
+        }
+        _
+          ? _.replace(`?${_.toString()}`, {
+              ..._.location.state,
+            })
+          : _.push(`?${_.toString()}`);
+      }
+      function _(_, _, _) {
+        _(_, _, _, !0);
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _.useMemo)(() => {
+            const _ = _(_.search, _);
+            return null != _ && null != _
+              ? null != _ && null != _
+                ? "boolean" == typeof _
+                  ? _.constructor("false" !== _)
+                  : _.constructor(_)
+                : _
+              : _;
+          }, [_.search, _, _]),
+          _ = (0, _.useCallback)(
+            (_, _ = !1) => {
+              _(_, _, null != _ && null != _ ? String(_) : null, _);
+            },
+            [_, _],
+          );
+        return [_, _];
+      }
+      function _(_, _, __webpack_require__ = !1) {
+        const _ = new URLSearchParams(_.location.search.substring(1));
+        for (const _ in _)
+          if (_.hasOwnProperty(_)) {
+            const _ = _[_];
+            _.delete(_), null != _ && null != _ && _.append(_, _);
+          }
+        _
+          ? _.replace(`?${_.toString()}`, {
+              ..._.location.state,
+            })
+          : _.push(`?${_.toString()}`);
+      }
+      function _(_, _) {
+        _(_, _, !0);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1557,35 +2008,30 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: _.closeModal,
-            bDisableBackgroundDismiss: !0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _.closeModal,
+          bDisableBackgroundDismiss: !0,
+          children: (0, _.jsx)(_, {
             redirectURL: _.redirectURL,
             guestOption: _.guestOption,
           }),
-        );
+        });
       }
       function _(_) {
         const { redirectURL: _ = window.location.href } = _;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(_, {
+        return (0, _.jsx)(_._, {
+          active: !0,
+          children: (0, _.jsx)(_, {
             redirectURL: _,
           }),
-        );
+        });
       }
       function _() {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -1597,7 +2043,7 @@
       }
       function _(_, _) {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ownerWin: window,
             redirectURL: _,
             guestOption: _,
@@ -1614,31 +2060,27 @@
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [_, _] = (0, _.useState)(!1);
-        return _.createElement(
-          "div",
-          null,
-          _
-            ? _.createElement(_._, null)
-            : _.createElement(
-                _._,
-                {
-                  autoFocus: !0,
-                  transport: _,
-                  platform: 2,
-                  onComplete: (_) => {
-                    _ == _._.k_PrimaryDomainFail
-                      ? _(!0)
-                      : window.location.assign(_);
-                  },
-                  redirectUrl: _,
-                  theme: "modal",
+        return (0, _.jsx)("div", {
+          children: _
+            ? (0, _.jsx)(_._, {})
+            : (0, _.jsx)(_._, {
+                autoFocus: !0,
+                transport: _,
+                platform: 2,
+                onComplete: (_) => {
+                  _ == _._.k_PrimaryDomainFail
+                    ? _(!0)
+                    : window.location.assign(_);
                 },
-                __webpack_require__ &&
-                  _.createElement(_._, {
+                redirectUrl: _,
+                theme: "modal",
+                children:
+                  __webpack_require__ &&
+                  (0, _.jsx)(_._, {
                     redirectURL: _,
                   }),
-              ),
-        );
+              }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1653,7 +2095,7 @@
       function _(_) {
         const { navigate: _, onClick: __webpack_require__, ..._ } = _,
           { target: _ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           ..._,
           onClick: (_) => {
             try {
@@ -1672,13 +2114,13 @@
         });
       }
       function _(_) {
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           component: _,
           ..._,
         });
       }
       function _(_) {
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           component: _,
           ..._,
         });
@@ -1706,7 +2148,7 @@
             (_.minWidth = _),
             (_.borderWidth = _ / 10 + "px");
         }
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(
             _.Loading,
             "small" == _ && _.Small,
@@ -1728,7 +2170,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           className: (0, _._)(_, _.UnstyledButton),
           ...__webpack_require__,
         });
@@ -1741,33 +2183,25 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
         const { spacing: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _.Provider,
-          {
-            value: _(_),
-          },
-          __webpack_require__,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: _(_),
+          children: __webpack_require__,
+        });
       }
       function _(_) {
         const _ = _();
-        return _.createElement(
-          "div",
-          {
-            style: _(_),
-          },
-          _.createElement(
-            _.Provider,
-            {
-              value: null,
-            },
-            _.children,
-          ),
-        );
+        return (0, _.jsx)("div", {
+          style: _(_),
+          children: (0, _.jsx)(_.Provider, {
+            value: null,
+            children: _.children,
+          }),
+        });
       }
       function _() {
         return (0, _.useContext)(_);
@@ -1803,6 +2237,26 @@
           padding: _,
           scrollPadding: _,
         };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1850,6 +2304,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 8e3;
@@ -2007,62 +2462,79 @@
           switch (_) {
             case _.Gold:
               _ = _.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  style: _,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    style: _,
+                  },
+                  _,
+                ),
               );
               break;
             case _.LNY2020:
               _ = _.map((_, _) =>
                 _ % 2
-                  ? _.createElement(_, {
-                      key: _,
-                      style: _,
-                    })
-                  : _.createElement(_, {
-                      key: _,
-                      style: _,
-                    }),
+                  ? (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    )
+                  : (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    ),
               );
               break;
             case _.Default:
               _ = _.map((_, _) =>
-                _.createElement(_, {
-                  key: _,
-                  style: _,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    style: _,
+                  },
+                  _,
+                ),
               );
           }
-          return _.createElement(
-            "div",
-            {
-              style: {
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                overflow: "hidden",
-              },
-              ref: __webpack_require__,
+          return (0, _.jsxs)("div", {
+            style: {
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              overflow: "hidden",
             },
-            _,
-            _.map((_, _) =>
-              _.flRandom > 0.5
-                ? _.createElement(_, {
-                    key: _,
-                    style: _,
-                  })
-                : _.createElement(_, {
-                    key: _,
-                    style: _,
-                  }),
-            ),
-          );
+            ref: __webpack_require__,
+            children: [
+              _,
+              _.map((_, _) =>
+                _.flRandom > 0.5
+                  ? (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    )
+                  : (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    ),
+              ),
+            ],
+          });
         },
         _ = ({ style: _ }) =>
-          _.createElement(_._.div, {
+          (0, _.jsx)(_._.div, {
             style: {
               ..._,
               ..._,
@@ -2071,7 +2543,7 @@
         _ = ({ style: _ }) => {
           const [_] = (0, _.useState)(Math.floor(Math.random() * _.length)),
             _ = _[_];
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             style: {
               ..._,
               ..._,
@@ -2082,7 +2554,7 @@
         _ = ({ style: _ }) => {
           const [_] = (0, _.useState)(Math.floor(Math.random() * _.length)),
             _ = _[_];
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             style: {
               ..._,
               ..._,
@@ -2091,289 +2563,256 @@
           });
         },
         _ = ({ style: _ }) =>
-          _.createElement(
-            _._.svg,
-            {
-              viewBox: "0 0 80 620",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              style: {
-                width: 10,
-                height: 70,
-                ..._,
-              },
+          (0, _.jsx)(_._.svg, {
+            viewBox: "0 0 80 620",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: {
+              width: 10,
+              height: 70,
+              ..._,
             },
-            _.createElement("path", {
+            children: (0, _.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               _: "M0.53418 0.446363C4.80788 7.96949 8.99436 15.2008 13.0073 22.1324C35.0383 60.1862 51.8397 89.2071 49.1318 107.895C48.8475 101.617 47.1164 95.1506 43.6182 89.4997C22.9652 56.1375 -2.34054 7.06674 0.53418 0.446363ZM56.8207 188.805C55.1885 180.279 48.7591 170.011 41.3806 161.521C37.204 156.715 9.25983 141.889 7.31883 141.711L7.31474 141.711L7.31468 141.71L7.31452 141.71L7.11268 139.174L6.5244 131.791L6.5251 131.791L6.52505 131.79L6.52672 131.791C34.8022 129.659 47.1567 121.526 49.1318 107.895C49.6795 119.989 44.859 131.385 36.9599 134.917C33.2606 136.571 29.1329 137.843 25.1609 138.813C32.3599 142.599 44.0294 149.927 51.5956 160.751C60.8324 173.966 58.2537 184.901 56.8207 188.805ZM14.1541 214.387C28.3318 211.43 49.5183 206.914 54.7559 200.428C57.1974 197.404 57.6912 193.352 56.8207 188.805C56.4544 189.804 56.163 190.342 56.163 190.342C50.7646 194.114 26.0806 200.624 11.3908 204.497L11.3906 204.497L11.3904 204.497C7.40758 205.548 4.15949 206.404 2.22967 206.96L2.67009 212.483L3.21786 219.36C12.4021 224.467 20.8538 228.732 28.2879 232.483C70.3706 253.717 79.8458 258.498 5.02032 306.544C5.02047 306.546 5.02063 306.548 5.02078 306.55C5.01989 306.548 5.019 306.547 5.01812 306.545C5.24371 309.369 5.53845 312.547 5.79092 315.269C5.89859 316.43 5.99858 317.508 6.08223 318.44C6.15188 319.464 6.19564 320.436 6.20554 321.424C6.20464 321.331 6.23688 321.223 6.30064 321.101C6.31949 321.398 6.32799 321.609 6.32408 321.719C6.27561 321.616 6.23528 321.518 6.20333 321.425C6.28038 321.817 6.31788 321.895 6.32408 321.719C7.33553 323.874 11.894 328.285 17.8731 334.069C41.6329 357.056 87.8264 401.748 23.0228 412.886C23.5764 419.833 23.1631 419.992 23.1631 419.992C23.1631 419.992 24.3205 419.752 26.2506 419.305C34.1052 423.989 55.3095 438.589 58.8169 442.625C66.1955 451.115 72.6248 461.382 74.2571 469.909C73.8908 470.907 73.5993 471.446 73.5993 471.446C68.4367 475.053 42.2327 481.635 25.7172 485.783L25.7152 485.783L25.7147 485.784L25.7135 485.784L25.7028 485.787C20.6602 487.053 16.5222 488.093 14.1645 488.751L13.6222 488.439L13.6585 488.894L13.653 488.896L13.6602 488.916L14.4124 498.36C47.1778 516.58 73.923 535.597 77.6114 557.121C77.1891 558.457 76.6366 559.776 75.9628 561.084C62.5946 587.039 41.1874 608.612 24.1016 619.88C66.6744 596.331 80.8095 575.784 77.6114 557.121C81.823 543.801 73.0945 528.757 42.6319 505.104L26.8056 496.013C27.3301 495.908 27.8664 495.802 28.4133 495.693L28.4153 495.693C43.5756 492.685 66.9267 488.052 72.1923 481.531C74.6338 478.508 75.1275 474.456 74.2571 469.909C75.69 466.004 78.2687 455.069 69.032 441.855C57.4339 425.262 36.1944 416.886 36.1944 416.886L35.6563 416.927C41.635 415.285 48.7178 413.074 54.4334 410.519C66.4332 405.154 68.2307 384.374 57.9941 367.838C51.515 357.372 43.7231 350.194 35.4751 342.596C27.6489 335.386 19.4122 327.798 11.4967 316.664C12.7089 315.779 14.0928 314.791 15.6091 313.709C40.2963 296.086 100.082 253.407 25.4758 221.439L14.1541 214.387Z",
               fill: _.fill,
             }),
-          ),
+          }),
         _ = ({ style: _ }) =>
-          _.createElement(
-            _._.svg,
-            {
-              viewBox: "0 0 203 295",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              style: {
-                width: 10,
-                height: 20,
-                ..._,
-              },
+          (0, _.jsx)(_._.svg, {
+            viewBox: "0 0 203 295",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: {
+              width: 10,
+              height: 20,
+              ..._,
             },
-            _.createElement("path", {
+            children: (0, _.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               _: "M104.427 22.6009L104.428 22.6013C125.146 59.4015 140.687 87.0059 133.282 102.839C134.662 95.3303 133.62 86.4659 129.246 79.1843C112.124 50.6796 91.1453 8.75528 93.5285 3.10091C97.2525 9.85693 100.914 16.3611 104.427 22.6009ZM142.726 166.38C141.373 159.096 136.043 150.323 129.926 143.069C127.078 139.691 110.154 127.651 103.342 123.396C101.494 123.638 100.371 123.725 100.371 123.725C100.371 123.725 100.713 123.589 100.254 117.655C119.247 116.187 129.407 111.125 133.282 102.839C131.985 109.898 128.547 115.759 123.726 117.978C120.124 119.637 116.182 120.838 112.579 121.699C116.941 123.721 130.418 130.653 138.395 142.414C146.052 153.705 143.914 163.045 142.726 166.38ZM103.389 188.664C103.824 188.575 104.268 188.484 104.721 188.392L104.722 188.392C117.291 185.827 136.649 181.876 141.015 176.307C143.039 173.725 143.448 170.264 142.726 166.38C142.423 167.232 142.181 167.693 142.181 167.693C137.901 170.772 116.177 176.387 102.486 179.926C98.3006 181.007 94.8659 181.895 92.9093 182.457L92.4596 182.191L92.4896 182.579C92.4878 182.58 92.486 182.58 92.4842 182.581L92.4914 182.602L93.1147 190.665C120.278 206.239 142.45 222.491 145.508 240.879C145.158 242.02 144.7 243.146 144.141 244.263C133.059 266.43 115.312 284.852 101.148 294.472C136.441 274.369 148.16 256.821 145.508 240.879C149 229.501 141.764 216.649 116.509 196.435L103.389 188.664Z",
               fill: _.fill,
             }),
-          ),
+          }),
         _ = [
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 48 102",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 5,
-                  height: 10,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 102",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 5,
+                height: 10,
+                ..._,
               },
-              _.createElement("path", {
+              children: (0, _.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 _: "M45.8382 77.0734L24 0L2.16179 77.0734C0.773631 79.3013 0 81.7786 0 84.3885C0 84.4894 0.00115761 84.5902 0.00346361 84.6908L0 84.703H0.00374963C0.23239 94.2845 10.8883 102 24 102C37.1117 102 47.7676 94.2845 47.9963 84.703H48L47.9965 84.6908C47.9988 84.5902 48 84.4894 48 84.3885C48 81.7786 47.2264 79.3013 45.8382 77.0734Z",
                 fill: "#F7D51E",
               }),
-            ),
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 50 39",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 7,
-                  ..._,
-                },
+            (0, _.jsxs)(_._.svg, {
+              viewBox: "0 0 50 39",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 7,
+                ..._,
               },
-              _.createElement("path", {
-                _: "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
-                fill: "#C4C4C4",
-              }),
-              _.createElement("path", {
-                _: "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
-                fill: _.fill,
-              }),
-            ),
+              children: [
+                (0, _.jsx)("path", {
+                  _: "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
+                  fill: "#C4C4C4",
+                }),
+                (0, _.jsx)("path", {
+                  _: "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
+                  fill: _.fill,
+                }),
+              ],
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 68 69",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 10,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 68 69",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 10,
+                ..._,
               },
-              _.createElement("rect", {
+              children: (0, _.jsx)("rect", {
                 _: "34.6389",
                 width: "48",
                 height: "48",
                 transform: "rotate(-45 0 34.6389)",
                 fill: _.fill,
               }),
-            ),
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 48 48",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 10,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 48",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 10,
+                ..._,
               },
-              _.createElement("path", {
+              children: (0, _.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 _: "M24 0L0 24L24 47.9999L48 24L24 0ZM23.7089 8.48533L8.48527 23.7089L23.7089 38.9325L38.9324 23.7089L23.7089 8.48533Z",
                 fill: _.fill,
               }),
-            ),
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 48 30",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 8,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 30",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
               },
-              _.createElement("ellipse", {
+              children: (0, _.jsx)("ellipse", {
                 _: "24",
                 _: "15",
                 _: "24",
                 _: "15",
                 fill: _.fill,
               }),
-            ),
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 48 30",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 8,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 30",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
               },
-              _.createElement("ellipse", {
+              children: (0, _.jsx)("ellipse", {
                 _: "24",
                 _: "15",
                 _: "24",
                 _: "15",
                 fill: _.fill,
               }),
-            ),
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 48 30",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 8,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 30",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
               },
-              _.createElement("ellipse", {
+              children: (0, _.jsx)("ellipse", {
                 _: "24",
                 _: "15",
                 _: "24",
                 _: "15",
                 fill: _.fill,
               }),
-            ),
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                viewBox: "0 0 48 39",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 8,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 39",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
               },
-              _.createElement("path", {
+              children: (0, _.jsx)("path", {
                 _: "M33.8287 29.6914L24.9705 21.1201C23.199 24.5487 23.4612 24.5487 21.4282 27.9773C19.3952 31.4058 13.4557 29.6914 12.57 27.9773C7.25553 22.8344 10.7985 17.6914 12.57 15.9773C19.656 5.69155 36.5247 4.54869 48 5.69155C47.4095 4.54865 45.5199 1.92 42.6855 0.548571C39.1425 -1.16571 1.94169 0.548571 0.170191 14.2629C-1.60131 27.9771 10.7992 38.2629 21.4282 38.2629C29.9314 38.2629 33.2382 32.5486 33.8287 29.6914Z",
                 fill: _.fill,
               }),
-            ),
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                width: "48",
-                height: "35",
-                viewBox: "0 0 48 35",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                style: {
-                  width: 10,
-                  height: 7,
-                  ..._,
-                },
+            (0, _.jsx)(_._.svg, {
+              width: "48",
+              height: "35",
+              viewBox: "0 0 48 35",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 7,
+                ..._,
               },
-              _.createElement("path", {
+              children: (0, _.jsx)("path", {
                 _: "M48 0H0L24 35L48 0Z",
                 fill: _.fill,
               }),
-            ),
+            }),
         ],
         _ = [
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 54 47.18",
-                style: {
-                  width: 28,
-                  height: 28,
-                  ..._,
-                },
+            (0, _.jsxs)(_._.svg, {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 54 47.18",
+              style: {
+                width: 28,
+                height: 28,
+                ..._,
               },
-              _.createElement("polygon", {
-                fill: "#60000e",
-                points: "10.02 14.06 10.02 14.06 10.02 14.06 10.02 14.06",
-              }),
-              _.createElement("path", {
-                fill: "#f93838",
-                _: "M54,9.53A9.52,9.52,0,0,0,37.74,2.79a10.82,10.82,0,0,0-2.25,3.54,21.52,21.52,0,0,0-1.19,4.08A16.55,16.55,0,0,0,27,8.73h-.24a16.38,16.38,0,0,0-7,1.69,22.41,22.41,0,0,0-1.2-4.09,10.82,10.82,0,0,0-2.25-3.54A9.52,9.52,0,1,0,2.79,16.26h0a10.82,10.82,0,0,0,3.54,2.25,23.87,23.87,0,0,0,5,1.36,16.34,16.34,0,0,0-.94,5.48h0v0a16.57,16.57,0,0,0,4.92,11.81A7.36,7.36,0,0,1,17.05,40a10.5,10.5,0,0,0,10,7.15,10.38,10.38,0,0,0,6.17-2,10.57,10.57,0,0,0,3.77-5.11,7.48,7.48,0,0,1,1.79-2.89,16.66,16.66,0,0,0,4-17.3l.65-.12a22.44,22.44,0,0,0,4.31-1.24,10.82,10.82,0,0,0,3.54-2.25L50.9,16l.31.31A9.5,9.5,0,0,0,54,9.53ZM32.11,21.28a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.4,8.4,0,0,0-2.59-.39,8.59,8.59,0,0,0-2.43.34h0a.44.44,0,1,1-.26-.84Zm-7.88,8.64a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.35,8.35,0,0,0-2.59-.39,8.46,8.46,0,0,0-2.42.34h0a.44.44,0,1,1-.26-.84ZM24.31,33a.45.45,0,0,1,.54-.32l2.16.55,2.14-.55a.45.45,0,0,1,.54.32.44.44,0,0,1-.32.53l-2.25.58a.41.41,0,0,1-.22,0l-2.27-.58h0A.44.44,0,0,1,24.31,33ZM21.9,21.34a.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27A8.35,8.35,0,0,0,19,21.78a8.46,8.46,0,0,0-2.42.34h0a.44.44,0,0,1-.26-.84A9.27,9.27,0,0,1,19,20.9,9.06,9.06,0,0,1,21.9,21.34Zm-1.6,8.08h0v0a.41.41,0,0,1,0-.1c0-.08-.06-.19-.12-.33a4.39,4.39,0,0,0-.47-.95,2.16,2.16,0,0,0-.43-.5,1.11,1.11,0,0,0-.24-.16.7.7,0,0,0-.25-.05.88.88,0,0,0-.29.05,1.82,1.82,0,0,0-.4.24,5,5,0,0,0-1.16,1.3.66.66,0,0,1-.92.17.65.65,0,0,1-.17-.91,7.44,7.44,0,0,1,1.1-1.32A3.45,3.45,0,0,1,18,26.13a2.21,2.21,0,0,1,.75-.14,2,2,0,0,1,.87.21,2.37,2.37,0,0,1,.66.49,4.41,4.41,0,0,1,.84,1.21,7.08,7.08,0,0,1,.3.72c.1.27.14.45.15.46h0a.67.67,0,0,1-.47.81A.66.66,0,0,1,20.3,29.42Zm12.19,8.86a4.18,4.18,0,0,1-.92.52,7.57,7.57,0,0,1-1.11,2.55A4.85,4.85,0,0,1,28.58,43a3.56,3.56,0,0,1-3.16,0,4.71,4.71,0,0,1-1.33-1,7.14,7.14,0,0,1-1.66-3.24,4.18,4.18,0,0,1-.92-.52.44.44,0,0,1-.1-.61.45.45,0,0,1,.62-.1,2.89,2.89,0,0,0,1.76.61,3,3,0,0,0,1.58-.47,4.28,4.28,0,0,0,1.26-1.31.43.43,0,0,1,.74,0,4.28,4.28,0,0,0,1.26,1.31,3,3,0,0,0,1.58.47A2.89,2.89,0,0,0,32,37.57h0a.45.45,0,0,1,.62.1A.44.44,0,0,1,32.49,38.28ZM38,29.07a.66.66,0,0,1-.92-.17,6.25,6.25,0,0,0-.9-1.09,2.25,2.25,0,0,0-.66-.45.88.88,0,0,0-.29-.05.58.58,0,0,0-.28.07,1,1,0,0,0-.31.23,3.29,3.29,0,0,0-.58.84c-.1.21-.19.42-.25.59s-.12.37-.13.38h0a.66.66,0,0,1-.8.47.67.67,0,0,1-.47-.81s.07-.25.2-.58a6.91,6.91,0,0,1,.59-1.2,3.66,3.66,0,0,1,.69-.79,2.3,2.3,0,0,1,.56-.35,1.82,1.82,0,0,1,.78-.17,2.21,2.21,0,0,1,.75.14,3,3,0,0,1,.73.41,6.6,6.6,0,0,1,1.46,1.62A.65.65,0,0,1,38,29.07Z",
-              }),
-              _.createElement("path", {
-                fill: "#f93838",
-                _: "M27,40.35c1.12,0,1.55-.37,1.89-1.53a4.17,4.17,0,0,1-.73-.37A5,5,0,0,1,27,37.39a5,5,0,0,1-1.16,1.06,4.17,4.17,0,0,1-.73.37C25.45,40,25.88,40.35,27,40.35Z",
-              }),
-            ),
+              children: [
+                (0, _.jsx)("polygon", {
+                  fill: "#60000e",
+                  points: "10.02 14.06 10.02 14.06 10.02 14.06 10.02 14.06",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#f93838",
+                  _: "M54,9.53A9.52,9.52,0,0,0,37.74,2.79a10.82,10.82,0,0,0-2.25,3.54,21.52,21.52,0,0,0-1.19,4.08A16.55,16.55,0,0,0,27,8.73h-.24a16.38,16.38,0,0,0-7,1.69,22.41,22.41,0,0,0-1.2-4.09,10.82,10.82,0,0,0-2.25-3.54A9.52,9.52,0,1,0,2.79,16.26h0a10.82,10.82,0,0,0,3.54,2.25,23.87,23.87,0,0,0,5,1.36,16.34,16.34,0,0,0-.94,5.48h0v0a16.57,16.57,0,0,0,4.92,11.81A7.36,7.36,0,0,1,17.05,40a10.5,10.5,0,0,0,10,7.15,10.38,10.38,0,0,0,6.17-2,10.57,10.57,0,0,0,3.77-5.11,7.48,7.48,0,0,1,1.79-2.89,16.66,16.66,0,0,0,4-17.3l.65-.12a22.44,22.44,0,0,0,4.31-1.24,10.82,10.82,0,0,0,3.54-2.25L50.9,16l.31.31A9.5,9.5,0,0,0,54,9.53ZM32.11,21.28a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.4,8.4,0,0,0-2.59-.39,8.59,8.59,0,0,0-2.43.34h0a.44.44,0,1,1-.26-.84Zm-7.88,8.64a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.35,8.35,0,0,0-2.59-.39,8.46,8.46,0,0,0-2.42.34h0a.44.44,0,1,1-.26-.84ZM24.31,33a.45.45,0,0,1,.54-.32l2.16.55,2.14-.55a.45.45,0,0,1,.54.32.44.44,0,0,1-.32.53l-2.25.58a.41.41,0,0,1-.22,0l-2.27-.58h0A.44.44,0,0,1,24.31,33ZM21.9,21.34a.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27A8.35,8.35,0,0,0,19,21.78a8.46,8.46,0,0,0-2.42.34h0a.44.44,0,0,1-.26-.84A9.27,9.27,0,0,1,19,20.9,9.06,9.06,0,0,1,21.9,21.34Zm-1.6,8.08h0v0a.41.41,0,0,1,0-.1c0-.08-.06-.19-.12-.33a4.39,4.39,0,0,0-.47-.95,2.16,2.16,0,0,0-.43-.5,1.11,1.11,0,0,0-.24-.16.7.7,0,0,0-.25-.05.88.88,0,0,0-.29.05,1.82,1.82,0,0,0-.4.24,5,5,0,0,0-1.16,1.3.66.66,0,0,1-.92.17.65.65,0,0,1-.17-.91,7.44,7.44,0,0,1,1.1-1.32A3.45,3.45,0,0,1,18,26.13a2.21,2.21,0,0,1,.75-.14,2,2,0,0,1,.87.21,2.37,2.37,0,0,1,.66.49,4.41,4.41,0,0,1,.84,1.21,7.08,7.08,0,0,1,.3.72c.1.27.14.45.15.46h0a.67.67,0,0,1-.47.81A.66.66,0,0,1,20.3,29.42Zm12.19,8.86a4.18,4.18,0,0,1-.92.52,7.57,7.57,0,0,1-1.11,2.55A4.85,4.85,0,0,1,28.58,43a3.56,3.56,0,0,1-3.16,0,4.71,4.71,0,0,1-1.33-1,7.14,7.14,0,0,1-1.66-3.24,4.18,4.18,0,0,1-.92-.52.44.44,0,0,1-.1-.61.45.45,0,0,1,.62-.1,2.89,2.89,0,0,0,1.76.61,3,3,0,0,0,1.58-.47,4.28,4.28,0,0,0,1.26-1.31.43.43,0,0,1,.74,0,4.28,4.28,0,0,0,1.26,1.31,3,3,0,0,0,1.58.47A2.89,2.89,0,0,0,32,37.57h0a.45.45,0,0,1,.62.1A.44.44,0,0,1,32.49,38.28ZM38,29.07a.66.66,0,0,1-.92-.17,6.25,6.25,0,0,0-.9-1.09,2.25,2.25,0,0,0-.66-.45.88.88,0,0,0-.29-.05.58.58,0,0,0-.28.07,1,1,0,0,0-.31.23,3.29,3.29,0,0,0-.58.84c-.1.21-.19.42-.25.59s-.12.37-.13.38h0a.66.66,0,0,1-.8.47.67.67,0,0,1-.47-.81s.07-.25.2-.58a6.91,6.91,0,0,1,.59-1.2,3.66,3.66,0,0,1,.69-.79,2.3,2.3,0,0,1,.56-.35,1.82,1.82,0,0,1,.78-.17,2.21,2.21,0,0,1,.75.14,3,3,0,0,1,.73.41,6.6,6.6,0,0,1,1.46,1.62A.65.65,0,0,1,38,29.07Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#f93838",
+                  _: "M27,40.35c1.12,0,1.55-.37,1.89-1.53a4.17,4.17,0,0,1-.73-.37A5,5,0,0,1,27,37.39a5,5,0,0,1-1.16,1.06,4.17,4.17,0,0,1-.73.37C25.45,40,25.88,40.35,27,40.35Z",
+                }),
+              ],
+            }),
           ({ style: _ }) =>
-            _.createElement(
-              _._.svg,
-              {
-                version: "1.1",
-                xmlns: "http://www.w3.org/2000/svg",
-                _: "0px",
-                _: "0px",
-                viewBox: "0 0 14.5 22",
-                style: {
-                  width: 28,
-                  height: 28,
-                  ..._,
-                },
+            (0, _.jsxs)(_._.svg, {
+              version: "1.1",
+              xmlns: "http://www.w3.org/2000/svg",
+              _: "0px",
+              _: "0px",
+              viewBox: "0 0 14.5 22",
+              style: {
+                width: 28,
+                height: 28,
+                ..._,
               },
-              _.createElement("path", {
-                fill: "#fc1010",
-                _: "M1.6,10.1c0,0-0.1,0-0.4-0.1C1,10,0.8,9.9,0.8,9.9c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,9c0.1-0.1,0.2-0.3,0.5-0.6C1.8,8.1,2,7.8,2.2,7.5c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2C2.6,7,2.7,6.8,2.8,6.5c0-0.1,0.1-0.2,0.1-0.3C3,6.1,3,6,3,5.9c0-0.2-0.1-0.4-0.2-0.5C2.6,5.3,2.4,5.3,2.1,5.3c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2V3.5l0.5-0.2C1.6,3.2,2,3.1,2.5,3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2C6.1,6.8,5.7,7.2,5.1,7.6h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8V9v0.3c0,0.2,0,0.4-0.1,0.5C6.6,10,6.5,10,6.2,10c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,10.1,1.6,10.1,1.6,10.1z",
-              }),
-              _.createElement("path", {
-                fill: "#fc1010",
-                _: "M9.8,10.3c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1C8.1,9.8,8,9.8,8,9.7L7.8,9.6c-0.1,0-0.1-0.1-0.2-0.1C7.4,9.3,7.2,9,7.1,8.6C7,8.3,6.9,8,6.9,7.6c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1C8.5,3.1,8.8,3,9.1,2.9c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4C14.2,8.6,14,9,13.7,9.3c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,10.3,9.9,10.3,9.8,10.3z M11.2,8.3c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3c-0.1-0.1-0.1-0.1-0.3-0.1c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,6.2C9.9,6.4,9.9,6.6,9.9,6.8c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,8.6,11.1,8.5,11.2,8.3z",
-              }),
-              _.createElement("path", {
-                fill: "#fc1010",
-                _: "M1.6,17.5c0,0-0.1,0-0.4-0.1c-0.2,0-0.4-0.1-0.4-0.1c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,16.4c0.1-0.1,0.2-0.3,0.5-0.6c0.2-0.2,0.4-0.5,0.7-0.9c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2c0.1-0.1,0.2-0.3,0.3-0.6c0-0.1,0.1-0.2,0.1-0.3C3,13.5,3,13.4,3,13.3c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.4-0.1-0.7-0.1c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2v-0.1l0.5-0.2c0.4-0.1,0.9-0.2,1.3-0.3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2c-0.3,0.4-0.7,0.8-1.3,1.2h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8v0.3v0.3c0,0.2,0,0.4-0.1,0.5c-0.1,0.1-0.3,0.2-0.5,0.2c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,17.5,1.6,17.5,1.6,17.5z",
-              }),
-              _.createElement("path", {
-                fill: "#fc1010",
-                _: "M9.8,17.7c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1L7.8,17c-0.1,0-0.1-0.1-0.2-0.1c-0.2-0.2-0.4-0.5-0.5-0.9C7,15.7,6.9,15.4,6.9,15c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0.2-0.1,0.5-0.2,0.8-0.3c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4c-0.1,0.5-0.3,0.9-0.7,1.2c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,17.7,9.9,17.7,9.8,17.7z M11.2,15.7c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3C10.9,12,10.8,12,10.7,12c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,13.6c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,16,11.1,15.9,11.2,15.7z",
-              }),
-            ),
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M1.6,10.1c0,0-0.1,0-0.4-0.1C1,10,0.8,9.9,0.8,9.9c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,9c0.1-0.1,0.2-0.3,0.5-0.6C1.8,8.1,2,7.8,2.2,7.5c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2C2.6,7,2.7,6.8,2.8,6.5c0-0.1,0.1-0.2,0.1-0.3C3,6.1,3,6,3,5.9c0-0.2-0.1-0.4-0.2-0.5C2.6,5.3,2.4,5.3,2.1,5.3c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2V3.5l0.5-0.2C1.6,3.2,2,3.1,2.5,3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2C6.1,6.8,5.7,7.2,5.1,7.6h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8V9v0.3c0,0.2,0,0.4-0.1,0.5C6.6,10,6.5,10,6.2,10c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,10.1,1.6,10.1,1.6,10.1z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M9.8,10.3c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1C8.1,9.8,8,9.8,8,9.7L7.8,9.6c-0.1,0-0.1-0.1-0.2-0.1C7.4,9.3,7.2,9,7.1,8.6C7,8.3,6.9,8,6.9,7.6c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1C8.5,3.1,8.8,3,9.1,2.9c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4C14.2,8.6,14,9,13.7,9.3c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,10.3,9.9,10.3,9.8,10.3z M11.2,8.3c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3c-0.1-0.1-0.1-0.1-0.3-0.1c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,6.2C9.9,6.4,9.9,6.6,9.9,6.8c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,8.6,11.1,8.5,11.2,8.3z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M1.6,17.5c0,0-0.1,0-0.4-0.1c-0.2,0-0.4-0.1-0.4-0.1c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,16.4c0.1-0.1,0.2-0.3,0.5-0.6c0.2-0.2,0.4-0.5,0.7-0.9c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2c0.1-0.1,0.2-0.3,0.3-0.6c0-0.1,0.1-0.2,0.1-0.3C3,13.5,3,13.4,3,13.3c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.4-0.1-0.7-0.1c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2v-0.1l0.5-0.2c0.4-0.1,0.9-0.2,1.3-0.3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2c-0.3,0.4-0.7,0.8-1.3,1.2h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8v0.3v0.3c0,0.2,0,0.4-0.1,0.5c-0.1,0.1-0.3,0.2-0.5,0.2c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,17.5,1.6,17.5,1.6,17.5z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M9.8,17.7c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1L7.8,17c-0.1,0-0.1-0.1-0.2-0.1c-0.2-0.2-0.4-0.5-0.5-0.9C7,15.7,6.9,15.4,6.9,15c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0.2-0.1,0.5-0.2,0.8-0.3c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4c-0.1,0.5-0.3,0.9-0.7,1.2c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,17.7,9.9,17.7,9.8,17.7z M11.2,15.7c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3C10.9,12,10.8,12,10.7,12c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,13.6c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,16,11.1,15.9,11.2,15.7z",
+                }),
+              ],
+            }),
         ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -6970,16 +7409,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ({ value: _, className: _, ...__webpack_require__ }) =>
-        _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.Discount, _),
-            ...__webpack_require__,
-          },
-          "-",
-          _,
-          "%",
-        );
+        (0, _.jsxs)("div", {
+          className: (0, _._)(_.Discount, _),
+          ...__webpack_require__,
+          children: ["-", _, "%"],
+        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _({ definition: _, theme: _, ...__webpack_require__ }) {
@@ -6999,7 +7433,7 @@
         };
       }
       const _ = (0, _._)((_) =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._(_),
           }),
         ),
@@ -7019,28 +7453,24 @@
               ..._
             } = _,
             _ = _(_);
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              className: (0, _._)(_.BundleContainer, _),
-              style: {
-                ..._,
-                width: "524px",
-              },
-              onActivate: _,
+          return (0, _.jsxs)(_._, {
+            display: "flex",
+            flexDirection: "column",
+            className: (0, _._)(_.BundleContainer, _),
+            style: {
               ..._,
+              width: "524px",
             },
-            __webpack_require__ &&
-              _.createElement("img", {
-                title: _,
-                src: __webpack_require__,
-                className: _.AppIcon,
-              }),
-            _.createElement(
-              _._,
-              {
+            onActivate: _,
+            ..._,
+            children: [
+              __webpack_require__ &&
+                (0, _.jsx)("img", {
+                  title: _,
+                  src: __webpack_require__,
+                  className: _.AppIcon,
+                }),
+              (0, _.jsx)(_._, {
                 flex: "1",
                 style: {
                   width: "484px",
@@ -7049,22 +7479,22 @@
                   position: "relative",
                   alignSelf: "center",
                 },
-              },
-              _.createElement(_, {
-                items: _.items,
-                visible: 5,
-                width: 464,
-                cardSize: 90,
-                offer: _,
+                children: (0, _.jsx)(_, {
+                  items: _.items,
+                  visible: 5,
+                  width: 464,
+                  cardSize: 90,
+                  offer: _,
+                }),
               }),
-            ),
-            _.createElement(_, {
-              label: _,
-              count: _.items.length,
-              cost: _,
-              discount: _.discount,
-            }),
-          );
+              (0, _.jsx)(_, {
+                label: _,
+                count: _.items.length,
+                cost: _,
+                discount: _.discount,
+              }),
+            ],
+          });
         }),
         _ = ({
           cost: _,
@@ -7073,50 +7503,43 @@
           count: _,
         }) => {
           const _ = `${__webpack_require__} (${_})`;
-          return _.createElement(
-            _._,
-            {
-              padding: "small",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "row",
-              className: _.BundleFooter,
-              title: _,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_._, {
+            padding: "small",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "row",
+            className: _.BundleFooter,
+            title: _,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.BundleName,
-              },
-              _,
-            ),
-            0 === _
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.AlreadyOwned,
-                    },
-                    (0, _._)("#Redeem_BundleItemOwned"),
-                  ),
-                  _.createElement(_._, {
-                    className: _.CheckmarkCircle,
+                children: _,
+              }),
+              0 === _
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.AlreadyOwned,
+                        children: (0, _._)("#Redeem_BundleItemOwned"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _.CheckmarkCircle,
+                      }),
+                    ],
+                  })
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        value: _,
+                        className: _.BundleDiscount,
+                      }),
+                      (0, _.jsx)(_._, {
+                        amount: _,
+                      }),
+                    ],
                   }),
-                )
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    value: _,
-                    className: _.BundleDiscount,
-                  }),
-                  _.createElement(_._, {
-                    amount: _,
-                  }),
-                ),
-          );
+            ],
+          });
         };
       const _ = (0, _._)((_) => {
         const {
@@ -7141,32 +7564,31 @@
             }
             return _;
           })(_, __webpack_require__, _);
-        return _.createElement(
-          "div",
-          {
-            style: {
-              position: "relative",
-            },
-            className: _.ItemHand,
+        return (0, _.jsx)("div", {
+          style: {
+            position: "relative",
           },
-          _.map((_, _) =>
-            _.createElement(
+          className: _.ItemHand,
+          children: _.map((_, _) =>
+            (0, _.jsxs)(
               _,
               {
-                key: `${_.defid}_${_}`,
                 style: _(_, _.length, _, _, _),
+                children: [
+                  _.mapItemOwnership.get(_.defid) &&
+                    (0, _.jsx)(_._, {
+                      className: (0, _._)(_.CheckmarkCircle, _.OwnedItem),
+                    }),
+                  (0, _.jsx)("img", {
+                    src: (0, _._)(_),
+                    className: _.ItemCardImage,
+                  }),
+                ],
               },
-              _.mapItemOwnership.get(_.defid) &&
-                _.createElement(_._, {
-                  className: (0, _._)(_.CheckmarkCircle, _.OwnedItem),
-                }),
-              _.createElement("img", {
-                src: (0, _._)(_),
-                className: _.ItemCardImage,
-              }),
+              `${_.defid}_${_}`,
             ),
           ),
-        );
+        });
       });
       function _(_, _, _, _, _) {
         const _ = 0.42,
@@ -7181,7 +7603,7 @@
         };
       }
       const _ = (_) =>
-        _.createElement(_._, {
+        (0, _.jsx)(_._, {
           padding: "small",
           display: "flex",
           justifyContent: "center",
@@ -7213,6 +7635,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7257,17 +7680,17 @@
             _ = _,
             _ = _ + _,
             _ = _.slice(_, _).map((_, _) =>
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
-                  key: _ + _,
                   ref: 0 === _ ? _ : void 0,
                   className: (0, _._)(
                     0 === _ || _ < _ - 1 ? _ : void 0,
                     _.itemClassName,
                   ),
+                  children: _,
                 },
-                _,
+                _ + _,
               ),
             );
           return {
@@ -7301,16 +7724,13 @@
             iPosition: _,
             ..._
           } = _;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.Container, _),
-              ref: __webpack_require__,
-              "flow-children": "row",
-              ..._,
-            },
-            _,
-          );
+          return (0, _.jsx)(_._, {
+            className: (0, _._)(_.Container, _),
+            ref: __webpack_require__,
+            "flow-children": "row",
+            ..._,
+            children: _,
+          });
         },
         _ = (_) => {
           const {
@@ -7319,21 +7739,21 @@
             fnNext: _,
             fnPrev: _,
           } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              className: (0, _._)(
-                _.LeftArrow,
-                !__webpack_require__ && _.Disabled,
-              ),
-              onClick: _,
-            }),
-            _.createElement(_, {
-              className: (0, _._)(_.RightArrow, !_ && _.Disabled),
-              onClick: _,
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                className: (0, _._)(
+                  _.LeftArrow,
+                  !__webpack_require__ && _.Disabled,
+                ),
+                onClick: _,
+              }),
+              (0, _.jsx)(_, {
+                className: (0, _._)(_.RightArrow, !_ && _.Disabled),
+                onClick: _,
+              }),
+            ],
+          });
         },
         _ = () => (window.ResizeObserver ? _() : _()),
         _ = () => {
@@ -7382,30 +7802,25 @@
           );
         },
         _ = (_) =>
-          _.createElement(
-            "svg",
-            {
-              ..._,
-              viewBox: "0 0 23 36",
-            },
-            _.createElement(
-              "g",
-              null,
-              _.createElement("path", {
+          (0, _.jsx)("svg", {
+            ..._,
+            viewBox: "0 0 23 36",
+            children: (0, _.jsx)("g", {
+              children: (0, _.jsx)("path", {
                 _: "M6 1.5L21 18L6 34.5",
                 stroke: "#EAEAEA",
                 fill: "none",
                 strokeWidth: "4",
               }),
-            ),
-          ),
+            }),
+          }),
         _ = (_) => {
           const { style: _, ...__webpack_require__ } = _,
             _ = {
               transform: "scaleX(-1)",
               ...(_ || {}),
             };
-          return _.createElement(_, {
+          return (0, _.jsx)(_, {
             style: _,
             ...__webpack_require__,
           });
@@ -7418,35 +7833,28 @@
           bLoadingMore: _,
           style: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.MobileContainer,
-          },
-          _.createElement(
-            _._,
-            {
-              "flow-children": "row",
-              className: (0, _._)(_.Container, _.Mobile),
-              style: _._.IN_GAMEPADUI ? null : _,
-            },
-            _.map(__webpack_require__),
-            _.createElement(_._, {
-              trigger: "repeated",
-              rootMargin: "0px 100% 0px 100%",
-              horizontal: !0,
-              onVisibilityChange: (_) => _ && _(),
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_._, {
+          className: _.MobileContainer,
+          children: (0, _.jsxs)(_._, {
+            "flow-children": "row",
+            className: (0, _._)(_.Container, _.Mobile),
+            style: _._.IN_GAMEPADUI ? null : _,
+            children: [
+              _.map(__webpack_require__),
+              (0, _.jsx)(_._, {
+                trigger: "repeated",
+                rootMargin: "0px 100% 0px 100%",
+                horizontal: !0,
+                onVisibilityChange: (_) => _ && _(),
+              }),
+              _ &&
+                (0, _.jsx)("div", {
                   className: _.Loading,
-                },
-                _.createElement(_._, null),
-              ),
-          ),
-        );
+                  children: (0, _.jsx)(_._, {}),
+                }),
+            ],
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7468,29 +7876,25 @@
             } = _,
             _ = `url(${_})`,
             _ = "mobile" === (0, _._)();
-          return _.createElement(
-            _._,
-            {
-              padding: ["small", "large"],
-              flexGrow: 1,
-              display: "flex",
-              flexDirection: "column",
-              className: (0, _._)(_.Container, _),
-              style: _
-                ? {
-                    backgroundImage: _,
-                    ..._,
-                  }
-                : _,
-              ..._,
-            },
-            !_ &&
-              _.createElement(_._, {
-                src: _,
-              }),
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_._, {
+            padding: ["small", "large"],
+            flexGrow: 1,
+            display: "flex",
+            flexDirection: "column",
+            className: (0, _._)(_.Container, _),
+            style: _
+              ? {
+                  backgroundImage: _,
+                  ..._,
+                }
+              : _,
+            ..._,
+            children: [
+              !_ &&
+                (0, _.jsx)(_._, {
+                  src: _,
+                }),
+              (0, _.jsx)(_._, {
                 marginBottom: "medium",
                 display: "flex",
                 flexDirection: "row",
@@ -7499,60 +7903,48 @@
                 style: {
                   zIndex: 1,
                 },
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsxs)(_._, {
                   display: "flex",
                   flexDirection: "column",
                   flexGrow: 1,
                   className: _.TitleContainer,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    display: "flex",
-                    flexGrow: 1,
-                    alignItems: "center",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      style: {
-                        transform: "translatey( -2px )",
-                      },
-                      className: _.Title,
-                    },
-                    _,
-                    " ",
-                  ),
-                  _,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Description,
-                  },
-                  __webpack_require__,
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      display: "flex",
+                      flexGrow: 1,
+                      alignItems: "center",
+                      children: [
+                        (0, _.jsxs)("div", {
+                          style: {
+                            transform: "translatey( -2px )",
+                          },
+                          className: _.Title,
+                          children: [_, " "],
+                        }),
+                        _,
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.Description,
+                      children: __webpack_require__,
+                    }),
+                  ],
+                }),
+              }),
+              (0, _.jsx)(_._, {
                 spacing: ["xsmall", "small"],
                 style: {
                   alignSelf: _ ? "flex-start" : "flex-end",
                 },
                 itemClassName: _,
-              },
-              _,
-            ),
-          );
+                children: _,
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const { theme: _, style: __webpack_require__, ..._ } = _;
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             ..._,
             style: {
               ...__webpack_require__,
@@ -7578,41 +7970,46 @@
         const _ = _(_);
         return 0 === _
           ? null
-          : _.createElement(
+          : (0, _.jsx)(
               _._,
               {
-                key: "HiddenCallout",
                 title: (0, _._)("#HiddenItems_Explanation", _, (0, _._)(_)),
+                children: _(_),
               },
-              _(_),
+              "HiddenCallout",
             );
       }
       const _ = (_) => {
         switch (_.descriptor.type) {
           case 1:
-            const _ = _.createElement(_, {
+            const _ = (0, _.jsx)(_, {
               ..._,
             });
             return _.descriptor.bHomogeneous
-              ? _.createElement(_._, null, _)
+              ? (0, _.jsx)(_._, {
+                  children: _,
+                })
               : _;
           case 0:
-            const _ = _.createElement(_, {
+            const _ = (0, _.jsx)(_, {
               ..._,
             });
             return _.descriptor.bHomogeneous
-              ? _.createElement(_._, null, _)
+              ? (0, _.jsx)(_._, {
+                  children: _,
+                })
               : _;
           case 2:
-            return _.createElement(_._, null, (_) =>
-              "desktop" !== _
-                ? _.createElement(_, {
-                    ..._,
-                  })
-                : _.createElement(_, {
-                    ..._,
-                  }),
-            );
+            return (0, _.jsx)(_._, {
+              children: (_) =>
+                "desktop" !== _
+                  ? (0, _.jsx)(_, {
+                      ..._,
+                    })
+                  : (0, _.jsx)(_, {
+                      ..._,
+                    }),
+            });
           default:
             return (
               console.error(`Unknown cluster display: ${_.descriptor.type}`),
@@ -7645,15 +8042,16 @@
               route: _ ? (0, _._)(_) : void 0,
               bHideHiddenItemCount: !!_,
             };
-          return _.createElement(_._, null, (_) =>
-            "desktop" !== _
-              ? _.createElement(_, {
-                  ..._,
-                })
-              : _.createElement(_, {
-                  ..._,
-                }),
-          );
+          return (0, _.jsx)(_._, {
+            children: (_) =>
+              "desktop" !== _
+                ? (0, _.jsx)(_, {
+                    ..._,
+                  })
+                : (0, _.jsx)(_, {
+                    ..._,
+                  }),
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -7672,43 +8070,35 @@
             _ = (0, _._)();
           if (0 === _) return null;
           const _ = !_ && !_ && _(_);
-          return _.createElement(
-            _._,
-            {
-              title: _,
-              subtitle: _ || void 0,
-              rightActions: _
-                ? _.createElement(
-                    _._,
-                    {
-                      _: _,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: () => _.push(_),
-                      },
-                      (0, _._)("#SeeAllButton"),
-                    ),
-                  )
-                : void 0,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
+          return (0, _.jsx)(_._, {
+            title: _,
+            subtitle: _ || void 0,
+            rightActions: _
+              ? (0, _.jsx)(_._, {
+                  _: _,
+                  children: (0, _.jsx)(_._, {
+                    onClick: () => _.push(_),
+                    children: (0, _._)("#SeeAllButton"),
+                  }),
+                })
+              : void 0,
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
                 items: _,
                 loadMore: () => _(_ + 10),
                 bLoadingMore: _,
                 renderItem: (_) =>
-                  _.createElement(_, {
-                    definition: _,
-                    key: _.defid,
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      definition: _,
+                    },
+                    _.defid,
+                  ),
                 style: _,
               }),
-            ),
-          );
+            }),
+          });
         }),
         _ = (0, _._)((_) => {
           const {
@@ -7722,13 +8112,16 @@
           const _ = _(
               (_, _) => _(_, _).rewards,
               (_) =>
-                _.createElement(_, {
-                  definition: _,
-                  key: _.defid,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    definition: _,
+                  },
+                  _.defid,
+                ),
               {
                 itemClassName: _.ItemHover,
-                fnRenderItemSkeleton: () => _.createElement(_._, null),
+                fnRenderItemSkeleton: () => (0, _.jsx)(_._, {}),
               },
             ),
             _ = _.bAllowNext || _.bAllowPrev;
@@ -7753,39 +8146,41 @@
           return (
             !_ &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
                     _: _,
-                    key: "SeeAll",
+                    children: (0, _.jsx)(_._, {
+                      children: _,
+                    }),
                   },
-                  _.createElement(_._, null, _),
+                  "SeeAll",
                 ),
               ),
             _ &&
               _.push(
-                _.createElement(_, {
-                  key: "CarouselControls",
-                  ..._,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    ..._,
+                  },
+                  "CarouselControls",
+                ),
               ),
             _ && (0 == _.length ? _.push(_) : 0 == _.length && _.push(_)),
-            _.createElement(
-              _._,
-              {
-                title: _,
-                subtitle: __webpack_require__,
-                leftActions: _,
-                rightActions: _,
-              },
-              _.createElement(_, {
+            (0, _.jsx)(_._, {
+              title: _,
+              subtitle: __webpack_require__,
+              leftActions: _,
+              rightActions: _,
+              children: (0, _.jsx)(_, {
                 style: {
                   width: "100%",
                   flexWrap: "wrap",
                 },
                 ..._,
               }),
-            )
+            })
           );
         }),
         _ = (0, _._)((_) => {
@@ -7799,28 +8194,31 @@
           } = _;
           let _ = (_, _) => _(_, _, _);
           const _ = _(_(0, 0));
-          return _.createElement(
-            _._,
-            {
-              title: _ || _,
-              subtitle: __webpack_require__ || _,
-              rightActions: _ || void 0,
-            },
-            _.createElement(_._, {
-              style: {
-                width: "100%",
+          return (0, _.jsx)(_._, {
+            title: _ || _,
+            subtitle: __webpack_require__ || _,
+            rightActions: _ || void 0,
+            children: (0, _.jsx)(
+              _._,
+              {
+                style: {
+                  width: "100%",
+                },
+                itemClassName: _.ItemHover,
+                getItems: _,
+                renderItem: (_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      definition: _,
+                    },
+                    _.defid,
+                  ),
+                renderItemSkeleton: () => (0, _.jsx)(_._, {}),
               },
-              itemClassName: _.ItemHover,
-              getItems: _,
-              renderItem: (_) =>
-                _.createElement(_, {
-                  definition: _,
-                  key: _.defid,
-                }),
-              renderItemSkeleton: () => _.createElement(_._, null),
-              key: `${_}||${JSON.stringify(_)}`,
-            }),
-          );
+              `${_}||${JSON.stringify(_)}`,
+            ),
+          });
         }),
         _ = (0, _._)((_) => {
           const {
@@ -7849,54 +8247,40 @@
             _ =
               _.bLoadingMore && 0 === _.rewards.length
                 ? [
-                    _.createElement(_._, {
-                      key: "0",
-                    }),
-                    _.createElement(_._, {
-                      key: "1",
-                    }),
-                    _.createElement(_._, {
-                      key: "2",
-                    }),
+                    (0, _.jsx)(_._, {}, "0"),
+                    (0, _.jsx)(_._, {}, "1"),
+                    (0, _.jsx)(_._, {}, "2"),
                   ]
                 : _.rewards.map((_) =>
-                    _.createElement(_, {
-                      definition: _,
-                      key: _.defid,
-                      theme: _,
-                    }),
+                    (0, _.jsx)(
+                      _,
+                      {
+                        definition: _,
+                        theme: _,
+                      },
+                      _.defid,
+                    ),
                   );
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              {
-                title: _ || _,
-                description: _ || _,
-                imgSrc: _,
-                fullbleed: _,
-                style: {
-                  width: "100%",
-                },
-                itemClassName: _.ItemHover,
-                actions: _.createElement(
-                  _._,
-                  {
-                    _: _,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      theme: _,
-                    },
-                    (0, _._)("#SeeAllButton"),
-                  ),
-                ),
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
+              title: _ || _,
+              description: _ || _,
+              imgSrc: _,
+              fullbleed: _,
+              style: {
+                width: "100%",
               },
-              _,
-            ),
-          );
+              itemClassName: _.ItemHover,
+              actions: (0, _.jsx)(_._, {
+                _: _,
+                children: (0, _.jsx)(_, {
+                  theme: _,
+                  children: (0, _._)("#SeeAllButton"),
+                }),
+              }),
+              children: _,
+            }),
+          });
         }),
         _ = (0, _._)((_) => {
           const {
@@ -7921,53 +8305,45 @@
               cluster: { title: _, subtitle: _, GetRewards: _ },
             } = _,
             _ = _ ? (0, _._)(_) : void 0;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              {
-                title: _ || _,
-                description: "",
-                imgSrc: _,
-                fullbleed: _,
-                style: {
-                  width: "100%",
-                },
-                itemClassName: _.ItemHover,
-                actions: _.createElement(
-                  _._,
-                  {
-                    _: _,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      onClick: () => _.push(_),
-                      theme: _,
-                      className: _.MobileHeroAction,
-                    },
-                    (0, _._)("#SeeAllButton"),
-                  ),
-                ),
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_, {
+              title: _ || _,
+              description: "",
+              imgSrc: _,
+              fullbleed: _,
+              style: {
+                width: "100%",
               },
-              _.createElement(_, {
+              itemClassName: _.ItemHover,
+              actions: (0, _.jsx)(_._, {
+                _: _,
+                children: (0, _.jsx)(_, {
+                  onClick: () => _.push(_),
+                  theme: _,
+                  className: _.MobileHeroAction,
+                  children: (0, _._)("#SeeAllButton"),
+                }),
+              }),
+              children: (0, _.jsx)(_, {
                 items: _(0, 6, __webpack_require__).rewards,
                 loadMore: () => {},
                 renderItem: (_) =>
-                  _.createElement(_, {
-                    definition: _,
-                    key: _.defid,
-                    theme: _,
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      definition: _,
+                      theme: _,
+                    },
+                    _.defid,
+                  ),
               }),
-            ),
-          );
+            }),
+          });
         }),
         _ = (_) => {
           const { definition: _, theme: __webpack_require__ } = _,
             _ = (0, _._)();
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             definition: _,
             onClick: (_) => {
               5 === _.type || 6 === _.type
@@ -7988,39 +8364,39 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ({ src: _ }) =>
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement("div", {
-              className: _.BackgroundFadeImage,
-              style: {
-                backgroundImage: `url(${_})`,
-              },
-            }),
-            _.createElement("div", {
-              className: _.BackgroundFadeImageBlurred,
-              style: {
-                backgroundImage: `url(${_})`,
-              },
-            }),
-            _.createElement("div", {
-              className: _.BackgroundFade,
-            }),
-          ),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
+                className: _.BackgroundFadeImage,
+                style: {
+                  backgroundImage: `url(${_})`,
+                },
+              }),
+              (0, _.jsx)("div", {
+                className: _.BackgroundFadeImageBlurred,
+                style: {
+                  backgroundImage: `url(${_})`,
+                },
+              }),
+              (0, _.jsx)("div", {
+                className: _.BackgroundFade,
+              }),
+            ],
+          }),
         _ = ({ theme: _ }) =>
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement("div", {
-              className: (0, _._)(_.BackgroundFadeTheme, _),
-            }),
-            _.createElement("div", {
-              className: (0, _._)(_.BackgroundFadeThemeBlurred, _),
-            }),
-            _.createElement("div", {
-              className: _.BackgroundFade,
-            }),
-          );
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.BackgroundFadeTheme, _),
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.BackgroundFadeThemeBlurred, _),
+              }),
+              (0, _.jsx)("div", {
+                className: _.BackgroundFade,
+              }),
+            ],
+          });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -8040,30 +8416,29 @@
             onClick: _,
             ..._
           } = _;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.ItemBox, _),
-              focusable: !0,
-              onActivate: _,
-              ..._,
-            },
-            _.createElement("div", {
-              className: (0, _._)(_.NoBackdropSupportBackdrop),
-            }),
-            __webpack_require__,
-          );
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(_.ItemBox, _),
+            focusable: !0,
+            onActivate: _,
+            ..._,
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.NoBackdropSupportBackdrop),
+              }),
+              __webpack_require__,
+            ],
+          });
         },
         _ = (_) => {
           const { className: _, ...__webpack_require__ } = _;
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: (0, _._)(_.Body, _),
             ...__webpack_require__,
           });
         },
         _ = (_) => {
           const { className: _, ...__webpack_require__ } = _;
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: (0, _._)(_.Footer, _),
             ...__webpack_require__,
           });
@@ -8085,6 +8460,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8151,11 +8527,11 @@
             };
           if (__webpack_require__) {
             const _ = __webpack_require__;
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               ..._,
             });
           }
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             className: _,
             style: _,
             ref: _,
@@ -8176,40 +8552,31 @@
             _ = _(),
             _ = _.spacing[_(_ || _ || "none")],
             _ = _.spacing[_(_ || _ || "none")];
-          return _.createElement(
-            _._,
-            {
-              "flow-children": _,
-              ref: _,
-              style: {
-                ...(_ || {}),
-                marginTop: _(-_),
-              },
-              ..._,
+          return (0, _.jsx)(_._, {
+            "flow-children": _,
+            ref: _,
+            style: {
+              ...(_ || {}),
+              marginTop: _(-_),
             },
-            _.createElement(
-              "div",
-              {
-                style: {
-                  marginLeft: _(-_),
-                },
-                className: _.InlineContainer,
+            ..._,
+            children: (0, _.jsx)("div", {
+              style: {
+                marginLeft: _(-_),
               },
-              _.Children.map(__webpack_require__, (_) =>
+              className: _.InlineContainer,
+              children: _.Children.map(__webpack_require__, (_) =>
                 null != _
-                  ? _.createElement(
-                      _,
-                      {
-                        paddingLeft: _ || _,
-                        paddingTop: _ || _,
-                        className: _,
-                      },
-                      _,
-                    )
+                  ? (0, _.jsx)(_, {
+                      paddingLeft: _ || _,
+                      paddingTop: _ || _,
+                      className: _,
+                      children: _,
+                    })
                   : null,
               ),
-            ),
-          );
+            }),
+          });
         }),
         _ = (0, _.forwardRef)(function (_, _) {
           const {
@@ -8220,27 +8587,21 @@
               ..._
             } = _,
             _ = _.Children.count(_);
-          return _.createElement(
-            _._,
-            {
-              "flow-children": "column",
-              ref: _,
-              className: _,
-              ..._,
-            },
-            _.Children.map(_, (_, _) =>
+          return (0, _.jsx)(_._, {
+            "flow-children": "column",
+            ref: _,
+            className: _,
+            ..._,
+            children: _.Children.map(_, (_, _) =>
               null != _
-                ? _.createElement(
-                    _,
-                    {
-                      paddingBottom: _ !== _ - 1 ? __webpack_require__ : void 0,
-                      className: (0, _._)(_, _.RemoveOnEmpty),
-                    },
-                    _,
-                  )
+                ? (0, _.jsx)(_, {
+                    paddingBottom: _ !== _ - 1 ? __webpack_require__ : void 0,
+                    className: (0, _._)(_, _.RemoveOnEmpty),
+                    children: _,
+                  })
                 : null,
             ),
-          );
+          });
         }),
         _ = (_) => `${_}px`,
         _ = {
@@ -8296,12 +8657,14 @@
             (0, _.useLayoutEffect)(() => {
               _((_) => _ + 1);
             }, [_]),
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("style", null, _),
-              __webpack_require__,
-            )
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("style", {
+                  children: _,
+                }),
+                __webpack_require__,
+              ],
+            })
           );
         };
       const _ = (_, _) => `${_}-${_}`,
@@ -8339,7 +8702,7 @@
         return _.children(_());
       }
       function _(_) {
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           component: _._,
           ..._,
         });
@@ -8354,7 +8717,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { size: _ } = _;
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           size: _,
         });
       }
@@ -8373,29 +8736,24 @@
       const _ = (_) => {
         const { amount: _, className: __webpack_require__, size: _, ..._ } = _,
           _ = _ > 0 ? (0, _._)(_) : (0, _._)("#Rewards_Free");
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.Container, __webpack_require__),
-            ..._,
-          },
-          _.createElement(_.vrn, {
-            className: _.Icon,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.Container, __webpack_require__),
+          ..._,
+          children: [
+            (0, _.jsx)(_.vrn, {
+              className: _.Icon,
+            }),
+            (0, _.jsxs)("div", {
               className: _.Amount,
               style: _
                 ? {
                     fontSize: `${_}rem`,
                   }
                 : void 0,
-            },
-            _,
-            _.children,
-          ),
-        );
+              children: [_, _.children],
+            }),
+          ],
+        });
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -8410,48 +8768,35 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
           _ = _.useRef(void 0);
         return (
           _.useEffect(() => _.current?.Activate(!0), []),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                navID: "LoyaltyShell",
-                navTreeRef: _,
-                className: (0, _._)(_.Shell),
-              },
-              _.createElement(
-                _._,
-                {
-                  domain: "store.steampowered.com",
-                  feature: "pointsshop",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    display: "flex",
-                    flexDirection: "row",
-                    className: _.ShellScrollParent,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      flex: "1",
-                      className: _.ShellScroll,
-                      "flow-children": "column",
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            ),
-          )
+          (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              navID: "LoyaltyShell",
+              navTreeRef: _,
+              className: (0, _._)(_.Shell),
+              children: (0, _.jsx)(_._, {
+                domain: "store.steampowered.com",
+                feature: "pointsshop",
+                children: (0, _.jsx)(_._, {
+                  display: "flex",
+                  flexDirection: "row",
+                  className: _.ShellScrollParent,
+                  children: (0, _.jsx)(_._, {
+                    flex: "1",
+                    className: _.ShellScroll,
+                    "flow-children": "column",
+                    children: _,
+                  }),
+                }),
+              }),
+            }),
+          })
         );
       }
       function _(_) {
@@ -8497,737 +8842,676 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) =>
-          _.createElement(
-            "svg",
-            {
-              viewBox: "0 0 24 24",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ..._,
-            },
-            _.createElement("path", {
+          (0, _.jsx)("svg", {
+            viewBox: "0 0 24 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ..._,
+            children: (0, _.jsx)("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               _: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
             }),
-          ),
+          }),
         _ = (_) =>
-          _.createElement(
-            "svg",
-            {
-              width: 30,
-              height: 30,
-              viewBox: "0 0 30 30",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ..._,
-            },
-            _.createElement("path", {
+          (0, _.jsx)("svg", {
+            width: 30,
+            height: 30,
+            viewBox: "0 0 30 30",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ..._,
+            children: (0, _.jsx)("path", {
               _: "M15.2305 28.1415L15.2305 15.621L15.2305 3.10029C8.31552 3.10029 2.70984 8.70596 2.70984 15.6209C2.70984 22.5359 8.31552 28.1415 15.2305 28.1415ZM30.2305 15.6209C30.2305 23.9052 23.5147 30.6209 15.2305 30.6209C6.9462 30.6209 0.230469 23.9052 0.230469 15.6209C0.230469 7.33664 6.9462 0.620911 15.2305 0.620911C23.5147 0.620911 30.2305 7.33664 30.2305 15.6209Z",
               fill: "#5B7E0F",
             }),
-          );
+          });
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "61px",
-            height: "52px",
-            viewBox: "0 0 61 52",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "61px",
+          height: "52px",
+          viewBox: "0 0 61 52",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M31.327 0.622074L31.0027 0.341797L30.6762 0.619372L7.67619 20.1694L0.676186 26.1194C0.465782 26.2982 0.440197 26.6138 0.61904 26.8242C0.797884 27.0346 1.11343 27.0602 1.32383 26.8813L7.50001 21.6316V49.0003C7.50001 50.3811 8.6193 51.5003 10 51.5003H51.5C52.8807 51.5003 54 50.3811 54 49.0003V21.5426L60.173 26.8786C60.3819 27.0592 60.6977 27.0362 60.8783 26.8273C61.0589 26.6184 61.0359 26.3027 60.827 26.1221L53.827 20.0712L31.327 0.622074ZM8.50001 49.0003V20.7816L30.9973 1.65889L53 20.6782V49.0003C53 49.8288 52.3284 50.5003 51.5 50.5003H38.5V32.0003C38.5 30.6196 37.3807 29.5003 36 29.5003H26C24.6193 29.5003 23.5 30.6196 23.5 32.0003V50.5003H10C9.17158 50.5003 8.50001 49.8288 8.50001 49.0003ZM24.5 50.5003H37.5V32.0003C37.5 31.1719 36.8284 30.5003 36 30.5003H26C25.1716 30.5003 24.5 31.1719 24.5 32.0003V50.5003Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "47px",
-            height: "51px",
-            viewBox: "0 0 47 51",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "47px",
+          height: "51px",
+          viewBox: "0 0 47 51",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M33.9999 10.5C33.9999 15.7034 29.5671 20 23.9999 20C18.4327 20 13.9999 15.7034 13.9999 10.5C13.9999 5.29663 18.4327 1 23.9999 1C29.5671 1 33.9999 5.29663 33.9999 10.5ZM34.9999 10.5C34.9999 16.299 30.075 21 23.9999 21C17.9247 21 12.9999 16.299 12.9999 10.5C12.9999 4.70101 17.9247 0 23.9999 0C30.075 0 34.9999 4.70101 34.9999 10.5ZM16.3702 23.5C10.6886 23.5 5.62398 26.8717 3.72868 32.2547C2.47599 35.8127 1.26935 39.3781 0.768536 40.866C0.549738 41.516 0.803538 42.2172 1.36831 42.5884L4.65592 44.7495C16.463 52.5107 31.809 52.2879 43.3858 44.1873L45.6833 42.5797C46.2215 42.2031 46.452 41.5201 46.2522 40.8944L43.9193 33.5891C42.0002 27.5792 36.4154 23.5 30.1065 23.5H24.2027H16.3702ZM4.67193 32.5868C6.41799 27.6277 11.0872 24.5 16.3702 24.5H24.2027H30.1065C35.9803 24.5 41.1799 28.2979 42.9667 33.8933L45.2996 41.1986C45.3662 41.4072 45.2893 41.6348 45.1099 41.7604L42.8125 43.368C31.5712 51.2338 16.67 51.4501 5.20521 43.9139L1.9176 41.7528C1.72419 41.6257 1.64564 41.3949 1.71629 41.185C2.21655 39.6988 3.42149 36.1384 4.67193 32.5868Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "49px",
-            height: "58px",
-            viewBox: "0 0 49 58",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "49px",
+          height: "58px",
+          viewBox: "0 0 49 58",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M24.5 12C27.5376 12 30 9.53757 30 6.5C30 3.46243 27.5376 1 24.5 1C21.4624 1 19 3.46243 19 6.5C19 9.53757 21.4624 12 24.5 12ZM24.5 13C26.1149 13 27.5923 12.411 28.7291 11.4362L38.2929 21H11.2071L20.5469 11.6602C21.6422 12.5005 23.0128 13 24.5 13ZM9.79289 21L19.8014 10.9915C18.6855 9.8244 18 8.24225 18 6.5C18 2.91015 20.9101 0 24.5 0C28.0899 0 31 2.91015 31 6.5C31 8.11495 30.411 9.59234 29.4362 10.7291L39.7071 21H40H45C46.933 21 48.5 22.567 48.5 24.5V54C48.5 55.933 46.933 57.5 45 57.5H4C2.067 57.5 0.5 55.933 0.5 54V24.5C0.5 22.567 2.067 21 4 21H8H9.79289ZM8 22H4C2.61929 22 1.5 23.1193 1.5 24.5V54C1.5 55.3807 2.61929 56.5 4 56.5H45C46.3807 56.5 47.5 55.3807 47.5 54V24.5C47.5 23.1193 46.3807 22 45 22H40H39.5H39.2929H10.2071H10H8ZM10.5 29C9.11929 29 8 30.1193 8 31.5V48C8 49.3807 9.11929 50.5 10.5 50.5H37.5C38.8807 50.5 40 49.3807 40 48V31.5C40 30.1193 38.8807 29 37.5 29H10.5ZM9 31.5C9 30.6716 9.67157 30 10.5 30H37.5C38.3284 30 39 30.6716 39 31.5V48C39 48.8284 38.3284 49.5 37.5 49.5H10.5C9.67157 49.5 9 48.8284 9 48V31.5Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...__webpack_require__,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ...__webpack_require__,
+          children: (0, _.jsx)("path", {
             fill: "none",
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M2 9H34V27H2V9ZM5 13H7V15H5V13ZM7 21H5V23H7V21ZM5 17H9V19H5V17ZM11 13H9V15H11V13ZM9 21H27V23H9V21ZM15 13H13V15H15V13ZM11 17H13V19H11V17ZM19 13H17V15H19V13ZM15 17H17V19H15V17ZM21 17H19V19H21V17ZM21 13H23V15H21V13ZM25 17H23V19H25V17ZM25 13H27V15H25V13ZM31 13H29V15H31V13ZM29 21H31V23H29V21ZM31 17H27V19H31V17Z",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "64",
-            height: "62",
-            viewBox: "0 0 64 62",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "64",
+          height: "62",
+          viewBox: "0 0 64 62",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M5.68889 0H58.3111C61.44 0 64 2.56 64 5.68889V18.8444H0V5.68889C0 2.56 2.56 0 5.68889 0ZM17.2302 12.7289C17.8183 12.7289 18.2969 12.2503 18.2969 11.6622V6.82667C18.2969 6.23858 17.8183 5.76 17.2302 5.76H7.98578C7.39769 5.76 6.91911 6.23858 6.91911 6.82667V11.6622C6.91911 12.2503 7.39769 12.7289 7.98578 12.7289H17.2302ZM36.6222 12.7289C37.2103 12.7289 37.6889 12.2503 37.6889 11.6622V6.82667C37.6889 6.23858 37.2103 5.76 36.6222 5.76H27.3778C26.7897 5.76 26.3111 6.23858 26.3111 6.82667V11.6622C26.3111 12.2503 26.7897 12.7289 27.3778 12.7289H36.6222ZM56.0142 12.7289C56.603 12.7289 57.0809 12.2503 57.0809 11.6622V6.82667C57.0809 6.23858 56.603 5.76 56.0142 5.76H46.7698C46.1824 5.76 45.7031 6.23858 45.7031 6.82667V11.6622C45.7031 12.2503 46.1824 12.7289 46.7698 12.7289H56.0142ZM5.68889 61.8667C2.56 61.8667 0 59.3067 0 56.1778V22.4H64V56.1778C64 59.3067 61.44 61.8667 58.3111 61.8667H5.68889ZM26.5202 29.9164C24.7673 28.9422 23.3323 29.7856 23.3323 31.7916V48.5639C23.3323 50.5714 24.7666 51.4133 26.5202 50.4391L41.1669 42.3033C43.2697 41.1342 43.2697 39.222 41.1669 38.053L26.5202 29.9164Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "51px",
-            height: "56px",
-            viewBox: "0 0 51 56",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M43.2109 6.95H7.21094C4.00769 6.95 1.41094 9.54675 1.41094 12.75V48.6496C1.41094 51.8528 4.00769 54.4496 7.21094 54.4496H43.2109C46.4142 54.4496 49.0109 51.8528 49.0109 48.6496V12.75C49.0109 9.54675 46.4142 6.95 43.2109 6.95ZM7.21094 5.75C3.34494 5.75 0.210938 8.88401 0.210938 12.75V48.6496C0.210938 52.5156 3.34494 55.6496 7.21094 55.6496H43.2109C47.0769 55.6496 50.2109 52.5156 50.2109 48.6496V12.75C50.2109 8.88401 47.0769 5.75 43.2109 5.75H7.21094Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M50.2109 17.875H0.210938V16.675H50.2109V17.875Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M27.3491 29.4463L25.9645 25.5785C25.7114 24.8714 24.7113 24.8714 24.4581 25.5785L23.0735 29.4463C22.6297 30.6861 21.4717 31.5275 20.1555 31.5664L16.0491 31.688C15.2983 31.7103 14.9893 32.6614 15.5836 33.1207L18.8342 35.6327C19.8762 36.4379 20.3185 37.7992 19.9488 39.0631L18.7956 43.0061C18.5847 43.727 19.3938 44.3148 20.0142 43.8915L23.4079 41.5762C24.4956 40.8341 25.927 40.8341 27.0148 41.5762L30.4084 43.8915C31.0288 44.3148 31.8379 43.727 31.6271 43.0061L30.4738 39.0631C30.1041 37.7992 30.5464 36.4379 31.5884 35.6327L34.839 33.1207C35.4334 32.6614 35.1243 31.7103 34.3735 31.688L30.2672 31.5664C28.9509 31.5275 27.7929 30.6861 27.3491 29.4463ZM27.0943 25.1741C26.4614 23.4062 23.9612 23.4062 23.3283 25.1741L21.9437 29.0419C21.6663 29.8168 20.9426 30.3426 20.1199 30.367L16.0136 30.4886C14.1366 30.5441 13.364 32.922 14.8498 34.0702L18.1005 36.5823C18.7517 37.0855 19.0281 37.9363 18.7971 38.7262L17.6438 42.6692C17.1167 44.4715 19.1394 45.9411 20.6905 44.8828L24.0841 42.5675C24.764 42.1037 25.6586 42.1037 26.3385 42.5675L29.7321 44.8828C31.2832 45.9411 33.306 44.4715 32.7788 42.6692L31.6255 38.7262C31.3945 37.9363 31.6709 37.0855 32.3221 36.5823L35.5728 34.0702C37.0586 32.922 36.286 30.5441 34.409 30.4886L30.3027 30.367C29.48 30.3426 28.7563 29.8168 28.4789 29.0419L27.0943 25.1741Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M16.4922 9.125V0.0268555L17.6922 0.0268555L17.6922 9.125H16.4922Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M17.0234 13.2063C17.8795 13.2063 18.5734 12.5123 18.5734 11.6562C18.5734 10.8002 17.8795 10.1062 17.0234 10.1062C16.1674 10.1062 15.4734 10.8002 15.4734 11.6562C15.4734 12.5123 16.1674 13.2063 17.0234 13.2063ZM17.0234 14.4062C18.5422 14.4062 19.7734 13.175 19.7734 11.6562C19.7734 10.1375 18.5422 8.90625 17.0234 8.90625C15.5047 8.90625 14.2734 10.1375 14.2734 11.6562C14.2734 13.175 15.5047 14.4062 17.0234 14.4062Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M32.8672 9.125V0.0268555L34.0672 0.0268555V9.125H32.8672Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M33.3984 13.2063C34.2545 13.2063 34.9484 12.5123 34.9484 11.6562C34.9484 10.8002 34.2545 10.1062 33.3984 10.1062C32.5424 10.1062 31.8484 10.8002 31.8484 11.6562C31.8484 12.5123 32.5424 13.2063 33.3984 13.2063ZM33.3984 14.4062C34.9172 14.4062 36.1484 13.175 36.1484 11.6562C36.1484 10.1375 34.9172 8.90625 33.3984 8.90625C31.8797 8.90625 30.6484 10.1375 30.6484 11.6562C30.6484 13.175 31.8797 14.4062 33.3984 14.4062Z",
-            fill: "",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "51px",
+          height: "56px",
+          viewBox: "0 0 51 56",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M43.2109 6.95H7.21094C4.00769 6.95 1.41094 9.54675 1.41094 12.75V48.6496C1.41094 51.8528 4.00769 54.4496 7.21094 54.4496H43.2109C46.4142 54.4496 49.0109 51.8528 49.0109 48.6496V12.75C49.0109 9.54675 46.4142 6.95 43.2109 6.95ZM7.21094 5.75C3.34494 5.75 0.210938 8.88401 0.210938 12.75V48.6496C0.210938 52.5156 3.34494 55.6496 7.21094 55.6496H43.2109C47.0769 55.6496 50.2109 52.5156 50.2109 48.6496V12.75C50.2109 8.88401 47.0769 5.75 43.2109 5.75H7.21094Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M50.2109 17.875H0.210938V16.675H50.2109V17.875Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M27.3491 29.4463L25.9645 25.5785C25.7114 24.8714 24.7113 24.8714 24.4581 25.5785L23.0735 29.4463C22.6297 30.6861 21.4717 31.5275 20.1555 31.5664L16.0491 31.688C15.2983 31.7103 14.9893 32.6614 15.5836 33.1207L18.8342 35.6327C19.8762 36.4379 20.3185 37.7992 19.9488 39.0631L18.7956 43.0061C18.5847 43.727 19.3938 44.3148 20.0142 43.8915L23.4079 41.5762C24.4956 40.8341 25.927 40.8341 27.0148 41.5762L30.4084 43.8915C31.0288 44.3148 31.8379 43.727 31.6271 43.0061L30.4738 39.0631C30.1041 37.7992 30.5464 36.4379 31.5884 35.6327L34.839 33.1207C35.4334 32.6614 35.1243 31.7103 34.3735 31.688L30.2672 31.5664C28.9509 31.5275 27.7929 30.6861 27.3491 29.4463ZM27.0943 25.1741C26.4614 23.4062 23.9612 23.4062 23.3283 25.1741L21.9437 29.0419C21.6663 29.8168 20.9426 30.3426 20.1199 30.367L16.0136 30.4886C14.1366 30.5441 13.364 32.922 14.8498 34.0702L18.1005 36.5823C18.7517 37.0855 19.0281 37.9363 18.7971 38.7262L17.6438 42.6692C17.1167 44.4715 19.1394 45.9411 20.6905 44.8828L24.0841 42.5675C24.764 42.1037 25.6586 42.1037 26.3385 42.5675L29.7321 44.8828C31.2832 45.9411 33.306 44.4715 32.7788 42.6692L31.6255 38.7262C31.3945 37.9363 31.6709 37.0855 32.3221 36.5823L35.5728 34.0702C37.0586 32.922 36.286 30.5441 34.409 30.4886L30.3027 30.367C29.48 30.3426 28.7563 29.8168 28.4789 29.0419L27.0943 25.1741Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M16.4922 9.125V0.0268555L17.6922 0.0268555L17.6922 9.125H16.4922Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M17.0234 13.2063C17.8795 13.2063 18.5734 12.5123 18.5734 11.6562C18.5734 10.8002 17.8795 10.1062 17.0234 10.1062C16.1674 10.1062 15.4734 10.8002 15.4734 11.6562C15.4734 12.5123 16.1674 13.2063 17.0234 13.2063ZM17.0234 14.4062C18.5422 14.4062 19.7734 13.175 19.7734 11.6562C19.7734 10.1375 18.5422 8.90625 17.0234 8.90625C15.5047 8.90625 14.2734 10.1375 14.2734 11.6562C14.2734 13.175 15.5047 14.4062 17.0234 14.4062Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M32.8672 9.125V0.0268555L34.0672 0.0268555V9.125H32.8672Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M33.3984 13.2063C34.2545 13.2063 34.9484 12.5123 34.9484 11.6562C34.9484 10.8002 34.2545 10.1062 33.3984 10.1062C32.5424 10.1062 31.8484 10.8002 31.8484 11.6562C31.8484 12.5123 32.5424 13.2063 33.3984 13.2063ZM33.3984 14.4062C34.9172 14.4062 36.1484 13.175 36.1484 11.6562C36.1484 10.1375 34.9172 8.90625 33.3984 8.90625C31.8797 8.90625 30.6484 10.1375 30.6484 11.6562C30.6484 13.175 31.8797 14.4062 33.3984 14.4062Z",
+              fill: "",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            fill: "none",
-            width: "68",
-            height: "68",
-            viewBox: "0 0 68 68",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, _._)(_, "SVGIcon_Button"),
-            ...__webpack_require__,
-          },
-          _.createElement("path", {
-            _: "M57.2981 10.8369L56.9021 9.61803C56.3034 7.77541 53.6966 7.77541 53.0979 9.61803L52.7019 10.8369H51.4203C49.4828 10.8369 48.6773 13.3161 50.2447 14.4549L51.2815 15.2082L50.8855 16.4271C50.2868 18.2697 52.3958 19.8019 53.9632 18.6631L55 17.9098L56.0368 18.6631C57.6042 19.8019 59.7132 18.2697 59.1145 16.4271L58.7185 15.2082L59.7553 14.4549C61.3227 13.3161 60.5172 10.8369 58.5797 10.8369L57.2981 10.8369Z",
-            stroke: "currentColor",
-            fill: "none",
-            strokeWidth: "2",
-          }),
-          _.createElement("rect", {
-            _: "1",
-            _: "1",
-            width: "66",
-            height: "66",
-            _: "9",
-            stroke: "currentColor",
-            fill: "none",
-            strokeWidth: "2",
-          }),
-          _.createElement("rect", {
-            _: "7",
-            _: "7",
-            width: "14",
-            height: "14",
-            _: "3",
-            stroke: "currentColor",
-            fill: "none",
-            strokeWidth: "2",
-          }),
-          _.createElement("rect", {
-            _: "7",
-            _: "26",
-            width: "54",
-            height: "14",
-            _: "3",
-            stroke: "currentColor",
-            fill: "none",
-            strokeWidth: "2",
-          }),
-          _.createElement("rect", {
-            _: "7",
-            _: "46",
-            width: "54",
-            height: "14",
-            _: "3",
-            stroke: "currentColor",
-            fill: "none",
-            strokeWidth: "2",
-          }),
-          _.createElement("line", {
-            _: "26",
-            _: "17",
-            _: "39",
-            _: "17",
-            stroke: "currentColor",
-            fill: "none",
-            strokeWidth: "2",
-            strokeLinecap: "round",
-          }),
-          _.createElement("line", {
-            _: "26",
-            _: "12",
-            _: "45",
-            _: "12",
-            stroke: "currentColor",
-            fill: "none",
-            strokeWidth: "2",
-            strokeLinecap: "round",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          fill: "none",
+          width: "68",
+          height: "68",
+          viewBox: "0 0 68 68",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)(_, "SVGIcon_Button"),
+          ...__webpack_require__,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M57.2981 10.8369L56.9021 9.61803C56.3034 7.77541 53.6966 7.77541 53.0979 9.61803L52.7019 10.8369H51.4203C49.4828 10.8369 48.6773 13.3161 50.2447 14.4549L51.2815 15.2082L50.8855 16.4271C50.2868 18.2697 52.3958 19.8019 53.9632 18.6631L55 17.9098L56.0368 18.6631C57.6042 19.8019 59.7132 18.2697 59.1145 16.4271L58.7185 15.2082L59.7553 14.4549C61.3227 13.3161 60.5172 10.8369 58.5797 10.8369L57.2981 10.8369Z",
+              stroke: "currentColor",
+              fill: "none",
+              strokeWidth: "2",
+            }),
+            (0, _.jsx)("rect", {
+              _: "1",
+              _: "1",
+              width: "66",
+              height: "66",
+              _: "9",
+              stroke: "currentColor",
+              fill: "none",
+              strokeWidth: "2",
+            }),
+            (0, _.jsx)("rect", {
+              _: "7",
+              _: "7",
+              width: "14",
+              height: "14",
+              _: "3",
+              stroke: "currentColor",
+              fill: "none",
+              strokeWidth: "2",
+            }),
+            (0, _.jsx)("rect", {
+              _: "7",
+              _: "26",
+              width: "54",
+              height: "14",
+              _: "3",
+              stroke: "currentColor",
+              fill: "none",
+              strokeWidth: "2",
+            }),
+            (0, _.jsx)("rect", {
+              _: "7",
+              _: "46",
+              width: "54",
+              height: "14",
+              _: "3",
+              stroke: "currentColor",
+              fill: "none",
+              strokeWidth: "2",
+            }),
+            (0, _.jsx)("line", {
+              _: "26",
+              _: "17",
+              _: "39",
+              _: "17",
+              stroke: "currentColor",
+              fill: "none",
+              strokeWidth: "2",
+              strokeLinecap: "round",
+            }),
+            (0, _.jsx)("line", {
+              _: "26",
+              _: "12",
+              _: "45",
+              _: "12",
+              stroke: "currentColor",
+              fill: "none",
+              strokeWidth: "2",
+              strokeLinecap: "round",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 52 46.1",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 52 46.1",
+          children: (0, _.jsx)("path", {
             _: "M51.5,40.2l-6.8-11.7c2.4-2,3.9-5,3.9-8.4c0-6.1-4.9-11-11-11c-1.3,0-2.5,0.2-3.7,0.6L29.4,2c-0.7-1.2-2-2-3.4-2s-2.7,0.7-3.4,2l-4.1,7.1H6.6v20.6l-6,10.5c-0.7,1.2-0.7,2.7,0,4c0.7,1.2,2,2,3.4,2H48c1.4,0,2.7-0.7,3.4-2C52.2,42.9,52.2,41.4,51.5,40.2z M46.6,20.1c0,5-4,9-9,9s-9-4-9-9s4-9,9-9S46.6,15.1,46.6,20.1z M8.6,11.1h8.7L8.6,26.2V11.1zM49.7,43.1c-0.4,0.6-1,1-1.7,1H4c-0.7,0-1.3-0.4-1.7-1c-0.4-0.6-0.4-1.3,0-2L24.3,3c0.4-0.6,1-1,1.7-1s1.3,0.4,1.7,1l4.4,7.6c-3.3,1.9-5.5,5.5-5.5,9.5c0,6.1,4.9,11,11,11c2,0,3.9-0.5,5.5-1.5l6.7,11.5C50.1,41.8,50.1,42.5,49.7,43.1z",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "64px",
-            height: "54px",
-            viewBox: "0 0 64 54",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "64px",
+          height: "54px",
+          viewBox: "0 0 64 54",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M4 0C1.79086 0 0 1.79086 0 4V50C0 52.2091 1.79086 54 4 54H11H53H60C62.2091 54 64 52.2091 64 50V4C64 1.79086 62.2091 0 60 0H53H11H4ZM11 2V52H53V2H11ZM8 25H3V29.8H8V25ZM3 15H8V19.8H3V15ZM8 6H3V10.8H8V6ZM3 34.5996H8V39.3996H3V34.5996ZM8 44.2002H3V49.0002H8V44.2002ZM39.8603 17.535C39.8603 21.0291 36.8085 24.0701 32.7786 24.0701C28.7487 24.0701 25.6969 21.0291 25.6969 17.535C25.6969 14.041 28.7487 11 32.7786 11C36.8085 11 39.8603 14.041 39.8603 17.535ZM41.8603 17.535C41.8603 22.2488 37.7943 26.0701 32.7786 26.0701C27.7629 26.0701 23.6969 22.2488 23.6969 17.535C23.6969 12.8213 27.7629 9 32.7786 9C37.7943 9 41.8603 12.8213 41.8603 17.535ZM30.4484 27.5466C24.6389 27.5466 19.3689 30.9432 17.364 36.4652C16.8368 37.9173 16.3885 39.1885 16.1121 39.9794C15.773 40.9495 16.227 42.0134 17.1535 42.4456L17.9794 42.831C27.4793 47.2632 38.4824 47.1178 47.8618 42.4361C48.7479 41.9938 49.1714 40.9651 48.8535 40.0271L48.0754 37.7315C46.0118 31.6431 40.2979 27.5466 33.8692 27.5466H33.0013H30.4484ZM19.2439 37.1478C20.9397 32.4771 25.4141 29.5466 30.4484 29.5466H33.0013H33.8692C39.4407 29.5466 44.3928 33.0969 46.1812 38.3735L46.9541 40.6538C38.1237 45.056 27.7672 45.1905 18.825 41.0185L18.0018 40.6344C18.2765 39.8484 18.7212 38.5873 19.2439 37.1478ZM61 25H56V29.8H61V25ZM56 15H61V19.8H56V15ZM61 6H56V10.8H61V6ZM56 34.5996H61V39.3996H56V34.5996ZM61 44.2002H56V49.0002H61V44.2002Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "61px",
-            height: "66px",
-            viewBox: "0 0 61 66",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "61px",
+          height: "66px",
+          viewBox: "0 0 61 66",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M58 2H3C2.44772 2 2 2.44772 2 3V49.9671L14.44 40.7192L15.0898 40.2361L15.6975 40.7713L21.5338 45.911L40.422 28.2692L41.1163 27.6207L41.7995 28.2809L59 44.9038V3C59 2.44772 58.5523 2 58 2ZM2 63V52.4592L14.9834 42.8074L20.8927 48.0113L27.4097 53.7505L28.7315 52.2495L23.0419 47.2391L41.0928 30.3793L59 47.6851V63C59 63.5523 58.5523 64 58 64H3C2.44772 64 2 63.5523 2 63ZM3 0C1.34315 0 0 1.34315 0 3V63C0 64.6569 1.34315 66 3 66H58C59.6569 66 61 64.6569 61 63V3C61 1.34315 59.6569 0 58 0H3ZM22.7185 16.2664C22.7185 18.5968 20.8293 20.486 18.4989 20.486C16.1685 20.486 14.2793 18.5968 14.2793 16.2664C14.2793 13.936 16.1685 12.0468 18.4989 12.0468C20.8293 12.0468 22.7185 13.936 22.7185 16.2664ZM24.7185 16.2664C24.7185 19.7014 21.9339 22.486 18.4989 22.486C15.0639 22.486 12.2793 19.7014 12.2793 16.2664C12.2793 12.8314 15.0639 10.0468 18.4989 10.0468C21.9339 10.0468 24.7185 12.8314 24.7185 16.2664Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "33",
-            height: "32",
-            viewBox: "0 0 33 32",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement(
-            "defs",
-            null,
-            _.createElement(
-              "filter",
-              {
+        return (0, _.jsxs)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "33",
+          height: "32",
+          viewBox: "0 0 33 32",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("defs", {
+              children: (0, _.jsxs)("filter", {
                 _: "SoftGlow",
                 height: "300%",
                 width: "300%",
                 _: "-75%",
                 _: "-75%",
-              },
-              _.createElement("feMorphology", {
-                operator: "dilate",
-                radius: "2",
-                _: "SourceAlpha",
-                result: "thicken",
+                children: [
+                  (0, _.jsx)("feMorphology", {
+                    operator: "dilate",
+                    radius: "2",
+                    _: "SourceAlpha",
+                    result: "thicken",
+                  }),
+                  (0, _.jsx)("feGaussianBlur", {
+                    _: "thicken",
+                    stdDeviation: "5",
+                    result: "blurred",
+                  }),
+                  (0, _.jsx)("feFlood", {
+                    floodColor: "rgba(55, 75, 148, .7)",
+                    result: "glowColor",
+                  }),
+                  (0, _.jsx)("feComposite", {
+                    _: "glowColor",
+                    in2: "blurred",
+                    operator: "in",
+                    result: "SoftGlow_colored",
+                  }),
+                  (0, _.jsxs)("feMerge", {
+                    children: [
+                      (0, _.jsx)("feMergeNode", {
+                        _: "SoftGlow_colored",
+                      }),
+                      (0, _.jsx)("feMergeNode", {
+                        _: "SourceGraphic",
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              _.createElement("feGaussianBlur", {
-                _: "thicken",
-                stdDeviation: "5",
-                result: "blurred",
-              }),
-              _.createElement("feFlood", {
-                floodColor: "rgba(55, 75, 148, .7)",
-                result: "glowColor",
-              }),
-              _.createElement("feComposite", {
-                _: "glowColor",
-                in2: "blurred",
-                operator: "in",
-                result: "SoftGlow_colored",
-              }),
-              _.createElement(
-                "feMerge",
-                null,
-                _.createElement("feMergeNode", {
-                  _: "SoftGlow_colored",
-                }),
-                _.createElement("feMergeNode", {
-                  _: "SourceGraphic",
-                }),
-              ),
-            ),
-          ),
-          _.createElement("path", {
-            fill: "none",
-            strokeWidth: ".6px",
-            _: "M31.9861 26.8551C32.2029 26.8551 32.3783 27.0254 32.3783 27.2355V29.2195C32.3783 29.4295 32.2029 29.5998 31.9861 29.5998H1.39223C1.17543 29.5998 1 29.4295 1 29.2195V27.2355C1 27.0254 1.17543 26.8551 1.39223 26.8551H3.20016V1.83469C3.20016 1.62465 3.37559 1.45435 3.59239 1.45435H10.1412C10.358 1.45435 10.5334 1.62465 10.5334 1.83469V5.05554H14.5097V1.83469C14.5097 1.62465 14.6851 1.45435 14.9019 1.45435H19.6631C19.8798 1.45435 20.0553 1.62465 20.0553 1.83469V4.18744L25.4729 3.22867C25.576 3.21139 25.6813 3.23257 25.7663 3.28995C25.8521 3.34734 25.9108 3.43537 25.9291 3.53454L30.1782 26.1126C30.2172 26.3193 30.0759 26.5175 29.8629 26.5552L28.1683 26.8551H31.9861ZM23.5066 22.6202L24.2874 26.7688L29.3362 25.8751L28.5555 21.7266L23.5066 22.6202ZM23.3657 21.8718L28.4147 20.9782L28.0604 19.0957L23.0114 19.989L23.3657 21.8718ZM27.9195 18.3472L25.2278 4.04525L20.1786 4.93891L22.8705 19.2406L27.9195 18.3472ZM20.0553 26.8551H23.5062L20.0553 8.51936V26.8551ZM19.2708 2.21503H15.2941V5.43589V26.8551H19.2708V2.21503ZM14.5097 26.8551V5.81623H10.5334V26.8551H14.5097ZM9.74893 10.38H3.98462V18.6904H9.74893V10.38ZM3.98462 9.6193H9.74893V7.41988H3.98462V9.6193ZM9.74893 19.451H3.98462V21.6503H9.74893V19.451ZM9.74893 5.43589V2.21503H3.98462V6.65919H9.74893V5.43589ZM9.74893 22.411H3.98462V26.8551H9.74893V22.411ZM1.78446 28.8391H31.5939V27.6158H19.6631H14.9019H10.1412H3.59239H1.78446V28.8391ZM13.6023 22.1066H11.4409C11.2241 22.1066 11.0486 21.9363 11.0486 21.7263C11.0486 21.5162 11.2241 21.3459 11.4409 21.3459H13.6023C13.8191 21.3459 13.9946 21.5162 13.9946 21.7263C13.9946 21.9363 13.8191 22.1066 13.6023 22.1066ZM11.4409 19.4512H13.6023C13.8191 19.4512 13.9946 19.2809 13.9946 19.0709C13.9946 18.8608 13.8191 18.6905 13.6023 18.6905H11.4409C11.2241 18.6905 11.0486 18.8608 11.0486 19.0709C11.0486 19.2809 11.2241 19.4512 11.4409 19.4512ZM18.3634 22.1066H16.2016C15.9848 22.1066 15.8093 21.9363 15.8093 21.7263C15.8093 21.5162 15.9848 21.3459 16.2016 21.3459H18.3634C18.5802 21.3459 18.7556 21.5162 18.7556 21.7263C18.7556 21.9363 18.5802 22.1066 18.3634 22.1066ZM16.2016 19.4512H18.3634C18.5802 19.4512 18.7556 19.2809 18.7556 19.0709C18.7556 18.8608 18.5802 18.6905 18.3634 18.6905H16.2016C15.9848 18.6905 15.8093 18.8608 15.8093 19.0709C15.8093 19.2809 15.9848 19.4512 16.2016 19.4512ZM4.80876 14.5352C4.80876 12.8573 5.71273 11.543 6.86643 11.543C8.02052 11.543 8.92449 12.8573 8.92449 14.5352C8.92449 16.2129 8.02052 17.5273 6.86643 17.5273C5.71273 17.5273 4.80876 16.2129 4.80876 14.5352ZM5.59322 14.5352C5.59322 15.7448 6.1762 16.7666 6.86643 16.7666C7.55666 16.7666 8.14003 15.7448 8.14003 14.5352C8.14003 13.3256 7.55666 12.3037 6.86643 12.3037C6.1762 12.3037 5.59322 13.3256 5.59322 14.5352Z",
-          }),
-        );
+            }),
+            (0, _.jsx)("path", {
+              fill: "none",
+              strokeWidth: ".6px",
+              _: "M31.9861 26.8551C32.2029 26.8551 32.3783 27.0254 32.3783 27.2355V29.2195C32.3783 29.4295 32.2029 29.5998 31.9861 29.5998H1.39223C1.17543 29.5998 1 29.4295 1 29.2195V27.2355C1 27.0254 1.17543 26.8551 1.39223 26.8551H3.20016V1.83469C3.20016 1.62465 3.37559 1.45435 3.59239 1.45435H10.1412C10.358 1.45435 10.5334 1.62465 10.5334 1.83469V5.05554H14.5097V1.83469C14.5097 1.62465 14.6851 1.45435 14.9019 1.45435H19.6631C19.8798 1.45435 20.0553 1.62465 20.0553 1.83469V4.18744L25.4729 3.22867C25.576 3.21139 25.6813 3.23257 25.7663 3.28995C25.8521 3.34734 25.9108 3.43537 25.9291 3.53454L30.1782 26.1126C30.2172 26.3193 30.0759 26.5175 29.8629 26.5552L28.1683 26.8551H31.9861ZM23.5066 22.6202L24.2874 26.7688L29.3362 25.8751L28.5555 21.7266L23.5066 22.6202ZM23.3657 21.8718L28.4147 20.9782L28.0604 19.0957L23.0114 19.989L23.3657 21.8718ZM27.9195 18.3472L25.2278 4.04525L20.1786 4.93891L22.8705 19.2406L27.9195 18.3472ZM20.0553 26.8551H23.5062L20.0553 8.51936V26.8551ZM19.2708 2.21503H15.2941V5.43589V26.8551H19.2708V2.21503ZM14.5097 26.8551V5.81623H10.5334V26.8551H14.5097ZM9.74893 10.38H3.98462V18.6904H9.74893V10.38ZM3.98462 9.6193H9.74893V7.41988H3.98462V9.6193ZM9.74893 19.451H3.98462V21.6503H9.74893V19.451ZM9.74893 5.43589V2.21503H3.98462V6.65919H9.74893V5.43589ZM9.74893 22.411H3.98462V26.8551H9.74893V22.411ZM1.78446 28.8391H31.5939V27.6158H19.6631H14.9019H10.1412H3.59239H1.78446V28.8391ZM13.6023 22.1066H11.4409C11.2241 22.1066 11.0486 21.9363 11.0486 21.7263C11.0486 21.5162 11.2241 21.3459 11.4409 21.3459H13.6023C13.8191 21.3459 13.9946 21.5162 13.9946 21.7263C13.9946 21.9363 13.8191 22.1066 13.6023 22.1066ZM11.4409 19.4512H13.6023C13.8191 19.4512 13.9946 19.2809 13.9946 19.0709C13.9946 18.8608 13.8191 18.6905 13.6023 18.6905H11.4409C11.2241 18.6905 11.0486 18.8608 11.0486 19.0709C11.0486 19.2809 11.2241 19.4512 11.4409 19.4512ZM18.3634 22.1066H16.2016C15.9848 22.1066 15.8093 21.9363 15.8093 21.7263C15.8093 21.5162 15.9848 21.3459 16.2016 21.3459H18.3634C18.5802 21.3459 18.7556 21.5162 18.7556 21.7263C18.7556 21.9363 18.5802 22.1066 18.3634 22.1066ZM16.2016 19.4512H18.3634C18.5802 19.4512 18.7556 19.2809 18.7556 19.0709C18.7556 18.8608 18.5802 18.6905 18.3634 18.6905H16.2016C15.9848 18.6905 15.8093 18.8608 15.8093 19.0709C15.8093 19.2809 15.9848 19.4512 16.2016 19.4512ZM4.80876 14.5352C4.80876 12.8573 5.71273 11.543 6.86643 11.543C8.02052 11.543 8.92449 12.8573 8.92449 14.5352C8.92449 16.2129 8.02052 17.5273 6.86643 17.5273C5.71273 17.5273 4.80876 16.2129 4.80876 14.5352ZM5.59322 14.5352C5.59322 15.7448 6.1762 16.7666 6.86643 16.7666C7.55666 16.7666 8.14003 15.7448 8.14003 14.5352C8.14003 13.3256 7.55666 12.3037 6.86643 12.3037C6.1762 12.3037 5.59322 13.3256 5.59322 14.5352Z",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            width: "23",
-            height: "23",
-            viewBox: "0 0 23 23",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M21.6537 6.60785H6.45296V21.836H21.6537V6.60785ZM5.66537 5.82026V22.6236H22.4413V5.82026H5.66537Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M3.8655 3.81134H19.0663V4.45177H19.8538V3.81134V3.02375H19.0663H3.8655H3.07791V3.81134V19.0395V19.8271H3.8655H4.50591V19.0395H3.8655V3.81134Z",
-            fill: "currentColor",
-          }),
-          _.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M1.27802 1.01483H16.4788V1.65525H17.2664V1.01483V0.227242H16.4788H1.27802H0.490433V1.01483V16.243V17.0305H1.27802H1.91844V16.243H1.27802V1.01483Z",
-            fill: "currentColor",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          width: "23",
+          height: "23",
+          viewBox: "0 0 23 23",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M21.6537 6.60785H6.45296V21.836H21.6537V6.60785ZM5.66537 5.82026V22.6236H22.4413V5.82026H5.66537Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M3.8655 3.81134H19.0663V4.45177H19.8538V3.81134V3.02375H19.0663H3.8655H3.07791V3.81134V19.0395V19.8271H3.8655H4.50591V19.0395H3.8655V3.81134Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M1.27802 1.01483H16.4788V1.65525H17.2664V1.01483V0.227242H16.4788H1.27802H0.490433V1.01483V16.243V17.0305H1.27802H1.91844V16.243H1.27802V1.01483Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: (0, _._)(_, "SVGIcon_Button"),
-            width: "64",
-            height: "62",
-            viewBox: "0 0 64 62",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_, "SVGIcon_Button"),
+          width: "64",
+          height: "62",
+          viewBox: "0 0 64 62",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M5.68889 0H58.3111C61.44 0 64 2.56 64 5.68889V18.8444H0V5.68889C0 2.56 2.56 0 5.68889 0ZM17.2302 12.7289C17.8183 12.7289 18.2969 12.2503 18.2969 11.6622V6.82667C18.2969 6.23858 17.8183 5.76 17.2302 5.76H7.98578C7.39769 5.76 6.91911 6.23858 6.91911 6.82667V11.6622C6.91911 12.2503 7.39769 12.7289 7.98578 12.7289H17.2302ZM36.6222 12.7289C37.2103 12.7289 37.6889 12.2503 37.6889 11.6622V6.82667C37.6889 6.23858 37.2103 5.76 36.6222 5.76H27.3778C26.7897 5.76 26.3111 6.23858 26.3111 6.82667V11.6622C26.3111 12.2503 26.7897 12.7289 27.3778 12.7289H36.6222ZM56.0142 12.7289C56.603 12.7289 57.0809 12.2503 57.0809 11.6622V6.82667C57.0809 6.23858 56.603 5.76 56.0142 5.76H46.7698C46.1824 5.76 45.7031 6.23858 45.7031 6.82667V11.6622C45.7031 12.2503 46.1824 12.7289 46.7698 12.7289H56.0142ZM5.68889 61.8667C2.56 61.8667 0 59.3067 0 56.1778V22.4H64V56.1778C64 59.3067 61.44 61.8667 58.3111 61.8667H5.68889ZM26.5202 29.9164C24.7673 28.9422 23.3323 29.7856 23.3323 31.7916V48.5639C23.3323 50.5714 24.7666 51.4133 26.5202 50.4391L41.1669 42.3033C43.2697 41.1342 43.2697 39.222 41.1669 38.053L26.5202 29.9164Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            width: "22",
-            height: "22",
-            viewBox: "0 0 22 22",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...__webpack_require__,
-          },
-          _.createElement("path", {
-            _: "M21 1L1 21",
-            strokeWidth: "2",
-          }),
-          _.createElement("path", {
-            _: "M0.999999 1L20 21",
-            strokeWidth: "2",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          className: _,
+          width: "22",
+          height: "22",
+          viewBox: "0 0 22 22",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ...__webpack_require__,
+          children: [
+            (0, _.jsx)("path", {
+              _: "M21 1L1 21",
+              strokeWidth: "2",
+            }),
+            (0, _.jsx)("path", {
+              _: "M0.999999 1L20 21",
+              strokeWidth: "2",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            width: "59",
-            height: "59",
-            viewBox: "0 0 59 59",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("rect", {
-            _: "1.5",
-            _: "1.5",
-            width: "56",
-            height: "56",
-            _: "4",
-            strokeWidth: "1",
-            fillOpacity: "0.0",
-          }),
-          _.createElement("path", {
-            _: "M29.14 15.868C30.748 15.868 32.128 16.144 33.28 16.696C34.456 17.224 35.356 17.968 35.98 18.928C36.604 19.864 36.916 20.932 36.916 22.132C36.916 22.948 36.772 23.68 36.484 24.328C36.196 24.952 35.848 25.492 35.44 25.948C35.032 26.38 34.468 26.932 33.748 27.604C32.956 28.3 32.308 28.924 31.804 29.476C31.3 30.028 30.868 30.724 30.508 31.564C30.172 32.38 30.004 33.34 30.004 34.444H27.088C27.088 33.004 27.268 31.78 27.628 30.772C28.012 29.764 28.468 28.96 28.996 28.36C29.548 27.736 30.232 27.076 31.048 26.38C31.888 25.636 32.5 24.988 32.884 24.436C33.292 23.884 33.496 23.212 33.496 22.42C33.496 21.268 33.064 20.356 32.2 19.684C31.336 19.012 30.16 18.676 28.672 18.676C26.608 18.676 24.736 19.336 23.056 20.656L21.76 18.244C22.696 17.524 23.8 16.948 25.072 16.516C26.368 16.084 27.724 15.868 29.14 15.868ZM28.564 37.288C29.26 37.288 29.812 37.504 30.22 37.936C30.628 38.344 30.832 38.908 30.832 39.628C30.832 40.348 30.628 40.912 30.22 41.32C29.812 41.728 29.26 41.932 28.564 41.932C27.892 41.932 27.352 41.728 26.944 41.32C26.536 40.912 26.332 40.348 26.332 39.628C26.332 38.908 26.536 38.344 26.944 37.936C27.352 37.504 27.892 37.288 28.564 37.288Z",
-            fill: "",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          className: _,
+          width: "59",
+          height: "59",
+          viewBox: "0 0 59 59",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("rect", {
+              _: "1.5",
+              _: "1.5",
+              width: "56",
+              height: "56",
+              _: "4",
+              strokeWidth: "1",
+              fillOpacity: "0.0",
+            }),
+            (0, _.jsx)("path", {
+              _: "M29.14 15.868C30.748 15.868 32.128 16.144 33.28 16.696C34.456 17.224 35.356 17.968 35.98 18.928C36.604 19.864 36.916 20.932 36.916 22.132C36.916 22.948 36.772 23.68 36.484 24.328C36.196 24.952 35.848 25.492 35.44 25.948C35.032 26.38 34.468 26.932 33.748 27.604C32.956 28.3 32.308 28.924 31.804 29.476C31.3 30.028 30.868 30.724 30.508 31.564C30.172 32.38 30.004 33.34 30.004 34.444H27.088C27.088 33.004 27.268 31.78 27.628 30.772C28.012 29.764 28.468 28.96 28.996 28.36C29.548 27.736 30.232 27.076 31.048 26.38C31.888 25.636 32.5 24.988 32.884 24.436C33.292 23.884 33.496 23.212 33.496 22.42C33.496 21.268 33.064 20.356 32.2 19.684C31.336 19.012 30.16 18.676 28.672 18.676C26.608 18.676 24.736 19.336 23.056 20.656L21.76 18.244C22.696 17.524 23.8 16.948 25.072 16.516C26.368 16.084 27.724 15.868 29.14 15.868ZM28.564 37.288C29.26 37.288 29.812 37.504 30.22 37.936C30.628 38.344 30.832 38.908 30.832 39.628C30.832 40.348 30.628 40.912 30.22 41.32C29.812 41.728 29.26 41.932 28.564 41.932C27.892 41.932 27.352 41.728 26.944 41.32C26.536 40.912 26.332 40.348 26.332 39.628C26.332 38.908 26.536 38.344 26.944 37.936C27.352 37.504 27.892 37.288 28.564 37.288Z",
+              fill: "",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            width: "49",
-            height: "53",
-            viewBox: "0 0 49 53",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: _,
+          width: "49",
+          height: "53",
+          viewBox: "0 0 49 53",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M48.3765 33.45C47.1427 38.7688 44.1478 43.5146 39.8778 46.9174C35.6078 50.3201 30.3132 52.1801 24.8531 52.1956C23.0011 52.1943 21.1552 51.9821 19.3511 51.5633C14.4369 50.4243 10.0013 47.7787 6.66379 43.9961C3.32632 40.2135 1.25375 35.4829 0.735641 30.4651C0.708708 30.2012 0.787709 29.9374 0.955263 29.7318C1.12282 29.5261 1.3652 29.3955 1.62909 29.3685C1.89298 29.3416 2.15676 29.4206 2.36241 29.5882C2.56805 29.7557 2.69871 29.9981 2.72564 30.262C3.1115 34.01 4.44505 37.5981 6.60068 40.6883C8.75631 43.7786 11.6631 46.2693 15.0472 47.9258C18.4313 49.5824 22.1814 50.3503 25.9443 50.1571C29.7071 49.964 33.3589 48.8163 36.5556 46.822C39.0282 45.2791 41.1726 43.2644 42.8665 40.8927C44.5604 38.5211 45.7706 35.8391 46.428 32.9997C47.0854 30.1604 47.1771 27.2194 46.6978 24.3447C46.2186 21.4699 45.1779 18.7177 43.635 16.2451C42.0921 13.7726 40.0774 11.6282 37.7057 9.93425C35.3341 8.24035 32.6521 7.03016 29.8127 6.37279C24.0785 5.04515 18.0517 6.04982 13.0581 9.16578L8.53564 11.9879L17.0203 12.8514C17.2749 12.8779 17.5096 13.0011 17.6761 13.1955C17.8426 13.3899 17.9282 13.6407 17.9153 13.8964C17.9024 14.152 17.792 14.3929 17.6068 14.5696C17.4216 14.7463 17.1757 14.8452 16.9197 14.846C16.8855 14.8461 16.8512 14.8443 16.8171 14.8406L5.42564 13.6814C5.40474 13.6793 5.38834 13.6669 5.36784 13.6635C5.32663 13.6572 5.28587 13.6482 5.24584 13.6366C5.22414 13.6302 5.20214 13.6328 5.18054 13.6248C5.15644 13.6159 5.14054 13.5965 5.11764 13.586C5.03876 13.5541 4.96583 13.5091 4.90194 13.4529C4.86699 13.4246 4.83401 13.394 4.80324 13.3612C4.77384 13.3299 4.74658 13.2967 4.72164 13.2618C4.70914 13.2442 4.69014 13.2346 4.67864 13.2161C4.66714 13.1976 4.66684 13.1761 4.65664 13.1575C4.63643 13.12 4.6187 13.0812 4.60354 13.0414C4.57364 12.9592 4.55279 12.8741 4.54134 12.7874C4.53787 12.7449 4.5372 12.7022 4.53934 12.6597C4.53994 12.6343 4.52934 12.6114 4.53214 12.5857C4.53434 12.5636 4.54714 12.5457 4.55074 12.5245C4.55755 12.4833 4.56704 12.4426 4.57914 12.4026C4.58524 12.382 4.58124 12.3611 4.58914 12.3406L8.55334 1.59938C8.64516 1.35049 8.83209 1.14827 9.07301 1.0372C9.1923 0.982204 9.32125 0.951243 9.45251 0.946084C9.58377 0.940926 9.71475 0.96167 9.83799 1.00713C9.96123 1.0526 10.0743 1.12189 10.1708 1.21105C10.2672 1.30022 10.3452 1.40751 10.4002 1.5268C10.4552 1.64609 10.4861 1.77505 10.4913 1.9063C10.4964 2.03756 10.4757 2.16854 10.4302 2.29178L7.47744 10.2918L11.9995 7.46998C16.0588 4.93676 20.7781 3.66416 25.5607 3.81312C30.3433 3.96208 34.9742 5.52591 38.868 8.30684C42.7618 11.0878 45.7434 14.9609 47.436 19.4364C49.1285 23.912 49.4558 28.7889 48.3765 33.4505V33.45ZM14.7565 39.346L25.4126 28.6897C25.6002 28.5022 25.7056 28.2479 25.7056 27.9827V17.0784C25.7056 16.8132 25.6003 16.5588 25.4127 16.3713C25.2252 16.1837 24.9709 16.0784 24.7056 16.0784C24.4404 16.0784 24.1861 16.1837 23.9985 16.3713C23.811 16.5588 23.7056 16.8132 23.7056 17.0784V27.5684L13.3423 37.9319C13.2475 38.0243 13.1721 38.1346 13.1202 38.2565C13.0684 38.3783 13.0413 38.5092 13.0404 38.6416C13.0396 38.7739 13.0651 38.9052 13.1153 39.0276C13.1656 39.1501 13.2397 39.2614 13.3333 39.355C13.4269 39.4486 13.5382 39.5227 13.6607 39.573C13.7831 39.6233 13.9144 39.6487 14.0468 39.6479C14.1792 39.647 14.3101 39.6199 14.4319 39.5681C14.5537 39.5163 14.664 39.4408 14.7564 39.346H14.7565Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            width: "47",
-            height: "22",
-            viewBox: "0 0 47 22",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: _,
+          width: "47",
+          height: "22",
+          viewBox: "0 0 47 22",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M36.4525 0.983032C34.3364 0.983032 32.2684 1.65634 30.5371 2.90676C30.4409 2.95486 29.9599 3.3396 29.9599 3.38769L23.7078 8.48558L17.5038 3.43579C17.3595 3.3396 16.3976 2.57011 16.1091 2.42583C14.5701 1.51206 12.7426 1.03113 10.915 1.03113C5.33619 1.03113 0.767334 5.59999 0.767334 11.1788C0.767334 16.7576 5.33619 21.3265 10.915 21.3265C13.0311 21.3265 15.0991 20.6532 16.8305 19.4028C16.9267 19.3547 17.4076 18.9699 17.4557 18.9218L23.7078 13.8239L29.9119 18.8737C30.0561 18.9699 31.0661 19.7394 31.3066 19.8837C32.8455 20.7975 34.6731 21.2784 36.5006 21.2784C42.0795 21.2784 46.6483 16.7095 46.6483 11.1307C46.6483 5.55189 42.0795 0.983032 36.4525 0.983032ZM14.4739 15.94C13.4159 16.7095 12.2135 17.1424 10.915 17.1424C7.64467 17.1424 4.95145 14.4491 4.95145 11.1788C4.95145 7.90846 7.64467 5.21524 10.915 5.21524C11.9731 5.21524 13.0311 5.5038 13.9449 6.03282C14.1373 6.12901 14.7144 6.56185 14.8106 6.65804L20.3894 11.1788C20.3894 11.1788 14.522 15.8919 14.4739 15.94ZM36.4525 17.1424C35.3945 17.1424 34.3364 16.8538 33.4227 16.3248C33.2303 16.2286 32.6532 15.7958 32.557 15.6996L26.9782 11.1788L32.8455 6.41757C33.9036 5.64808 35.1059 5.21524 36.4044 5.21524C39.6748 5.21524 42.368 7.90846 42.368 11.1788C42.368 14.4491 39.771 17.1424 36.4525 17.1424Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            width: "29",
-            height: "28",
-            viewBox: "0 0 29 28",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: _,
+          width: "29",
+          height: "28",
+          viewBox: "0 0 29 28",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             _: "M24.4232 4.36344C22.5002 2.44044 20.0502 1.13086 17.383 0.600287C14.7157 0.0697194 11.9511 0.342 9.43855 1.3827C6.92606 2.42339 4.77858 4.18576 3.2677 6.44695C1.75682 8.70813 0.950394 11.3666 0.950394 14.0861C0.950394 16.8056 1.75682 19.464 3.2677 21.7252C4.77858 23.9864 6.92606 25.7487 9.43855 26.7894C11.9511 27.8301 14.7157 28.1024 17.383 27.5718C20.0502 27.0413 22.5002 25.7317 24.4232 23.8087C25.7042 22.5343 26.7208 21.0193 27.4145 19.3507C28.1082 17.6822 28.4653 15.893 28.4653 14.0861C28.4653 12.2791 28.1082 10.4899 27.4145 8.82138C26.7208 7.15284 25.7042 5.63784 24.4232 4.36344ZM16.5334 21.3914H12.865V12.3164H16.5334V21.3914ZM14.6992 10.7874C14.3015 10.7874 13.9127 10.6695 13.5821 10.4485C13.2514 10.2274 12.9938 9.91333 12.8417 9.54584C12.6896 9.17835 12.65 8.77402 12.7278 8.38399C12.8056 7.99397 12.9973 7.63578 13.2787 7.35475C13.5601 7.07373 13.9186 6.88248 14.3087 6.80523C14.6988 6.72797 15.1031 6.76818 15.4704 6.92075C15.8377 7.07332 16.1514 7.33141 16.372 7.66235C16.5926 7.9933 16.71 8.38223 16.7094 8.77994C16.7094 9.0438 16.6574 9.30507 16.5564 9.54881C16.4553 9.79255 16.3072 10.014 16.1205 10.2004C15.9338 10.3869 15.7122 10.5347 15.4683 10.6354C15.2244 10.7361 14.9631 10.7878 14.6992 10.7874Z",
             fill: "",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            width: "41",
-            height: "64",
-            viewBox: "0 0 41 64",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          className: _,
+          width: "41",
+          height: "64",
+          viewBox: "0 0 41 64",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M30.4126 5.84583C28.4532 5.77501 26.5883 4.98584 25.1733 3.62868C22.883 1.43206 19.2764 1.40456 16.9529 3.566C15.5173 4.90142 13.6406 5.66206 11.6804 5.70299C8.50765 5.76924 5.93799 8.30001 5.82337 11.4714C5.75255 13.4308 4.96338 15.2956 3.60622 16.7107C1.4096 19.001 1.3821 22.6075 3.54354 24.9311C4.87896 26.3667 5.6396 28.2433 5.68053 30.2036C5.74678 33.3763 8.27755 35.946 11.4489 36.0606C13.4083 36.1314 15.2732 36.9206 16.6882 38.2778C18.9785 40.4744 22.5851 40.5019 24.9086 38.3404C26.3442 37.005 28.2209 36.2444 30.1811 36.2035C33.3539 36.1372 35.9235 33.6064 36.0382 30.4351C36.109 28.4757 36.8981 26.6108 38.2553 25.1958C40.4519 22.9055 40.4794 19.2989 38.318 16.9754C36.9826 15.5398 36.2219 13.6631 36.181 11.7029C36.1147 8.53011 33.584 5.96045 30.4126 5.84583ZM37.1808 11.682C37.1035 7.9792 34.1499 4.98025 30.4487 4.84648C28.7347 4.78453 27.1033 4.09418 25.8655 2.90697C23.1926 0.343378 18.9835 0.311283 16.2718 2.83381C15.016 4.00202 13.3743 4.6674 11.6595 4.70321C7.95674 4.78052 4.95779 7.73408 4.82402 11.4352C4.76207 13.1493 4.07172 14.7806 2.88451 16.0185C0.320917 18.6914 0.288821 22.9005 2.81135 25.6122C3.97955 26.868 4.64494 28.5097 4.68075 30.2245C4.75807 33.9272 7.71162 36.9262 11.4128 37.06C13.1268 37.1219 14.7582 37.8123 15.996 38.9995C18.669 41.5631 22.878 41.5952 25.5897 39.0726C26.8455 37.9044 28.4872 37.239 30.202 37.2032C33.9048 37.1259 36.9037 34.1724 37.0375 30.4712C37.0995 28.7572 37.7898 27.1258 38.977 25.888C41.5406 23.215 41.5727 19.006 39.0502 16.2943C37.882 15.0384 37.2166 13.3968 37.1808 11.682ZM31.4863 41.2401C31.4867 41.2404 31.487 41.2407 31.1669 41.6248L31.487 41.2407L31.6669 41.3906V41.6248V62.5728V63.4683L30.9046 62.9985L20.9309 56.8517L10.9573 62.9985L10.1949 63.4683V62.5728V41.6248V41.3555L10.4198 41.2073L10.6949 41.6248C10.4198 41.2073 10.42 41.2071 10.4203 41.2069L10.4209 41.2065L10.4222 41.2057L10.425 41.2039L10.4321 41.1993L10.4518 41.1873C10.4674 41.1779 10.4879 41.1661 10.5133 41.1524C10.5641 41.125 10.6344 41.0902 10.7241 41.0527C10.9034 40.9778 11.1598 40.8927 11.4906 40.8367C12.1557 40.724 13.1039 40.7318 14.3111 41.1525C14.7935 41.3206 15.3635 41.6156 15.9507 41.9446C16.2911 42.1353 16.6562 42.3485 17.0236 42.563L17.024 42.5632L17.0248 42.5637C17.2873 42.717 17.551 42.871 17.8076 43.0179C18.4375 43.3784 19.0498 43.7114 19.6033 43.955C20.1687 44.2038 20.6187 44.3343 20.9375 44.3385C21.205 44.3421 21.6162 44.2205 22.1636 43.9649C22.6946 43.7169 23.2892 43.3749 23.9047 43.0052C24.1025 42.8864 24.3034 42.7642 24.5044 42.642L24.5055 42.6413L24.5067 42.6406L24.5067 42.6405L24.5069 42.6405C24.9206 42.3888 25.3344 42.137 25.7213 41.9151C26.2933 41.587 26.855 41.2951 27.3286 41.1477C28.7347 40.7101 29.7388 40.6983 30.4172 40.8191C30.7557 40.8794 31.0083 40.9719 31.1846 41.0565C31.2726 41.0987 31.3409 41.1387 31.3909 41.1712C31.4159 41.1874 31.4363 41.2018 31.4523 41.2136C31.4603 41.2195 31.4671 41.2248 31.4729 41.2293L31.4808 41.2356L31.4841 41.2383L31.4856 41.2395L31.4863 41.2401ZM11.1949 41.9422V61.6774L20.6686 55.8387L20.9309 55.6771L21.1932 55.8387L30.6669 61.6774V41.9208C30.5682 41.8813 30.4282 41.8368 30.242 41.8037C29.7472 41.7156 28.9065 41.704 27.6258 42.1025C27.2665 42.2144 26.7877 42.4563 26.2189 42.7825C25.8428 42.9982 25.4485 43.2381 25.0417 43.4856L25.0415 43.4858L25.0399 43.4867C24.836 43.6108 24.629 43.7367 24.4195 43.8625C23.8009 44.234 23.1684 44.5994 22.5866 44.871C22.0212 45.135 21.4338 45.3452 20.9243 45.3385C20.3958 45.3315 19.7928 45.1309 19.2005 44.8703C18.5965 44.6045 17.9466 44.2496 17.3108 43.8857C17.0355 43.7281 16.7669 43.5712 16.504 43.4176C16.1468 43.209 15.8002 43.0066 15.4619 42.817C14.8778 42.4897 14.3743 42.2334 13.9821 42.0968C12.9316 41.7307 12.1539 41.7385 11.6576 41.8226C11.4625 41.8557 11.308 41.901 11.1949 41.9422ZM23.7901 8.68637C24.8582 9.71081 26.2659 10.3065 27.7449 10.36C29.879 10.4371 31.582 12.1663 31.6266 14.3013C31.6575 15.781 32.2316 17.1975 33.2397 18.2812C34.6941 19.8447 34.6756 22.2717 33.1975 23.8129C32.173 24.881 31.5774 26.2887 31.5239 27.7677C31.4468 29.9018 29.7176 31.6048 27.5826 31.6494C26.1029 31.6803 24.6863 32.2544 23.6027 33.2625C22.0391 34.7169 19.6122 34.6984 18.071 33.2203C17.0028 32.1958 15.5952 31.6002 14.1162 31.5467C11.9821 31.4696 10.2791 29.7404 10.2345 27.6054C10.2036 26.1257 9.62942 24.7091 8.62139 23.6255C7.16691 22.0619 7.18542 19.635 8.66357 18.0938C9.68801 17.0256 10.2837 15.618 10.3372 14.1389C10.4143 12.0049 12.1435 10.3019 14.2785 10.2573C15.7582 10.2264 17.1747 9.65222 18.2584 8.64419C19.8219 7.18971 22.2489 7.20821 23.7901 8.68637ZM27.781 9.36061C30.4449 9.45689 32.5707 11.6154 32.6264 14.2804C32.6521 15.5146 33.131 16.6962 33.9719 17.6001C35.7874 19.5518 35.7643 22.5812 33.9192 24.5051C33.0647 25.396 32.5678 26.5702 32.5232 27.8038C32.427 30.4677 30.2685 32.5935 27.6034 32.6492C26.3692 32.6749 25.1876 33.1538 24.2838 33.9946C22.332 35.8102 19.3026 35.7871 17.3788 33.942C16.4879 33.0875 15.3137 32.5906 14.08 32.546C11.4161 32.4498 9.29034 30.2913 9.23469 27.6262C9.20892 26.392 8.73001 25.2104 7.88921 24.3066C6.07363 22.3548 6.09673 19.3254 7.94186 17.4016C8.79635 16.5107 9.29322 15.3365 9.33781 14.1028C9.43409 11.4389 11.5926 9.31314 14.2576 9.25749C15.4918 9.23172 16.6734 8.75281 17.5773 7.912C19.529 6.09643 22.5584 6.11953 24.4823 7.96466C25.3732 8.81915 26.5474 9.31602 27.781 9.36061Z",
             fill: "none",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            width: "55",
-            height: "63",
-            viewBox: "0 0 55 63",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M47.7642 5.46737H43.3958V3.44632C43.3958 0.953685 42.3747 0 39.9495 0C37.4568 0 36.5032 1.02105 36.5032 3.44632V5.46737H17.5937V3.44632C17.5937 0.953685 16.5726 0 14.1474 0C11.6547 0 10.7011 1.02105 10.7011 3.44632V5.46737H6.33263C2.82947 5.46737 0 8.29684 0 11.8V56.6674C0 60.1705 2.82947 63 6.33263 63H47.7642C51.2674 63 54.0968 60.1705 54.0968 56.6674V11.8C54.0968 8.29684 51.2674 5.46737 47.7642 5.46737ZM1.62737 50.0758C2.62737 51.5 3.91789 52.2884 5.33263 52.2884H48.7642C50.1116 52.2884 51.1274 51.5 52.4021 50.1432V51.3453C52.4021 53.3663 50.7853 55.9832 48.7642 55.9832H5.33263C3.31158 55.9832 1.62737 53.3663 1.62737 51.3453V50.0758ZM52.4021 45.8884C52.4021 47.9095 50.7853 50.5263 48.7642 50.5263H5.33263C3.31158 50.5263 1.62737 47.9095 1.62737 45.8884V17.7958H52.4021V45.8884ZM38.1305 3.44632C38.1305 2.43579 38.9389 1.69474 39.8821 1.69474C40.8253 1.69474 41.6337 2.50316 41.6337 3.44632V6.62316C41.6337 7.63368 40.8253 8.37474 39.8821 8.37474C38.9389 8.37474 38.1305 7.56632 38.1305 6.62316V3.44632ZM12.3958 3.44632C12.3958 2.43579 13.2042 1.69474 14.1474 1.69474C15.0905 1.69474 15.8989 2.50316 15.8989 3.44632V6.62316C15.8989 7.63368 15.0905 8.37474 14.1474 8.37474C13.2042 8.37474 12.3958 7.56632 12.3958 6.62316V3.44632ZM5.33263 7.16211H10.7684C11.0379 9.38526 11.9242 10.1368 14.2147 10.1368C16.5053 10.1368 17.3916 9.38526 17.6611 7.16211H36.5705C36.84 9.38526 37.7263 10.1368 40.0168 10.1368C42.3074 10.1368 43.1937 9.38526 43.4632 7.16211H48.8989C50.92 7.16211 52.5368 9.77895 52.5368 11.8V16.1011H1.62737V11.8C1.62737 9.77895 3.24421 7.16211 5.33263 7.16211ZM48.7642 61.3053H6.33263C4.31158 61.3053 1.62737 58.6884 1.62737 56.6674V55.4653C2.62737 57.6779 4.91789 57.6779 6.33263 57.6779H48.7642C50.1116 57.6779 51.1274 57.5 52.4021 55.5326V56.7347C52.4021 58.6884 50.7853 61.3053 48.7642 61.3053Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M10.7159 34.7325H10.918C12.0632 34.7325 13.0064 33.7893 13.0064 32.644V32.4419C13.0064 31.2967 12.0632 30.3535 10.918 30.3535H10.7159C9.5706 30.3535 8.62744 31.2967 8.62744 32.4419V32.644C8.62744 33.8567 9.5706 34.7325 10.7159 34.7325Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M19.0694 34.7325H19.2715C20.4167 34.7325 21.3599 33.7893 21.3599 32.644V32.4419C21.3599 31.2967 20.4167 30.3535 19.2715 30.3535H19.0694C17.9241 30.3535 16.981 31.2967 16.981 32.4419V32.644C16.981 33.8567 17.9241 34.7325 19.0694 34.7325Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M27.4234 34.7325H27.6255C28.7708 34.7325 29.7139 33.7893 29.7139 32.644V32.4419C29.7139 31.2967 28.7708 30.3535 27.6255 30.3535H27.4234C26.2781 30.3535 25.335 31.2967 25.335 32.4419V32.644C25.335 33.8567 26.2781 34.7325 27.4234 34.7325Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M10.7159 26.3789H10.918C12.0632 26.3789 13.0064 25.4358 13.0064 24.2905V24.0884C13.0064 22.9432 12.0632 22 10.918 22H10.7159C9.5706 22 8.62744 22.9432 8.62744 24.0884V24.2905C8.62744 25.4358 9.5706 26.3789 10.7159 26.3789Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M19.0694 26.3789H19.2715C20.4167 26.3789 21.3599 25.4358 21.3599 24.2905V24.0884C21.3599 22.9432 20.4167 22 19.2715 22H19.0694C17.9241 22 16.981 22.9432 16.981 24.0884V24.2905C16.981 25.4358 17.9241 26.3789 19.0694 26.3789Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M27.4234 26.3789H27.6255C28.7708 26.3789 29.7139 25.4358 29.7139 24.2905V24.0884C29.7139 22.9432 28.7708 22 27.6255 22H27.4234C26.2781 22 25.335 22.9432 25.335 24.0884V24.2905C25.335 25.4358 26.2781 26.3789 27.4234 26.3789Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M35.7774 34.7325H35.9795C37.1248 34.7325 38.0679 33.7893 38.0679 32.644V32.4419C38.0679 31.2967 37.1248 30.3535 35.9795 30.3535H35.7774C34.6321 30.3535 33.689 31.2967 33.689 32.4419V32.644C33.689 33.8567 34.6321 34.7325 35.7774 34.7325Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M44.1309 34.7325H44.333C45.4783 34.7325 46.4214 33.7893 46.4214 32.644V32.4419C46.4214 31.2967 45.4783 30.3535 44.333 30.3535H44.1309C42.9856 30.3535 42.0425 31.2967 42.0425 32.4419V32.644C42.0425 33.8567 42.9856 34.7325 44.1309 34.7325Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M35.7774 26.3789H35.9795C37.1248 26.3789 38.0679 25.4358 38.0679 24.2905V24.0884C38.0679 22.9432 37.1248 22 35.9795 22H35.7774C34.6321 22 33.689 22.9432 33.689 24.0884V24.2905C33.689 25.4358 34.6321 26.3789 35.7774 26.3789Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M44.1309 26.3789H44.333C45.4783 26.3789 46.4214 25.4358 46.4214 24.2905V24.0884C46.4214 22.9432 45.4783 22 44.333 22H44.1309C42.9856 22 42.0425 22.9432 42.0425 24.0884V24.2905C42.0425 25.4358 42.9856 26.3789 44.1309 26.3789Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M10.7159 43.1534H10.918C12.0632 43.1534 13.0064 42.2102 13.0064 41.0649V40.8628C13.0064 39.7176 12.0632 38.7744 10.918 38.7744H10.7159C9.5706 38.7744 8.62744 39.7176 8.62744 40.8628V41.0649C8.62744 42.2102 9.5706 43.1534 10.7159 43.1534Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M19.0694 43.1534H19.2715C20.4167 43.1534 21.3599 42.2102 21.3599 41.0649V40.8628C21.3599 39.7176 20.4167 38.7744 19.2715 38.7744H19.0694C17.9241 38.7744 16.981 39.7176 16.981 40.8628V41.0649C16.981 42.2102 17.9241 43.1534 19.0694 43.1534Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M27.4234 43.1534H27.6255C28.7708 43.1534 29.7139 42.2102 29.7139 41.0649V40.8628C29.7139 39.7176 28.7708 38.7744 27.6255 38.7744H27.4234C26.2781 38.7744 25.335 39.7176 25.335 40.8628V41.0649C25.335 42.2102 26.2781 43.1534 27.4234 43.1534Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M35.7774 43.1534H35.9795C37.1248 43.1534 38.0679 42.2102 38.0679 41.0649V40.8628C38.0679 39.7176 37.1248 38.7744 35.9795 38.7744H35.7774C34.6321 38.7744 33.689 39.7176 33.689 40.8628V41.0649C33.689 42.2102 34.6321 43.1534 35.7774 43.1534Z",
-            fill: "",
-          }),
-          _.createElement("path", {
-            _: "M44.1309 43.1534H44.333C45.4783 43.1534 46.4214 42.2102 46.4214 41.0649V40.8628C46.4214 39.7176 45.4783 38.7744 44.333 38.7744H44.1309C42.9856 38.7744 42.0425 39.7176 42.0425 40.8628V41.0649C42.0425 42.2102 42.9856 43.1534 44.1309 43.1534Z",
-            fill: "",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          className: _,
+          width: "55",
+          height: "63",
+          viewBox: "0 0 55 63",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M47.7642 5.46737H43.3958V3.44632C43.3958 0.953685 42.3747 0 39.9495 0C37.4568 0 36.5032 1.02105 36.5032 3.44632V5.46737H17.5937V3.44632C17.5937 0.953685 16.5726 0 14.1474 0C11.6547 0 10.7011 1.02105 10.7011 3.44632V5.46737H6.33263C2.82947 5.46737 0 8.29684 0 11.8V56.6674C0 60.1705 2.82947 63 6.33263 63H47.7642C51.2674 63 54.0968 60.1705 54.0968 56.6674V11.8C54.0968 8.29684 51.2674 5.46737 47.7642 5.46737ZM1.62737 50.0758C2.62737 51.5 3.91789 52.2884 5.33263 52.2884H48.7642C50.1116 52.2884 51.1274 51.5 52.4021 50.1432V51.3453C52.4021 53.3663 50.7853 55.9832 48.7642 55.9832H5.33263C3.31158 55.9832 1.62737 53.3663 1.62737 51.3453V50.0758ZM52.4021 45.8884C52.4021 47.9095 50.7853 50.5263 48.7642 50.5263H5.33263C3.31158 50.5263 1.62737 47.9095 1.62737 45.8884V17.7958H52.4021V45.8884ZM38.1305 3.44632C38.1305 2.43579 38.9389 1.69474 39.8821 1.69474C40.8253 1.69474 41.6337 2.50316 41.6337 3.44632V6.62316C41.6337 7.63368 40.8253 8.37474 39.8821 8.37474C38.9389 8.37474 38.1305 7.56632 38.1305 6.62316V3.44632ZM12.3958 3.44632C12.3958 2.43579 13.2042 1.69474 14.1474 1.69474C15.0905 1.69474 15.8989 2.50316 15.8989 3.44632V6.62316C15.8989 7.63368 15.0905 8.37474 14.1474 8.37474C13.2042 8.37474 12.3958 7.56632 12.3958 6.62316V3.44632ZM5.33263 7.16211H10.7684C11.0379 9.38526 11.9242 10.1368 14.2147 10.1368C16.5053 10.1368 17.3916 9.38526 17.6611 7.16211H36.5705C36.84 9.38526 37.7263 10.1368 40.0168 10.1368C42.3074 10.1368 43.1937 9.38526 43.4632 7.16211H48.8989C50.92 7.16211 52.5368 9.77895 52.5368 11.8V16.1011H1.62737V11.8C1.62737 9.77895 3.24421 7.16211 5.33263 7.16211ZM48.7642 61.3053H6.33263C4.31158 61.3053 1.62737 58.6884 1.62737 56.6674V55.4653C2.62737 57.6779 4.91789 57.6779 6.33263 57.6779H48.7642C50.1116 57.6779 51.1274 57.5 52.4021 55.5326V56.7347C52.4021 58.6884 50.7853 61.3053 48.7642 61.3053Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M10.7159 34.7325H10.918C12.0632 34.7325 13.0064 33.7893 13.0064 32.644V32.4419C13.0064 31.2967 12.0632 30.3535 10.918 30.3535H10.7159C9.5706 30.3535 8.62744 31.2967 8.62744 32.4419V32.644C8.62744 33.8567 9.5706 34.7325 10.7159 34.7325Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M19.0694 34.7325H19.2715C20.4167 34.7325 21.3599 33.7893 21.3599 32.644V32.4419C21.3599 31.2967 20.4167 30.3535 19.2715 30.3535H19.0694C17.9241 30.3535 16.981 31.2967 16.981 32.4419V32.644C16.981 33.8567 17.9241 34.7325 19.0694 34.7325Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M27.4234 34.7325H27.6255C28.7708 34.7325 29.7139 33.7893 29.7139 32.644V32.4419C29.7139 31.2967 28.7708 30.3535 27.6255 30.3535H27.4234C26.2781 30.3535 25.335 31.2967 25.335 32.4419V32.644C25.335 33.8567 26.2781 34.7325 27.4234 34.7325Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M10.7159 26.3789H10.918C12.0632 26.3789 13.0064 25.4358 13.0064 24.2905V24.0884C13.0064 22.9432 12.0632 22 10.918 22H10.7159C9.5706 22 8.62744 22.9432 8.62744 24.0884V24.2905C8.62744 25.4358 9.5706 26.3789 10.7159 26.3789Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M19.0694 26.3789H19.2715C20.4167 26.3789 21.3599 25.4358 21.3599 24.2905V24.0884C21.3599 22.9432 20.4167 22 19.2715 22H19.0694C17.9241 22 16.981 22.9432 16.981 24.0884V24.2905C16.981 25.4358 17.9241 26.3789 19.0694 26.3789Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M27.4234 26.3789H27.6255C28.7708 26.3789 29.7139 25.4358 29.7139 24.2905V24.0884C29.7139 22.9432 28.7708 22 27.6255 22H27.4234C26.2781 22 25.335 22.9432 25.335 24.0884V24.2905C25.335 25.4358 26.2781 26.3789 27.4234 26.3789Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M35.7774 34.7325H35.9795C37.1248 34.7325 38.0679 33.7893 38.0679 32.644V32.4419C38.0679 31.2967 37.1248 30.3535 35.9795 30.3535H35.7774C34.6321 30.3535 33.689 31.2967 33.689 32.4419V32.644C33.689 33.8567 34.6321 34.7325 35.7774 34.7325Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M44.1309 34.7325H44.333C45.4783 34.7325 46.4214 33.7893 46.4214 32.644V32.4419C46.4214 31.2967 45.4783 30.3535 44.333 30.3535H44.1309C42.9856 30.3535 42.0425 31.2967 42.0425 32.4419V32.644C42.0425 33.8567 42.9856 34.7325 44.1309 34.7325Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M35.7774 26.3789H35.9795C37.1248 26.3789 38.0679 25.4358 38.0679 24.2905V24.0884C38.0679 22.9432 37.1248 22 35.9795 22H35.7774C34.6321 22 33.689 22.9432 33.689 24.0884V24.2905C33.689 25.4358 34.6321 26.3789 35.7774 26.3789Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M44.1309 26.3789H44.333C45.4783 26.3789 46.4214 25.4358 46.4214 24.2905V24.0884C46.4214 22.9432 45.4783 22 44.333 22H44.1309C42.9856 22 42.0425 22.9432 42.0425 24.0884V24.2905C42.0425 25.4358 42.9856 26.3789 44.1309 26.3789Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M10.7159 43.1534H10.918C12.0632 43.1534 13.0064 42.2102 13.0064 41.0649V40.8628C13.0064 39.7176 12.0632 38.7744 10.918 38.7744H10.7159C9.5706 38.7744 8.62744 39.7176 8.62744 40.8628V41.0649C8.62744 42.2102 9.5706 43.1534 10.7159 43.1534Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M19.0694 43.1534H19.2715C20.4167 43.1534 21.3599 42.2102 21.3599 41.0649V40.8628C21.3599 39.7176 20.4167 38.7744 19.2715 38.7744H19.0694C17.9241 38.7744 16.981 39.7176 16.981 40.8628V41.0649C16.981 42.2102 17.9241 43.1534 19.0694 43.1534Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M27.4234 43.1534H27.6255C28.7708 43.1534 29.7139 42.2102 29.7139 41.0649V40.8628C29.7139 39.7176 28.7708 38.7744 27.6255 38.7744H27.4234C26.2781 38.7744 25.335 39.7176 25.335 40.8628V41.0649C25.335 42.2102 26.2781 43.1534 27.4234 43.1534Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M35.7774 43.1534H35.9795C37.1248 43.1534 38.0679 42.2102 38.0679 41.0649V40.8628C38.0679 39.7176 37.1248 38.7744 35.9795 38.7744H35.7774C34.6321 38.7744 33.689 39.7176 33.689 40.8628V41.0649C33.689 42.2102 34.6321 43.1534 35.7774 43.1534Z",
+              fill: "",
+            }),
+            (0, _.jsx)("path", {
+              _: "M44.1309 43.1534H44.333C45.4783 43.1534 46.4214 42.2102 46.4214 41.0649V40.8628C46.4214 39.7176 45.4783 38.7744 44.333 38.7744H44.1309C42.9856 38.7744 42.0425 39.7176 42.0425 40.8628V41.0649C42.0425 42.2102 42.9856 43.1534 44.1309 43.1534Z",
+              fill: "",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            height: 100,
-            width: 100,
-            fill: "#fff",
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 69 69",
-          },
-          _.createElement("path", {
-            _: "M57.189 51.828H11.813a1 1 0 00-1 1v4.77a1 1 0 001 1h45.376a1 1 0 001-1v-4.77a1 1 0 00-1-1zm-1 4.77H12.813v-2.77h43.376v2.77z",
-          }),
-          _.createElement("path", {
-            _: "M63.189 4.402H5.813a1 1 0 00-1 1L4.81 62.598H2.46a1 1 0 100 2h64.08a1 1 0 100-2h-2.35l-.001-57.196a1 1 0 00-1-1zm-56.376 2h55.376v39.426H43.584v-5.854h-7.556l2.448-2.48a.999.999 0 00.288-.702V18.915h2.062a1 1 0 100-2h-3.508v-3.775h1.32a1 1 0 100-2h-3.584v-.917a1 1 0 10-2 0v.917H29.47a1 1 0 100 2h1.32v3.775h-3.508a1 1 0 100 2h2.061v17.875c0 .242.087.474.245.656l2.195 2.527h-6.365v5.854H6.813V6.402zm25.977 6.74h2.528v3.774H32.79v-3.775zm-1.447 5.774h1.711v14.642a1 1 0 102 0V18.916h1.71v17.465l-2.9 2.94-2.52-2.904v-17.5zm10.241 23.058v3.834H27.418v-3.834h14.166zM6.81 62.598v-14.77h55.38v14.77H6.81z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          className: _,
+          height: 100,
+          width: 100,
+          fill: "#fff",
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 69 69",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M57.189 51.828H11.813a1 1 0 00-1 1v4.77a1 1 0 001 1h45.376a1 1 0 001-1v-4.77a1 1 0 00-1-1zm-1 4.77H12.813v-2.77h43.376v2.77z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M63.189 4.402H5.813a1 1 0 00-1 1L4.81 62.598H2.46a1 1 0 100 2h64.08a1 1 0 100-2h-2.35l-.001-57.196a1 1 0 00-1-1zm-56.376 2h55.376v39.426H43.584v-5.854h-7.556l2.448-2.48a.999.999 0 00.288-.702V18.915h2.062a1 1 0 100-2h-3.508v-3.775h1.32a1 1 0 100-2h-3.584v-.917a1 1 0 10-2 0v.917H29.47a1 1 0 100 2h1.32v3.775h-3.508a1 1 0 100 2h2.061v17.875c0 .242.087.474.245.656l2.195 2.527h-6.365v5.854H6.813V6.402zm25.977 6.74h2.528v3.774H32.79v-3.775zm-1.447 5.774h1.711v14.642a1 1 0 102 0V18.916h1.71v17.465l-2.9 2.94-2.52-2.904v-17.5zm10.241 23.058v3.834H27.418v-3.834h14.166zM6.81 62.598v-14.77h55.38v14.77H6.81z",
+            }),
+          ],
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            height: 100,
-            width: 100,
-            fill: "currentColor",
-            stroke: "currentColor",
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 69 69",
-          },
-          _.createElement("path", {
-            _: "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
-          }),
-          "  ",
-        );
+        return (0, _.jsxs)("svg", {
+          className: _,
+          height: 100,
+          width: 100,
+          fill: "currentColor",
+          stroke: "currentColor",
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 69 69",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
+            }),
+            "  ",
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "0px",
-            _: "0px",
-            width: "1400px",
-            height: "1409px",
-            viewBox: "0 1801.5 1400 1409",
-            ..._,
-          },
-          _.createElement("path", {
+        return (0, _.jsx)("svg", {
+          version: "1.1",
+          _: "0px",
+          _: "0px",
+          width: "1400px",
+          height: "1409px",
+          viewBox: "0 1801.5 1400 1409",
+          ..._,
+          children: (0, _.jsx)("path", {
             fill: "#FFFFFF",
             _: "M362.353,2310.588c148.235-148.235,387.06-148.235,527.06,0\n\t\t\t\tc16.471,16.471,32.941,41.177,49.411,57.647L807.059,2500c-41.176-82.353-131.765-131.765-222.353-115.294\n\t\t\t\tc-41.177,8.235-74.118,24.706-98.823,49.411l-247.059,247.06c-74.118,74.117-74.118,197.646,0,280\n\t\t\t\tc74.118,74.117,197.647,74.117,280,0l0,0l74.118-74.118c74.117,24.706,148.235,41.177,222.353,32.941l-172.94,172.941\n\t\t\t\tc-148.235,148.235-387.06,148.235-527.06,0s-148.235-387.059,0-527.059C107.059,2557.647,362.353,2310.588,362.353,2310.588z\n\t\t\t\t\tM757.646,1907.059L592.941,2080c74.117-8.235,148.235,8.235,214.117,32.941l74.118-74.118c74.117-74.117,197.646-74.117,280,0\n\t\t\t\tc82.353,74.118,74.117,197.647,0,280l-255.294,247.06c-74.118,74.117-197.647,74.117-280,0\n\t\t\t\tc-8.235-16.471-24.706-41.177-32.941-65.883l-131.765,131.765c16.471,24.706,32.94,41.177,49.411,57.647\n\t\t\t\tc148.235,148.235,387.059,148.235,527.06,0l0,0l247.059-247.06c148.235-148.235,148.235-387.059,0-527.059\n\t\t\t\tS905.883,1767.059,757.646,1907.059L757.646,1907.059L757.646,1907.059z",
           }),
-        );
+        });
       }
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 39 30",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "#06BFFF",
-            _: "M4 11.1947L8.70813 12.7135C9.35359 12.9033 9.84719 13.4349 10.075 14.0803L11.5937 18.7885L13.1125 14.0803C13.3023 13.4349 13.8339 12.9413 14.4794 12.7135L19.1875 11.1947L14.4794 9.67595C13.8339 9.48611 13.3403 8.95455 13.1125 8.30908L11.5937 3.60095L10.075 8.30908C9.88516 8.95455 9.35359 9.44814 8.70813 9.67595L4 11.1947Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M20 4.89423L22.439 5.67308C22.7799 5.77692 23.0422 6.03654 23.1471 6.37404L23.9339 8.78846L24.7206 6.37404C24.8255 6.03654 25.0878 5.77692 25.4287 5.67308L27.8677 4.89423L25.4287 4.11539C25.0878 4.01154 24.8255 3.75192 24.7206 3.41442L23.9339 1L23.1471 3.41442C23.0422 3.75192 22.7799 4.01154 22.439 4.11539L20 4.89423Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M26 27.9471L27.2326 28.3365C27.39 28.3885 27.5211 28.5183 27.5735 28.674L27.9669 29.8942L28.3603 28.674C28.4128 28.5183 28.5439 28.3885 28.7012 28.3365L29.9339 27.9471L28.7012 27.5577C28.5439 27.5058 28.4128 27.376 28.3603 27.2202L27.9669 26L27.5735 27.2202C27.5211 27.376 27.39 27.5058 27.2326 27.5577L26 27.9471Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M35 1.94711L36.2326 2.33654C36.39 2.38846 36.5211 2.51827 36.5735 2.67404L36.9669 3.89423L37.3603 2.67404C37.4128 2.51827 37.5439 2.38846 37.7012 2.33654L38.9339 1.94711L37.7012 1.55769C37.5439 1.50577 37.4128 1.37596 37.3603 1.22019L36.9669 8.59772e-08L36.5735 1.22019C36.5211 1.37596 36.39 1.50577 36.2326 1.55769L35 1.94711Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M13 21.9471L14.2326 22.3365C14.39 22.3885 14.5211 22.5183 14.5735 22.674L14.9669 23.8942L15.3603 22.674C15.4128 22.5183 15.5439 22.3885 15.7012 22.3365L16.9339 21.9471L15.7012 21.5577C15.5439 21.5058 15.4128 21.376 15.3603 21.2202L14.9669 20L14.5735 21.2202C14.5211 21.376 14.39 21.5058 14.2326 21.5577L13 21.9471Z",
-          }),
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M-8.51111e-08 15.8413L1.23261 16.2308C1.38996 16.2827 1.52109 16.4125 1.57354 16.5683L1.96693 17.7885L2.36031 16.5683C2.41276 16.4125 2.54389 16.2827 2.70125 16.2308L3.93386 15.8413L2.70125 15.4519C2.54389 15.4 2.41276 15.2702 2.36031 15.1144L1.96693 13.8942L1.57354 15.1144C1.52109 15.2702 1.38996 15.4 1.23261 15.4519L-8.51111e-08 15.8413Z",
-          }),
-        );
+        return (0, _.jsxs)("svg", {
+          className: _,
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 39 30",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "#06BFFF",
+              _: "M4 11.1947L8.70813 12.7135C9.35359 12.9033 9.84719 13.4349 10.075 14.0803L11.5937 18.7885L13.1125 14.0803C13.3023 13.4349 13.8339 12.9413 14.4794 12.7135L19.1875 11.1947L14.4794 9.67595C13.8339 9.48611 13.3403 8.95455 13.1125 8.30908L11.5937 3.60095L10.075 8.30908C9.88516 8.95455 9.35359 9.44814 8.70813 9.67595L4 11.1947Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M20 4.89423L22.439 5.67308C22.7799 5.77692 23.0422 6.03654 23.1471 6.37404L23.9339 8.78846L24.7206 6.37404C24.8255 6.03654 25.0878 5.77692 25.4287 5.67308L27.8677 4.89423L25.4287 4.11539C25.0878 4.01154 24.8255 3.75192 24.7206 3.41442L23.9339 1L23.1471 3.41442C23.0422 3.75192 22.7799 4.01154 22.439 4.11539L20 4.89423Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M26 27.9471L27.2326 28.3365C27.39 28.3885 27.5211 28.5183 27.5735 28.674L27.9669 29.8942L28.3603 28.674C28.4128 28.5183 28.5439 28.3885 28.7012 28.3365L29.9339 27.9471L28.7012 27.5577C28.5439 27.5058 28.4128 27.376 28.3603 27.2202L27.9669 26L27.5735 27.2202C27.5211 27.376 27.39 27.5058 27.2326 27.5577L26 27.9471Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M35 1.94711L36.2326 2.33654C36.39 2.38846 36.5211 2.51827 36.5735 2.67404L36.9669 3.89423L37.3603 2.67404C37.4128 2.51827 37.5439 2.38846 37.7012 2.33654L38.9339 1.94711L37.7012 1.55769C37.5439 1.50577 37.4128 1.37596 37.3603 1.22019L36.9669 8.59772e-08L36.5735 1.22019C36.5211 1.37596 36.39 1.50577 36.2326 1.55769L35 1.94711Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M13 21.9471L14.2326 22.3365C14.39 22.3885 14.5211 22.5183 14.5735 22.674L14.9669 23.8942L15.3603 22.674C15.4128 22.5183 15.5439 22.3885 15.7012 22.3365L16.9339 21.9471L15.7012 21.5577C15.5439 21.5058 15.4128 21.376 15.3603 21.2202L14.9669 20L14.5735 21.2202C14.5211 21.376 14.39 21.5058 14.2326 21.5577L13 21.9471Z",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M-8.51111e-08 15.8413L1.23261 16.2308C1.38996 16.2827 1.52109 16.4125 1.57354 16.5683L1.96693 17.7885L2.36031 16.5683C2.41276 16.4125 2.54389 16.2827 2.70125 16.2308L3.93386 15.8413L2.70125 15.4519C2.54389 15.4 2.41276 15.2702 2.36031 15.1144L1.96693 13.8942L1.57354 15.1144C1.52109 15.2702 1.38996 15.4 1.23261 15.4519L-8.51111e-08 15.8413Z",
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9240,6 +9524,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9289,44 +9574,41 @@
       function _(_) {
         return _.forwardRef((_, _) => {
           const { scroll: _, smooth: _, ..._ } = _;
-          return _.createElement(
-            _,
-            {
-              ..._,
-              onClick: (_) => {
-                _(),
-                  _.onClick && _.onClick(_),
-                  "string" == typeof _._
-                    ? (_ = _._.split("#").slice(1).join("#"))
-                    : "object" == typeof _._ &&
-                      "string" == typeof _._.hash &&
-                      (_ = _._.hash.replace("#", "")),
-                  "" !== _ &&
-                    ((_ =
-                      _.scroll ||
-                      ((_) =>
-                        _.smooth
-                          ? _.scrollIntoView({
-                              behavior: "smooth",
-                            })
-                          : _.scrollIntoView())),
-                    window.setTimeout(() => {
-                      !1 === _() &&
-                        (null === _ && (_ = new MutationObserver(_)),
-                        _.observe(document, {
-                          attributes: !0,
-                          childList: !0,
-                          subtree: !0,
-                        }),
-                        (_ = window.setTimeout(() => {
-                          _();
-                        }, 1e4)));
-                    }, 0));
-              },
-              ref: _,
+          return (0, _.jsx)(_, {
+            ..._,
+            onClick: (_) => {
+              _(),
+                _.onClick && _.onClick(_),
+                "string" == typeof _._
+                  ? (_ = _._.split("#").slice(1).join("#"))
+                  : "object" == typeof _._ &&
+                    "string" == typeof _._.hash &&
+                    (_ = _._.hash.replace("#", "")),
+                "" !== _ &&
+                  ((_ =
+                    _.scroll ||
+                    ((_) =>
+                      _.smooth
+                        ? _.scrollIntoView({
+                            behavior: "smooth",
+                          })
+                        : _.scrollIntoView())),
+                  window.setTimeout(() => {
+                    !1 === _() &&
+                      (null === _ && (_ = new MutationObserver(_)),
+                      _.observe(document, {
+                        attributes: !0,
+                        childList: !0,
+                        subtree: !0,
+                      }),
+                      (_ = window.setTimeout(() => {
+                        _();
+                      }, 1e4)));
+                  }, 0));
             },
-            _.children,
-          );
+            ref: _,
+            children: _.children,
+          });
         });
       }
       _(_._);
@@ -9403,27 +9685,23 @@
                 return () => clearInterval(_);
               }
             }, [_]),
-            _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  "flow-children": "row",
-                  ...__webpack_require__,
-                  className: (0, _._)(_.ItemContainer, _),
-                  ref: _,
-                  fnScrollIntoViewHandler: () => !0,
-                },
-                _,
-                _.createElement("div", {
-                  className: _.Accent,
-                  style: _,
-                }),
-              ),
-            )
+            (0, _.jsx)(_.Provider, {
+              value: _,
+              children: (0, _.jsxs)(_._, {
+                "flow-children": "row",
+                ...__webpack_require__,
+                className: (0, _._)(_.ItemContainer, _),
+                ref: _,
+                fnScrollIntoViewHandler: () => !0,
+                children: [
+                  _,
+                  (0, _.jsx)("div", {
+                    className: _.Accent,
+                    style: _,
+                  }),
+                ],
+              }),
+            })
           );
         },
         _ = ({
@@ -9444,15 +9722,12 @@
                   width: _.clientWidth,
                 });
             }, [_, _, _]),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Item, _ && _.Active, __webpack_require__),
-                ref: _,
-                ..._,
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.Item, _ && _.Active, __webpack_require__),
+              ref: _,
+              ..._,
+              children: _,
+            })
           );
         };
       var _ = __webpack_require__("chunkid"),
@@ -9660,143 +9935,122 @@
           const [_, _] = (0, _.useState)(_._.Get().GetCurrentSearchTerm()),
             [__webpack_require__, _] = (0, _.useState)(0),
             _ = _._.Get().GetCurrentSearchPlaceholder();
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.SearchSection, _.NavItemPadding),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.SearchTermContainer,
-              },
-              _.createElement(_._, {
-                className: _.SearchTerm,
-                type: "text",
-                _: "point_search",
-                onChange: (_) => {
-                  let _ = _.target.value.toLowerCase();
-                  __webpack_require__ && clearTimeout(__webpack_require__),
-                    _(
-                      window.setTimeout(() => {
-                        _._.Get().SetCurrentSearchTerm(_);
-                      }, 300),
-                    ),
-                    _(_);
-                },
-                value: _,
-                placeholder: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.SearchIconContainer,
-                },
-                _.createElement(_.eSy, {
-                  className: (0, _._)(_.SearchIcon),
+          return (0, _.jsx)(_._, {
+            className: (0, _._)(_.SearchSection, _.NavItemPadding),
+            children: (0, _.jsxs)(_._, {
+              className: _.SearchTermContainer,
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.SearchTerm,
+                  type: "text",
+                  _: "point_search",
+                  onChange: (_) => {
+                    let _ = _.target.value.toLowerCase();
+                    __webpack_require__ && clearTimeout(__webpack_require__),
+                      _(
+                        window.setTimeout(() => {
+                          _._.Get().SetCurrentSearchTerm(_);
+                        }, 300),
+                      ),
+                      _(_);
+                  },
+                  value: _,
+                  placeholder: _,
                 }),
-              ),
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  {
+                (0, _.jsx)("div", {
+                  className: _.SearchIconContainer,
+                  children: (0, _.jsx)(_.eSy, {
+                    className: (0, _._)(_.SearchIcon),
+                  }),
+                }),
+                _.length > 0 &&
+                  (0, _.jsx)("div", {
                     className: _.SearchTermClearButton,
                     onClick: () => {
                       _(""), _._.Get().SetCurrentSearchTerm("");
                     },
-                  },
-                  _.createElement(_._, {
-                    className: _.SearchTermClearIcon,
+                    children: (0, _.jsx)(_._, {
+                      className: _.SearchTermClearIcon,
+                    }),
                   }),
-                ),
-            ),
-          );
+              ],
+            }),
+          });
         });
       function _() {
         return _._.Get().BIsLoggedIn()
-          ? _.createElement(
-              _._,
-              {
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                className: (0, _._)(_.PointsContainer, _.NavItemPadding),
-              },
-              _.createElement(_.vrn, {
-                className: _.Icon,
-              }),
-              _.createElement(
-                _._,
-                {
+          ? (0, _.jsxs)(_._, {
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              className: (0, _._)(_.PointsContainer, _.NavItemPadding),
+              children: [
+                (0, _.jsx)(_.vrn, {
+                  className: _.Icon,
+                }),
+                (0, _.jsxs)(_._, {
                   display: "flex",
                   flexDirection: "column",
                   flex: "1",
                   paddingLeft: "xsmall",
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.YourBalanceLabel,
-                    href: _._.STORE_BASE_URL + "pointssummary/",
-                  },
-                  (0, _._)("#YourBalance"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RewardsPointsCount,
-                  },
-                  (0, _._)(_._.Get().GetPointsAvailable().getLowBits()),
-                ),
-              ),
-            )
+                  children: [
+                    (0, _.jsx)("a", {
+                      className: _.YourBalanceLabel,
+                      href: _._.STORE_BASE_URL + "pointssummary/",
+                      children: (0, _._)("#YourBalance"),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.RewardsPointsCount,
+                      children: (0, _._)(
+                        _._.Get().GetPointsAvailable().getLowBits(),
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            })
           : null;
       }
       const _ = () => {
           const _ = _(),
             _ = _._.Get().BIsLoggedIn() && _._.Get().GetIsUsingAppIDFilters();
-          return _.createElement(
-            _._,
-            {
-              className: _.PrimaryNav,
-              "flow-children": "column",
-            },
-            _.createElement(
-              _._,
-              {
-                spacing: "none",
-              },
-              _.createElement(_, null),
-              _ && _.createElement(_, null),
-              _.map((_, _) =>
-                _.createElement(
-                  _.Fragment,
-                  {
-                    key: _,
-                  },
-                  _.label &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.NavItem,
-                      },
-                      _.label,
-                    ),
-                  _.items.map((_) =>
-                    _.external
-                      ? _.createElement(_, {
-                          ..._.props,
-                          key: _.props.href,
-                        })
-                      : _.createElement(_, {
-                          ..._.props,
-                          key: JSON.stringify(_.props._),
-                        }),
+          return (0, _.jsx)(_._, {
+            className: _.PrimaryNav,
+            "flow-children": "column",
+            children: (0, _.jsxs)(_._, {
+              spacing: "none",
+              children: [
+                (0, _.jsx)(_, {}),
+                _ && (0, _.jsx)(_, {}),
+                _.map((_, _) =>
+                  (0, _.jsxs)(
+                    _.Fragment,
+                    {
+                      children: [
+                        _.label &&
+                          (0, _.jsx)("div", {
+                            className: _.NavItem,
+                            children: _.label,
+                          }),
+                        _.items.map((_) =>
+                          _.external
+                            ? (0, _.createElement)(_, {
+                                ..._.props,
+                                key: _.props.href,
+                              })
+                            : (0, _.createElement)(_, {
+                                ..._.props,
+                                key: JSON.stringify(_.props._),
+                              }),
+                        ),
+                      ],
+                    },
+                    _,
                   ),
                 ),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         },
         _ = (_) => {
           const {
@@ -9808,25 +10062,21 @@
             } = _,
             _ = _,
             _ = "object" == typeof _._ && _._.hash ? _ : _._;
-          return _.createElement(
-            _,
-            {
-              className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
-              activeClassName: _.Selected,
-              ..._,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_, {
+            className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
+            activeClassName: _.Selected,
+            ..._,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.Label,
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(_, {
-                className: _.Callout,
+                children: _,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _.Callout,
+                }),
+            ],
+          });
         },
         _ = (_) => {
           const {
@@ -9837,24 +10087,20 @@
               ..._
             } = _,
             _ = _;
-          return _.createElement(
-            "a",
-            {
-              className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
-              ..._,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("a", {
+            className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
+            ..._,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.Label,
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(_, {
-                className: _.Callout,
+                children: _,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _.Callout,
+                }),
+            ],
+          });
         };
       function _(_) {
         const _ = (0, _._)(),
@@ -9862,14 +10108,11 @@
           _ = (0, _._)(_),
           _ = !!_ && (!_.exact || _.isExact),
           _ = _ && _.isActive ? _.isActive(_, _) : _;
-        return _.createElement(
-          _,
-          {
-            active: _,
-            className: _.ScrollableTabItem,
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_, {
+          active: _,
+          className: _.ScrollableTabItem,
+          children: _.children,
+        });
       }
       const _ = () => {
         const _ = _(),
@@ -9884,7 +10127,7 @@
                   ..._
                 } = _.props;
                 _.push(
-                  _.createElement(
+                  (0, _.createElement)(
                     _._,
                     {
                       ..._,
@@ -9892,13 +10135,10 @@
                       focusClassName: _.Focused,
                       noFocusRing: !0,
                     },
-                    _.createElement(
-                      _,
-                      {
-                        className: _.ScrollableTabItem,
-                      },
-                      _.props.children,
-                    ),
+                    (0, _.jsx)(_, {
+                      className: _.ScrollableTabItem,
+                      children: _.props.children,
+                    }),
                   ),
                 );
               } else {
@@ -9906,7 +10146,7 @@
                   { iconComponent: _, iconCallout: _, ..._ } = _,
                   _ = "string" == typeof _._ ? _._ : JSON.stringify(_._);
                 _.push(
-                  _.createElement(
+                  (0, _.createElement)(
                     _._,
                     {
                       ..._,
@@ -9914,25 +10154,19 @@
                       focusClassName: _.Focused,
                       noFocusRing: !0,
                     },
-                    _.createElement(
-                      _,
-                      {
-                        ..._,
-                      },
-                      _.children,
-                    ),
+                    (0, _.jsx)(_, {
+                      ..._,
+                      children: _.children,
+                    }),
                   ),
                 );
               }
             });
           }),
-          _.createElement(
-            _,
-            {
-              className: _.ScrollableTabs,
-            },
-            _,
-          )
+          (0, _.jsx)(_, {
+            className: _.ScrollableTabs,
+            children: _,
+          })
         );
       };
       var _ = __webpack_require__("chunkid");
@@ -9950,43 +10184,40 @@
         _ = __webpack_require__("chunkid");
       const _ = ({ className: _, ..._ }) => {
           const _ = _.useRef(void 0);
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement("div", {
-              ref: _,
-              className: (0, _._)(_.StandardRoot, _),
-              ..._,
-            }),
-            _.createElement(_, {
-              scrollElement: _.current,
-            }),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
+                ref: _,
+                className: (0, _._)(_.StandardRoot, _),
+                ..._,
+              }),
+              (0, _.jsx)(_, {
+                scrollElement: _.current,
+              }),
+            ],
+          });
         },
         _ = ({ children: _ }) =>
-          _.createElement(
-            _,
-            {
-              className: (0, _._)(_.ParallaxRoot, _.ParallaxRoot),
-            },
-            _,
-          ),
+          (0, _.jsx)(_, {
+            className: (0, _._)(_.ParallaxRoot, _.ParallaxRoot),
+            children: _,
+          }),
         _ = ({ children: _, src: _, className: __webpack_require__ }) =>
-          _.createElement(
-            _.Fragment,
-            null,
-            _,
-            _.createElement("div", {
-              className: (0, _._)(
-                _.ParallaxBackground,
-                _.ParallaxBackground,
-                __webpack_require__,
-              ),
-              style: {
-                backgroundImage: `url(${_})`,
-              },
-            }),
-          );
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _.ParallaxBackground,
+                  _.ParallaxBackground,
+                  __webpack_require__,
+                ),
+                style: {
+                  backgroundImage: `url(${_})`,
+                },
+              }),
+            ],
+          });
       function _() {
         return (0, _._)("(max-width: 965px)") || _._.IN_GAMEPADUI;
       }
@@ -9994,66 +10225,54 @@
         const _ = (0, _._)(["xxsmall", "small", "xxlarge"]),
           _ = _(),
           _ = (0, _._)(_);
-        return _.createElement(
-          _._,
-          {
-            spacing: {
-              horizontal: _,
-            },
+        return (0, _.jsx)(_._, {
+          spacing: {
+            horizontal: _,
           },
-          _.createElement(
-            _._,
-            {
-              display: "flex",
-              justifyContent: "center",
-              paddingBottom: "xlarge",
-              className: _.StandardLayout,
-            },
-            !_ && _.createElement(_, null),
-            _.createElement(
-              _._,
-              {
+          children: (0, _.jsxs)(_._, {
+            display: "flex",
+            justifyContent: "center",
+            paddingBottom: "xlarge",
+            className: _.StandardLayout,
+            children: [
+              !_ && (0, _.jsx)(_, {}),
+              (0, _.jsxs)(_._, {
                 itemClassName: _.PageItem,
                 className: _.ItemContainer,
-              },
-              _ && _.createElement(_, null),
-              _.children,
-            ),
-          ),
-        );
+                children: [_ && (0, _.jsx)(_, {}), _.children],
+              }),
+            ],
+          }),
+        });
       }
       const _ = ({ background: _, children: _ }) => {
           let _ = _;
           return (
             _ && (_ = _),
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                {
-                  src: _,
-                },
-                _.createElement(_, null, _),
-              ),
-            )
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_, {
+                src: _,
+                children: (0, _.jsx)(_, {
+                  children: _,
+                }),
+              }),
+            })
           );
         },
         _ = ({ children: _ }) =>
-          _.createElement(
-            _,
-            {
-              src: _,
-              className: _.HomeBackground,
-            },
-            _,
-          ),
+          (0, _.jsx)(_, {
+            src: _,
+            className: _.HomeBackground,
+            children: _,
+          }),
         _ = ({ children: _ }) =>
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, null, _.createElement(_, null, _)),
-          ),
+          (0, _.jsx)(_, {
+            children: (0, _.jsx)(_, {
+              children: (0, _.jsx)(_, {
+                children: _,
+              }),
+            }),
+          }),
         _ = (0, _._)(({ children: _, appid: _ }) => {
           const [__webpack_require__] = (0, _._)(_, {
             include_assets: !0,
@@ -10067,14 +10286,11 @@
                 (_ =
                   __webpack_require__.GetAssets().GetRawPageBackgroundURL() ??
                   __webpack_require__.GetAssets().GetPageBackgroundURL()),
-            _.createElement(
-              _,
-              {
-                src: _,
-                className: _.ParallaxAppBackground,
-              },
-              _,
-            )
+            (0, _.jsx)(_, {
+              src: _,
+              className: _.ParallaxAppBackground,
+              children: _,
+            })
           );
         }),
         _ = {
@@ -10082,10 +10298,10 @@
         };
       function _(_) {
         return _.appid in _
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
             })
-          : _.createElement(_, {
+          : (0, _.jsx)(_, {
               ..._,
             });
       }
@@ -10094,71 +10310,56 @@
           _ = (function (_) {
             return _[_];
           })(__webpack_require__);
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            "div",
-            {
-              style: {
-                backgroundImage: `url("${_}")`,
-              },
-              className: _.CustomAppBackground,
+        return (0, _.jsx)(_, {
+          children: (0, _.jsx)("div", {
+            style: {
+              backgroundImage: `url("${_}")`,
             },
-            _.createElement(_, null, _),
-          ),
-        );
+            className: _.CustomAppBackground,
+            children: (0, _.jsx)(_, {
+              children: _,
+            }),
+          }),
+        });
       }
       function _(_) {
         const { children: _, appid: __webpack_require__ } = _;
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            {
-              appid: __webpack_require__,
-            },
-            _.createElement(_, null, _),
-          ),
-        );
+        return (0, _.jsx)(_, {
+          children: (0, _.jsx)(_, {
+            appid: __webpack_require__,
+            children: (0, _.jsx)(_, {
+              children: _,
+            }),
+          }),
+        });
       }
       function _(_) {
         const { title: _, subtitle: __webpack_require__, headerImage: _ } = _,
           _ = _();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
               className: _.PagePointShopTitle,
-            },
-            _.createElement(_._, null),
-          ),
-          _ && _.createElement(_, null),
-          _ &&
-            _.createElement("img", {
-              className: _.PageHeaderImage,
-              src: _,
+              children: (0, _.jsx)(_._, {}),
             }),
-          _ &&
-            _.createElement(
-              "div",
-              {
+            _ && (0, _.jsx)(_, {}),
+            _ &&
+              (0, _.jsx)("img", {
+                className: _.PageHeaderImage,
+                src: _,
+              }),
+            _ &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(_.PageTitle, _.PageTitle),
-              },
-              _,
-            ),
-          __webpack_require__ &&
-            _.createElement(
-              "div",
-              {
+                children: _,
+              }),
+            __webpack_require__ &&
+              (0, _.jsx)("div", {
                 className: _.PageSubtitle,
-              },
-              __webpack_require__,
-            ),
-        );
+                children: __webpack_require__,
+              }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -10181,16 +10382,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(!1);
       function _(_) {
-        return _.createElement(
-          _.Provider,
-          {
-            value: !0,
-          },
-          _.children,
-        );
+        return (0, _.jsx)(_.Provider, {
+          value: !0,
+          children: _.children,
+        });
       }
       const _ = (0, _._)((_) => {
           const _ = (0, _.useContext)(_),
@@ -10213,10 +10412,10 @@
               };
             })(_);
           return _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 ..._,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 ..._,
               });
         }),
@@ -10236,27 +10435,24 @@
               ..._
             } = _,
             _ = _.community_item_data.item_title;
-          return _.createElement(
-            _._,
-            {
-              name: _,
-              cost: _,
-              attributes: _,
-              appIcon: __webpack_require__,
-              iconComponent: _._,
-              desc: _,
-              className: _,
-              appName: _,
-              ..._,
-            },
-            _.createElement("img", {
+          return (0, _.jsx)(_._, {
+            name: _,
+            cost: _,
+            attributes: _,
+            appIcon: __webpack_require__,
+            iconComponent: _._,
+            desc: _,
+            className: _,
+            appName: _,
+            ..._,
+            children: (0, _.jsx)("img", {
               src: (0, _._)(_),
               style: {
                 width: "100%",
                 height: "100%",
               },
             }),
-          );
+          });
         }),
         _ = (0, _._)((_) => {
           const {
@@ -10276,28 +10472,24 @@
             } = _,
             _ = _.community_item_data.item_title,
             _ = _.community_item_data.profile_theme_id;
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              className: (0, _._)(_.ProfileBundleContainer, _),
-              style: {
-                ..._,
-                width: "524px",
-              },
-              onActivate: _,
+          return (0, _.jsxs)(_._, {
+            display: "flex",
+            flexDirection: "column",
+            className: (0, _._)(_.ProfileBundleContainer, _),
+            style: {
               ..._,
+              width: "524px",
             },
-            __webpack_require__ &&
-              _.createElement("img", {
-                title: _,
-                src: __webpack_require__,
-                className: _.AppIcon,
-              }),
-            _.createElement(
-              _._,
-              {
+            onActivate: _,
+            ..._,
+            children: [
+              __webpack_require__ &&
+                (0, _.jsx)("img", {
+                  title: _,
+                  src: __webpack_require__,
+                  className: _.AppIcon,
+                }),
+              (0, _.jsxs)(_._, {
                 flex: "1",
                 style: {
                   width: "524px",
@@ -10305,64 +10497,57 @@
                   position: "relative",
                   alignSelf: "center",
                 },
-              },
-              _ &&
-                _.createElement(_._, {
-                  theme: _[`${_}Theme`],
-                }),
-              _.createElement(_, {
-                items: _.items,
-                offer: _,
+                children: [
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      theme: _[`${_}Theme`],
+                    }),
+                  (0, _.jsx)(_, {
+                    items: _.items,
+                    offer: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(_, {
-              label: _,
-              cost: _,
-              bOwned: _,
-            }),
-          );
+              (0, _.jsx)(_, {
+                label: _,
+                cost: _,
+                bOwned: _,
+              }),
+            ],
+          });
         }),
         _ = ({ cost: _, label: _, bOwned: __webpack_require__ }) =>
-          _.createElement(
-            _._,
-            {
-              padding: "small",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "row",
-              className: _.ProfileBundleFooter,
-              title: _,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_._, {
+            padding: "small",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "row",
+            className: _.ProfileBundleFooter,
+            title: _,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.ProfileBundleName,
-              },
-              _,
-            ),
-            __webpack_require__
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.AlreadyOwned,
-                    },
-                    (0, _._)("#Redeem_BundleItemOwned"),
-                  ),
-                  _.createElement(_._, {
-                    className: _.CheckmarkCircle,
+                children: _,
+              }),
+              __webpack_require__
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.AlreadyOwned,
+                        children: (0, _._)("#Redeem_BundleItemOwned"),
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _.CheckmarkCircle,
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)(_._, {
+                      amount: _,
+                    }),
                   }),
-                )
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_._, {
-                    amount: _,
-                  }),
-                ),
-          );
+            ],
+          });
       function _(_, _) {
         const _ = _.filter((_) => _.community_item_class == _).slice(0, 1);
         return 1 == _.length ? _[0] : null;
@@ -10373,44 +10558,43 @@
             _ = _(__webpack_require__, 14),
             _ = _(__webpack_require__, 13),
             _ = _(__webpack_require__, 3);
-          return _.createElement(
-            "div",
-            {
-              style: {
-                position: "relative",
-              },
-              className: _.ItemHand,
+          return (0, _.jsxs)("div", {
+            style: {
+              position: "relative",
             },
-            _ &&
-              _.createElement(_, {
-                item: _,
-                offer: _,
-                className: _.Avatar,
-              }),
-            _ &&
-              _.createElement(_, {
-                item: _,
-                offer: _,
-                className: _.AvatarFrame,
-              }),
-            _ &&
-              _.createElement(_, {
-                item: _,
-                offer: _,
-                className: _.MiniProfileBackground,
-              }),
-            _ &&
-              _.createElement(_, {
-                item: _,
-                offer: _,
-                className: _.ProfileBackground,
-              }),
-          );
+            className: _.ItemHand,
+            children: [
+              _ &&
+                (0, _.jsx)(_, {
+                  item: _,
+                  offer: _,
+                  className: _.Avatar,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  item: _,
+                  offer: _,
+                  className: _.AvatarFrame,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  item: _,
+                  offer: _,
+                  className: _.MiniProfileBackground,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  item: _,
+                  offer: _,
+                  className: _.ProfileBackground,
+                }),
+            ],
+          });
         }),
         _ = (0, _._)((_) => {
           const { offer: _, item: __webpack_require__, className: _, ..._ } = _,
             _ = 14 == __webpack_require__.community_item_class;
-          return _.createElement(
+          return (0, _.createElement)(
             _._,
             {
               padding: "none",
@@ -10422,13 +10606,13 @@
               key: __webpack_require__.defid,
             },
             _ &&
-              _.createElement("img", {
+              (0, _.jsx)("img", {
                 className: _.DefaultAvatarImage,
                 src:
                   _._.MEDIA_CDN_COMMUNITY_URL +
                   "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
               }),
-            _.createElement("img", {
+            (0, _.jsx)("img", {
               src: (0, _._)(__webpack_require__),
               className: _.ItemCardImage,
               style: _
@@ -10452,6 +10636,7 @@
       });
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10686,7 +10871,9 @@
           const [_, __webpack_require__] = (0, _.useState)(!1);
           return _(() => __webpack_require__(!0), _), _;
         })(_)
-          ? _.createElement(_.Fragment, null, _)
+          ? (0, _.jsx)(_.Fragment, {
+              children: _,
+            })
           : null;
       class _ extends _.Component {
         m_refContainer = _.createRef();
@@ -10824,23 +11011,23 @@
                     filter: `hue-rotate(${_.nHueRotation}deg)`,
                   };
                 _.push(
-                  _.createElement(_.burst, {
-                    key: _,
-                    style: _,
-                    msDelay: _.nDelay,
-                    scale: _.flScale,
-                    sale: this.props.sale,
-                  }),
+                  (0, _.jsx)(
+                    _.burst,
+                    {
+                      style: _,
+                      msDelay: _.nDelay,
+                      scale: _.flScale,
+                      sale: this.props.sale,
+                    },
+                    _,
+                  ),
                 );
               }),
-            _.createElement(
-              "div",
-              {
-                ref: this.m_refContainer,
-                className: _().FireworkContainer,
-              },
-              _,
-            )
+            (0, _.jsx)("div", {
+              ref: this.m_refContainer,
+              className: _().FireworkContainer,
+              children: _,
+            })
           );
         }
       }
@@ -10854,16 +11041,13 @@
           (_.animation = `${_().fireworkLongX} 0.2s steps(9) 10, ${_().fireworkLongY} 2.0s steps(10) forwards`),
           (_.transformOrigin = "0 0"),
           (_.transform = `scale( ${_.scale} )`),
-          _.createElement(
-            _,
-            {
-              msDelay: _.msDelay,
-            },
-            _.createElement("div", {
+          (0, _.jsx)(_, {
+            msDelay: _.msDelay,
+            children: (0, _.jsx)("div", {
               style: _.style,
               className: _().FireworkPNG,
             }),
-          )
+          })
         );
       }
       function _(_) {
@@ -10876,16 +11060,13 @@
           (_.animation = `${_().fireworkBigX} 0.2s steps(9) 4, ${_().fireworkBigY} 0.8s steps(4) forwards`),
           (_.transformOrigin = "0 0"),
           (_.transform = `scale( ${_.scale} )`),
-          _.createElement(
-            _,
-            {
-              msDelay: _.msDelay,
-            },
-            _.createElement("div", {
+          (0, _.jsx)(_, {
+            msDelay: _.msDelay,
+            children: (0, _.jsx)("div", {
               style: _.style,
               className: _().FireworkPNG,
             }),
-          )
+          })
         );
       }
       function _(_) {
@@ -10898,16 +11079,13 @@
           (_.animation = `${_().fireworkSmallX} 0.15s steps(10) 6, ${_().fireworkSmallY} 0.9s steps(6) forwards`),
           (_.transformOrigin = "0 0"),
           (_.transform = `scale( ${_.scale / 2} )`),
-          _.createElement(
-            _,
-            {
-              msDelay: _.msDelay,
-            },
-            _.createElement("div", {
+          (0, _.jsx)(_, {
+            msDelay: _.msDelay,
+            children: (0, _.jsx)("div", {
               style: _.style,
               className: _().FireworkPNG,
             }),
-          )
+          })
         );
       }
       var _ = __webpack_require__("chunkid");
@@ -10937,7 +11115,7 @@
           let _ = _.map((_) => _()[_]);
           return (
             __webpack_require__.push(_().snowball_fragment),
-            _.createElement("img", {
+            (0, _.jsx)("img", {
               src: this.getAsset(_),
               className: __webpack_require__.join(" "),
             })
@@ -10949,110 +11127,94 @@
           let _ = __webpack_require__.map((_) => _()[_]);
           return (
             _.push(_().snowball_fragment),
-            _.createElement(
-              "div",
-              {
-                style: {
-                  display: "inline-block",
-                },
-                className: _.join(" "),
+            (0, _.jsx)("div", {
+              style: {
+                display: "inline-block",
               },
-              _.createElement("img", {
+              className: _.join(" "),
+              children: (0, _.jsx)("img", {
                 style: {
                   transform: "rotation( 360deg )",
                 },
                 className: `${_().SnowballImage} ${_}`,
                 src: this.getAsset(_),
               }),
-            )
+            })
           );
         }
         residue() {
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
                 style: {
                   transform: `rotate(${this.m_splatRots[0]}deg)`,
                 },
-              },
-              this.fragment("splat1.png", "snowball-residue"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: this.fragment("splat1.png", "snowball-residue"),
+              }),
+              (0, _.jsx)("div", {
                 style: {
                   transform: `rotate(${this.m_splatRots[1]}deg)`,
                 },
-              },
-              this.fragment("splat2.png", "snowball-residue"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: this.fragment("splat2.png", "snowball-residue"),
+              }),
+              (0, _.jsx)("div", {
                 style: {
                   transform: `rotate(${this.m_splatRots[2]}deg)`,
                 },
-              },
-              this.fragment("splat3.png", "snowball-residue"),
-            ),
-          );
+                children: this.fragment("splat3.png", "snowball-residue"),
+              }),
+            ],
+          });
         }
         render() {
           let _ = `snowball-path-${this.m_nPathAnimation}`,
             _ = {
               animationName: _()[_],
             };
-          return _.createElement(
+          return (0, _.jsx)(
             _.Fragment,
             {
-              key: `${this.m_nKeyID}`,
-            },
-            _.createElement(
-              "div",
-              {
+              children: (0, _.jsx)("div", {
                 className: _()["snowball-path"],
                 style: _,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _()["snowball-container"],
                   style: {
                     left: this.m_x,
                     top: this.m_y,
                     transform: `rotate( ${this.m_nRotate}deg )`,
                   },
-                },
-                this.Snowball(this.m_nRotate, "snowball.png", "snowball"),
-                this.fragment("slide-out-tl.png", "slide-out-tl"),
-                this.fragment("slide-out-tr.png", "slide-out-tr"),
-                this.fragment("slide-out-bottom.png", "slide-out-bottom"),
-                this.residue(),
-                this.fragment(
-                  "snowball_1.png",
-                  "snowball-chunk",
-                  "snowball-chunk-1",
-                ),
-                this.fragment(
-                  "snowball_2.png",
-                  "snowball-chunk",
-                  "snowball-chunk-2",
-                ),
-                this.fragment(
-                  "snowball_3.png",
-                  "snowball-chunk",
-                  "snowball-chunk-3",
-                ),
-                this.fragment(
-                  "snowball_4.png",
-                  "snowball-chunk",
-                  "snowball-chunk-4",
-                ),
-              ),
-            ),
+                  children: [
+                    this.Snowball(this.m_nRotate, "snowball.png", "snowball"),
+                    this.fragment("slide-out-tl.png", "slide-out-tl"),
+                    this.fragment("slide-out-tr.png", "slide-out-tr"),
+                    this.fragment("slide-out-bottom.png", "slide-out-bottom"),
+                    this.residue(),
+                    this.fragment(
+                      "snowball_1.png",
+                      "snowball-chunk",
+                      "snowball-chunk-1",
+                    ),
+                    this.fragment(
+                      "snowball_2.png",
+                      "snowball-chunk",
+                      "snowball-chunk-2",
+                    ),
+                    this.fragment(
+                      "snowball_3.png",
+                      "snowball-chunk",
+                      "snowball-chunk-3",
+                    ),
+                    this.fragment(
+                      "snowball_4.png",
+                      "snowball-chunk",
+                      "snowball-chunk-4",
+                    ),
+                  ],
+                }),
+              }),
+            },
+            `${this.m_nKeyID}`,
           );
         }
       }
@@ -11068,7 +11230,7 @@
             _ = {
               animationDuration: `${_.SOverlay.nDuration}s`,
             };
-          _ = _.createElement("img", {
+          _ = (0, _.jsx)("img", {
             src: _,
             className: _()[_.SOverlay.strClass],
             style: _,
@@ -11079,21 +11241,20 @@
           animationName: _()[_.strAnimation],
           marginLeft: `${_.nOffset}%`,
         };
-        return _.createElement(
-          "div",
-          {
-            style: _,
-            className: _().balloons,
-          },
-          _.createElement("img", {
-            src: _,
-            style: {
-              maxWidth: "100%",
-              position: "absolute",
-            },
-          }),
-          _,
-        );
+        return (0, _.jsxs)("div", {
+          style: _,
+          className: _().balloons,
+          children: [
+            (0, _.jsx)("img", {
+              src: _,
+              style: {
+                maxWidth: "100%",
+                position: "absolute",
+              },
+            }),
+            _,
+          ],
+        });
       }
       class _ extends _ {
         m_rgBalloons = [];
@@ -11162,18 +11323,19 @@
           );
         }
         render() {
-          return _.createElement(
-            _.Fragment,
-            null,
-            this.m_rgBalloons.map((_, _) =>
-              _.createElement(_, {
-                key: `${_}`,
-                data: _,
-                effect: this.props.effect,
-                sale: this.m_strSaleId,
-              }),
+          return (0, _.jsx)(_.Fragment, {
+            children: this.m_rgBalloons.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  data: _,
+                  effect: this.props.effect,
+                  sale: this.m_strSaleId,
+                },
+                `${_}`,
+              ),
             ),
-          );
+          });
         }
       }
       class _ {
@@ -11201,7 +11363,7 @@
           _ =
             _._.COMMUNITY_CDN_ASSET_URL +
             `winter2019/roomeffects/96px/flake_${_}.png`;
-        return _.createElement("img", {
+        return (0, _.jsx)("img", {
           style: _,
           src: _,
         });
@@ -11212,7 +11374,7 @@
         return () => {
           const _ =
             _._.COMMUNITY_CDN_ASSET_URL + _ + "/roomeffects/96px/" + _ + ".png";
-          return _.createElement("img", {
+          return (0, _.jsx)("img", {
             style: {
               width: "100%",
             },
@@ -11235,45 +11397,45 @@
       }
       const _ = {
         lny2020_lanterns: _("lny2020_lanterns", "lny2020", _, (_) =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             effect: _,
             sale: "lny2020",
           }),
         ),
         lny2020_firework: _("lny2020_firework", "lny2020", 7e3, () =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             sale: "lny2020",
           }),
         ),
         lny2020_confetti: _("lny2020_confetti", "lny2020", _._, () =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             eType: _._.LNY2020,
           }),
         ),
         snowball: _("snowball", _, (_) =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             effect: _,
             sale: "winter2019",
           }),
         ),
         balloons: _("balloons", _, (_) =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             effect: _,
             sale: "winter2019",
           }),
         ),
         confetti: _("confetti", _._, () =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             eType: _._.Default,
           }),
         ),
         goldfetti: _("goldfetti", _._, () =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             eType: _._.Gold,
           }),
         ),
         firework: _("firework", 7e3, () =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             sale: "winter2019",
           }),
         ),
@@ -11288,41 +11450,39 @@
                 animationDelay: `${_ + 4 * __webpack_require__.next()}s`,
               };
             _.push(
-              _.createElement(
+              (0, _.jsxs)(
                 "div",
                 {
-                  key: _.timestamp + "_" + _,
                   style: _,
                   className: (0, _._)(
                     _().Snowflake,
                     _()["Snowflake-" + (_ % 20)],
                   ),
+                  children: [_(_), _(_ + 1)],
                 },
-                _(_),
-                _(_ + 1),
+                _.timestamp + "_" + _,
               ),
             );
           }
-          return _.createElement(_.Fragment, null, " ", _, " ");
+          return (0, _.jsxs)(_.Fragment, {
+            children: [" ", _, " "],
+          });
         }),
       };
       let _ = class extends _.Component {
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: _()["animation-container"],
-            },
-            this.props.effectManager.m_rgRunningEffects.map((_) =>
-              _.createElement(
+          return (0, _.jsx)("div", {
+            className: _()["animation-container"],
+            children: this.props.effectManager.m_rgRunningEffects.map((_) =>
+              (0, _.jsx)(
                 _.Fragment,
                 {
-                  key: _.timestamp,
+                  children: _.render(),
                 },
-                _.render(),
+                _.timestamp,
               ),
             ),
-          );
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -11435,26 +11595,23 @@
       function _(_) {
         const { link: _, className: __webpack_require__, ..._ } = _,
           [_, _] = _.useState(!1);
-        return _.createElement(
-          "div",
-          {
-            title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-            className: (0, _._)(_.Button, __webpack_require__),
-            onClick: () => (_(!0), void navigator.clipboard.writeText(_)),
-          },
-          _.createElement(_._, {
+        return (0, _.jsx)("div", {
+          title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+          className: (0, _._)(_.Button, __webpack_require__),
+          onClick: () => (_(!0), void navigator.clipboard.writeText(_)),
+          children: (0, _.jsx)(_._, {
             ..._,
             className: (0, _._)(_.Icon),
             "data-flash": _ ? 1 : 0,
             onAnimationEnd: () => _(!1),
           }),
-        );
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return ({ className: _, ...__webpack_require__ }) =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             className: (0, _._)(_, _),
             ...__webpack_require__,
           });
@@ -11471,7 +11628,7 @@
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             definitionid: _,
           }),
           _ ? (0, _._)(_) : window,
@@ -11485,7 +11642,7 @@
           desiredItemLevel: _,
         };
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             definition: _,
             saleitem: _,
           }),
@@ -11501,7 +11658,7 @@
           desiredItemLevel: _,
         };
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             definition: _,
           }),
           _ ? (0, _._)(_) : window,
@@ -11515,7 +11672,7 @@
           desiredItemLevel: _,
         };
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             definition: _,
           }),
           _ ? (0, _._)(_) : window,
@@ -11527,7 +11684,7 @@
           rewardDefinition: _,
         };
         (0, _._)(
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             definition: _,
           }),
           _ ? (0, _._)(_) : window,
@@ -11575,7 +11732,7 @@
           type: 1,
           rewardDefinition: _,
         };
-        return _.createElement(_, {
+        return (0, _.jsx)(_, {
           definition: _,
           ...__webpack_require__,
         });
@@ -11730,13 +11887,10 @@
           this.ShowError(
             (0, _._)(
               "#Redeem_Error_Generic",
-              _.createElement(
-                "a",
-                {
-                  href: _._.HELP_BASE_URL,
-                },
-                (0, _._)("#Redeem_Error_SteamSupport"),
-              ),
+              (0, _.jsx)("a", {
+                href: _._.HELP_BASE_URL,
+                children: (0, _._)("#Redeem_Error_SteamSupport"),
+              }),
             ),
           );
         }
@@ -11973,64 +12127,53 @@
           ) {
             _ = `${document.location.href.split("/reward/")[0]}/reward/${this.props.definition.rewardDefinition.defid}`;
           }
-          return _.createElement(
-            _,
-            {
-              onEscKeypress: this.CloseModal,
-              destructive: this.state.error,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.RedeemModalMobileScroll,
-              },
-              _.createElement(
-                _,
-                null,
-                _.createElement(_, {
-                  itemName: _,
-                  itemClassName: _,
-                  itemLink: _,
-                  appInfo: _,
-                  onRequestClose: this.CloseModal,
-                }),
-                this.m_strError &&
-                  this.state.error &&
-                  _.createElement(
-                    "div",
-                    {
+          return (0, _.jsx)(_, {
+            onEscKeypress: this.CloseModal,
+            destructive: this.state.error,
+            children: (0, _.jsx)(_._, {
+              className: _.RedeemModalMobileScroll,
+              children: (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_, {
+                    itemName: _,
+                    itemClassName: _,
+                    itemLink: _,
+                    appInfo: _,
+                    onRequestClose: this.CloseModal,
+                  }),
+                  this.m_strError &&
+                    this.state.error &&
+                    (0, _.jsx)("div", {
                       className: _.ErrorContainer,
-                    },
-                    this.m_strError,
-                  ),
-                _.createElement(
-                  _,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
-                      key: this.state.step,
-                      enter: this.m_bShowTransitions,
-                      exit: this.m_bShowTransitions,
-                      classNames: _,
-                      timeout: 500,
-                    },
-                    (_) =>
-                      _.createElement(_, {
-                        definition: this.m_mutableObjDefinition,
-                        closeModal: this.CloseModal,
-                        redeemPoints: this.RedeemPoints,
-                        equipItem: this.EquipItem,
-                        step: this.state.step,
-                        bRequestInProgress: this.state.requestInProgress,
-                        fnReloadItemDef: this.ReloadItemDef,
-                        containerRef: _,
-                      }),
-                  ),
-                ),
-              ),
-            ),
-          );
+                      children: this.m_strError,
+                    }),
+                  (0, _.jsx)(_, {
+                    children: (0, _.jsx)(
+                      _._,
+                      {
+                        enter: this.m_bShowTransitions,
+                        exit: this.m_bShowTransitions,
+                        classNames: _,
+                        timeout: 500,
+                        children: (_) =>
+                          (0, _.jsx)(_, {
+                            definition: this.m_mutableObjDefinition,
+                            closeModal: this.CloseModal,
+                            redeemPoints: this.RedeemPoints,
+                            equipItem: this.EquipItem,
+                            step: this.state.step,
+                            bRequestInProgress: this.state.requestInProgress,
+                            fnReloadItemDef: this.ReloadItemDef,
+                            containerRef: _,
+                          }),
+                      },
+                      this.state.step,
+                    ),
+                  }),
+                ],
+              }),
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "ShowGenericError", null),
@@ -12046,33 +12189,19 @@
             _ = _.rewardDefinition
               ? _._.GetAppInfo(_.rewardDefinition.appid)
               : null;
-          return _.createElement(
-            _,
-            {
-              onEscKeypress: __webpack_require__,
-            },
-            _.createElement(
-              _._,
-              {
-                navID: "RedeemPointsPreview",
-                closeModal: __webpack_require__,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(_, {
+          return (0, _.jsx)(_, {
+            onEscKeypress: __webpack_require__,
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsx)("div", {
+                children: (0, _.jsxs)(_, {
+                  children: [
+                    (0, _.jsx)(_, {
                       itemName: _(_),
                       itemClassName: _(_),
                       appInfo: _,
                       onRequestClose: __webpack_require__,
                     }),
-                    _.createElement(_, {
+                    (0, _.jsx)(_, {
                       definition: _,
                       closeModal: __webpack_require__,
                       redeemPoints: _,
@@ -12081,11 +12210,11 @@
                       bRequestInProgress: !1,
                       fnReloadItemDef: _,
                     }),
-                  ),
-                ),
-              ),
-            ),
-          );
+                  ],
+                }),
+              }),
+            }),
+          });
         },
         _ = (0, _._)(
           ({
@@ -12095,97 +12224,76 @@
             appInfo: _,
             onRequestClose: _,
           }) =>
-            _.createElement(
-              _._,
-              {
-                className: _.HeaderContainer,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)(_._, {
+              className: _.HeaderContainer,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.Left,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _.Header,
-                  },
-                  _,
-                  __webpack_require__ &&
-                    !_._.IN_GAMEPADUI &&
-                    _.createElement(_, {
-                      link: __webpack_require__,
-                      style: {
-                        marginLeft: "8px",
-                      },
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      className: _.Header,
+                      children: [
+                        _,
+                        __webpack_require__ &&
+                          !_._.IN_GAMEPADUI &&
+                          (0, _.jsx)(_, {
+                            link: __webpack_require__,
+                            style: {
+                              marginLeft: "8px",
+                            },
+                          }),
+                      ],
                     }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubHeader,
-                  },
-                  _,
-                ),
-                _ &&
-                  _.createElement(
-                    _._,
-                    {
-                      _: `${_._.LoyaltyStore()}/app/` + _.appid,
-                      onClick: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SubHeaderAppContainer,
-                      },
-                      _.createElement("img", {
-                        className: _.AppIcon,
-                        src: _.icon_url,
+                    (0, _.jsx)("div", {
+                      className: _.SubHeader,
+                      children: _,
+                    }),
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        _: `${_._.LoyaltyStore()}/app/` + _.appid,
+                        onClick: _,
+                        children: (0, _.jsxs)("div", {
+                          className: _.SubHeaderAppContainer,
+                          children: [
+                            (0, _.jsx)("img", {
+                              className: _.AppIcon,
+                              src: _.icon_url,
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.SubHeader,
+                              children: [" ", _.name, " "],
+                            }),
+                          ],
+                        }),
                       }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.SubHeader,
-                        },
-                        " ",
-                        _.name,
-                        " ",
-                      ),
-                    ),
-                  ),
-              ),
-              _._.Get().BIsLoggedIn() &&
-                _.createElement(
-                  "div",
-                  {
+                  ],
+                }),
+                _._.Get().BIsLoggedIn() &&
+                  (0, _.jsxs)("div", {
                     className: _.PointsContainer,
-                  },
-                  _.createElement(_.vrn, {
-                    className: _.Icon,
+                    children: [
+                      (0, _.jsx)(_.vrn, {
+                        className: _.Icon,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.BalanceColumn,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.Balance,
+                            children: (0, _._)("#YourBalance"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.CurrentPoints,
+                            children: (0, _._)(
+                              _._.Get().GetPointsAvailable().getLowBits(),
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
                   }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BalanceColumn,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Balance,
-                      },
-                      (0, _._)("#YourBalance"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.CurrentPoints,
-                      },
-                      (0, _._)(_._.Get().GetPointsAvailable().getLowBits()),
-                    ),
-                  ),
-                ),
-            ),
+              ],
+            }),
         ),
         _ = (_) =>
           2 == _.type || 3 == _.type
@@ -12258,7 +12366,7 @@
                 statusPosition: "none",
                 className: (0, _._)(_, _.playerAvatar),
               };
-            return _.createElement(_._, {
+            return (0, _.jsx)(_._, {
               persona: __webpack_require__,
               animatedAvatar: _,
               ..._,
@@ -12277,53 +12385,44 @@
                 statusPosition: "none",
                 className: (0, _._)(_, _.playerAvatar),
               };
-            return _.createElement(
-              "div",
-              {
-                className: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  persona: _,
-                  animatedAvatar: _,
-                  ..._,
-                },
-                _.createElement(_._, {
+            return (0, _.jsx)("div", {
+              className: _,
+              children: (0, _.jsx)(_._, {
+                persona: _,
+                animatedAvatar: _,
+                ..._,
+                children: (0, _.jsx)(_._, {
                   profileItem: __webpack_require__,
                 }),
-              ),
-            );
+              }),
+            });
           }));
       class _ extends _.Component {
         GetDescription() {
           return "equip" == this.props.step
             ? (0, _._)("#Redeem_Equip_Chat")
             : "saleitem" == this.props.step
-              ? _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#LunarSale2022_Redeem_Desc1"),
-                  _.createElement("br", null),
-                  _.createElement("br", null),
-                  (0, _._)("#LunarSale2022_Redeem_Desc2"),
-                )
+              ? (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#LunarSale2022_Redeem_Desc1"),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("br", {}),
+                    (0, _._)("#LunarSale2022_Redeem_Desc2"),
+                  ],
+                })
               : (0, _._)("#Redeem_UsePoints_Sticker");
         }
         GetModalPreview() {
           if ("saleitem" == this.props.step)
-            return _.createElement(
-              _,
-              {
-                className: _.PreviewSummerSaleCtn,
-                step: this.props.step,
-              },
-              _.createElement("img", {
+            return (0, _.jsx)(_, {
+              className: _.PreviewSummerSaleCtn,
+              step: this.props.step,
+              children: (0, _.jsx)("img", {
                 className: _.SaleRewardImg,
                 alt: "Free Sale Item",
                 src: _,
               }),
-            );
+            });
           {
             const _ = this.props.definition.rewardDefinition;
             let _ = {
@@ -12333,53 +12432,48 @@
                   ")",
               },
               _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
-            return _.createElement(
-              _,
-              {
-                className: _.PreviewChat,
-                step: this.props.step,
-              },
-              _.createElement("div", {
-                className: _.LargePreview,
-                style: _,
-              }),
-              _.createElement(_, {
-                icon: _,
-              }),
-            );
+            return (0, _.jsxs)(_, {
+              className: _.PreviewChat,
+              step: this.props.step,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.LargePreview,
+                  style: _,
+                }),
+                (0, _.jsx)(_, {
+                  icon: _,
+                }),
+              ],
+            });
           }
         }
         render() {
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: (0, _._)(
-                _.StickerPreviewContainer,
-                _.ChatPreviewContainer,
-              ),
-            },
-            this.GetModalPreview(),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: (0, _._)(
+              _.StickerPreviewContainer,
+              _.ChatPreviewContainer,
+            ),
+            children: [
+              this.GetModalPreview(),
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              _.createElement(_, {
-                closeModal: this.props.closeModal,
+                children: (0, _.jsx)(_, {
+                  closeModal: this.props.closeModal,
+                }),
               }),
-            ),
-          );
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -12387,21 +12481,17 @@
           return "equip" == this.props.step
             ? (0, _._)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.EquippedDesc,
-                  },
-                  (0, _._)(
+              ? (0, _.jsx)("div", {
+                  className: _.EquippedDesc,
+                  children: (0, _._)(
                     "#Redeem_Equipped_Background",
-                    _.createElement(
-                      "span",
-                      null,
-                      this.props.definition.rewardDefinition.community_item_data
-                        .item_title,
-                    ),
+                    (0, _.jsx)("span", {
+                      children:
+                        this.props.definition.rewardDefinition
+                          .community_item_data.item_title,
+                    }),
                   ),
-                )
+                })
               : (0, _._)("#Redeem_UsePoints_Background");
         }
         GetPreview() {
@@ -12412,7 +12502,7 @@
                 (0, _._)(_.appid, _.community_item_data.item_image_large) +
                 ")",
             },
-            _ = _.createElement("div", {
+            _ = (0, _.jsx)("div", {
               className: (0, _._)(
                 _.LargePreview,
                 _.community_item_data.tiled && _.TiledBackground,
@@ -12422,76 +12512,70 @@
           if (_.community_item_data.animated) {
             let _ = _.community_item_data.item_movie_webm,
               _ = _.community_item_data.item_movie_mp4;
-            _ = _.createElement(
-              "video",
-              {
-                className: _.VideoPreview,
-                playsInline: !0,
-                loop: !0,
-                muted: !0,
-                autoPlay: !0,
-                controls: !1,
-              },
-              _.createElement("source", {
-                src: (0, _._)(_.appid, _),
-                type: "video/webm",
-              }),
-              _.createElement("source", {
-                src: (0, _._)(_.appid, _),
-                type: "video/mp4",
-              }),
-            );
+            _ = (0, _.jsxs)("video", {
+              className: _.VideoPreview,
+              playsInline: !0,
+              loop: !0,
+              muted: !0,
+              autoPlay: !0,
+              controls: !1,
+              children: [
+                (0, _.jsx)("source", {
+                  src: (0, _._)(_.appid, _),
+                  type: "video/webm",
+                }),
+                (0, _.jsx)("source", {
+                  src: (0, _._)(_.appid, _),
+                  type: "video/mp4",
+                }),
+              ],
+            });
           }
           return _;
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   closeModal: this.props.closeModal,
                 })
               : null;
         }
         render() {
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: _.BackgroundPreviewContainer,
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: _.BackgroundPreviewContainer,
+            children: [
+              (0, _.jsxs)(_, {
                 className: _.PreviewBackgroundContainer,
                 step: this.props.step,
-              },
-              _.createElement("div", {
-                className: _.PreviewBackground,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.PreviewBackground,
+                  }),
+                  this.GetPreview(),
+                ],
               }),
-              this.GetPreview(),
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -12509,63 +12593,57 @@
                 (0, _._)(_.appid, _.community_item_data.item_image_large) +
                 ")",
             };
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: (0, _._)(
-                _.EmoticonPreviewContainer,
-                _.ChatPreviewContainer,
-              ),
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: (0, _._)(
+              _.EmoticonPreviewContainer,
+              _.ChatPreviewContainer,
+            ),
+            children: [
+              (0, _.jsxs)(_, {
                 className: _.PreviewChat,
                 step: this.props.step,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.LargePreviewContainer,
-                },
-                _.createElement("div", {
-                  className: _.LargePreview,
-                  style: _,
-                }),
-                _.createElement("div", {
-                  className: _.LargePreview,
-                  style: _,
-                }),
-                _.createElement("div", {
-                  className: _.LargePreview,
-                  style: _,
-                }),
-              ),
-              _.createElement(_, {
-                icon: _,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _.LargePreviewContainer,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.LargePreview,
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.LargePreview,
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.LargePreview,
+                        style: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    icon: _,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              _.createElement(_, {
-                closeModal: this.props.closeModal,
+                children: (0, _.jsx)(_, {
+                  closeModal: this.props.closeModal,
+                }),
               }),
-            ),
-          );
+            ],
+          });
         }
       }
       let _ = class extends _.Component {
@@ -12594,52 +12672,46 @@
             : (0, _._)("#Redeem_UsePoints_ChatEffect");
         }
         render() {
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: (0, _._)(
-                _.EmoticonPreviewContainer,
-                _.ChatPreviewContainer,
-              ),
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: (0, _._)(
+              _.EmoticonPreviewContainer,
+              _.ChatPreviewContainer,
+            ),
+            children: [
+              (0, _.jsxs)(_, {
                 className: _.PreviewChat,
                 step: this.props.step,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.PreviewEffectContainer,
-                },
-                _.createElement(_, {
-                  effectManager: this.m_manager,
-                }),
-              ),
-              _.createElement(_, null, this.GetEffectConfig().renderButton()),
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.PreviewEffectContainer,
+                    children: (0, _.jsx)(_, {
+                      effectManager: this.m_manager,
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    children: this.GetEffectConfig().renderButton(),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              _.createElement(_, {
-                closeModal: this.props.closeModal,
+                children: (0, _.jsx)(_, {
+                  closeModal: this.props.closeModal,
+                }),
               }),
-            ),
-          );
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -12648,121 +12720,105 @@
           return "equip" == this.props.step
             ? (0, _._)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.EquippedDesc,
-                  },
-                  (0, _._)(
+              ? (0, _.jsx)("div", {
+                  className: _.EquippedDesc,
+                  children: (0, _._)(
                     "#Redeem_Equipped_MiniProfile",
-                    _.createElement(
-                      "span",
-                      null,
-                      this.props.definition.rewardDefinition.community_item_data
-                        .item_title,
-                    ),
+                    (0, _.jsx)("span", {
+                      children:
+                        this.props.definition.rewardDefinition
+                          .community_item_data.item_title,
+                    }),
                   ),
-                )
+                })
               : (0, _._)("#Redeem_UsePoints_MiniProfile");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? _.createElement(
-                  _,
-                  {
-                    onClick: this.props.closeModal,
-                  },
-                  (0, _._)("#Button_Close"),
-                )
+              ? (0, _.jsx)(_, {
+                  onClick: this.props.closeModal,
+                  children: (0, _._)("#Button_Close"),
+                })
               : null;
         }
         render() {
           const _ = this.props.definition.rewardDefinition;
           let _ = _._.Get().GetEquippedItems(),
             _ = _._.Get().GetPersonaState(),
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               animatedAvatar: _.animated_avatar,
               persona: _,
               avatarFrame: _.avatar_frame,
               className: _.CurrentAvatar,
             });
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: _.MiniProfilePreviewContainer,
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: _.MiniProfilePreviewContainer,
+            children: [
+              (0, _.jsx)(_, {
                 className: _.PreviewBackgroundContainer,
                 step: this.props.step,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsxs)("div", {
                   className: _.ProfileContainer,
-                },
-                _.createElement(
-                  "video",
-                  {
-                    width: "100%",
-                    playsInline: !0,
-                    loop: !0,
-                    muted: !0,
-                    autoPlay: !0,
-                    controls: !1,
-                  },
-                  _.createElement("source", {
-                    src: (0, _._)(
-                      _.appid,
-                      _.community_item_data.item_movie_webm,
-                    ),
-                    type: "video/webm",
-                  }),
-                  _.createElement("source", {
-                    src: (0, _._)(
-                      _.appid,
-                      _.community_item_data.item_movie_mp4,
-                    ),
-                    type: "video/mp4",
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ProfileImage,
-                  },
-                  _._.Get().BIsLoggedIn() && _,
-                ),
-                _.createElement("div", {
-                  className: (0, _._)(_.ImageBlur, "miniprofile_backdropblur"),
+                  children: [
+                    (0, _.jsxs)("video", {
+                      width: "100%",
+                      playsInline: !0,
+                      loop: !0,
+                      muted: !0,
+                      autoPlay: !0,
+                      controls: !1,
+                      children: [
+                        (0, _.jsx)("source", {
+                          src: (0, _._)(
+                            _.appid,
+                            _.community_item_data.item_movie_webm,
+                          ),
+                          type: "video/webm",
+                        }),
+                        (0, _.jsx)("source", {
+                          src: (0, _._)(
+                            _.appid,
+                            _.community_item_data.item_movie_mp4,
+                          ),
+                          type: "video/mp4",
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.ProfileImage,
+                      children: _._.Get().BIsLoggedIn() && _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _.ImageBlur,
+                        "miniprofile_backdropblur",
+                      ),
+                    }),
+                  ],
                 }),
-              ),
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+              }),
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -12770,31 +12826,27 @@
           return "equip" == this.props.step
             ? (0, _._)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.EquippedDesc,
-                  },
-                  (0, _._)(
+              ? (0, _.jsx)("div", {
+                  className: _.EquippedDesc,
+                  children: (0, _._)(
                     "#Redeem_Equipped_AvatarFrame",
-                    _.createElement(
-                      "span",
-                      null,
-                      this.props.definition.rewardDefinition.community_item_data
-                        .item_title,
-                    ),
+                    (0, _.jsx)("span", {
+                      children:
+                        this.props.definition.rewardDefinition
+                          .community_item_data.item_title,
+                    }),
                   ),
-                )
+                })
               : (0, _._)("#Redeem_UsePoints_AvatarFrame");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   closeModal: this.props.closeModal,
                 })
               : null;
@@ -12811,7 +12863,7 @@
                 "/" +
                 _.community_item_data.item_image_small,
             },
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               animatedAvatar: _.animated_avatar,
               persona: _,
               avatarFrame: _,
@@ -12821,72 +12873,57 @@
           return (
             "equipped" != this.props.step &&
               _._.Get().BIsLoggedIn() &&
-              (_ = _.createElement(
-                "div",
-                {
-                  className: _.CurrentlyEquippedAvatarAndFrame,
-                },
-                _.createElement(_, {
-                  className: _.PreviewCurrentAvatar,
-                  animatedAvatar: _.animated_avatar,
-                  persona: _,
-                  avatarFrame: _.avatar_frame,
-                  strAnimatedAvatarClassName: _.CurrentAvatar,
-                }),
-                _.createElement(
-                  "div",
-                  {
+              (_ = (0, _.jsxs)("div", {
+                className: _.CurrentlyEquippedAvatarAndFrame,
+                children: [
+                  (0, _.jsx)(_, {
+                    className: _.PreviewCurrentAvatar,
+                    animatedAvatar: _.animated_avatar,
+                    persona: _,
+                    avatarFrame: _.avatar_frame,
+                    strAnimatedAvatarClassName: _.CurrentAvatar,
+                  }),
+                  (0, _.jsx)("div", {
                     className: _.CurrentlyEquippedAvatarAndFrameDesc,
-                  },
-                  (0, _._)("#Redeem_Equipped_CurrentAvatarFrame"),
-                ),
-              )),
-            _.createElement(
-              _,
-              {
-                ref: this.props.containerRef,
-                className: _.AvatarPreviewContainer,
-              },
-              _.createElement(
-                _,
-                {
+                    children: (0, _._)("#Redeem_Equipped_CurrentAvatarFrame"),
+                  }),
+                ],
+              })),
+            (0, _.jsxs)(_, {
+              ref: this.props.containerRef,
+              className: _.AvatarPreviewContainer,
+              children: [
+                (0, _.jsxs)(_, {
                   className: (0, _._)(_.PreviewBackgroundContainer, _.Frame),
                   step: this.props.step,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.ItemPreview, _.TopAvatar),
-                  },
-                  _,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.ItemPreview, _.BottomAvatar),
-                  },
-                  _,
-                ),
-              ),
-              _,
-              _.createElement(_, {
-                definition: this.props.definition,
-                step: this.props.step,
-                description: this.GetDescription(),
-              }),
-              _.createElement(
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.ItemPreview, _.TopAvatar),
+                      children: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.ItemPreview, _.BottomAvatar),
+                      children: _,
+                    }),
+                  ],
+                }),
                 _,
-                {
+                (0, _.jsx)(_, {
+                  definition: this.props.definition,
+                  step: this.props.step,
+                  description: this.GetDescription(),
+                }),
+                (0, _.jsx)(_, {
                   fnReloadItemDef: this.props.fnReloadItemDef,
                   bRequestInProgress: this.props.bRequestInProgress,
                   definition: this.props.definition,
                   step: this.props.step,
                   closeModal: this.props.closeModal,
                   redeemPoints: this.props.redeemPoints,
-                },
-                this.GetButtons(),
-              ),
-            )
+                  children: this.GetButtons(),
+                }),
+              ],
+            })
           );
         }
       }
@@ -12895,31 +12932,27 @@
           return "equip" == this.props.step
             ? (0, _._)("#Redeem_Equip_AnimatedAvatar")
             : "equipped" == this.props.step
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _.EquippedDesc,
-                  },
-                  (0, _._)(
+              ? (0, _.jsx)("div", {
+                  className: _.EquippedDesc,
+                  children: (0, _._)(
                     "#Redeem_Equipped_AnimatedAvatar",
-                    _.createElement(
-                      "span",
-                      null,
-                      this.props.definition.rewardDefinition.community_item_data
-                        .item_title,
-                    ),
+                    (0, _.jsx)("span", {
+                      children:
+                        this.props.definition.rewardDefinition
+                          .community_item_data.item_title,
+                    }),
                   ),
-                )
+                })
               : (0, _._)("#Redeem_UsePoints_AnimatedAvatar");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   closeModal: this.props.closeModal,
                 })
               : null;
@@ -12936,7 +12969,7 @@
                 "/" +
                 _.community_item_data.item_image_small,
             },
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               animatedAvatar: _,
               persona: _,
               avatarFrame: _.avatar_frame,
@@ -12946,72 +12979,57 @@
           return (
             "equipped" != this.props.step &&
               _._.Get().BIsLoggedIn() &&
-              (_ = _.createElement(
-                "div",
-                {
-                  className: _.CurrentlyEquippedAvatarAndFrame,
-                },
-                _.createElement(_, {
-                  className: _.PreviewCurrentAvatar,
-                  animatedAvatar: _.animated_avatar,
-                  persona: _,
-                  avatarFrame: _.avatar_frame,
-                  strAnimatedAvatarClassName: _.CurrentAvatar,
-                }),
-                _.createElement(
-                  "div",
-                  {
+              (_ = (0, _.jsxs)("div", {
+                className: _.CurrentlyEquippedAvatarAndFrame,
+                children: [
+                  (0, _.jsx)(_, {
+                    className: _.PreviewCurrentAvatar,
+                    animatedAvatar: _.animated_avatar,
+                    persona: _,
+                    avatarFrame: _.avatar_frame,
+                    strAnimatedAvatarClassName: _.CurrentAvatar,
+                  }),
+                  (0, _.jsx)("div", {
                     className: _.CurrentlyEquippedAvatarAndFrameDesc,
-                  },
-                  (0, _._)("#Redeem_Equipped_CurrentAvatar"),
-                ),
-              )),
-            _.createElement(
-              _,
-              {
-                ref: this.props.containerRef,
-                className: _.AvatarPreviewContainer,
-              },
-              _.createElement(
-                _,
-                {
+                    children: (0, _._)("#Redeem_Equipped_CurrentAvatar"),
+                  }),
+                ],
+              })),
+            (0, _.jsxs)(_, {
+              ref: this.props.containerRef,
+              className: _.AvatarPreviewContainer,
+              children: [
+                (0, _.jsxs)(_, {
                   className: (0, _._)(_.PreviewBackgroundContainer, _.Animated),
                   step: this.props.step,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.ItemPreview, _.TopAvatar),
-                  },
-                  _,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.ItemPreview, _.BottomAvatar),
-                  },
-                  _,
-                ),
-              ),
-              _,
-              _.createElement(_, {
-                definition: this.props.definition,
-                step: this.props.step,
-                description: this.GetDescription(),
-              }),
-              _.createElement(
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.ItemPreview, _.TopAvatar),
+                      children: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.ItemPreview, _.BottomAvatar),
+                      children: _,
+                    }),
+                  ],
+                }),
                 _,
-                {
+                (0, _.jsx)(_, {
+                  definition: this.props.definition,
+                  step: this.props.step,
+                  description: this.GetDescription(),
+                }),
+                (0, _.jsx)(_, {
                   fnReloadItemDef: this.props.fnReloadItemDef,
                   bRequestInProgress: this.props.bRequestInProgress,
                   definition: this.props.definition,
                   step: this.props.step,
                   closeModal: this.props.closeModal,
                   redeemPoints: this.props.redeemPoints,
-                },
-                this.GetButtons(),
-              ),
-            )
+                  children: this.GetButtons(),
+                }),
+              ],
+            })
           );
         }
       }
@@ -13023,7 +13041,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
@@ -13032,41 +13050,34 @@
         render() {
           const _ = this.props.definition.rewardDefinition;
           let _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: (0, _._)(_.KeyboardSkinPreviewContainer),
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: (0, _._)(_.KeyboardSkinPreviewContainer),
+            children: [
+              (0, _.jsx)(_, {
                 className: _.LargePreview,
                 step: this.props.step,
-              },
-              _.createElement("img", {
-                className: _.KeyboardPreviewImg,
-                src: _,
+                children: (0, _.jsx)("img", {
+                  className: _.KeyboardPreviewImg,
+                  src: _,
+                }),
               }),
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -13078,7 +13089,7 @@
         }
         GetButtons() {
           if ("equip" == this.props.step)
-            return _.createElement(_, {
+            return (0, _.jsx)(_, {
               closeModal: this.props.closeModal,
               equipItem: this.props.equipItem,
             });
@@ -13095,21 +13106,14 @@
         render() {
           const _ = this.props.definition.rewardDefinition;
           let _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: (0, _._)(_.StartupMoviePreviewContainer),
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: (0, _._)(_.StartupMoviePreviewContainer),
+            children: [
+              (0, _.jsx)(_, {
                 className: _.LargePreview,
                 step: this.props.step,
-              },
-              _.createElement(
-                "video",
-                {
+                children: (0, _.jsxs)("video", {
                   className: _.VideoPreview,
                   width: "100%",
                   playsInline: !0,
@@ -13117,52 +13121,52 @@
                   muted: !1,
                   autoPlay: !0,
                   controls: !1,
-                },
-                _.createElement("source", {
-                  src: (0, _._)(_.appid, _.community_item_data.item_movie_webm),
-                  type: "video/webm",
+                  children: [
+                    (0, _.jsx)("source", {
+                      src: (0, _._)(
+                        _.appid,
+                        _.community_item_data.item_movie_webm,
+                      ),
+                      type: "video/webm",
+                    }),
+                    (0, _.jsx)("source", {
+                      src: (0, _._)(
+                        _.appid,
+                        _.community_item_data.item_movie_mp4,
+                      ),
+                      type: "video/mp4",
+                    }),
+                    (0, _.jsx)("img", {
+                      src: _,
+                    }),
+                  ],
                 }),
-                _.createElement("source", {
-                  src: (0, _._)(_.appid, _.community_item_data.item_movie_mp4),
-                  type: "video/mp4",
-                }),
-                _.createElement("img", {
-                  src: _,
-                }),
-              ),
-            ),
-            _.createElement(
-              _,
-              {
+              }),
+              (0, _.jsx)(_, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
-              },
-              this.BShowClientMinVersionWarning() &&
-                _.createElement(
-                  "div",
-                  {
+                children:
+                  this.BShowClientMinVersionWarning() &&
+                  (0, _.jsx)("div", {
                     className: (0, _._)(_.Bold, _.NeedAppOwnership),
-                  },
-                  (0, _._)(
-                    "#Redeem_Warning_LatestClient",
-                    (0, _._)(this.m_rtMinClientVersion, !1, !0),
-                  ),
-                ),
-            ),
-            _.createElement(
-              _,
-              {
+                    children: (0, _._)(
+                      "#Redeem_Warning_LatestClient",
+                      (0, _._)(this.m_rtMinClientVersion, !1, !0),
+                    ),
+                  }),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       let _ = class extends _.Component {
@@ -13171,7 +13175,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
               })
             : null;
@@ -13179,75 +13183,65 @@
         GetPreviewForLevel() {
           let _ = _._.Get().GetUserSeasonalBadgeLevel();
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 definition: this.props.definition.rewardDefinition,
                 badgeLevel: _,
                 title: (0, _._)("#Redeem_Badge_CurrentLevel"),
               })
             : 0 == _
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   definition: this.props.definition.rewardDefinition,
                   badgeLevel: this.props.definition.itemLevel,
                   title: (0, _._)("#Redeem_Badge_AfterPoints"),
                 })
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    definition: this.props.definition.rewardDefinition,
-                    badgeLevel: _,
-                    title: (0, _._)("#Redeem_Badge_CurrentLevel"),
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.BadgeColumn, _.ArrowColumn),
-                    },
-                    _.createElement("div", {
-                      className: _.BlueArrow,
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_, {
+                      definition: this.props.definition.rewardDefinition,
+                      badgeLevel: _,
+                      title: (0, _._)("#Redeem_Badge_CurrentLevel"),
                     }),
-                  ),
-                  _.createElement(_, {
-                    definition: this.props.definition.rewardDefinition,
-                    badgeLevel: this.props.definition.itemLevel,
-                    title: (0, _._)("#Redeem_Badge_AfterPoints"),
-                  }),
-                );
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.BadgeColumn, _.ArrowColumn),
+                      children: (0, _.jsx)("div", {
+                        className: _.BlueArrow,
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      definition: this.props.definition.rewardDefinition,
+                      badgeLevel: this.props.definition.itemLevel,
+                      title: (0, _._)("#Redeem_Badge_AfterPoints"),
+                    }),
+                  ],
+                });
         }
         render() {
           return this.props.definition.rewardDefinition.community_item_data
             .badge_data[this.props.definition.itemLevel - 1]
-            ? _.createElement(
-                _,
-                {
-                  ref: this.props.containerRef,
-                  className: _.BadgeItemContainer,
-                },
-                _.createElement(
-                  _,
-                  {
+            ? (0, _.jsxs)(_, {
+                ref: this.props.containerRef,
+                className: _.BadgeItemContainer,
+                children: [
+                  (0, _.jsx)(_, {
                     className: _.BadgePreviewContainer,
-                  },
-                  this.GetPreviewForLevel(),
-                ),
-                _.createElement(_, {
-                  definition: this.props.definition,
-                  step: this.props.step,
-                  description: this.GetDescription(),
-                }),
-                _.createElement(
-                  _,
-                  {
+                    children: this.GetPreviewForLevel(),
+                  }),
+                  (0, _.jsx)(_, {
+                    definition: this.props.definition,
+                    step: this.props.step,
+                    description: this.GetDescription(),
+                  }),
+                  (0, _.jsx)(_, {
                     fnReloadItemDef: this.props.fnReloadItemDef,
                     bRequestInProgress: this.props.bRequestInProgress,
                     definition: this.props.definition,
                     step: this.props.step,
                     closeModal: this.props.closeModal,
                     redeemPoints: this.props.redeemPoints,
-                  },
-                  this.GetButtons(),
-                ),
-              )
+                    children: this.GetButtons(),
+                  }),
+                ],
+              })
             : (console.log(
                 `Missing badge level ${this.props.definition.itemLevel} image`,
               ),
@@ -13263,45 +13257,41 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   closeModal: this.props.closeModal,
                 })
               : null;
         }
         render() {
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: _.CouponPreviewContainer,
-            },
-            _.createElement(_, {
-              className: _.PreviewBackgroundContainer,
-              step: this.props.step,
-            }),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: _.CouponPreviewContainer,
+            children: [
+              (0, _.jsx)(_, {
+                className: _.PreviewBackgroundContainer,
+                step: this.props.step,
+              }),
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -13314,12 +13304,12 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   closeModal: this.props.closeModal,
                 })
               : null;
@@ -13350,58 +13340,43 @@
           let _ = {
             image_small: _.frame,
           };
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: _.GoldenProfileContainer,
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: _.GoldenProfileContainer,
+            children: [
+              (0, _.jsx)(_, {
                 className: _.GoldenProfilePreviewContainer,
                 step: this.props.step,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   className: _.AvatarContainer,
-                },
-                _.createElement(_._, {
-                  size: "FillArea",
-                  className: _.CurrentAvatar,
-                  persona: _,
-                  animatedAvatar: _.animated_avatar,
-                  avatarFrame: _,
+                  children: (0, _.jsx)(_._, {
+                    size: "FillArea",
+                    className: _.CurrentAvatar,
+                    persona: _,
+                    animatedAvatar: _.animated_avatar,
+                    avatarFrame: _,
+                  }),
                 }),
-              ),
-            ),
-            _.createElement(
-              _,
-              {
+              }),
+              (0, _.jsx)(_, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
-              },
-              _.createElement(
-                _,
-                null,
-                (0, _._)("#Redeem_GoldenProfile_Expiration"),
-              ),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _.jsx)(_, {
+                  children: (0, _._)("#Redeem_GoldenProfile_Expiration"),
+                }),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -13453,12 +13428,12 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   closeModal: this.props.closeModal,
                 })
               : null;
@@ -13481,83 +13456,72 @@
               _._.Get().GetMaxProfileShowcaseUpgradeLevel(),
             ),
             _ = 0.5 * this.state.iframeHeight;
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: _.ProfileShowcaseContainer,
-            },
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: _.ProfileShowcaseContainer,
+            children: [
+              (0, _.jsxs)(_, {
                 className: (0, _._)(
                   _.ProfileShowcasePreviewContainer,
                   _ ? _.LoadedPreview : _.LoadingPreview,
                 ),
                 step: this.props.step,
-              },
-              _.createElement("img", {
-                className: _.ProfileShowcaseIcon,
-                src: _,
-              }),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ProfileThrobber,
-                  },
-                  _.createElement(_._, {
-                    position: "center",
-                    size: "xlarge",
-                    string: (0, _._)(
-                      "#ProfileShowcases_LoadingPreview",
-                      (0, _._)("#ProfileShowcases_Type_" + _),
-                    ),
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.ProfileShowcaseIcon,
+                    src: _,
                   }),
-                ),
-              _.createElement(
-                _._,
-                {
-                  childFocusDisabled: !0,
-                  focusable: !1,
-                  className: _.PreviewShowcasePreviewFrameContainer,
-                  style: {
-                    height: 0 != _ ? _ + "px" : "1px",
-                  },
-                },
-                _.createElement("iframe", {
-                  className: _.PreviewShowcasePreviewFrame,
-                  src:
-                    _._.COMMUNITY_BASE_URL +
-                    "profiles/" +
-                    this.GetProfileSteamID() +
-                    `/previewsingleshowcase/?customization_type=${_}&level=${_}`,
-                  frameBorder: 0,
-                  scrolling: "no",
-                  onLoad: () => {
-                    this.OnProfileFrameLoaded();
-                  },
-                }),
-              ),
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _.ProfileThrobber,
+                      children: (0, _.jsx)(_._, {
+                        position: "center",
+                        size: "xlarge",
+                        string: (0, _._)(
+                          "#ProfileShowcases_LoadingPreview",
+                          (0, _._)("#ProfileShowcases_Type_" + _),
+                        ),
+                      }),
+                    }),
+                  (0, _.jsx)(_._, {
+                    childFocusDisabled: !0,
+                    focusable: !1,
+                    className: _.PreviewShowcasePreviewFrameContainer,
+                    style: {
+                      height: 0 != _ ? _ + "px" : "1px",
+                    },
+                    children: (0, _.jsx)("iframe", {
+                      className: _.PreviewShowcasePreviewFrame,
+                      src:
+                        _._.COMMUNITY_BASE_URL +
+                        "profiles/" +
+                        this.GetProfileSteamID() +
+                        `/previewsingleshowcase/?customization_type=${_}&level=${_}`,
+                      frameBorder: 0,
+                      scrolling: "no",
+                      onLoad: () => {
+                        this.OnProfileFrameLoaded();
+                      },
+                    }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -13571,7 +13535,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
               })
             : null;
@@ -13591,85 +13555,70 @@
                   _.community_item_data.item_image_large +
                   "?size=320x200");
               const _ = _._.Get().BRewardOwnedByUser(_);
-              return _.createElement(
+              return (0, _.jsxs)(
                 _._,
                 {
-                  key: _.defid,
                   padding: "xxsmall",
                   className: _.BundleItemPreview,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BundleItemPreviewImage,
-                  },
-                  _.createElement("img", {
-                    src: _,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BundleChildItemName,
-                    },
-                    _.community_item_data.item_title,
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BundleChildItemClass,
-                    },
-                    (0, _._)(_.community_item_class),
-                  ),
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BundleChildItemOwned,
-                    },
-                    _.createElement(_._, {
-                      className: _.OwnedCheckmark,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.BundleItemPreviewImage,
+                      children: (0, _.jsx)("img", {
+                        src: _,
+                      }),
                     }),
-                    "redeem" == this.props.step &&
-                      (0, _._)("#Redeem_BundleItemOwned"),
-                  ),
+                    (0, _.jsxs)("div", {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.BundleChildItemName,
+                          children: _.community_item_data.item_title,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.BundleChildItemClass,
+                          children: (0, _._)(_.community_item_class),
+                        }),
+                      ],
+                    }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _.BundleChildItemOwned,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            className: _.OwnedCheckmark,
+                          }),
+                          "redeem" == this.props.step &&
+                            (0, _._)("#Redeem_BundleItemOwned"),
+                        ],
+                      }),
+                  ],
+                },
+                _.defid,
               );
             });
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: _.BundleItemContainer,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: _.BundleItemContainer,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.BundleItemPreviewContainer,
-              },
-              _,
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+                children: _,
+              }),
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       class _ extends _.Component {
@@ -13698,7 +13647,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: this.props.closeModal,
               })
             : null;
@@ -13714,55 +13663,47 @@
               let _ = (0, _._)(_);
               const _ = _._.Get().BRewardOwnedByUser(_),
                 _ = 8 == _.community_item_class;
-              return _.createElement(
+              return (0, _.jsxs)(
                 _._,
                 {
-                  key: _.defid,
                   padding: "xxsmall",
                   className: (0, _._)(
                     _.BundleItemPreview,
                     _ && _.ProfileModifier,
                   ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BundleItemPreviewImage,
-                  },
-                  _.createElement("img", {
-                    src: _,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BundleChildItemName,
-                    },
-                    _.community_item_data.item_title,
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BundleChildItemClass,
-                    },
-                    (0, _._)(_.community_item_class),
-                  ),
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BundleChildItemOwned,
-                    },
-                    _.createElement(_._, {
-                      className: _.OwnedCheckmark,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.BundleItemPreviewImage,
+                      children: (0, _.jsx)("img", {
+                        src: _,
+                      }),
                     }),
-                    "redeem" == this.props.step &&
-                      (0, _._)("#Redeem_ProfileBundleItemOwned"),
-                  ),
+                    (0, _.jsxs)("div", {
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.BundleChildItemName,
+                          children: _.community_item_data.item_title,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.BundleChildItemClass,
+                          children: (0, _._)(_.community_item_class),
+                        }),
+                      ],
+                    }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _.BundleChildItemOwned,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            className: _.OwnedCheckmark,
+                          }),
+                          "redeem" == this.props.step &&
+                            (0, _._)("#Redeem_ProfileBundleItemOwned"),
+                        ],
+                      }),
+                  ],
+                },
+                _.defid,
               );
             }),
             _ =
@@ -13773,88 +13714,69 @@
               _ +
               "&itemtype=" +
               _;
-          return _.createElement(
-            _,
-            {
-              ref: this.props.containerRef,
-              className: (0, _._)(
-                _.BundleItemContainer,
-                _ ? _.LoadedPreview : _.LoadingPreview,
-              ),
-            },
-            !_ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)(_, {
+            ref: this.props.containerRef,
+            className: (0, _._)(
+              _.BundleItemContainer,
+              _ ? _.LoadedPreview : _.LoadingPreview,
+            ),
+            children: [
+              !_ &&
+                (0, _.jsx)("div", {
                   className: _.ProfileThrobber,
-                },
-                _.createElement(_._, {
-                  position: "center",
-                  size: "xlarge",
-                  string: (0, _._)(
-                    "#ProfileBundle_LoadingPreview",
-                    _(this.props.definition.rewardDefinition),
-                  ),
+                  children: (0, _.jsx)(_._, {
+                    position: "center",
+                    size: "xlarge",
+                    string: (0, _._)(
+                      "#ProfileBundle_LoadingPreview",
+                      _(this.props.definition.rewardDefinition),
+                    ),
+                  }),
                 }),
-              ),
-            _.createElement(
-              _._,
-              {
+              (0, _.jsx)(_._, {
                 childFocusDisabled: !0,
                 focusable: !1,
                 className: _.PreviewProfileBundleFrameContainer,
-              },
-              _.createElement("iframe", {
-                className: _.PreviewProfileBundleFrame,
-                src: _,
-                frameBorder: 0,
-                scrolling: "no",
-                onLoad: () => {
-                  this.OnIFrameLoaded();
-                },
+                children: (0, _.jsx)("iframe", {
+                  className: _.PreviewProfileBundleFrame,
+                  src: _,
+                  frameBorder: 0,
+                  scrolling: "no",
+                  onLoad: () => {
+                    this.OnIFrameLoaded();
+                  },
+                }),
               }),
-            ),
-            !_._.IN_GAMEPADUI &&
-              _.createElement(
-                "div",
-                {
+              !_._.IN_GAMEPADUI &&
+                (0, _.jsx)("div", {
                   className: _.PreviewLinkContainer,
-                },
-                _.createElement(
-                  "a",
-                  {
+                  children: (0, _.jsx)("a", {
                     href: _,
                     target: "_blank",
                     className: _.PreviewLink,
-                  },
-                  (0, _._)("#ProfileModifier_PreviewLinkText"),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
+                    children: (0, _._)("#ProfileModifier_PreviewLinkText"),
+                  }),
+                }),
+              (0, _.jsx)("div", {
                 className: _.BundleItemPreviewContainer,
-              },
-              _,
-            ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
-            _.createElement(
-              _,
-              {
+                children: _,
+              }),
+              (0, _.jsx)(_, {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              }),
+              (0, _.jsx)(_, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-              },
-              this.GetButtons(),
-            ),
-          );
+                children: this.GetButtons(),
+              }),
+            ],
+          });
         }
       }
       const _ = {
@@ -13888,28 +13810,27 @@
                     : _[_.definition.rewardDefinition.community_item_class];
           }
           return _
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 ..._,
               })
             : 4 == _.definition.rewardDefinition.type
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   ..._,
                 })
               : null;
         }),
         _ = (_) => {
           const { className: _, ...__webpack_require__ } = _;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.WarningTextContainer, _.className),
-              ...__webpack_require__,
-            },
-            _.createElement(_.ENo, {
-              className: _.TimeWarning,
-            }),
-            _.children,
-          );
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.WarningTextContainer, _.className),
+            ...__webpack_require__,
+            children: [
+              (0, _.jsx)(_.ENo, {
+                className: _.TimeWarning,
+              }),
+              _.children,
+            ],
+          });
         },
         _ = (_) => {
           const {
@@ -13919,23 +13840,20 @@
             redeemPoints: _,
             closeModal: _,
           } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              cost: _,
-              discount: __webpack_require__,
-              originalCost: _,
-              onClick: _,
-            }),
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                cost: _,
+                discount: __webpack_require__,
+                originalCost: _,
                 onClick: _,
-              },
-              (0, _._)("#Button_Cancel"),
-            ),
-          );
+              }),
+              (0, _.jsx)(_, {
+                onClick: _,
+                children: (0, _._)("#Button_Cancel"),
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const {
@@ -13948,81 +13866,61 @@
           if (__webpack_require__) {
             const _ = __webpack_require__ ? (0, _._)(_) : "",
               _ = _._.Get().BIsLoggedIn()
-                ? _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
+                ? (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsxs)("div", {
                         className: _.OriginalCost,
-                      },
-                      " ",
-                      _,
-                      " ",
-                      (0, _._)("#Rewards_Points"),
-                      " ",
-                    ),
-                    _.createElement(
-                      _._,
-                      {
+                        children: [
+                          " ",
+                          _,
+                          " ",
+                          (0, _._)("#Rewards_Points"),
+                          " ",
+                        ],
+                      }),
+                      (0, _.jsxs)(_._, {
                         amount: _,
-                      },
-                      " ",
-                      _ > 0 && (0, _._)("#Rewards_Points"),
-                    ),
-                  )
-                : _.createElement("span", null, (0, _._)("#Button_Login"));
-            return _.createElement(
-              _._,
-              {
-                focusable: !0,
-                className: (0, _._)(_.RedeemButton, _),
-                onActivate: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.DiscountContainer,
-                },
-                "-",
-                __webpack_require__,
-                "%",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CostContainer,
-                },
-                _,
-              ),
-            );
-          }
-          const _ = _._.Get().BIsLoggedIn()
-            ? _.createElement(
-                _._,
-                {
-                  size: 1.125,
-                  amount: _,
-                },
-                " ",
-                _ > 0 && (0, _._)("#Rewards_Points"),
-              )
-            : _.createElement("span", null, (0, _._)("#Button_Login"));
-          return _.createElement(
-            _._,
-            {
+                        children: [" ", _ > 0 && (0, _._)("#Rewards_Points")],
+                      }),
+                    ],
+                  })
+                : (0, _.jsx)("span", {
+                    children: (0, _._)("#Button_Login"),
+                  });
+            return (0, _.jsxs)(_._, {
               focusable: !0,
               className: (0, _._)(_.RedeemButton, _),
               onActivate: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.CostContainer,
-              },
-              _,
-            ),
-          );
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.DiscountContainer,
+                  children: ["-", __webpack_require__, "%"],
+                }),
+                (0, _.jsx)("div", {
+                  className: _.CostContainer,
+                  children: _,
+                }),
+              ],
+            });
+          }
+          const _ = _._.Get().BIsLoggedIn()
+            ? (0, _.jsxs)(_._, {
+                size: 1.125,
+                amount: _,
+                children: [" ", _ > 0 && (0, _._)("#Rewards_Points")],
+              })
+            : (0, _.jsx)("span", {
+                children: (0, _._)("#Button_Login"),
+              });
+          return (0, _.jsx)(_._, {
+            focusable: !0,
+            className: (0, _._)(_.RedeemButton, _),
+            onActivate: _,
+            children: (0, _.jsx)("div", {
+              className: _.CostContainer,
+              children: _,
+            }),
+          });
         },
         _ = (_) => {
           const { closeModal: _ } = _,
@@ -14049,167 +13947,116 @@
               (_ && _.success) || __webpack_require__(), _();
             };
           return _._.IN_CLIENT
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _,
-                  {
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
                     onClick: _,
-                  },
-                  (0, _._)("#Button_Goto_Chat"),
-                ),
-                _.createElement(
-                  _,
-                  {
+                    children: (0, _._)("#Button_Goto_Chat"),
+                  }),
+                  (0, _.jsx)(_, {
                     onClick: _,
-                  },
-                  (0, _._)("#Button_Later"),
-                ),
-              )
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _,
-                  {
+                    children: (0, _._)("#Button_Later"),
+                  }),
+                ],
+              })
+            : (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
                     onClick: _,
-                  },
-                  (0, _._)("#Button_Goto_WebChat"),
-                ),
-                _.createElement(
-                  _,
-                  {
+                    children: (0, _._)("#Button_Goto_WebChat"),
+                  }),
+                  (0, _.jsx)(_, {
                     onClick: _,
-                  },
-                  (0, _._)("#Button_Goto_ClientChat"),
-                ),
-                _.createElement(
-                  _,
-                  {
+                    children: (0, _._)("#Button_Goto_ClientChat"),
+                  }),
+                  (0, _.jsx)(_, {
                     onClick: _,
-                  },
-                  (0, _._)("#Button_Later"),
-                ),
-              );
+                    children: (0, _._)("#Button_Later"),
+                  }),
+                ],
+              });
         },
         _ = (_) => {
           const { equipItem: _, closeModal: __webpack_require__ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
                 onClick: _,
-              },
-              (0, _._)("#Button_Equip"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Button_Equip"),
+              }),
+              (0, _.jsx)(_, {
                 onClick: __webpack_require__,
-              },
-              (0, _._)("#Button_Later"),
-            ),
-          );
+                children: (0, _._)("#Button_Later"),
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const { closeModal: _ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
                 onClick: () =>
                   (window.location.href = _._.COMMUNITY_BASE_URL + "my"),
-              },
-              (0, _._)("#Button_Goto_Profile"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Button_Goto_Profile"),
+              }),
+              (0, _.jsx)(_, {
                 onClick: _,
-              },
-              (0, _._)("#Button_Close"),
-            ),
-          );
+                children: (0, _._)("#Button_Close"),
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const { closeModal: _ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
                 onClick: _,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   _: _._.LoyaltyHowItWorks(),
-                },
-                (0, _._)("#Redeem_NeedToOwnApp"),
-              ),
-            ),
-            _.createElement(
-              _,
-              {
+                  children: (0, _._)("#Redeem_NeedToOwnApp"),
+                }),
+              }),
+              (0, _.jsx)(_, {
                 onClick: _,
-              },
-              (0, _._)("#Button_Cancel"),
-            ),
-          );
+                children: (0, _._)("#Button_Cancel"),
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const { closeModal: _ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
                 onClick: _,
-              },
-              _.createElement(
-                _._,
-                {
+                children: (0, _.jsx)(_._, {
                   _: _._.LoyaltyHowItWorks(),
-                },
-                (0, _._)("#Redeem_HowToGetPoints"),
-              ),
-            ),
-            _.createElement(
-              _,
-              {
+                  children: (0, _._)("#Redeem_HowToGetPoints"),
+                }),
+              }),
+              (0, _.jsx)(_, {
                 onClick: _,
-              },
-              (0, _._)("#Button_Cancel"),
-            ),
-          );
+                children: (0, _._)("#Button_Cancel"),
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const { closeModal: _, fnReloadItemDef: __webpack_require__ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
                 onClick: __webpack_require__,
-              },
-              (0, _._)("#Redeem_PriceChange"),
-            ),
-            _.createElement(
-              _,
-              {
+                children: (0, _._)("#Redeem_PriceChange"),
+              }),
+              (0, _.jsx)(_, {
                 onClick: _,
-              },
-              (0, _._)("#Button_Cancel"),
-            ),
-          );
+                children: (0, _._)("#Button_Cancel"),
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const {
@@ -14223,18 +14070,15 @@
           } = _;
           let _ = _.children;
           if (_)
-            _ = _.createElement(_._, {
+            _ = (0, _.jsx)(_._, {
               className: _.RedeemThrobber,
               size: "medium",
             });
           else if ("preview" == _)
-            _ = _.createElement(
-              _,
-              {
-                onClick: _,
-              },
-              (0, _._)("#Button_Close"),
-            );
+            _ = (0, _.jsx)(_, {
+              onClick: _,
+              children: (0, _._)("#Button_Close"),
+            });
           else if ("redeem" == _) {
             const _ = _(__webpack_require__),
               { discount: _, originalCost: _ } = (function (_) {
@@ -14275,7 +14119,7 @@
                   originalCost: parseInt(_.rewardDefinition.point_cost),
                 };
               })(__webpack_require__);
-            _ = _.createElement(_, {
+            _ = (0, _.jsx)(_, {
               cost: _,
               discount: _,
               originalCost: _,
@@ -14284,92 +14128,70 @@
             });
           } else
             "cantredeemforapp" == _
-              ? (_ = _.createElement(_, {
+              ? (_ = (0, _.jsx)(_, {
                   closeModal: _,
                 }))
               : "cantafford" == _
-                ? (_ = _.createElement(_, {
+                ? (_ = (0, _.jsx)(_, {
                     closeModal: _,
                   }))
                 : "saleitem" == _
-                  ? (_ = _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(
-                        _,
-                        {
+                  ? (_ = (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_, {
                           onClick: _,
-                        },
-                        (0, _._)("#SummerSale_Redeem_Btn"),
-                      ),
-                      _.createElement(
-                        _,
-                        {
+                          children: (0, _._)("#SummerSale_Redeem_Btn"),
+                        }),
+                        (0, _.jsx)(_, {
                           onClick: _,
-                        },
-                        (0, _._)("#Button_Cancel"),
-                      ),
-                    ))
+                          children: (0, _._)("#Button_Cancel"),
+                        }),
+                      ],
+                    }))
                   : "pricechange" == _ &&
-                    (_ = _.createElement(_, {
+                    (_ = (0, _.jsx)(_, {
                       fnReloadItemDef: _,
                       closeModal: _,
                     }));
-          return _.createElement(
-            _._,
-            {
-              "flow-children": "row",
-              className: _.ItemButtonsContainer,
-              ..._,
-            },
-            _,
-          );
+          return (0, _.jsx)(_._, {
+            "flow-children": "row",
+            className: _.ItemButtonsContainer,
+            ..._,
+            children: _,
+          });
         },
         _ = (_) => {
           const { step: _, className: __webpack_require__, ..._ } = _;
           let _ = null;
           return (
             "equip" == _.step
-              ? (_ = _.createElement("div", {
+              ? (_ = (0, _.jsx)("div", {
                   className: (0, _._)(_.GreenCheck, _.PurchasedCheck),
                 }))
               : "equipped" == _.step &&
-                (_ = _.createElement(_._, {
+                (_ = (0, _.jsx)(_._, {
                   className: (0, _._)(_.GreenCheck, _.EquippedCheck),
                 })),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _.ItemPreviewContainer,
-                ),
-                ..._,
-              },
-              _,
-              _.children,
-            )
+            (0, _.jsxs)("div", {
+              className: (0, _._)(__webpack_require__, _.ItemPreviewContainer),
+              ..._,
+              children: [_, _.children],
+            })
           );
         },
         _ = (_) => {
           const { icon: _, ...__webpack_require__ } = _;
-          return _.createElement(
-            "div",
-            {
-              className: _.ChatPickerContainer,
-              ...__webpack_require__,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.IconPreview,
-                style: _ && {
-                  backgroundImage: `url( ${_} )`,
-                },
+          return (0, _.jsx)("div", {
+            className: _.ChatPickerContainer,
+            ...__webpack_require__,
+            children: (0, _.jsx)("div", {
+              className: _.IconPreview,
+              style: _ && {
+                backgroundImage: `url( ${_} )`,
               },
-              _.children,
-            ),
-          );
+              children: _.children,
+            }),
+          });
         },
         _ = (_) => {
           const {
@@ -14384,53 +14206,39 @@
           return (
             _._.Get().GetUserSeasonalBadgeLevel() == __webpack_require__ &&
               (_ = _.CurrentLevel),
-            _.createElement(
-              "div",
-              {
-                className: _.BadgeColumn,
-              },
-              _.createElement(
-                "div",
-                {
+            (0, _.jsxs)("div", {
+              className: _.BadgeColumn,
+              children: [
+                (0, _.jsx)("div", {
                   className: _.BadgeTitle,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.BadgeDetailsContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BadgeImgContainer,
-                  },
-                  _.createElement("div", {
-                    className: _.BadgeImage,
-                    style: {
-                      backgroundImage: `url( ${(0, _._)(_.appid, _)} )`,
-                    },
-                  }),
-                ),
-                _.createElement("div", {
-                  className: _.BadgeLine,
+                  children: _,
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.BadgeLevelContainer, _),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BadgeLevelText,
-                    },
-                    __webpack_require__,
-                  ),
-                ),
-              ),
-            )
+                (0, _.jsxs)("div", {
+                  className: _.BadgeDetailsContainer,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.BadgeImgContainer,
+                      children: (0, _.jsx)("div", {
+                        className: _.BadgeImage,
+                        style: {
+                          backgroundImage: `url( ${(0, _._)(_.appid, _)} )`,
+                        },
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.BadgeLine,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.BadgeLevelContainer, _),
+                      children: (0, _.jsx)("div", {
+                        className: _.BadgeLevelText,
+                        children: __webpack_require__,
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            })
           );
         },
         _ = (_) => {
@@ -14449,68 +14257,51 @@
             1 != _.rewardDefinition.type
           ) {
             if ("cantredeemforapp" == __webpack_require__) {
-              let _ = _.createElement(
-                "span",
-                {
-                  className: _.NeedAppOwnership,
-                },
-                _._.GetAppInfo(_.rewardDefinition.appid).name || "",
-              );
-              _ = _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Bold, _.Opacity),
-                },
-                (0, _._)("#Redeem_CantRedeemItemForApp", _),
-              );
+              let _ = (0, _.jsx)("span", {
+                className: _.NeedAppOwnership,
+                children: _._.GetAppInfo(_.rewardDefinition.appid).name || "",
+              });
+              _ = (0, _.jsx)("div", {
+                className: (0, _._)(_.Bold, _.Opacity),
+                children: (0, _._)("#Redeem_CantRedeemItemForApp", _),
+              });
             } else if ("cantafford" == __webpack_require__) {
               let _ = _(_) - _._.Get().GetPointsAvailable().getLowBits();
-              _ = _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Bold, _.Opacity),
-                },
-                (0, _._)("#Redeem_CantAfford", (0, _._)(_)),
-              );
+              _ = (0, _.jsx)("div", {
+                className: (0, _._)(_.Bold, _.Opacity),
+                children: (0, _._)("#Redeem_CantAfford", (0, _._)(_)),
+              });
             }
           } else
-            _ = _.createElement(
-              "div",
-              {
-                className: _.Bold,
-              },
-              (0, _._)("#Redeem_YoursToOwn", _(_.rewardDefinition)),
-            );
-          return _.createElement(
-            "div",
-            {
-              className: _.ItemDescription,
-              ..._,
-            },
-            _,
-            _.createElement("div", null, _),
-            _.children,
-            _,
-            _.createElement(
-              "div",
-              {
+            _ = (0, _.jsx)("div", {
+              className: _.Bold,
+              children: (0, _._)("#Redeem_YoursToOwn", _(_.rewardDefinition)),
+            });
+          return (0, _.jsxs)("div", {
+            className: _.ItemDescription,
+            ..._,
+            children: [
+              _,
+              (0, _.jsx)("div", {
+                children: _,
+              }),
+              _.children,
+              _,
+              (0, _.jsx)("div", {
                 className: _.Small,
-              },
-              (0, _._)("#Redeem_RefundWarning"),
-            ),
-          );
+                children: (0, _._)("#Redeem_RefundWarning"),
+              }),
+            ],
+          });
         },
         _ = _.forwardRef((_, _) => {
           const { className: __webpack_require__, ..._ } = _;
-          return _.createElement(
-            _._,
-            {
-              ref: _,
-              className: (0, _._)(_.ItemWrapper, __webpack_require__),
-              ..._,
-            },
-            _.children,
-          );
+          return (0, _.jsx)(_._, {
+            ref: _,
+            className: (0, _._)(_.ItemWrapper, __webpack_require__),
+            ..._,
+            children: _.children,
+          });
         });
       function _(_) {
         const {
@@ -14518,21 +14309,18 @@
           destructive: __webpack_require__,
           onEscKeypress: _,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            onEscKeypress: _,
-            bHideCloseIcon: !0,
-            bDestructiveWarning: __webpack_require__,
-            hideTopBar: !1,
-            bGamepadUIScrollWithin: !0,
-          },
-          _,
-        );
+        return (0, _.jsx)(_._, {
+          onEscKeypress: _,
+          bHideCloseIcon: !0,
+          bDestructiveWarning: __webpack_require__,
+          hideTopBar: !1,
+          bGamepadUIScrollWithin: !0,
+          children: _,
+        });
       }
       function _(_) {
         const _ = "desktop" !== (0, _._)();
-        return _.createElement(_._, {
+        return (0, _.jsx)(_._, {
           className: (0, _._)(_.ModalContainer, _ && _.Responsive),
           ..._,
         });
@@ -14562,10 +14350,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           className: (0, _._)(_, _.Pulse),
           ...__webpack_require__,
         });
@@ -14593,10 +14382,13 @@
         const _ = [];
         _.community_item_data.animated &&
           _.push(
-            _.createElement(_._, {
-              className: _.IconAnimated,
-              key: "animated",
-            }),
+            (0, _.jsx)(
+              _._,
+              {
+                className: _.IconAnimated,
+              },
+              "animated",
+            ),
           );
         const { icon_url: _, name: _ } = _._.GetAppInfo(_.appid),
           _ = _.community_item_data.item_title
@@ -14605,7 +14397,7 @@
         return {
           cost: parseInt(_.point_cost),
           name: _,
-          children: _.createElement("div", {
+          children: (0, _.jsx)("div", {
             className: _.Image,
             style: {
               backgroundImage: `url(${_})`,
@@ -14619,18 +14411,15 @@
         };
       }
       const _ = (0, _._)((_) =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._(_),
           }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _.EEf,
-            },
-            (_) => {
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _.EEf,
+            children: (_) => {
               const {
                   definition: {
                     appid: __webpack_require__,
@@ -14642,100 +14431,91 @@
                 } = _,
                 _ = _ ? _ : _,
                 _ = (0, _._)(__webpack_require__, _);
-              return _.createElement("img", {
+              return (0, _.jsx)("img", {
                 className: _.ImageMedium,
                 src: _,
               });
             },
-          ),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _.ZTc,
-            },
-            _.createElement("img", {
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _.ZTc,
+            children: (0, _.jsx)("img", {
               className: _.ImageSmall,
               src: (0, _._)(
                 _.definition.appid,
                 _.definition.community_item_data.item_image_large,
               ),
             }),
-          ),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._(_),
             iconComponent: _.oY9,
           }),
         ),
         _ = (0, _._)((_) =>
           _.definition.community_item_data.animated
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 ..._,
               })
             : _.definition.community_item_data.tiled
-              ? _.createElement(_, {
+              ? (0, _.jsx)(_, {
                   ..._,
                 })
-              : _.createElement(_, {
+              : (0, _.jsx)(_, {
                   ..._,
                 }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              className: _.HasAnimation,
-              ..._(_),
-              iconComponent: _.yHA,
-              styleOverride: _.BackgroundOverride,
-              videoProps: {
-                className: _.ImageBackground,
-                poster:
-                  _._.COMMUNITY_CDN_URL +
-                  "economy/profilebackground/items/" +
-                  _.definition.appid +
-                  "/" +
-                  _.definition.community_item_data.item_image_large +
-                  "?size=320x200",
-              },
+          (0, _.jsx)(_, {
+            className: _.HasAnimation,
+            ..._(_),
+            iconComponent: _.yHA,
+            styleOverride: _.BackgroundOverride,
+            videoProps: {
+              className: _.ImageBackground,
+              poster:
+                _._.COMMUNITY_CDN_URL +
+                "economy/profilebackground/items/" +
+                _.definition.appid +
+                "/" +
+                _.definition.community_item_data.item_image_large +
+                "?size=320x200",
             },
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("source", {
-                src: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_movie_webm_small
-                    ? _.definition.community_item_data.item_movie_webm_small
-                    : _.definition.community_item_data.item_movie_webm,
-                ),
-                type: "video/webm",
-              }),
-              _.createElement("source", {
-                src: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_movie_mp4_small
-                    ? _.definition.community_item_data.item_movie_mp4_small
-                    : _.definition.community_item_data.item_movie_mp4,
-                ),
-                type: "video/mp4",
-              }),
-            ),
-          ),
+            children: (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("source", {
+                  src: (0, _._)(
+                    _.definition.appid,
+                    _.definition.community_item_data.item_movie_webm_small
+                      ? _.definition.community_item_data.item_movie_webm_small
+                      : _.definition.community_item_data.item_movie_webm,
+                  ),
+                  type: "video/webm",
+                }),
+                (0, _.jsx)("source", {
+                  src: (0, _._)(
+                    _.definition.appid,
+                    _.definition.community_item_data.item_movie_mp4_small
+                      ? _.definition.community_item_data.item_movie_mp4_small
+                      : _.definition.community_item_data.item_movie_mp4,
+                  ),
+                  type: "video/mp4",
+                }),
+              ],
+            }),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _.yHA,
-              styleOverride: _.BackgroundOverride,
-            },
-            _.createElement("img", {
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _.yHA,
+            styleOverride: _.BackgroundOverride,
+            children: (0, _.jsx)("img", {
               className: _.ImageBackground,
               src:
                 _._.COMMUNITY_CDN_URL +
@@ -14745,16 +14525,13 @@
                 _.definition.community_item_data.item_image_large +
                 "?size=320x200",
             }),
-          ),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _.yHA,
-            },
-            _.createElement("img", {
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _.yHA,
+            children: (0, _.jsx)("img", {
               className: _.ImageMedium,
               src:
                 _._.COMMUNITY_CDN_URL +
@@ -14763,54 +14540,48 @@
                 "/" +
                 _.definition.community_item_data.item_image_large,
             }),
-          ),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _._,
-              videoProps: {
-                className: _.ImageMiniBackground,
-                poster: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_image_large,
-                ),
-              },
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _._,
+            videoProps: {
+              className: _.ImageMiniBackground,
+              poster: (0, _._)(
+                _.definition.appid,
+                _.definition.community_item_data.item_image_large,
+              ),
             },
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("source", {
-                src: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_movie_webm_small
-                    ? _.definition.community_item_data.item_movie_webm_small
-                    : _.definition.community_item_data.item_movie_webm,
-                ),
-                type: "video/webm",
-              }),
-              _.createElement("source", {
-                src: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_movie_mp4_small
-                    ? _.definition.community_item_data.item_movie_mp4_small
-                    : _.definition.community_item_data.item_movie_mp4,
-                ),
-                type: "video/mp4",
-              }),
-            ),
-          ),
+            children: (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("source", {
+                  src: (0, _._)(
+                    _.definition.appid,
+                    _.definition.community_item_data.item_movie_webm_small
+                      ? _.definition.community_item_data.item_movie_webm_small
+                      : _.definition.community_item_data.item_movie_webm,
+                  ),
+                  type: "video/webm",
+                }),
+                (0, _.jsx)("source", {
+                  src: (0, _._)(
+                    _.definition.appid,
+                    _.definition.community_item_data.item_movie_mp4_small
+                      ? _.definition.community_item_data.item_movie_mp4_small
+                      : _.definition.community_item_data.item_movie_mp4,
+                  ),
+                  type: "video/mp4",
+                }),
+              ],
+            }),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _._,
-            },
-            (_) => {
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _._,
+            children: (_) => {
               const {
                   definition: {
                     appid: __webpack_require__,
@@ -14822,21 +14593,18 @@
                 } = _,
                 _ = _ ? _ : _,
                 _ = (0, _._)(__webpack_require__, _);
-              return _.createElement("img", {
+              return (0, _.jsx)("img", {
                 className: _.ImageFrames,
                 src: _,
               });
             },
-          ),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _._,
-            },
-            (_) => {
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _._,
+            children: (_) => {
               const {
                   definition: {
                     appid: __webpack_require__,
@@ -14848,73 +14616,67 @@
                 } = _,
                 _ = _ ? _ : _,
                 _ = (0, _._)(__webpack_require__, _);
-              return _.createElement("img", {
+              return (0, _.jsx)("img", {
                 className: _.ImageAnimatedAvatar,
                 src: _,
               });
             },
-          ),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(_, {
+          (0, _.jsx)(_, {
             ..._(_),
             iconComponent: _._,
             desc: (0, _._)(8),
           }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _._,
-            },
-            _.createElement("img", {
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _._,
+            children: (0, _.jsx)("img", {
               className: _.ImageKeyboard,
               src: (0, _._)(
                 _.definition.appid,
                 _.definition.community_item_data.item_image_small,
               ),
             }),
-          ),
+          }),
         ),
         _ = (0, _._)((_) =>
-          _.createElement(
-            _,
-            {
-              ..._(_),
-              iconComponent: _._,
-              videoProps: {
-                className: _.ImageFillHeight,
-                poster: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_image_large,
-                ),
-              },
+          (0, _.jsx)(_, {
+            ..._(_),
+            iconComponent: _._,
+            videoProps: {
+              className: _.ImageFillHeight,
+              poster: (0, _._)(
+                _.definition.appid,
+                _.definition.community_item_data.item_image_large,
+              ),
             },
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("source", {
-                src: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_movie_webm_small
-                    ? _.definition.community_item_data.item_movie_webm_small
-                    : _.definition.community_item_data.item_movie_webm,
-                ),
-                type: "video/webm",
-              }),
-              _.createElement("source", {
-                src: (0, _._)(
-                  _.definition.appid,
-                  _.definition.community_item_data.item_movie_mp4_small
-                    ? _.definition.community_item_data.item_movie_mp4_small
-                    : _.definition.community_item_data.item_movie_mp4,
-                ),
-                type: "video/mp4",
-              }),
-            ),
-          ),
+            children: (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("source", {
+                  src: (0, _._)(
+                    _.definition.appid,
+                    _.definition.community_item_data.item_movie_webm_small
+                      ? _.definition.community_item_data.item_movie_webm_small
+                      : _.definition.community_item_data.item_movie_webm,
+                  ),
+                  type: "video/webm",
+                }),
+                (0, _.jsx)("source", {
+                  src: (0, _._)(
+                    _.definition.appid,
+                    _.definition.community_item_data.item_movie_mp4_small
+                      ? _.definition.community_item_data.item_movie_mp4_small
+                      : _.definition.community_item_data.item_movie_mp4,
+                  ),
+                  type: "video/mp4",
+                }),
+              ],
+            }),
+          }),
         );
       class _ extends _.Component {
         m_ref = _.createRef();
@@ -14927,19 +14689,15 @@
             videoProps: _,
             ...__webpack_require__
           } = this.props;
-          return _.createElement(
-            _,
-            {
-              ...__webpack_require__,
-            },
-            _.createElement(_._, {
-              trigger: "repeated",
-              onVisibilityChange: (_) => this.HandleVisibilityChange(_),
-              className: _.VisibilityTracker,
-            }),
-            _.createElement(
-              "video",
-              {
+          return (0, _.jsxs)(_, {
+            ...__webpack_require__,
+            children: [
+              (0, _.jsx)(_._, {
+                trigger: "repeated",
+                onVisibilityChange: (_) => this.HandleVisibilityChange(_),
+                className: _.VisibilityTracker,
+              }),
+              (0, _.jsx)("video", {
                 playsInline: !0,
                 loop: !0,
                 muted: !0,
@@ -14947,10 +14705,10 @@
                 controls: !1,
                 ..._,
                 ref: this.m_ref,
-              },
-              this.state.bVisible && _,
-            ),
-          );
+                children: this.state.bVisible && _,
+              }),
+            ],
+          });
         }
         m_playPromise = null;
         m_bShouldContinuePlaying = !0;
@@ -14980,21 +14738,18 @@
         };
         render() {
           const { children: _, ..._ } = this.props;
-          return _.createElement(
-            _,
-            {
-              ..._,
-              onMouseEnter: () =>
-                this.setState({
-                  bHover: !0,
-                }),
-              onMouseLeave: () =>
-                this.setState({
-                  bHover: !1,
-                }),
-            },
-            _(this.state.bHover || !0),
-          );
+          return (0, _.jsx)(_, {
+            ..._,
+            onMouseEnter: () =>
+              this.setState({
+                bHover: !0,
+              }),
+            onMouseLeave: () =>
+              this.setState({
+                bHover: !1,
+              }),
+            children: _(this.state.bHover || !0),
+          });
         }
       }
       const _ = (_) => {
@@ -15023,125 +14778,101 @@
             _ = {
               background: (_ || _).colors.background,
             };
-          return _.createElement(
-            "div",
-            {
-              className: _.ItemContainer,
-            },
-            _.createElement(
-              _._,
-              {
-                ..._,
-                className: (0, _._)(_, _.Item, _),
-                style: _,
-              },
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsx)("div", {
+            className: _.ItemContainer,
+            children: (0, _.jsxs)(_._, {
+              ..._,
+              className: (0, _._)(_, _.Item, _),
+              style: _,
+              children: [
+                (0, _.jsxs)(_._, {
                   className: _.Body,
                   style: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Attributes,
-                  },
-                  _,
-                ),
-                _.createElement(_, {
-                  src: __webpack_require__,
-                  title: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Attributes,
+                      children: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      src: __webpack_require__,
+                      title: _,
+                    }),
+                    !_ &&
+                      (0, _.jsxs)("div", {
+                        className: _.BodyTopRight,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            className: _.IconPartialCheckMark,
+                          }),
+                          (0, _.jsx)(_._, {
+                            className: _.IconCheckMark,
+                          }),
+                        ],
+                      }),
+                    _,
+                  ],
                 }),
-                !_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.BodyTopRight,
-                    },
-                    _.createElement(_._, {
-                      className: _.IconPartialCheckMark,
-                    }),
-                    _.createElement(_._, {
-                      className: _.IconCheckMark,
-                    }),
-                  ),
-                _,
-              ),
-              _.createElement(
-                _._,
-                {
+                (0, _.jsxs)(_._, {
                   className: _.Footer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    style: {
-                      flex: 1,
-                      paddingBottom: "10px",
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Name,
+                  children: [
+                    (0, _.jsx)("div", {
+                      style: {
+                        flex: 1,
+                        paddingBottom: "10px",
                       },
-                      _,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ItemTypeContainer,
-                      },
-                      _ &&
-                        _.createElement(_, {
-                          className: _.Icon,
-                          style: {
-                            fill: "",
-                          },
-                        }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Subtitle,
-                        },
-                        _,
-                        " ",
-                      ),
-                    ),
-                  ),
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.CostRow,
-                    },
-                    _.createElement(_._, {
-                      className: _.IconPartialCheckMark,
+                      children: (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.Name,
+                            children: _,
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.ItemTypeContainer,
+                            children: [
+                              _ &&
+                                (0, _.jsx)(_, {
+                                  className: _.Icon,
+                                  style: {
+                                    fill: "",
+                                  },
+                                }),
+                              (0, _.jsxs)("div", {
+                                className: _.Subtitle,
+                                children: [_, " "],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
                     }),
-                    _.createElement(_._, {
-                      className: _.IconCheckMark,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Cost,
-                      },
-                      _ ??
-                        _.createElement(_._, {
-                          amount: _,
-                        }),
-                    ),
-                  ),
-              ),
-              _.createElement("div", {
-                className: _.ItemContainerShine,
-              }),
-            ),
-          );
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _.CostRow,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            className: _.IconPartialCheckMark,
+                          }),
+                          (0, _.jsx)(_._, {
+                            className: _.IconCheckMark,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _.Cost,
+                            children:
+                              _ ??
+                              (0, _.jsx)(_._, {
+                                amount: _,
+                              }),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ItemContainerShine,
+                }),
+              ],
+            }),
+          });
         },
         _ = (_) => {
           const {
@@ -15168,110 +14899,87 @@
             _ = {
               background: (_ || _).colors.background,
             };
-          return _.createElement(
-            "div",
-            {
-              className: _.ItemWideContainer,
-            },
-            _.createElement(
-              _._,
-              {
-                ..._,
-                className: (0, _._)(_, _.Item, _),
-                style: _,
-              },
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsx)("div", {
+            className: _.ItemWideContainer,
+            children: (0, _.jsxs)(_._, {
+              ..._,
+              className: (0, _._)(_, _.Item, _),
+              style: _,
+              children: [
+                (0, _.jsxs)(_._, {
                   className: _.Body,
                   style: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Attributes,
-                  },
-                  _,
-                ),
-                _.createElement(_, {
-                  src: __webpack_require__,
-                  title: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Attributes,
+                      children: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      src: __webpack_require__,
+                      title: _,
+                    }),
+                    _,
+                  ],
                 }),
-                _,
-              ),
-              _.createElement(
-                _._,
-                {
+                (0, _.jsxs)(_._, {
                   className: _.Footer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    style: {
-                      flex: 1,
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Name,
+                  children: [
+                    (0, _.jsx)("div", {
+                      style: {
+                        flex: 1,
                       },
-                      _,
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ItemTypeContainer,
-                      },
-                      _ &&
-                        _.createElement(_, {
-                          className: _.Icon,
-                          style: {
-                            fill: "",
-                          },
-                        }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Subtitle,
-                        },
-                        _,
-                        " ",
-                      ),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CostRow,
-                  },
-                  _.createElement(_._, {
-                    className: _.IconPartialCheckMark,
-                  }),
-                  _.createElement(_._, {
-                    className: _.IconCheckMark,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Cost,
-                    },
-                    _ ??
-                      _.createElement(_._, {
-                        amount: _,
+                      children: (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.Name,
+                            children: _,
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.ItemTypeContainer,
+                            children: [
+                              _ &&
+                                (0, _.jsx)(_, {
+                                  className: _.Icon,
+                                  style: {
+                                    fill: "",
+                                  },
+                                }),
+                              (0, _.jsxs)("div", {
+                                className: _.Subtitle,
+                                children: [_, " "],
+                              }),
+                            ],
+                          }),
+                        ],
                       }),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _.ItemContainerShine,
-              }),
-            ),
-          );
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.CostRow,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          className: _.IconPartialCheckMark,
+                        }),
+                        (0, _.jsx)(_._, {
+                          className: _.IconCheckMark,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.Cost,
+                          children:
+                            _ ??
+                            (0, _.jsx)(_._, {
+                              amount: _,
+                            }),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ItemContainerShine,
+                }),
+              ],
+            }),
+          });
         },
         _ = {
           11: _,
@@ -15290,56 +14998,44 @@
             _ = _._.Get().BRewardOwnedByUser(_.definition),
             _ = (0, _._)(_, _ && _.OwnedItem);
           if (5 == _.definition.type || 6 == _.definition.type)
-            return _.createElement(
-              _._,
-              {
-                fallback: null,
-              },
-              _.createElement(_._, {
+            return (0, _.jsx)(_._, {
+              fallback: null,
+              children: (0, _.jsx)(_._, {
                 ...__webpack_require__,
                 className: _,
                 onClick: _.onClick,
               }),
-            );
+            });
           if (
             8 == _.definition.community_item_class &&
             0 != _.definition.bundle_defids?.length
           )
-            return _.createElement(
-              _._,
-              {
-                fallback: null,
-              },
-              _.createElement(_._, {
+            return (0, _.jsx)(_._, {
+              fallback: null,
+              children: (0, _.jsx)(_._, {
                 ...__webpack_require__,
                 className: _,
                 onClick: _.onClick,
               }),
-            );
+            });
           const _ = _[_.definition.community_item_class];
           return _
-            ? _.createElement(
-                _._,
-                {
-                  fallback: null,
-                },
-                _.createElement(_, {
+            ? (0, _.jsx)(_._, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
                   ...__webpack_require__,
                   className: _,
                   onClick: _.onClick,
                 }),
-              )
-            : _.createElement(
-                _._,
-                {
-                  fallback: null,
-                },
-                _.createElement(_, {
+              })
+            : (0, _.jsx)(_._, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
                   ...__webpack_require__,
                   className: _,
                   onClick: _.onClick,
                 }),
-              );
+              });
         });
       function _(_) {
         const _ = __webpack_require__("chunkid")(`./icon_showcase_${_}.svg`);
@@ -15360,7 +15056,7 @@
           cost: __webpack_require__,
           name: _,
           itemLevel: _,
-          children: _.createElement("img", {
+          children: (0, _.jsx)("img", {
             className: _.ImageProfileShowcase,
             src: _,
           }),
@@ -15372,7 +15068,7 @@
         };
       }
       const _ = (_) =>
-        _.createElement(_, {
+        (0, _.jsx)(_, {
           ..._(_),
         });
       function _({
@@ -15389,7 +15085,7 @@
         return {
           cost: _,
           name: _,
-          children: _.createElement("img", {
+          children: (0, _.jsx)("img", {
             className: _.ImageProfileShowcase,
             src: _,
           }),
@@ -15401,7 +15097,7 @@
         };
       }
       const _ = (_) =>
-        _.createElement(_, {
+        (0, _.jsx)(_, {
           ..._(_),
         });
       class _ extends _.Component {
@@ -15412,12 +15108,9 @@
           const { src: _, title: _ } = this.props,
             { bLoadComplete: __webpack_require__ } = this.state;
           return _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.AppIconContainer,
-                },
-                _.createElement("img", {
+            ? (0, _.jsx)("div", {
+                className: _.AppIconContainer,
+                children: (0, _.jsx)("img", {
                   className: _.AppIcon,
                   src: _,
                   onLoad: () =>
@@ -15432,50 +15125,40 @@
                   title: _,
                   alt: _,
                 }),
-              )
+              })
             : null;
         }
       }
       function _() {
-        return _.createElement(
-          _,
-          {
-            className: _.ItemContainer,
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.Item, _.ItemSkeleton),
-            },
-            _.createElement(_._, {
-              className: _.Body,
-            }),
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsx)(_, {
+          className: _.ItemContainer,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_.Item, _.ItemSkeleton),
+            children: [
+              (0, _.jsx)(_._, {
+                className: _.Body,
+              }),
+              (0, _.jsx)(_._, {
                 className: _.Footer,
-              },
-              _.createElement(
-                "div",
-                {
+                children: (0, _.jsx)("div", {
                   style: {
                     flex: 1,
                   },
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement("div", {
-                    className: _.SkeletonName,
+                  children: (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _.SkeletonName,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.SkeletonSubtitle,
+                      }),
+                    ],
                   }),
-                  _.createElement("div", {
-                    className: _.SkeletonSubtitle,
-                  }),
-                ),
-              ),
-            ),
-          ),
-        );
+                }),
+              }),
+            ],
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -15484,6 +15167,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -15501,40 +15185,36 @@
           [_, _] = (0, _.useState)(_),
           { rewards: _, bLoadingMore: _ } = _(0, _),
           _ = _.map(__webpack_require__);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              verticalSpacing: "large",
-              "flow-children": "grid",
-              ..._,
-            },
-            _,
-            _ &&
-              _ &&
-              (function (_, _) {
-                const _ = [];
-                for (let _ = 0; _ < _; _++)
-                  __webpack_require__.push(
-                    _.createElement(
-                      "div",
-                      {
-                        key: _,
-                      },
-                      _(),
-                    ),
-                  );
-                return _;
-              })(_, _),
-            _.createElement(_._, {
-              trigger: "repeated",
-              onVisibilityChange: (_) => _ && _(_ + _),
-            }),
-          ),
-        );
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsxs)(_._, {
+            verticalSpacing: "large",
+            "flow-children": "grid",
+            ..._,
+            children: [
+              _,
+              _ && _ && _(_, _),
+              (0, _.jsx)(_._, {
+                trigger: "repeated",
+                onVisibilityChange: (_) => _ && _(_ + _),
+              }),
+            ],
+          }),
+        });
       });
+      function _(_, _) {
+        const _ = [];
+        for (let _ = 0; _ < _; _++)
+          __webpack_require__.push(
+            (0, _.jsx)(
+              "div",
+              {
+                children: _(),
+              },
+              _,
+            ),
+          );
+        return _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -15556,82 +15236,61 @@
               children: _,
             } = _,
             _ = _ || __webpack_require__ || _ || _;
-          return _.createElement(
-            "div",
-            {
-              className: _.Section,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            className: _.Section,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _.Header,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: _.TitlesContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.TopRow,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SectionTitle,
-                      },
-                      _,
-                    ),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Actions,
-                        },
-                        _,
-                      ),
-                    _.createElement("div", {
-                      className: _.SectionLine,
-                    }),
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Actions,
-                        },
-                        _,
-                      ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SectionSubtitle,
-                    },
-                    __webpack_require__,
-                  ),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _.TopRow,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _.SectionTitle,
+                            children: _,
+                          }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _.Actions,
+                              children: _,
+                            }),
+                          (0, _.jsx)("div", {
+                            className: _.SectionLine,
+                          }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              className: _.Actions,
+                              children: _,
+                            }),
+                        ],
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.SectionSubtitle,
+                        children: __webpack_require__,
+                      }),
+                    ],
+                  }),
+                }),
+              (0, _.jsx)("div", {
                 className: _.Body,
-              },
-              _,
-            ),
-          );
+                children: _,
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const { className: _, ...__webpack_require__ } = _;
-          return _.createElement(_._, {
+          return (0, _.jsx)(_._, {
             className: (0, _._)(_, _.ActionButton),
             ...__webpack_require__,
           });
         },
         _ = (_) => {
           const { className: _, ...__webpack_require__ } = _;
-          return _.createElement("div", {
+          return (0, _.jsx)("div", {
             className: (0, _._)(_, _.SectionCallout),
             ...__webpack_require__,
           });
@@ -15644,6 +15303,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15730,347 +15390,293 @@
             } = _,
             _ = __webpack_require__,
             _ = _;
-          return _.createElement(
-            "div",
-            {
-              className: _.CalloutContainer,
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: _.CalloutContainer,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.CalloutIconContainer,
-              },
-              _.createElement(_, {
-                className: _.CalloutIcon,
+                children: (0, _.jsx)(_, {
+                  className: _.CalloutIcon,
+                }),
               }),
-            ),
-            _.createElement(
-              "div",
-              {
+              (0, _.jsxs)("div", {
                 className: _.CalloutText,
-              },
-              " ",
-              (0, _._)(_),
-              " ",
-            ),
-          );
+                children: [" ", (0, _._)(_), " "],
+              }),
+            ],
+          });
         },
         _ = (_) =>
-          _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              paddingTop: "xlarge",
-              className: _.PageContainer,
-            },
-            _.createElement(
-              "div",
-              {
+          (0, _.jsxs)(_._, {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingTop: "xlarge",
+            className: _.PageContainer,
+            children: [
+              (0, _.jsx)("div", {
                 className: _.HeaderText,
-              },
-              (0, _._)("#HowItWorks_SteamPoints"),
-            ),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#HowItWorks_SteamPoints"),
+              }),
+              (0, _.jsx)("div", {
                 className: _.SubHeaderText,
-              },
-              (0, _._)("#HowItWorks_SteamPoints_Desc1"),
-            ),
-            _.createElement("img", {
-              src: _,
-              className: _.HeaderImage,
-            }),
-            _.createElement(
-              "div",
-              {
+                children: (0, _._)("#HowItWorks_SteamPoints_Desc1"),
+              }),
+              (0, _.jsx)("img", {
+                src: _,
+                className: _.HeaderImage,
+              }),
+              (0, _.jsx)("div", {
                 className: _.SubHeaderText,
-              },
-              (0, _._)("#HowItWorks_SteamPoints_Desc2"),
-            ),
-          ),
+                children: (0, _._)("#HowItWorks_SteamPoints_Desc2"),
+              }),
+            ],
+          }),
         _ = (_) => {
           let _ = (0, _._)(
             "#HowItWorks_Conversion",
-            _.createElement("span", null, (0, _._)(_.numPoints)),
-            _.createElement(
-              "span",
-              null,
-              ((__webpack_require__ = _.dollarConversion),
-              "undefined" == typeof GStoreItemData
-                ? (console.error("Unable to find GStoreItemData"), null)
-                : GStoreItemData.fnFormatCurrency(__webpack_require__)),
-            ),
+            (0, _.jsx)("span", {
+              children: (0, _._)(_.numPoints),
+            }),
+            (0, _.jsx)("span", {
+              children:
+                ((__webpack_require__ = _.dollarConversion),
+                "undefined" == typeof GStoreItemData
+                  ? (console.error("Unable to find GStoreItemData"), null)
+                  : GStoreItemData.fnFormatCurrency(__webpack_require__)),
+            }),
           );
           var _;
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              paddingTop: "medium",
-              className: _.PageContainer,
-              focusable: !0,
-              noFocusRing: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ConvertionSectionTextContainer),
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)(_._, {
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            paddingTop: "medium",
+            className: _.PageContainer,
+            focusable: !0,
+            noFocusRing: !0,
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)(_.ConvertionSectionTextContainer),
+              children: [
+                (0, _.jsx)("div", {
                   className: _.PointsConvertion,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   className: _.SectionSubtitle,
-                },
-                (0, _._)("#HowItWorks_How_Desc"),
-              ),
-            ),
-          );
+                  children: (0, _._)("#HowItWorks_How_Desc"),
+                }),
+              ],
+            }),
+          });
         },
         _ = (_) => {
           let _ = (0, _._)(
             "#ShopName",
-            _.createElement("span", null, (0, _._)("#ShopNamePre")),
+            (0, _.jsx)("span", {
+              children: (0, _._)("#ShopNamePre"),
+            }),
             (0, _._)("#ShopNamePost"),
           );
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              paddingTop: "xxlarge",
-            },
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_._, {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingTop: "xxlarge",
+            children: [
+              (0, _.jsxs)(_._, {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "center",
                 className: _.UsePointsIconContainer,
                 focusable: !0,
                 noFocusRing: !0,
-              },
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
+                  }),
+                  (0, _.jsx)(_.yHA, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim2),
+                  }),
+                  (0, _.jsx)(_.Exy, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim3),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim4),
+                  }),
+                  (0, _.jsx)(_.EEf, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim5),
+                  }),
+                  (0, _.jsx)(_.oY9, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim6),
+                  }),
+                  (0, _.jsx)(_.ZTc, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim7),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim8),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
+                  }),
+                  (0, _.jsx)(_.yHA, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim2),
+                  }),
+                  (0, _.jsx)(_.Exy, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim3),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim4),
+                  }),
+                  (0, _.jsx)(_.EEf, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim5),
+                  }),
+                  (0, _.jsx)(_.oY9, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim6),
+                  }),
+                  (0, _.jsx)(_.ZTc, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim7),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim8),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
+                  }),
+                  (0, _.jsx)(_.yHA, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim2),
+                  }),
+                  (0, _.jsx)(_.Exy, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim3),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim4),
+                  }),
+                  (0, _.jsx)(_.EEf, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim5),
+                  }),
+                  (0, _.jsx)(_.oY9, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim6),
+                  }),
+                  (0, _.jsx)(_.ZTc, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim7),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim8),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
+                  }),
+                ],
               }),
-              _.createElement(_.yHA, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim2),
-              }),
-              _.createElement(_.Exy, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim3),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim4),
-              }),
-              _.createElement(_.EEf, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim5),
-              }),
-              _.createElement(_.oY9, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim6),
-              }),
-              _.createElement(_.ZTc, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim7),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim8),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
-              }),
-              _.createElement(_.yHA, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim2),
-              }),
-              _.createElement(_.Exy, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim3),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim4),
-              }),
-              _.createElement(_.EEf, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim5),
-              }),
-              _.createElement(_.oY9, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim6),
-              }),
-              _.createElement(_.ZTc, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim7),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim8),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
-              }),
-              _.createElement(_.yHA, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim2),
-              }),
-              _.createElement(_.Exy, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim3),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim4),
-              }),
-              _.createElement(_.EEf, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim5),
-              }),
-              _.createElement(_.oY9, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim6),
-              }),
-              _.createElement(_.ZTc, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim7),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim8),
-              }),
-              _.createElement(_._, {
-                className: (0, _._)(_.UsePointsSvg, _.UsePointsAnim1),
-              }),
-            ),
-            _.createElement(
-              _._,
-              {
+              (0, _.jsxs)(_._, {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 paddingTop: "large",
                 className: _.PageContainer,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.ShellHeaderBrandName,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.SectionSubtitle,
-                },
-                (0, _._)("#HowItWorks_UsePoints_Desc1"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  paddingTop: "large",
-                  focusable: !0,
-                  noFocusRing: !0,
-                },
-                _.createElement(_, {
-                  iconComponent: _._,
-                  descCallout: "#HowItWorks_DoNotExpire",
-                }),
-                _.createElement(_, {
-                  iconComponent: _._,
-                  descCallout: "#HowItWorks_Permanent",
-                }),
-                _.createElement(_, {
-                  iconComponent: _._,
-                  descCallout: "#HowItWorks_Marketable",
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _.CollectionItemsContainer,
-                  focusable: !0,
-                  noFocusRing: !0,
-                },
-                _.createElement("img", {
-                  className: _.ItemLeft,
-                  src: _,
-                }),
-                _.createElement("img", {
-                  className: _.ItemLeftMid,
-                  src: _._,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ItemMiddle,
-                  },
-                  _.createElement("img", {
-                    className: _.ItemFrame,
-                    src: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.ShellHeaderBrandName,
+                    children: _,
                   }),
-                  _.createElement("img", {
-                    className: _.ItemAvatar,
-                    src: _,
+                  (0, _.jsx)("div", {
+                    className: _.SectionSubtitle,
+                    children: (0, _._)("#HowItWorks_UsePoints_Desc1"),
                   }),
-                ),
-                _.createElement("img", {
-                  className: _.ItemRightMid,
-                  src: _._,
-                }),
-                _.createElement("img", {
-                  className: _.ItemRight,
-                  src: _._,
-                }),
-              ),
-            ),
-          );
+                  (0, _.jsxs)(_._, {
+                    display: "flex",
+                    flexDirection: "column",
+                    paddingTop: "large",
+                    focusable: !0,
+                    noFocusRing: !0,
+                    children: [
+                      (0, _.jsx)(_, {
+                        iconComponent: _._,
+                        descCallout: "#HowItWorks_DoNotExpire",
+                      }),
+                      (0, _.jsx)(_, {
+                        iconComponent: _._,
+                        descCallout: "#HowItWorks_Permanent",
+                      }),
+                      (0, _.jsx)(_, {
+                        iconComponent: _._,
+                        descCallout: "#HowItWorks_Marketable",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)(_._, {
+                    className: _.CollectionItemsContainer,
+                    focusable: !0,
+                    noFocusRing: !0,
+                    children: [
+                      (0, _.jsx)("img", {
+                        className: _.ItemLeft,
+                        src: _,
+                      }),
+                      (0, _.jsx)("img", {
+                        className: _.ItemLeftMid,
+                        src: _._,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _.ItemMiddle,
+                        children: [
+                          (0, _.jsx)("img", {
+                            className: _.ItemFrame,
+                            src: _,
+                          }),
+                          (0, _.jsx)("img", {
+                            className: _.ItemAvatar,
+                            src: _,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("img", {
+                        className: _.ItemRightMid,
+                        src: _._,
+                      }),
+                      (0, _.jsx)("img", {
+                        className: _.ItemRight,
+                        src: _._,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         },
         _ = () => {
           let _ = _._.LoyaltyByGame();
-          return _.createElement(
-            "div",
-            {
-              className: _.SectionTileContainer,
-              style: {
-                backgroundImage: `url(${_})`,
-              },
+          return (0, _.jsx)("div", {
+            className: _.SectionTileContainer,
+            style: {
+              backgroundImage: `url(${_})`,
             },
-            _.createElement(
-              _._,
-              {
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                paddingRight: "xlarge",
-                paddingLeft: "xlarge",
-                paddingBottom: "xxlarge",
-              },
-              _.createElement(_._, {
-                className: _.SectionIcons,
-              }),
-              _.createElement(
-                _._,
-                {
+            children: (0, _.jsxs)(_._, {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingRight: "xlarge",
+              paddingLeft: "xlarge",
+              paddingBottom: "xxlarge",
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _.SectionIcons,
+                }),
+                (0, _.jsx)(_._, {
                   _: _,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: _.SectionTitle,
-                  },
-                  (0, _._)("#HowItWorks_YourGames"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                    children: (0, _._)("#HowItWorks_YourGames"),
+                  }),
+                }),
+                (0, _.jsx)("div", {
                   className: _.SectionSubtitle,
-                },
-                (0, _._)("#HowItWorks_YourGames_Desc1"),
-              ),
-              _.createElement(
-                _._,
-                {
+                  children: (0, _._)("#HowItWorks_YourGames_Desc1"),
+                }),
+                (0, _.jsx)(_._, {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -16078,89 +15684,84 @@
                   paddingTop: "large",
                   focusable: !0,
                   noFocusRing: !0,
-                },
-                _.createElement(_, {
-                  iconComponent: _._,
-                  descCallout: "#HowItWorks_YourGames_TradingCards",
+                  children: (0, _.jsx)(_, {
+                    iconComponent: _._,
+                    descCallout: "#HowItWorks_YourGames_TradingCards",
+                  }),
                 }),
-              ),
-            ),
-          );
+              ],
+            }),
+          });
         },
         _ = (0, _._)(() => {
           let _ = _._.Get().GetCommunityAwardPointsTransferred(),
             _ = _._.STORE_BASE_URL + "labs/trendingreviews/",
             _ = _._.COMMUNITY_BASE_URL + "?subsection=workshop";
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              paddingTop: "xxlarge",
-            },
-            _.createElement(
-              _._,
-              {
+          return (0, _.jsxs)(_._, {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingTop: "xxlarge",
+            children: [
+              (0, _.jsxs)(_._, {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "center",
                 className: _.UsePointsIconContainer,
                 focusable: !0,
                 noFocusRing: !0,
-              },
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
+                children: [
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                  (0, _.jsx)("img", {
+                    src: _,
+                    className: _.ScrollIcon,
+                  }),
+                ],
               }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-            ),
-            _.createElement(
-              _._,
-              {
+              (0, _.jsxs)(_._, {
                 _: "CommunityAwards",
                 display: "flex",
                 flexDirection: "column",
@@ -16169,32 +15770,28 @@
                 className: _.PageContainer,
                 focusable: !0,
                 noFocusRing: !0,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.ShellHeaderBrandName,
-                },
-                (0, _._)("#HowItWorks_ReviewAwards"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.SectionSubtitle,
-                },
-                (0, _._)("#HowItWorks_ReviewAwardsWinter_Desc", _),
-              ),
-              _.createElement("img", {
-                alt: (0, _._)("#HowItWorks_ReviewAwards"),
-                src:
-                  _._.BASE_URL_STORE_CDN_ASSETS +
-                  `rewards/howtoawards/${_._.LANGUAGE}.png`,
-                className: _.AwardsUiImg,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.ShellHeaderBrandName,
+                    children: (0, _._)("#HowItWorks_ReviewAwards"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.SectionSubtitle,
+                    children: (0, _._)(
+                      "#HowItWorks_ReviewAwardsWinter_Desc",
+                      _,
+                    ),
+                  }),
+                  (0, _.jsx)("img", {
+                    alt: (0, _._)("#HowItWorks_ReviewAwards"),
+                    src:
+                      _._.BASE_URL_STORE_CDN_ASSETS +
+                      `rewards/howtoawards/${_._.LANGUAGE}.png`,
+                    className: _.AwardsUiImg,
+                  }),
+                ],
               }),
-            ),
-            _.createElement(
-              _._,
-              {
+              (0, _.jsxs)(_._, {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -16202,127 +15799,102 @@
                 className: _.PageContainer,
                 focusable: !0,
                 noFocusRing: !0,
-              },
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "center",
-                },
-                _.createElement("img", {
-                  src: _,
-                  className: _.AwardsApng,
-                }),
-                _.createElement(
-                  _._,
-                  {
+                children: [
+                  (0, _.jsxs)(_._, {
                     display: "flex",
-                    flexDirection: "column",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.SectionSubtitle,
-                        _.SectionSubtitleLeftAlign,
-                      ),
-                    },
-                    (0, _._)("#HowItWorks_AwardsReviews", _),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      href: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AwardsLink,
-                      },
-                      (0, _._)("#HowItWorks_AwardsReviewsLink"),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  paddingTop: "large",
-                },
-                _.createElement("img", {
-                  src: _,
-                  className: _.AwardsApng,
-                }),
-                _.createElement(
-                  _._,
-                  {
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _,
+                        className: _.AwardsApng,
+                      }),
+                      (0, _.jsxs)(_._, {
+                        display: "flex",
+                        flexDirection: "column",
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _.SectionSubtitle,
+                              _.SectionSubtitleLeftAlign,
+                            ),
+                            children: (0, _._)("#HowItWorks_AwardsReviews", _),
+                          }),
+                          (0, _.jsx)("a", {
+                            href: _,
+                            children: (0, _.jsx)("div", {
+                              className: _.AwardsLink,
+                              children: (0, _._)(
+                                "#HowItWorks_AwardsReviewsLink",
+                              ),
+                            }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)(_._, {
                     display: "flex",
-                    flexDirection: "column",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.SectionSubtitle,
-                        _.SectionSubtitleLeftAlign,
-                      ),
-                    },
-                    (0, _._)("#HowItWorks_AwardsUgc", _),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      href: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AwardsLink,
-                      },
-                      (0, _._)("#HowItWorks_AwardsUgcLink"),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  paddingTop: "large",
-                },
-                _.createElement("img", {
-                  src: _,
-                  className: _.AwardsApng,
-                }),
-                _.createElement(
-                  _._,
-                  {
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    paddingTop: "large",
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _,
+                        className: _.AwardsApng,
+                      }),
+                      (0, _.jsxs)(_._, {
+                        display: "flex",
+                        flexDirection: "column",
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _.SectionSubtitle,
+                              _.SectionSubtitleLeftAlign,
+                            ),
+                            children: (0, _._)("#HowItWorks_AwardsUgc", _),
+                          }),
+                          (0, _.jsx)("a", {
+                            href: _,
+                            children: (0, _.jsx)("div", {
+                              className: _.AwardsLink,
+                              children: (0, _._)("#HowItWorks_AwardsUgcLink"),
+                            }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsxs)(_._, {
                     display: "flex",
-                    flexDirection: "column",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.SectionSubtitle,
-                        _.SectionSubtitleLeftAlign,
-                      ),
-                    },
-                    (0, _._)("#HowItWorks_AwardsProfile", _),
-                  ),
-                ),
-              ),
-            ),
-          );
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    paddingTop: "large",
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _,
+                        className: _.AwardsApng,
+                      }),
+                      (0, _.jsx)(_._, {
+                        display: "flex",
+                        flexDirection: "column",
+                        children: (0, _.jsx)("div", {
+                          className: (0, _._)(
+                            _.SectionSubtitle,
+                            _.SectionSubtitleLeftAlign,
+                          ),
+                          children: (0, _._)("#HowItWorks_AwardsProfile", _),
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         });
       const _ = () => {
           const _ = (function () {
@@ -16370,36 +15942,29 @@
               },
             ].filter(Boolean);
           })();
-          return _.createElement(
-            _._,
-            {
+          return (0, _.jsx)(_._, {
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            paddingTop: "xxlarge",
+            className: _.FaqContainer,
+            children: (0, _.jsxs)(_._, {
               display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              paddingTop: "xxlarge",
-              className: _.FaqContainer,
-            },
-            _.createElement(
-              _._,
-              {
-                display: "flex",
-                flexDirection: "column",
-              },
-              _.createElement(
-                "div",
-                {
+              flexDirection: "column",
+              children: [
+                (0, _.jsx)("div", {
                   className: _.FaqTitle,
-                },
-                (0, _._)("#Faq_Title"),
-              ),
-              _.map((_) =>
-                _.createElement(_, {
-                  ..._,
-                  key: Array.isArray(_.question) ? _.question[0] : _.question,
+                  children: (0, _._)("#Faq_Title"),
                 }),
-              ),
-            ),
-          );
+                _.map((_) =>
+                  (0, _.createElement)(_, {
+                    ..._,
+                    key: Array.isArray(_.question) ? _.question[0] : _.question,
+                  }),
+                ),
+              ],
+            }),
+          });
         },
         _ = (_) => {
           const { question: _, answer: __webpack_require__ } = _,
@@ -16407,84 +15972,72 @@
             _ = Array.isArray(__webpack_require__)
               ? __webpack_require__
               : [__webpack_require__];
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              paddingTop: "medium",
-              paddingBottom: "medium",
-              focusable: !0,
-            },
-            _.map((_) =>
-              _.createElement(
-                _,
-                {
-                  key: _,
-                },
-                (0, _._)(_),
+          return (0, _.jsxs)(_._, {
+            display: "flex",
+            flexDirection: "column",
+            paddingTop: "medium",
+            paddingBottom: "medium",
+            focusable: !0,
+            children: [
+              _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    children: (0, _._)(_),
+                  },
+                  _,
+                ),
               ),
-            ),
-            _.map((_) =>
-              _.createElement(
-                _,
-                {
-                  key: _,
-                },
-                (0, _._)(_),
+              _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    children: (0, _._)(_),
+                  },
+                  _,
+                ),
               ),
-            ),
-          );
+            ],
+          });
         },
         _ = ({ children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: _.FaqQuestion,
-            },
-            _,
-          ),
+          (0, _.jsx)("div", {
+            className: _.FaqQuestion,
+            children: _,
+          }),
         _ = ({ children: _ }) =>
-          _.createElement(
-            "div",
-            {
-              className: _.FaqAnswer,
-            },
-            _,
-          ),
+          (0, _.jsx)("div", {
+            className: _.FaqAnswer,
+            children: _,
+          }),
         _ = () => {
           let _ = _._.Get().GetConfig().points_conversion.unit_spend,
             _ = _._.Get().GetConfig().points_conversion.points;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  style: {
-                    width: "100%",
-                  },
-                  _: "Title",
-                  className: _.PageFormatting,
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsxs)(_._, {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                style: {
+                  width: "100%",
                 },
-                _.createElement(_, null),
-                _.createElement(_, {
-                  dollarConversion: _,
-                  numPoints: _,
-                }),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                !(0, _._)(_._.EREALM) && _.createElement(_, null),
-                _.createElement(_, null),
-              ),
-            ),
-          );
+                _: "Title",
+                className: _.PageFormatting,
+                children: [
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {
+                    dollarConversion: _,
+                    numPoints: _,
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  !(0, _._)(_._.EREALM) && (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                ],
+              }),
+            }),
+          });
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16495,374 +16048,306 @@
         }
         render() {
           return (0, _._)(_._.EREALM)
-            ? _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    className: _.PageContainer,
-                    marginX: "xlarge",
-                    display: "flex",
-                    flexDirection: "column",
-                  },
-                  _.createElement(
-                    _._,
-                    {
+            ? (0, _.jsx)(_._, {
+                children: (0, _.jsxs)(_._, {
+                  className: _.PageContainer,
+                  marginX: "xlarge",
+                  display: "flex",
+                  flexDirection: "column",
+                  children: [
+                    (0, _.jsxs)(_._, {
                       marginY: "large",
                       display: "flex",
                       flexDirection: "column",
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.PageHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_Header_China"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_Intro_China"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.PageHeader,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_Header_China",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_Intro_China",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_1_Title_China"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_1_Desc_China"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_1_Title_China",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_1_Desc_China",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_2_Title_China"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_2_Desc_China"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_2_Desc2_China"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_2_Title_China",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_2_Desc_China",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_2_Desc2_China",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_3_Title_China"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_3_Desc_China"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_3_Desc2_China"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_3_Title_China",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_3_Desc_China",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_3_Desc2_China",
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_4_Title_China"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)(
-                        "#LunarSale2022_Rules_4_Desc_China",
-                        _.createElement(
-                          _._,
-                          {
-                            href: _._.STORE_BASE_URL + "privacy_agreement",
-                          },
-                          (0, _._)("#LunarSale2022_Rules_ClickHere"),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            : _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    className: _.PageContainer,
-                    marginX: "xlarge",
-                    display: "flex",
-                    flexDirection: "column",
-                  },
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_4_Title_China",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_4_Desc_China",
+                            (0, _.jsx)(_._, {
+                              href: _._.STORE_BASE_URL + "privacy_agreement",
+                              children: (0, _._)(
+                                "#LunarSale2022_Rules_ClickHere",
+                              ),
+                            }),
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              })
+            : (0, _.jsx)(_._, {
+                children: (0, _.jsxs)(_._, {
+                  className: _.PageContainer,
+                  marginX: "xlarge",
+                  display: "flex",
+                  flexDirection: "column",
+                  children: [
+                    (0, _.jsxs)(_._, {
                       marginY: "large",
                       display: "flex",
                       flexDirection: "column",
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.PageHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_Header"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_Intro"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.PageHeader,
+                          children: (0, _._)("#LunarSale2022_Rules_Header"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)("#LunarSale2022_Rules_Intro"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_1_Title"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_1_Desc"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)("#LunarSale2022_Rules_1_Title"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)("#LunarSale2022_Rules_1_Desc"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_2_Title"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_2_Desc"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_2_Desc2"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)("#LunarSale2022_Rules_2_Title"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)("#LunarSale2022_Rules_2_Desc"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)("#LunarSale2022_Rules_2_Desc2"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_3_Title"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_3_Desc"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_3_Desc2"),
-                    ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)("#LunarSale2022_Rules_3_Title"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)("#LunarSale2022_Rules_3_Desc"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionContent,
+                          children: (0, _._)("#LunarSale2022_Rules_3_Desc2"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
                       className: _.Section,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "small",
-                        display: "flex",
-                        flexDirection: "column",
-                        className: _.SectionHeader,
-                      },
-                      (0, _._)("#LunarSale2022_Rules_4_Title"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        marginY: "xsmall",
-                        className: _.SectionContent,
-                      },
-                      (0, _._)(
-                        "#LunarSale2022_Rules_4_Desc",
-                        _.createElement(
-                          _._,
-                          {
-                            href: _._.STORE_BASE_URL + "privacy_agreement",
-                          },
-                          (0, _._)("#LunarSale2022_Rules_ClickHere"),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              );
+                      children: [
+                        (0, _.jsx)(_._, {
+                          marginY: "small",
+                          display: "flex",
+                          flexDirection: "column",
+                          className: _.SectionHeader,
+                          children: (0, _._)("#LunarSale2022_Rules_4_Title"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          marginY: "xsmall",
+                          className: _.SectionContent,
+                          children: (0, _._)(
+                            "#LunarSale2022_Rules_4_Desc",
+                            (0, _.jsx)(_._, {
+                              href: _._.STORE_BASE_URL + "privacy_agreement",
+                              children: (0, _._)(
+                                "#LunarSale2022_Rules_ClickHere",
+                              ),
+                            }),
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              });
         }
       };
       _ = (0, _._)([_._], _);
@@ -16943,115 +16428,105 @@
                 ),
             },
           },
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "a",
-              {
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)("a", {
                 className: _.Header,
                 href: (0, _._)(_._.COMMUNITY_BASE_URL + "profiles/" + _),
-              },
-              _.createElement(_._, {
-                "data-miniprofile": "s" + _,
-                className: _.HeaderAvatar,
-                size: "Large",
-                statusPosition: "right",
-                strAvatarURL: _.data.avatar_url,
-              }),
-              _.data.persona_name,
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#EquippedProfile_Header_Title"),
-            ),
-          );
-        return _.createElement(
-          _._,
-          {
-            background:
-              _ &&
-              `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_item_data?.item_image_large}`,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.PageItemsContainer,
-              itemClassName: _.PageItemsContainerChildren,
-              spacing: "xlarge",
-            },
-            _.createElement(_._, {
-              title: _,
-              subtitle: (0, _._)("#EquippedProfile_Header_Desc"),
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.ErrorCtn,
-                },
-                _,
-              ),
-            _.data.active_definitions?.length > 0 &&
-              _.createElement(
-                _._,
-                {
-                  title: (0, _._)("#EquippedProfile_AvailableForPurchase"),
-                },
-                _.createElement(_._, {
-                  style: {
-                    width: "100%",
-                  },
-                  getItems: (_, _) => ({
-                    rewards: _.data.active_definitions,
-                    bLoadingMore: !1,
-                    cTotalMatching: _.data.active_definitions.length,
-                    cMaxToReturn: _.data.active_definitions.length,
+                children: [
+                  (0, _.jsx)(_._, {
+                    "data-miniprofile": "s" + _,
+                    className: _.HeaderAvatar,
+                    size: "Large",
+                    statusPosition: "right",
+                    strAvatarURL: _.data.avatar_url,
                   }),
-                  itemClassName: _.ItemHoverZIndex,
-                  renderItem: (_) =>
-                    _.createElement(_._, {
-                      definition: _,
-                      key: _.defid,
-                    }),
+                  _.data.persona_name,
+                ],
+              }),
+              (0, _.jsx)("div", {
+                children: (0, _._)("#EquippedProfile_Header_Title"),
+              }),
+            ],
+          });
+        return (0, _.jsx)(_._, {
+          background:
+            _ &&
+            `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_item_data?.item_image_large}`,
+          children: (0, _.jsxs)(_._, {
+            className: _.PageItemsContainer,
+            itemClassName: _.PageItemsContainerChildren,
+            spacing: "xlarge",
+            children: [
+              (0, _.jsx)(_._, {
+                title: _,
+                subtitle: (0, _._)("#EquippedProfile_Header_Desc"),
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _.ErrorCtn,
+                  children: _,
                 }),
-              ),
-            _.data.inactive_definitions?.length > 0 &&
-              _.createElement(
-                _._,
-                {
+              _.data.active_definitions?.length > 0 &&
+                (0, _.jsx)(_._, {
+                  title: (0, _._)("#EquippedProfile_AvailableForPurchase"),
+                  children: (0, _.jsx)(_._, {
+                    style: {
+                      width: "100%",
+                    },
+                    getItems: (_, _) => ({
+                      rewards: _.data.active_definitions,
+                      bLoadingMore: !1,
+                      cTotalMatching: _.data.active_definitions.length,
+                      cMaxToReturn: _.data.active_definitions.length,
+                    }),
+                    itemClassName: _.ItemHoverZIndex,
+                    renderItem: (_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          definition: _,
+                        },
+                        _.defid,
+                      ),
+                  }),
+                }),
+              _.data.inactive_definitions?.length > 0 &&
+                (0, _.jsx)(_._, {
                   title: (0, _._)("#EquippedProfile_NotAvailable"),
                   subtitle: (0, _._)(
                     "#EquippedProfile_NotAvailable_Desc",
                     _.data.inactive_definitions.length,
                   ),
-                },
-                _.createElement(_._, {
-                  style: {
-                    width: "100%",
-                  },
-                  getItems: (_, _) => ({
-                    rewards: _.data.inactive_definitions,
-                    bLoadingMore: !1,
-                    cTotalMatching: _.data.inactive_definitions.length,
-                    cMaxToReturn: _.data.inactive_definitions.length,
-                  }),
-                  itemClassName: _.ItemHoverZIndex,
-                  renderItem: (_) =>
-                    _.createElement(_._, {
-                      definition: _,
-                      purchaseable: !1,
-                      key: _.defid,
+                  children: (0, _.jsx)(_._, {
+                    style: {
+                      width: "100%",
+                    },
+                    getItems: (_, _) => ({
+                      rewards: _.data.inactive_definitions,
+                      bLoadingMore: !1,
+                      cTotalMatching: _.data.inactive_definitions.length,
+                      cMaxToReturn: _.data.inactive_definitions.length,
                     }),
+                    itemClassName: _.ItemHoverZIndex,
+                    renderItem: (_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          definition: _,
+                          purchaseable: !1,
+                        },
+                        _.defid,
+                      ),
+                  }),
                 }),
-              ),
-            _?.length > 0 &&
-              _.createElement(_._, {
-                descriptor: _,
-              }),
-          ),
-        );
+              _?.length > 0 &&
+                (0, _.jsx)(_._, {
+                  descriptor: _,
+                }),
+            ],
+          }),
+        });
       }
       var _,
         _ = __webpack_require__("chunkid"),
@@ -18301,50 +17776,37 @@
         }
         render() {
           return this.state.bReady
-            ? _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    _._,
-                    {
+            ? (0, _.jsx)(_._, {
+                children: (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
                       path: _._.LoyaltyHowItWorks(),
-                    },
-                    _.createElement(_, null),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      path: _._.LoyaltyStore(),
-                    },
-                    _.createElement(_._, null),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      path: _._.LoyaltyGiveawayRules(),
-                    },
-                    _.createElement(_, null),
-                  ),
-                  _.createElement(_._, {
-                    path: _._.LoyaltyEquippedProfile(":steamid"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        steamid: _.match.params.steamid,
-                      }),
-                  }),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_._, {
-                      _: _._.LoyaltyStore(),
+                      children: (0, _.jsx)(_, {}),
                     }),
-                  ),
-                ),
-              )
-            : _.createElement(_._, null);
+                    (0, _.jsx)(_._, {
+                      path: _._.LoyaltyStore(),
+                      children: (0, _.jsx)(_._, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: _._.LoyaltyGiveawayRules(),
+                      children: (0, _.jsx)(_, {}),
+                    }),
+                    (0, _.jsx)(_._, {
+                      path: _._.LoyaltyEquippedProfile(":steamid"),
+                      render: (_) =>
+                        (0, _.jsx)(_, {
+                          steamid: _.match.params.steamid,
+                        }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_._, {
+                        _: _._.LoyaltyStore(),
+                      }),
+                    }),
+                  ],
+                }),
+              })
+            : (0, _.jsx)(_._, {});
         }
       }
       const _ = (async function () {
@@ -18410,6 +17872,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -18422,53 +17885,40 @@
           } = _,
           _ = _,
           _ = "string" == typeof _ ? _ : (0, _._)(_);
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.Banner,
-            },
-            _ &&
-              _.createElement("img", {
-                className: _.Image,
-                src: _,
-              }),
-            _ &&
-              _.createElement(_, {
-                className: _.Image,
-              }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            className: _.Banner,
+            children: [
+              _ &&
+                (0, _.jsx)("img", {
+                  className: _.Image,
+                  src: _,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _.Image,
+                }),
+              (0, _.jsxs)("div", {
                 className: _.Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Description,
-                },
-                __webpack_require__,
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Title,
+                    children: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Description,
+                    children: __webpack_require__,
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
                 className: _.Link,
                 _: _,
-              },
-              _,
-            ),
-          ),
-        );
+                children: _,
+              }),
+            ],
+          }),
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18527,13 +17977,10 @@
             _ = (0, _._)("#SummerSale_ItemName");
           const _ = _._.Get().BCanClaimFreeSaleReward();
           if (!_) {
-            (_ = _.createElement(
-              "div",
-              {
-                className: _.ClaimedText,
-              },
-              (0, _._)("#Rewards_Claimed"),
-            )),
+            (_ = (0, _.jsx)("div", {
+              className: _.ClaimedText,
+              children: (0, _._)("#Rewards_Claimed"),
+            })),
               (_ = (0, _._)(_.SaleRewardItemOwned, _.OwnedItem)),
               (_ = null);
             const _ = _._.Get().GetClaimedSaleRewardItemDef();
@@ -18541,117 +17988,92 @@
               ((_ = _.community_item_data.item_title),
               (_ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_item_data.item_image_small}`));
           }
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              className: _.SaleRewardContainer,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.SaleRewardContainerFlex,
-              },
-              _.createElement(
-                _._,
-                {
+          return (0, _.jsx)(_._, {
+            display: "flex",
+            flexDirection: "column",
+            className: _.SaleRewardContainer,
+            children: (0, _.jsxs)(_._, {
+              className: _.SaleRewardContainerFlex,
+              children: [
+                (0, _.jsxs)(_._, {
                   display: "flex",
                   flexDirection: "column",
                   className: _.LeftColumn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SaleRewardLogoContainerFlex,
-                  },
-                  _.createElement("img", {
-                    className: _.SaleRewardLogo,
-                    alt: "Sale",
-                    src: _._.Get().GetFreeItemHeaderSource(),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SaleRewardTextContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SaleRewardSubHeader,
-                    },
-                    (0, _._)("#SummerSale_FreeDesc_2"),
-                  ),
-                  !_ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SummerNextStop,
-                      },
-                      _.createElement(_, null),
-                    ),
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.RulesLink,
-                      _: _._.LoyaltyGiveawayRules(),
-                    },
-                    (0, _._)("#SummerSale_Redeem_Rules"),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.SaleRewardLogoContainerFlex,
+                      children: (0, _.jsx)("img", {
+                        className: _.SaleRewardLogo,
+                        alt: "Sale",
+                        src: _._.Get().GetFreeItemHeaderSource(),
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.SaleRewardTextContainer,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.SaleRewardSubHeader,
+                          children: (0, _._)("#SummerSale_FreeDesc_2"),
+                        }),
+                        !_ &&
+                          (0, _.jsx)("div", {
+                            className: _.SummerNextStop,
+                            children: (0, _.jsx)(_, {}),
+                          }),
+                        (0, _.jsx)(_._, {
+                          className: _.RulesLink,
+                          _: _._.LoyaltyGiveawayRules(),
+                          children: (0, _._)("#SummerSale_Redeem_Rules"),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
                   className: _.FreeItemContainer,
-                },
-                _.createElement(
-                  _._,
-                  {
+                  children: (0, _.jsx)(_._, {
                     name: _,
                     cost: 0,
                     attributes: [
-                      _.createElement(_._, {
-                        className: _.IconAnimated,
-                        key: "animated",
-                      }),
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          className: _.IconAnimated,
+                        },
+                        "animated",
+                      ),
                     ],
                     iconComponent: _.EEf,
                     styleOverride: _,
                     desc: (0, _._)("#CommunityItemClass_Sticker"),
                     strPriceOverride: _,
                     onClick: _,
-                  },
-                  _.createElement("img", {
-                    className: _.ImageMedium,
-                    src: _,
+                    children: (0, _.jsx)("img", {
+                      className: _.ImageMedium,
+                      src: _,
+                    }),
                   }),
-                ),
-              ),
-            ),
-          );
+                }),
+              ],
+            }),
+          });
         }),
         _ = (0, _._)(() => {
           const _ = _._.Get().GetNextClaimTime();
           return _
-            ? _.createElement(
-                "span",
-                {
-                  className: _.NextStop,
-                },
-                _.createElement(
-                  "span",
-                  {
+            ? (0, _.jsxs)("span", {
+                className: _.NextStop,
+                children: [
+                  (0, _.jsx)("span", {
                     className: _.Title,
-                  },
-                  (0, _._)("#SummerSale_NextStop"),
-                ),
-                _.createElement(_, {
-                  className: _.Timer,
-                  time: _.getTime(),
-                }),
-              )
+                    children: (0, _._)("#SummerSale_NextStop"),
+                  }),
+                  (0, _.jsx)(_, {
+                    className: _.Timer,
+                    time: _.getTime(),
+                  }),
+                ],
+              })
             : null;
         }),
         _ = (0, _._)((_) => {
@@ -18660,20 +18082,13 @@
             _ = Math.floor(_ / _._.PerHour),
             _ = Math.floor((_ - _ * _._.PerHour) / _._.PerMinute),
             _ = Math.floor(_ - (_ * _._.PerHour + _ * _._.PerMinute));
-          return _.createElement(
-            "span",
-            {
-              style: {
-                fontFamily: "monospace",
-              },
-              ...__webpack_require__,
+          return (0, _.jsxs)("span", {
+            style: {
+              fontFamily: "monospace",
             },
-            _(_),
-            ":",
-            _(_),
-            ":",
-            _(_),
-          );
+            ...__webpack_require__,
+            children: [_(_), ":", _(_), ":", _(_)],
+          });
         }),
         _ = (_) => _.toString().padStart(2, "0");
       var _ = __webpack_require__("chunkid"),
@@ -18694,12 +18109,9 @@
         );
       let _ = class extends _.Component {
         render() {
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, null),
-            _.createElement(_, null),
-          );
+          return (0, _.jsxs)(_.Fragment, {
+            children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -18715,24 +18127,18 @@
         );
       });
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _.PageHomeTopTitle,
-          },
-          _.createElement(_._, {
-            className: _.Sparkles,
-          }),
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: _.PageHomeTopTitle,
+          children: [
+            (0, _.jsx)(_._, {
+              className: _.Sparkles,
+            }),
+            (0, _.jsxs)("div", {
               className: _.PageHomeBranding,
-            },
-            " ",
-            (0, _._)("#ShopLink"),
-            " ",
-          ),
-        );
+              children: [" ", (0, _._)("#ShopLink"), " "],
+            }),
+          ],
+        });
       }
       let _ = class extends _.Component {
         GetCoupon() {
@@ -18771,188 +18177,160 @@
               type: "custom",
               pageid: _._,
             }),
-            _ = _.createElement(
-              "div",
-              {
-                className: _.PageHomeTop,
-              },
-              _.createElement(
-                "div",
-                {
+            _ = (0, _.jsxs)("div", {
+              className: _.PageHomeTop,
+              children: [
+                (0, _.jsxs)("div", {
                   className: _.PageHomeBanner,
-                },
-                _.createElement("img", {
-                  className: _.HomeRewardsPointsIcon,
-                  src: _,
+                  children: [
+                    (0, _.jsx)("img", {
+                      className: _.HomeRewardsPointsIcon,
+                      src: _,
+                    }),
+                    (0, _.jsx)("img", {
+                      className: _.PageHomeBannerFloor,
+                      src: _,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.PageHomeBannerIcons,
+                      children: [
+                        (0, _.jsx)("img", {
+                          className: _.PageHomeBannerChicken,
+                          src: _._,
+                        }),
+                        (0, _.jsx)("img", {
+                          className: _.PageHomeBannerBored,
+                          src: _._,
+                        }),
+                        (0, _.jsx)("img", {
+                          className: _.PageHomeBannerHugs,
+                          src: _,
+                        }),
+                        (0, _.jsx)("img", {
+                          className: _.PageHomeBannerHappy,
+                          src: _._,
+                        }),
+                        (0, _.jsx)("img", {
+                          className: _.PageHomeBannerBoombox,
+                          src: _._,
+                        }),
+                        (0, _.jsx)("img", {
+                          className: _.PageHomeBannerDance,
+                          src: _,
+                        }),
+                      ],
+                    }),
+                  ],
                 }),
-                _.createElement("img", {
-                  className: _.PageHomeBannerFloor,
-                  src: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageHomeBannerIcons,
-                  },
-                  _.createElement("img", {
-                    className: _.PageHomeBannerChicken,
-                    src: _._,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerBored,
-                    src: _._,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerHugs,
-                    src: _,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerHappy,
-                    src: _._,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerBoombox,
-                    src: _._,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerDance,
-                    src: _,
-                  }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
+                (0, _.jsxs)("div", {
                   className: _.PageHomeTitleContainer,
-                },
-                _.createElement(_, null),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageHomeTopSubTitle,
-                  },
-                  (0, _._)("#ShopHome_UseRewardPoints"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageHomeTopSubTitle,
-                  },
-                  (0, _._)("#ShopHome_UseRewardPoints_Subtitle"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.PageHomeTopLink,
-                    _: _._.LoyaltyHowItWorks(),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.PageHomeHowItWorks,
-                    },
-                    " ",
-                    (0, _._)("#ShopHome_HowLinkBtn"),
-                  ),
-                ),
-              ),
-            );
-          return _.createElement(
-            _._,
-            null,
-            _ &&
-              _.createElement(
-                _,
-                {
-                  header: _,
-                  descriptor: _,
-                },
-                _._.Get().BIsSaleActive() &&
-                  _.createElement(_._, null, _.createElement(_, null)),
-              ),
-          );
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)("div", {
+                      className: _.PageHomeTopSubTitle,
+                      children: (0, _._)("#ShopHome_UseRewardPoints"),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.PageHomeTopSubTitle,
+                      children: (0, _._)("#ShopHome_UseRewardPoints_Subtitle"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      className: _.PageHomeTopLink,
+                      _: _._.LoyaltyHowItWorks(),
+                      children: (0, _.jsxs)(_._, {
+                        className: _.PageHomeHowItWorks,
+                        children: [" ", (0, _._)("#ShopHome_HowLinkBtn")],
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            });
+          return (0, _.jsx)(_._, {
+            children:
+              _ &&
+              (0, _.jsx)(_, {
+                header: _,
+                descriptor: _,
+                children:
+                  _._.Get().BIsSaleActive() &&
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {}),
+                  }),
+              }),
+          });
         }
       };
       _ = (0, _._)([_._], _);
       const _ = () =>
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
+          (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
                 path: _._.LoyaltySteamBadge(),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_, {}),
+              }),
+              (0, _.jsx)(_._, {
                 path: _._.LoyaltyByGame(),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_, {}),
+              }),
+              (0, _.jsx)(_._, {
                 path: _._.LoyaltyByEvent(),
-              },
-              _.createElement(_, null),
-            ),
-            !1,
-            _.createElement(
-              _._,
-              {
+                children: (0, _.jsx)(_, {}),
+              }),
+              !1,
+              (0, _.jsx)(_._, {
                 path: _._.LoyaltyProfileCustomizations(),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(_._, {
-              path: _._.LoyaltyItemBundle(":bundleid"),
-              render: (_) =>
-                _.createElement(_, {
-                  ..._,
-                }),
-            }),
-            _.createElement(_._, {
-              path: _._.LoyaltyEvents(":eventname"),
-              render: (_) =>
-                _.createElement(_, {
-                  eventname: _.match.params.eventname,
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/app/:appid/cluster/:clusterindex`,
-              render: (_) =>
-                _.createElement(_, {
-                  ..._,
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/app/:appid`,
-              render: (_) =>
-                _.createElement(_, {
-                  appid: parseInt(_.match.params.appid),
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/c/:pageid/cluster/:clusterindex`,
-              render: (_) =>
-                _.createElement(_, {
-                  ..._,
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/c/:pageid`,
-              render: (_) =>
-                _.createElement(_, {
-                  pageid: _.match.params.pageid,
-                }),
-            }),
-            _.createElement(_._, null, _.createElement(_, null)),
-          ),
-        _ = () => _.createElement(_._, null),
-        _ = () => _.createElement(_, null);
+                children: (0, _.jsx)(_, {}),
+              }),
+              (0, _.jsx)(_._, {
+                path: _._.LoyaltyItemBundle(":bundleid"),
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: _._.LoyaltyEvents(":eventname"),
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    eventname: _.match.params.eventname,
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_._.LoyaltyStore()}/app/:appid/cluster/:clusterindex`,
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_._.LoyaltyStore()}/app/:appid`,
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    appid: parseInt(_.match.params.appid),
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_._.LoyaltyStore()}/c/:pageid/cluster/:clusterindex`,
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                path: `${_._.LoyaltyStore()}/c/:pageid`,
+                render: (_) =>
+                  (0, _.jsx)(_, {
+                    pageid: _.match.params.pageid,
+                  }),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {}),
+              }),
+            ],
+          }),
+        _ = () => (0, _.jsx)(_._, {}),
+        _ = () => (0, _.jsx)(_, {});
       let _ = class extends _.Component {
         componentDidMount() {
           _._.Get().SetIsUsingAppIDFilters(!0);
@@ -18974,16 +18352,14 @@
               type: "custom",
               pageid: _,
             });
-          return _.createElement(
-            _._,
-            null,
-            _
-              ? _.createElement(_, {
+          return (0, _.jsx)(_._, {
+            children: _
+              ? (0, _.jsx)(_, {
                   descriptor: _,
                   additionalFilter: _,
                 })
-              : _.createElement(_._, null),
-          );
+              : (0, _.jsx)(_._, {}),
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -19002,55 +18378,51 @@
           } = _,
           _ =
             _ ||
-            _.createElement(_._, {
+            (0, _.jsx)(_._, {
               title: __webpack_require__,
               subtitle: _,
               headerImage: _,
             });
         (0, _._)(_);
         const _ = "mobile" === (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            paddingX: "none",
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.PageItemsContainer,
-                _.PageBrandingTopPadding,
-              ),
-              itemClassName: _.PageItemsContainerChildren,
-              spacing: _ ? "medium" : "xlarge",
-            },
-            _,
-            _.children,
-            _.filter(Boolean).map((_, _) => {
-              switch (_.type) {
-                case "banner":
-                  const { type: __webpack_require__, ..._ } = _;
-                  return _.createElement(_, {
-                    ..._,
-                    key: `${_.title}_${_}`,
-                  });
-                case "clusterview":
-                  return _.createElement(_._, {
-                    key: `${_.view.cluster._}_${_}`,
-                    descriptor: _.view,
-                    additionalFilter: _,
-                    linkedPage:
-                      null === _.view.linkedPage
-                        ? void 0
-                        : _.view.linkedPage || {
-                            ..._,
-                            clusterindex: _,
-                          },
-                  });
-              }
-            }),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          paddingX: "none",
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_.PageItemsContainer, _.PageBrandingTopPadding),
+            itemClassName: _.PageItemsContainerChildren,
+            spacing: _ ? "medium" : "xlarge",
+            children: [
+              _,
+              _.children,
+              _.filter(Boolean).map((_, _) => {
+                switch (_.type) {
+                  case "banner":
+                    const { type: __webpack_require__, ..._ } = _;
+                    return (0, _.createElement)(_, {
+                      ..._,
+                      key: `${_.title}_${_}`,
+                    });
+                  case "clusterview":
+                    return (0, _.jsx)(
+                      _._,
+                      {
+                        descriptor: _.view,
+                        additionalFilter: _,
+                        linkedPage:
+                          null === _.view.linkedPage
+                            ? void 0
+                            : _.view.linkedPage || {
+                                ..._,
+                                clusterindex: _,
+                              },
+                      },
+                      `${_.view.cluster._}_${_}`,
+                    );
+                }
+              }),
+            ],
+          }),
+        });
       });
       let _ = class extends _.Component {
         componentDidMount() {
@@ -19113,23 +18485,18 @@
               searchLanguage: _.length ? _._.LANGUAGE : void 0,
               searchTerm: _.length ? _ : void 0,
             };
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                paddingY: "xlarge",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              },
-              _.createElement(_._, {
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              paddingY: "xlarge",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              children: (0, _.jsx)(_._, {
                 descriptor: _,
                 additionalFilter: _,
               }),
-            ),
-          );
+            }),
+          });
         }
       };
       function _(_) {
@@ -19143,25 +18510,19 @@
           ),
           _ = (0, _._)(() => _._.GetAppInfo(_));
         return _
-          ? _.createElement(
-              _._,
-              {
-                appid: _,
-              },
-              _.createElement(_, {
-                header: _.createElement(_._, {
-                  title: _.createElement(
-                    "a",
-                    {
-                      href: (0, _._)(`${_._.STORE_BASE_URL}app/${_.appid}`, _),
-                    },
-                    _.name,
-                  ),
+          ? (0, _.jsx)(_._, {
+              appid: _,
+              children: (0, _.jsx)(_, {
+                header: (0, _.jsx)(_._, {
+                  title: (0, _.jsx)("a", {
+                    href: (0, _._)(`${_._.STORE_BASE_URL}app/${_.appid}`, _),
+                    children: _.name,
+                  }),
                   subtitle: _.subtitle,
                 }),
                 descriptor: _,
               }),
-            )
+            })
           : null;
       }
       function _(_) {
@@ -19219,56 +18580,46 @@
         const _ = _.data?.details?.included_apps?.concat(
             _.data?.details?.priority_apps,
           ),
-          _ = _.createElement(
-            "span",
-            {
-              className: _.DescriptorDrivenEventPageTitle,
-            },
-            _.data?.details?.title ?? _,
-          );
-        let _ = _.createElement(_._, {
+          _ = (0, _.jsx)("span", {
+            className: _.DescriptorDrivenEventPageTitle,
+            children: _.data?.details?.title ?? _,
+          });
+        let _ = (0, _.jsx)(_._, {
           title: _,
           subtitle: _ > _ ? (0, _._)("#PointShop_Event_Over") : void 0,
         });
         return (
           _.data?.details?.strPageHeader &&
-            (_ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("img", {
-                className: _.EventPageHeaderImg,
-                src: _.data.details.strPageHeader,
-              }),
-              Boolean(_ > _) &&
-                _.createElement(
-                  "div",
-                  {
+            (_ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("img", {
+                  className: _.EventPageHeaderImg,
+                  src: _.data.details.strPageHeader,
+                }),
+                Boolean(_ > _) &&
+                  (0, _.jsx)("div", {
                     className: _.PageSubtitle,
-                  },
-                  (0, _._)("#PointShop_Event_Over"),
-                ),
-            )),
-          _.createElement(
-            _._,
-            {
-              background: _.data?.details?.strPageBackground,
-            },
-            _.createElement(_, {
-              header: _.createElement(
-                "a",
-                {
+                    children: (0, _._)("#PointShop_Event_Over"),
+                  }),
+              ],
+            })),
+          (0, _.jsxs)(_._, {
+            background: _.data?.details?.strPageBackground,
+            children: [
+              (0, _.jsx)(_, {
+                header: (0, _.jsx)("a", {
                   href: (0, _._)(_._.STORE_BASE_URL + _.data?.details?.url, _),
-                },
-                _,
-              ),
-              descriptor: _,
-            }),
-            _.createElement(_._, {
-              trigger: "repeated",
-              onVisibilityChange: (_) => _ && _ < _.length && _(_ + 10),
-              rootMargin: "0px 0px 100px 0px",
-            }),
-          )
+                  children: _,
+                }),
+                descriptor: _,
+              }),
+              (0, _.jsx)(_._, {
+                trigger: "repeated",
+                onVisibilityChange: (_) => _ && _ < _.length && _(_ + 10),
+                rootMargin: "0px 0px 100px 0px",
+              }),
+            ],
+          })
         );
       }
       _ = (0, _._)([_._], _);
@@ -19276,47 +18627,40 @@
         render() {
           return _._.Get().BIsLoggedIn()
             ? this.props.children
-            : _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
-                  descriptor: this.props.descriptor,
-                }),
-                _.createElement(
-                  "div",
-                  {
+            : (0, _.jsxs)(_._, {
+                children: [
+                  (0, _.jsx)(_, {
+                    descriptor: this.props.descriptor,
+                  }),
+                  (0, _.jsxs)("div", {
                     style: {
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
                     },
-                  },
-                  _.createElement("div", null, (0, _._)("#RequiresLogin_Desc")),
-                  _.createElement(
-                    "div",
-                    {
-                      style: {
-                        paddingTop: "10px",
-                      },
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        className: (0, _._)(
-                          "btn_green_white_innerfade",
-                          " btn_medium",
-                        ),
-                        onClick: () => _._.Get().ShowLoginDialog(),
-                      },
-                      _.createElement(
-                        "span",
-                        null,
-                        (0, _._)("#RequiresLogin_Button"),
-                      ),
-                    ),
-                  ),
-                ),
-              );
+                    children: [
+                      (0, _.jsx)("div", {
+                        children: (0, _._)("#RequiresLogin_Desc"),
+                      }),
+                      (0, _.jsx)("div", {
+                        style: {
+                          paddingTop: "10px",
+                        },
+                        children: (0, _.jsx)("span", {
+                          className: (0, _._)(
+                            "btn_green_white_innerfade",
+                            " btn_medium",
+                          ),
+                          onClick: () => _._.Get().ShowLoginDialog(),
+                          children: (0, _.jsx)("span", {
+                            children: (0, _._)("#RequiresLogin_Button"),
+                          }),
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              });
         }
       }
       let _ = class extends _.Component {
@@ -19355,29 +18699,26 @@
               pageid: "bygame",
             },
           };
-          return _.createElement(
-            _,
-            {
-              descriptor: _,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                descriptor: _,
-              }),
-              _.createElement(_._, {
-                trigger: "repeated",
-                onVisibilityChange: (_) =>
-                  _ &&
-                  _ < _.length &&
-                  this.setState({
-                    cVisible: _ + 10,
-                  }),
-                rootMargin: "0px 0px 100px 0px",
-              }),
-            ),
-          );
+          return (0, _.jsx)(_, {
+            descriptor: _,
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_, {
+                  descriptor: _,
+                }),
+                (0, _.jsx)(_._, {
+                  trigger: "repeated",
+                  onVisibilityChange: (_) =>
+                    _ &&
+                    _ < _.length &&
+                    this.setState({
+                      cVisible: _ + 10,
+                    }),
+                  rootMargin: "0px 0px 100px 0px",
+                }),
+              ],
+            }),
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -19408,29 +18749,26 @@
                 pageid: "byevent",
               },
             };
-          return _.createElement(
-            _,
-            {
-              descriptor: _,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                descriptor: _,
-              }),
-              _.createElement(_._, {
-                trigger: "repeated",
-                onVisibilityChange: (_) =>
-                  _ &&
-                  _ < _.length &&
-                  this.setState({
-                    cVisible: _ + 10,
-                  }),
-                rootMargin: "0px 0px 100px 0px",
-              }),
-            ),
-          );
+          return (0, _.jsx)(_, {
+            descriptor: _,
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_, {
+                  descriptor: _,
+                }),
+                (0, _.jsx)(_._, {
+                  trigger: "repeated",
+                  onVisibilityChange: (_) =>
+                    _ &&
+                    _ < _.length &&
+                    this.setState({
+                      cVisible: _ + 10,
+                    }),
+                  rootMargin: "0px 0px 100px 0px",
+                }),
+              ],
+            }),
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -19470,49 +18808,42 @@
                   }),
                 )
               : [];
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                paddingY: "xlarge",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              },
-              _.createElement(_._, {
-                title: (0, _._)("#SeasonalBadge_Title"),
-                subtitle: (0, _._)("#SeasonalBadge_Description"),
-              }),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _,
-                  null,
-                  __webpack_require__.map((_) =>
-                    _.createElement(_, {
-                      key: _.level,
-                      ..._,
-                      onClick: (_) => (0, _._)(_, _, _.level),
-                    }),
-                  ),
-                ),
-              ),
-            ),
-          );
+          return (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              paddingY: "xlarge",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              children: [
+                (0, _.jsx)(_._, {
+                  title: (0, _._)("#SeasonalBadge_Title"),
+                  subtitle: (0, _._)("#SeasonalBadge_Description"),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_, {
+                    children: __webpack_require__.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          ..._,
+                          onClick: (_) => (0, _._)(_, _, _.level),
+                        },
+                        _.level,
+                      ),
+                    ),
+                  }),
+                }),
+              ],
+            }),
+          });
         }),
         _ = ({ children: _ }) =>
-          _.createElement(
-            _._,
-            {
-              className: _.BadgeGrid,
-              verticalSpacing: "large",
-              "flow-children": "grid",
-            },
-            _,
-          ),
+          (0, _.jsx)(_._, {
+            className: _.BadgeGrid,
+            verticalSpacing: "large",
+            "flow-children": "grid",
+            children: _,
+          }),
         _ = (_) => {
           const {
             level: _,
@@ -19522,71 +18853,55 @@
             className: _,
             ..._
           } = _;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.Badge, _),
-              ..._,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement("img", {
-                src: _,
-                title: (0, _._)("#BadgeLevel", _),
-                className: _.BadgeImage,
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(_.Badge, _),
+            ..._,
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)("img", {
+                  src: _,
+                  title: (0, _._)("#BadgeLevel", _),
+                  className: _.BadgeImage,
+                }),
               }),
-            ),
-            _.createElement(
-              _._,
-              {
+              (0, _.jsxs)(_._, {
                 className: _.Footer,
-              },
-              _.createElement(_, {
-                owned: __webpack_require__,
-                level: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    owned: __webpack_require__,
+                    level: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.Hint,
+                    children: __webpack_require__
+                      ? (0, _.jsx)(_, {})
+                      : (0, _.jsx)(_, {
+                          cost: _,
+                        }),
+                  }),
+                ],
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Hint,
-                },
-                __webpack_require__
-                  ? _.createElement(_, null)
-                  : _.createElement(_, {
-                      cost: _,
-                    }),
-              ),
-            ),
-          );
+            ],
+          });
         },
         _ = () =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             className: _.OwnedSticker,
           }),
         _ = ({ cost: _ }) =>
-          _.createElement(_._, {
+          (0, _.jsx)(_._, {
             amount: _,
             size: 0.75,
           }),
         _ = (_) => {
           const { level: _, owned: __webpack_require__ } = _;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.LevelMarker,
-                __webpack_require__ && _.Owned,
-              ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Inner,
-              },
-              _,
-            ),
-          );
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_.LevelMarker, __webpack_require__ && _.Owned),
+            children: (0, _.jsx)("div", {
+              className: _.Inner,
+              children: _,
+            }),
+          });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

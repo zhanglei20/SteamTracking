@@ -18,42 +18,44 @@
         FullPageView: (_, _) => `/questions/${_}/view/${_}`,
       };
       const _ = function (_) {
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(_._, {
-            path: _.Dashboard(":vanity_str"),
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "qanda-root": () => {
-                    const { vanity_str: _ } = _.match.params;
-                    return _.createElement(_._, {
-                      vanity_str: _,
-                    });
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_._, {
+              path: _.Dashboard(":vanity_str"),
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "qanda-root": () => {
+                      const { vanity_str: _ } = _.match.params;
+                      return (0, _.jsx)(_._, {
+                        vanity_str: _,
+                      });
+                    },
                   },
-                },
-              }),
-          }),
-          _.createElement(_._, {
-            path: _.FullPageView(":vanity_str", ":session_gid"),
-            render: (_) =>
-              _.createElement(_._, {
-                config: {
-                  "qanda-root": () => {
-                    const { vanity_str: _, session_gid: __webpack_require__ } =
-                      _.match.params;
-                    return _.createElement(_._, {
-                      gidSession: __webpack_require__,
-                    });
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              path: _.FullPageView(":vanity_str", ":session_gid"),
+              render: (_) =>
+                (0, _.jsx)(_._, {
+                  config: {
+                    "qanda-root": () => {
+                      const {
+                        vanity_str: _,
+                        session_gid: __webpack_require__,
+                      } = _.match.params;
+                      return (0, _.jsx)(_._, {
+                        gidSession: __webpack_require__,
+                      });
+                    },
                   },
-                },
-              }),
-          }),
-          _.createElement(_._, {
-            component: _._,
-          }),
-        );
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              component: _._,
+            }),
+          ],
+        });
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -156,6 +158,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = (0, _.createContext)({
         instances: {},
         factories: {},
