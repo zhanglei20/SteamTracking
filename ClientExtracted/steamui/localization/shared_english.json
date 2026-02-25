@@ -1053,6 +1053,8 @@
     "WriteReview_Dialog_SteamChinaDisclaimer": "By posting this review, you agree that the location where you wrote this review will be shared with other users in Steam China.",
     "WriteReview_Dialog_AllowComments": "Allow comments",
     "WriteReview_Dialog_FreeDisclaimer": "Check this box if you received this product for free",
+    "WriteReview_Dialog_HardwareSpecs": "Attach PC Specs to this review",
+    "WriteReview_Dialog_HardwareSpecs_ttip": "If you've saved some of your hardware information to Steam, you can attach it to you review and it will be shown to other users.",
     "WriteReview_Dialog_FreeDisclaimer_Tooltip": "Check this box if you were given this product for free. Will show Product received for free alongside your review. If you received additional compensation for the review of this game, you must disclose that in the text of your review.",
     "WriteReview_Dialog_FormattingHelp": "Formatting Help",
     "WriteReview_Dialog_GenericError": "We encountered a problem while posting your review. Please try again later.",

@@ -482,7 +482,6 @@ $\nY8O
 %s: read failed: %s\n
 %s: set hostname to %s\n
 %s: set timezone to %s\n
-%s: system() failed, errno %d\n
 %s:hscroll
 %s:vscroll
 %sSeperator
@@ -1066,10 +1065,10 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -1463,7 +1462,6 @@ $\nY8O
 17CStreamReaderBase
 17DirectoryTreeView
 17LayoutDebugDialog
-18:15:29
 18CGPUStatsReaderDrm
 18CJSCallbackPromise
 18CMsgBlockedRequest
@@ -1560,6 +1558,7 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
+23:14:36
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -3362,7 +3361,7 @@ FastHexToBuffer() wants non-negative integers, not
 Fatal error: %s\n
 FavoritedByFriendsRankedByPublicationDate
 Feature Disabled
-Feb 13 2026
+Feb 24 2026
 February
 Feel free to add support for more if you need it.
 Field "
@@ -4145,8 +4144,6 @@ LABEL_REQUIRED
 LANCache
 LANPeer
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-session-select %s
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LIMIT_MATCH=
 LIMIT_RECURSION=
@@ -5622,7 +5619,6 @@ SwappingStreamBuffers
 Swedish
 Swish
 Switch
-SwitchToUser
 Switching Protocols
 Syloti_Nagri
 Symbol name "

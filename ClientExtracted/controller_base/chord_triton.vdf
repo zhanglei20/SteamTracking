@@ -155,32 +155,6 @@
 		"description"		""
 		"inputs"
 		{
-			"dpad_west"
-			{
-				"activators"
-				{
-					"full_press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action gr_marker"
-						}
-					}
-				}
-			}
-			"dpad_east"
-			{
-				"activators"
-				{
-					"full_press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action gr_toggle"
-						}
-					}
-				}
-			}
 			"dpad_north"
 			{
 				"activators"
@@ -428,6 +402,33 @@
 					}
 				}
 			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_marker"
+						}
+					}
+				}
+			}
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_toggle"
+						}
+					}
+				}
+			}
+
 		}
 	}
 	"preset"

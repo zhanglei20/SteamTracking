@@ -33239,7 +33239,7 @@
           };
         }
         static SerializeNavNode(e, t = !0, r = !0) {
-          let i = null;
+          let i;
           const [n, s] = e.GetChildren();
           n.length &&
             -1 != s &&

@@ -537,7 +537,6 @@
 ""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
-""\n CSteamOSManager_GetState_Request"I\n!CSteamOSManager_GetState_Response
 ""\n SiteServerUI_CancelLogin_Request"O\n!SiteServerUI_CancelLogin_Response
 ""\n SiteServerUI_GetLanguage_Request"5\n!SiteServerUI_GetLanguage_Response
 ""\n SiteServerUI_LoginStatus_Request"}\n!SiteServerUI_LoginStatus_Response
@@ -711,7 +710,7 @@
 "2\n!CInventory_GetItemDefMeta_Request
 "2\n#CRemoteClient_StartPairing_Response
 "2\n0CSteamOSManager_OptOutOfSideloadedClient_Request"3\n1CSteamOSManager_OptOutOfSideloadedClient_Response".\n,CSteamOSManager_ApplyMandatoryUpdate_Request"/\n-CSteamOSManager_ApplyMandatoryUpdate_Response"Q\n$CSteamOSManager_FactoryReset_Request
-"2\n0CSteamOSManager_PrepareFactoryImageTest_Response"Y\n
+"2\n0CSteamOSManager_PrepareFactoryImageTest_Response")\n'CSteamOSManager_SwitchToDesktop_Request"*\n(CSteamOSManager_SwitchToDesktop_Response"H\n0CSteamOSManager_SetDefaultDesktopSession_Request
 "2\n0CTransportValidation_GetLastNotifyNumber_Request"O\n1CTransportValidation_GetLastNotifyNumber_Response
 "3DUfw
 "3Hau
@@ -745,6 +744,7 @@
 "7\n$CUserAccount_GetUserCountry_Response
 "7\n5CAccountHardware_RegisterValveIndexComponent_Response"a\n/CAccountHardware_GetSteamDeckComponents_Request
 "7\n5CGameRecording_SwitchBackgroundRecordingGame_Response*
+"7\n5CSteamInputService_ControllerListChanged_Notification"/\n-CSteamInputService_InitControllerList_Request"0\n.CSteamInputService_InitControllerList_Response".\n,CSteamInputService_GetControllerList_Request"q\n-CSteamInputService_GetControllerList_Response
 "8\n CChatRoom_JoinVoiceChat_Response
 "8\n"CRemoteClient_StartPairing_Request
 "8\n#CParties_CancelReservation_Response
@@ -2233,7 +2233,13 @@ ${LANGUAGE}
 %s: Corrupt stream, resetting\n
 %s: Hardware encoding is too slow, disabling\n
 %s: Invalid surveyid: %u
+%s: No SteamOSManager support for SwitchToDesktop, using legacy path
+%s: Sessions list: %s
 %s: SetHostname() failed, errno %d\n
+%s: Setting default session to "%s"
+%s: SteamOSManager predates session management interface
+%s: SteamOSManager version predates session management interface
+%s: Switching to session "%s" for user "%s"
 %s: User is not logged on or is in offline mode
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: __position (which is %zu) >= _Nb (which is %zu)
@@ -2283,12 +2289,14 @@ ${LANGUAGE}
 %s: set hostname to %s\n
 %s: set screen reader voice: %s -> %s
 %s: set timezone to %s\n
+%s: setting default desktop session to '%s' via SteamOSManager
 %s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
 %s: skipping set as steamos-manager is already in the desired state: %d -> %d
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: starting
 %s: starting update check
 %s: starting update: %s
+%s: switching to desktop via SteamOSManager
 %s: system() failed, errno %d\n
 %s: update available: %s
 %s: update complete: %s
@@ -2916,6 +2924,7 @@ ${LANGUAGE}
 (.CRemotePlay_SessionStopped_Notification
 (.CSiteLicense_ClientSeatCheckout_Request
 (.CSleepManager_StateChanged_Notification
+(.CSteamOSManager_SwitchToDesktop_Request
 (.CSteamTV_CreateBroadcastChannel_Request
 (.CSteamTV_FollowBroadcastChannel_Request
 (.CSteamTV_GetBroadcastChannelID_Response"
@@ -2973,6 +2982,7 @@ ${LANGUAGE}
 (\n accessibility_high_contrast_mode
 (\n can_create_rename_delete_channel
 (\n disable_nvidia_hardware_encoding
+(\n has_universal_face_button_glyphs
 (\n include_assets_without_overrides
 (\n include_purchased_customizations
 (\n input_activate_stick_or_trackpad
@@ -3324,6 +3334,7 @@ ${LANGUAGE}
 (\r:\n4294967295
 (\t""\n CParental_ValidateToken_Response"g\n"CParental_ValidatePassword_Request
 (\t""\n CPlayer_SetProfileTheme_Response"Y\n%CPlayer_SetProfilePreferences_Request
+(\t""\n CSteamOSManager_GetState_Request"I\n!CSteamOSManager_GetState_Response
 (\t"#\n!CChatRoom_RenameChatRoom_Response"g\n!CChatRoom_ReorderChatRoom_Request
 (\t"#\n!CSteamOS_SetUserPassword_Response"%\n#CSteamOS_GetUserHasPassword_Request"<\n$CSteamOS_GetUserHasPassword_Response
 (\t"#\n!SiteServerUI_SetLanguage_Response"#\n!SiteServerUI_ClientStatus_Request"
@@ -3363,6 +3374,7 @@ ${LANGUAGE}
 (\t"2\n!CRemoteClient_AllocateSDR_Request
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
 (\t"3\n1CAccountHardware_RegisterSteamController_Response"n\n<CAccountHardware_CompleteSteamControllerRegistration_Request
+(\t"3\n1CSteamOSManager_SetDefaultDesktopSession_Response"Y\n
 (\t"4\n SiteServerUI_SetLanguage_Request
 (\t"5\n CMsgTest_MessageToServer_Request
 (\t"5\n#CPartnerApps_FindDRMUploads_Request
@@ -3626,6 +3638,7 @@ ${LANGUAGE}
 (\v2+.CHIDMessageToRemote.DeviceGetProductStringH
 (\v2+.CMsgDraggableRegionsChanged.DraggableRects
 (\v2+.CPublishedFile_QueryFiles_Request.TagGroup
+(\v2+.CSteamInputService_RawControllerDetailItem*
 (\v2+.SiteServerUI_ClientStatus_Response.Payment
 (\v2,.CClientMetrics_SteamPipeWorkStats_Operation
 (\v2,.CCloud_BeginHTTPUpload_Response.HTTPHeaders
@@ -3929,6 +3942,7 @@ ${LANGUAGE}
 ).CSiteLicense_InitiateAssociation_Request
 ).CSleepManager_ShowPowerMenu_Notification
 ).CSleepManager_SwitchToPowerState_Request
+).CSteamOSManager_SwitchToDesktop_Response
 ).CSteamTV_CreateBroadcastChannel_Response"
 ).CSteamTV_FollowBroadcastChannel_Response"
 ).CSteamTV_GetMyBroadcastChannels_Response"
@@ -4202,10 +4216,12 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE31CWebUISteamOSManagerGetStateJob32CSteamOSManager_GetState_Request33CSteamOSManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE35CWebUISteamOSManagerFactoryResetJob36CSteamOSManager_FactoryReset_Request37CSteamOSManager_FactoryReset_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSetUserPasswordJob32CSteamOS_SetUserPassword_Request33CSteamOS_SetUserPassword_ResponseE
+*18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSwitchToDesktopJob39CSteamOSManager_SwitchToDesktop_Request40CSteamOSManager_SwitchToDesktop_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE41CWebUISteamOSManagerGetUserHasPasswordJob35CSteamOS_GetUserHasPassword_Request36CSteamOS_GetUserHasPassword_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE43CWebUISteamOSManagerApplyMandatoryUpdateJob44CSteamOSManager_ApplyMandatoryUpdate_Request45CSteamOSManager_ApplyMandatoryUpdate_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE46CWebUISteamOSManagerPrepareFactoryImageTestJob47CSteamOSManager_PrepareFactoryImageTest_Request48CSteamOSManager_PrepareFactoryImageTest_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE47CWebUISteamOSManagerOptOutOfSideloadedClientJob48CSteamOSManager_OptOutOfSideloadedClient_Request49CSteamOSManager_OptOutOfSideloadedClient_ResponseE
+*18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE47CWebUISteamOSManagerSetDefaultDesktopSessionJob48CSteamOSManager_SetDefaultDesktopSession_Request49CSteamOSManager_SetDefaultDesktopSession_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE52CWebUISteamOSManagerRefreshScreenReaderAutoLocaleJob53CSteamOSManager_RefreshScreenReaderAutoLocale_Request54CSteamOSManager_RefreshScreenReaderAutoLocale_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE29CWebUIGameRecordingGetTagsJob30CGameRecording_GetTags_Request31CGameRecording_GetTags_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE29CWebUIGameRecordingZipClipJob30CGameRecording_ZipClip_Request31CGameRecording_ZipClip_ResponseE
@@ -4421,49 +4437,54 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvE31CWebUISteamOSManagerGetStateJob
 *ZN23CSteamOSControllerLinux10InitializeEvE35CWebUISteamOSManagerFactoryResetJob
 *ZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSetUserPasswordJob
+*ZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSwitchToDesktopJob
 *ZN23CSteamOSControllerLinux10InitializeEvE41CWebUISteamOSManagerGetUserHasPasswordJob
 *ZN23CSteamOSControllerLinux10InitializeEvE43CWebUISteamOSManagerApplyMandatoryUpdateJob
 *ZN23CSteamOSControllerLinux10InitializeEvE46CWebUISteamOSManagerPrepareFactoryImageTestJob
 *ZN23CSteamOSControllerLinux10InitializeEvE47CWebUISteamOSManagerOptOutOfSideloadedClientJob
+*ZN23CSteamOSControllerLinux10InitializeEvE47CWebUISteamOSManagerSetDefaultDesktopSessionJob
 *ZN23CSteamOSControllerLinux10InitializeEvE52CWebUISteamOSManagerRefreshScreenReaderAutoLocaleJob
-*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE20_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE28_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE22_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE30_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK32CSteamOSManager_GetState_RequestR33CSteamOSManager_GetState_ResponseE_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK32CSteamOS_SetUserPassword_RequestR33CSteamOS_SetUserPassword_ResponseE4_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK35CSteamOS_GetUserHasPassword_RequestR36CSteamOS_GetUserHasPassword_ResponseE5_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK36CSteamOSManager_FactoryReset_RequestR37CSteamOSManager_FactoryReset_ResponseE2_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK39CSteamOSManager_SwitchToDesktop_RequestR40CSteamOSManager_SwitchToDesktop_ResponseE7_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK44CSteamOSManager_ApplyMandatoryUpdate_RequestR45CSteamOSManager_ApplyMandatoryUpdate_ResponseE1_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK47CSteamOSManager_PrepareFactoryImageTest_RequestR48CSteamOSManager_PrepareFactoryImageTest_ResponseE6_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK48CSteamOSManager_OptOutOfSideloadedClient_RequestR49CSteamOSManager_OptOutOfSideloadedClient_ResponseE0_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK48CSteamOSManager_SetDefaultDesktopSession_RequestR49CSteamOSManager_SetDefaultDesktopSession_ResponseE8_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK53CSteamOSManager_RefreshScreenReaderAutoLocale_RequestR54CSteamOSManager_RefreshScreenReaderAutoLocale_ResponseE3_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlRKiE7_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE12_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE13_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRKiE9_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE10_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE14_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE15_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE16_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE22_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE17_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE18_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE24_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE29_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE26_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE31_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE32_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE8_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlfE25_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlfE26_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE33_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE34_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlfE27_
-*ZN23CSteamOSControllerLinux10InitializeEvEUliE10_
-*ZN23CSteamOSControllerLinux10InitializeEvEUliE18_
-*ZN23CSteamOSControllerLinux10InitializeEvEUliE23_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlfE28_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlfE29_
+*ZN23CSteamOSControllerLinux10InitializeEvEUliE12_
+*ZN23CSteamOSControllerLinux10InitializeEvEUliE20_
+*ZN23CSteamOSControllerLinux10InitializeEvEUliE25_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE11_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE17_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE13_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE19_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE21_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE30_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE33_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE9_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE23_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE32_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE35_
 *ZN23CSteamOSControllerLinux12SetWifiDebugEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetCECEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetVRSEnabledEbEUlvE_
+*ZN23CSteamOSControllerLinux17SetDesktopSessionEPKcEUlvE_
 *ZN23CSteamOSControllerLinux17SetManualGPUClockEiEUlvE_
 *ZN23CSteamOSControllerLinux18SetCECWakeOnResumeEbEUlvE_
 *ZN23CSteamOSControllerLinux19SetScreenReaderRateEfEUlvE_
@@ -5337,6 +5358,7 @@ ${LANGUAGE}
 -.CSteamDeckCompatibility_SetFeedback_Response"
 -.CSteamDeckCompatibility_ShouldPrompt_Request
 -.CSteamEngine_GetTextFilterDictionary_Request
+-.CSteamInputService_GetControllerList_Request
 -.CSteamInputService_GetControllerName_Request
 -.CSteamOSManager_ApplyMandatoryUpdate_Request
 -.CSteamTV_GetBroadcastChannelProfile_Response"
@@ -5609,6 +5631,7 @@ ${LANGUAGE}
 ..CSiteLicense_ClientGetAvailableSeats_Response"
 ..CSteamDeckCompatibility_ShouldPrompt_Response"
 ..CSteamEngine_GetTextFilterDictionary_Response
+..CSteamInputService_GetControllerList_Response
 ..CSteamInputService_GetControllerName_Response
 ..CSteamOSManager_ApplyMandatoryUpdate_Response
 ..CStore_SetReservationPositionMessage_Response"
@@ -6888,7 +6911,7 @@ ${LANGUAGE}
 /data/src/steamUI/startupmodemanager.cpp
 /data/src/steamUI/steamoscontroller.cpp
 /data/src/steamUI/steamosmanager.cpp
-/data/src/steamUI/steamosmanager.cpp:594
+/data/src/steamUI/steamosmanager.cpp:596
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -7191,11 +7214,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7340,6 +7363,7 @@ ${LANGUAGE}
 1.CSteamInputService_GyroSpeedChanged_Notification
 1.CSteamOSManager_OptOutOfSideloadedClient_Request
 1.CSteamOSManager_PrepareFactoryImageTest_Response
+1.CSteamOSManager_SetDefaultDesktopSession_Request
 1.CSteamTV_GetBroadcastChannelBroadcasters_Request
 1.CSteamTV_GetBroadcastChannelInteraction_Response"
 1.CSteamTV_SetBroadcastChannelLinkRegions_Response"
@@ -9165,6 +9189,7 @@ ${LANGUAGE}
 2.CSteamInputService_PairDongleTritonDocked_Request
 2.CSteamInputService_ShouldTritonPairInOobe_Request
 2.CSteamOSManager_OptOutOfSideloadedClient_Response
+2.CSteamOSManager_SetDefaultDesktopSession_Response
 2.CSteamTV_GetBroadcastChannelBroadcasters_Response"
 2.CStorageDeviceManager_IsServiceAvailable_Response
 2.CStore_GetAllReservationPositionMessages_Response"
@@ -11209,6 +11234,7 @@ ${LANGUAGE}
 39CRemotePlay_SessionStopped_Notification
 39CSiteLicense_ClientSeatCheckout_Request
 39CSleepManager_StateChanged_Notification
+39CSteamOSManager_SwitchToDesktop_Request
 39CSteamTV_CreateBroadcastChannel_Request
 39CSteamTV_FollowBroadcastChannel_Request
 39CSteamTV_GetBroadcastChannelID_Response
@@ -11377,6 +11403,7 @@ ${LANGUAGE}
 40CSiteLicense_InitiateAssociation_Request
 40CSleepManager_ShowPowerMenu_Notification
 40CSleepManager_SwitchToPowerState_Request
+40CSteamOSManager_SwitchToDesktop_Response
 40CSteamTV_CreateBroadcastChannel_Response
 40CSteamTV_FollowBroadcastChannel_Response
 40CSteamTV_GetMyBroadcastChannels_Response
@@ -11568,6 +11595,7 @@ ${LANGUAGE}
 42CRemoteClient_AllocateRelayServer_Response
 42CShader_GetShaderReportingCadence_Response
 42CSiteManagerClient_IncomingClient_Response
+42CSteamInputService_RawControllerDetailItem
 42CSteamTV_GetBroadcastChannelClips_Response
 42CSteamTV_GetBroadcastChannelImages_Request
 42CSteamTV_GetBroadcastChannelLinks_Response
@@ -11714,6 +11742,7 @@ ${LANGUAGE}
 44CSteamDeckCompatibility_SetFeedback_Response
 44CSteamDeckCompatibility_ShouldPrompt_Request
 44CSteamEngine_GetTextFilterDictionary_Request
+44CSteamInputService_GetControllerList_Request
 44CSteamInputService_GetControllerName_Request
 44CSteamOSManager_ApplyMandatoryUpdate_Request
 44CSteamTV_GetBroadcastChannelProfile_Response
@@ -11779,8 +11808,10 @@ ${LANGUAGE}
 45CSiteLicense_ClientGetAvailableSeats_Response
 45CSteamDeckCompatibility_ShouldPrompt_Response
 45CSteamEngine_GetTextFilterDictionary_Response
+45CSteamInputService_GetControllerList_Response
 45CSteamInputService_GetControllerName_Response
 45CSteamInputService_GetDongles_Response_Dongle
+45CSteamInputService_InitControllerList_Request
 45CSteamOSManager_ApplyMandatoryUpdate_Response
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45CStore_GetRecommendedTagsForUser_Response_Tag
@@ -11841,6 +11872,7 @@ ${LANGUAGE}
 46CPlayer_NewSteamAnnouncementState_Notification
 46CPublishedFile_FileDeleted_Client_Notification
 46CSteamInputService_ControllerStateFlow_Request
+46CSteamInputService_InitControllerList_Response
 46CSteamInputService_TritonUndocked_Notification
 46CStore_MigratePartnerLinkTracking_Notification
 46CTransportValidationClient_AddNumbers_Response
@@ -11938,6 +11970,7 @@ ${LANGUAGE}
 48CSteamInputService_GyroSpeedChanged_Notification
 48CSteamOSManager_OptOutOfSideloadedClient_Request
 48CSteamOSManager_PrepareFactoryImageTest_Response
+48CSteamOSManager_SetDefaultDesktopSession_Request
 48CSteamTV_GetBroadcastChannelBroadcasters_Request
 48CSteamTV_GetBroadcastChannelInteraction_Response
 48CSteamTV_GetBroadcastChannelLinks_Response_Links
@@ -11990,6 +12023,7 @@ ${LANGUAGE}
 49CSteamInputService_PairDongleTritonDocked_Request
 49CSteamInputService_ShouldTritonPairInOobe_Request
 49CSteamOSManager_OptOutOfSideloadedClient_Response
+49CSteamOSManager_SetDefaultDesktopSession_Response
 49CSteamTV_GetBroadcastChannelBroadcasters_Response
 49CStorageDeviceManager_IsServiceAvailable_Response
 49CStoreBrowse_GetStoreCategories_Response_Category
@@ -12190,6 +12224,7 @@ ${LANGUAGE}
 53CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
 53CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 53CSteamEngine_TextFilterDictionaryChanged_Notification
+53CSteamInputService_ControllerListChanged_Notification
 53CSteamInputService_GetTritonPairingInfo_Response_Slot
 53CSteamInputService_GyroQuaternionChanged_Notification
 53CSteamInputService_PairDongleTritonConnected_Response
@@ -12403,6 +12438,7 @@ ${LANGUAGE}
 6.CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
 6.CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 6.CSteamEngine_TextFilterDictionaryChanged_Notification
+6.CSteamInputService_ControllerListChanged_Notification
 6.CSteamInputService_GyroQuaternionChanged_Notification
 6.CSteamInputService_PairDongleTritonConnected_Response
 6.CSteamNotification_NotificationsReceived_Notification
@@ -13252,6 +13288,7 @@ ${LANGUAGE}
 @\n\noperations
 @\n\ttaggroups
 @\n\vBroadcaster
+@\n\vcontrollers
 @bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 @bEnableFrameFuncOverageWarnings
 @bEnableHTTP2OnAllCHTTPClients
@@ -13853,7 +13890,6 @@ ActivateItem
 ActivatePlatformModule
 ActivateProduct
 Active
-ActiveAccount
 ActiveChanged
 ActiveDevices
 ActiveInstances
@@ -18590,7 +18626,6 @@ DVCS
 DWCHV
 DXDeviceID
 DXVendorID
-DXVideoCardDriver
 DXVideoCardVersion
 D\n@k_EContentReportReason_MisleadingInformationAboutGoodsOrServices
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
@@ -19759,6 +19794,7 @@ Error: %s: failed to set steamos telemetry state, not connected to daemon
 Error: %s: failed to set system trace state
 Error: %s: failed to set wifi debug mode %s
 Error: %s: failed to submit system report: %d
+Error: %s: failed to switch to desktop mode %s
 Error: %s: failed to take legacy gamescope screenshot: in progress
 Error: %s: failed to take legacy gamescope screenshot: no handler
 Error: %s: failed to take legacy gamescope screenshot: timeout
@@ -19788,6 +19824,7 @@ Error: %s: operation not supported
 Error: %s: popen failed
 Error: %s: steamos-priv-write failed %s: %s\n
 Error: %s: timed out
+Error: %s: timed out in d-bus call
 Error: %s: timed out waiting for atomupd proxy config request
 Error: %s: timed out waiting for drive eject result
 Error: %s: timed out waiting for filesystem unmount result
@@ -19829,6 +19866,7 @@ Error: failed to set TDP limit: cap1
 Error: failed to unregister for X11 property callback
 Error: fauiled to retrieve fdlist fd: %s\n
 Error: invalid adapter id: 0x%x
+Error: invalid desktop session: %s
 Error: invalid display state: %d
 Error: invalid profile: %s
 Error: invalid screen reader locale: %s
@@ -20234,7 +20272,7 @@ FbRK10CUtlStringE
 Feature Disabled
 Feature support: %s: supported
 Feature support: %s: unavailable - property not supported
-Feb 13 2026 18:15:30
+Feb 24 2026 23:14:29
 February
 Feel free to add support for more if you need it.
 FetchTranslationFromCrowdIn
@@ -21569,6 +21607,7 @@ GetConnectionType() != k_EConnectionTypeUDP
 GetConnectionType() == k_ESSLConnectionType_Client || GetConnectionType() == k_EDTLSConnectionType_Client
 GetContentDescriptors
 GetContentHubConfig
+GetControllerList
 GetControllerName
 GetCopyCount
 GetCredentialChangeTimeDetails
@@ -22588,7 +22627,6 @@ Input.RegisterForControllerBatteryChanges
 Input.RegisterForControllerCommandMessages
 Input.RegisterForControllerConfigCloudStateChanges
 Input.RegisterForControllerConfigInfoMessages
-Input.RegisterForControllerListChanges
 Input.RegisterForDualSenseUpdateNotification
 Input.RegisterForGameKeyboardMessages
 Input.RegisterForRemotePlayConfigChanges
@@ -23677,7 +23715,6 @@ MPEG Media File (*.mpeg)
 MPEG Media File (*.mpg)
 MQC,ARD
 MQui
-MSAAModes
 MTU discovery complete, detected value %d\n
 MTU discovery failed, no ping response\n
 MTU too high, reducing and trying with MTU %d\n
@@ -24102,6 +24139,7 @@ Method GetCommunityPreferences() not implemented.
 Method GetContentDescriptors() not implemented.
 Method GetContentHubConfig() not implemented.
 Method GetControllerAccessibilityStrings() not implemented.
+Method GetControllerList() not implemented.
 Method GetControllerName() not implemented.
 Method GetControllerPersonalizationFile() not implemented.
 Method GetCredentialChangeTimeDetails() not implemented.
@@ -24335,6 +24373,7 @@ Method NotifyClipCreated() not implemented.
 Method NotifyClipDeleted() not implemented.
 Method NotifyCommunityPreferencesChanged() not implemented.
 Method NotifyControllerDisconnected() not implemented.
+Method NotifyControllerListChanged() not implemented.
 Method NotifyControllerPairingChanged() not implemented.
 Method NotifyControllerPowerMenu() not implemented.
 Method NotifyCount() not implemented.
@@ -24554,6 +24593,7 @@ Method SetColor() not implemented.
 Method SetCommunityPreferences() not implemented.
 Method SetCompatibilityFeedback() not implemented.
 Method SetControllerPersonalizationFile() not implemented.
+Method SetDefaultDesktopSession() not implemented.
 Method SetDesiredControllerConfigForApp() not implemented.
 Method SetDiscovering() not implemented.
 Method SetDisplayPowerState() not implemented.
@@ -24617,6 +24657,7 @@ Method Subscribe() not implemented.
 Method SubscribeBroadcastChannel() not implemented.
 Method SuspendAppSession() not implemented.
 Method SwitchBackgroundRecordingGame() not implemented.
+Method SwitchToDesktop() not implemented.
 Method SwitchToPowerState() not implemented.
 Method TakeScreenshot() not implemented.
 Method ThreadedCount() not implemented.
@@ -26055,6 +26096,7 @@ NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
 NotifyControllerDisconnected
+NotifyControllerListChanged
 NotifyControllerPairingChanged
 NotifyControllerPowerMenu
 NotifyDisableSteamBroadcast
@@ -28785,6 +28827,7 @@ Set Steam client UI language
 Set VRS enabled: %d
 Set battery charge limit enabled: %d
 Set battery charge limit: %d
+Set desktop session: %s
 Set manual gpu clock enabled: %d
 Set manual gpu clock hz: %d
 Set offline mode: %d
@@ -28832,7 +28875,9 @@ SetCommunityPreferences
 SetCompatibilityFeedback
 SetConfiguration
 SetCursor
+SetDefaultDesktopSession
 SetDefaultDevice: %d -> %d
+SetDesktopSession
 SetDevkitServiceState
 SetDiscovering
 SetDiscoveryFilter
@@ -29478,7 +29523,9 @@ SteamOSManager.NotifyStateChanged#1
 SteamOSManager.OptOutOfSideloadedClient#1
 SteamOSManager.PrepareFactoryImageTest#1
 SteamOSManager.RefreshScreenReaderAutoLocale#1
+SteamOSManager.SetDefaultDesktopSession#1
 SteamOSManager.SetUserPassword#1
+SteamOSManager.SwitchToDesktop#1
 SteamOSManager1AmbientLightSensor1
 SteamOSManager1AmbientLightSensor1Proxy
 SteamOSManager1Audio1
@@ -29661,7 +29708,6 @@ SteamUI_ValveSurvey_Summary_DesktopResolution
 SteamUI_ValveSurvey_Summary_DesktopResolution_Unknown
 SteamUI_ValveSurvey_Summary_DesktopSystem
 SteamUI_ValveSurvey_Summary_DirectXCard
-SteamUI_ValveSurvey_Summary_DirectXDriverName
 SteamUI_ValveSurvey_Summary_DirectXDriverVersion
 SteamUI_ValveSurvey_Summary_DiskSerialHash
 SteamUI_ValveSurvey_Summary_DisplayDevice
@@ -29686,7 +29732,6 @@ SteamUI_ValveSurvey_Summary_LaptopSystem
 SteamUI_ValveSurvey_Summary_LogicalPlural
 SteamUI_ValveSurvey_Summary_LogicalSingular
 SteamUI_ValveSurvey_Summary_MACAddressHash
-SteamUI_ValveSurvey_Summary_MSAAModes
 SteamUI_ValveSurvey_Summary_Media
 SteamUI_ValveSurvey_Summary_Memory
 SteamUI_ValveSurvey_Summary_Misc
@@ -29942,11 +29987,11 @@ Swedish
 Swish
 Switch
 SwitchBackgroundRecordingGame
+SwitchToDesktop
 SwitchToDesktopMode
 SwitchToGameMode
 SwitchToLoginMode
 SwitchToPowerState
-SwitchToUser
 Switching Protocols
 Switching to desktopui (from legacy vgui mode)\n
 Switching to gamepadui\n
@@ -30064,7 +30109,6 @@ System.SetAirplaneMode
 System.ShutdownPC
 System.SteamRuntimeSystemInfo
 System.SuspendPC
-System.SwitchToDesktop
 System.UI.CloseGameWindow
 System.UI.GetGameWindowsInfo
 System.UI.RegisterForFocusChangeEvents
@@ -32168,6 +32212,7 @@ YearOrMore
 Yielding (ready to run)
 YieldingGetAvailableDrives
 YieldingGetFileSystemStableId
+YieldingPrintInstalledFiles
 YieldingResolveHostNameOrIPWithPort
 YieldingUpdateRemoteClientCache
 YldAdopt
@@ -32187,6 +32232,7 @@ YldGetBrowserProcessInfo
 YldGetBrowserProcessInfo: failed to retrieve data
 YldGetDesiredSteamUIWindows: finish
 YldGetDesiredSteamUIWindows: starting processing of %d windows
+YldGetDesktopSessions
 YldJSRunSurvey
 YldLoadAllClips
 YldPair
@@ -32201,6 +32247,7 @@ YldSetAtomUpdateProxyConfig
 YldSetBluetoothEnabledInternal
 YldSetBlurParams
 YldSetCECEnabled
+YldSetDefaultDesktopSession
 YldSetDiscovering
 YldSetEnabled
 YldSetLoginAdvertising
@@ -32218,6 +32265,7 @@ YldStartRequestProcessorIfNeeded
 YldStopAdvertising
 YldStopDiscovering
 YldSubmitSystemReport
+YldSwitchToDesktop
 YldTakeScreenshot
 YldTakeScreenshotGamescopeControl
 YldTriggerScreenReaderAction
@@ -32987,6 +33035,7 @@ Zulu
 \n\fbutton_steam
 \n\fbytes_actual
 \n\fcache_misses
+\n\fcapabilities
 \n\fcheer_amount
 \n\fclan_steamid
 \n\fclient_build
@@ -33053,6 +33102,7 @@ Zulu
 \n\fip_addresses
 \n\fipv4_address
 \n\fis_available
+\n\fis_bluetooth
 \n\fis_completed
 \n\fis_connected
 \n\fis_ejectable
@@ -33152,6 +33202,7 @@ Zulu
 \n\fruby_package
 \n\fsearch_score
 \n\fsegment_size
+\n\fsession_name
 \n\fshader_depot
 \n\fshare_handle
 \n\fshortcutname
@@ -33201,8 +33252,10 @@ Zulu
 \n\fwallet_state
 \n\fwordban_list
 \n\fx_normalized
+\n\fxinput_index
 \n\fy_normalized
 \n\n!CPublishedFile_QueryFiles_Request
+\n\n*CSteamInputService_RawControllerDetailItem
 \n\nBytesValue
 \n\nCSetQoSMsg
 \n\nEForumType
@@ -33461,6 +33514,7 @@ Zulu
 \n\ravg_bandwidth
 \n\rbHasCertError
 \n\rbatch_eresult
+\n\rbattery_level
 \n\rbbcode_format
 \n\rbrowser_scale
 \n\rbytes_scanned
@@ -33666,6 +33720,7 @@ Zulu
 \n\rtransactionid
 \n\rtrigger_right
 \n\rtrusted_score
+\n\rturn_on_sound
 \n\rupdate_result
 \n\rupdate_secret
 \n\rupdated_since
@@ -33814,6 +33869,7 @@ Zulu
 \n\tlast_seen
 \n\tlast_time
 \n\tlast_view
+\n\tled_green
 \n\tlength_ms
 \n\tlist_type
 \n\tlive_time
@@ -34019,6 +34075,7 @@ Zulu
 \n\vincremental
 \n\vinitialFile
 \n\vinitial_url
+\n\vinitialized
 \n\vinstance_id
 \n\vinvite_code
 \n\vinvite_note
@@ -34028,6 +34085,7 @@ Zulu
 \n\vipv6_remote
 \n\vis_borrowed
 \n\vis_captured
+\n\vis_charging
 \n\vis_disabled
 \n\vis_external
 \n\vis_featured
@@ -34648,6 +34706,7 @@ absolute_mouse.vdf
 ac-auditEntity
 ac-proxying
 ac-targeting
+accel_stationary_tolerance
 accelerometer_noise_tolerance
 acceleromter_1g
 acceleromter_noise
@@ -35272,6 +35331,8 @@ autosave:
 autosave://
 autosave://%s
 aux error
+aux_capsense_hysterisis
+aux_capsense_threshold
 av_buffer_create
 av_buffer_ref
 av_buffer_unref
@@ -35364,7 +35425,6 @@ bApplicable
 bAvailableContentOnStore
 bAvailableOnStore
 bB"`3
-bBluetooth
 bBroadcastCapable
 bButtonEast
 bButtonNorth
@@ -35442,7 +35502,6 @@ bHasLockedPrivateBetas
 bHasMultipleInputs
 bHasNintendoLayout
 bHasOutput
-bHasTouchscreen
 bHasTwoFactor
 bHasUnpairedWifiAP
 bHidden
@@ -35502,7 +35561,6 @@ bMouseEnabled
 bN.l
 bNeedsGameInstall
 bNewNavigation
-bNintendoLayout
 bNonSteamServer
 bNotificationToastEnabled
 bNotifications_EventsAndAnnouncements
@@ -35530,7 +35588,6 @@ bReceivedSomething
 bRecommended
 bRefreshComplete
 bRegistered
-bRemoteDevice
 bRemotePlayClientConfigEnabled
 bRemotePlayDisabledBySystemPolicy
 bRemotePlayEnabled
@@ -35583,9 +35640,7 @@ bUnderscanEnabled
 bUploaded
 bUseAsDefault
 bUseIOCP
-bUseReversedLayout
 bUseSystemBrowserFor2DVOD
-bUseUniversalFaceButtonGlyphs
 bUsesGamepad
 bUsesKeyboard
 bUsesMouse
@@ -35599,7 +35654,6 @@ bWaitingForUI
 bWantHTTP || bWantHTTPS
 bWasInserted == true
 bWebPage
-bWireless
 bWorkshopVisible
 b\fLM%
 b\fzUkm
@@ -37008,6 +37062,7 @@ cpu-scheduler1
 cpu_governor_manual_max_mhz
 cpu_governor_manual_mhz
 cpu_governor_manual_min_mhz
+cpu_id
 cpu_name
 crashes the Steam client
 crc:
@@ -37548,6 +37603,8 @@ daysUntilOSEndOfLife
 dcObject
 dcobject
 de_DE
+deadzone_left_stick
+deadzone_right_stick
 debugLaunchAppDelaySecs
 debug_container
 debug_containerfile
@@ -37696,6 +37753,8 @@ desktop_*.vdf
 desktop_notification_level
 desktop_portal_file_chooser_proxy_get_property
 desktop_portal_file_chooser_proxy_set_property
+desktop_session_default
+desktop_sessions_available
 destinationIndicator
 destroy
 desx
@@ -38091,7 +38150,6 @@ dwPID
 dx != __null
 dx == 65536 * 2
 dx == 65536 * 4
-dx_driver_name
 dx_driver_version
 dy != __null
 dynamic
@@ -38126,8 +38184,6 @@ eConnectorType
 eContent
 eContentType
 eControllerRumblePreference
-eControllerStyle
-eControllerType
 eControllerType_OBSOLETE
 eCurrencyCode
 eCurrencyCodeDelayed
@@ -38876,7 +38932,9 @@ finnish
 fips mode not supported
 fips_mode
 firefox
+firmware_build_time
 firmware_node/path
+firmware_version
 first num too large
 first octet invalid
 first_deck_playtime
@@ -38903,8 +38961,6 @@ flDisplayScale
 flGyroStationaryTolerance
 flHue >= 0.0 && flHue <= 360.0
 flInputVolume
-flLEDBrightness
-flLEDSaturation
 flLPadPressureCurve
 flLevel
 flMaxDisplayScaleFactor
@@ -42446,8 +42502,11 @@ gvET
 gwGW
 gyro_filtered_quaternion
 gyro_filtered_speed
+gyro_one_euro_filter_enabled
 gyro_raw_quaternion
 gyro_raw_speed
+gyro_stationary_tolerance
+gyro_sw_antidrift_enabled
 gyroscope_enabled
 gyroscope_noise
 gyroscope_noise_tolerance
@@ -42609,6 +42668,9 @@ handle-wait
 handleValue
 handle_token
 handshake failure
+haptic_strength_left
+haptic_strength_right
+haptics_enabled
 hardware
 hardware_cluster_id
 hardware_id
@@ -42624,11 +42686,14 @@ has_favorite_badge
 has_leaderboards
 has_mode_override
 has_new_players
+has_nintendo_layout
 has_non_6ghz_channel
 has_on_screen_keyboard
 has_pending_messages
+has_reversed_layout
 has_seen_controllers
 has_steam_library
+has_touchscreen
 has_update
 has_used_friendsui
 has_user_reacted
@@ -43813,6 +43878,7 @@ is_pairing_capable
 is_partner_chat_only
 is_password_change_supported
 is_phone_verified
+is_remote_device
 is_request_from_client
 is_reshade_supported
 is_restart_pending
@@ -43822,6 +43888,7 @@ is_save
 is_saved
 is_screen_reader_supported
 is_service_available
+is_session_management_supported
 is_shared_file
 is_site_license_lock
 is_status_led_control_available
@@ -43856,6 +43923,7 @@ is_wifi_driver_reload_available
 is_wifi_enabled
 is_wifi_powersave_enabled
 is_wifi_scanning_enabled
+is_wireless_steam_dongle
 is_xinput_device_OBSOLETE
 isalnum
 isalpha
@@ -46214,7 +46282,10 @@ leading_detached_comments
 leadvertisement1
 leadvertising-manager1
 leaks
+led_blue
 led_brightness
+led_red
+led_saturation
 left
 left the group
 leftGrip
@@ -46224,6 +46295,7 @@ left_aux
 left_stick_click
 left_stick_deflect
 left_stick_touch
+left_stick_touch_disable_lpad
 left_trackpad_click
 left_trackpad_touch
 legacy-pairing
@@ -46797,7 +46869,6 @@ m_cbkUpdateStateChanges
 m_cbkViewerRequest
 m_configOverride
 m_controllerDetailsCurrent
-m_controllerDetailsCurrent.unActiveAccountID != CONTROLLER_ACTIVE_ACCOUNT_IS_GUEST
 m_cubAlreadySentFromHeadBuffer < head.len
 m_cubMsgIncomingRecv <= m_cubMsgIncomingAlloc
 m_customImageManager
@@ -47763,6 +47834,7 @@ mac setup error
 mac string set error
 mac verify failure
 macAlgorithm
+mac_addr
 mac_release_date
 macedonian
 machine
@@ -48324,9 +48396,6 @@ nIndex
 nIndex != m_mapBindings.InvalidIndex()
 nIndex < ( unsigned int )m_list.Count()
 nInstanceID
-nLEDColorB
-nLEDColorG
-nLEDColorR
 nLHapticStrength
 nLStickDeadzone
 nLaunchOption
@@ -48397,7 +48466,6 @@ nWidth > 0 && nHeight > 0
 nWidth >= 0 && nHeight >= 0
 nWidthPct
 nWorkshopSize
-nXInputIndex
 nXPosition
 nY77
 nYPosition
@@ -49525,6 +49593,8 @@ packet length too long
 packet_size_received
 packet_size_requested
 packets
+pad_pressure_curve_left
+pad_pressure_curve_right
 padding check failed
 page
 page->m_pToolWindow == this
@@ -49912,6 +49982,7 @@ player_max_team_size
 player_name_pending_review
 player_percent_unlocked
 player_results
+player_slot_led_setting
 players
 players_accepted
 players_in_match
@@ -50853,7 +50924,6 @@ rgFamilyGroupMembers
 rgFilters
 rgFocusable
 rgHandles
-rgMacAddrs
 rgb color-map: too few entries
 rgb to gray green coefficient
 rgb to gray red coefficient
@@ -50870,6 +50940,7 @@ rightText
 right_stick_click
 right_stick_deflect
 right_stick_touch
+right_stick_touch_disable_rpad
 right_trackpad_click
 right_trackpad_touch
 rightarrow
@@ -51013,6 +51084,7 @@ ru_RU
 rule
 rules
 rumble_enabled
+rumble_setting
 run-game
 run/
 run_at_startup
@@ -52527,20 +52599,16 @@ strAccountBalance
 strAccountBalancePending
 strAccountName
 strActionName
-strActiveAccountID
 strAppName
 strArgs
 strArguments
-strAvatarHash
 strBytesMoved
 strBytesProcessed
 strBytesToProcess
-strCapabilities
 strCapsuleImage
 strCaption
 strCaptivePortalURL
 strChannel
-strChipID
 strClientInstanceID
 strCloudAvailable
 strCloudBytesAvailable
@@ -52553,7 +52621,6 @@ strCompatTool
 strCompatToolDisplayName
 strCompatToolName
 strConnectString
-strCpuID
 strDesc
 strDescription
 strDeveloperName
@@ -52570,7 +52637,6 @@ strFamilyGroupID
 strFamilyGroupName
 strFileTypeName
 strFilename
-strFirmwareBuildTime
 strFlatpakAppID
 strFolderPath
 strGameID
@@ -53716,6 +53782,7 @@ turkish
 turkmen
 turn:%s?transport=udp
 turn_off_controller_on_exit
+turn_off_sound
 tvos64
 two named subpatterns have the same name
 two_factor_method
@@ -53933,7 +54000,6 @@ unNewPacketSize == cubExtHdrSize + unOldBodySize + sizeof( ProtoBufMsgHeader_t )
 unNow > m_unLastSpew
 unOldBodySize >= 0
 unPID
-unProductID
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unRequestingAppID
@@ -53945,7 +54011,6 @@ unSizeOnDisk
 unStreamingSessionID
 unTimedTrialSecondsAllowed
 unTimedTrialSecondsPlayed
-unVendorID
 unWriteBufConsumed == k_BufSize
 unable to bind socket
 unable to check generator
@@ -54405,8 +54470,6 @@ vary
 vePC:)
 vecAchievedHidden
 vecAdditionalImageAssetURLs
-vecAltAccounts
-vecAlternateAccountIDs
 vecApps
 vecArgs
 vecAvailableClientBetas

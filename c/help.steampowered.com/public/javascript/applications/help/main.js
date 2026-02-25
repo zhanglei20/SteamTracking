@@ -36054,7 +36054,7 @@
           };
         }
         static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
-          let _ = null;
+          let _;
           const [_, _] = _.GetChildren();
           _.length &&
             -1 != _ &&
