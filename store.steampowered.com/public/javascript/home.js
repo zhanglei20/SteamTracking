@@ -2287,6 +2287,7 @@ GHomepage = {
 					var $Target = $J( '<div/>', {'class': 'specials_target' });
 					$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
 						'discount_class': 'daily_deal_discount discount_block_large',
+						'capsule_size': 'header',
 						lazy: true
 					}, iPage + 1 ) );
 					$Col.append( $Target );
