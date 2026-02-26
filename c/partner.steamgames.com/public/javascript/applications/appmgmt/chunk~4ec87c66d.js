@@ -15905,6 +15905,13 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = "packageid";
+      function _(_, _) {
+        const _ = new Date(1e3 * _),
+          _ = new Date(1e3 * _),
+          _ = __webpack_require__.getTimezoneOffset(),
+          _ = _.getTimezoneOffset() - _;
+        return -60 === _ ? 1 : 60 === _ ? -1 : 0;
+      }
       function _(_) {
         const { nInitialPackageID: _, closeModal: __webpack_require__ } = _,
           [_, _] = _.useState(null),
@@ -15928,14 +15935,20 @@
           _ = (_, _) => {
             const _ = Math.max(_, _.rtStartDate);
             _(_);
-            const _ = Math.floor((_.rtEndDate - _) / _._.PerDay);
+            const _ = _(_, _.rtEndDate),
+              _ = Math.floor((_.rtEndDate - _ + _ * _._.PerHour) / _._.PerDay);
             _ > _ && _(_);
           },
           _ = (_, _) => {
             if ((_(_), _(_), _)) {
               const _ = (0, _._)(_);
-              _(_.name),
-                _(Math.floor((_.end_date - _.start_date) / _._.PerDay)),
+              _(_.name);
+              const _ = _(_, _.end_date);
+              _(
+                Math.floor(
+                  (_.end_date - _.start_date + _ * _._.PerHour) / _._.PerDay,
+                ),
+              ),
                 _(_.start_date, _);
             } else _ && (_(""), _(7), _((0, _._)(_.rtStartDate), _));
           },
@@ -16051,8 +16064,12 @@
                                   onChange: (_) => {
                                     const _ = _.target.value,
                                       _ = Number(_ || 0),
+                                      _ = _(_, _?.rtEndDate),
                                       _ = Math.floor(
-                                        (_?.rtEndDate - _) / _._.PerDay,
+                                        ((_?.rtEndDate || 2147483647) -
+                                          _ +
+                                          _ * _._.PerHour) /
+                                          _._.PerDay,
                                       ),
                                       _ = Math.min(
                                         Math.min(14, _),

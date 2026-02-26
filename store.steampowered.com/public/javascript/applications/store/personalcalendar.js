@@ -308,8 +308,8 @@
         return (0, h.wT)(a, `${e} must be used within an <Autocomplete>!`), a;
       }
       var C = s(86632),
-        T = s(39020),
-        f = s(82477),
+        f = s(39020),
+        T = s(82477),
         j = s(46416),
         _ = s(32630),
         P = s(52038),
@@ -318,8 +318,8 @@
         b = s(12241),
         A = s(76217),
         I = s(30894),
-        W = s(65946),
-        k = s(70310);
+        k = s(65946),
+        W = s(70310);
       const N = "PC_HideOwned",
         G = "PC_HideEarlyAccess",
         H = "PC_GameCount",
@@ -360,7 +360,7 @@
           children: [
             (0, D.we)("#PersonalCalendar_LoginPrompt"),
             (0, t.jsx)("button", {
-              onClick: f.vg,
+              onClick: T.vg,
               className: b.LoginButton,
               children: (0, D.we)("#Login_SignIn"),
             }),
@@ -568,77 +568,87 @@
       function K(e) {
         const { games: a } = e,
           s =
-            (0, W.q3)(() =>
+            (0, k.q3)(() =>
               a?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
-        return (0, t.jsxs)(A.Z, {
-          className: b.PersonalCalendarSection,
-          children: [
-            (0, t.jsx)(A.Z, {
-              className: b.SectionHeader,
-              children: (0, D.we)("#PersonalCalendar_LastMonthGames"),
-            }),
-            (0, t.jsx)(A.Z, {
-              className: (0, P.A)(b.GameList, b.Month),
-              children: s
-                .slice(0, 16)
-                .map((e) =>
-                  (0, t.jsx)(
-                    A.Z,
-                    {
-                      className: b.AppEntry,
-                      children: (0, t.jsx)(j.W, {
-                        capsule: { id: e.appid },
-                        imageType: "header",
-                        bShowEarlyAccessBanner: !1,
-                        bShowIgnoreButton: !0,
-                        bShowDescriptionInHover: !0,
-                        bPreferAssetWithoutOverride: !1,
-                      }),
-                    },
-                    e.appid,
+        return (0, t.jsx)(_.Ay, {
+          controller: "personalcalendar",
+          method: "default",
+          feature: "lastmonth",
+          children: (0, t.jsxs)(A.Z, {
+            className: b.PersonalCalendarSection,
+            children: [
+              (0, t.jsx)(A.Z, {
+                className: b.SectionHeader,
+                children: (0, D.we)("#PersonalCalendar_LastMonthGames"),
+              }),
+              (0, t.jsx)(A.Z, {
+                className: (0, P.A)(b.GameList, b.Month),
+                children: s
+                  .slice(0, 16)
+                  .map((e) =>
+                    (0, t.jsx)(
+                      A.Z,
+                      {
+                        className: b.AppEntry,
+                        children: (0, t.jsx)(j.W, {
+                          capsule: { id: e.appid },
+                          imageType: "header",
+                          bShowEarlyAccessBanner: !1,
+                          bShowIgnoreButton: !0,
+                          bShowDescriptionInHover: !0,
+                          bPreferAssetWithoutOverride: !1,
+                        }),
+                      },
+                      e.appid,
+                    ),
                   ),
-                ),
-            }),
-          ],
+              }),
+            ],
+          }),
         });
       }
       function F(e) {
         const { games: a } = e,
           s =
-            (0, W.q3)(() =>
+            (0, k.q3)(() =>
               a?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
-        return (0, t.jsxs)(A.Z, {
-          className: b.PersonalCalendarSection,
-          children: [
-            (0, t.jsx)(A.Z, {
-              className: b.SectionHeader,
-              children: (0, D.we)("#PersonalCalendar_LastWeekGames"),
-            }),
-            (0, t.jsx)(A.Z, {
-              className: (0, P.A)(b.GameList, b.Week),
-              children: s
-                .slice(0, 12)
-                .map((e) =>
-                  (0, t.jsx)(
-                    A.Z,
-                    {
-                      className: b.AppEntry,
-                      children: (0, t.jsx)(j.W, {
-                        capsule: { id: e.appid },
-                        imageType: "header",
-                        bShowEarlyAccessBanner: !1,
-                        bShowIgnoreButton: !0,
-                        bShowDescriptionInHover: !0,
-                        bPreferAssetWithoutOverride: !1,
-                      }),
-                    },
-                    e.appid,
+        return (0, t.jsx)(_.Ay, {
+          controller: "personalcalendar",
+          method: "default",
+          feature: "lastweek",
+          children: (0, t.jsxs)(A.Z, {
+            className: b.PersonalCalendarSection,
+            children: [
+              (0, t.jsx)(A.Z, {
+                className: b.SectionHeader,
+                children: (0, D.we)("#PersonalCalendar_LastWeekGames"),
+              }),
+              (0, t.jsx)(A.Z, {
+                className: (0, P.A)(b.GameList, b.Week),
+                children: s
+                  .slice(0, 12)
+                  .map((e) =>
+                    (0, t.jsx)(
+                      A.Z,
+                      {
+                        className: b.AppEntry,
+                        children: (0, t.jsx)(j.W, {
+                          capsule: { id: e.appid },
+                          imageType: "header",
+                          bShowEarlyAccessBanner: !1,
+                          bShowIgnoreButton: !0,
+                          bShowDescriptionInHover: !0,
+                          bPreferAssetWithoutOverride: !1,
+                        }),
+                      },
+                      e.appid,
+                    ),
                   ),
-                ),
-            }),
-          ],
+              }),
+            ],
+          }),
         });
       }
       function J(e) {
@@ -649,7 +659,10 @@
             includeSaturday: r,
           } = e,
           [o, i] = l.useState(9999);
-        return (0, t.jsxs)(t.Fragment, {
+        return (0, t.jsxs)(_.Ay, {
+          controller: "personalcalendar",
+          method: "default",
+          feature: "calendar",
           children: [
             (0, t.jsxs)(A.Z, {
               className: (0, P.A)(
@@ -814,7 +827,7 @@
           l = Math.max(e.maxGames, r),
           o = l == e.appsToday?.length,
           i =
-            (0, W.q3)(() =>
+            (0, k.q3)(() =>
               e.appsToday?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [],
           c =
@@ -875,7 +888,7 @@
         const n = Math.floor(s.getTime() / 1e3),
           r = n == e.timestamp,
           l =
-            (0, W.q3)(() =>
+            (0, k.q3)(() =>
               e.appsToday?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
         return e.timestamp < n
@@ -917,9 +930,9 @@
             });
       }
       const $ = () => {
-        const { data: e } = (0, T.Fv)(L.TS.LANGUAGE),
+        const { data: e } = (0, f.Fv)(L.TS.LANGUAGE),
           [a, s] = l.useState(B),
-          r = (0, k.G)(a.selectedTag, 500, 30, 60, !0),
+          r = (0, W.G)(a.selectedTag, 500, 30, 60, !0),
           {
             maxResultCount: o,
             dayWeekTimestamps: i,
@@ -1026,55 +1039,50 @@
                 }),
                 (0, t.jsx)(A.Z, {
                   className: (0, P.A)(b.LoginButton),
-                  onClick: f.vg,
+                  onClick: T.vg,
                   children: (0, t.jsx)("span", {
                     children: (0, D.we)("#LoginButton"),
                   }),
                 }),
               ],
             })
-          : (0, t.jsx)(_.Ay, {
-              controller: "personalcalendar",
-              method: "default",
-              feature: "capsule",
-              children: (0, t.jsx)(n.Y, {
-                children: (0, t.jsx)(A.Z, {
-                  className: (0, P.A)(
-                    b.PersonalCalendarApp,
-                    r.isFetching && b.Refreshing,
-                  ),
-                  children: (0, t.jsxs)(A.Z, {
-                    className: b.PersonalCalendarContainer,
-                    children: [
-                      (0, t.jsx)(R, {
-                        count: r.data ? a.cResultsToShow : void 0,
+          : (0, t.jsx)(n.Y, {
+              children: (0, t.jsx)(A.Z, {
+                className: (0, P.A)(
+                  b.PersonalCalendarApp,
+                  r.isFetching && b.Refreshing,
+                ),
+                children: (0, t.jsxs)(A.Z, {
+                  className: b.PersonalCalendarContainer,
+                  children: [
+                    (0, t.jsx)(R, {
+                      count: r.data ? a.cResultsToShow : void 0,
+                    }),
+                    !L.iA.steamid && (0, t.jsx)(M, {}),
+                    r.data &&
+                      (0, t.jsxs)(t.Fragment, {
+                        children: [
+                          (0, t.jsx)(O, {
+                            state: a,
+                            onChange: s,
+                            tagMap: e,
+                            userTags: d,
+                            maxResultsToShow: o,
+                            usesWishlists: u,
+                          }),
+                          x.length > 0 &&
+                            (0, t.jsx)(K, { games: x, includeSaturday: w }),
+                          S.length > 0 &&
+                            (0, t.jsx)(F, { games: S, includeSaturday: w }),
+                          (0, t.jsx)(J, {
+                            dayWeekTimestamps: i,
+                            appReleasesByDay: y,
+                            todayTimestamp: p,
+                            includeSaturday: w,
+                          }),
+                        ],
                       }),
-                      !L.iA.steamid && (0, t.jsx)(M, {}),
-                      r.data &&
-                        (0, t.jsxs)(t.Fragment, {
-                          children: [
-                            (0, t.jsx)(O, {
-                              state: a,
-                              onChange: s,
-                              tagMap: e,
-                              userTags: d,
-                              maxResultsToShow: o,
-                              usesWishlists: u,
-                            }),
-                            x.length > 0 &&
-                              (0, t.jsx)(K, { games: x, includeSaturday: w }),
-                            S.length > 0 &&
-                              (0, t.jsx)(F, { games: S, includeSaturday: w }),
-                            (0, t.jsx)(J, {
-                              dayWeekTimestamps: i,
-                              appReleasesByDay: y,
-                              todayTimestamp: p,
-                              includeSaturday: w,
-                            }),
-                          ],
-                        }),
-                    ],
-                  }),
+                  ],
                 }),
               }),
             });

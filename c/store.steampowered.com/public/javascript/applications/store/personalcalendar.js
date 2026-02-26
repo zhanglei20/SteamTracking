@@ -630,36 +630,41 @@
             (0, _._)(() =>
               _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
             ) ?? [];
-        return (0, _.jsxs)(_._, {
-          className: _.PersonalCalendarSection,
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.SectionHeader,
-              children: (0, _._)("#PersonalCalendar_LastMonthGames"),
-            }),
-            (0, _.jsx)(_._, {
-              className: (0, _._)(_.GameList, _.Month),
-              children: __webpack_require__.slice(0, 16).map((_) =>
-                (0, _.jsx)(
-                  _._,
-                  {
-                    className: _.AppEntry,
-                    children: (0, _.jsx)(_._, {
-                      capsule: {
-                        _: _.appid,
-                      },
-                      imageType: "header",
-                      bShowEarlyAccessBanner: !1,
-                      bShowIgnoreButton: !0,
-                      bShowDescriptionInHover: !0,
-                      bPreferAssetWithoutOverride: !1,
-                    }),
-                  },
-                  _.appid,
+        return (0, _.jsx)(_._, {
+          controller: "personalcalendar",
+          method: "default",
+          feature: "lastmonth",
+          children: (0, _.jsxs)(_._, {
+            className: _.PersonalCalendarSection,
+            children: [
+              (0, _.jsx)(_._, {
+                className: _.SectionHeader,
+                children: (0, _._)("#PersonalCalendar_LastMonthGames"),
+              }),
+              (0, _.jsx)(_._, {
+                className: (0, _._)(_.GameList, _.Month),
+                children: __webpack_require__.slice(0, 16).map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      className: _.AppEntry,
+                      children: (0, _.jsx)(_._, {
+                        capsule: {
+                          _: _.appid,
+                        },
+                        imageType: "header",
+                        bShowEarlyAccessBanner: !1,
+                        bShowIgnoreButton: !0,
+                        bShowDescriptionInHover: !0,
+                        bPreferAssetWithoutOverride: !1,
+                      }),
+                    },
+                    _.appid,
+                  ),
                 ),
-              ),
-            }),
-          ],
+              }),
+            ],
+          }),
         });
       }
       function _(_) {
@@ -668,36 +673,41 @@
             (0, _._)(() =>
               _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
             ) ?? [];
-        return (0, _.jsxs)(_._, {
-          className: _.PersonalCalendarSection,
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.SectionHeader,
-              children: (0, _._)("#PersonalCalendar_LastWeekGames"),
-            }),
-            (0, _.jsx)(_._, {
-              className: (0, _._)(_.GameList, _.Week),
-              children: __webpack_require__.slice(0, 12).map((_) =>
-                (0, _.jsx)(
-                  _._,
-                  {
-                    className: _.AppEntry,
-                    children: (0, _.jsx)(_._, {
-                      capsule: {
-                        _: _.appid,
-                      },
-                      imageType: "header",
-                      bShowEarlyAccessBanner: !1,
-                      bShowIgnoreButton: !0,
-                      bShowDescriptionInHover: !0,
-                      bPreferAssetWithoutOverride: !1,
-                    }),
-                  },
-                  _.appid,
+        return (0, _.jsx)(_._, {
+          controller: "personalcalendar",
+          method: "default",
+          feature: "lastweek",
+          children: (0, _.jsxs)(_._, {
+            className: _.PersonalCalendarSection,
+            children: [
+              (0, _.jsx)(_._, {
+                className: _.SectionHeader,
+                children: (0, _._)("#PersonalCalendar_LastWeekGames"),
+              }),
+              (0, _.jsx)(_._, {
+                className: (0, _._)(_.GameList, _.Week),
+                children: __webpack_require__.slice(0, 12).map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      className: _.AppEntry,
+                      children: (0, _.jsx)(_._, {
+                        capsule: {
+                          _: _.appid,
+                        },
+                        imageType: "header",
+                        bShowEarlyAccessBanner: !1,
+                        bShowIgnoreButton: !0,
+                        bShowDescriptionInHover: !0,
+                        bPreferAssetWithoutOverride: !1,
+                      }),
+                    },
+                    _.appid,
+                  ),
                 ),
-              ),
-            }),
-          ],
+              }),
+            ],
+          }),
         });
       }
       function _(_) {
@@ -708,7 +718,10 @@
             includeSaturday: _,
           } = _,
           [_, _] = _.useState(9999);
-        return (0, _.jsxs)(_.Fragment, {
+        return (0, _.jsxs)(_._, {
+          controller: "personalcalendar",
+          method: "default",
+          feature: "calendar",
           children: [
             (0, _.jsxs)(_._, {
               className: (0, _._)(
@@ -1123,53 +1136,48 @@
               ],
             })
           : (0, _.jsx)(_._, {
-              controller: "personalcalendar",
-              method: "default",
-              feature: "capsule",
               children: (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  className: (0, _._)(
-                    _.PersonalCalendarApp,
-                    _.isFetching && _.Refreshing,
-                  ),
-                  children: (0, _.jsxs)(_._, {
-                    className: _.PersonalCalendarContainer,
-                    children: [
-                      (0, _.jsx)(_, {
-                        count: _.data ? _.cResultsToShow : void 0,
-                      }),
-                      !_._.steamid && (0, _.jsx)(_, {}),
-                      _.data &&
-                        (0, _.jsxs)(_.Fragment, {
-                          children: [
+                className: (0, _._)(
+                  _.PersonalCalendarApp,
+                  _.isFetching && _.Refreshing,
+                ),
+                children: (0, _.jsxs)(_._, {
+                  className: _.PersonalCalendarContainer,
+                  children: [
+                    (0, _.jsx)(_, {
+                      count: _.data ? _.cResultsToShow : void 0,
+                    }),
+                    !_._.steamid && (0, _.jsx)(_, {}),
+                    _.data &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)(_, {
+                            state: _,
+                            onChange: __webpack_require__,
+                            tagMap: _,
+                            userTags: _,
+                            maxResultsToShow: _,
+                            usesWishlists: _,
+                          }),
+                          _.length > 0 &&
                             (0, _.jsx)(_, {
-                              state: _,
-                              onChange: __webpack_require__,
-                              tagMap: _,
-                              userTags: _,
-                              maxResultsToShow: _,
-                              usesWishlists: _,
-                            }),
-                            _.length > 0 &&
-                              (0, _.jsx)(_, {
-                                games: _,
-                                includeSaturday: _,
-                              }),
-                            _.length > 0 &&
-                              (0, _.jsx)(_, {
-                                games: _,
-                                includeSaturday: _,
-                              }),
-                            (0, _.jsx)(_, {
-                              dayWeekTimestamps: _,
-                              appReleasesByDay: _,
-                              todayTimestamp: _,
+                              games: _,
                               includeSaturday: _,
                             }),
-                          ],
-                        }),
-                    ],
-                  }),
+                          _.length > 0 &&
+                            (0, _.jsx)(_, {
+                              games: _,
+                              includeSaturday: _,
+                            }),
+                          (0, _.jsx)(_, {
+                            dayWeekTimestamps: _,
+                            appReleasesByDay: _,
+                            todayTimestamp: _,
+                            includeSaturday: _,
+                          }),
+                        ],
+                      }),
+                  ],
                 }),
               }),
             });

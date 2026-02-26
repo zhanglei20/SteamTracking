@@ -15448,7 +15448,7 @@
     },
     68225: (e, t, s) => {
       "use strict";
-      s.d(t, { h: () => jt, o: () => wt });
+      s.d(t, { h: () => Ct, o: () => jt });
       var i = s(7850),
         a = s(43527),
         n = s(97058),
@@ -15487,7 +15487,14 @@
         O = s.n(G),
         L = s(65);
       const F = "packageid";
-      function U(e) {
+      function U(e, t) {
+        const s = new Date(1e3 * e),
+          i = new Date(1e3 * t),
+          a = s.getTimezoneOffset(),
+          n = i.getTimezoneOffset() - a;
+        return -60 === n ? 1 : 60 === n ? -1 : 0;
+      }
+      function z(e) {
         const { nInitialPackageID: t, closeModal: s } = e,
           [a, n] = S.useState(null),
           [r, o] = S.useState(""),
@@ -15501,36 +15508,44 @@
           I = (0, p.Gq)(_),
           [A, E] = S.useState(null),
           [R, G] = S.useState(null),
-          U = (0, h.Ad)(R),
-          z = !!A,
-          q = !U,
-          K = () => {
+          z = (0, h.Ad)(R),
+          q = !!A,
+          W = !z,
+          Y = () => {
             u(null), s();
           },
-          Y = (e, t) => {
+          J = (e, t) => {
             const s = Math.max(e, t.rtStartDate);
             n(s);
-            const i = Math.floor((t.rtEndDate - s) / N.Kp.PerDay);
-            l > i && c(i);
+            const i = U(s, t.rtEndDate),
+              a = Math.floor(
+                (t.rtEndDate - s + i * N.Kp.PerHour) / N.Kp.PerDay,
+              );
+            l > a && c(a);
           },
-          $ = (e, t) => {
+          X = (e, t) => {
             if ((E(e), G(t), t)) {
               const s = (0, h.Z6)(t);
-              o(s.name),
-                c(Math.floor((s.end_date - s.start_date) / N.Kp.PerDay)),
-                Y(s.start_date, e);
-            } else e && (o(""), c(7), Y((0, T.M)(e.rtStartDate), e));
+              o(s.name);
+              const i = U(a, s.end_date);
+              c(
+                Math.floor(
+                  (s.end_date - s.start_date + i * N.Kp.PerHour) / N.Kp.PerDay,
+                ),
+              ),
+                J(s.start_date, e);
+            } else e && (o(""), c(7), J((0, T.M)(e.rtStartDate), e));
           },
-          X = r.trim().length && _ > 0 && w >= m.sZ && w <= m.qT,
-          Q = Math.floor((0, L.kO)(new Date(1e3 * a), l).getTime() / 1e3),
-          Z = Math.floor(Date.now() / 1e3),
-          ee = (0, T.M)(Z),
-          te = (0, h.zL)(_);
+          Q = r.trim().length && _ > 0 && w >= m.sZ && w <= m.qT,
+          Z = Math.floor((0, L.kO)(new Date(1e3 * a), l).getTime() / 1e3),
+          ee = Math.floor(Date.now() / 1e3),
+          te = (0, T.M)(ee),
+          se = (0, h.zL)(_);
         return (0, i.jsxs)(M.eV, {
           title: (0, C.we)("#DiscountDashboard_Create_Title"),
           bAllowFullSize: !1,
-          onCancel: K,
-          closeModal: K,
+          onCancel: Y,
+          closeModal: Y,
           children: [
             (0, i.jsx)(y.nB, {
               children: (0, i.jsxs)("div", {
@@ -15544,34 +15559,34 @@
                   (0, i.jsxs)("div", {
                     className: O().Section,
                     children: [
-                      !_ && (0, i.jsx)(H, {}),
-                      (0, i.jsx)(V, {
+                      !_ && (0, i.jsx)(V, {}),
+                      (0, i.jsx)(K, {
                         selectedPackageID: _,
                         onSelect: (e) => {
-                          g(e), $(null, null);
+                          g(e), X(null, null);
                         },
                       }),
                     ],
                   }),
-                  Boolean(te + p.nu > Z) &&
+                  Boolean(se + p.nu > ee) &&
                     (0, i.jsx)("div", {
                       className: O().CooldownWarning,
                       children: (0, C.we)(
                         "#DiscountDashboard_Create_PriceIncreaseCooldown",
-                        (0, C.TW)(te, !0, !1),
+                        (0, C.TW)(se, !0, !1),
                       ),
                     }),
-                  (0, i.jsx)(W, {
+                  (0, i.jsx)(H, {
                     packageID: _,
                     rgScheduleRanges: I,
                     selectedRange: A,
                     selectedDiscountEventID: R,
-                    fnSelectRangeAndEvent: $,
+                    fnSelectRangeAndEvent: X,
                   }),
-                  z &&
+                  q &&
                     (0, i.jsxs)(i.Fragment, {
                       children: [
-                        q &&
+                        W &&
                           (0, i.jsxs)(i.Fragment, {
                             children: [
                               (0, i.jsxs)("div", {
@@ -15589,7 +15604,7 @@
                               (0, i.jsxs)("div", {
                                 className: O().Section,
                                 children: [
-                                  !r.trim().length && (0, i.jsx)(H, {}),
+                                  !r.trim().length && (0, i.jsx)(V, {}),
                                   (0, i.jsx)(y.pd, {
                                     type: "text",
                                     label: (0, C.we)(
@@ -15612,11 +15627,11 @@
                               strDescription: (0, C.we)(
                                 "#DiscountDashboard_Create_DiscountStartDate",
                               ),
-                              disabled: !q,
-                              nEarliestTime: Math.max(A.rtStartDate, ee),
+                              disabled: !W,
+                              nEarliestTime: Math.max(A.rtStartDate, te),
                               nLatestTime: A.rtEndDate - N.Kp.PerDay,
                               fnGetTimeToUpdate: () => a,
-                              fnSetTimeToUpdate: (e) => Y(e, A),
+                              fnSetTimeToUpdate: (e) => J(e, A),
                               className: O().DatePicker,
                               bShowTimeZone: !0,
                               strAlsoShowTimeZone: T.o,
@@ -15633,25 +15648,29 @@
                                   onChange: (e) => {
                                     const t = e.target.value,
                                       s = Number(t || 0),
-                                      i = Math.floor(
-                                        (A?.rtEndDate - a) / N.Kp.PerDay,
+                                      i = U(a, A?.rtEndDate),
+                                      n = Math.floor(
+                                        ((A?.rtEndDate || 2147483647) -
+                                          a +
+                                          i * N.Kp.PerHour) /
+                                          N.Kp.PerDay,
                                       ),
-                                      n = Math.min(
-                                        Math.min(14, i),
+                                      r = Math.min(
+                                        Math.min(14, n),
                                         Math.max(1, s),
                                       );
-                                    c(n);
+                                    c(r);
                                   },
-                                  disabled: !q,
+                                  disabled: !W,
                                   min: 1,
                                   max: 14,
                                 }),
-                                Boolean(Q) &&
+                                Boolean(Z) &&
                                   (0, i.jsx)("div", {
                                     children: (0, C.we)(
                                       "#DiscountDashboard_Create_EndDate",
-                                      (0, C.TW)(Q),
-                                      (0, k.pg)(Q),
+                                      (0, C.TW)(Z),
+                                      (0, k.pg)(Z),
                                     ),
                                   }),
                               ],
@@ -15667,7 +15686,7 @@
                                 O().DiscountPercentCtn,
                               ),
                               children: [
-                                (w < m.sZ || w > m.qT) && (0, i.jsx)(H, {}),
+                                (w < m.sZ || w > m.qT) && (0, i.jsx)(V, {}),
                                 (0, i.jsx)(y.pd, {
                                   type: "number",
                                   label: (0, C.we)(
@@ -15729,8 +15748,8 @@
             }),
             (0, i.jsx)(y.wi, {
               children: (0, i.jsx)(y.CB, {
-                onCancel: K,
-                bOKDisabled: !X,
+                onCancel: Y,
+                bOKDisabled: !Q,
                 onOK: () => {
                   const e = {
                     packageID: _,
@@ -15738,11 +15757,11 @@
                     strDiscountName: r,
                     strDiscountDescription: "#discount_desc_preset_special",
                     rtStartDate: a,
-                    rtEndDate: Q,
+                    rtEndDate: Z,
                     discountEventID: R,
                   };
                   (0, x.pg)(
-                    (0, i.jsx)(J, { discount: e, fnOnSuccess: K }),
+                    (0, i.jsx)($, { discount: e, fnOnSuccess: Y }),
                     window,
                   );
                 },
@@ -15753,7 +15772,7 @@
           ],
         });
       }
-      function z(e) {
+      function q(e) {
         const { range: t, fnSelectRangeAndEvent: s } = e;
         if (!t.bIsAvailable)
           return (0, i.jsxs)("div", {
@@ -15822,7 +15841,7 @@
           ],
         });
       }
-      function q(e) {
+      function W(e) {
         const { range: t, strDiscountEventID: s, fnClearEvent: a } = e,
           n = (0, h.Ad)(s);
         return (0, i.jsxs)("div", {
@@ -15870,7 +15889,7 @@
           ],
         });
       }
-      function W(e) {
+      function H(e) {
         const {
             packageID: t,
             rgScheduleRanges: s,
@@ -15901,7 +15920,7 @@
                 ),
               }),
             l &&
-              (0, i.jsx)(q, {
+              (0, i.jsx)(W, {
                 range: a,
                 strDiscountEventID: n,
                 fnClearEvent: () => r(null, null),
@@ -15910,7 +15929,7 @@
             d &&
               s.map((e, t) =>
                 (0, i.jsx)(
-                  z,
+                  q,
                   { range: e, fnSelectRangeAndEvent: r },
                   t + e.rtStartDate,
                 ),
@@ -15925,13 +15944,13 @@
           ],
         });
       }
-      function H(e) {
+      function V(e) {
         return (0, i.jsx)("div", {
           className: O().RequiredFieldWarning,
           children: (0, C.we)("#DiscountDashboard_Create_RequiredFieldWarning"),
         });
       }
-      function V(e) {
+      function K(e) {
         const { selectedPackageID: t, onSelect: s } = e,
           [a, n] = S.useState(""),
           [r, o] = S.useState(),
@@ -15971,7 +15990,7 @@
               ? (0, i.jsxs)("div", {
                   className: O().SelectedPackage,
                   children: [
-                    (0, i.jsx)(Y, { packageID: t }),
+                    (0, i.jsx)(J, { packageID: t }),
                     (0, i.jsx)("div", {
                       className: O().ClearSelectedPackage,
                       onClick: () => s(null),
@@ -16003,7 +16022,7 @@
                       },
                       bShowClearAction: !0,
                     }),
-                    (0, i.jsx)(K, {
+                    (0, i.jsx)(Y, {
                       strSearchKey: a,
                       rgSearchResults: r,
                       onSelect: (e) => {
@@ -16015,7 +16034,7 @@
           ],
         });
       }
-      function K(e) {
+      function Y(e) {
         const { strSearchKey: t, rgSearchResults: s, onSelect: a } = e;
         if (!t) return null;
         const n = s?.length ?? 0;
@@ -16043,7 +16062,7 @@
                   ?.slice(0, 20)
                   .map((e) =>
                     (0, i.jsx)(
-                      Y,
+                      J,
                       { packageID: e.GetID(), onSelect: a },
                       e.GetID(),
                     ),
@@ -16053,7 +16072,7 @@
           })
         );
       }
-      function Y(e) {
+      function J(e) {
         const { packageID: t, onSelect: s } = e,
           [a, n] = (0, A.Gg)(t, {});
         return (0, i.jsx)("div", {
@@ -16065,7 +16084,7 @@
           }),
         });
       }
-      function J(e) {
+      function $(e) {
         const { closeModal: t, discount: s, fnOnSuccess: a } = e,
           { fnSaveDiscount: n } = (0, m.gr)(),
           [r, o] = S.useState(null),
@@ -16096,24 +16115,24 @@
           })
         );
       }
-      var $ = s(42691),
-        X = s.n($),
-        Q = s(33299),
-        Z = s(84811),
-        ee = s(95695),
-        te = s.n(ee),
-        se = s(20969),
-        ie = s.n(se),
-        ae = s(17084),
-        ne = s(75233),
-        re = s(44165),
-        oe = s(32754),
-        le = s(9554),
-        ce = s(81418),
-        de = s(41735),
-        me = s.n(de),
-        ue = s(68797);
-      class pe {
+      var X = s(42691),
+        Q = s.n(X),
+        Z = s(33299),
+        ee = s(84811),
+        te = s(95695),
+        se = s.n(te),
+        ie = s(20969),
+        ae = s.n(ie),
+        ne = s(17084),
+        re = s(75233),
+        oe = s(44165),
+        le = s(32754),
+        ce = s(9554),
+        de = s(81418),
+        me = s(41735),
+        ue = s.n(me),
+        pe = s(68797);
+      class he {
         m_mapOptInDefs = new Map();
         m_mapInflightRequests = new Map();
         GetOptInPublicDefinition(e) {
@@ -16135,11 +16154,11 @@
             const t =
                 I.TS.PARTNER_BASE_URL + "optin/ajaxgetoptinpublicdefinition",
               s = { opt_in_name: e },
-              i = await me().get(t, { params: s });
+              i = await ue().get(t, { params: s });
             if (200 == i?.status && 1 == i?.data?.success && i?.data?.data) {
               const t = i.data.data;
               return (
-                (0, ce.Xd)(t),
+                (0, de.Xd)(t),
                 e.startsWith("sale_")
                   ? (this.m_mapOptInDefs.set(e, t),
                     this.m_mapOptInDefs.set(e.replace("sale_", ""), t))
@@ -16149,7 +16168,7 @@
               );
             }
           } catch (e) {
-            t = (0, ue.H)(e);
+            t = (0, pe.H)(e);
           }
           return (
             console.error(
@@ -16163,23 +16182,23 @@
         static s_Singleton;
         static Get() {
           return (
-            pe.s_Singleton ||
-              ((pe.s_Singleton = new pe()),
+            he.s_Singleton ||
+              ((he.s_Singleton = new he()),
               ("dev" != I.TS.WEB_UNIVERSE && "beta" != I.TS.WEB_UNIVERSE) ||
-                (window.g_OptInDefinitionStore = pe.s_Singleton)),
-            pe.s_Singleton
+                (window.g_OptInDefinitionStore = he.s_Singleton)),
+            he.s_Singleton
           );
         }
         constructor() {}
       }
-      function he(e) {
-        const [t, s] = (0, S.useState)(pe.Get().GetOptInPublicDefinition(e));
+      function _e(e) {
+        const [t, s] = (0, S.useState)(he.Get().GetOptInPublicDefinition(e));
         return (
           (0, S.useEffect)(() => {
-            let i = me().CancelToken.source();
+            let i = ue().CancelToken.source();
             return (
               (t && t.pageid.replace("sale_", "") == e.replace("sale_", "")) ||
-                pe
+                he
                   .Get()
                   .LoadOptInPublicDefinition(e)
                   .then((e) => {
@@ -16191,34 +16210,34 @@
           t
         );
       }
-      var _e = s(56330),
-        ge = s(85254),
-        Se = s.n(ge),
-        ve = s(17788),
-        ye = s(75493);
-      function fe(e) {
+      var ge = s(56330),
+        Se = s(85254),
+        ve = s.n(Se),
+        ye = s(17788),
+        fe = s(75493);
+      function xe(e) {
         const t = (0, p.WV)(),
           s = t?.length ?? 0,
           a = s > 0;
         return (0, i.jsxs)("div", {
-          className: (0, P.A)(Se().ToolbarInfo, a && Se().Visible),
+          className: (0, P.A)(ve().ToolbarInfo, a && ve().Visible),
           children: [
             (0, i.jsx)("div", {
-              className: Se().ChangeCount,
+              className: ve().ChangeCount,
               children: (0, C.Yp)("#PackageGrid_PendingChangeCount", s),
             }),
             (0, i.jsxs)("div", {
-              className: Se().Buttons,
+              className: ve().Buttons,
               children: [
                 (0, i.jsx)(y.$n, {
-                  onClick: (e) => (0, x.pg)((0, i.jsx)(be, {}), (0, j.uX)(e)),
+                  onClick: (e) => (0, x.pg)((0, i.jsx)(De, {}), (0, j.uX)(e)),
                   disabled: 0 == s,
-                  className: (0, P.A)(Se().Button, Se().SaveButton),
+                  className: (0, P.A)(ve().Button, ve().SaveButton),
                   children: (0, C.we)("#PackageGrid_SaveChangesDialogButton"),
                 }),
                 (0, i.jsx)(y.$n, {
-                  className: Se().Button,
-                  onClick: (e) => (0, x.pg)((0, i.jsx)(Ie, {}), (0, j.uX)(e)),
+                  className: ve().Button,
+                  onClick: (e) => (0, x.pg)((0, i.jsx)(Te, {}), (0, j.uX)(e)),
                   children: (0, C.we)(
                     "#PackageGrid_DiscardChangesDialogButton",
                   ),
@@ -16228,14 +16247,14 @@
           ],
         });
       }
-      function xe() {
+      function be() {
         return S.useCallback(
           (e, t) =>
-            (0, x.pg)((0, i.jsx)(be, { strContinueUrl: t }), (0, j.uX)(e)),
+            (0, x.pg)((0, i.jsx)(De, { strContinueUrl: t }), (0, j.uX)(e)),
           [],
         );
       }
-      function be(e) {
+      function De(e) {
         const { closeModal: t, strContinueUrl: s } = e,
           a = (0, p.WV)(),
           n = (0, p.l4)(),
@@ -16269,7 +16288,7 @@
           v = () => {
             e.closeModal(),
               (0, x.pg)(
-                (0, i.jsx)(we, {
+                (0, i.jsx)(je, {
                   rgLocalPackageDiscountOverrides: a,
                   fnOnSuccess: S,
                 }),
@@ -16288,34 +16307,34 @@
                 children: [
                   r &&
                     (0, i.jsx)("div", {
-                      className: Se().NavigationWarning,
+                      className: ve().NavigationWarning,
                       children: (0, C.we)("#PackageGrid_NavigationWarning"),
                     }),
                   d,
                   u &&
                     (0, i.jsx)("div", {
-                      className: Se().DiscountTooLowWarning,
+                      className: ve().DiscountTooLowWarning,
                       children: (0, C.we)(
                         "#DiscountDashboard_SaveDiscountsWarning_DiscountTooLow",
                       ),
                     }),
                   h &&
                     (0, i.jsx)("div", {
-                      className: Se().DiscountTooHighWarning,
+                      className: ve().DiscountTooHighWarning,
                       children: (0, C.we)(
                         "#DiscountDashboard_SaveDiscountsWarning_SomeDiscountTooHigh",
                       ),
                     }),
-                  (0, i.jsx)(je, {
+                  (0, i.jsx)(Ce, {
                     rgLocalPackageDiscountOverrides: a,
                     bMarkupStartTimeBeforeNow: !0,
                   }),
                   g &&
                     (0, i.jsxs)("div", {
-                      className: Se().DiscountStartImmediately,
+                      className: ve().DiscountStartImmediately,
                       children: [
                         (0, i.jsx)("div", {
-                          className: Se().ProgressIcon,
+                          className: ve().ProgressIcon,
                           children: (0, i.jsx)(E.FEq, {}),
                         }),
                         (0, i.jsx)("p", {
@@ -16352,7 +16371,7 @@
           }),
         });
       }
-      function De(e) {
+      function we(e) {
         const t = e.map((e) => e.nDiscountID).filter((e) => !!e),
           s = (0, m.a8)(t);
         return S.useMemo(() => {
@@ -16365,7 +16384,7 @@
           return t;
         }, [e]);
       }
-      function we(e) {
+      function je(e) {
         const {
             closeModal: t,
             rgLocalPackageDiscountOverrides: s,
@@ -16376,7 +16395,7 @@
           [l, c] = S.useState(0),
           [d, u] = S.useState(null),
           _ = (0, w.m)("SaveProgressDialog"),
-          g = De(s),
+          g = we(s),
           v = S.useRef(new Map()),
           { bEditingDailyDealDiscount: y } = (0, h.u7)();
         S.useEffect(() => {
@@ -16405,29 +16424,29 @@
             e != l || d
               ? e == l
                 ? (0, i.jsx)("div", {
-                    className: Se().ProgressIconError,
+                    className: ve().ProgressIconError,
                     children: (0, i.jsx)(E.X, {}),
                   })
                 : e < l && v.current.has(e)
-                  ? (0, i.jsx)(oe.he, {
+                  ? (0, i.jsx)(le.he, {
                       toolTipContent: v.current.get(e),
                       direction: "overlay",
-                      className: Se().ProgressIconWarning,
-                      strTooltipClassname: Se().HoverToolTip,
+                      className: ve().ProgressIconWarning,
+                      strTooltipClassname: ve().HoverToolTip,
                       children: (0, i.jsx)(E.eTF, { color: "#e5af37" }),
                     })
                   : e < l
                     ? (0, i.jsx)("div", {
-                        className: Se().ProgressIconCheck,
+                        className: ve().ProgressIconCheck,
                         children: (0, i.jsx)(E.Jlk, {}),
                       })
-                    : (0, i.jsx)("div", { className: Se().ProgressIconBlank })
-              : (0, i.jsx)(b.t, { className: Se().ProgressIconThrobber }),
+                    : (0, i.jsx)("div", { className: ve().ProgressIconBlank })
+              : (0, i.jsx)(b.t, { className: ve().ProgressIconThrobber }),
           x = !d && l < s.length,
-          D = (0, ye.V)(),
+          D = (0, fe.V)(),
           j = S.useCallback(() => {
             window.location.assign(
-              `${I.TS.PARTNER_BASE_URL}promotion${ve.PromotionRoutes.DailyDealPartnerDashboard("" + D)}`,
+              `${I.TS.PARTNER_BASE_URL}promotion${ye.PromotionRoutes.DailyDealPartnerDashboard("" + D)}`,
             );
           }, [D]);
         let T, A, B;
@@ -16456,15 +16475,15 @@
             children: [
               d,
               (0, i.jsx)("div", {
-                className: Se().SeeDetailsSection,
+                className: ve().SeeDetailsSection,
                 children: (0, i.jsx)("div", {
-                  className: Se().DiscountSummaryList,
+                  className: ve().DiscountSummaryList,
                   children: s.map((e, t) =>
                     (0, i.jsx)(
                       "div",
                       {
-                        className: Se().ProgressRow,
-                        children: (0, i.jsx)(Ce, {
+                        className: ve().ProgressRow,
+                        children: (0, i.jsx)(Ie, {
                           icon: f(t),
                           discount: e,
                           nPreviousDiscountPct: g.get(e.nDiscountID) ?? 0,
@@ -16479,22 +16498,22 @@
           })
         );
       }
-      function je(e) {
+      function Ce(e) {
         const {
             rgLocalPackageDiscountOverrides: t,
             bMarkupStartTimeBeforeNow: s,
           } = e,
           [a, n] = S.useState(t.length < 9),
-          r = De(t),
+          r = we(t),
           o = Math.floor(Date.now() / 1e3);
         return (0, i.jsx)("div", {
-          className: Se().SeeDetailsSection,
+          className: ve().SeeDetailsSection,
           children: a
             ? (0, i.jsx)("div", {
-                className: Se().DiscountSummaryList,
+                className: ve().DiscountSummaryList,
                 children: t.map((e) =>
                   (0, i.jsx)(
-                    Ce,
+                    Ie,
                     {
                       discount: e,
                       icon:
@@ -16507,12 +16526,12 @@
               })
             : (0, i.jsx)(y.$n, {
                 onClick: () => n(!0),
-                className: Se().SeeDetailsButton,
+                className: ve().SeeDetailsButton,
                 children: (0, C.we)("#PackageGrid_SeePendingChanges"),
               }),
         });
       }
-      function Ce(e) {
+      function Ie(e) {
         const { discount: t, nPreviousDiscountPct: s, icon: a } = e,
           n = (0, c.vV)(t.discountEventID),
           r = (0, m.$p)(t.packageID),
@@ -16533,56 +16552,56 @@
               ));
         return (0, i.jsxs)("div", {
           className: (0, P.A)(
-            Se().DiscountSummary,
-            u && Se().DiscountTooLow,
-            p && Se().DiscountTooHigh,
+            ve().DiscountSummary,
+            u && ve().DiscountTooLow,
+            p && ve().DiscountTooHigh,
           ),
           children: [
-            (0, i.jsx)("div", { className: Se().ProgressIcon, children: a }),
-            (0, i.jsx)(oe.he, {
+            (0, i.jsx)("div", { className: ve().ProgressIcon, children: a }),
+            (0, i.jsx)(le.he, {
               toolTipContent: `${t.packageID}: ${o}`,
               direction: "overlay",
-              className: Se().PackageName,
-              strTooltipClassname: Se().HoverToolTip,
+              className: ve().PackageName,
+              strTooltipClassname: ve().HoverToolTip,
               children: o,
             }),
-            (0, i.jsxs)(oe.he, {
+            (0, i.jsxs)(le.he, {
               bDisabled: !h,
               toolTipContent: h,
               direction: "left",
-              className: Se().DiscountDelta,
-              strTooltipClassname: Se().HoverToolTip,
+              className: ve().DiscountDelta,
+              strTooltipClassname: ve().HoverToolTip,
               children: [
                 (0, i.jsx)("span", {
-                  className: Se().PreviousDiscount,
+                  className: ve().PreviousDiscount,
                   children: s + "%",
                 }),
                 (0, i.jsx)("span", {
-                  className: Se().DiscountArrow,
+                  className: ve().DiscountArrow,
                   children: (0, i.jsx)(E.i3G, { angle: 90 }),
                 }),
                 (0, i.jsx)("span", {
-                  className: Se().NewDiscount,
+                  className: ve().NewDiscount,
                   children: t.nDiscountPct + "%",
                 }),
                 p &&
                   (0, i.jsx)("span", {
-                    className: Se().MaxDiscount,
+                    className: ve().MaxDiscount,
                     children: "(" + r + "%)",
                   }),
               ],
             }),
-            (0, i.jsx)(oe.he, {
+            (0, i.jsx)(le.he, {
               toolTipContent: `${l}: ${d}`,
               direction: "left",
-              className: Se().DiscountEventName,
-              strTooltipClassname: Se().HoverToolTip,
+              className: ve().DiscountEventName,
+              strTooltipClassname: ve().HoverToolTip,
               children: l,
             }),
           ],
         });
       }
-      function Ie(e) {
+      function Te(e) {
         const { closeModal: t } = e,
           s = (0, p.WV)(),
           a = (0, p.l4)(),
@@ -16599,43 +16618,43 @@
           },
           bDestructiveWarning: !0,
           closeModal: t,
-          children: [n, (0, i.jsx)(je, { rgLocalPackageDiscountOverrides: s })],
+          children: [n, (0, i.jsx)(Ce, { rgLocalPackageDiscountOverrides: s })],
         });
       }
-      function Te(e) {
+      function Ae(e) {
         const { packageState: t, strMessage: s } = e,
           a = (0, p.ZM)(),
-          n = xe(),
+          n = be(),
           r = t.optInReg.opt_in_name.replace("sale_", ""),
           o = I.TS.PARTNER_BASE_URL + "optin/sale/" + r + "/" + t.nBaseAppID;
-        return (0, i.jsx)(Q.Xr, {
+        return (0, i.jsx)(Z.Xr, {
           href: o,
-          strClassName: ie().RegistrationLink,
+          strClassName: ae().RegistrationLink,
           fnBLocalChangesExist: a,
           fnWarnUser: n,
           children: s,
         });
       }
-      function Ae(e) {
+      function Be(e) {
         const { packageState: t, strMessage: s } = e,
           a = t.optInReg.opt_in_name.replace("sale_", ""),
-          n = he(a),
+          n = _e(a),
           r = (0, d.O4)(a, t.nBaseAppID);
-        return !n || (0, ce.sp)(n, r)
-          ? (0, i.jsx)(Te, { ...e })
+        return !n || (0, de.sp)(n, r)
+          ? (0, i.jsx)(Ae, { ...e })
           : (0, i.jsx)("div", {
-              className: (0, P.A)(ie().RegistrationLink, ie().TheLinkItself),
+              className: (0, P.A)(ae().RegistrationLink, ae().TheLinkItself),
               onClick: (e) =>
                 (0, x.pg)(
-                  (0, i.jsx)(Be, { packageState: t, strOptInName: a }),
+                  (0, i.jsx)(ke, { packageState: t, strOptInName: a }),
                   (0, j.uX)(e),
                 ),
               children: s,
             });
       }
-      function Be(e) {
+      function ke(e) {
         const { strOptInName: t, closeModal: s, packageState: a } = e,
-          n = he(t),
+          n = _e(t),
           r = (0, p.QD)(),
           [o, l] = (0, S.useState)(null),
           [c, m] = (0, S.useState)(!1);
@@ -16672,11 +16691,11 @@
           bOKDisabled: Boolean(o),
           children: [
             (0, i.jsx)("div", {
-              className: ie().EventTitle,
+              className: ae().EventTitle,
               children: n.event_title[I.TS.LANGUAGE] || n.event_title.english,
             }),
             (0, i.jsxs)("div", {
-              className: ie().EventDates,
+              className: ae().EventDates,
               children: [
                 (0, C.TW)(n.event_start_date),
                 " - ",
@@ -16685,14 +16704,14 @@
             }),
             (0, i.jsx)("br", {}),
             (0, i.jsx)("div", {
-              className: ie().RegistrationDesc,
+              className: ae().RegistrationDesc,
               children: (0, C.we)(
                 "#DiscountDashboard_OptIn_QuickRegistration_Desc",
               ),
             }),
             Boolean(o) &&
               (0, i.jsxs)("div", {
-                className: _e.ErrorStylesWithIcon,
+                className: ge.ErrorStylesWithIcon,
                 children: [o, " "],
               }),
             Boolean(c && !o) &&
@@ -16704,7 +16723,7 @@
           ],
         });
       }
-      function ke(e) {
+      function Me(e) {
         const { cell: t, column: s } = e,
           a = t.getValue(),
           { packageState: n, fnSetDiscountPct: r } = (0, p.zP)(
@@ -16712,31 +16731,31 @@
             a?.discountEventID,
           ),
           o = s.columnDef.meta.arbitraryData,
-          l = (0, re.f1)(),
+          l = (0, oe.f1)(),
           c = (0, m.$p)(a?.packageID),
           d = o?.start_date < l;
         if (!n) return null;
-        const u = [ie().DataCell];
-        n.bChangedLocally && u.push(ie().ChangedLocally);
+        const u = [ae().DataCell];
+        n.bChangedLocally && u.push(ae().ChangedLocally);
         let h = null,
           _ = n.bChangedLocally;
         switch (n.eState) {
           case 0:
-            u.push(ie().DataLoading), (h = null);
+            u.push(ae().DataLoading), (h = null);
             break;
           case 1:
-            u.push(ie().NoConflict);
+            u.push(ae().NoConflict);
             let e = null,
               t = n.discount?.nDiscountPct || 0;
             t > 0
-              ? (u.push(ie().HasDiscount),
+              ? (u.push(ae().HasDiscount),
                 t < 10
-                  ? (u.push(ie().DiscountTooLow),
+                  ? (u.push(ae().DiscountTooLow),
                     (e = (0, C.we)(
                       "#DiscountDashboard_SaveDiscountsWarning_DiscountTooLow",
                     )))
                   : t > c &&
-                    (u.push(ie().DiscountTooHigh),
+                    (u.push(ae().DiscountTooHigh),
                     (e = _
                       ? 0 == c
                         ? (0, C.we)(
@@ -16756,15 +16775,15 @@
                             "#DiscountDashboard_ExistingDiscountTooHigh",
                             c,
                           ))))
-              : u.push(ie().NoDiscount),
+              : u.push(ae().NoDiscount),
               d && t > 0 && !_
-                ? (u.push(ie().LiveEvent),
+                ? (u.push(ae().LiveEvent),
                   (h = (0, i.jsxs)(i.Fragment, {
                     children: [
-                      (0, i.jsx)(Pe, { packageState: n }),
+                      (0, i.jsx)(Re, { packageState: n }),
                       !!n.optInReg &&
                         n.nBaseAppID &&
-                        (0, i.jsx)(Te, {
+                        (0, i.jsx)(Ae, {
                           packageState: n,
                           strMessage: (0, C.we)(
                             "#DiscountDashboard_OptIn_Grid_ViewOptInLink",
@@ -16774,11 +16793,11 @@
                   })))
                 : (h = (0, i.jsxs)(i.Fragment, {
                     children: [
-                      !!e && (0, i.jsx)(Me, { strToolTip: e }),
-                      (0, i.jsx)(Ee, { packageState: n, fnSetDiscountPct: r }),
+                      !!e && (0, i.jsx)(Ee, { strToolTip: e }),
+                      (0, i.jsx)(Pe, { packageState: n, fnSetDiscountPct: r }),
                       !!n.optInReg &&
                         n.nBaseAppID &&
-                        (0, i.jsx)(Te, {
+                        (0, i.jsx)(Ae, {
                           packageState: n,
                           strMessage: (0, C.we)(
                             "#DiscountDashboard_OptIn_Grid_OptInLink",
@@ -16788,8 +16807,8 @@
                   }));
             break;
           case 2:
-            u.push(ie().NeedsOptIn),
-              (h = (0, i.jsx)(Ae, {
+            u.push(ae().NeedsOptIn),
+              (h = (0, i.jsx)(Be, {
                 packageState: n,
                 strMessage: (0, C.we)(
                   "#DiscountDashboard_OptIn_Grid_OptInRequired",
@@ -16797,17 +16816,17 @@
               }));
             break;
           case 3:
-            u.push(ie().OptInOptedOut),
-              (h = (0, i.jsx)(Te, {
+            u.push(ae().OptInOptedOut),
+              (h = (0, i.jsx)(Ae, {
                 packageState: n,
                 strMessage: (0, C.we)("#DiscountDashboard_OptIn_Grid_OptedOut"),
               }));
             break;
           case 4:
           case 10:
-            u.push(ie().OptInRestricted),
-              (h = (0, i.jsx)(oe.he, {
-                className: ie().TextCell,
+            u.push(ae().OptInRestricted),
+              (h = (0, i.jsx)(le.he, {
+                className: ae().TextCell,
                 toolTipContent: (0, C.we)(
                   "#DiscountDashboard_OptIn_Grid_Ineligible_NA_tooltip",
                 ),
@@ -16817,52 +16836,52 @@
               }));
             break;
           case 5:
-            u.push(ie().OptInNoBaseAppToRegister),
+            u.push(ae().OptInNoBaseAppToRegister),
               (h = (0, i.jsx)("div", {
-                className: ie().TextCell,
+                className: ae().TextCell,
                 children: (0, C.we)(
                   "#DiscountDashboard_OptIn_Grid_Ineligible_NoBaseGame",
                 ),
               }));
             break;
           case 11:
-            u.push(ie().OptInNoBaseAppToRegister),
+            u.push(ae().OptInNoBaseAppToRegister),
               (h = (0, i.jsx)("div", {
-                className: ie().TextCell,
+                className: ae().TextCell,
                 children: (0, C.we)(
                   "#DiscountDashboard_OptIn_Grid_Ineligible_RegisterBaseGame",
                 ),
               }));
             break;
           case 6:
-            u.push(ie().JustReleased),
-              (h = (0, i.jsx)(Re, { packageState: n }));
+            u.push(ae().JustReleased),
+              (h = (0, i.jsx)(Ne, { packageState: n }));
             break;
           case 7:
-            u.push(ie().PriceIncreased),
-              (h = (0, i.jsx)(Re, { packageState: n }));
+            u.push(ae().PriceIncreased),
+              (h = (0, i.jsx)(Ne, { packageState: n }));
             break;
           case 8:
           case 9:
-            u.push(ie().CooldownWindow),
-              (h = (0, i.jsx)(Re, { packageState: n }));
+            u.push(ae().CooldownWindow),
+              (h = (0, i.jsx)(Ne, { packageState: n }));
         }
         return (0, i.jsx)("div", {
           className: (0, P.A)(...u),
-          onKeyDown: le.nm,
+          onKeyDown: ce.nm,
           children: h,
         });
       }
-      function Me(e) {
+      function Ee(e) {
         const { strToolTip: t } = e;
-        return (0, i.jsx)(oe.he, {
-          className: ie().DiscountRangeWarning,
+        return (0, i.jsx)(le.he, {
+          className: ae().DiscountRangeWarning,
           toolTipContent: t,
           direction: "left",
           children: (0, i.jsx)(E.eTF, { color: "#ff5b29" }),
         });
       }
-      function Ee(e) {
+      function Pe(e) {
         const { packageState: t, fnSetDiscountPct: s } = e,
           a = (0, p.ew)(),
           n = t?.discount?.nDiscountPct?.toString() ?? "0";
@@ -16870,7 +16889,7 @@
           children: [
             (0, i.jsx)(y.pd, {
               value: n,
-              className: ie().DiscountInput,
+              className: ae().DiscountInput,
               onChange: (e) => {
                 const i = e.target.value,
                   a = Number(i || 0);
@@ -16882,13 +16901,13 @@
                 e.target.select();
               },
             }),
-            (0, i.jsx)("div", { className: ie().CellPct, children: "%" }),
+            (0, i.jsx)("div", { className: ae().CellPct, children: "%" }),
             t.bChangedLocally &&
-              (0, i.jsx)(oe.he, {
-                className: ie().ResetButtonCtn,
+              (0, i.jsx)(le.he, {
+                className: ae().ResetButtonCtn,
                 toolTipContent: (0, C.we)("#PackageGrid_ResetButton_Tooltip"),
                 children: (0, i.jsx)("div", {
-                  className: ie().ResetButton,
+                  className: ae().ResetButton,
                   onClick: () => {
                     a(t.packageID, t.discountEventID);
                   },
@@ -16898,22 +16917,22 @@
           ],
         });
       }
-      function Pe(e) {
+      function Re(e) {
         const { packageState: t } = e,
           s = t?.discount?.nDiscountPct?.toString() ?? "0";
         return (0, i.jsxs)("div", {
-          className: ie().DiscountValueCtn,
+          className: ae().DiscountValueCtn,
           children: [
-            (0, i.jsx)("div", { className: ie().DiscountInput, children: s }),
-            (0, i.jsx)("div", { className: ie().CellPct, children: "%" }),
+            (0, i.jsx)("div", { className: ae().DiscountInput, children: s }),
+            (0, i.jsx)("div", { className: ae().CellPct, children: "%" }),
           ],
         });
       }
-      function Re(e) {
+      function Ne(e) {
         const { packageState: t } = e;
-        return (0, i.jsxs)(oe.m9, {
-          className: ie().ConflictWarning,
-          toolTipContent: (0, i.jsx)(Ne, { packageState: t }),
+        return (0, i.jsxs)(le.m9, {
+          className: ae().ConflictWarning,
+          toolTipContent: (0, i.jsx)(Ge, { packageState: t }),
           children: [
             (0, i.jsx)("div", {
               children: (0, C.we)("#DiscountDashboard_ConflictWarning"),
@@ -16922,7 +16941,7 @@
           ],
         });
       }
-      function Ne(e) {
+      function Ge(e) {
         const { packageState: t } = e;
         (0, h.Ad)(t.discountEventID);
         let s = null;
@@ -16940,20 +16959,20 @@
             s = (0, C.we)("#DiscountDashboard_Conflict_OverlappingDiscount");
         }
         return (0, i.jsxs)("div", {
-          className: ie().ConflictToolTip,
+          className: ae().ConflictToolTip,
           children: [
             (0, i.jsx)(E.zD7, {}),
             (0, i.jsxs)("div", {
-              className: ie().ConflictText,
+              className: ae().ConflictText,
               children: [
                 (0, i.jsx)("div", {
-                  className: ie().ConflictExplanationText,
+                  className: ae().ConflictExplanationText,
                   children: s,
                 }),
                 t.rgConflictDetails?.map((e, t) =>
                   (0, i.jsx)(
                     "div",
-                    { className: ie().ConflictDetailText, children: e },
+                    { className: ae().ConflictDetailText, children: e },
                     t,
                   ),
                 ),
@@ -16962,38 +16981,38 @@
           ],
         });
       }
-      var Ge = s(40441),
-        Oe = s.n(Ge);
-      function Le(e) {
+      var Oe = s(40441),
+        Le = s.n(Oe);
+      function Fe(e) {
         const { row: t } = e,
           s = t.original.packageID,
           [a, n] = (0, h.Fs)();
         switch (a) {
           case "most-recent":
-            return (0, i.jsx)(ze, { packageID: s });
-          case "next-available":
             return (0, i.jsx)(qe, { packageID: s });
+          case "next-available":
+            return (0, i.jsx)(We, { packageID: s });
           default:
-            return (0, i.jsx)(Ue, { packageID: s });
+            return (0, i.jsx)(ze, { packageID: s });
         }
       }
-      function Fe(e) {
+      function Ue(e) {
         const { row: t } = e,
           s = t.original.packageID;
         return (0, i.jsx)("div", {
-          className: ie().ButtonCell,
+          className: ae().ButtonCell,
           children: (0, i.jsx)(y.$n, {
             onClick: (e) =>
-              (0, x.pg)((0, i.jsx)(U, { nInitialPackageID: s }), (0, j.uX)(e)),
+              (0, x.pg)((0, i.jsx)(z, { nInitialPackageID: s }), (0, j.uX)(e)),
             children: (0, C.we)("#DiscountDashboard_CreateDiscountButton_Row"),
           }),
         });
       }
-      function Ue(e) {
+      function ze(e) {
         const { packageID: t } = e,
           { deepestDiscount: s, bLoading: a } = (0, m.hC)(t);
         if (a)
-          return (0, i.jsx)(b.t, { className: Oe().GridRowLoadingThrobber });
+          return (0, i.jsx)(b.t, { className: Le().GridRowLoadingThrobber });
         const n = s?.nDiscountPct ?? 0,
           r = s
             ? (0, C.we)(
@@ -17003,13 +17022,13 @@
                 (0, C.$z)(s.rtStartDate),
               )
             : (0, C.we)("#DiscountDashboard_NeverDiscounted");
-        return (0, i.jsx)(oe.he, { toolTipContent: r, children: n + "%" });
+        return (0, i.jsx)(le.he, { toolTipContent: r, children: n + "%" });
       }
-      function ze(e) {
+      function qe(e) {
         const { packageID: t } = e,
           { mostRecentDiscount: s, bLoading: a } = (0, m.XA)([t]);
         if (a)
-          return (0, i.jsx)(b.t, { className: Oe().GridRowLoadingThrobber });
+          return (0, i.jsx)(b.t, { className: Le().GridRowLoadingThrobber });
         const n = s?.nDiscountPct ?? 0,
           r = s
             ? (0, C.we)(
@@ -17019,12 +17038,12 @@
                 (0, C.$z)(s.rtStartDate),
               )
             : (0, C.we)("#DiscountDashboard_NeverDiscounted");
-        return (0, i.jsx)(oe.he, { toolTipContent: r, children: n + "%" });
+        return (0, i.jsx)(le.he, { toolTipContent: r, children: n + "%" });
       }
-      function qe(e) {
+      function We(e) {
         const { packageID: t } = e,
           s = (0, p.Gq)(t),
-          a = (0, re.f1)();
+          a = (0, oe.f1)();
         let n = (0, C.we)(
             "#DiscountDashboard_GridColumn_NextAvailableDiscount_Never",
           ),
@@ -17046,9 +17065,9 @@
                 )));
             break;
           }
-        return (0, i.jsx)(oe.he, { toolTipContent: r, children: n });
+        return (0, i.jsx)(le.he, { toolTipContent: r, children: n });
       }
-      function We() {
+      function He() {
         const [e, t] = (0, h.Fs)(),
           s = [
             {
@@ -17070,16 +17089,16 @@
               data: "next-available",
             },
           ];
-        return (0, i.jsx)(oe.he, {
+        return (0, i.jsx)(le.he, {
           toolTipContent: (0, C.we)(
             "#DiscountDashboard_GridColumn_RelatedDiscount_ttip",
           ),
-          className: Oe().RelatedInfoPickerCtn,
+          className: Le().RelatedInfoPickerCtn,
           children: (0, i.jsx)("div", {
-            className: Oe().RelatedInfoPicker,
+            className: Le().RelatedInfoPicker,
             children: (0, i.jsx)(y.m, {
-              strDropDownClassName: Oe().RelatedInfoDropDown,
-              strDropDownItemClassName: Oe().RelatedInfoDropDownItem,
+              strDropDownClassName: Le().RelatedInfoDropDown,
+              strDropDownItemClassName: Le().RelatedInfoDropDownItem,
               contextMenuPositionOptions: { bOverlapHorizontal: !0 },
               rgOptions: s,
               selectedOption: e,
@@ -17088,18 +17107,18 @@
           }),
         });
       }
-      function He() {
+      function Ve() {
         return (0, i.jsxs)("div", {
-          className: Oe().EventDetails,
+          className: Le().EventDetails,
           children: [
             (0, i.jsx)("div", {
-              className: Oe().EventName,
+              className: Le().EventName,
               children: (0, C.we)(
                 "#DiscountDashboard_GridColumn_NewDiscount_title",
               ),
             }),
             (0, i.jsx)("div", {
-              className: Oe().EventDates,
+              className: Le().EventDates,
               children: (0, C.we)(
                 "#DiscountDashboard_GridColumn_NewDiscount_desc",
               ),
@@ -17107,27 +17126,27 @@
           ],
         });
       }
-      function Ve() {
+      function Ke() {
         const {
             strPriceKey: e,
             rgSupportedPriceKeys: t,
             fnSetPriceKey: s,
-          } = (0, ae.T7)(),
+          } = (0, ne.T7)(),
           a = t.map((e) => ({ label: e, data: e }));
-        return (0, i.jsxs)(oe.he, {
+        return (0, i.jsxs)(le.he, {
           toolTipContent: (0, C.we)(
             "#DiscountDashboard_GridColumn_BasePrice_ttip",
           ),
           children: [
             (0, i.jsx)("div", {
-              className: Oe().BasePriceTitle,
+              className: Le().BasePriceTitle,
               children: (0, C.we)("#DiscountDashboard_GridColumn_BasePrice"),
             }),
             (0, i.jsx)("div", {
-              className: Oe().CurrencyPicker,
+              className: Le().CurrencyPicker,
               children: (0, i.jsx)(y.m, {
-                strDropDownClassName: Oe().CurrencyDropDown,
-                strDropDownItemClassName: Oe().CurrencyDropDownItem,
+                strDropDownClassName: Le().CurrencyDropDown,
+                strDropDownItemClassName: Le().CurrencyDropDownItem,
                 contextMenuPositionOptions: { bOverlapHorizontal: !0 },
                 rgOptions: a,
                 selectedOption: e,
@@ -17137,23 +17156,23 @@
           ],
         });
       }
-      function Ke(e) {
+      function Ye(e) {
         const { row: t } = e,
           s = t.original.packageID,
-          a = (0, ae.fZ)(s);
+          a = (0, ne.fZ)(s);
         return (0, i.jsx)("div", {
-          className: Oe().BasePriceDisplay,
+          className: Le().BasePriceDisplay,
           children: a ?? "--",
         });
       }
-      function Ye(e) {
+      function Je(e) {
         return e + "-event-column";
       }
-      const Je = "createnew";
-      function $e(e) {
+      const $e = "createnew";
+      function Xe(e) {
         const { column: t } = e,
-          { fnBLocalChangesExist: s, fnWarnUser: a, client: n } = (0, Q.HA)(),
-          r = (0, re.f1)(),
+          { fnBLocalChangesExist: s, fnWarnUser: a, client: n } = (0, Z.HA)(),
+          r = (0, oe.f1)(),
           { strSelectedEvent: o, fnSelectEvent: l } = (0, h.u7)(),
           c = t.columnDef.meta.arbitraryData,
           d = c.start_date <= r && r <= c.end_date,
@@ -17165,28 +17184,28 @@
             I.iA.is_support && !isNaN(Number(c.id))
               ? `${I.TS.PARTNER_BASE_URL}admin/editdiscountevent/${c.id}`
               : null;
-        return (0, i.jsx)(ne.Ht, {
+        return (0, i.jsx)(re.Ht, {
           client: n,
-          children: (0, i.jsxs)(oe.he, {
+          children: (0, i.jsxs)(le.he, {
             className: (0, P.A)(
-              Oe().EventDetails,
-              d && Oe().Active,
-              m && Oe().Selected,
-              !!p && Oe().RestrictedEligibility,
+              Le().EventDetails,
+              d && Le().Active,
+              m && Le().Selected,
+              !!p && Le().RestrictedEligibility,
             ),
             onClick: () => l(m ? null : c.id),
             toolTipContent: (0, C.we)("#DiscountDashboard_ColumnHeader_ttip"),
             children: [
               (0, i.jsxs)("div", {
-                className: Oe().EventName,
+                className: Le().EventName,
                 children: [
                   c.name,
                   !!p &&
-                    (0, i.jsx)(Q.Xr, {
+                    (0, i.jsx)(Z.Xr, {
                       fnBLocalChangesExist: s,
                       fnWarnUser: a,
                       href: p,
-                      strClassName: Oe().EditEventLink,
+                      strClassName: Le().EditEventLink,
                       strToolTip: (0, C.we)(
                         "#DiscountDashboard_LinkToEditEventPage_ttip",
                       ),
@@ -17197,53 +17216,53 @@
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: Oe().EventDates,
+                className: Le().EventDates,
                 children: [
                   (0, i.jsx)(k.X0, {
-                    className: Oe().EventDateRange,
+                    className: Le().EventDateRange,
                     strMonthFormat: "short",
                     rtStartDate: c.start_date,
                     rtEndDate: c.end_date,
                   }),
                   (0, i.jsx)("div", {
-                    className: Oe().EventNumDays,
+                    className: Le().EventNumDays,
                     children: (0, C.Yp)("#DiscountDashboard_NumberOfDays", u),
                   }),
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: Oe().EventParticipationCtn,
+                className: Le().EventParticipationCtn,
                 children: [
-                  (0, i.jsx)(Ze, { discountEvent: c }),
-                  (0, i.jsx)(Xe, { discountEvent: c }),
+                  (0, i.jsx)(et, { discountEvent: c }),
+                  (0, i.jsx)(Qe, { discountEvent: c }),
                 ],
               }),
             ],
           }),
         });
       }
-      function Xe(e) {
+      function Qe(e) {
         const t = (0, p.gr)(e.discountEvent.id),
           s = t.nAlreadySet + t.nAvailable + t.nConflicts + t.nNeedRegistration;
-        return (0, i.jsxs)(oe.m9, {
-          className: Oe().ParticipationDetails,
-          toolTipContent: (0, i.jsx)(Qe, { counts: t }),
+        return (0, i.jsxs)(le.m9, {
+          className: Le().ParticipationDetails,
+          toolTipContent: (0, i.jsx)(Ze, { counts: t }),
           children: [
             (0, i.jsx)("div", {
-              className: Oe().Title,
+              className: Le().Title,
               children: (0, C.we)("#DiscountDashboard_PackagesDiscounted"),
             }),
             (0, i.jsx)("div", {
-              className: Oe().Count,
+              className: Le().Count,
               children: t.nAlreadySet + " / " + s,
             }),
           ],
         });
       }
-      function Qe(e) {
+      function Ze(e) {
         const { counts: t } = e;
         return (0, i.jsxs)("div", {
-          className: Oe().ParticipationToolTip,
+          className: Le().ParticipationToolTip,
           children: [
             (0, i.jsx)("div", {
               children: (0, C.we)(
@@ -17282,30 +17301,30 @@
           ],
         });
       }
-      function Ze(e) {
+      function et(e) {
         const { discountEvent: t } = e,
           s = (0, d.k)(t.opt_in_name),
           a = (0, d.D6)(t.opt_in_name);
         return 0 == s.length
           ? null
-          : (0, i.jsxs)(oe.m9, {
-              className: Oe().ParticipationDetails,
-              toolTipContent: (0, i.jsx)(et, { ...a }),
+          : (0, i.jsxs)(le.m9, {
+              className: Le().ParticipationDetails,
+              toolTipContent: (0, i.jsx)(tt, { ...a }),
               children: [
                 (0, i.jsx)("div", {
-                  className: Oe().Title,
+                  className: Le().Title,
                   children: (0, C.we)("#DiscountDashboard_AppRegistered"),
                 }),
                 (0, i.jsxs)("div", {
-                  className: Oe().Count,
+                  className: Le().Count,
                   children: [a.nAppOptedIn, " / ", a.nAppEligible],
                 }),
               ],
             });
       }
-      function et(e) {
+      function tt(e) {
         return (0, i.jsxs)("div", {
-          className: Oe().ParticipationToolTip,
+          className: Le().ParticipationToolTip,
           children: [
             (0, i.jsx)("div", {
               children: (0, C.we)("#DiscountDashboard_AppOptIn", e.nAppOptedIn),
@@ -17326,10 +17345,10 @@
           ],
         });
       }
-      var tt = s(73745),
-        st = s(29524),
-        it = s.n(st);
-      function at(e) {
+      var st = s(73745),
+        it = s(29524),
+        at = s.n(it);
+      function nt(e) {
         const t = "America/Los_Angeles",
           s = {
             weekday: "short",
@@ -17364,7 +17383,7 @@
         if (!a) return l;
         return `${l} (${o(n.toLocaleString(C.pf.GetPreferredLocales(), i), i.timeZone)})`;
       }
-      function nt(e) {
+      function rt(e) {
         const [t, s] = S.useState(0),
           {
             bSingleDiscountEventView: a,
@@ -17388,7 +17407,7 @@
           D = b.length,
           w = e.refTable.current?.getTableElement(),
           j = w?.getBoundingClientRect().width ?? 740,
-          T = (0, tt.CH)(),
+          T = (0, st.CH)(),
           A = S.useRef(new ResizeObserver(T));
         S.useEffect(() => {
           if (!w) return;
@@ -17399,33 +17418,33 @@
           k = (0, m.zy)(b);
         return (0, i.jsxs)("div", {
           style: { left: j + "px" },
-          className: (0, P.A)(it().SingleEventDetailsCtn, a && it().Visible),
+          className: (0, P.A)(at().SingleEventDetailsCtn, a && at().Visible),
           children: [
             (0, i.jsxs)("div", {
-              className: it().Section,
+              className: at().Section,
               children: [
                 (0, i.jsx)("div", {
-                  className: it().SectionDate,
+                  className: at().SectionDate,
                   children: (0, C.we)(
                     "#DiscountDashboard_DetailView_StartTimeLabel",
-                    at(d?.start_date),
+                    nt(d?.start_date),
                   ),
                 }),
                 (0, i.jsx)("div", {
-                  className: it().SectionDate,
+                  className: at().SectionDate,
                   children: (0, C.we)(
                     "#DiscountDashboard_DetailView_EndTimeLabel",
-                    at(d?.end_date),
+                    nt(d?.end_date),
                   ),
                 }),
                 (0, i.jsx)("div", {
-                  className: it().SectionLabel,
+                  className: at().SectionLabel,
                   children: (0, C.we)(
                     "#DiscountDashboard_DetailView_YourViewTitle",
                   ),
                 }),
                 (0, i.jsx)("div", {
-                  className: it().ViewSummary,
+                  className: at().ViewSummary,
                   children: (0, C.we)(
                     "#DiscountDashboard_DetailView_ViewSectionWithCount",
                     x,
@@ -17433,14 +17452,14 @@
                   ),
                 }),
                 (0, i.jsx)("div", {
-                  className: it().SectionText,
+                  className: at().SectionText,
                   children: (0, C.we)(
                     "#DiscountDashboard_DetailView_ViewSectionInstructions",
                   ),
                 }),
                 v > 0 &&
                   (0, i.jsx)(y.Yh, {
-                    className: it().HideConflicts,
+                    className: at().HideConflicts,
                     label: (0, C.we)(
                       "#DiscountDashboard_DetailView_HideConflicts",
                     ),
@@ -17451,44 +17470,44 @@
               ],
             }),
             (0, i.jsxs)("div", {
-              className: it().Section,
+              className: at().Section,
               children: [
                 (0, i.jsxs)("div", {
-                  className: it().SectionLabel,
+                  className: at().SectionLabel,
                   children: [
                     (0, C.we)(
                       "#DiscountDashboard_DetailView_DiscountAllVisibleTitle",
                     ),
-                    (0, i.jsx)(oe.he, {
+                    (0, i.jsx)(le.he, {
                       toolTipContent: (0, C.we)(
                         "#DiscountDashboard_DetailView_BatchDiscountInstructions_ttip",
                       ),
-                      className: it().helpCtn,
+                      className: at().helpCtn,
                       children: (0, i.jsx)(E._VW, {}),
                     }),
                   ],
                 }),
                 (0, i.jsx)("div", {
-                  className: it().SectionText,
+                  className: at().SectionText,
                   children: (0, C.we)(
                     "#DiscountDashboard_DetailView_BatchDiscountInstructions",
                   ),
                 }),
                 (0, i.jsx)("div", {
-                  className: it().SectionText,
+                  className: at().SectionText,
                   children: (0, C.we)(
                     "#DiscountDashboard_DetailView_BatchDiscountInstructions_ProTip",
                   ),
                 }),
                 (0, i.jsxs)("div", {
                   className: (0, P.A)(
-                    it().BatchDiscountLine,
-                    0 == D && it().Disabled,
+                    at().BatchDiscountLine,
+                    0 == D && at().Disabled,
                   ),
                   children: [
                     (0, i.jsx)(y.pd, {
                       value: t,
-                      className: it().BatchDiscountInput,
+                      className: at().BatchDiscountInput,
                       onChange: (e) => {
                         const t = e.target.value,
                           i = Number(t || 0);
@@ -17497,11 +17516,11 @@
                       onFocus: (e) => e.target.select(),
                     }),
                     (0, i.jsx)("div", {
-                      className: it().CellPct,
+                      className: at().CellPct,
                       children: "%",
                     }),
                     (0, i.jsx)(y.$n, {
-                      className: it().BatchDiscountButton,
+                      className: at().BatchDiscountButton,
                       onClick: () => c(t, n, b),
                       disabled: 0 == D,
                       children: (0, C.Yp)(
@@ -17513,10 +17532,10 @@
                 }),
                 t > k &&
                   (0, i.jsxs)("div", {
-                    className: it().WarningText,
+                    className: at().WarningText,
                     children: [
                       (0, i.jsx)("span", {
-                        className: it().SectionText,
+                        className: at().SectionText,
                         children: (0, C.we)(
                           "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountWarning",
                           k,
@@ -17525,7 +17544,7 @@
                       (0, i.jsx)("a", {
                         href: B,
                         target: "_blank",
-                        className: it().SectionText,
+                        className: at().SectionText,
                         children: (0, C.we)(
                           "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
                         ),
@@ -17535,7 +17554,7 @@
               ],
             }),
             (0, i.jsx)("div", {
-              className: it().Section,
+              className: at().Section,
               children: (0, i.jsx)(y.$n, {
                 onClick: (e) => r(null),
                 children: (0, C.we)(
@@ -17546,14 +17565,14 @@
           ],
         });
       }
-      var rt = s(66051),
-        ot = s(64238),
-        lt = s.n(ot);
-      const ct = "all-events";
-      function dt(e, t) {
+      var ot = s(66051),
+        lt = s(64238),
+        ct = s.n(lt);
+      const dt = "all-events";
+      function mt(e, t) {
         return e.size == t.size && Array.from(e).every((e) => t.has(e));
       }
-      function mt(e) {
+      function ut(e) {
         const { rgDiscountEvents: t, refTable: s } = e,
           {
             bSingleDiscountEventView: a,
@@ -17569,7 +17588,7 @@
               const t = [
                 {
                   label: (0, C.we)("#DiscountDashboard_DiscountFilterAll"),
-                  data: ct,
+                  data: dt,
                 },
               ];
               for (const s of e)
@@ -17600,7 +17619,7 @@
                     if (!("accessorKey" in i)) return;
                     if (d?.columnPinning.left?.includes(i.accessorKey)) return;
                     let n = !1;
-                    if (i.accessorKey == Je) n = !t;
+                    if (i.accessorKey == $e) n = !t;
                     else if (i.meta?.arbitraryData) {
                       const e = i.meta.arbitraryData;
                       n = a.has(e.id);
@@ -17621,8 +17640,8 @@
                   const { ineligibile: t, conflicts: s } = n,
                     a = r.current;
                   (e.current?.getColumnFilterFnOverride().packageID &&
-                    dt(t, a.ineligibile) &&
-                    dt(s, a.conflicts) &&
+                    mt(t, a.ineligibile) &&
+                    mt(s, a.conflicts) &&
                     i == o.current) ||
                     (e.current?.setColumnFilterFnOverride({
                       packageID: (e) =>
@@ -17646,23 +17665,23 @@
           })(s),
           g = t.some((e) => (0, m.Ko)(e.id));
         return (0, i.jsxs)("div", {
-          className: ie().DiscountsFilterBar,
+          className: ae().DiscountsFilterBar,
           children: [
             (0, i.jsx)("div", {
-              className: ie().DiscountSelectDropDown,
+              className: ae().DiscountSelectDropDown,
               children: (0, i.jsx)(y.m, {
-                strDropDownClassName: te().DropDownScroll,
+                strDropDownClassName: se().DropDownScroll,
                 rgOptions: u,
-                selectedOption: n ?? ct,
+                selectedOption: n ?? dt,
                 label: (0, C.we)(
                   "#DiscountDashboard_DiscountFilterByEventButton",
                 ),
-                onChange: (e) => r(e.data == ct ? null : e.data),
+                onChange: (e) => r(e.data == dt ? null : e.data),
               }),
             }),
             !a &&
               (0, i.jsx)(y.Yh, {
-                className: ie().DiscountFilterCheckbox,
+                className: ae().DiscountFilterCheckbox,
                 label: (0, C.we)(
                   "#DiscountDashboard_ShowCustomDiscountsCheckBoxLabel",
                 ),
@@ -17672,7 +17691,7 @@
               }),
             !a &&
               (0, i.jsx)(y.Yh, {
-                className: ie().DiscountFilterCheckbox,
+                className: ae().DiscountFilterCheckbox,
                 label: (0, C.we)(
                   "#DiscountDashboard_ShowWeeklongDiscountsCheckBoxLabel",
                 ),
@@ -17682,71 +17701,71 @@
               }),
             _ &&
               (0, i.jsx)("div", {
-                className: ie().UpdatingMessage,
+                className: ae().UpdatingMessage,
                 children: (0, C.we)("#DiscountDashboard_UpdatingStatusMessage"),
               }),
-            (0, i.jsx)(nt, { refTable: s }),
+            (0, i.jsx)(rt, { refTable: s }),
           ],
         });
       }
-      function ut(e) {
+      function pt(e) {
         const t = (0, p.WV)(),
           s = t?.length ?? 0;
         return (0, i.jsx)("div", {
-          className: (0, P.A)(ie().DiscountGridCtn, s > 0 && "PendingVisible"),
-          children: (0, i.jsx)(pt, { ...e }),
+          className: (0, P.A)(ae().DiscountGridCtn, s > 0 && "PendingVisible"),
+          children: (0, i.jsx)(ht, { ...e }),
         });
       }
-      const pt = S.memo(function (e) {
+      const ht = S.memo(function (e) {
         const t = S.useRef(null);
         "dev" == I.TS.WEB_UNIVERSE && (window.g_DiscountGridTableRef = t);
         const s = (0, h.Ix)(),
           a = (function (e) {
-            const t = (0, Q.uv)(),
-              s = (0, Q.ZN)(),
-              i = (0, Q.mE)(!0);
+            const t = (0, Z.uv)(),
+              s = (0, Z.ZN)(),
+              i = (0, Z.mE)(!0);
             return S.useMemo(() => {
               const a = {
                   accessorKey: "basePrice",
                   enableSorting: !1,
-                  header: Ve,
-                  cell: Ke,
-                  meta: { cellClassname: Oe().BasePrice },
+                  header: Ke,
+                  cell: Ye,
+                  meta: { cellClassname: Le().BasePrice },
                   size: 120,
                 },
                 n = {
                   accessorKey: "relatedDiscount",
                   enableSorting: !1,
-                  header: We,
-                  cell: Le,
+                  header: He,
+                  cell: Fe,
                   size: 120,
-                  meta: { cellClassname: Oe().RelatedDiscount },
+                  meta: { cellClassname: Le().RelatedDiscount },
                 },
                 r = [t, s, i, a, n];
               for (const t of e) {
                 const e = "unique" == t.collision_type;
                 r.push({
-                  accessorKey: Ye(t.id),
+                  accessorKey: Je(t.id),
                   size: 200,
                   enableSorting: !1,
                   meta: {
                     headerClassname: (0, P.A)(
-                      Oe().DiscountGridDataColumn,
-                      e && Oe().CollisionFreeDiscountEvent,
+                      Le().DiscountGridDataColumn,
+                      e && Le().CollisionFreeDiscountEvent,
                     ),
                     arbitraryData: t,
                   },
-                  header: $e,
-                  cell: ke,
+                  header: Xe,
+                  cell: Me,
                 });
               }
               return (
                 r.push({
-                  accessorKey: Je,
-                  header: He,
+                  accessorKey: $e,
+                  header: Ve,
                   enableSorting: !1,
-                  cell: Fe,
-                  meta: { headerClassname: Oe().DiscountGridDataColumn },
+                  cell: Ue,
+                  meta: { headerClassname: Le().DiscountGridDataColumn },
                   size: 120,
                 }),
                 r
@@ -17771,7 +17790,7 @@
                     relatedDiscount: null,
                   };
                 for (const t of e)
-                  n[Ye(t.id)] = { packageID: i, discountEventID: t.id };
+                  n[Je(t.id)] = { packageID: i, discountEventID: t.id };
                 s.push(n);
               }
               return s;
@@ -17782,28 +17801,28 @@
           l = new URLSearchParams(window.location.search),
           c = l.has(u.xi) ? decodeURIComponent(l.get(u.xi)) : "",
           d = (0, p.ZM)(),
-          m = xe();
+          m = be();
         ("dev" != I.TS.WEB_UNIVERSE && "beta" != I.TS.WEB_UNIVERSE) ||
           console.log("Rendering grid", a);
         const _ = {};
-        l.has("de") && (_[Je] = !1);
+        l.has("de") && (_[$e] = !1);
         const y = (0, h.dp)();
-        for (const e of s) y.has(e.id) || (_[Ye(e.id)] = !1);
+        for (const e of s) y.has(e.id) || (_[Je(e.id)] = !1);
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(mt, { rgDiscountEvents: s, refTable: t }),
+            (0, i.jsx)(ut, { rgDiscountEvents: s, refTable: t }),
             (0, i.jsx)("div", {
-              className: ie().DiscountGridWrapper,
+              className: ae().DiscountGridWrapper,
               children: (0, i.jsx)("div", {
-                className: lt()(ie().DiscountGrid, "noGlobalButtonStyle"),
-                children: (0, i.jsxs)(Z.tH, {
+                className: ct()(ae().DiscountGrid, "noGlobalButtonStyle"),
+                children: (0, i.jsxs)(ee.tH, {
                   children: [
-                    (0, i.jsx)(Q.rK, {
+                    (0, i.jsx)(Z.rK, {
                       fnBLocalChangesExist: d,
                       fnWarnUser: m,
-                      children: (0, i.jsx)(rt.k, {
+                      children: (0, i.jsx)(ot.k, {
                         ref: t,
-                        className: ie().DiscountGridTable,
+                        className: ae().DiscountGridTable,
                         columns: a,
                         data: n,
                         nItemHeight: 40,
@@ -17825,7 +17844,7 @@
                         initialColumnVisibility: _,
                         onGroupingChange: o,
                         onVisibleRowsChange: o,
-                        renderGroup: Q.IR,
+                        renderGroup: Z.IR,
                         getRowKey: (e, t) => t.packageID,
                       }),
                     }),
@@ -17837,15 +17856,15 @@
           ],
         });
       });
-      var ht = s(19367),
-        _t = s.n(ht),
-        gt = s(9161),
-        St = s(67302),
-        vt = s.n(St);
-      function yt(e) {
+      var _t = s(19367),
+        gt = s.n(_t),
+        St = s(9161),
+        vt = s(67302),
+        yt = s.n(vt);
+      function ft(e) {
         const { closeModal: t } = e,
           s = (0, u.vs)(),
-          a = _t()().format("YYYY-MM-DDTHH-mm-ss"),
+          a = gt()().format("YYYY-MM-DDTHH-mm-ss"),
           n = (0, u.zt)(),
           r = (0, u.Yr)(),
           o = (0, h.Ix)(),
@@ -17873,28 +17892,28 @@
               children: (0, C.we)("#PricingDashboard_SubtitleExport"),
             }),
             (0, i.jsx)("div", {
-              className: vt().Instructions,
+              className: yt().Instructions,
               children: (0, C.we)(
                 "#DiscountDashboard_ImportExport_DownloadInstructions",
               ),
             }),
             (0, i.jsxs)("div", {
-              className: vt().ButtonRows,
+              className: yt().ButtonRows,
               children: [
                 r.length != n.length &&
                   (0, i.jsxs)("div", {
-                    className: vt().OptionCtn,
+                    className: yt().OptionCtn,
                     children: [
                       (0, i.jsx)("span", {
-                        className: vt().OptionDesc,
+                        className: yt().OptionDesc,
                         children: (0, C.we)(
                           "#DiscountDashboard_ImportExport_DownloadVisible_Desc",
                         ),
                       }),
                       (0, i.jsxs)(y.$n, {
-                        className: vt().Button,
+                        className: yt().Button,
                         disabled: p,
-                        onClick: () => xt(r, c, m),
+                        onClick: () => bt(r, c, m),
                         children: [
                           (0, C.we)(
                             "#DiscountDashboard_ImportExport_DownloadVisible_Button",
@@ -17910,18 +17929,18 @@
                     ],
                   }),
                 (0, i.jsxs)("div", {
-                  className: vt().OptionCtn,
+                  className: yt().OptionCtn,
                   children: [
                     (0, i.jsx)("span", {
-                      className: vt().OptionDesc,
+                      className: yt().OptionDesc,
                       children: (0, C.we)(
                         "#DiscountDashboard_ImportExport_DownloadAll_Desc",
                       ),
                     }),
                     (0, i.jsxs)(y.$n, {
-                      className: vt().Button,
+                      className: yt().Button,
                       disabled: p,
-                      onClick: () => xt(n, o, d),
+                      onClick: () => bt(n, o, d),
                       children: [
                         (0, C.we)(
                           "#DiscountDashboard_ImportExport_DownloadAll_Button",
@@ -17944,27 +17963,27 @@
               children: (0, C.we)("#PricingDashboard_SubtitleImport"),
             }),
             (0, i.jsx)("div", {
-              className: vt().Instructions,
+              className: yt().Instructions,
               children: (0, C.we)(
                 "#DiscountDashboard_ImportExport_UploadInstructions",
               ),
             }),
             (0, i.jsx)("div", {
-              className: vt().ButtonRows,
+              className: yt().ButtonRows,
               children: (0, i.jsxs)("div", {
-                className: vt().OptionCtn,
+                className: yt().OptionCtn,
                 children: [
                   (0, i.jsx)("span", {
-                    className: vt().OptionDesc,
+                    className: yt().OptionDesc,
                     children: (0, C.we)(
                       "#DiscountDashboard_ImportExport_Upload_Desc",
                     ),
                   }),
                   (0, i.jsx)(y.$n, {
-                    className: vt().Button,
+                    className: yt().Button,
                     disabled: p,
                     children: (0, i.jsxs)("label", {
-                      className: vt().ImportButtonLabel,
+                      className: yt().ImportButtonLabel,
                       htmlFor: "import-discount-input",
                       children: [
                         (0, C.we)(
@@ -17979,9 +17998,9 @@
                               if (e.target.files.length >= 1) {
                                 const s = (0, j.uX)(e),
                                   a = e.target.files[0],
-                                  n = await gt.g.ParseCSVFile(a);
+                                  n = await St.g.ParseCSVFile(a);
                                 (0, x.mK)(
-                                  (0, i.jsx)(bt, {
+                                  (0, i.jsx)(Dt, {
                                     strFilename: a.name,
                                     parseResult: n,
                                   }),
@@ -18000,14 +18019,14 @@
           ],
         });
       }
-      function ft(e) {
+      function xt(e) {
         return e.header?.trim()?.length > 0
           ? e.header.trim()
           : e.name?.trim()?.length > 0
             ? e.name.trim()
             : e.id;
       }
-      function xt(e, t, s) {
+      function bt(e, t, s) {
         const i = [],
           a = [
             (0, C.we)("#PackageGrid_Column_PackageName"),
@@ -18016,14 +18035,14 @@
           ],
           n = new Set();
         for (const e of t) {
-          let t = ft(e);
+          let t = xt(e);
           n.has(t) && (t = t + "/" + e.id), n.add(t), a.push(t);
         }
         i.push(a);
         for (const s of e) {
           const e = v.A.Get().GetPackage(s);
           if (!e || !e.BIsVisible()) continue;
-          const a = (0, ae.oj)(s),
+          const a = (0, ne.oj)(s),
             n = [e.GetName(), s.toString(), a ?? "--"];
           for (const e of t) {
             const t = (0, p.i3)(s, e.id);
@@ -18034,11 +18053,11 @@
           }
           i.push(n);
         }
-        gt.g.WriteCSVToFile(i, s);
+        St.g.WriteCSVToFile(i, s);
       }
-      function bt(e) {
+      function Dt(e) {
         const { closeModal: t, strFilename: s, parseResult: a } = e,
-          n = (0, re.f1)(),
+          n = (0, oe.f1)(),
           r = (0, u.zt)(),
           o = (0, h.Ix)(),
           l = (0, p.ve)(),
@@ -18056,7 +18075,7 @@
                 r = new Set(e.meta?.fields ?? []);
               for (const e of i) {
                 if (t > e.start_date) continue;
-                const s = ft(e),
+                const s = xt(e),
                   i = s + "/" + e.id;
                 r.has(i) ? n.set(i, e.id) : r.has(s) && n.set(s, e.id);
               }
@@ -18105,13 +18124,13 @@
           bAlertDialog: !y,
           strOKButtonText: f,
           onOK: () => {
-            y && (0, x.pg)((0, i.jsx)(be, {}), window);
+            y && (0, x.pg)((0, i.jsx)(De, {}), window);
           },
           strCancelButtonText: (0, C.we)("#Button_OK"),
           closeModal: t,
           children: [
             (0, i.jsx)("div", {
-              className: vt().ParseResultCount,
+              className: yt().ParseResultCount,
               children: (0, C.Yp)(
                 "#DiscountDashboard_ImportExport_UploadResults",
                 c.length,
@@ -18125,19 +18144,19 @@
               (0, i.jsxs)(i.Fragment, {
                 children: [
                   (0, i.jsx)("div", {
-                    className: vt().ErrorHeader,
+                    className: yt().ErrorHeader,
                     children: (0, C.we)(
                       "#DiscountDashboard_ImportExport_UploadErrorsHeader",
                       a.errors?.length,
                     ),
                   }),
                   (0, i.jsx)("div", {
-                    className: vt().ParseErrors,
+                    className: yt().ParseErrors,
                     children: a.errors.map((e, t) =>
                       (0, i.jsx)(
                         "div",
                         {
-                          className: vt().Error,
+                          className: yt().Error,
                           children: `${e.row ?? "-"} ${e.message}`,
                         },
                         `${e.message}-${t}`,
@@ -18149,7 +18168,7 @@
           ],
         });
       }
-      function Dt(e) {
+      function wt(e) {
         (0, _.h)((0, p.ZM)());
         const { rgDiscountEvents: t, eResult: s } = (0, c.sU)(),
           a = (0, u.zt)(),
@@ -18160,13 +18179,13 @@
           T = (0, p.bA)(),
           [A, B] = (0, f.QD)(F, null);
         S.useEffect(() => {
-          A && (0, x.pg)((0, i.jsx)(U, {}), window);
+          A && (0, x.pg)((0, i.jsx)(z, {}), window);
         }, [A]);
         const [k, M] = S.useState(),
           [E, P] = S.useState(),
           [R, N] = S.useState(),
           [G, O] = S.useState(!1),
-          [L, z] = S.useState(!1),
+          [L, U] = S.useState(!1),
           [q, W] = S.useState(!1),
           [H, V] = S.useState(!1);
         S.useEffect(() => {
@@ -18180,7 +18199,7 @@
           S.useEffect(() => {
             r(a, n).then((e) => {
               1 == e
-                ? z(!0)
+                ? U(!0)
                 : P(
                     (0, C.we)(
                       "#DiscountDashboard_Error_CouldNotLoadPackageDiscounts",
@@ -18242,21 +18261,21 @@
           Y = I.TS.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=919",
           J = !!R;
         return (0, i.jsxs)("div", {
-          className: X().DashboardPage,
+          className: Q().DashboardPage,
           children: [
             (0, i.jsxs)("div", {
-              className: X().DashTitleBar,
+              className: Q().DashTitleBar,
               children: [
                 (0, i.jsx)("div", {
-                  className: X().DashTitle,
+                  className: Q().DashTitle,
                   children: (0, C.we)("#DiscountDashboard_Title"),
                 }),
                 (0, i.jsxs)("div", {
-                  className: X().ButtonGroup,
+                  className: Q().ButtonGroup,
                   children: [
                     (0, i.jsx)(y.$n, {
                       onClick: (e) =>
-                        (0, x.pg)((0, i.jsx)(U, {}), (0, j.uX)(e)),
+                        (0, x.pg)((0, i.jsx)(z, {}), (0, j.uX)(e)),
                       disabled: !J,
                       children: (0, C.we)(
                         "#DiscountDashboard_CreateDiscountButton",
@@ -18264,7 +18283,7 @@
                     }),
                     (0, i.jsx)(y.$n, {
                       onClick: (e) =>
-                        (0, x.pg)((0, i.jsx)(yt, {}), (0, j.uX)(e)),
+                        (0, x.pg)((0, i.jsx)(ft, {}), (0, j.uX)(e)),
                       children: (0, C.we)(
                         "#DiscountDashboard_ImportExportButton",
                       ),
@@ -18284,27 +18303,27 @@
               ],
             }),
             (0, i.jsx)("div", {
-              className: X().ConfidentialBanner,
+              className: Q().ConfidentialBanner,
               children: (0, C.we)("#DiscountDashboard_ConfidentialityBanner"),
             }),
             E &&
-              (0, i.jsx)("div", { className: X().ErrorMessage, children: E }),
+              (0, i.jsx)("div", { className: Q().ErrorMessage, children: E }),
             !E &&
               k &&
               (0, i.jsx)(b.t, {
                 position: "center",
                 string: k,
-                className: X().Throbber,
+                className: Q().Throbber,
               }),
             H &&
               (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(ut, {}), (0, i.jsx)(fe, {})],
+                children: [(0, i.jsx)(pt, {}), (0, i.jsx)(xe, {})],
               }),
           ],
         });
       }
-      const wt = { DiscountDashboard: (e) => `/dashboard/${e}` },
-        jt = (e) =>
+      const jt = { DiscountDashboard: (e) => `/dashboard/${e}` },
+        Ct = (e) =>
           (0, i.jsx)(r.Kd, {
             basename: (0, a.C)() + "promotion/discounts/",
             children: (0, i.jsxs)(o.dO, {
@@ -18319,8 +18338,8 @@
                     }),
                 }),
                 (0, i.jsx)(o.qh, {
-                  path: wt.DiscountDashboard(":publisherid(\\d+)"),
-                  render: (e) => (0, i.jsx)(Dt, {}),
+                  path: jt.DiscountDashboard(":publisherid(\\d+)"),
+                  render: (e) => (0, i.jsx)(wt, {}),
                 }),
                 (0, i.jsx)(o.qh, { component: n.a }),
               ],
