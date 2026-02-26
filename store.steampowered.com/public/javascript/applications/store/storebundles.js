@@ -289,7 +289,7 @@
     },
     93135: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => P });
+      r.r(t), r.d(t, { default: () => L });
       var n = r(7850),
         s = r(39777),
         a = r(15631),
@@ -319,24 +319,25 @@
             })
           : null;
       }
-      var o = r(706),
-        c = r(3740),
-        u = r(35380),
+      var o = r(35380),
+        c = r(51078),
+        u = r(3740),
         _ = r(67082),
         p = r.n(_);
       function m(e) {
         const { appid: t, elPageSort: r, strPageSubTitle: a } = e,
-          l = (0, u.$5)(t),
+          l = (0, o.$5)(t),
           { data: i } = (0, s.J$)(l),
-          { data: _ } = (0, s.lv)(l);
+          { data: _ } = (0, s.lv)(l),
+          { strStoreURL: m } = (0, c.x)(i);
         return i
           ? (0, n.jsxs)("div", {
               className: p().AppHeader,
               children: [
                 (0, n.jsx)("div", {
                   className: p().CapsuleSizer,
-                  children: (0, n.jsx)(o.Q, {
-                    id: l,
+                  children: (0, n.jsx)("a", {
+                    href: m,
                     children:
                       _ &&
                       (0, n.jsx)("img", {
@@ -353,11 +354,12 @@
                         className: p().SubTitle,
                         children: a,
                       }),
-                    (0, n.jsx)("div", {
+                    (0, n.jsx)("a", {
+                      href: m,
                       className: p().Title,
                       children: i.name || "",
                     }),
-                    (0, n.jsx)(c.N, { id: l }),
+                    (0, n.jsx)(u.N, { id: l }),
                   ],
                 }),
                 Boolean(r) &&
@@ -386,7 +388,7 @@
         w = r(24484),
         D = r(31960),
         x = r.n(D);
-      function P(e) {
+      function L(e) {
         const {
             match: {
               params: { appid: t },
@@ -397,7 +399,9 @@
         return (
           (0, b.useEffect)(() => {
             if (s) {
-              const e = s.GetStorePageURL().replace("/app/", "/bundlelist/");
+              const e = s
+                .GetStorePageURL()
+                .replace("/app/", "/bundlelist_old/");
               e != window.location.href &&
                 window.history.replaceState({}, "", e);
             }
@@ -405,12 +409,12 @@
           (0, n.jsx)(G.Ay, {
             method: "bundlelist",
             children: (0, n.jsx)(S.tH, {
-              children: (0, n.jsx)(L, { storeItem: s }),
+              children: (0, n.jsx)(P, { storeItem: s }),
             }),
           })
         );
       }
-      function L(e) {
+      function P(e) {
         const { storeItem: t } = e,
           r = (0, I.DJ)(t),
           [s, a] = (0, b.useState)(y.k_BundleSort_Price),
@@ -422,7 +426,7 @@
               [r] = (0, B.L2)(),
               n = (0, j.MS)(t, h.Xh),
               s = (0, b.useMemo)(() => {
-                if (3 != n && 2 != n) return null;
+                if (!t || (3 != n && 2 != n)) return null;
                 {
                   let r = t;
                   switch (

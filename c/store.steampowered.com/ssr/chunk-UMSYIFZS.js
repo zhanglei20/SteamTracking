@@ -167,8 +167,9 @@ function _(_) {
     ),
     _ = (0, _.useCallback)(
       (_) => {
-        _.key === "Enter" && _ && _ ? _() : _(),
-          _.key === "Escape" && _ && (_(), _.stopPropagation());
+        _.current?.contains(_.target) &&
+          (_.key === "Enter" && _ && _ ? _() : _(),
+          _.key === "Escape" && _ && (_(), _.stopPropagation()));
       },
       [_, _, _, _],
     ),

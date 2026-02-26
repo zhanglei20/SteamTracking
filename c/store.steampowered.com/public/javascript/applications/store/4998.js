@@ -66,8 +66,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -80,13 +78,6 @@
             __webpack_require__,
             _,
           );
-        if (void 0 === _ || !_)
-          return (0, _.jsx)(_._, {
-            size: "small",
-            position: "center",
-            string: (0, _._)("#Loading"),
-          });
-        if (null == _) return null;
         if (
           "library" === __webpack_require__ ||
           "vertical" == __webpack_require__
@@ -97,7 +88,6 @@
           });
         let _,
           _,
-          _ = (0, _._)(_, "header" === __webpack_require__),
           _ = "";
         if ("main" === __webpack_require__)
           (_ = _().mainCapsuleImgWidth),
@@ -107,6 +97,12 @@
           (_ = _().headerCapsuleImgWidth),
             (_ = _().headerCapsuleImgHeight),
             (_ = _().HeaderCapsuleImageContainer);
+        if (void 0 === _ || !_)
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_, "CapsuleImageCtn"),
+          });
+        if (null == _) return null;
+        let _ = (0, _._)(_, "header" === __webpack_require__);
         return (0, _.jsx)("div", {
           className: (0, _._)(_, "CapsuleImageCtn"),
           children: (0, _.jsx)(_._, {
@@ -396,6 +392,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -430,7 +427,6 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -489,7 +485,7 @@
                     src: (0, _._)(_),
                     className: _().LinesImg,
                   }),
-                  (0, _._)("#Sale_InLibrary"),
+                  _._.Localize("#Sale_InLibrary"),
                 ],
               }),
             _ &&
@@ -499,7 +495,7 @@
                   (0, _.jsx)(_.qnF, {
                     className: _().LinesImg,
                   }),
-                  (0, _._)("#Sale_OnWishlist"),
+                  _._.Localize("#Sale_OnWishlist"),
                 ],
               }),
             _ &&
@@ -540,7 +536,7 @@
         return _
           ? (0, _.jsx)("span", {
               className: (0, _._)(_().Banner, _().EarlyAccessGradient),
-              children: (0, _._)("#Sale_EarlyAccess"),
+              children: _._.Localize("#Sale_EarlyAccess"),
             })
           : null;
       }

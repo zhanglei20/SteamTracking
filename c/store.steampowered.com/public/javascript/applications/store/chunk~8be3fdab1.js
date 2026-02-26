@@ -11,84 +11,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return (0, _._)(
-          _,
-          (function (_) {
-            if (!_) return;
-            let _ = _?.jsondata?.read_more_link
-              ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
-              : void 0;
-            return _ ? [_] : void 0;
-          })(_),
-        );
-      }
-      function _(_, _) {
-        return _
-          ? (_ = _(_, _)
-              ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)
-              : (0, _._)(_))
-          : "";
-      }
-      function _(_, _, _) {
-        let _ = _;
-        return (
-          _.toLowerCase().startsWith("http") || (_ = "http://" + _),
-          (0, _.jsx)(_, {
-            url: _,
-            event: _,
-            children: _ || _,
-          })
-        );
-      }
-      const _ = (_) => {
-        const {
-          url: _,
-          event: __webpack_require__,
-          className: _,
-          style: _,
-        } = _;
-        let _,
-          _ = (0, _._)(_);
-        (_ = _(_, __webpack_require__)),
-          (0, _._)(_) && (_ = "noopener nofollow");
-        const _ =
-          "string" == typeof _.children &&
-          _.children.length > 0 &&
-          _ &&
-          !_.startsWith("steam://")
-            ? (0, _._)(_)
-            : void 0;
-        return (0, _.jsx)(_._, {
-          toolTipContent: _,
-          direction: "top",
-          children: (0, _.jsx)(_._, {
-            className: _,
-            href: _,
-            rel: _,
-            _: _._,
-            style: _,
-            children: _.children,
-          }),
-        });
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -248,12 +173,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -286,7 +206,6 @@
           _ = (0, _._)(_, __webpack_require__),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(),
-          _ = (0, _._)(),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -307,18 +226,16 @@
                 : _,
             [_, _, _],
           ),
-          _ = (0, _._)((0, _._)(_, _));
+          { strStoreURL: _, snr: _ } = (0, _._)(_, _);
         if (!_) return null;
         const _ = _.included_appids?.length || 0,
           _ = _.included_appids?.filter((_) => _?.has(_))?.length || 0,
           _ = 2 == _.item_type && Boolean(_?.must_purchase_as_set),
-          _ = (0, _._)(_),
           _ = Boolean(!_ && _ > 1),
           _ = 1 == _.item_type && 1 == _,
           _ = 0 == _.item_type || _,
           _ = _ && _.appid,
-          _ = (0, _._)(_, _, _),
-          _ = ((0, _._)(), _.name || ""),
+          _ = _.name || "",
           _ = (0, _._)(_, _),
           _ = _ || !_?.is_coming_soon || _;
         return (0, _.jsxs)(_._, {
@@ -346,8 +263,9 @@
                 children: [
                   (0, _.jsx)("div", {
                     className: (0, _._)(_().StoreSaleWidgetHalfLeft),
-                    children: (0, _.jsx)(_._, {
-                      _: 0 == _.item_type ? _ : void 0,
+                    children: (0, _.jsx)(_, {
+                      _: _,
+                      strURL: _,
                       children: (0, _.jsxs)("div", {
                         className: _().StoreSaleWidgetImage,
                         children: [
@@ -497,6 +415,18 @@
               }),
           ],
         });
+      }
+      function _(_) {
+        const { _: _, strURL: __webpack_require__, children: _ } = _;
+        return "appid" in _
+          ? (0, _.jsxs)(_._, {
+              _: _,
+              children: [_, " "],
+            })
+          : (0, _.jsx)("a", {
+              href: __webpack_require__,
+              children: _,
+            });
       }
       function _(_) {
         const { _: _ } = _,

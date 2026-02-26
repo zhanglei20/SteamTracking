@@ -834,7 +834,7 @@
     },
     706: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => De });
+      n.d(t, { Q: () => Be });
       var r = n(7850),
         i = n(3740),
         o = n(24267),
@@ -1145,16 +1145,17 @@
           })
         );
       }
-      var te = n(72739),
-        ne = n(6336),
-        re = n(84811),
-        ie = n(32754),
-        oe = n(10350),
-        ae = n.n(oe),
-        se = n(10224),
-        le = n(10050);
-      const ce = 150;
-      function de(e) {
+      var te = n(51078),
+        ne = n(72739),
+        re = n(6336),
+        ie = n(84811),
+        oe = n(32754),
+        ae = n(10350),
+        se = n.n(ae),
+        le = n(10224),
+        ce = n(10050);
+      const de = 150;
+      function ue(e) {
         const {
             hoverContent: t,
             hoverProps: n,
@@ -1164,7 +1165,7 @@
             className: s,
           } = e,
           l = (0, h.Qn)(),
-          c = (0, se.zI)(),
+          c = (0, le.zI)(),
           u = !l && !c,
           [p, m] = d.useState(!1),
           [_, g] = d.useState(void 0);
@@ -1172,7 +1173,7 @@
           "data-key": "hover div",
           role: "button",
           tabIndex: 0,
-          className: (0, C.A)(ae().ItemHoverSource, s),
+          className: (0, C.A)(se().ItemHoverSource, s),
           onMouseEnter: (e) => {
             m(!0), g(e.currentTarget);
           },
@@ -1184,7 +1185,7 @@
           children: [
             u &&
               _ &&
-              (0, r.jsx)(ue, {
+              (0, r.jsx)(pe, {
                 visible: p,
                 target: _,
                 nDelayShowMs: i,
@@ -1192,21 +1193,21 @@
                 hoverProps: n,
                 children: t,
               }),
-            (0, r.jsx)(re.tH, { children: a }),
+            (0, r.jsx)(ie.tH, { children: a }),
           ],
         });
       }
-      function ue(e) {
+      function pe(e) {
         const {
             hoverProps: t,
-            nDelayShowMs: n = ce,
+            nDelayShowMs: n = de,
             nWidthMultiplier: i = 1.15,
             target: o,
             visible: a,
             children: s,
           } = e,
           [l, c] = d.useState(a),
-          { targetElement: u = o.ownerDocument.body } = (0, ie.gK)();
+          { targetElement: u = o.ownerDocument.body } = (0, oe.gK)();
         if (
           (d.useEffect(() => {
             if (a) {
@@ -1244,29 +1245,29 @@
               zIndex: 98,
               width: o.clientWidth * i,
               fontSize: p,
-              minHeight: "hiding" == me() ? void 0 : 300,
+              minHeight: "hiding" == Ce() ? void 0 : 300,
               height:
-                "hiding" == me() ? 1.15 * o.clientWidth * (125 / 184) : void 0,
+                "hiding" == Ce() ? 1.15 * o.clientWidth * (125 / 184) : void 0,
               ...t?.style,
             },
             target: o,
           };
         return u
-          ? te.createPortal(
-              (0, r.jsx)(pe, {
+          ? ne.createPortal(
+              (0, r.jsx)(me, {
                 hoverProps: m,
-                children: (0, r.jsx)(re.tH, { children: s }),
+                children: (0, r.jsx)(ie.tH, { children: s }),
               }),
               u,
             )
           : null;
       }
-      function pe(e) {
+      function me(e) {
         const { hoverProps: t, children: n } = e,
           i = d.useCallback((e) => e?.focus(), []);
-        return (0, r.jsx)(ne.g, {
+        return (0, r.jsx)(re.g, {
           ...t,
-          children: (0, r.jsx)(le.M, {
+          children: (0, r.jsx)(ce.M, {
             timeout: 500,
             in: !0,
             appear: !0,
@@ -1274,31 +1275,27 @@
             children: (e) =>
               (0, r.jsx)("div", {
                 ref: (0, P.XB)(e, i),
-                className: ae().HoverContentTransition,
+                className: se().HoverContentTransition,
                 tabIndex: -1,
                 children: n,
               }),
           }),
         });
       }
-      function me() {
-        return window.sessionStorage?.getItem(Ce) || "default";
+      function Ce() {
+        return window.sessionStorage?.getItem(_e) || "default";
       }
-      const Ce = "DEBUG_UseNewGameHover";
+      const _e = "DEBUG_UseNewGameHover";
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(Ce, e);
+        window.sessionStorage.setItem(_e, e);
       };
-      var _e = n(5309),
-        he = n(71420),
-        ge = n(60014),
-        fe = n(55963),
-        we = n(54906),
-        ve = n(18654),
-        xe = n.n(ve),
-        be = n(72237),
-        Se = n(99956),
-        ye = n(49411);
-      function je(e) {
+      var he = n(5309),
+        ge = n(54906),
+        fe = n(18654),
+        we = n.n(fe),
+        ve = n(72237),
+        xe = n(99956);
+      function be(e) {
         const { id: t } = e,
           { data: n } = (0, R.xz)(t);
         return n
@@ -1311,7 +1308,7 @@
                   .filter((e) => e.tagid)
                   .map((e) =>
                     (0, r.jsx)(
-                      Se.p,
+                      xe.p,
                       { tagid: e.tagid, className: F().Tag },
                       "tag_" + e.tagid,
                     ),
@@ -1320,7 +1317,7 @@
             })
           : null;
       }
-      function Le(e) {
+      function Se(e) {
         const {
             id: t,
             displayID: n,
@@ -1400,22 +1397,22 @@
                       children: L?.name || c,
                     }),
                   }),
-                  x && (0, r.jsx)(He, { id: t }),
-                  (0, r.jsx)(je, { id: t }),
+                  x && (0, r.jsx)(je, { id: t }),
+                  (0, r.jsx)(be, { id: t }),
                   Boolean(!g) && (0, r.jsx)(o.J, { id: t }),
                   Boolean(!g && k) &&
                     (0, r.jsxs)("div", {
                       className: F().ReviewsAndRelease,
                       children: [
-                        (0, r.jsx)(be.Q, {
+                        (0, r.jsx)(ve.Q, {
                           id: t,
                           strClassName: F().PlatformDisplay,
                         }),
-                        (0, r.jsx)(Be, { id: t }),
+                        (0, r.jsx)(ye, { id: t }),
                       ],
                     }),
                   m && (0, r.jsx)(a.j, { id: t, className: F().DemoButton }),
-                  Boolean(g && D) && (0, r.jsx)(we.Q8, { id: t }),
+                  Boolean(g && D) && (0, r.jsx)(ge.Q8, { id: t }),
                   Boolean(p) && p,
                   f &&
                     D &&
@@ -1430,14 +1427,14 @@
           ],
         });
       }
-      function Be(e) {
+      function ye(e) {
         const { id: t } = e,
           { data: n } = (0, R.by)(t);
         if (!n) return null;
-        const i = (0, _e.CC)(n);
+        const i = (0, he.CC)(n);
         return (0, r.jsx)("div", { className: F().ReleaseDate, children: i });
       }
-      function He(e) {
+      function je(e) {
         const { id: t } = e,
           { data: n } = (0, R.wl)(t);
         return n
@@ -1447,7 +1444,7 @@
             })
           : null;
       }
-      function ke(e) {
+      function Le(e) {
         const {
           id: t,
           displayID: n,
@@ -1457,27 +1454,30 @@
           bShowWishlistButton: s = !0,
           bShowIgnoreButton: l = !1,
         } = e;
-        return (0, r.jsxs)("div", {
-          className: (0, C.A)(
-            F().GameHoverCapsuleCtn,
-            xe().InGameHover,
-            o && F().UseHidingBottomHalf,
-          ),
-          children: [
-            (0, r.jsxs)("a", {
-              href: i,
-              className: F().TrailerAnchorStoreLink,
+        return (0, k.kB)(t)
+          ? (0, r.jsxs)("div", {
+              className: (0, C.A)(
+                F().GameHoverCapsuleCtn,
+                we().InGameHover,
+                o && F().UseHidingBottomHalf,
+              ),
               children: [
-                Boolean(s && !a) && (0, r.jsx)(c.E, { id: n, snr: e.strSNR }),
-                Boolean(l && !a) && (0, r.jsx)(L, { id: n, snr: e.strSNR }),
-                t && (0, r.jsx)(q, { id: t }),
+                (0, r.jsxs)("a", {
+                  href: i,
+                  className: F().TrailerAnchorStoreLink,
+                  children: [
+                    Boolean(s && !a) &&
+                      (0, r.jsx)(c.E, { id: n, snr: e.strSNR }),
+                    Boolean(l && !a) && (0, r.jsx)(L, { id: n, snr: e.strSNR }),
+                    t && (0, r.jsx)(q, { id: t }),
+                  ],
+                }),
+                (0, r.jsx)(Se, { ...e }),
               ],
-            }),
-            (0, r.jsx)(Le, { ...e }),
-          ],
-        });
+            })
+          : null;
       }
-      function De(e) {
+      function Be(e) {
         const {
             id: t,
             name: n,
@@ -1498,46 +1498,40 @@
             ...w
           } = e,
           { data: v } = (0, R.J$)(t),
-          x = (0, ge.n9)(),
-          b = (0, fe.L3)(x),
-          S = (0, h.Qn)(),
-          y = (0, ye.w)();
-        if ((!v && !n) || S) return (0, r.jsx)(r.Fragment, { children: u });
-        let j = t;
+          x = (0, h.Qn)(),
+          { strStoreURL: b, snr: S } = (0, te.x)(v, s);
+        if ((!v && !n) || x) return (0, r.jsx)(r.Fragment, { children: u });
+        let y = t;
         v &&
           1 == v.item_type &&
           1 == v.included_appids?.length &&
-          (j = { appid: v.included_appids[0] });
-        const L = "hiding" == me(),
-          B =
-            i || !v
-              ? void 0
-              : (0, fe.It)(`${(0, he._)(v, s)}${d ? `?${d}` : ""}`, x, y),
-          H = {
+          (y = { appid: v.included_appids[0] });
+        const j = i || !v ? void 0 : b,
+          L = {
             id: t,
-            displayID: j,
+            displayID: y,
             name: n,
             bPreventNavigation: i,
-            strStoreUrl: B,
+            strStoreUrl: j,
             elElementToAppend: o,
             bShowDemoButton: a,
             bShowDeckCompatibilityDialog: C,
-            bHideBottomHalf: L,
+            bHideBottomHalf: "hiding" == Ce(),
             bHidePrice: l,
             bUseSubscriptionLayout: c,
-            strSNR: b,
+            strSNR: S,
             nCreatorAccountID: p,
             bShowWishlistButton: _,
             bShowIgnoreButton: g,
             bShowDescription: f,
           },
-          k = (0, r.jsx)(ke, { ...H }),
-          D = B ? (0, r.jsx)("a", { href: B, children: u }) : u;
-        return (0, r.jsx)(de, {
-          hoverContent: k,
+          B = (0, r.jsx)(Le, { ...L }),
+          H = j ? (0, r.jsx)("a", { href: j, children: u }) : u;
+        return (0, r.jsx)(ue, {
+          hoverContent: B,
           nWidthMultiplier: m,
           ...w,
-          children: D,
+          children: H,
         });
       }
     },
@@ -2468,6 +2462,21 @@
         });
       }
     },
+    51078: (e, t, n) => {
+      "use strict";
+      n.d(t, { x: () => l });
+      var r = n(71420),
+        i = n(60014),
+        o = n(6866),
+        a = n(55963),
+        s = n(49411);
+      function l(e, t) {
+        const n = (0, i.n9)(),
+          l = (0, s.w)(),
+          c = (0, o.tB)((0, r._)(e, t));
+        return { snr: (0, a.L3)(n), strStoreURL: (0, a.It)(c, n, l) };
+      }
+    },
     55672: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => o });
@@ -2871,27 +2880,28 @@
     },
     58918: (e, t, n) => {
       "use strict";
-      n.d(t, { S6: () => d, ZJ: () => m, $Y: () => c, _7: () => u });
+      n.d(t, { S6: () => u, ZJ: () => C, $Y: () => d, _7: () => p });
       var r = n(80902),
         i = n(75233),
         o = n(23809),
-        a = n(30470),
-        s = n(99838);
-      var l = n(39777);
-      function c() {
+        a = n(99838),
+        s = n(30470);
+      var l = n(39777),
+        c = n(8527);
+      function d() {
         (0, o.KV)();
-        const e = a.iA.accountid;
+        const e = c.iA.accountid;
         return (0, r.I)(
           (function (e, t) {
             return {
-              queryKey: p(t),
+              queryKey: m(t),
               queryFn: async () => {
                 if (!t) return new Set();
                 const e = await (async function (e, t) {
-                  const n = (0, s.Am)(
-                      a.TS.STORE_BASE_URL,
+                  const n = (0, a.Am)(
+                      s.TS.STORE_BASE_URL,
                       t,
-                      a.iA.country_code,
+                      s.iA.country_code,
                     ),
                     r = await fetch(n);
                   return (await r.json()).rgOwnedApps || [];
@@ -2903,25 +2913,25 @@
           })(0, e),
         );
       }
-      function d(e) {
-        const { data: t } = c();
+      function u(e) {
+        const { data: t } = d();
         return void 0 === t ? void 0 : t.has(e);
       }
-      function u() {
+      function p() {
         const e = (0, i.jE)(),
-          t = a.iA.accountid;
+          t = c.iA.accountid;
         return (n) => {
-          e.setQueryData(p(t), (e) => {
+          e.setQueryData(m(t), (e) => {
             if (e) return new Set([...e.values(), ...n]);
           });
         };
       }
-      function p(e) {
+      function m(e) {
         return ["AccountOwnedApps", e ?? 0];
       }
-      function m(e) {
+      function C(e) {
         const { data: t } = (0, l.J$)(e && "appid" in e ? void 0 : e),
-          { data: n } = c();
+          { data: n } = d();
         let r;
         return (
           e && "appid" in e ? (r = [e.appid]) : t && (r = t.included_appids),
@@ -3155,6 +3165,69 @@
       function u(e) {
         return ["AccountWishlistApps", e ?? 0];
       }
+    },
+    6866: (e, t, n) => {
+      "use strict";
+      n.d(t, { Pm: () => p, d$: () => m, tB: () => u });
+      var r = n(7850),
+        i = n(15759),
+        o = n(55963),
+        a = n(32754),
+        s = n(61336),
+        l = n(78327),
+        c = n(45699);
+      function d(e, t) {
+        return (0, i.p)(
+          e,
+          (function (e) {
+            if (!e) return;
+            let t = e?.jsondata?.read_more_link
+              ? (0, s.wm)(e.jsondata.read_more_link).toLocaleLowerCase()
+              : void 0;
+            return t ? [t] : void 0;
+          })(t),
+        );
+      }
+      function u(e, t) {
+        return e
+          ? (e = d(e, t)
+              ? (l.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+                (0, i.E)(e)
+              : (0, s.NT)(e))
+          : "";
+      }
+      function p(e, t, n) {
+        let i = e;
+        return (
+          i.toLowerCase().startsWith("http") || (i = "http://" + i),
+          (0, r.jsx)(m, { url: i, event: t, children: n || e })
+        );
+      }
+      const m = (e) => {
+        const { url: t, event: n, className: l, style: d } = e;
+        let p,
+          m = (0, o.OZ)(t);
+        (m = u(m, n)), (0, i.p)(m) && (p = "noopener nofollow");
+        const C =
+          "string" == typeof e.children &&
+          e.children.length > 0 &&
+          t &&
+          !t.startsWith("steam://")
+            ? (0, s.Qz)(t)
+            : void 0;
+        return (0, r.jsx)(a.Gq, {
+          toolTipContent: C,
+          direction: "top",
+          children: (0, r.jsx)(c.Ii, {
+            className: l,
+            href: m,
+            rel: p,
+            id: e.id,
+            style: d,
+            children: e.children,
+          }),
+        });
+      };
     },
     35380: (e, t, n) => {
       "use strict";

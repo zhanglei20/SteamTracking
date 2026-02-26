@@ -64057,7 +64057,7 @@
         RecommenderDemos: () => "/recommenderdemos/",
         PersonalCalendar: () => "/personalcalendar",
         VerifiedProgram: () => "/verified/:appid(\\d+)/",
-        BundleListForApp: () => "/bundlelist/:appid(\\d+)/",
+        BundleListForApp: () => "/bundlelist_old/:appid(\\d+)/",
         SteamCharts: () => "/charts/",
         SteamAwardNominations: () =>
           "/steamawards/nominations/:year(\\d+)?/:steamid(\\d+)?",

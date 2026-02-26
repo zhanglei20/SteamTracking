@@ -361,15 +361,16 @@
           } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
+          { data: _ } = (0, _._)(_),
+          { strStoreURL: _ } = (0, _._)(_);
         return _
           ? (0, _.jsxs)("div", {
               className: _().AppHeader,
               children: [
                 (0, _.jsx)("div", {
                   className: _().CapsuleSizer,
-                  children: (0, _.jsx)(_._, {
-                    _: _,
+                  children: (0, _.jsx)("a", {
+                    href: _,
                     children:
                       _ &&
                       (0, _.jsx)("img", {
@@ -386,7 +387,8 @@
                         className: _().SubTitle,
                         children: _,
                       }),
-                    (0, _.jsx)("div", {
+                    (0, _.jsx)("a", {
+                      href: _,
                       className: _().Title,
                       children: _.name || "",
                     }),
@@ -432,7 +434,10 @@
         return (
           (0, _.useEffect)(() => {
             if (_) {
-              const _ = _.GetStorePageURL().replace("/app/", "/bundlelist/");
+              const _ = _.GetStorePageURL().replace(
+                "/app/",
+                "/bundlelist_old/",
+              );
               _ != window.location.href &&
                 window.history.replaceState({}, "", _);
             }
@@ -459,7 +464,7 @@
               [_] = (0, _._)(),
               _ = (0, _._)(_, _._),
               _ = (0, _.useMemo)(() => {
-                if (3 != _ && 2 != _) return null;
+                if (!_ || (3 != _ && 2 != _)) return null;
                 {
                   let _ = _;
                   switch (

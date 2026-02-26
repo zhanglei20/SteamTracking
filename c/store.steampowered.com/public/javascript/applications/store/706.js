@@ -1398,6 +1398,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1546,11 +1547,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1743,38 +1740,40 @@
           bShowWishlistButton: _ = !0,
           bShowIgnoreButton: _ = !1,
         } = _;
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().GameHoverCapsuleCtn,
-            _().InGameHover,
-            _ && _().UseHidingBottomHalf,
-          ),
-          children: [
-            (0, _.jsxs)("a", {
-              href: _,
-              className: _().TrailerAnchorStoreLink,
+        return (0, _._)(_)
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().GameHoverCapsuleCtn,
+                _().InGameHover,
+                _ && _().UseHidingBottomHalf,
+              ),
               children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    _: __webpack_require__,
-                    snr: _.strSNR,
-                  }),
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_, {
-                    _: __webpack_require__,
-                    snr: _.strSNR,
-                  }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    _: _,
-                  }),
+                (0, _.jsxs)("a", {
+                  href: _,
+                  className: _().TrailerAnchorStoreLink,
+                  children: [
+                    Boolean(_ && !_) &&
+                      (0, _.jsx)(_._, {
+                        _: __webpack_require__,
+                        snr: _.strSNR,
+                      }),
+                    Boolean(_ && !_) &&
+                      (0, _.jsx)(_, {
+                        _: __webpack_require__,
+                        snr: _.strSNR,
+                      }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        _: _,
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
               ],
-            }),
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-          ],
-        });
+            })
+          : null;
       }
       function _(_) {
         const {
@@ -1798,9 +1797,7 @@
           } = _,
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)();
+          { strStoreURL: _, snr: _ } = (0, _._)(_, _);
         if ((!_ && !__webpack_require__) || _)
           return (0, _.jsx)(_.Fragment, {
             children: _,
@@ -1812,11 +1809,7 @@
           (_ = {
             appid: _.included_appids[0],
           });
-        const _ = "hiding" == _(),
-          _ =
-            _ || !_
-              ? void 0
-              : (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
+        const _ = _ || !_ ? void 0 : _,
           _ = {
             _: _,
             displayID: _,
@@ -1826,7 +1819,7 @@
             elElementToAppend: _,
             bShowDemoButton: _,
             bShowDeckCompatibilityDialog: _,
-            bHideBottomHalf: _,
+            bHideBottomHalf: "hiding" == _(),
             bHidePrice: _,
             bUseSubscriptionLayout: _,
             strSNR: _,
@@ -2855,6 +2848,26 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)((0, _._)(_, _));
+        return {
+          snr: (0, _._)(_),
+          strStoreURL: (0, _._)(_, _, _),
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
@@ -3391,7 +3404,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _() {
         (0, _._)();
         const _ = _._.accountid;
@@ -3673,6 +3687,82 @@
       function _(_) {
         return ["AccountWishlistApps", _ ?? 0];
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          _,
+          (function (_) {
+            if (!_) return;
+            let _ = _?.jsondata?.read_more_link
+              ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
+              : void 0;
+            return _ ? [_] : void 0;
+          })(_),
+        );
+      }
+      function _(_, _) {
+        return _
+          ? (_ = _(_, _)
+              ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)
+              : (0, _._)(_))
+          : "";
+      }
+      function _(_, _, _) {
+        let _ = _;
+        return (
+          _.toLowerCase().startsWith("http") || (_ = "http://" + _),
+          (0, _.jsx)(_, {
+            url: _,
+            event: _,
+            children: _ || _,
+          })
+        );
+      }
+      const _ = (_) => {
+        const {
+          url: _,
+          event: __webpack_require__,
+          className: _,
+          style: _,
+        } = _;
+        let _,
+          _ = (0, _._)(_);
+        (_ = _(_, __webpack_require__)),
+          (0, _._)(_) && (_ = "noopener nofollow");
+        const _ =
+          "string" == typeof _.children &&
+          _.children.length > 0 &&
+          _ &&
+          !_.startsWith("steam://")
+            ? (0, _._)(_)
+            : void 0;
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          direction: "top",
+          children: (0, _.jsx)(_._, {
+            className: _,
+            href: _,
+            rel: _,
+            _: _._,
+            style: _,
+            children: _.children,
+          }),
+        });
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
