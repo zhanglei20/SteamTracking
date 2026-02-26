@@ -296,7 +296,8 @@
         (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
           (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
           (_[(_.APPLICATION = 2)] = "APPLICATION"),
-          (_[(_.BROWSER = 3)] = "BROWSER");
+          (_[(_.BROWSER = 3)] = "BROWSER"),
+          (_[(_.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(_ || (_ = {}));
       let _ = {
         [_._._]: "vgp_onok",
@@ -709,58 +710,59 @@
           }
         }
         TranslateKey(_) {
-          const _ = this.GetKeycodeFromEvent(_),
-            _ = _.ctrlKey,
-            _ = _.shiftKey;
+          const _ = this.GetKeycodeFromEvent(_);
+          if (_.altKey) return _._.INVALID;
           if (this.BShouldSwallowEventForTextInputWorkaround(_))
             return _._.INVALID;
-          if (_ && _)
+          if (_.ctrlKey)
+            if (_.shiftKey)
+              switch (_) {
+                case "Digit4":
+                  return _._.TRIGGER_LEFT;
+                case "Digit5":
+                  return _._.TRIGGER_RIGHT;
+                default:
+                  return _._.INVALID;
+              }
+            else
+              switch (_) {
+                case "Digit1":
+                  return _._.STEAM_GUIDE;
+                case "Digit2":
+                  return _._.STEAM_QUICK_MENU;
+                case "Digit3":
+                case "Digit9":
+                  return _._.SELECT;
+                case "Digit4":
+                  return _._.BUMPER_LEFT;
+                case "Digit5":
+                  return _._.BUMPER_RIGHT;
+                case "Digit6":
+                  return _._.LSTICK_CLICK;
+                case "Digit7":
+                  return _._.RSTICK_CLICK;
+                case "Digit8":
+                  return _._.OPTIONS;
+                case "Digit0":
+                  return _._.START;
+              }
+          else if (!_.shiftKey)
             switch (_) {
-              case "Digit4":
-                return _._.TRIGGER_LEFT;
-              case "Digit5":
-                return _._.TRIGGER_RIGHT;
-              default:
-                return _._.INVALID;
+              case "Escape":
+                return _._.CANCEL;
+              case "Enter":
+                return _._._;
+              case "Backspace":
+                return _._.SECONDARY;
+              case "ArrowUp":
+                return _._.DIR_UP;
+              case "ArrowDown":
+                return _._.DIR_DOWN;
+              case "ArrowLeft":
+                return _._.DIR_LEFT;
+              case "ArrowRight":
+                return _._.DIR_RIGHT;
             }
-          if (_)
-            switch (_) {
-              case "Digit1":
-                return _._.STEAM_GUIDE;
-              case "Digit2":
-                return _._.STEAM_QUICK_MENU;
-              case "Digit3":
-              case "Digit9":
-                return _._.SELECT;
-              case "Digit4":
-                return _._.BUMPER_LEFT;
-              case "Digit5":
-                return _._.BUMPER_RIGHT;
-              case "Digit6":
-                return _._.LSTICK_CLICK;
-              case "Digit7":
-                return _._.RSTICK_CLICK;
-              case "Digit8":
-                return _._.OPTIONS;
-              case "Digit0":
-                return _._.START;
-            }
-          switch (_) {
-            case "Escape":
-              return _._.CANCEL;
-            case "Enter":
-              return _._._;
-            case "Backspace":
-              return _._.SECONDARY;
-            case "ArrowUp":
-              return _._.DIR_UP;
-            case "ArrowDown":
-              return _._.DIR_DOWN;
-            case "ArrowLeft":
-              return _._.DIR_LEFT;
-            case "ArrowRight":
-              return _._.DIR_RIGHT;
-          }
           return _._.INVALID;
         }
       }
@@ -839,8 +841,12 @@
         }
         async LoadSettings() {
           const _ = (_) => {
-            const _ = localStorage.getItem(_);
-            return _ ? JSON.parse(_) : void 0;
+            try {
+              const _ = localStorage.getItem(_);
+              return _ ? JSON.parse(_) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
@@ -2966,78 +2972,81 @@
                 _(
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
-            (function (_, _) {
-              const _ = _.Element;
-              if (!_) return;
-              let _ = [
-                {
-                  node: _,
-                  eScrollType: _.m_Properties?.scrollIntoViewType,
-                },
-              ];
-              for (let _ = _.Parent; _; _ = _.Parent) {
-                const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
-                  _ = _.m_Properties?.scrollIntoViewType;
-                if (_) {
-                  const _ = {
+            this.m_Tree.BIsActive() &&
+              (function (_, _) {
+                const _ = _.Element;
+                if (!_) return;
+                let _ = [
+                  {
                     node: _,
-                    eScrollType: _,
-                  };
-                  "force" === _ ? (_ = [_]) : _.push(_);
+                    eScrollType: _.m_Properties?.scrollIntoViewType,
+                  },
+                ];
+                for (let _ = _.Parent; _; _ = _.Parent) {
+                  const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+                    _ = _.m_Properties?.scrollIntoViewType;
+                  if (_) {
+                    const _ = {
+                      node: _,
+                      eScrollType: _,
+                    };
+                    "force" === _ ? (_ = [_]) : _.push(_);
+                  }
+                  if (void 0 !== _)
+                    for (
+                      let _ = _.length - 1;
+                      _ >= 0 && void 0 === _[_].eScrollType;
+                      _--
+                    )
+                      _[_].eScrollType = _;
                 }
-                if (void 0 !== _)
-                  for (
-                    let _ = _.length - 1;
-                    _ >= 0 && void 0 === _[_].eScrollType;
-                    _--
+                for (; _.length; ) {
+                  let { node: _, eScrollType: _ } = _.pop(),
+                    _ = 0 == _.length;
+                  if (
+                    (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+                    _?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
                   )
-                    _[_].eScrollType = _;
-              }
-              for (; _.length; ) {
-                let { node: _, eScrollType: _ } = _.pop(),
-                  _ = 0 == _.length;
-                if (
-                  (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
-                  _?.m_Properties?.fnScrollIntoViewHandler &&
-                    !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
-                )
-                  continue;
-                const _ = _.m_element,
-                  _ =
-                    _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
-                if (_) {
-                  const _ = _ ? _(_) : _.getBoundingClientRect();
-                  let _ = !1;
-                  const _ = Math.max(1.4 * (_.bottom - _.top), 40),
-                    _ = _ && performance.now() - _ < 500;
-                  (_ ||
-                    _.bottom < -_ ||
-                    _.top > _.ownerDocument.defaultView.innerHeight + _) &&
-                    ((_ = !0),
-                    _ ||
-                      _(
-                        `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
-                      ));
-                  let _ = _ ? "auto" : "smooth";
-                  _ && (_ = performance.now()),
-                    _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
-                    _
-                      ? _(0, _, _)
-                      : _.scrollIntoView({
-                          behavior: _,
-                          block: "nearest",
-                        });
-                } else
-                  _("No previous element for scrolling, will jump"),
-                    _
-                      ? _(0, _, "auto")
-                      : _?.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, _);
+                    continue;
+                  const _ = _.m_element,
+                    _ =
+                      _ == _.NoTransform ||
+                      _ == _.NoTransformSparseContent ||
+                      !_;
+                  if (_) {
+                    const _ = _ ? _(_) : _.getBoundingClientRect();
+                    let _ = !1;
+                    const _ = Math.max(1.4 * (_.bottom - _.top), 40),
+                      _ = _ && performance.now() - _ < 500;
+                    (_ ||
+                      _.bottom < -_ ||
+                      _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+                      ((_ = !0),
+                      _ ||
+                        _(
+                          `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                        ));
+                    let _ = _ ? "auto" : "smooth";
+                    _ && (_ = performance.now()),
+                      _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+                      _
+                        ? _(0, _, _)
+                        : _.scrollIntoView({
+                            behavior: _,
+                            block: "nearest",
+                          });
+                  } else
+                    _("No previous element for scrolling, will jump"),
+                      _
+                        ? _(0, _, "auto")
+                        : _?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -3587,9 +3596,9 @@
                 `DeferredFocus in ${this.m_tree._} - focusing ${_ ? "descendant of" : "node"} ${_.NavKey}`,
               ),
               _
-                ? _.BChildTakeFocus(_.APPLICATION) ||
-                  this.m_tree.TransferFocus(_.APPLICATION, _)
-                : _.BTakeFocus(_.APPLICATION);
+                ? _.BChildTakeFocus(_.AUTOFOCUS) ||
+                  this.m_tree.TransferFocus(_.AUTOFOCUS, _)
+                : _.BTakeFocus(_.AUTOFOCUS);
           }
         }
       }
@@ -4149,10 +4158,15 @@
               _ != _.m_LastActiveNavTree &&
               (_.m_LastActiveFocusNavTree?.GetParentEmbeddedNavTree() == _ ||
               _.GetParentEmbeddedNavTree() == _.m_LastActiveFocusNavTree
-                ? (_(
-                    `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
-                  ),
-                  _.Activate())
+                ? _ == _.AUTOFOCUS &&
+                  _.m_LastActiveNavTree?.GetLastFocusedNode()
+                  ? _(
+                      `There was an autofocus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} and we already have something focused.  Source: ${_ && _[_]}.`,
+                    )
+                  : (_(
+                      `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
+                    ),
+                    _.Activate())
                 : _(
                     `There was a focus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} so it is being ignored.  Source: ${_ && _[_]}.`,
                   ));

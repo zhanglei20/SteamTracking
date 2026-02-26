@@ -1073,23 +1073,23 @@
           l = (0, k.TH)(o),
           c = (0, d.useMemo)(
             () =>
-              (function (e, t, n, r, i) {
-                const o = [];
-                i && o.push(K(e)),
-                  n && n.length > 0 && o.push(...z(e, t.name, n, U));
-                const a = U - (n?.length || 0);
+              (function (e, t, n, r, i, o) {
+                const a = [];
+                o && a.push(K(t)),
+                  r && r.length > 0 && a.push(...z(e, n.name, r, U));
+                const s = U - (r?.length || 0);
                 return (
-                  a > 0 && r && r.length > 0 && o.push(...z(e, t.name, r, a)),
-                  ((e && 0 == o.length && "dev" == h.TS.WEB_UNIVERSE) ||
+                  s > 0 && i && i.length > 0 && a.push(...z(e, n.name, i, s)),
+                  ((e && 0 == a.length && "dev" == h.TS.WEB_UNIVERSE) ||
                     "beta" == h.TS.WEB_UNIVERSE) &&
                     console.error(
                       "DEV ONLY OUTPUT: Demo GameHoverImages for id/type no images: (might be not age safe screenshots)",
                       (0, N.ER)(e),
                     ),
-                  o
+                  a
                 );
-              })(n, i, a, s, l),
-            [n, i, l, a, s],
+              })(n, o, i, a, s, l),
+            [n, o, i, l, a, s],
           );
         return (0, r.jsx)(ee, { rgTrailerAndImages: c });
       }
@@ -1446,16 +1446,19 @@
       }
       function Le(e) {
         const {
-          id: t,
-          displayID: n,
-          strStoreUrl: i,
-          bHideBottomHalf: o,
-          bShowDeckCompatibilityDialog: a,
-          bShowWishlistButton: s = !0,
-          bShowIgnoreButton: l = !1,
-        } = e;
-        return (0, k.kB)(t)
-          ? (0, r.jsxs)("div", {
+            id: t,
+            displayID: n,
+            strStoreUrl: i,
+            bHideBottomHalf: o,
+            bShowDeckCompatibilityDialog: a,
+            bShowWishlistButton: s = !0,
+            bShowIgnoreButton: l = !1,
+          } = e,
+          { data: d } = (0, R.Yo)(t),
+          { data: u } = (0, R.j4)(t);
+        return void 0 === d && void 0 === u
+          ? null
+          : (0, r.jsxs)("div", {
               className: (0, C.A)(
                 F().GameHoverCapsuleCtn,
                 we().InGameHover,
@@ -1474,8 +1477,7 @@
                 }),
                 (0, r.jsx)(Se, { ...e }),
               ],
-            })
-          : null;
+            });
       }
       function Be(e) {
         const {

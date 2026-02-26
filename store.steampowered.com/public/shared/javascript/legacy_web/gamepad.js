@@ -283,19 +283,20 @@
       "use strict";
       n(745);
     },
-    227: (e, t, n) => {
+    951: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => Dt });
       var o,
-        i = n(669),
+        i = n(50),
         s = n.n(i),
-        r = n(195);
+        r = n(573);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
           (e[(e.APPLICATION = 2)] = "APPLICATION"),
-          (e[(e.BROWSER = 3)] = "BROWSER");
+          (e[(e.BROWSER = 3)] = "BROWSER"),
+          (e[(e.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(o || (o = {}));
       let a = {
         [r.pR.OK]: "vgp_onok",
@@ -351,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(806),
-        p = n(737),
-        _ = n(710),
-        f = n(197);
+        g = n(787),
+        p = n(884),
+        _ = n(47),
+        f = n(814);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -692,58 +693,59 @@
           }
         }
         TranslateKey(e) {
-          const t = this.GetKeycodeFromEvent(e),
-            n = e.ctrlKey,
-            o = e.shiftKey;
+          const t = this.GetKeycodeFromEvent(e);
+          if (e.altKey) return r.pR.INVALID;
           if (this.BShouldSwallowEventForTextInputWorkaround(e))
             return r.pR.INVALID;
-          if (n && o)
+          if (e.ctrlKey)
+            if (e.shiftKey)
+              switch (t) {
+                case "Digit4":
+                  return r.pR.TRIGGER_LEFT;
+                case "Digit5":
+                  return r.pR.TRIGGER_RIGHT;
+                default:
+                  return r.pR.INVALID;
+              }
+            else
+              switch (t) {
+                case "Digit1":
+                  return r.pR.STEAM_GUIDE;
+                case "Digit2":
+                  return r.pR.STEAM_QUICK_MENU;
+                case "Digit3":
+                case "Digit9":
+                  return r.pR.SELECT;
+                case "Digit4":
+                  return r.pR.BUMPER_LEFT;
+                case "Digit5":
+                  return r.pR.BUMPER_RIGHT;
+                case "Digit6":
+                  return r.pR.LSTICK_CLICK;
+                case "Digit7":
+                  return r.pR.RSTICK_CLICK;
+                case "Digit8":
+                  return r.pR.OPTIONS;
+                case "Digit0":
+                  return r.pR.START;
+              }
+          else if (!e.shiftKey)
             switch (t) {
-              case "Digit4":
-                return r.pR.TRIGGER_LEFT;
-              case "Digit5":
-                return r.pR.TRIGGER_RIGHT;
-              default:
-                return r.pR.INVALID;
+              case "Escape":
+                return r.pR.CANCEL;
+              case "Enter":
+                return r.pR.OK;
+              case "Backspace":
+                return r.pR.SECONDARY;
+              case "ArrowUp":
+                return r.pR.DIR_UP;
+              case "ArrowDown":
+                return r.pR.DIR_DOWN;
+              case "ArrowLeft":
+                return r.pR.DIR_LEFT;
+              case "ArrowRight":
+                return r.pR.DIR_RIGHT;
             }
-          if (n)
-            switch (t) {
-              case "Digit1":
-                return r.pR.STEAM_GUIDE;
-              case "Digit2":
-                return r.pR.STEAM_QUICK_MENU;
-              case "Digit3":
-              case "Digit9":
-                return r.pR.SELECT;
-              case "Digit4":
-                return r.pR.BUMPER_LEFT;
-              case "Digit5":
-                return r.pR.BUMPER_RIGHT;
-              case "Digit6":
-                return r.pR.LSTICK_CLICK;
-              case "Digit7":
-                return r.pR.RSTICK_CLICK;
-              case "Digit8":
-                return r.pR.OPTIONS;
-              case "Digit0":
-                return r.pR.START;
-            }
-          switch (t) {
-            case "Escape":
-              return r.pR.CANCEL;
-            case "Enter":
-              return r.pR.OK;
-            case "Backspace":
-              return r.pR.SECONDARY;
-            case "ArrowUp":
-              return r.pR.DIR_UP;
-            case "ArrowDown":
-              return r.pR.DIR_DOWN;
-            case "ArrowLeft":
-              return r.pR.DIR_LEFT;
-            case "ArrowRight":
-              return r.pR.DIR_RIGHT;
-          }
           return r.pR.INVALID;
         }
       }
@@ -751,7 +753,7 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(597);
+        D = n(322);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -822,8 +824,12 @@
         }
         async LoadSettings() {
           const e = (e) => {
-            const t = localStorage.getItem(e);
-            return t ? JSON.parse(t) : void 0;
+            try {
+              const t = localStorage.getItem(e);
+              return t ? JSON.parse(t) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!e(
             O.k_IncludeBacktraceInLog_StorageKey,
@@ -1004,7 +1010,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var x = n(695);
+      var x = n(282);
       class k {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -2822,71 +2828,72 @@
                 Be(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
-            (function (e, t) {
-              const n = e.Element;
-              if (!n) return;
-              let o = [
-                { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
-              ];
-              for (let t = e.Parent; t; t = t.Parent) {
-                const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
-                  n = t.m_Properties?.scrollIntoViewType;
-                if (e) {
-                  const i = { node: t, eScrollType: n };
-                  "force" === e ? (o = [i]) : o.push(i);
+            this.m_Tree.BIsActive() &&
+              (function (e, t) {
+                const n = e.Element;
+                if (!n) return;
+                let o = [
+                  { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
+                ];
+                for (let t = e.Parent; t; t = t.Parent) {
+                  const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
+                    n = t.m_Properties?.scrollIntoViewType;
+                  if (e) {
+                    const i = { node: t, eScrollType: n };
+                    "force" === e ? (o = [i]) : o.push(i);
+                  }
+                  if (void 0 !== n)
+                    for (
+                      let e = o.length - 1;
+                      e >= 0 && void 0 === o[e].eScrollType;
+                      e--
+                    )
+                      o[e].eScrollType = n;
                 }
-                if (void 0 !== n)
-                  for (
-                    let e = o.length - 1;
-                    e >= 0 && void 0 === o[e].eScrollType;
-                    e--
+                for (; o.length; ) {
+                  let { node: n, eScrollType: i } = o.pop(),
+                    s = 0 == o.length;
+                  if (
+                    (void 0 === i && (i = be ? xe.NoTransform : xe.Standard),
+                    n?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== n.m_Properties.fnScrollIntoViewHandler(e, t, n))
                   )
-                    o[e].eScrollType = n;
-              }
-              for (; o.length; ) {
-                let { node: n, eScrollType: i } = o.pop(),
-                  s = 0 == o.length;
-                if (
-                  (void 0 === i && (i = be ? xe.NoTransform : xe.Standard),
-                  n?.m_Properties?.fnScrollIntoViewHandler &&
-                    !1 !== n.m_Properties.fnScrollIntoViewHandler(e, t, n))
-                )
-                  continue;
-                const r = n.m_element,
-                  a =
-                    i == xe.NoTransform ||
-                    i == xe.NoTransformSparseContent ||
-                    !s;
-                if (t) {
-                  const t = a ? Ae(r) : r.getBoundingClientRect();
-                  let n = !1;
-                  const o = Math.max(1.4 * (t.bottom - t.top), 40),
-                    i = Ce && performance.now() - Ce < 500;
-                  (i ||
-                    t.bottom < -o ||
-                    t.top > r.ownerDocument.defaultView.innerHeight + o) &&
-                    ((n = !0),
-                    i ||
-                      ve(
-                        `Disabling smooth scrolling, ${t.bottom} < ${-o}, ${t.top} > ${r.ownerDocument.defaultView.innerHeight} + ${o} `,
-                      ));
-                  let s = n ? "auto" : "smooth";
-                  n && (Ce = performance.now()),
-                    e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
-                    a
-                      ? Ne(0, r, s)
-                      : r.scrollIntoView({ behavior: s, block: "nearest" });
-                } else
-                  ve("No previous element for scrolling, will jump"),
-                    a
-                      ? Ne(0, r, "auto")
-                      : r?.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, t);
+                    continue;
+                  const r = n.m_element,
+                    a =
+                      i == xe.NoTransform ||
+                      i == xe.NoTransformSparseContent ||
+                      !s;
+                  if (t) {
+                    const t = a ? Ae(r) : r.getBoundingClientRect();
+                    let n = !1;
+                    const o = Math.max(1.4 * (t.bottom - t.top), 40),
+                      i = Ce && performance.now() - Ce < 500;
+                    (i ||
+                      t.bottom < -o ||
+                      t.top > r.ownerDocument.defaultView.innerHeight + o) &&
+                      ((n = !0),
+                      i ||
+                        ve(
+                          `Disabling smooth scrolling, ${t.bottom} < ${-o}, ${t.top} > ${r.ownerDocument.defaultView.innerHeight} + ${o} `,
+                        ));
+                    let s = n ? "auto" : "smooth";
+                    n && (Ce = performance.now()),
+                      e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
+                      a
+                        ? Ne(0, r, s)
+                        : r.scrollIntoView({ behavior: s, block: "nearest" });
+                  } else
+                    ve("No previous element for scrolling, will jump"),
+                      a
+                        ? Ne(0, r, "auto")
+                        : r?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, t);
         }
       }
       (0, m.Cg)([g.o], Ue.prototype, "OnDOMFocus", null),
@@ -3414,9 +3421,9 @@
                 `DeferredFocus in ${this.m_tree.id} - focusing ${t ? "descendant of" : "node"} ${e.NavKey}`,
               ),
               t
-                ? e.BChildTakeFocus(o.APPLICATION) ||
-                  this.m_tree.TransferFocus(o.APPLICATION, e)
-                : e.BTakeFocus(o.APPLICATION);
+                ? e.BChildTakeFocus(o.AUTOFOCUS) ||
+                  this.m_tree.TransferFocus(o.AUTOFOCUS, e)
+                : e.BTakeFocus(o.AUTOFOCUS);
           }
         }
       }
@@ -3966,10 +3973,15 @@
               e != i.m_LastActiveNavTree &&
               (i.m_LastActiveFocusNavTree?.GetParentEmbeddedNavTree() == e ||
               e.GetParentEmbeddedNavTree() == i.m_LastActiveFocusNavTree
-                ? (ot(
-                    `There was a focus event in ${e.id}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
-                  ),
-                  e.Activate())
+                ? t == o.AUTOFOCUS &&
+                  i.m_LastActiveNavTree?.GetLastFocusedNode()
+                  ? ot(
+                      `There was an autofocus event in ${e.id}, but the active nav tree is ${i.m_LastActiveFocusNavTree?.id} and we already have something focused.  Source: ${t && o[t]}.`,
+                    )
+                  : (ot(
+                      `There was a focus event in ${e.id}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
+                    ),
+                    e.Activate())
                 : ot(
                     `There was a focus event in ${e.id}, but the active nav tree is ${i.m_LastActiveFocusNavTree?.id} so it is being ignored.  Source: ${t && o[t]}.`,
                   ));
@@ -4733,7 +4745,7 @@
         },
       };
     },
-    737: (e, t, n) => {
+    884: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4746,12 +4758,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    197: (e, t, n) => {
+    814: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(806),
-        s = n(737);
+        i = n(787),
+        s = n(884);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

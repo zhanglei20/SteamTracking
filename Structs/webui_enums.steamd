@@ -2510,6 +2510,15 @@ enum UnnamedEnum54a08596fc4e0e87
 	MAX_VALUE = 132;
 }
 
+enum UnnamedEnum5512f8eb7f881187
+{
+	GAMEPAD = 0;
+	KEYBOARD = 1;
+	APPLICATION = 2;
+	BROWSER = 3;
+	AUTOFOCUS = 4;
+}
+
 enum UnnamedEnum55381d04bbcefb85
 {
 	SHORT = 0;

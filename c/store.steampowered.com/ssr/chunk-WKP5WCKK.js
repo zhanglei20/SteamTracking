@@ -2,9 +2,9 @@ import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 var _ = class {
@@ -278,8 +278,12 @@ var _ = class _ {
   }
   async LoadSettings() {
     let _ = (_) => {
-      let _ = localStorage.getItem(_);
-      return _ ? JSON.parse(_) : void 0;
+      try {
+        let _ = localStorage.getItem(_);
+        return _ ? JSON.parse(_) : void 0;
+      } catch {
+        return;
+      }
     };
     this.m_bIncludeBacktraceInLog = !!_(_.k_IncludeBacktraceInLog_StorageKey);
     let _ = _(_.k_EnabledLogNames_StorageKey);
@@ -459,6 +463,7 @@ var _ = _(_(), 1),
     (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
     (_[(_.APPLICATION = 2)] = "APPLICATION"),
     (_[(_.BROWSER = 3)] = "BROWSER"),
+    (_[(_.AUTOFOCUS = 4)] = "AUTOFOCUS"),
     _
   ))(_ || {}),
   _ = {
@@ -1113,8 +1118,8 @@ var _ = class {
             `DeferredFocus in ${this.m_tree._} - focusing ${_ ? "descendant of" : "node"} ${_.NavKey}`,
           ),
           _
-            ? _.BChildTakeFocus(2) || this.m_tree.TransferFocus(2, _)
-            : _.BTakeFocus(2);
+            ? _.BChildTakeFocus(4) || this.m_tree.TransferFocus(4, _)
+            : _.BTakeFocus(4);
       }
     }
   };
@@ -1587,10 +1592,14 @@ var _ = class {
         _ != _.m_LastActiveNavTree &&
         (_.m_LastActiveFocusNavTree?.GetParentEmbeddedNavTree() == _ ||
         _.GetParentEmbeddedNavTree() == _.m_LastActiveFocusNavTree
-          ? (_(
-              `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
-            ),
-            _.Activate())
+          ? _ == 4 && _.m_LastActiveNavTree?.GetLastFocusedNode()
+            ? _(
+                `There was an autofocus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} and we already have something focused.  Source: ${_ && _[_]}.`,
+              )
+            : (_(
+                `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
+              ),
+              _.Activate())
           : _(
               `There was a focus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} so it is being ignored.  Source: ${_ && _[_]}.`,
             ));
@@ -3366,7 +3375,7 @@ var _ = ((_) => (
             _(
               `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
             ),
-        _(this, _);
+        this.m_Tree.BIsActive() && _(this, _);
     }
   };
 _([_], _.prototype, "OnDOMFocus", 1),

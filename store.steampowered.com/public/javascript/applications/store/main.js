@@ -3358,7 +3358,8 @@
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
           (e[(e.APPLICATION = 2)] = "APPLICATION"),
-          (e[(e.BROWSER = 3)] = "BROWSER");
+          (e[(e.BROWSER = 3)] = "BROWSER"),
+          (e[(e.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(i || (i = {}));
       let s = {
         [n.pR.OK]: "vgp_onok",
@@ -5198,69 +5199,72 @@
                 A(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
-            (function (e, t) {
-              const r = e.Element;
-              if (!r) return;
-              let i = [
-                { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
-              ];
-              for (let t = e.Parent; t; t = t.Parent) {
-                const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
-                  r = t.m_Properties?.scrollIntoViewType;
-                if (e) {
-                  const n = { node: t, eScrollType: r };
-                  "force" === e ? (i = [n]) : i.push(n);
+            this.m_Tree.BIsActive() &&
+              (function (e, t) {
+                const r = e.Element;
+                if (!r) return;
+                let i = [
+                  { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
+                ];
+                for (let t = e.Parent; t; t = t.Parent) {
+                  const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
+                    r = t.m_Properties?.scrollIntoViewType;
+                  if (e) {
+                    const n = { node: t, eScrollType: r };
+                    "force" === e ? (i = [n]) : i.push(n);
+                  }
+                  if (void 0 !== r)
+                    for (
+                      let e = i.length - 1;
+                      e >= 0 && void 0 === i[e].eScrollType;
+                      e--
+                    )
+                      i[e].eScrollType = r;
                 }
-                if (void 0 !== r)
-                  for (
-                    let e = i.length - 1;
-                    e >= 0 && void 0 === i[e].eScrollType;
-                    e--
+                for (; i.length; ) {
+                  let { node: r, eScrollType: n } = i.pop(),
+                    s = 0 == i.length;
+                  if (
+                    (void 0 === n && (n = S ? N.NoTransform : N.Standard),
+                    r?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
                   )
-                    i[e].eScrollType = r;
-              }
-              for (; i.length; ) {
-                let { node: r, eScrollType: n } = i.pop(),
-                  s = 0 == i.length;
-                if (
-                  (void 0 === n && (n = S ? N.NoTransform : N.Standard),
-                  r?.m_Properties?.fnScrollIntoViewHandler &&
-                    !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
-                )
-                  continue;
-                const a = r.m_element,
-                  o =
-                    n == N.NoTransform || n == N.NoTransformSparseContent || !s;
-                if (t) {
-                  const t = o ? R(a) : a.getBoundingClientRect();
-                  let r = !1;
-                  const i = Math.max(1.4 * (t.bottom - t.top), 40),
-                    n = v && performance.now() - v < 500;
-                  (n ||
-                    t.bottom < -i ||
-                    t.top > a.ownerDocument.defaultView.innerHeight + i) &&
-                    ((r = !0),
-                    n ||
-                      C(
-                        `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
-                      ));
-                  let s = r ? "auto" : "smooth";
-                  r && (v = performance.now()),
-                    e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
-                    o
-                      ? O(0, a, s)
-                      : a.scrollIntoView({ behavior: s, block: "nearest" });
-                } else
-                  C("No previous element for scrolling, will jump"),
-                    o
-                      ? O(0, a, "auto")
-                      : a?.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, t);
+                    continue;
+                  const a = r.m_element,
+                    o =
+                      n == N.NoTransform ||
+                      n == N.NoTransformSparseContent ||
+                      !s;
+                  if (t) {
+                    const t = o ? R(a) : a.getBoundingClientRect();
+                    let r = !1;
+                    const i = Math.max(1.4 * (t.bottom - t.top), 40),
+                      n = v && performance.now() - v < 500;
+                    (n ||
+                      t.bottom < -i ||
+                      t.top > a.ownerDocument.defaultView.innerHeight + i) &&
+                      ((r = !0),
+                      n ||
+                        C(
+                          `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
+                        ));
+                    let s = r ? "auto" : "smooth";
+                    r && (v = performance.now()),
+                      e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
+                      o
+                        ? O(0, a, s)
+                        : a.scrollIntoView({ behavior: s, block: "nearest" });
+                  } else
+                    C("No previous element for scrolling, will jump"),
+                      o
+                        ? O(0, a, "auto")
+                        : a?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, t);
         }
       }
       (0, i.Cg)([l.o], G.prototype, "OnDOMFocus", null),
@@ -36319,6 +36323,7 @@
           return i && ((r += "_" + i), t && (r += "_" + t)), r;
         }
         static AddNavParamToURL(e, t) {
+          if (!e || 0 == e.length) return e;
           try {
             const r = new URL((0, i.S)(e)),
               n = new URLSearchParams(r.search);
@@ -62861,8 +62866,12 @@
         }
         async LoadSettings() {
           const e = (e) => {
-            const t = localStorage.getItem(e);
-            return t ? JSON.parse(t) : void 0;
+            try {
+              const t = localStorage.getItem(e);
+              return t ? JSON.parse(t) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!e(
             l.k_IncludeBacktraceInLog_StorageKey,
@@ -66211,9 +66220,9 @@
                 `DeferredFocus in ${this.m_tree.id} - focusing ${t ? "descendant of" : "node"} ${e.NavKey}`,
               ),
               t
-                ? e.BChildTakeFocus(nt.D$.APPLICATION) ||
-                  this.m_tree.TransferFocus(nt.D$.APPLICATION, e)
-                : e.BTakeFocus(nt.D$.APPLICATION);
+                ? e.BChildTakeFocus(nt.D$.AUTOFOCUS) ||
+                  this.m_tree.TransferFocus(nt.D$.AUTOFOCUS, e)
+                : e.BTakeFocus(nt.D$.AUTOFOCUS);
           }
         }
       }
@@ -66735,10 +66744,15 @@
               e != i.m_LastActiveNavTree &&
               (i.m_LastActiveFocusNavTree?.GetParentEmbeddedNavTree() == e ||
               e.GetParentEmbeddedNavTree() == i.m_LastActiveFocusNavTree
-                ? (_t(
-                    `There was a focus event in ${e.id}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
-                  ),
-                  e.Activate())
+                ? t == nt.D$.AUTOFOCUS &&
+                  i.m_LastActiveNavTree?.GetLastFocusedNode()
+                  ? _t(
+                      `There was an autofocus event in ${e.id}, but the active nav tree is ${i.m_LastActiveFocusNavTree?.id} and we already have something focused.  Source: ${t && nt.D$[t]}.`,
+                    )
+                  : (_t(
+                      `There was a focus event in ${e.id}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
+                    ),
+                    e.Activate())
                 : _t(
                     `There was a focus event in ${e.id}, but the active nav tree is ${i.m_LastActiveFocusNavTree?.id} so it is being ignored.  Source: ${t && nt.D$[t]}.`,
                   ));

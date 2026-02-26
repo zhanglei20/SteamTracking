@@ -1305,7 +1305,7 @@
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(
             () =>
-              (function (_, _, _, _, _) {
+              (function (_, _, _, _, _, _) {
                 const _ = [];
                 _ && _.push(_(_)),
                   _ && _.length > 0 && _.push(..._(_, _.name, _, _));
@@ -1320,8 +1320,8 @@
                     ),
                   _
                 );
-              })(__webpack_require__, _, _, _, _),
-            [__webpack_require__, _, _, _, _],
+              })(__webpack_require__, _, _, _, _, _),
+            [__webpack_require__, _, _, _, _, _],
           );
         return (0, _.jsx)(_, {
           rgTrailerAndImages: _,
@@ -1732,16 +1732,19 @@
       }
       function _(_) {
         const {
-          _: _,
-          displayID: __webpack_require__,
-          strStoreUrl: _,
-          bHideBottomHalf: _,
-          bShowDeckCompatibilityDialog: _,
-          bShowWishlistButton: _ = !0,
-          bShowIgnoreButton: _ = !1,
-        } = _;
-        return (0, _._)(_)
-          ? (0, _.jsxs)("div", {
+            _: _,
+            displayID: __webpack_require__,
+            strStoreUrl: _,
+            bHideBottomHalf: _,
+            bShowDeckCompatibilityDialog: _,
+            bShowWishlistButton: _ = !0,
+            bShowIgnoreButton: _ = !1,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return void 0 === _ && void 0 === _
+          ? null
+          : (0, _.jsxs)("div", {
               className: (0, _._)(
                 _().GameHoverCapsuleCtn,
                 _().InGameHover,
@@ -1772,8 +1775,7 @@
                   ..._,
                 }),
               ],
-            })
-          : null;
+            });
       }
       function _(_) {
         const {

@@ -1,5 +1,5 @@
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_(), 1),
@@ -3204,6 +3204,7 @@ var _ = class _ {
     return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
   }
   static AddNavParamToURL(_, _) {
+    if (!_ || _.length == 0) return _;
     try {
       let _ = new URL(_(_)),
         _ = new URLSearchParams(_.search);

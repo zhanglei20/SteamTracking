@@ -1,49 +1,51 @@
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -51,12 +53,10 @@ import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -75,11 +75,11 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_(), 1);
@@ -692,58 +692,59 @@ var _ = class extends _ {
     }
   }
   TranslateKey(_) {
-    let _ = this.GetKeycodeFromEvent(_),
-      _ = _.ctrlKey,
-      _ = _.shiftKey;
+    let _ = this.GetKeycodeFromEvent(_);
+    if (_.altKey) return 0;
     if (this.BShouldSwallowEventForTextInputWorkaround(_)) return 0;
-    if (_ && _)
+    if (_.ctrlKey)
+      if (_.shiftKey)
+        switch (_) {
+          case "Digit4":
+            return 7;
+          case "Digit5":
+            return 8;
+          default:
+            return 0;
+        }
+      else
+        switch (_) {
+          case "Digit1":
+            return 27;
+          case "Digit2":
+            return 28;
+          case "Digit3":
+            return 13;
+          case "Digit4":
+            return 5;
+          case "Digit5":
+            return 6;
+          case "Digit6":
+            return 15;
+          case "Digit7":
+            return 16;
+          case "Digit8":
+            return 4;
+          case "Digit9":
+            return 13;
+          case "Digit0":
+            return 14;
+        }
+    else if (!_.shiftKey)
       switch (_) {
-        case "Digit4":
-          return 7;
-        case "Digit5":
-          return 8;
-        default:
-          return 0;
+        case "Escape":
+          return 2;
+        case "Enter":
+          return 1;
+        case "Backspace":
+          return 3;
+        case "ArrowUp":
+          return 9;
+        case "ArrowDown":
+          return 10;
+        case "ArrowLeft":
+          return 11;
+        case "ArrowRight":
+          return 12;
       }
-    if (_)
-      switch (_) {
-        case "Digit1":
-          return 27;
-        case "Digit2":
-          return 28;
-        case "Digit3":
-          return 13;
-        case "Digit4":
-          return 5;
-        case "Digit5":
-          return 6;
-        case "Digit6":
-          return 15;
-        case "Digit7":
-          return 16;
-        case "Digit8":
-          return 4;
-        case "Digit9":
-          return 13;
-        case "Digit0":
-          return 14;
-      }
-    switch (_) {
-      case "Escape":
-        return 2;
-      case "Enter":
-        return 1;
-      case "Backspace":
-        return 3;
-      case "ArrowUp":
-        return 9;
-      case "ArrowDown":
-        return 10;
-      case "ArrowLeft":
-        return 11;
-      case "ArrowRight":
-        return 12;
-    }
     return 0;
   }
 };
