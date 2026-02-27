@@ -397,7 +397,7 @@
     "EventDisplay_CallToAction_InLibrary": "ライブラリ内",
     "EventDisplay_CallToAction_PlayNow": "今すぐプレイ",
     "EventDisplay_CallToAction_ComingSoon": "近日登場",
-    "EventDisplay_CallToAction_ComingSoon_Date": "開始日：%1$s",
+    "EventDisplay_CallToAction_ComingSoon_Date": "リリース予定：%1$s",
     "EventDisplay_CallToAction_Prepurchase_Short": "予約購入",
     "EventDisplay_CallToAction_ShowPurchaseOptions_Button": "購入オプション",
     "EventDisplay_CallToAction_FreeToPlay": "無料プレイ",
@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "トレードが取り消されました",
     "SteamNotifications_TradeReversal_Body_Short": "トレードが取り消されました",
     "SteamNotifications_TradeReversal_Description": "最近のトレードの1つがトレード相手によって取り消されました。",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "PCの仕様をこのレビューに添付",
+    "GameFrameRateReporting_Confirmation_Yes": "ありがとうございます。これはアカウント設定でいつでも変更できます。",
+    "GameFrameRateReporting_Confirmation_No": "これはアカウント設定でいつでも変更できます。",
+    "GameFrameRateReporting_Title": "匿名のフレームレートデータ：",
+    "GameFrameRateReporting_Prompt": "Steamアカウントにログインした状態でゲームをプレイ中に、匿名のフレームレートデータを収集してもよろしいですか？このデータは、ゲームの互換性の把握とSteamの改善に役立ちます。",
+    "GameFrameRateReporting_Details_Title": "匿名のフレームレートデータ",
+    "GameFrameRateReporting_Details_Desc": "これを許可すると、ゲームプレイのフレームレートデータが保存されますが、Steamアカウントに紐づけられることはなく、プレイしているハードウェアの種類で識別されます。このデータは、ゲームの互換性を把握したり、Steamを実行するデバイスの体験を改善したりするのに役立ちます。",
+    "GameFrameRateReporting_Details_HowToChange": "この設定を後で変更したい場合は、Steamアカウントの「設定」から可能です。",
+    "GameFrameRateReporting_LearnMore": "詳細を見る"
 }

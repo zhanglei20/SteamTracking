@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Egy csere vissza lett vonva.",
     "SteamNotifications_TradeReversal_Body_Short": "Egy csere vissza lett vonva.",
     "SteamNotifications_TradeReversal_Description": "A cserepartnered visszavonta egy közelmúltbeli cserédet.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "PC-specifikációk csatolása ehhez az értékeléshez",
+    "GameFrameRateReporting_Confirmation_Yes": "Köszönjük, ezt bármikor meg tudod változtatni a fiókbeállításokban.",
+    "GameFrameRateReporting_Confirmation_No": "Ezt bármikor meg tudod változtatni a fiókbeállításokban.",
+    "GameFrameRateReporting_Title": "Névtelen képkockaszám-adatok:",
+    "GameFrameRateReporting_Prompt": "Gyűjthetünk névtelen képkockaszám-adatokat, miközben játszol és be vagy jelentkezve a Steam fiókodba? Ezen adatok segítenek többet megtudnunk a játékkompatibilitásról, és továbbfejleszteni a Steamet.",
+    "GameFrameRateReporting_Details_Title": "Névtelen képkockaszám-adatok",
+    "GameFrameRateReporting_Details_Desc": "Ha feliratkozol erre, a játékmeneti képkockaszám-adatok a Steam fiókodhoz kapcsolás nélkül lesznek tárolva, de az általad használt hardvertípus alapján azonosítva lesznek. Ezek az adatok segítenek nekünk többet megtudni a játékkompatibilitásról és javítani a felhasználói élményt a Steamet futtató eszközökön.",
+    "GameFrameRateReporting_Details_HowToChange": "Ha később meg szeretnéd változtatni a beállítást, a Steam fiókbeállításaiban találod meg.",
+    "GameFrameRateReporting_LearnMore": "Tudj meg többet"
 }

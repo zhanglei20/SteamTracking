@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Поправено е, че списъкът с приятели и чат прозорците не се изобразяваха в игралния Steam слой под Linux и macOS.",
     "BBCode_Loading": "Зареждане",
     "BBCode_Failed": "Неуспешно зареждане",
-    "broadcastDetails_Playing": "Играе"
+    "broadcastDetails_Playing": "Играе",
+    "ChatRoom_PlayestInvite_ViewInvite": "Преглед на покана",
+    "ChatRoom_PlayestInvite_Invite": "%1$s Ви покани към Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Поканихте %1$s към Steam Playtest %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Поканихте %1$s към Steam Playtest за %2$s%3$s"
 }

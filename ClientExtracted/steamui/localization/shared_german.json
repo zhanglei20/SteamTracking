@@ -471,7 +471,7 @@
     "EventDisplay_Share_OnMyStatus": "Direkt in meinem Status teilen",
     "EventDisplay_Share_OnMyStatus_Details": "Veröffentlichen Sie diesen Status im Aktivitätenfeed Ihrer Freunde. Steam wird dort die Nachricht und das unten angezeigte Vorschaubild anzeigen.",
     "EventDisplay_Share_OnMyStatus_Placeholder": "Teilen Sie Ihren Freunden etwas dazu mit",
-    "EventDisplay_Share_OnSteam": "In der Steam Community als Statusmeldung teilen",
+    "EventDisplay_Share_OnSteam": "In der Steam-Community als Statusmeldung teilen",
     "EventDisplay_Share_OnFaceBook": "Auf Facebook teilen",
     "EventDisplay_Share_OnTwitter": "Auf Twitter teilen",
     "EventDisplay_Share_OnReddit": "Auf Reddit teilen",
@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Ein Handel wurde rückgängig gemacht",
     "SteamNotifications_TradeReversal_Body_Short": "Ein Handel wurde rückgängig gemacht",
     "SteamNotifications_TradeReversal_Description": "Einer Ihrer letzten Handel wurde von Ihrem Handelspartner rückgängig gemacht.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Fügen Sie dieser Rezension die Gerätespezifikationen bei",
+    "GameFrameRateReporting_Confirmation_Yes": "Vielen Dank. Sie können dies jederzeit in den Account-Einstellungen ändern.",
+    "GameFrameRateReporting_Confirmation_No": "Sie können dies jederzeit in den Account-Einstellungen ändern.",
+    "GameFrameRateReporting_Title": "Anonymisierte Daten zur Bildrate:",
+    "GameFrameRateReporting_Prompt": "Gestatten Sie Steam, während des Spielens sowie der aktiven Nutzung des Steam-Accounts anonyme Daten zur Bildrate zu sammeln? Diese Daten werden zur Kompatibilitätsprüfung von Spielen sowie zur Verbesserung von Steam verwendet.",
+    "GameFrameRateReporting_Details_Title": "Anonymisierte Daten zur Bildrate",
+    "GameFrameRateReporting_Details_Desc": "Durch die Aktivierung dieser Option, werden beim Spielen Daten zur Bildrate erfasst und gespeichert. Diese Daten enthalten keine accountbezogenen Informationen, geben jedoch Aufschluss darüber, welche Hardware zum Spielen verwendet wurde. Die Erfassung dieser Daten gibt Steam Aufschluss über die Kompatibilität von Spielen und trägt so zur Verbesserung der allgemeinen Spielerfahrung auf Geräten mit Steam bei.",
+    "GameFrameRateReporting_Details_HowToChange": "Sie können diese Einstellung jederzeit in Ihren Steam-Accounteinstellungen ändern",
+    "GameFrameRateReporting_LearnMore": "Mehr erfahren"
 }

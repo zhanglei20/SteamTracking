@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Обмін було скасовано",
     "SteamNotifications_TradeReversal_Body_Short": "Обмін було скасовано",
     "SteamNotifications_TradeReversal_Description": "Ваш партнер по обміну скасував один із нещодавніх обмінів.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Прикріпити характеристики ПК до цієї рецензії",
+    "GameFrameRateReporting_Confirmation_Yes": "Дякуємо! Ви можете змінити це у будь-який момент в налаштуваннях акаунта.",
+    "GameFrameRateReporting_Confirmation_No": "Ви можете змінити це у будь-який момент в налаштуваннях акаунта.",
+    "GameFrameRateReporting_Title": "Анонімні дані про частоту кадрів:",
+    "GameFrameRateReporting_Prompt": "Чи можемо ми збирати анонімні дані про частоту кадрів під час гри після входу до акаунта Steam? Ці дані допомагають нам дізнатися про сумісність ігор і поліпшувати Steam.",
+    "GameFrameRateReporting_Details_Title": "Анонімні дані про частоту кадрів",
+    "GameFrameRateReporting_Details_Desc": "Якщо ви надасте дозвіл на збір даних про частоту кадрів, вони зберігатимуться анонімно й не будуть пов’язані з вашим акаунтом Steam. Ці дані ідентифікуються за типом обладнання, на якому ви граєте. Вони допомагають нам дізнатися про сумісність ігор і поліпшувати досвід користування пристроями, на яких інстальовано Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Якщо бажатимете змінити цей дозвіл пізніше, можете знайти його в налаштуваннях акаунта Steam.",
+    "GameFrameRateReporting_LearnMore": "Докладніше"
 }

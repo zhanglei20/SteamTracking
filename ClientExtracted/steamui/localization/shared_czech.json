@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Obchod byl vzat zpět",
     "SteamNotifications_TradeReversal_Body_Short": "Obchod byl vzat zpět",
     "SteamNotifications_TradeReversal_Description": "Jeden z Vašich nedávných obchodů vzal druhý uživatel zpět.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Přiložit k recenzi konfiguraci zařízení",
+    "GameFrameRateReporting_Confirmation_Yes": "Děkujeme. Své rozhodnutí můžete případně kdykoli změnit v nastavení.",
+    "GameFrameRateReporting_Confirmation_No": "Své rozhodnutí můžete kdykoli změnit v nastavení.",
+    "GameFrameRateReporting_Title": "Anonymní data o snímkové frekvenci:",
+    "GameFrameRateReporting_Prompt": "Můžeme sbírat anonymizovaná data o snímkové frekvenci, zatímco hrajete hry a jste přihlášeni ke svému účtu služby Steam? Tato data nám pomáhají s určením kompatibility her a obecným zlepšením služby Steam.",
+    "GameFrameRateReporting_Details_Title": "Anonymní data o snímkové frekvenci",
+    "GameFrameRateReporting_Details_Desc": "Pokud tuto možnost povolíte, ukládaná data o snímkové frekvenci nebudou spojena s Vaším účtem služby Steam a jediným identifikátorem bude hardware, na kterém jste hráli. Tato data nám pomáhají s určením kompatibility her a zlepšením zážitku napříč různými zařízeními.",
+    "GameFrameRateReporting_Details_HowToChange": "Anonymní sběr dat můžete případně kdykoli zakázat/povolit v nastavení svého účtu.",
+    "GameFrameRateReporting_LearnMore": "Více informací"
 }

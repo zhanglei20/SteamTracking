@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Naprawiono błąd powodujący, że okna czatu i znajomych nie wyświetlały się w nakładce w systemach Linux i macOS.",
     "BBCode_Loading": "Wczytywanie",
     "BBCode_Failed": "Nie udało się wczytać",
-    "broadcastDetails_Playing": "Gra w"
+    "broadcastDetails_Playing": "Gra w",
+    "ChatRoom_PlayestInvite_ViewInvite": "Zobacz zaproszenie",
+    "ChatRoom_PlayestInvite_Invite": "%1$s zaprasza cię do dołączenia do Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Zaproszono użytkownika %1$s do playtestu %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Zaproszono użytkownika %1$s do playtestu %2$s%3$s"
 }

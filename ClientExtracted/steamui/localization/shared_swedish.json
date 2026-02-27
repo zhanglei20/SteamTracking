@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Ett byte återställdes",
     "SteamNotifications_TradeReversal_Body_Short": "Ett byte återställdes",
     "SteamNotifications_TradeReversal_Description": "Ett av dina senaste byten ångrades av bytespartnern.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Bifoga pc-specifikationer med recensionen",
+    "GameFrameRateReporting_Confirmation_Yes": "Tack! Du kan ändra detta när som helst i kontoinställningarna.",
+    "GameFrameRateReporting_Confirmation_No": "Du kan ändra detta när som helst i kontoinställningarna.",
+    "GameFrameRateReporting_Title": "Anonyma data om bildfrekvens:",
+    "GameFrameRateReporting_Prompt": "Kan vi samla in anonymiserad bildfrekvensdata medan du spelar spel och är inloggad på ditt Steam-konto? Dessa data hjälper oss att lära oss om spelkompatibilitet och förbättra Steam.",
+    "GameFrameRateReporting_Details_Title": "Anonyma data om bildfrekvens",
+    "GameFrameRateReporting_Details_Desc": "Om du väljer att delta lagras bildfrekvensdata från spel utan koppling till ditt Steam-konto, men identifieras med den typ av maskinvara du spelar på. Dessa data hjälper oss att lära oss om spelkompatibilitet och förbättra upplevelsen på enheter som kör Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Om du vill ändra inställningen senare finns den i kontoinställningarna på Steam.",
+    "GameFrameRateReporting_LearnMore": "Mer information"
 }

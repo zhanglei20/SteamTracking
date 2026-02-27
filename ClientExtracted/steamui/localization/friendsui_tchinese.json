@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "修正在 Linux 和 macOS 中，好友與聊天視窗無法顯示於遊戲內嵌介面中的問題",
     "BBCode_Loading": "載入中",
     "BBCode_Failed": "載入失敗",
-    "broadcastDetails_Playing": "正在遊玩"
+    "broadcastDetails_Playing": "正在遊玩",
+    "ChatRoom_PlayestInvite_ViewInvite": "檢視邀請",
+    "ChatRoom_PlayestInvite_Invite": "%1$s 邀請您加入一項 Steam 遊戲測試",
+    "ChatRoom_PlaytestInvite_YouInvited": "您邀請了 %1$s 加入一項 Steam 遊戲測試 %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "您邀請了 %1$s 加入 %2$s%3$s 的 Steam 遊戲測試"
 }

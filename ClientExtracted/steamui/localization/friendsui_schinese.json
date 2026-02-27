@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "修复了好友和聊天窗口在 Linux 及 macOS 上的游戏内叠加界面中不显示的问题。",
     "BBCode_Loading": "正在载入",
     "BBCode_Failed": "载入失败",
-    "broadcastDetails_Playing": "正在播放"
+    "broadcastDetails_Playing": "正在播放",
+    "ChatRoom_PlayestInvite_ViewInvite": "查看邀请",
+    "ChatRoom_PlayestInvite_Invite": "%1$s 邀请您加入 Steam 游戏测试",
+    "ChatRoom_PlaytestInvite_YouInvited": "您邀请了 %1$s 加入 Steam 游戏测试 %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "您邀请了 %1$s 加入 %2$s%3$s 的 Steam 游戏测试"
 }

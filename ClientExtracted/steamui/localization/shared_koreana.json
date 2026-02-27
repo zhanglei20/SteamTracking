@@ -590,7 +590,7 @@
     "EventEditor_SaleValveApproval_Request_Desc": "이렇게 하면 Valve에 판매 페이지 검토를 요청하는 Steamworks 지원 티켓이 생성됩니다. 아트와 메시지가 최종적으로 준비되고, 게임 목록이 완성된 후에만 검토를 요청해야 합니다.",
     "EventEditor_SaleValveApproval_Request_Desc2": "페이지 상단 근처에 있는 이벤트 제목과 목적이 명확하게 설명되어 있는지 확인하세요. 쇼케이스의 경우, 페이지 상단에 무엇을 위한 쇼케이스이며 어떤 방식으로 작동하는지 설명하는 텍스트 섹션이 필요할 수 있습니다.",
     "EventEditor_SaleValveApproval_Request_Desc3": "이 할인 페이지는 검토가 완료되면 자동으로 잠금 처리됩니다. 검토 이후 또는 이벤트가 시작된 후 새롭게 변경해야 할 사항이 있는 경우 해당 변경 사항에 대한 자세한 정보와 검토 전에 이를 완료할 수 없었던 사유를 적어 주세요.",
-    "EventEditor_SaleValveApproval_Request_InputText": "선택 사항: 검토 팀에게 전달하고 싶은 정보",
+    "EventEditor_SaleValveApproval_Request_InputText": "선택 사항: 검토팀에게 전달하고 싶은 정보",
     "EventEditor_SaleValveApproval_Request_Partner": "검토 요청 티켓을 함께 확인할 수 있는 파트너를 선택하세요.",
     "EventEditor_SaleValveApproval_Request_Partner_ttip": "선택 사항: 파트너를 선택할 경우, 해당 파트너의 구성원이 티켓을 확인하고 응답할 수 있습니다. 기본 설정에서는 티켓을 생성한 사용자만 티켓을 읽고, 업데이트하거나 응답할 수 있습니다.",
     "EventEditor_SaleValveApproval_Request_Error": "티켓을 생성하지 못했습니다. 나중에 다시 시도해 주세요.",
@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "거래를 되돌렸습니다.",
     "SteamNotifications_TradeReversal_Body_Short": "거래를 되돌렸습니다.",
     "SteamNotifications_TradeReversal_Description": "최근 거래 중 하나를 거래 상대가 되돌렸습니다.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "이 평가에 PC 사양 첨부",
+    "GameFrameRateReporting_Confirmation_Yes": "감사합니다. 이 설정은 계정 설정에서 언제든지 변경할 수 있습니다.",
+    "GameFrameRateReporting_Confirmation_No": "이 설정은 계정 설정에서 언제든지 변경할 수 있습니다.",
+    "GameFrameRateReporting_Title": "익명 프레임 속도 데이터:",
+    "GameFrameRateReporting_Prompt": "Steam 계정으로 로그인하여 게임을 플레이하는 동안 프레임 속도 데이터를 익명으로 수집해도 될까요? 이 데이터는 게임 호환성에 대해 알아보고 Steam을 개선하는 데 도움이 됩니다.",
+    "GameFrameRateReporting_Details_Title": "익명 프레임 속도 데이터",
+    "GameFrameRateReporting_Details_Desc": "데이터 수집에 동의할 경우 게임플레이어의 프레임 속도 데이터는 Steam 계정에 연결되지 않고 익명으로 저장되지만, 게임을 플레이하는 데 사용한 하드웨어의 종류는 식별됩니다. 이 데이터는 게임 호환성에 대해 알아보고 Steam을 실행하는 기기에서의 경험을 개선하는 데 도움이 됩니다.",
+    "GameFrameRateReporting_Details_HowToChange": "나중에 설정을 변경하려면 Steam 계정 설정에서 변경할 수 있습니다.",
+    "GameFrameRateReporting_LearnMore": "자세한 정보"
 }

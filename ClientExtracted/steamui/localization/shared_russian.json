@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Операция отменена",
     "SteamNotifications_TradeReversal_Body_Short": "Операция отменена",
     "SteamNotifications_TradeReversal_Description": "Одна из ваших недавних операций обмена была отменена другим участником.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Добавить характеристики ПК к этому обзору",
+    "GameFrameRateReporting_Confirmation_Yes": "Спасибо! Вы можете отменить сбор данных в любое время в настройках аккаунта.",
+    "GameFrameRateReporting_Confirmation_No": "Вы можете отменить сбор данных в любое время в настройках аккаунта.",
+    "GameFrameRateReporting_Title": "Анонимные данные о частоте кадров:",
+    "GameFrameRateReporting_Prompt": "Можем ли мы собирать анонимные данные о частоте кадров, когда вы играете в игры, войдя в свой аккаунт Steam? Эти данные помогают нам узнать больше о совместимости игр и улучшить работу Steam.",
+    "GameFrameRateReporting_Details_Title": "Анонимные данные о частоте кадров",
+    "GameFrameRateReporting_Details_Desc": "Если вы согласитесь, данные о частоте кадров игрового процесса будут храниться без привязки к вашему аккаунту Steam и идентифицироваться по типу устройства, на котором вы играете. Эти данные помогают нам узнать больше о совместимости игр и улучшить работу устройств, на которых установлен Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "В будущем вы сможете отключить сбор данных в настройках аккаунта Steam",
+    "GameFrameRateReporting_LearnMore": "Узнать больше"
 }

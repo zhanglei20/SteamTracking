@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Linux와 macOS의 게임 내 오버레이에서 친구와 채팅창이 표시되지 않는 문제를 해결했습니다.",
     "BBCode_Loading": "불러오는 중",
     "BBCode_Failed": "불러오기 실패",
-    "broadcastDetails_Playing": "플레이 중"
+    "broadcastDetails_Playing": "플레이 중",
+    "ChatRoom_PlayestInvite_ViewInvite": "초대 보기",
+    "ChatRoom_PlayestInvite_Invite": "%1$s 님이 Steam Playtest에 초대했습니다.",
+    "ChatRoom_PlaytestInvite_YouInvited": "%1$s 님을 %2$s%3$s Steam Playtest에 초대했습니다.",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "%1$s 님을 %2$s%3$s Steam Playtest에 초대했습니다."
 }

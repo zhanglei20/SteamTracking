@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "En byttehandel ble omgjort",
     "SteamNotifications_TradeReversal_Body_Short": "En byttehandel ble omgjort",
     "SteamNotifications_TradeReversal_Description": "En nylig byttehandel ble omgjort av den andre parten.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Legg ved PC-spesifikasjoner til anmeldelsen",
+    "GameFrameRateReporting_Confirmation_Yes": "Takk, du kan endre dette når som helst i kontoinnstillingene.",
+    "GameFrameRateReporting_Confirmation_No": "Du kan endre dette når som helst i kontoinnstillingene.",
+    "GameFrameRateReporting_Title": "Anonyme data om bildefrekvens:",
+    "GameFrameRateReporting_Prompt": "Kan vi samle inn anonymiserte data om bildefrekvens mens du spiller spill og er logget inn med Steam-kontoen din? Denne informasjonen hjelper oss med å lære om spillets kompatibilitet og forbedre Steam.",
+    "GameFrameRateReporting_Details_Title": "Anonyme data om bildefrekvens",
+    "GameFrameRateReporting_Details_Desc": "Hvis du velger å delta, lagres dataen om bildefrekvensen uten tilknytning til Steam-kontoen din, men identifiseres med hva slags maskinvare du spiller på. Denne dataen hjelper oss med å lære om spillets kompatibilitet og å forbedre opplevelsen på enheter som kjører Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Hvis du vil endre innstillingen senere, kan du finne den i Steam-kontoinnstillingene.",
+    "GameFrameRateReporting_LearnMore": "Les mer"
 }

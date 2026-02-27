@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Fikset at venne- og samtalevinduer ikke ble vist i spilloverlegget på Linux og macOS.",
     "BBCode_Loading": "Laster",
     "BBCode_Failed": "Kunne ikke laste inn",
-    "broadcastDetails_Playing": "Spiller"
+    "broadcastDetails_Playing": "Spiller",
+    "ChatRoom_PlayestInvite_ViewInvite": "Se invitasjon",
+    "ChatRoom_PlayestInvite_Invite": "%1$s inviterte deg til en Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Du inviterte %1$s til Steam Playtest for %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Du inviterte %1$s til Steam Playtest for %2$s%3$s"
 }

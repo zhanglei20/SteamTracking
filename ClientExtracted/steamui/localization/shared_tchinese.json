@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "一筆交易已撤銷",
     "SteamNotifications_TradeReversal_Body_Short": "一筆交易已撤銷",
     "SteamNotifications_TradeReversal_Description": "您有一筆近期交易已被您的交易夥伴撤銷。",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "為此評論附上 PC 規格",
+    "GameFrameRateReporting_Confirmation_Yes": "謝謝，您可隨時在帳戶設定中變更此項。",
+    "GameFrameRateReporting_Confirmation_No": "您可隨時在帳戶設定中變更此項。",
+    "GameFrameRateReporting_Title": "匿名遊戲幀率資料：",
+    "GameFrameRateReporting_Prompt": "我們是否能在您以 Steam 帳戶登入並遊玩遊戲時收集匿名幀率資料？此資料協助我們了解遊戲相容性並改善 Steam 體驗。",
+    "GameFrameRateReporting_Details_Title": "匿名遊戲幀率資料",
+    "GameFrameRateReporting_Details_Desc": "如果您選擇參與收集資料，遊戲過程中幀率資料的儲存方式不會與您的 Steam 帳戶有所連結，但會識別您是使用哪一種硬體遊玩。此資料協助我們了解遊戲相容性並改善在裝置上執行 Steam 的體驗。",
+    "GameFrameRateReporting_Details_HowToChange": "若您稍後想要更改設定，可前往 Steam 帳戶設定中完成",
+    "GameFrameRateReporting_LearnMore": "深入了解"
 }

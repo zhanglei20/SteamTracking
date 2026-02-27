@@ -230,11 +230,11 @@
     "WarnBeforeNavigatingToCopyrightReportForm": "Ești pe cale să părăsești această pagină și să accesezi formularul Steam pentru raportarea unei încălcări a drepturilor de autor.",
     "WarnBeforeNavigatingToTrademarkReportForm": "Ești pe cale să părăsești această pagină și să accesezi formularul Steam pentru raportarea utilizării nepermise a unei mărci înregistrate.",
     "reportedcontent_unresolved_1": "Ai raportat %1$s pe Steam.",
-    "reportedcontent_unresolved_2": "Echipa de moderare Steam va evalua conținutul și va lua măsuri în conformitate cu %1$s Steam. Vei primi o notificare aici de îndată ce situația semnalată este rezolvată. Dacă ai efectuat această raportare din greșeală, o poți %2$s.",
+    "reportedcontent_unresolved_2": "Echipa de moderare Steam va evalua conținutul și va lua măsuri în conformitate cu %1$s Steam. Vei primi o notificare Steam de îndată ce situația semnalată este rezolvată.",
     "reportedcontent_community_guidelines": "Regulile și îndrumările comunității",
-    "reportedcontent_cancel_report": "anula.",
+    "reportedcontent_cancel_report": "anula",
     "reportedcontent_acquitted_1": "Am analizat conținutul (%1$s) pe care l-ai raportat pe Steam pe %2$s.",
-    "reportedcontent_acquitted_2": "În urma evaluării de către %1$s, s-a constatat că acest conținut nu încalcă %2$s Steam sau vreo lege aplicabilă atunci când este analizat în contextul său. Această decizie s-a bazat pe informațiile disponibile la momentul verificării și pe o evaluare în raport cu reglementările relevante. Dacă nu ești de acord cu această decizie, poți trimite o %3$s.",
+    "reportedcontent_acquitted_2": "În urma evaluării de către %1$s, s-a constatat că acest conținut nu încalcă %2$s Steam sau vreo lege aplicabilă atunci când este analizat în contextul său. Această decizie s-a bazat pe informațiile disponibile la momentul verificării și pe o evaluare în raport cu reglementările relevante.",
     "reportedcontent_acquitted_2_eu_addendum": "De asemenea, ai dreptul de a te adresa unui organism autorizat de soluționare extrajudiciară a litigiilor sau de a intenta o acțiune în fața unei instanțe competente.",
     "reportedcontent_acquitted_3": "De asemenea, îți recomandăm să consulți informațiile disponibile în articolul %1$s.",
     "reportedcontent_dispute_acquittal": "contestație",
@@ -275,5 +275,8 @@
     "moderatedcontent_dispute_sanctioned_1": "Am analizat contestația ta cu privire la conținut (%1$s).",
     "moderatedcontent_dispute_sanctioned_2": "După o reevaluare atentă, am hotărât să ne menținem decizia inițială. Conținutul va rămâne eliminat sau restricționat, iar măsurile luate asupra contului vor rămâne active. Am ajuns la această hotărâre după ce am evaluat conținutul în contextul său, ținând cont de informațiile pe care ni le-ai furnizat în cadrul contestației și de regulile platformei și reglementările legale.",
     "moderatedcontent_dispute_sanctioned_2_eu_addendum": "Dacă nu ești de acord cu această hotărâre, ai dreptul de a te adresa unui organism autorizat de soluționare extrajudiciară a litigiilor sau de a intenta o acțiune în fața unei instanțe competente.",
-    "nocomma": ""
+    "nocomma": "",
+    "reportedcontent_unresolved_cancel": " Dacă ai efectuat această raportare din greșeală, o poți %1$s.",
+    "reportedcontent_dispute_submit_dispute": " Dacă nu ești de acord cu această decizie, poți depune o %1$s.",
+    "reportedcontent_content_report_breadcrumb": "Detaliile raportului"
 }

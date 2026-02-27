@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Body_Short": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Description": "Uma das suas trocas recentes foi revertida pela contraparte.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Anexar especificações do computador à análise",
+    "GameFrameRateReporting_Confirmation_Yes": "Agradecemos a participação! Você pode alterar a sua preferência a qualquer momento nas configurações da conta.",
+    "GameFrameRateReporting_Confirmation_No": "Você pode alterar a sua preferência a qualquer momento nas configurações da conta.",
+    "GameFrameRateReporting_Title": "Dados anônimos de taxa de quadros:",
+    "GameFrameRateReporting_Prompt": "Podemos coletar dados anônimos de taxa de quadros ao jogar com a sua conta Steam? Esses dados nos ajudam a entender melhor a compatibilidade de jogos e aprimorar o Steam.",
+    "GameFrameRateReporting_Details_Title": "Dados anônimos de taxa de quadros",
+    "GameFrameRateReporting_Details_Desc": "Ao ativar esta opção, dados de taxa de quadros dos seus jogos serão armazenados sem nenhuma associação à sua conta Steam, mas identificados pelo tipo de hardware em uso. Esses dados nos ajudam a entender melhor a compatibilidade de jogos e aprimorar a experiência em dispositivos que rodam o Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Caso deseje alterar esta opção mais tarde, você pode encontrá-la nas configurações da conta Steam.",
+    "GameFrameRateReporting_LearnMore": "Saiba mais"
 }

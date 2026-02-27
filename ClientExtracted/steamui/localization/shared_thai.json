@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
     "SteamNotifications_TradeReversal_Body_Short": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
     "SteamNotifications_TradeReversal_Description": "คู่แลกเปลี่ยนของคุณได้คืนค่าให้หนึ่งในการแลกเปลี่ยนล่าสุดของคุณแล้ว",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "แนบข้อมูลจำเพาะของ PC มากับบทวิจารณ์นี้",
+    "GameFrameRateReporting_Confirmation_Yes": "ขอบคุณ คุณสามารถเปลี่ยนการตั้งค่านี้ได้ทุกเมื่อในการตั้งค่าบัญชี",
+    "GameFrameRateReporting_Confirmation_No": "คุณสามารถเปลี่ยนการตั้งค่านี้ได้ทุกเมื่อในการตั้งค่าบัญชี",
+    "GameFrameRateReporting_Title": "ข้อมูลอัตราเฟรมแบบไม่ระบุตัวตน:",
+    "GameFrameRateReporting_Prompt": "เราขออนุญาตเก็บข้อมูลอัตราเฟรมแบบไม่ระบุตัวตนในขณะที่คุณกำลังเล่นเกม และเข้าสู่ระบบด้วยบัญชี Steam ของคุณได้หรือไม่? ข้อมูลนี้จะช่วยให้เราได้เรียนรู้เกี่ยวกับความเข้ากันได้ของเกมและนำไปใช้เพื่อพัฒนา Steam ให้ดียิ่งขึ้น",
+    "GameFrameRateReporting_Details_Title": "ข้อมูลอัตราเฟรมแบบไม่ระบุตัวตน",
+    "GameFrameRateReporting_Details_Desc": "หากคุณเลือกเข้าร่วม ข้อมูลอัตราเฟรมขณะเล่นเกมจะถูกจัดเก็บโดยไม่มีการเชื่อมโยงกับบัญชี Steam ของคุณ แต่จะถูกระบุด้วยประเภทของฮาร์ดแวร์ที่คุณใช้ในการเล่น ข้อมูลนี้จะช่วยให้เราได้เรียนรู้เกี่ยวกับความเข้ากันได้ของเกม และปรับปรุงประสบการณ์การใช้งานบนอุปกรณ์ที่ใช้ Steam",
+    "GameFrameRateReporting_Details_HowToChange": "หากคุณต้องการเปลี่ยนการตั้งค่านี้ในภายหลัง คุณสามารถเข้าไปปรับเปลี่ยนได้ที่การตั้งค่าบัญชี Steam",
+    "GameFrameRateReporting_LearnMore": "เรียนรู้เพิ่มเติม"
 }

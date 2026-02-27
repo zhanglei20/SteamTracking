@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Fixade att vän- och chattfönster inte visades i spelövertoningen på Linux och macOS.",
     "BBCode_Loading": "Läser in",
     "BBCode_Failed": "Inläsning misslyckades",
-    "broadcastDetails_Playing": "Spelar"
+    "broadcastDetails_Playing": "Spelar",
+    "ChatRoom_PlayestInvite_ViewInvite": "Visa inbjudan",
+    "ChatRoom_PlayestInvite_Invite": "%1$s har bjudit in dig till ett Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Du bjöd in %1$s till Steam Playtest för %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Du bjöd in %1$s till Steam Playtest för %2$s%3$s"
 }

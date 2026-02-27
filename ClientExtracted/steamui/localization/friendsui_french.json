@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Correction du problème suivant : les fenêtres de contacts et de chat ne s'affichaient pas dans l'overlay en jeu sur Linux et macOS.",
     "BBCode_Loading": "Chargement",
     "BBCode_Failed": "Échec du chargement",
-    "broadcastDetails_Playing": "Joue à"
+    "broadcastDetails_Playing": "Joue à",
+    "ChatRoom_PlayestInvite_ViewInvite": "Afficher l'invitation",
+    "ChatRoom_PlayestInvite_Invite": "%1$s vous a invité à rejoindre un playtest Steam",
+    "ChatRoom_PlaytestInvite_YouInvited": "Vous avez invité %1$s au playtest Steam %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Vous avez invité %1$s au playtest Steam de %2$s%3$s"
 }

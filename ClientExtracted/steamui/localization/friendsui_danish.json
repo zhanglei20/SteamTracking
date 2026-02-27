@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Rettelse af venne- og chatvinduer, som ikke blev vist i overlayet i spil i Linux og macOS.",
     "BBCode_Loading": "Indlæser",
     "BBCode_Failed": "Indlæsningen mislykkedes",
-    "broadcastDetails_Playing": "Spiller"
+    "broadcastDetails_Playing": "Spiller",
+    "ChatRoom_PlayestInvite_ViewInvite": "Vis invitation",
+    "ChatRoom_PlayestInvite_Invite": "%1$s inviterede dig til en Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Du inviterede %1$s til Steam Playtest %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Du inviterede %1$s til Steam Playtesten for %2$s%3$s"
 }

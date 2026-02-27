@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Er is een ruilactie teruggedraaid",
     "SteamNotifications_TradeReversal_Body_Short": "Er is een ruilactie teruggedraaid",
     "SteamNotifications_TradeReversal_Description": "Een van je recente ruilacties is teruggedraaid door je ruilpartner.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Pc-specificaties toevoegen aan deze recensie",
+    "GameFrameRateReporting_Confirmation_Yes": "Bedankt, je kunt je keuze op elk gewenst moment wijzigen in de accountinstellingen.",
+    "GameFrameRateReporting_Confirmation_No": "Je kunt je keuze op elk gewenst moment wijzigen in de accountinstellingen.",
+    "GameFrameRateReporting_Title": "Anonieme gegevens over framesnelheid:",
+    "GameFrameRateReporting_Prompt": "Mogen we geanonimiseerde gegevens over framesnelheid verzamelen terwijl je met je Steam-account bent ingelogd en spellen speelt? We gebruiken deze gegevens om beter inzicht te krijgen in de spelcompatibiliteit en om Steam te verbeteren.",
+    "GameFrameRateReporting_Details_Title": "Anonieme gegevens over framesnelheid",
+    "GameFrameRateReporting_Details_Desc": "Als je hier toestemming voor geeft, worden de gegevens over framesnelheid tijdens het spelen verzameld en opgeslagen zonder connectie met je Steam-account. Ze worden alleen gekoppeld aan het type hardware waarop je speelt. We gebruiken deze gegevens om beter inzicht te krijgen in de spelcompatibiliteit en om de ervaring op apparaten met Steam te verbeteren.",
+    "GameFrameRateReporting_Details_HowToChange": "Je kunt deze instelling later altijd wijzigen via de Steam-accountinstellingen",
+    "GameFrameRateReporting_LearnMore": "Meer informatie"
 }

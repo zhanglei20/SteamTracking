@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Wymiana została cofnięta",
     "SteamNotifications_TradeReversal_Body_Short": "Wymiana została cofnięta",
     "SteamNotifications_TradeReversal_Description": "Jedna z twoich ostatnich wymian została cofnięta przez twojego partnera wymiany.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Dołącz specyfikację PC do tej recenzji",
+    "GameFrameRateReporting_Confirmation_Yes": "Dziękujemy, możesz to zmienić w każdej chwili w ustawieniach konta.",
+    "GameFrameRateReporting_Confirmation_No": "Możesz to zmienić w każdej chwili w ustawieniach konta.",
+    "GameFrameRateReporting_Title": "Anonimowe dane o liczbie klatek na sekundę:",
+    "GameFrameRateReporting_Prompt": "Czy możemy zbierać zanonimizowane dane dotyczące liczby klatek na sekundę, gdy grasz w gry i jesteś zalogowany na swoje konto Steam? Te dane pomagają nam zrozumieć zgodność gier oraz ulepszać Steam.",
+    "GameFrameRateReporting_Details_Title": "Anonimowe dane o liczbie klatek na sekundę",
+    "GameFrameRateReporting_Details_Desc": "Jeśli się na to zgodzisz, dane dotyczące liczby klatek na sekundę w rozgrywce będą przechowywane bez powiązania z twoim kontem Steam, ale będą identyfikowane na podstawie rodzaju sprzętu, na którym grasz. Dane te pomagają nam w ocenie zgodności gier i ulepszaniu wygody użytkowania na urządzeniach ze Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Jeśli chcesz zmienić to ustawienie później, możesz znaleźć je w ustawieniach konta Steam.",
+    "GameFrameRateReporting_LearnMore": "Więcej"
 }

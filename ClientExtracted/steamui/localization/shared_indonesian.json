@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Sebuah pertukaran telah dikembalikan",
     "SteamNotifications_TradeReversal_Body_Short": "Sebuah pertukaran telah dikembalikan",
     "SteamNotifications_TradeReversal_Description": "Salah satu pertukaran terkinimu dikembalikan oleh rekan bertukarmu.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Lampirkan Spesifikasi PC ke ulasan ini",
+    "GameFrameRateReporting_Confirmation_Yes": "Terima kasih, kamu dapat mengubah ini kapan saja di pengaturan akun.",
+    "GameFrameRateReporting_Confirmation_No": "Kamu dapat mengubah ini kapan saja di pengaturan akun.",
+    "GameFrameRateReporting_Title": "Data FPS Anonim:",
+    "GameFrameRateReporting_Prompt": "Apakah kami boleh mengumpulkan data FPS anonim saat kamu bermain game dan login dengan akun Steam-mu? Data ini membantu kami mempelajari tentang kompatibilitas game dan meningkatkan Steam.",
+    "GameFrameRateReporting_Details_Title": "Data FPS Anonim",
+    "GameFrameRateReporting_Details_Desc": "Jika kamu memilih untuk mengaktifkan opsi ini, data FPS gameplay akan disimpan tanpa hubungan ke akun Steam-mu, tapi akan teridentifikasi dengan jenis hardware yang kamu gunakan untuk bermain. Data ini membantu kami mempelajari kompatibilitas game dan meningkatkan pengalaman di perangkat yang menjalankan Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Jika kamu ingin mengubah pengaturan ini nanti, kamu dapat menemukannya di Pengaturan Akun Steam.",
+    "GameFrameRateReporting_LearnMore": "Pelajari Lebih Lanjut"
 }

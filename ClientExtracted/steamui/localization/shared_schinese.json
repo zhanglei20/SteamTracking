@@ -3635,7 +3635,7 @@
     "Settings_GameRecording_AudioRecording_Mic": "录制麦克风",
     "Settings_GameRecording_AudioRecording_Mic_Description": "允许在录制游戏音频的同时录制系统麦克风输入。",
     "Settings_GameRecording_AudioRecording_MicMono": "强制麦克风为单声道",
-    "Settings_GameRecording_AudioRecording_MicMono_Description": "选择在播放期间是否只在一个声道中听到麦克风的声音",
+    "Settings_GameRecording_AudioRecording_MicMono_Description": "选择在播放期间是否只在一个声道中听到麦克风的声音。",
     "Settings_GameRecording_AudioRecording_AGC": "自动增益控制",
     "Settings_GameRecording_AudioRecording_AGC_Description": "自动调整麦克风录制水平，以保持稳定的音量和清晰度。",
     "Settings_GameRecording_SystemAudio": "录制所有系统音频",
@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "一笔交易已撤销",
     "SteamNotifications_TradeReversal_Body_Short": "一笔交易已撤销",
     "SteamNotifications_TradeReversal_Description": "您近期的一笔交易被交易对象撤销了。",
-    "shared_dummy": ""
+    "shared_dummy": "",
+    "WriteReview_Dialog_HardwareSpecs": "在此评测中附上 PC 配置",
+    "GameFrameRateReporting_Confirmation_Yes": "谢谢，您可以随时在帐户设置中对此进行更改。",
+    "GameFrameRateReporting_Confirmation_No": "您可以随时在帐户设置中对此进行更改。",
+    "GameFrameRateReporting_Title": "匿名帧率数据：",
+    "GameFrameRateReporting_Prompt": "我们能否在您已登录自己的 Steam 帐户并畅玩游戏时收集匿名帧率数据？这些数据有助于我们了解游戏兼容性并改进 Steam。",
+    "GameFrameRateReporting_Details_Title": "匿名帧率数据",
+    "GameFrameRateReporting_Details_Desc": "如果您选择同意，游戏帧率数据将在不关联您 Steam 帐户的情况下进行存储，但会记录您所使用的硬件类型。这些数据将协助我们了解游戏兼容性，并提升运行 Steam 的各类设备的使用体验。",
+    "GameFrameRateReporting_Details_HowToChange": "如果您希望过后更改该设置，可以在 Steam 帐户设置中进行操作。",
+    "GameFrameRateReporting_LearnMore": "了解更多"
 }

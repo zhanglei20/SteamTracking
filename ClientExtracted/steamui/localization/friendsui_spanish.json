@@ -284,7 +284,7 @@
     "Chat_Actions_CreateInviteLink": "Generar un enlace de invitación",
     "Chat_Actions_OpenChat": "Abrir ventana de chat",
     "Chat_Upload": "Cargar",
-    "Chat_Uploading": "Subiendo: %1$s",
+    "Chat_Uploading": "Cargando: %1$s",
     "Chat_Exporting": "Exportando %1$s",
     "Chat_Upload_ErrorStart": "Fallo al iniciar la carga: %1$s",
     "Chat_Upload_ErrorCommit": "Fallo al finalizar la carga: %1$s",
@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Se corrigió un problema por el que las ventanas de amigos y de chat no se mostraban en la interfaz en la partida en Linux y macOS.",
     "BBCode_Loading": "Cargando",
     "BBCode_Failed": "Error al cargar",
-    "broadcastDetails_Playing": "Reproduciendo"
+    "broadcastDetails_Playing": "Reproduciendo",
+    "ChatRoom_PlayestInvite_ViewInvite": "Ver invitación",
+    "ChatRoom_PlayestInvite_Invite": "%1$s te ha invitado a una prueba de juego de Steam",
+    "ChatRoom_PlaytestInvite_YouInvited": "Has invitado a %1$s a la prueba de juego de Steam de %2$s«%3$s»",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Has invitado a %1$s a la prueba de juego de Steam de %2$s«%3$s»"
 }

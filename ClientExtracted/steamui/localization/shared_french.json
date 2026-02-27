@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Un échange a été annulé",
     "SteamNotifications_TradeReversal_Body_Short": "Un échange a été annulé",
     "SteamNotifications_TradeReversal_Description": "Un de vos échanges récents a été annulé par l'autre partie.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Joindre les caractéristiques techniques du PC à cette évaluation",
+    "GameFrameRateReporting_Confirmation_Yes": "Merci, vous pouvez modifier ce paramètre à tout moment dans les paramètres de votre compte.",
+    "GameFrameRateReporting_Confirmation_No": "Vous pouvez modifier ce paramètre à tout moment dans les paramètres de votre compte.",
+    "GameFrameRateReporting_Title": "Données anonymes de fréquence d'images :",
+    "GameFrameRateReporting_Prompt": "Nous permettez-vous de collecter des données anonymes sur la fréquence d'images pendant vos parties de jeu et quand vous êtes connecté(e) avec votre compte Steam ? Ces données nous aident à en savoir plus sur la compatibilité des jeux et à améliorer Steam.",
+    "GameFrameRateReporting_Details_Title": "Données anonymes de fréquence d'images ",
+    "GameFrameRateReporting_Details_Desc": "Si vous donnez votre accord, vos données de fréquence d'images en jeu seront stockées sans être reliées à votre compte Steam, mais seront plutôt identifiées en fonction du matériel sur lequel vous jouez. Ces données nous aideront à étudier la compatibilité des jeux, et à améliorer l'expérience utilisateur sur les appareils qui utilisent Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Si vous changez d'avis, vous pouvez toujours modifier vos préférences dans les paramètres de votre compte Steam.",
+    "GameFrameRateReporting_LearnMore": "En savoir plus"
 }

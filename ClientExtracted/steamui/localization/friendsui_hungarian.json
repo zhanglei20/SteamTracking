@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Javítottuk, hogy a barát- és csevegésablakok Linuxon és macOS-en nem jelentek meg a játékbeli átfedésen.",
     "BBCode_Loading": "Betöltés",
     "BBCode_Failed": "Nem sikerült betölteni",
-    "broadcastDetails_Playing": "Ezzel játszik:"
+    "broadcastDetails_Playing": "Ezzel játszik:",
+    "ChatRoom_PlayestInvite_ViewInvite": "Meghívó megnézése",
+    "ChatRoom_PlayestInvite_Invite": "%1$s meghívott egy Steam Playtestbe.",
+    "ChatRoom_PlaytestInvite_YouInvited": "Meghívtad %1$s felhasználót a(z) %2$s%3$s Steam Playtestbe.",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Meghívtad %1$s felhasználót a(z) %2$s%3$s Steam Playtestjébe."
 }

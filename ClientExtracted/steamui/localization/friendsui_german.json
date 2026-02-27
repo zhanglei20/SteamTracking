@@ -229,7 +229,7 @@
     "ConnectionTrouble_ReconnectNow": "Jetzt neu verbinden",
     "ConnectionTrouble_LoginLost": "Sie wurden von Steam abgemeldet.",
     "ConnectionTrouble_LoginAgain": "Anmelden",
-    "ConnectionTrouble_LoginChanged": "Sie haben sich mit einem anderen Steam-Account in der Steam Community angemeldet. Klicken Sie auf die Schaltfläche unten, um zum neuen Account zu wechseln.",
+    "ConnectionTrouble_LoginChanged": "Sie haben sich mit einem anderen Steam-Account in der Steam-Community angemeldet. Klicken Sie auf die Schaltfläche unten, um zum neuen Account zu wechseln.",
     "ConnectionTrouble_LoginChanged_Reload": "Accounts wechseln",
     "ConnectionTrouble_LoggedOnElsewhere": "Ihr Account ist auf zu vielen Geräten bei Steam angemeldet.",
     "ConnectionTrouble_CurrentlyDisconnected": "Verbindung unterbrochen",
@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Fehler behoben, durch den Freunde- und Chatfenster im In-Game-Overlay unter Linux und macOS nicht angezeigt wurden.",
     "BBCode_Loading": "Ladevorgang läuft",
     "BBCode_Failed": "Konnte nicht geladen werden",
-    "broadcastDetails_Playing": "Spielt"
+    "broadcastDetails_Playing": "Spielt",
+    "ChatRoom_PlayestInvite_ViewInvite": "Einladung anzeigen",
+    "ChatRoom_PlayestInvite_Invite": "%1$s hat Sie zu einem Steam Playtest eingeladen",
+    "ChatRoom_PlaytestInvite_YouInvited": "Sie haben %1$s zu einem Steam Playtest von %2$s%3$s eingeladen",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Sie haben %1$s zu einem Steam Playtest von %2$s%3$s eingeladen"
 }

@@ -6907,7 +6907,6 @@ ${LANGUAGE}
 /data/src/steamUI/settingsprofilemanager.cpp
 /data/src/steamUI/sharedconnectioncontroller.cpp
 /data/src/steamUI/shutdowncontroller.cpp
-/data/src/steamUI/spewmanager.cpp
 /data/src/steamUI/startupmodemanager.cpp
 /data/src/steamUI/steamoscontroller.cpp
 /data/src/steamUI/steamosmanager.cpp
@@ -7214,11 +7213,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -18560,7 +18559,6 @@ DLOPEN Error:%s\n
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
 DOCUMENTS
-DONT_BREAK_ON_ASSERT
 DOWNGRD
 DOWNLOAD
 DPIScaling
@@ -19725,7 +19723,6 @@ Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error writing file
 Error:
-Error: %s
 Error: %s Device not found %s\n
 Error: %s couldn't access device %s\n
 Error: %s: %s: empty hotkey
@@ -20272,7 +20269,7 @@ FbRK10CUtlStringE
 Feature Disabled
 Feature support: %s: supported
 Feature support: %s: unavailable - property not supported
-Feb 24 2026 23:14:29
+Feb 27 2026 02:23:25
 February
 Feel free to add support for more if you need it.
 FetchTranslationFromCrowdIn
@@ -39650,7 +39647,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenZil
 ghost_
 gidlist
 gidparentcomment
@@ -42516,6 +42513,7 @@ gzip,identity,*;q=0
 h264_vaapi
 h2Wl
 h8,4$
+hAu5H
 hConnection == m_hConnection
 hControllerBinding != 0
 hHandle

@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Body_Short": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Description": "Uma das tuas trocas recentes foi revertida pela pessoa com quem trocaste.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Anexar especificações do PC a esta análise",
+    "GameFrameRateReporting_Confirmation_Yes": "Obrigado. Podes alterar a tua resposta a qualquer altura nas definições da tua conta.",
+    "GameFrameRateReporting_Confirmation_No": "Podes alterar a tua resposta a qualquer altura nas definições da tua conta.",
+    "GameFrameRateReporting_Title": "Dados anónimos da taxa de frames:",
+    "GameFrameRateReporting_Prompt": "Podemos recolher dados anonimizados da taxa de frames enquanto jogas jogos com sessão iniciada na tua conta Steam? Estes dados ajudam-nos a saber mais sobre a compatibilidade dos jogos e melhorar o Steam.",
+    "GameFrameRateReporting_Details_Title": "Dados anónimos da taxa de frames",
+    "GameFrameRateReporting_Details_Desc": "Se aceitares, os dados de taxas de frames serão armazenados sem nenhuma associação à tua conta Steam, mas serão identificados com base no tipo de hardware que estiveres a usar para jogar. Estes dados ajudam-nos a obter mais informações sobre a compatibilidade de jogos e a melhorar a experiência em dispositivos com Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Podes alterar esta definição mais tarde nas definições da tua conta Steam",
+    "GameFrameRateReporting_LearnMore": "Mais informações"
 }

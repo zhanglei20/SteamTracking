@@ -230,11 +230,11 @@
     "WarnBeforeNavigatingToCopyrightReportForm": "Chystáte se opustit tuto stránku a přejít na formulář pro nahlášení porušení autorských práv.",
     "WarnBeforeNavigatingToTrademarkReportForm": "Chystáte se opustit tuto stránku a přejít na formulář pro nahlášení porušení ochranné známky.",
     "reportedcontent_unresolved_1": "Nahlásili jste obsah (%1$s) ve službě Steam.",
-    "reportedcontent_unresolved_2": "Moderátoři služby Steam obsah nyní přezkoumají a na základě %1$s podniknou patřičné kroky. Až bude nahlášení vyřešeno, budete zde upozorněni. Pokud jste nahlášení odeslali omylem, můžete ho %2$s.",
+    "reportedcontent_unresolved_2": "Moderátoři služby Steam obsah nyní přezkoumají a na základě %1$s podniknou patřičné kroky. Až bude nahlášení vyřešeno, budete upozorněni.",
     "reportedcontent_community_guidelines": "Obecných zásad a pravidel komunity",
     "reportedcontent_cancel_report": "zrušit",
     "reportedcontent_acquitted_1": "Dokončili jsme kontrolu obsahu (%1$s), který jste ve službě Steam nahlásili dne %2$s.",
-    "reportedcontent_acquitted_2": "Po přezkoumání obsahu %1$s jsme došli k závěru, že jeho zveřejnění nebylo porušením %2$s služby Steam ani žádného platného zákona (při posouzení v jeho kontextu). Toto rozhodnutí vzešlo z informací dostupných v okamžiku kontroly a při posouzení podle příslušných norem. Pokud s rozhodnutím nesouhlasíte, můžete ho %3$s.",
+    "reportedcontent_acquitted_2": "Po přezkoumání obsahu %1$s jsme došli k závěru, že jeho zveřejnění nebylo porušením %2$s služby Steam ani žádného platného zákona (při posouzení v jeho kontextu). Toto rozhodnutí vzešlo z informací dostupných v okamžiku kontroly a při posouzení podle příslušných norem.",
     "reportedcontent_acquitted_2_eu_addendum": "Také máte právo požádat o řešení prostřednictvím certifikovaného orgánu pro mimosoudní řešení sporů nebo se domáhat soudní nápravy u příslušného soudu.",
     "reportedcontent_acquitted_3": "Závěrem Vám doporučujeme prostudovat si %1$s.",
     "reportedcontent_dispute_acquittal": "zpochybnit",
@@ -275,5 +275,8 @@
     "moderatedcontent_dispute_sanctioned_1": "Dokončili jsme kontrolu Vašeho zpochybnění týkajícího se rozhodnutí ohledně obsahu (%1$s).",
     "moderatedcontent_dispute_sanctioned_2": "Po pečlivém přehodnocení si stojíme za naším původním rozhodnutím. Obsah tedy zůstane smazaný nebo omezený a stejně tak na Vašem účtu zůstanou veškeré související postihy. K tomuto rozhodnutí jsme dospěli po opětovné kontrole obsahu v jeho kontextu a s přihlédnutím k dodatečným informacím poskytnutým ve zpochybnění a příslušným pravidlům služby Steam a právním normám.",
     "moderatedcontent_dispute_sanctioned_2_eu_addendum": "Pokud s naším rozhodnutím nesouhlasíte, můžete požádat o řešení prostřednictvím certifikovaného orgánu pro mimosoudní řešení sporů nebo se domáhat soudní nápravy u příslušného soudu.",
-    "nocomma": ""
+    "nocomma": "",
+    "reportedcontent_unresolved_cancel": " Pokud jste nahlášení odeslali omylem, můžete ho %1$s.",
+    "reportedcontent_dispute_submit_dispute": " Pokud s rozhodnutím nesouhlasíte, můžete ho %1$s.",
+    "reportedcontent_content_report_breadcrumb": "Detaily nahlášení"
 }

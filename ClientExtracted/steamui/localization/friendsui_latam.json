@@ -167,7 +167,7 @@
     "ChatEntry_UploadImage": "Subir una imagen",
     "ChatEntry_UploadLastScreenshot": "Subir la última captura de pantalla",
     "ChatEntry_SendTradeURL": "Compartir tu URL de oferta de intercambio",
-    "ChatEntry_TagAsSpoiler": "Etiquetar como <i>spoiler</i>",
+    "ChatEntry_TagAsSpoiler": "Etiquetar como spoiler",
     "ChatEntry_TakePhoto": "Tomar una foto",
     "ChatEntry_ChooseFromLibrary": "Seleccionar foto de la biblioteca",
     "ChatEntryButton_SendSnowfall": "¡Haz que nieve!",
@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Se corrigió un problema por el que las ventanas de amigos y de chat no se mostraban en la interfaz de la partida en Linux y macOS.",
     "BBCode_Loading": "Cargando",
     "BBCode_Failed": "Error al cargar",
-    "broadcastDetails_Playing": "Reproduciendo"
+    "broadcastDetails_Playing": "Reproduciendo",
+    "ChatRoom_PlayestInvite_ViewInvite": "Ver invitación",
+    "ChatRoom_PlayestInvite_Invite": "%1$s te invitó a una prueba de juego de Steam",
+    "ChatRoom_PlaytestInvite_YouInvited": "Invitaste a %1$s a la prueba de juego de Steam %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Invitaste a %1$s a la prueba de juego de Steam de %2$s%3$s"
 }

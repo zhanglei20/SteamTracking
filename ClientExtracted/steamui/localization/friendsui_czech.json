@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Byl opraven seznam přátel a okna konverzací, která se v systémech Linux a macOS nezobrazovala v překrytí služby Steam.",
     "BBCode_Loading": "Načítání",
     "BBCode_Failed": "Načítání se nezdařilo",
-    "broadcastDetails_Playing": "Hraje"
+    "broadcastDetails_Playing": "Hraje",
+    "ChatRoom_PlayestInvite_ViewInvite": "Zobrazit pozvánku",
+    "ChatRoom_PlayestInvite_Invite": "Uživatel %1$s Vás pozval k testování hry",
+    "ChatRoom_PlaytestInvite_YouInvited": "Pozvali jste uživatele %1$s k testování hry %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Pozvali jste uživatele %1$s k testování hry %2$s%3$s"
 }

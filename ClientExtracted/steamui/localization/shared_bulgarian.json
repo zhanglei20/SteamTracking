@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Дадена търговия беше върната обратно",
     "SteamNotifications_TradeReversal_Body_Short": "Дадена търговия беше върната обратно",
     "SteamNotifications_TradeReversal_Description": "Една от скорошните Ви търговии беше върната обратно от Вашия търговски партньор.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Прикачване на компютърни спецификации към тази рецензия",
+    "GameFrameRateReporting_Confirmation_Yes": "Благодарим, можете да промените това по всяко време в настройките на акаунта си.",
+    "GameFrameRateReporting_Confirmation_No": "Можете да промените това по всяко време в настройките на акаунта си.",
+    "GameFrameRateReporting_Title": "Анонимни данни за честотата на кадрите:",
+    "GameFrameRateReporting_Prompt": "Можем ли да събираме анонимни данни за честотата на кадрите, докато пускате игри и сте влезли в Steam акаунта си? Тези данни ни помагат да научим още относно съвместимостта за игрите и да подобряваме Steam.",
+    "GameFrameRateReporting_Details_Title": "Анонимни данни за честотата на кадрите:",
+    "GameFrameRateReporting_Details_Desc": "Ако вземете участие в това, данните за честотата на кадрите в играта ще се съхраняват без връзка към Вашия Steam акаунт, но ще се идентифицират с вида хардуер, на който пускате заглавията. Тези данни ни помагат да научим още относно съвместимостта за игрите и да подобрим преживяването на устройствата, изпълняващи Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Ако бихте искали да промените настройката по-късно, можете да я намерите в „Настройки“ на Steam акаунта.",
+    "GameFrameRateReporting_LearnMore": "Научете още"
 }

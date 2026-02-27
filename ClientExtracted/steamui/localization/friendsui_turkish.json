@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Linux ve macOS'teki oyun içi arayüzlerde arkadaşlar ve sohbet pencerelerinin görünmemesi hatası giderildi.",
     "BBCode_Loading": "Yükleniyor",
     "BBCode_Failed": "Yüklenemedi",
-    "broadcastDetails_Playing": "Oynuyor:"
+    "broadcastDetails_Playing": "Oynuyor:",
+    "ChatRoom_PlayestInvite_ViewInvite": "Daveti Görüntüle",
+    "ChatRoom_PlayestInvite_Invite": "%1$s sizi bir Steam Playtest'e davet etti",
+    "ChatRoom_PlaytestInvite_YouInvited": "%1$s adlı kişiyi %2$s%3$s Steam Playtest'ine davet ettiniz",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "%1$s adlı kişiyi %2$s%3$s için Steam Playtest'e davet ettiniz"
 }

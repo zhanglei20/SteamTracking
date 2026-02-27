@@ -1423,7 +1423,7 @@
     "Sale_HiddenItems_Short": "%1$s ocultos",
     "Sale_HiddenItem_Single": "%1$s artículo está oculto debido a %2$s",
     "Sale_HiddenItem_Single_Short": "%1$s oculto",
-    "Sale_HiddenItem_Tooltip": "Los artículos se han ocultado debido a las preferencias de tu tienda. Haz clic para ver y editar las preferencias de tu tienda.",
+    "Sale_HiddenItem_Tooltip": "Los artículos se han ocultado debido a tus preferencias de la tienda. Haz clic para verlas y editarlas.",
     "Sale_ContentPreview": "Incluye 1 artículo",
     "Sale_ContentPreview_Plural": "Incluye %1$s artículos",
     "Sale_StorePreferences": "tus preferencias de la tienda",
@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Se revirtió un intercambio",
     "SteamNotifications_TradeReversal_Body_Short": "Se revirtió un intercambio",
     "SteamNotifications_TradeReversal_Description": "La persona con la que realizaste intercambios revirtió uno de tus intercambios recientes.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Adjuntar las especificaciones del PC a esta reseña",
+    "GameFrameRateReporting_Confirmation_Yes": "¡Gracias! Puedes cambiar este ajuste cuando quieras en los parámetros de tu cuenta.",
+    "GameFrameRateReporting_Confirmation_No": "Puedes cambiar este ajuste cuando quieras en los parámetros de tu cuenta.",
+    "GameFrameRateReporting_Title": "Datos anónimos de la velocidad de fotogramas:",
+    "GameFrameRateReporting_Prompt": "¿Podemos recopilar datos anónimos de la velocidad de fotogramas mientras juegas y tienes la sesión iniciada con tu cuenta de Steam? Estos datos nos ayudan a conocer la compatibilidad de los juegos y mejorar Steam.",
+    "GameFrameRateReporting_Details_Title": "Datos anónimos de la velocidad de fotogramas",
+    "GameFrameRateReporting_Details_Desc": "Al activar esta opción, los datos de la velocidad de fotogramas durante la partida se almacenarán sin vincularse a tu cuenta de Steam, pero se identificarán según el tipo de hardware que utilices para jugar. Estos datos nos ayudan a conocer la compatibilidad de los juegos y a mejorar la experiencia en los dispositivos que utilizan Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Si quieres cambiar esta opción más adelante, puedes encontrarla en los parámetros de la cuenta de Steam.",
+    "GameFrameRateReporting_LearnMore": "Más información"
 }

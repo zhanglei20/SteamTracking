@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Исправлена ошибка, из-за которой окна друзей и чата не отображались во внутриигровом оверлее на Linux и macOS.",
     "BBCode_Loading": "Загрузка",
     "BBCode_Failed": "Ошибка загрузки",
-    "broadcastDetails_Playing": "Воспроизведение"
+    "broadcastDetails_Playing": "Воспроизведение",
+    "ChatRoom_PlayestInvite_ViewInvite": "Открыть приглашение",
+    "ChatRoom_PlayestInvite_Invite": "%1$s приглашает вас принять участие в тестировании",
+    "ChatRoom_PlaytestInvite_YouInvited": "Вы пригласили %1$s принять участие в тестировании %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Вы пригласили %1$s принять участие в тестировании %2$s%3$s"
 }

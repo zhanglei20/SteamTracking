@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Bir takas iptal edildi",
     "SteamNotifications_TradeReversal_Body_Short": "Bir takas iptal edildi",
     "SteamNotifications_TradeReversal_Description": "Son takaslarınızdan biri takas yaptığınız kişi tarafından iptal edildi.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Bu incelemeye bilgisayar özelliklerini ekle",
+    "GameFrameRateReporting_Confirmation_Yes": "Teşekkürler. Bunu istediğiniz zaman hesap ayarlarınızdan değiştirebilirsiniz.",
+    "GameFrameRateReporting_Confirmation_No": "Bunu istediğiniz zaman hesap ayarlarınızdan değiştirebilirsiniz.",
+    "GameFrameRateReporting_Title": "Anonim kare hızı verileri:",
+    "GameFrameRateReporting_Prompt": "Steam hesabınızla giriş yapmış vaziyette oyun oynarken anonimleştirilmiş kare hızı verilerini toplayabilir miyiz? Bu veriler, oyunun uyumluluğunu öğrenmemize ve Steam'i geliştirmemize yardımcı olur.",
+    "GameFrameRateReporting_Details_Title": "Anonim kare hızı verileri",
+    "GameFrameRateReporting_Details_Desc": "Bunu kabul ettiğiniz takdirde oyun kare hızı verileriniz Steam hesabınızla ilişkilendirilmeden kaydedilir. Bu veriler sadece oynadığınız donanımla ilişkilendirilir. Bu veriler, oyunun uyumluluğunu öğrenmemize ve Steam'i çalıştıran aygıtlardaki deneyimi iyileştirmemize yardımcı olur.",
+    "GameFrameRateReporting_Details_HowToChange": "Arzu ederseniz, bu ayarı daha sonra Steam hesap ayarlarınızdan değiştirebilirsiniz.",
+    "GameFrameRateReporting_LearnMore": "Daha Fazla Bilgi"
 }

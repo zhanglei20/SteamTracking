@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Виправлено помилку, внаслідок якої вікна списку друзів і чату не зображувалися в оверлеї Linux і macOS.",
     "BBCode_Loading": "Завантаження",
     "BBCode_Failed": "Не вдалося завантажити",
-    "broadcastDetails_Playing": "Відтворення"
+    "broadcastDetails_Playing": "Відтворення",
+    "ChatRoom_PlayestInvite_ViewInvite": "Переглянути запрошення",
+    "ChatRoom_PlayestInvite_Invite": "%1$s запрошує вас до тестування в Steam",
+    "ChatRoom_PlaytestInvite_YouInvited": "Ви запрошуєте користувача %1$s до тестування %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Ви запрошуєте користувача %1$s до тестування %2$s%3$s"
 }

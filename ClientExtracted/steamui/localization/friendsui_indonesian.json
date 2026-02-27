@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Memperbaiki jendela Teman dan Obrolan yang tidak tampil di overlay dalam game pada Linux dan macOS.",
     "BBCode_Loading": "Memuat",
     "BBCode_Failed": "Gagal memuat",
-    "broadcastDetails_Playing": "Bermain"
+    "broadcastDetails_Playing": "Bermain",
+    "ChatRoom_PlayestInvite_ViewInvite": "Lihat Undangan",
+    "ChatRoom_PlayestInvite_Invite": "%1$s mengundangmu untuk bergabung dalam Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Kamu mengundang %1$s ke Steam Playtest %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Kamu mengundang %1$s ke Steam Playtest untuk %2$s%3$s"
 }

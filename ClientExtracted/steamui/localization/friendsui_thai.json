@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "แก้ไขหน้าต่างเพื่อนและแช็ตที่ไม่แสดงในโอเวอร์เลย์ภายในเกมบน Linux และ macOS",
     "BBCode_Loading": "กำลังโหลด",
     "BBCode_Failed": "ล้มเหลวในการโหลด",
-    "broadcastDetails_Playing": "กำลังเล่น"
+    "broadcastDetails_Playing": "กำลังเล่น",
+    "ChatRoom_PlayestInvite_ViewInvite": "ดูคำเชิญ",
+    "ChatRoom_PlayestInvite_Invite": "%1$s ได้เชิญคุณเข้าร่วม Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "คุณได้เชิญ %1$s เข้าร่วม Steam Playtest %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "คุณได้เชิญ%1$s เข้าร่วม Steam Playtest สำหรับ %2$s%3$s"
 }

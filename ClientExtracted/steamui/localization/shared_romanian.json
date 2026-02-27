@@ -990,7 +990,7 @@
     "User_WantsToPlay": "Alătură-te",
     "User_ToggleDoNotDisturb": "Nu deranja",
     "User_GameInfoHidden": "Starea ta din joc este ascunsă de prietenii tăi din cauza setărilor tale de confidențialitate",
-    "User_LimitedAccount": "Contul tău nu îndeplinește cerințele pentru a folosi această caracteristică. %1$s pentru mai multe informații.",
+    "User_LimitedAccount": "Contul tău nu îndeplinește cerințele pentru a utiliza această caracteristică. %1$s pentru mai multe informații.",
     "User_LimitedAccount_UrlInfo": "Accesează asistența Steam",
     "isNickname": "Porecla ta pentru acest prieten",
     "Friend_Menu_NotAFriendLabel": "Nu sunteți prieteni",
@@ -1623,7 +1623,7 @@
     "Sale_default_label_59": "Shooter",
     "Sale_default_label_60": "Mister",
     "Sale_default_label_61": "Acțiune-aventură",
-    "Sale_default_label_62": "Titluri populare",
+    "Sale_default_label_62": "Populare",
     "Sale_default_label_63": "Sporturi și curse",
     "Sale_default_label_64": "Lupte",
     "Sale_default_label_65": "Hack and Slash",
@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Un schimb a fost anulat",
     "SteamNotifications_TradeReversal_Body_Short": "Un schimb a fost anulat",
     "SteamNotifications_TradeReversal_Description": "Unul dintre schimburile tale recente a fost anulat de partenerul tău de schimb.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Atașează acestei recenzii specificațiile PC-ului",
+    "GameFrameRateReporting_Confirmation_Yes": "Îți mulțumim! Dacă dorești să modifici această setare, o poți face oricând din setările contului.",
+    "GameFrameRateReporting_Confirmation_No": "Dacă dorești să modifici această setare, o poți face oricând din setările contului.",
+    "GameFrameRateReporting_Title": "Date anonime privind frecvența de cadre:",
+    "GameFrameRateReporting_Prompt": "Ne permiți să colectăm date anonime privind frecvența de cadre din timpul jocurilor atunci când folosești acest cont Steam? Aceste date ne ajută să aflăm mai multe despre compatibilitatea jocurilor și să îmbunătățim Steam.",
+    "GameFrameRateReporting_Details_Title": "Date anonime privind frecvența de cadre",
+    "GameFrameRateReporting_Details_Desc": "Dacă activezi această setare, datele despre frecvența ta de cadre din timpul jocurilor vor fi stocate fără a fi asociate contului tău Steam și vor fi identificate prin tipul de hardware utilizat. Aceste date ne ajută să aflăm mai multe despre compatibilitatea jocurilor și să îmbunătățim Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Dacă dorești să modifici această setare mai târziu, o poți face din setările contului Steam.",
+    "GameFrameRateReporting_LearnMore": "Află mai multe"
 }

@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Μια ανταλλαγή αντιστράφηκε",
     "SteamNotifications_TradeReversal_Body_Short": "Μια ανταλλαγή αντιστράφηκε",
     "SteamNotifications_TradeReversal_Description": "Μία από τις πρόσφατες ανταλλαγές σας αντιστράφηκε από τον χρήστη με τον οποίο κάνατε την ανταλλαγή.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Επισύναψη προδιαγραφών υπολογιστή σε αυτήν την κριτική",
+    "GameFrameRateReporting_Confirmation_Yes": "Ευχαριστούμε, μπορείτε να την αλλάξετε οποιαδήποτε στιγμή στις ρυθμίσεις λογαριασμού.",
+    "GameFrameRateReporting_Confirmation_No": "Μπορείτε να την αλλάξετε οποιαδήποτε στιγμή στις ρυθμίσεις λογαριασμού.",
+    "GameFrameRateReporting_Title": "Ανώνυμα δεδομένα ρυθμού καρέ:",
+    "GameFrameRateReporting_Prompt": "Μπορούμε να συλλέγουμε ανώνυμα δεδομένα ρυθμού καρέ όσο παίζετε παιχνίδια και είστε συνδεδεμένοι με τον λογαριασμό Steam σας; Αυτά τα δεδομένα μάς βοηθούν να μαθαίνουμε περισσότερα σχετικά με τη συμβατότητα των παιχνιδιών και να βελτιώνουμε το Steam.",
+    "GameFrameRateReporting_Details_Title": "Ανώνυμα δεδομένα ρυθμού καρέ",
+    "GameFrameRateReporting_Details_Desc": "Εάν επιλέξετε να συμμετάσχετε σε αυτό, τα δεδομένα ρυθμού καρέ του παιχνιδιού θα αποθηκεύονται χωρίς να συνδέονται με τον λογαριασμό Steam σας, αλλά η αναγνώρισή τους θα γίνεται βάσει του είδους υλισμικού με το οποίο παίζετε. Αυτά τα δεδομένα μάς βοηθούν να μαθαίνουμε περισσότερα σχετικά με τη συμβατότητα των παιχνιδιών και να βελτιώνουμε την εμπειρία σε συσκευές που εκτελούν Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Εάν θέλετε να αλλάξετε τη ρύθμιση αργότερα, μπορείτε να τη βρείτε στις ρυθμίσεις λογαριασμού Steam.",
+    "GameFrameRateReporting_LearnMore": "Μάθετε περισσότερα"
 }

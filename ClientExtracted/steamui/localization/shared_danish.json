@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "En byttehandel blev tilbageført",
     "SteamNotifications_TradeReversal_Body_Short": "En byttehandel blev tilbageført",
     "SteamNotifications_TradeReversal_Description": "En af dine seneste byttehandler blev tilbageført af din byttepartner.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Vedhæft PC-specifikationer til denne anmeldelse",
+    "GameFrameRateReporting_Confirmation_Yes": "Tak, du kan ændre dette når som helst i kontoindstillingerne.",
+    "GameFrameRateReporting_Confirmation_No": "Du kan ændre dette når som helst i kontoindstillingerne.",
+    "GameFrameRateReporting_Title": "Anonyme data om billedhastighed:",
+    "GameFrameRateReporting_Prompt": "Må vi indsamle anonymiserede data om billedhastighed, mens du spiller spil og er logget på med din Steam-konto? Disse data hjælper os med at lære om spilkompatibilitet og forbedre Steam.",
+    "GameFrameRateReporting_Details_Title": "Anonyme data om billedhastighed",
+    "GameFrameRateReporting_Details_Desc": "Hvis du siger ja til dette, lagres spildata om billedhastighed uden forbindelse til din Steam-konto, men identificeres baseret på den type hardware, du spiller på. Disse data hjælper os med at lære om spilkompatibilitet og forbedre oplevelsen på enheder, som kører Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Hvis du vil ændre indstillingen senere, kan du finde den under kontoindstillingerne på Steam.",
+    "GameFrameRateReporting_LearnMore": "Læs mere"
 }

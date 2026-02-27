@@ -727,9 +727,9 @@
     "Friend_InviteError_Blocked": "A apărut o eroare la adăugarea utilizatorului %1$s în lista ta de prieteni. Comunicarea dintre tine și acest utilizator a fost blocată.",
     "Friend_InviteError_InvalidState": "Ai blocat orice comunicare cu %1$s. Pentru a relua comunicarea cu acest utilizator, trebuie mai întâi să-l deblochezi accesând profilul său comunitar Steam.",
     "Friend_InviteError_RateLimitExceeded": "Se pare că ai trimis prea multe cereri de prietenie în ultimul timp. Pentru a preveni orice activitate de tip spam, trebuie să aștepți înainte de a putea invita alți prieteni. Reține că, în acest interval de timp, alți jucători te pot adăuga în continuare.",
-    "Friend_InviteError_LimitedUser": "Contul tău nu întrunește cerințele pentru utilizarea acestei funcții.",
-    "Friend_InviteError_LimitedUserLink": "Contul tău nu îndeplinește cerințele pentru a folosi această caracteristică. Pentru informații suplimentare: %1$s",
-    "Friend_InviteError_VisitSteamSupport": "Vizitează asistența Steam",
+    "Friend_InviteError_LimitedUser": "Contul tău nu îndeplinește cerințele pentru a utiliza această caracteristică.",
+    "Friend_InviteError_LimitedUserLink": "Contul tău nu îndeplinește cerințele pentru a utiliza această caracteristică. %1$s pentru mai multe informații.",
+    "Friend_InviteError_VisitSteamSupport": "Accesează asistența Steam",
     "Friend_IgnoreIncomingInvite_Success": "Cererea de prietenie de la %1$s a fost ignorată.",
     "Friend_IgnoreIncomingInvite_Error": "A apărut o eroare la ignorarea cererii de prietenie de la %1$s.",
     "Friend_BlockIncomingInvite_Error": "A apărut o eroare la blocarea cererii de prietenie de la %1$s.",
@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "S-a reparat faptul că ferestrele pentru prieteni și chat nu erau afișate în interfața din joc pe Linux și macOS.",
     "BBCode_Loading": "Se încarcă",
     "BBCode_Failed": "Nu s-a putut încărca",
-    "broadcastDetails_Playing": "Se joacă"
+    "broadcastDetails_Playing": "Se joacă",
+    "ChatRoom_PlayestInvite_ViewInvite": "Vezi invitația",
+    "ChatRoom_PlayestInvite_Invite": "%1$s te-a invitat la un playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Ai invitat pe %1$s la playtestul %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Ai invitat pe %1$s la un playtest pentru %2$s%3$s"
 }

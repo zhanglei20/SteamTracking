@@ -3828,5 +3828,14 @@
     "SteamNotifications_TradeReversal_Body": "Se revirtió un intercambio",
     "SteamNotifications_TradeReversal_Body_Short": "Se revirtió un intercambio",
     "SteamNotifications_TradeReversal_Description": "Uno de tus intercambios recientes fue revertido por la persona con la que hiciste el intercambio.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "WriteReview_Dialog_HardwareSpecs": "Adjuntar especificaciones de PC a esta reseña",
+    "GameFrameRateReporting_Confirmation_Yes": "Gracias, puedes cambiar esto en cualquier momento en la configuración de la cuenta.",
+    "GameFrameRateReporting_Confirmation_No": "Puedes cambiar esto en cualquier momento en la configuración de la cuenta.",
+    "GameFrameRateReporting_Title": "Datos anónimos de velocidad de fotogramas:",
+    "GameFrameRateReporting_Prompt": "¿Podemos recolectar datos anónimos de la velocidad de fotogramas mientras juegas y has iniciado sesión con tu cuenta de Steam? Estos datos nos ayudan a aprender sobre la compatibilidad de los juegos y mejorar Steam.",
+    "GameFrameRateReporting_Details_Title": "Datos anónimos de velocidad de fotogramas",
+    "GameFrameRateReporting_Details_Desc": "Si aceptas esta opción, los datos de velocidad de fotogramas del juego se almacenarán sin conexión a tu cuenta de Steam, pero se identificarán con el tipo de hardware en el que estás jugando. Estos datos nos ayudan a aprender sobre la compatibilidad del juego y mejorar la experiencia en los dispositivos que ejecutan Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "Si deseas cambiar la configuración más adelante, puedes encontrarla en Configuraciones de tu cuenta de Steam.",
+    "GameFrameRateReporting_LearnMore": "Más información"
 }

@@ -1204,5 +1204,9 @@
     "changeLog_UpdateItem57": "Linux および macOS のゲーム内オーバーレイで、フレンドとチャットウィンドウが表示されない問題を修正。",
     "BBCode_Loading": "読み込み中",
     "BBCode_Failed": "読み込みに失敗しました",
-    "broadcastDetails_Playing": "プレイ中"
+    "broadcastDetails_Playing": "プレイ中",
+    "ChatRoom_PlayestInvite_ViewInvite": "招待を表示",
+    "ChatRoom_PlayestInvite_Invite": "%1$sがあなたをSteam Playtestに招待しました",
+    "ChatRoom_PlaytestInvite_YouInvited": "%1$sをSteam Playtest%2$s『%3$s』に招待しました",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "%1$sを%2$s『%3$s』のSteam Playtestに招待しました"
 }
