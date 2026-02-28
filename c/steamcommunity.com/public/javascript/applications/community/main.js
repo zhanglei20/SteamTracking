@@ -8415,14 +8415,13 @@
         "string" == typeof _
           ? ((_ = _), (_ = new TextEncoder().encode(_).buffer))
           : (_ = _);
-        const _ = await window.crypto.subtle.digest(_, _);
-        return (
-          (_ = _),
-          Array.prototype.map
-            .call(new Uint8Array(_), (_) => ("00" + _.toString(16)).slice(-2))
-            .join("")
-        );
-        var _;
+        return (function (_) {
+          const _ = new Uint8Array(_);
+          let _ = "";
+          for (let _ = 0; _ < _.length; _++)
+            _ += ("00" + _[_].toString(16)).slice(-2);
+          return _;
+        })(await window.crypto.subtle.digest(_, _));
       }
       __webpack_require__._(module_exports, {
         _: () => _,

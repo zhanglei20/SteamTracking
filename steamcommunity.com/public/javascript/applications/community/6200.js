@@ -19,11 +19,11 @@
           i = [];
         for (; (r = t.match(o.O)); ) {
           r.index > 0 && i.push(e.text(t.substring(0, r.index)));
-          const l = (0, o.S)(r[0]),
-            a = s && s(l);
-          a && "default" !== a
-            ? "remove" !== a && i.push(a)
-            : i.push(e.text(r[0], [n.create({ href: l })])),
+          const a = (0, o.S)(r[0]),
+            l = s && s(a);
+          l && "default" !== l
+            ? "remove" !== l && i.push(l)
+            : i.push(e.text(r[0], [n.create({ href: a })])),
             (t = t.substring(r.index + r[0].length));
         }
         if (0 != i.length) return t.length && i.push(e.text(t)), i;
@@ -36,8 +36,8 @@
         s = n(57053),
         r = n(52893),
         i = n(90626),
-        l = n(61859),
-        a = n(17558),
+        a = n(61859),
+        l = n(17558),
         c = n(22145),
         d = n(59722),
         u = n(42714);
@@ -45,7 +45,7 @@
         const {
             linkMarkType: t,
             onURLPasted: n,
-            schema: l,
+            schema: a,
             onClickURL: d = p,
           } = e,
           h = i.useRef(d);
@@ -53,7 +53,7 @@
         const [f, g] = i.useState(),
           [v, w] = i.useState(),
           [P, _] = i.useState(),
-          [x, y] = (0, a.E)(l),
+          [y, x] = (0, l.E)(a),
           R = i.useMemo(
             () =>
               new r.k_({
@@ -79,36 +79,36 @@
                       (!t.metaKey && !t.ctrlKey) ||
                       t.shiftKey ||
                       t.altKey
-                    ) && (x(e), !0),
+                    ) && (y(e), !0),
                   clipboardTextParser(e, o, r, i) {
-                    const a = (0, u.F)(l, e, t, n);
-                    return a && new s.Ji(s.FK.from(a), o.start(), o.end());
+                    const l = (0, u.F)(a, e, t, n);
+                    return l && new s.Ji(s.FK.from(l), o.start(), o.end());
                   },
                   handlePaste(e, o, r) {
                     let i = [];
                     if (
                       (r.content.descendants((e, o) => {
                         if (e.isText) {
-                          const s = (0, u.F)(l, e.text, t, n);
+                          const s = (0, u.F)(a, e.text, t, n);
                           s && i.push({ node: e, pos: o, rgNodes: s });
                         }
                       }),
                       !i.length)
                     )
                       return !1;
-                    let a = e.state.tr;
-                    a.selection.empty || a.deleteSelection();
-                    let c = a.selection.from,
+                    let l = e.state.tr;
+                    l.selection.empty || l.deleteSelection();
+                    let c = l.selection.from,
                       d = 0;
                     for (const e of i) {
                       const { node: t, pos: n, rgNodes: o } = e,
                         i = r.content.cut(d, n).append(s.FK.from(o));
-                      a.insert(c, i), (c += i.size + 2), (d = n + t.nodeSize);
+                      l.insert(c, i), (c += i.size + 2), (d = n + t.nodeSize);
                     }
                     return (
-                      a.insert(c, r.content.cut(d)),
-                      a.scrollIntoView(),
-                      e.dispatch(a),
+                      l.insert(c, r.content.cut(d)),
+                      l.scrollIntoView(),
+                      e.dispatch(l),
                       !0
                     );
                   },
@@ -131,28 +131,28 @@
                   },
                 },
               }),
-            [t, x, n, l],
+            [t, y, n, a],
           );
         (0, c.c$)(R);
-        let k = null;
+        let U = null;
         return (
           P &&
             f &&
             v &&
-            (k = (0, o.jsx)(m, {
+            (U = (0, o.jsx)(m, {
               top: v,
               left: f,
               href: P.getAttribute("href"),
             })),
-          (0, o.jsxs)(o.Fragment, { children: [k, y] })
+          (0, o.jsxs)(o.Fragment, { children: [U, x] })
         );
       });
       function m(e) {
         const { top: t, left: n, href: s } = e,
-          [r, a] = i.useState(0),
+          [r, l] = i.useState(0),
           c = i.useRef(null);
         i.useLayoutEffect(() => {
-          a(c.current.getBoundingClientRect().width);
+          l(c.current.getBoundingClientRect().width);
         }, [t, n, s]);
         const u = { top: `${t}px`, left: `${Math.max(n - r / 2, 12)}px` };
         return (0, o.jsxs)("div", {
@@ -163,7 +163,7 @@
             (0, o.jsx)("div", { className: d.Link, children: s }),
             (0, o.jsx)("div", {
               className: d.LinkHelp,
-              children: (0, l.we)("#UserGameNotes_ClickToOpenLink"),
+              children: (0, a.we)("#UserGameNotes_ClickToOpenLink"),
             }),
           ],
         });
@@ -179,15 +179,15 @@
         s = n(91986),
         r = n(52893),
         i = n(90626),
-        l = n(72739),
-        a = n(22145);
+        a = n(72739),
+        l = n(22145);
       const c = i.memo(function (e) {
         const { specs: t } = e,
           [n, s] = i.useState([]),
-          l = i.useRef(0),
+          a = i.useRef(0),
           c = i.useCallback(
             (e) => (
-              s((t) => [...t, { id: l.current++, nodeView: e }]),
+              s((t) => [...t, { id: a.current++, nodeView: e }]),
               () => s((t) => t.filter((t) => t.nodeView != e))
             ),
             [],
@@ -204,7 +204,7 @@
             );
           }, [t, c]);
         return (
-          (0, a.c$)(h),
+          (0, l.c$)(h),
           n.map(({ id: e, nodeView: t }) => (0, o.jsx)(d, { nodeView: t }, e))
         );
       });
@@ -215,13 +215,13 @@
             getProps: o,
             onPropsChanged: s,
             actions: r,
-            isSelected: a,
+            isSelected: l,
           } = e.nodeView,
           [c, d] = i.useReducer((e) => e + 1, 0);
         return (
           i.useEffect(() => s.Register(d).Unregister, [s, d]),
-          l.createPortal(
-            i.createElement(n.component, { ...o(), selected: a(), ...r }),
+          a.createPortal(
+            i.createElement(n.component, { ...o(), selected: l(), ...r }),
             t,
           )
         );
@@ -233,16 +233,16 @@
             e.type.isInline ? "span" : "div",
           );
           this.dom = i;
-          const { selection: l } = n.state;
-          this.selected = o() >= l.from && o() + t.nodeSize <= l.to;
-          const a = (e) => {
+          const { selection: a } = n.state;
+          this.selected = o() >= a.from && o() + t.nodeSize <= a.to;
+          const l = (e) => {
               const s = e(n.state.tr, t, o());
               s && n.dispatch(s);
             },
             c = {
-              update: a,
-              setAttrs: (e, t) => a((n, o, s) => n.setNodeMarkup(s, t, e)),
-              removeNode: () => a((e, t, n) => e.delete(n, n + t.nodeSize)),
+              update: l,
+              setAttrs: (e, t) => l((n, o, s) => n.setNodeMarkup(s, t, e)),
+              removeNode: () => l((e, t, n) => e.delete(n, n + t.nodeSize)),
               focusView: () => {
                 window.setTimeout(() => n.focus(), 1);
               },
@@ -286,8 +286,8 @@
             id: t,
             role: n,
             visible: i = !0,
-            className: l,
-            keepMounted: a = !1,
+            className: a,
+            keepMounted: l = !1,
             expandDirection: c = "height",
             msAnimationDuration: d = 250,
             children: u,
@@ -299,11 +299,11 @@
           } = (function (e, t = "height", n = 250) {
             const o = s.useRef(null),
               i = s.useRef(!0),
-              [l, a] = s.useState("idle"),
+              [a, l] = s.useState("idle"),
               [c, d] = s.useState(e ? {} : { [t]: "0px", overflow: "hidden" }),
               [u, h] = s.useState(e);
             s.useLayoutEffect(() => {
-              i.current || a("start"), e && h(e);
+              i.current || l("start"), e && h(e);
             }, [e]),
               s.useLayoutEffect(
                 () => (
@@ -320,11 +320,11 @@
                   i = () => {
                     r.unstable_batchedUpdates(() => {
                       d(e ? {} : { [t]: "0px", overflow: "hidden" }),
-                        a("idle"),
+                        l("idle"),
                         h(e);
                     });
                   };
-                if ("start" == l) {
+                if ("start" == a) {
                   const o = n[s];
                   0 == o
                     ? i()
@@ -333,8 +333,8 @@
                         ...n,
                         overflow: "hidden",
                       })),
-                      a("active"));
-                } else if ("active" == l) {
+                      l("active"));
+                } else if ("active" == a) {
                   n.scrollTop;
                   const o = n[s];
                   return (
@@ -345,15 +345,15 @@
                     }
                   );
                 }
-              }, [l, e]);
+              }, [a, e]);
             const m = { ...c, transition: `${t} ${n}ms` };
             return { style: m, active: u, refDiv: o };
           })(i, c, d);
-        return i || m || a
+        return i || m || l
           ? (0, o.jsx)("div", {
               id: t,
               role: n,
-              className: l,
+              className: a,
               ref: p,
               style: h,
               inert: !i,
@@ -364,55 +364,56 @@
     },
     71696: (e, t, n) => {
       "use strict";
-      n.d(t, { Xv: () => w, pw: () => P });
+      n.d(t, { Xv: () => P, pw: () => _ });
       var o = n(7850),
         s = n(81393),
-        r = n(22145),
-        i = n(52893),
+        r = n(20737),
+        i = n(22145),
+        a = n(52893),
         l = n(29287),
-        a = n(90626);
-      var c = n(72739),
-        d = n(78395),
-        u = n(21869),
-        h = n(22797),
-        m = n(6144),
-        p = n(61859),
-        f = n(27650),
-        g = n(64753),
-        v = n(73309);
-      function w(e) {
+        c = n(90626);
+      var d = n(72739),
+        u = n(78395),
+        h = n(21869),
+        m = n(22797),
+        p = n(6144),
+        f = n(61859),
+        g = n(27650),
+        v = n(64753),
+        w = n(73309);
+      function P(e) {
         const {
             children: t,
             ProcessFileUpload: n,
             FetchImageURL: s,
             bAllowImageHotLinking: r = !1,
           } = e,
-          [i] = a.useState(() => ({ manager: new y(n, s, r) })),
-          { manager: l } = i;
+          [i] = c.useState(() => ({ manager: new R(n, s, r) })),
+          { manager: a } = i;
         return (
-          l.SetProps(n, s, r),
-          (0, o.jsxs)(R.Provider, {
+          a.SetProps(n, s, r),
+          (0, o.jsxs)(U.Provider, {
             value: i,
             children: [
-              (0, o.jsx)(U, { manager: l }),
-              (0, o.jsx)(L, { manager: l, children: t }),
+              (0, o.jsx)(L, { manager: a }),
+              (0, o.jsx)(k, { manager: a, children: t }),
             ],
           })
         );
       }
-      const P = a.memo(function (e) {
+      const _ = c.memo(function (e) {
         const { nodeType: t } = e,
-          n = k(),
+          n = b(),
           {
             placeholderElements: s,
-            createPlaceholder: c,
+            createPlaceholder: r,
             replacePlaceholder: d,
           } = (function (e, t = "PlaceholderPlugin") {
-            const [n, o] = a.useState([]),
-              [s] = a.useState(
+            const [n, o] = c.useState([]),
+              [s] = c.useState(
                 () =>
-                  new i.k_({
-                    key: new i.hs(t),
+                  new a.k_({
+                    key: new a.hs(t),
                     state: {
                       init: () => l.zF.empty,
                       apply(t, n) {
@@ -458,54 +459,54 @@
                     },
                   }),
               );
-            (0, r.c$)(s);
-            const c = (0, r.Hd)(),
-              d = a.useRef(0),
-              u = a.useCallback(
+            (0, i.c$)(s);
+            const r = (0, i.Hd)(),
+              d = c.useRef(0),
+              u = c.useCallback(
                 (e, n, o) => {
-                  const r = `${t}_${d.current++}`;
-                  let i = o || c.state.tr;
+                  const i = `${t}_${d.current++}`;
+                  let a = o || r.state.tr;
                   void 0 === n &&
-                    (i.selection.empty || i.deleteSelection(),
-                    (n = i.selection.from));
+                    (a.selection.empty || a.deleteSelection(),
+                    (n = a.selection.from));
                   const l = (null == o ? void 0 : o.getMeta(s)) || [];
                   return (
-                    i.setMeta(s, [...l, { add: { id: r, pos: n, data: e } }]),
-                    o || c.dispatch(i),
-                    r
+                    a.setMeta(s, [...l, { add: { id: i, pos: n, data: e } }]),
+                    o || r.dispatch(a),
+                    i
                   );
                 },
-                [s, t, c],
+                [s, t, r],
               ),
-              h = a.useCallback(
+              h = c.useCallback(
                 (e) => {
-                  const t = s.getState(c.state),
+                  const t = s.getState(r.state),
                     n =
                       null == t
                         ? void 0
                         : t.find(void 0, void 0, (t) => t.id == e);
                   return (null == n ? void 0 : n.length) ? n[0].from : void 0;
                 },
-                [c, s],
+                [r, s],
               ),
-              m = a.useCallback(
+              m = c.useCallback(
                 (e, t) => {
                   const n = h(e);
                   return (
                     !!n &&
                     (t
-                      ? c.dispatch(
-                          c.state.tr
+                      ? r.dispatch(
+                          r.state.tr
                             .replaceWith(n, n, t)
                             .setMeta(s, [{ remove: { id: e } }]),
                         )
-                      : c.dispatch(
-                          c.state.tr.setMeta(s, [{ remove: { id: e } }]),
+                      : r.dispatch(
+                          r.state.tr.setMeta(s, [{ remove: { id: e } }]),
                         ),
                     !0)
                   );
                 },
-                [s, h, c],
+                [s, h, r],
               );
             return {
               placeholderElements: n,
@@ -515,17 +516,21 @@
             };
           })("span", "FileUploadPlaceholder");
         !(function (e, t) {
-          (0, r.c$)(
-            a.useMemo(
+          (0, i.c$)(
+            c.useMemo(
               () =>
-                new i.k_({
+                new a.k_({
                   props: {
                     handlePaste(n, o, s) {
-                      if (e.BAllowImageHotLinking()) return !1;
                       const r = [];
                       if (
-                        (s.content.descendants((e, n) => {
-                          e.type == t && r.push({ url: e.attrs.src, pos: n });
+                        (s.content.descendants((n, o) => {
+                          if (n.type == t) {
+                            const t = n.attrs.src;
+                            (!t.startsWith("data:") &&
+                              e.BAllowImageHotLinking()) ||
+                              r.push({ url: t, pos: o });
+                          }
                         }),
                         r.length)
                       ) {
@@ -547,6 +552,7 @@
                           !0
                         );
                       }
+                      return !1;
                     },
                     handleDOMEvents: {
                       paste(t, n) {
@@ -573,9 +579,9 @@
             ),
           );
         })(n, t);
-        const u = (0, r.Hd)();
+        const u = (0, i.Hd)();
         return (
-          a.useEffect(() => n.RegisterEditor(u, c, d), [n, u, c, d]),
+          c.useEffect(() => n.RegisterEditor(u, r, d), [n, u, r, d]),
           (0, o.jsx)(o.Fragment, {
             children: s.map(({ id: e, element: t, data: n }) =>
               (0, o.jsx)(x, { element: t, data: n }, e),
@@ -583,7 +589,7 @@
           })
         );
       });
-      class _ extends Error {
+      class y extends Error {
         constructor(e) {
           super(e);
         }
@@ -591,34 +597,34 @@
       function x(e) {
         const { element: t, data: n } = e,
           s = "file" in n ? n.file : void 0,
-          r = a.useMemo(() => s && URL.createObjectURL(s), [s]),
+          r = c.useMemo(() => s && URL.createObjectURL(s), [s]),
           i = "url" in n ? n.url : r,
-          l = s.type.startsWith("video/");
-        return c.createPortal(
+          a = null == s ? void 0 : s.type.startsWith("video/");
+        return d.createPortal(
           (0, o.jsxs)("span", {
-            className: v.FileUploadPlaceholder,
+            className: w.FileUploadPlaceholder,
             children: [
               (0, o.jsx)("div", {
-                className: v.ThrobberCtn,
+                className: w.ThrobberCtn,
                 children: (0, o.jsxs)("div", {
-                  className: v.ThrobberRow,
+                  className: w.ThrobberRow,
                   children: [
                     (0, o.jsx)("div", {
-                      className: v.Throbber,
-                      children: (0, o.jsx)(h.t, {
+                      className: w.Throbber,
+                      children: (0, o.jsx)(m.t, {
                         size: "medium",
                         position: "center",
                       }),
                     }),
-                    (0, p.we)("#Prosemirror_FileUpload_Uploading"),
+                    (0, f.we)("#Prosemirror_FileUpload_Uploading"),
                   ],
                 }),
               }),
-              !l && (0, o.jsx)("img", { src: i, className: v.PendingImage }),
-              l &&
+              !a && (0, o.jsx)("img", { src: i, className: w.PendingImage }),
+              a &&
                 (0, o.jsx)("video", {
                   src: i,
-                  className: v.PendingImage,
+                  className: w.PendingImage,
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
@@ -629,9 +635,9 @@
           t,
         );
       }
-      class y {
+      class R {
         constructor(e, t, n) {
-          (this.m_errors = (0, m.Jc)([])),
+          (this.m_errors = (0, p.Jc)([])),
             (this.m_fnProcessFileUpload = e),
             (this.m_fnFetchImageURL = t),
             (this.m_bAllowImageHotLinking = n);
@@ -691,14 +697,58 @@
           if (
             ((this.m_fnCreatePlaceholder && this.m_fnReplacePlaceholder) ||
               this.AddError("No editor registered to handle file upload"),
-            !this.m_fnFetchImageURL)
-          )
-            return void console.warn(
-              "The file upload manager does not have a way to fetch image URLs, so we cannot accept pasted <img> tags.",
+            console.log(`QueueUploadFileByURL: ${e} at pos ${t}`),
+            e.startsWith("data:"))
+          ) {
+            const o = this.m_fnCreatePlaceholder({ url: e }, t, n);
+            return this.ProcessDataURL(e, o), !0;
+          }
+          if (this.m_fnFetchImageURL) {
+            const o = this.m_fnCreatePlaceholder({ url: e }, t, n);
+            return this.FetchURLAndProcess(e, o), !0;
+          }
+          return (
+            (0, s.wT)(
+              this.m_bAllowImageHotLinking,
+              "A URL was posted but we don't have a fnFetchImageURL to process it",
+            ),
+            !1
+          );
+        }
+        async ProcessDataURL(e, t) {
+          const [n, o] = e.split(","),
+            s = n.match(/^data:(?<mimetype>[^;]*);(?<encoding>.*)$/);
+          if (!s || "base64" != s.groups.encoding)
+            return void this.AddError(
+              `Unable to data URL, unexpected format: ${n}`,
             );
-          console.log(`QueueUploadFileByURL: ${e} at pos ${t}`);
-          const o = this.m_fnCreatePlaceholder({ url: e }, t, n);
-          this.FetchURLAndProcess(e, o);
+          const i = null == s ? void 0 : s.groups.mimetype,
+            a = (function (e) {
+              switch (e) {
+                case "image/jpeg":
+                  return "jpg";
+                case "image/png":
+                  return "png";
+                case "image/gif":
+                  return "gif";
+                case "image/webp":
+                  return "webp";
+                case "video/mp4":
+                  return "mp4";
+                case "video/webm":
+                  return "webm";
+                default:
+                  return;
+              }
+            })(i);
+          if (!a)
+            return void this.AddError(`Unsupported MIME type for image: ${i}`);
+          const l = atob(o),
+            c = new Uint8Array(l.length);
+          for (let e = 0; e < l.length; e++) c[e] = l.charCodeAt(e);
+          const d = await r.C(c.buffer),
+            u = new File([c], `upload_${d}.${a}`, { type: i });
+          await this.ProcessFile(u, t);
         }
         async FetchURLAndProcess(e, t) {
           var n;
@@ -726,7 +776,7 @@
             console.log(`Processing file upload: "${e.name}"`),
               (n = await this.m_fnProcessFileUpload(e));
           } catch (e) {
-            e instanceof _
+            e instanceof y
               ? this.AddError(e.message)
               : this.AddError(`Error proccessing file upload: ${e}`);
           }
@@ -735,40 +785,40 @@
             : this.m_fnReplacePlaceholder(t);
         }
       }
-      const R = a.createContext(void 0);
-      function k() {
-        return a.useContext(R).manager;
+      const U = c.createContext(void 0);
+      function b() {
+        return c.useContext(U).manager;
       }
-      const U = a.memo(function (e) {
+      const L = c.memo(function (e) {
         const { manager: t } = e,
-          n = (0, g.gc)(t.GetErrors());
+          n = (0, v.gc)(t.GetErrors());
         return n.length
-          ? (0, o.jsx)(u.E, {
+          ? (0, o.jsx)(h.E, {
               active: !0,
-              children: (0, o.jsx)(d.o0, {
+              children: (0, o.jsx)(u.o0, {
                 bAlertDialog: !0,
-                strTitle: (0, p.we)("#Error_Generic"),
+                strTitle: (0, f.we)("#Error_Generic"),
                 strDescription: n.map((e, t) =>
                   (0, o.jsx)("div", { children: e }, t),
                 ),
-                strOKButtonText: (0, p.we)("#Button_OK"),
+                strOKButtonText: (0, f.we)("#Button_OK"),
                 onOK: () => t.ClearErrors(),
                 onCancel: () => t.ClearErrors(),
               }),
             })
           : null;
       });
-      function L(e) {
+      function k(e) {
         const { manager: t, children: n } = e,
-          o = a.useCallback(
+          o = c.useCallback(
             (e, n) => {
               for (const o of e)
                 t.UploadFile(o, t.GetViewPosition(n.clientX, n.clientY));
             },
             [t],
           ),
-          [s, r] = (0, f.hk)(o);
-        return a.cloneElement(n, { ...s, ...n.props });
+          [s, r] = (0, g.hk)(o);
+        return c.cloneElement(n, { ...s, ...n.props });
       }
     },
   },

@@ -7739,14 +7739,13 @@
         "string" == typeof e
           ? ((i = e), (r = new TextEncoder().encode(i).buffer))
           : (r = e);
-        const n = await window.crypto.subtle.digest(t, r);
-        return (
-          (s = n),
-          Array.prototype.map
-            .call(new Uint8Array(s), (e) => ("00" + e.toString(16)).slice(-2))
-            .join("")
-        );
-        var s;
+        return (function (e) {
+          const t = new Uint8Array(e);
+          let r = "";
+          for (let e = 0; e < t.length; e++)
+            r += ("00" + t[e].toString(16)).slice(-2);
+          return r;
+        })(await window.crypto.subtle.digest(t, r));
       }
       r.d(t, { C: () => i });
     },
