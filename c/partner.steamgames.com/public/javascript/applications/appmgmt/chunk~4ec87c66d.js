@@ -11216,9 +11216,12 @@
               _?.valid_realms || 0,
               _?.button_text,
               _?.explicit_no_associated_item,
-              _?.partner?.trim().length > 0 ||
+              (_?.partner &&
+                "string" == typeof _.partner &&
+                _.partner.trim().length > 0) ||
                 _?.explicit_no_partner_name_needed ||
-                _?.custom_legal_text?.trim().length > 0,
+                (_?.custom_legal_text &&
+                  _?.custom_legal_text?.trim().length > 0),
               _?.type,
               _?.update_event_clan_accountid,
               _?.update_event_gid,

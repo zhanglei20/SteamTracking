@@ -2083,62 +2083,7 @@ function UpdateSortArrows()
 		elArrow.html( '&#9660' );
 }
 
-var g_nMillisPopularRefresh = 1900;
 var g_bMarketWindowHidden = false;
-var g_nUpdatesQueued = 0;
-
-function CreatePopularItemClosure( item )
-{
-	return function() {
-		g_nUpdatesQueued--;
-
-		var elResult = $J('.market_listing_searchresult[data-appid=' + item.appid + '][data-hash-name="' + item.hash_name.replace( /"/g, "\\\"" ) + '"]' );
-
-		if ( elResult.length )
-		{
-			var elQuantity = elResult.find( '.market_listing_num_listings_qty' );
-			var elPrice = elResult.find( '.market_listing_their_price .market_table_value > span.normal_price ' );
-
-			// Update values and apply some effects for values that changed
-			if ( elQuantity.data( 'qty' ) != item.sell_listings )
-			{
-				elQuantity.html( item.sell_listings.toLocaleString() );
-				elQuantity.data( 'qty', item.sell_listings );
-
-				elQuantity.css( 'color', '#fff' );
-				elQuantity.animate({
-					color: "#828282"
-				}, 900 );
-			}
-
-			if ( elPrice.data( 'price' ) != item.sell_price )
-			{
-				var elArrow = null;
-				if ( item.sell_price > elPrice.data( 'price' ) )
-				{
-					elArrow = elResult.find( '.market_arrow_up' );
-				}
-				else
-				{
-					elArrow = elResult.find( '.market_arrow_down' );
-				}
-
-				var position = elPrice.position();
-				position.top -= elPrice.height();
-				position.left += elPrice.width() + 2;
-				elArrow.css( 'top', position.top );
-				elArrow.css( 'left', position.left );
-				elArrow.stop();
-				elArrow.show();
-				elArrow.fadeOut( 900 );
-
-				var sCurrencyCode = GetCurrencyCode( g_nWalletCurrency );
-				elPrice.html( v_currencyformat( item.sell_price, sCurrencyCode, g_strCountryCode ) );
-				elPrice.data( 'price', item.sell_price );
-			}
-		}
-	};
-}
 
 function v_shuffle( rgArray )
 {
@@ -2154,82 +2099,6 @@ function v_shuffle( rgArray )
 	}
 
 	return rgArray;
-}
-
-var g_bWaitingOnWebSocketRetry = false
-function SubscribeToPopularItemUpdates()
-{
-	g_bWaitingOnWebSocketRetry = false;
-	if ( !("WebSocket" in window) )
-	{
-		console.log( "No web socket support" );
-		return;
-	}
-
-	var socket = new WebSocket( g_strWebSocketURL );
-
-	socket.onopen = function() {
-		var subscribe = { message: "subscribe", seqnum: 1, feed: g_strPopularFeed };
-		socket.send( JSON.stringify( subscribe )  );
-	};
-
-	socket.onerror = function() {
-		var cmsRetry = 90000 + Math.floor(Math.random() * 60000);
-		console.log( "WebSocket error. Retry in " + cmsRetry + "ms." );
-		try
-		{
-			socket.close();
-		}
-		catch ( exception )
-		{
-		}
-
-		if ( !g_bWaitingOnWebSocketRetry )
-		{
-			g_bWaitingOnWebSocketRetry = true;
-			setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
-		}
-	};
-
-	socket.onclose = function() {
-		if ( !g_bWaitingOnWebSocketRetry )
-		{
-			g_bWaitingOnWebSocketRetry = true;
-
-			var cmsRetry = 90000 + Math.floor( Math.random() * 60000 );
-			console.log( "WebSocket closed. Retry in " + cmsRetry + "ms." );
-			setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
-		}
-	};
-
-	socket.onmessage = function( oMessage ) {
-		var data = $J.parseJSON( oMessage.data );
-		if ( data && data.message && data.message == "feedupdate" )
-		{
-			if ( data.feed == g_strPopularFeed )
-			{
-				var feed = $J.parseJSON( data.data );
-				if ( !feed || !feed.items )
-				{
-					return;
-				}
-
-				var nMilliToWaitForRowUpdate = 0;
-				var rgItems = v_shuffle( feed.items );
-
-				for ( var i = 0; i < rgItems.length; i++ )
-				{
-					// Don't update if we're too far behind
-					if ( g_nUpdatesQueued <= 20 && !g_bMarketWindowHidden )
-					{
-						g_nUpdatesQueued++;
-						setTimeout( CreatePopularItemClosure( rgItems[i] ), nMilliToWaitForRowUpdate );
-						nMilliToWaitForRowUpdate += ( g_nMillisPopularRefresh / rgItems.length );
-					}
-				}
-			}
-		}
-	};
 }
 
 function ShowAllGames()

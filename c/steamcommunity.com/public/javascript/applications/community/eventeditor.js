@@ -8746,73 +8746,135 @@
                 }),
                 (0, _.jsxs)(_._, {
                   children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)("div", {
-                        children: (0, _._)("#Sale_GameExport_Desc"),
-                      }),
+                    (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)("div", {
+                          children: (0, _._)("#Sale_GameExport_Desc"),
+                        }),
+                        (0, _.jsx)("br", {}),
+                        _
+                          ? _
+                          : (0, _.jsx)(_._, {
+                              position: "center",
+                              string: (0, _._)("#Sale_Debug_Loading"),
+                              size: "medium",
+                            }),
+                        (0, _.jsx)(_._, {
+                          onClick: () => {
+                            var _;
+                            const { mapItemLocations: _, rgSections: _ } = _,
+                              _ = [];
+                            for (const _ of Array.from(_.keys())) {
+                              const _ = _(_);
+                              let _;
+                              try {
+                                _ =
+                                  null ===
+                                    (_ = _._.Get().GetStoreItem(
+                                      _._,
+                                      (0, _._)(_.type),
+                                    )) || void 0 === _
+                                    ? void 0
+                                    : _.GetName();
+                              } catch (_) {}
+                              _.push([`${_.type}: ${_ || _._}`, _]);
+                            }
+                            _.sort();
+                            const _ = [],
+                              _ = ["Item", "AppID", "Count"];
+                            for (const _ of _)
+                              _.push(`${_.strLabel} (${_.type})`);
+                            _.push(_);
+                            for (const [_, _] of _) {
+                              const _ = _.get(_),
+                                _ = [_, _(_)._.toString(), _.size.toString()];
+                              for (const _ of _)
+                                _.push(_.has(_.unique_id) ? "1" : " ");
+                              _.push(_);
+                            }
+                            const _ = "item_locations.csv";
+                            _._.WriteCSVToFile(_, _),
+                              (0, _._)(
+                                (0, _.jsx)(_._, {
+                                  strTitle: (0, _._)("#Sale_GameExport_Title"),
+                                  bAlertDialog: !0,
+                                  strDescription: (0, _._)(
+                                    "#Sale_GameExport_FileExported",
+                                    _,
+                                  ),
+                                }),
+                                window,
+                              ),
+                              _();
+                          },
+                          disabled: !_,
+                          children: (0, _._)("#Sale_Export"),
+                        }),
+                      ],
                     }),
                     (0, _.jsx)(_._, {
-                      children: _
-                        ? _
-                        : (0, _.jsx)(_._, {
-                            position: "center",
-                            string: (0, _._)("#Sale_Debug_Loading"),
-                            size: "medium",
+                      clanSteamID: _._.GetEditModel().GetClanSteamID(),
+                      children: (0, _.jsxs)(_._, {
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: (0, _._)("#Sale_GameExport_Desc"),
                           }),
+                          (0, _.jsx)(_._, {
+                            onClick: () => {
+                              const { mapItemLocations: _ } = _,
+                                _ = [];
+                              _.push(["Item", "ID", "Dev", "Pub", "Franchise"]);
+                              const _ = [];
+                              for (const _ of Array.from(_.keys())) {
+                                const _ = _(_);
+                                try {
+                                  const _ = _._.Get().GetStoreItem(
+                                    _._,
+                                    (0, _._)(_.type),
+                                  );
+                                  __webpack_require__.push([
+                                    `${_.type}: ${_.GetName() || _._}`,
+                                    _,
+                                  ]);
+                                } catch (_) {}
+                              }
+                              __webpack_require__.sort();
+                              for (const [_, _] of _) {
+                                const _ = _.GetDeveloperNames().join(","),
+                                  _ = _.GetPublisherNames().join(","),
+                                  _ = _.GetFranchiseNames().join(","),
+                                  _ = [_, _.GetAppID().toString(), _, _, _];
+                                _.push(_);
+                              }
+                              const _ = "item_pubs.csv";
+                              _._.WriteCSVToFile(_, _),
+                                (0, _._)(
+                                  (0, _.jsx)(_._, {
+                                    strTitle: (0, _._)(
+                                      "#Sale_GameExport_Title",
+                                    ),
+                                    bAlertDialog: !0,
+                                    strDescription: (0, _._)(
+                                      "#Sale_GameExport_FileExported",
+                                      _,
+                                    ),
+                                  }),
+                                  window,
+                                ),
+                                _();
+                            },
+                            disabled: !_,
+                            children: (0, _._)("#Sale_Export"),
+                          }),
+                        ],
+                      }),
                     }),
                   ],
                 }),
                 (0, _.jsx)(_._, {
                   children: (0, _.jsx)(_._, {
-                    onCancel: _,
-                    bOKDisabled: !_,
-                    strOKText: (0, _._)("#Button_Save"),
-                    onOK: () => {
-                      var _;
-                      const { mapItemLocations: _, rgSections: _ } = _,
-                        _ = [];
-                      for (const _ of Array.from(_.keys())) {
-                        const _ = _(_);
-                        let _;
-                        try {
-                          _ =
-                            null ===
-                              (_ = _._.Get().GetStoreItem(
-                                _._,
-                                (0, _._)(_.type),
-                              )) || void 0 === _
-                              ? void 0
-                              : _.GetName();
-                        } catch (_) {}
-                        _.push([`${_.type}: ${_ || _._}`, _]);
-                      }
-                      _.sort();
-                      const _ = [],
-                        _ = ["Item", "AppID", "Count"];
-                      for (const _ of _) _.push(`${_.strLabel} (${_.type})`);
-                      _.push(_);
-                      for (const [_, _] of _) {
-                        const _ = _.get(_),
-                          _ = [_, _(_)._.toString(), _.size.toString()];
-                        for (const _ of _)
-                          _.push(_.has(_.unique_id) ? "1" : " ");
-                        _.push(_);
-                      }
-                      const _ = "item_locations.csv";
-                      _._.WriteCSVToFile(_, _),
-                        (0, _._)(
-                          (0, _.jsx)(_._, {
-                            strTitle: (0, _._)("#Sale_GameExport_Title"),
-                            bAlertDialog: !0,
-                            strDescription: (0, _._)(
-                              "#Sale_GameExport_FileExported",
-                              _,
-                            ),
-                          }),
-                          window,
-                        ),
-                        _();
-                    },
+                    onClick: _,
+                    children: (0, _._)("#Button_Close"),
                   }),
                 }),
               ],

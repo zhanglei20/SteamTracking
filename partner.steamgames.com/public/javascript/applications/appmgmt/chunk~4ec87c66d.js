@@ -10922,9 +10922,12 @@
               g?.valid_realms || 0,
               p?.button_text,
               g?.explicit_no_associated_item,
-              p?.partner?.trim().length > 0 ||
+              (p?.partner &&
+                "string" == typeof p.partner &&
+                p.partner.trim().length > 0) ||
                 g?.explicit_no_partner_name_needed ||
-                p?.custom_legal_text?.trim().length > 0,
+                (p?.custom_legal_text &&
+                  p?.custom_legal_text?.trim().length > 0),
               i?.type,
               p?.update_event_clan_accountid,
               p?.update_event_gid,
