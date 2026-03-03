@@ -386,7 +386,7 @@
     },
     45169: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Nd });
+      a.r(t), a.d(t, { default: () => Ad });
       var n = a(90626),
         i = a(7850),
         s = a(43527),
@@ -415,8 +415,8 @@
         T = a(64846),
         I = a(26408),
         G = a(60383),
-        A = a(81393),
-        N = a(68797),
+        N = a(81393),
+        A = a(68797),
         M = a(6144),
         B = a(52038),
         L = a(56011),
@@ -561,8 +561,8 @@
         Te = "quest_close_",
         Ie = "quest_open_",
         Ge = "discoqueue_desc_",
-        Ae = "socialshare_header_",
-        Ne = "socialshare_title_",
+        Ne = "socialshare_header_",
+        Ae = "socialshare_title_",
         Me = "socialshare_desc_",
         Be = "socialshare_image_",
         Le = "socialshare_imagealttext_",
@@ -1089,14 +1089,14 @@
                         a.localized_header &&
                           Boolean(k.NT.Get(a.localized_header, b)) &&
                           d.SetLocalization(
-                            Ae + t.unique_id + "_" + e.unique_id,
+                            Ne + t.unique_id + "_" + e.unique_id,
                             b,
                             a.localized_header[b],
                           ),
                           a.title &&
                             Boolean(k.NT.Get(a.title, b)) &&
                             d.SetLocalization(
-                              Ne + t.unique_id + "_" + e.unique_id,
+                              Ae + t.unique_id + "_" + e.unique_id,
                               b,
                               a.title[b],
                             ),
@@ -2061,7 +2061,7 @@
                               b.forEach((i) => {
                                 const o = i.localized_option_fields;
                                 if (
-                                  n === Ae + t.unique_id + "_" + i.unique_id &&
+                                  n === Ne + t.unique_id + "_" + i.unique_id &&
                                   (c ||
                                     (o.localized_header &&
                                       Boolean(k.NT.Get(o.localized_header, a))))
@@ -2076,7 +2076,7 @@
                                     (s = !0));
                                 }
                                 if (
-                                  n === Ne + t.unique_id + "_" + i.unique_id &&
+                                  n === Ae + t.unique_id + "_" + i.unique_id &&
                                   (c ||
                                     (o.title && Boolean(k.NT.Get(o.title, a))))
                                 ) {
@@ -2525,7 +2525,7 @@
                           : ut(a, t);
                       })
                       .catch((e) => {
-                        let t = (0, N.H)(e);
+                        let t = (0, A.H)(e);
                         (0, y.pg)(
                           (0, i.jsx)(f.KG, {
                             strTitle: (0, k.we)("#EventEditor_CloneError"),
@@ -2722,7 +2722,7 @@
                     })
                     .catch((e) => {
                       if (!t.token.reason) {
-                        const t = (0, N.H)(e);
+                        const t = (0, A.H)(e);
                         console.error("useBranchInfo: " + t.strErrorMsg, t);
                       }
                     }),
@@ -3079,7 +3079,7 @@
                                   }),
                                 ],
                               })
-                            : (0, i.jsx)(At, {
+                            : (0, i.jsx)(Nt, {
                                 fnOnGotoPage: this.OnGotoPage,
                                 ...this.props,
                               }),
@@ -3103,7 +3103,7 @@
         (0, K.Cg)([R.oI], Gt.prototype, "OnGotoPage", null),
         (0, K.Cg)([R.oI], Gt.prototype, "OnIgnoreFallbackClick", null),
         (Gt = (0, K.Cg)([_.PA], Gt));
-      let At = class extends n.Component {
+      let Nt = class extends n.Component {
         OnIgnoreFallbackClick(e) {
           e.stopPropagation();
         }
@@ -3123,7 +3123,7 @@
               );
             })
             .catch((e) => {
-              let t = (0, N.H)(e);
+              let t = (0, A.H)(e);
               (0, y.pg)(
                 (0, i.jsx)(f.KG, {
                   strTitle: (0, k.we)("#EventEditor_PublishingError"),
@@ -3230,7 +3230,7 @@
           });
         }
       };
-      function Nt(e, t) {
+      function At(e, t) {
         if (!e || t <= 0) return [];
         const a = new Array();
         return (
@@ -3245,24 +3245,24 @@
               s &&
                 ("object" == typeof s || Array.isArray(s)) &&
                 o > 100 &&
-                Nt(s, t - 1).forEach((e) => {
+                At(s, t - 1).forEach((e) => {
                   a.push({ key: n + ":" + e.key, size: e.size });
                 });
           }),
           a
         );
       }
-      (0, K.Cg)([R.oI], At.prototype, "OnIgnoreFallbackClick", null),
-        (0, K.Cg)([R.oI], At.prototype, "OnPublishEvent", null),
-        (0, K.Cg)([R.oI], At.prototype, "OnPublishSuccess", null),
-        (0, K.Cg)([R.oI], At.prototype, "StopPropagation", null),
-        (0, K.Cg)([R.oI], At.prototype, "OnDeleteClickAndVerify", null),
-        (At = (0, K.Cg)([_.PA], At));
+      (0, K.Cg)([R.oI], Nt.prototype, "OnIgnoreFallbackClick", null),
+        (0, K.Cg)([R.oI], Nt.prototype, "OnPublishEvent", null),
+        (0, K.Cg)([R.oI], Nt.prototype, "OnPublishSuccess", null),
+        (0, K.Cg)([R.oI], Nt.prototype, "StopPropagation", null),
+        (0, K.Cg)([R.oI], Nt.prototype, "OnDeleteClickAndVerify", null),
+        (Nt = (0, K.Cg)([_.PA], Nt));
       const Mt = (e) => {
           var t, a;
           const { eventModel: n } = e;
           if (!(null == n ? void 0 : n.jsondata)) return null;
-          const s = Nt(n.jsondata, 3);
+          const s = At(n.jsondata, 3);
           s.sort((e, t) => t.size - e.size);
           return (0, i.jsxs)("div", {
             className: ct.MetaDataCtn,
@@ -3334,7 +3334,7 @@
             })(X, U),
             ie = (0, R.Sz)(X),
             se = n.useMemo(() => {
-              (0, A.wT)(
+              (0, N.wT)(
                 !V || V.every((e) => null != e),
                 "draftClanEvents has a null event",
               );
@@ -3367,7 +3367,7 @@
           }, [z, F, se]),
             n.useEffect(() => {
               if ("error" == ee) {
-                const e = (0, N.H)(te);
+                const e = (0, A.H)(te);
                 (0, y.pg)(
                   (0, i.jsx)(f.KG, {
                     children: (0, k.we)(
@@ -3401,7 +3401,7 @@
                 })),
                   l.sort(
                     (e, t) => (
-                      (0, A.wT)(
+                      (0, N.wT)(
                         e !== t,
                         `Unexpected duplicates in the list: ${e} ${t}`,
                       ),
@@ -4739,7 +4739,7 @@
           }),
         });
       }
-      function Aa(e) {
+      function Na(e) {
         const { label: t, fnUpdateColor: a, strColorToChange: n } = e;
         return (0, i.jsx)(i.Fragment, {
           children: (0, i.jsxs)(x.$n, {
@@ -4762,7 +4762,7 @@
           }),
         });
       }
-      var Na = a(91667);
+      var Aa = a(91667);
       function Ma(e) {
         return (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(Ba, { ...e }), (0, i.jsx)(La, { ...e })],
@@ -4772,30 +4772,30 @@
         const { model: t, fnOnDirty: a } = e,
           [s, o] = (0, Yt.q3)(() => [
             t.sale_carousel_arrow_color,
-            t.sale_carousel_arrow_style || Na.C.k_ECutArrowStyle,
+            t.sale_carousel_arrow_style || Aa.C.k_ECutArrowStyle,
           ]),
           l = (0, n.useMemo)(() => {
             const e = [];
             return (
               e.push({
                 label: (0, k.we)("#Sale_Section_Carousel_CutArrowStyles"),
-                data: Na.C.k_ECutArrowStyle,
+                data: Aa.C.k_ECutArrowStyle,
               }),
               e.push({
                 label: (0, k.we)("#Sale_Section_Carousel_DoubleArrowStyles"),
-                data: Na.C.k_EDoubleArrowStyle,
+                data: Aa.C.k_EDoubleArrowStyle,
               }),
               e.push({
                 label: (0, k.we)("#Sale_Section_Carousel_ChevronStyles"),
-                data: Na.C.k_EThickChevron,
+                data: Aa.C.k_EThickChevron,
               }),
               e.push({
                 label: (0, k.we)("#Sale_Section_Carousel_FlatArrowStyles"),
-                data: Na.C.k_EFilledArrow,
+                data: Aa.C.k_EFilledArrow,
               }),
               e.push({
                 label: (0, k.we)("#Sale_Section_Carousel_PointyArrowStyles"),
-                data: Na.C.k_EPointyArrow,
+                data: Aa.C.k_EPointyArrow,
               }),
               e
             );
@@ -4846,7 +4846,7 @@
           [s, o, l] = (0, Yt.q3)(() => [
             t.sale_carousel_breadcrumb_color,
             t.sale_carousel_active_breadcrumb_color,
-            t.sale_carousel_breadcrumb_style || Na.m.k_EPillCrumb,
+            t.sale_carousel_breadcrumb_style || Aa.m.k_EPillCrumb,
           ]),
           r = (0, n.useMemo)(() => {
             const e = [];
@@ -4855,19 +4855,19 @@
                 label: (0, k.we)(
                   "#Sale_Section_Carousel_BreadCrumb_PillStyles",
                 ),
-                data: Na.m.k_EPillCrumb,
+                data: Aa.m.k_EPillCrumb,
               }),
               e.push({
                 label: (0, k.we)(
                   "#Sale_Section_Carousel_BreadCrumb_CircularStyles",
                 ),
-                data: Na.m.k_ECircularCrumb,
+                data: Aa.m.k_ECircularCrumb,
               }),
               e.push({
                 label: (0, k.we)(
                   "#Sale_Section_Carousel_BreadCrumb_SquareStyles",
                 ),
-                data: Na.m.k_ESquareCrumb,
+                data: Aa.m.k_ESquareCrumb,
               }),
               e
             );
@@ -4881,7 +4881,7 @@
                 (0, i.jsx)(x.JU, {
                   children: (0, k.we)("#Sale_Section_Carousel_BreadCrumb"),
                 }),
-                (0, i.jsx)(Aa, {
+                (0, i.jsx)(Na, {
                   label: (0, k.we)("#Sale_Section_Carousel_BreadCrumb_Color"),
                   strColorToChange: s,
                   breadcrumbColor: s,
@@ -4892,7 +4892,7 @@
                       ((t.sale_carousel_breadcrumb_color = e), a());
                   },
                 }),
-                (0, i.jsx)(Aa, {
+                (0, i.jsx)(Na, {
                   label: (0, k.we)(
                     "#Sale_Section_Carousel_ActiveBreadCrumb_Color",
                   ),
@@ -5545,7 +5545,7 @@
                     : t.success) ||
                 !(null === (a = s.data) || void 0 === a ? void 0 : a.partners)
               )
-                throw `Load single user partner info failed ${((0, N.H))(s).strErrorMsg}`;
+                throw `Load single user partner info failed ${((0, A.H))(s).strErrorMsg}`;
               return s.data.partners;
             })(e),
         });
@@ -5966,7 +5966,7 @@
                     .catch((e) => {
                       l(),
                         d.fnSetError(!0),
-                        d.fnSetStrError((0, N.H)(e).strErrorMsg);
+                        d.fnSetStrError((0, A.H)(e).strErrorMsg);
                     });
               },
               strOKButtonText: "Update",
@@ -6011,7 +6011,7 @@
                 .catch((e) => {
                   l(),
                     c.fnSetError(!0),
-                    c.fnSetStrError((0, N.H)(e).strErrorMsg);
+                    c.fnSetStrError((0, A.H)(e).strErrorMsg);
                 });
           },
           strOKButtonText: "Yes, Approve",
@@ -6103,11 +6103,11 @@
                         ? e.data
                         : (console.error(
                             "CreateReviewRequestTicket failed.",
-                            e && (0, N.H)(e),
+                            e && (0, A.H)(e),
                           ),
                           29 == e.data.success ? e.data : null);
                     } catch (e) {
-                      const t = (0, N.H)(e);
+                      const t = (0, A.H)(e);
                       console.error(
                         "CreateReviewRequestTicket failed: " + t.strErrorMsg,
                         t,
@@ -6459,7 +6459,7 @@
                 .catch((e) => {
                   l(),
                     h.fnSetError(!0),
-                    h.fnSetStrError((0, N.H)(e).strErrorMsg);
+                    h.fnSetStrError((0, A.H)(e).strErrorMsg);
                 });
           },
           strOKButtonText: "Yes, Approve",
@@ -6548,7 +6548,7 @@
           C = `${O.TS.PARTNER_BASE_URL}doc/store/promo/${u}_page`,
           y = (0, k.we)(`#EventSaleGuidelines_doc_${u}`),
           [T, I] = n.useState(r || ""),
-          [G, A] = n.useState(d || ""),
+          [G, N] = n.useState(d || ""),
           [M, B] = n.useState(!1),
           [L, R] = n.useState(null),
           P = g && E && b && T.length > 0 && G.length > 0;
@@ -6564,7 +6564,7 @@
                   m(s.GetGID())
                     .then(a)
                     .catch((e) => {
-                      R((0, N.H)(e).strErrorMsg);
+                      R((0, A.H)(e).strErrorMsg);
                     }))
                 : a && a();
           },
@@ -6643,7 +6643,7 @@
                           "#EventSaleGuidelines_PrimaryContact_email",
                         ),
                         value: G,
-                        onChange: (e) => A(e.currentTarget.value),
+                        onChange: (e) => N(e.currentTarget.value),
                       }),
                     ],
                   }),
@@ -6800,20 +6800,20 @@
             (e.ApproveWalletFunding = "pubrightapprovewalletfunding"),
             (e.ManageLicensedSites = "pubrightmanagelicensedsites");
         })(In || (In = {}));
-      class An {
+      class Nn {
         static ConstructAppRightsMap() {
           const e = new Map();
-          return An.AppRights.forEach((t) => e.set(t.token, t)), e;
+          return Nn.AppRights.forEach((t) => e.set(t.token, t)), e;
         }
         static ConstructPubRightsMap() {
           const e = new Map();
-          return An.PubRights.forEach((t) => e.set(t.token, t)), e;
+          return Nn.PubRights.forEach((t) => e.set(t.token, t)), e;
         }
         static GetAppRightFlags(e) {
           let t = 0;
           return (
             e.forEach((e) => {
-              t |= An.MapAppRights.get(e).flag;
+              t |= Nn.MapAppRights.get(e).flag;
             }),
             t
           );
@@ -6822,13 +6822,13 @@
           let t = 0;
           return (
             e.forEach((e) => {
-              t |= An.MapPubRights.get(e).flag;
+              t |= Nn.MapPubRights.get(e).flag;
             }),
             t
           );
         }
       }
-      (An.AppRights = [
+      (Nn.AppRights = [
         { flag: 1, token: Tn.EditInfo },
         { flag: 2, token: Tn.Publish },
         { flag: 4, token: Tn.ViewErrorData },
@@ -6847,16 +6847,16 @@
         { flag: 32768, token: Tn.AppRightViewMarketingTraffic },
         { flag: 65536, token: Tn.AppRightEditStoreDisplayContent },
       ]),
-        (An.MapAppRights = An.ConstructAppRightsMap()),
-        (An.PubRights = [
+        (Nn.MapAppRights = Nn.ConstructAppRightsMap()),
+        (Nn.PubRights = [
           { flag: 1, token: In.ManagerUsers },
           { flag: 2, token: In.ActualAuthority },
           { flag: 4, token: In.ViewFinancials },
           { flag: 8, token: In.ApproveWalletFunding },
           { flag: 16, token: In.ManageLicensedSites },
         ]),
-        (An.MapPubRights = An.ConstructPubRightsMap());
-      var Nn = a(56330),
+        (Nn.MapPubRights = Nn.ConstructPubRightsMap());
+      var An = a(56330),
         Mn = a(55263);
       function Bn(e) {
         const { salePage: t, updateLandingPage: a } = e,
@@ -7117,7 +7117,7 @@
                             e)
                         : (t.app_right_requirement_info = {
                             bLockedToPartnerAppRights: e,
-                            nAppRightFlag: An.GetAppRightFlags([Tn.EditInfo]),
+                            nAppRightFlag: Nn.GetAppRightFlags([Tn.EditInfo]),
                           }),
                         s.SetDirty(ie.IQ.jsondata_sales);
                     });
@@ -7385,7 +7385,7 @@
                     ],
                   })
                 : (0, i.jsx)("div", {
-                    className: Nn.ErrorStylesWithIcon,
+                    className: An.ErrorStylesWithIcon,
                     children: (0, k.we)(
                       "#EventEditor_SaleNotReady_SaleVanity_ttip",
                     ),
@@ -7448,7 +7448,7 @@
                   ],
                 })
               : (0, i.jsx)("div", {
-                  className: Nn.ErrorStylesWithIcon,
+                  className: An.ErrorStylesWithIcon,
                   children: (0, k.we)(
                     "#EventEditor_SaleNotReady_UpdateLandingPage_ttip",
                   ),
@@ -7891,7 +7891,7 @@
             }),
             u &&
               (0, i.jsx)("div", {
-                className: Nn.WarningStyles,
+                className: An.WarningStyles,
                 children: (0, k.we)("#Sale_Enable_Warning"),
               }),
           ],
@@ -8362,7 +8362,14 @@
                             onClick: () => {
                               const { mapItemLocations: e } = s,
                                 t = [];
-                              t.push(["Item", "ID", "Dev", "Pub", "Franchise"]);
+                              t.push([
+                                "Type",
+                                "ID",
+                                "Name",
+                                "Dev",
+                                "Pub",
+                                "Franchise",
+                              ]);
                               const a = [];
                               for (const t of Array.from(e.keys())) {
                                 const e = di(t);
@@ -8372,18 +8379,26 @@
                                     (0, Kn.SW)(e.type),
                                   );
                                   a.push([
-                                    `${e.type}: ${t.GetName() || e.id}`,
+                                    e.type,
+                                    t.GetName() || e.id.toString(),
                                     t,
                                   ]);
                                 } catch (e) {}
                               }
                               a.sort();
-                              for (const [e, n] of a) {
-                                const a = n.GetDeveloperNames().join(","),
-                                  i = n.GetPublisherNames().join(","),
-                                  s = n.GetFranchiseNames().join(","),
-                                  o = [e, n.GetAppID().toString(), a, i, s];
-                                t.push(o);
+                              for (const [e, n, i] of a) {
+                                const a = i.GetDeveloperNames().join(","),
+                                  s = i.GetPublisherNames().join(","),
+                                  o = i.GetFranchiseNames().join(","),
+                                  l = [
+                                    e.toString(),
+                                    i.GetID().toString(),
+                                    n,
+                                    a,
+                                    s,
+                                    o,
+                                  ];
+                                t.push(l);
                               }
                               const n = "item_pubs.csv";
                               Xn.g.WriteCSVToFile(t, n),
@@ -8776,7 +8791,7 @@
               children: [
                 (0, i.jsx)(f.EN, {
                   active: a,
-                  children: (0, i.jsx)(Ai, { editModel: t, closeModal: s }),
+                  children: (0, i.jsx)(Ni, { editModel: t, closeModal: s }),
                 }),
                 (0, i.jsx)(ae.Gq, {
                   toolTipContent: (0, k.we)("#Sale_ReorderSections_ttip"),
@@ -8811,7 +8826,7 @@
           ],
         });
       }
-      function Ai(e) {
+      function Ni(e) {
         const { editModel: t, closeModal: a } = e,
           s = (0, Yt.q3)(() => t.GetSaleSections()),
           [o, l] = n.useState(null);
@@ -8867,7 +8882,7 @@
           }),
         });
       }
-      const Ni = n.lazy(() =>
+      const Ai = n.lazy(() =>
         Promise.all([a.e(91), a.e(8502)]).then(a.bind(a, 17065)),
       );
       function Mi(e) {
@@ -8969,7 +8984,7 @@
                     className: Ha.CodeEditor,
                     children: (0, i.jsx)(n.Suspense, {
                       fallback: null,
-                      children: (0, i.jsx)(Ni, {
+                      children: (0, i.jsx)(Ai, {
                         width: "100%",
                         height: "100%",
                         language: "css",
@@ -9926,7 +9941,7 @@
               if (Cs.Fm.Get().BIsIgnoringCurator(a.clanAccountID)) continue;
               const e = Cs.Fm.Get().BIsFollowingCurator(a.clanAccountID),
                 t = (0, i.jsx)(
-                  As,
+                  Ns,
                   {
                     suggestion: o,
                     fnOnSelected: this.props.fnOnSelected,
@@ -9995,7 +10010,7 @@
                 )
                   return null;
                 const n = (0, i.jsx)(
-                  As,
+                  Ns,
                   { suggestion: t, fnOnSelected: this.props.fnOnSelected },
                   t.type + t.id,
                 );
@@ -10134,7 +10149,7 @@
         }
       }
       (0, K.Cg)([R.oI], Gs.prototype, "UpdateSuggestions", null);
-      const As = (e) =>
+      const Ns = (e) =>
         (0, i.jsxs)(
           "div",
           {
@@ -10158,7 +10173,7 @@
           },
           `suggestion-${e.suggestion.id}`,
         );
-      function Ns(e) {
+      function As(e) {
         const { editModel: t } = e,
           a = t.GetEventModel(),
           s = (0, Yt.q3)(() => a.jsondata.associated_appid || 0),
@@ -10265,7 +10280,7 @@
             (0, i.jsx)(qs, { editModel: a }),
             Boolean(s) && (0, i.jsx)(Vs, { editModel: a }),
             (0, i.jsx)(yt, { editModel: a }),
-            (0, i.jsx)(Ns, { editModel: a }),
+            (0, i.jsx)(As, { editModel: a }),
             l && (0, i.jsx)(Ps, {}),
             (0, i.jsxs)("div", {
               className: b().Columns,
@@ -10953,7 +10968,7 @@
             className: (0, B.A)(Ha.SaleContainer, "SaleContainer"),
             children: [
               (0, i.jsx)("div", {
-                className: Nn.WarningStyles,
+                className: An.WarningStyles,
                 children: (0, k.we)("#Sale_CloneNotReady"),
               }),
               (0, i.jsx)(Yn, { mode: a }),
@@ -11765,9 +11780,9 @@
               return (
                 (this.m_rgFriendsList = n.data.friends), this.m_rgFriendsList
               );
-            (this.m_rgFriendsList = []), (a = (0, N.H)(n));
+            (this.m_rgFriendsList = []), (a = (0, A.H)(n));
           } catch (e) {
-            a = (0, N.H)(e);
+            a = (0, A.H)(e);
           }
           return (
             console.error(
@@ -12187,7 +12202,7 @@
                   className: ui().BroadcastAccountList,
                   children: a.map((e) =>
                     (0, i.jsx)(
-                      Ao,
+                      No,
                       { accountid: e },
                       "broadcastaccountrow_" + e,
                     ),
@@ -12459,7 +12474,7 @@
           ],
         });
       }
-      function Ao(e) {
+      function No(e) {
         const { accountid: t } = e,
           { isLoading: a, data: n } = (0, Co.js)(t),
           s = () => {
@@ -12512,7 +12527,7 @@
                       }),
                     ],
                   }),
-                  (0, i.jsx)(No, { accountid: t }),
+                  (0, i.jsx)(Ao, { accountid: t }),
                   (0, i.jsx)("img", {
                     className: (0, B.A)(Eo().FlexCenter, Eo().RemoveIcon),
                     src: po.A,
@@ -12524,7 +12539,7 @@
                 children: (0, k.we)("#Broadcast_FailedToLoadUser"),
               });
       }
-      function No(e) {
+      function Ao(e) {
         const t = o.mh.GetEditModel(),
           a = new ho(t),
           n = [
@@ -12657,7 +12672,7 @@
                   }),
                 this.m_mapAppIDToSoundTracks.set(e, s);
             } catch (t) {
-              const a = (0, N.H)(t);
+              const a = (0, A.H)(t);
               console.error(
                 "LoadDLCAndSoundTracksForAppID for appid: " +
                   e +
@@ -13157,7 +13172,7 @@
                 (a.image.status = "failed"),
                   (a.image.message = a.uploadResult.message);
           } catch (e) {
-            console.error("DoUpload failed:" + (0, N.H)(e).strErrorMsg);
+            console.error("DoUpload failed:" + (0, A.H)(e).strErrorMsg);
           }
         }
         async OnDropFiles(e) {
@@ -13212,7 +13227,7 @@
               try {
                 await this.m_clanImageUploader.AddExistingClanImage(e, t);
               } catch (e) {
-                let t = (0, N.H)(e);
+                let t = (0, A.H)(e);
                 console.error("AddExistingClanImage: " + t.strErrorMsg, t),
                   (0, y.pg)(
                     (0, i.jsx)(f.KG, {
@@ -13583,7 +13598,7 @@
               value: e,
               label: e.capability,
             })),
-            a = An.PubRights.map((t) =>
+            a = Nn.PubRights.map((t) =>
               (0, i.jsx)(
                 x.Yh,
                 {
@@ -13596,7 +13611,7 @@
                 "PubRights" + t.flag,
               ),
             ),
-            n = An.AppRights.filter(
+            n = Nn.AppRights.filter(
               (e) =>
                 ![Tn.Download, Tn.UploadCDKeys, Tn.ManageCEG].includes(e.token),
             ).map((t) =>
@@ -13718,7 +13733,7 @@
                   }),
                   Boolean(this.state.nDuplicatesRemoved > 0) &&
                     (0, i.jsx)("div", {
-                      className: Nn.WarningStylesBackground,
+                      className: An.WarningStylesBackground,
                       children: (0, i.jsx)("b", {
                         children: (0, k.we)(
                           "#EventEmail_Developer_DuplicateRemoved",
@@ -14011,7 +14026,7 @@
         ll = (e) =>
           (0, al.K)(e.editModel.GetAppID())
             ? (0, i.jsx)("div", {
-                className: Nn.WarningStylesBackground,
+                className: An.WarningStylesBackground,
                 children: (0, k.we)("#EventEmail_SteamChina_Warning"),
               })
             : null;
@@ -14047,7 +14062,7 @@
             })
             .catch((e) => {
               (0, y.pg)(
-                (0, i.jsx)(f.KG, { children: (0, N.H)(e).strErrorMsg }),
+                (0, i.jsx)(f.KG, { children: (0, A.H)(e).strErrorMsg }),
                 window,
               );
             });
@@ -14147,7 +14162,7 @@
               window,
             );
           } catch (e) {
-            let t = (0, N.H)(e);
+            let t = (0, A.H)(e);
             console.error("OnSetupAndFireEmail failed: " + t.strErrorMsg),
               (0, y.pg)(
                 (0, i.jsx)(f.o0, {
@@ -14874,7 +14889,7 @@
           } catch (e) {
             this.setState({
               bRefreshing: !1,
-              err_msg: (0, N.H)(e).strErrorMsg,
+              err_msg: (0, A.H)(e).strErrorMsg,
             });
           }
         }
@@ -15737,8 +15752,8 @@
             : null;
         });
       var Gl = a(5618),
-        Al = a(6542),
-        Nl = a.n(Al);
+        Nl = a(6542),
+        Al = a.n(Nl);
       function Ml(e) {
         const { editModel: t } = e,
           a = (0, Yt.q3)(() => ({
@@ -15795,14 +15810,14 @@
         const j = t.BAllowedToPublishStagedEvents(),
           w = u && !h;
         return (0, i.jsxs)("div", {
-          className: (0, B.A)(b().FlexColumnContainer, Nl().PublishOption),
+          className: (0, B.A)(b().FlexColumnContainer, Al().PublishOption),
           children: [
             (0, i.jsx)("div", {
               className: b().EventEditorTextTitle,
               children: (0, k.we)("#Button_Publish"),
             }),
             (0, i.jsxs)("div", {
-              className: (0, B.A)(Nl().PublishButtonCtn),
+              className: (0, B.A)(Al().PublishButtonCtn),
               children: [
                 w &&
                   (0, i.jsxs)(i.Fragment, {
@@ -15902,13 +15917,13 @@
         return (0, i.jsxs)("div", {
           children: [
             a &&
-              (0, i.jsx)("div", { className: Nl().Description, children: a }),
+              (0, i.jsx)("div", { className: Al().Description, children: a }),
             (0, i.jsxs)(x.$n, {
               onClick: l,
               className: (0, B.A)(
-                Nl().EventPublishButton,
+                Al().EventPublishButton,
                 "DialogButton Primary",
-                Nl().PublishButton,
+                Al().PublishButton,
               ),
               ref: o,
               disabled: s,
@@ -15966,9 +15981,9 @@
                 n
               );
             }
-            n = (0, N.H)(o);
+            n = (0, A.H)(o);
           } catch (e) {
-            n = (0, N.H)(e);
+            n = (0, A.H)(e);
           }
           return (
             console.error(
@@ -16386,11 +16401,11 @@
                         ? e.data
                         : (console.error(
                             "CreateMarketingMessageMajorUpdateReviewRequestTicket failed.",
-                            e && (0, N.H)(e),
+                            e && (0, A.H)(e),
                           ),
                           29 == e.data.success ? e.data : null);
                     } catch (e) {
-                      const t = (0, N.H)(e);
+                      const t = (0, A.H)(e);
                       console.error(
                         "CreateMarketingMessageMajorUpdateReviewRequestTicket failed: " +
                           t.strErrorMsg,
@@ -17033,7 +17048,7 @@
           u = (0, g._5)(r),
           h = (0, Yt.q3)(() => (0, Qt.cA)()),
           p = (0, g.Ao)(r);
-        (0, A.wT)(
+        (0, N.wT)(
           [c.bVisible, u.bVisible, p.bVisible].filter(Boolean).length <= 1,
           "Sale, Update Landing Page, and Creator Home should be mutually exclusive",
         );
@@ -17627,9 +17642,9 @@
               (null === (t = i.data) || void 0 === t ? void 0 : t.counts)
             )
               return (this.m_counts = i.data.counts), this.m_counts;
-            a = (0, N.H)(i);
+            a = (0, A.H)(i);
           } catch (e) {
-            a = (0, N.H)(e);
+            a = (0, A.H)(e);
           }
           return (
             console.error(
@@ -17758,21 +17773,21 @@
         Tr = a(94636),
         Ir = a(20446),
         Gr = a(9202),
-        Ar = a.n(Gr),
-        Nr = a(35380);
+        Nr = a.n(Gr),
+        Ar = a(35380);
       function Mr(e) {
         const { appid: t, color: a, bgcolor: n } = e,
           s = (0, Cr.n9)(),
-          o = (0, Nr.$5)(t),
+          o = (0, Ar.$5)(t),
           l = (0, fr.L3)(s);
         return (0, i.jsx)("div", {
-          className: Ar().WishlistHoverCtn,
+          className: Nr().WishlistHoverCtn,
           children: (0, i.jsx)(Tr.E, {
             snr: l,
             id: o,
             classOverride: (0, B.A)(
               Dr().WishlistButtonNotTop,
-              Ar().BBCodeWishlistButton,
+              Nr().BBCodeWishlistButton,
               "WishlistButton",
             ),
             styleOverride: { color: a, backgroundColor: n },
@@ -18239,7 +18254,7 @@
       var Td = a(94429),
         Id = (a(5977), a(97058)),
         Gd = a(39020);
-      let Ad = class extends dr.mn {
+      let Nd = class extends dr.mn {
         constructor() {
           super(...arguments), (this.state = { bLoading: !0 });
         }
@@ -18265,7 +18280,7 @@
               });
         }
       };
-      function Nd(e) {
+      function Ad(e) {
         const [t, a] = n.useState(!0),
           r = (0, Gd.vb)(O.TS.LANGUAGE);
         return (
@@ -18427,7 +18442,7 @@
                             ":oldAnnouncementGID(\\d+)",
                           ),
                           render: (e) =>
-                            (0, n.createElement)(Ad, {
+                            (0, n.createElement)(Nd, {
                               ...e,
                               key: e.match.params.oldAnnouncementGID,
                             }),
@@ -18480,7 +18495,7 @@
               })
         );
       }
-      Ad = (0, K.Cg)([_.PA], Ad);
+      Nd = (0, K.Cg)([_.PA], Nd);
     },
     94057: (e, t, a) => {
       "use strict";

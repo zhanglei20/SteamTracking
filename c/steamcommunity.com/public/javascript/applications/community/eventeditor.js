@@ -8823,7 +8823,14 @@
                             onClick: () => {
                               const { mapItemLocations: _ } = _,
                                 _ = [];
-                              _.push(["Item", "ID", "Dev", "Pub", "Franchise"]);
+                              _.push([
+                                "Type",
+                                "ID",
+                                "Name",
+                                "Dev",
+                                "Pub",
+                                "Franchise",
+                              ]);
                               const _ = [];
                               for (const _ of Array.from(_.keys())) {
                                 const _ = _(_);
@@ -8833,17 +8840,25 @@
                                     (0, _._)(_.type),
                                   );
                                   __webpack_require__.push([
-                                    `${_.type}: ${_.GetName() || _._}`,
+                                    _.type,
+                                    _.GetName() || _._.toString(),
                                     _,
                                   ]);
                                 } catch (_) {}
                               }
                               __webpack_require__.sort();
-                              for (const [_, _] of _) {
+                              for (const [_, _, _] of _) {
                                 const _ = _.GetDeveloperNames().join(","),
                                   _ = _.GetPublisherNames().join(","),
                                   _ = _.GetFranchiseNames().join(","),
-                                  _ = [_, _.GetAppID().toString(), _, _, _];
+                                  _ = [
+                                    _.toString(),
+                                    _.GetID().toString(),
+                                    _,
+                                    _,
+                                    _,
+                                    _,
+                                  ];
                                 _.push(_);
                               }
                               const _ = "item_pubs.csv";
