@@ -105,7 +105,7 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 		var tagid = rgForcedTop[i];
 		var $Tag = g_TagMap[ tagid ];
 		$Container.append( $Tag );
-		$Tag.show();
+		$Tag.css( {display: '' });
 		rgDisplayedTags[ tagid ] = true;
 		nIndex++;
 		$Tag.find('.tab_filter_control_count').css( {display: 'none' });
@@ -155,9 +155,9 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 		$Tag.find('.tab_filter_control_count').text( textCount ).css( {display: '' });
 		$Container.append( $Tag );
 		if ( nIndex++ > 15 )
-			$Tag.hide();
+			$Tag.css( {display: 'none' });
 		else
-			$Tag.show();
+			$Tag.css( {display: '' });
 	}
 
 	//Add any remaining tags.
@@ -170,9 +170,9 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 		$Tag.find('.tab_filter_control_count').css( {display: 'none' });
 		$Container.append( $Tag );
 		if ( nIndex++ > 15 )
-			$Tag.hide();
+			$Tag.css( {display: 'none' });
 		else
-			$Tag.show();
+			$Tag.css( {display: '' });
 	}
 
 	// apply tag filter text if not empty
@@ -204,7 +204,7 @@ function PopulateLangFilterData( rgSelectedLanguages, rgLanguagesShowOnTop )
 	{
 		var langid = rgSelectedLanguages[ i ];
 		var $Lang = g_LangMap[ langid ];
-		$Container.append( $Lang ).show();
+		$Container.append( $Lang ).css( { display: '' } );
 		rgDisplayedLangs[ langid ] = true;
 		nIndex++;
 	}
@@ -216,7 +216,7 @@ function PopulateLangFilterData( rgSelectedLanguages, rgLanguagesShowOnTop )
 		if ( rgDisplayedLangs[ langid ] )
 			continue;	//handled above
 		var $Lang = g_LangMap[ langid ];
-		$Container.append( $Lang ).show();
+		$Container.append( $Lang ).css( { display: '' } );
 		rgDisplayedLangs[ langid ] = true;
 		nIndex++;
 	}
@@ -230,9 +230,9 @@ function PopulateLangFilterData( rgSelectedLanguages, rgLanguagesShowOnTop )
 		var $Lang = g_LangMap[ langid ];
 		$Container.append( $Lang );
 		if ( nIndex++ > 15 )
-			$Lang.hide();
+			$Lang.css( { display: 'none' } );
 		else
-			$Lang.show();
+			$Lang.css( { display: '' } );
 	}
 
 	if ( rgSelectedLanguages.length )
