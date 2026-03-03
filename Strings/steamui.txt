@@ -7213,11 +7213,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -19722,7 +19722,6 @@ Error when fetching default uint value for: %s
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error writing file
-Error:
 Error: %s Device not found %s\n
 Error: %s couldn't access device %s\n
 Error: %s: %s: empty hotkey
@@ -19833,6 +19832,7 @@ Error: %s: unsupported platform
 Error: %s: update check failed: %s\n%s
 Error: %s: update failed: %s\n%s
 Error: %s: version query error\n
+Error: %s\n
 Error: CLEDDeviceSysfs: failed to write property: %s -> %s
 Error: CX11WindowProperty: failed to parse array property: key:%s format:%d index:%d
 Error: CX11WindowProperty: failed to parse property: key:%s format:%d
@@ -20269,7 +20269,6 @@ FbRK10CUtlStringE
 Feature Disabled
 Feature support: %s: supported
 Feature support: %s: unavailable - property not supported
-Feb 27 2026 02:23:25
 February
 Feel free to add support for more if you need it.
 FetchTranslationFromCrowdIn
@@ -23787,6 +23786,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
+Mar  2 2026 20:16:49
 Marathi
 March
 MarkMessageClicked
@@ -28196,7 +28196,6 @@ SDL_SetGamepadMapping
 SDL_SetHint
 SDL_SetLogOutputFunction
 SDL_SetLogPriority
-SDL_ShowSimpleMessageBox
 SDL_StringToGUID
 SDL_TIMER_RESOLUTION
 SDL_TellIO
@@ -29402,9 +29401,7 @@ StdDevNetworkMS
 StdDevPingMS
 StdDevServerBitrate
 Steam
-Steam - Dev warning: %s\n
 Steam - DirWatcher
-Steam - Error
 Steam App %u
 Steam Beta Update
 Steam Big Picture
@@ -31698,6 +31695,7 @@ Warning, couldn't get controller details for %u\n
 Warning: %s: failed to connect to steamos telemtry helper %s
 Warning: %s: lsof is required to run steam and it may not be available - please install
 Warning: %s: unexpected number of address fields
+Warning: %s\n
 Warning: Blocking wait on mutex failed in Clear: %d\n
 Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
 Warning: Failed to find a compatible 32bpp X11 visual\n
@@ -39647,7 +39645,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenZil
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -42513,7 +42511,6 @@ gzip,identity,*;q=0
 h264_vaapi
 h2Wl
 h8,4$
-hAu5H
 hConnection == m_hConnection
 hControllerBinding != 0
 hHandle

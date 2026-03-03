@@ -320,7 +320,6 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-02:23:12
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -344,6 +343,7 @@ $ORIGIN
 17CStreamReaderBase
 18CUtlCharConversion
 19CUtlNoEscConversion
+20:16:36
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
@@ -483,7 +483,6 @@ Failed writing minidump, nothing to upload.\n
 Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
-Feb 27 2026
 February
 File change notification for %s but no file contents changed based on hash\n
 FilterCallback
@@ -541,6 +540,7 @@ LoadFileRangeIntoBuffer_Internal
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
+Mar  2 2026
 March
 Matched '%s' -> '%s'\n
 MemFree:
