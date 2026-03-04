@@ -478,7 +478,7 @@
                     n = parseInt("" + t.mean_frame_rate_stddev);
                   e.push({ date: t.date, mean: i, range: [i + n, i - n] });
                 }),
-              e
+              e.sort((e, t) => e.date - t.date)
             );
           }, [i]);
         if (!i || !i.frame_rate_clusters?.length)
@@ -552,12 +552,13 @@
                     name: "average",
                     stroke: "#4477EE",
                   }),
-                  (0, n.jsx)(A.G, {
-                    type: "monotone",
-                    dataKey: "range",
-                    fill: "#cccccc",
-                    connectNulls: !0,
-                  }),
+                  Boolean(!1) &&
+                    (0, n.jsx)(A.G, {
+                      type: "monotone",
+                      dataKey: "range",
+                      fill: "#cccccc",
+                      connectNulls: !0,
+                    }),
                 ],
               }),
             }),

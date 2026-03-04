@@ -538,7 +538,7 @@
                     });
                   },
                 ),
-              _
+              _.sort((_, _) => _.date - _.date)
             );
           }, [__webpack_require__]);
         if (
@@ -628,12 +628,13 @@
                     name: "average",
                     stroke: "#4477EE",
                   }),
-                  (0, _.jsx)(_._, {
-                    type: "monotone",
-                    dataKey: "range",
-                    fill: "#cccccc",
-                    connectNulls: !0,
-                  }),
+                  Boolean(!1) &&
+                    (0, _.jsx)(_._, {
+                      type: "monotone",
+                      dataKey: "range",
+                      fill: "#cccccc",
+                      connectNulls: !0,
+                    }),
                 ],
               }),
             }),
