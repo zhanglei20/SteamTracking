@@ -1747,140 +1747,160 @@
       const y = 500;
       function N(e) {
         const {
-            appid: t,
-            event_customization: r,
-            partnerEventStore: s,
-            trackingLocation: i,
-            strClassName: l,
-            bViewAllShowInfiniteScroll: c,
+            trackingLocation: t,
+            strClassName: r,
+            bViewAllShowInfiniteScroll: s,
           } = e,
+          [i, l, c] = (0, f.uD)(),
           [_, w] = (0, a.useState)(null),
-          [N, b, R] = (0, f.uD)(),
-          [I, E] = (0, a.useState)(null),
-          [P, B] = (0, a.useState)([]),
-          [k, L] = (0, a.useState)(void 0),
-          [D, M] = (0, a.useState)(null),
-          [F] = d("emgid", void 0),
-          G = (0, a.useCallback)(() => {
-            E(null), R();
-          }, [R]),
-          H = (0, a.useCallback)(
+          [N, b] = (0, a.useState)(void 0),
+          R = (0, a.useCallback)(() => {
+            w(null), c();
+          }, [c]),
+          I = (0, a.useCallback)(
             (e) => {
-              if (i && e && e.BIsPartnerEvent()) {
-                const t = u.KN.Get().GetTracker();
-                t.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), i) &&
-                  t.Flush();
+              if (t && e && e.BIsPartnerEvent()) {
+                const r = u.KN.Get().GetTracker();
+                r.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
+                  r.Flush();
               }
-              E(e), L(void 0), b();
+              w(e), b(void 0), l();
             },
-            [i, b],
+            [t, l],
           ),
-          U = (0, a.useCallback)(() => {
-            const { event_gid: e, announcement_gid: t, clan_account_id: r } = D,
-              n = u.KN.Get().GetTracker();
-            i && e && n.MarkEventRead(e, r, i) && n.Flush(), L(t), E(null), b();
-          }, [D, b, i]);
-        (0, a.useEffect)(() => {
-          const e = (0, m.v)("EventWebRowEmbed");
-          let n = !1;
-          if (
-            (function (e) {
-              const t = e;
-              if (t && "object" == typeof t)
-                return (
-                  void 0 !== t.bPreLoaded &&
-                  "boolean" == typeof t.bPreLoaded &&
-                  Array.isArray(t.announcementGIDList)
-                );
-              return !1;
-            })(e)
-          ) {
-            (n = e.bPreLoaded),
-              B(e.announcementGIDList),
-              M(e.last_update_event);
-            const t = [];
-            if (
-              (e.announcementGIDList.forEach((e) => {
-                const r = p.O3.GetClanEventFromAnnouncementGID(e);
-                r && t.push(r);
-              }),
-              w(t),
-              F)
-            ) {
-              const e = t.find((e) => e.GID === F);
-              e && H(e);
+          { last_update_event: E, rgEvents: P } = (function (e) {
+            const {
+                appid: t,
+                event_customization: r,
+                partnerEventStore: n,
+                trackingLocation: s,
+                fnEventShowModal: i,
+              } = e,
+              [o, l] = (0, a.useState)(null),
+              [c, h] = (0, a.useState)(null),
+              [_] = d("emgid", void 0);
+            return (
+              (0, a.useEffect)(() => {
+                const e = (0, m.v)("EventWebRowEmbed");
+                let a = !1;
+                if (
+                  (function (e) {
+                    const t = e;
+                    if (t && "object" == typeof t)
+                      return (
+                        void 0 !== t.bPreLoaded &&
+                        "boolean" == typeof t.bPreLoaded &&
+                        Array.isArray(t.announcementGIDList)
+                      );
+                    return !1;
+                  })(e)
+                ) {
+                  (a = e.bPreLoaded), l(e.last_update_event);
+                  const t = [];
+                  e.announcementGIDList.forEach((e) => {
+                    const r = p.O3.GetClanEventFromAnnouncementGID(e);
+                    r && t.push(r);
+                  }),
+                    h(t);
+                }
+                if (!a) {
+                  (async () => {
+                    const e = await n.LoadAdjacentPartnerEvents(
+                      void 0,
+                      void 0,
+                      t,
+                      0,
+                      2,
+                      r,
+                    );
+                    if ((h(e), s && e && e.length > 0)) {
+                      const t = u.KN.Get().GetTracker();
+                      e
+                        .filter((e) => e.BIsPartnerEvent())
+                        .forEach((e) =>
+                          t.MarkEventShown(
+                            e.GID,
+                            e.clanSteamID.GetAccountID(),
+                            s,
+                          ),
+                        ),
+                        t.Flush();
+                    }
+                  })();
+                }
+              }, [t, _, r, i, n, s]),
+              (0, a.useEffect)(() => {
+                if (null != c && _) {
+                  const e = c.find((e) => e.GID === _);
+                  if (e) i(e);
+                  else {
+                    (async () => {
+                      const e = await n.LoadPartnerEventFromClanEventGID(
+                        t,
+                        _,
+                        0,
+                      );
+                      e && h([...c, e]);
+                    })();
+                  }
+                }
+              }, [_, c, i, h, n, t]),
+              { last_update_event: o, rgEvents: c }
+            );
+          })({ ...e, fnEventShowModal: I }),
+          B = (0, a.useCallback)(() => {
+            const { event_gid: e, announcement_gid: r, clan_account_id: n } = E,
+              a = u.KN.Get().GetTracker();
+            t && e && a.MarkEventRead(e, n, t) && a.Flush(), b(r), w(null), l();
+          }, [E, l, t]);
+        (0, a.useEffect)(
+          () => (
+            (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
+              b(t), w(null), b(t), l();
+            }),
+            () => {
+              window.fnPartnerEvent_ShowInfiniteScroll &&
+                delete window.fnPartnerEvent_ShowInfiniteScroll;
             }
-          }
-          if (!n) {
-            (async () => {
-              const e = await s.LoadAdjacentPartnerEvents(
-                void 0,
-                void 0,
-                t,
-                0,
-                2,
-                r,
-              );
-              if ((w(e), i && e && e.length > 0)) {
-                const t = u.KN.Get().GetTracker();
-                e
-                  .filter((e) => e.BIsPartnerEvent())
-                  .forEach((e) =>
-                    t.MarkEventShown(e.GID, e.clanSteamID.GetAccountID(), i),
-                  ),
-                  t.Flush();
-              }
-            })();
-          }
-        }, [t, F, r, H, s, i]),
-          (0, a.useEffect)(
-            () => (
-              (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
-                L(t), E(null), L(t), b();
-              }),
-              () => {
-                window.fnPartnerEvent_ShowInfiniteScroll &&
-                  delete window.fnPartnerEvent_ShowInfiniteScroll;
-              }
-            ),
-            [b],
-          );
-        const z = !!D && !!D.rtime,
-          O =
-            z && !!D.announcement_gid && (!_ || 0 == _.length)
-              ? D.announcement_gid
+          ),
+          [l],
+        );
+        const k = !!E && !!E.rtime,
+          L =
+            k && !!E.announcement_gid && (!P || 0 == P.length)
+              ? E.announcement_gid
               : void 0,
-          V = window.screen.width <= y ? 1 : 2;
+          D = window.screen.width <= y ? 1 : 2;
         return (0, n.jsxs)(o.ml, {
-          className: l,
+          className: r,
           children: [
             (0, n.jsx)(g.EN, {
-              active: N,
+              active: i,
               children: (0, n.jsx)(j, {
                 ...e,
-                announcementGID: k || I?.AnnouncementGID,
-                eventModel: I,
-                closeModal: G,
+                announcementGID: N || _?.AnnouncementGID,
+                eventModel: _,
+                closeModal: R,
               }),
             }),
-            !!_ &&
+            !!P &&
               (0, n.jsxs)("div", {
                 children: [
                   (0, n.jsx)("h2", {
                     children: (0, v.we)("#EventBrowse_RecentEvents"),
                   }),
                   !x.TS.IN_GAMEPADUI &&
-                    !!_ &&
+                    !!P &&
                     (0, n.jsx)("div", {
                       className: C.SectionButtonCtn,
-                      children: c
+                      children: s
                         ? (0, n.jsx)(o.ml, {
                             className: C.SectionButton,
-                            onClick: () => H(_[0]),
+                            onClick: () => I(P[0]),
                             children: (0, v.we)("#EventBrowse_MoreEventsBtn"),
                           })
                         : (0, n.jsx)(A.tj, {
-                            eventModel: _[0],
+                            eventModel: P[0],
                             route: A.PH.k_eViewWebSiteHub,
                             className: C.SectionButton,
                             children: (0, v.we)("#EventBrowse_MoreEventsBtn"),
@@ -1888,9 +1908,9 @@
                     }),
                   (0, n.jsx)("div", {
                     className: C.EventsSummariesCtn,
-                    children: _.slice(0, V).map((e) => {
+                    children: P.slice(0, D).map((e) => {
                       const t =
-                        1 === _.length && window.screen.width > 500
+                        1 === P.length && window.screen.width > 500
                           ? h.kH
                           : h.uY;
                       return (0, n.jsx)(
@@ -1898,7 +1918,7 @@
                         {
                           event: e,
                           onClick: (t) => {
-                            H(e), t.stopPropagation(), t.preventDefault();
+                            I(e), t.stopPropagation(), t.preventDefault();
                           },
                         },
                         e.GID,
@@ -1907,17 +1927,17 @@
                   }),
                 ],
               }),
-            z &&
-              !!O &&
+            k &&
+              !!L &&
               (0, n.jsx)(T, {
-                nUpdateTime: D.rtime,
-                announcementGID: O,
-                onClick: U,
+                nUpdateTime: E.rtime,
+                announcementGID: L,
+                onClick: B,
               }),
-            z &&
-              !O &&
+            k &&
+              !L &&
               !x.TS.IN_GAMEPADUI &&
-              (0, n.jsx)(S, { nUpdateTime: D.rtime, onClick: U }),
+              (0, n.jsx)(S, { nUpdateTime: E.rtime, onClick: B }),
           ],
         });
       }

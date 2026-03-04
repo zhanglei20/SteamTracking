@@ -3721,8 +3721,9 @@
           } = e,
           { data: n } = (0, o.j4)(t),
           { data: c } = (0, o.J$)(t),
-          u = (0, l.kB)(t);
-        return u && n && c
+          { data: u } = (0, o.Yo)(t),
+          m = (0, l.kB)(t);
+        return void 0 !== !u && n && c
           ? (0, s.jsx)("div", {
               className: (0, M.A)(w().HilightGrid, w().MediaContainerMM),
               children: (0, s.jsx)(O, {
@@ -3732,7 +3733,7 @@
                   bUseAssetWithoutOverride: Boolean(a),
                   fnOnClickButton: r,
                 }),
-                trailer: u.length > 0 ? u[0] : void 0,
+                trailer: m && m.length > 0 ? m[0] : void 0,
                 storeItemScreenshots: n,
                 featureElementclassName: w().MainImage,
                 bUseTrailerAsFirstThumb: !i,

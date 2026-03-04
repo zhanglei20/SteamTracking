@@ -1961,20 +1961,13 @@
       const _ = 500;
       function _(_) {
         const {
-            appid: _,
-            event_customization: __webpack_require__,
-            partnerEventStore: _,
             trackingLocation: _,
-            strClassName: _,
+            strClassName: __webpack_require__,
             bViewAllShowInfiniteScroll: _,
           } = _,
-          [_, _] = (0, _.useState)(null),
           [_, _, _] = (0, _._)(),
           [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(void 0),
-          [_, _] = (0, _.useState)(null),
-          [_] = _("emgid", void 0),
           _ = (0, _.useCallback)(() => {
             _(null), _();
           }, [_]),
@@ -1982,88 +1975,124 @@
             (_) => {
               if (_ && _ && _.BIsPartnerEvent()) {
                 const _ = _._.Get().GetTracker();
-                _.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
-                  _.Flush();
+                __webpack_require__.MarkEventRead(
+                  _.GID,
+                  _.clanSteamID.GetAccountID(),
+                  _,
+                ) && __webpack_require__.Flush();
               }
               _(_), _(void 0), _();
             },
             [_, _],
           ),
+          { last_update_event: _, rgEvents: _ } = (function (_) {
+            const {
+                appid: _,
+                event_customization: __webpack_require__,
+                partnerEventStore: _,
+                trackingLocation: _,
+                fnEventShowModal: _,
+              } = _,
+              [_, _] = (0, _.useState)(null),
+              [_, _] = (0, _.useState)(null),
+              [_] = _("emgid", void 0);
+            return (
+              (0, _.useEffect)(() => {
+                const _ = (0, _._)("EventWebRowEmbed");
+                let _ = !1;
+                if (
+                  (function (_) {
+                    const _ = _;
+                    if (_ && "object" == typeof _)
+                      return (
+                        void 0 !== _.bPreLoaded &&
+                        "boolean" == typeof _.bPreLoaded &&
+                        Array.isArray(_.announcementGIDList)
+                      );
+                    return !1;
+                  })(_)
+                ) {
+                  (_ = _.bPreLoaded), _(_.last_update_event);
+                  const _ = [];
+                  _.announcementGIDList.forEach((_) => {
+                    const _ = _._.GetClanEventFromAnnouncementGID(_);
+                    _ && _.push(_);
+                  }),
+                    _(_);
+                }
+                if (!_) {
+                  (async () => {
+                    const _ = await _.LoadAdjacentPartnerEvents(
+                      void 0,
+                      void 0,
+                      _,
+                      0,
+                      2,
+                      __webpack_require__,
+                    );
+                    if ((_(_), _ && _ && _.length > 0)) {
+                      const _ = _._.Get().GetTracker();
+                      _.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
+                        _.MarkEventShown(
+                          _.GID,
+                          _.clanSteamID.GetAccountID(),
+                          _,
+                        ),
+                      ),
+                        _.Flush();
+                    }
+                  })();
+                }
+              }, [_, _, __webpack_require__, _, _, _]),
+              (0, _.useEffect)(() => {
+                if (null != _ && _) {
+                  const _ = _.find((_) => _.GID === _);
+                  if (_) _(_);
+                  else {
+                    (async () => {
+                      const _ = await _.LoadPartnerEventFromClanEventGID(
+                        _,
+                        _,
+                        0,
+                      );
+                      _ && _([..._, _]);
+                    })();
+                  }
+                }
+              }, [_, _, _, _, _, _]),
+              {
+                last_update_event: _,
+                rgEvents: _,
+              }
+            );
+          })({
+            ..._,
+            fnEventShowModal: _,
+          }),
           _ = (0, _.useCallback)(() => {
             const {
                 event_gid: _,
-                announcement_gid: _,
-                clan_account_id: __webpack_require__,
+                announcement_gid: __webpack_require__,
+                clan_account_id: _,
               } = _,
               _ = _._.Get().GetTracker();
-            _ && _ && _.MarkEventRead(_, __webpack_require__, _) && _.Flush(),
-              _(_),
+            _ && _ && _.MarkEventRead(_, _, _) && _.Flush(),
+              _(__webpack_require__),
               _(null),
               _();
           }, [_, _, _]);
-        (0, _.useEffect)(() => {
-          const _ = (0, _._)("EventWebRowEmbed");
-          let _ = !1;
-          if (
-            (function (_) {
-              const _ = _;
-              if (_ && "object" == typeof _)
-                return (
-                  void 0 !== _.bPreLoaded &&
-                  "boolean" == typeof _.bPreLoaded &&
-                  Array.isArray(_.announcementGIDList)
-                );
-              return !1;
-            })(_)
-          ) {
-            (_ = _.bPreLoaded),
-              _(_.announcementGIDList),
-              _(_.last_update_event);
-            const _ = [];
-            if (
-              (_.announcementGIDList.forEach((_) => {
-                const _ = _._.GetClanEventFromAnnouncementGID(_);
-                _ && _.push(_);
-              }),
-              _(_),
-              _)
-            ) {
-              const _ = _.find((_) => _.GID === _);
-              _ && _(_);
+        (0, _.useEffect)(
+          () => (
+            (window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
+              _(_), _(null), _(_), _();
+            }),
+            () => {
+              window.fnPartnerEvent_ShowInfiniteScroll &&
+                delete window.fnPartnerEvent_ShowInfiniteScroll;
             }
-          }
-          if (!_) {
-            (async () => {
-              const _ = await _.LoadAdjacentPartnerEvents(
-                void 0,
-                void 0,
-                _,
-                0,
-                2,
-                __webpack_require__,
-              );
-              if ((_(_), _ && _ && _.length > 0)) {
-                const _ = _._.Get().GetTracker();
-                _.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
-                  _.MarkEventShown(_.GID, _.clanSteamID.GetAccountID(), _),
-                ),
-                  _.Flush();
-              }
-            })();
-          }
-        }, [_, _, __webpack_require__, _, _, _]),
-          (0, _.useEffect)(
-            () => (
-              (window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
-                _(_), _(null), _(_), _();
-              }),
-              () => {
-                window.fnPartnerEvent_ShowInfiniteScroll &&
-                  delete window.fnPartnerEvent_ShowInfiniteScroll;
-              }
-            ),
-            [_],
-          );
+          ),
+          [_],
+        );
         const _ = !!_ && !!_.rtime,
           _ =
             _ && !!_.announcement_gid && (!_ || 0 == _.length)
@@ -2071,7 +2100,7 @@
               : void 0,
           _ = window.screen.width <= _ ? 1 : 2;
         return (0, _.jsxs)(_._, {
-          className: _,
+          className: __webpack_require__,
           children: [
             (0, _.jsx)(_._, {
               active: _,

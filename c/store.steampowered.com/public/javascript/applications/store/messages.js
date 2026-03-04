@@ -4008,8 +4008,9 @@
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_);
-        return _ && _ && _
+        return void 0 !== !_ && _ && _
           ? (0, _.jsx)("div", {
               className: (0, _._)(_().HilightGrid, _().MediaContainerMM),
               children: (0, _.jsx)(_, {
@@ -4019,7 +4020,7 @@
                   bUseAssetWithoutOverride: Boolean(_),
                   fnOnClickButton: __webpack_require__,
                 }),
-                trailer: _.length > 0 ? _[0] : void 0,
+                trailer: _ && _.length > 0 ? _[0] : void 0,
                 storeItemScreenshots: _,
                 featureElementclassName: _().MainImage,
                 bUseTrailerAsFirstThumb: !_,
