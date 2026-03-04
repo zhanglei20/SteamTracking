@@ -20647,6 +20647,244 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        include_basic_info: !0,
+        include_assets: !0,
+        include_tag_count: 10,
+        include_release: !0,
+      };
+      function _(_) {
+        const {
+            rgOrderedAppIDs: _,
+            fnSetFilteredAppID: __webpack_require__,
+            rgNotToPruneList: _,
+            pageid: _,
+          } = _,
+          [_, _] = _.useState(!0),
+          _ = (0, _._)("OptInAppReviewFilter");
+        _.useEffect(() => {
+          _._.Get()
+            .QueueMultipleAppRequests(_?.slice(0, 100) || [], _)
+            .then(() => {
+              _._.Get()
+                .QueueMultipleAppRequests(_?.slice(100) || [], _)
+                .then(() => {
+                  _(!1);
+                });
+            });
+        }, [_.token.reason, _, _]);
+        const [_, _] = _.useState(new Set()),
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(0);
+        return (
+          _.useEffect(() => {
+            const _ = _?.trim().length > 2,
+              _ = _?.toLocaleLowerCase(),
+              _ = Array.from(_),
+              _ = new Set(_ || []);
+            if (_.length > 0 && (_.size > 0 || _ || _ || _)) {
+              const _ = _.filter((_) => {
+                if (_) {
+                  const _ = _._.Get().GetApp(_);
+                  return (
+                    _?.GetName()?.toLocaleLowerCase().indexOf(_) >= 0 ||
+                    _?.GetDeveloperNames()?.some(
+                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
+                    ) ||
+                    _?.GetPublisherNames()?.some(
+                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
+                    ) ||
+                    _?.GetFranchiseNames()?.some(
+                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
+                    ) ||
+                    _?.GetShortDescription()?.toLocaleLowerCase().indexOf(_) >=
+                      0
+                  );
+                }
+                return !0;
+              })
+                .filter((_) => {
+                  if (_.length > 0) {
+                    const _ = _._.Get().GetApp(_);
+                    return _.every((_) => _?.GetTagIDs().includes(_));
+                  }
+                  return !0;
+                })
+                .filter((_) => {
+                  if (_ > 0) {
+                    const _ = _._.Get().GetApp(_);
+                    return (
+                      _ &&
+                      (_?.BIsComingSoon() ||
+                        _?.GetOriginalReleaseDateRTime() > _)
+                    );
+                  }
+                  return !0;
+                })
+                .filter((_) => !(_ && _.size > 0) || !_.has(_));
+              _.token.reason || __webpack_require__(_);
+            }
+          }, [_, _.token.reason, __webpack_require__, _, _, _, _, _, _]),
+          (0, _.jsx)(_._, {
+            title: "Filter Options",
+            bStartMinimized: !0,
+            children: Boolean(_)
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _._)("#EventCalendar_UniversalSearch"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      size: "small",
+                      string: `Loading ${_?.length || 0} Apps`,
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      type: "text",
+                      label: (0, _._)("#EventCalendar_UniversalSearch"),
+                      placeholder: "search by app name, description",
+                      value: _,
+                      onChange: (_) => {
+                        _(_.target.value), _(1);
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      setFilterTagIDs: _,
+                      fnUpdateSetFilterTagIDs: (_) => {
+                        _(_), _(1);
+                      },
+                      rgAppIDs: _,
+                      bLoading: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      strDescription: "Filter to games Released After:",
+                      strDescToolTip:
+                        "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _,
+                      fnSetTimeToUpdate: (_) => {
+                        _(_), _(1);
+                      },
+                    }),
+                    Boolean(_?.length > 0) &&
+                      (0, _.jsx)(_._, {
+                        checked: _,
+                        onChange: (_) => {
+                          _(_), _(1);
+                        },
+                        tooltip:
+                          "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
+                        label:
+                          "Filter out previously emailed apps from pruning",
+                      }),
+                  ],
+                }),
+          })
+        );
+      }
+      function _(_) {
+        const {
+            setFilterTagIDs: _,
+            fnUpdateSetFilterTagIDs: __webpack_require__,
+            rgAppIDs: _,
+            bLoading: _,
+          } = _,
+          _ = _.useMemo(
+            () =>
+              _
+                ? []
+                : (function (_) {
+                    const _ = new Map();
+                    return (
+                      _.forEach((_) => {
+                        const _ = _._.Get().GetApp(_);
+                        __webpack_require__?.GetTagIDs().forEach((_) => {
+                          _.has(_)
+                            ? (_.get(_).count += 1)
+                            : _.set(_, {
+                                tagid: _,
+                                count: 1,
+                              });
+                        });
+                      }),
+                      Array.from(_.values())
+                    );
+                  })(_).sort((_, _) => (_.count < _.count ? 1 : -1)),
+            [_, _],
+          ),
+          { data: _ } = (0, _._)(_._.LANGUAGE),
+          _ = _.useMemo(
+            () =>
+              _.map((_) => ({
+                label: _ && _[_.tagid],
+                value: _,
+              })),
+            [_, _],
+          );
+        return (0, _.jsxs)("div", {
+          className: _.TagFilterBar,
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Filter by Tag:",
+            }),
+            (0, _.jsx)(_._, {
+              isSearchable: !0,
+              isLoading: _,
+              isMulti: !0,
+              isClearable: !0,
+              value: _.filter((_) => _.has(_.value.tagid)),
+              options: _,
+              styles: {
+                option: (_) => ({
+                  ..._,
+                  color: "#444444",
+                }),
+              },
+              formatOptionLabel: (_) =>
+                (0, _.jsx)(_, {
+                  tagCount: _.value,
+                }),
+              onChange: (_) => {
+                __webpack_require__(new Set(_?.map((_) => _.value.tagid)));
+              },
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { tagCount: _ } = _;
+        return (
+          ((0, _._)(_.tagid, _._.LANGUAGE) || "tagid: " + _.tagid) +
+          " (count: " +
+          _.count +
+          ")"
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -24568,17 +24806,19 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const _ = _._.Get(),
@@ -25115,8 +25355,6 @@
         );
       };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -37628,7 +37866,10 @@
                 children: [
                   (0, _.jsx)(_, {}),
                   (0, _.jsxs)("div", {
-                    className: _().EditorInputPaneContents,
+                    className: (0, _._)(
+                      _().EditorInputPaneContents,
+                      _().AdminPageCtn,
+                    ),
                     children: [
                       (0, _.jsx)(_._, {
                         tabs: _,
@@ -39710,225 +39951,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {
-        include_basic_info: !0,
-        include_assets: !0,
-        include_tag_count: 10,
-        include_release: !0,
-      };
-      function _(_) {
-        const {
-            rgOrderedAppIDs: _,
-            fnSetFilteredAppID: __webpack_require__,
-            rgNotToPruneList: _,
-            pageid: _,
-          } = _,
-          [_, _] = _.useState(!0),
-          _ = (0, _._)("OptInAppReviewFilter");
-        _.useEffect(() => {
-          _._.Get()
-            .QueueMultipleAppRequests(_?.slice(0, 100) || [], _)
-            .then(() => {
-              _._.Get()
-                .QueueMultipleAppRequests(_?.slice(100) || [], _)
-                .then(() => {
-                  _(!1);
-                });
-            });
-        }, [_.token.reason, _, _]);
-        const [_, _] = _.useState(new Set()),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(0);
-        return (
-          _.useEffect(() => {
-            const _ = _?.trim().length > 2,
-              _ = _?.toLocaleLowerCase(),
-              _ = Array.from(_),
-              _ = new Set(_ || []);
-            if (_.length > 0 && (_.size > 0 || _ || _ || _)) {
-              const _ = _.filter((_) => {
-                if (_) {
-                  const _ = _._.Get().GetApp(_);
-                  return (
-                    _?.GetName()?.toLocaleLowerCase().indexOf(_) >= 0 ||
-                    _?.GetDeveloperNames()?.some(
-                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
-                    ) ||
-                    _?.GetPublisherNames()?.some(
-                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
-                    ) ||
-                    _?.GetFranchiseNames()?.some(
-                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
-                    ) ||
-                    _?.GetShortDescription()?.toLocaleLowerCase().indexOf(_) >=
-                      0
-                  );
-                }
-                return !0;
-              })
-                .filter((_) => {
-                  if (_.length > 0) {
-                    const _ = _._.Get().GetApp(_);
-                    return _.every((_) => _?.GetTagIDs().includes(_));
-                  }
-                  return !0;
-                })
-                .filter((_) => {
-                  if (_ > 0) {
-                    const _ = _._.Get().GetApp(_);
-                    return (
-                      _ &&
-                      (_?.BIsComingSoon() ||
-                        _?.GetOriginalReleaseDateRTime() > _)
-                    );
-                  }
-                  return !0;
-                })
-                .filter((_) => !(_ && _.size > 0) || !_.has(_));
-              _.token.reason || __webpack_require__(_);
-            }
-          }, [_, _.token.reason, __webpack_require__, _, _, _, _, _, _]),
-          (0, _.jsx)(_._, {
-            title: "Filter Options",
-            bStartMinimized: !0,
-            children: Boolean(_)
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _._)("#EventCalendar_UniversalSearch"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                      string: `Loading ${_?.length || 0} Apps`,
-                    }),
-                  ],
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      type: "text",
-                      label: (0, _._)("#EventCalendar_UniversalSearch"),
-                      placeholder: "search by app name, description",
-                      value: _,
-                      onChange: (_) => {
-                        _(_.target.value), _(1);
-                      },
-                    }),
-                    (0, _.jsx)(_, {
-                      setFilterTagIDs: _,
-                      fnUpdateSetFilterTagIDs: (_) => {
-                        _(_), _(1);
-                      },
-                      rgAppIDs: _,
-                      bLoading: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      strDescription: "Filter to games Released After:",
-                      strDescToolTip:
-                        "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
-                      nEarliestTime: 0,
-                      fnGetTimeToUpdate: () => _,
-                      fnSetTimeToUpdate: (_) => {
-                        _(_), _(1);
-                      },
-                    }),
-                    Boolean(_?.length > 0) &&
-                      (0, _.jsx)(_._, {
-                        checked: _,
-                        onChange: (_) => {
-                          _(_), _(1);
-                        },
-                        tooltip:
-                          "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
-                        label:
-                          "Filter out previously emailed apps from pruning",
-                      }),
-                  ],
-                }),
-          })
-        );
-      }
-      function _(_) {
-        const {
-            setFilterTagIDs: _,
-            fnUpdateSetFilterTagIDs: __webpack_require__,
-            rgAppIDs: _,
-            bLoading: _,
-          } = _,
-          _ = _.useMemo(
-            () =>
-              _
-                ? []
-                : (function (_) {
-                    const _ = new Map();
-                    return (
-                      _.forEach((_) => {
-                        const _ = _._.Get().GetApp(_);
-                        __webpack_require__?.GetTagIDs().forEach((_) => {
-                          _.has(_)
-                            ? (_.get(_).count += 1)
-                            : _.set(_, {
-                                tagid: _,
-                                count: 1,
-                              });
-                        });
-                      }),
-                      Array.from(_.values())
-                    );
-                  })(_).sort((_, _) => (_.count < _.count ? 1 : -1)),
-            [_, _],
-          ),
-          { data: _ } = (0, _._)(_._.LANGUAGE),
-          _ = _.useMemo(
-            () =>
-              _.map((_) => ({
-                label: _ && _[_.tagid],
-                value: _,
-              })),
-            [_, _],
-          );
-        return (0, _.jsxs)("div", {
-          className: _.TagFilterBar,
-          children: [
-            (0, _.jsx)(_._, {
-              children: "Filter by Tag:",
-            }),
-            (0, _.jsx)(_._, {
-              isSearchable: !0,
-              isLoading: _,
-              isMulti: !0,
-              isClearable: !0,
-              value: _.filter((_) => _.has(_.value.tagid)),
-              options: _,
-              styles: {
-                option: (_) => ({
-                  ..._,
-                  color: "#444444",
-                }),
-              },
-              formatOptionLabel: (_) =>
-                (0, _.jsx)(_, {
-                  tagCount: _.value,
-                }),
-              onChange: (_) => {
-                __webpack_require__(new Set(_?.map((_) => _.value.tagid)));
-              },
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { tagCount: _ } = _;
-        return (
-          ((0, _._)(_.tagid, _._.LANGUAGE) || "tagid: " + _.tagid) +
-          " (count: " +
-          _.count +
-          ")"
-        );
-      }
       const _ = (_) => null != _;
       class _ {
         m_mapChangeCallback = new Map();
@@ -40040,7 +40064,7 @@
       function _(_) {
         const { appid: _, pageid: __webpack_require__, index: _ } = _,
           _ = (0, _._)(_, __webpack_require__),
-          [_, _] = (0, _._)(_, _),
+          [_, _] = (0, _._)(_, _._),
           _ =
             (_.useMemo(
               () => ({
@@ -40220,7 +40244,7 @@
             bAcceptAppeal: _,
             closeModal: _,
           } = _,
-          [_] = (0, _._)(_, _),
+          [_] = (0, _._)(_, _._),
           { fnUpdateAppealState: _ } = (0, _._)(),
           _ = (0, _._)();
         return _.bLoading
@@ -40527,7 +40551,7 @@
             (0, _.jsx)(_, {
               bShowPruningCriteria: _,
             }),
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
               pageid: __webpack_require__,
               rgOrderedAppIDs: _,
               fnSetFilteredAppID: _,
@@ -40572,7 +40596,7 @@
             index: _,
             bPendingReview: _,
           } = _,
-          [_, _] = (0, _._)(_, _),
+          [_, _] = (0, _._)(_, _._),
           { fnChangeAppPruneState: _ } = _(),
           _ = (0, _._)(_);
         switch (_) {
@@ -65142,7 +65166,9 @@
                                 label: "PARTNER NAME TO INSERT INTO LEGAL LINE",
                                 value: _,
                                 onChange: (_) =>
-                                  _.SetLegalTextPartnerName(_.target.value),
+                                  _.SetLegalTextPartnerName(
+                                    _.target.value ? "" + _.target.value : "",
+                                  ),
                                 placeholder:
                                   "Enter company name; preview will update below",
                               }),
@@ -65261,6 +65287,10 @@
           {
             label: (0, _._)("#msg_play_demo_now"),
             data: "#msg_play_demo_now",
+          },
+          {
+            label: (0, _._)("#msg_advanced_access"),
+            data: "#msg_advanced_access",
           },
           {
             label: "",
@@ -72520,7 +72550,10 @@
                       (0, _.jsx)("textarea", {
                         value: _,
                         disabled: !0,
-                        className: _.AssetNotes,
+                        className: (0, _._)(
+                          "DialogTextInputBase",
+                          _.AssetNotes,
+                        ),
                       }),
                     ],
                   }),
@@ -75769,12 +75802,18 @@
                         ],
                       }),
                     Boolean(__webpack_require__ && _) &&
-                      (0, _.jsx)("div", {
-                        children: (0, _.jsx)("a", {
-                          href: `${_._.STATS_BASE_URL}sales/details/?gid=${_}&clanid=${__webpack_require__}`,
-                          target: "_blank",
-                          children: "See detailed sale page promo stats",
-                        }),
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _.jsx)("a", {
+                            href: `${_._.STATS_BASE_URL}sales/details/?gid=${_}&clanid=${__webpack_require__}`,
+                            target: "_blank",
+                            children: "See detailed sale page promo stats",
+                          }),
+                          (0, _.jsx)("p", {
+                            children:
+                              "Note: If the above page fails to load, then add query paramater like: $count=50&start=0. This will permit enable viewing data a bit at a time. You can increment start by 50 (by count) to see the rest of the data.",
+                          }),
+                        ],
                       }),
                     Boolean(0 == _) &&
                       (0, _.jsx)("div", {
@@ -83792,6 +83831,7 @@
             { bLoading: _, eventModel: __webpack_require__ } = this.state;
           if (_)
             return (0, _.jsx)(_._, {
+              active: !0,
               children: (0, _.jsx)("div", {
                 className: _().FlexCenter,
                 style: {
@@ -83821,28 +83861,25 @@
                   _,
                   "steam://nav/games/details/" + __webpack_require__.appid,
                 )));
-          const _ = (0, _.jsx)("div", {
-            children: (0, _.jsx)(_._, {
-              initialEvent: __webpack_require__,
-              appid: _,
-              clanSteamID: _,
-              partnerEventStore: _,
-              emoticonStore: _._,
-              closeModal: !_ && _,
-              showAppHeader: _,
-              bShowOnlyInitialEvent: _,
-              additionalParams: _,
-              eventClassName: _,
-              onAppIconClick: _,
-            }),
+          const _ = (0, _.jsx)(_._, {
+            initialEvent: __webpack_require__,
+            appid: _,
+            clanSteamID: _,
+            partnerEventStore: _,
+            emoticonStore: _._,
+            closeModal: !_ && _,
+            showAppHeader: _,
+            bShowOnlyInitialEvent: _,
+            additionalParams: _,
+            eventClassName: _,
+            onAppIconClick: _,
           });
           return _
             ? _
             : (0, _.jsx)(_._, {
-                className: _,
-                children: (0, _.jsx)(_._, {
-                  navID: "WebRowEventInfiniteScroll",
-                  closeModal: _,
+                active: !0,
+                children: (0, _.jsx)("div", {
+                  className: _,
                   children: _,
                 }),
               });
@@ -104986,12 +105023,7 @@
         return (0, _._)() && !_._.IN_STEAMUI
           ? (0, _.jsx)(_._, {
               className: _.GamepadOnlyScrollPanel,
-              children: (0, _.jsx)(_._, {
-                focusable: !0,
-                noFocusRing: !0,
-                className: _.GamepadOnlyPanel,
-                children: _,
-              }),
+              children: _,
             })
           : (0, _.jsx)(_.Fragment, {
               children: _,
@@ -106037,7 +106069,6 @@
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       let _ = class extends _.Component {
         m_refFocus = _.createRef();
         componentDidMount() {

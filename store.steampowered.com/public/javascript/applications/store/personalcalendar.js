@@ -58,7 +58,7 @@
     },
     70310: (e, a, s) => {
       "use strict";
-      s.d(a, { A: () => i, G: () => c });
+      s.d(a, { A: () => i, G: () => d });
       var t = s(41735),
         n = s.n(t),
         r = s(78327),
@@ -76,14 +76,14 @@
           );
         }
         async GetCalendarRecommendations(e, a, s, t, n) {
-          return o.L.fetchQuery(d(e, a, s, t, n));
+          return o.L.fetchQuery(c(e, a, s, t, n));
         }
         Init() {}
       }
-      function c(e, a, s, t, n) {
-        return (0, l.I)(d(e, a, s, t, n));
+      function d(e, a, s, t, n) {
+        return (0, l.I)(c(e, a, s, t, n));
       }
-      function d(e, a, s, t, l) {
+      function c(e, a, s, t, l) {
         return {
           queryKey: ["personalcalendar", e, a, s, t, l],
           queryFn: async () => {
@@ -121,52 +121,64 @@
         l = s(90626),
         o = s(64238),
         i = s.n(o),
-        c = s(91239);
-      var d = s(24089);
+        d = s(91239);
+      var c = s(24089);
       var u = s(90534),
-        m = s(61023);
-      function p(e) {
+        m = s(61023),
+        p = s(77914);
+      function h(e) {
         const { extracted: a, remaining: s } = (0, u.A4)(e),
           {
             value: n,
             onTextChange: r,
-            onChange: l,
-            radius: o,
-            variant: p,
-            size: h,
-            beforeContent: g,
-            afterContent: y,
-            inputRef: x,
-            ref: S,
-            ...w
+            clearable: l,
+            onChange: o,
+            radius: h,
+            variant: g,
+            size: y,
+            beforeContent: x,
+            afterContent: S,
+            inputRef: w,
+            ref: C,
+            disabled: f,
+            ...T
           } = s,
-          C = {
+          j = {
             ...a,
-            variant: p,
-            size: h,
-            radius: o,
-            beforeContent: g,
-            afterContent: y,
-            ref: S,
+            variant: g,
+            size: y,
+            radius: h,
+            beforeContent: x,
+            afterContent:
+              n && l
+                ? (0, t.jsx)(p.g, {
+                    onClick: () => r(""),
+                    cursor: "pointer",
+                    hitSlop: !0,
+                  })
+                : S,
+            ref: C,
+            disabled: f,
           };
         return (0, t.jsx)(m.j, {
           cursor: "text",
-          ...C,
+          ...j,
           children: (0, t.jsx)("input", {
-            ref: x,
+            ref: w,
             type: "text",
-            ...w,
-            className: i()(c.Reset, d.TextEntry),
+            ...T,
+            "aria-disabled": f,
+            readOnly: f,
+            className: i()(d.Reset, c.TextEntry),
             value: n || "",
             onChange: (e) => {
-              r(e.target.value), l && l(e);
+              f || (r(e.target.value), o && o(e));
             },
           }),
         });
       }
-      var h = s(81393),
-        g = s(95013),
-        y = s(77914);
+      var g = s(81393),
+        y = s(95013);
       const x = Object.assign(
           function (e) {
             const {
@@ -184,7 +196,7 @@
                   } = e,
                   [n, r] = (0, l.useState)(null),
                   [o, i] = (0, l.useState)(!1),
-                  c = (0, l.useCallback)(
+                  d = (0, l.useCallback)(
                     (e) => {
                       e ? (i(!0), r(null)) : i(!1), a(e);
                     },
@@ -195,14 +207,14 @@
                   setActiveIndex: r,
                   open: o,
                   onOpenChange: i,
-                  onTextChange: c,
+                  onTextChange: d,
                   suggestions: s,
                   onSuggestionSelected: t,
                 };
               })({ onTextChange: s, suggestions: a, onSuggestionSelected: n }),
-              c =
+              d =
                 o.value && r
-                  ? (0, t.jsx)(y.g, {
+                  ? (0, t.jsx)(p.g, {
                       onClick: () => i.onTextChange(""),
                       cursor: "pointer",
                       hitSlop: !0,
@@ -211,7 +223,7 @@
             return (0, t.jsxs)(x.Root, {
               state: i,
               children: [
-                (0, t.jsx)(x.TextInput, { ...o, afterContent: c }),
+                (0, t.jsx)(x.TextInput, { ...o, afterContent: d }),
                 (0, t.jsx)(x.Suggestions, {
                   children: a.map((e, a) =>
                     (0, t.jsx)(x.Suggestion, { value: e, children: e }, e + a),
@@ -228,7 +240,7 @@
                   popoverWidth: n = "dropdown",
                   ...r
                 } = e,
-                l = (0, g.T)({
+                l = (0, y.T)({
                   ...r.state,
                   width: n,
                   placement: s,
@@ -239,7 +251,7 @@
                 });
               return (0, t.jsx)(S.Provider, {
                 value: r,
-                children: (0, t.jsx)(g.k.Root, { state: l, children: a }),
+                children: (0, t.jsx)(y.k.Root, { state: l, children: a }),
               });
             },
             TextInput: function (e) {
@@ -253,11 +265,11 @@
                     onSuggestionSelected: i,
                   },
                 } = w("<Autocomplete.TextInput>"),
-                c = (0, l.useRef)(null);
-              return (0, t.jsx)(g.k.Anchor, {
-                children: (0, t.jsx)(p, {
+                d = (0, l.useRef)(null);
+              return (0, t.jsx)(y.k.Anchor, {
+                children: (0, t.jsx)(h, {
                   ...e,
-                  inputRef: c,
+                  inputRef: d,
                   onTextChange: a,
                   "aria-autocomplete": "list",
                   onKeyDown: (e) => {
@@ -280,7 +292,7 @@
               });
             },
             Suggestions: function (e) {
-              return (0, t.jsx)(g.k.Positioner, { ...e, returnFocus: !1 });
+              return (0, t.jsx)(y.k.Positioner, { ...e, returnFocus: !1 });
             },
             Suggestion: function (e) {
               const { value: a, children: s, ...n } = e,
@@ -292,7 +304,7 @@
                     onSuggestionSelected: i,
                   },
                 } = w("<Autocomplete.TextInput>");
-              return (0, t.jsx)(g.k.Item, {
+              return (0, t.jsx)(y.k.Item, {
                 onSelect: (e) => {
                   i && i(a, e), e.defaultPrevented || r(a), o(null), l(!1);
                 },
@@ -305,20 +317,20 @@
         S = (0, l.createContext)(null);
       function w(e) {
         const a = (0, l.useContext)(S);
-        return (0, h.wT)(a, `${e} must be used within an <Autocomplete>!`), a;
+        return (0, g.wT)(a, `${e} must be used within an <Autocomplete>!`), a;
       }
       var C = s(86632),
         f = s(39020),
         T = s(82477),
-        j = s(46416),
+        j = s(22687),
         _ = s(32630),
         P = s(52038),
         D = s(61859),
         L = s(78327),
         b = s(12241),
         A = s(76217),
-        I = s(30894),
-        k = s(65946),
+        k = s(30894),
+        I = s(65946),
         W = s(70310);
       const N = "PC_HideOwned",
         G = "PC_HideEarlyAccess",
@@ -443,7 +455,7 @@
       function E(e) {
         const { userTags: a, tagMap: s, selectedTag: n, onChange: r } = e,
           [o, i] = l.useState(""),
-          { tagStrings: c, tagStringMap: d } = l.useMemo(() => {
+          { tagStrings: d, tagStringMap: c } = l.useMemo(() => {
             const e = [],
               t = new Map();
             for (const [a, n] of Object.entries(s ?? {})) {
@@ -471,18 +483,18 @@
               children: (0, D.we)("#PersonalCalendar_TagSelector"),
             }),
             (0, t.jsx)(x, {
-              suggestions: c,
+              suggestions: d,
               onSuggestionSelected: (e) =>
                 ((e) => {
-                  r(d?.get(e.toLocaleLowerCase()) ?? 0);
+                  r(c?.get(e.toLocaleLowerCase()) ?? 0);
                 })(e),
               value: o,
               onTextChange: (e) =>
                 ((e) => {
                   "" === e.trim() && n
                     ? r(0)
-                    : d.has(e.toLocaleLowerCase()) &&
-                      r(d.get(e.toLocaleLowerCase())),
+                    : c.has(e.toLocaleLowerCase()) &&
+                      r(c.get(e.toLocaleLowerCase())),
                     i(e);
                 })(e),
               clearable: !0,
@@ -568,8 +580,8 @@
       function K(e) {
         const { games: a } = e,
           s =
-            (0, k.q3)(() =>
-              a?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
+            (0, I.q3)(() =>
+              a?.filter((e) => !k.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
         return (0, t.jsx)(_.Ay, {
           controller: "personalcalendar",
@@ -611,8 +623,8 @@
       function F(e) {
         const { games: a } = e,
           s =
-            (0, k.q3)(() =>
-              a?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
+            (0, I.q3)(() =>
+              a?.filter((e) => !k.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
         return (0, t.jsx)(_.Ay, {
           controller: "personalcalendar",
@@ -827,10 +839,10 @@
           l = Math.max(e.maxGames, r),
           o = l == e.appsToday?.length,
           i =
-            (0, k.q3)(() =>
-              e.appsToday?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
+            (0, I.q3)(() =>
+              e.appsToday?.filter((e) => !k.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [],
-          c =
+          d =
             1 == e.maxNumGamesInWeek ||
             e.appsToday?.length <= Math.floor(e.maxNumGamesInWeek / 2)
               ? "library"
@@ -849,7 +861,7 @@
                       className: b.CalendarAppEntry,
                       children: (0, t.jsx)(j.W, {
                         capsule: { id: e.appid },
-                        imageType: c,
+                        imageType: d,
                         nWidthMultiplier: 2,
                         bShowName: !1,
                         bHidePlatforms: !0,
@@ -888,8 +900,8 @@
         const n = Math.floor(s.getTime() / 1e3),
           r = n == e.timestamp,
           l =
-            (0, k.q3)(() =>
-              e.appsToday?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
+            (0, I.q3)(() =>
+              e.appsToday?.filter((e) => !k.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
         return e.timestamp < n
           ? null
@@ -936,8 +948,8 @@
           {
             maxResultCount: o,
             dayWeekTimestamps: i,
-            appReleasesByDay: c,
-            userTags: d,
+            appReleasesByDay: d,
+            userTags: c,
             usesWishlists: u,
           } = r.data || {},
           m = new Date();
@@ -952,7 +964,7 @@
             lastWeekGames: S,
             includeSaturday: w,
           } = l.useMemo(() => {
-            if (!c)
+            if (!d)
               return {
                 appReleasesByDayFiltered: [],
                 lastMonthGames: [],
@@ -982,7 +994,7 @@
                 );
                 return Object.fromEntries(r);
               })(
-                c,
+                d,
                 a.cResultsToShow,
                 a.bHideOwned,
                 a.bHideEarlyAccess,
@@ -1020,7 +1032,7 @@
               }
             );
           }, [
-            c,
+            d,
             a.cResultsToShow,
             a.bHideOwned,
             a.wishlistDisplay,
@@ -1066,7 +1078,7 @@
                             state: a,
                             onChange: s,
                             tagMap: e,
-                            userTags: d,
+                            userTags: c,
                             maxResultsToShow: o,
                             usesWishlists: u,
                           }),

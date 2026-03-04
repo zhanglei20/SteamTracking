@@ -15,7 +15,7 @@
         (r.czech = () => a.e(7591).then(a.t.bind(a, 815, 19))),
         (r.danish = () => a.e(6523).then(a.t.bind(a, 4289, 19))),
         (r.dutch = () => a.e(5110).then(a.t.bind(a, 54978, 19))),
-        (r.english = () => a.e(9875).then(a.t.bind(a, 33800, 19))),
+        (r.english = () => a.e(2256).then(a.t.bind(a, 33800, 19))),
         (r.finnish = () => a.e(6031).then(a.t.bind(a, 3907, 19))),
         (r.french = () => a.e(5018).then(a.t.bind(a, 45040, 19))),
         (r.german = () => a.e(6208).then(a.t.bind(a, 94750, 19))),

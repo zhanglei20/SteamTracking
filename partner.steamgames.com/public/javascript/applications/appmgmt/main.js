@@ -571,8 +571,6 @@
         BodyNoScroll: "_1Xs5dtPK2K37sd1U9BLX3S",
         BodyNoScrollDialog: "_3jhMIr8hczcBK_fOVtEVOK",
         OverlayModal: "_24YFXIVY7CC2quNzCN7015",
-        GamepadOnlyModalWrapper: "_1GlTsstfPZWsQc4umFIvrX",
-        GamepadOnlyPanelWrapper: "_1aY-rmUi48QSw7U1ZWa5DZ",
         ModalDialog: "_32QRvPPBL733SpNR9x0Gp3",
       };
     },
@@ -858,7 +856,7 @@
         "./shared_czech.json": [815, 7591],
         "./shared_danish.json": [4289, 6523],
         "./shared_dutch.json": [54978, 5110],
-        "./shared_english.json": [33800, 9875],
+        "./shared_english.json": [33800, 2256],
         "./shared_finnish.json": [3907, 6031],
         "./shared_french.json": [45040, 5018],
         "./shared_german.json": [94750, 6208],
@@ -904,7 +902,7 @@
         "./shared_czech.json": [815, 7591],
         "./shared_danish.json": [4289, 6523],
         "./shared_dutch.json": [54978, 5110],
-        "./shared_english.json": [33800, 9875],
+        "./shared_english.json": [33800, 2256],
         "./shared_finnish.json": [3907, 6031],
         "./shared_french.json": [45040, 5018],
         "./shared_german.json": [94750, 6208],
@@ -1569,24 +1567,26 @@
       }
       function de(e) {
         const {
-          accentColor: t,
-          dullColor: r,
-          bodyTextColor: n,
-          children: s,
-        } = e;
-        return (0, i.jsx)("div", {
-          "data-accent-color": t,
-          "data-dull-color": r,
-          "data-body-text-color": n,
-          style: { display: "contents" },
-          children: (0, i.jsx)("div", {
-            style: {
-              display: "contents",
-              color: "var(--color-text-body-body)",
-            },
+            accentColor: t,
+            dullColor: r,
+            bodyTextColor: n,
             children: s,
-          }),
-        });
+            breakpoints: o,
+          } = e,
+          a = (0, i.jsx)("div", {
+            "data-accent-color": t,
+            "data-dull-color": r,
+            "data-body-text-color": n,
+            style: { display: "contents" },
+            children: (0, i.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: s,
+            }),
+          });
+        return o ? (0, i.jsx)(oe.cW, { breakpoints: o, children: a }) : a;
       }
       const me = n.memo(function (e) {
         const {
@@ -1642,12 +1642,12 @@
         ),
         we = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
+            r.e(4941),
+            r.e(120),
             r.e(4568),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
             r.e(1480),
-            r.e(34),
             r.e(9646),
             r.e(1158),
             r.e(6627),
@@ -1662,25 +1662,26 @@
         ),
         be = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(4568),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
             r.e(2924),
+            r.e(1997),
             r.e(8102),
-            r.e(462),
             r.e(1084),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
@@ -1690,7 +1691,6 @@
             r.e(1853),
             r.e(7022),
             r.e(4440),
-            r.e(3506),
             r.e(9352),
             r.e(8758),
             r.e(7352),
@@ -1700,25 +1700,26 @@
         ),
         Ce = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(4568),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
             r.e(2924),
+            r.e(1997),
             r.e(8102),
-            r.e(462),
             r.e(1084),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
@@ -1728,7 +1729,6 @@
             r.e(1853),
             r.e(7022),
             r.e(4440),
-            r.e(3506),
             r.e(9352),
             r.e(8758),
             r.e(7352),
@@ -1738,25 +1738,26 @@
         ),
         Me = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(4568),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
             r.e(2924),
+            r.e(1997),
             r.e(8102),
-            r.e(462),
             r.e(1084),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
@@ -1766,7 +1767,6 @@
             r.e(1853),
             r.e(7022),
             r.e(4440),
-            r.e(3506),
             r.e(9352),
             r.e(8758),
             r.e(7352),
@@ -1776,25 +1776,26 @@
         ),
         Se = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(4568),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
             r.e(2924),
+            r.e(1997),
             r.e(8102),
-            r.e(462),
             r.e(1084),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
@@ -1804,60 +1805,58 @@
             r.e(1853),
             r.e(7022),
             r.e(4440),
-            r.e(3506),
             r.e(9352),
             r.e(8758),
             r.e(7352),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 79467)),
+          ]).then(r.bind(r, 86360)),
         ),
         ve = n.lazy(() =>
-          Promise.all([r.e(3864), r.e(5344), r.e(5193), r.e(5933)]).then(
+          Promise.all([r.e(4134), r.e(7935), r.e(5193), r.e(5933)]).then(
             r.bind(r, 88797),
           ),
         ),
         ye = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
+            r.e(4941),
+            r.e(120),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(2924),
-            r.e(462),
-            r.e(5295),
-            r.e(34),
-            r.e(3388),
+            r.e(1997),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(4829),
-            r.e(3506),
             r.e(4017),
             r.e(9433),
           ]).then(r.bind(r, 49648)),
         ),
         Be = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
-            r.e(3864),
-            r.e(3874),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
             r.e(2924),
             r.e(6995),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4829),
             r.e(4440),
-            r.e(3506),
             r.e(8758),
             r.e(9989),
             r.e(7043),
@@ -1867,12 +1866,12 @@
         ),
         xe = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
+            r.e(4941),
+            r.e(120),
             r.e(4568),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
             r.e(1480),
-            r.e(34),
             r.e(9646),
             r.e(1158),
             r.e(6627),
@@ -1888,25 +1887,26 @@
         Re = n.lazy(() => r.e(5027).then(r.bind(r, 26193))),
         Ie = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(4568),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
             r.e(2924),
+            r.e(1997),
             r.e(8102),
-            r.e(462),
             r.e(1084),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
@@ -1916,7 +1916,6 @@
             r.e(1853),
             r.e(7022),
             r.e(4440),
-            r.e(3506),
             r.e(9352),
             r.e(8758),
             r.e(7352),
@@ -1936,25 +1935,26 @@
         ),
         je = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(4568),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
             r.e(2924),
+            r.e(1997),
             r.e(8102),
-            r.e(462),
             r.e(1084),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
@@ -1964,7 +1964,6 @@
             r.e(1853),
             r.e(7022),
             r.e(4440),
-            r.e(3506),
             r.e(9352),
             r.e(8758),
             r.e(7352),
@@ -1974,26 +1973,27 @@
         ),
         De = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
-            r.e(3874),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(8008),
+            r.e(4789),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(4985),
           ]).then(r.bind(r, 43709)),
         ),
         Le = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(5841),
+            r.e(4941),
+            r.e(9681),
             r.e(7224),
-            r.e(5295),
+            r.e(5659),
+            r.e(4789),
             r.e(1480),
             r.e(9161),
-            r.e(3388),
             r.e(1917),
+            r.e(9150),
             r.e(2012),
             r.e(7352),
             r.e(9989),
@@ -2002,25 +2002,26 @@
         ),
         Oe = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
-            r.e(5841),
+            r.e(4941),
+            r.e(120),
+            r.e(9681),
+            r.e(4134),
+            r.e(8008),
+            r.e(7935),
             r.e(4568),
-            r.e(3864),
-            r.e(3874),
-            r.e(5344),
             r.e(2924),
+            r.e(1997),
             r.e(8102),
-            r.e(462),
             r.e(1084),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(9246),
@@ -2030,7 +2031,6 @@
             r.e(1853),
             r.e(7022),
             r.e(4440),
-            r.e(3506),
             r.e(9352),
             r.e(8758),
             r.e(7352),
@@ -2039,29 +2039,30 @@
           ]).then(r.bind(r, 16340)),
         ),
         ke = n.lazy(() =>
-          Promise.all([r.e(5295), r.e(34), r.e(9161), r.e(3350)]).then(
+          Promise.all([r.e(5659), r.e(6129), r.e(9161), r.e(3350)]).then(
             r.bind(r, 92513),
           ),
         ),
         Fe = n.lazy(() =>
-          Promise.all([r.e(5295), r.e(34), r.e(9161), r.e(3350)]).then(
+          Promise.all([r.e(5659), r.e(6129), r.e(9161), r.e(3350)]).then(
             r.bind(r, 2203),
           ),
         ),
         Ee = n.lazy(() =>
           Promise.all([
-            r.e(8403),
-            r.e(2256),
+            r.e(4941),
+            r.e(120),
             r.e(4568),
             r.e(8102),
-            r.e(5295),
+            r.e(5659),
+            r.e(6129),
+            r.e(4789),
             r.e(1480),
-            r.e(34),
             r.e(9161),
             r.e(9646),
-            r.e(3388),
             r.e(1158),
             r.e(1917),
+            r.e(9150),
             r.e(6627),
             r.e(2012),
             r.e(4829),
@@ -2071,10 +2072,27 @@
             r.e(4440),
             r.e(9352),
             r.e(6762),
-          ]).then(r.bind(r, 36637)),
-        );
-      n.Fragment;
-      function ze(e) {
+          ]).then(r.bind(r, 20153)),
+        ),
+        ze =
+          (n.Fragment,
+          n.lazy(() =>
+            Promise.all([
+              r.e(4941),
+              r.e(120),
+              r.e(9681),
+              r.e(4134),
+              r.e(8008),
+              r.e(7935),
+              r.e(1997),
+              r.e(5659),
+              r.e(6129),
+              r.e(4789),
+              r.e(9150),
+              r.e(906),
+            ]).then(r.bind(r, 15898)),
+          ));
+      function Ae(e) {
         const t = (0, _.Tc)("publisherid", "application_config"),
           r = n.useMemo(
             () => ({ country: _.TS.COUNTRY, language: _.TS.LANGUAGE }),
@@ -2087,7 +2105,7 @@
           children: (0, i.jsx)(c.O.Provider, {
             value: parseInt(t),
             children: (0, i.jsx)(L.s, {
-              children: (0, i.jsx)(We, {
+              children: (0, i.jsx)(Ue, {
                 children: (0, i.jsx)(s.V3, {
                   context: r,
                   children: (0, i.jsx)(me, {
@@ -2099,7 +2117,7 @@
           }),
         });
       }
-      function Ae(e) {
+      function Ne(e) {
         let { children: t } = e,
           r = (0, O.OU)([l.B.PricingTools(), l.B.PromotionTools()]);
         return (0, i.jsx)("div", {
@@ -2107,7 +2125,7 @@
           children: t,
         });
       }
-      function Ne(e) {
+      function Pe(e) {
         const [t, r] = n.useState(!1);
         return (
           n.useEffect(() => {
@@ -2120,8 +2138,8 @@
           t
             ? (0, i.jsx)(S.Kd, {
                 basename: (0, l.C)(),
-                children: (0, i.jsx)(ze, {
-                  children: (0, i.jsx)(Ae, {
+                children: (0, i.jsx)(Ae, {
+                  children: (0, i.jsx)(Ne, {
                     children: (0, i.jsx)(n.Suspense, {
                       fallback: null,
                       children: (0, i.jsxs)(v.dO, {
@@ -2292,7 +2310,7 @@
                           }),
                           (0, i.jsx)(v.qh, {
                             path: l.B.DeckVerified(),
-                            render: () =>
+                            render: (e) =>
                               (0, i.jsx)(T.X, {
                                 config: {
                                   "deck-verified-results": () =>
@@ -2302,6 +2320,11 @@
                                         "application_config",
                                       ),
                                       bIncludeSteamOS: !0,
+                                    }),
+                                  "deck-performance-stats": (t) =>
+                                    (0, i.jsx)(ze, {
+                                      appId: e.match.params.appid,
+                                      dataprops: t,
                                     }),
                                 },
                               }),
@@ -2374,12 +2397,12 @@
             : null
         );
       }
-      function Pe() {
+      function We() {
         const e = (0, _.Fd)("loyalty_webapi_token", "application_config");
         return new x.D(_.TS.WEBAPI_BASE_URL, e);
       }
-      function We(e) {
-        const t = (0, D.bs)(Pe),
+      function Ue(e) {
+        const t = (0, D.bs)(We),
           r = (0, D.bs)(n.useCallback(() => new B.A(), []));
         return (0, i.jsx)(y.VQ, {
           useActiveSteamInterface: t,
@@ -2387,26 +2410,26 @@
           children: e.children,
         });
       }
-      var Ue = r(14947),
-        He = r(44844),
-        Ve = r(26317),
-        qe = r(81393),
-        Ge = (r(5977), r(8527));
-      function Ze() {
+      var He = r(14947),
+        Ve = r(44844),
+        qe = r(17204),
+        Ge = r(81393),
+        Ze = (r(5977), r(8527));
+      function Ke() {
         const e = [];
         return (
-          Ge.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          Ge.TS.IN_CLIENT && e.push("in_client"),
+          Ze.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          Ze.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      (0, Ue.jK)({ enforceActions: "never" }),
+      (0, He.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           const e = document.getElementById("application_root"),
             t = e ? "application_config" : void 0;
           (0, _.XJ)(t);
           const i = new x.D(_.TS.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, Ve.aj)().Init("Partner", CLSTAMP, i, { fnGetReportTags: Ze }),
+          (0, qe.aj)().Init("Partner", CLSTAMP, i, { fnGetReportTags: Ke }),
             await (async function (e) {
               const [t, n, i, s] = await Promise.all([
                   r(14919)(`./shared_${e}.json`),
@@ -2433,7 +2456,7 @@
                   g.pf.AddTokens(i, null);
             })(_.TS.LANGUAGE),
             e
-              ? He.createRoot(e).render(n.createElement(Ne, {}))
+              ? Ve.createRoot(e).render(n.createElement(Pe, {}))
               : (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2449,13 +2472,13 @@
                           );
                         break;
                       default:
-                        (0, qe.wT)(!1, `unknown component: "${i}"`);
+                        (0, Ge.wT)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })();
         }),
         (window.LocalizationManifestReady = function (e, t, r) {
-          (0, qe.wT)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, Ge.wT)("manifest" === t, `Expected manifest not "${t}"`),
             g.pf.InitDirect(r);
         });
     },
@@ -2494,11 +2517,12 @@
         return null;
       }
       const a = ["initial", "sm", "md", "lg"],
-        l = (0, i.createContext)("lg");
+        l = (0, i.createContext)({ sm: 768, md: 940, lg: 1240, ff: "lg" });
       function c(e) {
-        const { children: t, breakpoints: r = { sm: 768, md: 940, lg: 1240 } } =
-            e,
-          o = (function (e) {
+        const { children: t, breakpoints: r = {} } = e,
+          o = (0, i.useContext)(l),
+          a = { sm: r.sm ?? o.sm, md: r.md ?? o.md, lg: r.lg ?? o.lg },
+          c = (function (e) {
             const t = s(`(min-width: ${e.sm}px)`),
               r = s(`(min-width: ${e.md}px)`),
               n = s(`(min-width: ${e.lg}px)`),
@@ -2507,17 +2531,24 @@
               (0, i.useEffect)(() => a(!0), []),
               o ? (n ? "lg" : r ? "md" : t ? "sm" : "initial") : "lg"
             );
-          })(r);
-        return (0, n.jsx)(l.Provider, { value: o, children: t });
+          })(a),
+          { sm: u, md: d, lg: m } = a,
+          h = (0, i.useMemo)(
+            () => ({ ff: c, sm: u, md: d, lg: m }),
+            [c, u, d, m],
+          );
+        return (0, n.jsx)(l.Provider, { value: h, children: t });
       }
       function u(e) {
-        const { formFactor: t, children: r } = e;
+        const { formFactor: t, children: r } = e,
+          s = (0, i.useContext)(l),
+          o = (0, i.useMemo)(() => ({ ...s, ff: t ?? s.ff }), [s, t]);
         return t
-          ? (0, n.jsx)(l.Provider, { value: t, children: r })
+          ? (0, n.jsx)(l.Provider, { value: o, children: r })
           : (0, n.jsx)(n.Fragment, { children: r });
       }
       function d() {
-        return (0, i.useContext)(l);
+        return (0, i.useContext)(l).ff;
       }
       a.reduce((e, t, r) => ((e[t] = r), e), {});
     },
@@ -2954,8 +2985,7 @@
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-            (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
         })(I || (I = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
@@ -3053,7 +3083,7 @@
     },
     85585: (e, t, r) => {
       "use strict";
-      r.d(t, { B2: () => m, qR: () => _ });
+      r.d(t, { qR: () => g });
       var n = r(7850),
         i = r(64753),
         s = r(8871),
@@ -3063,7 +3093,7 @@
         c = r(65233),
         u = r(21109),
         d = r(74882);
-      const m = o.forwardRef(function (e, t) {
+      o.forwardRef(function (e, t) {
         const {
             navID: r,
             onActivated: i,
@@ -3072,7 +3102,7 @@
             enabled: l,
             modal: u,
             virtualFocus: d,
-            historyMode: m,
+            historyMode: h,
             parentEmbeddedNavTree: p,
             onGlobalButtonDown: g,
             disableFocusClasses: _,
@@ -3082,7 +3112,7 @@
           } = e,
           { elemProps: C, navOptions: M, gamepadEvents: S } = (0, a.sl)(b);
         return (0, c.Vu)()
-          ? (0, n.jsx)(h, {
+          ? (0, n.jsx)(m, {
               navID: r,
               onActivated: i,
               onDeactivated: s,
@@ -3090,7 +3120,7 @@
               enabled: l,
               modal: u,
               virtualFocus: d,
-              historyMode: m,
+              historyMode: h,
               parentEmbeddedNavTree: p,
               onGlobalButtonDown: g,
               disableFocusClasses: _,
@@ -3102,13 +3132,13 @@
             })
           : (0, n.jsx)("div", { ...C, ref: t });
       });
-      function h(e) {
+      function m(e) {
         const {
             navID: t,
             onActivated: r,
             onDeactivated: m,
             navTreeRef: h,
-            enabled: p = !0,
+            enabled: g = !0,
             modal: _ = !1,
             virtualFocus: f = !1,
             historyMode: w,
@@ -3167,7 +3197,7 @@
             navID: t,
             parentEmbeddedNavTree: C,
             disabledRoot: v,
-            enabled: p,
+            enabled: g,
             onGlobalButtonDown: M,
             navTreeRef: h,
             virtualFocus: f,
@@ -3182,7 +3212,7 @@
             j.Root.SetProperties({ ...R, layout: e });
           });
         const D = (0, s.Ue)(T, b.props.ref);
-        return (0, n.jsx)(g, {
+        return (0, n.jsx)(p, {
           tree: v ? null : j,
           disableFocusClasses: S || v,
           children: (0, n.jsx)(a.TJ.Provider, {
@@ -3195,13 +3225,13 @@
           }),
         });
       }
-      const p = o.createContext({
+      const h = o.createContext({
         bActiveTree: !1,
         bActiveTreeWithinContext: !1,
         bDisableFocusClasses: !1,
         bIsMounted: !1,
       });
-      function g(e) {
+      function p(e) {
         const { tree: t, disableFocusClasses: r = !1, children: s } = e,
           [a, l] = o.useState(t?.BIsActive() || !1),
           [c, u] = o.useState(t?.BIsActiveWithinContext() || !1),
@@ -3226,10 +3256,10 @@
           }),
           [a, r, c, d],
         );
-        return (0, n.jsx)(p.Provider, { value: m, children: s });
+        return (0, n.jsx)(h.Provider, { value: m, children: s });
       }
-      function _() {
-        return o.useContext(p);
+      function g() {
+        return o.useContext(h);
       }
     },
     21109: (e, t, r) => {
@@ -4031,7 +4061,8 @@
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
           (e[(e.APPLICATION = 2)] = "APPLICATION"),
-          (e[(e.BROWSER = 3)] = "BROWSER");
+          (e[(e.BROWSER = 3)] = "BROWSER"),
+          (e[(e.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(n || (n = {}));
       i.pR.OK, i.pR.CANCEL, i.pR.SECONDARY, i.pR.OPTIONS, i.pR.START;
       function s(e, t, r) {
@@ -5392,14 +5423,21 @@
                 c = this.FindNextFocusableChildInDirection(r, t, e);
               }
             } else if (i == W.PREFERRED_CHILD) {
-              for (const t of this.m_rgChildren)
-                if (
-                  ((c = t.BWantsPreferredFocus()
-                    ? t.FindFocusableNode(e)
-                    : void 0),
-                  c)
-                )
-                  return c;
+              let t = this.m_rgChildren;
+              for (; t.length; ) {
+                let r = [];
+                for (const n of t) {
+                  if (
+                    ((c = n.BWantsPreferredFocus()
+                      ? n.FindFocusableNode(e)
+                      : void 0),
+                    c)
+                  )
+                    return c;
+                  r.push(...n.m_rgChildren);
+                }
+                t = r;
+              }
             } else
               i == W.LAST &&
                 (c = this.FindNextFocusableChildInDirection(
@@ -5822,69 +5860,72 @@
                 N(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
-            (function (e, t) {
-              const r = e.Element;
-              if (!r) return;
-              let n = [
-                { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
-              ];
-              for (let t = e.Parent; t; t = t.Parent) {
-                const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
-                  r = t.m_Properties?.scrollIntoViewType;
-                if (e) {
-                  const i = { node: t, eScrollType: r };
-                  "force" === e ? (n = [i]) : n.push(i);
+            this.m_Tree.BIsActive() &&
+              (function (e, t) {
+                const r = e.Element;
+                if (!r) return;
+                let n = [
+                  { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
+                ];
+                for (let t = e.Parent; t; t = t.Parent) {
+                  const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
+                    r = t.m_Properties?.scrollIntoViewType;
+                  if (e) {
+                    const i = { node: t, eScrollType: r };
+                    "force" === e ? (n = [i]) : n.push(i);
+                  }
+                  if (void 0 !== r)
+                    for (
+                      let e = n.length - 1;
+                      e >= 0 && void 0 === n[e].eScrollType;
+                      e--
+                    )
+                      n[e].eScrollType = r;
                 }
-                if (void 0 !== r)
-                  for (
-                    let e = n.length - 1;
-                    e >= 0 && void 0 === n[e].eScrollType;
-                    e--
+                for (; n.length; ) {
+                  let { node: r, eScrollType: i } = n.pop(),
+                    s = 0 == n.length;
+                  if (
+                    (void 0 === i && (i = y ? U.NoTransform : U.Standard),
+                    r?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
                   )
-                    n[e].eScrollType = r;
-              }
-              for (; n.length; ) {
-                let { node: r, eScrollType: i } = n.pop(),
-                  s = 0 == n.length;
-                if (
-                  (void 0 === i && (i = y ? U.NoTransform : U.Standard),
-                  r?.m_Properties?.fnScrollIntoViewHandler &&
-                    !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
-                )
-                  continue;
-                const o = r.m_element,
-                  a =
-                    i == U.NoTransform || i == U.NoTransformSparseContent || !s;
-                if (t) {
-                  const t = a ? x(o) : o.getBoundingClientRect();
-                  let r = !1;
-                  const n = Math.max(1.4 * (t.bottom - t.top), 40),
-                    i = B && performance.now() - B < 500;
-                  (i ||
-                    t.bottom < -n ||
-                    t.top > o.ownerDocument.defaultView.innerHeight + n) &&
-                    ((r = !0),
-                    i ||
-                      v(
-                        `Disabling smooth scrolling, ${t.bottom} < ${-n}, ${t.top} > ${o.ownerDocument.defaultView.innerHeight} + ${n} `,
-                      ));
-                  let s = r ? "auto" : "smooth";
-                  r && (B = performance.now()),
-                    e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
-                    a
-                      ? O(0, o, s)
-                      : o.scrollIntoView({ behavior: s, block: "nearest" });
-                } else
-                  v("No previous element for scrolling, will jump"),
-                    a
-                      ? O(0, o, "auto")
-                      : o?.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, t);
+                    continue;
+                  const o = r.m_element,
+                    a =
+                      i == U.NoTransform ||
+                      i == U.NoTransformSparseContent ||
+                      !s;
+                  if (t) {
+                    const t = a ? x(o) : o.getBoundingClientRect();
+                    let r = !1;
+                    const n = Math.max(1.4 * (t.bottom - t.top), 40),
+                      i = B && performance.now() - B < 500;
+                    (i ||
+                      t.bottom < -n ||
+                      t.top > o.ownerDocument.defaultView.innerHeight + n) &&
+                      ((r = !0),
+                      i ||
+                        v(
+                          `Disabling smooth scrolling, ${t.bottom} < ${-n}, ${t.top} > ${o.ownerDocument.defaultView.innerHeight} + ${n} `,
+                        ));
+                    let s = r ? "auto" : "smooth";
+                    r && (B = performance.now()),
+                      e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
+                      a
+                        ? O(0, o, s)
+                        : o.scrollIntoView({ behavior: s, block: "nearest" });
+                  } else
+                    v("No previous element for scrolling, will jump"),
+                      a
+                        ? O(0, o, "auto")
+                        : o?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, t);
         }
       }
       (0, n.Cg)([l.o], V.prototype, "OnDOMFocus", null),
@@ -6243,6 +6284,24 @@
         n(!1, t, ...r);
       }
       r.d(t, { v8: () => i, wT: () => n, z_: () => s });
+    },
+    20737: (e, t, r) => {
+      "use strict";
+      async function n(e, t = "SHA-256") {
+        let r;
+        var n;
+        "string" == typeof e
+          ? ((n = e), (r = new TextEncoder().encode(n).buffer))
+          : (r = e);
+        return (function (e) {
+          const t = new Uint8Array(e);
+          let r = "";
+          for (let e = 0; e < t.length; e++)
+            r += ("00" + t[e].toString(16)).slice(-2);
+          return r;
+        })(await window.crypto.subtle.digest(t, r));
+      }
+      r.d(t, { C: () => n });
     },
     6419: (e, t, r) => {
       "use strict";
@@ -10446,6 +10505,11 @@
                     n: 3,
                     br: s.qM.readInt32,
                     bw: s.gp.writeInt32,
+                  },
+                  framegen_frame_rate: {
+                    n: 4,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
                   },
                 },
               }),
@@ -16825,7 +16889,7 @@
         i = r(8871);
       function s(e, t, r, i) {
         n.useEffect(() => {
-          const n = e?.current;
+          const n = e && "current" in e ? e.current : e;
           if (n && r)
             return (
               n.addEventListener(t, r, i), () => n.removeEventListener(t, r)
@@ -21100,7 +21164,7 @@
         }
       })();
     },
-    26317: (e, t, r) => {
+    17204: (e, t, r) => {
       "use strict";
       r.d(t, { aj: () => R });
       var n = r(90626),
@@ -21108,22 +21172,8 @@
         s = r(59134),
         o = r(84811),
         a = r(61859),
-        l = r(42865);
-      async function c(e, t = "SHA-256") {
-        let r;
-        var n;
-        "string" == typeof e
-          ? ((n = e), (r = new TextEncoder().encode(n).buffer))
-          : (r = e);
-        const i = await window.crypto.subtle.digest(t, r);
-        return (
-          (s = i),
-          Array.prototype.map
-            .call(new Uint8Array(s), (e) => ("00" + e.toString(16)).slice(-2))
-            .join("")
-        );
-        var s;
-      }
+        l = r(42865),
+        c = r(20737);
       const u =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
       let d,
@@ -21510,7 +21560,7 @@
         };
       async function T(e) {
         try {
-          return (await c(e)).slice(0, 16);
+          return (await c.C(e)).slice(0, 16);
         } catch (e) {
           return "";
         }
@@ -30131,48 +30181,20 @@
       "use strict";
       r.d(t, {
         mt: () => n.mt,
-        Qs: () => d,
-        o0: () => m.o0,
-        eV: () => h.eV,
-        KG: () => m.KG,
-        Ee: () => m.Ee,
-        x_: () => p.x_,
+        o0: () => i.o0,
+        eV: () => s.eV,
+        KG: () => i.KG,
+        Ee: () => i.Ee,
+        x_: () => o.x_,
         of: () => n.of,
-        EN: () => g.E,
+        EN: () => a.E,
       });
-      var n = r(83882),
-        i = (r(81194), r(7850)),
-        s = r(85585),
-        o = r(7445),
-        a = r(76217),
-        l = r(90626),
-        c = r(78327),
-        u = r(88843);
-      function d(e) {
-        const { children: t, navID: r, closeModal: n } = e,
-          d = l.createRef(),
-          m = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return (0, c.Qn)() && !c.TS.IN_STEAMUI
-          ? (0, i.jsx)(s.B2, {
-              navID: r,
-              navTreeRef: d,
-              onCancelButton: n,
-              className: u.GamepadOnlyModalWrapper,
-              children: (0, i.jsx)(o.q, {
-                children: (0, i.jsx)(a.Z, {
-                  className: u.GamepadOnlyPanelWrapper,
-                  onGamepadDirection: m,
-                  focusableIfEmpty: !0,
-                  children: t,
-                }),
-              }),
-            })
-          : (0, i.jsx)(i.Fragment, { children: t });
-      }
-      var m = r(78395),
-        h = r(10411),
-        p = (r(76222), r(2654)),
-        g = r(21869);
+      var n = r(83882);
+      r(81194), r(7850), r(90626);
+      var i = r(78395),
+        s = r(10411),
+        o = (r(76222), r(2654)),
+        a = r(21869);
     },
     78025: (e, t, r) => {
       "use strict";
@@ -36298,7 +36320,6 @@
       class l {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-        static s_Singleton = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
@@ -36319,8 +36340,12 @@
         }
         async LoadSettings() {
           const e = (e) => {
-            const t = localStorage.getItem(e);
-            return t ? JSON.parse(t) : void 0;
+            try {
+              const t = localStorage.getItem(e);
+              return t ? JSON.parse(t) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!e(
             l.k_IncludeBacktraceInLog_StorageKey,
@@ -36350,15 +36375,21 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(...e) {
+          e &&
+            e.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            null == l.s_Singleton && (l.s_Singleton = new l()), l.s_Singleton
+            null == window.g_LogManager && (window.g_LogManager = new l()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -36380,11 +36411,19 @@
           this.SetDebugLogEnabled(e, !this.IsDebugLogEnabled(e));
         }
         async SetDebugLogEnabled(e, t) {
-          t
-            ? this.m_setEnabledDebugLogs.add(e)
-            : this.m_setEnabledDebugLogs.delete(e),
-            this.m_SettingsChangedCallback.Dispatch(),
-            await this.SaveSettings();
+          this.IsLogName(e)
+            ? (t
+                ? this.m_setEnabledDebugLogs.add(e)
+                : this.m_setEnabledDebugLogs.delete(e),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings())
+            : console.warn(
+                `No log named "${e}", available logs:`,
+                this.GetLogNames(),
+              );
+        }
+        async SetDebugLogsEnabled(e, ...t) {
+          t.forEach((t) => this.SetDebugLogEnabled(t, e));
         }
         async SetAllDebugLogsEnabled(e) {
           (this.m_setEnabledDebugLogs = e
@@ -36403,6 +36442,9 @@
           (this.m_bIncludeBacktraceInLog = e),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
         }
       }
       function c(e, t, r, i, s, ...o) {
@@ -36469,28 +36511,17 @@
                 : console.error(...h);
           }
       }
-      const u = () => [...l.Get().LogNames].sort(),
-        d = (e, t) => {
-          l.Get().IsLogName(e)
-            ? l.Get().SetDebugLogEnabled(e, t)
-            : console.warn(`No log named "${e}", available logs:`, u());
-        };
-      (window.DebugLogEnable = (...e) => e.forEach((e) => d(e, !0))),
-        (window.DebugLogDisable = (...e) => e.forEach((e) => d(e, !1))),
+      (window.DebugLogEnable = (...e) => l.Get().SetDebugLogsEnabled(!0, ...e)),
+        (window.DebugLogDisable = (...e) =>
+          l.Get().SetDebugLogsEnabled(!1, ...e)),
         (window.DebugLogEnableAll = () => l.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => l.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
           l.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
           l.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = u),
-        (window.DebugLogEnabled = (...e) => {
-          e.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            l.Get().PrintEnabledLogs();
-        }),
+        (window.DebugLogNames = () => l.Get().GetLogNames()),
+        (window.DebugLogEnabled = (...e) => l.Get().PrintEnabledLogs(...e)),
         (window.EnableSteamConsole = (e = !0) =>
           l.Get().SetDebugLogEnabled("SteamClient", e));
     },

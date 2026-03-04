@@ -5340,6 +5340,25 @@ function InitAutoCollapseReadMore( elTargets )
 
 
 let g_bUseNavigationAPI = !!( typeof window != 'undefined' && window.navigation );
+let g_bBoundNavEvent = false;
+
+function BindNavEvent()
+{
+	if ( !g_bBoundNavEvent )
+	{
+		window.navigation.addEventListener('navigate', function (e)
+		{
+			if ( e.info == 'local' )
+			{
+				e.intercept({
+					async handler() {
+											},
+				});
+			}
+		});
+		g_bBoundNavEvent = true;
+	}
+}
 
 /**
  * Update history state, either the browser history API or navigation API, whichever we are using.
@@ -5369,7 +5388,8 @@ function ReplaceHistoryURL( url /*: string | URL */ )
 	{
 		if ( window.navigation.currentEntry.url != strURL )
 		{
-			window.navigation.navigate( strURL, { state: window.navigation.currentEntry.getState(), history: "replace" } );
+			BindNavEvent();
+			window.navigation.navigate( strURL, { state: window.navigation.currentEntry.getState(), history: "replace", info: "local" } );
 		}
 	}
 	else
@@ -5390,7 +5410,8 @@ function ReplaceHistoryStateAndURL( fnUpdater /*: ( state: T ) => T*/, url /*: s
 	let newState = fnUpdater( GetHistoryState() );
 	if ( g_bUseNavigationAPI )
 	{
-		window.navigation.navigate( typeof url == "string" ? url : url.toString(), { state: newState, history: bPushState ? "push" : "replace" } );
+		BindNavEvent();
+		window.navigation.navigate( typeof url == "string" ? url : url.toString(), { state: newState, history: bPushState ? "push" : "replace", info: "local" } );
 	}
 	else
 	{

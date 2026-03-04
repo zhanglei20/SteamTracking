@@ -800,8 +800,6 @@
         BodyNoScroll: "_1Xs5dtPK2K37sd1U9BLX3S",
         BodyNoScrollDialog: "_3jhMIr8hczcBK_fOVtEVOK",
         OverlayModal: "_24YFXIVY7CC2quNzCN7015",
-        GamepadOnlyModalWrapper: "_1GlTsstfPZWsQc4umFIvrX",
-        GamepadOnlyPanelWrapper: "_1aY-rmUi48QSw7U1ZWa5DZ",
         ModalDialog: "_32QRvPPBL733SpNR9x0Gp3",
       };
     },
@@ -1235,16 +1233,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ["initial", "sm", "md", "lg"],
-        _ = (0, _.createContext)("lg");
+        _ = (0, _.createContext)({
+          _: 768,
+          _: 940,
+          _: 1240,
+          _: "lg",
+        });
       function _(_) {
-        const {
-            children: _,
-            breakpoints: __webpack_require__ = {
-              _: 768,
-              _: 940,
-              _: 1240,
-            },
-          } = _,
+        const { children: _, breakpoints: __webpack_require__ = {} } = _,
+          _ = (0, _.useContext)(_),
+          _ = {
+            _: __webpack_require__._ ?? _._,
+            _: __webpack_require__._ ?? _._,
+            _: __webpack_require__._ ?? _._,
+          },
           _ = (function (_) {
             const _ = (0, _._)(`(min-width: ${_._}px)`),
               _ = (0, _._)(`(min-width: ${_._}px)`),
@@ -1254,14 +1256,32 @@
               (0, _.useEffect)(() => _(!0), []),
               _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
             );
-          })(__webpack_require__);
+          })(_),
+          { _: _, _: _, _: _ } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+            }),
+            [_, _, _, _],
+          );
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: _,
         });
       }
       function _(_) {
-        const { formFactor: _, children: __webpack_require__ } = _;
+        const { formFactor: _, children: __webpack_require__ } = _,
+          _ = (0, _.useContext)(_),
+          _ = (0, _.useMemo)(
+            () => ({
+              ..._,
+              _: _ ?? _._,
+            }),
+            [_, _],
+          );
         return _
           ? (0, _.jsx)(_.Provider, {
               value: _,
@@ -1272,7 +1292,7 @@
             });
       }
       function _() {
-        return (0, _.useContext)(_);
+        return (0, _.useContext)(_)._;
       }
       _.reduce((_, _, _) => ((_[_] = _), _), {});
     },
@@ -1304,26 +1324,33 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const {
-          accentColor: _,
-          dullColor: __webpack_require__,
-          bodyTextColor: _,
-          children: _,
-        } = _;
-        return (0, _.jsx)("div", {
-          "data-accent-color": _,
-          "data-dull-color": __webpack_require__,
-          "data-body-text-color": _,
-          style: {
-            display: "contents",
-          },
-          children: (0, _.jsx)("div", {
+            accentColor: _,
+            dullColor: __webpack_require__,
+            bodyTextColor: _,
+            children: _,
+            breakpoints: _,
+          } = _,
+          _ = (0, _.jsx)("div", {
+            "data-accent-color": _,
+            "data-dull-color": __webpack_require__,
+            "data-body-text-color": _,
             style: {
               display: "contents",
-              color: "var(--color-text-body-body)",
             },
-            children: _,
-          }),
-        });
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: _,
+            }),
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              breakpoints: _,
+              children: _,
+            })
+          : _;
       }
       const _ = _.memo(function (_) {
         const {
@@ -1782,6 +1809,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = 1,
         _ = 4,
@@ -1791,7 +1821,10 @@
         _ = 250820,
         _ = 330050,
         _ = 358510,
-        _ = 366490;
+        _ = 366490,
+        _ = 730,
+        _ = 710,
+        _ = 268440;
       const _ = "18446744073709551615";
       function _(_, _ = "en") {
         switch (_) {
@@ -2224,8 +2257,7 @@
         (function (_) {
           (_[(_.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (_[(_.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (_[(_.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
@@ -5202,14 +5234,21 @@
                 _ = this.FindNextFocusableChildInDirection(_, _, _);
               }
             } else if (_ == _.PREFERRED_CHILD) {
-              for (const _ of this.m_rgChildren)
-                if (
-                  ((_ = _.BWantsPreferredFocus()
-                    ? _.FindFocusableNode(_)
-                    : void 0),
-                  _)
-                )
-                  return _;
+              let _ = this.m_rgChildren;
+              for (; _.length; ) {
+                let _ = [];
+                for (const _ of _) {
+                  if (
+                    ((_ = _.BWantsPreferredFocus()
+                      ? _.FindFocusableNode(_)
+                      : void 0),
+                    _)
+                  )
+                    return _;
+                  __webpack_require__.push(..._.m_rgChildren);
+                }
+                _ = _;
+              }
             } else
               _ == _.LAST &&
                 (_ = this.FindNextFocusableChildInDirection(
@@ -5867,6 +5906,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -36518,7 +36558,7 @@
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         _.useEffect(() => {
-          const _ = _?.current;
+          const _ = _ && "current" in _ ? _.current : _;
           if (_ && _)
             return (
               _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
@@ -49928,6 +49968,11 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  framegen_frame_rate: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -50406,14 +50451,13 @@
         "string" == typeof _
           ? ((_ = _), (_ = new TextEncoder().encode(_).buffer))
           : (_ = _);
-        const _ = await window.crypto.subtle.digest(_, _);
-        return (
-          (_ = _),
-          Array.prototype.map
-            .call(new Uint8Array(_), (_) => ("00" + _.toString(16)).slice(-2))
-            .join("")
-        );
-        var _;
+        return (function (_) {
+          const _ = new Uint8Array(_);
+          let _ = "";
+          for (let _ = 0; _ < _.length; _++)
+            _ += ("00" + _[_].toString(16)).slice(-2);
+          return _;
+        })(await window.crypto.subtle.digest(_, _));
       }
       const _ =
         window.addEventListener ||
@@ -69294,7 +69338,6 @@
       class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-        static s_Singleton = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
@@ -69350,15 +69393,21 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(..._) {
+          _ &&
+            _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
+            null == window.g_LogManager && (window.g_LogManager = new _()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -69380,11 +69429,19 @@
           this.SetDebugLogEnabled(_, !this.IsDebugLogEnabled(_));
         }
         async SetDebugLogEnabled(_, _) {
-          _
-            ? this.m_setEnabledDebugLogs.add(_)
-            : this.m_setEnabledDebugLogs.delete(_),
-            this.m_SettingsChangedCallback.Dispatch(),
-            await this.SaveSettings();
+          this.IsLogName(_)
+            ? (_
+                ? this.m_setEnabledDebugLogs.add(_)
+                : this.m_setEnabledDebugLogs.delete(_),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings())
+            : console.warn(
+                `No log named "${_}", available logs:`,
+                this.GetLogNames(),
+              );
+        }
+        async SetDebugLogsEnabled(_, ..._) {
+          _.forEach((_) => this.SetDebugLogEnabled(_, _));
         }
         async SetAllDebugLogsEnabled(_) {
           (this.m_setEnabledDebugLogs = _
@@ -69403,6 +69460,9 @@
           (this.m_bIncludeBacktraceInLog = _),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
         }
       }
       function _(_, _, _, _, _, ..._) {
@@ -69469,28 +69529,17 @@
                 : console.error(..._);
           }
       }
-      const _ = () => [..._.Get().LogNames].sort(),
-        _ = (_, _) => {
-          _.Get().IsLogName(_)
-            ? _.Get().SetDebugLogEnabled(_, _)
-            : console.warn(`No log named "${_}", available logs:`, _());
-        };
-      (window.DebugLogEnable = (..._) => _.forEach((_) => _(_, !0))),
-        (window.DebugLogDisable = (..._) => _.forEach((_) => _(_, !1))),
+      (window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._)),
+        (window.DebugLogDisable = (..._) =>
+          _.Get().SetDebugLogsEnabled(!1, ..._)),
         (window.DebugLogEnableAll = () => _.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => _.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = _),
-        (window.DebugLogEnabled = (..._) => {
-          _.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            _.Get().PrintEnabledLogs();
-        }),
+        (window.DebugLogNames = () => _.Get().GetLogNames()),
+        (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },
@@ -70049,7 +70098,6 @@
         _: () => _._,
         _: () => _,
         _: () => _._,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _._,
@@ -71399,6 +71447,541 @@
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_GetWishlistCategories_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.categoryid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  categoryid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  name: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  item_count: {
+                    _: 3,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlistCategory";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.categories || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  categories: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_GetWishlistCategories_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_GetItemCategories_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.categories || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  categories: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_GetItemCategories_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  categoryid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  category_name: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_AddWishlistItemCategory_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.categoryid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  categoryid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  name: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  item_count: {
+                    _: 3,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_AddWishlistItemCategory_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  categoryid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_RemoveWishlistItemCategory_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CWishlist_RemoveWishlistItemCategory_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
           super(),
             _.prototype.macos_only || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [24, 25, 26], null);
@@ -71946,6 +72529,48 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetWishlistCategories = function (_, _) {
+            return _.SendMsg(
+              "Wishlist.GetWishlistCategories#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetItemCategories = function (_, _) {
+            return _.SendMsg(
+              "Wishlist.GetItemCategories#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.AddWishlistItemCategory = function (_, _) {
+            return _.SendMsg(
+              "Wishlist.AddWishlistItemCategory#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.RemoveWishlistItemCategory = function (_, _) {
+            return _.SendMsg(
+              "Wishlist.RemoveWishlistItemCategory#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
               },
             );
           });
@@ -73805,12 +74430,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -74176,146 +74799,37 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _,
-            role: __webpack_require__,
-            visible: _ = !0,
-            className: _,
-            keepMounted: _ = !1,
-            expandDirection: _ = "height",
-            msAnimationDuration: _ = 250,
-            children: _,
-          } = _,
-          {
-            style: _,
-            active: _,
-            refDiv: _,
-          } = (function (_, _ = "height", __webpack_require__ = 250) {
-            const _ = _.useRef(null),
-              _ = _.useRef(!0),
-              [_, _] = _.useState("idle"),
-              [_, _] = _.useState(
-                _
-                  ? {}
-                  : {
-                      [_]: "0px",
-                      overflow: "hidden",
-                    },
-              ),
-              [_, _] = _.useState(_);
-            _.useLayoutEffect(() => {
-              _.current || _("start"), _ && _(_);
-            }, [_]),
-              _.useLayoutEffect(
-                () => (
-                  (_.current = !1),
-                  () => {
-                    _.current = !0;
-                  }
-                ),
-                [],
-              ),
-              _.useLayoutEffect(() => {
-                const _ = _.current,
-                  _ = "height" == _ ? "scrollHeight" : "scrollWidth",
-                  _ = () => {
-                    _.unstable_batchedUpdates(() => {
-                      _(
-                        _
-                          ? {}
-                          : {
-                              [_]: "0px",
-                              overflow: "hidden",
-                            },
-                      ),
-                        _("idle"),
-                        _(_);
-                    });
-                  };
-                if ("start" == _) {
-                  const _ = _[_];
-                  0 == _
-                    ? _()
-                    : (_((_) => ({
-                        [_]: _ ? "0px" : `${_}px`,
-                        ..._,
-                        overflow: "hidden",
-                      })),
-                      _("active"));
-                } else if ("active" == _) {
-                  _.scrollTop;
-                  const _ = _[_];
-                  return (
-                    _({
-                      overflow: "hidden",
-                      [_]: _ ? `${_}px` : "0px",
-                    }),
-                    __webpack_require__.addEventListener("transitionend", _),
-                    () => {
-                      __webpack_require__.removeEventListener(
-                        "transitionend",
-                        _,
-                      );
-                    }
-                  );
-                }
-              }, [_, _]);
-            const _ = {
-              ..._,
-              transition: `${_} ${__webpack_require__}ms`,
-            };
-            return {
-              style: _,
-              active: _,
-              refDiv: _,
-            };
-          })(_, _, _);
-        return _ || _ || _
-          ? (0, _.jsx)("div", {
-              _: _,
-              role: __webpack_require__,
-              className: _,
-              ref: _,
-              style: _,
-              inert: !_,
-              children: _,
-            })
-          : null;
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _ = {}) {
-        const {
-            nTimeoutMS: __webpack_require__ = 350,
-            nTimeoutExtensionMS: _ = 125,
-            nMaxTimeoutExtensions: _ = 3,
-          } = _,
-          [_, _] = _.useState(_),
-          _ = _.useRef(void 0);
-        return (
-          _.useEffect(() => {
-            const _ = performance.now();
-            _.current
-              ? _ - _.current.tsLastChange < _ * __webpack_require__ &&
-                (_.current.tsScheduledTimeout = Math.max(
-                  performance.now() + _,
-                  _.current.tsScheduledTimeout,
-                ))
-              : (_.current = {
-                  tsLastChange: _,
-                  tsScheduledTimeout: performance.now() + __webpack_require__,
-                });
-            const _ = _.current.tsScheduledTimeout - performance.now(),
-              _ = window.setTimeout(() => {
-                (_.current = void 0), _(_);
-              }, _);
-            return () => window.clearTimeout(_);
-          }, [_, __webpack_require__, _, _]),
-          _
-        );
+      function _(_, _, _, _, _) {
+        return {
+          queryKey: ["StoreQuery", _],
+          queryFn: () =>
+            (async function (_, _, _, _, _) {
+              const _ = _._.Init(_._);
+              (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
+              _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
+              const _ = await _._.Query(_, _);
+              if (1 != _.GetEResult())
+                throw `Error executing StoreQuery "${_}": ${_.GetErrorMessage()}`;
+              _ &&
+                _.Body()
+                  .store_items()
+                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
+              return {
+                rgItemIDs: _.Body().ids().map(_._),
+                metadata: _.Body().metadata().toObject(),
+              };
+            })(_, _, _, _, _),
+          staleTime: 6e5,
+        };
       }
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -74367,2260 +74881,7 @@
       function _(_) {
         return ["StorePreferencesQueryKey", _ ?? 0];
       }
-      function _(_) {
-        return {
-          content_descriptors_excluded: _,
-        };
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.recent_apps || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  recent_apps: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisitData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.item_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  item_id: {
-                    _: 1,
-                    _: _._,
-                  },
-                  time_visit: {
-                    _: 2,
-                    _: _._.readFixed32,
-                    _: _._.writeFixed32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisitData_RecentApps";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisit_GetFrequentlyVisitedPages_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.visit_data || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  visit_data: {
-                    _: 1,
-                    _: _,
-                  },
-                  frequent_hubs: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisit_GetFrequentlyVisitedPages_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.item_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  item_id: {
-                    _: 1,
-                    _: _._,
-                  },
-                  time_visit: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  visit_count: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisit_GetFrequentlyVisitedPages_Response_FrequentHubs";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.context || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  context: {
-                    _: 1,
-                    _: _._,
-                  },
-                  data_request: {
-                    _: 2,
-                    _: _._,
-                  },
-                  count: {
-                    _: 3,
-                    _: 10,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisit_GetMostVisitedItemsOnStore_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.item_ids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  item_ids: {
-                    _: 1,
-                    _: _._,
-                    _: !0,
-                    _: !0,
-                  },
-                  items: {
-                    _: 2,
-                    _: _._,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisit_GetMostVisitedItemsOnStore_Response";
-        }
-      }
-      var _;
-      !(function (_) {
-        (_.GetFrequentlyVisitedPages = function (_, _) {
-          return _.SendMsg(
-            "UserStoreVisit.GetFrequentlyVisitedPages#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            },
-          );
-        }),
-          (_.GetMostVisitedItemsOnStore = function (_, _) {
-            return _.SendMsg(
-              "UserStoreVisit.GetMostVisitedItemsOnStore#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 2,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          });
-      })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
-      function _(_ = !0) {
-        const _ = (function (_, _, _, _) {
-          return {
-            queryKey: ["StoreFrequentlyVisitedHubs", _],
-            queryFn: async () => {
-              const [_, _] = await Promise.all([
-                _.fetchQuery(_(_, _)),
-                _.fetchQuery(
-                  (0, _._)(_, _, _, _._.excluded_content_descriptors),
-                ),
-              ]);
-              return (_.frequent_hubs || [])
-                .map((_) =>
-                  _.item_id.hubcategoryid
-                    ? {
-                        ..._,
-                        hubconfig: _.get(_.item_id.hubcategoryid),
-                      }
-                    : _.item_id.tagid
-                      ? {
-                          ..._,
-                          tagid: _.item_id.tagid,
-                        }
-                      : null,
-                )
-                .filter(
-                  (_) =>
-                    _ &&
-                    (("hubconfig" in _ && _.hubconfig) ||
-                      ("tagid" in _ && _.tagid)),
-                );
-            },
-            enabled: !!_,
-            initialData: _ ? void 0 : [],
-            staleTime: 6e5,
-          };
-        })((0, _._)(), (0, _._)(), (0, _._)(), (0, _._)());
-        return (0, _._)({
-          ..._,
-          enabled: _.enabled && _,
-        });
-      }
-      function _(_, _) {
-        return {
-          queryKey: ["StoreFrequentlyVisited", _],
-          queryFn: () =>
-            (async function (_) {
-              const _ = _._.Init(_),
-                _ = await _.GetFrequentlyVisitedPages(_, _);
-              if (!__webpack_require__.BSuccess())
-                throw __webpack_require__.GetErrorMessage();
-              return __webpack_require__.Body().toObject();
-            })(_),
-          enabled: !!_ && "0" != _,
-          staleTime: 6e5,
-        };
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = JSON.parse(`[
-	{
-		"rgTagIDs": [
-			19
-		],
-		"id": "action",
-		"strLocToken": "#ContentHubby_Hub_action_menu",
-		"strSalePageURL": "category/action"
-	},
-	{
-		"rgTagIDs": [
-			21
-		],
-		"id": "adventure",
-		"strLocToken": "#ContentHubby_Hub_adventure_menu",
-		"strSalePageURL": "category/adventure"
-	},
-	{
-		"rgTagIDs": [
-			4085
-		],
-		"id": "anime",
-		"strLocToken": "#ContentHubby_Hub_anime_mild_menu",
-		"strSalePageURL": "category/anime"
-	},
-	{
-		"rgTagIDs": [
-			597
-		],
-		"id": "casual",
-		"strLocToken": "#ContentHubby_Hub_casual_menu",
-		"strSalePageURL": "category/casual"
-	},
-	{
-		"rgTagIDs": [
-			1695
-		],
-		"id": "exploration_open_world",
-		"strLocToken": "#ContentHubby_Hub_adventure_explore_open_world_menu",
-		"strSalePageURL": "category/exploration_open_world"
-	},
-	{
-		"rgTagIDs": [
-			4328,
-			4736,
-			6506
-		],
-		"id": "fighting_martial_arts",
-		"strLocToken": "#ContentHubby_Hub_fighting_menu",
-		"strSalePageURL": "category/fighting_martial_arts"
-	},
-	{
-		"rgTagIDs": [
-			1667
-		],
-		"id": "horror",
-		"strLocToken": "#ContentHubby_Hub_horror_menu",
-		"strSalePageURL": "category/horror"
-	},
-	{
-		"rgTagIDs": [
-			1685
-		],
-		"id": "multiplayer_coop",
-		"strLocToken": "#ContentHubby_Hub_multiplayer_coop_menu",
-		"strSalePageURL": "category/multiplayer_coop"
-	},
-	{
-		"rgTagIDs": [
-			1664,
-			5537,
-			1665
-		],
-		"id": "puzzle_matching",
-		"strLocToken": "#ContentHubby_Hub_puzzle_menu",
-		"strSalePageURL": "category/puzzle_matching/"
-	},
-	{
-		"rgTagIDs": [
-			699,
-			4102
-		],
-		"id": "racing",
-		"strLocToken": "#ContentHubby_Hub_racing_menu",
-		"strSalePageURL": "category/racing"
-	},
-	{
-		"rgTagIDs": [
-			42804
-		],
-		"id": "rogue_like_rogue_lite",
-		"strLocToken": "#ContentHubby_Hub_rogue_like_rogue_lite_menu",
-		"strSalePageURL": "category/rogue_like_rogue_lite"
-	},
-	{
-		"rgTagIDs": [
-			112,
-			4434,
-			4231
-		],
-		"id": "rpg",
-		"strLocToken": "#ContentHubby_Hub_rpg_menu",
-		"strSalePageURL": "category/rpg"
-	},
-	{
-		"rgTagIDs": [
-			3942
-		],
-		"id": "science_fiction",
-		"strLocToken": "#ContentHubby_Hub_science_fiction_menu",
-		"strSalePageURL": "category/science_fiction"
-	},
-	{
-		"rgTagIDs": [
-			599,
-			12472
-		],
-		"id": "simulation",
-		"strLocToken": "#ContentHubby_Hub_simulation_menu",
-		"strSalePageURL": "category/simulation"
-	},
-	{
-		"rgTagIDs": [
-			701
-		],
-		"id": "sports",
-		"strLocToken": "#ContentHubby_Hub_sports_menu",
-		"strSalePageURL": "category/sports"
-	},
-	{
-		"rgTagIDs": [
-			1742
-		],
-		"id": "story_rich",
-		"strLocToken": "#ContentHubby_Hub_interactive_fiction_menu",
-		"strSalePageURL": "category/story_rich"
-	},
-	{
-		"rgTagIDs": [
-			9,
-			1670,
-			1676
-		],
-		"id": "strategy",
-		"strLocToken": "#ContentHubby_Hub_strategy_menu",
-		"strSalePageURL": "category/strategy"
-	},
-	{
-		"rgTagIDs": [
-			9,
-			4328,
-			220585
-		],
-		"id": "strategy_cities_settlements",
-		"strLocToken": "#ContentHubby_Hub_sim_cities_settlements_menu",
-		"strSalePageURL": "category/strategy_cities_settlements"
-	},
-	{
-		"rgTagIDs": [
-			1662
-		],
-		"id": "survival",
-		"strLocToken": "#ContentHubby_Hub_survival_menu",
-		"strSalePageURL": "category/survival"
-	},
-	{
-		"rgTagIDs": [
-			3799
-		],
-		"id": "visual_novel",
-		"strLocToken": "#ContentHubby_Hub_visual_novel_menu",
-		"strSalePageURL": "category/visual_novel"
-	},
-	{
-		"rgTagIDs": [
-			113
-		],
-		"id": "freetoplay",
-		"strLocToken": "#ContentHubby_Hub_free_to_play",
-		"strSalePageURL": "genre/Free%20to%20Play"
-	},
-	{
-		"rgTagIDs": [
-			113
-		],
-		"id": "earlyaccess",
-		"strLocToken": "#genre_early_access",
-		"strSalePageURL": "genre/Early%20Access"
-	}
-]`),
-        _ = {};
-      (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 83190, 19))),
-        (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66864, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 6383, 19))),
-        (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 26818, 19))),
-        (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15063, 19))),
-        (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45200, 19))),
-        (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72022, 19))),
-        (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 57493, 19))),
-        (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 55206, 19))),
-        (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 39320, 19))),
-        (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 52730, 19))),
-        (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24315, 19))),
-        (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 13018, 19))),
-        (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24726, 19))),
-        (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66969, 19))),
-        (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 14945, 19))),
-        (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15801, 19))),
-        (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97218, 19))),
-        (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21511, 19))),
-        (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53803, 19))),
-        (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 91905, 19))),
-        (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 77027, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44649, 19))),
-        (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 9338, 19))),
-        (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 19142, 19))),
-        (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 22559, 19))),
-        (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51753, 19))),
-        (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24388, 19))),
-        (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44342, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84512, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 81657, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
-      function _() {
-        const _ = _.Localize;
-        return _.map((_) => ({
-          ..._,
-          strName: _(_.strLocToken),
-        }));
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _(),
-          { data: __webpack_require__ } = (function () {
-            const _ = _(),
-              _ = (0, _._)(),
-              _ = (0, _._)();
-            return (0, _._)({
-              queryKey: ["AppIDsInCart", _],
-              queryFn: async () => {
-                const _ = await Promise.all(
-                    _.map((_) =>
-                      __webpack_require__.fetchQuery((0, _._)(_, _)),
-                    ),
-                  ),
-                  _ = new Set();
-                return (
-                  _.forEach((_) => _.included_appids?.forEach((_) => _.add(_))),
-                  _
-                );
-              },
-              enabled: void 0 !== _,
-            });
-          })();
-        return _
-          ? "appid" in _
-            ? __webpack_require__?.has(_.appid)
-            : "packageid" in _
-              ? _?.some((_) => "packageid" in _ && _.packageid == _.packageid)
-              : "bundleid" in _ &&
-                _?.some((_) => "bundleid" in _ && _.bundleid == _.bundleid)
-          : void 0;
-      }
-      function _() {
-        const { data: _ } = (0, _._)();
-        return _.useMemo(
-          () =>
-            _?.line_items?.map((_) =>
-              _.packageid
-                ? {
-                    packageid: _.packageid,
-                  }
-                : {
-                    bundleid: _.bundleid,
-                  },
-            ),
-          [_],
-        );
-      }
-      function _(_) {
-        const { children: _, collapse: __webpack_require__ } = _,
-          _ = "itemid" in _ ? _.itemid : void 0,
-          { data: _ } = (0, _._)(_),
-          _ = _(_),
-          _ = "itemid" in _ ? _ : _.filterFailures;
-        let _;
-        if (
-          (_
-            ? (_ = (0, _.jsx)(_, {}))
-            : _?.excluded_content_descriptorids?.length
-              ? (_ = (0, _.jsx)(_, {}))
-              : _?.ignored
-                ? (_ = (0, _.jsx)(_, {}))
-                : _?.already_owned
-                  ? (_ = (0, _.jsx)(_, {}))
-                  : _?.on_wishlist && (_ = (0, _.jsx)(_, {})),
-          !_)
-        )
-          return _;
-        const { className: _, children: _, ..._ } = _.props,
-          _ = _()(_, _.ds_flagged, __webpack_require__ && _.ds_collapse_flag);
-        return _.cloneElement(
-          _,
-          {
-            ..._,
-            className: _,
-          },
-          _,
-          _,
-        );
-      }
-      function _(_) {
-        const { className: _, svg: __webpack_require__, children: _ } = _;
-        return (0, _.jsxs)("div", {
-          className: _()(_.ds_flag, _),
-          children: [
-            __webpack_require__,
-            (0, _.jsx)("div", {
-              className: _.ds_label,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _() {
-        return (0, _.jsx)(_, {
-          className: _.ds_owned_flag,
-          svg: (0, _.jsx)(_, {}),
-          children: _("#ItemFlag_InLibrary"),
-        });
-      }
-      function _() {
-        return (0, _.jsx)(_, {
-          className: _.ds_wishlist_flag,
-          svg: (0, _.jsx)(_, {}),
-          children: _("#ItemFlag_OnWishlist"),
-        });
-      }
-      function _() {
-        return (0, _.jsx)(_, {
-          className: _.ds_incart_flag,
-          svg: (0, _.jsx)(_, {}),
-          children: _("#ItemFlag_InCart"),
-        });
-      }
-      function _() {
-        return (0, _.jsx)(_, {
-          className: _.ds_ignored_flag,
-          svg: (0, _.jsx)(_, {}),
-          children: _("#ItemFlag_Ignored"),
-        });
-      }
-      function _() {
-        return (0, _.jsx)(_, {
-          className: _.ds_excluded_by_preferences_flag,
-          svg: (0, _.jsx)(_, {}),
-          children: _("#ItemFlag_ExcludedByPreferences"),
-        });
-      }
-      function _() {
-        return (0, _.jsx)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 15 14",
-          fill: "none",
-          children: (0, _.jsx)("path", {
-            fill: "currentColor",
-            _: "M14 3H1V1H14V3ZM14 6H1V8H14V6ZM14 11H1V13H14V11Z",
-          }),
-        });
-      }
-      function _() {
-        return (0, _.jsx)("svg", {
-          width: "11",
-          height: "10",
-          viewBox: "0 0 11 10",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: (0, _.jsx)("path", {
-            _: "M5.31189 0.0504065L6.54671 3.85081H10.5427L7.30988 6.19959L8.5447 10L5.31189 7.65122L2.07907 10L3.31389 6.19959L0.0810761 3.85081H4.07706L5.31189 0.0504065Z",
-            fill: "currentColor",
-          }),
-        });
-      }
-      function _() {
-        return (0, _.jsx)("svg", {
-          width: "11",
-          height: "11",
-          viewBox: "0 0 11 11",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: (0, _.jsx)("path", {
-            _: "M10.2758 2.45971L9.20028 6.3586C9.14883 6.55507 9.03359 6.72888 8.87266 6.85277C8.71173 6.97665 8.51421 7.04358 8.31112 7.04304H4.50695C4.309 7.04324 4.11631 6.97935 3.95769 6.86093C3.79906 6.74252 3.68303 6.57593 3.62695 6.3861L2.31 2.45971H0.611115V1.23749H2.53C2.72203 1.23785 2.9091 1.2985 3.0648 1.41089C3.2205 1.52328 3.33697 1.68173 3.39778 1.86388L3.59945 2.47499L10.2758 2.45971ZM4.58334 8.26527C4.43225 8.26527 4.28456 8.31007 4.15894 8.394C4.03332 8.47794 3.93541 8.59724 3.8776 8.73683C3.81978 8.87641 3.80465 9.03 3.83413 9.17818C3.8636 9.32636 3.93635 9.46247 4.04319 9.5693C4.15002 9.67614 4.28613 9.74889 4.43431 9.77837C4.58249 9.80784 4.73608 9.79271 4.87566 9.7349C5.01525 9.67708 5.13455 9.57917 5.21849 9.45355C5.30242 9.32793 5.34723 9.18024 5.34723 9.02915C5.34723 8.82656 5.26675 8.63226 5.12349 8.489C4.98023 8.34575 4.78593 8.26527 4.58334 8.26527ZM8.25 8.26527C8.09892 8.26527 7.95123 8.31007 7.82561 8.394C7.69999 8.47794 7.60208 8.59724 7.54426 8.73683C7.48645 8.87641 7.47132 9.03 7.50079 9.17818C7.53027 9.32636 7.60302 9.46247 7.70985 9.5693C7.81668 9.67614 7.9528 9.74889 8.10098 9.77837C8.24916 9.80784 8.40275 9.79271 8.54233 9.7349C8.68191 9.67708 8.80122 9.57917 8.88515 9.45355C8.96909 9.32793 9.01389 9.18024 9.01389 9.02915C9.01389 8.82656 8.93341 8.63226 8.79016 8.489C8.6469 8.34575 8.4526 8.26527 8.25 8.26527Z",
-            fill: "currentColor",
-          }),
-        });
-      }
-      function _() {
-        return (0, _.jsxs)("svg", {
-          width: "11",
-          height: "10",
-          viewBox: "0 0 11 10",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: [
-            (0, _.jsx)("path", {
-              _: "M5 10C4.30833 10 3.65833 9.86875 3.05 9.60625C2.44167 9.34375 1.9125 8.9875 1.4625 8.5375C1.0125 8.0875 0.65625 7.55833 0.39375 6.95C0.13125 6.34167 0 5.69167 0 5C0 4.30833 0.13125 3.65833 0.39375 3.05C0.65625 2.44167 1.0125 1.9125 1.4625 1.4625C1.9125 1.0125 2.44167 0.65625 3.05 0.39375C3.65833 0.13125 4.30833 0 5 0C5.69167 0 6.34167 0.13125 6.95 0.39375C7.55833 0.65625 8.0875 1.0125 8.5375 1.4625C8.9875 1.9125 9.34375 2.44167 9.60625 3.05C9.86875 3.65833 10 4.30833 10 5C10 5.69167 9.86875 6.34167 9.60625 6.95C9.34375 7.55833 8.9875 8.0875 8.5375 8.5375C8.0875 8.9875 7.55833 9.34375 6.95 9.60625C6.34167 9.86875 5.69167 10 5 10ZM5 9C6.11667 9 7.0625 8.6125 7.8375 7.8375C8.6125 7.0625 9 6.11667 9 5C9 3.88333 8.6125 2.9375 7.8375 2.1625C7.0625 1.3875 6.11667 1 5 1C3.88333 1 2.9375 1.3875 2.1625 2.1625C1.3875 2.9375 1 3.88333 1 5C1 6.11667 1.3875 7.0625 2.1625 7.8375C2.9375 8.6125 3.88333 9 5 9Z",
-              fill: "currentColor",
-            }),
-            (0, _.jsx)("path", {
-              _: "M7.5 5.75H2.5V4.25H7.5V5.75Z",
-              fill: "currentColor",
-            }),
-          ],
-        });
-      }
-      function _() {
-        return (0, _.jsxs)("svg", {
-          width: "11",
-          height: "10",
-          viewBox: "0 0 11 10",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: [
-            (0, _.jsx)("path", {
-              _: "M5 10C4.30833 10 3.65833 9.86875 3.05 9.60625C2.44167 9.34375 1.9125 8.9875 1.4625 8.5375C1.0125 8.0875 0.65625 7.55833 0.39375 6.95C0.13125 6.34167 0 5.69167 0 5C0 4.30833 0.13125 3.65833 0.39375 3.05C0.65625 2.44167 1.0125 1.9125 1.4625 1.4625C1.9125 1.0125 2.44167 0.65625 3.05 0.39375C3.65833 0.13125 4.30833 0 5 0C5.69167 0 6.34167 0.13125 6.95 0.39375C7.55833 0.65625 8.0875 1.0125 8.5375 1.4625C8.9875 1.9125 9.34375 2.44167 9.60625 3.05C9.86875 3.65833 10 4.30833 10 5C10 5.69167 9.86875 6.34167 9.60625 6.95C9.34375 7.55833 8.9875 8.0875 8.5375 8.5375C8.0875 8.9875 7.55833 9.34375 6.95 9.60625C6.34167 9.86875 5.69167 10 5 10ZM5 9C6.11667 9 7.0625 8.6125 7.8375 7.8375C8.6125 7.0625 9 6.11667 9 5C9 3.88333 8.6125 2.9375 7.8375 2.1625C7.0625 1.3875 6.11667 1 5 1C3.88333 1 2.9375 1.3875 2.1625 2.1625C1.3875 2.9375 1 3.88333 1 5C1 6.11667 1.3875 7.0625 2.1625 7.8375C2.9375 8.6125 3.88333 9 5 9Z",
-              fill: "currentColor",
-            }),
-            (0, _.jsx)("path", {
-              _: "M6.36527 7.42592L2.57407 3.63473L3.63474 2.57407L7.42593 6.36526L6.36527 7.42592Z",
-              fill: "currentColor",
-            }),
-            (0, _.jsx)("path", {
-              _: "M3.63473 7.42592L7.42593 3.63473L6.36526 2.57407L2.57407 6.36526L3.63473 7.42592Z",
-              fill: "currentColor",
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const {
-            purchaseOption: _,
-            size: __webpack_require__ = "large",
-            transparentBackground: _ = !1,
-          } = _,
-          {
-            discount_pct: _ = 0,
-            formatted_original_price: _,
-            formatted_final_price: _,
-            final_price_in_cents: _,
-            hide_discount_pct_for_compliance: _ = !1,
-            bundle_discount_pct: _,
-          } = _;
-        if (!_) return null;
-        const _ = _ && !_;
-        return (0, _.jsxs)(_, {
-          percentage: _,
-          original_price: _,
-          final_price: _,
-          hide_discount_pct: _,
-          size: __webpack_require__,
-          transparent: _,
-          children: [
-            _ > 0 &&
-              (0, _.jsx)(_, {
-                percentage: _,
-                hide_discount_pct: _,
-              }),
-            (0, _.jsx)(_, {
-              final_price: _,
-              original_price: _ ? _ : void 0,
-            }),
-          ],
-        });
-      });
-      function _(_) {
-        const { final_price: _, original_price: __webpack_require__ } = _;
-        return __webpack_require__
-          ? (0, _.jsxs)("div", {
-              className: _()(_.Prices, _.WithOriginalPrice),
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.OriginalPrice,
-                  children: __webpack_require__,
-                }),
-                (0, _.jsx)("div", {
-                  className: _.FinalPrice,
-                  children: _,
-                }),
-              ],
-            })
-          : (0, _.jsx)("div", {
-              className: _.Prices,
-              children: (0, _.jsx)("div", {
-                className: _.FinalPrice,
-                children: _,
-              }),
-            });
-      }
-      function _(_) {
-        const { percentage: _, hide_discount_pct: __webpack_require__ } = _;
-        return __webpack_require__
-          ? (0, _.jsx)("div", {
-              className: _()(_.Discount, _.Icon),
-              children: (0, _.jsx)(_, {}),
-            })
-          : (0, _.jsx)("div", {
-              className: _()(_.Discount),
-              children: (0, _.jsxs)("div", {
-                className: _.DiscountPct,
-                children: ["-", _, "%"],
-              }),
-            });
-      }
-      function _(_) {
-        const {
-          percentage: _,
-          original_price: __webpack_require__,
-          final_price: _,
-          hide_discount_pct: _,
-          size: _,
-          transparent: _,
-          children: _,
-        } = _;
-        let _ = {};
-        return (
-          _ &&
-            ((_.role = "link"),
-            (_["aria-label"] = _
-              ? _.Localize("#Discount_ARIA_Label_SpecialPrice", _)
-              : _.Localize("#Discount_ARIA_Label", _, __webpack_require__, _))),
-          (0, _.jsx)("div", {
-            ..._,
-            className: _()(
-              _.DiscountBlock,
-              _ && _.Transparent,
-              "large" == _ && _.SizeLarge,
-              "inline" == _ && _.SizeInline,
-            ),
-            children: _,
-          })
-        );
-      }
-      function _() {
-        return (0, _.jsx)("svg", {
-          width: "26",
-          height: "26",
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 26 26",
-          fill: "none",
-          children: (0, _.jsx)("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M17.5133 4.65595C15.8046 6.36468 17.0366 9.2803 19.4284 9.28035C20.446 9.28035 21.0261 8.76331 21.2519 8.56209C21.2963 8.5225 21.327 8.49513 21.3447 8.48633C22.4018 7.42917 22.4024 5.71423 21.3441 4.65595C20.2817 3.59714 18.5699 3.59936 17.5133 4.65595ZM18.5553 7.44735C17.4045 6.30173 19.1522 4.54882 20.301 5.69597V5.69586C20.7836 6.18159 20.783 6.96269 20.301 7.44422C19.8189 7.92684 19.0348 7.92415 18.5553 7.44735ZM0.583974 13.873L14.455 0L24.4165 1.583L26 11.5449L12.1289 25.416C11.7368 25.805 11.2252 26 10.7156 26C10.2065 26 9.69489 25.805 9.30552 25.416L0.583974 16.6976C0.194954 16.305 0 15.7933 0 15.2843C0 14.7742 0.194948 14.2625 0.583974 13.873ZM9.26632 17.5853L8.88665 17.965C8.62416 18.2274 8.43667 18.5227 8.32418 18.8509C8.21403 19.1766 8.19645 19.5106 8.27145 19.8528C8.34879 20.1926 8.53979 20.5148 8.84446 20.8195C9.14445 21.1195 9.46318 21.307 9.80066 21.382C10.1428 21.457 10.4756 21.4382 10.7991 21.3257C11.1272 21.2132 11.4225 21.0257 11.6849 20.7633L12.0646 20.3836C12.3271 20.1211 12.5146 19.8281 12.6271 19.5047C12.7419 19.179 12.7618 18.8473 12.6868 18.5099C12.6142 18.17 12.4255 17.8478 12.1209 17.5431C11.8209 17.2431 11.4986 17.0545 11.1541 16.9771C10.8143 16.8998 10.4791 16.9162 10.1487 17.0263C9.82293 17.1365 9.5288 17.3228 9.26632 17.5853ZM9.6038 18.6821L9.98347 18.3024C10.2014 18.0845 10.4487 17.9427 10.7252 17.8771C11.0065 17.8115 11.2701 17.9017 11.5162 18.1478C11.7693 18.4009 11.8584 18.6634 11.7834 18.9352C11.7107 19.2047 11.5654 19.4485 11.3475 19.6664L10.9678 20.0461C10.7498 20.2641 10.5026 20.4082 10.226 20.4785C9.95417 20.5488 9.6952 20.4609 9.44912 20.2148C9.19601 19.9617 9.10344 19.6981 9.1714 19.4239C9.24171 19.1473 9.38584 18.9001 9.6038 18.6821ZM9.80066 9.87944L9.421 10.2591C9.15851 10.5216 8.97102 10.8169 8.85853 11.145C8.74837 11.4708 8.7308 11.8047 8.80579 12.1469C8.88313 12.4867 9.07414 12.809 9.37881 13.1136C9.6788 13.4136 9.99753 13.6011 10.335 13.6761C10.6772 13.7511 11.01 13.7324 11.3334 13.6199C11.6615 13.5074 11.9568 13.3199 12.2193 13.0574L12.599 12.6777C12.8614 12.4152 13.0489 12.1223 13.1614 11.7989C13.2763 11.4731 13.2962 11.1415 13.2212 10.804C13.1485 10.4642 12.9599 10.1419 12.6552 9.83725C12.3552 9.53727 12.033 9.34861 11.6885 9.27127C11.3486 9.19393 11.0135 9.21033 10.683 9.32048C10.3573 9.43063 10.0632 9.61695 9.80066 9.87944ZM10.1381 10.9763L10.5178 10.5966C10.7358 10.3786 10.983 10.2368 11.2596 10.1712C11.5408 10.1056 11.8045 10.1958 12.0506 10.4419C12.3037 10.695 12.3927 10.9575 12.3177 11.2294C12.2451 11.4989 12.0998 11.7426 11.8818 11.9606L11.5021 12.3403C11.2842 12.5582 11.0369 12.7023 10.7604 12.7726C10.4885 12.843 10.2295 12.7551 9.98347 12.509C9.73036 12.2559 9.63778 11.9922 9.70575 11.718C9.77606 11.4415 9.92019 11.1942 10.1381 10.9763ZM16.3675 13.7464L4.21814 15.9963L5.01966 16.7978L17.169 14.5479L16.3675 13.7464Z",
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { rgItemIDs: _ } = _;
-        return (0, _.jsx)(_._, {
-          "flow-children": "column",
-          navEntryPreferPosition: _._.MAINTAIN_Y,
-          className: _.CapsuleList,
-          children: _.map((_) =>
-            (0, _.jsx)(
-              _,
-              {
-                itemid: _,
-              },
-              (0, _._)(_),
-            ),
-          ),
-        });
-      }
-      const _ = _.memo(function (_) {
-        const {
-            itemid: _,
-            active: __webpack_require__,
-            className: _,
-            ..._
-          } = _,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return (0, _.jsx)(_, {
-          itemid: _,
-          collapse: !0,
-          children: (0, _.jsxs)(_._, {
-            ..._,
-            storeItem: _,
-            className: _()(
-              _.ItemCapsule,
-              void 0 === __webpack_require__ && _.Hover,
-              __webpack_require__ && _.Active,
-              _,
-            ),
-            children: [
-              (0, _.jsx)(_, {
-                itemid: _,
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Content,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Title,
-                    children: _?.name,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.DiscountCtn,
-                    children: [
-                      (0, _.jsx)(_, {
-                        storeItem: _,
-                        purchaseOption: _,
-                      }),
-                      (0, _.jsx)(_, {
-                        purchaseOption: _,
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          }),
-        });
-      });
-      function _(_) {
-        const { storeItem: _, purchaseOption: __webpack_require__ } = _;
-        return __webpack_require__
-          ? (0, _.jsx)(_, {
-              purchaseOption: __webpack_require__,
-              size: "inline",
-              transparentBackground: !0,
-            })
-          : _?.is_free
-            ? _("#Price_Free")
-            : (0, _.jsx)(_.Fragment, {
-                children: " ",
-              });
-      }
-      function _(_) {
-        const { purchaseOption: _ } = _;
-        return !_ || !_.included_game_count || _.included_game_count <= 1
-          ? null
-          : (0, _.jsx)("div", {
-              className: _.BundleItemCount,
-              children: _(
-                "#Menu_IncludesXGames",
-                (0, _._)(_.included_game_count),
-              ),
-            });
-      }
-      function _(_) {
-        const { itemid: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
-          _ =
-            __webpack_require__ &&
-            (0, _._)(__webpack_require__, "small_capsule");
-        return (0, _.jsx)("div", {
-          className: _()(_.Capsule, !_ && _.Ghost),
-          children:
-            _ &&
-            (0, _.jsx)("img", {
-              src: _,
-              alt: "",
-            }),
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = 10, _ = void 0) {
-        return {
-          queryKey: ["MostVisitedItems", __webpack_require__],
-          queryFn: () =>
-            (async function (_, _, __webpack_require__ = 10, _) {
-              const _ = _._.Init(_);
-              _.Body().set_count(__webpack_require__),
-                (0, _._)(_, _),
-                _ && (0, _._)(_, _.data_request);
-              const _ = await _.GetMostVisitedItemsOnStore(_, _);
-              if (!_.BSuccess())
-                throw `Error loading most visited items: ${_.GetErrorMessage()}`;
-              _ &&
-                _.Body()
-                  .items()
-                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
-              return _.Body()
-                .item_ids()
-                .map((_) => _.toObject());
-            })(_, _, __webpack_require__, _),
-          staleTime: 3e5,
-        };
-      }
-      function _(_) {
-        const { itemid: _, ...__webpack_require__ } = _;
-        return "hubcategoryid" in _
-          ? (0, _.jsx)(_, {
-              hubcategoryid: _.hubcategoryid,
-              ...__webpack_require__,
-            })
-          : "tagid" in _
-            ? (0, _.jsx)(_, {
-                tagid: _.tagid,
-                ...__webpack_require__,
-              })
-            : "creatorid" in _
-              ? (0, _.jsx)(_, {
-                  creatorid: _.creatorid,
-                  ...__webpack_require__,
-                })
-              : null;
-      }
-      function _(_) {
-        switch (_) {
-          case "square":
-            return `${_._.STORE_CDN_URL}categories/image/`;
-          case "wide":
-            return `${_._.STORE_CDN_URL}categories/searchsuggestionsimage/`;
-          default:
-            return (0, _._)(_, `Unknown type: ${_}`), "";
-        }
-      }
-      function _(_) {
-        const {
-            hubcategoryid: _,
-            type: __webpack_require__ = "square",
-            className: _,
-          } = _,
-          { data: _ } = (0, _._)(),
-          _ = _?.get(_);
-        if (_)
-          return (0, _.jsx)("img", {
-            className: _,
-            alt: "",
-            src: `${_(__webpack_require__)}category/${_.handle}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
-          });
-      }
-      function _(_) {
-        const {
-          category: _,
-          type: __webpack_require__ = "square",
-          className: _,
-        } = _;
-        return (0, _.jsx)("img", {
-          className: _,
-          alt: "",
-          src: `${_(__webpack_require__)}category/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
-        });
-      }
-      function _(_) {
-        const {
-          tagid: _,
-          type: __webpack_require__ = "square",
-          className: _,
-        } = _;
-        return (0, _.jsx)("img", {
-          className: _,
-          alt: "",
-          src: `${_(__webpack_require__)}tags/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
-        });
-      }
-      function _(_) {
-        const {
-          creatorid: _,
-          type: __webpack_require__ = "square",
-          className: _,
-        } = _;
-        return (0, _.jsx)("img", {
-          className: _,
-          alt: "",
-          src: `${_(__webpack_require__)}creator/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-          include_assets: !0,
-          apply_user_filters: !0,
-        },
-        _ = {
-          include_tags: !0,
-          include_creators: !0,
-        };
-      function _(_) {
-        const {
-          list: _,
-          iActiveIndex: __webpack_require__,
-          activeSection: _,
-          getMouseHandlers: _,
-        } = _;
-        let _, _, _, _, _;
-        switch (
-          (_.rgMainItems.length
-            ? (_ = (0, _.jsx)(_, {
-                title: _.strMainTitle,
-                children: _.rgMainItems.map(({ item_id: _ }, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      itemid: _,
-                      index: _,
-                      active: "apps" == _ && _ == __webpack_require__,
-                      getMouseHandlers: _,
-                    },
-                    (0, _._)(_),
-                  ),
-                ),
-              }))
-            : _.rgMainItems &&
-              "suggestions" == _.eListType &&
-              (_ = (0, _.jsx)(_, {
-                title: _.strMainTitle,
-                children: (0, _.jsx)(_, {}),
-              })),
-          _.rgTextItems?.length &&
-            (_ = (0, _.jsx)(_, {
-              title: _.strTextLinks,
-              items: _.rgTextItems,
-            })),
-          _.rgSubSectionItems?.length &&
-            (_ =
-              "recent" == _.eListType
-                ? (0, _.jsx)(_, {
-                    title: _.strSubSectionTitle,
-                    horizontal: !0,
-                    children: _.rgSubSectionItems.map(({ item_id: _ }, _) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          itemid: _,
-                          index: _,
-                          active: "categories" == _ && _ == __webpack_require__,
-                          getMouseHandlers: _,
-                        },
-                        (0, _._)(_),
-                      ),
-                    ),
-                  })
-                : (0, _.jsx)(_, {
-                    title: _.strSubSectionTitle,
-                    children: _.rgSubSectionItems.map(({ item_id: _ }, _) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          itemid: _,
-                          index: _,
-                          active: "categories" == _ && _ == __webpack_require__,
-                          getMouseHandlers: _,
-                        },
-                        (0, _._)(_),
-                      ),
-                    ),
-                  })),
-          _.eListType)
-        ) {
-          case "suggestions":
-            _ = "search-suggestion";
-            break;
-          case "recent":
-            (_ = "popular"), (_ = "recent");
-            break;
-          default:
-            (0, _._)(_.eListType, `Unhandled list type ${_.eListType}`);
-        }
-        return (0, _.jsxs)(_._, {
-          controller: "search",
-          method: "suggest",
-          submethod: "",
-          feature: _,
-          children: [
-            (0, _.jsx)(_._, {
-              feature: _ ?? _,
-              children: _,
-            }),
-            _,
-            _,
-            (0, _.jsx)(_, {
-              active: "advancedsearch" == _,
-              getMouseHandlers: _,
-            }),
-          ],
-        });
-      }
-      function _(_ = !0) {
-        return (function (_ = 10, _ = {}, __webpack_require__ = !0) {
-          const _ = (0, _._)(),
-            _ = (0, _._)(),
-            {
-              dataLoader: _,
-              storeBrowseContext: _,
-              cacheStoreItemData: _,
-            } = (0, _._)();
-          return (0, _._)({
-            queryKey: ["MostVisitedItemsFiltered", _],
-            queryFn: async () => {
-              const _ = await _.fetchQuery(
-                  _(_, _, _, {
-                    cacheStoreItemData: _,
-                    data_request: {
-                      ..._,
-                      apply_user_filters: !0,
-                    },
-                  }),
-                ),
-                _ = await Promise.all(
-                  __webpack_require__.map((_) => _.fetchQuery((0, _._)(_, _))),
-                ),
-                _ = new Map();
-              for (let _ = 0; _ < _.length; _++) _.set(_[_], _[_]);
-              const _ = (_) => {
-                const _ = _.get(_);
-                return !_ || (10 == _.filter_failure && _.on_wishlist)
-                  ? 0
-                  : _.filter_failure;
-              };
-              return __webpack_require__
-                .filter((_) => {
-                  const _ = _.get(_);
-                  return !_ || _.filter_failure < 40;
-                })
-                .sort((_, _) => _(_) - _(_));
-            },
-            staleTime: 3e5,
-            enabled: __webpack_require__,
-          });
-        })(10, _, _);
-      }
-      function _(_, _, _, _ = !0) {
-        const _ = _(_),
-          _ = (function () {
-            const { data: _ } = _();
-            return _.useMemo(() => {
-              if (void 0 !== _) return _(_);
-            }, [_]);
-          })(),
-          _ = _.useMemo(() => (0, _._)(_, _), [_]),
-          _ = (function (_, ..._) {
-            const [_, _] = _.useState([]),
-              _ = _.useRef(void 0);
-            (0, _.useEffect)(() => {
-              (_.current && _._(_.current, _)) ||
-                ((_.current = _), _((_) => [..._, _(..._)]));
-            });
-            const [_, _] = (0, _._)({
-              queries: _,
-              combine: (_) => {
-                for (let _ = _.length - 1; _ >= 0; _--)
-                  if (!_[_].isLoading) return [_, _[_]];
-                return [void 0, void 0];
-              },
-            });
-            return (
-              (0, _.useEffect)(() => {
-                _ && _ > 0 && _((_) => _.slice(_));
-              }, [_]),
-              _
-            );
-          })((0, _._)(_, 5, _), void 0 === _ ? "" : _),
-          _ = _ && "" == _,
-          { data: _ } = _(_),
-          { data: _ } = _(_),
-          { data: _ } = (function (_ = !0) {
-            const _ = _((0, _._)(), (0, _._)());
-            return (0, _._)({
-              ..._,
-              select: (_) =>
-                _.visit_data?.recent_apps?.map(({ item_id: _ }) => _) || [],
-              enabled: _.enabled && _,
-            });
-          })(_ && _);
-        _.useMemo(() => _._(_().slice()), []);
-        return (function (_) {
-          const [_, _] = _.useState(_ || _),
-            [_, _] = _.useState({
-              activeSection: "apps",
-              iActiveIndex: void 0,
-              eLastInputSource: void 0,
-            }),
-            _ = (function (_, _) {
-              const _ = (0, _._)(),
-                _ = (0, _._)(),
-                _ = (0, _._)(_, _);
-              return _.useCallback(
-                async (_) => {
-                  const _ = await __webpack_require__.fetchQuery(
-                    (0, _._)(_, _),
-                  );
-                  return (
-                    !!_ &&
-                    ((window.location.href = `${_._.STORE_BASE_URL}${_.store_url_path}?snr=${_}`),
-                    !0)
-                  );
-                },
-                [_, _, _],
-              );
-            })();
-          _.useEffect(() => {
-            __webpack_require__(_ || _);
-          }, [_]);
-          const _ =
-              ("apps" == _.activeSection
-                ? _.rgMainItems
-                : _.rgSubSectionItems) || [],
-            _ = "recent" == _.eListType,
-            _ = _.useCallback(
-              (_, _) => ({
-                onMouseEnter: () => {
-                  _((_) =>
-                    _.activeSection === _ && _.iActiveIndex === _
-                      ? _
-                      : {
-                          activeSection: _,
-                          iActiveIndex: _,
-                          eLastInputSource: "mouse",
-                        },
-                  );
-                },
-                onMouseLeave: () => {
-                  _({
-                    activeSection: "apps",
-                    iActiveIndex: void 0,
-                    eLastInputSource: "mouse",
-                  });
-                },
-              }),
-              [],
-            ),
-            _ = (_) => "categories" == _ && _,
-            _ = (_, _ = !0) => {
-              switch (_) {
-                case "apps":
-                  return _.rgMainItems.length;
-                case "categories": {
-                  const _ = _.rgSubSectionItems?.length || 0;
-                  return _ && _ ? (_ > 0 ? 1 : 0) : _;
-                }
-                case "advancedsearch":
-                  return 1;
-                default:
-                  return (0, _._)(_, `unknown section ${_}`), 0;
-              }
-            },
-            _ = (_, _ = !1) => {
-              const _ = ["apps", "categories", "advancedsearch"];
-              let _ =
-                (__webpack_require__.indexOf(_) + (_ ? -1 : 1) + _.length) %
-                _.length;
-              return (
-                0 == _(_[_]) && (_ = (_ + (_ ? -1 : 1) + _.length) % _.length),
-                0 == _(_[_]) ? _ : _[_]
-              );
-            },
-            _ = _.useRef(void 0);
-          _.current = (_) => {
-            switch (_.key) {
-              case "ArrowUp":
-                return (
-                  _(({ activeSection: _, iActiveIndex: _ }) => {
-                    let _ = (void 0 === _ || _(_) ? 0 : _) - 1,
-                      _ = _;
-                    return (
-                      _ < 0 && ((_ = _(_, !0)), (_ = _(_) - 1)),
-                      {
-                        activeSection: _,
-                        iActiveIndex: _,
-                        eLastInputSource: "keyboard",
-                      }
-                    );
-                  }),
-                  !0
-                );
-              case "ArrowDown":
-                return (
-                  _(({ activeSection: _, iActiveIndex: _ }) => {
-                    let _ = (_ ?? -1) + 1,
-                      _ = _;
-                    return (
-                      _ >= _(_) && ((_ = _(_)), (_ = 0)),
-                      {
-                        activeSection: _,
-                        iActiveIndex: _,
-                        eLastInputSource: "keyboard",
-                      }
-                    );
-                  }),
-                  !0
-                );
-              case "ArrowLeft":
-                if (_(_.activeSection))
-                  return (
-                    _((_) => {
-                      const { activeSection: _, iActiveIndex: _ } = _;
-                      if (_(_)) {
-                        const _ = _(_, !1);
-                        return {
-                          activeSection: _,
-                          iActiveIndex: ((_ ?? 0) + _ - 1) % _,
-                          eLastInputSource: "keyboard",
-                        };
-                      }
-                      return _;
-                    }),
-                    !0
-                  );
-                break;
-              case "ArrowRight":
-                if (_(_.activeSection))
-                  return (
-                    _((_) => {
-                      const { activeSection: _, iActiveIndex: _ } = _;
-                      if (_(_.activeSection)) {
-                        return {
-                          activeSection: "categories",
-                          iActiveIndex: ((_ ?? 0) + 1) % _(_, !1),
-                          eLastInputSource: "keyboard",
-                        };
-                      }
-                      return _;
-                    }),
-                    !0
-                  );
-                break;
-              case "Enter": {
-                const {
-                  activeSection: _,
-                  iActiveIndex: _,
-                  eLastInputSource: _,
-                } = _;
-                if ("advancedsearch" == _) return !1;
-                {
-                  const _ = "apps" == _ ? _.rgMainItems : _.rgSubSectionItems;
-                  if (void 0 !== _ && _ && _ < _.length && "keyboard" === _)
-                    return _(_[_].item_id), !0;
-                }
-                break;
-              }
-            }
-            return !1;
-          };
-          const _ = _.useCallback((_) => _.current(_), []);
-          return {
-            list: _,
-            activeSection: _.activeSection,
-            iActiveIndex:
-              void 0 !== _.iActiveIndex
-                ? Math.max(0, Math.min(_.length - 1, _.iActiveIndex))
-                : void 0,
-            getMouseHandlers: _,
-            onKeyDown: _,
-          };
-        })(
-          _.useMemo(() => {
-            if (_ && _.data) {
-              const [_, _, _] = (0, _._)(_.data.rgItemIDs);
-              return {
-                eListType: "suggestions",
-                strMainTitle: _("#Menu_SearchBar_SearchResults"),
-                rgMainItems: _.slice(0, _).map((_) => ({
-                  item_id: _,
-                })),
-                strSubSectionTitle: _("#Menu_SearchBar_BrowseBy"),
-                rgSubSectionItems: [..._, ..._].slice(0, 3).map((_) => ({
-                  item_id: _,
-                })),
-              };
-            }
-            if (_ || _ || _) {
-              const _ = _?.slice(0, _) || [];
-              return {
-                eListType: "recent",
-                strMainTitle: _("#Menu_SearchBar_PopularSearches"),
-                rgMainItems: _.map((_) => ({
-                  item_id: _,
-                })),
-                strTextLinks: _("#Menu_SearchBar_RecentlyViewed"),
-                rgTextItems: _
-                  ? _?.slice(0, 4).map((_) => ({
-                      item_id: _,
-                    }))
-                  : void 0,
-                strSubSectionTitle: _("#Menu_SearchBar_YourTopGenres"),
-                rgSubSectionItems:
-                  _?.slice(0, 3).map((_) => ({
-                    item_id: _.item_id,
-                  })) || [],
-              };
-            }
-          }, [_, _, _, _, _, _]),
-        );
-      }
-      const _ = {
-        eListType: "suggestions",
-        strMainTitle: "",
-        rgMainItems: [],
-      };
-      function _(_) {
-        const { title: _, children: __webpack_require__, horizontal: _ } = _;
-        return (0, _.jsxs)("div", {
-          className: _()(_.SuggestionSection, _ && _.Horizontal),
-          children: [
-            (0, _.jsx)("div", {
-              className: _.SectionTitle,
-              children: _,
-            }),
-            (0, _.jsx)("div", {
-              className: _.SuggestionList,
-              children: __webpack_require__,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { title: _, items: __webpack_require__ } = _;
-        return (0, _.jsx)("div", {
-          className: _()(_.SuggestionSection),
-          children: (0, _.jsxs)("div", {
-            className: _.SuggestionTextList,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.SectionTitle,
-                children: _,
-              }),
-              __webpack_require__.map(({ item_id: _ }, _) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    itemid: _,
-                    first: 0 == _,
-                  },
-                  (0, _._)(_),
-                ),
-              ),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const { itemid: _, first: __webpack_require__ } = _,
-          { data: _ } = (0, _._)(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            !__webpack_require__ && ", ",
-            (0, _.jsx)(_._, {
-              className: _.TextLink,
-              storeItem: _,
-              feature: "recent",
-              children: _?.name,
-            }),
-          ],
-        });
-      }
-      const _ = _.memo(function (_) {
-          const {
-              itemid: _,
-              index: __webpack_require__,
-              getMouseHandlers: _,
-              active: _ = !1,
-            } = _,
-            _ = _.useMemo(
-              () => _("apps", __webpack_require__),
-              [_, __webpack_require__],
-            );
-          return (0, _.jsx)(_, {
-            itemid: _,
-            active: _,
-            ..._,
-          });
-        }),
-        _ = _.memo(function (_) {
-          const { itemid: _, ...__webpack_require__ } = _,
-            { data: _ } = (0, _._)(_),
-            _ = (0, _._)(`${_._.STORE_BASE_URL}${_?.store_url_path || "/"}`);
-          return "creatorid" in _
-            ? (0, _.jsx)(_, {
-                className: _.CreatorSuggestion,
-                itemid: _,
-                url: _,
-                ...__webpack_require__,
-                children: (0, _.jsx)(_, {
-                  itemid: _,
-                }),
-              })
-            : (0, _.jsx)(_, {
-                itemid: _,
-                url: _,
-                ...__webpack_require__,
-                children: (0, _.jsx)(_, {
-                  itemid: _,
-                }),
-              });
-        });
-      function _(_) {
-        const {
-          url: _,
-          itemid: __webpack_require__,
-          grid: _ = !1,
-          className: _,
-          index: _,
-          getMouseHandlers: _,
-          active: _,
-          children: _,
-        } = _;
-        return (0, _.jsxs)("a", {
-          className: _()(
-            _.CategorySuggestion,
-            _ && _.CategoryGridSuggestion,
-            _,
-            _ && _.Active,
-          ),
-          href: _,
-          ..._("categories", _),
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.TiledBackground,
-              children: [
-                (0, _.jsx)(_, {
-                  itemid: __webpack_require__,
-                  type: _ ? "square" : "wide",
-                }),
-                (0, _.jsx)("div", {
-                  className: _.BackgroundGradient,
-                }),
-              ],
-            }),
-            _,
-          ],
-        });
-      }
-      function _(_) {
-        const { itemid: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _?.clan_avatar &&
-              (0, _.jsx)("img", {
-                className: _.CreatorAvatar,
-                src: (0, _._)(_.clan_avatar, "Medium"),
-                alt: "",
-              }),
-            (0, _.jsx)("div", {
-              className: _.CreatorName,
-              children: __webpack_require__?.name,
-            }),
-            (0, _.jsx)(_, {
-              storeItem: __webpack_require__,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { itemid: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("div", {
-              className: _.TagName,
-              children: __webpack_require__?.name,
-            }),
-            (0, _.jsx)(_, {
-              storeItem: __webpack_require__,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { storeItem: _ } = _;
-        return _ && _.game_count
-          ? (0, _.jsx)("div", {
-              className: _.GameCount,
-              children: _(
-                "#Menu_SearchBar_CategoryGameCount",
-                (0, _._)(_.game_count),
-              ),
-            })
-          : null;
-      }
-      const _ = _.memo(function (_) {
-        const { itemid: _, ...__webpack_require__ } = _,
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(`${_._.STORE_BASE_URL}${_?.store_url_path || "/"}`);
-        return (0, _.jsx)(_, {
-          itemid: _,
-          url: _,
-          grid: !0,
-          ...__webpack_require__,
-          children: (0, _.jsx)("div", {
-            className: _.Content,
-            children: (0, _.jsx)("div", {
-              children: _?.name,
-            }),
-          }),
-        });
-      });
-      function _(_) {
-        const { getMouseHandlers: _, active: __webpack_require__ } = _,
-          _ = (function (_) {
-            const { term: _ } = _(),
-              _ = (0, _._)(_);
-            return (0, _.useMemo)(() => _(_, _), [_, _]);
-          })("advancedsearch");
-        return (0, _.jsx)("a", {
-          className: _()(_.AdvancedSearch, __webpack_require__ && _.Active),
-          href: _,
-          ..._("advancedsearch", 0),
-          children: (0, _.jsx)("span", {
-            className: _.Content,
-            children: _("#Menu_SearchBar_AdvancedSearch"),
-          }),
-        });
-      }
-      function _() {
-        return (0, _.jsx)("div", {
-          className: _.NoMatches,
-          children: _("#Menu_SearchBar_NoMatches"),
-        });
-      }
-      const _ = _.memo(function () {
-        const { bBackdropActive: _ } = _(),
-          _ = _();
-        return (0, _.jsxs)("div", {
-          className: _.SearchBar,
-          children: [
-            !_ &&
-              (0, _.jsx)(_, {
-                bBackdropActive: _,
-              }),
-            (0, _.jsx)(_, {}),
-          ],
-        });
-      });
-      function _(_) {
-        return _.useCallback(
-          (_) => {
-            const _ = (_) =>
-                _.classList.contains(_.SuggestionsPosition) ||
-                _.classList.contains(_.SearchForm),
-              _ = _.currentTarget;
-            var _;
-            (_.relatedTarget &&
-              ((_ = _.relatedTarget), _._(_, _) || _._(_, _))) ||
-              _();
-          },
-          [_],
-        );
-      }
-      const _ = _.memo(function (_) {
-        const { bBackdropActive: _, autoFocus: __webpack_require__ } = _,
-          {
-            term: _,
-            setTerm: _,
-            onInputKeyDown: _,
-            suggestionsId: _,
-            onActive: _,
-            bSearchVisible: _,
-            openSearch: _,
-            closeSearch: _,
-          } = _(),
-          _ = _(_),
-          _ = _.useCallback(() => {
-            _(), _();
-          }, [_, _]),
-          _ = _.useCallback(
-            (_) => {
-              _(_.currentTarget.value), _();
-            },
-            [_, _],
-          ),
-          _ = _.useCallback(() => {
-            _(""), _();
-          }, [_, _]),
-          _ = _.useCallback(
-            (_) => {
-              _(), _.preventDefault();
-            },
-            [_],
-          ),
-          _ = (0, _._)("search");
-        return (0, _.jsxs)("form", {
-          className: _()(_.SearchForm, _ && !_ && _.MenuActive),
-          role: "search",
-          onMouseEnter: () => _(),
-          method: "GET",
-          action: `${_._.STORE_BASE_URL}search`,
-          onBlur: _,
-          children: [
-            (0, _.jsx)("input", {
-              type: "hidden",
-              name: "snr",
-              value: _,
-            }),
-            (0, _.jsxs)("div", {
-              className: _.SearchInputContainer,
-              children: [
-                (0, _.jsx)("input", {
-                  className: _.SearchInput,
-                  name: "term",
-                  placeholder: _("#Menu_SearchPlaceholder"),
-                  value: _,
-                  autoFocus: __webpack_require__,
-                  autoComplete: "off",
-                  type: "text",
-                  onChange: _,
-                  onFocus: _,
-                  onClick: _,
-                  onKeyDown: _,
-                  role: "combobox",
-                  "aria-expanded": _,
-                  "aria-autocomplete": "list",
-                  "aria-controls": _ ? _ : void 0,
-                }),
-                _ &&
-                  (0, _.jsx)("button", {
-                    className: _.ClearSearch,
-                    type: "button",
-                    onMouseDown: _,
-                    onClick: _,
-                    "aria-label": _("#Menu_ClearSearchTerm"),
-                    children: (0, _.jsx)(_, {}),
-                  }),
-              ],
-            }),
-            (0, _.jsx)("button", {
-              className: _.SearchIcon,
-              type: "submit",
-              onClick: _,
-              children: (0, _.jsx)(_, {
-                "aria-label": _("#Menu_Search"),
-              }),
-            }),
-          ],
-        });
-      });
-      function _() {
-        const {
-            term: _,
-            setInputKeyDown: _,
-            suggestionsId: __webpack_require__,
-            bEverActive: _,
-            bSearchVisible: _,
-            openSearch: _,
-            closeSearch: _,
-          } = _(),
-          { nBackdropHeight: _ } = _(),
-          _ = _ && _ < 480 ? 3 : 4,
-          _ = !(_ && _ < 450),
-          { onKeyDown: _, ..._ } = _(_, _, _, _),
-          _ = _(_),
-          _ = _.useCallback(
-            (_) => {
-              _ && _(_)
-                ? _.preventDefault()
-                : "Escape" === _.key
-                  ? _()
-                  : "Tab" !== _.key && _();
-            },
-            [_, _, _, _],
-          );
-        _.useEffect(() => (_(_), () => _(void 0)), [_, _]);
-        const _ = _.useRef(null);
-        return (
-          _(_, _),
-          (0, _.jsx)("div", {
-            className: _.SuggestionsPosition,
-            onBlur: _,
-            ref: _,
-            children: (0, _.jsx)(_, {
-              visible: _,
-              className: _.InnerPosition,
-              msAnimationDuration: 100,
-              keepMounted: !0,
-              children: (0, _.jsx)("div", {
-                className: _.Suggestions,
-                _: __webpack_require__,
-                children: (0, _.jsx)(_, {
-                  ..._,
-                }),
-              }),
-            }),
-          })
-        );
-      }
-      const _ = _.memo(function (_) {
-          return (0, _.jsx)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 18 18",
-            fill: "none",
-            ..._,
-            children: (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M13.8296 12.0786C14.8347 10.6321 15.2623 8.86133 15.0284 7.11496C14.7945 5.36859 13.9159 3.77313 12.5656 2.64269C11.2153 1.51224 9.49114 0.928708 7.73254 1.00696C5.97394 1.08522 4.30831 1.8196 3.06357 3.06552C1.81882 4.31144 1.08514 5.97864 1.00696 7.7389C0.928776 9.49916 1.51176 11.2249 2.64114 12.5765C3.77052 13.9281 5.36446 14.8075 7.10919 15.0417C8.85391 15.2758 10.623 14.8477 12.0682 13.8417L15.2185 17L15.3997 16.8187L16.8188 15.3982L17 15.2168L13.8296 12.0786ZM8.04222 12.5824C7.14643 12.5824 6.27075 12.3165 5.52593 11.8183C4.7811 11.3202 4.20058 10.6122 3.85777 9.78376C3.51497 8.95538 3.42528 8.04384 3.60004 7.16443C3.7748 6.28502 4.20616 5.47723 4.83958 4.84321C5.47301 4.20919 6.28004 3.77742 7.15862 3.60249C8.0372 3.42757 8.94787 3.51734 9.77548 3.86047C10.6031 4.2036 11.3104 4.78467 11.8081 5.5302C12.3058 6.27573 12.5714 7.15223 12.5714 8.04887C12.5714 9.25123 12.0943 10.4043 11.2449 11.2545C10.3955 12.1047 9.24344 12.5824 8.04222 12.5824V12.5824Z",
-            }),
-          });
-        }),
-        _ = _.memo(function (_) {
-          return (0, _.jsx)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-            children: (0, _.jsx)("path", {
-              fill: "currentColor",
-              _: "M32.12 7.41L28.59 3.88L18 14.46L7.41 3.88L3.88 7.41L14.46 18L3.88 28.59L7.41 32.12L18 21.54L28.59 32.12L32.12 28.59L21.54 18L32.12 7.41Z",
-            }),
-          });
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _, _) {
-        return {
-          queryKey: ["StoreQuery", _],
-          queryFn: () =>
-            (async function (_, _, _, _, _) {
-              const _ = _._.Init(_._);
-              (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
-              _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
-              const _ = await _._.Query(_, _);
-              if (1 != _.GetEResult())
-                throw `Error executing StoreQuery "${_}": ${_.GetErrorMessage()}`;
-              _ &&
-                _.Body()
-                  .store_items()
-                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
-              return {
-                rgItemIDs: _.Body().ids().map(_._),
-                metadata: _.Body().metadata().toObject(),
-              };
-            })(_, _, _, _, _),
-          staleTime: 6e5,
-        };
-      }
-      var _,
-        _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         const {
           count: _ = 40,
@@ -76669,6 +74930,8 @@
           _,
         );
       }
+      var _,
+        _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)(),
           _ = (0, _._)();
@@ -76901,6 +75164,9 @@
       })(_ || (_ = {}));
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _();
@@ -77718,7 +75984,439 @@
             ],
           });
         });
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 83190, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 66864, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 6383, 19))),
+        (_.czech = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 26818, 19))),
+        (_.danish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 15063, 19))),
+        (_.dutch = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 45200, 19))),
+        (_.english = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 72022, 19))),
+        (_.finnish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 57493, 19))),
+        (_.french = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 55206, 19))),
+        (_.german = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 39320, 19))),
+        (_.greek = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 52730, 19))),
+        (_.hungarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 24315, 19))),
+        (_.indonesian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 13018, 19))),
+        (_.italian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 24726, 19))),
+        (_.japanese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 66969, 19))),
+        (_.koreana = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 14945, 19))),
+        (_.latam = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 15801, 19))),
+        (_.norwegian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 97218, 19))),
+        (_.polish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 21511, 19))),
+        (_.portuguese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 53803, 19))),
+        (_.romanian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 91905, 19))),
+        (_.russian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 77027, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 44649, 19))),
+        (_.schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 9338, 19))),
+        (_.spanish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 19142, 19))),
+        (_.swedish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 22559, 19))),
+        (_.tchinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 51753, 19))),
+        (_.thai = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 24388, 19))),
+        (_.turkish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 44342, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 84512, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 81657, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
       var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            role: __webpack_require__,
+            visible: _ = !0,
+            className: _,
+            keepMounted: _ = !1,
+            expandDirection: _ = "height",
+            msAnimationDuration: _ = 250,
+            children: _,
+          } = _,
+          {
+            style: _,
+            active: _,
+            refDiv: _,
+          } = (function (_, _ = "height", __webpack_require__ = 250) {
+            const _ = _.useRef(null),
+              _ = _.useRef(!0),
+              [_, _] = _.useState("idle"),
+              [_, _] = _.useState(
+                _
+                  ? {}
+                  : {
+                      [_]: "0px",
+                      overflow: "hidden",
+                    },
+              ),
+              [_, _] = _.useState(_);
+            _.useLayoutEffect(() => {
+              _.current || _("start"), _ && _(_);
+            }, [_]),
+              _.useLayoutEffect(
+                () => (
+                  (_.current = !1),
+                  () => {
+                    _.current = !0;
+                  }
+                ),
+                [],
+              ),
+              _.useLayoutEffect(() => {
+                const _ = _.current,
+                  _ = "height" == _ ? "scrollHeight" : "scrollWidth",
+                  _ = () => {
+                    _.unstable_batchedUpdates(() => {
+                      _(
+                        _
+                          ? {}
+                          : {
+                              [_]: "0px",
+                              overflow: "hidden",
+                            },
+                      ),
+                        _("idle"),
+                        _(_);
+                    });
+                  };
+                if ("start" == _) {
+                  const _ = _[_];
+                  0 == _
+                    ? _()
+                    : (_((_) => ({
+                        [_]: _ ? "0px" : `${_}px`,
+                        ..._,
+                        overflow: "hidden",
+                      })),
+                      _("active"));
+                } else if ("active" == _) {
+                  _.scrollTop;
+                  const _ = _[_];
+                  return (
+                    _({
+                      overflow: "hidden",
+                      [_]: _ ? `${_}px` : "0px",
+                    }),
+                    __webpack_require__.addEventListener("transitionend", _),
+                    () => {
+                      __webpack_require__.removeEventListener(
+                        "transitionend",
+                        _,
+                      );
+                    }
+                  );
+                }
+              }, [_, _]);
+            const _ = {
+              ..._,
+              transition: `${_} ${__webpack_require__}ms`,
+            };
+            return {
+              style: _,
+              active: _,
+              refDiv: _,
+            };
+          })(_, _, _);
+        return _ || _ || _
+          ? (0, _.jsx)("div", {
+              _: _,
+              role: __webpack_require__,
+              className: _,
+              ref: _,
+              style: _,
+              inert: !_,
+              children: _,
+            })
+          : null;
+      }
+      const _ = JSON.parse(`[
+	{
+		"rgTagIDs": [
+			19
+		],
+		"id": "action",
+		"strLocToken": "#ContentHubby_Hub_action_menu",
+		"strSalePageURL": "category/action"
+	},
+	{
+		"rgTagIDs": [
+			21
+		],
+		"id": "adventure",
+		"strLocToken": "#ContentHubby_Hub_adventure_menu",
+		"strSalePageURL": "category/adventure"
+	},
+	{
+		"rgTagIDs": [
+			4085
+		],
+		"id": "anime",
+		"strLocToken": "#ContentHubby_Hub_anime_mild_menu",
+		"strSalePageURL": "category/anime"
+	},
+	{
+		"rgTagIDs": [
+			597
+		],
+		"id": "casual",
+		"strLocToken": "#ContentHubby_Hub_casual_menu",
+		"strSalePageURL": "category/casual"
+	},
+	{
+		"rgTagIDs": [
+			1695
+		],
+		"id": "exploration_open_world",
+		"strLocToken": "#ContentHubby_Hub_adventure_explore_open_world_menu",
+		"strSalePageURL": "category/exploration_open_world"
+	},
+	{
+		"rgTagIDs": [
+			4328,
+			4736,
+			6506
+		],
+		"id": "fighting_martial_arts",
+		"strLocToken": "#ContentHubby_Hub_fighting_menu",
+		"strSalePageURL": "category/fighting_martial_arts"
+	},
+	{
+		"rgTagIDs": [
+			1667
+		],
+		"id": "horror",
+		"strLocToken": "#ContentHubby_Hub_horror_menu",
+		"strSalePageURL": "category/horror"
+	},
+	{
+		"rgTagIDs": [
+			1685
+		],
+		"id": "multiplayer_coop",
+		"strLocToken": "#ContentHubby_Hub_multiplayer_coop_menu",
+		"strSalePageURL": "category/multiplayer_coop"
+	},
+	{
+		"rgTagIDs": [
+			1664,
+			5537,
+			1665
+		],
+		"id": "puzzle_matching",
+		"strLocToken": "#ContentHubby_Hub_puzzle_menu",
+		"strSalePageURL": "category/puzzle_matching/"
+	},
+	{
+		"rgTagIDs": [
+			699,
+			4102
+		],
+		"id": "racing",
+		"strLocToken": "#ContentHubby_Hub_racing_menu",
+		"strSalePageURL": "category/racing"
+	},
+	{
+		"rgTagIDs": [
+			42804
+		],
+		"id": "rogue_like_rogue_lite",
+		"strLocToken": "#ContentHubby_Hub_rogue_like_rogue_lite_menu",
+		"strSalePageURL": "category/rogue_like_rogue_lite"
+	},
+	{
+		"rgTagIDs": [
+			112,
+			4434,
+			4231
+		],
+		"id": "rpg",
+		"strLocToken": "#ContentHubby_Hub_rpg_menu",
+		"strSalePageURL": "category/rpg"
+	},
+	{
+		"rgTagIDs": [
+			3942
+		],
+		"id": "science_fiction",
+		"strLocToken": "#ContentHubby_Hub_science_fiction_menu",
+		"strSalePageURL": "category/science_fiction"
+	},
+	{
+		"rgTagIDs": [
+			599,
+			12472
+		],
+		"id": "simulation",
+		"strLocToken": "#ContentHubby_Hub_simulation_menu",
+		"strSalePageURL": "category/simulation"
+	},
+	{
+		"rgTagIDs": [
+			701
+		],
+		"id": "sports",
+		"strLocToken": "#ContentHubby_Hub_sports_menu",
+		"strSalePageURL": "category/sports"
+	},
+	{
+		"rgTagIDs": [
+			1742
+		],
+		"id": "story_rich",
+		"strLocToken": "#ContentHubby_Hub_interactive_fiction_menu",
+		"strSalePageURL": "category/story_rich"
+	},
+	{
+		"rgTagIDs": [
+			9,
+			1670,
+			1676
+		],
+		"id": "strategy",
+		"strLocToken": "#ContentHubby_Hub_strategy_menu",
+		"strSalePageURL": "category/strategy"
+	},
+	{
+		"rgTagIDs": [
+			9,
+			4328,
+			220585
+		],
+		"id": "strategy_cities_settlements",
+		"strLocToken": "#ContentHubby_Hub_sim_cities_settlements_menu",
+		"strSalePageURL": "category/strategy_cities_settlements"
+	},
+	{
+		"rgTagIDs": [
+			1662
+		],
+		"id": "survival",
+		"strLocToken": "#ContentHubby_Hub_survival_menu",
+		"strSalePageURL": "category/survival"
+	},
+	{
+		"rgTagIDs": [
+			3799
+		],
+		"id": "visual_novel",
+		"strLocToken": "#ContentHubby_Hub_visual_novel_menu",
+		"strSalePageURL": "category/visual_novel"
+	},
+	{
+		"rgTagIDs": [
+			113
+		],
+		"id": "freetoplay",
+		"strLocToken": "#ContentHubby_Hub_free_to_play",
+		"strSalePageURL": "genre/Free%20to%20Play"
+	},
+	{
+		"rgTagIDs": [
+			113
+		],
+		"id": "earlyaccess",
+		"strLocToken": "#genre_early_access",
+		"strSalePageURL": "genre/Early%20Access"
+	}
+]`);
+      function _() {
+        const _ = _.Localize;
+        return _.map((_) => ({
+          ..._,
+          strName: _(_.strLocToken),
+        }));
+      }
       function _() {
         const _ = (0, _._)(),
           _ = (0, _._)(),
@@ -77861,8 +76559,605 @@
 		]
 	}
 ]`);
-      var _ = __webpack_require__("chunkid"),
+      var _,
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { itemid: _, ...__webpack_require__ } = _;
+        return "hubcategoryid" in _
+          ? (0, _.jsx)(_, {
+              hubcategoryid: _.hubcategoryid,
+              ...__webpack_require__,
+            })
+          : "tagid" in _
+            ? (0, _.jsx)(_, {
+                tagid: _.tagid,
+                ...__webpack_require__,
+              })
+            : "creatorid" in _
+              ? (0, _.jsx)(_, {
+                  creatorid: _.creatorid,
+                  ...__webpack_require__,
+                })
+              : null;
+      }
+      function _(_) {
+        switch (_) {
+          case "square":
+            return `${_._.STORE_CDN_URL}categories/image/`;
+          case "wide":
+            return `${_._.STORE_CDN_URL}categories/searchsuggestionsimage/`;
+          default:
+            return (0, _._)(_, `Unknown type: ${_}`), "";
+        }
+      }
+      function _(_) {
+        const {
+            hubcategoryid: _,
+            type: __webpack_require__ = "square",
+            className: _,
+          } = _,
+          { data: _ } = (0, _._)(),
+          _ = _?.get(_);
+        if (_)
+          return (0, _.jsx)("img", {
+            className: _,
+            alt: "",
+            src: `${_(__webpack_require__)}category/${_.handle}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+          });
+      }
+      function _(_) {
+        const {
+          category: _,
+          type: __webpack_require__ = "square",
+          className: _,
+        } = _;
+        return (0, _.jsx)("img", {
+          className: _,
+          alt: "",
+          src: `${_(__webpack_require__)}category/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+        });
+      }
+      function _(_) {
+        const {
+          tagid: _,
+          type: __webpack_require__ = "square",
+          className: _,
+        } = _;
+        return (0, _.jsx)("img", {
+          className: _,
+          alt: "",
+          src: `${_(__webpack_require__)}tags/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+        });
+      }
+      function _(_) {
+        const {
+          creatorid: _,
+          type: __webpack_require__ = "square",
+          className: _,
+        } = _;
+        return (0, _.jsx)("img", {
+          className: _,
+          alt: "",
+          src: `${_(__webpack_require__)}creator/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+        });
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.recent_apps || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  recent_apps: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisitData";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.item_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  item_id: {
+                    _: 1,
+                    _: _._,
+                  },
+                  time_visit: {
+                    _: 2,
+                    _: _._.readFixed32,
+                    _: _._.writeFixed32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisitData_RecentApps";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisit_GetFrequentlyVisitedPages_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.visit_data || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  visit_data: {
+                    _: 1,
+                    _: _,
+                  },
+                  frequent_hubs: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisit_GetFrequentlyVisitedPages_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.item_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  item_id: {
+                    _: 1,
+                    _: _._,
+                  },
+                  time_visit: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  visit_count: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisit_GetFrequentlyVisitedPages_Response_FrequentHubs";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.context || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  context: {
+                    _: 1,
+                    _: _._,
+                  },
+                  data_request: {
+                    _: 2,
+                    _: _._,
+                  },
+                  count: {
+                    _: 3,
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisit_GetMostVisitedItemsOnStore_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.item_ids || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  item_ids: {
+                    _: 1,
+                    _: _._,
+                    _: !0,
+                    _: !0,
+                  },
+                  items: {
+                    _: 2,
+                    _: _._,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisit_GetMostVisitedItemsOnStore_Response";
+        }
+      }
+      function _(_ = !0) {
+        const _ = (function (_, _, _, _) {
+          return {
+            queryKey: ["StoreFrequentlyVisitedHubs", _],
+            queryFn: async () => {
+              const [_, _] = await Promise.all([
+                _.fetchQuery(_(_, _)),
+                _.fetchQuery(
+                  (0, _._)(_, _, _, _._.excluded_content_descriptors),
+                ),
+              ]);
+              return (_.frequent_hubs || [])
+                .map((_) =>
+                  _.item_id.hubcategoryid
+                    ? {
+                        ..._,
+                        hubconfig: _.get(_.item_id.hubcategoryid),
+                      }
+                    : _.item_id.tagid
+                      ? {
+                          ..._,
+                          tagid: _.item_id.tagid,
+                        }
+                      : null,
+                )
+                .filter(
+                  (_) =>
+                    _ &&
+                    (("hubconfig" in _ && _.hubconfig) ||
+                      ("tagid" in _ && _.tagid)),
+                );
+            },
+            enabled: !!_,
+            initialData: _ ? void 0 : [],
+            staleTime: 6e5,
+          };
+        })((0, _._)(), (0, _._)(), (0, _._)(), (0, _._)());
+        return (0, _._)({
+          ..._,
+          enabled: _.enabled && _,
+        });
+      }
+      function _(_, _) {
+        return {
+          queryKey: ["StoreFrequentlyVisited", _],
+          queryFn: () =>
+            (async function (_) {
+              const _ = _._.Init(_),
+                _ = await _.GetFrequentlyVisitedPages(_, _);
+              if (!__webpack_require__.BSuccess())
+                throw __webpack_require__.GetErrorMessage();
+              return __webpack_require__.Body().toObject();
+            })(_),
+          enabled: !!_ && "0" != _,
+          staleTime: 6e5,
+        };
+      }
+      !(function (_) {
+        (_.GetFrequentlyVisitedPages = function (_, _) {
+          return _.SendMsg(
+            "UserStoreVisit.GetFrequentlyVisitedPages#1",
+            (0, _._)(_, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
+        }),
+          (_.GetMostVisitedItemsOnStore = function (_, _) {
+            return _.SendMsg(
+              "UserStoreVisit.GetMostVisitedItemsOnStore#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          });
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)(),
           _ = _(),
@@ -78699,6 +77994,444 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const _ = _(),
+          { data: __webpack_require__ } = (function () {
+            const _ = _(),
+              _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              queryKey: ["AppIDsInCart", _],
+              queryFn: async () => {
+                const _ = await Promise.all(
+                    _.map((_) =>
+                      __webpack_require__.fetchQuery((0, _._)(_, _)),
+                    ),
+                  ),
+                  _ = new Set();
+                return (
+                  _.forEach((_) => _.included_appids?.forEach((_) => _.add(_))),
+                  _
+                );
+              },
+              enabled: void 0 !== _,
+            });
+          })();
+        return _
+          ? "appid" in _
+            ? __webpack_require__?.has(_.appid)
+            : "packageid" in _
+              ? _?.some((_) => "packageid" in _ && _.packageid == _.packageid)
+              : "bundleid" in _ &&
+                _?.some((_) => "bundleid" in _ && _.bundleid == _.bundleid)
+          : void 0;
+      }
+      function _() {
+        const { data: _ } = (0, _._)();
+        return _.useMemo(
+          () =>
+            _?.line_items?.map((_) =>
+              _.packageid
+                ? {
+                    packageid: _.packageid,
+                  }
+                : {
+                    bundleid: _.bundleid,
+                  },
+            ),
+          [_],
+        );
+      }
+      function _(_) {
+        const { children: _, collapse: __webpack_require__ } = _,
+          _ = "itemid" in _ ? _.itemid : void 0,
+          { data: _ } = (0, _._)(_),
+          _ = _(_),
+          _ = "itemid" in _ ? _ : _.filterFailures;
+        let _;
+        if (
+          (_
+            ? (_ = (0, _.jsx)(_, {}))
+            : _?.excluded_content_descriptorids?.length
+              ? (_ = (0, _.jsx)(_, {}))
+              : _?.ignored
+                ? (_ = (0, _.jsx)(_, {}))
+                : _?.already_owned
+                  ? (_ = (0, _.jsx)(_, {}))
+                  : _?.on_wishlist && (_ = (0, _.jsx)(_, {})),
+          !_)
+        )
+          return _;
+        const { className: _, children: _, ..._ } = _.props,
+          _ = _()(_, _.ds_flagged, __webpack_require__ && _.ds_collapse_flag);
+        return _.cloneElement(
+          _,
+          {
+            ..._,
+            className: _,
+          },
+          _,
+          _,
+        );
+      }
+      function _(_) {
+        const { className: _, svg: __webpack_require__, children: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: _()(_.ds_flag, _),
+          children: [
+            __webpack_require__,
+            (0, _.jsx)("div", {
+              className: _.ds_label,
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsx)(_, {
+          className: _.ds_owned_flag,
+          svg: (0, _.jsx)(_, {}),
+          children: _("#ItemFlag_InLibrary"),
+        });
+      }
+      function _() {
+        return (0, _.jsx)(_, {
+          className: _.ds_wishlist_flag,
+          svg: (0, _.jsx)(_, {}),
+          children: _("#ItemFlag_OnWishlist"),
+        });
+      }
+      function _() {
+        return (0, _.jsx)(_, {
+          className: _.ds_incart_flag,
+          svg: (0, _.jsx)(_, {}),
+          children: _("#ItemFlag_InCart"),
+        });
+      }
+      function _() {
+        return (0, _.jsx)(_, {
+          className: _.ds_ignored_flag,
+          svg: (0, _.jsx)(_, {}),
+          children: _("#ItemFlag_Ignored"),
+        });
+      }
+      function _() {
+        return (0, _.jsx)(_, {
+          className: _.ds_excluded_by_preferences_flag,
+          svg: (0, _.jsx)(_, {}),
+          children: _("#ItemFlag_ExcludedByPreferences"),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 15 14",
+          fill: "none",
+          children: (0, _.jsx)("path", {
+            fill: "currentColor",
+            _: "M14 3H1V1H14V3ZM14 6H1V8H14V6ZM14 11H1V13H14V11Z",
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("svg", {
+          width: "11",
+          height: "10",
+          viewBox: "0 0 11 10",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
+            _: "M5.31189 0.0504065L6.54671 3.85081H10.5427L7.30988 6.19959L8.5447 10L5.31189 7.65122L2.07907 10L3.31389 6.19959L0.0810761 3.85081H4.07706L5.31189 0.0504065Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("svg", {
+          width: "11",
+          height: "11",
+          viewBox: "0 0 11 11",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
+            _: "M10.2758 2.45971L9.20028 6.3586C9.14883 6.55507 9.03359 6.72888 8.87266 6.85277C8.71173 6.97665 8.51421 7.04358 8.31112 7.04304H4.50695C4.309 7.04324 4.11631 6.97935 3.95769 6.86093C3.79906 6.74252 3.68303 6.57593 3.62695 6.3861L2.31 2.45971H0.611115V1.23749H2.53C2.72203 1.23785 2.9091 1.2985 3.0648 1.41089C3.2205 1.52328 3.33697 1.68173 3.39778 1.86388L3.59945 2.47499L10.2758 2.45971ZM4.58334 8.26527C4.43225 8.26527 4.28456 8.31007 4.15894 8.394C4.03332 8.47794 3.93541 8.59724 3.8776 8.73683C3.81978 8.87641 3.80465 9.03 3.83413 9.17818C3.8636 9.32636 3.93635 9.46247 4.04319 9.5693C4.15002 9.67614 4.28613 9.74889 4.43431 9.77837C4.58249 9.80784 4.73608 9.79271 4.87566 9.7349C5.01525 9.67708 5.13455 9.57917 5.21849 9.45355C5.30242 9.32793 5.34723 9.18024 5.34723 9.02915C5.34723 8.82656 5.26675 8.63226 5.12349 8.489C4.98023 8.34575 4.78593 8.26527 4.58334 8.26527ZM8.25 8.26527C8.09892 8.26527 7.95123 8.31007 7.82561 8.394C7.69999 8.47794 7.60208 8.59724 7.54426 8.73683C7.48645 8.87641 7.47132 9.03 7.50079 9.17818C7.53027 9.32636 7.60302 9.46247 7.70985 9.5693C7.81668 9.67614 7.9528 9.74889 8.10098 9.77837C8.24916 9.80784 8.40275 9.79271 8.54233 9.7349C8.68191 9.67708 8.80122 9.57917 8.88515 9.45355C8.96909 9.32793 9.01389 9.18024 9.01389 9.02915C9.01389 8.82656 8.93341 8.63226 8.79016 8.489C8.6469 8.34575 8.4526 8.26527 8.25 8.26527Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          width: "11",
+          height: "10",
+          viewBox: "0 0 11 10",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M5 10C4.30833 10 3.65833 9.86875 3.05 9.60625C2.44167 9.34375 1.9125 8.9875 1.4625 8.5375C1.0125 8.0875 0.65625 7.55833 0.39375 6.95C0.13125 6.34167 0 5.69167 0 5C0 4.30833 0.13125 3.65833 0.39375 3.05C0.65625 2.44167 1.0125 1.9125 1.4625 1.4625C1.9125 1.0125 2.44167 0.65625 3.05 0.39375C3.65833 0.13125 4.30833 0 5 0C5.69167 0 6.34167 0.13125 6.95 0.39375C7.55833 0.65625 8.0875 1.0125 8.5375 1.4625C8.9875 1.9125 9.34375 2.44167 9.60625 3.05C9.86875 3.65833 10 4.30833 10 5C10 5.69167 9.86875 6.34167 9.60625 6.95C9.34375 7.55833 8.9875 8.0875 8.5375 8.5375C8.0875 8.9875 7.55833 9.34375 6.95 9.60625C6.34167 9.86875 5.69167 10 5 10ZM5 9C6.11667 9 7.0625 8.6125 7.8375 7.8375C8.6125 7.0625 9 6.11667 9 5C9 3.88333 8.6125 2.9375 7.8375 2.1625C7.0625 1.3875 6.11667 1 5 1C3.88333 1 2.9375 1.3875 2.1625 2.1625C1.3875 2.9375 1 3.88333 1 5C1 6.11667 1.3875 7.0625 2.1625 7.8375C2.9375 8.6125 3.88333 9 5 9Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M7.5 5.75H2.5V4.25H7.5V5.75Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          width: "11",
+          height: "10",
+          viewBox: "0 0 11 10",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M5 10C4.30833 10 3.65833 9.86875 3.05 9.60625C2.44167 9.34375 1.9125 8.9875 1.4625 8.5375C1.0125 8.0875 0.65625 7.55833 0.39375 6.95C0.13125 6.34167 0 5.69167 0 5C0 4.30833 0.13125 3.65833 0.39375 3.05C0.65625 2.44167 1.0125 1.9125 1.4625 1.4625C1.9125 1.0125 2.44167 0.65625 3.05 0.39375C3.65833 0.13125 4.30833 0 5 0C5.69167 0 6.34167 0.13125 6.95 0.39375C7.55833 0.65625 8.0875 1.0125 8.5375 1.4625C8.9875 1.9125 9.34375 2.44167 9.60625 3.05C9.86875 3.65833 10 4.30833 10 5C10 5.69167 9.86875 6.34167 9.60625 6.95C9.34375 7.55833 8.9875 8.0875 8.5375 8.5375C8.0875 8.9875 7.55833 9.34375 6.95 9.60625C6.34167 9.86875 5.69167 10 5 10ZM5 9C6.11667 9 7.0625 8.6125 7.8375 7.8375C8.6125 7.0625 9 6.11667 9 5C9 3.88333 8.6125 2.9375 7.8375 2.1625C7.0625 1.3875 6.11667 1 5 1C3.88333 1 2.9375 1.3875 2.1625 2.1625C1.3875 2.9375 1 3.88333 1 5C1 6.11667 1.3875 7.0625 2.1625 7.8375C2.9375 8.6125 3.88333 9 5 9Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M6.36527 7.42592L2.57407 3.63473L3.63474 2.57407L7.42593 6.36526L6.36527 7.42592Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M3.63473 7.42592L7.42593 3.63473L6.36526 2.57407L2.57407 6.36526L3.63473 7.42592Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+            purchaseOption: _,
+            size: __webpack_require__ = "large",
+            transparentBackground: _ = !1,
+          } = _,
+          {
+            discount_pct: _ = 0,
+            formatted_original_price: _,
+            formatted_final_price: _,
+            final_price_in_cents: _,
+            hide_discount_pct_for_compliance: _ = !1,
+            bundle_discount_pct: _,
+          } = _;
+        if (!_) return null;
+        const _ = _ && !_;
+        return (0, _.jsxs)(_, {
+          percentage: _,
+          original_price: _,
+          final_price: _,
+          hide_discount_pct: _,
+          size: __webpack_require__,
+          transparent: _,
+          children: [
+            _ > 0 &&
+              (0, _.jsx)(_, {
+                percentage: _,
+                hide_discount_pct: _,
+              }),
+            (0, _.jsx)(_, {
+              final_price: _,
+              original_price: _ ? _ : void 0,
+            }),
+          ],
+        });
+      });
+      function _(_) {
+        const { final_price: _, original_price: __webpack_require__ } = _;
+        return __webpack_require__
+          ? (0, _.jsxs)("div", {
+              className: _()(_.Prices, _.WithOriginalPrice),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.OriginalPrice,
+                  children: __webpack_require__,
+                }),
+                (0, _.jsx)("div", {
+                  className: _.FinalPrice,
+                  children: _,
+                }),
+              ],
+            })
+          : (0, _.jsx)("div", {
+              className: _.Prices,
+              children: (0, _.jsx)("div", {
+                className: _.FinalPrice,
+                children: _,
+              }),
+            });
+      }
+      function _(_) {
+        const { percentage: _, hide_discount_pct: __webpack_require__ } = _;
+        return __webpack_require__
+          ? (0, _.jsx)("div", {
+              className: _()(_.Discount, _.Icon),
+              children: (0, _.jsx)(_, {}),
+            })
+          : (0, _.jsx)("div", {
+              className: _()(_.Discount),
+              children: (0, _.jsxs)("div", {
+                className: _.DiscountPct,
+                children: ["-", _, "%"],
+              }),
+            });
+      }
+      function _(_) {
+        const {
+          percentage: _,
+          original_price: __webpack_require__,
+          final_price: _,
+          hide_discount_pct: _,
+          size: _,
+          transparent: _,
+          children: _,
+        } = _;
+        let _ = {};
+        return (
+          _ &&
+            ((_.role = "link"),
+            (_["aria-label"] = _
+              ? _.Localize("#Discount_ARIA_Label_SpecialPrice", _)
+              : _.Localize("#Discount_ARIA_Label", _, __webpack_require__, _))),
+          (0, _.jsx)("div", {
+            ..._,
+            className: _()(
+              _.DiscountBlock,
+              _ && _.Transparent,
+              "large" == _ && _.SizeLarge,
+              "inline" == _ && _.SizeInline,
+            ),
+            children: _,
+          })
+        );
+      }
+      function _() {
+        return (0, _.jsx)("svg", {
+          width: "26",
+          height: "26",
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 26 26",
+          fill: "none",
+          children: (0, _.jsx)("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M17.5133 4.65595C15.8046 6.36468 17.0366 9.2803 19.4284 9.28035C20.446 9.28035 21.0261 8.76331 21.2519 8.56209C21.2963 8.5225 21.327 8.49513 21.3447 8.48633C22.4018 7.42917 22.4024 5.71423 21.3441 4.65595C20.2817 3.59714 18.5699 3.59936 17.5133 4.65595ZM18.5553 7.44735C17.4045 6.30173 19.1522 4.54882 20.301 5.69597V5.69586C20.7836 6.18159 20.783 6.96269 20.301 7.44422C19.8189 7.92684 19.0348 7.92415 18.5553 7.44735ZM0.583974 13.873L14.455 0L24.4165 1.583L26 11.5449L12.1289 25.416C11.7368 25.805 11.2252 26 10.7156 26C10.2065 26 9.69489 25.805 9.30552 25.416L0.583974 16.6976C0.194954 16.305 0 15.7933 0 15.2843C0 14.7742 0.194948 14.2625 0.583974 13.873ZM9.26632 17.5853L8.88665 17.965C8.62416 18.2274 8.43667 18.5227 8.32418 18.8509C8.21403 19.1766 8.19645 19.5106 8.27145 19.8528C8.34879 20.1926 8.53979 20.5148 8.84446 20.8195C9.14445 21.1195 9.46318 21.307 9.80066 21.382C10.1428 21.457 10.4756 21.4382 10.7991 21.3257C11.1272 21.2132 11.4225 21.0257 11.6849 20.7633L12.0646 20.3836C12.3271 20.1211 12.5146 19.8281 12.6271 19.5047C12.7419 19.179 12.7618 18.8473 12.6868 18.5099C12.6142 18.17 12.4255 17.8478 12.1209 17.5431C11.8209 17.2431 11.4986 17.0545 11.1541 16.9771C10.8143 16.8998 10.4791 16.9162 10.1487 17.0263C9.82293 17.1365 9.5288 17.3228 9.26632 17.5853ZM9.6038 18.6821L9.98347 18.3024C10.2014 18.0845 10.4487 17.9427 10.7252 17.8771C11.0065 17.8115 11.2701 17.9017 11.5162 18.1478C11.7693 18.4009 11.8584 18.6634 11.7834 18.9352C11.7107 19.2047 11.5654 19.4485 11.3475 19.6664L10.9678 20.0461C10.7498 20.2641 10.5026 20.4082 10.226 20.4785C9.95417 20.5488 9.6952 20.4609 9.44912 20.2148C9.19601 19.9617 9.10344 19.6981 9.1714 19.4239C9.24171 19.1473 9.38584 18.9001 9.6038 18.6821ZM9.80066 9.87944L9.421 10.2591C9.15851 10.5216 8.97102 10.8169 8.85853 11.145C8.74837 11.4708 8.7308 11.8047 8.80579 12.1469C8.88313 12.4867 9.07414 12.809 9.37881 13.1136C9.6788 13.4136 9.99753 13.6011 10.335 13.6761C10.6772 13.7511 11.01 13.7324 11.3334 13.6199C11.6615 13.5074 11.9568 13.3199 12.2193 13.0574L12.599 12.6777C12.8614 12.4152 13.0489 12.1223 13.1614 11.7989C13.2763 11.4731 13.2962 11.1415 13.2212 10.804C13.1485 10.4642 12.9599 10.1419 12.6552 9.83725C12.3552 9.53727 12.033 9.34861 11.6885 9.27127C11.3486 9.19393 11.0135 9.21033 10.683 9.32048C10.3573 9.43063 10.0632 9.61695 9.80066 9.87944ZM10.1381 10.9763L10.5178 10.5966C10.7358 10.3786 10.983 10.2368 11.2596 10.1712C11.5408 10.1056 11.8045 10.1958 12.0506 10.4419C12.3037 10.695 12.3927 10.9575 12.3177 11.2294C12.2451 11.4989 12.0998 11.7426 11.8818 11.9606L11.5021 12.3403C11.2842 12.5582 11.0369 12.7023 10.7604 12.7726C10.4885 12.843 10.2295 12.7551 9.98347 12.509C9.73036 12.2559 9.63778 11.9922 9.70575 11.718C9.77606 11.4415 9.92019 11.1942 10.1381 10.9763ZM16.3675 13.7464L4.21814 15.9963L5.01966 16.7978L17.169 14.5479L16.3675 13.7464Z",
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgItemIDs: _ } = _;
+        return (0, _.jsx)(_._, {
+          "flow-children": "column",
+          navEntryPreferPosition: _._.MAINTAIN_Y,
+          className: _.CapsuleList,
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                itemid: _,
+              },
+              (0, _._)(_),
+            ),
+          ),
+        });
+      }
+      const _ = _.memo(function (_) {
+        const {
+            itemid: _,
+            active: __webpack_require__,
+            className: _,
+            ..._
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsx)(_, {
+          itemid: _,
+          collapse: !0,
+          children: (0, _.jsxs)(_._, {
+            ..._,
+            storeItem: _,
+            className: _()(
+              _.ItemCapsule,
+              void 0 === __webpack_require__ && _.Hover,
+              __webpack_require__ && _.Active,
+              _,
+            ),
+            children: [
+              (0, _.jsx)(_, {
+                itemid: _,
+              }),
+              (0, _.jsxs)("div", {
+                className: _.Content,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Title,
+                    children: _?.name,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _.DiscountCtn,
+                    children: [
+                      (0, _.jsx)(_, {
+                        storeItem: _,
+                        purchaseOption: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        purchaseOption: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      });
+      function _(_) {
+        const { storeItem: _, purchaseOption: __webpack_require__ } = _;
+        return __webpack_require__
+          ? (0, _.jsx)(_, {
+              purchaseOption: __webpack_require__,
+              size: "inline",
+              transparentBackground: !0,
+            })
+          : _?.is_free
+            ? _("#Price_Free")
+            : (0, _.jsx)(_.Fragment, {
+                children: " ",
+              });
+      }
+      function _(_) {
+        const { purchaseOption: _ } = _;
+        return !_ || !_.included_game_count || _.included_game_count <= 1
+          ? null
+          : (0, _.jsx)("div", {
+              className: _.BundleItemCount,
+              children: _(
+                "#Menu_IncludesXGames",
+                (0, _._)(_.included_game_count),
+              ),
+            });
+      }
+      function _(_) {
+        const { itemid: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_),
+          _ =
+            __webpack_require__ &&
+            (0, _._)(__webpack_require__, "small_capsule");
+        return (0, _.jsx)("div", {
+          className: _()(_.Capsule, !_ && _.Ghost),
+          children:
+            _ &&
+            (0, _.jsx)("img", {
+              src: _,
+              alt: "",
+            }),
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
         return (0, _.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           version: "1.1",
@@ -79418,93 +79151,986 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const { refPage: _ } = _,
-          [__webpack_require__, _] = _.useState(),
-          [_, _] = _.useState(() =>
-            _._.IN_MOBILE_WEBVIEW ? new Set() : void 0,
-          ),
-          _ = _(),
-          { bSearchVisible: _, openSearch: _, closeSearch: _ } = _(),
-          _ = _.useRef(null),
-          _ = _.useCallback(() => {
-            _.current?.TakeFocus(), _(void 0);
-          }, []),
-          _ = _.useCallback(() => {
-            _(void 0), _();
-          }, [_]),
-          _ = _.useCallback(
-            (_) => {
-              _((_) => (_ === _ ? void 0 : _)), _();
-            },
-            [_],
-          ),
-          _ = _.useCallback(() => _("more"), [_]);
-        (0, _.useEffect)(() => {
-          _ && _();
-        }, [_, _]);
-        const _ = _.useRef(null),
-          _ = _.useRef(null);
+      function _(_, _ = {}) {
+        const {
+            nTimeoutMS: __webpack_require__ = 350,
+            nTimeoutExtensionMS: _ = 125,
+            nMaxTimeoutExtensions: _ = 3,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _.useRef(void 0);
+        return (
+          _.useEffect(() => {
+            const _ = performance.now();
+            _.current
+              ? _ - _.current.tsLastChange < _ * __webpack_require__ &&
+                (_.current.tsScheduledTimeout = Math.max(
+                  performance.now() + _,
+                  _.current.tsScheduledTimeout,
+                ))
+              : (_.current = {
+                  tsLastChange: _,
+                  tsScheduledTimeout: performance.now() + __webpack_require__,
+                });
+            const _ = _.current.tsScheduledTimeout - performance.now(),
+              _ = window.setTimeout(() => {
+                (_.current = void 0), _(_);
+              }, _);
+            return () => window.clearTimeout(_);
+          }, [_, __webpack_require__, _, _]),
+          _
+        );
+      }
+      function _(_) {
+        return {
+          content_descriptors_excluded: _,
+        };
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, __webpack_require__ = 10, _ = void 0) {
+        return {
+          queryKey: ["MostVisitedItems", __webpack_require__],
+          queryFn: () =>
+            (async function (_, _, __webpack_require__ = 10, _) {
+              const _ = _._.Init(_);
+              _.Body().set_count(__webpack_require__),
+                (0, _._)(_, _),
+                _ && (0, _._)(_, _.data_request);
+              const _ = await _.GetMostVisitedItemsOnStore(_, _);
+              if (!_.BSuccess())
+                throw `Error loading most visited items: ${_.GetErrorMessage()}`;
+              _ &&
+                _.Body()
+                  .items()
+                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
+              return _.Body()
+                .item_ids()
+                .map((_) => _.toObject());
+            })(_, _, __webpack_require__, _),
+          staleTime: 3e5,
+        };
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+          include_assets: !0,
+          apply_user_filters: !0,
+        },
+        _ = {
+          include_tags: !0,
+          include_creators: !0,
+        };
+      function _(_) {
+        const {
+          list: _,
+          iActiveIndex: __webpack_require__,
+          activeSection: _,
+          getMouseHandlers: _,
+        } = _;
+        let _, _, _, _, _;
+        switch (
+          (_.rgMainItems.length
+            ? (_ = (0, _.jsx)(_, {
+                title: _.strMainTitle,
+                children: _.rgMainItems.map(({ item_id: _ }, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      itemid: _,
+                      index: _,
+                      active: "apps" == _ && _ == __webpack_require__,
+                      getMouseHandlers: _,
+                    },
+                    (0, _._)(_),
+                  ),
+                ),
+              }))
+            : _.rgMainItems &&
+              "suggestions" == _.eListType &&
+              (_ = (0, _.jsx)(_, {
+                title: _.strMainTitle,
+                children: (0, _.jsx)(_, {}),
+              })),
+          _.rgTextItems?.length &&
+            (_ = (0, _.jsx)(_, {
+              title: _.strTextLinks,
+              items: _.rgTextItems,
+            })),
+          _.rgSubSectionItems?.length &&
+            (_ =
+              "recent" == _.eListType
+                ? (0, _.jsx)(_, {
+                    title: _.strSubSectionTitle,
+                    horizontal: !0,
+                    children: _.rgSubSectionItems.map(({ item_id: _ }, _) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          itemid: _,
+                          index: _,
+                          active: "categories" == _ && _ == __webpack_require__,
+                          getMouseHandlers: _,
+                        },
+                        (0, _._)(_),
+                      ),
+                    ),
+                  })
+                : (0, _.jsx)(_, {
+                    title: _.strSubSectionTitle,
+                    children: _.rgSubSectionItems.map(({ item_id: _ }, _) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          itemid: _,
+                          index: _,
+                          active: "categories" == _ && _ == __webpack_require__,
+                          getMouseHandlers: _,
+                        },
+                        (0, _._)(_),
+                      ),
+                    ),
+                  })),
+          _.eListType)
+        ) {
+          case "suggestions":
+            _ = "search-suggestion";
+            break;
+          case "recent":
+            (_ = "popular"), (_ = "recent");
+            break;
+          default:
+            (0, _._)(_.eListType, `Unhandled list type ${_.eListType}`);
+        }
         return (0, _.jsxs)(_._, {
-          controller: "storemenu",
-          method: "default",
+          controller: "search",
+          method: "suggest",
           submethod: "",
-          feature: "",
+          feature: _,
           children: [
-            (0, _.jsxs)(_, {
-              bShowBackdrop: _ || !!__webpack_require__,
-              closePopoverAndSearch: _,
-              refPage: _,
-              children: [
-                _._.IN_MOBILE_WEBVIEW
-                  ? (0, _.jsx)(_, {})
-                  : (0, _.jsxs)(_._, {
-                      "flow-children": "row",
-                      className: _.Content,
-                      role: "navigation",
-                      "aria-label": _("#Menu_Label"),
-                      navRef: _,
-                      children: [
-                        (0, _.jsxs)(_, {
-                          openPopover: _,
-                          activeSection: __webpack_require__,
-                          visibleSections: _,
-                          setVisibleSections: _,
-                          refPopover: _,
-                          refActiveButton: _,
-                          children: [
-                            _ && (0, _.jsx)(_, {}),
-                            !_ &&
-                              (0, _.jsx)("div", {
-                                className: _.NoSearchBarSpacer,
-                              }),
-                          ],
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.RightButtons,
-                          children: [
-                            !_ && (0, _.jsx)(_, {}),
-                            (0, _.jsx)(_, {}),
-                            (0, _.jsx)(_, {}),
-                          ],
-                        }),
-                      ],
+            (0, _.jsx)(_._, {
+              feature: _ ?? _,
+              children: _,
+            }),
+            _,
+            _,
+            (0, _.jsx)(_, {
+              active: "advancedsearch" == _,
+              getMouseHandlers: _,
+            }),
+          ],
+        });
+      }
+      function _(_ = !0) {
+        return (function (_ = 10, _ = {}, __webpack_require__ = !0) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            {
+              dataLoader: _,
+              storeBrowseContext: _,
+              cacheStoreItemData: _,
+            } = (0, _._)();
+          return (0, _._)({
+            queryKey: ["MostVisitedItemsFiltered", _],
+            queryFn: async () => {
+              const _ = await _.fetchQuery(
+                  _(_, _, _, {
+                    cacheStoreItemData: _,
+                    data_request: {
+                      ..._,
+                      apply_user_filters: !0,
+                    },
+                  }),
+                ),
+                _ = await Promise.all(
+                  __webpack_require__.map((_) => _.fetchQuery((0, _._)(_, _))),
+                ),
+                _ = new Map();
+              for (let _ = 0; _ < _.length; _++) _.set(_[_], _[_]);
+              const _ = (_) => {
+                const _ = _.get(_);
+                return !_ || (10 == _.filter_failure && _.on_wishlist)
+                  ? 0
+                  : _.filter_failure;
+              };
+              return __webpack_require__
+                .filter((_) => {
+                  const _ = _.get(_);
+                  return !_ || _.filter_failure < 40;
+                })
+                .sort((_, _) => _(_) - _(_));
+            },
+            staleTime: 3e5,
+            enabled: __webpack_require__,
+          });
+        })(10, _, _);
+      }
+      function _(_, _, _, _ = !0) {
+        const _ = _(_),
+          _ = (function () {
+            const { data: _ } = _();
+            return _.useMemo(() => {
+              if (void 0 !== _) return _(_);
+            }, [_]);
+          })(),
+          _ = _.useMemo(() => (0, _._)(_, _), [_]),
+          _ = (function (_, ..._) {
+            const [_, _] = _.useState([]),
+              _ = _.useRef(void 0);
+            (0, _.useEffect)(() => {
+              (_.current && _._(_.current, _)) ||
+                ((_.current = _), _((_) => [..._, _(..._)]));
+            });
+            const [_, _] = (0, _._)({
+              queries: _,
+              combine: (_) => {
+                for (let _ = _.length - 1; _ >= 0; _--)
+                  if (!_[_].isLoading) return [_, _[_]];
+                return [void 0, void 0];
+              },
+            });
+            return (
+              (0, _.useEffect)(() => {
+                _ && _ > 0 && _((_) => _.slice(_));
+              }, [_]),
+              _
+            );
+          })((0, _._)(_, 5, _), void 0 === _ ? "" : _),
+          _ = _ && "" == _,
+          { data: _ } = _(_),
+          { data: _ } = _(_),
+          { data: _ } = (function (_ = !0) {
+            const _ = _((0, _._)(), (0, _._)());
+            return (0, _._)({
+              ..._,
+              select: (_) =>
+                _.visit_data?.recent_apps?.map(({ item_id: _ }) => _) || [],
+              enabled: _.enabled && _,
+            });
+          })(_ && _);
+        _.useMemo(() => _._(_().slice()), []);
+        return (function (_) {
+          const [_, _] = _.useState(_ || _),
+            [_, _] = _.useState({
+              activeSection: "apps",
+              iActiveIndex: void 0,
+              eLastInputSource: void 0,
+            }),
+            _ = (function (_, _) {
+              const _ = (0, _._)(),
+                _ = (0, _._)(),
+                _ = (0, _._)(_, _);
+              return _.useCallback(
+                async (_) => {
+                  const _ = await __webpack_require__.fetchQuery(
+                    (0, _._)(_, _),
+                  );
+                  return (
+                    !!_ &&
+                    ((window.location.href = `${_._.STORE_BASE_URL}${_.store_url_path}?snr=${_}`),
+                    !0)
+                  );
+                },
+                [_, _, _],
+              );
+            })();
+          _.useEffect(() => {
+            __webpack_require__(_ || _);
+          }, [_]);
+          const _ =
+              ("apps" == _.activeSection
+                ? _.rgMainItems
+                : _.rgSubSectionItems) || [],
+            _ = "recent" == _.eListType,
+            _ = _.useCallback(
+              (_, _) => ({
+                onMouseEnter: () => {
+                  _((_) =>
+                    _.activeSection === _ && _.iActiveIndex === _
+                      ? _
+                      : {
+                          activeSection: _,
+                          iActiveIndex: _,
+                          eLastInputSource: "mouse",
+                        },
+                  );
+                },
+                onMouseLeave: () => {
+                  _({
+                    activeSection: "apps",
+                    iActiveIndex: void 0,
+                    eLastInputSource: "mouse",
+                  });
+                },
+              }),
+              [],
+            ),
+            _ = (_) => "categories" == _ && _,
+            _ = (_, _ = !0) => {
+              switch (_) {
+                case "apps":
+                  return _.rgMainItems.length;
+                case "categories": {
+                  const _ = _.rgSubSectionItems?.length || 0;
+                  return _ && _ ? (_ > 0 ? 1 : 0) : _;
+                }
+                case "advancedsearch":
+                  return 1;
+                default:
+                  return (0, _._)(_, `unknown section ${_}`), 0;
+              }
+            },
+            _ = (_, _ = !1) => {
+              const _ = ["apps", "categories", "advancedsearch"];
+              let _ =
+                (__webpack_require__.indexOf(_) + (_ ? -1 : 1) + _.length) %
+                _.length;
+              return (
+                0 == _(_[_]) && (_ = (_ + (_ ? -1 : 1) + _.length) % _.length),
+                0 == _(_[_]) ? _ : _[_]
+              );
+            },
+            _ = _.useRef(void 0);
+          _.current = (_) => {
+            switch (_.key) {
+              case "ArrowUp":
+                return (
+                  _(({ activeSection: _, iActiveIndex: _ }) => {
+                    let _ = (void 0 === _ || _(_) ? 0 : _) - 1,
+                      _ = _;
+                    return (
+                      _ < 0 && ((_ = _(_, !0)), (_ = _(_) - 1)),
+                      {
+                        activeSection: _,
+                        iActiveIndex: _,
+                        eLastInputSource: "keyboard",
+                      }
+                    );
+                  }),
+                  !0
+                );
+              case "ArrowDown":
+                return (
+                  _(({ activeSection: _, iActiveIndex: _ }) => {
+                    let _ = (_ ?? -1) + 1,
+                      _ = _;
+                    return (
+                      _ >= _(_) && ((_ = _(_)), (_ = 0)),
+                      {
+                        activeSection: _,
+                        iActiveIndex: _,
+                        eLastInputSource: "keyboard",
+                      }
+                    );
+                  }),
+                  !0
+                );
+              case "ArrowLeft":
+                if (_(_.activeSection))
+                  return (
+                    _((_) => {
+                      const { activeSection: _, iActiveIndex: _ } = _;
+                      if (_(_)) {
+                        const _ = _(_, !1);
+                        return {
+                          activeSection: _,
+                          iActiveIndex: ((_ ?? 0) + _ - 1) % _,
+                          eLastInputSource: "keyboard",
+                        };
+                      }
+                      return _;
                     }),
+                    !0
+                  );
+                break;
+              case "ArrowRight":
+                if (_(_.activeSection))
+                  return (
+                    _((_) => {
+                      const { activeSection: _, iActiveIndex: _ } = _;
+                      if (_(_.activeSection)) {
+                        return {
+                          activeSection: "categories",
+                          iActiveIndex: ((_ ?? 0) + 1) % _(_, !1),
+                          eLastInputSource: "keyboard",
+                        };
+                      }
+                      return _;
+                    }),
+                    !0
+                  );
+                break;
+              case "Enter": {
+                const {
+                  activeSection: _,
+                  iActiveIndex: _,
+                  eLastInputSource: _,
+                } = _;
+                if ("advancedsearch" == _) return !1;
+                {
+                  const _ = "apps" == _ ? _.rgMainItems : _.rgSubSectionItems;
+                  if (void 0 !== _ && _ && _ < _.length && "keyboard" === _)
+                    return _(_[_].item_id), !0;
+                }
+                break;
+              }
+            }
+            return !1;
+          };
+          const _ = _.useCallback((_) => _.current(_), []);
+          return {
+            list: _,
+            activeSection: _.activeSection,
+            iActiveIndex:
+              void 0 !== _.iActiveIndex
+                ? Math.max(0, Math.min(_.length - 1, _.iActiveIndex))
+                : void 0,
+            getMouseHandlers: _,
+            onKeyDown: _,
+          };
+        })(
+          _.useMemo(() => {
+            if (_ && _.data) {
+              const [_, _, _] = (0, _._)(_.data.rgItemIDs);
+              return {
+                eListType: "suggestions",
+                strMainTitle: _("#Menu_SearchBar_SearchResults"),
+                rgMainItems: _.slice(0, _).map((_) => ({
+                  item_id: _,
+                })),
+                strSubSectionTitle: _("#Menu_SearchBar_BrowseBy"),
+                rgSubSectionItems: [..._, ..._].slice(0, 3).map((_) => ({
+                  item_id: _,
+                })),
+              };
+            }
+            if (_ || _ || _) {
+              const _ = _?.slice(0, _) || [];
+              return {
+                eListType: "recent",
+                strMainTitle: _("#Menu_SearchBar_PopularSearches"),
+                rgMainItems: _.map((_) => ({
+                  item_id: _,
+                })),
+                strTextLinks: _("#Menu_SearchBar_RecentlyViewed"),
+                rgTextItems: _
+                  ? _?.slice(0, 4).map((_) => ({
+                      item_id: _,
+                    }))
+                  : void 0,
+                strSubSectionTitle: _("#Menu_SearchBar_YourTopGenres"),
+                rgSubSectionItems:
+                  _?.slice(0, 3).map((_) => ({
+                    item_id: _.item_id,
+                  })) || [],
+              };
+            }
+          }, [_, _, _, _, _, _]),
+        );
+      }
+      const _ = {
+        eListType: "suggestions",
+        strMainTitle: "",
+        rgMainItems: [],
+      };
+      function _(_) {
+        const { title: _, children: __webpack_require__, horizontal: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: _()(_.SuggestionSection, _ && _.Horizontal),
+          children: [
+            (0, _.jsx)("div", {
+              className: _.SectionTitle,
+              children: _,
+            }),
+            (0, _.jsx)("div", {
+              className: _.SuggestionList,
+              children: __webpack_require__,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { title: _, items: __webpack_require__ } = _;
+        return (0, _.jsx)("div", {
+          className: _()(_.SuggestionSection),
+          children: (0, _.jsxs)("div", {
+            className: _.SuggestionTextList,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.SectionTitle,
+                children: _,
+              }),
+              __webpack_require__.map(({ item_id: _ }, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    itemid: _,
+                    first: 0 == _,
+                  },
+                  (0, _._)(_),
+                ),
+              ),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { itemid: _, first: __webpack_require__ } = _,
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !__webpack_require__ && ", ",
+            (0, _.jsx)(_._, {
+              className: _.TextLink,
+              storeItem: _,
+              feature: "recent",
+              children: _?.name,
+            }),
+          ],
+        });
+      }
+      const _ = _.memo(function (_) {
+          const {
+              itemid: _,
+              index: __webpack_require__,
+              getMouseHandlers: _,
+              active: _ = !1,
+            } = _,
+            _ = _.useMemo(
+              () => _("apps", __webpack_require__),
+              [_, __webpack_require__],
+            );
+          return (0, _.jsx)(_, {
+            itemid: _,
+            active: _,
+            ..._,
+          });
+        }),
+        _ = _.memo(function (_) {
+          const { itemid: _, ...__webpack_require__ } = _,
+            { data: _ } = (0, _._)(_),
+            _ = (0, _._)(`${_._.STORE_BASE_URL}${_?.store_url_path || "/"}`);
+          return "creatorid" in _
+            ? (0, _.jsx)(_, {
+                className: _.CreatorSuggestion,
+                itemid: _,
+                url: _,
+                ...__webpack_require__,
+                children: (0, _.jsx)(_, {
+                  itemid: _,
+                }),
+              })
+            : (0, _.jsx)(_, {
+                itemid: _,
+                url: _,
+                ...__webpack_require__,
+                children: (0, _.jsx)(_, {
+                  itemid: _,
+                }),
+              });
+        });
+      function _(_) {
+        const {
+          url: _,
+          itemid: __webpack_require__,
+          grid: _ = !1,
+          className: _,
+          index: _,
+          getMouseHandlers: _,
+          active: _,
+          children: _,
+        } = _;
+        return (0, _.jsxs)("a", {
+          className: _()(
+            _.CategorySuggestion,
+            _ && _.CategoryGridSuggestion,
+            _,
+            _ && _.Active,
+          ),
+          href: _,
+          ..._("categories", _),
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.TiledBackground,
+              children: [
                 (0, _.jsx)(_, {
-                  activeSection: __webpack_require__,
-                  closePopover: _,
-                  visibleSections: _,
-                  refPopover: _,
-                  refActiveButton: _,
+                  itemid: __webpack_require__,
+                  type: _ ? "square" : "wide",
+                }),
+                (0, _.jsx)("div", {
+                  className: _.BackgroundGradient,
                 }),
               ],
             }),
+            _,
+          ],
+        });
+      }
+      function _(_) {
+        const { itemid: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _?.clan_avatar &&
+              (0, _.jsx)("img", {
+                className: _.CreatorAvatar,
+                src: (0, _._)(_.clan_avatar, "Medium"),
+                alt: "",
+              }),
+            (0, _.jsx)("div", {
+              className: _.CreatorName,
+              children: __webpack_require__?.name,
+            }),
             (0, _.jsx)(_, {
-              openMoreSection: _,
+              storeItem: __webpack_require__,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { itemid: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              className: _.TagName,
+              children: __webpack_require__?.name,
+            }),
+            (0, _.jsx)(_, {
+              storeItem: __webpack_require__,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { storeItem: _ } = _;
+        return _ && _.game_count
+          ? (0, _.jsx)("div", {
+              className: _.GameCount,
+              children: _(
+                "#Menu_SearchBar_CategoryGameCount",
+                (0, _._)(_.game_count),
+              ),
+            })
+          : null;
+      }
+      const _ = _.memo(function (_) {
+        const { itemid: _, ...__webpack_require__ } = _,
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}${_?.store_url_path || "/"}`);
+        return (0, _.jsx)(_, {
+          itemid: _,
+          url: _,
+          grid: !0,
+          ...__webpack_require__,
+          children: (0, _.jsx)("div", {
+            className: _.Content,
+            children: (0, _.jsx)("div", {
+              children: _?.name,
+            }),
+          }),
+        });
+      });
+      function _(_) {
+        const { getMouseHandlers: _, active: __webpack_require__ } = _,
+          _ = (function (_) {
+            const { term: _ } = _(),
+              _ = (0, _._)(_);
+            return (0, _.useMemo)(() => _(_, _), [_, _]);
+          })("advancedsearch");
+        return (0, _.jsx)("a", {
+          className: _()(_.AdvancedSearch, __webpack_require__ && _.Active),
+          href: _,
+          ..._("advancedsearch", 0),
+          children: (0, _.jsx)("span", {
+            className: _.Content,
+            children: _("#Menu_SearchBar_AdvancedSearch"),
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("div", {
+          className: _.NoMatches,
+          children: _("#Menu_SearchBar_NoMatches"),
+        });
+      }
+      const _ = _.memo(function () {
+        const { bBackdropActive: _ } = _(),
+          _ = _();
+        return (0, _.jsxs)("div", {
+          className: _.SearchBar,
+          children: [
+            !_ &&
+              (0, _.jsx)(_, {
+                bBackdropActive: _,
+              }),
+            (0, _.jsx)(_, {}),
+          ],
+        });
+      });
+      function _(_) {
+        return _.useCallback(
+          (_) => {
+            const _ = (_) =>
+                _.classList.contains(_.SuggestionsPosition) ||
+                _.classList.contains(_.SearchForm),
+              _ = _.currentTarget;
+            var _;
+            (_.relatedTarget &&
+              ((_ = _.relatedTarget), _._(_, _) || _._(_, _))) ||
+              _();
+          },
+          [_],
+        );
+      }
+      const _ = _.memo(function (_) {
+        const { bBackdropActive: _, autoFocus: __webpack_require__ } = _,
+          {
+            term: _,
+            setTerm: _,
+            onInputKeyDown: _,
+            suggestionsId: _,
+            onActive: _,
+            bSearchVisible: _,
+            openSearch: _,
+            closeSearch: _,
+          } = _(),
+          _ = _(_),
+          _ = _.useCallback(() => {
+            _(), _();
+          }, [_, _]),
+          _ = _.useCallback(
+            (_) => {
+              _(_.currentTarget.value), _();
+            },
+            [_, _],
+          ),
+          _ = _.useCallback(() => {
+            _(""), _();
+          }, [_, _]),
+          _ = _.useCallback(
+            (_) => {
+              _(), _.preventDefault();
+            },
+            [_],
+          ),
+          _ = (0, _._)("search");
+        return (0, _.jsxs)("form", {
+          className: _()(_.SearchForm, _ && !_ && _.MenuActive),
+          role: "search",
+          onMouseEnter: () => _(),
+          method: "GET",
+          action: `${_._.STORE_BASE_URL}search`,
+          onBlur: _,
+          children: [
+            (0, _.jsx)("input", {
+              type: "hidden",
+              name: "snr",
+              value: _,
+            }),
+            (0, _.jsxs)("div", {
+              className: _.SearchInputContainer,
+              children: [
+                (0, _.jsx)("input", {
+                  className: _.SearchInput,
+                  name: "term",
+                  placeholder: _("#Menu_SearchPlaceholder"),
+                  value: _,
+                  autoFocus: __webpack_require__,
+                  autoComplete: "off",
+                  type: "text",
+                  onChange: _,
+                  onFocus: _,
+                  onClick: _,
+                  onKeyDown: _,
+                  role: "combobox",
+                  "aria-expanded": _,
+                  "aria-autocomplete": "list",
+                  "aria-controls": _ ? _ : void 0,
+                }),
+                _ &&
+                  (0, _.jsx)("button", {
+                    className: _.ClearSearch,
+                    type: "button",
+                    onMouseDown: _,
+                    onClick: _,
+                    "aria-label": _("#Menu_ClearSearchTerm"),
+                    children: (0, _.jsx)(_, {}),
+                  }),
+              ],
+            }),
+            (0, _.jsx)("button", {
+              className: _.SearchIcon,
+              type: "submit",
+              onClick: _,
+              children: (0, _.jsx)(_, {
+                "aria-label": _("#Menu_Search"),
+              }),
             }),
           ],
         });
       });
+      function _() {
+        const {
+            term: _,
+            setInputKeyDown: _,
+            suggestionsId: __webpack_require__,
+            bEverActive: _,
+            bSearchVisible: _,
+            openSearch: _,
+            closeSearch: _,
+          } = _(),
+          { nBackdropHeight: _ } = _(),
+          _ = _ && _ < 480 ? 3 : 4,
+          _ = !(_ && _ < 450),
+          { onKeyDown: _, ..._ } = _(_, _, _, _),
+          _ = _(_),
+          _ = _.useCallback(
+            (_) => {
+              _ && _(_)
+                ? _.preventDefault()
+                : "Escape" === _.key
+                  ? _()
+                  : "Tab" !== _.key && _();
+            },
+            [_, _, _, _],
+          );
+        _.useEffect(() => (_(_), () => _(void 0)), [_, _]);
+        const _ = _.useRef(null);
+        return (
+          _(_, _),
+          (0, _.jsx)("div", {
+            className: _.SuggestionsPosition,
+            onBlur: _,
+            ref: _,
+            children: (0, _.jsx)(_, {
+              visible: _,
+              className: _.InnerPosition,
+              msAnimationDuration: 100,
+              keepMounted: !0,
+              children: (0, _.jsx)("div", {
+                className: _.Suggestions,
+                _: __webpack_require__,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              }),
+            }),
+          })
+        );
+      }
+      const _ = _.memo(function (_) {
+          return (0, _.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 18 18",
+            fill: "none",
+            ..._,
+            children: (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M13.8296 12.0786C14.8347 10.6321 15.2623 8.86133 15.0284 7.11496C14.7945 5.36859 13.9159 3.77313 12.5656 2.64269C11.2153 1.51224 9.49114 0.928708 7.73254 1.00696C5.97394 1.08522 4.30831 1.8196 3.06357 3.06552C1.81882 4.31144 1.08514 5.97864 1.00696 7.7389C0.928776 9.49916 1.51176 11.2249 2.64114 12.5765C3.77052 13.9281 5.36446 14.8075 7.10919 15.0417C8.85391 15.2758 10.623 14.8477 12.0682 13.8417L15.2185 17L15.3997 16.8187L16.8188 15.3982L17 15.2168L13.8296 12.0786ZM8.04222 12.5824C7.14643 12.5824 6.27075 12.3165 5.52593 11.8183C4.7811 11.3202 4.20058 10.6122 3.85777 9.78376C3.51497 8.95538 3.42528 8.04384 3.60004 7.16443C3.7748 6.28502 4.20616 5.47723 4.83958 4.84321C5.47301 4.20919 6.28004 3.77742 7.15862 3.60249C8.0372 3.42757 8.94787 3.51734 9.77548 3.86047C10.6031 4.2036 11.3104 4.78467 11.8081 5.5302C12.3058 6.27573 12.5714 7.15223 12.5714 8.04887C12.5714 9.25123 12.0943 10.4043 11.2449 11.2545C10.3955 12.1047 9.24344 12.5824 8.04222 12.5824V12.5824Z",
+            }),
+          });
+        }),
+        _ = _.memo(function (_) {
+          return (0, _.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M32.12 7.41L28.59 3.88L18 14.46L7.41 3.88L3.88 7.41L14.46 18L3.88 28.59L7.41 32.12L18 21.54L28.59 32.12L32.12 28.59L21.54 18L32.12 7.41Z",
+            }),
+          });
+        }),
+        _ = _.memo(function (_) {
+          const { refPage: _ } = _,
+            [__webpack_require__, _] = _.useState(),
+            [_, _] = _.useState(() =>
+              _._.IN_MOBILE_WEBVIEW ? new Set() : void 0,
+            ),
+            _ = _(),
+            { bSearchVisible: _, openSearch: _, closeSearch: _ } = _(),
+            _ = _.useRef(null),
+            _ = _.useCallback(() => {
+              _.current?.TakeFocus(), _(void 0);
+            }, []),
+            _ = _.useCallback(() => {
+              _(void 0), _();
+            }, [_]),
+            _ = _.useCallback(
+              (_) => {
+                _((_) => (_ === _ ? void 0 : _)), _();
+              },
+              [_],
+            ),
+            _ = _.useCallback(() => _("more"), [_]);
+          (0, _.useEffect)(() => {
+            _ && _();
+          }, [_, _]);
+          const _ = _.useRef(null),
+            _ = _.useRef(null);
+          return (0, _.jsxs)(_._, {
+            controller: "storemenu",
+            method: "default",
+            submethod: "",
+            feature: "",
+            children: [
+              (0, _.jsxs)(_, {
+                bShowBackdrop: _ || !!__webpack_require__,
+                closePopoverAndSearch: _,
+                refPage: _,
+                children: [
+                  _._.IN_MOBILE_WEBVIEW
+                    ? (0, _.jsx)(_, {})
+                    : (0, _.jsxs)(_._, {
+                        "flow-children": "row",
+                        className: _.Content,
+                        role: "navigation",
+                        "aria-label": _("#Menu_Label"),
+                        navRef: _,
+                        onMoveLeft: _._,
+                        onMoveRight: _._,
+                        children: [
+                          (0, _.jsxs)(_, {
+                            openPopover: _,
+                            activeSection: __webpack_require__,
+                            visibleSections: _,
+                            setVisibleSections: _,
+                            refPopover: _,
+                            refActiveButton: _,
+                            children: [
+                              _ && (0, _.jsx)(_, {}),
+                              !_ &&
+                                (0, _.jsx)("div", {
+                                  className: _.NoSearchBarSpacer,
+                                }),
+                            ],
+                          }),
+                          (0, _.jsxs)("div", {
+                            className: _.RightButtons,
+                            children: [
+                              !_ && (0, _.jsx)(_, {}),
+                              (0, _.jsx)(_, {}),
+                              (0, _.jsx)(_, {}),
+                            ],
+                          }),
+                        ],
+                      }),
+                  (0, _.jsx)(_, {
+                    activeSection: __webpack_require__,
+                    closePopover: _,
+                    visibleSections: _,
+                    refPopover: _,
+                    refActiveButton: _,
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                openMoreSection: _,
+              }),
+            ],
+          });
+        });
       function _(_) {
         const {
             bShowBackdrop: _,
@@ -80054,7 +80680,6 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
@@ -80126,77 +80751,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -80245,12 +80803,571 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -80345,40 +81462,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -80395,472 +81478,6 @@
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -80927,6 +81544,7 @@
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
+        _ = _.Fragment,
         _ = _(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -81707,6 +82325,11 @@
                         fallback: null,
                         children: (0, _.jsx)(_, {}),
                       }),
+                    "open-in-desktop-client-or-login": () =>
+                      (0, _.jsx)(_.Suspense, {
+                        fallback: null,
+                        children: (0, _.jsx)(_, {}),
+                      }),
                     "store-menu-v7": () =>
                       (0, _.jsx)(_.Suspense, {
                         fallback: null,
@@ -81728,6 +82351,11 @@
                       children: (0, _.jsx)(_, {
                         ..._,
                       }),
+                    }),
+                  footer: () =>
+                    (0, _.jsx)(_.Suspense, {
+                      fallback: null,
+                      children: (0, _.jsx)(_, {}),
                     }),
                 },
               }),

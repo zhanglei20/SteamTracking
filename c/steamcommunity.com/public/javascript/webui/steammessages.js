@@ -30864,6 +30864,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  framegen_frame_rate: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -44708,7 +44713,8 @@ var CLSTAMP = "steamdb";
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 5,
+                bConstMethod: !0,
+                ePrivilege: 1,
               },
             );
           }),
@@ -44718,6 +44724,7 @@ var CLSTAMP = "steamdb";
               (0, _._)(_, _),
               _,
               {
+                bConstMethod: !0,
                 ePrivilege: 5,
               },
             );
@@ -93605,6 +93612,11 @@ var CLSTAMP = "steamdb";
                     _: 4,
                     _,
                   },
+                  is_vrlink_remote: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                   tmp_title: {
                     _: 1e3,
                     _: _._.readString,
@@ -94043,7 +94055,6 @@ var CLSTAMP = "steamdb";
           return "CVRGamepadUI_Frame_FrameMenu_Item_SteamGameOverlayOptions";
         }
       }
-      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {

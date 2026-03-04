@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Meus anúncios e encomendas ativos",
 	"MyOrders_Heading_Sell": "Anúncios",
 	"MyOrders_Heading_Buy": "Encomendas",
+	"MyOrders_Heading_MyPurchaseOffers": "Compras: minhas encomendas",
+	"MyOrders_Heading_MyListings": "Vendas: meus anúncios",
 	"MyOrders_FailedToLoad": "Houve um problema ao carregar os dados deste item.",
 	"MyOrders_NoActiveOrders_Item": "Você não tem anúncios nem encomendas ativas para este item.",
 	"MyOrders_NoBuyOrders_Item": "Você não tem encomendas ativas para este item.",

@@ -584,7 +584,7 @@
 }
 ._3vGQugNJFaL7JS8KhZhU2H img {
   filter: blur(120px);
-  height: 110vh;
+  height: 100%;
 }
 .cCoovA8rihPiT1IZ33Cr_ {
   position: relative;
@@ -637,6 +637,11 @@ html.responsive.gamepad .cCoovA8rihPiT1IZ33Cr_ {
   font-style: normal;
   font-weight: 700;
   line-height: 1.3;
+}
+.cCoovA8rihPiT1IZ33Cr_ ._33K0Gjy94jUQFhMmqwaCH8 {
+  width: fit-content;
+  background: #344654b9;
+  color: var(--color-text-light-subtitle, #d6d9dc);
 }
 .cCoovA8rihPiT1IZ33Cr_ ._2F9yRZTzjsLBM4QSoRoLsN {
   position: absolute;

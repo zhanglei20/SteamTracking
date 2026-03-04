@@ -146,235 +146,255 @@
       (0, _._)([_._], _.prototype, "HideModal", null), (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (function () {
+            const [_, _] = (0, _.useState)(location.search);
+            return (
+              (0, _.useEffect)(() => {
+                function _(_) {
+                  "urlchange" === _.data && _(location.search);
+                }
+                return (
+                  window.addEventListener("message", _),
+                  () => {
+                    window.removeEventListener("message", _);
+                  }
+                );
+              }, []),
+              _
+            );
+          })(),
+          _ = (0, _.useMemo)(() => {
+            const _ = new URLSearchParams(
+              __webpack_require__.substring("chunkid"),
+            ).get(_);
+            return null != _
+              ? null != _
+                ? "boolean" == typeof _
+                  ? _.constructor("false" !== _)
+                  : _.constructor(_)
+                : _
+              : _;
+          }, [_, _, _]),
+          [_, _] = (0, _.useState)(_),
+          _ = _.useCallback(
+            (_, _ = !1) => {
+              const _ = new URLSearchParams(
+                __webpack_require__.substring("chunkid"),
+              );
+              if (null != _) {
+                if (_.get(_) == _) return;
+                _.set(_, String(_));
+              } else {
+                if (!_.has(_)) return;
+                _.delete(_);
+              }
+              _
+                ? history.replaceState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  )
+                : history.pushState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  ),
+                (0, _.startTransition)(() => {
+                  _(_), window.postMessage("urlchange");
+                });
+            },
+            [_, _],
+          );
+        return [_, _];
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.state = {
-              events: null,
-              bShowModal: !1,
-              modalInitialEvent: null,
-              bPreLoaded: !1,
-              announcementGIDList: [],
-              last_update_event: null,
-            });
+      function _(_) {
+        const {
+            appid: _,
+            event_customization: __webpack_require__,
+            partnerEventStore: _,
+            trackingLocation: _,
+            strClassName: _,
+            bViewAllShowInfiniteScroll: _,
+          } = _,
+          [_, _] = (0, _.useState)(null),
+          [_, _, _] = (0, _._)(),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)(void 0),
+          [_, _] = (0, _.useState)(null),
+          [_] = _("emgid", void 0),
+          _ = (0, _.useCallback)(() => {
+            _(null), _();
+          }, [_]),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (_ && _ && _.BIsPartnerEvent()) {
+                const _ = _._.Get().GetTracker();
+                _.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
+                  _.Flush();
+              }
+              _(_), _(void 0), _();
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(() => {
+            const {
+                event_gid: _,
+                announcement_gid: _,
+                clan_account_id: __webpack_require__,
+              } = _,
+              _ = _._.Get().GetTracker();
+            _ && _ && _.MarkEventRead(_, __webpack_require__, _) && _.Flush(),
+              _(_),
+              _(null),
+              _();
+          }, [_, _, _]);
+        (0, _.useEffect)(() => {
           const _ = (0, _._)("EventWebRowEmbed");
-          if (this.ValidateStoreDefault(_)) {
-            (this.state.bPreLoaded = _.bPreLoaded),
-              (this.state.announcementGIDList = _.announcementGIDList),
-              (this.state.last_update_event = _.last_update_event),
-              (this.state.events = []),
-              this.state.announcementGIDList.forEach((_) => {
+          let _ = !1;
+          if (
+            (function (_) {
+              const _ = _;
+              if (_ && "object" == typeof _)
+                return (
+                  void 0 !== _.bPreLoaded &&
+                  "boolean" == typeof _.bPreLoaded &&
+                  Array.isArray(_.announcementGIDList)
+                );
+              return !1;
+            })(_)
+          ) {
+            (_ = _.bPreLoaded),
+              _(_.announcementGIDList),
+              _(_.last_update_event);
+            const _ = [];
+            if (
+              (_.announcementGIDList.forEach((_) => {
                 const _ = _._.GetClanEventFromAnnouncementGID(_);
-                _ && this.state.events.push(_);
-              });
-            const _ = new URLSearchParams(window.location.search),
-              _ = null == _ ? void 0 : _.get("emgid");
-            if (_) {
-              const _ = this.state.events.find((_) => _.GID === _);
-              _ &&
-                ((this.state.modalInitialEvent = _),
-                (this.state.bShowModal = !0));
+                _ && _.push(_);
+              }),
+              _(_),
+              _)
+            ) {
+              const _ = _.find((_) => _.GID === _);
+              _ && _(_);
             }
           }
-        }
-        async componentDidMount() {
-          const {
-            appid: _,
-            event_customization: _,
-            partnerEventStore: __webpack_require__,
-            trackingLocation: _,
-          } = this.props;
-          if (!this.state.bPreLoaded) {
-            const _ = await __webpack_require__.LoadAdjacentPartnerEvents(
-              null,
-              null,
-              _,
-              0,
-              2,
-              _,
-            );
-            if (
-              (this.setState({
-                events: _,
-              }),
-              _ && _ && _.length > 0)
-            ) {
-              const _ = _._.Get().GetTracker();
-              this.state.events
-                .filter((_) => _.BIsPartnerEvent())
-                .forEach((_) =>
+          if (!_) {
+            (async () => {
+              const _ = await _.LoadAdjacentPartnerEvents(
+                void 0,
+                void 0,
+                _,
+                0,
+                2,
+                __webpack_require__,
+              );
+              if ((_(_), _ && _ && _.length > 0)) {
+                const _ = _._.Get().GetTracker();
+                _.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
                   _.MarkEventShown(_.GID, _.clanSteamID.GetAccountID(), _),
                 ),
-                _.Flush();
-            }
+                  _.Flush();
+              }
+            })();
           }
-          window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
-            this.setState({
-              bShowModal: !0,
-              announcementGID: _,
-              modalInitialEvent: void 0,
-            });
-          };
-        }
-        ValidateStoreDefault(_) {
-          const _ = _;
-          return (
-            !(!_ || "object" != typeof _) &&
-            void 0 !== _.bPreLoaded && "boolean" == typeof _.bPreLoaded &&
-            Array.isArray(_.announcementGIDList)
+        }, [_, _, __webpack_require__, _, _, _]),
+          (0, _.useEffect)(
+            () => (
+              (window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
+                _(_), _(null), _(_), _();
+              }),
+              () => {
+                window.fnPartnerEvent_ShowInfiniteScroll &&
+                  delete window.fnPartnerEvent_ShowInfiniteScroll;
+              }
+            ),
+            [_],
           );
-        }
-        ShowModal(_) {
-          const { trackingLocation: _ } = this.props;
-          this.setState({
-            bShowModal: !0,
-            modalInitialEvent: _,
-            announcementGID: void 0,
-          });
-          const _ = _._.Get().GetTracker();
-          _ &&
-            _.BIsPartnerEvent() &&
-            __webpack_require__.MarkEventRead(
-              _.GID,
-              _.clanSteamID.GetAccountID(),
-              _,
-            ) &&
-            __webpack_require__.Flush();
-        }
-        ShowLatestUpdateModal() {
-          const {
-              event_gid: _,
-              announcement_gid: _,
-              clan_account_id: __webpack_require__,
-            } = this.state.last_update_event,
-            { trackingLocation: _ } = this.props;
-          this.setState({
-            bShowModal: !0,
-            modalInitialEvent: void 0,
-            announcementGID: _,
-          });
-          const _ = _._.Get().GetTracker();
-          _ && _.MarkEventRead(_, __webpack_require__, _) && _.Flush();
-        }
-        CloseModal() {
-          this.setState({
-            bShowModal: !1,
-            modalInitialEvent: null,
-          });
-        }
-        BHasLastUpdateEvent() {
-          var _;
-          return Boolean(
-            null === (_ = this.state.last_update_event) || void 0 === _
-              ? void 0
-              : _.rtime,
-          );
-        }
-        BShouldShowLastUpdateEvent() {
-          const { last_update_event: _, events: _ } = this.state;
-          return (
-            !(
-              !this.BHasLastUpdateEvent() ||
-              !(null == _ ? void 0 : _.announcement_gid)
-            ) && !(null == _ ? void 0 : _.length)
-          );
-        }
-        render() {
-          var _, _, _;
-          const _ = this.state.events,
-            _ = window.screen.width <= 500 ? 1 : 2,
-            _ = Boolean(null == _ ? void 0 : _.length),
-            _ = this.BHasLastUpdateEvent(),
-            _ = this.BShouldShowLastUpdateEvent()
-              ? this.state.last_update_event.announcement_gid
+        const _ = !!_ && !!_.rtime,
+          _ =
+            _ && !!_.announcement_gid && (!_ || 0 == _.length)
+              ? _.announcement_gid
               : void 0,
-            { strClassName: _ } = this.props;
-          return (0, _.jsxs)(_._, {
-            className: _,
-            children: [
-              this.state.bShowModal &&
-                (0, _.jsx)(_, {
-                  ...this.props,
-                  announcementGID:
-                    this.state.announcementGID ||
-                    (null === (_ = this.state.modalInitialEvent) || void 0 === _
-                      ? void 0
-                      : _.AnnouncementGID),
-                  eventModel: this.state.modalInitialEvent,
-                  closeModal: this.CloseModal,
-                }),
-              _ &&
-                (0, _.jsxs)("div", {
-                  children: [
-                    (0, _.jsx)("h2", {
-                      children: (0, _._)("#EventBrowse_RecentEvents"),
-                    }),
-                    !(null === (_ = this.context) || void 0 === _
-                      ? void 0
-                      : _.IN_GAMEPADUI) &&
-                      (0, _.jsx)("div", {
-                        className: _.SectionButtonCtn,
-                        children: this.props.bViewAllShowInfiniteScroll
-                          ? (0, _.jsx)(_._, {
-                              className: _.SectionButton,
-                              onClick: () => this.ShowModal(_[0]),
-                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                            })
-                          : (0, _.jsx)(_._, {
-                              eventModel: _[0],
-                              route: _._.k_eViewWebSiteHub,
-                              className: _.SectionButton,
-                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                            }),
-                      }),
+          _ = window.screen.width <= 500 ? 1 : 2;
+        return (0, _.jsxs)(_._, {
+          className: _,
+          children: [
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                ..._,
+                announcementGID: _ || (null == _ ? void 0 : _.AnnouncementGID),
+                eventModel: _,
+                closeModal: _,
+              }),
+            }),
+            !!_ &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: (0, _._)("#EventBrowse_RecentEvents"),
+                  }),
+                  !_._.IN_GAMEPADUI &&
+                    !!_ &&
                     (0, _.jsx)("div", {
-                      className: _.EventsSummariesCtn,
-                      children: _.slice(0, _).map((_) => {
-                        const _ =
-                          1 === _.length && window.screen.width > 500
-                            ? _._
-                            : _._;
-                        return (0, _.jsx)(
-                          _,
-                          {
-                            event: _,
-                            onClick: (_) => {
-                              this.ShowModal(_),
-                                _.stopPropagation(),
-                                _.preventDefault();
-                            },
-                          },
-                          _.GID,
-                        );
-                      }),
+                      className: _.SectionButtonCtn,
+                      children: _
+                        ? (0, _.jsx)(_._, {
+                            className: _.SectionButton,
+                            onClick: () => _(_[0]),
+                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                          })
+                        : (0, _.jsx)(_._, {
+                            eventModel: _[0],
+                            route: _._.k_eViewWebSiteHub,
+                            className: _.SectionButton,
+                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                          }),
                     }),
-                  ],
-                }),
-              Boolean(_ && _) &&
-                (0, _.jsx)(_, {
-                  nUpdateTime: this.state.last_update_event.rtime,
-                  announcementGID: _,
-                  onClick: this.ShowLatestUpdateModal,
-                }),
-              Boolean(
-                _ &&
-                  !_ &&
-                  !(null === (_ = this.context) || void 0 === _
-                    ? void 0
-                    : _.IN_GAMEPADUI),
-              ) &&
-                (0, _.jsx)(_, {
-                  nUpdateTime: this.state.last_update_event.rtime,
-                  onClick: this.ShowLatestUpdateModal,
-                }),
-            ],
-          });
-        }
+                  (0, _.jsx)("div", {
+                    className: _.EventsSummariesCtn,
+                    children: _.slice(0, _).map((_) => {
+                      const _ =
+                        1 === _.length && window.screen.width > 500 ? _._ : _._;
+                      return (0, _.jsx)(
+                        _,
+                        {
+                          event: _,
+                          onClick: (_) => {
+                            _(_), _.stopPropagation(), _.preventDefault();
+                          },
+                        },
+                        _.GID,
+                      );
+                    }),
+                  }),
+                ],
+              }),
+            _ &&
+              !!_ &&
+              (0, _.jsx)(_, {
+                nUpdateTime: _.rtime,
+                announcementGID: _,
+                onClick: _,
+              }),
+            _ &&
+              !_ &&
+              !_._.IN_GAMEPADUI &&
+              (0, _.jsx)(_, {
+                nUpdateTime: _.rtime,
+                onClick: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -444,7 +464,7 @@
                 children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
-            Boolean(_) &&
+            !!_ &&
               (0, _.jsx)(_._, {
                 className: _.EventsSummariesCtn,
                 "flow-children": "column",
@@ -457,10 +477,6 @@
           ],
         });
       }
-      (_.contextType = _._),
-        (0, _._)([_._], _.prototype, "ShowModal", null),
-        (0, _._)([_._], _.prototype, "ShowLatestUpdateModal", null),
-        (0, _._)([_._], _.prototype, "CloseModal", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {

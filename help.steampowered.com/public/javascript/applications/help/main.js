@@ -110,6 +110,9 @@
     7692: (e) => {
       e.exports = { LoginContainer: "_2kLRmRsLwjGDlm-ZfUpChG" };
     },
+    3857: (e) => {
+      e.exports = { Root: "_2KPA3I9eXE9r251_-GX_iv" };
+    },
     3645: (e) => {
       e.exports = {
         Bold: "_3cln317VYhwhE1fSeMCG48",
@@ -957,8 +960,6 @@
         BodyNoScroll: "_1Xs5dtPK2K37sd1U9BLX3S",
         BodyNoScrollDialog: "_3jhMIr8hczcBK_fOVtEVOK",
         OverlayModal: "_24YFXIVY7CC2quNzCN7015",
-        GamepadOnlyModalWrapper: "_1GlTsstfPZWsQc4umFIvrX",
-        GamepadOnlyPanelWrapper: "_1aY-rmUi48QSw7U1ZWa5DZ",
         ModalDialog: "_32QRvPPBL733SpNR9x0Gp3",
       };
     },
@@ -2527,7 +2528,7 @@
         },
       };
     },
-    4249: (e, t, r) => {
+    7805: (e, t, r) => {
       "use strict";
       r(3808), r(3977);
       var i = r(626),
@@ -31642,13 +31643,145 @@
               }),
         });
       }
-      const lg = i.lazy(() => r.e(976).then(r.bind(r, 9584))),
-        cg = (e) =>
+      var lg = r(3857);
+      function cg(e) {
+        const t = "function" == typeof matchMedia ? matchMedia : ug,
+          r = (0, i.useMemo)(() => t(e), [e, t]),
+          [n, s] = (0, i.useState)(!!r && r.matches);
+        return (
+          (0, i.useEffect)(() => {
+            if (!r) return () => {};
+            function e(e) {
+              s(e.matches);
+            }
+            return (
+              s(r.matches),
+              r.addEventListener("change", e),
+              () => r.removeEventListener("change", e)
+            );
+          }, [r]),
+          n
+        );
+      }
+      function ug() {
+        return null;
+      }
+      const mg = (0, i.createContext)({ sm: 768, md: 940, lg: 1240, ff: "lg" });
+      function dg(e) {
+        const { children: t, breakpoints: r = {} } = e,
+          n = (0, i.useContext)(mg),
+          a = { sm: r.sm ?? n.sm, md: r.md ?? n.md, lg: r.lg ?? n.lg },
+          o = (function (e) {
+            const t = cg(`(min-width: ${e.sm}px)`),
+              r = cg(`(min-width: ${e.md}px)`),
+              n = cg(`(min-width: ${e.lg}px)`),
+              [s, a] = (0, i.useState)(!0);
+            return (
+              (0, i.useEffect)(() => a(!0), []),
+              s ? (n ? "lg" : r ? "md" : t ? "sm" : "initial") : "lg"
+            );
+          })(a),
+          { sm: l, md: c, lg: u } = a,
+          m = (0, i.useMemo)(
+            () => ({ ff: o, sm: l, md: c, lg: u }),
+            [o, l, c, u],
+          );
+        return (0, s.jsx)(mg.Provider, { value: m, children: t });
+      }
+      function pg(e) {
+        const { formFactor: t, children: r } = e,
+          n = (0, i.useContext)(mg),
+          a = (0, i.useMemo)(() => ({ ...n, ff: t ?? n.ff }), [n, t]);
+        return t
+          ? (0, s.jsx)(mg.Provider, { value: a, children: r })
+          : (0, s.jsx)(s.Fragment, { children: r });
+      }
+      ["initial", "sm", "md", "lg"].reduce((e, t, r) => ((e[t] = r), e), {});
+      const gg = (0, i.createContext)({}),
+        _g = (0, i.createContext)(() => {});
+      function hg(e) {
+        const [t, r] = (0, i.useState)({});
+        return (0, s.jsx)(gg.Provider, {
+          value: t,
+          children: (0, s.jsx)(_g.Provider, { value: r, children: e.children }),
+        });
+      }
+      function fg() {
+        return (0, i.useContext)(gg);
+      }
+      function bg(e) {
+        const {
+            accentColor: t,
+            dullColor: r,
+            bodyTextColor: i,
+            children: n,
+            breakpoints: a,
+          } = e,
+          o = (0, s.jsx)("div", {
+            "data-accent-color": t,
+            "data-dull-color": r,
+            "data-body-text-color": i,
+            style: { display: "contents" },
+            children: (0, s.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: n,
+            }),
+          });
+        return a ? (0, s.jsx)(dg, { breakpoints: a, children: o }) : o;
+      }
+      const yg = i.memo(function (e) {
+        const {
+          defaultTextSize: t,
+          accentColor: r = "blue",
+          dullColor: i = "greyneutral",
+          bodyTextColor: n = "text-light",
+          breakpoints: a,
+          children: o,
+          zoo: l,
+        } = e;
+        let c;
+        return (
+          t &&
+            (c = {
+              "--default-font-size": `var(--text-size-${t})`,
+              "--default-line-height": `var(--line-height-${t})`,
+              "--default-letter-spacing": `var(--letter-spacing-${t})`,
+            }),
+          (0, s.jsx)(hg, {
+            children: (0, s.jsx)(dg, {
+              breakpoints: a,
+              children: (0, s.jsx)(Bg, {
+                children: (0, s.jsx)("div", {
+                  className: Rs()(lg.Root, "noOpinionatedGlobalStyles"),
+                  style: c,
+                  children: (0, s.jsxs)(bg, {
+                    accentColor: r,
+                    dullColor: i,
+                    bodyTextColor: n,
+                    children: [o, !1],
+                  }),
+                }),
+              }),
+            }),
+          })
+        );
+      });
+      function Bg(e) {
+        const { children: t } = e,
+          { formFactorOverride: r } = fg();
+        return (0, s.jsx)(pg, { formFactor: r, children: t });
+      }
+      const wg = i.lazy(() => r.e(976).then(r.bind(r, 9584))),
+        Mg = i.Fragment,
+        Sg = (e) =>
           (0, s.jsx)(d.Kd, {
             basename: m(),
             children: (0, s.jsx)("div", {
               className: Nr().App,
-              children: (0, s.jsx)(ug, {
+              children: (0, s.jsx)(vg, {
                 children: (0, s.jsxs)(Ge.tH, {
                   children: [
                     (0, s.jsx)(i.Suspense, {
@@ -31656,7 +31789,7 @@
                       children: (0, s.jsx)(Fr, {
                         config: {
                           "green-envelope": () =>
-                            (0, s.jsx)(lg, {
+                            (0, s.jsx)(wg, {
                               bResponsiveHeader: !1,
                               notifications: (0, a.Tc)(
                                 "steam_notifications",
@@ -31664,7 +31797,7 @@
                               ),
                             }),
                           "green-envelope-responsive": () =>
-                            (0, s.jsx)(lg, {
+                            (0, s.jsx)(wg, {
                               bResponsiveHeader: !0,
                               notifications: (0, a.Tc)(
                                 "steam_notifications",
@@ -31673,6 +31806,15 @@
                             }),
                         },
                       }),
+                    }),
+                    (0, s.jsx)(Fr, {
+                      config: {
+                        footer: () =>
+                          (0, s.jsx)(i.Suspense, {
+                            fallback: null,
+                            children: (0, s.jsx)(Mg, {}),
+                          }),
+                      },
                     }),
                     (0, s.jsx)(i.Suspense, {
                       fallback: null,
@@ -31724,18 +31866,20 @@
               }),
             }),
           });
-      function ug(e) {
+      function vg(e) {
         const { children: t } = e;
         return (0, s.jsx)(xr.Ay, {
           domain: "help.steampowered.com",
           children: (0, s.jsx)(a.ss, {
-            children: (0, s.jsx)(dg, {
+            children: (0, s.jsx)(Rg, {
               children: (0, s.jsx)(Ur, {
-                children: (0, s.jsx)(Le, {
-                  children: (0, s.jsx)(Ir, {
-                    bRenderOverlayAtRoot: !0,
-                    bUsePopups: !1,
-                    children: t,
+                children: (0, s.jsx)(yg, {
+                  children: (0, s.jsx)(Le, {
+                    children: (0, s.jsx)(Ir, {
+                      bRenderOverlayAtRoot: !0,
+                      bUsePopups: !1,
+                      children: t,
+                    }),
                   }),
                 }),
               }),
@@ -31743,12 +31887,12 @@
           }),
         });
       }
-      function mg() {
+      function Cg() {
         const e = (0, a.Tc)("help_user_config", "application_config");
         return new b.D(a.TS.WEBAPI_BASE_URL, e?.webapi_token);
       }
-      function dg(e) {
-        const t = (0, st.bs)(mg),
+      function Rg(e) {
+        const t = (0, st.bs)(Cg),
           r = (0, st.bs)(i.useCallback(() => new f(), [])),
           n = (0, i.useMemo)(
             () => ({ useActiveAccount: () => a.iA.steamid }),
@@ -31763,8 +31907,8 @@
           }),
         });
       }
-      var pg = r(8812);
-      function gg() {
+      var Ig = r(8812);
+      function Tg() {
         const e = [];
         return (
           Kr.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
@@ -31778,11 +31922,11 @@
           document.getElementById("application_config")
             ? (0, a.XJ)("application_config")
             : (0, a.XJ)(),
-            (0, pg.aj)().Init(
+            (0, Ig.aj)().Init(
               "Help",
               CLSTAMP,
               new b.D(a.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-              { fnGetReportTags: gg },
+              { fnGetReportTags: Tg },
             ),
             await (async function (e) {
               {
@@ -31798,15 +31942,15 @@
                   ]);
                 nt.pf.InitFromObjects(s, o, n, a);
               }
-              for (const e of _g) nt.pf.AddTokens(e);
-              _g = void 0;
+              for (const e of zg) nt.pf.AddTokens(e);
+              zg = void 0;
             })(a.TS.LANGUAGE),
             document.getElementById("application_root") &&
               n
                 .createRoot(document.getElementById("application_root"))
-                .render(i.createElement(cg, {}));
+                .render(i.createElement(Sg, {}));
         });
-      let _g = [];
+      let zg = [];
     },
     2160: (e, t, r) => {
       "use strict";
@@ -32258,8 +32402,7 @@
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-            (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
         })(I || (I = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
@@ -33096,7 +33239,8 @@
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
           (e[(e.APPLICATION = 2)] = "APPLICATION"),
-          (e[(e.BROWSER = 3)] = "BROWSER");
+          (e[(e.BROWSER = 3)] = "BROWSER"),
+          (e[(e.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(i || (i = {}));
       n.pR.OK, n.pR.CANCEL, n.pR.SECONDARY, n.pR.OPTIONS, n.pR.START;
       function s(e, t, r) {
@@ -34510,14 +34654,21 @@
                 c = this.FindNextFocusableChildInDirection(r, t, e);
               }
             } else if (n == H.PREFERRED_CHILD) {
-              for (const t of this.m_rgChildren)
-                if (
-                  ((c = t.BWantsPreferredFocus()
-                    ? t.FindFocusableNode(e)
-                    : void 0),
-                  c)
-                )
-                  return c;
+              let t = this.m_rgChildren;
+              for (; t.length; ) {
+                let r = [];
+                for (const i of t) {
+                  if (
+                    ((c = i.BWantsPreferredFocus()
+                      ? i.FindFocusableNode(e)
+                      : void 0),
+                    c)
+                  )
+                    return c;
+                  r.push(...i.m_rgChildren);
+                }
+                t = r;
+              }
             } else
               n == H.LAST &&
                 (c = this.FindNextFocusableChildInDirection(
@@ -34940,69 +35091,72 @@
                 N(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
-            (function (e, t) {
-              const r = e.Element;
-              if (!r) return;
-              let i = [
-                { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
-              ];
-              for (let t = e.Parent; t; t = t.Parent) {
-                const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
-                  r = t.m_Properties?.scrollIntoViewType;
-                if (e) {
-                  const n = { node: t, eScrollType: r };
-                  "force" === e ? (i = [n]) : i.push(n);
+            this.m_Tree.BIsActive() &&
+              (function (e, t) {
+                const r = e.Element;
+                if (!r) return;
+                let i = [
+                  { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
+                ];
+                for (let t = e.Parent; t; t = t.Parent) {
+                  const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
+                    r = t.m_Properties?.scrollIntoViewType;
+                  if (e) {
+                    const n = { node: t, eScrollType: r };
+                    "force" === e ? (i = [n]) : i.push(n);
+                  }
+                  if (void 0 !== r)
+                    for (
+                      let e = i.length - 1;
+                      e >= 0 && void 0 === i[e].eScrollType;
+                      e--
+                    )
+                      i[e].eScrollType = r;
                 }
-                if (void 0 !== r)
-                  for (
-                    let e = i.length - 1;
-                    e >= 0 && void 0 === i[e].eScrollType;
-                    e--
+                for (; i.length; ) {
+                  let { node: r, eScrollType: n } = i.pop(),
+                    s = 0 == i.length;
+                  if (
+                    (void 0 === n && (n = T ? V.NoTransform : V.Standard),
+                    r?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
                   )
-                    i[e].eScrollType = r;
-              }
-              for (; i.length; ) {
-                let { node: r, eScrollType: n } = i.pop(),
-                  s = 0 == i.length;
-                if (
-                  (void 0 === n && (n = T ? V.NoTransform : V.Standard),
-                  r?.m_Properties?.fnScrollIntoViewHandler &&
-                    !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
-                )
-                  continue;
-                const a = r.m_element,
-                  o =
-                    n == V.NoTransform || n == V.NoTransformSparseContent || !s;
-                if (t) {
-                  const t = o ? F(a) : a.getBoundingClientRect();
-                  let r = !1;
-                  const i = Math.max(1.4 * (t.bottom - t.top), 40),
-                    n = z && performance.now() - z < 500;
-                  (n ||
-                    t.bottom < -i ||
-                    t.top > a.ownerDocument.defaultView.innerHeight + i) &&
-                    ((r = !0),
-                    n ||
-                      I(
-                        `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
-                      ));
-                  let s = r ? "auto" : "smooth";
-                  r && (z = performance.now()),
-                    e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
-                    o
-                      ? k(0, a, s)
-                      : a.scrollIntoView({ behavior: s, block: "nearest" });
-                } else
-                  I("No previous element for scrolling, will jump"),
-                    o
-                      ? k(0, a, "auto")
-                      : a?.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, t);
+                    continue;
+                  const a = r.m_element,
+                    o =
+                      n == V.NoTransform ||
+                      n == V.NoTransformSparseContent ||
+                      !s;
+                  if (t) {
+                    const t = o ? F(a) : a.getBoundingClientRect();
+                    let r = !1;
+                    const i = Math.max(1.4 * (t.bottom - t.top), 40),
+                      n = z && performance.now() - z < 500;
+                    (n ||
+                      t.bottom < -i ||
+                      t.top > a.ownerDocument.defaultView.innerHeight + i) &&
+                      ((r = !0),
+                      n ||
+                        I(
+                          `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
+                        ));
+                    let s = r ? "auto" : "smooth";
+                    r && (z = performance.now()),
+                      e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
+                      o
+                        ? k(0, a, s)
+                        : a.scrollIntoView({ behavior: s, block: "nearest" });
+                  } else
+                    I("No previous element for scrolling, will jump"),
+                      o
+                        ? k(0, a, "auto")
+                        : a?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, t);
         }
       }
       (0, i.Cg)([l.o], Q.prototype, "OnDOMFocus", null),
@@ -56835,6 +56989,7 @@
           return i && ((r += "_" + i), t && (r += "_" + t)), r;
         }
         static AddNavParamToURL(e, t) {
+          if (!e || 0 == e.length) return e;
           try {
             const r = new URL((0, i.S)(e)),
               n = new URLSearchParams(r.search);
@@ -62922,6 +63077,11 @@
                     br: o.qM.readInt32,
                     bw: o.gp.writeInt32,
                   },
+                  framegen_frame_rate: {
+                    n: 4,
+                    br: o.qM.readUint32,
+                    bw: o.gp.writeUint32,
+                  },
                 },
               }),
             U.sm_m
@@ -63360,14 +63520,13 @@
         "string" == typeof e
           ? ((i = e), (r = new TextEncoder().encode(i).buffer))
           : (r = e);
-        const n = await window.crypto.subtle.digest(t, r);
-        return (
-          (s = n),
-          Array.prototype.map
-            .call(new Uint8Array(s), (e) => ("00" + e.toString(16)).slice(-2))
-            .join("")
-        );
-        var s;
+        return (function (e) {
+          const t = new Uint8Array(e);
+          let r = "";
+          for (let e = 0; e < t.length; e++)
+            r += ("00" + t[e].toString(16)).slice(-2);
+          return r;
+        })(await window.crypto.subtle.digest(t, r));
       }
       const K =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
@@ -69497,7 +69656,6 @@
       class l {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-        static s_Singleton = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
@@ -69518,8 +69676,12 @@
         }
         async LoadSettings() {
           const e = (e) => {
-            const t = localStorage.getItem(e);
-            return t ? JSON.parse(t) : void 0;
+            try {
+              const t = localStorage.getItem(e);
+              return t ? JSON.parse(t) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!e(
             l.k_IncludeBacktraceInLog_StorageKey,
@@ -69549,15 +69711,21 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(...e) {
+          e &&
+            e.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            null == l.s_Singleton && (l.s_Singleton = new l()), l.s_Singleton
+            null == window.g_LogManager && (window.g_LogManager = new l()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -69579,11 +69747,19 @@
           this.SetDebugLogEnabled(e, !this.IsDebugLogEnabled(e));
         }
         async SetDebugLogEnabled(e, t) {
-          t
-            ? this.m_setEnabledDebugLogs.add(e)
-            : this.m_setEnabledDebugLogs.delete(e),
-            this.m_SettingsChangedCallback.Dispatch(),
-            await this.SaveSettings();
+          this.IsLogName(e)
+            ? (t
+                ? this.m_setEnabledDebugLogs.add(e)
+                : this.m_setEnabledDebugLogs.delete(e),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings())
+            : console.warn(
+                `No log named "${e}", available logs:`,
+                this.GetLogNames(),
+              );
+        }
+        async SetDebugLogsEnabled(e, ...t) {
+          t.forEach((t) => this.SetDebugLogEnabled(t, e));
         }
         async SetAllDebugLogsEnabled(e) {
           (this.m_setEnabledDebugLogs = e
@@ -69602,6 +69778,9 @@
           (this.m_bIncludeBacktraceInLog = e),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
         }
       }
       function c(e, t, r, n, s, ...a) {
@@ -69668,28 +69847,17 @@
                 : console.error(...p);
           }
       }
-      const u = () => [...l.Get().LogNames].sort(),
-        m = (e, t) => {
-          l.Get().IsLogName(e)
-            ? l.Get().SetDebugLogEnabled(e, t)
-            : console.warn(`No log named "${e}", available logs:`, u());
-        };
-      (window.DebugLogEnable = (...e) => e.forEach((e) => m(e, !0))),
-        (window.DebugLogDisable = (...e) => e.forEach((e) => m(e, !1))),
+      (window.DebugLogEnable = (...e) => l.Get().SetDebugLogsEnabled(!0, ...e)),
+        (window.DebugLogDisable = (...e) =>
+          l.Get().SetDebugLogsEnabled(!1, ...e)),
         (window.DebugLogEnableAll = () => l.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => l.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
           l.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
           l.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = u),
-        (window.DebugLogEnabled = (...e) => {
-          e.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            l.Get().PrintEnabledLogs();
-        }),
+        (window.DebugLogNames = () => l.Get().GetLogNames()),
+        (window.DebugLogEnabled = (...e) => l.Get().PrintEnabledLogs(...e)),
         (window.EnableSteamConsole = (e = !0) =>
           l.Get().SetDebugLogEnabled("SteamClient", e));
     },
@@ -70285,7 +70453,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 4249), e((e.s = t));
+      return (t = 7805), e((e.s = t));
       var t;
     });
     e.O();

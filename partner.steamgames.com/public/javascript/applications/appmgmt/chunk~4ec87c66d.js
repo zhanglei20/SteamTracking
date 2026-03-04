@@ -18368,7 +18368,7 @@
         g = s.n(_),
         S = s(36185),
         v = s(17083),
-        y = s(79467),
+        y = s(86360),
         f = s(38135),
         x = s(95695),
         b = s.n(x),
@@ -18952,7 +18952,7 @@
         y = s(61859),
         f = s(27429),
         x = s(69235),
-        b = s(56555),
+        b = s(56854),
         D = s(49953),
         w = s(55241),
         j = s(85010),
@@ -19083,7 +19083,7 @@
         N = s.n(R),
         G = s(15480),
         O = s.n(G),
-        L = s(79467),
+        L = s(86360),
         F = s(30470),
         U = s(26408),
         z = s(16021),
@@ -19772,6 +19772,227 @@
         );
       }
     },
+    51155: (e, t, s) => {
+      "use strict";
+      s.d(t, { E: () => S, L: () => g });
+      var i = s(7850),
+        a = s(90626),
+        n = s(77411),
+        r = s(16021),
+        o = s(39020),
+        l = s(16676),
+        c = s(99637),
+        d = s(22797),
+        m = s(48479),
+        u = s(4434),
+        p = s(61859),
+        h = s(74303),
+        _ = s(30470);
+      const g = {
+        include_basic_info: !0,
+        include_assets: !0,
+        include_tag_count: 10,
+        include_release: !0,
+      };
+      function S(e) {
+        const {
+            rgOrderedAppIDs: t,
+            fnSetFilteredAppID: s,
+            rgNotToPruneList: n,
+            pageid: o,
+          } = e,
+          [h, _] = a.useState(!0),
+          S = (0, u.m)("OptInAppReviewFilter");
+        a.useEffect(() => {
+          r.A.Get()
+            .QueueMultipleAppRequests(t?.slice(0, 100) || [], g)
+            .then(() => {
+              r.A.Get()
+                .QueueMultipleAppRequests(t?.slice(100) || [], g)
+                .then(() => {
+                  _(!1);
+                });
+            });
+        }, [S.token.reason, o, t]);
+        const [y, f] = a.useState(new Set()),
+          [x, b] = a.useState(""),
+          [D, w] = a.useState(0),
+          [j, C] = a.useState(!1),
+          [I, T] = a.useState(0);
+        return (
+          a.useEffect(() => {
+            const e = x?.trim().length > 2,
+              i = x?.toLocaleLowerCase(),
+              a = Array.from(y),
+              o = new Set(n || []);
+            if (t.length > 0 && (y.size > 0 || e || D || I)) {
+              const n = t
+                .filter((t) => {
+                  if (e) {
+                    const e = r.A.Get().GetApp(t);
+                    return (
+                      e?.GetName()?.toLocaleLowerCase().indexOf(i) >= 0 ||
+                      e
+                        ?.GetDeveloperNames()
+                        ?.some((e) => e.toLocaleLowerCase().indexOf(i) >= 0) ||
+                      e
+                        ?.GetPublisherNames()
+                        ?.some((e) => e.toLocaleLowerCase().indexOf(i) >= 0) ||
+                      e
+                        ?.GetFranchiseNames()
+                        ?.some((e) => e.toLocaleLowerCase().indexOf(i) >= 0) ||
+                      e
+                        ?.GetShortDescription()
+                        ?.toLocaleLowerCase()
+                        .indexOf(i) >= 0
+                    );
+                  }
+                  return !0;
+                })
+                .filter((e) => {
+                  if (a.length > 0) {
+                    const t = r.A.Get().GetApp(e);
+                    return a.every((e) => t?.GetTagIDs().includes(e));
+                  }
+                  return !0;
+                })
+                .filter((e) => {
+                  if (D > 0) {
+                    const t = r.A.Get().GetApp(e);
+                    return (
+                      t &&
+                      (t?.BIsComingSoon() ||
+                        t?.GetOriginalReleaseDateRTime() > D)
+                    );
+                  }
+                  return !0;
+                })
+                .filter((e) => !(j && o.size > 0) || !o.has(e));
+              S.token.reason || s(n);
+            }
+          }, [j, S.token.reason, s, I, D, n, t, y, x]),
+          (0, i.jsx)(m.qx, {
+            title: "Filter Options",
+            bStartMinimized: !0,
+            children: Boolean(h)
+              ? (0, i.jsxs)(i.Fragment, {
+                  children: [
+                    (0, i.jsx)(l.JU, {
+                      children: (0, p.we)("#EventCalendar_UniversalSearch"),
+                    }),
+                    (0, i.jsx)(d.t, {
+                      size: "small",
+                      string: `Loading ${t?.length || 0} Apps`,
+                    }),
+                  ],
+                })
+              : (0, i.jsxs)(i.Fragment, {
+                  children: [
+                    (0, i.jsx)(l.pd, {
+                      type: "text",
+                      label: (0, p.we)("#EventCalendar_UniversalSearch"),
+                      placeholder: "search by app name, description",
+                      value: x,
+                      onChange: (e) => {
+                        b(e.target.value), T(1);
+                      },
+                    }),
+                    (0, i.jsx)(v, {
+                      setFilterTagIDs: y,
+                      fnUpdateSetFilterTagIDs: (e) => {
+                        f(e), T(1);
+                      },
+                      rgAppIDs: t,
+                      bLoading: h,
+                    }),
+                    (0, i.jsx)(c.K, {
+                      strDescription: "Filter to games Released After:",
+                      strDescToolTip:
+                        "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => D,
+                      fnSetTimeToUpdate: (e) => {
+                        w(e), T(1);
+                      },
+                    }),
+                    Boolean(n?.length > 0) &&
+                      (0, i.jsx)(l.Yh, {
+                        checked: j,
+                        onChange: (e) => {
+                          C(e), T(1);
+                        },
+                        tooltip:
+                          "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
+                        label:
+                          "Filter out previously emailed apps from pruning",
+                      }),
+                  ],
+                }),
+          })
+        );
+      }
+      function v(e) {
+        const {
+            setFilterTagIDs: t,
+            fnUpdateSetFilterTagIDs: s,
+            rgAppIDs: c,
+            bLoading: d,
+          } = e,
+          m = a.useMemo(
+            () =>
+              d
+                ? []
+                : (function (e) {
+                    const t = new Map();
+                    return (
+                      e.forEach((e) => {
+                        const s = r.A.Get().GetApp(e);
+                        s?.GetTagIDs().forEach((e) => {
+                          t.has(e)
+                            ? (t.get(e).count += 1)
+                            : t.set(e, { tagid: e, count: 1 });
+                        });
+                      }),
+                      Array.from(t.values())
+                    );
+                  })(c).sort((e, t) => (e.count < t.count ? 1 : -1)),
+            [c, d],
+          ),
+          { data: u } = (0, o.Fv)(_.TS.LANGUAGE),
+          p = a.useMemo(
+            () => m.map((e) => ({ label: u && u[e.tagid], value: e })),
+            [u, m],
+          );
+        return (0, i.jsxs)("div", {
+          className: h.TagFilterBar,
+          children: [
+            (0, i.jsx)(l.JU, { children: "Filter by Tag:" }),
+            (0, i.jsx)(n.Ay, {
+              isSearchable: !0,
+              isLoading: d,
+              isMulti: !0,
+              isClearable: !0,
+              value: p.filter((e) => t.has(e.value.tagid)),
+              options: p,
+              styles: { option: (e) => ({ ...e, color: "#444444" }) },
+              formatOptionLabel: (e) => (0, i.jsx)(y, { tagCount: e.value }),
+              onChange: (e) => {
+                s(new Set(e?.map((e) => e.value.tagid)));
+              },
+            }),
+          ],
+        });
+      }
+      function y(e) {
+        const { tagCount: t } = e;
+        return (
+          ((0, o.MB)(t.tagid, _.TS.LANGUAGE) || "tagid: " + t.tagid) +
+          " (count: " +
+          t.count +
+          ")"
+        );
+      }
+    },
     32011: (e, t, s) => {
       "use strict";
       s.d(t, { Rl: () => r, Yi: () => n, qF: () => o });
@@ -19792,9 +20013,9 @@
         return `${a.TS.BASE_URL_SHARED_CDN}store_item_assets/optin/${e}/${t}/${s}`;
       }
     },
-    79467: (e, t, s) => {
+    86360: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { OptInRoutes: () => Pl, default: () => Gl });
+      s.r(t), s.d(t, { OptInRoutes: () => kl, default: () => Pl });
       var i = s(7850),
         a = s(43527),
         n = s(97058),
@@ -23342,7 +23563,7 @@
                     className: (0, f.A)(L().Button, L().ButtonCtn),
                     children: [
                       (0, i.jsx)(c.N_, {
-                        to: Pl.OptinAdminEdit(t.pageid),
+                        to: kl.OptinAdminEdit(t.pageid),
                         className: (0, f.A)(_().Button, _().Primary),
                         children: "Edit Opt-In Definition",
                       }),
@@ -23351,20 +23572,20 @@
                           href:
                             b.TS.PARTNER_BASE_URL +
                             "optin" +
-                            Pl.OptInAppReview(t.pageid),
+                            kl.OptInAppReview(t.pageid),
                           className: (0, f.A)(_().Button),
                           target: "_blank",
                           children: "Open Opt-In Pruning Page",
                         }),
                       Boolean(!a) &&
                         (0, i.jsx)(c.N_, {
-                          to: Pl.OptinAdminAnalysis(t.pageid),
+                          to: kl.OptinAdminAnalysis(t.pageid),
                           className: (0, f.A)(_().Button, _().Primary),
                           children: "Post OptIn Stats",
                         }),
                       Boolean(v || !a) &&
                         (0, i.jsx)(c.N_, {
-                          to: Pl.OptinAdminDemoAnalysis(t.pageid),
+                          to: kl.OptinAdminDemoAnalysis(t.pageid),
                           className: (0, f.A)(_().Button, _().Primary),
                           children: "Demo Playtime OptIn Stats",
                         }),
@@ -23388,31 +23609,33 @@
       }
       var Ve = s(75844),
         Ke = s(1909),
-        Ye = s(81418),
-        Je = s(22837),
-        $e = s(63556),
-        Xe = s(68033),
-        Qe = s(6205),
-        Ze = s(56654),
-        et = s(12155),
-        tt = s(32754),
-        st = s(62490),
-        it = s(60169),
-        at = s(73086),
-        nt = s.n(at),
-        rt = s(48479);
-      const ot = (0, Ve.PA)((e) => {
+        Ye = s(45737),
+        Je = s.n(Ye),
+        $e = s(73086),
+        Xe = s.n($e),
+        Qe = s(81418),
+        Ze = s(22837),
+        et = s(63556),
+        tt = s(68033),
+        st = s(6205),
+        it = s(56654),
+        at = s(12155),
+        nt = s(32754),
+        rt = s(62490),
+        ot = s(60169),
+        lt = s(48479);
+      const ct = (0, Ve.PA)((e) => {
           const t = r.Mt.Get(),
             s = t
               .GetEditableDynamicSections()
               .map((e, t) =>
                 (0, i.jsx)(
-                  lt,
+                  dt,
                   { section: e, dynamicSectionIndex: t },
                   e.GetUniqueID(),
                 ),
               );
-          return (0, i.jsxs)(rt.qx, {
+          return (0, i.jsxs)(lt.qx, {
             title: "Optional Dynamic Sections",
             bStartMinimized: !1,
             children: [
@@ -23423,7 +23646,7 @@
               }),
               s,
               (0, i.jsx)("div", {
-                className: it.AddSectionCtn,
+                className: ot.AddSectionCtn,
                 children: (0, i.jsx)(m.jn, {
                   onClick: t.AddDynamicSection,
                   children: "Add New Dynamic Section",
@@ -23432,15 +23655,15 @@
             ],
           });
         }),
-        lt = (0, Ve.PA)((e) => {
+        dt = (0, Ve.PA)((e) => {
           const { section: t, dynamicSectionIndex: s } = e,
-            a = $e.O.Get().GetCurEditLanguage(),
+            a = et.O.Get().GetCurEditLanguage(),
             n = l.createRef(),
             r = t
               .GetLists()
               .map((e, s) =>
                 (0, i.jsx)(
-                  dt,
+                  ut,
                   { section: t, listIndex: s },
                   t.GetUniqueID() + e.unique_id,
                 ),
@@ -23448,11 +23671,11 @@
           return (0, i.jsx)(u.tH, {
             children: (0, i.jsxs)("div", {
               className: (0, f.A)({
-                [nt().Section]: !0,
+                [Xe().Section]: !0,
                 [_().ValveOnlyBackground]: t.BIsValveOnlySection(),
               }),
               children: [
-                (0, i.jsx)(ct, { section: t, dynamicSectionIndex: s }),
+                (0, i.jsx)(mt, { section: t, dynamicSectionIndex: s }),
                 (0, i.jsxs)("div", {
                   children: ["Section ID: ", t.GetUniqueID()],
                 }),
@@ -23465,16 +23688,16 @@
                 (0, i.jsx)("div", {
                   children: "Section Description: (optional)",
                 }),
-                (0, i.jsx)(Qe.I, {
+                (0, i.jsx)(st.I, {
                   fnGetCurText: t.GetDescription,
                   fnOnTextChange: (e) =>
                     t.SetDescription(e.currentTarget.value, a),
                   fnSetText: t.SetDescriptionWithCurLang,
                   strPlaceholder: "Enter Description Here",
-                  emoticonStore: Xe.A,
+                  emoticonStore: tt.A,
                   bSupportHTMLImport: !0,
                   showFormatHelp: "PartnerEvents",
-                  classNameForTextArea: nt().EventBBCodeEditor,
+                  classNameForTextArea: Xe().EventBBCodeEditor,
                   limitBBCode: void 0,
                   nOverridesRows: 10,
                 }),
@@ -23550,7 +23773,7 @@
                     children: [
                       (0, i.jsx)(m.$n, {
                         disabled: t.GetListCount() < 2,
-                        onClick: (e) => _t(e, t.GetModel()),
+                        onClick: (e) => St(e, t.GetModel()),
                         children: "Re-Order lists within this Section",
                       }),
                       (0, i.jsx)(m.jn, {
@@ -23564,12 +23787,12 @@
             }),
           });
         }),
-        ct = (0, Ve.PA)((e) => {
+        mt = (0, Ve.PA)((e) => {
           const t = r.Mt.Get(),
             { section: s, dynamicSectionIndex: a } = e;
           return (0, i.jsxs)("div", {
             className: (0, f.A)({
-              [it.Header]: !0,
+              [ot.Header]: !0,
               [_().ValveOnlyBackground]: s.BIsValveOnlySection(),
             }),
             children: [
@@ -23595,27 +23818,27 @@
                       (0, x.uX)(e),
                     );
                   },
-                  children: (0, i.jsx)(et.sED, {}),
+                  children: (0, i.jsx)(at.sED, {}),
                 }),
               }),
             ],
           });
         }),
-        dt = (0, Ve.PA)((e) => {
+        ut = (0, Ve.PA)((e) => {
           const { section: t, listIndex: s } = e;
           return "text_input" === t.GetInputStyle()
             ? (0, i.jsx)("div", {
                 children: "Textarea will appear here for the users input.",
               })
-            : (0, i.jsx)(mt, { section: t, listIndex: s });
+            : (0, i.jsx)(pt, { section: t, listIndex: s });
         }),
-        mt = (0, Ve.PA)((e) => {
+        pt = (0, Ve.PA)((e) => {
           const { section: t, listIndex: s } = e,
             a = t.GetListByIndex(s),
-            n = $e.O.Get().GetCurEditLanguage();
+            n = et.O.Get().GetCurEditLanguage();
           return (0, i.jsxs)("div", {
             id: t.GetUniqueID() + a.unique_id,
-            className: it.optionList,
+            className: ot.optionList,
             children: [
               (0, i.jsx)(m.pd, {
                 type: "text",
@@ -23626,7 +23849,7 @@
               }),
               Boolean(0 == a.options.length)
                 ? (0, i.jsx)("div", { children: "No Options Added" })
-                : (0, i.jsx)(Ze.A, {
+                : (0, i.jsx)(it.A, {
                     items: a.options.map((e, t) => ({
                       itemIndex: t,
                       listitem: e,
@@ -23638,7 +23861,7 @@
                           strTitle: "Delete selected option",
                           strDescription:
                             "Are you sure you want to delete the following item?: " +
-                            (0, Ye.Ym)(t.GetItemAtListAndIndex(s, e).text, n),
+                            (0, Qe.Ym)(t.GetItemAtListAndIndex(s, e).text, n),
                           onOK: () => t.RemoveListItem(s, e),
                         }),
                         (0, x.uX)(a),
@@ -23646,7 +23869,7 @@
                     },
                     onEdit: (a, n) => {
                       (0, S.pg)(
-                        (0, i.jsx)(ut, {
+                        (0, i.jsx)(ht, {
                           ...e,
                           itemIndex: a,
                           item: t.GetItemAtListAndIndex(s, a),
@@ -23655,16 +23878,16 @@
                       );
                     },
                     onMove: (e, t) => {
-                      (0, st.yY)(a.options, e, t), r.Mt.Get().SetDirty(!0);
+                      (0, rt.yY)(a.options, e, t), r.Mt.Get().SetDirty(!0);
                     },
                     render: (e) => {
                       let t =
                         e.listitem.tooltip &&
-                        (0, Ye.Ym)(e.listitem.tooltip, n, void 0);
-                      return (0, i.jsxs)(tt.he, {
+                        (0, Qe.Ym)(e.listitem.tooltip, n, void 0);
+                      return (0, i.jsxs)(nt.he, {
                         toolTipContent: t,
                         children: [
-                          (0, Ye.Ym)(e.listitem.text, n),
+                          (0, Qe.Ym)(e.listitem.text, n),
                           " ",
                           Boolean(t) && "(?)",
                         ],
@@ -23673,16 +23896,16 @@
                   }),
               (0, i.jsx)(m.$n, {
                 onClick: (t) =>
-                  (0, S.pg)((0, i.jsx)(pt, { ...e }), (0, x.uX)(t)),
+                  (0, S.pg)((0, i.jsx)(_t, { ...e }), (0, x.uX)(t)),
                 children: "Add Option Item",
               }),
             ],
           });
         }),
-        ut = (e) => {
+        ht = (e) => {
           const [t, s] = (0, l.useState)(e.item.text),
             [a, n] = (0, l.useState)(e.item.tooltip),
-            [r, o] = (0, l.useState)($e.O.Get().GetCurEditLanguage());
+            [r, o] = (0, l.useState)(et.O.Get().GetCurEditLanguage());
           return (0, i.jsx)(A.o0, {
             strTitle: "Edit Item",
             strDescription: "Update the value and confirm to apply changes.",
@@ -23696,7 +23919,7 @@
                 (0, i.jsx)(Ke.Ng, {
                   selectedLang: r,
                   fnLangHasData: (e) => {
-                    let s = (0, Je.Lg)(e);
+                    let s = (0, Ze.Lg)(e);
                     return (
                       (t[s] && t[s].trim().length > 0) ||
                       (a && a[s] && a[s].trim().length > 0)
@@ -23708,33 +23931,33 @@
                   type: "text",
                   placeholder: "Enter Text",
                   label: "Item Name",
-                  value: (0, Ye.mA)(t, r, ""),
+                  value: (0, Qe.mA)(t, r, ""),
                   onChange: (e) => {
                     let i = JSON.parse(JSON.stringify(t));
-                    (i[(0, Je.Lg)(r)] = e.target.value), s(i);
+                    (i[(0, Ze.Lg)(r)] = e.target.value), s(i);
                   },
                 }),
                 (0, i.jsx)(m.pd, {
                   type: "text",
                   placeholder: "Enter Tooltip",
                   label: "Tooltip (optional)",
-                  value: (0, Ye.mA)(a, r, ""),
+                  value: (0, Qe.mA)(a, r, ""),
                   onChange: (e) => {
                     let t = a ? JSON.parse(JSON.stringify(a)) : {};
-                    (t[(0, Je.Lg)(r)] = e.target.value), n(t);
+                    (t[(0, Ze.Lg)(r)] = e.target.value), n(t);
                   },
                 }),
               ],
             }),
           });
         },
-        pt = (e) => {
+        _t = (e) => {
           const [t, s] = (0, l.useState)(""),
             [a, n] = (0, l.useState)(""),
-            r = $e.O.Get().GetCurEditLanguage();
+            r = et.O.Get().GetCurEditLanguage();
           return (0, i.jsx)(A.o0, {
             strTitle: "Add Option Item",
-            strDescription: `Add items for the user to select from. Adding for the language: ${(0, Je.Lg)(r)}`,
+            strDescription: `Add items for the user to select from. Adding for the language: ${(0, Ze.Lg)(r)}`,
             onOK: () => {
               e.section.AddItemToListByIndex(e.listIndex, t, r, a),
                 e.closeModal && e.closeModal();
@@ -23762,9 +23985,9 @@
             }),
           });
         },
-        ht = (e) => {
+        gt = (e) => {
           const t = r.Mt.Get(),
-            s = $e.O.Get().GetCurEditLanguage();
+            s = et.O.Get().GetCurEditLanguage();
           (0, S.pg)(
             (0, i.jsx)(A.o0, {
               strTitle: "Re-Order Dynamic Sections",
@@ -23776,9 +23999,9 @@
                   t.GetModel().dynamic_sections &&
                     t.GetModel().dynamic_sections.length > 0,
                 )
-                  ? (0, i.jsx)(Ze.A, {
+                  ? (0, i.jsx)(it.A, {
                       items: t.GetModel().dynamic_sections,
-                      render: (e) => (0, Ye.Ym)(e.name, s, "Unnamed Section"),
+                      render: (e) => (0, Qe.Ym)(e.name, s, "Unnamed Section"),
                       onReorder: () => t.SetDirty(!0),
                     })
                   : (0, i.jsx)("p", {
@@ -23789,9 +24012,9 @@
             (0, x.uX)(e),
           );
         },
-        _t = (e, t) => {
+        St = (e, t) => {
           const s = r.Mt.Get(),
-            a = $e.O.Get().GetCurEditLanguage();
+            a = et.O.Get().GetCurEditLanguage();
           (0, S.pg)(
             (0, i.jsx)(A.o0, {
               strTitle: "Re-Order Lists within a Sections",
@@ -23800,10 +24023,10 @@
                 "Reorders the list within a section. Changes are immediately applied but don't reflect in the editor. Save and reload the page (its a bug, I will fix is soon!)",
               children: (0, i.jsx)("div", {
                 children: Boolean(t.lists && t.lists.length > 0)
-                  ? (0, i.jsx)(Ze.A, {
+                  ? (0, i.jsx)(it.A, {
                       items: t.lists,
                       render: (e) =>
-                        (0, Ye.Ym)(e.option_title, a, "Untitled List"),
+                        (0, Qe.Ym)(e.option_title, a, "Untitled List"),
                       onReorder: () => s.SetDirty(!0),
                     })
                   : (0, i.jsx)("p", { children: "No list to re-order" }),
@@ -23812,8 +24035,8 @@
             (0, x.uX)(e),
           );
         };
-      var gt = s(14932);
-      const St = (e) => {
+      var vt = s(14932);
+      const yt = (e) => {
         const t = r.Mt.Get(),
           s = JSON.parse(JSON.stringify(t.GetModel() || [])),
           a = JSON.parse(JSON.stringify(s.emails || []));
@@ -23823,7 +24046,7 @@
             name: "OptIn Event Body Raw",
             key: "eventbody",
             contents: (0, i.jsx)(u.tH, {
-              children: (0, i.jsx)(gt.G, { data: s }),
+              children: (0, i.jsx)(vt.G, { data: s }),
             }),
           },
         ];
@@ -23833,7 +24056,7 @@
               name: e.internal_name,
               key: "" + (e.email_def_id || t),
               contents: (0, i.jsx)(u.tH, {
-                children: (0, i.jsx)(gt.G, { data: e }),
+                children: (0, i.jsx)(vt.G, { data: e }),
               }),
             });
           }),
@@ -23891,9 +24114,7 @@
           })
         );
       };
-      var vt = s(77411),
-        yt = s(45737),
-        ft = s.n(yt),
+      var ft = s(77411),
         xt = s(99637),
         bt = s(2160),
         Dt = s(82817),
@@ -23920,7 +24141,7 @@
             [t],
           );
         return (0, i.jsxs)("div", {
-          className: nt().Section,
+          className: Xe().Section,
           children: [
             (0, i.jsxs)("h3", {
               children: [
@@ -23947,7 +24168,7 @@
           [s] = (0, Le.q3)(() => [
             Object.keys(t.GetAllLocalizedOptInBanner())
               .sort()
-              .map((e) => (0, Je.sf)(e)),
+              .map((e) => (0, Ze.sf)(e)),
           ]),
           a = (0, l.useCallback)(
             (e) => {
@@ -23960,7 +24181,7 @@
           rgAssetLangs: s,
           fnGetAssetUrl: a,
           fnDeletAssetLang: t.DeleteLocalizedOptInBanner,
-          imageClassname: ft().BannerPreview,
+          imageClassname: Je().BannerPreview,
         });
       }
       var kt = s(6419);
@@ -24091,17 +24312,17 @@
           ]),
           [d, u] = (0, l.useState)(t.BHasCollectDemoDeadlineDate()),
           [p] = (0, Le.q3)(() => [t.GetEventStartTime()]);
-        return (0, i.jsxs)(rt.qx, {
+        return (0, i.jsxs)(lt.qx, {
           title: "Additional Featuring Section",
           bStartMinimized: !1,
           children: [
             (0, i.jsx)("hr", {}),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "For Apps Marked As Featured" }),
                 (0, i.jsx)("div", {
-                  className: nt().SectionDesc,
+                  className: Xe().SectionDesc,
                   children:
                     "If eneabled, this allows us to collect additional information and permissions from apps who have additional featuring enabled on them. Additional featuring is done during the App Review (pruning) process prior to sending invitation. It can be added at anytime:",
                 }),
@@ -24122,8 +24343,8 @@
                 (0, i.jsx)("hr", {}),
                 (0, i.jsxs)("div", {
                   className: (0, f.A)(
-                    nt().IndentedSubSection,
-                    s ? "" : nt().Disabled,
+                    Xe().IndentedSubSection,
+                    s ? "" : Xe().Disabled,
                   ),
                   children: [
                     (0, i.jsx)(m.Yh, {
@@ -24472,7 +24693,7 @@
                           cursor: "pointer",
                         },
                         onClick: this.OnSearchSubmit,
-                        children: (0, i.jsx)(et.eSy, {}),
+                        children: (0, i.jsx)(at.eSy, {}),
                       }),
                     ],
                   }),
@@ -24682,10 +24903,10 @@
           children: [
             (0, i.jsx)("h3", { children: "App Invites" }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsxs)("div", {
-                  className: nt().SectionDesc,
+                  className: Xe().SectionDesc,
                   children: [
                     "Tool that lets you explicitly invite specific apps to participate. This can be done before or after the OptIn is published/live for partners. App Invites will bypass ",
                     (0, i.jsx)("b", { children: "ALL" }),
@@ -24693,7 +24914,7 @@
                   ],
                 }),
                 (0, i.jsx)("div", {
-                  className: nt().SectionDesc,
+                  className: Xe().SectionDesc,
                   children:
                     "Inviting apps will NOT trigger any automatic notification. However, the email tab can be used to send an email to all invited apps.",
                 }),
@@ -24702,23 +24923,23 @@
                   children:
                     "Shown on the pruning UI to our team and external pruning contractors",
                 }),
-                (0, i.jsx)(Qe.I, {
+                (0, i.jsx)(st.I, {
                   fnGetCurText: t.GetCurPruningCriteriaText,
                   fnOnTextChange: (e) =>
                     t.SetCurPruningCriteriaText(e.currentTarget.value),
                   fnSetText: t.SetCurPruningCriteriaText,
                   strPlaceholder: "Enter Pruning Criteria Text",
-                  emoticonStore: Xe.A,
+                  emoticonStore: tt.A,
                   bSupportHTMLImport: !0,
                   showFormatHelp: "PartnerEvents",
-                  classNameForTextArea: nt().EventBBCodeEditor,
+                  classNameForTextArea: Xe().EventBBCodeEditor,
                   limitBBCode: void 0,
                   nOverridesRows: 10,
                 }),
                 (0, i.jsxs)("div", {
-                  className: nt().InviteButtonRow,
+                  className: Xe().InviteButtonRow,
                   children: [
-                    (0, i.jsx)(tt.he, {
+                    (0, i.jsx)(nt.he, {
                       toolTipContent:
                         "For adding games to the pruning process; app isn't able to optin while in this state. Only games we haven't already acted upon can move to pending review.",
                       children: (0, i.jsx)(m.jn, {
@@ -24732,7 +24953,7 @@
                         children: 'Add to "Pending Review"...',
                       }),
                     }),
-                    (0, i.jsx)(tt.he, {
+                    (0, i.jsx)(nt.he, {
                       toolTipContent:
                         "Invite an app allows it to immediately optin to the event and will see they are permitted to participate",
                       children: (0, i.jsx)(m.$n, {
@@ -24746,7 +24967,7 @@
                         children: "Invite Apps...",
                       }),
                     }),
-                    (0, i.jsx)(tt.he, {
+                    (0, i.jsx)(nt.he, {
                       toolTipContent:
                         "Directly marks an app as pruned. It won't surface on the sale pages or content hub override page. Will apply even if app as opted in",
                       children: (0, i.jsx)(m.$n, {
@@ -24763,8 +24984,8 @@
                   ],
                 }),
                 (0, i.jsx)("div", {
-                  className: nt().ShowAllInvitedRow,
-                  children: (0, i.jsx)(tt.he, {
+                  className: Xe().ShowAllInvitedRow,
+                  children: (0, i.jsx)(nt.he, {
                     toolTipContent:
                       "This list will include all invited app, even if they are no longer invited because we pruned them or the partner took action - opted in/out.",
                     children: (0, i.jsx)(m.$n, {
@@ -24780,7 +25001,7 @@
                 (0, i.jsx)("br", {}),
                 (0, i.jsx)("h3", { children: "Manage App Pruning" }),
                 (0, i.jsxs)("div", {
-                  className: nt().SectionDesc,
+                  className: Xe().SectionDesc,
                   children: [
                     "For an event like a tag sale, that depends on publisher and users tagging, we may need to review invited games to ensure they match the intent of the tag sale. ",
                     (0, i.jsx)("a", {
@@ -24808,7 +25029,7 @@
                     children: [
                       (0, i.jsx)("br", {}),
                       (0, i.jsx)("h3", { children: "External Reviewers" }),
-                      (0, i.jsx)(Ze.A, {
+                      (0, i.jsx)(it.A, {
                         bDisabled: !0,
                         items: s,
                         onDelete: (e) => t.RemoveExternalAppReviewAt(e),
@@ -24827,7 +25048,7 @@
                     ],
                   }),
                 (0, i.jsx)("p", {
-                  className: nt().SectionDesc,
+                  className: Xe().SectionDesc,
                   children: (0, i.jsx)("b", {
                     children:
                       "Add External App Reviewer via Friend Code / Account ID",
@@ -24904,12 +25125,12 @@
             bDisableBackgroundDismiss: !0,
             bAllowFullSize: !0,
             closeModal: t,
-            className: nt().InvitedAppHistoryDialog,
+            className: Xe().InvitedAppHistoryDialog,
             children: [
               Boolean(!a || !n) &&
                 (0, i.jsx)(B.t, { size: "medium", position: "center" }),
               (0, i.jsxs)("table", {
-                className: nt().InvitedAppHistoryTable,
+                className: Xe().InvitedAppHistoryTable,
                 children: [
                   (0, i.jsx)("thead", {
                     children: (0, i.jsxs)("tr", {
@@ -24942,7 +25163,7 @@
               ? (a = "opted in")
               : t.time_opted_out && (a = "opted out"),
           (0, i.jsxs)("tr", {
-            className: nt().InvitedAppRow,
+            className: Xe().InvitedAppRow,
             children: [
               (0, i.jsx)("td", {
                 children:
@@ -24960,12 +25181,12 @@
       const as = (0, Ve.PA)((e) => {
         const t = r.Mt.Get(),
           s = t.BIsReleaseGamesEligible() || t.BIsUnreleaseGamesEligible();
-        return (0, i.jsxs)(rt.qx, {
+        return (0, i.jsxs)(lt.qx, {
           title: "Registration Requirements",
           bStartMinimized: !1,
           children: [
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "Registration Deadline" }),
                 (0, i.jsx)(xt.K, {
@@ -24979,11 +25200,11 @@
               ],
             }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "Visibility" }),
                 (0, i.jsx)("div", {
-                  className: nt().SectionDesc,
+                  className: Xe().SectionDesc,
                   children:
                     "By default, optins are visible to partners if it's enabled. If set to be visible only to invited partners, the partner must also own the app to see the optin.",
                 }),
@@ -24991,21 +25212,21 @@
                   onChange: (e) =>
                     t.SetVisibility(
                       e
-                        ? Ye.CN.k_EOptInVisibility_InviteOnly
-                        : Ye.CN.k_EOptInVisibility_Public,
+                        ? Qe.CN.k_EOptInVisibility_InviteOnly
+                        : Qe.CN.k_EOptInVisibility_Public,
                     ),
                   label: "Visible only to invited partners",
                   checked:
-                    t.EVisibility() == Ye.CN.k_EOptInVisibility_InviteOnly,
+                    t.EVisibility() == Qe.CN.k_EOptInVisibility_InviteOnly,
                 }),
               ],
             }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "ELIGIBILITY SETTING" }),
                 (0, i.jsxs)("div", {
-                  className: nt().SectionDesc,
+                  className: Xe().SectionDesc,
                   children: [
                     "Enable this to limit participation to only invitied games or partners.",
                     (0, i.jsx)("br", {}),
@@ -25022,23 +25243,23 @@
                 !!t.BIsInvitationOnly() &&
                   (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsx)("div", {
-                      className: nt().Section,
+                      className: Xe().Section,
                       children: (0, i.jsx)(Xt, {}),
                     }),
                   }),
                 !t.BIsInvitationOnly() &&
                   (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsxs)("div", {
-                      className: nt().Section,
+                      className: Xe().Section,
                       children: [
                         (0, i.jsx)("h3", {
                           children: "ELIGIBILITY CRITERIA SETTINGS",
                         }),
                         (0, i.jsxs)("div", {
-                          className: nt().IndentedSubSection,
+                          className: Xe().IndentedSubSection,
                           children: [
                             (0, i.jsxs)("div", {
-                              className: nt().SectionDesc,
+                              className: Xe().SectionDesc,
                               children: [
                                 "Use the settings below to define one or more criteria that determines which games can participate.",
                                 (0, i.jsx)("br", {}),
@@ -25049,7 +25270,7 @@
                               children: "LIMIT BY RELEASE DATE",
                             }),
                             (0, i.jsxs)("div", {
-                              className: nt().Section,
+                              className: Xe().Section,
                               children: [
                                 !Boolean(s) &&
                                   (0, i.jsx)("div", {
@@ -25097,7 +25318,7 @@
                               children: "LIMIT BY COOLDOWN GROUP",
                             }),
                             (0, i.jsxs)("div", {
-                              className: nt().Section,
+                              className: Xe().Section,
                               children: [
                                 (0, i.jsx)(m.Yh, {
                                   label:
@@ -25106,7 +25327,7 @@
                                   onChange: t.SetCooldownRequired,
                                 }),
                                 (0, i.jsxs)("div", {
-                                  className: nt().InviteButtonRow,
+                                  className: Xe().InviteButtonRow,
                                   children: [
                                     (0, i.jsx)(m.m, {
                                       label: "Cooldown Group",
@@ -25119,7 +25340,7 @@
                                       },
                                     }),
                                     (0, i.jsx)("div", {
-                                      className: nt().NarrowInputField,
+                                      className: Xe().NarrowInputField,
                                       children: (0, i.jsx)(m.pd, {
                                         label:
                                           "Cooldown Window (in number of days)",
@@ -25138,14 +25359,14 @@
                             }),
                             (0, i.jsx)("h3", { children: "LIMIT BY TAG" }),
                             (0, i.jsx)("div", {
-                              className: nt().SectionDesc,
+                              className: Xe().SectionDesc,
                               children:
                                 "Games must have one of these tags to participate",
                             }),
                             (0, i.jsxs)("div", {
-                              className: nt().Section,
+                              className: Xe().Section,
                               children: [
-                                (0, i.jsx)(vt.Ay, {
+                                (0, i.jsx)(ft.Ay, {
                                   isSearchable: !0,
                                   isMulti: !0,
                                   onChange: t.OnChangeRequiredTags,
@@ -25155,7 +25376,7 @@
                                 (0, i.jsx)("br", {}),
                                 (0, i.jsx)("br", {}),
                                 (0, i.jsx)("div", {
-                                  className: nt().NarrowInputField,
+                                  className: Xe().NarrowInputField,
                                   children: (0, i.jsx)(m.pd, {
                                     type: "number",
                                     min: "1",
@@ -25183,12 +25404,12 @@
                               children: "LIMIT BY APP FEATURES",
                             }),
                             (0, i.jsx)("div", {
-                              className: nt().SectionDesc,
+                              className: Xe().SectionDesc,
                               children:
                                 "Games must have one of these features to participate",
                             }),
                             (0, i.jsxs)("div", {
-                              className: nt().Section,
+                              className: Xe().Section,
                               children: [
                                 (0, i.jsx)(m.Yh, {
                                   label: "Remote Play Together",
@@ -25221,7 +25442,7 @@
           [s, a] = l.useState(t.BHasSpecialEventType()),
           [n, o] = l.useState(rs(t.GetSpecialEventType())),
           c = new Array();
-        Je.Zi.forEach((e) => c.push(rs(e)));
+        Ze.Zi.forEach((e) => c.push(rs(e)));
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)("h3", {
@@ -25244,7 +25465,7 @@
             }),
             s
               ? (0, i.jsxs)("div", {
-                  className: nt().IndentedSubSection,
+                  className: Xe().IndentedSubSection,
                   children: [
                     (0, i.jsx)("p", {
                       children:
@@ -25257,7 +25478,7 @@
                         children: "Learn more about this feature here.",
                       }),
                     }),
-                    (0, i.jsx)(vt.Ay, {
+                    (0, i.jsx)(ft.Ay, {
                       styles: { option: (e) => ({ ...e, color: "#444444" }) },
                       isSearchable: !0,
                       isMulti: !1,
@@ -25285,17 +25506,17 @@
                     (0, i.jsx)("div", {
                       children: "Optional: Special Event Description:",
                     }),
-                    (0, i.jsx)(Qe.I, {
+                    (0, i.jsx)(st.I, {
                       fnGetCurText: t.GetCurSpecialEventDescription,
                       fnOnTextChange: (e) =>
                         t.SetCurSpecialEventDescription(e.currentTarget.value),
                       fnSetText: t.SetCurSpecialEventDescription,
                       strPlaceholder:
                         "Optional: Enter Special Event Description Here",
-                      emoticonStore: Xe.A,
+                      emoticonStore: tt.A,
                       bSupportHTMLImport: !0,
                       showFormatHelp: "PartnerEvents",
-                      classNameForTextArea: nt().EventBBCodeEditor,
+                      classNameForTextArea: Xe().EventBBCodeEditor,
                       limitBBCode: void 0,
                       nOverridesRows: 10,
                     }),
@@ -25310,7 +25531,7 @@
                       placeholder: "Optional: Documentation Link Here",
                     }),
                     (0, i.jsx)("div", {
-                      className: nt().NarrowInputField,
+                      className: Xe().NarrowInputField,
                       children: (0, i.jsx)(m.pd, {
                         type: "number",
                         min: "0",
@@ -25405,7 +25626,7 @@
                   children:
                     "Optional: Add one ore more additional event scheduling restrictions. For instance, we plan to have official replace or broadcasts are different points of the events that are not strictly at the start or end of the event. Alternatively, we want to prevents partners from scheduling their live streams during the common hours related to Steam prop and suffer from their stream interruptions.",
                 }),
-                (0, i.jsx)(Ze.A, {
+                (0, i.jsx)(it.A, {
                   items: u,
                   onDelete: (e) => t.RemoveSpecialEventBlock(e),
                   onMove: (e, s) => t.MoveSpecialEventblock(e, s),
@@ -25468,9 +25689,9 @@
           [c, d, u] = (0, Le.q3)(() => [
             a.GetEventStartTime(),
             a.GetEventEndTime(),
-            $e.O.Get().GetCurEditLanguage(),
+            et.O.Get().GetCurEditLanguage(),
           ]),
-          p = (0, Je.Lg)(u),
+          p = (0, Ze.Lg)(u),
           h = (e) => (n.block_reason[p] = e);
         return (0, i.jsxs)(A.o0, {
           strTitle: "Edit Special Event Schedule Block Range",
@@ -25521,16 +25742,16 @@
               children:
                 "Optional: Blocking Schedule Localized Reason visible to Partner Event Editors:",
             }),
-            (0, i.jsx)(Qe.I, {
-              fnGetCurText: () => (0, Ye.mA)(n.block_reason, u, ""),
+            (0, i.jsx)(st.I, {
+              fnGetCurText: () => (0, Qe.mA)(n.block_reason, u, ""),
               fnOnTextChange: (e) => h(e.currentTarget.value),
               fnSetText: h,
               strPlaceholder:
                 "Optional: Enter Schedule block description here; shorter concise reason preferred.",
-              emoticonStore: Xe.A,
+              emoticonStore: tt.A,
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
-              classNameForTextArea: nt().EventBBCodeEditor,
+              classNameForTextArea: Xe().EventBBCodeEditor,
               limitBBCode: void 0,
               nOverridesRows: 10,
             }),
@@ -25553,7 +25774,7 @@
             t.GetQandA1URL(),
             t.GetQandA2URL(),
           ]);
-        return (0, i.jsxs)(rt.qx, {
+        return (0, i.jsxs)(lt.qx, {
           title: "Event Deadlines and Reminders",
           bStartMinimized: !1,
           children: [
@@ -25562,7 +25783,7 @@
                 "Items here will surface directly on the generated documentation and surfaces on participating partners dashboards as informational",
             }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "Next Fest Additional Times" }),
                 (0, i.jsx)("p", {
@@ -25621,7 +25842,7 @@
       function ps(e) {
         const t = r.Mt.Get();
         return (0, i.jsxs)("div", {
-          className: nt().Section,
+          className: Xe().Section,
           children: [
             (0, i.jsx)("h3", { children: "Free-to-Keep DLC Item Drops" }),
             (0, i.jsx)("p", {
@@ -25659,18 +25880,18 @@
           ]),
           [o, l, c] = (0, Fe.uD)(!1);
         return (0, i.jsxs)("div", {
-          className: ft().AdminPageCtn,
+          className: Je().AdminPageCtn,
           children: [
             (0, i.jsxs)("div", {
-              className: ft().PageTitle,
+              className: Je().PageTitle,
               children: ["OptIn Admin Editing: ", s],
             }),
             (0, i.jsx)("hr", {}),
             (0, i.jsxs)("div", {
-              className: ft().ColumnCtn,
+              className: Je().ColumnCtn,
               children: [
                 (0, i.jsxs)("div", {
-                  className: ft().LeftCol,
+                  className: Je().LeftCol,
                   children: [
                     (0, i.jsx)(Ss, {}),
                     (0, i.jsx)(as, {}),
@@ -25678,7 +25899,7 @@
                     (0, i.jsx)(vs, {}),
                     (0, i.jsx)(us, {}),
                     (0, i.jsx)(ys, {}),
-                    (0, i.jsx)(ot, {}),
+                    (0, i.jsx)(ct, {}),
                     (0, i.jsx)(fs, {}),
                     (0, i.jsx)(xs, {}),
                     (0, i.jsx)(bs, {}),
@@ -25688,12 +25909,12 @@
                   ],
                 }),
                 (0, i.jsx)("div", {
-                  className: ft().RightCol,
+                  className: Je().RightCol,
                   children: (0, i.jsxs)("div", {
-                    className: ft().SectionCtn,
+                    className: Je().SectionCtn,
                     children: [
                       (0, i.jsx)("div", {
-                        className: nt().SectionDesc,
+                        className: Xe().SectionDesc,
                         children:
                           "When you are ready to start accepting opt-ins from eligible games that meet the criteria you've defined, check the box below and save the OptIn.",
                       }),
@@ -25735,19 +25956,19 @@
             s = [
               {
                 label: "Event Registration",
-                data: Ye.YI.k_EOptInType_EventRegistration,
+                data: Qe.YI.k_EOptInType_EventRegistration,
               },
               {
                 label: "Recommended Actions",
-                data: Ye.YI.k_EOptInType_RecommendedAction,
+                data: Qe.YI.k_EOptInType_RecommendedAction,
               },
             ];
-          return (0, i.jsxs)(rt.qx, {
+          return (0, i.jsxs)(lt.qx, {
             title: "Basic Event Info",
             bStartMinimized: !1,
             children: [
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", { children: "Event Title:" }),
                   (0, i.jsx)(m.pd, {
@@ -25763,16 +25984,16 @@
                     children:
                       "This section appears at the top of the opt-in page and is used for telling potential participants what the event is all about. This is also considered the overview which appears in the automatically generated docs",
                   }),
-                  (0, i.jsx)(Qe.I, {
+                  (0, i.jsx)(st.I, {
                     fnGetCurText: t.GetCurDescription,
                     fnOnTextChange: (e) =>
                       t.SetCurDescription(e.currentTarget.value),
                     fnSetText: t.SetCurDescription,
                     strPlaceholder: "Enter Description Here",
-                    emoticonStore: Xe.A,
+                    emoticonStore: tt.A,
                     bSupportHTMLImport: !0,
                     showFormatHelp: "PartnerEvents",
-                    classNameForTextArea: nt().EventBBCodeEditor,
+                    classNameForTextArea: Xe().EventBBCodeEditor,
                     limitBBCode: void 0,
                     nOverridesRows: 10,
                   }),
@@ -25781,16 +26002,16 @@
                     children:
                       "This section should contain only the eligibility requirements for participating in the event",
                   }),
-                  (0, i.jsx)(Qe.I, {
+                  (0, i.jsx)(st.I, {
                     fnGetCurText: t.GetCurEligibilityText,
                     fnOnTextChange: (e) =>
                       t.SetCurEligibilityText(e.currentTarget.value),
                     fnSetText: t.SetCurEligibilityText,
                     strPlaceholder: "Enter Eligibility Here",
-                    emoticonStore: Xe.A,
+                    emoticonStore: tt.A,
                     bSupportHTMLImport: !0,
                     showFormatHelp: "PartnerEvents",
-                    classNameForTextArea: nt().EventBBCodeEditor,
+                    classNameForTextArea: Xe().EventBBCodeEditor,
                     limitBBCode: void 0,
                     nOverridesRows: 10,
                   }),
@@ -25808,7 +26029,7 @@
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", { children: "Event Dates:" }),
                   (0, i.jsx)("p", {
@@ -25846,7 +26067,7 @@
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", {
                     children: "Steamworks Documentation URL:",
@@ -25882,16 +26103,16 @@
                     children:
                       "This section appears near the bottom of the opt-in page and is used for describing where participants can find more information.",
                   }),
-                  (0, i.jsx)(Qe.I, {
+                  (0, i.jsx)(st.I, {
                     fnGetCurText: t.GetCurHelpText,
                     fnOnTextChange: (e) =>
                       t.SetCurHelpText(e.currentTarget.value),
                     fnSetText: t.SetCurHelpText,
                     strPlaceholder: "Enter Help Text",
-                    emoticonStore: Xe.A,
+                    emoticonStore: tt.A,
                     bSupportHTMLImport: !0,
                     showFormatHelp: "PartnerEvents",
-                    classNameForTextArea: nt().EventBBCodeEditor,
+                    classNameForTextArea: Xe().EventBBCodeEditor,
                     limitBBCode: void 0,
                     nOverridesRows: 10,
                   }),
@@ -25899,7 +26120,7 @@
               }),
               (0, i.jsx)(At, {}),
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", {
                     children: "Categorization & Stat Reporting:",
@@ -25933,7 +26154,7 @@
                 ],
               }),
               (0, i.jsx)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: (0, i.jsx)(os, {}),
               }),
             ],
@@ -25941,7 +26162,7 @@
         }),
         vs = (0, Ve.PA)((e) => {
           const t = r.Mt.Get();
-          return (0, i.jsxs)(rt.qx, {
+          return (0, i.jsxs)(lt.qx, {
             title: "Registration Options",
             bStartMinimized: !1,
             children: [
@@ -25950,7 +26171,7 @@
                   "Select the settings that should appear as part of the registration process",
               }),
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", { children: "Categories" }),
                   (0, i.jsx)("p", {
@@ -25965,8 +26186,8 @@
                   (0, i.jsx)("hr", {}),
                   (0, i.jsxs)("div", {
                     className: (0, f.A)(
-                      nt().IndentedSubSection,
-                      t.BIsCategoriesEnabled() ? "" : nt().Disabled,
+                      Xe().IndentedSubSection,
+                      t.BIsCategoriesEnabled() ? "" : Xe().Disabled,
                     ),
                     children: [
                       (0, i.jsx)(m.m, {
@@ -25979,7 +26200,7 @@
                         },
                       }),
                       (0, i.jsx)("span", { children: "Visible Categories" }),
-                      (0, i.jsx)(vt.Ay, {
+                      (0, i.jsx)(ft.Ay, {
                         isSearchable: !0,
                         isMulti: !0,
                         onChange: t.OnChangeCategoryTags,
@@ -25991,7 +26212,7 @@
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", { children: "Press Contact Info" }),
                   (0, i.jsx)("p", {
@@ -26006,8 +26227,8 @@
                   (0, i.jsx)("hr", {}),
                   (0, i.jsx)("div", {
                     className: (0, f.A)(
-                      nt().IndentedSubSection,
-                      t.BIsPressContactEnabled() ? "" : nt().Disabled,
+                      Xe().IndentedSubSection,
+                      t.BIsPressContactEnabled() ? "" : Xe().Disabled,
                     ),
                     children: (0, i.jsx)(m.m, {
                       label: "Optional/Suggested/Required",
@@ -26024,12 +26245,12 @@
         }),
         ys = (0, Ve.PA)((e) => {
           const t = r.Mt.Get();
-          return (0, i.jsxs)(rt.qx, {
+          return (0, i.jsxs)(lt.qx, {
             title: "Uncommon Registration Options",
             bStartMinimized: !0,
             children: [
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", { children: "Artist Statement" }),
                   (0, i.jsx)("p", {
@@ -26057,7 +26278,7 @@
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", { children: "Primary Country" }),
                   (0, i.jsx)("p", {
@@ -26084,11 +26305,11 @@
         }),
         fs = (0, Ve.PA)((e) => {
           const t = r.Mt.Get();
-          return (0, i.jsx)(rt.qx, {
+          return (0, i.jsx)(lt.qx, {
             title: "Tasks Required Prior To Registration",
             bStartMinimized: !1,
             children: (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)(m.Yh, {
                   label: "Show this section to developers",
@@ -26098,8 +26319,8 @@
                 (0, i.jsx)("hr", {}),
                 (0, i.jsxs)("div", {
                   className: (0, f.A)(
-                    nt().IndentedSubSection,
-                    t.BIsBeforeYouOptInEnabled() ? "" : nt().Disabled,
+                    Xe().IndentedSubSection,
+                    t.BIsBeforeYouOptInEnabled() ? "" : Xe().Disabled,
                   ),
                   children: [
                     (0, i.jsx)("h3", { children: "Build Your Store Page" }),
@@ -26115,17 +26336,17 @@
                       onChange: (e) => t.SetBuildYourStorePageRequired(e.data),
                       contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
                     }),
-                    (0, i.jsx)(Qe.I, {
+                    (0, i.jsx)(st.I, {
                       fnGetCurText: t.GetStorePageText,
                       fnOnTextChange: (e) =>
                         t.SetStorePageText(e.currentTarget.value),
                       fnSetText: t.SetStorePageText,
                       strPlaceholder:
                         "Describe any required guidelines for the store page such as screenshots, trailer, etc.",
-                      emoticonStore: Xe.A,
+                      emoticonStore: tt.A,
                       bSupportHTMLImport: !0,
                       showFormatHelp: "PartnerEvents",
-                      classNameForTextArea: nt().EventBBCodeEditor,
+                      classNameForTextArea: Xe().EventBBCodeEditor,
                       limitBBCode: void 0,
                       nOverridesRows: 10,
                     }),
@@ -26149,11 +26370,11 @@
             t.GetLaunchYourDemoRequired(),
             t.GetLaunchYourDemoDueDate(),
           ]);
-        return (0, i.jsx)(rt.qx, {
+        return (0, i.jsx)(lt.qx, {
           title: "Tasks required to start",
           bStartMinimized: !1,
           children: (0, i.jsxs)("div", {
-            className: nt().Section,
+            className: Xe().Section,
             children: [
               (0, i.jsx)("p", {
                 children:
@@ -26167,8 +26388,8 @@
               (0, i.jsx)("hr", {}),
               (0, i.jsxs)("div", {
                 className: (0, f.A)(
-                  nt().IndentedSubSection,
-                  s ? "" : nt().Disabled,
+                  Xe().IndentedSubSection,
+                  s ? "" : Xe().Disabled,
                 ),
                 children: [
                   (0, i.jsx)(m.m, {
@@ -26202,11 +26423,11 @@
             t.BIsEnterDiscountsEnabled(),
             t.GetDiscountEventID(),
           ]);
-        return (0, i.jsx)(rt.qx, {
+        return (0, i.jsx)(lt.qx, {
           title: "Tasks that can be done any time",
           bStartMinimized: !1,
           children: (0, i.jsxs)("div", {
-            className: nt().Section,
+            className: Xe().Section,
             children: [
               (0, i.jsx)("p", {
                 children:
@@ -26220,8 +26441,8 @@
               (0, i.jsx)("hr", {}),
               (0, i.jsxs)("div", {
                 className: (0, f.A)(
-                  nt().IndentedSubSection,
-                  Boolean(s) ? "" : nt().Disabled,
+                  Xe().IndentedSubSection,
+                  Boolean(s) ? "" : Xe().Disabled,
                 ),
                 children: [
                   (0, i.jsx)("h3", {
@@ -26304,11 +26525,11 @@
             t.GetCurOptInRegistrationTitle(),
             t.GetCurOptInRegistrationCheckbox(),
           ]);
-        return (0, i.jsx)(rt.qx, {
+        return (0, i.jsx)(lt.qx, {
           title: "Override Final Particiption Text",
           bStartMinimized: !1,
           children: (0, i.jsxs)("div", {
-            className: nt().Section,
+            className: Xe().Section,
             children: [
               (0, i.jsx)("p", {
                 children:
@@ -26388,11 +26609,11 @@
       function ws(e) {
         const t = r.Mt.Get(),
           [s, a] = (0, l.useState)(t.GetCurAppealsText()?.length > 0);
-        return (0, i.jsx)(rt.qx, {
+        return (0, i.jsx)(lt.qx, {
           title: "Appeals Process",
           bStartMinimized: !1,
           children: (0, i.jsxs)("div", {
-            className: nt().Section,
+            className: Xe().Section,
             children: [
               (0, i.jsx)("p", {
                 children:
@@ -26405,16 +26626,16 @@
                         children:
                           "Describe the eligibility criteria here for partners to see. They will see this when their game is not eligible and they can then consider whether they wish to start an appeal.",
                       }),
-                      (0, i.jsx)(Qe.I, {
+                      (0, i.jsx)(st.I, {
                         fnGetCurText: t.GetCurAppealsText,
                         fnOnTextChange: (e) =>
                           t.SetCurAppealsText(e.currentTarget.value),
                         fnSetText: t.SetCurAppealsText,
                         strPlaceholder: "Enter Appeals Text",
-                        emoticonStore: Xe.A,
+                        emoticonStore: tt.A,
                         bSupportHTMLImport: !0,
                         showFormatHelp: "PartnerEvents",
-                        classNameForTextArea: nt().EventBBCodeEditor,
+                        classNameForTextArea: Xe().EventBBCodeEditor,
                         limitBBCode: void 0,
                         nOverridesRows: 10,
                       }),
@@ -26464,7 +26685,7 @@
                   onOK: async () => {
                     a(!0);
                     const e = await r.Mt.Get().Delete(c.current.token);
-                    o(e), a(!1), e || (t(!1), d.push(Pl.OptinAdminDashboard()));
+                    o(e), a(!1), e || (t(!1), d.push(kl.OptinAdminDashboard()));
                   },
                   bOKDisabled: s,
                   children: [
@@ -26476,7 +26697,7 @@
                       }),
                     Boolean(n) &&
                       (0, i.jsx)("div", {
-                        className: nt().DialogErrorText,
+                        className: Xe().DialogErrorText,
                         children: n,
                       }),
                   ],
@@ -26671,13 +26892,13 @@
             [e, t],
           );
         return e.mapAppToDiscountInfo
-          ? (0, i.jsx)(rt.qx, {
+          ? (0, i.jsx)(lt.qx, {
               title: "OptIn Participation Stats",
               tooltip:
                 "Shows the stats for the top 100 and all games invited/optin/opted out for a themed sale. Ignores the eligible games",
               bStartMinimized: !1,
               children: (0, i.jsxs)("table", {
-                className: nt().StatsCtn,
+                className: Xe().StatsCtn,
                 children: [
                   (0, i.jsxs)("tr", {
                     children: [
@@ -27463,7 +27684,7 @@
           return (0, i.jsxs)(i.Fragment, {
             children: [
               Boolean(e.label) && (0, i.jsx)("div", { children: e.label }),
-              (0, i.jsx)(vt.Ay, {
+              (0, i.jsx)(ft.Ay, {
                 styles: { option: (e) => ({ ...e, color: "#444444" }) },
                 isSearchable: !0,
                 isMulti: !1,
@@ -27481,7 +27702,7 @@
           return (0, i.jsxs)(i.Fragment, {
             children: [
               Boolean(e.label) && (0, i.jsx)("div", { children: e.label }),
-              (0, i.jsx)(vt.Ay, {
+              (0, i.jsx)(ft.Ay, {
                 styles: { option: (e) => ({ ...e, color: "#444444" }) },
                 isSearchable: !0,
                 isMulti: !0,
@@ -28342,7 +28563,7 @@
                   (0, x.uX)(e),
                 );
               },
-              children: (0, i.jsx)(tt.he, {
+              children: (0, i.jsx)(nt.he, {
                 toolTipContent:
                   "Generates a CSV of only opt-ed in games intended to be shared with the press",
                 children: "Download Press CSV",
@@ -28354,7 +28575,7 @@
                 onClick: () => {
                   (0, S.pg)((0, i.jsx)(ei, {}), window);
                 },
-                children: (0, i.jsx)(tt.he, {
+                children: (0, i.jsx)(nt.he, {
                   toolTipContent:
                     "Create a package for the demos that have opted-in to the event and allowed us to use their demo. The package is create with release override.",
                   children: "Create Demo Package",
@@ -28367,7 +28588,7 @@
                   (0, i.jsx)(Si, { optInStats: t.current.getData() }),
                   (0, x.uX)(e),
                 ),
-              children: (0, i.jsx)(tt.he, {
+              children: (0, i.jsx)(nt.he, {
                 toolTipContent:
                   "Download trailers or Game Capsules for opted-in games from this event.",
                 children: "Download Trailers or Capsules",
@@ -28380,7 +28601,7 @@
                   (0, i.jsx)(xi, { strOptInName: a.GetOptInPageID() }),
                   (0, x.uX)(e),
                 ),
-              children: (0, i.jsx)(tt.he, {
+              children: (0, i.jsx)(nt.he, {
                 toolTipContent:
                   "Recommend we refresh stats before this call. This will search for the appids in the various buckets (optin, opted out etc...)",
                 children: "🔍 Find App...",
@@ -28398,7 +28619,7 @@
                     }),
                     (0, x.uX)(e),
                   ),
-                children: (0, i.jsx)(tt.he, {
+                children: (0, i.jsx)(nt.he, {
                   toolTipContent:
                     "Recommend refresh stats before using this dialog. This will provide a dialog that will mass move apps into the pending_review state which allows us to do pruning before they are invited to participate.",
                   children: "Eligible → Pending Review...",
@@ -28416,7 +28637,7 @@
                     }),
                     (0, x.uX)(e),
                   ),
-                children: (0, i.jsx)(tt.he, {
+                children: (0, i.jsx)(nt.he, {
                   toolTipContent:
                     "Recommend refresh stats before using this dialog. This will provide a dialog that will mass invite eligible apps meeting a coming soon or release with min earn critria.",
                   children: "Eligible → Invited...",
@@ -28516,9 +28737,9 @@
             (0, i.jsx)("h2", { children: a }),
             (0, i.jsx)("hr", {}),
             (0, i.jsx)("div", {
-              className: (0, f.A)(nt().Section, nt().ManageTable),
+              className: (0, f.A)(Xe().Section, Xe().ManageTable),
               children: (0, i.jsxs)("div", {
-                className: nt().SectionDesc,
+                className: Xe().SectionDesc,
                 children: [
                   (0, i.jsx)(As.F, {}),
                   "How to opt in a specific game. Use this link and swap out the 220 at the end with the correct appID  ",
@@ -28703,7 +28924,7 @@
         return a
           ? (0, i.jsx)("span", { children: "Email Resutls: Reviewed" })
           : (0, i.jsx)(m.$n, {
-              className: nt().BasicButtonSize,
+              className: Xe().BasicButtonSize,
               onClick: (e) =>
                 (0, S.pg)(
                   (0, i.jsx)(Bi, { emailEditModel: s, serverDef: t }),
@@ -28769,7 +28990,7 @@
           : (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(m.$n, {
-                  className: nt().BasicButtonSize,
+                  className: Xe().BasicButtonSize,
                   onClick: (e) =>
                     (0, S.pg)(
                       (0, i.jsx)(Mi, { emailEditModel: s, serverDef: t }),
@@ -28781,7 +29002,7 @@
                 }),
                 Boolean(a) &&
                   (0, i.jsx)(m.$n, {
-                    className: nt().BasicButtonSize,
+                    className: Xe().BasicButtonSize,
                     onClick: (e) =>
                       (0, S.pg)(
                         (0, i.jsx)(Ei, { emailEditModel: s, serverDef: t }),
@@ -28939,7 +29160,7 @@
                 (0, i.jsx)("div", {
                   className: Oi().ChangeBtnCtn,
                   children: (0, i.jsx)(m.$n, {
-                    className: nt().BasicButtonSize,
+                    className: Xe().BasicButtonSize,
                     onClick: (e) =>
                       (0, S.pg)(
                         (0, i.jsx)(Wi, {
@@ -28959,7 +29180,7 @@
         }),
         zi = (0, Ve.PA)((e) => {
           const { section: t } = e,
-            s = $e.O.Get().GetCurEditLanguage();
+            s = et.O.Get().GetCurEditLanguage();
           return (0, i.jsxs)("div", {
             className: Oi().SectionCtn,
             children: [
@@ -29097,7 +29318,7 @@
           const { emailDef: t, section: s, storeItem: a } = e;
           let n = "",
             o = (0, i.jsx)("div", {});
-          const l = (0, $e.E)();
+          const l = (0, et.E)();
           if (s.GetType() == U.Dj.k_Custom) return null;
           const c =
               b.TS.PARTNER_BASE_URL +
@@ -30452,8 +30673,8 @@
         });
       function Vi(e) {
         const { emailDef: t } = e,
-          s = (0, $e.E)(),
-          a = (0, Je.sf)(P.A0.GetLanguageFallback((0, Je.Lg)(s))),
+          s = (0, et.E)(),
+          a = (0, Ze.sf)(P.A0.GetLanguageFallback((0, Ze.Lg)(s))),
           [n, r, o] = (0, Le.q3)(() => [
             t.GetOwningOptInName(),
             t.GetEmailImage(s),
@@ -30578,7 +30799,7 @@
                 ),
                   o((t) => {
                     const a = { ...t };
-                    return (a[(0, Je.Lg)(s)] = e + (0, Dt.qR)(i)), a;
+                    return (a[(0, Ze.Lg)(s)] = e + (0, Dt.qR)(i)), a;
                   });
               },
             }),
@@ -30597,11 +30818,11 @@
           [n] = (0, Le.q3)(() => [
             Object.keys(t)
               .sort()
-              .map((e) => (0, Je.sf)(e)),
+              .map((e) => (0, Ze.sf)(e)),
           ]),
           r = (0, l.useCallback)(
             (e) => {
-              const i = (0, Je.Lg)(e),
+              const i = (0, Ze.Lg)(e),
                 a = t[i];
               return a ? (0, Tt.qF)(s, e, a) : null;
             },
@@ -30611,7 +30832,7 @@
           rgAssetLangs: n,
           fnGetAssetUrl: r,
           fnDeletAssetLang: (e) => {
-            const s = (0, Je.Lg)(e),
+            const s = (0, Ze.Lg)(e),
               i = { ...t };
             i?.[s] && (delete i[s], a(i));
           },
@@ -30771,7 +30992,7 @@
               position: "center",
             });
           const d = r.Mt.Get(),
-            u = $e.O.Get().GetCurEditLanguage(),
+            u = et.O.Get().GetCurEditLanguage(),
             p = t
               .GetSections()
               .map((e, s) =>
@@ -31046,7 +31267,7 @@
                           (0, i.jsx)("div", {
                             className: Oi().AddSectionCtn,
                             children: (0, i.jsx)(m.jn, {
-                              className: nt().BasicButtonSize,
+                              className: Xe().BasicButtonSize,
                               disabled: t.BIsReadOnly(),
                               onClick: (e) =>
                                 (0, S.pg)(
@@ -31083,7 +31304,7 @@
       function aa(e) {
         const { emailDef: t, fnSetUseCustom: s } = e,
           a = r.Mt.Get(),
-          n = (0, $e.E)(),
+          n = (0, et.E)(),
           [o, c] = (0, Le.q3)(() => [t.GetSubjectToken(), a.GetEventTitle(n)]),
           d = (0, l.useMemo)(
             () => ia.map((e) => ({ label: (0, P.we)(e, c), data: e })),
@@ -31154,7 +31375,7 @@
       const ra = (0, Ve.PA)((e) => {
         const { emailDef: t } = e,
           s = oa(t),
-          a = (0, $e.E)();
+          a = (0, et.E)();
         return 0 == Object.values(s).length
           ? null
           : (0, i.jsxs)("div", {
@@ -31801,7 +32022,7 @@
             (0, i.jsx)("p", {
               children: "After hitting ok, remember to save the optin.",
             }),
-            (0, i.jsx)(rt.qx, {
+            (0, i.jsx)(lt.qx, {
               title: `App List: ${c.length} Apps`,
               bStartMinimized: !0,
               children: (0, i.jsx)(i.Fragment, {
@@ -31829,11 +32050,11 @@
               : (0, i.jsxs)("div", {
                   children: ["Store Item Not Loading Appid: ", t],
                 }),
-            (0, i.jsx)(tt.he, {
+            (0, i.jsx)(nt.he, {
               className: Ji().ProgressIconError,
               onClick: s,
               toolTipContent: "Remove App From List",
-              children: (0, i.jsx)(et.X, {}),
+              children: (0, i.jsx)(at.X, {}),
             }),
           ],
         });
@@ -32077,7 +32298,7 @@
                   },
                   children: [
                     "Next Fest: Create Templated Emails ",
-                    (0, i.jsx)(tt.he, {
+                    (0, i.jsx)(nt.he, {
                       toolTipContent:
                         "For next fest, this will automatically create all of the email templates required for operating the festival",
                       children: " (?) ",
@@ -32262,7 +32483,7 @@
                 (0, i.jsx)("span", { children: r.appid_emailed }),
               ],
             }),
-            (0, i.jsx)(tt.he, {
+            (0, i.jsx)(nt.he, {
               toolTipContent:
                 "Attempted to email these apps however all users opted out of receiving communication.",
               children: (0, i.jsxs)("div", {
@@ -32289,7 +32510,7 @@
                 (0, i.jsx)("span", { children: r.partner_eailed }),
               ],
             }),
-            (0, i.jsx)(tt.he, {
+            (0, i.jsx)(nt.he, {
               toolTipContent:
                 "Attempted to email these Partenr however all users opted out of receiving communication.",
               children: (0, i.jsxs)("div", {
@@ -32328,7 +32549,7 @@
               className: _().FlexRowWrapSpaceBetweenContainer,
               children: ["Featured App:", (0, i.jsx)("span", { children: f })],
             }),
-            (0, i.jsx)(tt.he, {
+            (0, i.jsx)(nt.he, {
               toolTipContent:
                 "These apps need investigation as they were emailed but are not in any known set of apps associated with the events. See the csv for list.",
               children: (0, i.jsxs)("div", {
@@ -32339,7 +32560,7 @@
                 ],
               }),
             }),
-            (0, i.jsx)(tt.he, {
+            (0, i.jsx)(nt.he, {
               toolTipContent:
                 "We did not email these invited apps. Either they were invited after the email OR we couldn't find a user to email",
               children: (0, i.jsxs)("div", {
@@ -32541,7 +32762,7 @@
                     (0, i.jsx)("span", { children: n.length }),
                   ],
                 }),
-                (0, i.jsx)(tt.he, {
+                (0, i.jsx)(nt.he, {
                   toolTipContent:
                     "We can only send emails to users who either took an optin action or is a memmber of the partner which permits emails. These app has neither.",
                   children: (0, i.jsxs)("div", {
@@ -32564,7 +32785,7 @@
       }
       const xa = (e) => {
         const { closeModal: t, emailDef: s } = e,
-          a = (0, $e.E)(),
+          a = (0, et.E)(),
           n = (0, E.vs)();
         return n.bLoading
           ? (0, i.jsx)(E.Hh, {
@@ -32686,7 +32907,7 @@
                   },
                   children: [
                     "Theme Sales: Create Templated Emails ",
-                    (0, i.jsx)(tt.he, {
+                    (0, i.jsx)(nt.he, {
                       toolTipContent: "Emails for regular theme sales",
                       children: " (?) ",
                     }),
@@ -32832,7 +33053,7 @@
                                         (0, i.jsx)("th", { children: "Name" }),
                                         (0, i.jsx)("th", { children: "Type" }),
                                         (0, i.jsx)("th", {
-                                          children: (0, i.jsxs)(tt.he, {
+                                          children: (0, i.jsxs)(nt.he, {
                                             toolTipContent:
                                               "This is the number of unique accounts encountered; this can be less than email to send/sent as an account registering multiple opt-ins, will get separate emails for each app opted in.",
                                             children: [
@@ -32843,7 +33064,7 @@
                                           }),
                                         }),
                                         (0, i.jsx)("th", {
-                                          children: (0, i.jsxs)(tt.he, {
+                                          children: (0, i.jsxs)(nt.he, {
                                             toolTipContent:
                                               "Email sent can be higher than account examined if a user registered more than one app",
                                             children: [
@@ -32983,7 +33204,7 @@
                             className: pa.CreationRow,
                             children: [
                               (0, i.jsx)(m.$n, {
-                                className: nt().BasicButtonSize,
+                                className: Xe().BasicButtonSize,
                                 onClick: (t) =>
                                   (0, S.pg)(
                                     (0, i.jsx)(wa, { history: e.history }),
@@ -33074,7 +33295,7 @@
         Ca = (e) => {
           const { emailEditModel: t } = e,
             s = r.Mt.Get(),
-            a = (0, $e.E)();
+            a = (0, et.E)();
           return (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)("td", {
@@ -33089,7 +33310,7 @@
               }),
               (0, i.jsx)("td", {
                 children: (0, i.jsx)(m.$n, {
-                  className: nt().BasicButtonSize,
+                  className: Xe().BasicButtonSize,
                   disabled: Me.Get().BHasEmailDefLoadFailure(s.GetFullName()),
                   onClick: (e) =>
                     (0, S.pg)((0, i.jsx)(ua, { emailDef: t }), (0, x.uX)(e)),
@@ -33101,7 +33322,7 @@
         },
         Ia = (e) => {
           const { emailEditModel: t, serverDef: s } = e,
-            a = (0, $e.E)(),
+            a = (0, et.E)(),
             [n, r] = (0, l.useState)(!1);
           return (
             (0, l.useEffect)(() => {
@@ -33139,7 +33360,7 @@
                 }),
                 (0, i.jsx)("td", {
                   children: (0, i.jsx)(m.$n, {
-                    className: (0, f.A)(nt().BasicButtonSize, pa.CloneBtn),
+                    className: (0, f.A)(Xe().BasicButtonSize, pa.CloneBtn),
                     onClick: () => Pa(t),
                     children: "Clone",
                   }),
@@ -33167,7 +33388,7 @@
         };
       function Ta(e) {
         const { emailEditModel: t, serverDef: s } = e,
-          a = (0, $e.E)(),
+          a = (0, et.E)(),
           [n, r] = (function (e) {
             const [t, s] = l.useState(!Me.Get().BHasReachEstimateLoaded(e));
             return (
@@ -33230,7 +33451,7 @@
             (0, i.jsx)("td", {
               className: pa.NoWrap,
               children: (0, i.jsx)(m.$n, {
-                className: nt().BasicButtonSize,
+                className: Xe().BasicButtonSize,
                 onClick: (e) =>
                   (0, S.pg)((0, i.jsx)(_a, { emailDef: t }), (0, x.uX)(e)),
                 children: "Send ACTUAL Email Now",
@@ -33251,7 +33472,7 @@
             (0, i.jsx)("td", {
               className: pa.NoWrap,
               children: (0, i.jsx)(m.$n, {
-                className: nt().BasicButtonSize,
+                className: Xe().BasicButtonSize,
                 onClick: (e) =>
                   (0, S.pg)((0, i.jsx)(xa, { emailDef: t }), (0, x.uX)(e)),
                 children: "Test Email fired To Myself",
@@ -33264,7 +33485,7 @@
             (0, i.jsx)("td", {
               className: pa.NoWrap,
               children: (0, i.jsx)(m.$n, {
-                className: nt().BasicButtonSize,
+                className: Xe().BasicButtonSize,
                 onClick: () => Pa(t),
                 children: "Clone",
               }),
@@ -33276,7 +33497,7 @@
         const t = (0, Pi.Jo)(e.GetSteamAwardsAdApp());
         if (e.BHasSteamAwardsAdApp()) {
           if (t.isLoading) return;
-          return (0, st.rj)(t.data.votes, 2).map((e) => e.localization.title);
+          return (0, rt.rj)(t.data.votes, 2).map((e) => e.localization.title);
         }
         return null;
       }
@@ -33294,7 +33515,7 @@
           (a += "&force_text_view=0"),
           s?.length > 0 &&
             (a += "&steamawardcategories=" + encodeURIComponent(s.join(","))),
-          (0, i.jsx)(tt.he, {
+          (0, i.jsx)(nt.he, {
             toolTipContent:
               "You can update the URL using ?l=<language> to test the variousl localization",
             children: Boolean(void 0 === s)
@@ -33303,7 +33524,7 @@
                   string: "Loading Steam Award Categories",
                 })
               : (0, i.jsx)(m.$n, {
-                  className: nt().BasicButtonSize,
+                  className: Xe().BasicButtonSize,
                   onClick: (e) => (0, y.Id)(e, a),
                   children: "Web Preview",
                 }),
@@ -33410,7 +33631,7 @@
                 bShowXML: !0,
                 bShowCSV: !0,
                 strFileNamePrefix: "optin",
-                lang: $e.O.Get().GetCurEditLanguage(),
+                lang: et.O.Get().GetCurEditLanguage(),
               }),
             }),
           ],
@@ -33428,7 +33649,7 @@
                 (0, z.h5)(() => {
                   s.forEach((s) => {
                     let o = !1,
-                      l = (0, Je.Lg)(s);
+                      l = (0, Ze.Lg)(s);
                     a.forEach((a) => {
                       const c = t.GetLocalization(a, s) || "";
                       if (
@@ -33762,7 +33983,7 @@
         ln = nn + "desc_",
         cn = nn + "button_text_";
       function dn(e, t, s) {
-        let i = (0, Je.Lg)(s);
+        let i = (0, Ze.Lg)(s);
         const a = e.subject && e.subject[i] && e.subject[i].length > 0;
         (a || 0 == s) &&
           t.SetLocalization(rn + e.unique_id, s, a ? e.subject[i] : "");
@@ -33799,7 +34020,7 @@
           });
       }
       function mn(e, t, s) {
-        let i = (0, Je.Lg)(s);
+        let i = (0, Ze.Lg)(s);
         const a =
           e.event_title && e.event_title[i] && e.event_title[i].length > 0;
         (a || 0 == s) && t.SetLocalization(Fa, s, a ? e.event_title[i] : "");
@@ -34225,10 +34446,10 @@
             t.GetPublicEventURL(),
           ]);
         return (0, i.jsxs)("div", {
-          className: ft().AdminPageCtn,
+          className: Je().AdminPageCtn,
           children: [
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("p", {
                   children:
@@ -34250,7 +34471,7 @@
               ],
             }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", {
                   children: "Public Content Hub / Sale URL:",
@@ -34285,7 +34506,7 @@
               ],
             }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "Priority Apps" }),
                 (0, i.jsx)("div", {
@@ -34310,7 +34531,7 @@
             (0, i.jsx)(In, { editModel: t }),
             (0, i.jsx)(Tn, { editModel: t }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "Included Apps" }),
                 (0, i.jsx)("div", {
@@ -34344,7 +34565,7 @@
         const { editModel: t } = e,
           [s] = (0, Le.q3)(() => [t.GetPointShopAdvertisingAppID()]);
         return (0, i.jsxs)("div", {
-          className: nt().Section,
+          className: Xe().Section,
           children: [
             (0, i.jsx)("h3", { children: "Point Shop Advertising App" }),
             (0, i.jsx)("p", {
@@ -34380,7 +34601,7 @@
             t.GetPointShopRadialEdgeColorOverride(),
           ]);
         return (0, i.jsxs)("div", {
-          className: (0, f.A)(nt().Section),
+          className: (0, f.A)(Xe().Section),
           children: [
             (0, i.jsx)("h3", { children: "Point Shop Background Color" }),
             (0, i.jsx)("p", {
@@ -34804,31 +35025,31 @@
           d = (0, i.jsx)(Jn, { fnUpdateLocalSurvey: r, oSurveyData: n });
         return d
           ? (0, i.jsx)("div", {
-              className: ft().AdminPageCtn,
+              className: Je().AdminPageCtn,
               children: (0, i.jsxs)("div", {
                 className: qn().SurveyCtn,
                 children: [
                   (0, i.jsx)("div", {
-                    className: ft().PageTitle,
+                    className: Je().PageTitle,
                     children: (0, P.we)("#OptIn_SurveyTitle", s),
                   }),
                   (0, i.jsx)("hr", {}),
                   (0, i.jsxs)("div", {
-                    className: ft().ColumnCtn,
+                    className: Je().ColumnCtn,
                     children: [
                       (0, i.jsxs)("div", {
-                        className: ft().LeftCol,
+                        className: Je().LeftCol,
                         children: [
                           Boolean(l) &&
                             (0, i.jsx)("div", {
-                              className: ft().ColHeader,
+                              className: Je().ColHeader,
                               children: (0, i.jsx)("div", {
-                                className: ft().ColHeaderImg,
+                                className: Je().ColHeaderImg,
                                 style: { backgroundImage: `url( '${l}' )` },
                               }),
                             }),
                           (0, i.jsxs)("div", {
-                            className: (0, f.A)(ft().SectionCtn, ft().Bright),
+                            className: (0, f.A)(Je().SectionCtn, Je().Bright),
                             children: [
                               (0, i.jsx)("h2", {
                                 children: (0, P.we)(
@@ -34843,9 +35064,9 @@
                         ],
                       }),
                       (0, i.jsx)("div", {
-                        className: ft().RightCol,
+                        className: Je().RightCol,
                         children: (0, i.jsxs)("div", {
-                          className: ft().SectionCtn,
+                          className: Je().SectionCtn,
                           children: [
                             (0, i.jsx)("h3", {
                               children: (0, P.we)(
@@ -34971,7 +35192,7 @@
           fnSetAdditionalData: l,
         } = e;
         return (0, i.jsxs)("div", {
-          className: (0, f.A)(ft().SectionCtn, qn().SurveyQuestionCtn),
+          className: (0, f.A)(Je().SectionCtn, qn().SurveyQuestionCtn),
           children: [
             (0, i.jsx)("h2", { children: (0, P.we)(t) }),
             (0, i.jsx)("div", {
@@ -35032,7 +35253,7 @@
           strNotesToken: n,
         } = e;
         return (0, i.jsxs)("div", {
-          className: (0, f.A)(ft().SectionCtn, qn().SurveyQuestionCtn),
+          className: (0, f.A)(Je().SectionCtn, qn().SurveyQuestionCtn),
           children: [
             (0, i.jsx)("h2", { children: (0, P.we)(t) }),
             (0, i.jsxs)("div", {
@@ -35057,7 +35278,7 @@
       }
       function Qn(e) {
         const { editModel: t } = e,
-          s = (0, $e.E)(),
+          s = (0, et.E)(),
           [a, n, r, o, c] = (0, Le.q3)(() => [
             t.GetCurEventTitle(),
             t.BHasSurveyEnabled(),
@@ -35077,10 +35298,10 @@
           ),
           g = c && (0, Tt.Yi)(o, s, c);
         return (0, i.jsxs)("div", {
-          className: ft().AdminPageCtn,
+          className: Je().AdminPageCtn,
           children: [
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "Survey Controls" }),
                 (0, i.jsx)("hr", {}),
@@ -35107,7 +35328,7 @@
             }),
             Boolean(r) &&
               (0, i.jsxs)("div", {
-                className: nt().Section,
+                className: Xe().Section,
                 children: [
                   (0, i.jsx)("h3", { children: "Preview Version: " }),
                   (0, i.jsx)("hr", {}),
@@ -35130,7 +35351,7 @@
                 ],
               }),
             (0, i.jsxs)("div", {
-              className: nt().Section,
+              className: Xe().Section,
               children: [
                 (0, i.jsx)("h3", { children: "Survey Results" }),
                 (0, i.jsx)("hr", {}),
@@ -35266,7 +35487,7 @@
                   t.BIsUnreleaseGamesEligible() ||
                   t.BIsInvitationOnly()
                     ? null
-                    : (0, i.jsx)(tt.he, {
+                    : (0, i.jsx)(nt.he, {
                         toolTipContent:
                           "Must choose release or unrelease games in the requirement section",
                         children: (0, i.jsx)(v.a, {
@@ -35344,7 +35565,7 @@
             o.push({
               name: "Debug",
               key: "debug",
-              contents: (0, i.jsx)(u.tH, { children: (0, i.jsx)(St, {}) }),
+              contents: (0, i.jsx)(u.tH, { children: (0, i.jsx)(yt, {}) }),
               onClick: s,
             }),
             (0, i.jsx)(u.tH, {
@@ -35352,7 +35573,10 @@
                 children: [
                   (0, i.jsx)(er, {}),
                   (0, i.jsxs)("div", {
-                    className: nt().EditorInputPaneContents,
+                    className: (0, f.A)(
+                      Xe().EditorInputPaneContents,
+                      Je().AdminPageCtn,
+                    ),
                     children: [
                       (0, i.jsx)(v.V, { tabs: o }),
                       (0, i.jsx)("div", { className: _().ClearThings }),
@@ -35366,12 +35590,12 @@
         }),
         er = (0, Ve.PA)((e) =>
           (0, i.jsxs)("div", {
-            className: (0, f.A)(nt().TopBarContainer),
+            className: (0, f.A)(Xe().TopBarContainer),
             children: [
               (0, i.jsx)(m.$n, {
-                className: nt().BasicButtonSize,
+                className: Xe().BasicButtonSize,
                 children: (0, i.jsx)(c.N_, {
-                  to: Pl.OptinAdminDashboard(),
+                  to: kl.OptinAdminDashboard(),
                   children: "Dashboard",
                 }),
               }),
@@ -35385,18 +35609,18 @@
           const t = r.Mt.Get();
           return (0, i.jsxs)("div", {
             className: (0, f.A)(
-              nt().FlexRowWrapFlexStartContainer,
-              nt().BottomBar,
+              Xe().FlexRowWrapFlexStartContainer,
+              Xe().BottomBar,
             ),
             children: [
               (0, i.jsx)(m.jn, {
-                className: nt().BasicButtonSize,
+                className: Xe().BasicButtonSize,
                 onClick: (e) => (0, S.pg)((0, i.jsx)(sr, {}), (0, x.uX)(e)),
                 children: t.BIsDirty() ? "Save" : "Saved",
               }),
               (0, i.jsx)(m.$n, {
-                className: nt().BasicButtonSize,
-                onClick: ht,
+                className: Xe().BasicButtonSize,
+                onClick: gt,
                 children: "Re-order Dynamic Sections",
               }),
             ],
@@ -35482,10 +35706,10 @@
         });
         return (0, i.jsx)(u.tH, {
           children: (0, i.jsxs)("div", {
-            className: ft().AdminPageCtn,
+            className: Je().AdminPageCtn,
             children: [
               (0, i.jsxs)("div", {
-                className: ft().PageTitle,
+                className: Je().PageTitle,
                 children: [
                   "Opt-In Game Support Page: ",
                   n ? n.GetName() : "Unknown",
@@ -35493,7 +35717,7 @@
                   t,
                   ") ",
                   (0, i.jsx)("span", {
-                    className: ft().ValveOnlyTitle,
+                    className: Je().ValveOnlyTitle,
                     children: "Valve Only Page",
                   }),
                 ],
@@ -35710,13 +35934,13 @@
         ),
         cr = (0, Ve.PA)((e) => {
           const { section: t, sectionIndex: s } = e,
-            a = (0, Je.sf)(b.TS.LANGUAGE),
-            n = (0, Ye.Ym)(
+            a = (0, Ze.sf)(b.TS.LANGUAGE),
+            n = (0, Qe.Ym)(
               t.name,
               a,
               (0, P.we)("#OptIn_Registration_Title", s),
             ),
-            r = (0, Ye.Ym)(t.description, a, ""),
+            r = (0, Qe.Ym)(t.description, a, ""),
             o = t.valve_only;
           return (0, i.jsxs)("div", {
             id: e.section.unique_id,
@@ -35783,8 +36007,8 @@
             [a, n] = (0, l.useState)(
               ar.Get().GetSelectedItems(t.unique_id, s.unique_id),
             ),
-            r = (0, Je.sf)(b.TS.LANGUAGE),
-            o = (0, Ye.Ym)(s.option_title, r),
+            r = (0, Ze.sf)(b.TS.LANGUAGE),
+            o = (0, Qe.Ym)(s.option_title, r),
             c = new Array(),
             d = rr.OQ(t.columns, 1, 3);
           for (let e = 0; e < d; ++e)
@@ -35796,14 +36020,14 @@
                   children: s.options
                     .filter((t, s) => s % d == e)
                     .map((e) => {
-                      const s = (0, Ye.Ym)(e.text, r),
-                        o = (0, Ye.Ym)(e.tooltip, r, void 0);
+                      const s = (0, Qe.Ym)(e.text, r),
+                        o = (0, Qe.Ym)(e.tooltip, r, void 0);
                       return "radio" == t.input_style
                         ? (0, i.jsx)(
                             m.a,
                             {
                               value: e.unique_id,
-                              children: (0, i.jsxs)(tt.he, {
+                              children: (0, i.jsxs)(nt.he, {
                                 toolTipContent: o,
                                 bDisabled: !o,
                                 children: [s, " ", Boolean(o) && "(?)"],
@@ -35860,11 +36084,11 @@
             [a, n] = (0, l.useState)(
               ar.Get().GetSelectedItems(t.unique_id, s.unique_id),
             ),
-            r = (0, Je.sf)(b.TS.LANGUAGE),
-            o = (0, Ye.Ym)(s.option_title, r),
+            r = (0, Ze.sf)(b.TS.LANGUAGE),
+            o = (0, Qe.Ym)(s.option_title, r),
             c = [],
             d = s.options.map((e) => {
-              const t = (0, Ye.Ym)(e.text, r);
+              const t = (0, Qe.Ym)(e.text, r);
               let s = { value: e.unique_id, label: t };
               return -1 != a.findIndex((t) => t == e.unique_id) && c.push(s), s;
             });
@@ -35873,7 +36097,7 @@
             children: [
               Boolean(o) &&
                 (0, i.jsx)("div", { className: or.ListTitle, children: o }),
-              (0, i.jsx)(vt.Ay, {
+              (0, i.jsx)(ft.Ay, {
                 name: "searchField",
                 backspaceRemovesValue: !0,
                 isSearchable: !0,
@@ -35975,7 +36199,7 @@
         let n = (function (e, t) {
           const s = t.jsondata,
             a = Number.parseInt(e),
-            n = (0, Je.sf)(b.TS.LANGUAGE),
+            n = (0, Ze.sf)(b.TS.LANGUAGE),
             r = [];
           let o = null,
             l = [],
@@ -37036,7 +37260,7 @@
                                 (0, i.jsx)(A.o0, {
                                   strTitle: (0, P.we)("#OptIn_Debug"),
                                   bAlertDialog: !0,
-                                  children: (0, i.jsx)(gt.G, { data: e }),
+                                  children: (0, i.jsx)(vt.G, { data: e }),
                                 }),
                                 window,
                               );
@@ -37055,7 +37279,7 @@
           (0, i.jsx)(_s.XG, {
             message: (e) =>
               !r.Mt.Get().BIsDirty() ||
-              e.pathname != Pl.OptinAdminDashboard() ||
+              e.pathname != kl.OptinAdminDashboard() ||
               (0, P.we)("#Generel_Discard_Warning"),
           });
       class Wr {
@@ -37275,213 +37499,10 @@
       var Vr = s(35380),
         Kr = s(68276),
         Yr = s(96236),
-        Jr = s(74303);
-      const $r = {
-        include_basic_info: !0,
-        include_assets: !0,
-        include_tag_count: 10,
-        include_release: !0,
-      };
-      function Xr(e) {
-        const {
-            rgOrderedAppIDs: t,
-            fnSetFilteredAppID: s,
-            rgNotToPruneList: a,
-            pageid: n,
-          } = e,
-          [r, o] = l.useState(!0),
-          c = (0, _i.m)("OptInAppReviewFilter");
-        l.useEffect(() => {
-          Ft.A.Get()
-            .QueueMultipleAppRequests(t?.slice(0, 100) || [], $r)
-            .then(() => {
-              Ft.A.Get()
-                .QueueMultipleAppRequests(t?.slice(100) || [], $r)
-                .then(() => {
-                  o(!1);
-                });
-            });
-        }, [c.token.reason, n, t]);
-        const [d, u] = l.useState(new Set()),
-          [p, h] = l.useState(""),
-          [_, g] = l.useState(0),
-          [S, v] = l.useState(!1),
-          [y, f] = l.useState(0);
-        return (
-          l.useEffect(() => {
-            const e = p?.trim().length > 2,
-              i = p?.toLocaleLowerCase(),
-              n = Array.from(d),
-              r = new Set(a || []);
-            if (t.length > 0 && (d.size > 0 || e || _ || y)) {
-              const a = t
-                .filter((t) => {
-                  if (e) {
-                    const e = Ft.A.Get().GetApp(t);
-                    return (
-                      e?.GetName()?.toLocaleLowerCase().indexOf(i) >= 0 ||
-                      e
-                        ?.GetDeveloperNames()
-                        ?.some((e) => e.toLocaleLowerCase().indexOf(i) >= 0) ||
-                      e
-                        ?.GetPublisherNames()
-                        ?.some((e) => e.toLocaleLowerCase().indexOf(i) >= 0) ||
-                      e
-                        ?.GetFranchiseNames()
-                        ?.some((e) => e.toLocaleLowerCase().indexOf(i) >= 0) ||
-                      e
-                        ?.GetShortDescription()
-                        ?.toLocaleLowerCase()
-                        .indexOf(i) >= 0
-                    );
-                  }
-                  return !0;
-                })
-                .filter((e) => {
-                  if (n.length > 0) {
-                    const t = Ft.A.Get().GetApp(e);
-                    return n.every((e) => t?.GetTagIDs().includes(e));
-                  }
-                  return !0;
-                })
-                .filter((e) => {
-                  if (_ > 0) {
-                    const t = Ft.A.Get().GetApp(e);
-                    return (
-                      t &&
-                      (t?.BIsComingSoon() ||
-                        t?.GetOriginalReleaseDateRTime() > _)
-                    );
-                  }
-                  return !0;
-                })
-                .filter((e) => !(S && r.size > 0) || !r.has(e));
-              c.token.reason || s(a);
-            }
-          }, [S, c.token.reason, s, y, _, a, t, d, p]),
-          (0, i.jsx)(rt.qx, {
-            title: "Filter Options",
-            bStartMinimized: !0,
-            children: Boolean(r)
-              ? (0, i.jsxs)(i.Fragment, {
-                  children: [
-                    (0, i.jsx)(m.JU, {
-                      children: (0, P.we)("#EventCalendar_UniversalSearch"),
-                    }),
-                    (0, i.jsx)(B.t, {
-                      size: "small",
-                      string: `Loading ${t?.length || 0} Apps`,
-                    }),
-                  ],
-                })
-              : (0, i.jsxs)(i.Fragment, {
-                  children: [
-                    (0, i.jsx)(m.pd, {
-                      type: "text",
-                      label: (0, P.we)("#EventCalendar_UniversalSearch"),
-                      placeholder: "search by app name, description",
-                      value: p,
-                      onChange: (e) => {
-                        h(e.target.value), f(1);
-                      },
-                    }),
-                    (0, i.jsx)(Qr, {
-                      setFilterTagIDs: d,
-                      fnUpdateSetFilterTagIDs: (e) => {
-                        u(e), f(1);
-                      },
-                      rgAppIDs: t,
-                      bLoading: r,
-                    }),
-                    (0, i.jsx)(xt.K, {
-                      strDescription: "Filter to games Released After:",
-                      strDescToolTip:
-                        "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
-                      nEarliestTime: 0,
-                      fnGetTimeToUpdate: () => _,
-                      fnSetTimeToUpdate: (e) => {
-                        g(e), f(1);
-                      },
-                    }),
-                    Boolean(a?.length > 0) &&
-                      (0, i.jsx)(m.Yh, {
-                        checked: S,
-                        onChange: (e) => {
-                          v(e), f(1);
-                        },
-                        tooltip:
-                          "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
-                        label:
-                          "Filter out previously emailed apps from pruning",
-                      }),
-                  ],
-                }),
-          })
-        );
-      }
-      function Qr(e) {
-        const {
-            setFilterTagIDs: t,
-            fnUpdateSetFilterTagIDs: s,
-            rgAppIDs: a,
-            bLoading: n,
-          } = e,
-          r = l.useMemo(
-            () =>
-              n
-                ? []
-                : (function (e) {
-                    const t = new Map();
-                    return (
-                      e.forEach((e) => {
-                        const s = Ft.A.Get().GetApp(e);
-                        s?.GetTagIDs().forEach((e) => {
-                          t.has(e)
-                            ? (t.get(e).count += 1)
-                            : t.set(e, { tagid: e, count: 1 });
-                        });
-                      }),
-                      Array.from(t.values())
-                    );
-                  })(a).sort((e, t) => (e.count < t.count ? 1 : -1)),
-            [a, n],
-          ),
-          { data: o } = (0, Vs.Fv)(Ct.TS.LANGUAGE),
-          c = l.useMemo(
-            () => r.map((e) => ({ label: o && o[e.tagid], value: e })),
-            [o, r],
-          );
-        return (0, i.jsxs)("div", {
-          className: Jr.TagFilterBar,
-          children: [
-            (0, i.jsx)(m.JU, { children: "Filter by Tag:" }),
-            (0, i.jsx)(vt.Ay, {
-              isSearchable: !0,
-              isLoading: n,
-              isMulti: !0,
-              isClearable: !0,
-              value: c.filter((e) => t.has(e.value.tagid)),
-              options: c,
-              styles: { option: (e) => ({ ...e, color: "#444444" }) },
-              formatOptionLabel: (e) => (0, i.jsx)(Zr, { tagCount: e.value }),
-              onChange: (e) => {
-                s(new Set(e?.map((e) => e.value.tagid)));
-              },
-            }),
-          ],
-        });
-      }
-      function Zr(e) {
-        const { tagCount: t } = e;
-        return (
-          ((0, Vs.MB)(t.tagid, Ct.TS.LANGUAGE) || "tagid: " + t.tagid) +
-          " (count: " +
-          t.count +
-          ")"
-        );
-      }
-      const eo = (e) => null != e;
-      class to {
+        Jr = s(74303),
+        $r = s(51155);
+      const Xr = (e) => null != e;
+      class Qr {
         m_mapChangeCallback = new Map();
         GetLocalStoreChangeCallback(e) {
           return (
@@ -37492,11 +37513,11 @@
         }
         static s_Singleton;
         static Get() {
-          return to.s_Singleton || (to.s_Singleton = new to()), to.s_Singleton;
+          return Qr.s_Singleton || (Qr.s_Singleton = new Qr()), Qr.s_Singleton;
         }
       }
-      var so = s(81943);
-      function io(e) {
+      var Zr = s(81943);
+      function eo(e) {
         const { rgAppealReviewReg: t, pageid: s } = e,
           a = l.useMemo(
             () =>
@@ -37509,12 +37530,12 @@
           );
         return (0, i.jsxs)("div", {
           children: [
-            (0, i.jsx)(no, { bShowPruningCriteria: !0 }),
+            (0, i.jsx)(so, { bShowPruningCriteria: !0 }),
             Boolean(a.length > 0)
               ? (0, i.jsx)(i.Fragment, {
                   children: a.map((e, t) =>
                     (0, i.jsx)(
-                      ro,
+                      io,
                       { pageid: s, registration: e, index: t },
                       "appeal" + e.appid,
                     ),
@@ -37526,8 +37547,8 @@
           ],
         });
       }
-      const ao = "app_review_elig_crit";
-      function no(e) {
+      const to = "app_review_elig_crit";
+      function so(e) {
         const { bShowPruningCriteria: t } = e,
           s = (0, Un.Tc)("optin_eligibility_criteria", "application_config"),
           [a, n] = (function (e, t) {
@@ -37535,10 +37556,10 @@
               a = l.useRef(e),
               n = l.useCallback(
                 (t) => {
-                  const s = eo(t) ? String(t) : null;
+                  const s = Xr(t) ? String(t) : null;
                   window.localStorage.setItem(e, s),
                     i(s),
-                    to.Get().GetLocalStoreChangeCallback(e).Dispatch(s);
+                    Qr.Get().GetLocalStoreChangeCallback(e).Dispatch(s);
                 },
                 [e, i],
               );
@@ -37549,37 +37570,37 @@
             const r = e == a.current ? s : window.localStorage.getItem(e);
             let o = t;
             return (
-              eo(r) &&
-                (o = eo(t)
+              Xr(r) &&
+                (o = Xr(t)
                   ? "boolean" == typeof t
                     ? t.constructor("false" !== r)
                     : t.constructor(r)
                   : r),
-              (0, zt.hL)(to.Get().GetLocalStoreChangeCallback(e), i),
+              (0, zt.hL)(Qr.Get().GetLocalStoreChangeCallback(e), i),
               [o, n]
             );
-          })(ao, !1);
+          })(to, !1);
         return t && s?.length > 1
-          ? (0, i.jsx)(rt.AQ, {
+          ? (0, i.jsx)(lt.AQ, {
               title: "Pruning Eligibility Criteria",
               getMinimized: () => a,
               toggleMinimized: () => n(!a),
-              className: so.CollapseableTitle,
+              className: Zr.CollapseableTitle,
               children: (0, i.jsx)(nr.fh, { text: s, event: null }),
             })
           : null;
       }
-      function ro(e) {
+      function io(e) {
         return (0, i.jsx)(Yr.K, {
           placeholderHeight: "160px",
           rootMargin: "0px 0px 200px 0px",
-          children: (0, i.jsx)(oo, { ...e, appid: e.registration.appid }),
+          children: (0, i.jsx)(ao, { ...e, appid: e.registration.appid }),
         });
       }
-      function oo(e) {
+      function ao(e) {
         const { appid: t, pageid: s, index: a } = e,
           n = (0, Ot._q)(t, s),
-          [r, o] = (0, Ut.t7)(t, $r),
+          [r, o] = (0, Ut.t7)(t, $r.L),
           c = (l.useMemo(() => ({ type: "game", id: t }), [t]), (0, Vr.$5)(t));
         if (!n)
           return (0, i.jsx)("div", { children: "Error: Missing registration" });
@@ -37657,7 +37678,7 @@
                           : (0, i.jsx)(m.$n, {
                               onClick: (e) =>
                                 (0, S.pg)(
-                                  (0, i.jsx)(lo, {
+                                  (0, i.jsx)(no, {
                                     appid: t,
                                     registration: n,
                                     bAcceptAppeal: !0,
@@ -37673,7 +37694,7 @@
                           : (0, i.jsx)(m.$n, {
                               onClick: (e) =>
                                 (0, S.pg)(
-                                  (0, i.jsx)(lo, {
+                                  (0, i.jsx)(no, {
                                     appid: t,
                                     registration: n,
                                     bAcceptAppeal: !1,
@@ -37691,7 +37712,7 @@
                                 (0, i.jsx)(A.o0, {
                                   strTitle: (0, P.we)("#OptIn_Debug"),
                                   bAlertDialog: !0,
-                                  children: (0, i.jsx)(gt.G, { data: n }),
+                                  children: (0, i.jsx)(vt.G, { data: n }),
                                 }),
                                 (0, x.uX)(e),
                               ),
@@ -37704,7 +37725,7 @@
                 (0, i.jsxs)("div", {
                   className: Jr.GameInfo,
                   children: [
-                    (0, i.jsx)(vo, { storeItem: r }),
+                    (0, i.jsx)(_o, { storeItem: r }),
                     (0, i.jsxs)("div", {
                       className: Jr.AppealWordsCtn,
                       children: [
@@ -37734,14 +37755,14 @@
           ],
         });
       }
-      function lo(e) {
+      function no(e) {
         const {
             appid: t,
             registration: s,
             bAcceptAppeal: a,
             closeModal: n,
           } = e,
-          [r] = (0, Ut.t7)(t, $r),
+          [r] = (0, Ut.t7)(t, $r.L),
           { fnUpdateAppealState: o } = (0, Ot.fw)(),
           l = (0, E.vs)();
         return l.bLoading
@@ -37770,23 +37791,23 @@
               },
             });
       }
-      function co(e) {
+      function ro(e) {
         return (0, i.jsxs)("div", {
           children: [
             (0, i.jsx)(m.$n, {
               onClick: (t) =>
-                (0, S.pg)((0, i.jsx)(mo, { ...e, bInvite: !0 }), (0, x.uX)(t)),
+                (0, S.pg)((0, i.jsx)(oo, { ...e, bInvite: !0 }), (0, x.uX)(t)),
               children: (0, P.we)("#OptIn_AppReview_InviteAll"),
             }),
             (0, i.jsx)(m.$n, {
               onClick: (t) =>
-                (0, S.pg)((0, i.jsx)(mo, { ...e, bInvite: !1 }), (0, x.uX)(t)),
+                (0, S.pg)((0, i.jsx)(oo, { ...e, bInvite: !1 }), (0, x.uX)(t)),
               children: (0, P.we)("#OptIn_AppReview_PruneAll"),
             }),
           ],
         });
       }
-      function mo(e) {
+      function oo(e) {
         const { closeModal: t, rgAppIDs: s, strOptInName: a, bInvite: n } = e,
           { fnChangeAppPruneState: r } = Hr(),
           [o, c] = (0, l.useState)(void 0),
@@ -37827,11 +37848,11 @@
           ],
         });
       }
-      function uo(e) {
+      function lo(e) {
         const { tagid: t, language: s = Ct.TS.LANGUAGE } = e;
         return (0, Vs.MB)(t, s) || String(t);
       }
-      function po(e) {
+      function co(e) {
         const { pageid: t } = e,
           s = (0, b.Tc)("optin_title", "application_config"),
           {
@@ -37917,7 +37938,7 @@
               key: "review",
               contents: (0, i.jsx)(u.tH, {
                 children: (0, i.jsx)(
-                  ho,
+                  mo,
                   {
                     rgOrderedAppIDs: h,
                     pageid: t,
@@ -37938,7 +37959,7 @@
               key: "appeal",
               contents: (0, i.jsx)(u.tH, {
                 children: (0, i.jsx)(
-                  io,
+                  eo,
                   { rgAppealReviewReg: _, pageid: t },
                   "appealmap",
                 ),
@@ -37950,7 +37971,7 @@
               key: "invited",
               contents: (0, i.jsx)(u.tH, {
                 children: (0, i.jsx)(
-                  ho,
+                  mo,
                   {
                     rgOrderedAppIDs: a,
                     pageid: t,
@@ -37968,7 +37989,7 @@
               key: "pruned",
               contents: (0, i.jsx)(u.tH, {
                 children: (0, i.jsx)(
-                  ho,
+                  mo,
                   {
                     rgOrderedAppIDs: n,
                     pageid: t,
@@ -37982,14 +38003,14 @@
             },
           ];
         return (0, i.jsxs)("div", {
-          className: ft().AdminPageCtn,
+          className: Je().AdminPageCtn,
           children: [
             (0, i.jsx)("div", {
-              className: ft().PageTitle,
+              className: Je().PageTitle,
               children: (0, P.we)("#OptIn_AppReview", s),
             }),
             (0, i.jsx)("div", {
-              className: ft().PageSubTitle,
+              className: Je().PageSubTitle,
               children:
                 "Use the 'Prune' option to remove eligibility for that game. Pruned titles will not be eligible, invited, or receive any communication about this event.",
             }),
@@ -37997,7 +38018,7 @@
           ],
         });
       }
-      function ho(e) {
+      function mo(e) {
         const {
             rgOrderedAppIDs: t,
             pageid: s,
@@ -38010,9 +38031,9 @@
           m = c ?? t;
         return (0, i.jsxs)("div", {
           children: [
-            Boolean(r) && (0, i.jsx)(co, { strOptInName: s, rgAppIDs: m }),
-            (0, i.jsx)(no, { bShowPruningCriteria: o }),
-            (0, i.jsx)(Xr, {
+            Boolean(r) && (0, i.jsx)(ro, { strOptInName: s, rgAppIDs: m }),
+            (0, i.jsx)(so, { bShowPruningCriteria: o }),
+            (0, i.jsx)($r.E, {
               pageid: s,
               rgOrderedAppIDs: t,
               fnSetFilteredAppID: d,
@@ -38022,7 +38043,7 @@
               ? (0, i.jsx)(i.Fragment, {
                   children: m.map((e, t) =>
                     (0, i.jsx)(
-                      _o,
+                      uo,
                       {
                         pageid: s,
                         appid: e,
@@ -38040,14 +38061,14 @@
           ],
         });
       }
-      function _o(e) {
+      function uo(e) {
         return (0, i.jsx)(Yr.K, {
           placeholderHeight: "160px",
           rootMargin: "0px 0px 200px 0px",
-          children: (0, i.jsx)(go, { ...e }),
+          children: (0, i.jsx)(po, { ...e }),
         });
       }
-      function go(e) {
+      function po(e) {
         const {
             appid: t,
             bInvited: s,
@@ -38055,7 +38076,7 @@
             index: n,
             bPendingReview: r,
           } = e,
-          [o, l] = (0, Ut.t7)(t, $r),
+          [o, l] = (0, Ut.t7)(t, $r.L),
           { fnChangeAppPruneState: c } = Hr(),
           d = (0, Vr.$5)(t);
         switch (l) {
@@ -38137,7 +38158,7 @@
                             children: (0, P.we)("#OptIn_AppReview_Invite"),
                           }),
                         Boolean(b.iA.is_support && s) &&
-                          (0, i.jsx)(So, { appid: t, pageid: a }),
+                          (0, i.jsx)(ho, { appid: t, pageid: a }),
                       ],
                     }),
                   ],
@@ -38149,7 +38170,7 @@
                       className: Jr.Desc,
                       children: o.GetShortDescription(),
                     }),
-                    (0, i.jsx)(vo, { storeItem: o }),
+                    (0, i.jsx)(_o, { storeItem: o }),
                   ],
                 }),
               ],
@@ -38161,7 +38182,7 @@
           ],
         });
       }
-      function So(e) {
+      function ho(e) {
         const { appid: t, pageid: s } = e,
           a = (function (e) {
             const [t, s] = (0, l.useState)(Wr.Get().GetStateForApp(e));
@@ -38172,7 +38193,7 @@
               Wr.Get().ChangeAppAdditionalFeaturingState,
           };
         return (0, i.jsx)("div", {
-          className: ft().ValveOnlyBackground,
+          className: Je().ValveOnlyBackground,
           children: (0, i.jsx)(m.$n, {
             onClick: () => {
               n(s, [t], !a.additionally_featured)
@@ -38202,7 +38223,7 @@
           }),
         });
       }
-      function vo(e) {
+      function _o(e) {
         const { storeItem: t } = e,
           s = l.useMemo(() => t?.GetTags().map((e) => e.tagid), [t]);
         return (0, i.jsx)("div", {
@@ -38213,7 +38234,7 @@
               children: s.map((e) =>
                 (0, i.jsx)(
                   "span",
-                  { children: (0, i.jsx)(uo, { tagid: e }) },
+                  { children: (0, i.jsx)(lo, { tagid: e }) },
                   e,
                 ),
               ),
@@ -38221,12 +38242,12 @@
           ),
         });
       }
-      var yo = s(11577),
-        fo = s(62007),
-        xo = s.n(fo),
-        bo = s(82348),
-        Do = s.n(bo);
-      function wo(e) {
+      var go = s(11577),
+        So = s(62007),
+        vo = s.n(So),
+        yo = s(82348),
+        fo = s.n(yo);
+      function xo(e) {
         const {
             storeItem: t,
             closeModal: s,
@@ -38235,7 +38256,7 @@
           } = e,
           [r, o] = (0, l.useState)(""),
           { fnUpdateOptInRegistrationJson: c } = (0, Ot.es)(),
-          d = (0, Ye.Ym)(a.event_title, (0, Je.sf)(Ct.TS.LANGUAGE)),
+          d = (0, Qe.Ym)(a.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE)),
           m = (0, E.vs)();
         return m.bLoading
           ? (0, i.jsx)(E.Hh, {
@@ -38294,7 +38315,7 @@
                 }
               },
               children: (0, i.jsxs)("div", {
-                className: Do().AppealsEntryForm,
+                className: fo().AppealsEntryForm,
                 children: [
                   (0, i.jsx)("p", {
                     children: (0, P.we)("#OptIn_Appeals_Dialog_Desc"),
@@ -38316,7 +38337,7 @@
                   }),
                   (0, i.jsx)("textarea", {
                     value: r,
-                    className: Do().AppealTextInput,
+                    className: fo().AppealTextInput,
                     onChange: (e) => {
                       o(e.currentTarget.value);
                     },
@@ -38339,7 +38360,7 @@
               }),
             });
       }
-      function jo(e) {
+      function bo(e) {
         const {
             optInDef: t,
             optInRegistration: s,
@@ -38399,36 +38420,36 @@
               },
             });
       }
-      function Co(e) {
+      function Do(e) {
         const { optInDef: t } = e,
           s = (0, Tt.Rl)(t);
         return (0, i.jsxs)("div", {
-          className: ft().RightCol,
+          className: Je().RightCol,
           children: [
             (0, i.jsx)("div", {
-              className: ft().ColHeader,
+              className: Je().ColHeader,
               children:
                 Boolean(s) &&
                 (0, i.jsx)("div", {
-                  className: ft().ColHeaderImg,
+                  className: Je().ColHeaderImg,
                   style: { backgroundImage: `url( '${s}' )` },
                 }),
             }),
             (0, i.jsxs)("div", {
-              className: ft().SectionCtn,
+              className: Je().SectionCtn,
               children: [
-                (0, i.jsx)(Io, { ...e }),
-                Boolean(Ct.iA.is_support) && (0, i.jsx)(To, { ...e }),
+                (0, i.jsx)(wo, { ...e }),
+                Boolean(Ct.iA.is_support) && (0, i.jsx)(jo, { ...e }),
               ],
             }),
           ],
         });
       }
-      function Io(e) {
+      function wo(e) {
         const { optInDef: t } = e;
-        return (0, i.jsx)(Ro, { optInDef: t });
+        return (0, i.jsx)(Mo, { optInDef: t });
       }
-      function To(e) {
+      function jo(e) {
         const { optInDef: t, optInRegistration: s } = e,
           { fnUpdateAppToInvitation: a } = Gt();
         return (0, i.jsxs)(i.Fragment, {
@@ -38457,7 +38478,7 @@
                 (0, i.jsx)("br", {}),
                 (0, i.jsx)(m.$n, {
                   onClick: (t) =>
-                    (0, S.pg)((0, i.jsx)(Ao, { ...e }), (0, x.uX)(t)),
+                    (0, S.pg)((0, i.jsx)(Co, { ...e }), (0, x.uX)(t)),
                   children: "(VO) Invite App to Participate",
                 }),
                 (0, i.jsx)("br", {}),
@@ -38467,7 +38488,7 @@
                       (0, i.jsx)(A.o0, {
                         strTitle: (0, P.we)("#OptIn_Debug"),
                         bAlertDialog: !0,
-                        children: (0, i.jsx)(gt.G, { data: s }),
+                        children: (0, i.jsx)(vt.G, { data: s }),
                       }),
                       (0, x.uX)(e),
                     ),
@@ -38479,7 +38500,7 @@
                       (0, i.jsx)(A.o0, {
                         strTitle: (0, P.we)("#OptIn_Def_Debug"),
                         bAlertDialog: !0,
-                        children: (0, i.jsx)(gt.G, { data: t }),
+                        children: (0, i.jsx)(vt.G, { data: t }),
                       }),
                       (0, x.uX)(e),
                     ),
@@ -38491,7 +38512,7 @@
                       (0, i.jsx)(m.$n, {
                         onClick: (t) =>
                           (0, S.pg)(
-                            (0, i.jsx)(jo, { bReject: !1, ...e }),
+                            (0, i.jsx)(bo, { bReject: !1, ...e }),
                             (0, x.uX)(t),
                           ),
                         children: "Clear Appeal Data",
@@ -38499,7 +38520,7 @@
                       (0, i.jsx)(m.$n, {
                         onClick: (e) =>
                           (0, S.pg)(
-                            (0, i.jsx)(lo, {
+                            (0, i.jsx)(no, {
                               appid: s.appid,
                               registration: s,
                               bAcceptAppeal: !0,
@@ -38511,7 +38532,7 @@
                       (0, i.jsx)(m.$n, {
                         onClick: (e) =>
                           (0, S.pg)(
-                            (0, i.jsx)(lo, {
+                            (0, i.jsx)(no, {
                               appid: s.appid,
                               registration: s,
                               bAcceptAppeal: !1,
@@ -38527,7 +38548,7 @@
           ],
         });
       }
-      function Ao(e) {
+      function Co(e) {
         const { optInDef: t, optInRegistration: s, closeModal: a } = e,
           { fnUpdateAppToInvitation: n } = Gt(),
           r = (0, E.vs)();
@@ -38577,7 +38598,7 @@
               }),
             });
       }
-      function Bo(e) {
+      function Io(e) {
         const { appid: t, pageid: s } = e,
           [a] = (0, Ut.t7)(t, { include_release: !0, include_assets: !0 }),
           n = (0, b.Tc)("eligible_due_optin_def", "application_config"),
@@ -38587,7 +38608,7 @@
           return (0, i.jsx)("div", {
             children: (0, P.we)("#OptIn_Appeals_DoesNotExist", s),
           });
-        const c = (0, Ye.Ym)(r.event_title, (0, Je.sf)(Ct.TS.LANGUAGE)),
+        const c = (0, Qe.Ym)(r.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE)),
           d = Math.floor(Date.now() / 1e3);
         return r.event_end_date < d
           ? (0, i.jsx)("div", { children: (0, P.we)("#OptIn_Appeals_IsOver") })
@@ -38609,10 +38630,10 @@
                   ],
                 })
               : (0, i.jsxs)("div", {
-                  className: ft().AdminPageCtn,
+                  className: Je().AdminPageCtn,
                   children: [
                     (0, i.jsxs)("div", {
-                      className: ft().PageTitle,
+                      className: Je().PageTitle,
                       children: [
                         a.GetName(),
                         " (",
@@ -38624,7 +38645,7 @@
                       ],
                     }),
                     (0, i.jsx)("hr", {}),
-                    (0, i.jsx)(ko, {
+                    (0, i.jsx)(To, {
                       optInDef: r,
                       optInRegistration: l,
                       storeItem: a,
@@ -38636,9 +38657,9 @@
                 string: (0, P.we)("#Loading"),
               });
       }
-      function ko(e) {
+      function To(e) {
         const { optInDef: t, optInRegistration: s, storeItem: a } = e,
-          n = (0, Ye.Ym)(t.event_title, (0, Je.sf)(Ct.TS.LANGUAGE)),
+          n = (0, Qe.Ym)(t.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE)),
           r = (0, Tt.Rl)(t),
           o = Boolean(s.jsondata?.rtime_appeal_created),
           l = Boolean(2 === s.appeal_state);
@@ -38650,52 +38671,52 @@
             : (!s.pending_review && s.pruned) ||
               (c = "#OptIn_Appeals_Title_NotReviewed"),
           (0, i.jsxs)("div", {
-            className: ft().ColumnCtn,
+            className: Je().ColumnCtn,
             children: [
               (0, i.jsxs)("div", {
-                className: ft().LeftCol,
+                className: Je().LeftCol,
                 children: [
                   (0, i.jsx)("div", {
-                    className: ft().ColHeader,
+                    className: Je().ColHeader,
                     children: Boolean(r)
                       ? (0, i.jsx)("div", {
-                          className: ft().ColHeaderImg,
+                          className: Je().ColHeaderImg,
                           style: { backgroundImage: `url( '${r}' )` },
                         })
                       : Boolean(n) && (0, i.jsx)("div", { children: n }),
                   }),
                   (0, i.jsxs)("div", {
-                    className: (0, f.A)(ft().SectionCtn, xo().AppealSummaryCtn),
+                    className: (0, f.A)(Je().SectionCtn, vo().AppealSummaryCtn),
                     children: [
                       (0, i.jsx)("img", {
-                        className: xo().CapsuleImg,
+                        className: vo().CapsuleImg,
                         src: a?.GetAssets().GetHeaderURL(),
                       }),
                       (0, i.jsx)("div", {
-                        className: xo().AppealTitle,
+                        className: vo().AppealTitle,
                         children: (0, P.we)(c),
                       }),
                     ],
                   }),
-                  !o && (0, i.jsx)(Mo, { ...e }),
-                  (0, i.jsx)(Eo, { ...e }),
+                  !o && (0, i.jsx)(Ao, { ...e }),
+                  (0, i.jsx)(Bo, { ...e }),
                 ],
               }),
-              (0, i.jsx)(Co, { ...e }),
+              (0, i.jsx)(Do, { ...e }),
             ],
           })
         );
       }
-      function Mo(e) {
+      function Ao(e) {
         const { optInDef: t, storeItem: s, optInRegistration: a } = e;
         Boolean(a.jsondata?.rtime_appeal_created);
         let n = "#OptIn_Appeals_ReviewLine";
         (!a.pending_review && a.pruned) ||
           (n = "#OptIn_Appeals_NotReviewed_ReviewLine");
-        const r = (0, Ye.Ym)(t.event_title, (0, Je.sf)(Ct.TS.LANGUAGE)),
-          o = (0, Ye.Ym)(t.appeals_text, (0, Je.sf)(Ct.TS.LANGUAGE), null);
+        const r = (0, Qe.Ym)(t.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE)),
+          o = (0, Qe.Ym)(t.appeals_text, (0, Ze.sf)(Ct.TS.LANGUAGE), null);
         return (0, i.jsxs)("div", {
-          className: ft().SectionCtn,
+          className: Je().SectionCtn,
           children: [
             (0, i.jsx)("h1", { children: (0, P.we)(n, s.GetName()) }),
             (0, i.jsx)("p", {
@@ -38737,7 +38758,7 @@
           ],
         });
       }
-      function Eo(e) {
+      function Bo(e) {
         const { optInDef: t, optInRegistration: s, storeItem: a } = e;
         let n = !1;
         if (
@@ -38749,13 +38770,13 @@
             if (e < t.release_date_eligibility.release_after_date) {
               if (e > Math.floor(Date.now() / 1e3))
                 return (0, i.jsxs)("div", {
-                  className: ft().SectionCtn,
+                  className: Je().SectionCtn,
                   children: [
                     (0, i.jsx)("h1", {
                       children: (0, P.we)("#OptIn_Appeals_NotPossible_Title"),
                     }),
                     (0, i.jsxs)("div", {
-                      className: ft().warning,
+                      className: Je().warning,
                       children: [
                         (0, i.jsxs)("p", {
                           children: [
@@ -38790,13 +38811,13 @@
             a.BIsReleased()
           )
             return (0, i.jsxs)("div", {
-              className: ft().SectionCtn,
+              className: Je().SectionCtn,
               children: [
                 (0, i.jsx)("h1", {
                   children: (0, P.we)("#OptIn_Appeals_NotPossible_Title"),
                 }),
                 (0, i.jsx)("div", {
-                  className: ft().warning,
+                  className: Je().warning,
                   children: (0, i.jsx)("p", {
                     children: (0, P.we)("#OptIn_Appeals_NotPossible_Desc4"),
                   }),
@@ -38808,22 +38829,22 @@
           !s.jsondata?.rtime_appeal_created
         )
           return (0, i.jsxs)("div", {
-            className: ft().SectionCtn,
+            className: Je().SectionCtn,
             children: [
               (0, i.jsx)("h1", {
                 children: (0, P.we)("#OptIn_Appeals_NotPossible_Title"),
               }),
               (0, i.jsx)("div", {
-                className: ft().warning,
+                className: Je().warning,
                 children: (0, i.jsx)("p", {
                   children: (0, P.we)("#OptIn_Appeals_NotPossible_Desc5"),
                 }),
               }),
             ],
           });
-        return (0, i.jsx)(Po, { ...e, bShowReleaseDatePassed: n });
+        return (0, i.jsx)(ko, { ...e, bShowReleaseDatePassed: n });
       }
-      function Po(e) {
+      function ko(e) {
         const {
             optInDef: t,
             optInRegistration: s,
@@ -38832,7 +38853,7 @@
           } = e,
           r = Boolean(s.jsondata?.rtime_appeal_created),
           o = Boolean(2 === s.appeal_state),
-          l = (0, Ye.Ym)(t.event_title, (0, Je.sf)(Ct.TS.LANGUAGE));
+          l = (0, Qe.Ym)(t.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE));
         let c = "#OptIn_Appeals_Control_Title",
           d = "#OptIn_Appeals_Control_Desc";
         return (
@@ -38842,7 +38863,7 @@
             : (!s.pending_review && s.pruned) ||
               (c = "#OptIn_Appeals_Control_NotReviewed_Title"),
           (0, i.jsxs)("div", {
-            className: ft().SectionCtn,
+            className: Je().SectionCtn,
             children: [
               !r &&
                 (0, i.jsxs)(i.Fragment, {
@@ -38853,7 +38874,7 @@
                 }),
               Boolean(n) &&
                 (0, i.jsxs)("div", {
-                  className: ft().warning,
+                  className: Je().warning,
                   children: [
                     (0, i.jsx)("h3", {
                       children: (0, P.we)(
@@ -38876,16 +38897,16 @@
                 }),
               Boolean(!r) &&
                 (0, i.jsx)("div", {
-                  className: xo().ButtonCtn,
+                  className: vo().ButtonCtn,
                   children: (0, i.jsx)(m.jn, {
                     onClick: (t) =>
-                      (0, S.pg)((0, i.jsx)(wo, { ...e }), (0, x.uX)(t)),
+                      (0, S.pg)((0, i.jsx)(xo, { ...e }), (0, x.uX)(t)),
                     children: (0, P.we)("#OptIn_Appeals_Control_Button"),
                   }),
                 }),
               Boolean(r && !o) &&
                 (0, i.jsxs)("div", {
-                  className: (0, f.A)(xo().AppealResults, xo().Submitted),
+                  className: (0, f.A)(vo().AppealResults, vo().Submitted),
                   children: [
                     (0, i.jsx)("h2", {
                       children: (0, P.we)(
@@ -38902,7 +38923,7 @@
                 }),
               Boolean(o) &&
                 (0, i.jsxs)("div", {
-                  className: (0, f.A)(xo().AppealResults, xo().Declined),
+                  className: (0, f.A)(vo().AppealResults, vo().Declined),
                   children: [
                     (0, i.jsx)("h2", {
                       children: (0, P.we)("#OptIn_Appeals_Control_Declined"),
@@ -38927,15 +38948,15 @@
           })
         );
       }
-      function Ro(e) {
+      function Mo(e) {
         const { optInDef: t } = e,
-          s = (0, Ye.Ym)(t.event_title, (0, Je.sf)(Ct.TS.LANGUAGE)),
+          s = (0, Qe.Ym)(t.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE)),
           a = t.public_doc_wiki_url,
-          n = (0, Ye.Ym)(t.help_text, (0, Je.sf)(Ct.TS.LANGUAGE), null);
+          n = (0, Qe.Ym)(t.help_text, (0, Ze.sf)(Ct.TS.LANGUAGE), null);
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)("div", {
-              className: ft().TitleSmall,
+              className: Je().TitleSmall,
               children: (0, P.we)("#DiscountDashboard_HelpAreaText"),
             }),
             Boolean(a) &&
@@ -38961,7 +38982,7 @@
                   ),
                 }),
             (0, i.jsx)("div", {
-              className: ft().TitleSmall,
+              className: Je().TitleSmall,
               children: (0, P.we)("#OptIn_Appeals_HelpDoc_NeedHelp"),
             }),
             (0, i.jsx)("a", {
@@ -38973,7 +38994,7 @@
           ],
         });
       }
-      function No(e) {
+      function Eo(e) {
         const t = e;
         return (
           t &&
@@ -38983,12 +39004,12 @@
           "string" == typeof t[0].app_name
         );
       }
-      function Go() {
+      function Po() {
         const [e, t] = (0, l.useState)(null);
         return (
           (0, l.useEffect)(() => {
             const e = (0, b.Fd)("optin_registered", "application_config");
-            No(e) &&
+            Eo(e) &&
               ("dev" === b.TS.WEB_UNIVERSE &&
                 console.log(
                   "useOptInRegistrationForDashboardNotPruned has " + e.length,
@@ -39006,9 +39027,9 @@
           e
         );
       }
-      var Oo = s(62792),
-        Lo = s(90710);
-      function Fo(e) {
+      var Ro = s(62792),
+        No = s(90710);
+      function Go(e) {
         const { pageid: t } = e,
           s = (0, o.u)(t),
           a = (0, l.useMemo)(
@@ -39020,32 +39041,32 @@
           return (0, i.jsx)("div", {
             children: (0, P.we)("#OptIn_Appeals_DoesNotExist", t),
           });
-        const r = (0, Ye.Ym)(s.event_title, (0, Je.sf)(Ct.TS.LANGUAGE));
+        const r = (0, Qe.Ym)(s.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE));
         return (0, i.jsxs)("div", {
-          className: ft().AdminPageCtn,
+          className: Je().AdminPageCtn,
           children: [
             (0, i.jsx)("div", {
-              className: ft().PageTitle,
+              className: Je().PageTitle,
               children: (0, P.we)("#OptIn_Title", r),
             }),
             (0, i.jsx)("div", {
               children: (0, P.we)("#OptIn_DashBoard", n.name || "", a),
             }),
             (0, i.jsx)("hr", {}),
-            (0, i.jsx)(Uo, { optInDef: s }),
+            (0, i.jsx)(Oo, { optInDef: s }),
           ],
         });
       }
-      function Uo(e) {
+      function Oo(e) {
         const { optInDef: t } = e,
           s = Math.floor(Date.now() / 1e3);
         return t.event_end_date < s
           ? (0, i.jsx)("div", { children: (0, P.we)("#OptIn_Appeals_IsOver") })
           : (0, i.jsxs)("div", {
-              className: ft().ColumnCtn,
+              className: Je().ColumnCtn,
               children: [
                 (0, i.jsx)("div", {
-                  className: ft().LeftCol,
+                  className: Je().LeftCol,
                   children:
                     t.event_end_date < s
                       ? (0, i.jsx)("div", {
@@ -39053,46 +39074,46 @@
                         })
                       : (0, i.jsxs)(i.Fragment, {
                           children: [
-                            (0, i.jsx)(Wo, { optInDef: t }),
+                            (0, i.jsx)(Uo, { optInDef: t }),
+                            (0, i.jsx)(zo, { optInDef: t }),
+                            (0, i.jsx)(qo, { optInDef: t }),
                             (0, i.jsx)(Ho, { optInDef: t }),
-                            (0, i.jsx)(Vo, { optInDef: t }),
-                            (0, i.jsx)(Yo, { optInDef: t }),
                           ],
                         }),
                 }),
                 (0, i.jsxs)("div", {
-                  className: ft().RightCol,
+                  className: Je().RightCol,
                   children: [
-                    (0, i.jsx)(zo, { optInDef: t }),
-                    (0, i.jsx)(qo, { optInDef: t }),
-                    (0, i.jsx)($o, { optInDef: t }),
+                    (0, i.jsx)(Lo, { optInDef: t }),
+                    (0, i.jsx)(Fo, { optInDef: t }),
+                    (0, i.jsx)(Ko, { optInDef: t }),
                   ],
                 }),
               ],
             });
       }
-      function zo(e) {
+      function Lo(e) {
         const { optInDef: t } = e,
           s =
-            ((0, Ye.Ym)(t.event_title, (0, Je.sf)(Ct.TS.LANGUAGE)),
+            ((0, Qe.Ym)(t.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE)),
             (0, Tt.Rl)(t));
         return (0, i.jsxs)("div", {
-          className: ft().ColHeader,
+          className: Je().ColHeader,
           children: [
             Boolean(s) &&
               (0, i.jsx)("div", {
-                className: ft().ColHeaderImg,
+                className: Je().ColHeaderImg,
                 style: { backgroundImage: `url( '${s}' )` },
               }),
             (0, i.jsx)("div", {
-              className: ft().SmallText,
+              className: Je().SmallText,
               children: (0, P.we)(
                 "#DiscountDashboard_DetailView_StartTimeLabel",
                 (0, Zs.TW)(t.event_start_date),
               ),
             }),
             (0, i.jsx)("div", {
-              className: ft().SmallText,
+              className: Je().SmallText,
               children: (0, P.we)(
                 "#DiscountDashboard_DetailView_EndTimeLabel",
                 (0, Zs.TW)(t.event_end_date),
@@ -39101,14 +39122,14 @@
           ],
         });
       }
-      function qo(e) {
+      function Fo(e) {
         const { optInDef: t } = e;
         return t.do_anytime?.discount_event_id
           ? (0, i.jsxs)("div", {
-              className: ft().SectionCtn,
+              className: Je().SectionCtn,
               children: [
                 (0, i.jsx)("div", {
-                  className: ft().TitleSmall,
+                  className: Je().TitleSmall,
                   children: (0, P.we)("#OptIn_EnterDiscount"),
                 }),
                 (0, i.jsx)("p", {
@@ -39121,25 +39142,25 @@
             })
           : null;
       }
-      function Wo(e) {
+      function Uo(e) {
         const { optInDef: t } = e,
-          s = (0, Ye.Ym)(t.event_title, (0, Je.sf)(Ct.TS.LANGUAGE)),
+          s = (0, Qe.Ym)(t.event_title, (0, Ze.sf)(Ct.TS.LANGUAGE)),
           a = (0, Tt.Rl)(t),
-          n = (0, Ye.Ym)(t.description, (0, Je.sf)(Ct.TS.LANGUAGE), null),
-          r = (0, Ye.Ym)(t.eligibility_text, (0, Je.sf)(Ct.TS.LANGUAGE), null);
+          n = (0, Qe.Ym)(t.description, (0, Ze.sf)(Ct.TS.LANGUAGE), null),
+          r = (0, Qe.Ym)(t.eligibility_text, (0, Ze.sf)(Ct.TS.LANGUAGE), null);
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)("div", {
-              className: ft().ColHeader,
+              className: Je().ColHeader,
               children: Boolean(a)
                 ? (0, i.jsx)("div", {
-                    className: ft().ColHeaderImg,
+                    className: Je().ColHeaderImg,
                     style: { backgroundImage: `url( '${a}' )` },
                   })
                 : Boolean(s) && (0, i.jsx)("div", { children: s }),
             }),
             (0, i.jsxs)("div", {
-              className: ft().SectionCtn,
+              className: Je().SectionCtn,
               children: [
                 Boolean(t.optin_deadline_date) &&
                   (0, i.jsxs)("h1", {
@@ -39177,18 +39198,18 @@
           ],
         });
       }
-      function Ho(e) {
+      function zo(e) {
         const { optInDef: t } = e,
-          s = Go();
+          s = Po();
         return s && 0 != s.length
           ? (0, i.jsxs)("div", {
-              className: ft().SectionCtn,
+              className: Je().SectionCtn,
               children: [
                 (0, i.jsx)("h1", {
                   children: (0, P.we)("#OptIn_Registered_Games"),
                 }),
                 (0, i.jsxs)("table", {
-                  className: nt().EligibleGamesTable,
+                  className: Xe().EligibleGamesTable,
                   children: [
                     (0, i.jsx)("thead", {
                       children: (0, i.jsxs)("tr", {
@@ -39206,7 +39227,7 @@
                     (0, i.jsx)("tbody", {
                       children: s.map((e) =>
                         (0, i.jsx)(
-                          Ko,
+                          Wo,
                           {
                             bReview: !0,
                             appid: e.appid,
@@ -39223,7 +39244,7 @@
             })
           : null;
       }
-      function Vo(e) {
+      function qo(e) {
         const { optInDef: t } = e,
           s = (function () {
             const [e, t] = (0, l.useState)(null);
@@ -39233,7 +39254,7 @@
                   "optin_opportunities",
                   "application_config",
                 );
-                No(e) &&
+                Eo(e) &&
                   ("dev" === b.TS.WEB_UNIVERSE &&
                     console.log(
                       "useOptInOpportunitiesForDashboard has " + e.length,
@@ -39249,22 +39270,22 @@
               e
             );
           })(),
-          a = Go();
+          a = Po();
         return (!s || 0 == s.length) && a?.length > 0
           ? null
           : (0, i.jsxs)("div", {
-              className: ft().SectionCtn,
+              className: Je().SectionCtn,
               children: [
                 (0, i.jsx)("h1", {
                   children: (0, P.we)("#OptIn_Eligible_Games"),
                 }),
                 Boolean(!s || 0 == s.length)
                   ? (0, i.jsx)("div", {
-                      className: nt().NoEligibleCtn,
+                      className: Xe().NoEligibleCtn,
                       children: (0, P.we)("#OptIn_NoEligible_Games_Found"),
                     })
                   : (0, i.jsxs)("table", {
-                      className: nt().EligibleGamesTable,
+                      className: Xe().EligibleGamesTable,
                       children: [
                         (0, i.jsx)("thead", {
                           children: (0, i.jsxs)("tr", {
@@ -39282,7 +39303,7 @@
                         (0, i.jsx)("tbody", {
                           children: s.map((e) =>
                             (0, i.jsx)(
-                              Ko,
+                              Wo,
                               {
                                 appid: e.appid,
                                 appName: e.app_name,
@@ -39297,7 +39318,7 @@
               ],
             });
       }
-      function Ko(e) {
+      function Wo(e) {
         const { appid: t, appName: s, optInDef: a, bReview: n } = e;
         return (0, i.jsxs)("tr", {
           children: [
@@ -39316,17 +39337,17 @@
           ],
         });
       }
-      function Yo(e) {
+      function Ho(e) {
         const { optInDef: t } = e,
           [s, a] = (0, l.useState)(null),
-          [n] = (0, Ut.G6)((0, Oo.M9)(s), (0, Oo.pk)(s), {
+          [n] = (0, Ut.G6)((0, Ro.M9)(s), (0, Ro.pk)(s), {
             include_assets: !0,
           }),
           r = s?.appid && 0 == n?.GetAppType(),
-          o = (0, Ye.Ym)(t.appeals_text, (0, Je.sf)(Ct.TS.LANGUAGE));
+          o = (0, Qe.Ym)(t.appeals_text, (0, Ze.sf)(Ct.TS.LANGUAGE));
         if (o?.length > 0)
           return (0, i.jsxs)("div", {
-            className: ft().SectionCtn,
+            className: Je().SectionCtn,
             children: [
               (0, i.jsx)("h1", {
                 children: (0, P.we)("#OptIn_EligibleMissed_Title"),
@@ -39349,7 +39370,7 @@
                 children: (0, P.we)("#OptIn_NoEligible_Desc1_NF"),
               }),
               (0, i.jsxs)("div", {
-                className: fo.AppealsEntryPointCtn,
+                className: So.AppealsEntryPointCtn,
                 children: [
                   (0, i.jsx)("h3", {
                     children: (0, P.we)("#OptIn_EligibleMissed_GetStarted"),
@@ -39359,11 +39380,11 @@
                   }),
                   (0, i.jsx)("p", {
                     children: (0, i.jsx)("span", {
-                      className: fo.Notice,
+                      className: So.Notice,
                       children: (0, P.we)("#OptIn_NoEligible_Desc_StorePage"),
                     }),
                   }),
-                  (0, i.jsx)(Lo.h, {
+                  (0, i.jsx)(No.h, {
                     itemType: 0,
                     strLabel: (0, P.we)("#OptIn_SearchGame"),
                     autoFocus: !1,
@@ -39372,9 +39393,9 @@
                     },
                   }),
                   (0, i.jsxs)("div", {
-                    className: fo.AppealSelectedApp,
+                    className: So.AppealSelectedApp,
                     children: [
-                      (0, i.jsx)(Jo, { oFeaturedItem: s, oStoreItem: n }),
+                      (0, i.jsx)(Vo, { oFeaturedItem: s, oStoreItem: n }),
                       (0, i.jsx)(m.jn, {
                         disabled: !r,
                         onClick: (e) =>
@@ -39396,7 +39417,7 @@
             ],
           });
       }
-      function Jo(e) {
+      function Vo(e) {
         const { oFeaturedItem: t, oStoreItem: s } = e;
         return t && !s
           ? (0, i.jsx)("div", {
@@ -39404,7 +39425,7 @@
             })
           : s
             ? (0, i.jsxs)("div", {
-                className: fo.SelectedApp,
+                className: So.SelectedApp,
                 children: [
                   (0, i.jsx)("img", { src: s.GetAssets().GetHeaderURL() }),
                   (0, i.jsxs)("div", {
@@ -39418,12 +39439,12 @@
               })
             : null;
       }
-      function $o(e) {
+      function Ko(e) {
         const { optInDef: t } = e;
         return (0, i.jsxs)("div", {
-          className: ft().SectionCtn,
+          className: Je().SectionCtn,
           children: [
-            (0, i.jsx)(Ro, { optInDef: t }),
+            (0, i.jsx)(Mo, { optInDef: t }),
             Boolean(Ct.iA.is_support) &&
               (0, i.jsx)("div", {
                 className: _().ValveOnlyBackground,
@@ -39435,17 +39456,17 @@
           ],
         });
       }
-      var Xo = s(51134),
-        Qo = s(5026),
-        Zo = s(58632),
-        el = s.n(Zo),
-        tl = s(54806),
-        sl = s(96001);
-      const il = l.createContext({
+      var Yo = s(51134),
+        Jo = s(5026),
+        $o = s(58632),
+        Xo = s.n($o),
+        Qo = s(54806),
+        Zo = s(96001);
+      const el = l.createContext({
         loadOptInAppealsSummaryStats: async (e, t) =>
           await (function (e) {
-            nl ||
-              (nl = new (el())(
+            sl ||
+              (sl = new (Xo())(
                 async (t) => {
                   const s = W.w.Init(je);
                   s.Body().set_opt_in_names([...t]);
@@ -39468,20 +39489,20 @@
                 },
                 { maxBatchSize: 100 },
               ));
-            return nl;
+            return sl;
           })(t).load(e),
       });
-      function al(e, t, s) {
+      function tl(e, t, s) {
         return {
           queryKey: ["OptInAppealsSummaryStats", s],
           queryFn: () => e.loadOptInAppealsSummaryStats(s, t),
           enabled: !!s,
         };
       }
-      let nl;
-      var rl = s(27144),
-        ol = s(29233);
-      function ll(e) {
+      let sl;
+      var il = s(27144),
+        al = s(29233);
+      function nl(e) {
         (0, l.useEffect)(() => {
           o.v.Get();
         }, []);
@@ -39492,7 +39513,7 @@
               name: `App Review (${o.v.Get().GetAppReviewOptIn()?.length || 0})`,
               key: "appreview",
               contents: (0, i.jsx)(u.tH, {
-                children: (0, i.jsx)(cl, {
+                children: (0, i.jsx)(rl, {
                   list: o.v.Get().GetAppReviewOptIn(),
                 }),
               }),
@@ -39502,7 +39523,7 @@
               name: `Appeals Review (${o.v.Get().GetAppealReviewOptIn()?.length || 0})`,
               key: "appealss",
               contents: (0, i.jsx)(u.tH, {
-                children: (0, i.jsx)(cl, {
+                children: (0, i.jsx)(rl, {
                   list: o.v.Get().GetAppealReviewOptIn(),
                   bAppeals: !0,
                 }),
@@ -39529,7 +39550,7 @@
               (0, i.jsx)(m.$n, {
                 onClick: (e) =>
                   (0, S.pg)(
-                    (0, i.jsx)(pl, { list: o.v.Get().GetAppealReviewOptIn() }),
+                    (0, i.jsx)(dl, { list: o.v.Get().GetAppealReviewOptIn() }),
                     (0, x.uX)(e),
                   ),
                 children: "Download Appeals CSV Data",
@@ -39539,7 +39560,7 @@
           }),
         });
       }
-      function cl(e) {
+      function rl(e) {
         const { list: t, bReverseOrder: s, bAppeals: a } = e,
           [n, r] = (0, p.QD)("query", ""),
           o = (0, l.useMemo)(() => {
@@ -39577,14 +39598,14 @@
                 "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
               placeholder: "type here...",
             }),
-            o.map((e) => (0, i.jsx)(dl, { def: e, bAppeals: a }, e.pageid)),
+            o.map((e) => (0, i.jsx)(ol, { def: e, bAppeals: a }, e.pageid)),
           ],
         });
       }
-      function dl(e) {
+      function ol(e) {
         const { def: t, bAppeals: s } = e,
           a = t.event_title?.english || "No Name Assigned",
-          n = (0, Ye.Ym)(t.appeals_text, (0, Je.sf)(b.TS.LANGUAGE));
+          n = (0, Qe.Ym)(t.appeals_text, (0, Ze.sf)(b.TS.LANGUAGE));
         return n?.length > 0
           ? (0, i.jsxs)(
               "div",
@@ -39641,7 +39662,7 @@
                       (0, i.jsx)("div", {
                         className: L().StatsCtn,
                         children: s
-                          ? (0, i.jsx)(ml, { def: t })
+                          ? (0, i.jsx)(ll, { def: t })
                           : (0, i.jsxs)("div", {
                               className: w().FeaturedApps,
                               children: [
@@ -39677,12 +39698,12 @@
             )
           : null;
       }
-      function ml(e) {
+      function ll(e) {
         const { def: t } = e,
           s = (function (e) {
-            const t = (0, sl.a)(),
-              s = l.useContext(il);
-            return (0, q.I)(al(s, t, e));
+            const t = (0, Zo.a)(),
+              s = l.useContext(el);
+            return (0, q.I)(tl(s, t, e));
           })(t.pageid),
           [a, n] = (0, l.useState)(!1),
           r = l.useMemo(() => {
@@ -39771,7 +39792,7 @@
                           .filter((e) => 0 !== e.appeal_account_id)
                           .map((e) =>
                             (0, i.jsx)(
-                              ul,
+                              cl,
                               { userStat: e },
                               `${e.opt_in_name}+${e.appeal_account_id}`,
                             ),
@@ -39786,7 +39807,7 @@
               })
           : (0, i.jsx)(B.t, { size: "medium", string: (0, P.we)("#Loading") });
       }
-      function ul(e) {
+      function cl(e) {
         const { userStat: t } = e;
         return (0, i.jsxs)("div", {
           children: [
@@ -39806,14 +39827,14 @@
           ],
         });
       }
-      function pl(e) {
+      function dl(e) {
         const t = (0, d.f1)(),
           { closeModal: s, list: a } = e,
           [n, r] = (0, l.useState)(!0),
           o = (function (e) {
-            const t = (0, sl.a)(),
-              s = l.useContext(il);
-            return (0, tl.E)({ queries: e.map((e) => al(s, t, e)) });
+            const t = (0, Zo.a)(),
+              s = l.useContext(el);
+            return (0, Qo.E)({ queries: e.map((e) => tl(s, t, e)) });
           })((0, l.useMemo)(() => a.map((e) => e.pageid), [a])),
           c = (0, l.useMemo)(() => {
             if (o?.some((e) => e.isLoading)) return null;
@@ -39827,7 +39848,7 @@
               Array.from(e)
             );
           }, [o]),
-          m = (0, rl.B3)(c),
+          m = (0, il.B3)(c),
           u = (0, l.useMemo)(() => {
             if (m?.length > 0) {
               const e = [];
@@ -39841,7 +39862,7 @@
               ]);
               const t = new Map();
               return (
-                m.forEach((e) => t.set(new ol.b2(e.steamid).GetAccountID(), e)),
+                m.forEach((e) => t.set(new al.b2(e.steamid).GetAccountID(), e)),
                 o
                   .filter((e) => e.data?.length > 0)
                   .forEach((s) =>
@@ -39886,33 +39907,33 @@
           })
         );
       }
-      var hl = s(4943),
-        _l = s(5695),
-        gl = s(2516),
-        Sl = s(55272),
-        vl = s(17904);
-      function yl(e) {
+      var ml = s(4943),
+        ul = s(5695),
+        pl = s(2516),
+        hl = s(55272),
+        _l = s(17904);
+      function gl(e) {
         const { pageid: t } = e;
         return (0, i.jsxs)("div", {
-          className: (0, f.A)(ft().AdminPageCtn, ft().WidePageCtn),
+          className: (0, f.A)(Je().AdminPageCtn, Je().WidePageCtn),
           children: [
             (0, i.jsxs)("div", {
-              className: ft().PageTitle,
+              className: Je().PageTitle,
               children: ["Survey Results ", t],
             }),
-            (0, i.jsx)(xl, { pageid: t }),
+            (0, i.jsx)(vl, { pageid: t }),
           ],
         });
       }
-      const fl = (0, ks.FB)();
-      function xl(e) {
+      const Sl = (0, ks.FB)();
+      function vl(e) {
         const t = (function () {
             const [e] = (0, l.useState)(() =>
               (0, Un.Tc)("optin_survey_results", "application_config"),
             );
             return e;
           })(),
-          { rgDemoStats: s, rgAppSansPermissions: a } = (0, Sl.pS)(),
+          { rgDemoStats: s, rgAppSansPermissions: a } = (0, hl.pS)(),
           [n, r] = (0, l.useState)(() => !0),
           [o, c, d, u] = (0, l.useMemo)(() => {
             const e = s.reduce(
@@ -39952,30 +39973,30 @@
           }, [n, u, t]),
           h = (0, l.useMemo)(
             () => [
-              fl.accessor("appid", {
+              Sl.accessor("appid", {
                 header: "App",
                 size: 250,
-                cell: Dl,
+                cell: fl,
                 id: "appinfo",
               }),
-              fl.accessor("appid", { header: "AppID", size: 50 }),
-              fl.accessor("demo_player_count", {
+              Sl.accessor("appid", { header: "AppID", size: 50 }),
+              Sl.accessor("demo_player_count", {
                 header: "Demo Players",
                 size: 50,
-                cell: _l.iS,
+                cell: ul.iS,
               }),
-              fl.accessor("wishlist_count", {
+              Sl.accessor("wishlist_count", {
                 header: "Wishlists",
                 size: 50,
-                cell: _l.iS,
+                cell: ul.iS,
               }),
-              fl.accessor("player_wishlist_count", {
+              Sl.accessor("player_wishlist_count", {
                 header: "Player + Wishlist",
                 size: 50,
-                cell: _l.iS,
+                cell: ul.iS,
               }),
-              fl.accessor("accountid", { header: "AccountID", size: 60 }),
-              fl.accessor("satisfaction", {
+              Sl.accessor("accountid", { header: "AccountID", size: 60 }),
+              Sl.accessor("satisfaction", {
                 header: "Communication",
                 size: 70,
                 meta: {
@@ -39983,12 +40004,12 @@
                     "How satisfied were you with the communication from Valve about Next Fest?",
                 },
               }),
-              fl.accessor("satisfiction_description", {
+              Sl.accessor("satisfiction_description", {
                 header: "Satisfaction Notes",
                 size: 150,
-                cell: wl,
+                cell: xl,
               }),
-              fl.accessor("team_size", {
+              Sl.accessor("team_size", {
                 header: "Team Size",
                 size: 30,
                 meta: {
@@ -39996,38 +40017,38 @@
                     "How many full-time people do you have working on your game?",
                 },
               }),
-              fl.accessor("meet_expectations", {
+              Sl.accessor("meet_expectations", {
                 header: "Expectations",
                 size: 40,
                 meta: {
                   strHeaderTooltip:
                     "Did your participation in Next Fest meet your expectations?",
                 },
-                cell: _l.sM,
+                cell: ul.sM,
               }),
-              fl.accessor("expectation_explanation", {
+              Sl.accessor("expectation_explanation", {
                 header: "Expectation Notes",
                 size: 350,
-                cell: wl,
+                cell: xl,
               }),
-              fl.accessor("change_release_plans", {
+              Sl.accessor("change_release_plans", {
                 header: "Release Plans",
                 size: 40,
                 meta: {
                   strHeaderTooltip:
                     "Did you change your release plans as a result of participating in Next Fest?",
                 },
-                cell: _l.sM,
+                cell: ul.sM,
               }),
-              fl.accessor("change_release_description", {
+              Sl.accessor("change_release_description", {
                 header: "Release Plan Notes",
                 size: 350,
-                cell: wl,
+                cell: xl,
               }),
-              fl.accessor("suggestions", {
+              Sl.accessor("suggestions", {
                 header: "Suggestions",
                 size: 750,
-                cell: wl,
+                cell: xl,
                 meta: {
                   strHeaderTooltip:
                     "Do you have any feedback or suggestions? What can we do to make Next Fest better?",
@@ -40067,7 +40088,7 @@
                 columns: h,
                 data: p,
                 getRowKey: (e, t) => t.appid ?? `index-${e}`,
-                className: (0, f.A)(vl.ResultsTableCtn),
+                className: (0, f.A)(_l.ResultsTableCtn),
                 stickyHeader: !0,
                 nItemHeight: 28,
                 overscan: p.length,
@@ -40075,7 +40096,7 @@
               (0, i.jsx)(m.$n, {
                 id: "download-csv",
                 onClick: () =>
-                  (0, gl.K)(
+                  (0, pl.K)(
                     "optin_survey.csv",
                     p,
                     h.map((e) => ({
@@ -40094,14 +40115,14 @@
           })
         );
       }
-      const bl = {
+      const yl = {
         include_assets: !0,
         include_release: !0,
         include_reviews: !0,
       };
-      function Dl(e) {
+      function fl(e) {
         const t = Number.parseInt(e.getValue()),
-          [s] = (0, Ut.t7)(t, bl),
+          [s] = (0, Ut.t7)(t, yl),
           a = (0, Vr.$5)(t);
         return (0, i.jsxs)("div", {
           children: [
@@ -40112,7 +40133,7 @@
                 style: { minWidth: "320px" },
               },
               children: (0, i.jsx)("img", {
-                className: vl.Img,
+                className: _l.Img,
                 src: s?.GetAssets().GetHeaderURL(),
               }),
             }),
@@ -40120,15 +40141,15 @@
           ],
         });
       }
-      function wl(e) {
-        return (0, i.jsx)(_l.DP, { text: e.getValue(), regExp: /\r\n|\r|\n/ });
+      function xl(e) {
+        return (0, i.jsx)(ul.DP, { text: e.getValue(), regExp: /\r\n|\r|\n/ });
       }
-      var jl = s(25035),
-        Cl = s.n(jl),
-        Il = s(562);
-      function Tl() {
+      var bl = s(25035),
+        Dl = s.n(bl),
+        wl = s(562);
+      function jl() {
         const [e, t] = l.useState({}),
-          { rgTags: s } = (0, Il.DT)(),
+          { rgTags: s } = (0, wl.DT)(),
           a = l.useMemo(
             () => s?.reduce((e, t) => e.set(t.tagid, t.name), new Map()),
             [s],
@@ -40167,7 +40188,7 @@
                 }
                 return { rgAppIDs: [], mapAppStats: void 0 };
               },
-              enabled: Al(e),
+              enabled: Cl(e),
             });
             return t;
           })(e),
@@ -40205,7 +40226,7 @@
                   strShortDescription: e.GetShortDescription(),
                   wishlist_count: t ? (0, ze.D)(Number(t.wishlist_count)) : "",
                   sales: t
-                    ? (0, Xo.xE)(
+                    ? (0, Yo.xE)(
                         Number(t.sales) +
                           Number(t.sales_dlc) +
                           Number(t.sales_in_game),
@@ -40218,10 +40239,10 @@
           u = n.isSuccess && r.isSuccess,
           p = !(m || (n.isSuccess && r.isSuccess));
         return (0, i.jsxs)("div", {
-          className: ft().AdminPageCtn,
+          className: Je().AdminPageCtn,
           children: [
             (0, i.jsx)("div", {
-              className: ft().PageTitle,
+              className: Je().PageTitle,
               children: "Detailed Game Search",
             }),
             (0, i.jsx)("div", {
@@ -40230,14 +40251,14 @@
             }),
             (0, i.jsx)("hr", { className: "VO" }),
             (0, i.jsxs)("div", {
-              className: Cl().TopSection,
+              className: Dl().TopSection,
               children: [
-                (0, i.jsx)(Bl, { fnSetSearch: t }),
-                (0, i.jsx)(kl, { search: e, rgCurrentResults: d }),
+                (0, i.jsx)(Il, { fnSetSearch: t }),
+                (0, i.jsx)(Tl, { search: e, rgCurrentResults: d }),
               ],
             }),
             (0, i.jsx)("hr", {}),
-            Al(e) &&
+            Cl(e) &&
               (0, i.jsxs)(i.Fragment, {
                 children: [
                   m && (0, i.jsx)(B.t, { size: "small" }),
@@ -40246,10 +40267,10 @@
                     (0, i.jsxs)(i.Fragment, {
                       children: [
                         (0, i.jsxs)("div", {
-                          className: Cl().ResultsTitle,
+                          className: Dl().ResultsTitle,
                           children: ["Results (", d.length, ")"],
                         }),
-                        (0, i.jsx)(El, { items: d }),
+                        (0, i.jsx)(Bl, { items: d }),
                       ],
                     }),
                   u &&
@@ -40261,17 +40282,17 @@
           ],
         });
       }
-      function Al(e) {
+      function Cl(e) {
         return (
           e?.strName?.length > 0 || e?.strDescription?.length > 0 || !!e.nTag
         );
       }
-      function Bl(e) {
+      function Il(e) {
         const { fnSetSearch: t } = e,
           [s, a] = l.useState(""),
           [n, r] = l.useState(""),
           [o, c] = l.useState(""),
-          { rgTags: d } = (0, Il.DT)(),
+          { rgTags: d } = (0, wl.DT)(),
           u =
             o.trim().length > 0
               ? d.find((e) => e.name.toLowerCase() == o.toLowerCase())?.tagid
@@ -40283,7 +40304,7 @@
             return e ? [{ value: "", label: "<none>" }, ...e] : void 0;
           }, [d]);
         return (0, i.jsxs)("form", {
-          className: Cl().SearchCtn,
+          className: Dl().SearchCtn,
           onSubmit: (e) => {
             t({ strName: s.trim(), strDescription: n.trim(), nTag: u }),
               e.preventDefault();
@@ -40304,7 +40325,7 @@
               onChange: (e) => r(e.target.value),
             }),
             (0, i.jsx)(m.JU, { children: "Tags" }),
-            (0, i.jsx)(vt.Ay, {
+            (0, i.jsx)(ft.Ay, {
               className: "react-select-container",
               classNamePrefix: "react-select",
               isSearchable: !0,
@@ -40317,30 +40338,30 @@
             o.trim().length > 0 &&
               !u &&
               (0, i.jsx)("div", {
-                className: Cl().Warning,
+                className: Dl().Warning,
                 children: "Tag not found",
               }),
             (0, i.jsx)(m.jn, {
               type: "submit",
-              className: Cl().SearchButton,
+              className: Dl().SearchButton,
               children: "Search",
             }),
           ],
         });
       }
-      function kl(e) {
+      function Tl(e) {
         const { search: t, rgCurrentResults: s } = e,
-          { rgTags: a } = (0, Il.DT)(),
+          { rgTags: a } = (0, wl.DT)(),
           [n, r] = l.useState([]),
           [o, c] = l.useState(1),
           d = s?.length > 0 && !n.some((e) => e.rgItems == s),
           u = n.length > 0;
         return (0, i.jsxs)("div", {
-          className: Cl().ResultSetsCtn,
+          className: Dl().ResultSetsCtn,
           children: [
             (0, i.jsx)("h3", { children: "To be exported:" }),
             (0, i.jsxs)("div", {
-              className: Cl().ResultsList,
+              className: Dl().ResultsList,
               children: [
                 0 == n.length && (0, i.jsx)("div", { children: "None so far" }),
                 n.map((e, t) =>
@@ -40353,7 +40374,7 @@
                         e.rgItems.length,
                         ")",
                         (0, i.jsx)("button", {
-                          className: Cl().RemoveResultSetButton,
+                          className: Dl().RemoveResultSetButton,
                           onClick: () =>
                             r([...n.slice(0, t), ...n.slice(t + 1)]),
                           children: "x",
@@ -40366,10 +40387,10 @@
               ],
             }),
             (0, i.jsxs)("div", {
-              className: Cl().Buttons,
+              className: Dl().Buttons,
               children: [
                 (0, i.jsx)(m.$n, {
-                  className: Cl().ExportButton,
+                  className: Dl().ExportButton,
                   onClick: () =>
                     (() => {
                       const e = o;
@@ -40392,7 +40413,7 @@
                   children: "Add current results",
                 }),
                 (0, i.jsx)(m.$n, {
-                  className: Cl().ExportButton,
+                  className: Dl().ExportButton,
                   onClick: () =>
                     (() => {
                       const e = [];
@@ -40427,21 +40448,21 @@
           ],
         });
       }
-      const Ml = (0, ks.FB)();
-      function El(e) {
+      const Al = (0, ks.FB)();
+      function Bl(e) {
         const { items: t } = e,
           s = l.useMemo(
             () => [
-              Ml.accessor("nAppID", { header: "App ID", size: 90 }),
-              Ml.accessor("strName", { header: "Name", size: 200 }),
-              Ml.accessor("rgTags", { header: "Tags", size: 300 }),
-              Ml.accessor("strShortDescription", {
+              Al.accessor("nAppID", { header: "App ID", size: 90 }),
+              Al.accessor("strName", { header: "Name", size: 200 }),
+              Al.accessor("rgTags", { header: "Tags", size: 300 }),
+              Al.accessor("strShortDescription", {
                 header: "Short Desc",
                 minSize: 100,
                 size: 500,
               }),
-              Ml.accessor("wishlist_count", { header: "Wishlists", size: 90 }),
-              Ml.accessor("sales", { header: "Sales", size: 110 }),
+              Al.accessor("wishlist_count", { header: "Wishlists", size: 90 }),
+              Al.accessor("sales", { header: "Sales", size: 110 }),
             ],
             [],
           );
@@ -40453,7 +40474,7 @@
           nItemHeight: 28,
         });
       }
-      const Pl = {
+      const kl = {
           OptinAdminDashboard: () => "/admin/",
           OptinAdminEdit: (e) => `/admin/edit/${e}`,
           OptinAdminAnalysis: (e) => `/admin/analysis/${e}`,
@@ -40468,12 +40489,12 @@
           OptInAppSurvey: (e) => `/survey/${e}`,
           OptInSurveyResults: (e) => `/surveyresults/${e}`,
         },
-        Rl = "sale_";
-      function Nl(e) {
-        return e?.startsWith(Rl) ? e : Rl + e;
+        Ml = "sale_";
+      function El(e) {
+        return e?.startsWith(Ml) ? e : Ml + e;
       }
-      function Gl(e) {
-        return (0, i.jsx)(yo.m, {
+      function Pl(e) {
+        return (0, i.jsx)(go.m, {
           children: (0, i.jsxs)(c.Kd, {
             basename: (0, a.C)() + "optin/",
             children: [
@@ -40484,96 +40505,96 @@
                     exact: !0,
                     path: a.B.DiagData(),
                     render: (e) =>
-                      (0, i.jsx)(gt.z, {
+                      (0, i.jsx)(vt.z, {
                         ...e,
                         strConfigID: "application_config",
                       }),
                   }),
                   (0, i.jsx)(_s.qh, {
                     exact: !0,
-                    path: Pl.OptinAdminDashboard(),
+                    path: kl.OptinAdminDashboard(),
                     component: qe,
                   }),
                   (0, i.jsx)(_s.qh, {
                     exact: !0,
-                    path: Pl.OptinAdminEdit(":pageid"),
+                    path: kl.OptinAdminEdit(":pageid"),
                     render: (e) =>
-                      (0, i.jsx)(Qo.S, {
+                      (0, i.jsx)(Jo.S, {
                         pageid: e.match.params.pageid,
                         children: (0, i.jsx)(Zn, {}),
                       }),
                   }),
                   (0, i.jsx)(_s.qh, {
                     exact: !0,
-                    path: Pl.OptinAdminAnalysis(":pageid"),
+                    path: kl.OptinAdminAnalysis(":pageid"),
                     render: (e) =>
-                      (0, i.jsx)(Qo.S, {
+                      (0, i.jsx)(Jo.S, {
                         pageid: e.match.params.pageid,
-                        children: (0, i.jsx)(Xo.ft, {}),
+                        children: (0, i.jsx)(Yo.ft, {}),
                       }),
                   }),
                   (0, i.jsx)(_s.qh, {
                     exact: !0,
-                    path: Pl.OptinAdminDemoAnalysis(":pageid"),
+                    path: kl.OptinAdminDemoAnalysis(":pageid"),
                     render: (e) =>
-                      (0, i.jsx)(Qo.A, {
+                      (0, i.jsx)(Jo.A, {
                         pageid: e.match.params.pageid,
-                        children: (0, i.jsx)(hl.OF, { bShowOnlySummary: !1 }),
+                        children: (0, i.jsx)(ml.OF, { bShowOnlySummary: !1 }),
                       }),
                   }),
                   (0, i.jsx)(_s.qh, {
                     exact: !0,
-                    path: Pl.OptinAdminPrePruning(),
-                    component: Tl,
+                    path: kl.OptinAdminPrePruning(),
+                    component: jl,
                   }),
                   (0, i.jsx)(_s.qh, {
                     exact: !0,
-                    path: Pl.OptinAdminSupport(":appid"),
+                    path: kl.OptinAdminSupport(":appid"),
                     render: (e) =>
                       (0, i.jsx)(ir, {
                         appid: Number.parseInt(e.match.params.appid),
                       }),
                   }),
                   (0, i.jsx)(_s.qh, {
-                    path: Pl.OptInApp(":partialpageid", ":appid"),
+                    path: kl.OptInApp(":partialpageid", ":appid"),
                     render: (e) =>
                       (0, i.jsx)(zr, {
                         appid: e.match.params.appid,
-                        pageid: Nl(e.match.params.partialpageid),
+                        pageid: El(e.match.params.partialpageid),
                       }),
                   }),
                   (0, i.jsx)(_s.qh, {
-                    path: Pl.OptInAppReviewDashboard(),
-                    component: ll,
+                    path: kl.OptInAppReviewDashboard(),
+                    component: nl,
                   }),
                   (0, i.jsx)(_s.qh, {
-                    path: Pl.OptInAppReview(":pageid"),
+                    path: kl.OptInAppReview(":pageid"),
                     render: (e) =>
-                      (0, i.jsx)(po, { pageid: e.match.params.pageid }),
+                      (0, i.jsx)(co, { pageid: e.match.params.pageid }),
                   }),
                   (0, i.jsx)(_s.qh, {
-                    path: Pl.OptInAppAppeal(":partialpageid", ":appid"),
+                    path: kl.OptInAppAppeal(":partialpageid", ":appid"),
                     render: (e) =>
-                      (0, i.jsx)(Bo, {
+                      (0, i.jsx)(Io, {
                         appid: Number.parseInt(e.match.params.appid),
-                        pageid: Nl(e.match.params.partialpageid),
+                        pageid: El(e.match.params.partialpageid),
                       }),
                   }),
                   (0, i.jsx)(_s.qh, {
-                    path: Pl.OptInAppSurvey(":partialpageid"),
+                    path: kl.OptInAppSurvey(":partialpageid"),
                     render: (e) =>
                       (0, i.jsx)(Wn, { pageid: e.match.params.partialpageid }),
                   }),
                   (0, i.jsx)(_s.qh, {
-                    path: Pl.OptInSurveyResults(":partialpageid"),
+                    path: kl.OptInSurveyResults(":partialpageid"),
                     render: (e) =>
-                      (0, i.jsx)(yl, { pageid: e.match.params.partialpageid }),
+                      (0, i.jsx)(gl, { pageid: e.match.params.partialpageid }),
                   }),
                   (0, i.jsx)(_s.qh, {
-                    path: Pl.OptInPartnerDashboard(":partialpageid"),
+                    path: kl.OptInPartnerDashboard(":partialpageid"),
                     render: (e) =>
-                      (0, i.jsx)(Fo, {
-                        pageid: Nl(e.match.params.partialpageid),
+                      (0, i.jsx)(Go, {
+                        pageid: El(e.match.params.partialpageid),
                       }),
                   }),
                   (0, i.jsx)(_s.qh, { component: n.a }),
@@ -56930,7 +56951,7 @@
       var Ne = s(32754),
         Ge = s(82227),
         Oe = s(69235),
-        Le = s(56555),
+        Le = s(56854),
         Fe = s(49953),
         Ue = s(55241),
         ze = s(85010),
@@ -60364,7 +60385,9 @@
                                 label: "PARTNER NAME TO INSERT INTO LEGAL LINE",
                                 value: n,
                                 onChange: (e) =>
-                                  t.SetLegalTextPartnerName(e.target.value),
+                                  t.SetLegalTextPartnerName(
+                                    e.target.value ? "" + e.target.value : "",
+                                  ),
                                 placeholder:
                                   "Enter company name; preview will update below",
                               }),
@@ -60477,6 +60500,10 @@
           {
             label: (0, z.we)("#msg_play_demo_now"),
             data: "#msg_play_demo_now",
+          },
+          {
+            label: (0, z.we)("#msg_advanced_access"),
+            data: "#msg_advanced_access",
           },
           { label: "", data: null },
         ];
@@ -66962,7 +66989,10 @@
                       (0, a.jsx)("textarea", {
                         value: i,
                         disabled: !0,
-                        className: u.AssetNotes,
+                        className: (0, g.A)(
+                          "DialogTextInputBase",
+                          u.AssetNotes,
+                        ),
                       }),
                     ],
                   }),
@@ -69862,12 +69892,18 @@
                         ],
                       }),
                     Boolean(s && r) &&
-                      (0, i.jsx)("div", {
-                        children: (0, i.jsx)("a", {
-                          href: `${x.TS.STATS_BASE_URL}sales/details/?gid=${r}&clanid=${s}`,
-                          target: "_blank",
-                          children: "See detailed sale page promo stats",
-                        }),
+                      (0, i.jsxs)("div", {
+                        children: [
+                          (0, i.jsx)("a", {
+                            href: `${x.TS.STATS_BASE_URL}sales/details/?gid=${r}&clanid=${s}`,
+                            target: "_blank",
+                            children: "See detailed sale page promo stats",
+                          }),
+                          (0, i.jsx)("p", {
+                            children:
+                              "Note: If the above page fails to load, then add query paramater like: $count=50&start=0. This will permit enable viewing data a bit at a time. You can increment start by 50 (by count) to see the rest of the data.",
+                          }),
+                        ],
                       }),
                     Boolean(0 == l) &&
                       (0, i.jsx)("div", {
@@ -76429,7 +76465,7 @@
       s(90595);
       var wt = s(96236);
       s(99671), s(27666);
-      s(47715), s(63232);
+      s(75753), s(63232);
       var jt,
         Ct = s(19367),
         It = s.n(Ct),
@@ -77440,7 +77476,8 @@
           const { bShowOnlyInitialEvent: e } = this.props,
             { bLoading: t, eventModel: s } = this.state;
           if (t)
-            return (0, i.jsx)(nt.of, {
+            return (0, i.jsx)(nt.EN, {
+              active: !0,
               children: (0, i.jsx)("div", {
                 className: Ht().FlexCenter,
                 style: { height: "400px" },
@@ -77465,30 +77502,24 @@
             J.Fm.Get().BOwnsApp(s.appid) &&
               (p = (e) =>
                 (0, vt.EP)(e, "steam://nav/games/details/" + s.appid)));
-          const h = (0, i.jsx)("div", {
-            children: (0, i.jsx)(zt.AD, {
-              initialEvent: s,
-              appid: n,
-              clanSteamID: r,
-              partnerEventStore: l,
-              emoticonStore: Ut.A,
-              closeModal: !d && a,
-              showAppHeader: c,
-              bShowOnlyInitialEvent: e,
-              additionalParams: m,
-              eventClassName: u,
-              onAppIconClick: p,
-            }),
+          const h = (0, i.jsx)(zt.AD, {
+            initialEvent: s,
+            appid: n,
+            clanSteamID: r,
+            partnerEventStore: l,
+            emoticonStore: Ut.A,
+            closeModal: !d && a,
+            showAppHeader: c,
+            bShowOnlyInitialEvent: e,
+            additionalParams: m,
+            eventClassName: u,
+            onAppIconClick: p,
           });
           return d
             ? h
-            : (0, i.jsx)(nt.of, {
-                className: o,
-                children: (0, i.jsx)(nt.Qs, {
-                  navID: "WebRowEventInfiniteScroll",
-                  closeModal: a,
-                  children: h,
-                }),
+            : (0, i.jsx)(nt.EN, {
+                active: !0,
+                children: (0, i.jsx)("div", { className: o, children: h }),
               });
         }
       };
@@ -77855,7 +77886,7 @@
         static instance_count = 0;
       }
       var ys = s(94095),
-        fs = s(99956),
+        fs = s(90421),
         xs = s(12424),
         bs = s(78588),
         Ds = s(8893),
@@ -96933,12 +96964,7 @@
         return (0, A.Qn)() && !A.TS.IN_STEAMUI
           ? (0, a.jsx)(Oe.Qg, {
               className: q.GamepadOnlyScrollPanel,
-              children: (0, a.jsx)(c.Z, {
-                focusable: !0,
-                noFocusRing: !0,
-                className: q.GamepadOnlyPanel,
-                children: t,
-              }),
+              children: t,
             })
           : (0, a.jsx)(a.Fragment, { children: t });
       }
@@ -97874,7 +97900,6 @@
         h = s(1507),
         _ = (s(738), s(73745)),
         g = s(19332);
-      s(9154);
       let S = class extends r.Component {
         m_refFocus = r.createRef();
         componentDidMount() {

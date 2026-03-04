@@ -8,6 +8,7 @@
 	"language": "norwegian",
 	"LoginRedirect_Dialog_Title": "Logg inn",
 	"LoginRedirect_Dialog_Description": "Logg inn for å legge til på ønskelisten, følge eller ignorere. Du blir sendt videre til innloggingssiden når du trykker på OK.",
+	"Wishlist_NotSignedIn": "Logg inn eller åpne denne siden i Steam-klienten for å legge til på ønskelisten, følge, kjøpe eller se anbefalinger",
 	"Dummy": "dummy"
 }`);
     },

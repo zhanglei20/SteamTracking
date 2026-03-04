@@ -13,6 +13,7 @@
         ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
         Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
         Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
+        Disabled: "_2I6xXve3oCxh8fra7SWTnq",
         "Size-1": "_2e1xlPghh48rkP13ydQOPb",
         "Size-2": "B7HtDxiiORArIRcBR9kVB",
       };
@@ -295,6 +296,7 @@
                 focusable: _ = !0,
                 hoverable: _ = !0,
                 clickable: _ = !0,
+                disabled: _,
                 className: _,
                 ..._
               } = _,
@@ -305,9 +307,10 @@
                 radius: _,
                 className: _()(
                   _.ControlBox,
-                  _ && _.Focusable,
-                  _ && _.Hoverable,
-                  _ && _.Clickable,
+                  _ && !_ && _.Focusable,
+                  _ && !_ && _.Hoverable,
+                  _ && !_ && _.Clickable,
+                  _ && _.Disabled,
                   _[`Variant-${_}`],
                   _[`Size-${__webpack_require__}`],
                   _,

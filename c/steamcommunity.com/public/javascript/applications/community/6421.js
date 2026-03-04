@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Моите активни заявки",
 	"MyOrders_Heading_Sell": "Заявки за продажба",
 	"MyOrders_Heading_Buy": "Заявки за покупка",
+	"MyOrders_Heading_MyPurchaseOffers": "Купуване — Моите оферти",
+	"MyOrders_Heading_MyListings": "Продаване — Моите обяви",
 	"MyOrders_FailedToLoad": "Имаше проблем при зареждането на данните за заявката за този артикул.",
 	"MyOrders_NoActiveOrders_Item": "Нямате активни заявки за този артикул.",
 	"MyOrders_NoBuyOrders_Item": "Нямате активни заявки за купуване на този артикул.",

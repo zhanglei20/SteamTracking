@@ -8,6 +8,7 @@
 	"language": "spanish",
 	"LoginRedirect_Dialog_Title": "Iniciar sesión",
 	"LoginRedirect_Dialog_Description": "Inicia sesión para añadir este artículo a tu lista de deseados, seguirlo o marcarlo como ignorado. Al hacer clic en «Aceptar», se te redirigirá a la página de inicio de sesión.",
+	"Wishlist_NotSignedIn": "Inicia sesión o abre esta página en la aplicación de Steam para seguir o comprar juegos, añadirlos a la lista de deseados y ver recomendaciones.",
 	"Dummy": "dummy"
 }`);
     },

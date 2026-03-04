@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Aktif Siparişlerim",
 	"MyOrders_Heading_Sell": "Satış Talimatları",
 	"MyOrders_Heading_Buy": "Satın Alma Talimatları",
+	"MyOrders_Heading_MyPurchaseOffers": "Satın Alma Tekliflerim",
+	"MyOrders_Heading_MyListings": "Satış İlanlarım",
 	"MyOrders_FailedToLoad": "Bu öğenin sipariş verileri yüklenirken bir sorun oluştu.",
 	"MyOrders_NoActiveOrders_Item": "Bu öğe için aktif talimatınız yok.",
 	"MyOrders_NoBuyOrders_Item": "Bu öğe için aktif satın alma talimatınız yok.",

@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "我的有效订购单和销售单",
 	"MyOrders_Heading_Sell": "销售单",
 	"MyOrders_Heading_Buy": "订购单",
+	"MyOrders_Heading_MyPurchaseOffers": "购买 - 我的报价",
+	"MyOrders_Heading_MyListings": "出售 - 我的上架物品",
 	"MyOrders_FailedToLoad": "载入此物品的订购单/销售单数据时出现问题。",
 	"MyOrders_NoActiveOrders_Item": "您没有此物品的有效订购单/销售单。",
 	"MyOrders_NoBuyOrders_Item": "您没有此物品的有效订购单。",

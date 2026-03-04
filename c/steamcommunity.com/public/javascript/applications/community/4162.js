@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "greek",
 	"SellOnMarket_View": "Προβολή στην Αγορά Κοινότητας",
+	"SellOnMarket_ViewListing": "Προβολή της καταχώρισής μου",
 	"SellOnMarket_LowestPrice": "Ξεκινά από: %1$s",
 	"SellOnMarket_Volume": "Ποσότητα: Πουλήθηκαν %1$s τις τελευταίες 24 ώρες",
 	"SellOnMarket_SellThisItem": "Πώληση",

@@ -6,6 +6,39 @@
         Main: "_1Zn_5pvuMbqr57ws1eJKe",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
+        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
+        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
+        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
+        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
+        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
+        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
+        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
+        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
+        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
+        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
+        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+      };
+    },
     chunkid: () => {},
     chunkid: (module) => {
       module.exports = {
@@ -221,6 +254,107 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        if (_) {
+          if ("appid" in _) return "app";
+          if ("bundleid" in _) return "bundle";
+          if ("packageid" in _) return "sub";
+        }
+      }
+      function _(_) {
+        const {
+            _: _,
+            hoverClassName: __webpack_require__,
+            fnGetIDOverride: _,
+            fnHoverState: _,
+            children: _,
+          } = _,
+          _ = _.useRef(null),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _(_);
+              _ &&
+                (_ && _(!0),
+                window.GameHover &&
+                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
+                    type: _,
+                    _: (0, _._)(_)._,
+                    _: 1,
+                  }));
+            },
+            [_, _, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(_) &&
+                (_ && _.relatedTarget && _(!1),
+                window.HideGameHover &&
+                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
+            },
+            [_, _, _],
+          );
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: __webpack_require__,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          onFocus: _,
+          onBlur: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
+            strExtraParams: __webpack_require__,
+            fnOnClickOverride: _,
+            strOverrideURL: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(
+            _ ||
+              (_ && "creatorid" in _
+                ? (0, _._)(
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )
+                : (0, _._)(
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )),
+          );
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            className: _.className,
+            href: _ ? void 0 : _,
+            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+            rel: "noopener noreferrer",
+            onClick: _,
+            children: _.children,
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -274,21 +408,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, closeModal: __webpack_require__ } = _;
         return (0, _.jsx)(_._, {
-          navID: "SinglePartnerEventRoot",
+          initialEvent: _,
+          bShowOnlyInitialEvent: !0,
+          partnerEventStore: _._,
+          emoticonStore: _._,
+          showAppHeader: !0,
           closeModal: __webpack_require__,
-          children: (0, _.jsx)(_._, {
-            initialEvent: _,
-            bShowOnlyInitialEvent: !0,
-            partnerEventStore: _._,
-            emoticonStore: _._,
-            showAppHeader: !0,
-            closeModal: __webpack_require__,
-          }),
         });
       }
       function _(_, _) {
@@ -345,6 +474,125 @@
       (0, _._)([_._], _.prototype, "escFunction", null),
         (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
         (_ = (0, _._)([_._], _));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsx)(_, {
+          appid: _,
+          bIsFree: Boolean(_?.is_free),
+          bIsComingSoon: Boolean(_?.is_coming_soon),
+          bTextMode: _,
+          className: __webpack_require__,
+        });
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1),
+          _ = (0, _._)(),
+          {
+            appid: _,
+            bIsFree: _,
+            bIsComingSoon: _,
+            className: _,
+            bTextMode: _,
+          } = _,
+          _ = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          { mutateAsync: _ } = (0, _._)(_, !_, (0, _._)(_)),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        if (_ || (!_ && _))
+          return _
+            ? (0, _.jsx)(_, {
+                possibleDemoAppID: _,
+              })
+            : null;
+        let _ = null;
+        return (
+          _ && !_
+            ? (_ = (0, _.jsx)(_._, {
+                size: 18,
+              }))
+            : _
+              ? _ && (_ = _ ? (0, _._)("#OnWishlist") : (0, _.jsx)(_.qnF, {}))
+              : (_ = _
+                  ? (0, _._)("#wishlist_add_to_wishlist")
+                  : (0, _.jsx)(_.T4m, {})),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#AddToWishlist_ttip"),
+                children: (0, _.jsx)("div", {
+                  className: (0, _._)(_().WishList, _),
+                  onClick: async () => {
+                    _._.logged_in
+                      ? _ ||
+                        (__webpack_require__(!0),
+                        await _(),
+                        __webpack_require__(!1))
+                      : _();
+                  },
+                  children: _,
+                }),
+              }),
+              _,
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _
+          ? (1 != _.type && 12 != _.type) || !_.related_items?.parent_appid
+            ? null
+            : (0, _.jsx)(_, {
+                parentAppID: _.related_items?.parent_appid,
+                className: __webpack_require__,
+              })
+          : null;
+      }
+      function _(_) {
+        const { parentAppID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _ && _
+          ? (0, _.jsx)(_, {
+              appid: _,
+              bIsComingSoon: Boolean(_.is_coming_soon),
+              bIsFree: Boolean(_.is_free),
+              className: __webpack_require__,
+            })
+          : null;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

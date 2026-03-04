@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "คําสั่งซื้อที่ดำเนินการอยู่ของฉัน",
 	"MyOrders_Heading_Sell": "คำสั่งขาย",
 	"MyOrders_Heading_Buy": "คำสั่งซื้อ",
+	"MyOrders_Heading_MyPurchaseOffers": "การซื้อ - ข้อเสนอของฉัน",
+	"MyOrders_Heading_MyListings": "การขาย - รายการขายของฉัน",
 	"MyOrders_FailedToLoad": "ตรวจพบปัญหาในการโหลดข้อมูลคำสั่งซื้อสำหรับไอเท็มนี้",
 	"MyOrders_NoActiveOrders_Item": "คุณไม่มีคำสั่งที่ดำเนินการอยู่สำหรับไอเท็มนี้",
 	"MyOrders_NoBuyOrders_Item": "คุณไม่มีคำสั่งซื้อที่ดำเนินการอยู่สำหรับไอเท็มนี้",

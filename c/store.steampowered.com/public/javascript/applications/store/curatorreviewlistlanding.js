@@ -15,50 +15,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
-        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
-        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
-        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
-        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
-        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
-        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
-        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
-        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
-        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
-        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
-        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
-        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
-        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
-        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
-        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
-        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
-        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
-        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
-        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
-        Reason: "_2h0GKAYcXRP10ryZHFn79d",
-        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         YoutubePreviewImage: "_3bVwKmAuh70AH8XVDnyf5z",
         YoutubePlayer: "_3oXEPQSJY3yN1IVhfxeSy0",
       };
@@ -261,146 +217,242 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _,
-            bShowAsMuted: __webpack_require__,
-            bHidePrice: _,
-            bShowInLibraryInsteadOfPrice: _,
-            bHidePlatforms: _,
-            strClassName: _,
-            creatorAccountID: _,
-            bShowName: _,
-            onlyOneDiscountPct: _,
-            bShowAddToCart: _,
-            bShowWishlistButton: _,
-          } = _,
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(!1),
-          { data: _ } = (0, _._)(_);
+      const _ = {
+        include_assets: !0,
+        include_release: !0,
+        include_platforms: !0,
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
+        include_supported_languages: !0,
+      };
+      class _ {
+        m_setAlreadyAdded = new Set();
+        Reset() {
+          this.m_setAlreadyAdded = new Set();
+        }
+        BHasAppID(_) {
+          return this.m_setAlreadyAdded.has("a" + _);
+        }
+        BHasPackageID(_) {
+          return this.m_setAlreadyAdded.has("s" + _);
+        }
+        BHasBundleID(_) {
+          return this.m_setAlreadyAdded.has("b" + _);
+        }
+        BHasStoreItemKey(_) {
+          return this.m_setAlreadyAdded.has(
+            this.ConvertStoreItemKeyToUniqueKey(_),
+          );
+        }
+        AddStoreItemKey(_) {
+          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(_));
+        }
+        ConvertStoreItemKeyToUniqueKey(_) {
+          switch (_.item_type) {
+            default:
+            case "app":
+              return "a" + _._;
+            case "sub":
+              return "s" + _._;
+            case "bundle":
+              return "b" + _._;
+          }
+        }
+      }
+      const _ = 4;
+      function _(_, _, _, _, _, _) {
+        const _ = new Array(),
+          _ = new Array(),
+          _ = new Array(),
+          _ = new Array();
+        if (!_ || 0 == _.length) return _;
+        const _ = [
+          _._.k_RejectSupportedLanguage,
+          _._.k_RejectAlreadyDisplayed,
+          _._.k_RejectNoTrailer,
+        ];
+        for (let _ of _) {
+          let _ = _._,
+            _ = _._.k_NotRejected;
+          switch (_.item_type) {
+            case "sub":
+              const _ = _._.Get().GetPackage(_);
+              if (1 !== _?.GetIncludedAppIDs()?.length) {
+                _ = _(_, _, _, !0);
+                break;
+              }
+              _ = _.GetIncludedAppIDs()[0];
+            case "app":
+              _ = _(_, _, _, _, !0);
+              break;
+            case "bundle":
+              _ = _(_, _, _, !0);
+          }
+          if (
+            (_ == _._.k_NotRejected
+              ? ((_.rejected = _._.k_NotRejected),
+                _.push({
+                  ..._,
+                  priority: 1,
+                }))
+              : _.includes(_)
+                ? ((_.rejected = _._.k_NotRejected), _.push(_))
+                : ((_.rejected = _),
+                  _ == _._.k_RejectIgnoredGame ? _.push(_) : _.push(_)),
+            _.length > _)
+          )
+            break;
+        }
+        return (
+          _.length < _ &&
+            (_(_, _, _, 2),
+            _.length < _ &&
+              _.enforce_minimum &&
+              (_(_, _, _, 3), _(_, _, _, _))),
+          _
+        );
+      }
+      function _(_, _, _, _) {
+        for (let _ = 0; _.length < _ && _ < _.length; ++_)
+          _.push({
+            ..._[_],
+            priority: _,
+          });
+      }
+      function _(_, _) {
+        const _ = _._.Get();
         if (
-          ((0, _.useEffect)(() => {
-            _.current && _(_.current.offsetWidth < 370);
-          }, [_]),
-          !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
-        )
-          return null;
-        const _ = Boolean(_ && 0 == _?.item_type),
-          _ = Boolean(!_ && !_ && !_ && _ && _);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            !_ &&
-              (0, _.jsxs)("div", {
-                ref: _,
-                className: (0, _._)(
-                  _().CapsuleBottomBar,
-                  "CapsuleBottomBar",
-                  __webpack_require__ && _().Muted,
-                  _,
-                ),
-                children: [
-                  _ &&
-                    (0, _.jsx)(_, {
-                      creatorAccountID: _,
-                      ..._,
-                    }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      className: (0, _._)(
-                        _().MaxActionButtonWidth,
-                        _().AddToCartButton,
-                      ),
-                    }),
-                  _ &&
-                    "appid" in _ &&
-                    (0, _.jsx)(_._, {
-                      appid: _.appid,
-                      className: (0, _._)(
-                        _().MaxActionButtonWidth,
-                        _().AddToWishlistButton,
-                      ),
-                    }),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      bMinimizePlatforms: _,
-                    }),
-                  !_ &&
-                    (0, _.jsx)("span", {
-                      className: _().BottomBarPriceInfo,
-                      children: (0, _.jsx)(_._, {
-                        _: _,
-                        bShowInLibrary: _,
-                        onlyOneDiscountPct: _,
-                      }),
-                    }),
-                ],
-              }),
-            _ &&
-              (0, _.jsx)(_, {
-                _: _,
-              }),
-          ],
-        });
+          _.only_current_platform &&
+          __webpack_require__.BHasPlatformPreferenceSet()
+        ) {
+          if (
+            !(
+              (_.GetPlatforms()?.windows &&
+                __webpack_require__.BIsPreferredPlatform("win")) ||
+              (_.GetPlatforms()?.mac &&
+                __webpack_require__.BIsPreferredPlatform("mac")) ||
+              (_.GetPlatforms()?.steamos_linux &&
+                __webpack_require__.BIsPreferredPlatform("linux"))
+            )
+          )
+            return _._.k_RejectWrongPlatform;
+        }
+        return !_.prepurchase && _.BIsComingSoon()
+          ? _._.k_RejectNoComingSoon
+          : !_.virtual_reality && _.GetPlatforms()?.vr_support.vrhmd_only
+            ? _._.k_RejectNoVR
+            : _.GetAllCreatorClanIDs()?.some((_) =>
+                  __webpack_require__.BIsIgnoringCurator(_),
+                )
+              ? _._.k_RejectCreatorClan
+              : _._.k_NotRejected;
       }
-      function _(_) {
-        const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__?.name
-          ? (0, _.jsx)("div", {
-              className: _().CapsuleName,
-              children: __webpack_require__.name,
-            })
-          : null;
+      function _(_, _) {
+        if (_.localized) {
+          const _ = (0, _._)(_._.LANGUAGE);
+          if (!_.GetAllLanguagesWithSomeSupport()?.includes(_))
+            return _._.k_RejectSupportedLanguage;
+        }
+        return _._.k_NotRejected;
       }
-      function _(_) {
-        const {
-            creatorAccountID: _,
-            bShowAsMuted: __webpack_require__,
-            strClassName: _,
-          } = _,
-          _ = (0, _.useMemo)(
-            () => ({
-              creatorid: _,
-            }),
-            [_],
-          ),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ = (0, _._)(_?.clan_avatar, "Medium"),
-          _ = _.name || "";
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().BottomCreatorRow,
-            __webpack_require__ && _().Muted,
-            _,
-          ),
-          children: [
-            (0, _.jsx)("img", {
-              className: (0, _._)(_().CreatorLogo),
-              src: _,
-              alt: _,
-            }),
-            (0, _.jsx)("span", {
-              className: _().CreatorName,
-              children: _,
-            }),
-          ],
-        });
+      function _(_, _, _, _, _) {
+        const _ = _._.Get().GetApp(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        if (_.BIsGameIgnored(_)) return _._.k_RejectIgnoredGame;
+        if (_.BExcludeTagIDs(_.GetTagIDs())) return _._.k_RejectIgnoreGameTags;
+        if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
+          return _._.k_RejectIgnoreContentDescriptors;
+        if (!_.early_access && _.BIsEarlyAccess())
+          return _._.k_RejectEarlyAccess;
+        const _ = _.GetAppType();
+        return _.software || 6 != _
+          ? _.games_already_in_library && _.BIsGameOwned(_)
+            ? _._.k_RejectInLibrary
+            : _.games_not_in_library && !_.BIsGameOwned(_)
+              ? _._.k_RejectNotInLibrary
+              : !_.video && [7, 8, 9].includes(_)
+                ? _._.k_RejectVideo
+                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
+                  ? _._.k_RejectNoDiscount
+                  : "adultonly" != _ &&
+                      _.no_ao_content &&
+                      (_.HasContentDescriptorID(3) ||
+                        _.HasContentDescriptorID(4))
+                    ? _._.k_RejectAO
+                    : 1 == _ &&
+                        _.games_already_in_library &&
+                        _.BIsGameOwned(_.GetParentAppID())
+                      ? _._.k_RejectInLibrary
+                      : _
+                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
+                          _.BHasAppID(_)
+                          ? _._.k_RejectAlreadyDisplayed
+                          : _.has_trailer && !_.BHasTrailers(!1)
+                            ? _._.k_RejectNoTrailer
+                            : _(_, _)
+                        : _._.k_NotRejected
+          : _._.k_RejectSoftware;
+      }
+      function _(_, _) {
+        const _ = _._.Get();
+        let _ = !1;
+        for (let _ of _) {
+          if (__webpack_require__.BIsGameIgnored(_))
+            return _._.k_RejectIgnoredGame;
+          __webpack_require__.BIsGameOwned(_) && (_ = !0);
+        }
+        return _.games_not_in_library && _
+          ? _._.k_RejectInLibrary
+          : _.games_not_in_library && !_
+            ? _._.k_RejectNotInLibrary
+            : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetPackage(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        return _.games_already_in_library && _.BOwnsPackage(_)
+          ? _._.k_RejectInLibrary
+          : _.BIsPackageIgnored(_)
+            ? _._.k_RejectIgnoredGame
+            : _
+              ? __webpack_require__.BHasPackageID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _(_, _)
+              : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetBundle(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        return _ != _._.k_NotRejected
+          ? _
+          : _
+            ? __webpack_require__.BHasBundleID(_)
+              ? _._.k_RejectAlreadyDisplayed
+              : _(_, _)
+            : _._.k_NotRejected;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -814,6 +866,202 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        const _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _._)();
+        _.current = _;
+        const [_, _] = (0, _.useState)(void 0),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = {
+              include_assets: _,
+              include_release: _,
+              include_platforms: _,
+              include_all_purchase_options: _,
+              include_screenshots: _,
+              include_trailers: _,
+              include_ratings: _,
+              include_tag_count: _,
+              include_reviews: _,
+              include_basic_info: _,
+              include_supported_languages: _,
+              include_full_description: _,
+              include_included_items: _,
+              include_assets_without_overrides: _,
+              apply_user_filters: _,
+              include_links: _,
+            };
+            let _ = null;
+            return (
+              !_ ||
+                _ < 0 ||
+                _._.Get().BHasStoreItem(_, _, _) ||
+                (void 0 !== _ && _ && _ == _.current) ||
+                (_ !== _.current && (_(void 0), (_.current = _)),
+                (_ = _().CancelToken.source()),
+                _._.Get()
+                  .QueueStoreItemRequest(_, _, _)
+                  .then((_) => {
+                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                  })),
+              () => _?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
+        return _ ? [_, 3] : [null, 2];
+      }
+      function _(_, _, _) {
+        return _(_, 0, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, 2, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, 1, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = _(_, _, _);
+        let _;
+        1 != _?.GetStoreItemType() ||
+          _.GetAssets()?.GetHeaderURL() ||
+          1 != _?.GetIncludedAppIDs().length ||
+          (_ = _.GetIncludedAppIDs()[0]);
+        const [_, _] = _(_, _);
+        return _ && _?.BIsVisible() ? [_, _] : [_, _];
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)(),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            if (!_ || 0 == _.length) return;
+            const _ = {
+                include_assets: _,
+                include_release: _,
+                include_platforms: _,
+                include_all_purchase_options: _,
+                include_screenshots: _,
+                include_trailers: _,
+                include_ratings: _,
+                include_tag_count: _,
+                include_reviews: _,
+                include_basic_info: _,
+                include_supported_languages: _,
+                include_full_description: _,
+                include_included_items: _,
+                include_assets_without_overrides: _,
+                apply_user_filters: _,
+                include_links: _,
+              },
+              _ = _.filter(
+                (_) =>
+                  !(
+                    _._.Get().BHasStoreItem(_, _, _) ||
+                    _._.Get().BIsStoreItemMissing(_, _)
+                  ),
+              );
+            if (0 == _.length) return;
+            const _ = _().CancelToken.source(),
+              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
+            return (
+              Promise.all(_).then(() => {
+                _.token.reason || _();
+              }),
+              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return 2;
+        if (
+          !_.every(
+            (_) =>
+              _._.Get().BHasStoreItem(_, _, _) ||
+              _._.Get().BIsStoreItemMissing(_, _),
+          )
+        )
+          return 1;
+        return _.every((_) =>
+          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
+        )
+          ? 3
+          : 2;
+      }
+      function _(_, _, _) {
+        return _(_, 0, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, 2, _, _);
+      }
+      function _() {
+        _.useEffect(
+          () => (
+            _._.Get().SetReturnUnavailableItems(!0),
+            () => _._.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1075,311 +1323,6 @@
             _ ? _ && _.push(_) : _.push(_);
         }
         return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "capsule_index_";
-      function _(_) {
-        const {
-            capsule: _,
-            bShowParentApp: __webpack_require__,
-            elElementToAppendToHover: _,
-            index: _,
-            navKey: _,
-            bHideStoreHover: _,
-            onlyOneDiscountPct: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          [_] = (0, _._)(
-            __webpack_require__ ? _?.GetParentAppID() : void 0,
-            _._,
-          ),
-          _ = (0, _._)(_);
-        if (!_) return null;
-        const _ = Boolean(_),
-          _ = (0, _.jsx)(_, {
-            ..._,
-            strExtraParams: _.strExtraParams,
-            info: _,
-            bIsHovered: _,
-            bHasParentAppToDisplay: _,
-            onlyOneDiscountPct: _,
-            bShowEarlyAccessBanner: _,
-          });
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)({
-            [_().OuterCapsuleContainer]: !0,
-            [_ + _]: 0 == _,
-          }),
-          navEntryPreferPosition: _._.PREFERRED_CHILD,
-          navKey: _,
-          children: [
-            (0, _.jsxs)(_._, {
-              appid: _.GetAppID(),
-              children: [
-                Boolean(_)
-                  ? (0, _.jsx)("div", {
-                      onMouseEnter: () => _(!0),
-                      onMouseLeave: () => _(!1),
-                      children: _,
-                    })
-                  : (0, _.jsx)(_._, {
-                      className: _().CapsuleContainer,
-                      _: _,
-                      elElementToAppend: _.elElementToAppendToHover,
-                      bShowDemoButton: _.bShowDemoButton,
-                      bPreferDemoStorePage: _.bPreferDemoStorePage,
-                      bShowDeckCompatibilityDialog:
-                        _.bShowDeckCompatibilityDialog,
-                      bHidePrice: _.bHidePrice,
-                      bUseSubscriptionLayout: _.bUseSubscriptionLayout,
-                      strExtraParams: _.strExtraParams,
-                      nCreatorAccountID: _.creatorAccountID,
-                      nWidthMultiplier: _.nWidthMultiplier,
-                      bShowIgnoreButton: _.bShowIgnoreButton,
-                      bShowDescription: _.bShowDescriptionInHover,
-                      children: _,
-                    }),
-                Boolean(_) &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: _,
-                  }),
-              ],
-            }),
-            _ &&
-              (0, _.jsx)(_, {
-                strExtraParams: _.strExtraParams,
-                parentStoreItem: _,
-                childAppType: _.GetAppType(),
-                bPreferDemoStorePage: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            strExtraParams: _,
-            parentStoreItem: __webpack_require__,
-            childAppType: _,
-            bPreferDemoStorePage: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return _
-          ? (0, _.jsx)(_._, {
-              className: _().CapsuleParentInfo,
-              ...(0, _._)(_, _, _, _, _),
-              children: (0, _.jsxs)(_._, {
-                appid: __webpack_require__.GetAppID(),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().ParentType,
-                    children: (0, _._)(
-                      11 == _
-                        ? "#SalePage_ParentApp_SoundTrack"
-                        : "#SalePage_ParentApp_DLC",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    _: _,
-                    strExtraParams: _,
-                    children: (0, _.jsx)("img", {
-                      loading: "lazy",
-                      className: _.AppCapsuleImage,
-                      alt: __webpack_require__.GetName(),
-                      src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
-                      ...(0, _._)(),
-                    }),
-                  }),
-                ],
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHideStatusBanners: __webpack_require__,
-            strExtraParams: _,
-            index: _,
-            imageType: _,
-            bHasParentAppToDisplay: _,
-            bIsHovered: _,
-            strDoubleCapsuleMessage: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-            bPreferAssetWithoutOverride: _,
-          } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(_);
-        if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        "overrideNavigation" in _ &&
-          (_ = (_) => (
-            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
-          ));
-        const _ = Boolean(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_().TwoWidthCtn]: _,
-              }),
-              children: [
-                (0, _.jsxs)(_._, {
-                  href: _ ? void 0 : _,
-                  style: {
-                    display: "block",
-                    cursor: "pointer",
-                  },
-                  className: (0, _._)({
-                    [_().TwoWidthCapsule]: _,
-                  }),
-                  preferredFocus: _,
-                  onClick: _,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      appids: _,
-                      hide_status_banners: __webpack_require__,
-                      show_early_access: _.bShowEarlyAccessBanner,
-                    }),
-                    "none" != _ &&
-                      (0, _.jsx)(_._, {
-                        imageType: _,
-                        _: _,
-                        bPreferAssetWithoutOverride: _,
-                      }),
-                    (0, _.jsx)(_._, {
-                      _: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      active: _,
-                      bIsHoverMode: !0,
-                    }),
-                  ],
-                }),
-                _ &&
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(
-                      _().TwoWidthSideInfo,
-                      "TwoWidthSideInfo",
-                    ),
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().Reason,
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().StoreSaleItemRelease,
-                        children: (0, _.jsx)("span", {
-                          children: _.GetFormattedSteamReleaseDate(),
-                        }),
-                      }),
-                      (0, _.jsx)(_._, {
-                        bHideTitle: !0,
-                        rgTagIDs: _.GetTagIDs(),
-                        instanceNum: _,
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHidePriceIfOwned: __webpack_require__,
-            bHideStatusBanners: _,
-            bUseSubscriptionLayout: _,
-            elElementToAppendToHover: _,
-            bHidePrice: _,
-            bHidePlatforms: _,
-            creatorAccountID: _,
-            bIsHovered: _,
-            onlyOneDiscountPct: _,
-            strDoubleCapsuleMessage: _,
-          } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = _ && !_;
-        if (_ && _ && 0 == _.item_type && _.appid)
-          return (0, _.jsx)(_._, {
-            appid: _.appid,
-            bIsMuted: _,
-          });
-        if (_) return null;
-        const _ = Boolean(_ && __webpack_require__),
-          _ = Boolean(_);
-        return (0, _.jsx)(_._, {
-          _: _,
-          bShowAsMuted: _,
-          bHidePrice: _,
-          bShowInLibraryInsteadOfPrice: _,
-          bHidePlatforms: _,
-          creatorAccountID: _,
-          bShowName: _.bShowName,
-          onlyOneDiscountPct: _,
-          bShowWishlistButton: Boolean(_),
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

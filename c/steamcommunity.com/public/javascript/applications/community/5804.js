@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "thai",
 	"SellOnMarket_View": "ดูในตลาดชุมชน",
+	"SellOnMarket_ViewListing": "ดูรายการของฉัน",
 	"SellOnMarket_LowestPrice": "เริ่มต้นที่: %1$s",
 	"SellOnMarket_Volume": "จำนวน: %1$s รายการ ขายไปใน 24 ชั่วโมงล่าสุด",
 	"SellOnMarket_SellThisItem": "ขาย",

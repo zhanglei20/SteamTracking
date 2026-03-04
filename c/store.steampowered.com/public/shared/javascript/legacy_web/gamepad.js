@@ -820,7 +820,6 @@
       class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-        static s_Singleton = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
@@ -876,15 +875,21 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(..._) {
+          _ &&
+            _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
+            null == window.g_LogManager && (window.g_LogManager = new _()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -906,11 +911,19 @@
           this.SetDebugLogEnabled(_, !this.IsDebugLogEnabled(_));
         }
         async SetDebugLogEnabled(_, _) {
-          _
-            ? this.m_setEnabledDebugLogs.add(_)
-            : this.m_setEnabledDebugLogs.delete(_),
-            this.m_SettingsChangedCallback.Dispatch(),
-            await this.SaveSettings();
+          this.IsLogName(_)
+            ? (_
+                ? this.m_setEnabledDebugLogs.add(_)
+                : this.m_setEnabledDebugLogs.delete(_),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings())
+            : console.warn(
+                `No log named "${_}", available logs:`,
+                this.GetLogNames(),
+              );
+        }
+        async SetDebugLogsEnabled(_, ..._) {
+          _.forEach((_) => this.SetDebugLogEnabled(_, _));
         }
         async SetAllDebugLogsEnabled(_) {
           (this.m_setEnabledDebugLogs = _
@@ -929,6 +942,9 @@
           (this.m_bIncludeBacktraceInLog = _),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
         }
       }
       function _(_, _, _, _, _, ..._) {
@@ -995,28 +1011,17 @@
                 : console.error(..._);
           }
       }
-      const _ = () => [..._.Get().LogNames].sort(),
-        _ = (_, _) => {
-          _.Get().IsLogName(_)
-            ? _.Get().SetDebugLogEnabled(_, _)
-            : console.warn(`No log named "${_}", available logs:`, _());
-        };
-      (window.DebugLogEnable = (..._) => _.forEach((_) => _(_, !0))),
-        (window.DebugLogDisable = (..._) => _.forEach((_) => _(_, !1))),
+      (window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._)),
+        (window.DebugLogDisable = (..._) =>
+          _.Get().SetDebugLogsEnabled(!1, ..._)),
         (window.DebugLogEnableAll = () => _.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => _.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = _),
-        (window.DebugLogEnabled = (..._) => {
-          _.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            _.Get().PrintEnabledLogs();
-        }),
+        (window.DebugLogNames = () => _.Get().GetLogNames()),
+        (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
       const _ = {
@@ -2524,14 +2529,21 @@
                 _ = this.FindNextFocusableChildInDirection(_, _, _);
               }
             } else if (_ == _.PREFERRED_CHILD) {
-              for (const _ of this.m_rgChildren)
-                if (
-                  ((_ = _.BWantsPreferredFocus()
-                    ? _.FindFocusableNode(_)
-                    : void 0),
-                  _)
-                )
-                  return _;
+              let _ = this.m_rgChildren;
+              for (; _.length; ) {
+                let _ = [];
+                for (const _ of _) {
+                  if (
+                    ((_ = _.BWantsPreferredFocus()
+                      ? _.FindFocusableNode(_)
+                      : void 0),
+                    _)
+                  )
+                    return _;
+                  __webpack_require__.push(..._.m_rgChildren);
+                }
+                _ = _;
+              }
             } else
               _ == _.LAST &&
                 (_ = this.FindNextFocusableChildInDirection(

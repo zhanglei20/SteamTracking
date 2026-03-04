@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "schinese",
 	"SellOnMarket_View": "在社区市场中查看",
+	"SellOnMarket_ViewListing": "查看我的上架物品",
 	"SellOnMarket_LowestPrice": "起始价格：%1$s",
 	"SellOnMarket_Volume": "数量：在过去 24 小时内卖出了 %1$s 件",
 	"SellOnMarket_SellThisItem": "出售",

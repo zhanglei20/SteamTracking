@@ -36,6 +36,7 @@
         "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
         "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
         Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
       };
     },
     chunkid: (module) => {
@@ -183,6 +184,12 @@
         ItemDescription: "_2MixhMbHTxS0qJ2uAefnVy",
         GameImage: "_3LTPlbh1oIRZyLjujpw83H",
         GameImagePlaceholder: "_27u72fjp-gJgeD5k7NQ1Vf",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ListedItemIcon: "CsBvls5vHRsxv-ZseyEhc",
+        ListedItemLabel: "_2qj5isrN95ajQb8c2nAuMs",
       };
     },
     chunkid: (module) => {
@@ -923,67 +930,19 @@
       };
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { url: _, children: __webpack_require__ } = _;
-        return (0, _.jsx)(_, {
-          target: "_blank",
-          href: _.href,
-          underline: "auto",
-          contrast: "title",
-          children: __webpack_require__,
-        });
-      }
-      function _(_) {
-        const { url: _, children: __webpack_require__ } = _,
-          [_, _, _] = _.hash.slice(1).split("_"),
-          _ = _.pathname.slice(1).split("/");
-        if (!_ || !_ || !_ || _.length < 2)
-          return (0, _.jsx)(_, {
-            url: _,
-            children: __webpack_require__,
-          });
-        let _ = "",
-          _ = "";
-        return (
-          "id" == _[0]
-            ? ((_ = "id:" + _[1]), (_ = "o_url=" + _[1]))
-            : ((_ = _[1]), (_ = "o=" + _[1])),
-          (0, _.jsx)("div", {
-            children: (0, _.jsx)("a", {
-              href: _.href,
-              "data-economy-item": `${_}/${_}/${_}/${_}`,
-              children: (0, _.jsx)("img", {
-                src: `${_._.COMMUNITY_CDN_URL}economy/item/${_}/${_}/${_}?${_}`,
-                alt: "",
-              }),
-            }),
-          })
-        );
-      }
-      function _(_) {
         var _;
         let _ =
           null !== (_ = _(_.args)) && void 0 !== _ ? _ : _(_.args, "href");
-        if (!_ || !__webpack_require__.match(/^https?:\/\//)) return _.children;
-        (0, _._)(_) && (_ = (0, _._)(_));
-        const _ = URL.parse(_);
-        if (!_) return _.children;
-        let _ = _;
-        return (
-          (function (_) {
-            return (
-              _.hash &&
-              _.origin + "/" == _._.COMMUNITY_BASE_URL &&
-              (_.pathname.startsWith("/id/") ||
-                _.pathname.startsWith("/profiles/")) &&
-              (_.pathname.endsWith("/inventory") ||
-                _.pathname.endsWith("/inventory/"))
-            );
-          })(_) && (_ = _),
-          (0, _.jsx)(_, {
-            url: _,
-            children: _.children,
-          })
-        );
+        return _ && __webpack_require__.match(/^https?:\/\//)
+          ? ((0, _._)(_) && (_ = (0, _._)(_)),
+            (0, _.jsx)(_, {
+              target: "_blank",
+              href: _,
+              underline: "auto",
+              contrast: "title",
+              children: _.children,
+            }))
+          : _.children;
       }
       const _ = {
         list: {
@@ -1409,6 +1368,7 @@
             hashName: _,
             bCanInteract: _,
             bItemSealed: _,
+            ulAssetID: _,
           } = _,
           { data: _, isLoading: _ } =
             ((_ = _),
@@ -1439,29 +1399,39 @@
           (null == _ ? void 0 : _.lowest_price) ||
           (null == _ ? void 0 : _.volume) ||
           _
-          ? (0, _.jsxs)(_._, {
-              background: "greyneutral-3",
-              padding: "4",
-              gapY: "3",
-              direction: "column",
-              children: [
-                _ &&
-                  (0, _.jsx)(_._, {
-                    _: "div",
-                    children: (0, _.jsx)(_, {
-                      underline: "auto",
-                      color: "greyneutral-12",
+          ? _
+            ? (0, _.jsx)(_._, {
+                background: "greyneutral-3",
+                padding: "4",
+                gapY: "3",
+                direction: "column",
+                children: (0, _.jsx)(_._, {
+                  color: "dull",
+                  href: `${_._.COMMUNITY_BASE_URL}market/listings/${__webpack_require__}/${encodeURIComponent(_)}?sellorderassetid=${_}`,
+                  size: "1",
+                  children: _("#SellOnMarket_ViewListing"),
+                }),
+              })
+            : (0, _.jsxs)(_._, {
+                background: "greyneutral-3",
+                padding: "4",
+                gapY: "3",
+                direction: "column",
+                children: [
+                  (0, _.jsx)(_, {
+                    isLoading: _,
+                    priceOverview: _,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      size: "1",
+                      color: "dull",
                       href: `${_._.COMMUNITY_BASE_URL}market/listings/${__webpack_require__}/${encodeURIComponent(_)}`,
                       children: _("#SellOnMarket_View"),
                     }),
-                  }),
-                (0, _.jsx)(_, {
-                  isLoading: _,
-                  priceOverview: _,
-                }),
-                _ && !_ && (0, _.jsx)(_, {}),
-              ],
-            })
+                  _ && !_ && (0, _.jsx)(_, {}),
+                ],
+              })
           : null;
       }
       function _(_) {
@@ -1533,6 +1503,24 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _.jsxs)(_._, {
+          position: "relative",
+          title: _("#ItemDescription_ListedItemTooltip"),
+          children: [
+            (0, _.jsx)(_._, {
+              className: _.ListedItemLabel,
+              children: _("#ItemDescription_ListedItem"),
+            }),
+            (0, _.jsx)(_._, {
+              className: _.ListedItemIcon,
+              alt: _("#ItemDescription_ListedItem"),
+              src: `${_._.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
+            }),
+          ],
+        });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1600,6 +1588,17 @@
                 alt: _.name,
               }),
               !!_.sealed &&
+                1 != _.sealed_type &&
+                (0, _.jsx)(_._, {
+                  position: "absolute",
+                  style: {
+                    left: "0",
+                    bottom: "0",
+                  },
+                  children: (0, _.jsx)(_, {}),
+                }),
+              !!_.sealed &&
+                1 == _.sealed_type &&
                 (0, _.jsx)(_._, {
                   position: "absolute",
                   style: {
@@ -1815,6 +1814,7 @@
         },
         SellOnMarket: function () {
           const _ = _(),
+            _ = _(),
             _ = _(),
             _ = (function (_) {
               switch (null == _ ? void 0 : _.toUpperCase()) {
@@ -2104,7 +2104,8 @@
                   );
               }
             })(_._.country_code),
-            _ = !!_.sealed;
+            _ = _.assetid,
+            _ = !!_.sealed && 1 == _.sealed_type;
           if (!_.marketable && 1 != _.sealed_type) return null;
           const _ = _.market_hash_name || _.market_name || _.name;
           return _
@@ -2114,6 +2115,7 @@
                 hashName: _,
                 bCanInteract: _,
                 bItemSealed: _,
+                ulAssetID: _,
               })
             : null;
         },
@@ -2545,11 +2547,18 @@
             cssProperty: "--width",
             responsive: !0,
           },
+          {
+            prop: "minWidth",
+            className: _.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
         ],
         _ = function (_) {
           const {
               variant: _ = "default",
               size: __webpack_require__ = "2",
+              minWidth: _ = "fit-content",
               color: _,
               loading: _,
               children: _,
@@ -2573,6 +2582,7 @@
                 ..._,
                 variant: _,
                 size: __webpack_require__,
+                minWidth: _,
                 color: _,
                 className: _()(_.Button, _ && _.Icon),
                 onClick: _,
@@ -2586,6 +2596,7 @@
           const {
               variant: _ = "default",
               size: __webpack_require__ = "2",
+              minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
               ..._
@@ -2598,6 +2609,7 @@
                 ..._,
                 variant: _,
                 size: __webpack_require__,
+                minWidth: _,
                 className: _()(_.Button, _ && _.Icon, (0, _._)()),
               },
               _,
@@ -2920,7 +2932,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { level: _ = "auto", color: __webpack_require__ } = _,
+        const {
+            level: _ = "auto",
+            className: __webpack_require__,
+            color: _,
+          } = _,
           _ = (function (_, _) {
             if ("auto" === _ && 0 === _) return "h1";
             const _ = "auto" === _ ? _.toString() : _;
@@ -2940,7 +2956,7 @@
           ...(0, _._)(
             {
               ..._,
-              className: _()((0, _._)(), _.Heading),
+              className: _()((0, _._)(), _.Heading, __webpack_require__),
             },
             _,
           ),
@@ -3303,10 +3319,21 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       function _(_) {
+        return (0, _.jsx)(_, {
+          ..._,
+          viewBoxSize: 12,
+          children: (0, _.jsx)("path", {
+            _: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      function _(_) {
         const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
           {
             value: _,
             onTextChange: _,
+            clearable: _,
             onChange: _,
             radius: _,
             variant: _,
@@ -3315,6 +3342,7 @@
             afterContent: _,
             inputRef: _,
             ref: _,
+            disabled: _,
             ..._
           } = __webpack_require__,
           _ = {
@@ -3323,8 +3351,16 @@
             size: _,
             radius: _,
             beforeContent: _,
-            afterContent: _,
+            afterContent:
+              _ && _
+                ? (0, _.jsx)(_, {
+                    onClick: () => _(""),
+                    cursor: "pointer",
+                    hitSlop: !0,
+                  })
+                : _,
             ref: _,
+            disabled: _,
           };
         return (0, _.jsx)(_._, {
           cursor: "text",
@@ -3333,10 +3369,12 @@
             ref: _,
             type: "text",
             ..._,
+            "aria-disabled": _,
+            readOnly: _,
             className: _()((0, _._)(), _.TextEntry),
             value: _ || "",
             onChange: (_) => {
-              _(_.target.value), _ && _(_);
+              _ || (_(_.target.value), _ && _(_));
             },
           }),
         });
@@ -3577,16 +3615,6 @@
             children: _,
           });
         };
-      function _(_) {
-        return (0, _.jsx)(_, {
-          ..._,
-          viewBoxSize: 12,
-          children: (0, _.jsx)("path", {
-            _: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
-            fill: "currentColor",
-          }),
-        });
-      }
       function _(_) {
         const {
             onTextChange: _,
@@ -9057,11 +9085,6 @@
                 _.preventDefault());
             },
           }),
-          _ = _
-            ? (0, _.jsx)(_, {
-                onClick: () => _.onTextChange(""),
-              })
-            : void 0,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           _ = _ || !_,
@@ -9112,12 +9135,12 @@
               value: _,
               placeholder: _,
               ..._,
-              afterContent: _,
               title: _.Localize("#AdvancedSearch_TextSearch_Tooltip"),
               beforeContent: _,
               ref: _,
               onFocus: () => _(!0),
               onBlur: () => _(!1),
+              clearable: !0,
             }),
             (0, _.jsx)(_.Suggestions, {
               children: _.map((_, _) =>

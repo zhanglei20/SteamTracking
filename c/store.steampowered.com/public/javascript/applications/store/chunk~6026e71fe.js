@@ -6212,21 +6212,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, closeModal: __webpack_require__ } = _;
         return (0, _.jsx)(_._, {
-          navID: "SinglePartnerEventRoot",
+          initialEvent: _,
+          bShowOnlyInitialEvent: !0,
+          partnerEventStore: _._,
+          emoticonStore: _._,
+          showAppHeader: !0,
           closeModal: __webpack_require__,
-          children: (0, _.jsx)(_._, {
-            initialEvent: _,
-            bShowOnlyInitialEvent: !0,
-            partnerEventStore: _._,
-            emoticonStore: _._,
-            showAppHeader: !0,
-            closeModal: __webpack_require__,
-          }),
         });
       }
       function _(_, _) {
@@ -6649,6 +6644,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

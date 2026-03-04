@@ -1,10 +1,4 @@
 
-function ImportAndSaveSurvey( appid )
-{
-	$J( "#bImportRatingsQuestionnaire" ).val( 1 );
-	SaveSurvey( appid );
-}
-
 var gValidURL = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
 
 function RequireTextAnswer( $checkbox, $textElem )

@@ -9336,8 +9336,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -9350,13 +9348,6 @@
             __webpack_require__,
             _,
           );
-        if (void 0 === _ || !_)
-          return (0, _.jsx)(_._, {
-            size: "small",
-            position: "center",
-            string: (0, _._)("#Loading"),
-          });
-        if (null == _) return null;
         if (
           "library" === __webpack_require__ ||
           "vertical" == __webpack_require__
@@ -9367,7 +9358,6 @@
           });
         let _,
           _,
-          _ = (0, _._)(_, "header" === __webpack_require__),
           _ = "";
         if ("main" === __webpack_require__)
           (_ = _().mainCapsuleImgWidth),
@@ -9377,6 +9367,12 @@
           (_ = _().headerCapsuleImgWidth),
             (_ = _().headerCapsuleImgHeight),
             (_ = _().HeaderCapsuleImageContainer);
+        if (void 0 === _ || !_)
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_, "CapsuleImageCtn"),
+          });
+        if (null == _) return null;
+        let _ = (0, _._)(_, "header" === __webpack_require__);
         return (0, _.jsx)("div", {
           className: (0, _._)(_, "CapsuleImageCtn"),
           children: (0, _.jsx)(_._, {
@@ -9947,7 +9943,7 @@
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(
             () =>
-              (function (_, _, _, _, _) {
+              (function (_, _, _, _, _, _) {
                 const _ = [];
                 _ && _.push(_(_)),
                   _ && _.length > 0 && _.push(..._(_, _.name, _, _));
@@ -9962,8 +9958,8 @@
                     ),
                   _
                 );
-              })(__webpack_require__, _, _, _, _),
-            [__webpack_require__, _, _, _, _],
+              })(__webpack_require__, _, _, _, _, _),
+            [__webpack_require__, _, _, _, _, _],
           );
         return (0, _.jsx)(_, {
           rgTrailerAndImages: _,
@@ -10039,6 +10035,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10205,11 +10202,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -10400,46 +10393,50 @@
       }
       function _(_) {
         const {
-          _: _,
-          displayID: __webpack_require__,
-          strStoreUrl: _,
-          bHideBottomHalf: _,
-          bShowDeckCompatibilityDialog: _,
-          bShowWishlistButton: _ = !0,
-          bShowIgnoreButton: _ = !1,
-        } = _;
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().GameHoverCapsuleCtn,
-            _().InGameHover,
-            _ && _().UseHidingBottomHalf,
-          ),
-          children: [
-            (0, _.jsxs)("a", {
-              href: _,
-              className: _().TrailerAnchorStoreLink,
+            _: _,
+            displayID: __webpack_require__,
+            strStoreUrl: _,
+            bHideBottomHalf: _,
+            bShowDeckCompatibilityDialog: _,
+            bShowWishlistButton: _ = !0,
+            bShowIgnoreButton: _ = !1,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return void 0 === _ && void 0 === _
+          ? null
+          : (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().GameHoverCapsuleCtn,
+                _().InGameHover,
+                _ && _().UseHidingBottomHalf,
+              ),
               children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    _: __webpack_require__,
-                    snr: _.strSNR,
-                  }),
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_, {
-                    _: __webpack_require__,
-                    snr: _.strSNR,
-                  }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    _: _,
-                  }),
+                (0, _.jsxs)("a", {
+                  href: _,
+                  className: _().TrailerAnchorStoreLink,
+                  children: [
+                    Boolean(_ && !_) &&
+                      (0, _.jsx)(_._, {
+                        _: __webpack_require__,
+                        snr: _.strSNR,
+                      }),
+                    Boolean(_ && !_) &&
+                      (0, _.jsx)(_, {
+                        _: __webpack_require__,
+                        snr: _.strSNR,
+                      }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        _: _,
+                      }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
               ],
-            }),
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-          ],
-        });
+            });
       }
       function _(_) {
         var _;
@@ -10464,9 +10461,7 @@
           } = _,
           { data: _ } = (0, _._)(__webpack_require__),
           _ = (0, _._)(),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)();
+          { strStoreURL: _, snr: _ } = (0, _._)(_, _);
         if ((!_ && !_) || _)
           return (0, _.jsx)(_.Fragment, {
             children: _,
@@ -10481,11 +10476,7 @@
           (_ = {
             appid: _.included_appids[0],
           });
-        const _ = "hiding" == _(),
-          _ =
-            _ || !_
-              ? void 0
-              : (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
+        const _ = _ || !_ ? void 0 : _,
           _ = {
             _: __webpack_require__,
             displayID: _,
@@ -10495,7 +10486,7 @@
             elElementToAppend: _,
             bShowDemoButton: _,
             bShowDeckCompatibilityDialog: _,
-            bHideBottomHalf: _,
+            bHideBottomHalf: "hiding" == _(),
             bHidePrice: _,
             bUseSubscriptionLayout: _,
             strSNR: _,
@@ -14449,6 +14440,98 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          rgTagIDs: _,
+          bShowEvenIfNoTags: __webpack_require__,
+          bHideTitle: _,
+          bLargeText: _,
+          bNoStoreLinks: _,
+        } = _;
+        return (null == _ ? void 0 : _.length) > 0 || __webpack_require__
+          ? (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().SaleTagBlockCtn,
+                _ ? _().LargeText : "",
+                "SaleTagBlockCtn",
+              ),
+              children: [
+                Boolean(!_) &&
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(_().TagTitle, "WidgetTagTitle"),
+                    children: (0, _._)("#GameHover_Tags"),
+                  }),
+                Boolean((null == _ ? void 0 : _.length) > 0)
+                  ? (0, _.jsx)("div", {
+                      className: (0, _._)(_().TagBox, "TagBox"),
+                      children: _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            tagid: _,
+                            bNoStoreLinks: _,
+                          },
+                          _,
+                        ),
+                      ),
+                    })
+                  : (0, _.jsx)("div", {
+                      children: (0, _._)("#Broadcast_None"),
+                    }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { tagid: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_, _._.LANGUAGE);
+        if (!_) return null;
+        const _ = (0, _._)((0, _._)(_._.LANGUAGE)),
+          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
+        return (0, _.jsx)(_._, {
+          url: _,
+          className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
+            tagid: _,
+            className: __webpack_require__,
+            bNoStoreLinks: _,
+          } = _,
+          _ = (0, _._)((0, _._)(_._.LANGUAGE)),
+          _ = (0, _._)(_, _._.LANGUAGE),
+          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
+        return _
+          ? _
+            ? (0, _.jsx)("div", {
+                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+                children: _,
+              })
+            : (0, _.jsx)(_._, {
+                url: _,
+                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+                children: _,
+              })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -14529,6 +14612,26 @@
         return {
           storeItemAsset: (null == _ ? void 0 : _.visible) ? _ : _,
           storeItemDefaultInfo: _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)((0, _._)(_, _));
+        return {
+          snr: (0, _._)(_),
+          strStoreURL: (0, _._)(_, _, _),
         };
       }
     },
@@ -15361,7 +15464,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _() {
         (0, _._)();
         const _ = _._.accountid;
@@ -15791,7 +15895,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15809,12 +15912,6 @@
         include_screenshots: !0,
         include_supported_languages: !0,
       };
-      function _() {
-        return {
-          width: 231,
-          height: 87,
-        };
-      }
       class _ {
         constructor() {
           this.m_setAlreadyAdded = new Set();
@@ -38324,6 +38421,7 @@
             { bLoading: _, eventModel: __webpack_require__ } = this.state;
           if (_)
             return (0, _.jsx)(_._, {
+              active: !0,
               children: (0, _.jsx)("div", {
                 className: _().FlexCenter,
                 style: {
@@ -38355,28 +38453,25 @@
                   _,
                   "steam://nav/games/details/" + __webpack_require__.appid,
                 )));
-          const _ = (0, _.jsx)("div", {
-            children: (0, _.jsx)(_._, {
-              initialEvent: __webpack_require__,
-              appid: _,
-              clanSteamID: _,
-              partnerEventStore: _,
-              emoticonStore: _._,
-              closeModal: !_ && _,
-              showAppHeader: _,
-              bShowOnlyInitialEvent: _,
-              additionalParams: _,
-              eventClassName: _,
-              onAppIconClick: _,
-            }),
+          const _ = (0, _.jsx)(_._, {
+            initialEvent: __webpack_require__,
+            appid: _,
+            clanSteamID: _,
+            partnerEventStore: _,
+            emoticonStore: _._,
+            closeModal: !_ && _,
+            showAppHeader: _,
+            bShowOnlyInitialEvent: _,
+            additionalParams: _,
+            eventClassName: _,
+            onAppIconClick: _,
           });
           return _
             ? _
             : (0, _.jsx)(_._, {
-                className: _,
-                children: (0, _.jsx)(_._, {
-                  navID: "WebRowEventInfiniteScroll",
-                  closeModal: _,
+                active: !0,
+                children: (0, _.jsx)("div", {
+                  className: _,
                   children: _,
                 }),
               });
@@ -39576,7 +39671,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { bOn: _ } = _;
@@ -39660,12 +39754,7 @@
         return (0, _._)() && !_._.IN_STEAMUI
           ? (0, _.jsx)(_._, {
               className: _.GamepadOnlyScrollPanel,
-              children: (0, _.jsx)(_._, {
-                focusable: !0,
-                noFocusRing: !0,
-                className: _.GamepadOnlyPanel,
-                children: _,
-              }),
+              children: _,
             })
           : (0, _.jsx)(_.Fragment, {
               children: _,
@@ -40149,8 +40238,6 @@
           return _.g_Self || (_.g_Self = new _()), _.g_Self;
         }
       }
-      _.g_Self = null;
-      __webpack_require__("chunkid");
       function _(_) {
         var _;
         const { _: __webpack_require__, bPopOutTrailerPlayback: _ } = _,
@@ -40532,6 +40619,7 @@
           ],
         });
       }
+      _.g_Self = null;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -40539,6 +40627,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -40712,12 +40801,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -40751,7 +40835,6 @@
           _ = (0, _._)(_, _),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(),
-          _ = (0, _._)(),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -40772,7 +40855,7 @@
                 : _,
             [_, _, _],
           ),
-          _ = (0, _._)((0, _._)(_, _));
+          { strStoreURL: _, snr: _ } = (0, _._)(_, _);
         if (!_) return null;
         const _ =
             (null === (_ = _.included_appids) || void 0 === _
@@ -40791,13 +40874,11 @@
           _ =
             2 == _.item_type &&
             Boolean(null == _ ? void 0 : _.must_purchase_as_set),
-          _ = (0, _._)(_),
           _ = Boolean(!_ && _ > 1),
           _ = 1 == _.item_type && 1 == _,
           _ = 0 == _.item_type || _,
           _ = _ && _.appid,
-          _ = (0, _._)(_, _, _),
-          _ = ((0, _._)(), _.name || ""),
+          _ = _.name || "",
           _ = (0, _._)(_, _),
           _ = _ || !(null == _ ? void 0 : _.is_coming_soon) || _;
         return (0, _.jsxs)(_._, {
@@ -40825,8 +40906,9 @@
                 children: [
                   (0, _.jsx)("div", {
                     className: (0, _._)(_().StoreSaleWidgetHalfLeft),
-                    children: (0, _.jsx)(_._, {
-                      _: 0 == _.item_type ? _ : void 0,
+                    children: (0, _.jsx)(_, {
+                      _: _,
+                      strURL: _,
                       children: (0, _.jsxs)("div", {
                         className: _().StoreSaleWidgetImage,
                         children: [
@@ -40976,6 +41058,18 @@
               }),
           ],
         });
+      }
+      function _(_) {
+        const { _: _, strURL: __webpack_require__, children: _ } = _;
+        return "appid" in _
+          ? (0, _.jsxs)(_._, {
+              _: _,
+              children: [_, " "],
+            })
+          : (0, _.jsx)("a", {
+              href: __webpack_require__,
+              children: _,
+            });
       }
       function _(_) {
         const { _: _ } = _,
@@ -41634,6 +41728,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -41668,7 +41763,6 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -41732,7 +41826,7 @@
                     src: (0, _._)(_),
                     className: _().LinesImg,
                   }),
-                  (0, _._)("#Sale_InLibrary"),
+                  _._.Localize("#Sale_InLibrary"),
                 ],
               }),
             _ &&
@@ -41742,7 +41836,7 @@
                   (0, _.jsx)(_.qnF, {
                     className: _().LinesImg,
                   }),
-                  (0, _._)("#Sale_OnWishlist"),
+                  _._.Localize("#Sale_OnWishlist"),
                 ],
               }),
             _ &&
@@ -41783,7 +41877,7 @@
         return _
           ? (0, _.jsx)("span", {
               className: (0, _._)(_().Banner, _().EarlyAccessGradient),
-              children: (0, _._)("#Sale_EarlyAccess"),
+              children: _._.Localize("#Sale_EarlyAccess"),
             })
           : null;
       }
@@ -41942,98 +42036,6 @@
           },
           onOKActionDescription: _._.Localize("#Sale_Gamepad_Action_Select"),
         };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          rgTagIDs: _,
-          bShowEvenIfNoTags: __webpack_require__,
-          bHideTitle: _,
-          bLargeText: _,
-          bNoStoreLinks: _,
-        } = _;
-        return (null == _ ? void 0 : _.length) > 0 || __webpack_require__
-          ? (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().SaleTagBlockCtn,
-                _ ? _().LargeText : "",
-                "SaleTagBlockCtn",
-              ),
-              children: [
-                Boolean(!_) &&
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().TagTitle, "WidgetTagTitle"),
-                    children: (0, _._)("#GameHover_Tags"),
-                  }),
-                Boolean((null == _ ? void 0 : _.length) > 0)
-                  ? (0, _.jsx)("div", {
-                      className: (0, _._)(_().TagBox, "TagBox"),
-                      children: _.map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            tagid: _,
-                            bNoStoreLinks: _,
-                          },
-                          _,
-                        ),
-                      ),
-                    })
-                  : (0, _.jsx)("div", {
-                      children: (0, _._)("#Broadcast_None"),
-                    }),
-              ],
-            })
-          : null;
-      }
-      function _(_) {
-        const { tagid: _, className: __webpack_require__ } = _,
-          _ = (0, _._)(_, _._.LANGUAGE);
-        if (!_) return null;
-        const _ = (0, _._)((0, _._)(_._.LANGUAGE)),
-          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
-        return (0, _.jsx)(_._, {
-          url: _,
-          className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
-          children: _,
-        });
-      }
-      function _(_) {
-        const {
-            tagid: _,
-            className: __webpack_require__,
-            bNoStoreLinks: _,
-          } = _,
-          _ = (0, _._)((0, _._)(_._.LANGUAGE)),
-          _ = (0, _._)(_, _._.LANGUAGE),
-          _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
-        return _
-          ? _
-            ? (0, _.jsx)("div", {
-                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
-                children: _,
-              })
-            : (0, _.jsx)(_._, {
-                url: _,
-                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
-                children: _,
-              })
-          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

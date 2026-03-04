@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Mes ordres en cours",
 	"MyOrders_Heading_Sell": "Ordres de vente",
 	"MyOrders_Heading_Buy": "Ordres d'achat",
+	"MyOrders_Heading_MyPurchaseOffers": "Achats − Mes offres",
+	"MyOrders_Heading_MyListings": "Ventes − Mes offres",
 	"MyOrders_FailedToLoad": "Un problème est survenu lors du chargement des données pour cet item.",
 	"MyOrders_NoActiveOrders_Item": "Vous n'avez aucun ordre en cours pour cet item.",
 	"MyOrders_NoBuyOrders_Item": "Vous n'avez aucun ordre d'achat en cours pour cet item.",

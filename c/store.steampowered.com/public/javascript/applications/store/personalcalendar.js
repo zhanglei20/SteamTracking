@@ -135,12 +135,14 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
           {
             value: _,
             onTextChange: _,
+            clearable: _,
             onChange: _,
             radius: _,
             variant: _,
@@ -149,6 +151,7 @@
             afterContent: _,
             inputRef: _,
             ref: _,
+            disabled: _,
             ..._
           } = __webpack_require__,
           _ = {
@@ -157,8 +160,16 @@
             size: _,
             radius: _,
             beforeContent: _,
-            afterContent: _,
+            afterContent:
+              _ && _
+                ? (0, _.jsx)(_._, {
+                    onClick: () => _(""),
+                    cursor: "pointer",
+                    hitSlop: !0,
+                  })
+                : _,
             ref: _,
+            disabled: _,
           };
         return (0, _.jsx)(_._, {
           cursor: "text",
@@ -167,16 +178,17 @@
             ref: _,
             type: "text",
             ..._,
+            "aria-disabled": _,
+            readOnly: _,
             className: _()(_.Reset, _.TextEntry),
             value: _ || "",
             onChange: (_) => {
-              _(_.target.value), _ && _(_);
+              _ || (_(_.target.value), _ && _(_));
             },
           }),
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = Object.assign(
           function (_) {

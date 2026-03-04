@@ -1430,6 +1430,14 @@
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._1cd-wdIp5lIWsydAxII-vY:focus-within {
   background-color: var(--bg-color-focus, var(--color-debug));
 }
+:where(._2gL71Yq-HzVI9oOGyWu3jH)._2I6xXve3oCxh8fra7SWTnq {
+  opacity: 0.35;
+  cursor: default;
+}
+:where(._2gL71Yq-HzVI9oOGyWu3jH)._2I6xXve3oCxh8fra7SWTnq:focus-visible,
+:where(._2gL71Yq-HzVI9oOGyWu3jH)._2I6xXve3oCxh8fra7SWTnq:focus-within {
+  outline: 1px solid #fff;
+}
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2e1xlPghh48rkP13ydQOPb {
   min-height: var(--control-height-1);
   --font-size: var(--text-size-2);

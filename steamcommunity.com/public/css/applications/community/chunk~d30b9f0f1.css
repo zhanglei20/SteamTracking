@@ -5135,9 +5135,19 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   box-sizing: border-box;
   margin: 0 auto;
 }
-.wC3_c2yhq3ppKA9AKQoTy select {
+.wC3_c2yhq3ppKA9AKQoTy input,
+.wC3_c2yhq3ppKA9AKQoTy select,
+.wC3_c2yhq3ppKA9AKQoTy textarea {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
   font-size: 14px;
-  padding: 12px 10px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+  padding: 8px 10px;
 }
 .wC3_c2yhq3ppKA9AKQoTy.uHgjQHyNygSKukDngfNQO {
   max-width: unset;

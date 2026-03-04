@@ -14,6 +14,7 @@
         "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
         "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
         Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
       };
     },
     chunkid: (module) => {
@@ -361,171 +362,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _ = "span",
-            ref: __webpack_require__,
-            className: _,
-            ..._
-          } = _,
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: __webpack_require__,
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()(_.Text, _),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ...[
-          {
-            prop: "weight",
-            responsive: !0,
-            className: _.TextWeight,
-            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_, _.contrast ?? "body"),
-            ],
-          },
-          {
-            prop: "contrast",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_.color ?? "text-body", _),
-            ],
-          },
-          {
-            prop: "truncate",
-            className: _.Truncate,
-          },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: _.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: _.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`TextSize-${_}`],
-        },
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (_?.asset_url_format && _[_])
-          return (
-            _._.BASE_URL_SHARED_CDN +
-            "/store_item_assets/" +
-            _.asset_url_format.replace("${FILENAME}", _[_])
-          );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports),
-        __webpack_require__._(module_exports, {
-          default: () => _,
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _, _) {
-        return (0, _._)(
-          (function (_, _, _, _, _) {
-            return {
-              queryKey: ["gamemixer", _, _, _, _, _],
-              queryFn: async () => {
-                let _ = {
-                  appids: _.join(","),
-                  appweights: _.join(","),
-                  sessionid: _._.SESSIONID,
-                  selffactor: _,
-                  popularity: _ ? 0 : _,
-                  scoperange: _ ? 100 : 0,
-                  scopedecayrange: _ ? 1e3 : 0,
-                  scopedecaystrength: _ ? 20 : 0,
-                };
-                const _ = await _().get(
-                  `${_._.STORE_BASE_URL}gameexplorer/exploreapplist`,
-                  {
-                    params: _,
-                    withCredentials: !0,
-                    timeout: 1e4,
-                  },
-                );
-                if (_.data)
-                  return Object.entries(_.data)
-                    .map(([_, _]) => ({
-                      nAppID: Number(_),
-                      fDistance: Number(_),
-                    }))
-                    .filter((_) => _.fDistance > 0 && !_.includes(_.nAppID))
-                    .sort((_, _) => _.fDistance - _.fDistance);
-                throw "Failed FetchAppValues";
-              },
-              placeholderData: (_) => _,
-            };
-          })(_, _, _, _, _),
-        );
-      }
-      function _() {
-        return (0, _._)({
-          queryKey: ["gamemixerplayed"],
-          queryFn: async () => {
-            let _ = {
-              sessionid: _._.SESSIONID,
-            };
-            const _ = await _().get(
-              `${_._.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
-              {
-                params: _,
-                withCredentials: !0,
-                timeout: 1e4,
-              },
-            );
-            if (_.data) return _.data;
-            throw "Failed FetchAppValues";
-          },
-          placeholderData: (_) => _,
-        });
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -621,11 +458,18 @@
             cssProperty: "--width",
             responsive: !0,
           },
+          {
+            prop: "minWidth",
+            className: _.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
         ],
         _ = function (_) {
           const {
               variant: _ = "default",
               size: __webpack_require__ = "2",
+              minWidth: _ = "fit-content",
               color: _,
               loading: _,
               children: _,
@@ -649,6 +493,7 @@
                 ..._,
                 variant: _,
                 size: __webpack_require__,
+                minWidth: _,
                 color: _,
                 className: _()(_.Button, _ && _.Icon),
                 onClick: _,
@@ -658,7 +503,421 @@
             children: _,
           });
         };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _ = "span",
+            ref: __webpack_require__,
+            className: _,
+            ..._
+          } = _,
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: __webpack_require__,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ...[
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_, _.contrast ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_.color ?? "text-body", _),
+            ],
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`TextSize-${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+        include_release: !0,
+        include_platforms: !0,
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
+        include_supported_languages: !0,
+      };
+      class _ {
+        m_setAlreadyAdded = new Set();
+        Reset() {
+          this.m_setAlreadyAdded = new Set();
+        }
+        BHasAppID(_) {
+          return this.m_setAlreadyAdded.has("a" + _);
+        }
+        BHasPackageID(_) {
+          return this.m_setAlreadyAdded.has("s" + _);
+        }
+        BHasBundleID(_) {
+          return this.m_setAlreadyAdded.has("b" + _);
+        }
+        BHasStoreItemKey(_) {
+          return this.m_setAlreadyAdded.has(
+            this.ConvertStoreItemKeyToUniqueKey(_),
+          );
+        }
+        AddStoreItemKey(_) {
+          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(_));
+        }
+        ConvertStoreItemKeyToUniqueKey(_) {
+          switch (_.item_type) {
+            default:
+            case "app":
+              return "a" + _._;
+            case "sub":
+              return "s" + _._;
+            case "bundle":
+              return "b" + _._;
+          }
+        }
+      }
+      const _ = 4;
+      function _(_, _, _, _, _, _) {
+        const _ = new Array(),
+          _ = new Array(),
+          _ = new Array(),
+          _ = new Array();
+        if (!_ || 0 == _.length) return _;
+        const _ = [
+          _._.k_RejectSupportedLanguage,
+          _._.k_RejectAlreadyDisplayed,
+          _._.k_RejectNoTrailer,
+        ];
+        for (let _ of _) {
+          let _ = _._,
+            _ = _._.k_NotRejected;
+          switch (_.item_type) {
+            case "sub":
+              const _ = _._.Get().GetPackage(_);
+              if (1 !== _?.GetIncludedAppIDs()?.length) {
+                _ = _(_, _, _, !0);
+                break;
+              }
+              _ = _.GetIncludedAppIDs()[0];
+            case "app":
+              _ = _(_, _, _, _, !0);
+              break;
+            case "bundle":
+              _ = _(_, _, _, !0);
+          }
+          if (
+            (_ == _._.k_NotRejected
+              ? ((_.rejected = _._.k_NotRejected),
+                _.push({
+                  ..._,
+                  priority: 1,
+                }))
+              : _.includes(_)
+                ? ((_.rejected = _._.k_NotRejected), _.push(_))
+                : ((_.rejected = _),
+                  _ == _._.k_RejectIgnoredGame ? _.push(_) : _.push(_)),
+            _.length > _)
+          )
+            break;
+        }
+        return (
+          _.length < _ &&
+            (_(_, _, _, 2),
+            _.length < _ &&
+              _.enforce_minimum &&
+              (_(_, _, _, 3), _(_, _, _, _))),
+          _
+        );
+      }
+      function _(_, _, _, _) {
+        for (let _ = 0; _.length < _ && _ < _.length; ++_)
+          _.push({
+            ..._[_],
+            priority: _,
+          });
+      }
+      function _(_, _) {
+        const _ = _._.Get();
+        if (
+          _.only_current_platform &&
+          __webpack_require__.BHasPlatformPreferenceSet()
+        ) {
+          if (
+            !(
+              (_.GetPlatforms()?.windows &&
+                __webpack_require__.BIsPreferredPlatform("win")) ||
+              (_.GetPlatforms()?.mac &&
+                __webpack_require__.BIsPreferredPlatform("mac")) ||
+              (_.GetPlatforms()?.steamos_linux &&
+                __webpack_require__.BIsPreferredPlatform("linux"))
+            )
+          )
+            return _._.k_RejectWrongPlatform;
+        }
+        return !_.prepurchase && _.BIsComingSoon()
+          ? _._.k_RejectNoComingSoon
+          : !_.virtual_reality && _.GetPlatforms()?.vr_support.vrhmd_only
+            ? _._.k_RejectNoVR
+            : _.GetAllCreatorClanIDs()?.some((_) =>
+                  __webpack_require__.BIsIgnoringCurator(_),
+                )
+              ? _._.k_RejectCreatorClan
+              : _._.k_NotRejected;
+      }
+      function _(_, _) {
+        if (_.localized) {
+          const _ = (0, _._)(_._.LANGUAGE);
+          if (!_.GetAllLanguagesWithSomeSupport()?.includes(_))
+            return _._.k_RejectSupportedLanguage;
+        }
+        return _._.k_NotRejected;
+      }
+      function _(_, _, _, _, _) {
+        const _ = _._.Get().GetApp(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        if (_.BIsGameIgnored(_)) return _._.k_RejectIgnoredGame;
+        if (_.BExcludeTagIDs(_.GetTagIDs())) return _._.k_RejectIgnoreGameTags;
+        if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
+          return _._.k_RejectIgnoreContentDescriptors;
+        if (!_.early_access && _.BIsEarlyAccess())
+          return _._.k_RejectEarlyAccess;
+        const _ = _.GetAppType();
+        return _.software || 6 != _
+          ? _.games_already_in_library && _.BIsGameOwned(_)
+            ? _._.k_RejectInLibrary
+            : _.games_not_in_library && !_.BIsGameOwned(_)
+              ? _._.k_RejectNotInLibrary
+              : !_.video && [7, 8, 9].includes(_)
+                ? _._.k_RejectVideo
+                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
+                  ? _._.k_RejectNoDiscount
+                  : "adultonly" != _ &&
+                      _.no_ao_content &&
+                      (_.HasContentDescriptorID(3) ||
+                        _.HasContentDescriptorID(4))
+                    ? _._.k_RejectAO
+                    : 1 == _ &&
+                        _.games_already_in_library &&
+                        _.BIsGameOwned(_.GetParentAppID())
+                      ? _._.k_RejectInLibrary
+                      : _
+                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
+                          _.BHasAppID(_)
+                          ? _._.k_RejectAlreadyDisplayed
+                          : _.has_trailer && !_.BHasTrailers(!1)
+                            ? _._.k_RejectNoTrailer
+                            : _(_, _)
+                        : _._.k_NotRejected
+          : _._.k_RejectSoftware;
+      }
+      function _(_, _) {
+        const _ = _._.Get();
+        let _ = !1;
+        for (let _ of _) {
+          if (__webpack_require__.BIsGameIgnored(_))
+            return _._.k_RejectIgnoredGame;
+          __webpack_require__.BIsGameOwned(_) && (_ = !0);
+        }
+        return _.games_not_in_library && _
+          ? _._.k_RejectInLibrary
+          : _.games_not_in_library && !_
+            ? _._.k_RejectNotInLibrary
+            : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetPackage(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        return _.games_already_in_library && _.BOwnsPackage(_)
+          ? _._.k_RejectInLibrary
+          : _.BIsPackageIgnored(_)
+            ? _._.k_RejectIgnoredGame
+            : _
+              ? __webpack_require__.BHasPackageID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _(_, _)
+              : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetBundle(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        return _ != _._.k_NotRejected
+          ? _
+          : _
+            ? __webpack_require__.BHasBundleID(_)
+              ? _._.k_RejectAlreadyDisplayed
+              : _(_, _)
+            : _._.k_NotRejected;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_?.asset_url_format && _[_])
+          return (
+            _._.BASE_URL_SHARED_CDN +
+            "/store_item_assets/" +
+            _.asset_url_format.replace("${FILENAME}", _[_])
+          );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          default: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _, _) {
+        return (0, _._)(
+          (function (_, _, _, _, _) {
+            return {
+              queryKey: ["gamemixer", _, _, _, _, _],
+              queryFn: async () => {
+                let _ = {
+                  appids: _.join(","),
+                  appweights: _.join(","),
+                  sessionid: _._.SESSIONID,
+                  selffactor: _,
+                  popularity: _ ? 0 : _,
+                  scoperange: _ ? 100 : 0,
+                  scopedecayrange: _ ? 1e3 : 0,
+                  scopedecaystrength: _ ? 20 : 0,
+                };
+                const _ = await _().get(
+                  `${_._.STORE_BASE_URL}gameexplorer/exploreapplist`,
+                  {
+                    params: _,
+                    withCredentials: !0,
+                    timeout: 1e4,
+                  },
+                );
+                if (_.data)
+                  return Object.entries(_.data)
+                    .map(([_, _]) => ({
+                      nAppID: Number(_),
+                      fDistance: Number(_),
+                    }))
+                    .filter((_) => _.fDistance > 0 && !_.includes(_.nAppID))
+                    .sort((_, _) => _.fDistance - _.fDistance);
+                throw "Failed FetchAppValues";
+              },
+              placeholderData: (_) => _,
+            };
+          })(_, _, _, _, _),
+        );
+      }
+      function _() {
+        return (0, _._)({
+          queryKey: ["gamemixerplayed"],
+          queryFn: async () => {
+            let _ = {
+              sessionid: _._.SESSIONID,
+            };
+            const _ = await _().get(
+              `${_._.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
+              {
+                params: _,
+                withCredentials: !0,
+                timeout: 1e4,
+              },
+            );
+            if (_.data) return _.data;
+            throw "Failed FetchAppValues";
+          },
+          placeholderData: (_) => _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -947,7 +1206,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         const {
             onSelectionChange: __webpack_require__,
@@ -1335,7 +1595,7 @@
           children: [
             (0, _.jsx)("div", {
               className: _.RemoveButttonContainer,
-              children: (0, _.jsx)(_, {
+              children: (0, _.jsx)(_._, {
                 variant: "default",
                 size: "1",
                 color: "red",
@@ -1651,7 +1911,7 @@
                     `${(100 * _.fDistance).toFixed(2)}%`,
                     (0, _.jsx)("div", {
                       className: _.StartExplore,
-                      children: (0, _.jsx)(_, {
+                      children: (0, _.jsx)(_._, {
                         variant: "default",
                         size: "1",
                         color: "green",

@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "swedish",
 	"SellOnMarket_View": "Visa på gemenskapsmarknaden",
+	"SellOnMarket_ViewListing": "Visa min annons",
 	"SellOnMarket_LowestPrice": "Från %1$s",
 	"SellOnMarket_Volume": "Försäljningsvolym: %1$s sålda de senaste 24 timmarna",
 	"SellOnMarket_SellThisItem": "Sälj",

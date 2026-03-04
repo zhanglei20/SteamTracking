@@ -39,7 +39,7 @@
         (g.brazilian = () => r.e(8916).then(r.t.bind(r, 68916, 19))),
         (g.bulgarian = () => r.e(5603).then(r.t.bind(r, 25603, 19))),
         (g.czech = () => r.e(3697).then(r.t.bind(r, 3697, 19))),
-        (g.danish = () => r.e(5113).then(r.t.bind(r, 89875, 19))),
+        (g.danish = () => r.e(9875).then(r.t.bind(r, 89875, 19))),
         (g.dutch = () => r.e(8156).then(r.t.bind(r, 18156, 19))),
         (g.english = () => r.e(8314).then(r.t.bind(r, 98314, 19))),
         (g.finnish = () => r.e(8881).then(r.t.bind(r, 98881, 19))),

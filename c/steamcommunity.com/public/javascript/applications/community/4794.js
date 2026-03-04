@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Mijn actieve bestellingen",
 	"MyOrders_Heading_Sell": "Verkooporders",
 	"MyOrders_Heading_Buy": "Aankooporders",
+	"MyOrders_Heading_MyPurchaseOffers": "Kopen – Mijn bestellingen",
+	"MyOrders_Heading_MyListings": "Verkopen – Mijn vermeldingen",
 	"MyOrders_FailedToLoad": "Er is een probleem opgetreden bij het laden van de bestellingsgegevens van dit voorwerp.",
 	"MyOrders_NoActiveOrders_Item": "Er zijn geen actieve bestellingen voor dit voorwerp.",
 	"MyOrders_NoBuyOrders_Item": "Er zijn geen actieve aankooporders voor dit voorwerp.",

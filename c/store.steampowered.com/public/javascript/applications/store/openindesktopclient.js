@@ -256,6 +256,7 @@
         __webpack_require__._(module_exports, {
           OpenInDesktopClient: () => _,
           default: () => _,
+          useOpenWebInSteamClient: () => _,
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -267,61 +268,64 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
-          const [_, __webpack_require__] = _.useState(22);
-          _.useEffect(() => {
-            _._.IN_CLIENT ||
-              _._.IN_MOBILE ||
-              _._.IN_MOBILE_WEBVIEW ||
-              _._.BClientConnectedAndSupportsMessage("OpenSteamURL").then(
-                (_) => {
-                  __webpack_require__(_ ? 1 : 2);
-                },
-              );
-          }, []);
-          const _ = _.useCallback(() => {
-            let _ = `${(0, _._)()}//openurl/`;
-            const _ = (0, _._)("browserid");
-            if (_) {
-              const _ = new URL(window.location.href),
-                _ = new URLSearchParams(_.search);
-              _.set("utm_bid", _),
-                (_ += _.origin + _.pathname + "?" + _.toString() + _.hash);
-            } else _ += window.location.href;
-            1 == _ ? _._.OpenSteamURL(_) : (window.location.href = _);
-          }, [_]);
-          return (0, _.jsx)("div", {
-            className: _.OpenInBannerContainer,
-            children: (0, _.jsxs)("div", {
-              className: _.OpenInBannerContent,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.BannerButtonContainer,
-                  children: (0, _.jsx)("div", {
-                    onClick: _,
-                    className: _.BannerButton,
-                    children: (0, _._)("#OpenInDesktopAppBanner_OpenAppButton"),
-                  }),
+        const { fnOpenInSteamClient: _ } = _();
+        return (0, _.jsx)("div", {
+          className: _.OpenInBannerContainer,
+          children: (0, _.jsxs)("div", {
+            className: _.OpenInBannerContent,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.BannerButtonContainer,
+                children: (0, _.jsx)("div", {
+                  onClick: _,
+                  className: _.BannerButton,
+                  children: (0, _._)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
-                (0, _.jsx)("div", {
-                  className: _.BannerMessage,
-                  children: (0, _.jsxs)("div", {
-                    className: _.BannerTitle,
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: (0, _._)(
-                          "#OpenInDesktopAppBanner_NotSignedIn",
-                        ),
-                      }),
-                      (0, _.jsx)("br", {}),
-                      (0, _._)("#OpenInDesktopAppBanner_Body"),
-                    ],
-                  }),
+              }),
+              (0, _.jsx)("div", {
+                className: _.BannerMessage,
+                children: (0, _.jsxs)("div", {
+                  className: _.BannerTitle,
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: (0, _._)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _._)("#OpenInDesktopAppBanner_Body"),
+                  ],
                 }),
-              ],
-            }),
-          });
-        }),
-        _ = _;
+              }),
+            ],
+          }),
+        });
+      });
+      function _() {
+        const [_, _] = _.useState(22);
+        _.useEffect(() => {
+          _._.IN_CLIENT ||
+            _._.IN_MOBILE ||
+            _._.IN_MOBILE_WEBVIEW ||
+            _._.BClientConnectedAndSupportsMessage("OpenSteamURL").then((_) => {
+              _(_ ? 1 : 2);
+            });
+        }, []);
+        const _ = _.useCallback(() => {
+          let _ = `${(0, _._)()}//openurl/`;
+          const _ = (0, _._)("browserid");
+          if (_) {
+            const _ = new URL(window.location.href),
+              _ = new URLSearchParams(_.search);
+            _.set("utm_bid", _),
+              (_ += _.origin + _.pathname + "?" + _.toString() + _.hash);
+          } else _ += window.location.href;
+          1 == _ ? _._.OpenSteamURL(_) : (window.location.href = _);
+        }, [_]);
+        return {
+          eClientConnectedState: _,
+          fnOpenInSteamClient: _,
+        };
+      }
+      const _ = _;
     },
   },
 ]);

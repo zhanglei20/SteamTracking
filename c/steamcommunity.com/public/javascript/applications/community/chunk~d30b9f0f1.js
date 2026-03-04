@@ -935,6 +935,7 @@
           Category: (_, _) => `/${_()}/${_}/partnerevents/category/${_}`,
           Edit: (_, _) => `/${_()}/${_}/partnerevents/edit/${_}`,
           EditRedirectToCategory: (_) => `/${_()}/${_}/partnerevents/edit`,
+          Clone: (_, _) => `/${_()}/${_}/partnerevents/clone/${_}`,
           Preview: (_, _) => `/${_()}/${_}/partnerevents/preview/${_}`,
           PreviewSale: (_, _) => `/${_()}/${_}/partnerevents/previewsale/${_}`,
           View: (_, _) => `/${_()}/${_}/partnerevents/view/${_}`,
@@ -28202,17 +28203,17 @@
                 data: "discoveryqueue",
                 tooltip: (0, _._)("#Sale_DiscoveryQueue_ttip"),
               },
-              {
+              !_ && {
                 label: (0, _._)("#Sale_BroadcastPlayerSection"),
                 data: "broadcast",
                 tooltip: (0, _._)("#Sale_BroadcastPlayerSection_ttip"),
               },
-              {
+              !_ && {
                 label: (0, _._)("#Sale_SectionType_EventSchedule"),
                 data: "event_schedule",
                 tooltip: (0, _._)("#Sale_SectionType_EventSchedule_ttip"),
               },
-              {
+              !_ && {
                 label: (0, _._)("#Sale_Events"),
                 data: "events",
                 tooltip: (0, _._)("#Sale_Events_ttip"),
@@ -36024,21 +36025,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, closeModal: __webpack_require__ } = _;
         return (0, _.jsx)(_._, {
-          navID: "SinglePartnerEventRoot",
+          initialEvent: _,
+          bShowOnlyInitialEvent: !0,
+          partnerEventStore: _._,
+          emoticonStore: _._,
+          showAppHeader: !0,
           closeModal: __webpack_require__,
-          children: (0, _.jsx)(_._, {
-            initialEvent: _,
-            bShowOnlyInitialEvent: !0,
-            partnerEventStore: _._,
-            emoticonStore: _._,
-            showAppHeader: !0,
-            closeModal: __webpack_require__,
-          }),
         });
       }
       function _(_, _) {
@@ -41053,21 +41049,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -41251,14 +41240,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";
       function _(_) {
+        var _;
         const {
-            capsule: _,
-            bShowParentApp: __webpack_require__,
+            capsule: __webpack_require__,
+            bShowParentApp: _,
             elElementToAppendToHover: _,
             index: _,
             navKey: _,
@@ -41268,22 +41264,23 @@
             bShowEarlyAccessBanner: _,
           } = _,
           [_, _] = _.useState(!1),
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          [_] = (0, _._)(
-            __webpack_require__
-              ? null == _
+          _ = (0, _._)(__webpack_require__),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(
+            _
+              ? null === (_ = null == _ ? void 0 : _.related_items) ||
+                void 0 === _
                 ? void 0
-                : _.GetParentAppID()
+                : _.parent_appid
               : void 0,
-            _._,
           ),
-          _ = (0, _._)(_);
-        if (!_) return null;
-        const _ = Boolean(_),
+          { data: _ } = (0, _._)(_);
+        if (!_ || !_) return null;
+        const _ = !!_ && !!_,
           _ = (0, _.jsx)(_, {
             ..._,
             strExtraParams: _.strExtraParams,
-            info: _,
+            _: _,
             bIsHovered: _,
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
@@ -41298,7 +41295,7 @@
           navKey: _,
           children: [
             (0, _.jsxs)(_._, {
-              appid: _.GetAppID(),
+              appid: _.appid,
               children: [
                 Boolean(_)
                   ? (0, _.jsx)("div", {
@@ -41332,9 +41329,10 @@
             _ &&
               (0, _.jsx)(_, {
                 strExtraParams: _.strExtraParams,
-                parentStoreItem: _,
-                childAppType: _.GetAppType(),
-                bPreferDemoStorePage: _,
+                parentID: _,
+                parentStoreItemDefaultInfo: _,
+                childAppType: _.type,
+                bPreferDemoStorePage: Boolean(_),
               }),
           ],
         });
@@ -41342,20 +41340,20 @@
       function _(_) {
         const {
             strExtraParams: _,
-            parentStoreItem: __webpack_require__,
+            parentID: __webpack_require__,
+            parentStoreItemDefaultInfo: _,
             childAppType: _,
             bPreferDemoStorePage: _,
           } = _,
-          _ = (0, _._)(__webpack_require__),
-          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)(__webpack_require__);
         return _
           ? (0, _.jsx)(_._, {
               className: _().CapsuleParentInfo,
               ...(0, _._)(_, _, _, _, _),
               children: (0, _.jsxs)(_._, {
-                appid: __webpack_require__.GetAppID(),
+                appid: _.appid,
                 children: [
                   (0, _.jsx)("div", {
                     className: _().ParentType,
@@ -41366,14 +41364,15 @@
                     ),
                   }),
                   (0, _.jsx)(_._, {
-                    _: _,
+                    _: __webpack_require__,
                     strExtraParams: _,
                     children: (0, _.jsx)("img", {
                       loading: "lazy",
                       className: _.AppCapsuleImage,
-                      alt: __webpack_require__.GetName(),
-                      src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
-                      ...(0, _._)(),
+                      alt: _.name || "",
+                      src: (0, _._)(_, "small_capsule"),
+                      width: 231,
+                      height: 87,
                     }),
                   }),
                 ],
@@ -41383,7 +41382,7 @@
       }
       function _(_) {
         const {
-            info: _,
+            _: _,
             bHideStatusBanners: __webpack_require__,
             strExtraParams: _,
             index: _,
@@ -41395,21 +41394,16 @@
             bShowEarlyAccessBanner: _,
             bPreferAssetWithoutOverride: _,
           } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
           _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(_);
+          { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = (0, _._)(
-          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
+          (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
         );
         let _;
-        "overrideNavigation" in _ &&
-          (_ = (_) => (
-            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
-          ));
-        const _ = Boolean(_);
+        const _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -41451,28 +41445,10 @@
                   ],
                 }),
                 _ &&
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(
-                      _().TwoWidthSideInfo,
-                      "TwoWidthSideInfo",
-                    ),
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().Reason,
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().StoreSaleItemRelease,
-                        children: (0, _.jsx)("span", {
-                          children: _.GetFormattedSteamReleaseDate(),
-                        }),
-                      }),
-                      (0, _.jsx)(_._, {
-                        bHideTitle: !0,
-                        rgTagIDs: _.GetTagIDs(),
-                        instanceNum: _,
-                      }),
-                    ],
+                  (0, _.jsx)(_, {
+                    _: _,
+                    strDoubleCapsuleMessage: _,
+                    index: _,
                   }),
               ],
             }),
@@ -41484,7 +41460,36 @@
       }
       function _(_) {
         const {
-            info: _,
+            _: _,
+            strDoubleCapsuleMessage: __webpack_require__,
+            index: _,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().TwoWidthSideInfo, "TwoWidthSideInfo"),
+          children: [
+            (0, _.jsx)("div", {
+              className: _().Reason,
+              children: __webpack_require__,
+            }),
+            (0, _.jsx)("div", {
+              className: _().StoreSaleItemRelease,
+              children: (0, _.jsx)("span", {
+                children: _ ? (0, _._)(_) : "",
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              bHideTitle: !0,
+              rgTagIDs: (null == _ ? void 0 : _.map((_) => _.tagid)) || [],
+              instanceNum: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
             bHidePriceIfOwned: __webpack_require__,
             bHideStatusBanners: _,
             bUseSubscriptionLayout: _,
@@ -41496,7 +41501,6 @@
             onlyOneDiscountPct: _,
             strDoubleCapsuleMessage: _,
           } = _,
-          _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { bIsOwned: _ } = (0, _._)(_),
           _ = _ && !_;

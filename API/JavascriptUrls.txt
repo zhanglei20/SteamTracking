@@ -227,6 +227,7 @@ ${COMMUNITY_BASE_URL}gid/${}/members/
 ${COMMUNITY_BASE_URL}gid/${}/membersManage
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/${}/edit
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/clone/${GID}?redir=${href}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/create?type=creatorhome
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/$clanEventGID}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale
@@ -260,6 +261,7 @@ ${COMMUNITY_BASE_URL}market/${}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}market/appaccessories/${}
 ${COMMUNITY_BASE_URL}market/appfilters/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
+${COMMUNITY_BASE_URL}market/listings/${}/${}?sellorderassetid=${}
 ${COMMUNITY_BASE_URL}market/priceoverview/?${}
 ${COMMUNITY_BASE_URL}market/search?appid=${_ ? _ : 0}
 ${COMMUNITY_BASE_URL}market/steamitemfiltersicon/${}
@@ -386,12 +388,12 @@ ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/image/${icon_url}
 ${COMMUNITY_CDN_URL}economy/image/${}/330x192
-${COMMUNITY_CDN_URL}economy/item/${}/${}/${}?${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}
 ${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
+${COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png
 ${COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png
 ${COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png
 ${COMMUNITY_CDN_URL}public/images/sharedfiles/guides/
@@ -1020,6 +1022,7 @@ ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}meetsteam
+${PARTNER_BASE_URL}meetsteam/admin/ajaxgetregistrations
 ${PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails
 ${PARTNER_BASE_URL}meetsteam/ajaxregisterinterest
 ${PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${}
@@ -1345,7 +1348,6 @@ ${STORE_BASE_URL}curator/${creator_clan_id}/
 ${STORE_BASE_URL}curator/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxcheckfornews
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxmanagerssfeed
-${STORE_BASE_URL}curator/${}
 ${STORE_BASE_URL}curator/${}/
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetlistdetails
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetrecbyapps
@@ -1952,7 +1954,7 @@ ${profileUrl}/ajaxlevelup/
 ${profileUrl}/ajaxsetnickname/
 ${profile_url}games/?tab=all
 ${profile_url}recommended
-${profile_url}recommended/${appid}
+${profile_url}recommended/${}
 ${rateURL}${gid}
 ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
 ${short_url}/${invite_token}
@@ -2214,6 +2216,7 @@ https://community.fastly.steamstatic.com/economy/image/${}${strSize}?allow_anima
 https://community.fastly.steamstatic.com/economy/image/${}/96fx96f
 https://community.fastly.steamstatic.com/economy/profilebackground/${strBackgroundImage}?size=${strSize}&v=2
 https://community.fastly.steamstatic.com/public/images/${newImg}
+https://community.fastly.steamstatic.com/public/images//economy/gift_default_header.jpg
 https://community.fastly.steamstatic.com/public/images//sharedfiles/icons/icon_delete.png
 https://community.fastly.steamstatic.com/public/images/economy/applogos/99900.png
 https://community.fastly.steamstatic.com/public/images/economy/blank_gameicon.gif

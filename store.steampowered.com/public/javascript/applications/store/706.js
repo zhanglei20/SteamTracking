@@ -767,69 +767,38 @@
         PerMinute: 60,
       };
     },
-    88680: (e, t, n) => {
+    84547: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => p });
+      n.d(t, { E: () => d, l: () => u });
       var r = n(7850),
         i = n(78395),
-        o = n(42475);
-      const a = {};
-      (a.arabic = () => n.e(3695).then(n.t.bind(n, 93695, 19))),
-        (a.brazilian = () => n.e(1091).then(n.t.bind(n, 41091, 19))),
-        (a.bulgarian = () => n.e(9180).then(n.t.bind(n, 89180, 19))),
-        (a.czech = () => n.e(1514).then(n.t.bind(n, 21514, 19))),
-        (a.danish = () => n.e(5598).then(n.t.bind(n, 45598, 19))),
-        (a.dutch = () => n.e(5971).then(n.t.bind(n, 55971, 19))),
-        (a.english = () => n.e(7217).then(n.t.bind(n, 67217, 19))),
-        (a.finnish = () => n.e(7686).then(n.t.bind(n, 27686, 19))),
-        (a.french = () => n.e(7623).then(n.t.bind(n, 7623, 19))),
-        (a.german = () => n.e(7757).then(n.t.bind(n, 97757, 19))),
-        (a.greek = () => n.e(6345).then(n.t.bind(n, 46345, 19))),
-        (a.hungarian = () => n.e(5600).then(n.t.bind(n, 5600, 19))),
-        (a.indonesian = () => n.e(1163).then(n.t.bind(n, 51163, 19))),
-        (a.italian = () => n.e(1913).then(n.t.bind(n, 71913, 19))),
-        (a.japanese = () => n.e(9872).then(n.t.bind(n, 79872, 19))),
-        (a.koreana = () => n.e(2322).then(n.t.bind(n, 12322, 19))),
-        (a.latam = () => n.e(4954).then(n.t.bind(n, 94954, 19))),
-        (a.norwegian = () => n.e(8341).then(n.t.bind(n, 48341, 19))),
-        (a.polish = () => n.e(7890).then(n.t.bind(n, 97890, 19))),
-        (a.portuguese = () => n.e(1810).then(n.t.bind(n, 21810, 19))),
-        (a.romanian = () => n.e(5500).then(n.t.bind(n, 75500, 19))),
-        (a.russian = () => n.e(2268).then(n.t.bind(n, 72268, 19))),
-        (a.schinese = () => n.e(5951).then(n.t.bind(n, 85951, 19))),
-        (a.spanish = () => n.e(8265).then(n.t.bind(n, 28265, 19))),
-        (a.swedish = () => n.e(2248).then(n.t.bind(n, 82248, 19))),
-        (a.tchinese = () => n.e(2020).then(n.t.bind(n, 62020, 19))),
-        (a.thai = () => n.e(7841).then(n.t.bind(n, 67841, 19))),
-        (a.turkish = () => n.e(4921).then(n.t.bind(n, 94921, 19))),
-        (a.ukrainian = () => n.e(1667).then(n.t.bind(n, 11667, 19))),
-        (a.vietnamese = () => n.e(4528).then(n.t.bind(n, 74528, 19)));
-      const s = (0, o.l)(async function (e) {
-        if (a[e]) return a[e]();
-      });
-      var l = n(8527),
-        c = n(64753),
-        d = n(21869);
-      function u(e) {
+        o = n(62151),
+        a = n(8527),
+        s = n(64753),
+        l = n(21869);
+      function c(e) {
         const { closeModal: t } = e;
         return (0, r.jsx)(i.o0, {
-          strTitle: s.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: s.Localize("#LoginRedirect_Dialog_Description"),
+          strTitle: o.F5.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: o.F5.Localize("#LoginRedirect_Dialog_Description"),
           closeModal: t,
           onOK: () => {
-            window.location.href = `${l.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+            u();
           },
         });
       }
-      function p() {
-        const [e, t, n] = (0, c.uD)();
+      function d() {
+        const [e, t, n] = (0, s.uD)();
         return {
-          elDialogElement: (0, r.jsx)(d.E, {
+          elDialogElement: (0, r.jsx)(l.E, {
             active: e,
-            children: (0, r.jsx)(u, { closeModal: n }),
+            children: (0, r.jsx)(c, { closeModal: n }),
           }),
           fnShowLogonDialog: t,
         };
+      }
+      function u() {
+        window.location.href = `${a.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
       }
     },
     706: (e, t, n) => {
@@ -851,7 +820,7 @@
         h = n(78327),
         g = n(39722),
         f = n.n(g),
-        w = n(88680),
+        w = n(84547),
         v = n(76217),
         x = n(42024),
         b = n(99838),
@@ -862,7 +831,7 @@
         const { id: t, snr: n, classOverride: i } = e,
           [o, a] = (0, d.useState)(!1),
           s = (0, m.m)("GameHoverIgnoreButton"),
-          { elDialogElement: l, fnShowLogonDialog: c } = (0, w.l)(),
+          { elDialogElement: l, fnShowLogonDialog: c } = (0, w.E)(),
           g = t && "appid" in t ? t.appid : void 0,
           L = (0, x.BD)(g),
           { mutateAsync: B } = (function (e, t, n, r = 0) {
@@ -1294,7 +1263,7 @@
         fe = n(18654),
         we = n.n(fe),
         ve = n(72237),
-        xe = n(99956);
+        xe = n(90421);
       function be(e) {
         const { id: t } = e,
           { data: n } = (0, R.xz)(t);
@@ -1788,7 +1757,7 @@
       n.d(t, { E: () => w });
       var r = n(7850),
         i = n(76217),
-        o = n(88680),
+        o = n(84547),
         a = n(39777),
         s = n(58918),
         l = n(17376),
@@ -1805,7 +1774,7 @@
       function w(e) {
         const { id: t, snr: n, classOverride: g, styleOverride: w } = e,
           { data: v } = (0, a.J$)(t),
-          { elDialogElement: x, fnShowLogonDialog: b } = (0, o.l)(),
+          { elDialogElement: x, fnShowLogonDialog: b } = (0, o.E)(),
           [S, y] = (0, d.useState)(() =>
             v && (1 == v.type || 12 == v.type) && v.related_items?.parent_appid
               ? v.related_items?.parent_appid
@@ -1857,6 +1826,45 @@
               ],
             });
       }
+    },
+    62151: (e, t, n) => {
+      "use strict";
+      n.d(t, { F5: () => o });
+      var r = n(42475);
+      const i = {};
+      (i.arabic = () => n.e(3695).then(n.t.bind(n, 93695, 19))),
+        (i.brazilian = () => n.e(1091).then(n.t.bind(n, 41091, 19))),
+        (i.bulgarian = () => n.e(9180).then(n.t.bind(n, 89180, 19))),
+        (i.czech = () => n.e(1514).then(n.t.bind(n, 21514, 19))),
+        (i.danish = () => n.e(3217).then(n.t.bind(n, 45598, 19))),
+        (i.dutch = () => n.e(5971).then(n.t.bind(n, 55971, 19))),
+        (i.english = () => n.e(7217).then(n.t.bind(n, 67217, 19))),
+        (i.finnish = () => n.e(7686).then(n.t.bind(n, 27686, 19))),
+        (i.french = () => n.e(7623).then(n.t.bind(n, 7623, 19))),
+        (i.german = () => n.e(7757).then(n.t.bind(n, 97757, 19))),
+        (i.greek = () => n.e(6345).then(n.t.bind(n, 46345, 19))),
+        (i.hungarian = () => n.e(5600).then(n.t.bind(n, 5600, 19))),
+        (i.indonesian = () => n.e(1163).then(n.t.bind(n, 51163, 19))),
+        (i.italian = () => n.e(1913).then(n.t.bind(n, 71913, 19))),
+        (i.japanese = () => n.e(9872).then(n.t.bind(n, 79872, 19))),
+        (i.koreana = () => n.e(2322).then(n.t.bind(n, 12322, 19))),
+        (i.latam = () => n.e(4954).then(n.t.bind(n, 94954, 19))),
+        (i.norwegian = () => n.e(8341).then(n.t.bind(n, 48341, 19))),
+        (i.polish = () => n.e(7890).then(n.t.bind(n, 97890, 19))),
+        (i.portuguese = () => n.e(1810).then(n.t.bind(n, 21810, 19))),
+        (i.romanian = () => n.e(5500).then(n.t.bind(n, 75500, 19))),
+        (i.russian = () => n.e(2268).then(n.t.bind(n, 72268, 19))),
+        (i.schinese = () => n.e(5951).then(n.t.bind(n, 85951, 19))),
+        (i.spanish = () => n.e(8265).then(n.t.bind(n, 28265, 19))),
+        (i.swedish = () => n.e(2248).then(n.t.bind(n, 82248, 19))),
+        (i.tchinese = () => n.e(2020).then(n.t.bind(n, 62020, 19))),
+        (i.thai = () => n.e(7841).then(n.t.bind(n, 67841, 19))),
+        (i.turkish = () => n.e(4921).then(n.t.bind(n, 94921, 19))),
+        (i.ukrainian = () => n.e(1667).then(n.t.bind(n, 11667, 19))),
+        (i.vietnamese = () => n.e(4528).then(n.t.bind(n, 74528, 19)));
+      const o = (0, r.l)(async function (e) {
+        if (i[e]) return i[e]();
+      });
     },
     40807: (e, t, n) => {
       "use strict";
@@ -2423,6 +2431,84 @@
             ],
           })
         );
+      }
+    },
+    90421: (e, t, n) => {
+      "use strict";
+      n.d(t, { n: () => p, p: () => m });
+      var r = n(7850),
+        i = n(22837),
+        o = n(39020),
+        a = n(18654),
+        s = n.n(a),
+        l = n(90595),
+        c = n(52038),
+        d = n(61859),
+        u = n(78327);
+      function p(e) {
+        const {
+          rgTagIDs: t,
+          bShowEvenIfNoTags: n,
+          bHideTitle: i,
+          bLargeText: o,
+          bNoStoreLinks: a,
+        } = e;
+        return t?.length > 0 || n
+          ? (0, r.jsxs)("div", {
+              className: (0, c.A)(
+                s().SaleTagBlockCtn,
+                o ? s().LargeText : "",
+                "SaleTagBlockCtn",
+              ),
+              children: [
+                Boolean(!i) &&
+                  (0, r.jsx)("div", {
+                    className: (0, c.A)(s().TagTitle, "WidgetTagTitle"),
+                    children: (0, d.we)("#GameHover_Tags"),
+                  }),
+                Boolean(t?.length > 0)
+                  ? (0, r.jsx)("div", {
+                      className: (0, c.A)(s().TagBox, "TagBox"),
+                      children: t.map((e) =>
+                        (0, r.jsx)(C, { tagid: e, bNoStoreLinks: a }, e),
+                      ),
+                    })
+                  : (0, r.jsx)("div", {
+                      children: (0, d.we)("#Broadcast_None"),
+                    }),
+              ],
+            })
+          : null;
+      }
+      function m(e) {
+        const { tagid: t, className: n } = e,
+          a = (0, o.MB)(t, u.TS.LANGUAGE);
+        if (!a) return null;
+        const d = (0, i.ww)((0, i.sf)(u.TS.LANGUAGE)),
+          p = `${u.TS.STORE_BASE_URL}tags/${d}/${a}`;
+        return (0, r.jsx)(l.q, {
+          url: p,
+          className: (0, c.A)(s().Tag, "WidgetTag", n),
+          children: a,
+        });
+      }
+      function C(e) {
+        const { tagid: t, className: n, bNoStoreLinks: a } = e,
+          d = (0, i.ww)((0, i.sf)(u.TS.LANGUAGE)),
+          p = (0, o.MB)(t, u.TS.LANGUAGE),
+          m = `${u.TS.STORE_BASE_URL}tags/${d}/${p}`;
+        return p
+          ? a
+            ? (0, r.jsx)("div", {
+                className: (0, c.A)(s().Tag, "WidgetTag", n),
+                children: p,
+              })
+            : (0, r.jsx)(l.q, {
+                url: m,
+                className: (0, c.A)(s().Tag, "WidgetTag", n),
+                children: p,
+              })
+          : null;
       }
     },
     12424: (e, t, n) => {
@@ -4302,7 +4388,7 @@
         o = n(45699),
         a = n(64753),
         s = n(8527),
-        l = n(88680),
+        l = n(84547),
         c = n(60014),
         d = n(3578),
         u = n(68009),
@@ -4339,7 +4425,7 @@
             onFollowClick: c,
             followType: d,
           } = e,
-          { elDialogElement: u, fnShowLogonDialog: p } = (0, l.l)();
+          { elDialogElement: u, fnShowLogonDialog: p } = (0, l.E)();
         if (!(0, C.xU)()) return null;
         let m = null;
         switch (d) {
@@ -4615,84 +4701,6 @@
               }),
           ],
         });
-      }
-    },
-    99956: (e, t, n) => {
-      "use strict";
-      n.d(t, { n: () => p, p: () => m });
-      var r = n(7850),
-        i = n(22837),
-        o = n(39020),
-        a = n(18654),
-        s = n.n(a),
-        l = n(90595),
-        c = n(52038),
-        d = n(61859),
-        u = n(78327);
-      function p(e) {
-        const {
-          rgTagIDs: t,
-          bShowEvenIfNoTags: n,
-          bHideTitle: i,
-          bLargeText: o,
-          bNoStoreLinks: a,
-        } = e;
-        return t?.length > 0 || n
-          ? (0, r.jsxs)("div", {
-              className: (0, c.A)(
-                s().SaleTagBlockCtn,
-                o ? s().LargeText : "",
-                "SaleTagBlockCtn",
-              ),
-              children: [
-                Boolean(!i) &&
-                  (0, r.jsx)("div", {
-                    className: (0, c.A)(s().TagTitle, "WidgetTagTitle"),
-                    children: (0, d.we)("#GameHover_Tags"),
-                  }),
-                Boolean(t?.length > 0)
-                  ? (0, r.jsx)("div", {
-                      className: (0, c.A)(s().TagBox, "TagBox"),
-                      children: t.map((e) =>
-                        (0, r.jsx)(C, { tagid: e, bNoStoreLinks: a }, e),
-                      ),
-                    })
-                  : (0, r.jsx)("div", {
-                      children: (0, d.we)("#Broadcast_None"),
-                    }),
-              ],
-            })
-          : null;
-      }
-      function m(e) {
-        const { tagid: t, className: n } = e,
-          a = (0, o.MB)(t, u.TS.LANGUAGE);
-        if (!a) return null;
-        const d = (0, i.ww)((0, i.sf)(u.TS.LANGUAGE)),
-          p = `${u.TS.STORE_BASE_URL}tags/${d}/${a}`;
-        return (0, r.jsx)(l.q, {
-          url: p,
-          className: (0, c.A)(s().Tag, "WidgetTag", n),
-          children: a,
-        });
-      }
-      function C(e) {
-        const { tagid: t, className: n, bNoStoreLinks: a } = e,
-          d = (0, i.ww)((0, i.sf)(u.TS.LANGUAGE)),
-          p = (0, o.MB)(t, u.TS.LANGUAGE),
-          m = `${u.TS.STORE_BASE_URL}tags/${d}/${p}`;
-        return p
-          ? a
-            ? (0, r.jsx)("div", {
-                className: (0, c.A)(s().Tag, "WidgetTag", n),
-                children: p,
-              })
-            : (0, r.jsx)(l.q, {
-                url: m,
-                className: (0, c.A)(s().Tag, "WidgetTag", n),
-                children: p,
-              })
-          : null;
       }
     },
     90595: (e, t, n) => {

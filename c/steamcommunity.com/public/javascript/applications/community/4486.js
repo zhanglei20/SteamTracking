@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Мої активні замовлення і пропозиції",
 	"MyOrders_Heading_Sell": "Пропозиції продажу",
 	"MyOrders_Heading_Buy": "Замовлення на купівлю",
+	"MyOrders_Heading_MyPurchaseOffers": "Купівля — мої пропозиції",
+	"MyOrders_Heading_MyListings": "Продаж — мої предмети",
 	"MyOrders_FailedToLoad": "Виникла проблема під час завантаження даних про замовлення для цього предмета.",
 	"MyOrders_NoActiveOrders_Item": "У вас немає активних замовлень на продаж для цього предмета.",
 	"MyOrders_NoBuyOrders_Item": "У вас немає активних замовлень на купівлю для цього предмета.",

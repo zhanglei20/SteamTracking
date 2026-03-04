@@ -2176,7 +2176,7 @@
         bt = n(61336),
         ft = n(72978),
         Et = n.n(ft),
-        It = n(88680);
+        It = n(84547);
       const wt = (0, d.PA)((e) => {
         const { eventModel: t, calendarEvent: n, history: a } = e,
           r = (e) => {
@@ -2365,7 +2365,7 @@
       function jt(e) {
         const { eventModel: t, calendarEvent: n } = e,
           a = (0, ze.eT)(t.clanSteamID.GetAccountID()),
-          { elDialogElement: r, fnShowLogonDialog: i } = (0, It.l)(),
+          { elDialogElement: r, fnShowLogonDialog: i } = (0, It.E)(),
           o = u.useCallback(async () => {
             G.iA.logged_in
               ? (await ue.Fm.Get().UpdateFollowOrIgnoreCurator(

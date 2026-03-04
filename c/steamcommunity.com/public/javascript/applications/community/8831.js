@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Lệnh giao dịch hiện tại",
 	"MyOrders_Heading_Sell": "Lệnh bán",
 	"MyOrders_Heading_Buy": "Lệnh mua",
+	"MyOrders_Heading_MyPurchaseOffers": "Mua - Đề nghị của tôi",
+	"MyOrders_Heading_MyListings": "Bán - Mục đăng của tôi",
 	"MyOrders_FailedToLoad": "Có vấn đề phát sinh khi nạp dữ liệu đăng bán cho vật phẩm này.",
 	"MyOrders_NoActiveOrders_Item": "Bạn hiện không có lệnh giao dịch nào cho vật phẩm này.",
 	"MyOrders_NoBuyOrders_Item": "Bạn hiện không có lệnh mua nào cho vật phẩm này.",

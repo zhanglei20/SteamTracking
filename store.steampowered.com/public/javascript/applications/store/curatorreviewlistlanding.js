@@ -13,50 +13,6 @@
     66272: (e) => {
       e.exports = { BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG" };
     },
-    33924: (e) => {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
-        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
-        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
-        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
-        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
-        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
-        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
-        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
-        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
-        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
-        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
-        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
-        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
-        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
-        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
-        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
-        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
-        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
-      };
-    },
-    91291: (e) => {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
-        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
-        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
-        Reason: "_2h0GKAYcXRP10ryZHFn79d",
-        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
-      };
-    },
     70758: (e) => {
       e.exports = {
         YoutubePreviewImage: "_3bVwKmAuh70AH8XVDnyf5z",
@@ -100,39 +56,39 @@
     22584: (e) => {
       e.exports = { BreadContainer: "GkVFIKIAijTGzfSc4BEQl" };
     },
-    17083: (e, t, a) => {
+    17083: (e, t, n) => {
       "use strict";
-      a.d(t, { N_: () => _, k2: () => v });
-      var n = a(92757),
-        s = a(42891),
-        r = a(90626),
-        o = a(29248),
-        i = a(58584),
-        l = a(81115),
-        c = a(68841);
-      r.Component;
-      r.Component;
+      n.d(t, { N_: () => f, k2: () => y });
+      var a = n(92757),
+        r = n(42891),
+        s = n(90626),
+        i = n(29248),
+        o = n(58584),
+        l = n(81115),
+        c = n(68841);
+      s.Component;
+      s.Component;
       var u = function (e, t) {
           return "function" == typeof e ? e(t) : e;
         },
         d = function (e, t) {
-          return "string" == typeof e ? (0, o.yJ)(e, null, null, t) : e;
+          return "string" == typeof e ? (0, i.yJ)(e, null, null, t) : e;
         },
-        m = function (e) {
+        _ = function (e) {
           return e;
         },
-        p = r.forwardRef;
-      void 0 === p && (p = m);
-      var h = p(function (e, t) {
-        var a = e.innerRef,
-          n = e.navigate,
-          s = e.onClick,
-          o = (0, l.A)(e, ["innerRef", "navigate", "onClick"]),
-          c = o.target,
-          u = (0, i.A)({}, o, {
+        m = s.forwardRef;
+      void 0 === m && (m = _);
+      var p = m(function (e, t) {
+        var n = e.innerRef,
+          a = e.navigate,
+          r = e.onClick,
+          i = (0, l.A)(e, ["innerRef", "navigate", "onClick"]),
+          c = i.target,
+          u = (0, o.A)({}, i, {
             onClick: function (e) {
               try {
-                s && s(e);
+                r && r(e);
               } catch (t) {
                 throw (e.preventDefault(), t);
               }
@@ -142,58 +98,58 @@
                 (function (e) {
                   return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
                 })(e) ||
-                (e.preventDefault(), n());
+                (e.preventDefault(), a());
             },
           });
-        return (u.ref = (m !== p && t) || a), r.createElement("a", u);
+        return (u.ref = (_ !== m && t) || n), s.createElement("a", u);
       });
-      var _ = p(function (e, t) {
-          var a = e.component,
-            s = void 0 === a ? h : a,
-            _ = e.replace,
-            f = e.to,
+      var f = m(function (e, t) {
+          var n = e.component,
+            r = void 0 === n ? p : n,
+            f = e.replace,
+            h = e.to,
             g = e.innerRef,
-            v = (0, l.A)(e, ["component", "replace", "to", "innerRef"]);
-          return r.createElement(n.XZ.Consumer, null, function (e) {
+            y = (0, l.A)(e, ["component", "replace", "to", "innerRef"]);
+          return s.createElement(a.XZ.Consumer, null, function (e) {
             e || (0, c.A)(!1);
-            var a = e.history,
-              n = d(u(f, e.location), e.location),
-              l = n ? a.createHref(n) : "",
-              h = (0, i.A)({}, v, {
+            var n = e.history,
+              a = d(u(h, e.location), e.location),
+              l = a ? n.createHref(a) : "",
+              p = (0, o.A)({}, y, {
                 href: l,
                 navigate: function () {
-                  var t = u(f, e.location),
-                    n = (0, o.AO)(e.location) === (0, o.AO)(d(t));
-                  (_ || n ? a.replace : a.push)(t);
+                  var t = u(h, e.location),
+                    a = (0, i.AO)(e.location) === (0, i.AO)(d(t));
+                  (f || a ? n.replace : n.push)(t);
                 },
               });
             return (
-              m !== p ? (h.ref = t || g) : (h.innerRef = g),
-              r.createElement(s, h)
+              _ !== m ? (p.ref = t || g) : (p.innerRef = g),
+              s.createElement(r, p)
             );
           });
         }),
-        f = function (e) {
+        h = function (e) {
           return e;
         },
-        g = r.forwardRef;
-      void 0 === g && (g = f);
-      var v = g(function (e, t) {
-        var a = e["aria-current"],
-          s = void 0 === a ? "page" : a,
-          o = e.activeClassName,
-          m = void 0 === o ? "active" : o,
-          p = e.activeStyle,
-          h = e.className,
-          v = e.exact,
-          S = e.isActive,
+        g = s.forwardRef;
+      void 0 === g && (g = h);
+      var y = g(function (e, t) {
+        var n = e["aria-current"],
+          r = void 0 === n ? "page" : n,
+          i = e.activeClassName,
+          _ = void 0 === i ? "active" : i,
+          m = e.activeStyle,
+          p = e.className,
+          y = e.exact,
+          I = e.isActive,
           b = e.location,
-          I = e.sensitive,
-          w = e.strict,
-          x = e.style,
-          A = e.to,
-          y = e.innerRef,
-          C = (0, l.A)(e, [
+          v = e.sensitive,
+          A = e.strict,
+          S = e.style,
+          G = e.to,
+          w = e.innerRef,
+          j = (0, l.A)(e, [
             "aria-current",
             "activeClassName",
             "activeStyle",
@@ -207,207 +163,316 @@
             "to",
             "innerRef",
           ]);
-        return r.createElement(n.XZ.Consumer, null, function (e) {
+        return s.createElement(a.XZ.Consumer, null, function (e) {
           e || (0, c.A)(!1);
-          var a = b || e.location,
-            o = d(u(A, a), a),
-            l = o.pathname,
-            j = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-            D = j
-              ? (0, n.B6)(a.pathname, {
-                  path: j,
-                  exact: v,
-                  sensitive: I,
-                  strict: w,
+          var n = b || e.location,
+            i = d(u(G, n), n),
+            l = i.pathname,
+            C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+            R = C
+              ? (0, a.B6)(n.pathname, {
+                  path: C,
+                  exact: y,
+                  sensitive: v,
+                  strict: A,
                 })
               : null,
-            G = !!(S ? S(D, a) : D),
-            E = "function" == typeof h ? h(G) : h,
-            T = "function" == typeof x ? x(G) : x;
-          G &&
-            ((E = (function () {
+            x = !!(I ? I(R, n) : R),
+            D = "function" == typeof p ? p(x) : p,
+            B = "function" == typeof S ? S(x) : S;
+          x &&
+            ((D = (function () {
               for (
-                var e = arguments.length, t = new Array(e), a = 0;
-                a < e;
-                a++
+                var e = arguments.length, t = new Array(e), n = 0;
+                n < e;
+                n++
               )
-                t[a] = arguments[a];
+                t[n] = arguments[n];
               return t
                 .filter(function (e) {
                   return e;
                 })
                 .join(" ");
-            })(E, m)),
-            (T = (0, i.A)({}, T, p)));
-          var N = (0, i.A)(
-            { "aria-current": (G && s) || null, className: E, style: T, to: o },
-            C,
+            })(D, _)),
+            (B = (0, o.A)({}, B, m)));
+          var k = (0, o.A)(
+            { "aria-current": (x && r) || null, className: D, style: B, to: i },
+            j,
           );
           return (
-            f !== g ? (N.ref = t || y) : (N.innerRef = y), r.createElement(_, N)
+            h !== g ? (k.ref = t || w) : (k.innerRef = w), s.createElement(f, k)
           );
         });
       });
     },
-    75152: (e, t, a) => {
+    57876: (e, t, n) => {
       "use strict";
-      a.d(t, { q: () => h });
-      var n = a(7850),
-        s = a(99171),
-        r = a(39777),
-        o = a(90626),
-        i = a(43976),
-        l = a(18654),
-        c = a.n(l),
-        u = a(72237),
-        d = a(3740),
-        m = a(14326),
-        p = a(52038);
-      function h(e) {
-        const {
-            id: t,
-            bShowAsMuted: a,
-            bHidePrice: s,
-            bShowInLibraryInsteadOfPrice: l,
-            bHidePlatforms: h,
-            strClassName: g,
-            creatorAccountID: v,
-            bShowName: S,
-            onlyOneDiscountPct: b,
-            bShowAddToCart: I,
-            bShowWishlistButton: w,
-          } = e,
-          x = (0, o.useRef)(null),
-          [A, y] = (0, o.useState)(!1),
-          { data: C } = (0, r.J$)(t);
-        if (
-          ((0, o.useEffect)(() => {
-            x.current && y(x.current.offsetWidth < 370);
-          }, [x]),
-          !t || !("appid" in t || "bundleid" in t || "packageid" in t))
-        )
-          return null;
-        const j = Boolean(w && 0 == C?.item_type),
-          D = Boolean(!v && !I && !j && h && s);
-        return (0, n.jsxs)(n.Fragment, {
-          children: [
-            !D &&
-              (0, n.jsxs)("div", {
-                ref: x,
-                className: (0, p.A)(
-                  c().CapsuleBottomBar,
-                  "CapsuleBottomBar",
-                  a && c().Muted,
-                  g,
-                ),
-                children: [
-                  v && (0, n.jsx)(f, { creatorAccountID: v, ...e }),
-                  I &&
-                    (0, n.jsx)(i.h, {
-                      id: t,
-                      className: (0, p.A)(
-                        c().MaxActionButtonWidth,
-                        c().AddToCartButton,
-                      ),
-                    }),
-                  j &&
-                    "appid" in t &&
-                    (0, n.jsx)(m.r, {
-                      appid: t.appid,
-                      className: (0, p.A)(
-                        c().MaxActionButtonWidth,
-                        c().AddToWishlistButton,
-                      ),
-                    }),
-                  !h && (0, n.jsx)(u.Q, { id: t, bMinimizePlatforms: A }),
-                  !s &&
-                    (0, n.jsx)("span", {
-                      className: c().BottomBarPriceInfo,
-                      children: (0, n.jsx)(d.N, {
-                        id: t,
-                        bShowInLibrary: l,
-                        onlyOneDiscountPct: b,
-                      }),
-                    }),
-                ],
-              }),
-            S && (0, n.jsx)(_, { id: t }),
-          ],
-        });
+      n.d(t, { Xh: () => l, cU: () => c, tf: () => d, wl: () => u });
+      var a = n(22837),
+        r = n(30894),
+        s = n(16021),
+        i = n(62792),
+        o = n(78327);
+      const l = {
+        include_assets: !0,
+        include_release: !0,
+        include_platforms: !0,
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
+        include_supported_languages: !0,
+      };
+      class c {
+        m_setAlreadyAdded = new Set();
+        Reset() {
+          this.m_setAlreadyAdded = new Set();
+        }
+        BHasAppID(e) {
+          return this.m_setAlreadyAdded.has("a" + e);
+        }
+        BHasPackageID(e) {
+          return this.m_setAlreadyAdded.has("s" + e);
+        }
+        BHasBundleID(e) {
+          return this.m_setAlreadyAdded.has("b" + e);
+        }
+        BHasStoreItemKey(e) {
+          return this.m_setAlreadyAdded.has(
+            this.ConvertStoreItemKeyToUniqueKey(e),
+          );
+        }
+        AddStoreItemKey(e) {
+          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(e));
+        }
+        ConvertStoreItemKeyToUniqueKey(e) {
+          switch (e.item_type) {
+            default:
+            case "app":
+              return "a" + e.id;
+            case "sub":
+              return "s" + e.id;
+            case "bundle":
+              return "b" + e.id;
+          }
+        }
       }
-      function _(e) {
-        const { id: t } = e,
-          { data: a } = (0, r.J$)(t);
-        return a?.name
-          ? (0, n.jsx)("div", { className: c().CapsuleName, children: a.name })
-          : null;
+      const u = 4;
+      function d(e, t, n, a, r, o) {
+        const l = new Array(),
+          c = new Array(),
+          d = new Array(),
+          m = new Array();
+        if (!e || 0 == e.length) return l;
+        const p = [
+          i.by.k_RejectSupportedLanguage,
+          i.by.k_RejectAlreadyDisplayed,
+          i.by.k_RejectNoTrailer,
+        ];
+        for (let o of e) {
+          let e = o.id,
+            u = i.by.k_NotRejected;
+          switch (o.item_type) {
+            case "sub":
+              const r = s.A.Get().GetPackage(e);
+              if (1 !== r?.GetIncludedAppIDs()?.length) {
+                u = g(e, t, a, !0);
+                break;
+              }
+              e = r.GetIncludedAppIDs()[0];
+            case "app":
+              u = f(e, t, n, a, !0);
+              break;
+            case "bundle":
+              u = y(e, t, a, !0);
+          }
+          if (
+            (u == i.by.k_NotRejected
+              ? ((o.rejected = i.by.k_NotRejected),
+                l.push({ ...o, priority: 1 }))
+              : p.includes(u)
+                ? ((o.rejected = i.by.k_NotRejected), c.push(o))
+                : ((o.rejected = u),
+                  u == i.by.k_RejectIgnoredGame ? d.push(o) : m.push(o)),
+            l.length > r)
+          )
+            break;
+        }
+        return (
+          l.length < r &&
+            (_(l, c, o, 2),
+            l.length < o &&
+              t.enforce_minimum &&
+              (_(l, d, o, 3), _(l, m, o, u))),
+          l
+        );
       }
-      function f(e) {
-        const { creatorAccountID: t, bShowAsMuted: a, strClassName: i } = e,
-          l = (0, o.useMemo)(() => ({ creatorid: t }), [t]),
-          { data: u } = (0, r.J$)(l),
-          { data: d } = (0, r.lv)(l);
-        if (!u) return null;
-        const m = (0, s.t)(d?.clan_avatar, "Medium"),
-          h = u.name || "";
-        return (0, n.jsxs)("div", {
-          className: (0, p.A)(c().BottomCreatorRow, a && c().Muted, i),
-          children: [
-            (0, n.jsx)("img", {
-              className: (0, p.A)(c().CreatorLogo),
-              src: m,
-              alt: h,
-            }),
-            (0, n.jsx)("span", { className: c().CreatorName, children: h }),
-          ],
-        });
+      function _(e, t, n, a) {
+        for (let r = 0; e.length < n && r < t.length; ++r)
+          e.push({ ...t[r], priority: a });
+      }
+      function m(e, t) {
+        const n = r.Fm.Get();
+        if (t.only_current_platform && n.BHasPlatformPreferenceSet()) {
+          if (
+            !(
+              (e.GetPlatforms()?.windows && n.BIsPreferredPlatform("win")) ||
+              (e.GetPlatforms()?.mac && n.BIsPreferredPlatform("mac")) ||
+              (e.GetPlatforms()?.steamos_linux &&
+                n.BIsPreferredPlatform("linux"))
+            )
+          )
+            return i.by.k_RejectWrongPlatform;
+        }
+        return !t.prepurchase && e.BIsComingSoon()
+          ? i.by.k_RejectNoComingSoon
+          : !t.virtual_reality && e.GetPlatforms()?.vr_support.vrhmd_only
+            ? i.by.k_RejectNoVR
+            : e.GetAllCreatorClanIDs()?.some((e) => n.BIsIgnoringCurator(e))
+              ? i.by.k_RejectCreatorClan
+              : i.by.k_NotRejected;
+      }
+      function p(e, t) {
+        if (t.localized) {
+          const t = (0, a.sf)(o.TS.LANGUAGE);
+          if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
+            return i.by.k_RejectSupportedLanguage;
+        }
+        return i.by.k_NotRejected;
+      }
+      function f(e, t, n, a, o) {
+        const l = s.A.Get().GetApp(e);
+        if (!l) return i.by.k_RejectNotLoaded;
+        const c = m(l, t);
+        if (c != i.by.k_NotRejected) return c;
+        const u = r.Fm.Get();
+        if (u.BIsGameIgnored(e)) return i.by.k_RejectIgnoredGame;
+        if (u.BExcludeTagIDs(l.GetTagIDs())) return i.by.k_RejectIgnoreGameTags;
+        if (u.BExcludesContentDescriptor(l.GetContentDescriptorIDs()))
+          return i.by.k_RejectIgnoreContentDescriptors;
+        if (!t.early_access && l.BIsEarlyAccess())
+          return i.by.k_RejectEarlyAccess;
+        const d = l.GetAppType();
+        return t.software || 6 != d
+          ? t.games_already_in_library && u.BIsGameOwned(e)
+            ? i.by.k_RejectInLibrary
+            : t.games_not_in_library && !u.BIsGameOwned(e)
+              ? i.by.k_RejectNotInLibrary
+              : !t.video && [7, 8, 9].includes(d)
+                ? i.by.k_RejectVideo
+                : t.has_discount && !l.GetBestPurchaseOption().discount_pct
+                  ? i.by.k_RejectNoDiscount
+                  : "adultonly" != n &&
+                      t.no_ao_content &&
+                      (l.HasContentDescriptorID(3) ||
+                        l.HasContentDescriptorID(4))
+                    ? i.by.k_RejectAO
+                    : 1 == d &&
+                        t.games_already_in_library &&
+                        u.BIsGameOwned(l.GetParentAppID())
+                      ? i.by.k_RejectInLibrary
+                      : o
+                        ? (1 == d && a.BHasAppID(l.GetParentAppID())) ||
+                          a.BHasAppID(e)
+                          ? i.by.k_RejectAlreadyDisplayed
+                          : t.has_trailer && !l.BHasTrailers(!1)
+                            ? i.by.k_RejectNoTrailer
+                            : p(l, t)
+                        : i.by.k_NotRejected
+          : i.by.k_RejectSoftware;
+      }
+      function h(e, t) {
+        const n = r.Fm.Get();
+        let a = !1;
+        for (let t of e) {
+          if (n.BIsGameIgnored(t)) return i.by.k_RejectIgnoredGame;
+          n.BIsGameOwned(t) && (a = !0);
+        }
+        return t.games_not_in_library && a
+          ? i.by.k_RejectInLibrary
+          : t.games_not_in_library && !a
+            ? i.by.k_RejectNotInLibrary
+            : i.by.k_NotRejected;
+      }
+      function g(e, t, n, a) {
+        const o = s.A.Get().GetPackage(e);
+        if (!o) return i.by.k_RejectNotLoaded;
+        const l = m(o, t);
+        if (l != i.by.k_NotRejected) return l;
+        const c = h(o.GetIncludedAppIDs(), t);
+        if (c != i.by.k_NotRejected) return c;
+        const u = r.Fm.Get();
+        return t.games_already_in_library && u.BOwnsPackage(e)
+          ? i.by.k_RejectInLibrary
+          : u.BIsPackageIgnored(e)
+            ? i.by.k_RejectIgnoredGame
+            : a
+              ? n.BHasPackageID(e)
+                ? i.by.k_RejectAlreadyDisplayed
+                : p(o, t)
+              : i.by.k_NotRejected;
+      }
+      function y(e, t, n, a) {
+        const r = s.A.Get().GetBundle(e);
+        if (!r) return i.by.k_RejectNotLoaded;
+        const o = m(r, t);
+        if (o != i.by.k_NotRejected) return o;
+        const l = h(r.GetIncludedAppIDs(), t);
+        return l != i.by.k_NotRejected
+          ? l
+          : a
+            ? n.BHasBundleID(e)
+              ? i.by.k_RejectAlreadyDisplayed
+              : p(r, t)
+            : i.by.k_NotRejected;
       }
     },
-    70995: (e, t, a) => {
+    70995: (e, t, n) => {
       "use strict";
-      a.d(t, { Lg: () => c, XU: () => d });
-      const n = 20,
-        s = /^.*youtube[^v]+v=(.{11}).*/,
-        r = /^.*youtu\.be\/(.{11}).*/,
-        o = /^.*youtube.*\/embed\/(.{11}).*/,
-        i = /^.*[?&]t=([^&]+)(?:&|$)/,
+      n.d(t, { Lg: () => c, XU: () => d });
+      const a = 20,
+        r = /^.*youtube[^v]+v=(.{11}).*/,
+        s = /^.*youtu\.be\/(.{11}).*/,
+        i = /^.*youtube.*\/embed\/(.{11}).*/,
+        o = /^.*[?&]t=([^&]+)(?:&|$)/,
         l = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
       function c(e) {
         return !!u(e);
       }
       function u(e) {
-        const t = e?.length < n ? void 0 : s.exec(e) || r.exec(e) || o.exec(e);
+        const t = e?.length < a ? void 0 : r.exec(e) || s.exec(e) || i.exec(e);
         return t?.[1];
       }
       function d(e) {
         const t = u(e);
         if (!t) return;
-        const a = (function (e) {
-            const t = i.exec(e);
+        const n = (function (e) {
+            const t = o.exec(e);
             return t?.[1];
           })(e),
-          n = a
+          a = n
             ? (function (e) {
                 const t = l.exec(e);
                 if (!(t?.[1] || t?.[2] || t?.[3] || t?.[4])) return;
                 if (t?.[4]) return parseInt(t?.[4]);
-                let a = 0;
+                let n = 0;
                 return (
-                  t?.[1] && (a += 3600 * parseInt(t[1])),
-                  t?.[2] && (a += 60 * parseInt(t[2])),
-                  t?.[3] && (a += parseInt(t[3])),
-                  a
+                  t?.[1] && (n += 3600 * parseInt(t[1])),
+                  t?.[2] && (n += 60 * parseInt(t[2])),
+                  t?.[3] && (n += parseInt(t[3])),
+                  n
                 );
-              })(a)
+              })(n)
             : void 0;
-        return { strVideoID: t, nStartSeconds: n };
+        return { strVideoID: t, nStartSeconds: a };
       }
     },
-    36837: (e, t, a) => {
+    36837: (e, t, n) => {
       "use strict";
-      a.d(t, { f: () => s });
-      var n = a(78327);
-      class s {
+      n.d(t, { f: () => r });
+      var a = n(78327);
+      class r {
         m_HomeView;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
@@ -418,18 +483,18 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            s.s_globalSingletonStore ||
-              ((s.s_globalSingletonStore = new s()),
-              "dev" == n.TS.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = s.s_globalSingletonStore)),
-            s.s_globalSingletonStore
+            r.s_globalSingletonStore ||
+              ((r.s_globalSingletonStore = new r()),
+              "dev" == a.TS.WEB_UNIVERSE &&
+                (window.g_HomeViewSetting = r.s_globalSingletonStore)),
+            r.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === n.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
-          const e = (0, n.Tc)("home_view_setting", "application_config");
+          "dev" === a.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          const e = (0, a.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-          const t = (0, n.Tc)(
+          const t = (0, a.Tc)(
             "home_view_setting_override",
             "application_config",
           );
@@ -462,49 +527,49 @@
         }
       }
     },
-    6626: (e, t, a) => {
+    6626: (e, t, n) => {
       "use strict";
-      a.d(t, {
-        F6: () => S,
-        ME: () => w,
-        RA: () => I,
-        cc: () => A,
-        fq: () => y,
-        m1: () => x,
+      n.d(t, {
+        F6: () => I,
+        ME: () => A,
+        RA: () => v,
+        cc: () => G,
+        fq: () => w,
+        m1: () => S,
       });
-      var n = a(34629),
-        s = a(41735),
-        r = a.n(s),
-        o = a(14947),
-        i = a(90626),
-        l = a(17720),
-        c = a(4796),
-        u = a(30894),
-        d = a(6379),
-        m = a(99032),
-        p = a(62490),
-        h = a(81393),
-        _ = a(68797),
-        f = a(84933),
-        g = a(78327);
-      function v(e) {
+      var a = n(34629),
+        r = n(41735),
+        s = n.n(r),
+        i = n(14947),
+        o = n(90626),
+        l = n(17720),
+        c = n(4796),
+        u = n(30894),
+        d = n(6379),
+        _ = n(99032),
+        m = n(62490),
+        p = n(81393),
+        f = n(68797),
+        h = n(84933),
+        g = n(78327);
+      function y(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-          : ((0, h.wT)(
+          : ((0, p.wT)(
               !e.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof e.list_jsondata,
             ),
             (e.list_jsondata = {}));
       }
-      const S = "0";
+      const I = "0";
       function b(e, t) {
-        (t.localized_flat_title = (0, p.$Y)([], 31, null)),
-          (t.localized_flat_blurb = (0, p.$Y)([], 31, null)),
-          (t.localized_flat_link = (0, p.$Y)([], 31, null)),
-          t.title !== S && (t.localized_flat_title[e] = t.title),
-          t.blurb !== S && (t.localized_flat_blurb[e] = t.blurb),
-          t.link !== S && (t.localized_flat_link[e] = t.link),
+        (t.localized_flat_title = (0, m.$Y)([], 31, null)),
+          (t.localized_flat_blurb = (0, m.$Y)([], 31, null)),
+          (t.localized_flat_link = (0, m.$Y)([], 31, null)),
+          t.title !== I && (t.localized_flat_title[e] = t.title),
+          t.blurb !== I && (t.localized_flat_blurb[e] = t.blurb),
+          t.link !== I && (t.localized_flat_link[e] = t.link),
           t.title_localization.forEach((e) => {
             e.localized_string?.length > 0 &&
               (t.localized_flat_title[e.language] = e.localized_string);
@@ -518,7 +583,7 @@
               (t.localized_flat_link[e.language] = e.localized_string);
           });
       }
-      class I {
+      class v {
         m_mapList = new Map();
         m_mapEventGIDToLists = new Map();
         m_mapListIDToClanAccount = new Map();
@@ -531,29 +596,29 @@
         GetClanAccountFromListID(e) {
           return this.m_mapListIDToClanAccount.get(e);
         }
-        async LoadListDetails(e, t, a) {
+        async LoadListDetails(e, t, n) {
           if (this.m_mapList.has(t)) return this.m_mapList.get(t);
-          const n =
+          const a =
               g.TS.STORE_BASE_URL +
               "curator/" +
               e.GetAccountID() +
               "/admin/ajaxgetlistdetails",
-            s = { listid: t };
+            r = { listid: t };
           try {
-            const o = await r().get(n, { params: s, cancelToken: a?.token });
-            if (1 == o?.data?.success) {
-              const a = { ...o.data.list_details };
+            const i = await s().get(a, { params: r, cancelToken: n?.token });
+            if (1 == i?.data?.success) {
+              const n = { ...i.data.list_details };
               return (
-                (0, h.wT)(t == a?.listid, "Wanted" + t + "but got" + a?.listid),
-                v(a),
-                b(o.data.curation_language, a),
-                this.m_mapList.set(t, a),
+                (0, p.wT)(t == n?.listid, "Wanted" + t + "but got" + n?.listid),
+                y(n),
+                b(i.data.curation_language, n),
+                this.m_mapList.set(t, n),
                 this.m_mapListIDToClanAccount.set(t, e.GetAccountID()),
-                a
+                n
               );
             }
           } catch (e) {
-            const t = (0, _.H)(e);
+            const t = (0, f.H)(e);
             console.error(
               "CCuratorListStore.LoadListDetails: error on load: " +
                 t.strErrorMsg,
@@ -562,15 +627,15 @@
           }
           return null;
         }
-        async LoadMyFollowedSaleCurationLists(e, t, a) {
+        async LoadMyFollowedSaleCurationLists(e, t, n) {
           if (
             !g.iA.logged_in ||
             (u.Fm.Get().BIsLoaded() &&
               0 == u.Fm.Get().GetFollowedCuratorCount())
           )
             return [];
-          const n = g.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
-            s = {
+          const a = g.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
+            r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
               origin: self.origin,
@@ -579,69 +644,69 @@
                 : void 0,
             };
           return this.InternalLoadSaleCuratorLists(
-            n,
-            s,
+            a,
+            r,
             "CCuratorListStore.LoadMyFollowedSaleCurationLists",
             e,
             t,
-            a,
+            n,
           );
         }
-        async LoadAllSaleCurationLists(e, t, a) {
+        async LoadAllSaleCurationLists(e, t, n) {
           if (this.m_mapEventGIDToLists.has(t))
             return this.m_mapEventGIDToLists.get(t);
-          const n = g.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
-            s = {
+          const a = g.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
+            r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
               origin: self.origin,
             };
           return this.InternalLoadSaleCuratorLists(
-            n,
-            s,
+            a,
+            r,
             "CCuratorListStore.LoadAllSaleCurationLists",
             e,
             t,
-            a,
+            n,
           );
         }
-        async InternalLoadSaleCuratorLists(e, t, a, n, s, i) {
+        async InternalLoadSaleCuratorLists(e, t, n, a, r, o) {
           try {
-            const a = await r().get(e, { params: t, cancelToken: i?.token });
-            if (1 == a?.data?.success) {
+            const n = await s().get(e, { params: t, cancelToken: o?.token });
+            if (1 == n?.data?.success) {
               const e = new Array();
               return (
-                (0, o.h5)(() => {
-                  a.data.matches &&
-                    a.data.matches.forEach((t) => {
-                      t.multi_detail_lists.forEach((a) => {
+                (0, i.h5)(() => {
+                  n.data.matches &&
+                    n.data.matches.forEach((t) => {
+                      t.multi_detail_lists.forEach((n) => {
                         this.m_mapListIDToClanAccount.set(
-                          a.listid,
+                          n.listid,
                           t.clan_account_id,
                         ),
-                          v(a),
-                          b(t.curation_language, a),
-                          this.m_mapList.set(a.listid, a),
-                          e.push(a);
+                          y(n),
+                          b(t.curation_language, n),
+                          this.m_mapList.set(n.listid, n),
+                          e.push(n);
                       });
                     }),
-                    this.m_mapEventGIDToLists.set(s, e);
+                    this.m_mapEventGIDToLists.set(r, e);
                 }),
                 e
               );
             }
           } catch (e) {
-            const t = (0, _.H)(e);
-            console.error(a + ": error on load: " + t.strErrorMsg, t);
+            const t = (0, f.H)(e);
+            console.error(n + ": error on load: " + t.strErrorMsg, t);
           }
           return [];
         }
         static s_Singleton;
         static Get() {
-          return I.s_Singleton || (I.s_Singleton = new I()), I.s_Singleton;
+          return v.s_Singleton || (v.s_Singleton = new v()), v.s_Singleton;
         }
         constructor() {
-          (0, o.Gn)(this),
+          (0, i.Gn)(this),
             "dev" == g.TS.WEB_UNIVERSE && (window.g_curatorListStore = this);
           let e = (0, g.Tc)("curatorlistdata", "application_config");
           ("dev" != g.TS.WEB_UNIVERSE && "beta" != g.TS.WEB_UNIVERSE) ||
@@ -650,10 +715,10 @@
               e,
             ),
             this.ValidateStoreDefault(e) &&
-              (0, o.h5)(() => {
+              (0, i.h5)(() => {
                 e.forEach((e) => {
                   e.multi_detail_lists.forEach((t) => {
-                    v(t),
+                    y(t),
                       b(e.curation_language, t),
                       this.m_mapList.set(t.listid, t);
                   });
@@ -675,96 +740,292 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function w(e, t) {
-        const a = (0, f.CH)();
+      function A(e, t) {
+        const n = (0, h.CH)();
         return (
-          (0, i.useEffect)(() => {
-            if (I.Get().GetListDetails(t) || !e) return;
-            const n = r().CancelToken.source();
+          (0, o.useEffect)(() => {
+            if (v.Get().GetListDetails(t) || !e) return;
+            const a = s().CancelToken.source();
             return (
               (async () => {
-                const s = await I.Get().LoadListDetails(e, t);
-                if (!n.token.reason)
-                  if (s?.apps?.length) {
+                const r = await v.Get().LoadListDetails(e, t);
+                if (!a.token.reason)
+                  if (r?.apps?.length) {
                     const e = [];
-                    for (const t of s.apps) {
-                      const a = t?.recommended_app?.appid;
-                      a && e.push({ id: a, type: "game" });
+                    for (const t of r.apps) {
+                      const n = t?.recommended_app?.appid;
+                      n && e.push({ id: n, type: "game" });
                     }
-                    (0, m.H2)(e, {
-                      ...m.jy,
+                    (0, _.H2)(e, {
+                      ..._.jy,
                       include_assets: !0,
                       include_release: !0,
                     }),
-                      a();
+                      n();
                   } else console.error("Found no list data");
               })(),
-              () => n.cancel("unmounting CuratorList")
+              () => a.cancel("unmounting CuratorList")
             );
-          }, [e, t, a]),
-          I.Get().GetListDetails(t)
+          }, [e, t, n]),
+          v.Get().GetListDetails(t)
         );
       }
-      function x(e) {
+      function S(e) {
         const t = e && c.ac.GetClanInfoByClanAccountID(e),
-          [a, n] = (0, i.useState)(!!t);
+          [n, a] = (0, o.useState)(!!t);
         return (
-          (0, i.useEffect)(() => {
-            if (a && e) {
+          (0, o.useEffect)(() => {
+            if (n && e) {
               const t = l.b.InitFromClanID(e);
               c.ac.LoadClanInfoForClanSteamID(t).finally(() => {
-                n(!0);
+                a(!0);
               });
             }
-          }, [a, e]),
+          }, [n, e]),
           t
         );
       }
-      function A(e) {
+      function G(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
-      function y(e) {
-        const t = (0, f.CH)(),
-          a = A(e) ? e.sale_clan_event_gid : null,
-          n = a && d.O3.GetClanEventModel(a);
+      function w(e) {
+        const t = (0, h.CH)(),
+          n = G(e) ? e.sale_clan_event_gid : null,
+          a = n && d.O3.GetClanEventModel(n);
         return (
-          (0, i.useEffect)(() => {
-            if (n || !A(e)) return;
-            const s = r().CancelToken.source();
+          (0, o.useEffect)(() => {
+            if (a || !G(e)) return;
+            const r = s().CancelToken.source();
             return (
               (async () => {
                 d.O3.Init(),
                   await d.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                     new l.b(e.sale_clan_steamid),
-                    a,
+                    n,
                     0,
                   ),
-                  s.token.reason || t();
+                  r.token.reason || t();
               })(),
-              () => s.cancel("unmounting CuratorList")
+              () => r.cancel("unmounting CuratorList")
             );
-          }, [e, a, n, t]),
-          n
+          }, [e, n, a, t]),
+          a
         );
       }
-      (0, n.Cg)([o.sH], I.prototype, "m_mapList", void 0);
+      (0, a.Cg)([i.sH], v.prototype, "m_mapList", void 0);
     },
-    22305: (e, t, a) => {
+    55263: (e, t, n) => {
       "use strict";
-      a.d(t, { r: () => c });
-      var n = a(7850),
-        s = a(66272),
-        r = a(52038),
-        o = a(17083),
-        i = a(45699),
-        l = a(76217);
+      n.d(t, {
+        G6: () => l,
+        Gg: () => d,
+        MS: () => f,
+        Ow: () => u,
+        YM: () => h,
+        mZ: () => _,
+        t7: () => c,
+        zX: () => p,
+      });
+      var a = n(41735),
+        r = n.n(a),
+        s = n(90626),
+        i = n(84933),
+        o = n(16021);
+      function l(e, t, n, a) {
+        const l = (0, s.useRef)(void 0),
+          c = (0, s.useRef)(void 0),
+          u = (0, i.CH)();
+        l.current = e;
+        const [d, _] = (0, s.useState)(void 0),
+          {
+            include_assets: m,
+            include_release: p,
+            include_platforms: f,
+            include_all_purchase_options: h,
+            include_screenshots: g,
+            include_trailers: y,
+            include_ratings: I,
+            include_tag_count: b,
+            include_reviews: v,
+            include_basic_info: A,
+            include_supported_languages: S,
+            include_full_description: G,
+            include_included_items: w,
+            include_assets_without_overrides: j,
+            apply_user_filters: C,
+            include_links: R,
+          } = n;
+        if (
+          ((0, s.useEffect)(() => {
+            const n = {
+              include_assets: m,
+              include_release: p,
+              include_platforms: f,
+              include_all_purchase_options: h,
+              include_screenshots: g,
+              include_trailers: y,
+              include_ratings: I,
+              include_tag_count: b,
+              include_reviews: v,
+              include_basic_info: A,
+              include_supported_languages: S,
+              include_full_description: G,
+              include_included_items: w,
+              include_assets_without_overrides: j,
+              apply_user_filters: C,
+              include_links: R,
+            };
+            let s = null;
+            return (
+              !e ||
+                e < 0 ||
+                o.A.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== d && a && a == c.current) ||
+                (a !== c.current && (_(void 0), (c.current = a)),
+                (s = r().CancelToken.source()),
+                o.A.Get()
+                  .QueueStoreItemRequest(e, t, n)
+                  .then((t) => {
+                    s?.token.reason || l.current !== e || _(1 == t), u();
+                  })),
+              () => s?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [e, t, a, d, m, p, f, h, g, y, I, b, v, A, S, G, w, j, C, R, u]),
+          !e)
+        )
+          return [null, 2];
+        if (!1 === d) return [void 0, 2];
+        if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+        const x = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return x ? [x, 3] : [null, 2];
+      }
+      function c(e, t, n) {
+        return l(e, 0, t, n);
+      }
+      function u(e, t, n) {
+        return l(e, 2, t, n);
+      }
+      function d(e, t, n) {
+        return l(e, 1, t, n);
+      }
+      function _(e, t, n) {
+        const [a, r] = l(e, t, n);
+        let s;
+        1 != a?.GetStoreItemType() ||
+          a.GetAssets()?.GetHeaderURL() ||
+          1 != a?.GetIncludedAppIDs().length ||
+          (s = a.GetIncludedAppIDs()[0]);
+        const [i, o] = c(s, n);
+        return s && i?.BIsVisible() ? [i, o] : [a, r];
+      }
+      function m(e, t, n, a) {
+        const l = (0, i.CH)(),
+          {
+            include_assets: c,
+            include_release: u,
+            include_platforms: d,
+            include_all_purchase_options: _,
+            include_screenshots: m,
+            include_trailers: p,
+            include_ratings: f,
+            include_tag_count: h,
+            include_reviews: g,
+            include_basic_info: y,
+            include_supported_languages: I,
+            include_full_description: b,
+            include_included_items: v,
+            include_assets_without_overrides: A,
+            apply_user_filters: S,
+            include_links: G,
+          } = n;
+        if (
+          ((0, s.useEffect)(() => {
+            if (!e || 0 == e.length) return;
+            const n = {
+                include_assets: c,
+                include_release: u,
+                include_platforms: d,
+                include_all_purchase_options: _,
+                include_screenshots: m,
+                include_trailers: p,
+                include_ratings: f,
+                include_tag_count: h,
+                include_reviews: g,
+                include_basic_info: y,
+                include_supported_languages: I,
+                include_full_description: b,
+                include_included_items: v,
+                include_assets_without_overrides: A,
+                apply_user_filters: S,
+                include_links: G,
+              },
+              a = e.filter(
+                (e) =>
+                  !(
+                    o.A.Get().BHasStoreItem(e, t, n) ||
+                    o.A.Get().BIsStoreItemMissing(e, t)
+                  ),
+              );
+            if (0 == a.length) return;
+            const s = r().CancelToken.source(),
+              i = a.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
+            return (
+              Promise.all(i).then(() => {
+                s.token.reason || l();
+              }),
+              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [e, t, a, l, c, u, d, _, m, p, f, h, g, y, I, b, v, A, S, G]),
+          !e)
+        )
+          return 2;
+        if (
+          !e.every(
+            (e) =>
+              o.A.Get().BHasStoreItem(e, t, n) ||
+              o.A.Get().BIsStoreItemMissing(e, t),
+          )
+        )
+          return 1;
+        return e.every((e) =>
+          o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+        )
+          ? 3
+          : 2;
+      }
+      function p(e, t, n) {
+        return m(e, 0, t, n);
+      }
+      function f(e, t, n) {
+        return m(e, 2, t, n);
+      }
+      function h() {
+        s.useEffect(
+          () => (
+            o.A.Get().SetReturnUnavailableItems(!0),
+            () => o.A.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
+      }
+    },
+    22305: (e, t, n) => {
+      "use strict";
+      n.d(t, { r: () => c });
+      var a = n(7850),
+        r = n(66272),
+        s = n(52038),
+        i = n(17083),
+        o = n(45699),
+        l = n(76217);
       function c(e) {
-        const { crumbs: t, className: a } = e;
+        const { crumbs: t, className: n } = e;
         return t && 0 != t.length
-          ? (0, n.jsxs)("div", {
-              className: (0, r.A)(s.BreadContainer, a),
+          ? (0, a.jsxs)("div", {
+              className: (0, s.A)(r.BreadContainer, n),
               children: [
-                (0, n.jsx)(l.Z, {
+                (0, a.jsx)(l.Z, {
                   className: "blockbg",
                   "flow-children": "row",
                   children: t.map((e) => {
@@ -772,21 +1033,21 @@
                     return (
                       e.url.startsWith("http")
                         ? t.push(
-                            (0, n.jsx)(
-                              i.Ii,
+                            (0, a.jsx)(
+                              o.Ii,
                               { href: e.url, children: e.name },
                               "anchor_" + e.name,
                             ),
                           )
                         : t.push(
-                            (0, n.jsx)(
-                              o.N_,
+                            (0, a.jsx)(
+                              i.N_,
                               { to: e.url, children: e.name },
                               "link_" + e.name,
                             ),
                           ),
                       t.push(
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                           "span",
                           { children: " > " },
                           e.name + "span",
@@ -796,113 +1057,113 @@
                     );
                   }),
                 }),
-                (0, n.jsx)("div", { style: { clear: "left" } }),
+                (0, a.jsx)("div", { style: { clear: "left" } }),
               ],
             })
           : null;
       }
     },
-    99032: (e, t, a) => {
+    99032: (e, t, n) => {
       "use strict";
-      a.d(t, {
-        AX: () => v,
-        H2: () => _,
+      n.d(t, {
+        AX: () => y,
+        H2: () => f,
         Li: () => g,
-        S7: () => m,
-        a9: () => S,
-        jy: () => f,
-        nt: () => h,
+        S7: () => _,
+        a9: () => I,
+        jy: () => h,
+        nt: () => p,
         sd: () => d,
-        tJ: () => p,
+        tJ: () => m,
       });
-      var n = a(57876),
-        s = a(62792),
-        r = a(81886),
-        o = a(30894),
-        i = a(16021),
-        l = a(78327),
-        c = a(36837),
-        u = a(81393);
+      var a = n(57876),
+        r = n(62792),
+        s = n(81886),
+        i = n(30894),
+        o = n(16021),
+        l = n(78327),
+        c = n(36837),
+        u = n(81393);
       function d(e) {
-        return i.A.Get().BIsStoreItemMissing(e.id, (0, s.SW)(e.type));
+        return o.A.Get().BIsStoreItemMissing(e.id, (0, r.SW)(e.type));
       }
-      function m(e, t, a) {
-        const n = new Array();
+      function _(e, t, n) {
+        const a = new Array();
         return (
-          e?.forEach((e) => n.push({ id: e, type: "game" })),
-          t?.forEach((e) => n.push({ id: e, type: "sub" })),
-          a?.forEach((e) => n.push({ id: e, type: "bundle" })),
-          n
+          e?.forEach((e) => a.push({ id: e, type: "game" })),
+          t?.forEach((e) => a.push({ id: e, type: "sub" })),
+          n?.forEach((e) => a.push({ id: e, type: "bundle" })),
+          a
         );
       }
-      function p(e) {
-        const t = i.A.Get().GetStoreItem(e.id, (0, s.SW)(e.type));
+      function m(e) {
+        const t = o.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
         return t?.GetBestPurchaseOption()?.discount_pct > 0;
       }
-      function h(e) {
+      function p(e) {
         if (!c.f.Get().GetHomeView()?.localized) return !0;
-        const t = i.A.Get().GetStoreItem(e.id, (0, s.SW)(e.type));
-        return o.Fm.Get().BIsAnyLanguageEnabled(
+        const t = o.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
+        return i.Fm.Get().BIsAnyLanguageEnabled(
           t.GetAllLanguagesWithSomeSupport(),
         );
       }
-      async function _(e, t, a) {
+      async function f(e, t, n) {
         if (!e || 0 == e.length) return [];
-        const n = e.filter((e) => (0, r.fp)(e.type)).map((e) => e.id),
-          s = e.filter((e) => "sub" === e.type).map((e) => e.id),
-          o = e.filter((e) => "bundle" === e.type).map((e) => e.id);
+        const a = e.filter((e) => (0, s.fp)(e.type)).map((e) => e.id),
+          r = e.filter((e) => "sub" === e.type).map((e) => e.id),
+          i = e.filter((e) => "bundle" === e.type).map((e) => e.id);
         {
-          const e = n.filter((e) => !i.A.Get().BHasApp(e, t)),
-            a = s.filter((e) => !i.A.Get().BHasApp(e, t)),
-            r = o.filter((e) => !i.A.Get().BHasApp(e, t));
-          (e.length > 0 || a.length > 0 || r.length > 0) &&
+          const e = a.filter((e) => !o.A.Get().BHasApp(e, t)),
+            n = r.filter((e) => !o.A.Get().BHasApp(e, t)),
+            s = i.filter((e) => !o.A.Get().BHasApp(e, t));
+          (e.length > 0 || n.length > 0 || s.length > 0) &&
             (await Promise.all([
-              i.A.Get().QueueMultipleAppRequests(e, t),
-              i.A.Get().QueueMultiplePackageRequests(a, t),
-              i.A.Get().QueueMultipleBundleRequests(r, t),
+              o.A.Get().QueueMultipleAppRequests(e, t),
+              o.A.Get().QueueMultiplePackageRequests(n, t),
+              o.A.Get().QueueMultipleBundleRequests(s, t),
             ]));
         }
         const l = new Set();
-        o?.forEach((e) => {
-          const t = i.A.Get().GetBundle(e);
+        i?.forEach((e) => {
+          const t = o.A.Get().GetBundle(e);
           t?.GetIncludedAppIDs().forEach((e) => l.add(e));
         }),
-          s?.forEach((e) => {
-            const t = i.A.Get().GetPackage(e);
+          r?.forEach((e) => {
+            const t = o.A.Get().GetPackage(e);
             t?.GetIncludedAppIDs().forEach((e) => l.add(e));
           });
-        const c = Array.from(l).filter((e) => !i.A.Get().BHasApp(e, t));
+        const c = Array.from(l).filter((e) => !o.A.Get().BHasApp(e, t));
         if (
-          (c.length > 0 && (await i.A.Get().QueueMultipleAppRequests(c, t)),
-          n.forEach((e) => l.add(e)),
-          a)
+          (c.length > 0 && (await o.A.Get().QueueMultipleAppRequests(c, t)),
+          a.forEach((e) => l.add(e)),
+          n)
         ) {
           const e = Array.from(l)
             .map((e) => {
-              const t = i.A.Get().GetApp(e);
+              const t = o.A.Get().GetApp(e);
               return t?.GetParentAppID()
                 ? (l.add(t.GetParentAppID()), t.GetParentAppID())
                 : null;
             })
             .filter(Boolean)
-            .filter((e) => !i.A.Get().BHasApp(e, t));
-          e.length > 0 && (await i.A.Get().QueueMultipleAppRequests(e, t));
+            .filter((e) => !o.A.Get().BHasApp(e, t));
+          e.length > 0 && (await o.A.Get().QueueMultipleAppRequests(e, t));
         }
         return Array.from(l).filter((e) => {
-          const t = i.A.Get().GetApp(e);
+          const t = o.A.Get().GetApp(e);
           return t && !t.GetParentAppID();
         });
       }
-      const f = {
+      const h = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
       };
       function g(e) {
-        const t = o.Fm.Get();
+        const t = i.Fm.Get();
         (0, u.wT)(t.BIsLoaded(), "Dynamic Store not loaded");
-        const a = e?.GetAllLanguagesWithSomeSupport() || [],
-          n = c.f.Get().GetHomeView()?.localized;
+        const n = e?.GetAllLanguagesWithSomeSupport() || [],
+          a = c.f.Get().GetHomeView()?.localized;
         return (
           !e ||
           (0 == e.GetStoreItemType() &&
@@ -911,39 +1172,39 @@
           t.BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
           t.BExcludeTagIDs(e.GetTagIDs()) ||
           e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e)) ||
-          (n &&
+          (a &&
             !(
-              0 == a.length ||
+              0 == n.length ||
               e.BHasSomeLanguageSupport(0) ||
-              t.BIsAnyLanguageEnabled(a)
+              t.BIsAnyLanguageEnabled(n)
             ))
         );
       }
-      async function v(e, t, a, r) {
+      async function y(e, t, n, s) {
         let c = 0,
           u = 0;
         const d = [];
-        await _(e, n.Xh, t);
-        for (const n of e) {
-          const e = i.A.Get().GetStoreItem(n.id, (0, s.SW)(n.type));
+        await f(e, a.Xh, t);
+        for (const a of e) {
+          const e = o.A.Get().GetStoreItem(a.id, (0, r.SW)(a.type));
           if (!e) {
             c++;
             continue;
           }
           const l = e
             .GetIncludedAppIDs()
-            .map((e) => i.A.Get().GetApp(e))
+            .map((e) => o.A.Get().GetApp(e))
             .filter(Boolean);
           if ((l.push(e), t)) {
             const e = new Set(l.map((e) => e.GetParentAppID()).filter(Boolean)),
               t = Array.from(e)
-                .map((e) => i.A.Get().GetApp(e))
+                .map((e) => o.A.Get().GetApp(e))
                 .filter(Boolean);
             t && l.push(...t);
           }
-          l.some(r || g)
-            ? (u++, a && (o.Fm.Get().BIsStoreItemOwned(e) || a.push(n)))
-            : d.push(n);
+          l.some(s || g)
+            ? (u++, n && (i.Fm.Get().BIsStoreItemOwned(e) || n.push(a)))
+            : d.push(a);
         }
         return (
           "dev" === l.TS.WEB_UNIVERSE &&
@@ -958,390 +1219,115 @@
           d
         );
       }
-      async function S(e, t, a, n, r, l, c) {
-        let u = await v(
+      async function I(e, t, n, a, s, l, c) {
+        let u = await y(
           e,
           t,
           c,
-          r
+          s
             ? (e) =>
                 !e ||
-                o.Fm.Get().BExcludesContentDescriptor(
+                i.Fm.Get().BExcludesContentDescriptor(
                   e.GetContentDescriptorIDs(),
                 ) ||
-                o.Fm.Get().BExcludeTagIDs(e.GetTagIDs())
+                i.Fm.Get().BExcludeTagIDs(e.GetTagIDs())
             : g,
         );
         const d = [];
         for (const e of u) {
-          const t = i.A.Get().GetStoreItem(e.id, (0, s.SW)(e.type));
+          const t = o.A.Get().GetStoreItem(e.id, (0, r.SW)(e.type));
           if (!t) continue;
-          const r = t?.GetIncludedAppIDsOrSelf();
+          const s = t?.GetIncludedAppIDsOrSelf();
           let u = !1;
-          a && (u = u || r.every((e) => o.Fm.Get().BIsGameOwned(e))),
-            n && (u = u || r.every((e) => o.Fm.Get().BIsGameWishlisted(e))),
-            l && (u = u || r.every((e) => o.Fm.Get().BIsGameIgnored(e))),
+          n && (u = u || s.every((e) => i.Fm.Get().BIsGameOwned(e))),
+            a && (u = u || s.every((e) => i.Fm.Get().BIsGameWishlisted(e))),
+            l && (u = u || s.every((e) => i.Fm.Get().BIsGameIgnored(e))),
             u ? c && c.push(e) : d.push(e);
         }
         return d;
       }
     },
-    46416: (e, t, a) => {
+    94743: (e, t, n) => {
       "use strict";
-      a.d(t, { J: () => k, W: () => W });
-      var n = a(7850),
-        s = a(45699),
-        r = a(76217),
-        o = a(23310),
-        i = a(78588),
-        l = a(39777),
-        c = a(14987),
-        u = a(60014),
-        d = a(58918),
-        m = a(90626),
-        p = a(57876),
-        h = a(35380),
-        _ = a(55963),
-        f = a(62792),
-        g = a(55263),
-        v = a(33924),
-        S = a(706),
-        b = a(75152),
-        I = a(80696),
-        w = a(18654),
-        x = a.n(w),
-        A = a(88961),
-        y = a(72860),
-        C = a(70300),
-        j = a(12424),
-        D = a(20433),
-        G = a(54492),
-        E = a(49411),
-        T = a(52038),
-        N = a(61859),
-        B = a(61336),
-        L = a(78327),
-        P = a(91291),
-        R = a.n(P),
-        H = a(99956),
-        F = a(75279);
-      const k = "capsule_index_";
-      function W(e) {
-        const {
-            capsule: t,
-            bShowParentApp: a,
-            elElementToAppendToHover: s,
-            index: i,
-            navKey: l,
-            bHideStoreHover: c,
-            onlyOneDiscountPct: u,
-            bPreferDemoStorePage: d,
-            bShowEarlyAccessBanner: _,
-          } = e,
-          [v, b] = m.useState(!1),
-          [I] = (0, g.G6)(t.id, (0, f.SW)(t.type), p.Xh),
-          [w] = (0, g.t7)(a ? I?.GetParentAppID() : void 0, p.Xh),
-          A = (0, h.rt)(t);
-        if (!I) return null;
-        const y = Boolean(w),
-          j = (0, n.jsx)(O, {
-            ...e,
-            strExtraParams: e.strExtraParams,
-            info: t,
-            bIsHovered: v,
-            bHasParentAppToDisplay: y,
-            onlyOneDiscountPct: u,
-            bShowEarlyAccessBanner: _,
-          });
-        return (0, n.jsxs)(r.Z, {
-          className: (0, T.A)({
-            [x().OuterCapsuleContainer]: !0,
-            [k + i]: 0 == i,
-          }),
-          navEntryPreferPosition: o.iU.PREFERRED_CHILD,
-          navKey: l,
-          children: [
-            (0, n.jsxs)(C.oj, {
-              appid: I.GetAppID(),
-              children: [
-                Boolean(c)
-                  ? (0, n.jsx)("div", {
-                      onMouseEnter: () => b(!0),
-                      onMouseLeave: () => b(!1),
-                      children: j,
-                    })
-                  : (0, n.jsx)(S.Q, {
-                      className: x().CapsuleContainer,
-                      id: A,
-                      elElementToAppend: e.elElementToAppendToHover,
-                      bShowDemoButton: e.bShowDemoButton,
-                      bPreferDemoStorePage: e.bPreferDemoStorePage,
-                      bShowDeckCompatibilityDialog:
-                        e.bShowDeckCompatibilityDialog,
-                      bHidePrice: e.bHidePrice,
-                      bUseSubscriptionLayout: e.bUseSubscriptionLayout,
-                      strExtraParams: e.strExtraParams,
-                      nCreatorAccountID: e.creatorAccountID,
-                      nWidthMultiplier: e.nWidthMultiplier,
-                      bShowIgnoreButton: e.bShowIgnoreButton,
-                      bShowDescription: e.bShowDescriptionInHover,
-                      children: j,
-                    }),
-                Boolean(s) && (0, n.jsx)(n.Fragment, { children: s }),
-              ],
-            }),
-            y &&
-              (0, n.jsx)(M, {
-                strExtraParams: e.strExtraParams,
-                parentStoreItem: w,
-                childAppType: I.GetAppType(),
-                bPreferDemoStorePage: d,
-              }),
-          ],
-        });
-      }
-      function M(e) {
-        const {
-            strExtraParams: t,
-            parentStoreItem: a,
-            childAppType: r,
-            bPreferDemoStorePage: o,
-          } = e,
-          i = (0, F.DJ)(a),
-          { data: c } = (0, l.J$)(i),
-          d = (0, u.n9)(),
-          m = (0, L.Qn)();
-        return c
-          ? (0, n.jsx)(s.ml, {
-              className: x().CapsuleParentInfo,
-              ...(0, y.S)(c, d, m, o, t),
-              children: (0, n.jsxs)(C.oj, {
-                appid: a.GetAppID(),
-                children: [
-                  (0, n.jsx)("div", {
-                    className: x().ParentType,
-                    children: (0, N.we)(
-                      11 == r
-                        ? "#SalePage_ParentApp_SoundTrack"
-                        : "#SalePage_ParentApp_DLC",
-                    ),
-                  }),
-                  (0, n.jsx)(D.u, {
-                    id: i,
-                    strExtraParams: t,
-                    children: (0, n.jsx)("img", {
-                      loading: "lazy",
-                      className: v.AppCapsuleImage,
-                      alt: a.GetName(),
-                      src: a.GetAssets().GetSmallCapsuleURL(),
-                      ...(0, p.Jw)(),
-                    }),
-                  }),
-                ],
-              }),
-            })
-          : null;
-      }
-      function O(e) {
-        const {
-            info: t,
-            bHideStatusBanners: a,
-            strExtraParams: r,
-            index: o,
-            imageType: l,
-            bHasParentAppToDisplay: d,
-            bIsHovered: m,
-            strDoubleCapsuleMessage: v,
-            bPreferDemoStorePage: S,
-            bShowEarlyAccessBanner: b,
-            bPreferAssetWithoutOverride: w,
-          } = e,
-          [x] = (0, g.G6)(t.id, (0, f.SW)(t.type), p.Xh),
-          y = (0, h.rt)(t),
-          C = (0, u.n9)(),
-          j = (0, E.w)(),
-          D = (0, c._)(y);
-        if (!x) return null;
-        const N = (0, B.NT)(
-          (0, _.It)(`${x.GetStorePageURL(S)}${r ? `?${r}` : ""}`, C, j),
-        );
-        let L;
-        "overrideNavigation" in t &&
-          (L = (e) => (
-            t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
-          ));
-        const P = Boolean(v);
-        return (0, n.jsxs)(n.Fragment, {
-          children: [
-            (0, n.jsxs)("div", {
-              className: (0, T.A)({ [R().TwoWidthCtn]: P }),
-              children: [
-                (0, n.jsxs)(s.Ii, {
-                  href: L ? void 0 : N,
-                  style: { display: "block", cursor: "pointer" },
-                  className: (0, T.A)({ [R().TwoWidthCapsule]: P }),
-                  preferredFocus: d,
-                  onClick: L,
-                  children: [
-                    (0, n.jsx)(A.V, {
-                      appids: D,
-                      hide_status_banners: a,
-                      show_early_access: e.bShowEarlyAccessBanner,
-                    }),
-                    "none" != l &&
-                      (0, n.jsx)(i.a, {
-                        imageType: l,
-                        id: y,
-                        bPreferAssetWithoutOverride: w,
-                      }),
-                    (0, n.jsx)(G.J, { id: y }),
-                    (0, n.jsx)(I.m, { id: y, active: m, bIsHoverMode: !0 }),
-                  ],
-                }),
-                P &&
-                  (0, n.jsxs)("div", {
-                    className: (0, T.A)(
-                      R().TwoWidthSideInfo,
-                      "TwoWidthSideInfo",
-                    ),
-                    children: [
-                      (0, n.jsx)("div", { className: R().Reason, children: v }),
-                      (0, n.jsx)("div", {
-                        className: R().StoreSaleItemRelease,
-                        children: (0, n.jsx)("span", {
-                          children: x.GetFormattedSteamReleaseDate(),
-                        }),
-                      }),
-                      (0, n.jsx)(H.n, {
-                        bHideTitle: !0,
-                        rgTagIDs: x.GetTagIDs(),
-                        instanceNum: o,
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-            (0, n.jsx)(V, { ...e }),
-          ],
-        });
-      }
-      function V(e) {
-        const {
-            info: t,
-            bHidePriceIfOwned: a,
-            bHideStatusBanners: s,
-            bUseSubscriptionLayout: r,
-            elElementToAppendToHover: o,
-            bHidePrice: i,
-            bHidePlatforms: c,
-            creatorAccountID: u,
-            bIsHovered: m,
-            onlyOneDiscountPct: p,
-            strDoubleCapsuleMessage: _,
-          } = e,
-          f = (0, h.rt)(t),
-          { data: g } = (0, l.J$)(f),
-          { bIsOwned: v } = (0, d.ZJ)(f),
-          S = v && !s;
-        if (r && g && 0 == g.item_type && g.appid)
-          return (0, n.jsx)(j.E, { appid: g.appid, bIsMuted: m });
-        if (o) return null;
-        const I = Boolean(v && a),
-          w = Boolean(S);
-        return (0, n.jsx)(b.q, {
-          id: f,
-          bShowAsMuted: w,
-          bHidePrice: i,
-          bShowInLibraryInsteadOfPrice: I,
-          bHidePlatforms: c,
-          creatorAccountID: u,
-          bShowName: e.bShowName,
-          onlyOneDiscountPct: p,
-          bShowWishlistButton: Boolean(_),
-        });
-      }
-    },
-    94743: (e, t, a) => {
-      "use strict";
-      a.d(t, { l: () => h, r: () => p });
-      var n = a(7850),
-        s = a(90626),
-        r = a(26296),
-        o = a(12155),
-        i = a(48211),
-        l = a(52038),
-        c = a(61859),
-        u = a(70758),
-        d = a.n(u),
-        m = a(61949);
-      const p = (e) => {
+      n.d(t, { l: () => p, r: () => m });
+      var a = n(7850),
+        r = n(90626),
+        s = n(26296),
+        i = n(12155),
+        o = n(48211),
+        l = n(52038),
+        c = n(61859),
+        u = n(70758),
+        d = n.n(u),
+        _ = n(61949);
+      const m = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
-            [a, o] = s.useState(0);
-          s.useEffect(() => o(0), [e.video]);
-          const i = s.useRef(void 0);
+            [n, i] = r.useState(0);
+          r.useEffect(() => i(0), [e.video]);
+          const o = r.useRef(void 0);
           if (e.altImgWithFallback && e.altImgWithFallback.length > 0)
-            return (0, n.jsx)(r.o, {
+            return (0, a.jsx)(s.o, {
               className: e.className,
               srcs: e.altImgWithFallback,
             });
           if (e.altImg)
-            return (0, n.jsx)("img", { src: e.altImg, className: e.className });
+            return (0, a.jsx)("img", { src: e.altImg, className: e.className });
           {
-            const s =
-                "https://img.youtube.com/vi/" + e.video + "/" + t[a] + ".jpg",
-              r = () => {
-                a + 1 < t.length && o(a + 1);
+            const r =
+                "https://img.youtube.com/vi/" + e.video + "/" + t[n] + ".jpg",
+              s = () => {
+                n + 1 < t.length && i(n + 1);
               },
               c = () => {
-                i.current && i.current.naturalHeight < 91 && r();
+                o.current && o.current.naturalHeight < 91 && s();
               };
-            return (0, n.jsx)("img", {
-              ref: i,
+            return (0, a.jsx)("img", {
+              ref: o,
               onLoad: c,
-              onError: r,
-              src: s,
+              onError: s,
+              src: r,
               className: (0, l.A)(d().YoutubePreviewImage, e.className),
             });
           }
         },
-        h = (e) => {
-          const [t, a] = s.useState(!1);
-          (0, i.VC)(!!e.preloadYoutubeScripts);
-          const r = (0, m.Rp)("youtube");
-          if (t && r)
-            return (0, n.jsx)(i.N1, {
+        p = (e) => {
+          const [t, n] = r.useState(!1);
+          (0, o.VC)(!!e.preloadYoutubeScripts);
+          const s = (0, _.Rp)("youtube");
+          if (t && s)
+            return (0, a.jsx)(o.N1, {
               ...e,
               classnames: (0, l.A)(d().YoutubePlayer, e.classnames),
             });
           {
             const t = (t) => {
               e.onPlayerActivated && e.onPlayerActivated(),
-                a(!0),
+                n(!0),
                 t.stopPropagation(),
                 t.preventDefault();
             };
-            return (0, n.jsxs)("div", {
+            return (0, a.jsxs)("div", {
               className: (0, l.A)(
                 "YoutubePreviewContainer",
                 d().YoutubePreviewImage,
                 e.imageClassnames,
               ),
-              onClick: r ? t : void 0,
+              onClick: s ? t : void 0,
               children: [
-                (0, n.jsx)(p, {
+                (0, a.jsx)(m, {
                   className: "YoutubePreviewImage",
                   altImgWithFallback: e.altImgWithFallback,
                   altImg: e.altImg,
                   video: e.video,
                 }),
-                r &&
-                  (0, n.jsxs)(n.Fragment, {
+                s &&
+                  (0, a.jsxs)(a.Fragment, {
                     children: [
-                      (0, n.jsx)("div", {
+                      (0, a.jsx)("div", {
                         className: "YoutubePreviewPlay",
-                        children: (0, n.jsx)(o.IOc, {}),
+                        children: (0, a.jsx)(i.IOc, {}),
                       }),
-                      (0, n.jsx)("div", {
+                      (0, a.jsx)("div", {
                         className: "VideoHintText",
                         children: (0, c.we)("#EventCalendar_WatchYouTubeVideo"),
                       }),
@@ -1352,41 +1338,41 @@
           }
         };
     },
-    49271: (e, t, a) => {
+    49271: (e, t, n) => {
       "use strict";
-      a.r(t),
-        a.d(t, { CuratorReviewListContainer: () => ee, default: () => Q });
-      var n = a(7850),
-        s = a(75844),
-        r = a(90626),
-        o = a(15759),
-        i = a(22837),
-        l = a(45699),
-        c = a(12447),
-        u = a(76217),
-        d = a(70995),
-        m = a(38390),
-        p = a(17720),
-        h = a(55963),
-        _ = a(4434),
-        f = a(41735),
-        g = a.n(f),
-        v = a(78327),
-        S = a(68797);
+      n.r(t),
+        n.d(t, { CuratorReviewListContainer: () => ee, default: () => J });
+      var a = n(7850),
+        r = n(75844),
+        s = n(90626),
+        i = n(15759),
+        o = n(22837),
+        l = n(45699),
+        c = n(12447),
+        u = n(76217),
+        d = n(70995),
+        _ = n(38390),
+        m = n(17720),
+        p = n(55963),
+        f = n(4434),
+        h = n(41735),
+        g = n.n(h),
+        y = n(78327),
+        I = n(68797);
       function b(e, t) {
-        const [a, n] = (0, r.useState)(
+        const [n, a] = (0, s.useState)(
             e?.BUsesContentHubForItemSource() ? new Set() : null,
           ),
-          s = (0, _.m)("useFilteredAppViaContentHub");
+          r = (0, f.m)("useFilteredAppViaContentHub");
         return (
-          (0, r.useEffect)(() => {
+          (0, s.useEffect)(() => {
             e?.BUsesContentHubForItemSource() &&
-              !a &&
+              !n &&
               (async function (e, t) {
-                const a =
-                    v.TS.STORE_BASE_URL +
+                const n =
+                    y.TS.STORE_BASE_URL +
                     "contenthub/ajaxfilterappsbycontenthub",
-                  n = {
+                  a = {
                     hubtype: e.GetContentHubType(),
                     category: e.GetContentHubCategory(),
                     tagid: e.GetContentHubTag(),
@@ -1396,117 +1382,117 @@
                     optin_only: e.jsondata.optin_only,
                     applist: t.sort().join(","),
                   };
-                let s = null;
-                const r = new Set();
+                let r = null;
+                const s = new Set();
                 try {
-                  const e = await g().get(a, { params: n });
+                  const e = await g().get(n, { params: a });
                   if (1 == e?.data?.success)
-                    return e.data.appids.forEach((e) => r.add(e)), r;
-                  s = (0, S.H)(e);
+                    return e.data.appids.forEach((e) => s.add(e)), s;
+                  r = (0, I.H)(e);
                 } catch (e) {
-                  s = (0, S.H)(e);
+                  r = (0, I.H)(e);
                 }
                 return (
                   console.error(
-                    "LoadContentHubFilteredApps failed: " + s?.strErrorMsg,
-                    s,
+                    "LoadContentHubFilteredApps failed: " + r?.strErrorMsg,
+                    r,
                   ),
-                  r
+                  s
                 );
               })(e, t).then((e) => {
-                s.token.reason || n(e);
+                r.token.reason || a(e);
               });
-          }, [a, s.token.reason, e, t]),
-          a
+          }, [n, r.token.reason, e, t]),
+          n
         );
       }
-      var I = a(6626),
-        w = a(30894),
-        x = a(16021),
-        A = a(62792),
-        y = a(55263),
-        C = a(39020),
-        j = a(39777),
-        D = a(33380),
-        G = a.n(D),
-        E = a(12155),
-        T = a(52038),
-        N = a(70758);
-      const B = new RegExp(
+      var v = n(6626),
+        A = n(30894),
+        S = n(16021),
+        G = n(62792),
+        w = n(55263),
+        j = n(39020),
+        C = n(39777),
+        R = n(33380),
+        x = n.n(R),
+        D = n(12155),
+        B = n(52038),
+        k = n(70758);
+      const L = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
-      function L(e) {
-        const t = B.exec(e);
+      function N(e) {
+        const t = L.exec(e);
         return t && t.length > 1 ? t[1] : null;
       }
-      function P(e) {
+      function T(e) {
         const {
             posterURL: t,
-            videoid: a,
-            muted: s,
-            autoplay: o,
-            bIsClipID: i,
+            videoid: n,
+            muted: r,
+            autoplay: i,
+            bIsClipID: o,
             time: l,
             width: c,
             height: u,
           } = e,
-          [d, m] = r.useState(Boolean(t)),
-          p = null != o && null != o && o;
+          [d, _] = s.useState(Boolean(t)),
+          m = null != i && null != i && i;
         if (d)
-          return (0, n.jsxs)("div", {
-            className: (0, T.A)(
+          return (0, a.jsxs)("div", {
+            className: (0, B.A)(
               "YoutubePreviewContainer",
-              N.YoutubePreviewImage,
+              k.YoutubePreviewImage,
               e.imageClassnames,
             ),
-            onClick: () => m(!1),
+            onClick: () => _(!1),
             children: [
-              (0, n.jsx)("img", {
-                className: (0, T.A)(
+              (0, a.jsx)("img", {
+                className: (0, B.A)(
                   "YoutubePreviewImage",
-                  N.YoutubePreviewImage,
+                  k.YoutubePreviewImage,
                 ),
                 src:
                   t ||
-                  v.TS.COMMUNITY_CDN_URL +
+                  y.TS.COMMUNITY_CDN_URL +
                     "public/shared/images/responsive/youtube_16x9_placeholder.gif",
               }),
-              (0, n.jsx)("div", {
+              (0, a.jsx)("div", {
                 className: "YoutubePreviewPlay",
-                children: (0, n.jsx)(E.IOc, {}),
+                children: (0, a.jsx)(D.IOc, {}),
               }),
             ],
           });
-        let h = (0, v.xv)().replace("https://", "");
-        const _ = h.indexOf("/");
-        _ >= 0 && (h = h.substring(0, _));
-        let f = i
-          ? `https://clips.twitch.tv/embed?clip=${a}`
-          : `https://player.twitch.tv/?video=${a}`;
+        let p = (0, y.xv)().replace("https://", "");
+        const f = p.indexOf("/");
+        f >= 0 && (p = p.substring(0, f));
+        let h = o
+          ? `https://clips.twitch.tv/embed?clip=${n}`
+          : `https://player.twitch.tv/?video=${n}`;
         return (
-          (f += `&parent=${h}&autoplay=${p}&muted=${Boolean(s)}`),
+          (h += `&parent=${p}&autoplay=${m}&muted=${Boolean(r)}`),
           l &&
-            (f += `&time=${(function (e) {
+            (h += `&time=${(function (e) {
               const t = Math.floor(e / 3600);
               e -= 60 * t * 60;
-              const a = Math.floor(e / 60);
-              return `${t}h${a}m${(e -= a * e)}s`;
+              const n = Math.floor(e / 60);
+              return `${t}h${n}m${(e -= n * e)}s`;
             })(l)}`),
-          (0, n.jsxs)("div", {
-            className: (0, T.A)("YoutubePlayer", G().TwitchPlayer),
+          (0, a.jsxs)("div", {
+            className: (0, B.A)("YoutubePlayer", x().TwitchPlayer),
             children: [
-              (0, n.jsx)("img", {
-                className: (0, T.A)(
+              (0, a.jsx)("img", {
+                className: (0, B.A)(
                   "YoutubePreviewContainer",
-                  N.YoutubePreviewImage,
+                  k.YoutubePreviewImage,
                   e.imageClassnames,
                 ),
                 src:
-                  v.TS.COMMUNITY_CDN_URL +
+                  y.TS.COMMUNITY_CDN_URL +
                   "public/shared/images/responsive/youtube_16x9_placeholder.gif",
               }),
-              (0, n.jsx)("iframe", {
-                src: f,
+              (0, a.jsx)("iframe", {
+                src: h,
                 allowFullScreen: !0,
                 frameBorder: 0,
                 width: c || 460,
@@ -1516,56 +1502,56 @@
           })
         );
       }
-      var R = a(706),
-        H = a(99032),
-        F = a(75152),
-        k = a(46416),
-        W = a(22797),
-        M = a(10224),
-        O = a(94743),
-        V = a(61859),
-        Y = a(61336),
-        z = a(62014),
-        U = a.n(z),
-        Z = a(22305),
-        q = a(22584);
-      function J(e) {
+      var E = n(706),
+        P = n(99032),
+        F = n(75152),
+        H = n(22687),
+        V = n(22797),
+        O = n(10224),
+        M = n(94743),
+        Y = n(61859),
+        U = n(61336),
+        W = n(62014),
+        z = n.n(W),
+        q = n(22305),
+        K = n(22584);
+      function Z(e) {
         const { clanInfo: t } = e,
-          { curator_link: a, curator_medium_avatar: s } = (0, v.Tc)(
+          { curator_link: n, curator_medium_avatar: r } = (0, y.Tc)(
             "curator_header",
             "application_config",
           );
-        return (0, n.jsx)(u.Z, {
+        return (0, a.jsx)(u.Z, {
           className: "page_content_ctn",
           "flow-children": "column",
           autoFocus: !0,
-          children: (0, n.jsx)("div", {
+          children: (0, a.jsx)("div", {
             className: "page_content",
-            children: (0, n.jsxs)(u.Z, {
+            children: (0, a.jsxs)(u.Z, {
               className: "list_header_area",
               "flow-children": "row",
               children: [
-                (0, n.jsx)("div", {
+                (0, a.jsx)("div", {
                   className: "curator_avatar_image",
-                  children: (0, n.jsx)(l.Ii, {
-                    href: a,
-                    children: (0, n.jsx)("img", {
+                  children: (0, a.jsx)(l.Ii, {
+                    href: n,
+                    children: (0, a.jsx)("img", {
                       className: "curator_avatar",
-                      src: s,
+                      src: r,
                     }),
                   }),
                 }),
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                   className: "curator_details",
                   children: [
-                    (0, n.jsx)(Z.r, {
-                      className: q.BreadContainer,
-                      crumbs: (0, v.Tc)("breadcrumbs", "application_config"),
+                    (0, a.jsx)(q.r, {
+                      className: K.BreadContainer,
+                      crumbs: (0, y.Tc)("breadcrumbs", "application_config"),
                     }),
-                    (0, n.jsx)(l.Ii, {
+                    (0, a.jsx)(l.Ii, {
                       className: "pageheader curator_name",
-                      href: a,
-                      children: (0, V.we)(
+                      href: n,
+                      children: (0, Y.we)(
                         "#SteamCurator_List_Header_List",
                         t.group_name,
                       ),
@@ -1577,55 +1563,55 @@
           }),
         });
       }
-      var X = a(32630),
-        K = a(35380),
-        $ = a(42834);
-      const Q = function (e) {
-        return (0, n.jsx)(c.u, {
+      var X = n(32630),
+        $ = n(35380),
+        Q = n(42834);
+      const J = function (e) {
+        return (0, a.jsx)(c.u, {
           navID: "StoreCuratorPageRoot",
-          children: (0, n.jsx)(ee, { listid: e.listid }),
+          children: (0, a.jsx)(ee, { listid: e.listid }),
         });
       };
       function ee(e) {
         const t = parseInt(
-            (0, v.Tc)("curator_account_id", "application_config"),
+            (0, y.Tc)("curator_account_id", "application_config"),
           ),
-          a = (0, I.m1)(t),
-          s = (0, I.ME)(a?.clanSteamID, e.listid);
+          n = (0, v.m1)(t),
+          r = (0, v.ME)(n?.clanSteamID, e.listid);
         return (
-          (0, C.vb)(v.TS.LANGUAGE),
-          s
-            ? (0, n.jsxs)(X.Ay, {
+          (0, j.vb)(y.TS.LANGUAGE),
+          r
+            ? (0, a.jsxs)(X.Ay, {
                 feature: "curatorlistcapsule",
                 children: [
-                  (0, n.jsx)(J, { clanInfo: a }),
-                  (0, n.jsx)("div", {
+                  (0, a.jsx)(Z, { clanInfo: n }),
+                  (0, a.jsx)("div", {
                     className: "page_content_ctn grayscale",
-                    children: (0, n.jsx)("div", {
+                    children: (0, a.jsx)("div", {
                       className: "page_content",
-                      children: (0, n.jsxs)("div", {
-                        className: U().CuratorListCtn,
+                      children: (0, a.jsxs)("div", {
+                        className: z().CuratorListCtn,
                         children: [
-                          (0, n.jsx)(ne, { listDetails: s }),
-                          (0, I.cc)(s)
-                            ? (0, n.jsx)(te, { listDetails: s })
-                            : (0, n.jsx)(ae, {
-                                listDetails: s,
-                                rgListItems: s.apps,
+                          (0, a.jsx)(ae, { listDetails: r }),
+                          (0, v.cc)(r)
+                            ? (0, a.jsx)(te, { listDetails: r })
+                            : (0, a.jsx)(ne, {
+                                listDetails: r,
+                                rgListItems: r.apps,
                               }),
-                          (0, n.jsxs)("div", {
-                            className: U().CuratorMoreCtn,
+                          (0, a.jsxs)("div", {
+                            className: z().CuratorMoreCtn,
                             children: [
-                              (0, n.jsx)("h2", {
-                                children: (0, V.we)(
+                              (0, a.jsx)("h2", {
+                                children: (0, Y.we)(
                                   "#SteamCurator_ExploreMoreTitle",
                                 ),
                               }),
-                              (0, n.jsx)(l.Ii, {
-                                href: a.vanity_url,
-                                children: (0, V.PP)(
+                              (0, a.jsx)(l.Ii, {
+                                href: n.vanity_url,
+                                children: (0, Y.PP)(
                                   "#SteamCurator_MoreReviews",
-                                  a.group_name,
+                                  n.group_name,
                                 ),
                               }),
                             ],
@@ -1641,52 +1627,52 @@
       }
       function te(e) {
         const { listDetails: t } = e,
-          [a, s] = (0, r.useState)(null),
-          o = new p.b(t.sale_clan_steamid),
-          { eventModel: i } = (0, m.B9)(
-            o.GetAccountID(),
+          [n, r] = (0, s.useState)(null),
+          i = new m.b(t.sale_clan_steamid),
+          { eventModel: o } = (0, _.B9)(
+            i.GetAccountID(),
             t.sale_clan_event_gid,
           ),
-          l = (0, r.useMemo)(
+          l = (0, s.useMemo)(
             () => (t.apps || []).map((e) => e.recommended_app.appid),
             [t],
           ),
-          c = b(i, l);
+          c = b(o, l);
         return (
-          (0, r.useEffect)(() => {
-            if (i)
-              if (i.BUsesContentHubForItemSource())
-                c && s(t.apps?.filter((e) => c.has(e.recommended_app?.appid)));
+          (0, s.useEffect)(() => {
+            if (o)
+              if (o.BUsesContentHubForItemSource())
+                c && r(t.apps?.filter((e) => c.has(e.recommended_app?.appid)));
               else {
-                const e = i.GetSaleFeaturedApps();
-                s(t.apps?.filter((t) => e.has(t.recommended_app?.appid)));
+                const e = o.GetSaleFeaturedApps();
+                r(t.apps?.filter((t) => e.has(t.recommended_app?.appid)));
               }
-          }, [t, i, c]),
-          (0, n.jsx)(ae, { listDetails: t, rgListItems: a })
+          }, [t, o, c]),
+          (0, a.jsx)(ne, { listDetails: t, rgListItems: n })
         );
       }
-      function ae(e) {
-        const { listDetails: t, rgListItems: a } = e,
-          [s, o] = (0, r.useState)(0),
-          [i, c] = (0, r.useState)(null),
-          d = (0, _.m)("CuratorAppListDisplay");
+      function ne(e) {
+        const { listDetails: t, rgListItems: n } = e,
+          [r, i] = (0, s.useState)(0),
+          [o, c] = (0, s.useState)(null),
+          d = (0, f.m)("CuratorAppListDisplay");
         if (
-          (r.useEffect(() => {
-            a &&
-              (o(a?.length || 0),
-              w.Fm.Get()
+          (s.useEffect(() => {
+            n &&
+              (i(n?.length || 0),
+              A.Fm.Get()
                 .HintLoad()
                 .then(() => {
-                  const e = a.map((e) => e.recommended_app.appid);
-                  x.A.Get()
-                    .QueueMultipleAppRequests(e, H.jy)
+                  const e = n.map((e) => e.recommended_app.appid);
+                  S.A.Get()
+                    .QueueMultipleAppRequests(e, P.jy)
                     .then(() => {
                       d.token.reason ||
                         c(
-                          a.filter(
+                          n.filter(
                             (e) =>
-                              !(0, H.Li)(
-                                x.A.Get().GetApp(e.recommended_app.appid),
+                              !(0, P.Li)(
+                                S.A.Get().GetApp(e.recommended_app.appid),
                               ),
                           ),
                         );
@@ -1695,312 +1681,312 @@
                       d.token.reason || c([]);
                     });
                 }));
-          }, [a, d]),
-          null == i)
+          }, [n, d]),
+          null == o)
         )
-          return (0, n.jsx)(W.t, {
-            string: (0, V.we)("#Loading"),
+          return (0, a.jsx)(V.t, {
+            string: (0, Y.we)("#Loading"),
             position: "center",
             size: "medium",
           });
-        const m = 1 == t.list_type;
-        return (0, n.jsxs)(n.Fragment, {
+        const _ = 1 == t.list_type;
+        return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, n.jsx)(u.Z, {
-              className: (0, T.A)(U().CuratorList, m && U().CuratorListGrid),
+            (0, a.jsx)(u.Z, {
+              className: (0, B.A)(z().CuratorList, _ && z().CuratorListGrid),
               "flow-children": "grid",
-              children: i.map((e, a) =>
-                (0, n.jsx)(
-                  se,
-                  { item: e, listDetails: t, bAutoFocus: 0 == a },
+              children: o.map((e, n) =>
+                (0, a.jsx)(
+                  re,
+                  { item: e, listDetails: t, bAutoFocus: 0 == n },
                   "rec_" + e.recommended_app.appid,
                 ),
               ),
             }),
-            Boolean(100 > i.length) &&
-              (0, n.jsxs)("div", {
+            Boolean(100 > o.length) &&
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, n.jsxs)("span", {
+                  (0, a.jsxs)("span", {
                     children: [
-                      (0, V.Yp)("#SteamCurator_Hidden", s - i.length),
+                      (0, Y.Yp)("#SteamCurator_Hidden", r - o.length),
                       " ",
                     ],
                   }),
-                  (0, n.jsx)(l.Ii, {
-                    href: v.TS.STORE_BASE_URL + "account/preferences/",
-                    children: (0, V.we)("#SteamCurator_Setting"),
+                  (0, a.jsx)(l.Ii, {
+                    href: y.TS.STORE_BASE_URL + "account/preferences/",
+                    children: (0, Y.we)("#SteamCurator_Setting"),
                   }),
                 ],
               }),
           ],
         });
       }
-      function ne(e) {
+      function ae(e) {
         const { listDetails: t } = e,
-          a = (0, I.fq)(t),
-          s = (0, v.Tc)("showlisttitle", "application_config"),
-          r = (0, v.Tc)("titleareaheight", "application_config"),
-          o =
+          n = (0, v.fq)(t),
+          r = (0, y.Tc)("showlisttitle", "application_config"),
+          s = (0, y.Tc)("titleareaheight", "application_config"),
+          i =
             t.list_jsondata.youtube_link &&
             (0, d.XU)(t.list_jsondata.youtube_link),
-          c = t.list_jsondata.youtube_link && L(t.list_jsondata.youtube_link),
-          u = (0, i.sf)(v.TS.LANGUAGE),
-          m = V.NT.GetWithFallback(t.localized_flat_title, u),
-          p = V.NT.GetWithFallback(t.localized_flat_blurb, u),
-          h = V.NT.GetWithFallback(t.localized_flat_link, u),
-          _ =
-            a &&
-            a.GetImageURL(
-              (0, M.c5)() ? "product_mobile_banner" : "product_banner",
+          c = t.list_jsondata.youtube_link && N(t.list_jsondata.youtube_link),
+          u = (0, o.sf)(y.TS.LANGUAGE),
+          _ = Y.NT.GetWithFallback(t.localized_flat_title, u),
+          m = Y.NT.GetWithFallback(t.localized_flat_blurb, u),
+          p = Y.NT.GetWithFallback(t.localized_flat_link, u),
+          f =
+            n &&
+            n.GetImageURL(
+              (0, O.c5)() ? "product_mobile_banner" : "product_banner",
               u,
             );
-        return (0, n.jsxs)("div", {
-          className: U().TopReviewInfo,
+        return (0, a.jsxs)("div", {
+          className: z().TopReviewInfo,
           children: [
-            Boolean(_) &&
-              (0, n.jsx)(l.Ii, {
-                href: a.GetSaleURL(),
-                children: (0, n.jsx)("img", {
-                  className: U().SaleBanner,
-                  src: _,
+            Boolean(f) &&
+              (0, a.jsx)(l.Ii, {
+                href: n.GetSaleURL(),
+                children: (0, a.jsx)("img", {
+                  className: z().SaleBanner,
+                  src: f,
                 }),
               }),
-            s && m && (0, n.jsx)("div", { className: U().Title, children: m }),
-            s && p && (0, n.jsx)("div", { className: U().Blurb, children: p }),
-            Boolean(r > 0) && (0, n.jsx)("div", { style: { height: r } }),
-            o &&
-              (0, n.jsx)("div", {
-                className: U().VideoReviewCtn,
-                children: (0, n.jsx)(O.l, {
-                  video: o.strVideoID,
-                  startSeconds: o.nStartSeconds,
+            r && _ && (0, a.jsx)("div", { className: z().Title, children: _ }),
+            r && m && (0, a.jsx)("div", { className: z().Blurb, children: m }),
+            Boolean(s > 0) && (0, a.jsx)("div", { style: { height: s } }),
+            i &&
+              (0, a.jsx)("div", {
+                className: z().VideoReviewCtn,
+                children: (0, a.jsx)(M.l, {
+                  video: i.strVideoID,
+                  startSeconds: i.nStartSeconds,
                   autoplay: !0,
                   autopause: !0,
                   showFullscreenBtn: !0,
                   controls: !0,
                   preloadYoutubeScripts: !0,
                   playsInline: !0,
-                  imageClassnames: U().YouTubePreviewImage,
+                  imageClassnames: z().YouTubePreviewImage,
                 }),
               }),
             Boolean(c) &&
-              (0, n.jsx)("div", {
-                className: U().VideoReviewCtn,
-                children: (0, n.jsx)(P, {
+              (0, a.jsx)("div", {
+                className: z().VideoReviewCtn,
+                children: (0, a.jsx)(T, {
                   videoid: c,
                   posterURL: "",
-                  imageClassnames: U().YouTubePreviewImage,
+                  imageClassnames: z().YouTubePreviewImage,
                 }),
               }),
-            h && (0, n.jsx)(ie, { url: h }),
+            p && (0, a.jsx)(oe, { url: p }),
           ],
         });
       }
-      const se = (0, s.PA)((e) => {
-        const { item: t, listDetails: a, bAutoFocus: s } = e,
-          o = parseInt((0, v.Tc)("curator_account_id", "application_config")),
-          i = (0, I.m1)(o),
-          [l] = (0, y.t7)(t?.recommended_app?.appid, {
+      const re = (0, r.PA)((e) => {
+        const { item: t, listDetails: n, bAutoFocus: r } = e,
+          i = parseInt((0, y.Tc)("curator_account_id", "application_config")),
+          o = (0, v.m1)(i),
+          [l] = (0, w.t7)(t?.recommended_app?.appid, {
             include_assets: !0,
             include_release: !0,
           }),
-          c = (0, r.useMemo)(
+          c = (0, s.useMemo)(
             () => ({
               id: l?.GetID(),
-              type: (0, A._4)(l?.GetStoreItemType(), l?.GetAppType()),
+              type: (0, G._4)(l?.GetStoreItemType(), l?.GetAppType()),
             }),
             [l],
           ),
-          m = (0, K.rt)(c);
-        if (!i || !l) return null;
+          _ = (0, $.rt)(c);
+        if (!o || !l) return null;
         const {
-            appid: p,
-            link_url: h,
-            blurb: _,
-            time_recommended: f,
+            appid: m,
+            link_url: p,
+            blurb: f,
+            time_recommended: h,
             recommendation_state: g,
           } = t.recommended_app,
-          S = i.is_creator_home && !i.is_ogg,
-          b = a.list_jsondata.app_data?.[p],
-          w = h && (0, d.XU)(h),
-          x = h && L(h),
-          C = _ != I.F6 && _,
-          j = l.BHasDemo(),
-          D = b?.img_url,
-          G = `curator_clanid=${i.clanAccountID}&curator_listid=${a.listid}`,
-          E = l.GetStorePageURL() + "/?curator_clanid=" + i.clanAccountID;
-        return (0, n.jsxs)(u.Z, {
-          className: U().CuratorReview,
-          autoFocus: s,
+          I = o.is_creator_home && !o.is_ogg,
+          b = n.list_jsondata.app_data?.[m],
+          A = p && (0, d.XU)(p),
+          S = p && N(p),
+          j = f != v.F6 && f,
+          C = l.BHasDemo(),
+          R = b?.img_url,
+          x = `curator_clanid=${o.clanAccountID}&curator_listid=${n.listid}`,
+          D = l.GetStorePageURL() + "/?curator_clanid=" + o.clanAccountID;
+        return (0, a.jsxs)(u.Z, {
+          className: z().CuratorReview,
+          autoFocus: r,
           children: [
-            (0, n.jsx)("div", {
-              className: U().CapsuleCtn,
-              children: Boolean(w || x)
-                ? (0, n.jsx)(re, {
-                    strVideoID: w?.strVideoID || x,
-                    nStartSeconds: w?.nStartSeconds,
-                    id: m,
-                    strImgOverrideUrl: D,
-                    bShowDemoButton: j,
-                    strExtraParams: G,
-                    bTwitchVideo: Boolean(x),
+            (0, a.jsx)("div", {
+              className: z().CapsuleCtn,
+              children: Boolean(A || S)
+                ? (0, a.jsx)(se, {
+                    strVideoID: A?.strVideoID || S,
+                    nStartSeconds: A?.nStartSeconds,
+                    id: _,
+                    strImgOverrideUrl: R,
+                    bShowDemoButton: C,
+                    strExtraParams: x,
+                    bTwitchVideo: Boolean(S),
                   })
-                : (0, n.jsx)(k.W, {
+                : (0, a.jsx)(H.W, {
                     imageType: "header",
                     capsule: c,
-                    bShowDemoButton: j,
-                    strExtraParams: G,
+                    bShowDemoButton: C,
+                    strExtraParams: x,
                     bPreferAssetWithoutOverride: !1,
                   }),
             }),
-            (0, n.jsxs)("div", {
-              className: U().ReviewTextSection,
+            (0, a.jsxs)("div", {
+              className: z().ReviewTextSection,
               children: [
-                (0, n.jsx)("a", {
-                  className: U().GameTitle,
-                  href: E,
+                (0, a.jsx)("a", {
+                  className: z().GameTitle,
+                  href: D,
                   children: l.GetName(),
                 }),
-                (0, n.jsxs)("div", {
-                  className: U().RecommendationTypeAndDate,
+                (0, a.jsxs)("div", {
+                  className: z().RecommendationTypeAndDate,
                   children: [
-                    (0, n.jsx)(oe, { type: g }),
-                    (0, n.jsx)("div", {
-                      className: U().ReviewDate,
+                    (0, a.jsx)(ie, { type: g }),
+                    (0, a.jsx)("div", {
+                      className: z().ReviewDate,
                       children:
-                        S || !Boolean(f)
-                          ? (0, V.we)(
+                        I || !Boolean(h)
+                          ? (0, Y.we)(
                               "#EventModTile_ReleaseDate",
                               l.GetFormattedSteamReleaseDate(),
                             )
-                          : (0, V.$z)(f),
+                          : (0, Y.$z)(h),
                     }),
                   ],
                 }),
-                Boolean(C) &&
-                  (0, n.jsx)("div", {
-                    className: U().ReviewBlurb,
-                    children: (0, V.we)("#SteamCurator_ReviewTextQuoted", C),
+                Boolean(j) &&
+                  (0, a.jsx)("div", {
+                    className: z().ReviewBlurb,
+                    children: (0, Y.we)("#SteamCurator_ReviewTextQuoted", j),
                   }),
-                Boolean(h) && (0, n.jsx)(ie, { url: h }),
+                Boolean(p) && (0, a.jsx)(oe, { url: p }),
               ],
             }),
           ],
         });
       });
-      function re(e) {
+      function se(e) {
         const {
             strVideoID: t,
-            nStartSeconds: a,
-            id: s,
-            strImgOverrideUrl: r,
-            bShowDemoButton: o,
-            strExtraParams: i,
+            nStartSeconds: n,
+            id: r,
+            strImgOverrideUrl: s,
+            bShowDemoButton: i,
+            strExtraParams: o,
             bTwitchVideo: l,
           } = e,
-          { data: c } = (0, j.lv)(s);
-        return (0, n.jsxs)("div", {
-          className: U().YouTubeCapsule,
+          { data: c } = (0, C.lv)(r);
+        return (0, a.jsxs)("div", {
+          className: z().YouTubeCapsule,
           children: [
-            (0, n.jsx)("div", {
-              className: U().YouTubeCtn,
+            (0, a.jsx)("div", {
+              className: z().YouTubeCtn,
               children: l
-                ? (0, n.jsx)(P, {
+                ? (0, a.jsx)(T, {
                     videoid: t,
-                    posterURL: c ? (0, $.b0)(c, "header") : void 0,
-                    imageClassnames: U().YouTubePreviewImage,
+                    posterURL: c ? (0, Q.b0)(c, "header") : void 0,
+                    imageClassnames: z().YouTubePreviewImage,
                     autoplay: !0,
                   })
-                : (0, n.jsx)(O.l, {
+                : (0, a.jsx)(M.l, {
                     video: t,
-                    startSeconds: a,
+                    startSeconds: n,
                     autoplay: !0,
                     autopause: !0,
                     showFullscreenBtn: !0,
                     controls: !0,
                     preloadYoutubeScripts: !0,
                     playsInline: !0,
-                    imageClassnames: U().YouTubePreviewImage,
-                    altImg: r,
+                    imageClassnames: z().YouTubePreviewImage,
+                    altImg: s,
                   }),
             }),
-            (0, n.jsxs)("div", {
-              className: U().YouTubeCapsuleBottomBar,
+            (0, a.jsxs)("div", {
+              className: z().YouTubeCapsuleBottomBar,
               children: [
-                (0, n.jsx)("div", {
-                  className: U().GameImageCtn,
-                  children: (0, n.jsx)(R.Q, {
-                    id: s,
-                    bShowDemoButton: o,
+                (0, a.jsx)("div", {
+                  className: z().GameImageCtn,
+                  children: (0, a.jsx)(E.Q, {
+                    id: r,
+                    bShowDemoButton: i,
                     nDelayShowMs: 300,
-                    strExtraParams: i,
+                    strExtraParams: o,
                     hoverProps: {
                       direction: "overlay-center",
                       style: { minWidth: "300px" },
                     },
-                    children: (0, n.jsx)("img", {
-                      className: U().GameImage,
-                      src: c ? (0, $.b0)(c, "library_capsule") : void 0,
+                    children: (0, a.jsx)("img", {
+                      className: z().GameImage,
+                      src: c ? (0, Q.b0)(c, "library_capsule") : void 0,
                     }),
                   }),
                 }),
-                (0, n.jsx)(F.q, { id: s, strClassName: U().FullWidth }),
+                (0, a.jsx)(F.q, { id: r, strClassName: z().FullWidth }),
               ],
             }),
           ],
         });
       }
-      function oe(e) {
+      function ie(e) {
         switch (e.type) {
           case 0:
-            return (0, n.jsx)("div", {
-              className: U().Recommended,
-              children: (0, V.we)("#SteamCurator_Recommended"),
+            return (0, a.jsx)("div", {
+              className: z().Recommended,
+              children: (0, Y.we)("#SteamCurator_Recommended"),
             });
           case 1:
-            return (0, n.jsx)("div", {
-              className: U().NotRecommended,
-              children: (0, V.we)("#SteamCurator_NotRecommended"),
+            return (0, a.jsx)("div", {
+              className: z().NotRecommended,
+              children: (0, Y.we)("#SteamCurator_NotRecommended"),
             });
           case 2:
-            return (0, n.jsx)("div", {
-              className: U().Informational,
-              children: (0, V.we)("#SteamCurator_Informational"),
+            return (0, a.jsx)("div", {
+              className: z().Informational,
+              children: (0, Y.we)("#SteamCurator_Informational"),
             });
           default:
             return null;
         }
       }
-      function ie(e) {
-        let t = (0, h.OZ)(e.url);
-        (0, o.p)(t) &&
+      function oe(e) {
+        let t = (0, p.OZ)(e.url);
+        (0, i.p)(t) &&
           (t =
-            (v.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
-            v.TS.COMMUNITY_BASE_URL +
+            (y.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+            y.TS.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
             t);
-        const a = (0, Y.wm)(e.url),
-          s = (0, d.Lg)(e.url);
-        return (0, n.jsxs)("div", {
-          className: U().FullReviewLink,
+        const n = (0, U.wm)(e.url),
+          r = (0, d.Lg)(e.url);
+        return (0, a.jsxs)("div", {
+          className: z().FullReviewLink,
           children: [
-            (0, n.jsx)(l.Ii, {
-              className: U().FullReviewAnchor,
+            (0, a.jsx)(l.Ii, {
+              className: z().FullReviewAnchor,
               href: t,
               rel: "noopener nofollow",
               preferredFocus: !1,
               autoFocus: !1,
-              children: (0, V.we)(
-                s
+              children: (0, Y.we)(
+                r
                   ? "#SteamCurator_WatchFullReview"
                   : "#SteamCurator_ReadFullReview",
               ),
             }),
-            (0, n.jsx)("div", {
-              className: U().FullReviewDomain,
-              children: (0, V.we)(
+            (0, a.jsx)("div", {
+              className: z().FullReviewDomain,
+              children: (0, Y.we)(
                 "#SteamCurator_ReviewLinkHostnameBracketed",
-                a,
+                n,
               ),
             }),
           ],

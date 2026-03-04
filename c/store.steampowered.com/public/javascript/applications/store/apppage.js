@@ -1883,8 +1883,70 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (function () {
+            const [_, _] = (0, _.useState)(location.search);
+            return (
+              (0, _.useEffect)(() => {
+                function _(_) {
+                  "urlchange" === _.data && _(location.search);
+                }
+                return (
+                  window.addEventListener("message", _),
+                  () => {
+                    window.removeEventListener("message", _);
+                  }
+                );
+              }, []),
+              _
+            );
+          })(),
+          _ = (0, _.useMemo)(() => {
+            const _ = new URLSearchParams(
+              __webpack_require__.substring("chunkid"),
+            ).get(_);
+            return null != _
+              ? null != _
+                ? "boolean" == typeof _
+                  ? _.constructor("false" !== _)
+                  : _.constructor(_)
+                : _
+              : _;
+          }, [_, _, _]),
+          [_, _] = (0, _.useState)(_),
+          _ = _.useCallback(
+            (_, _ = !1) => {
+              const _ = new URLSearchParams(
+                __webpack_require__.substring("chunkid"),
+              );
+              if (null != _) {
+                if (_.get(_) == _) return;
+                _.set(_, String(_));
+              } else {
+                if (!_.has(_)) return;
+                _.delete(_);
+              }
+              _
+                ? history.replaceState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  )
+                : history.pushState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  ),
+                (0, _.startTransition)(() => {
+                  _(_), window.postMessage("urlchange");
+                });
+            },
+            [_, _],
+          );
+        return [_, _];
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1896,212 +1958,188 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        static contextType = _._;
-        state = {
-          events: null,
-          bShowModal: !1,
-          modalInitialEvent: null,
-          bPreLoaded: !1,
-          announcementGIDList: [],
-          last_update_event: null,
-        };
-        constructor(_) {
-          super(_);
+      const _ = 500;
+      function _(_) {
+        const {
+            appid: _,
+            event_customization: __webpack_require__,
+            partnerEventStore: _,
+            trackingLocation: _,
+            strClassName: _,
+            bViewAllShowInfiniteScroll: _,
+          } = _,
+          [_, _] = (0, _.useState)(null),
+          [_, _, _] = (0, _._)(),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)(void 0),
+          [_, _] = (0, _.useState)(null),
+          [_] = _("emgid", void 0),
+          _ = (0, _.useCallback)(() => {
+            _(null), _();
+          }, [_]),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (_ && _ && _.BIsPartnerEvent()) {
+                const _ = _._.Get().GetTracker();
+                _.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
+                  _.Flush();
+              }
+              _(_), _(void 0), _();
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(() => {
+            const {
+                event_gid: _,
+                announcement_gid: _,
+                clan_account_id: __webpack_require__,
+              } = _,
+              _ = _._.Get().GetTracker();
+            _ && _ && _.MarkEventRead(_, __webpack_require__, _) && _.Flush(),
+              _(_),
+              _(null),
+              _();
+          }, [_, _, _]);
+        (0, _.useEffect)(() => {
           const _ = (0, _._)("EventWebRowEmbed");
-          if (this.ValidateStoreDefault(_)) {
-            (this.state.bPreLoaded = _.bPreLoaded),
-              (this.state.announcementGIDList = _.announcementGIDList),
-              (this.state.last_update_event = _.last_update_event),
-              (this.state.events = []),
-              this.state.announcementGIDList.forEach((_) => {
+          let _ = !1;
+          if (
+            (function (_) {
+              const _ = _;
+              if (_ && "object" == typeof _)
+                return (
+                  void 0 !== _.bPreLoaded &&
+                  "boolean" == typeof _.bPreLoaded &&
+                  Array.isArray(_.announcementGIDList)
+                );
+              return !1;
+            })(_)
+          ) {
+            (_ = _.bPreLoaded),
+              _(_.announcementGIDList),
+              _(_.last_update_event);
+            const _ = [];
+            if (
+              (_.announcementGIDList.forEach((_) => {
                 const _ = _._.GetClanEventFromAnnouncementGID(_);
-                _ && this.state.events.push(_);
-              });
-            const _ = new URLSearchParams(window.location.search),
-              _ = _?.get("emgid");
-            if (_) {
-              const _ = this.state.events.find((_) => _.GID === _);
-              _ &&
-                ((this.state.modalInitialEvent = _),
-                (this.state.bShowModal = !0));
+                _ && _.push(_);
+              }),
+              _(_),
+              _)
+            ) {
+              const _ = _.find((_) => _.GID === _);
+              _ && _(_);
             }
           }
-        }
-        async componentDidMount() {
-          const {
-            appid: _,
-            event_customization: _,
-            partnerEventStore: __webpack_require__,
-            trackingLocation: _,
-          } = this.props;
-          if (!this.state.bPreLoaded) {
-            const _ = await __webpack_require__.LoadAdjacentPartnerEvents(
-              null,
-              null,
-              _,
-              0,
-              2,
-              _,
-            );
-            if (
-              (this.setState({
-                events: _,
-              }),
-              _ && _ && _.length > 0)
-            ) {
-              const _ = _._.Get().GetTracker();
-              this.state.events
-                .filter((_) => _.BIsPartnerEvent())
-                .forEach((_) =>
+          if (!_) {
+            (async () => {
+              const _ = await _.LoadAdjacentPartnerEvents(
+                void 0,
+                void 0,
+                _,
+                0,
+                2,
+                __webpack_require__,
+              );
+              if ((_(_), _ && _ && _.length > 0)) {
+                const _ = _._.Get().GetTracker();
+                _.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
                   _.MarkEventShown(_.GID, _.clanSteamID.GetAccountID(), _),
                 ),
-                _.Flush();
-            }
+                  _.Flush();
+              }
+            })();
           }
-          window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
-            this.setState({
-              bShowModal: !0,
-              announcementGID: _,
-              modalInitialEvent: void 0,
-            });
-          };
-        }
-        ValidateStoreDefault(_) {
-          const _ = _;
-          return (
-            !(!_ || "object" != typeof _) &&
-            void 0 !== _.bPreLoaded && "boolean" == typeof _.bPreLoaded &&
-            Array.isArray(_.announcementGIDList)
+        }, [_, _, __webpack_require__, _, _, _]),
+          (0, _.useEffect)(
+            () => (
+              (window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
+                _(_), _(null), _(_), _();
+              }),
+              () => {
+                window.fnPartnerEvent_ShowInfiniteScroll &&
+                  delete window.fnPartnerEvent_ShowInfiniteScroll;
+              }
+            ),
+            [_],
           );
-        }
-        ShowModal(_) {
-          const { trackingLocation: _ } = this.props;
-          this.setState({
-            bShowModal: !0,
-            modalInitialEvent: _,
-            announcementGID: void 0,
-          });
-          const _ = _._.Get().GetTracker();
-          _ &&
-            _.BIsPartnerEvent() &&
-            __webpack_require__.MarkEventRead(
-              _.GID,
-              _.clanSteamID.GetAccountID(),
-              _,
-            ) &&
-            __webpack_require__.Flush();
-        }
-        ShowLatestUpdateModal() {
-          const {
-              event_gid: _,
-              announcement_gid: _,
-              clan_account_id: __webpack_require__,
-            } = this.state.last_update_event,
-            { trackingLocation: _ } = this.props;
-          this.setState({
-            bShowModal: !0,
-            modalInitialEvent: void 0,
-            announcementGID: _,
-          });
-          const _ = _._.Get().GetTracker();
-          _ && _.MarkEventRead(_, __webpack_require__, _) && _.Flush();
-        }
-        CloseModal() {
-          this.setState({
-            bShowModal: !1,
-            modalInitialEvent: null,
-          });
-        }
-        BHasLastUpdateEvent() {
-          return Boolean(this.state.last_update_event?.rtime);
-        }
-        BShouldShowLastUpdateEvent() {
-          const { last_update_event: _, events: _ } = this.state;
-          return (
-            !(!this.BHasLastUpdateEvent() || !_?.announcement_gid) && !_?.length
-          );
-        }
-        render() {
-          const _ = this.state.events,
-            _ = window.screen.width <= 500 ? 1 : 2,
-            _ = Boolean(_?.length),
-            _ = this.BHasLastUpdateEvent(),
-            _ = this.BShouldShowLastUpdateEvent()
-              ? this.state.last_update_event.announcement_gid
+        const _ = !!_ && !!_.rtime,
+          _ =
+            _ && !!_.announcement_gid && (!_ || 0 == _.length)
+              ? _.announcement_gid
               : void 0,
-            { strClassName: _ } = this.props;
-          return (0, _.jsxs)(_._, {
-            className: _,
-            children: [
-              this.state.bShowModal &&
-                (0, _.jsx)(_, {
-                  ...this.props,
-                  announcementGID:
-                    this.state.announcementGID ||
-                    this.state.modalInitialEvent?.AnnouncementGID,
-                  eventModel: this.state.modalInitialEvent,
-                  closeModal: this.CloseModal,
-                }),
-              _ &&
-                (0, _.jsxs)("div", {
-                  children: [
-                    (0, _.jsx)("h2", {
-                      children: (0, _._)("#EventBrowse_RecentEvents"),
-                    }),
-                    !this.context?.IN_GAMEPADUI &&
-                      (0, _.jsx)("div", {
-                        className: _.SectionButtonCtn,
-                        children: this.props.bViewAllShowInfiniteScroll
-                          ? (0, _.jsx)(_._, {
-                              className: _.SectionButton,
-                              onClick: () => this.ShowModal(_[0]),
-                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                            })
-                          : (0, _.jsx)(_._, {
-                              eventModel: _[0],
-                              route: _._.k_eViewWebSiteHub,
-                              className: _.SectionButton,
-                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                            }),
-                      }),
+          _ = window.screen.width <= _ ? 1 : 2;
+        return (0, _.jsxs)(_._, {
+          className: _,
+          children: [
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_, {
+                ..._,
+                announcementGID: _ || _?.AnnouncementGID,
+                eventModel: _,
+                closeModal: _,
+              }),
+            }),
+            !!_ &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: (0, _._)("#EventBrowse_RecentEvents"),
+                  }),
+                  !_._.IN_GAMEPADUI &&
+                    !!_ &&
                     (0, _.jsx)("div", {
-                      className: _.EventsSummariesCtn,
-                      children: _.slice(0, _).map((_) => {
-                        const _ =
-                          1 === _.length && window.screen.width > 500
-                            ? _._
-                            : _._;
-                        return (0, _.jsx)(
-                          _,
-                          {
-                            event: _,
-                            onClick: (_) => {
-                              this.ShowModal(_),
-                                _.stopPropagation(),
-                                _.preventDefault();
-                            },
-                          },
-                          _.GID,
-                        );
-                      }),
+                      className: _.SectionButtonCtn,
+                      children: _
+                        ? (0, _.jsx)(_._, {
+                            className: _.SectionButton,
+                            onClick: () => _(_[0]),
+                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                          })
+                        : (0, _.jsx)(_._, {
+                            eventModel: _[0],
+                            route: _._.k_eViewWebSiteHub,
+                            className: _.SectionButton,
+                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                          }),
                     }),
-                  ],
-                }),
-              Boolean(_ && _) &&
-                (0, _.jsx)(_, {
-                  nUpdateTime: this.state.last_update_event.rtime,
-                  announcementGID: _,
-                  onClick: this.ShowLatestUpdateModal,
-                }),
-              Boolean(_ && !_ && !this.context?.IN_GAMEPADUI) &&
-                (0, _.jsx)(_, {
-                  nUpdateTime: this.state.last_update_event.rtime,
-                  onClick: this.ShowLatestUpdateModal,
-                }),
-            ],
-          });
-        }
+                  (0, _.jsx)("div", {
+                    className: _.EventsSummariesCtn,
+                    children: _.slice(0, _).map((_) => {
+                      const _ =
+                        1 === _.length && window.screen.width > 500 ? _._ : _._;
+                      return (0, _.jsx)(
+                        _,
+                        {
+                          event: _,
+                          onClick: (_) => {
+                            _(_), _.stopPropagation(), _.preventDefault();
+                          },
+                        },
+                        _.GID,
+                      );
+                    }),
+                  }),
+                ],
+              }),
+            _ &&
+              !!_ &&
+              (0, _.jsx)(_, {
+                nUpdateTime: _.rtime,
+                announcementGID: _,
+                onClick: _,
+              }),
+            _ &&
+              !_ &&
+              !_._.IN_GAMEPADUI &&
+              (0, _.jsx)(_, {
+                nUpdateTime: _.rtime,
+                onClick: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -2171,7 +2209,7 @@
                 children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
-            Boolean(_) &&
+            !!_ &&
               (0, _.jsx)(_._, {
                 className: _.EventsSummariesCtn,
                 "flow-children": "column",
@@ -2201,14 +2239,10 @@
           trackingLocation: 3,
         });
       }
-      (0, _._)([_._], _.prototype, "ShowModal", null),
-        (0, _._)([_._], _.prototype, "ShowLatestUpdateModal", null),
-        (0, _._)([_._], _.prototype, "CloseModal", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2654,6 +2688,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3243,6 +3278,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(void 0),
           _ = (0, _._)(),
+          _ = (0, _._)(),
           _ = (function (_, _, _, _) {
             return (0, _._)({
               queryKey: ["UserReactions", _, _],
@@ -3399,7 +3435,7 @@
                     }),
                   (0, _.jsx)(_._, {
                     className: _.ButtonContainer,
-                    scrollDirection: "y",
+                    scrollDirection: _ ? "x" : "y",
                     "flow-children": "grid",
                     children:
                       !_ &&
@@ -3407,7 +3443,9 @@
                         (0, _.jsx)(
                           _,
                           {
-                            autoFocus: 0 == _,
+                            autoFocus:
+                              (void 0 === _ && 0 == _) ||
+                              (_ === _ && !_.data?.has(_)),
                             reaction: _,
                             selected: _ === _ && !_.data?.has(_),
                             cost: _.get(_).points_cost,
@@ -3697,21 +3735,17 @@
             });
           }
         }
-        return (0, _.jsx)(_._, {
+        return (0, _.jsxs)(_._, {
           className: _.GrantAwardModal,
           active: _,
           onDismiss: _,
-          children: (0, _.jsxs)(_._, {
-            navID: "GrantAward",
-            closeModal: _,
-            children: [
-              _ &&
-                (0, _.jsx)(_._, {
-                  eType: _._.Default,
-                }),
-              _,
-            ],
-          }),
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                eType: _._.Default,
+              }),
+            _,
+          ],
         });
       }
       const _ = ({ description: _ }) =>
@@ -5814,86 +5848,87 @@
         });
       }
       const _ = function (_) {
-          const {
-              appID: _,
-              results: __webpack_require__,
-              appName: _,
-              tab: _,
-            } = _,
-            _ = (0, _._)(),
-            _ = "steamos" == _ ? 2 : 1;
-          let _, _, _;
-          2 == _
-            ? ((_ = (0, _._)(
-                "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
-              )),
-              (_ = (0, _.jsx)(_._, {
-                category: __webpack_require__.steamos_resolved_category,
-              })),
-              (_ = (0, _.jsx)(_, {
-                category: __webpack_require__.steamos_resolved_category,
-              })))
-            : ((_ = _
-                ? (0, _._)(
-                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                  )
-                : (0, _._)(
-                    "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
-                  )),
-              (_ = (0, _.jsx)(_._, {
-                category: __webpack_require__.resolved_category,
-              })),
-              (_ = (0, _.jsx)(_, {
-                category: __webpack_require__.resolved_category,
-              })));
-          const _ = __webpack_require__?.steam_deck_blog_url,
-            _ = _.useId();
-          return __webpack_require__
-            ? (0, _.jsxs)("div", {
-                className: _().BannerContainer,
-                role: "group",
-                "aria-labelledby": _,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().BannerHeader,
-                    _: _,
-                    children: _,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _ ? _().BannerContent : _().BannerContentDesktop,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        children: [_, _],
+        const {
+            appID: _,
+            results: __webpack_require__,
+            appName: _,
+            tab: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = "steamos" == _ ? 2 : 1;
+        let _, _, _;
+        2 == _
+          ? ((_ = (0, _._)(
+              "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+            )),
+            (_ = (0, _.jsx)(_._, {
+              category: __webpack_require__.steamos_resolved_category,
+            })),
+            (_ = (0, _.jsx)(_, {
+              category: __webpack_require__.steamos_resolved_category,
+            })))
+          : ((_ = _
+              ? (0, _._)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                )
+              : (0, _._)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+                )),
+            (_ = (0, _.jsx)(_._, {
+              category: __webpack_require__.resolved_category,
+            })),
+            (_ = (0, _.jsx)(_, {
+              category: __webpack_require__.resolved_category,
+            })));
+        const _ = __webpack_require__?.steam_deck_blog_url,
+          _ = _.useId();
+        return __webpack_require__
+          ? (0, _.jsxs)("div", {
+              className: _().BannerContainer,
+              role: "group",
+              "aria-labelledby": _,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().BannerHeader,
+                  _: _,
+                  children: _,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _ ? _().BannerContent : _().BannerContentDesktop,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      children: [_, _],
+                    }),
+                    (0, _.jsx)(_, {
+                      results: __webpack_require__,
+                      learnMore: (0, _._)(
+                        "#SteamDeckVerified_Store_CompatSection_LearnMore",
+                      ),
+                      appName: _ || "",
+                      eStartingTab: _,
+                    }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().Divider,
                       }),
-                      (0, _.jsx)(_, {
-                        results: __webpack_require__,
-                        learnMore: (0, _._)(
-                          "#SteamDeckVerified_Store_CompatSection_LearnMore",
-                        ),
-                        appName: _ || "",
-                        eStartingTab: _,
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        url: __webpack_require__.steam_deck_blog_url,
+                        containerClass: _().DeveloperComments_Anchor,
+                        bIncludeIcon: !0,
                       }),
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: _().Divider,
-                        }),
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          url: __webpack_require__.steam_deck_blog_url,
-                          containerClass: _().DeveloperComments_Anchor,
-                          bIncludeIcon: !0,
-                        }),
-                    ],
-                  }),
-                ],
-              })
-            : ("dev" == _._.WEB_UNIVERSE &&
-                console.error(
-                  "deck verified banner received empty results for appid: " + _,
-                ),
-              null);
-        },
-        _ =
+                  ],
+                }),
+              ],
+            })
+          : ("dev" == _._.WEB_UNIVERSE &&
+              console.error(
+                "deck verified banner received empty results for appid: " + _,
+              ),
+            null);
+      };
+      var _ = __webpack_require__("chunkid");
+      const _ =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
         _ =
           __webpack_require__._ +
@@ -6120,91 +6155,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { underline: _ = "auto", ...__webpack_require__ } = _;
-        return (0, _.jsx)("a", {
-          ...(0, _._)(
-            {
-              ...__webpack_require__,
-              underline: _,
-              className: _.TextLink,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "underline",
-          className: (_) => _[`Underline-${_}`],
-        },
-      ];
-      function _(_) {
-        const { url: _, children: __webpack_require__ } = _;
-        return (0, _.jsx)(_, {
-          target: "_blank",
-          href: _.href,
-          underline: "auto",
-          contrast: "title",
-          children: __webpack_require__,
-        });
-      }
-      function _(_) {
-        const { url: _, children: __webpack_require__ } = _,
-          [_, _, _] = _.hash.slice(1).split("_"),
-          _ = _.pathname.slice(1).split("/");
-        if (!_ || !_ || !_ || _.length < 2)
-          return (0, _.jsx)(_, {
-            url: _,
-            children: __webpack_require__,
-          });
-        let _ = "",
-          _ = "";
-        return (
-          "id" == _[0]
-            ? ((_ = "id:" + _[1]), (_ = "o_url=" + _[1]))
-            : ((_ = _[1]), (_ = "o=" + _[1])),
-          (0, _.jsx)("div", {
-            children: (0, _.jsx)("a", {
-              href: _.href,
-              "data-economy-item": `${_}/${_}/${_}/${_}`,
-              children: (0, _.jsx)("img", {
-                src: `${_._.COMMUNITY_CDN_URL}economy/item/${_}/${_}/${_}?${_}`,
-                alt: "",
-              }),
-            }),
-          })
-        );
-      }
-      function _(_) {
-        let _ = _(_.args) ?? _(_.args, "href");
-        if (!_ || !_.match(/^https?:\/\//)) return _.children;
-        (0, _._)(_) && (_ = (0, _._)(_));
-        const _ = URL.parse(_);
-        if (!_) return _.children;
-        let _ = _;
-        return (
-          (function (_) {
-            return (
-              _.hash &&
-              _.origin + "/" == _._.COMMUNITY_BASE_URL &&
-              (_.pathname.startsWith("/id/") ||
-                _.pathname.startsWith("/profiles/")) &&
-              (_.pathname.endsWith("/inventory") ||
-                _.pathname.endsWith("/inventory/"))
-            );
-          })(_) && (_ = _),
-          (0, _.jsx)(_, {
-            url: _,
-            children: _.children,
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -6258,10 +6208,126 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
-      _.english = () =>
+      (_.arabic = () =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 39032, 19));
+          .then(__webpack_require__._.bind(__webpack_require__, 3276, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 76966, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 32733, 19))),
+        (_.czech = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 7071, 19))),
+        (_.danish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 77233, 19))),
+        (_.dutch = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 31186, 19))),
+        (_.english = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 39032, 19))),
+        (_.finnish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 31475, 19))),
+        (_.french = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 36512, 19))),
+        (_.german = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 15598, 19))),
+        (_.greek = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 57108, 19))),
+        (_.hungarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 69921, 19))),
+        (_.indonesian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 1416, 19))),
+        (_.italian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 8616, 19))),
+        (_.japanese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 1039, 19))),
+        (_.koreana = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 51495, 19))),
+        (_.latam = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 1871, 19))),
+        (_.norwegian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 70176, 19))),
+        (_.polish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 93577, 19))),
+        (_.portuguese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 78461, 19))),
+        (_.romanian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 91203, 19))),
+        (_.russian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 25745, 19))),
+        (_.schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 8492, 19))),
+        (_.spanish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 24080, 19))),
+        (_.swedish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 89617, 19))),
+        (_.tchinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 86119, 19))),
+        (_.thai = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 38902, 19))),
+        (_.turkish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 84344, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 73854, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 5511, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -6385,12 +6451,13 @@
           throw new _(76, "Malformed ajaxgetreviews response");
         if (1 != _.success)
           throw new _(_.success, `Error ${_.success} from ajaxgetreviews`);
-        const _ = _,
-          _ = [
-            ...(_.reviews?.map((_) => _.recommendationid) || []),
-            ...(_.recentreviews?.map((_) => _.recommendationid) || []),
-            ...(_.friendreviews?.map((_) => _.recommendationid) || []),
-          ];
+        const _ = _;
+        _.reviewFilter = _.get("filter") || "all";
+        const _ = [
+          ...(_.reviews?.map((_) => _.recommendationid) || []),
+          ...(_.recentreviews?.map((_) => _.recommendationid) || []),
+          ...(_.friendreviews?.map((_) => _.recommendationid) || []),
+        ];
         try {
           const _ = await _(_);
           for (const _ of _) _.setQueryData(_(_.recommendationid), _);
@@ -6460,25 +6527,95 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        return `${_.author.profile_url}recommended/${_.appid}`;
+        const { underline: _ = "auto", ...__webpack_require__ } = _;
+        return (0, _.jsx)("a", {
+          ...(0, _._)(
+            {
+              ...__webpack_require__,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
+      function _(_) {
+        const { url: _, children: __webpack_require__ } = _;
+        return (0, _.jsx)(_, {
+          target: "_blank",
+          href: _.href,
+          underline: "auto",
+          contrast: "title",
+          children: __webpack_require__,
+        });
+      }
+      var _;
+      function _(_, _) {
+        switch (_) {
+          case _.k_EURLSite_Store:
+            return _ + "/" == _._.STORE_BASE_URL || !1;
+          case _.k_EURLSite_Community:
+            return _ + "/" == _._.COMMUNITY_BASE_URL || !1;
+        }
+        return !1;
+      }
+      !(function (_) {
+        (_[(_.k_EURLSite_None = 0)] = "k_EURLSite_None"),
+          (_[(_.k_EURLSite_Store = 1)] = "k_EURLSite_Store"),
+          (_[(_.k_EURLSite_Community = 2)] = "k_EURLSite_Community");
+      })(_ || (_ = {}));
+      const _ = _.createContext([]);
+      function _(_) {
+        const _ = _.useContext(_);
+        let _ = _(_.args) ?? _(_.args, "href");
+        if (!_ || !__webpack_require__.match(/^https?:\/\//)) return _.children;
+        (0, _._)(_) && (_ = (0, _._)(_));
+        const _ = URL.parse(_);
+        if (!_) return _.children;
+        const _ = (function (_, _) {
+          for (const _ of _)
+            if (_(_.origin, _.site) && _.regex.exec(_.pathname))
+              return _.component;
+          return _;
+        })(_ || [], _);
+        return (0, _.jsx)(_, {
+          url: _,
+          children: _.children,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return `${_.author.profile_url}recommended/${_}`;
       }
       function _(_) {
-        const { author: _, bIsFriend: __webpack_require__ } = _;
+        const { author: _ } = _;
         if (!_.avatar) return null;
-        const _ = new _._(_.steamid);
+        const _ = "FillArea",
+          _ = new _._(_.steamid),
+          _ = (0, _._)(_.avatar, _);
         return (0, _.jsx)(_._, {
           className: _().AvatarContainer,
           "data-miniprofile": _.GetAccountID(),
           href: _.profile_url,
           children: (0, _.jsx)(_, {
             className: _().Avatar,
-            size: __webpack_require__ ? "FillArea" : "Medium",
+            size: _,
             statusPosition: "border",
             isOnline: "online" == _.persona_status,
             isInGame: "in-game" == _.persona_status,
-            avatarURL: _.avatar,
+            avatarURL: _,
             alt: _.personaname,
           }),
         });
@@ -6491,7 +6628,6 @@
           children: [
             (0, _.jsx)(_, {
               author: _,
-              bIsFriend: __webpack_require__,
             }),
             (0, _.jsxs)(_._, {
               className: _().AuthorNameAndCounts,
@@ -6572,6 +6708,7 @@
             bIsFriend: __webpack_require__,
             bShortPresentation: _,
           } = _,
+          { appid: _ } = _.useContext(_),
           _ = _.voted_up;
         let _ = _ ? "#Review_Recommended" : "#Review_NotRecommended";
         __webpack_require__ &&
@@ -6591,7 +6728,7 @@
         );
         return (0, _.jsx)(_._, {
           className: _().ReviewInfoHeaderLink,
-          href: _(_),
+          href: _(_, _),
           children: (0, _.jsxs)(_._, {
             className: _().ReviewInfoHeader,
             toolTipContent: _.Localize("#Review_SeeFullReview"),
@@ -6632,60 +6769,79 @@
       }
       function _(_) {
         const { review: _ } = _,
-          _ = [],
-          _ = (0, _._)("appname", "application_config");
-        return (
-          _.csgo_disclaimer &&
-            __webpack_require__.push(
-              (0, _.jsx)(
-                _._,
-                {
-                  className: _().Disclaimer,
-                  toolTipContent: _.Localize(
-                    "#Review_CSGO_Disclaimer_Tooltip",
-                    _,
-                  ),
-                  children: _.Localize("#Review_CSGO_Disclaimer"),
-                },
-                "csgo",
+          {
+            appid: __webpack_require__,
+            app_release_date: _,
+            appname: _,
+          } = _.useContext(_);
+        if (
+          __webpack_require__ == _._ ||
+          __webpack_require__ == _._ ||
+          __webpack_require__ == _._
+        ) {
+          if ((_.timestamp_updated || _.timestamp_created) < 1695853800)
+            return (0, _.jsx)(_._, {
+              className: _().Disclaimer,
+              toolTipContent: _.Localize("#Review_CSGO_Disclaimer_Tooltip", _),
+              children: _.Localize("#Review_CSGO_Disclaimer"),
+            });
+        }
+        return null;
+      }
+      function _(_) {
+        const { review: _ } = _,
+          { app_release_date: __webpack_require__, appname: _ } =
+            _.useContext(_);
+        return _.written_during_early_access
+          ? (0, _.jsx)(_._, {
+              className: _().Disclaimer,
+              toolTipContent: _.Localize(
+                "#Review_EarlyAccess_Disclaimer_Tooltip",
+                _,
               ),
-            ),
-          _.written_during_early_access
-            ? __webpack_require__.push(
-                (0, _.jsx)(
-                  _._,
-                  {
-                    className: _().Disclaimer,
-                    toolTipContent: _.Localize(
-                      "#Review_EarlyAccess_Disclaimer_Tooltip",
-                      _,
-                    ),
-                    children: _.Localize("#Review_EarlyAccess_Disclaimer"),
-                  },
-                  "ea",
+              children: _.Localize("#Review_EarlyAccess_Disclaimer"),
+            })
+          : null;
+      }
+      function _(_) {
+        const { review: _ } = _,
+          { app_release_date: __webpack_require__, appname: _ } =
+            _.useContext(_);
+        return __webpack_require__ &&
+          _.author.last_played &&
+          _.author.last_played < __webpack_require__
+          ? (0, _.jsx)(
+              _._,
+              {
+                className: _().Disclaimer,
+                toolTipContent: _.LocalizeReact(
+                  "#Review_PreRelease_Disclaimer_Tooltip",
+                  _,
+                  (0, _._)(_.author.last_played),
+                  (0, _.jsx)("br", {}),
                 ),
-              )
-            : _.app_release_date &&
-              _.author.last_played &&
-              _.author.last_played < _.app_release_date &&
-              __webpack_require__.push(
-                (0, _.jsx)(
-                  _._,
-                  {
-                    className: _().Disclaimer,
-                    toolTipContent: _.LocalizeReact(
-                      "#Review_PreRelease_Disclaimer_Tooltip",
-                      _,
-                      (0, _._)(_.author.last_played),
-                      (0, _.jsx)("br", {}),
-                    ),
-                    children: _.Localize("#Review_PreRelease_Disclaimer"),
-                  },
-                  "prerelease",
-                ),
-              ),
-          _
-        );
+                children: _.Localize("#Review_PreRelease_Disclaimer"),
+              },
+              "prerelease",
+            )
+          : null;
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              review: _,
+            }),
+            _.written_during_early_access
+              ? (0, _.jsx)(_, {
+                  review: _,
+                })
+              : (0, _.jsx)(_, {
+                  review: _,
+                }),
+          ],
+        });
       }
       function _(_) {
         const { review: _ } = _;
@@ -6955,7 +7111,8 @@
         });
       }
       function _(_) {
-        const { review: _ } = _;
+        const { review: _ } = _,
+          { appid: __webpack_require__ } = _.useContext(_);
         return (0, _.jsxs)(_._, {
           className: _().ReviewRatings,
           children: [
@@ -6984,7 +7141,7 @@
               (0, _.jsx)("div", {
                 className: _().Right,
                 children: (0, _.jsx)(_._, {
-                  href: _(_),
+                  href: _(_, __webpack_require__),
                   children: (0, _.jsxs)(_._, {
                     className: _().CommentCount,
                     toolTipContent: _.Localize("#Review_SeeFullReview"),
@@ -7033,29 +7190,14 @@
         });
       }
       function _(_) {
-        let _ = _(_.args) ?? _(_.args, "href");
-        return (0, _._)(_)
-          ? ((_ = (0, _._)(_)),
-            (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_, {
-                  target: "_blank",
-                  href: _,
-                  underline: "auto",
-                  contrast: "title",
-                  children: _.children,
-                }),
-                (0, _.jsx)("br", {}),
-              ],
-            }))
-          : (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-                (0, _.jsx)("br", {}),
-              ],
-            });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)("br", {}),
+          ],
+        });
       }
       function _(_) {
         const { text: _ = "" } = _,
@@ -7072,10 +7214,15 @@
               },
             };
             return new _._(_, (_) => new _._(new _._()), _._.LANGUAGE);
-          }, []);
+          }, []),
+          _ = _.useMemo(() => [], []);
         return _.useMemo(
-          () => __webpack_require__.ParseBBCode(_, void 0),
-          [_, _],
+          () =>
+            (0, _.jsx)(_.Provider, {
+              value: _,
+              children: __webpack_require__.ParseBBCode(_, void 0),
+            }),
+          [_, _, _],
         );
       }
       function _(_) {
@@ -7338,7 +7485,8 @@
         });
       }
       function _(_) {
-        const { review: _ } = _;
+        const { review: _ } = _,
+          { appid: __webpack_require__ } = _.useContext(_);
         return _.developer_response && _.timestamp_dev_responded
           ? (0, _.jsxs)("div", {
               className: _().DeveloperResponse,
@@ -7355,7 +7503,7 @@
                 }),
                 (0, _.jsx)("a", {
                   className: _().Link,
-                  href: _(_),
+                  href: _(_, __webpack_require__),
                   children: _.Localize(
                     "#Review_OfficialDeveloperResponse_View",
                   ),
@@ -7408,7 +7556,9 @@
                     mapTags: _,
                     setHighlight: _,
                   }),
-                  (0, _.jsx)("hr", {}),
+                  (0, _.jsx)("hr", {
+                    className: _().MainDivider,
+                  }),
                   (0, _.jsx)(_, {
                     review: _,
                   }),
@@ -7684,9 +7834,26 @@
             })
           : null;
       }
+      const _ = _.createContext({
+        appid: 0,
+        app_release_date: 0,
+        appname: "",
+      });
       function _(_) {
-        const { appid: _ } = _,
-          [__webpack_require__, _] = _.useState({
+        const {
+            appid: _,
+            app_release_date: __webpack_require__,
+            appname: _,
+          } = _,
+          _ = _.useMemo(
+            () => ({
+              appid: _,
+              app_release_date: __webpack_require__,
+              appname: _,
+            }),
+            [_, __webpack_require__, _],
+          ),
+          [_, _] = _.useState({
             filter: "summary",
             date_range_type: "all",
             day_range: 30,
@@ -7717,11 +7884,14 @@
               } catch {}
             }, []),
           ),
-          (0, _.jsx)(_._, {
-            navID: "AppReviews",
-            children: (0, _.jsx)(_, {
-              appid: _,
-              searchParams: __webpack_require__,
+          (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_._, {
+              navID: "AppReviews",
+              children: (0, _.jsx)(_, {
+                appid: _,
+                searchParams: _,
+              }),
             }),
           })
         );
@@ -7762,7 +7932,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -7786,11 +7955,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

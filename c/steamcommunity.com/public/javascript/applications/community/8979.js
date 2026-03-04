@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "hungarian",
 	"SellOnMarket_View": "Megnézés a Közösségi Piacon",
+	"SellOnMarket_ViewListing": "Ajánlataim megnézése",
 	"SellOnMarket_LowestPrice": "Kezdőár: %1$s",
 	"SellOnMarket_Volume": "Mennyiség: %1$s eladva az elmúlt 24 órában",
 	"SellOnMarket_SellThisItem": "Eladás",

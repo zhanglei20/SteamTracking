@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "장터 활동 현황",
 	"MyOrders_Heading_Sell": "판매 등록",
 	"MyOrders_Heading_Buy": "구매 주문",
+	"MyOrders_Heading_MyPurchaseOffers": "구매 - 내 구매 주문",
+	"MyOrders_Heading_MyListings": "판매 - 내 판매 등록 목록",
 	"MyOrders_FailedToLoad": "이 아이템에 대한 장터 활동 데이터를 불러오는 도중 문제가 발생했습니다.",
 	"MyOrders_NoActiveOrders_Item": "이 아이템에 대한 활성화된 판매 등록이나 구매 주문이 없습니다.",
 	"MyOrders_NoBuyOrders_Item": "이 아이템에 대한 활성화된 구매 주문이 없습니다.",

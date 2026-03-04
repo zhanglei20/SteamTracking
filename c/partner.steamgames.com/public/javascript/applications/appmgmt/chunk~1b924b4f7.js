@@ -44,6 +44,7 @@
         "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
         "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
         Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
       };
     },
     chunkid: (module) => {
@@ -262,8 +263,9 @@
           ),
           _ = (0, _.useCallback)(
             (_) => {
-              "Enter" === _.key && _ && _ ? _() : _(),
-                "Escape" === _.key && _ && (_(), _.stopPropagation());
+              _.current?.contains(_.target) &&
+                ("Enter" === _.key && _ && _ ? _() : _(),
+                "Escape" === _.key && _ && (_(), _.stopPropagation()));
             },
             [_, _, _, _],
           );
@@ -931,11 +933,18 @@
             cssProperty: "--width",
             responsive: !0,
           },
+          {
+            prop: "minWidth",
+            className: _.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
         ],
         _ = function (_) {
           const {
               variant: _ = "default",
               size: __webpack_require__ = "2",
+              minWidth: _ = "fit-content",
               color: _,
               loading: _,
               children: _,
@@ -959,6 +968,7 @@
                 ..._,
                 variant: _,
                 size: __webpack_require__,
+                minWidth: _,
                 color: _,
                 className: _()(_.Button, _ && _.Icon),
                 onClick: _,

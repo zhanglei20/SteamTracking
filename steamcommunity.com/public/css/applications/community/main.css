@@ -390,18 +390,6 @@ body._3jhMIr8hczcBK_fOVtEVOK {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1500;
 }
-._1GlTsstfPZWsQc4umFIvrX {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  max-height: 100vh;
-  overflow-y: scroll;
-}
-._1GlTsstfPZWsQc4umFIvrX ._1aY-rmUi48QSw7U1ZWa5DZ {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
 dialog._32QRvPPBL733SpNR9x0Gp3 {
   padding: 0;
   outline: none;
@@ -2209,7 +2197,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 }
 ._16sYNwqxz6giarbVaRUl7R {
   background: none;
-  padding: calc(12px + 1.4vw) 2.8vw;
+  padding: calc(12px + 2.25vh) 2.8vw;
 }
 ._16sYNwqxz6giarbVaRUl7R .DialogControlsSection:not(:first-child),
 ._16sYNwqxz6giarbVaRUl7R .DialogControlsSectionHeader:not(:first-child),
@@ -2854,7 +2842,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   margin: auto;
   background-color: #0e141b;
   border: 2px solid #23262e;
-  padding: calc(12px + 1.4vw) 2.8vw;
+  padding: calc(12px + 2.25vh) 2.8vw;
   width: 660px;
   box-sizing: border-box;
   animation-name: _2JseUqLU57eK7UqCBneiZN;

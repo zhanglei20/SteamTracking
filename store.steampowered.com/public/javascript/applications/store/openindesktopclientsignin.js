@@ -1,0 +1,686 @@
+/**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
+ ****/
+(self.webpackChunkstore = self.webpackChunkstore || []).push([
+  [1349, 8843],
+  {
+    69041: (e) => {
+      e.exports = {
+        Button: "_0BH1ydyFmSnUvoVK2hIc",
+        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
+        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
+        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
+        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
+        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
+        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
+        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
+        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
+        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
+        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
+      };
+    },
+    73406: (e) => {
+      e.exports = {
+        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
+        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
+        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
+        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
+        "Size-3": "_389OPmdZoebw42_AlsUFxi",
+        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
+        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
+        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
+        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
+        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
+      };
+    },
+    97824: (e) => {
+      e.exports = {
+        OpenInBannerContainer: "_1EQpm6hAsghyCST7W04m-E",
+        OpenInBannerContent: "_13oFTFTjvz0YaOVnWZxyqr",
+        ValveOnly: "_3jg5qxP4_hiZYa6-GJDCOp",
+        BannerMessage: "_1HSa8QK0U-qQCGObG6XYFT",
+        BannerTitle: "_3Xfc_DOo4BUZBmxkSRmD6y",
+        BannerButtonContainer: "_1lwkSayKFi-9WCDd6pq5bV",
+        BannerButton: "_1jso7z80FWGn42k1HP0_cf",
+      };
+    },
+    53965: (e, n, t) => {
+      "use strict";
+      t.d(n, { $: () => _ });
+      var i = t(7850),
+        s = t(64238),
+        o = t.n(s),
+        r = t(69041),
+        a = t(75659),
+        c = t(41324),
+        l = t(73406),
+        d = t(90534),
+        h = t(53971);
+      function u(e) {
+        const {
+          size: n = "3",
+          loading: t = !0,
+          children: s,
+          color: o,
+          variant: r,
+          ...a
+        } = e;
+        return s || !t
+          ? (0, i.jsxs)(d.az, {
+              position: "relative",
+              ...a,
+              width: "fit-content",
+              children: [
+                (0, i.jsx)("div", {
+                  "data-visibility": !t,
+                  className: l.ChildContainer,
+                  children: s,
+                }),
+                t &&
+                  (0, i.jsx)(h.s, {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                    children: (0, i.jsx)(p, { size: n, color: o, variant: r }),
+                  }),
+              ],
+            })
+          : (0, i.jsx)(p, { size: n, color: o, variant: r, ...a });
+      }
+      function p(e) {
+        const { className: n, color: t, ...s } = (0, c.mz)(e, m);
+        return (0, i.jsx)("div", {
+          "data-accent-color": t,
+          className: o()(n, l.Spinner),
+          ...s,
+        });
+      }
+      const m = [
+        ...a.L,
+        { prop: "size", responsive: !0, className: (e) => l[`Size-${e}`] },
+        { prop: "variant", className: (e) => l[`Variant-${e}`] },
+      ];
+      const b = [
+          ...a.L,
+          { prop: "size", responsive: !0, className: (e) => r[`Size-${e}`] },
+          { prop: "variant", className: (e) => r[`Variant-${e}`] },
+          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
+          {
+            prop: "width",
+            className: r.Width,
+            cssProperty: "--width",
+            responsive: !0,
+          },
+          {
+            prop: "minWidth",
+            className: r.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
+        ],
+        _ = function (e) {
+          const {
+              variant: n = "default",
+              size: t = "2",
+              minWidth: s = "fit-content",
+              color: a,
+              loading: l,
+              children: d,
+              onClick: h,
+              icon: p,
+              ...m
+            } = e,
+            _ = l
+              ? (0, i.jsx)(u, {
+                  size: t,
+                  color: a,
+                  variant: "bright",
+                  children: d,
+                })
+              : d,
+            C = l ? void 0 : h;
+          return (0, i.jsx)("button", {
+            type: "button",
+            ...(0, c.mz)(
+              {
+                ...m,
+                variant: n,
+                size: t,
+                minWidth: s,
+                color: a,
+                className: o()(r.Button, p && r.Icon),
+                onClick: C,
+              },
+              b,
+            ),
+            children: _,
+          });
+        };
+    },
+    84547: (e, n, t) => {
+      "use strict";
+      t.d(n, { E: () => d, l: () => h });
+      var i = t(7850),
+        s = t(78395),
+        o = t(62151),
+        r = t(8527),
+        a = t(64753),
+        c = t(21869);
+      function l(e) {
+        const { closeModal: n } = e;
+        return (0, i.jsx)(s.o0, {
+          strTitle: o.F5.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: o.F5.Localize("#LoginRedirect_Dialog_Description"),
+          closeModal: n,
+          onOK: () => {
+            h();
+          },
+        });
+      }
+      function d() {
+        const [e, n, t] = (0, a.uD)();
+        return {
+          elDialogElement: (0, i.jsx)(c.E, {
+            active: e,
+            children: (0, i.jsx)(l, { closeModal: t }),
+          }),
+          fnShowLogonDialog: n,
+        };
+      }
+      function h() {
+        window.location.href = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+      }
+    },
+    62151: (e, n, t) => {
+      "use strict";
+      t.d(n, { F5: () => o });
+      var i = t(42475);
+      const s = {};
+      (s.arabic = () => t.e(3695).then(t.t.bind(t, 93695, 19))),
+        (s.brazilian = () => t.e(1091).then(t.t.bind(t, 41091, 19))),
+        (s.bulgarian = () => t.e(9180).then(t.t.bind(t, 89180, 19))),
+        (s.czech = () => t.e(1514).then(t.t.bind(t, 21514, 19))),
+        (s.danish = () => t.e(3217).then(t.t.bind(t, 45598, 19))),
+        (s.dutch = () => t.e(5971).then(t.t.bind(t, 55971, 19))),
+        (s.english = () => t.e(7217).then(t.t.bind(t, 67217, 19))),
+        (s.finnish = () => t.e(7686).then(t.t.bind(t, 27686, 19))),
+        (s.french = () => t.e(7623).then(t.t.bind(t, 7623, 19))),
+        (s.german = () => t.e(7757).then(t.t.bind(t, 97757, 19))),
+        (s.greek = () => t.e(6345).then(t.t.bind(t, 46345, 19))),
+        (s.hungarian = () => t.e(5600).then(t.t.bind(t, 5600, 19))),
+        (s.indonesian = () => t.e(1163).then(t.t.bind(t, 51163, 19))),
+        (s.italian = () => t.e(1913).then(t.t.bind(t, 71913, 19))),
+        (s.japanese = () => t.e(9872).then(t.t.bind(t, 79872, 19))),
+        (s.koreana = () => t.e(2322).then(t.t.bind(t, 12322, 19))),
+        (s.latam = () => t.e(4954).then(t.t.bind(t, 94954, 19))),
+        (s.norwegian = () => t.e(8341).then(t.t.bind(t, 48341, 19))),
+        (s.polish = () => t.e(7890).then(t.t.bind(t, 97890, 19))),
+        (s.portuguese = () => t.e(1810).then(t.t.bind(t, 21810, 19))),
+        (s.romanian = () => t.e(5500).then(t.t.bind(t, 75500, 19))),
+        (s.russian = () => t.e(2268).then(t.t.bind(t, 72268, 19))),
+        (s.schinese = () => t.e(5951).then(t.t.bind(t, 85951, 19))),
+        (s.spanish = () => t.e(8265).then(t.t.bind(t, 28265, 19))),
+        (s.swedish = () => t.e(2248).then(t.t.bind(t, 82248, 19))),
+        (s.tchinese = () => t.e(2020).then(t.t.bind(t, 62020, 19))),
+        (s.thai = () => t.e(7841).then(t.t.bind(t, 67841, 19))),
+        (s.turkish = () => t.e(4921).then(t.t.bind(t, 94921, 19))),
+        (s.ukrainian = () => t.e(1667).then(t.t.bind(t, 11667, 19))),
+        (s.vietnamese = () => t.e(4528).then(t.t.bind(t, 74528, 19)));
+      const o = (0, i.l)(async function (e) {
+        if (s[e]) return s[e]();
+      });
+    },
+    55672: (e, n, t) => {
+      "use strict";
+      t.d(n, { Z: () => o });
+      var i = t(42475);
+      const s = {};
+      (s.arabic = () => t.e(3710).then(t.t.bind(t, 8476, 19))),
+        (s.brazilian = () => t.e(6562).then(t.t.bind(t, 99574, 19))),
+        (s.bulgarian = () => t.e(1449).then(t.t.bind(t, 43789, 19))),
+        (s.czech = () => t.e(7591).then(t.t.bind(t, 815, 19))),
+        (s.danish = () => t.e(6523).then(t.t.bind(t, 4289, 19))),
+        (s.dutch = () => t.e(5110).then(t.t.bind(t, 54978, 19))),
+        (s.english = () => t.e(2256).then(t.t.bind(t, 33800, 19))),
+        (s.finnish = () => t.e(6031).then(t.t.bind(t, 3907, 19))),
+        (s.french = () => t.e(5018).then(t.t.bind(t, 45040, 19))),
+        (s.german = () => t.e(6208).then(t.t.bind(t, 94750, 19))),
+        (s.greek = () => t.e(9712).then(t.t.bind(t, 69668, 19))),
+        (s.hungarian = () => t.e(6165).then(t.t.bind(t, 45233, 19))),
+        (s.indonesian = () => t.e(8306).then(t.t.bind(t, 90200, 19))),
+        (s.italian = () => t.e(1531).then(t.t.bind(t, 31864, 19))),
+        (s.japanese = () => t.e(1973).then(t.t.bind(t, 7263, 19))),
+        (s.koreana = () => t.e(7539).then(t.t.bind(t, 30295, 19))),
+        (s.latam = () => t.e(2435).then(t.t.bind(t, 50559, 19))),
+        (s.norwegian = () => t.e(2320).then(t.t.bind(t, 86512, 19))),
+        (s.polish = () => t.e(8967).then(t.t.bind(t, 52889, 19))),
+        (s.portuguese = () => t.e(6239).then(t.t.bind(t, 72269, 19))),
+        (s.romanian = () => t.e(2749).then(t.t.bind(t, 34419, 19))),
+        (s.russian = () => t.e(8025).then(t.t.bind(t, 75777, 19))),
+        (s.sc_schinese = () => t.e(9027).then(t.t.bind(t, 23723, 19))),
+        (s.schinese = () => t.e(7786).then(t.t.bind(t, 85436, 19))),
+        (s.spanish = () => t.e(2632).then(t.t.bind(t, 76736, 19))),
+        (s.swedish = () => t.e(1225).then(t.t.bind(t, 94625, 19))),
+        (s.tchinese = () => t.e(5241).then(t.t.bind(t, 15191, 19))),
+        (s.thai = () => t.e(8595).then(t.t.bind(t, 4230, 19))),
+        (s.turkish = () => t.e(9152).then(t.t.bind(t, 34792, 19))),
+        (s.ukrainian = () => t.e(2954).then(t.t.bind(t, 27246, 19))),
+        (s.vietnamese = () => t.e(6149).then(t.t.bind(t, 59863, 19)));
+      const o = (0, i.l)(async function (e) {
+        if (s[e]) return s[e]();
+      });
+    },
+    62381: (e, n, t) => {
+      "use strict";
+      t.d(n, { W: () => r });
+      var i = t(30470);
+      let s = { success: !0, result: 1 };
+      class o {
+        m_mapWaitingCallbacks = new Map();
+        m_socket;
+        m_iCallSeq = 1;
+        m_bReady = !1;
+        m_bClientConnectionFailed = !1;
+        m_bSecurityException = !1;
+        m_promiseConnect;
+        m_ClientInfo = {
+          ulVersion: "",
+          bFriendsUIEnabled: !1,
+          unAccountID: 0,
+          rgSupportedMessages: [],
+        };
+        constructor() {}
+        get ClientInfo() {
+          return this.m_ClientInfo;
+        }
+        get ready() {
+          return this.m_bReady;
+        }
+        get browser_supported() {
+          return !this.m_bSecurityException;
+        }
+        get connected_to_client() {
+          return !!this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
+        }
+        SendMsgAndAwaitResponse(e) {
+          return new Promise((n, t) => {
+            let i = this.m_iCallSeq++;
+            this.BSendMsg(e, i)
+              ? this.m_mapWaitingCallbacks.set(i, {
+                  iSeq: i,
+                  fnCallback: n,
+                  fnError: t,
+                })
+              : t();
+          });
+        }
+        BSendMsg(e, n) {
+          if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
+            return !1;
+          let t = Object.assign({}, e, {
+            universe: i.TS.EUNIVERSE,
+            accountid: i.iA.accountid,
+          });
+          void 0 !== n && (t.sequenceid = n);
+          try {
+            return this.m_socket.send(JSON.stringify(t)), !0;
+          } catch (e) {
+            return !1;
+          }
+        }
+        OnSocketMessage(e) {
+          try {
+            let n = JSON.parse(e.data);
+            if (n.sequenceid) {
+              let e = this.m_mapWaitingCallbacks.get(n.sequenceid);
+              if (e)
+                return (
+                  this.m_mapWaitingCallbacks.delete(n.sequenceid),
+                  void e.fnCallback(n)
+                );
+            }
+          } catch (e) {
+            console.error("exception parsing response", e);
+          }
+        }
+        Connect() {
+          if (this.m_bReady && this.m_socket?.readyState === WebSocket.OPEN)
+            return Promise.resolve();
+          if (this.m_promiseConnect) return this.m_promiseConnect;
+          let e = new Promise((e, n) => {
+            try {
+              this.m_socket = new WebSocket(
+                "ws://127.0.0.1:27060/clientsocket/",
+              );
+            } catch (e) {
+              return (this.m_bSecurityException = !0), void n(e);
+            }
+            (this.m_socket.onerror = (e) => {
+              n();
+            }),
+              (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
+              (this.m_socket.onopen = () => {
+                this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                  .then((t) => {
+                    1 == t.success
+                      ? ((this.m_ClientInfo.ulVersion = t.clientversion),
+                        (this.m_ClientInfo.bFriendsUIEnabled = !!t.friendsui),
+                        (this.m_ClientInfo.unAccountID = t.accountid),
+                        t.supported_messages &&
+                          (this.m_ClientInfo.rgSupportedMessages =
+                            t.supported_messages),
+                        e())
+                      : n();
+                  })
+                  .catch(n);
+              });
+          });
+          return (
+            (this.m_promiseConnect = e),
+            this.m_promiseConnect
+              .then(() => {
+                (this.m_bReady = !0), (this.m_promiseConnect = void 0);
+              })
+              .catch(() => {
+                (this.m_bClientConnectionFailed = !0),
+                  (this.m_promiseConnect = void 0);
+              }),
+            this.m_promiseConnect
+          );
+        }
+      }
+      let r = new (class {
+        m_connection = new o();
+        FailureResult(e = 2) {
+          let n = { success: !1, result: e };
+          return (
+            this.m_connection &&
+              !this.m_connection.browser_supported &&
+              (n.browser_unsupported = !0),
+            this.m_connection &&
+              !this.m_connection.connected_to_client &&
+              (n.connect_failed = !0),
+            7 == e && (n.call_unsupported = !0),
+            n
+          );
+        }
+        BClientConnected() {
+          return this.m_connection.Connect().then(
+            () => s,
+            () => this.FailureResult(),
+          );
+        }
+        BClientConnectedAndSupportsMessage(e) {
+          return this.m_connection
+            .Connect()
+            .then(() => this.BClientSupportsMessage(e))
+            .catch(() => !1);
+        }
+        BClientSupportsMessage(e) {
+          return (
+            !(
+              !this.m_connection.connected_to_client || !this.m_connection.ready
+            ) &&
+            -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
+          );
+        }
+        OpenFriendChatDialog(e) {
+          let n = { message: "ShowFriendChatDialog", steamid: e };
+          return this.GenericEResultCall(n);
+        }
+        OpenChatRoomGroupDialog(e, n) {
+          let t = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
+          return n && (t.chat_room_id = n), this.GenericEResultCall(t);
+        }
+        ShowChatRoomGroupInvite(e, n = !0) {
+          let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
+          return this.GenericEResultCall(t, n);
+        }
+        m_mapCacheSubscribedApp = new Map();
+        BIsSubscribedApp(e) {
+          if (this.m_mapCacheSubscribedApp.has(e))
+            return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
+          let n = { message: "IsSubscribedApp", appid: e };
+          return this.GenericEResultCall(n, !0).then((n) => {
+            if (n.connect_failed) return;
+            let t = 1 == n.result;
+            return this.m_mapCacheSubscribedApp.set(e, t), t;
+          });
+        }
+        OpenFriendsDialog() {
+          return this.GenericEResultCall({ message: "OpenFriendsDialog" });
+        }
+        OpenSteamURL(e, n = !1) {
+          let t = { message: "OpenSteamURL", url: e };
+          return this.GenericEResultCall(t, n);
+        }
+        BClientAccountMatches() {
+          return (
+            !i.iA.logged_in ||
+            i.iA.accountid == this.m_connection.ClientInfo.unAccountID
+          );
+        }
+        GenericEResultCall(e, n = !1) {
+          return this.m_connection
+            .Connect()
+            .then(() =>
+              n && !this.BClientAccountMatches()
+                ? { success: !1, result: 19, account_mismatch: !0 }
+                : this.m_connection
+                    .SendMsgAndAwaitResponse(e)
+                    .then((e) =>
+                      1 === e.success ? s : this.FailureResult(e.success),
+                    ),
+            )
+            .catch(() => this.FailureResult());
+        }
+      })();
+      window.ClientConnectionAPI = r;
+    },
+    51706: (e, n, t) => {
+      "use strict";
+      t.d(n, {
+        mt: () => l,
+        o0: () => h.o0,
+        eV: () => u.eV,
+        KG: () => h.KG,
+        Ee: () => h.Ee,
+        x_: () => a.x_,
+        of: () => d,
+        pY: () => h.pY,
+        EN: () => r.E,
+      });
+      var i = t(7850),
+        s = t(90626),
+        o = t(53835),
+        r = t(21869),
+        a = t(2654);
+      t(72739),
+        t(48902),
+        t(60155),
+        t(25118),
+        t(84933),
+        t(52745),
+        t(13871),
+        t(78327),
+        t(28460);
+      function c(e) {
+        const { labelledBy: n } = e || {},
+          [t, i] = s.useState(void 0);
+        return {
+          headerId: n || t,
+          context: s.useMemo(() => ({ setHeaderId: i }), []),
+        };
+      }
+      function l(e) {
+        const {
+            active: n,
+            onDismiss: t,
+            className: s,
+            modalClassName: l,
+            children: d,
+            ...h
+          } = e,
+          { headerId: u, context: p } = c({ labelledBy: e["aria-labelledby"] });
+        return (0, i.jsx)(o.t6.Provider, {
+          value: p,
+          children: (0, i.jsx)(r.E, {
+            active: n,
+            children: (0, i.jsx)(a.x_, {
+              onEscKeypress: t,
+              className: l,
+              children: (0, i.jsx)(o.UC, {
+                role: "dialog",
+                "aria-labelledby": u,
+                className: s,
+                ...h,
+                children: d,
+              }),
+            }),
+          }),
+        });
+      }
+      function d(e) {
+        const { className: n, children: t } = e;
+        return (0, i.jsx)(r.E, {
+          active: !0,
+          children: (0, i.jsx)("div", { className: n, children: t }),
+        });
+      }
+      t(81194);
+      var h = t(78395),
+        u = t(10411);
+      t(76222);
+    },
+    71009: (e, n, t) => {
+      "use strict";
+      t.r(n),
+        t.d(n, {
+          OpenInDesktopClient: () => u,
+          default: () => m,
+          useOpenWebInSteamClient: () => p,
+        });
+      var i = t(7850),
+        s = t(90626),
+        o = t(30470),
+        r = t(84811),
+        a = t(62381),
+        c = t(97824),
+        l = t(78327),
+        d = t(2627),
+        h = t(61859);
+      const u = (0, r.Nr)(function (e) {
+        const { fnOpenInSteamClient: n } = p();
+        return (0, i.jsx)("div", {
+          className: c.OpenInBannerContainer,
+          children: (0, i.jsxs)("div", {
+            className: c.OpenInBannerContent,
+            children: [
+              (0, i.jsx)("div", {
+                className: c.BannerButtonContainer,
+                children: (0, i.jsx)("div", {
+                  onClick: n,
+                  className: c.BannerButton,
+                  children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                }),
+              }),
+              (0, i.jsx)("div", {
+                className: c.BannerMessage,
+                children: (0, i.jsxs)("div", {
+                  className: c.BannerTitle,
+                  children: [
+                    (0, i.jsx)("b", {
+                      children: (0, h.we)(
+                        "#OpenInDesktopAppBanner_NotSignedIn",
+                      ),
+                    }),
+                    (0, i.jsx)("br", {}),
+                    (0, h.we)("#OpenInDesktopAppBanner_Body"),
+                  ],
+                }),
+              }),
+            ],
+          }),
+        });
+      });
+      function p() {
+        const [e, n] = s.useState(22);
+        s.useEffect(() => {
+          o.TS.IN_CLIENT ||
+            o.TS.IN_MOBILE ||
+            o.TS.IN_MOBILE_WEBVIEW ||
+            a.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
+              n(e ? 1 : 2);
+            });
+        }, []);
+        const t = s.useCallback(() => {
+          let n = `${(0, l.yl)()}//openurl/`;
+          const t = (0, d.VY)("browserid");
+          if (t) {
+            const e = new URL(window.location.href),
+              i = new URLSearchParams(e.search);
+            i.set("utm_bid", t),
+              (n += e.origin + e.pathname + "?" + i.toString() + e.hash);
+          } else n += window.location.href;
+          1 == e ? a.W.OpenSteamURL(n) : (window.location.href = n);
+        }, [e]);
+        return { eClientConnectedState: e, fnOpenInSteamClient: t };
+      }
+      const m = u;
+    },
+    26240: (e, n, t) => {
+      "use strict";
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => m, default: () => b });
+      var i = t(7850),
+        s = t(84811),
+        o = t(51706),
+        r = t(71009),
+        a = t(61859),
+        c = t(53965),
+        l = t(55672),
+        d = t(62151),
+        h = t(84547),
+        u = t(84933),
+        p = t(32754);
+      const m = (0, s.Nr)(function (e) {
+          const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
+            r.useOpenWebInSteamClient)(),
+            s = 1 == t,
+            [m, b, _] = (0, u.uD)();
+          return (0, i.jsxs)(i.Fragment, {
+            children: [
+              (0, i.jsx)(p.Gq, {
+                toolTipContent: l.Z.Localize("#AddToWishlist_ttip"),
+                children: (0, i.jsx)(c.$, {
+                  onClick: b,
+                  children: (0, a.we)("#AddToYourWishlist"),
+                }),
+              }),
+              (0, i.jsx)(o.EN, {
+                active: m,
+                children: (0, i.jsx)(o.o0, {
+                  strTitle: (0, a.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                  strDescription: s
+                    ? (0, a.we)("#Wishlist_NotSignedIn")
+                    : d.F5.Localize("#LoginRedirect_Dialog_Description"),
+                  closeModal: _,
+                  onOK: h.l,
+                  strOKButtonText: l.Z.Localize("#Login_SignIn"),
+                  children:
+                    s &&
+                    (0, i.jsx)(c.$, {
+                      onClick: n,
+                      children: (0, a.we)(
+                        "#OpenInDesktopAppBanner_OpenAppButton",
+                      ),
+                    }),
+                }),
+              }),
+            ],
+          });
+        }),
+        b = m;
+    },
+  },
+]);

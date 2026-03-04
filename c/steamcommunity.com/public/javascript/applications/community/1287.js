@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Moje nabídky a příkazy",
 	"MyOrders_Heading_Sell": "Nabídky k prodeji",
 	"MyOrders_Heading_Buy": "Příkazy k nákupu",
+	"MyOrders_Heading_MyPurchaseOffers": "Co chci koupit",
+	"MyOrders_Heading_MyListings": "Co chci prodat",
 	"MyOrders_FailedToLoad": "Při načítání nabídek a příkazů pro tuto položku došlo k chybě.",
 	"MyOrders_NoActiveOrders_Item": "Pro tuto položku nemáte žádné aktivní nabídky k prodeji.",
 	"MyOrders_NoBuyOrders_Item": "Pro tuto položku nemáte žádné aktivní příkazy k nákupu.",

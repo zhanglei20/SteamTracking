@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "我的有效銷售或訂購單",
 	"MyOrders_Heading_Sell": "銷售單",
 	"MyOrders_Heading_Buy": "訂購單",
+	"MyOrders_Heading_MyPurchaseOffers": "購買 - 我的訂購單",
+	"MyOrders_Heading_MyListings": "販售 - 我的上架物品",
 	"MyOrders_FailedToLoad": "載入此物品的銷售或訂購單資料時發生錯誤。",
 	"MyOrders_NoActiveOrders_Item": "您沒有此物品的有效銷售或訂購單。",
 	"MyOrders_NoBuyOrders_Item": "您沒有此物品的有效訂購單。",

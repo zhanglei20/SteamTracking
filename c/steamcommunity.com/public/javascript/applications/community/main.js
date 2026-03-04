@@ -643,8 +643,6 @@
         BodyNoScroll: "_1Xs5dtPK2K37sd1U9BLX3S",
         BodyNoScrollDialog: "_3jhMIr8hczcBK_fOVtEVOK",
         OverlayModal: "_24YFXIVY7CC2quNzCN7015",
-        GamepadOnlyModalWrapper: "_1GlTsstfPZWsQc4umFIvrX",
-        GamepadOnlyPanelWrapper: "_1aY-rmUi48QSw7U1ZWa5DZ",
         ModalDialog: "_32QRvPPBL733SpNR9x0Gp3",
       };
     },
@@ -1915,9 +1913,9 @@
                 `DeferredFocus in ${this.m_tree._} - focusing ${_ ? "descendant of" : "node"} ${_.NavKey}`,
               ),
               _
-                ? _.BChildTakeFocus(_._.APPLICATION) ||
-                  this.m_tree.TransferFocus(_._.APPLICATION, _)
-                : _.BTakeFocus(_._.APPLICATION);
+                ? _.BChildTakeFocus(_._.AUTOFOCUS) ||
+                  this.m_tree.TransferFocus(_._.AUTOFOCUS, _)
+                : _.BTakeFocus(_._.AUTOFOCUS);
           }
         }
       }
@@ -2494,7 +2492,7 @@
           _.WindowContext.SetActiveNavTree(_, _);
         }
         OnGamepadNavigationTreeFocused(_, _, __webpack_require__ = !1) {
-          var _, _;
+          var _, _, _, _;
           const _ = _.WindowContext;
           _ != this.m_ActiveContext &&
             _(`(${_.LogName(_.Window)}) Focus event in inactive window`),
@@ -2504,10 +2502,17 @@
                 ? void 0
                 : _.GetParentEmbeddedNavTree()) == _ ||
               _.GetParentEmbeddedNavTree() == _.m_LastActiveFocusNavTree
-                ? (_(
-                    `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
-                  ),
-                  _.Activate())
+                ? _ == _._.AUTOFOCUS &&
+                  (null === (_ = _.m_LastActiveNavTree) || void 0 === _
+                    ? void 0
+                    : _.GetLastFocusedNode())
+                  ? _(
+                      `There was an autofocus event in ${_._}, but the active nav tree is ${null === (_ = _.m_LastActiveFocusNavTree) || void 0 === _ ? void 0 : _._} and we already have something focused.  Source: ${_ && _._[_]}.`,
+                    )
+                  : (_(
+                      `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
+                    ),
+                    _.Activate())
                 : _(
                     `There was a focus event in ${_._}, but the active nav tree is ${null === (_ = _.m_LastActiveFocusNavTree) || void 0 === _ ? void 0 : _._} so it is being ignored.  Source: ${_ && _._[_]}.`,
                   ));
@@ -3065,6 +3070,7 @@
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
+        _ = _.Fragment,
         _ = () => (_._.IS_OGG ? "games" : "groups"),
         _ = {
           DiagData: () => "/:anything*/diagdata",
@@ -3498,6 +3504,15 @@
             }),
             (0, _.jsx)(_._, {
               config: {
+                footer: () =>
+                  (0, _.jsx)(_.Suspense, {
+                    fallback: null,
+                    children: (0, _.jsx)(_, {}),
+                  }),
+              },
+            }),
+            (0, _.jsx)(_._, {
+              config: {
                 parentalunlock: (_) =>
                   (0, _.jsx)(_, {
                     ..._,
@@ -3698,16 +3713,21 @@
         return null;
       }
       const _ = ["initial", "sm", "md", "lg"],
-        _ = (0, _.createContext)("lg");
+        _ = (0, _.createContext)({
+          _: 768,
+          _: 940,
+          _: 1240,
+          _: "lg",
+        });
       function _(_) {
-        const {
-            children: _,
-            breakpoints: __webpack_require__ = {
-              _: 768,
-              _: 940,
-              _: 1240,
-            },
-          } = _,
+        var _, _, _;
+        const { children: _, breakpoints: _ = {} } = _,
+          _ = (0, _.useContext)(_),
+          _ = {
+            _: null !== (_ = _._) && void 0 !== _ ? _ : _._,
+            _: null !== (_ = _._) && void 0 !== _ ? _ : _._,
+            _: null !== (_ = _._) && void 0 !== _ ? _ : _._,
+          },
           _ = (function (_) {
             const _ = _(`(min-width: ${_._}px)`),
               _ = _(`(min-width: ${_._}px)`),
@@ -3717,14 +3737,32 @@
               (0, _.useEffect)(() => _(!0), []),
               _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
             );
-          })(__webpack_require__);
+          })(_),
+          { _: _, _: _, _: _ } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+            }),
+            [_, _, _, _],
+          );
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: _,
         });
       }
       function _(_) {
-        const { formFactor: _, children: __webpack_require__ } = _;
+        const { formFactor: _, children: __webpack_require__ } = _,
+          _ = (0, _.useContext)(_),
+          _ = (0, _.useMemo)(
+            () => ({
+              ..._,
+              _: null != _ ? _ : _._,
+            }),
+            [_, _],
+          );
         return _
           ? (0, _.jsx)(_.Provider, {
               value: _,
@@ -3735,7 +3773,7 @@
             });
       }
       function _() {
-        return (0, _.useContext)(_);
+        return (0, _.useContext)(_)._;
       }
       const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
       function _(_) {
@@ -3771,26 +3809,33 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const {
-          accentColor: _,
-          dullColor: __webpack_require__,
-          bodyTextColor: _,
-          children: _,
-        } = _;
-        return (0, _.jsx)("div", {
-          "data-accent-color": _,
-          "data-dull-color": __webpack_require__,
-          "data-body-text-color": _,
-          style: {
-            display: "contents",
-          },
-          children: (0, _.jsx)("div", {
+            accentColor: _,
+            dullColor: __webpack_require__,
+            bodyTextColor: _,
+            children: _,
+            breakpoints: _,
+          } = _,
+          _ = (0, _.jsx)("div", {
+            "data-accent-color": _,
+            "data-dull-color": __webpack_require__,
+            "data-body-text-color": _,
             style: {
               display: "contents",
-              color: "var(--color-text-body-body)",
             },
-            children: _,
-          }),
-        });
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: _,
+            }),
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              breakpoints: _,
+              children: _,
+            })
+          : _;
       }
       const _ = _.memo(function (_) {
         const {
@@ -4311,8 +4356,7 @@
         (function (_) {
           (_[(_.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (_[(_.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (_[(_.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
@@ -5795,7 +5839,8 @@
         (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
           (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
           (_[(_.APPLICATION = 2)] = "APPLICATION"),
-          (_[(_.BROWSER = 3)] = "BROWSER");
+          (_[(_.BROWSER = 3)] = "BROWSER"),
+          (_[(_.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(_ || (_ = {}));
       let _ = {
         [_._._]: "vgp_onok",
@@ -7409,14 +7454,21 @@
                 _ = this.FindNextFocusableChildInDirection(_, _, _);
               }
             } else if (_ == _.PREFERRED_CHILD) {
-              for (const _ of this.m_rgChildren)
-                if (
-                  ((_ = _.BWantsPreferredFocus()
-                    ? _.FindFocusableNode(_)
-                    : void 0),
-                  _)
-                )
-                  return _;
+              let _ = this.m_rgChildren;
+              for (; _.length; ) {
+                let _ = [];
+                for (const _ of _) {
+                  if (
+                    ((_ = _.BWantsPreferredFocus()
+                      ? _.FindFocusableNode(_)
+                      : void 0),
+                    _)
+                  )
+                    return _;
+                  __webpack_require__.push(..._.m_rgChildren);
+                }
+                _ = _;
+              }
             } else
               _ == _.LAST &&
                 (_ = this.FindNextFocusableChildInDirection(
@@ -7895,92 +7947,95 @@
                 _(
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
-            (function (_, _) {
-              var _, _, _, _;
-              const _ = _.Element;
-              if (!_) return;
-              let _ = [
-                {
-                  node: _,
-                  eScrollType:
-                    null === (_ = _.m_Properties) || void 0 === _
-                      ? void 0
-                      : _.scrollIntoViewType,
-                },
-              ];
-              for (let _ = _.Parent; _; _ = _.Parent) {
-                const _ =
-                    null === (_ = _.m_Properties) || void 0 === _
-                      ? void 0
-                      : _.scrollIntoViewWhenChildFocused,
-                  _ =
-                    null === (_ = _.m_Properties) || void 0 === _
-                      ? void 0
-                      : _.scrollIntoViewType;
-                if (_) {
-                  const _ = {
+            this.m_Tree.BIsActive() &&
+              (function (_, _) {
+                var _, _, _, _;
+                const _ = _.Element;
+                if (!_) return;
+                let _ = [
+                  {
                     node: _,
-                    eScrollType: _,
-                  };
-                  "force" === _ ? (_ = [_]) : _.push(_);
+                    eScrollType:
+                      null === (_ = _.m_Properties) || void 0 === _
+                        ? void 0
+                        : _.scrollIntoViewType,
+                  },
+                ];
+                for (let _ = _.Parent; _; _ = _.Parent) {
+                  const _ =
+                      null === (_ = _.m_Properties) || void 0 === _
+                        ? void 0
+                        : _.scrollIntoViewWhenChildFocused,
+                    _ =
+                      null === (_ = _.m_Properties) || void 0 === _
+                        ? void 0
+                        : _.scrollIntoViewType;
+                  if (_) {
+                    const _ = {
+                      node: _,
+                      eScrollType: _,
+                    };
+                    "force" === _ ? (_ = [_]) : _.push(_);
+                  }
+                  if (void 0 !== _)
+                    for (
+                      let _ = _.length - 1;
+                      _ >= 0 && void 0 === _[_].eScrollType;
+                      _--
+                    )
+                      _[_].eScrollType = _;
                 }
-                if (void 0 !== _)
-                  for (
-                    let _ = _.length - 1;
-                    _ >= 0 && void 0 === _[_].eScrollType;
-                    _--
+                for (; _.length; ) {
+                  let { node: _, eScrollType: _ } = _.pop(),
+                    _ = 0 == _.length;
+                  if (
+                    (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+                    (null === (_ = null == _ ? void 0 : _.m_Properties) ||
+                    void 0 === _
+                      ? void 0
+                      : _.fnScrollIntoViewHandler) &&
+                      !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
                   )
-                    _[_].eScrollType = _;
-              }
-              for (; _.length; ) {
-                let { node: _, eScrollType: _ } = _.pop(),
-                  _ = 0 == _.length;
-                if (
-                  (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
-                  (null === (_ = null == _ ? void 0 : _.m_Properties) ||
-                  void 0 === _
-                    ? void 0
-                    : _.fnScrollIntoViewHandler) &&
-                    !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
-                )
-                  continue;
-                const _ = _.m_element,
-                  _ =
-                    _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
-                if (_) {
-                  const _ = _ ? _(_) : _.getBoundingClientRect();
-                  let _ = !1;
-                  const _ = Math.max(1.4 * (_.bottom - _.top), 40),
-                    _ = _ && performance.now() - _ < 500;
-                  (_ ||
-                    _.bottom < -_ ||
-                    _.top > _.ownerDocument.defaultView.innerHeight + _) &&
-                    ((_ = !0),
-                    _ ||
-                      _(
-                        `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
-                      ));
-                  let _ = _ ? "auto" : "smooth";
-                  _ && (_ = performance.now()),
-                    _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
-                    _
-                      ? _(0, _, _)
-                      : _.scrollIntoView({
-                          behavior: _,
-                          block: "nearest",
-                        });
-                } else
-                  _("No previous element for scrolling, will jump"),
-                    _
-                      ? _(0, _, "auto")
-                      : null == _ ||
-                        _.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, _);
+                    continue;
+                  const _ = _.m_element,
+                    _ =
+                      _ == _.NoTransform ||
+                      _ == _.NoTransformSparseContent ||
+                      !_;
+                  if (_) {
+                    const _ = _ ? _(_) : _.getBoundingClientRect();
+                    let _ = !1;
+                    const _ = Math.max(1.4 * (_.bottom - _.top), 40),
+                      _ = _ && performance.now() - _ < 500;
+                    (_ ||
+                      _.bottom < -_ ||
+                      _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+                      ((_ = !0),
+                      _ ||
+                        _(
+                          `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                        ));
+                    let _ = _ ? "auto" : "smooth";
+                    _ && (_ = performance.now()),
+                      _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+                      _
+                        ? _(0, _, _)
+                        : _.scrollIntoView({
+                            behavior: _,
+                            block: "nearest",
+                          });
+                  } else
+                    _("No previous element for scrolling, will jump"),
+                      _
+                        ? _(0, _, "auto")
+                        : null == _ ||
+                          _.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -12957,6 +13012,11 @@
                     _: 3,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  framegen_frame_rate: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -35405,7 +35465,7 @@
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         _.useEffect(() => {
-          const _ = null == _ ? void 0 : _.current;
+          const _ = _ && "current" in _ ? _.current : _;
           if (_ && _)
             return (
               _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
@@ -37904,6 +37964,7 @@
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
         static AddNavParamToURL(_, _) {
+          if (!_ || 0 == _.length) return _;
           try {
             const _ = new URL((0, _._)(_)),
               _ = new URLSearchParams(_.search);
@@ -53261,7 +53322,8 @@
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 5,
+                bConstMethod: !0,
+                ePrivilege: 1,
               },
             );
           }),
@@ -53271,6 +53333,7 @@
               (0, _._)(_, _),
               _,
               {
+                bConstMethod: !0,
                 ePrivilege: 5,
               },
             );
@@ -76657,7 +76720,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -76713,16 +76775,6 @@
                 children: _,
               }),
             }),
-          }),
-        });
-      }
-      function _(_) {
-        const { className: _, children: __webpack_require__ } = _;
-        return (0, _.jsx)(_._, {
-          active: !0,
-          children: (0, _.jsx)("div", {
-            className: _,
-            children: __webpack_require__,
           }),
         });
       }
@@ -77412,8 +77464,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _._,
-        _: () => _,
-        _: () => _._,
         _: () => _._,
         _: () => _._,
         _: () => _._,
@@ -77421,37 +77471,10 @@
         _: () => _._,
         _: () => _._,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, navID: __webpack_require__, closeModal: _ } = _,
-          _ = _.createRef(),
-          _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
-        return (0, _._)() && !_._.IN_STEAMUI
-          ? (0, _.jsx)(_._, {
-              navID: __webpack_require__,
-              navTreeRef: _,
-              onCancelButton: _,
-              className: _.GamepadOnlyModalWrapper,
-              children: (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  className: _.GamepadOnlyPanelWrapper,
-                  onGamepadDirection: _,
-                  focusableIfEmpty: !0,
-                  children: _,
-                }),
-              }),
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: _,
-            });
-      }
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
@@ -85394,8 +85417,12 @@
         }
         async LoadSettings() {
           const _ = (_) => {
-            const _ = localStorage.getItem(_);
-            return _ ? JSON.parse(_) : void 0;
+            try {
+              const _ = localStorage.getItem(_);
+              return _ ? JSON.parse(_) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
@@ -85425,15 +85452,21 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(..._) {
+          _ &&
+            _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
+            null == window.g_LogManager && (window.g_LogManager = new _()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -85455,11 +85488,19 @@
           this.SetDebugLogEnabled(_, !this.IsDebugLogEnabled(_));
         }
         async SetDebugLogEnabled(_, _) {
-          _
-            ? this.m_setEnabledDebugLogs.add(_)
-            : this.m_setEnabledDebugLogs.delete(_),
-            this.m_SettingsChangedCallback.Dispatch(),
-            await this.SaveSettings();
+          this.IsLogName(_)
+            ? (_
+                ? this.m_setEnabledDebugLogs.add(_)
+                : this.m_setEnabledDebugLogs.delete(_),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings())
+            : console.warn(
+                `No log named "${_}", available logs:`,
+                this.GetLogNames(),
+              );
+        }
+        async SetDebugLogsEnabled(_, ..._) {
+          _.forEach((_) => this.SetDebugLogEnabled(_, _));
         }
         async SetAllDebugLogsEnabled(_) {
           (this.m_setEnabledDebugLogs = _
@@ -85478,6 +85519,9 @@
           (this.m_bIncludeBacktraceInLog = _),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
         }
       }
       function _(_, _, _, _, _, ..._) {
@@ -85546,29 +85590,18 @@
       }
       (_.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
         (_.k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog"),
-        (_.s_Singleton = null);
-      const _ = () => [..._.Get().LogNames].sort(),
-        _ = (_, _) => {
-          _.Get().IsLogName(_)
-            ? _.Get().SetDebugLogEnabled(_, _)
-            : console.warn(`No log named "${_}", available logs:`, _());
-        };
-      (window.DebugLogEnable = (..._) => _.forEach((_) => _(_, !0))),
-        (window.DebugLogDisable = (..._) => _.forEach((_) => _(_, !1))),
+        (window.DebugLogEnable = (..._) =>
+          _.Get().SetDebugLogsEnabled(!0, ..._)),
+        (window.DebugLogDisable = (..._) =>
+          _.Get().SetDebugLogsEnabled(!1, ..._)),
         (window.DebugLogEnableAll = () => _.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => _.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = _),
-        (window.DebugLogEnabled = (..._) => {
-          _.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            _.Get().PrintEnabledLogs();
-        }),
+        (window.DebugLogNames = () => _.Get().GetLogNames()),
+        (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },
@@ -86116,7 +86149,6 @@
         _: () => _,
         _: () => _,
         _: () => _._,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _._,

@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Мои активные заявки",
 	"MyOrders_Heading_Sell": "Заявки на продажу",
 	"MyOrders_Heading_Buy": "Заявки на покупку",
+	"MyOrders_Heading_MyPurchaseOffers": "Покупка — мои предложения",
+	"MyOrders_Heading_MyListings": "Продажа — мои лоты",
 	"MyOrders_FailedToLoad": "При загрузке заявки для этого предмета возникла проблема.",
 	"MyOrders_NoActiveOrders_Item": "У вас нет активных заявок для этого предмета.",
 	"MyOrders_NoBuyOrders_Item": "У вас нет активных заявок на покупку этого предмета.",

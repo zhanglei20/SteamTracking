@@ -123,7 +123,17 @@
 	"ItemFlag_OnWishlist": "찜 목록에 있음",
 	"ItemFlag_InCart": "장바구니에 있음",
 	"ItemFlag_Ignored": "제외로 지정함",
-	"ItemFlag_ExcludedByPreferences": "환경 설정에 따라 제외함"
+	"ItemFlag_ExcludedByPreferences": "환경 설정에 따라 제외함",
+	"Wishlist_Controls_Categories_Header": "My Categories:",
+	"Wishlist_Categories_None": "None",
+	"Wishlist_Gamepad_Filter_Category": "Filter by category",
+	"Wishlist_Gamepad_Filter_Clear_Category": "Clear category filters",
+	"Wishlist_Gamepad_Add_Category": "Add category",
+	"Wishlist_Gamepad_Removecategory": "Remove category",
+	"Wishlist_Controls_Categories_Remove_Tooltip": "Remove this category from this item",
+	"Wishlist_Controls_Categories_Filter_Tooltip": "Filter your wishlist to items in this category",
+	"Wishlist_Controls_Categories_All": "All",
+	"Wishlist_Controls_Categories_Manage": "Add or Remove Categories"
 }`);
     },
   },

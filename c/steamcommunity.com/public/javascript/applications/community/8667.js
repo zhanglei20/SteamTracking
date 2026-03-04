@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Omat aktiiviset tarjoukset",
 	"MyOrders_Heading_Sell": "Myyntitarjoukset",
 	"MyOrders_Heading_Buy": "Ostotarjoukset",
+	"MyOrders_Heading_MyPurchaseOffers": "Omat ostotarjoukset",
+	"MyOrders_Heading_MyListings": "Omat myyntilistaukset",
 	"MyOrders_FailedToLoad": "Esineen tarjoustietojen lataaminen epäonnistui.",
 	"MyOrders_NoActiveOrders_Item": "Esineelle ei ole aktiivisia tarjouksia.",
 	"MyOrders_NoBuyOrders_Item": "Esineelle ei ole aktiivisia ostotarjouksia.",

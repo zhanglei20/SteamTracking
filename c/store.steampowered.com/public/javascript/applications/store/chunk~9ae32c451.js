@@ -1,19 +1,8 @@
+"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [351],
   {
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
-        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
-        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
-        Reason: "_2h0GKAYcXRP10ryZHFn79d",
-        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       function _(_) {
         switch (_) {
           case 0:
@@ -41,153 +30,6 @@
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _,
-            bShowAsMuted: __webpack_require__,
-            bHidePrice: _,
-            bShowInLibraryInsteadOfPrice: _,
-            bHidePlatforms: _,
-            strClassName: _,
-            creatorAccountID: _,
-            bShowName: _,
-            onlyOneDiscountPct: _,
-            bShowAddToCart: _,
-            bShowWishlistButton: _,
-          } = _,
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(!1),
-          { data: _ } = (0, _._)(_);
-        if (
-          ((0, _.useEffect)(() => {
-            _.current && _(_.current.offsetWidth < 370);
-          }, [_]),
-          !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
-        )
-          return null;
-        const _ = Boolean(_ && 0 == _?.item_type),
-          _ = Boolean(!_ && !_ && !_ && _ && _);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            !_ &&
-              (0, _.jsxs)("div", {
-                ref: _,
-                className: (0, _._)(
-                  _().CapsuleBottomBar,
-                  "CapsuleBottomBar",
-                  __webpack_require__ && _().Muted,
-                  _,
-                ),
-                children: [
-                  _ &&
-                    (0, _.jsx)(_, {
-                      creatorAccountID: _,
-                      ..._,
-                    }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      className: (0, _._)(
-                        _().MaxActionButtonWidth,
-                        _().AddToCartButton,
-                      ),
-                    }),
-                  _ &&
-                    "appid" in _ &&
-                    (0, _.jsx)(_._, {
-                      appid: _.appid,
-                      className: (0, _._)(
-                        _().MaxActionButtonWidth,
-                        _().AddToWishlistButton,
-                      ),
-                    }),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      bMinimizePlatforms: _,
-                    }),
-                  !_ &&
-                    (0, _.jsx)("span", {
-                      className: _().BottomBarPriceInfo,
-                      children: (0, _.jsx)(_._, {
-                        _: _,
-                        bShowInLibrary: _,
-                        onlyOneDiscountPct: _,
-                      }),
-                    }),
-                ],
-              }),
-            _ &&
-              (0, _.jsx)(_, {
-                _: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__?.name
-          ? (0, _.jsx)("div", {
-              className: _().CapsuleName,
-              children: __webpack_require__.name,
-            })
-          : null;
-      }
-      function _(_) {
-        const {
-            creatorAccountID: _,
-            bShowAsMuted: __webpack_require__,
-            strClassName: _,
-          } = _,
-          _ = (0, _.useMemo)(
-            () => ({
-              creatorid: _,
-            }),
-            [_],
-          ),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ = (0, _._)(_?.clan_avatar, "Medium"),
-          _ = _.name || "";
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().BottomCreatorRow,
-            __webpack_require__ && _().Muted,
-            _,
-          ),
-          children: [
-            (0, _.jsx)("img", {
-              className: (0, _._)(_().CreatorLogo),
-              src: _,
-              alt: _,
-            }),
-            (0, _.jsx)("span", {
-              className: _().CreatorName,
-              children: _,
-            }),
-          ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -201,7 +43,6 @@
       })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -347,7 +188,6 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -431,7 +271,6 @@
         (0, _._)([_._], _.prototype, "m_rgAnswerChosen", void 0);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -761,7 +600,6 @@
         (0, _._)([_._], _.prototype, "OpenDoor", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -1011,7 +849,6 @@
         (0, _._)([_._], _.prototype, "DeployCapsuleIfPossible", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -1066,7 +903,6 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -1293,7 +1129,6 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -1488,312 +1323,6 @@
         (0, _._)([_._], _.prototype, "HandleMessage", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "capsule_index_";
-      function _(_) {
-        const {
-            capsule: _,
-            bShowParentApp: __webpack_require__,
-            elElementToAppendToHover: _,
-            index: _,
-            navKey: _,
-            bHideStoreHover: _,
-            onlyOneDiscountPct: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          [_] = (0, _._)(
-            __webpack_require__ ? _?.GetParentAppID() : void 0,
-            _._,
-          ),
-          _ = (0, _._)(_);
-        if (!_) return null;
-        const _ = Boolean(_),
-          _ = (0, _.jsx)(_, {
-            ..._,
-            strExtraParams: _.strExtraParams,
-            info: _,
-            bIsHovered: _,
-            bHasParentAppToDisplay: _,
-            onlyOneDiscountPct: _,
-            bShowEarlyAccessBanner: _,
-          });
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)({
-            [_().OuterCapsuleContainer]: !0,
-            [_ + _]: 0 == _,
-          }),
-          navEntryPreferPosition: _._.PREFERRED_CHILD,
-          navKey: _,
-          children: [
-            (0, _.jsxs)(_._, {
-              appid: _.GetAppID(),
-              children: [
-                Boolean(_)
-                  ? (0, _.jsx)("div", {
-                      onMouseEnter: () => _(!0),
-                      onMouseLeave: () => _(!1),
-                      children: _,
-                    })
-                  : (0, _.jsx)(_._, {
-                      className: _().CapsuleContainer,
-                      _: _,
-                      elElementToAppend: _.elElementToAppendToHover,
-                      bShowDemoButton: _.bShowDemoButton,
-                      bPreferDemoStorePage: _.bPreferDemoStorePage,
-                      bShowDeckCompatibilityDialog:
-                        _.bShowDeckCompatibilityDialog,
-                      bHidePrice: _.bHidePrice,
-                      bUseSubscriptionLayout: _.bUseSubscriptionLayout,
-                      strExtraParams: _.strExtraParams,
-                      nCreatorAccountID: _.creatorAccountID,
-                      nWidthMultiplier: _.nWidthMultiplier,
-                      bShowIgnoreButton: _.bShowIgnoreButton,
-                      bShowDescription: _.bShowDescriptionInHover,
-                      children: _,
-                    }),
-                Boolean(_) &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: _,
-                  }),
-              ],
-            }),
-            _ &&
-              (0, _.jsx)(_, {
-                strExtraParams: _.strExtraParams,
-                parentStoreItem: _,
-                childAppType: _.GetAppType(),
-                bPreferDemoStorePage: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            strExtraParams: _,
-            parentStoreItem: __webpack_require__,
-            childAppType: _,
-            bPreferDemoStorePage: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return _
-          ? (0, _.jsx)(_._, {
-              className: _().CapsuleParentInfo,
-              ...(0, _._)(_, _, _, _, _),
-              children: (0, _.jsxs)(_._, {
-                appid: __webpack_require__.GetAppID(),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().ParentType,
-                    children: (0, _._)(
-                      11 == _
-                        ? "#SalePage_ParentApp_SoundTrack"
-                        : "#SalePage_ParentApp_DLC",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    _: _,
-                    strExtraParams: _,
-                    children: (0, _.jsx)("img", {
-                      loading: "lazy",
-                      className: _.AppCapsuleImage,
-                      alt: __webpack_require__.GetName(),
-                      src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
-                      ...(0, _._)(),
-                    }),
-                  }),
-                ],
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHideStatusBanners: __webpack_require__,
-            strExtraParams: _,
-            index: _,
-            imageType: _,
-            bHasParentAppToDisplay: _,
-            bIsHovered: _,
-            strDoubleCapsuleMessage: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-            bPreferAssetWithoutOverride: _,
-          } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(_);
-        if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        "overrideNavigation" in _ &&
-          (_ = (_) => (
-            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
-          ));
-        const _ = Boolean(_);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_().TwoWidthCtn]: _,
-              }),
-              children: [
-                (0, _.jsxs)(_._, {
-                  href: _ ? void 0 : _,
-                  style: {
-                    display: "block",
-                    cursor: "pointer",
-                  },
-                  className: (0, _._)({
-                    [_().TwoWidthCapsule]: _,
-                  }),
-                  preferredFocus: _,
-                  onClick: _,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      appids: _,
-                      hide_status_banners: __webpack_require__,
-                      show_early_access: _.bShowEarlyAccessBanner,
-                    }),
-                    "none" != _ &&
-                      (0, _.jsx)(_._, {
-                        imageType: _,
-                        _: _,
-                        bPreferAssetWithoutOverride: _,
-                      }),
-                    (0, _.jsx)(_._, {
-                      _: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      _: _,
-                      active: _,
-                      bIsHoverMode: !0,
-                    }),
-                  ],
-                }),
-                _ &&
-                  (0, _.jsxs)("div", {
-                    className: (0, _._)(
-                      _().TwoWidthSideInfo,
-                      "TwoWidthSideInfo",
-                    ),
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().Reason,
-                        children: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().StoreSaleItemRelease,
-                        children: (0, _.jsx)("span", {
-                          children: _.GetFormattedSteamReleaseDate(),
-                        }),
-                      }),
-                      (0, _.jsx)(_._, {
-                        bHideTitle: !0,
-                        rgTagIDs: _.GetTagIDs(),
-                        instanceNum: _,
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHidePriceIfOwned: __webpack_require__,
-            bHideStatusBanners: _,
-            bUseSubscriptionLayout: _,
-            elElementToAppendToHover: _,
-            bHidePrice: _,
-            bHidePlatforms: _,
-            creatorAccountID: _,
-            bIsHovered: _,
-            onlyOneDiscountPct: _,
-            strDoubleCapsuleMessage: _,
-          } = _,
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = _ && !_;
-        if (_ && _ && 0 == _.item_type && _.appid)
-          return (0, _.jsx)(_._, {
-            appid: _.appid,
-            bIsMuted: _,
-          });
-        if (_) return null;
-        const _ = Boolean(_ && __webpack_require__),
-          _ = Boolean(_);
-        return (0, _.jsx)(_._, {
-          _: _,
-          bShowAsMuted: _,
-          bHidePrice: _,
-          bShowInLibraryInsteadOfPrice: _,
-          bHidePlatforms: _,
-          creatorAccountID: _,
-          bShowName: _.bShowName,
-          onlyOneDiscountPct: _,
-          bShowWishlistButton: Boolean(_),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });

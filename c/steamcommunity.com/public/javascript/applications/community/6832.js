@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "german",
 	"SellOnMarket_View": "Im Communitymarkt anzeigen",
+	"SellOnMarket_ViewListing": "Mein Angebot ansehen",
 	"SellOnMarket_LowestPrice": "Ab %1$s",
 	"SellOnMarket_Volume": "Menge: %1$s in den letzten 24 Stunden verkauft",
 	"SellOnMarket_SellThisItem": "Verkaufen",

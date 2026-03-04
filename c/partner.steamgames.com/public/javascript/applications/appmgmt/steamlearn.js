@@ -29,7 +29,8 @@
         Blue: "_1qMTRRLhSlbF_UEMXNfTTb",
         Red: "_14L88rvELqfk11Mix6bQcL",
         DashboardPage: "_2DQPUEkEuXCEyoKHFl1lyQ",
-        ProjectListContainer: "_2Hvue6Rgy03QsovzYIunQH",
+        TopRow: "_2Om14RfZf3dBjKLn5TelDm",
+        LiveTrainsContainer: "_1u0-oGfi8ssIM16-QB73uS",
         EventsContainer: "_1-cSLmZAfNajKDrM6fc3rM",
         DashboardHeader: "_3J7N7aE7ex1L4WmL3UClC-",
         DashboardUnderline: "_3pRYNQm8mab5nAiTIx_tmD",
@@ -15257,6 +15258,30 @@
           staleTime: 1 / 0,
         });
       }
+      function _(_, _) {
+        return (0, _._)({
+          queryKey: ["SteamLearnProjectStatusAll", _, _],
+          queryFn: () =>
+            (async function (_, _) {
+              let _ = _._.Init(_);
+              __webpack_require__.Body().request_all().set_timestamp_start(_),
+                __webpack_require__.Body().request_all().set_timestamp_end(_);
+              const _ = await _.GetProjectStatus(
+                _.Get().GetServiceTransport(),
+                _,
+              );
+              if (
+                (console.log(_.Body().toObject()),
+                _.BIsValid() &&
+                  1 == _.GetEResult() &&
+                  1 == _.Body().project_status().length)
+              )
+                return _.Body();
+              throw `Failed FetchProjectStatusAll: Start ${_}, end ${_}`;
+            })(_, _),
+          staleTime: 1 / 0,
+        });
+      }
       function _(_, _, _) {
         return (0, _._)({
           queryKey: ["SteamLearnTrainLogs", _, _, _],
@@ -15271,23 +15296,6 @@
               throw `Failed FetchLogs: Project ${_}, Train ${_}, Fetch ${_}`;
             })(_, _, _),
           staleTime: 1e4,
-        });
-      }
-      function _(_, _, _, _) {
-        return (0, _._)({
-          queryKey: ["SteamLearnTrainLogEvents", _, _, _, _],
-          queryFn: () =>
-            (async function (_, _, _, _) {
-              let _ = _._.Init(_);
-              _.Body().set_start_timestamp(_),
-                _.Body().set_end_timestamp(_),
-                _.Body().set_project_id(_),
-                _.Body().set_published_version(_);
-              const _ = await _.GetLogEvents(_.Get().GetServiceTransport(), _);
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
-              throw `Failed FetchLogEvents: ${_} to ${_} `;
-            })(_, _, _, _),
-          staleTime: 1 / 0,
         });
       }
       function _(_, _, _) {
@@ -16843,473 +16851,75 @@
           ],
         });
       }
-      const _ = (_) => {
-          const _ = Math.max(
-            0,
-            ..._.msgProject
-              .published_configs()
-              .map((_) => _.published_version()),
-          );
-          return (0, _.jsxs)(_._, {
-            _: _.SteamLearnProjectTrainStatus(_.msgProject.project_id(), _),
-            className: (0, _._)(_.ProjectEntry, _.isHidden && _.Hidden),
-            children: [
-              (0, _.jsx)("div", {
-                className: _.ProjectName,
-                children: _.msgProject.project_name(),
-              }),
-              (0, _.jsx)("div", {
-                className: _.ProjectDescription,
-                children: _.msgProject.project_description(),
-              }),
-              (0, _.jsx)("div", {
-                className: _.ProjectID,
-                children: (0, _._)(
-                  "#SteamLearn_ProjectID",
-                  _.msgProject.project_id(),
-                ),
-              }),
-            ],
-          });
-        },
-        _ = () => {
-          const [_, _] = _.useState(""),
-            _ = _(),
-            _ = _.data;
-          return (0, _.jsxs)("div", {
-            className: _.DashboardProjectList,
-            children: [
-              _.isLoading &&
-                (0, _.jsx)("div", {
-                  className: _.Loading,
-                  children: (0, _._)("#SteamLearn_LoadingProjects"),
-                }),
-              _.isSuccess &&
-                (0, _.jsxs)("div", {
-                  className: _.ListContainer,
-                  children: [
-                    (0, _.jsx)("input", {
-                      type: "text",
-                      className: _.ListFilter,
-                      value: _,
-                      onChange: (_) => _(_.target.value),
-                      placeholder: (0, _._)("#SteamLearn_FilterProject"),
-                    }),
-                    _.map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          isHidden:
-                            _.length > 0 &&
-                            !_.project_name()
-                              .toLowerCase()
-                              .includes(_.toLowerCase()),
-                          msgProject: _,
-                        },
-                        `Project_${_.project_id()}`,
-                      ),
-                    ),
-                  ],
-                }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const _ = _(_.nProjectID, _.nFetchID),
-            _ = _(_.nProjectID, _.nTrainID),
-            _ = _.data,
-            _ = _.data;
-          if (
-            ((0, _._)(() => {
-              if (_)
-                switch (_.status()) {
-                  case 0:
-                  case 1:
-                  case 2:
-                  case 5:
-                  case 6:
-                    _(_.nProjectID, _.nFetchID);
-                }
-              if (_)
-                switch (_.status()) {
-                  case 0:
-                  case 2:
-                  case 1:
-                  case 6:
-                    _(_.nProjectID, _.nTrainID);
-                }
-            }, 3e4),
-            !_ || !_)
-          )
-            return null;
-          let _ = "";
-          switch (_.status()) {
-            case 2:
-              _ = (0, _._)(
-                "#SteamLearn_FetchStatus_Percent",
-                ((100 * _.total_rows_processed()) / _.total_rows()).toFixed(0),
-              );
-              break;
-            case 5:
-              _ = (0, _._)("#SteamLearn_FetchStatus_Metadata");
-              break;
-            case 6:
-              _ = (0, _._)("#SteamLearn_FetchStatus_Cleanup");
-              break;
-            case 8:
-              _ = (0, _._)("#SteamLearn_FetchStatus_Canceled");
-          }
-          if (0 == _.length)
-            switch (_.status()) {
-              case 6:
-                _ = (0, _._)("#SteamLearn_TrainStatus_WaitingOnASS");
-                break;
-              case 2:
-                _ = (0, _._)(
-                  "#SteamLearn_TrainStatus_InProgress",
-                  _.epochs().length,
-                  _.total_epochs(),
-                );
-            }
-          return (0, _.jsx)("div", {
-            className: _.ProjectStatusInfo,
-            children: _,
-          });
-        },
-        _ = (_) => {
-          let _ = {
-            month: "long",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-            hour12: !0,
-          };
-          const _ = _(_.nProjectID),
-            [_, _] = _.data ?? [void 0, void 0],
-            _ = _(_.nProjectID, _.nTrainID).data;
-          let _ = 0;
-          if (_) {
-            for (const _ of _.published_configs())
-              if (
-                _.train_infos().find(
-                  (_) =>
-                    _.fetch_id() == _.nFetchID && _.train_id() == _.nTrainID,
-                )
-              ) {
-                _ = _.published_version();
-                break;
-              }
-            0 == _ &&
-              (_ = Math.max(
-                0,
-                ..._.published_configs().map((_) => _.published_version()),
-              ));
-          }
-          let _ = "",
-            _ = "";
-          switch (_.msgEvent.event_type()) {
-            case 4:
-              (_ = (0, _._)("#SteamLearn_Event_Type_ScheduledTrain")),
-                (_ = _.SteamLearnProjectTrain(_.nProjectID, _));
-              break;
-            case 1:
-              (_ = _.SteamLearnProjectTrainStatus(_.nProjectID, _)),
-                (_ =
-                  0 == _.nEndTime
-                    ? (0, _._)("#SteamLearn_Event_Type_TrainStarted_Inprogress")
-                    : (0, _._)("#SteamLearn_Event_Type_TrainStarted_Complete"));
-          }
-          const _ = 1 == _.msgEvent.event_type();
-          let _ = "";
-          0 != _.nEndTime &&
-            (_ = new Date(1e3 * (_.nEndTime - _.msgEvent.timestamp()))
-              .toISOString()
-              .substring(11, 19));
-          const _ = _ && _.active() && _.live();
-          return (0, _.jsxs)(_._, {
-            _: _,
-            className: (0, _._)(_.EventEntry, _ && _.IsLive),
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.Timestamp,
-                children: [
-                  !_.bProjectSpecific &&
-                    new Date(1e3 * _.msgEvent.timestamp()).toLocaleString(
-                      _._.GetPreferredLocales(),
-                      _,
-                    ),
-                  _.bProjectSpecific &&
-                    (0, _._)("#SteamLearn_Event_TrainID", _.nTrainID),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Project,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _.Name,
-                    children: [
-                      _.bProjectSpecific &&
-                        new Date(1e3 * _.msgEvent.timestamp()).toLocaleString(
-                          _._.GetPreferredLocales(),
-                          _,
-                        ),
-                      !_.bProjectSpecific && _ && _.project_name(),
-                    ],
-                  }),
-                  !_.bProjectSpecific &&
-                    (0, _.jsx)("div", {
-                      className: _.ProjectID,
-                      children:
-                        _ && (0, _._)("#SteamLearn_ProjectID", _.project_id()),
-                    }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.Title,
-                children: _,
-              }),
-              _ &&
-                (0, _.jsxs)("div", {
-                  className: _.Status,
-                  children: [
-                    0 == _.nEndTime &&
-                      (0, _.jsx)("div", {
-                        className: _.InProgress,
-                        children: (0, _._)("#SteamLearn_Event_InProgress"),
-                      }),
-                    0 == _.nEndTime &&
-                      (0, _.jsx)(_, {
-                        nProjectID: _.msgEvent.project_id(),
-                        nFetchID: _.msgEvent.train_started().fetch_id(),
-                        nTrainID: _.msgEvent.train_started().train_id(),
-                      }),
-                    0 != _.nEndTime &&
-                      (0, _.jsx)("div", {
-                        className: _.Completed,
-                        children: (0, _._)(
-                          "#SteamLearn_Event_Completed",
-                          new Date(1e3 * _.nEndTime).toLocaleString(
-                            _._.GetPreferredLocales(),
-                            {
-                              hour: "numeric",
-                              minute: "numeric",
-                              hour12: !0,
-                            },
-                          ),
-                          _,
-                        ),
-                      }),
-                    0 != _.nEndTime &&
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(
-                          _.CompletedDetails,
-                          _.bProjectSpecific && _.Gold,
-                        ),
-                        children: (0, _._)(
-                          "#SteamLearn_Event_CompletedDetails",
-                          _.fLoss.toFixed(4),
-                          (100 * _.fAccuracy).toFixed(2),
-                        ),
-                      }),
-                  ],
-                }),
-            ],
-          });
-        },
-        _ = (_) => {
-          if (2 == _.msgEvent.event_type()) return null;
-          let _ = 0,
-            _ = 0,
-            _ = 0;
-          switch (_.msgEvent.event_type()) {
-            case 1:
-              (_ = _.msgEvent.project_id()),
-                (_ = _.msgEvent.train_started().fetch_id()),
-                (_ = _.msgEvent.train_started().train_id());
-              break;
-            case 4:
-              if (_.msgEvent.timestamp() < Date.now() / 1e3) return null;
-              _ = _.msgEvent.project_id();
-          }
-          if (0 == _) return null;
-          if (1 == _.msgEvent.event_type())
-            for (const _ of _.arrMsgAllEvents)
-              if (
-                !(__webpack_require__.timestamp() <= _.msgEvent.timestamp())
-              ) {
-                if (
-                  1 == __webpack_require__.event_type() &&
-                  __webpack_require__.project_id() == _
-                )
-                  return null;
-                if (
-                  2 == __webpack_require__.event_type() &&
-                  __webpack_require__.project_id() == _
-                )
-                  break;
-              }
-          let _ = 0,
-            _ = 0,
-            _ = 0;
-          if (0 != _ && 0 != _ && 0 != _) {
-            let _,
-              _ = !1;
-            for (const _ of _.arrMsgAllEvents)
-              if (
-                (_ == _.msgEvent && (_ = !0),
-                _ &&
-                  2 == _.event_type() &&
-                  _.project_id() == _ &&
-                  _.train_ended().fetch_id() == _ &&
-                  _.train_ended().train_id() == _)
-              ) {
-                _ = _;
-                break;
-              }
-            _ &&
-              ((_ = _.train_ended().loss()),
-              (_ = _.train_ended().accuracy()),
-              (_ = _.timestamp()));
-          }
-          return (0, _.jsx)(_, {
-            msgEvent: _.msgEvent,
-            nProjectID: _,
-            nFetchID: _,
-            nTrainID: _,
-            fLoss: _,
-            fAccuracy: _,
-            nEndTime: _,
-            bProjectSpecific: _.bProjectSpecific,
-          });
-        };
       const _ = () => {
-          const [_, _] = _.useState(0),
-            _ = new Date();
-          __webpack_require__.setDate(__webpack_require__.getDate() + 7 * _);
-          const [_, _] = (function (_, _) {
-              const _ = _.getDay(),
-                _ = _ >= _ ? _ - _ : 6 - _,
-                _ = new Date(_),
-                _ = new Date(_);
-              return (
-                _.setDate(_.getDate() - _),
-                _.setDate(_.getDate() - _ + 7),
-                _.setHours(0, 0, 0, 0),
-                _.setHours(0, 0, 0, 0),
-                [Math.floor(_.getTime() / 1e3), Math.floor(_.getTime() / 1e3)]
-              );
-            })(_, 0),
-            _ = _(_, _, 0, 0);
-          let _ = {
-            month: "long",
-            day: "numeric",
-          };
-          const _ = _.data;
-          return (0, _.jsx)("div", {
-            className: _.DashboardEventList,
-            children: (0, _.jsxs)("div", {
-              className: _.EventsListContainer,
+        const [_, _] = _.useState(_.Hidden),
+          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(0),
+          _ = (0, _._)(),
+          _ = new Date(),
+          _ = _.getDay(),
+          _ = _.getDate() - _,
+          _ = new Date(_.setDate(_)),
+          _ = new Date(_.setDate(_ + 7));
+        Math.floor(_.getTime() / 6e4),
+          _(
+            60 * Math.floor(_.getTime() / 6e4),
+            60 * Math.floor(_.getTime() / 6e4),
+          );
+        return (0, _.jsxs)("div", {
+          className: _.DashboardPage,
+          children: [
+            (0, _.jsx)(_, {
+              eState: _,
+              fnSetPopupState: _,
+            }),
+            (0, _.jsxs)("div", {
+              className: _.TopRow,
               children: [
-                (0, _.jsxs)("div", {
-                  className: _.WeekSelector,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.LeftArrow,
-                      onClick: () => _(_ - 1),
-                      children: "<",
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.DateRange,
-                      children: [
-                        new Date(1e3 * _).toLocaleString(
-                          _._.GetPreferredLocales(),
-                          _,
-                        ),
-                        " - ",
-                        new Date(1e3 * _).toLocaleString(
-                          _._.GetPreferredLocales(),
-                          _,
-                        ),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.RightArrow,
-                      onClick: () => _(_ + 1),
-                      children: ">",
-                    }),
-                  ],
+                (0, _.jsx)("input", {
+                  type: "text",
+                  className: _.ListFilter,
+                  value: __webpack_require__,
+                  onChange: (_) => _(_.target.value),
+                  placeholder: (0, _._)("#SteamLearn_FilterProject"),
                 }),
-                _.isLoading &&
-                  (0, _.jsx)("div", {
-                    className: _.Loading,
-                    children: (0, _._)("#SteamLearn_LoadingEvents"),
-                  }),
-                _.isSuccess &&
-                  (0, _.jsx)("div", {
-                    className: _.EventList,
-                    children: _.event_list().map((_, _) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          msgEvent: _,
-                          arrMsgAllEvents: _.event_list(),
-                        },
-                        `Event_${_}`,
-                      ),
-                    ),
-                  }),
+                (0, _.jsx)(_._, {
+                  onClick: () => _(_.Create),
+                  children: (0, _._)("#SteamLearn_CreateNew"),
+                }),
+                (0, _.jsx)(_._, {
+                  onClick: () => _.push(_.SteamLearnProjects()),
+                  children: (0, _._)("#SteamLearn_GoToProjects"),
+                }),
               ],
             }),
-          });
-        },
-        _ = () => {
-          const [_, _] = _.useState(_.Hidden);
-          return (0, _.jsxs)("div", {
-            className: _.DashboardPage,
-            children: [
-              (0, _.jsx)(_, {
-                eState: _,
-                fnSetPopupState: _,
-              }),
-              (0, _.jsxs)("div", {
-                className: _.ProjectListContainer,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.DashboardHeader,
-                    children: (0, _._)("#SteamLearn_ProjectList"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.DashboardUnderline,
-                  }),
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _(_.Create),
-                    children: (0, _._)("#SteamLearn_CreateNew"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    _: _.SteamLearnDataSources(),
-                    children: (0, _.jsx)(_._, {
-                      children: (0, _._)("#SteamLearn_GoToDataSources"),
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.EventsContainer,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.DashboardHeader,
-                    children: (0, _._)("#SteamLearn_Project_Events"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.DashboardUnderline,
-                  }),
-                  (0, _.jsx)(_, {}),
-                ],
-              }),
-            ],
-          });
-        };
+            (0, _.jsxs)("div", {
+              className: _.LiveTrainsContainer,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.DashboardHeader,
+                  children: (0, _._)("#SteamLearn_LiveTrains"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.DashboardUnderline,
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _.EventsContainer,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.DashboardHeader,
+                  children: (0, _._)("#SteamLearn_Project_Schedule"),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.DashboardUnderline,
+                }),
+              ],
+            }),
+          ],
+        });
+      };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = () => {
@@ -40343,7 +39953,8 @@
         _ = {
           SteamLearnBase: () => "steamlearn",
           SteamLearnProject: () => "project",
-          SteamLearnDashboard: () => "/dashboard",
+          SteamLearnDashboard: () => "/dashboard2",
+          SteamLearnProjects: () => "/projects",
           SteamLearnDataSources: () => "/datasources",
           SteamLearnProjectList: () => `/${_.SteamLearnProject()}/list`,
           SteamLearnProjectEvents: () => `/${_.SteamLearnProject()}/events`,

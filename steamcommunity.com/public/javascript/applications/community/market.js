@@ -38,6 +38,7 @@
         "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
         "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
         Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
       };
     },
     48093: (t) => {
@@ -183,6 +184,12 @@
         GameImagePlaceholder: "_27u72fjp-gJgeD5k7NQ1Vf",
       };
     },
+    43694: (t) => {
+      t.exports = {
+        ListedItemIcon: "CsBvls5vHRsxv-ZseyEhc",
+        ListedItemLabel: "_2qj5isrN95ajQb8c2nAuMs",
+      };
+    },
     11685: (t) => {
       t.exports = {
         TradeProtectionIcon: "_2EE-ZampXjpepog8RdkfIJ",
@@ -212,7 +219,7 @@
         Silhouette: "NLSqZ9dW14eyrJHMGtMXq",
       };
     },
-    9574: (t, c, n) => {
+    37646: (t, c, n) => {
       "use strict";
       n.r(c), n.d(c, { default: () => Wt });
       var e = n(7850),
@@ -737,63 +744,21 @@
       };
       var ot = n(15759);
       function it(t) {
-        const { url: c, children: n } = t;
-        return (0, e.jsx)(B, {
-          target: "_blank",
-          href: c.href,
-          underline: "auto",
-          contrast: "title",
-          children: n,
-        });
-      }
-      function vt(t) {
-        const { url: c, children: n } = t,
-          [l, s, r] = c.hash.slice(1).split("_"),
-          a = c.pathname.slice(1).split("/");
-        if (!l || !s || !r || a.length < 2)
-          return (0, e.jsx)(it, { url: c, children: n });
-        let o = "",
-          i = "";
-        return (
-          "id" == a[0]
-            ? ((o = "id:" + a[1]), (i = "o_url=" + a[1]))
-            : ((o = a[1]), (i = "o=" + a[1])),
-          (0, e.jsx)("div", {
-            children: (0, e.jsx)("a", {
-              href: c.href,
-              "data-economy-item": `${l}/${s}/${r}/${o}`,
-              children: (0, e.jsx)("img", {
-                src: `${d.TS.COMMUNITY_CDN_URL}economy/item/${l}/${s}/${r}?${i}`,
-                alt: "",
-              }),
-            }),
-          })
-        );
-      }
-      function ht(t) {
         var c;
         let n =
           null !== (c = st(t.args)) && void 0 !== c ? c : st(t.args, "href");
-        if (!n || !n.match(/^https?:\/\//)) return t.children;
-        (0, ot.p)(n) && (n = (0, ot.E)(n));
-        const l = URL.parse(n);
-        if (!l) return t.children;
-        let s = it;
-        return (
-          (function (t) {
-            return (
-              t.hash &&
-              t.origin + "/" == d.TS.COMMUNITY_BASE_URL &&
-              (t.pathname.startsWith("/id/") ||
-                t.pathname.startsWith("/profiles/")) &&
-              (t.pathname.endsWith("/inventory") ||
-                t.pathname.endsWith("/inventory/"))
-            );
-          })(l) && (s = vt),
-          (0, e.jsx)(s, { url: l, children: t.children })
-        );
+        return n && n.match(/^https?:\/\//)
+          ? ((0, ot.p)(n) && (n = (0, ot.E)(n)),
+            (0, e.jsx)(B, {
+              target: "_blank",
+              href: n,
+              underline: "auto",
+              contrast: "title",
+              children: t.children,
+            }))
+          : t.children;
       }
-      const dt = {
+      const vt = {
         list: {
           Constructor: function (t) {
             return (0, e.jsx)("ul", { children: t.children });
@@ -813,24 +778,24 @@
           autocloses: !0,
         },
       };
-      function ut(t) {
+      function ht(t) {
         const { itemDescription: c, bbcode: n = "" } = t,
           e = a.useMemo(() => {
             const t = {
               ...rt,
-              ...dt,
+              ...vt,
               ...at,
-              url: { Constructor: ht },
+              url: { Constructor: it },
               container_item_list: { Constructor: K },
               persona: { Constructor: nt },
-              date: { Constructor: pt },
+              date: { Constructor: dt },
             };
             return new et.B(t, (t) => new lt.R8(), d.TS.LANGUAGE);
           }, []),
           l = a.useMemo(() => ({ itemDescription: c }), [c]);
         return a.useMemo(() => e.ParseBBCode(n, l), [e, n, l]);
       }
-      function pt(t) {
+      function dt(t) {
         var c, n;
         const e = parseInt(
           null !==
@@ -844,7 +809,7 @@
         if (!e) return null;
         return new Date(1e3 * e).toLocaleString((0, w.J)());
       }
-      function ft(t) {
+      function ut(t) {
         const { description: c, type: n = "descriptions", ...s } = t,
           r = c[n];
         return (0, e.jsx)(l.s, {
@@ -853,11 +818,11 @@
             null == r
               ? void 0
               : r.map((t, n) =>
-                  (0, e.jsx)(gt, { line: t, description: c, ...s }, n),
+                  (0, e.jsx)(pt, { line: t, description: c, ...s }, n),
                 ),
         });
       }
-      function gt(t) {
+      function pt(t) {
         var c, n;
         const { line: l, description: s, ...r } = t,
           a = {
@@ -884,25 +849,25 @@
           case "bbcode":
             return (0, e.jsx)(V.EY, {
               ...a,
-              children: (0, e.jsx)(ut, { itemDescription: s, bbcode: o }),
+              children: (0, e.jsx)(ht, { itemDescription: s, bbcode: o }),
             });
           default:
             return (0, e.jsx)(V.EY, { ...a, children: o });
         }
       }
-      const mt = a.createContext(void 0);
+      const ft = a.createContext(void 0);
+      function gt() {
+        return a.useContext(ft).description;
+      }
+      function mt() {
+        return a.useContext(ft).asset;
+      }
       function Ct() {
-        return a.useContext(mt).description;
+        return a.useContext(ft).bInteractable;
       }
-      function xt() {
-        return a.useContext(mt).asset;
-      }
-      function _t() {
-        return a.useContext(mt).bInteractable;
-      }
-      function jt(t) {
+      function xt(t) {
         const { action: c } = t,
-          n = xt();
+          n = mt();
         if (!n) return null;
         const l = c.link.match(
             /GetGooValue\(\s*'?[^']*'?\s*,\s*'?[^']*'?\s*,\s*'?(?<appid>[0-9]+)'?\s*,\s*'?(?<item_type>[0-9]+)'?\s*,\s*'?(?<border_color>[0-9]+)'?/,
@@ -921,7 +886,7 @@
         )
           return null;
         const { appid: o, item_type: i, border_color: v } = s;
-        return (0, e.jsx)(yt, {
+        return (0, e.jsx)(_t, {
           contextid: r,
           assetid: a,
           appid: parseInt(o),
@@ -929,7 +894,7 @@
           border_color: parseInt(v),
         });
       }
-      function yt(t) {
+      function _t(t) {
         var c;
         const {
             contextid: n,
@@ -1007,7 +972,7 @@
             })
           : null;
       }
-      function Vt(t) {
+      function jt(t) {
         const { actions: c } = t,
           [n, s] = a.useMemo(() => {
             let t = [],
@@ -1020,8 +985,8 @@
                     ? void 0
                     : s.startsWith("javascript:GetGooValue")
                 )
-                  ? n.push((0, e.jsx)(jt, { action: c }, l))
-                  : t.push((0, e.jsx)(wt, { action: c }, l));
+                  ? n.push((0, e.jsx)(xt, { action: c }, l))
+                  : t.push((0, e.jsx)(yt, { action: c }, l));
               }),
               [t, n]
             );
@@ -1033,12 +998,12 @@
           ],
         });
       }
-      function wt(t) {
+      function yt(t) {
         const c = i(),
-          n = Ct(),
-          l = xt(),
-          s = a.useContext(mt).listingID;
-        return (0, e.jsx)(bt, {
+          n = gt(),
+          l = mt(),
+          s = a.useContext(ft).listingID;
+        return (0, e.jsx)(Vt, {
           ...t,
           ownerSteamID: c,
           description: n,
@@ -1046,7 +1011,7 @@
           listingID: s,
         });
       }
-      function bt(t) {
+      function Vt(t) {
         const {
             action: c,
             description: n,
@@ -1089,7 +1054,7 @@
           children: c.name,
         });
       }
-      var St;
+      var wt;
       !(function (t) {
         (t[(t.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
           (t[(t.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -1140,20 +1105,21 @@
           (t[(t.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
           (t[(t.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
           (t[(t.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-      })(St || (St = {}));
-      St.k_ECurrencyCodeTRY, St.k_ECurrencyCodeARS;
-      function kt(t) {
+      })(wt || (wt = {}));
+      wt.k_ECurrencyCodeTRY, wt.k_ECurrencyCodeARS;
+      function bt(t) {
         const {
             eWalletCurrency: c,
             appid: n,
             hashName: s,
-            bCanInteract: r,
-            bItemSealed: a,
+            bCanInteract: a,
+            bItemSealed: o,
+            ulAssetID: i,
           } = t,
-          { data: o, isLoading: i } =
-            ((v = c),
-            (h = n),
-            (u = s),
+          { data: v, isLoading: h } =
+            ((u = c),
+            (p = n),
+            (g = s),
             (0, f.I)(
               (function (t, c, n) {
                 return {
@@ -1170,36 +1136,46 @@
                     return await s.json();
                   },
                 };
-              })(v, h, u),
+              })(u, p, g),
             ));
-        var v, h, u;
-        return r ||
-          (null == o ? void 0 : o.lowest_price) ||
-          (null == o ? void 0 : o.volume) ||
-          i
-          ? (0, e.jsxs)(l.s, {
-              background: "greyneutral-3",
-              padding: "4",
-              gapY: "3",
-              direction: "column",
-              children: [
-                r &&
-                  (0, e.jsx)(V.EY, {
-                    as: "div",
-                    children: (0, e.jsx)(B, {
-                      underline: "auto",
-                      color: "greyneutral-12",
+        var u, p, g;
+        return a ||
+          (null == v ? void 0 : v.lowest_price) ||
+          (null == v ? void 0 : v.volume) ||
+          h
+          ? o
+            ? (0, e.jsx)(l.s, {
+                background: "greyneutral-3",
+                padding: "4",
+                gapY: "3",
+                direction: "column",
+                children: (0, e.jsx)(r.v, {
+                  color: "dull",
+                  href: `${d.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}?sellorderassetid=${i}`,
+                  size: "1",
+                  children: y("#SellOnMarket_ViewListing"),
+                }),
+              })
+            : (0, e.jsxs)(l.s, {
+                background: "greyneutral-3",
+                padding: "4",
+                gapY: "3",
+                direction: "column",
+                children: [
+                  (0, e.jsx)(St, { isLoading: h, priceOverview: v }),
+                  a &&
+                    (0, e.jsx)(r.v, {
+                      size: "1",
+                      color: "dull",
                       href: `${d.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}`,
                       children: y("#SellOnMarket_View"),
                     }),
-                  }),
-                (0, e.jsx)(zt, { isLoading: i, priceOverview: o }),
-                r && !a && (0, e.jsx)(Mt, {}),
-              ],
-            })
+                  a && !o && (0, e.jsx)(kt, {}),
+                ],
+              })
           : null;
       }
-      function zt(t) {
+      function St(t) {
         const { isLoading: c, priceOverview: n } = t;
         return c ||
           (null == n ? void 0 : n.lowest_price) ||
@@ -1223,7 +1199,7 @@
             })
           : null;
       }
-      function Mt() {
+      function kt() {
         const t = i();
         return d.iA.logged_in && t && t == d.iA.steamid
           ? (0, e.jsx)(s.az, {
@@ -1236,21 +1212,39 @@
             })
           : null;
       }
-      var Lt = n(58256),
-        It = n(11685);
-      function Tt() {
+      var zt = n(58256),
+        Mt = n(11685);
+      function Lt() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
           title: y("#ItemDescription_TradeProtectedTooltip"),
           children: [
             (0, e.jsx)(s.az, {
-              className: It.TradeProtectionLabel,
+              className: Mt.TradeProtectionLabel,
               children: y("#ItemDescription_TradeProtected"),
             }),
-            (0, e.jsx)(Lt._, {
-              className: It.TradeProtectionIcon,
+            (0, e.jsx)(zt._, {
+              className: Mt.TradeProtectionIcon,
               alt: y("#ItemDescription_TradeProtected"),
               src: `${d.TS.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
+            }),
+          ],
+        });
+      }
+      var It = n(43694);
+      function Tt() {
+        return (0, e.jsxs)(s.az, {
+          position: "relative",
+          title: y("#ItemDescription_ListedItemTooltip"),
+          children: [
+            (0, e.jsx)(s.az, {
+              className: It.ListedItemLabel,
+              children: y("#ItemDescription_ListedItem"),
+            }),
+            (0, e.jsx)(zt._, {
+              className: It.ListedItemIcon,
+              alt: y("#ItemDescription_ListedItem"),
+              src: `${d.TS.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
             }),
           ],
         });
@@ -1279,11 +1273,11 @@
               }),
               [c, n, l, s],
             );
-          return (0, e.jsx)(mt.Provider, { value: o, children: r });
+          return (0, e.jsx)(ft.Provider, { value: o, children: r });
         },
         Container: function (t) {
           const { children: c, ...n } = t,
-            s = Ct();
+            s = gt();
           return (0, e.jsx)(l.s, {
             direction: "column",
             border: `2px solid ${F(s, "#3A3A3A")}`,
@@ -1304,7 +1298,7 @@
         },
         Image: function (t) {
           const { bAllowAnimatedIcon: c = !0 } = t,
-            n = Ct(),
+            n = gt(),
             r =
               `${d.TS.COMMUNITY_CDN_URL}economy/image/${n.icon_url_large || n.icon_url}/330x192` +
               (c ? "?allow_animated=1" : "");
@@ -1316,6 +1310,14 @@
             children: [
               (0, e.jsx)("img", { src: r, alt: n.name }),
               !!n.sealed &&
+                1 != n.sealed_type &&
+                (0, e.jsx)(s.az, {
+                  position: "absolute",
+                  style: { left: "0", bottom: "0" },
+                  children: (0, e.jsx)(Lt, {}),
+                }),
+              !!n.sealed &&
+                1 == n.sealed_type &&
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
@@ -1332,15 +1334,15 @@
           });
         },
         Name: function () {
-          const t = Ct(),
-            c = xt();
+          const t = gt(),
+            c = mt();
           return (0, e.jsx)(Ht.D, {
             size: "6",
             children: (0, e.jsx)(U, { description: t, asset: c }),
           });
         },
         FraudWarnings: function () {
-          const { fraudwarnings: t } = Ct();
+          const { fraudwarnings: t } = gt();
           return t && 0 != t.length
             ? (0, e.jsx)(s.az, {
                 borderColor: "dull-6",
@@ -1372,7 +1374,7 @@
         GameInfo: function (t) {
           var c;
           const { hrefGame: n } = t,
-            r = Ct(),
+            r = gt(),
             a = r.appid,
             { data: o } = (0, Rt.lv)({ appid: a }),
             { data: i } = (0, Rt.J$)({ appid: a }),
@@ -1394,7 +1396,7 @@
               (0, e.jsx)(Bt, {
                 href: d,
                 children: v
-                  ? (0, e.jsx)(Lt._, {
+                  ? (0, e.jsx)(zt._, {
                       alt:
                         null !== (c = null == i ? void 0 : i.name) &&
                         void 0 !== c
@@ -1432,9 +1434,9 @@
           });
         },
         Descriptions: function () {
-          const t = Ct();
+          const t = gt();
           return (0, e.jsx)(e.Fragment, {
-            children: (0, e.jsx)(ft, {
+            children: (0, e.jsx)(ut, {
               description: t,
               contrast: "description",
               size: "3",
@@ -1442,14 +1444,14 @@
           });
         },
         Actions: function () {
-          const t = Ct(),
-            c = _t(),
+          const t = gt(),
+            c = Ct(),
             { actions: n } = t;
-          return c ? n && (0, e.jsx)(Vt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(jt, { actions: n }) : null;
         },
         OwnerDescriptions: function () {
-          const t = Ct();
-          return (0, e.jsx)(ft, {
+          const t = gt();
+          return (0, e.jsx)(ut, {
             description: t,
             type: "owner_descriptions",
             contrast: "description",
@@ -1457,19 +1459,19 @@
           });
         },
         OwnerActions: function () {
-          const t = Ct(),
-            c = _t(),
+          const t = gt(),
+            c = Ct(),
             { owner_actions: n } = t;
-          return c ? n && (0, e.jsx)(Vt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(jt, { actions: n }) : null;
         },
         MarketActions: function () {
-          const t = Ct(),
-            c = _t(),
+          const t = gt(),
+            c = Ct(),
             { market_actions: n } = t;
-          return c ? n && (0, e.jsx)(Vt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(jt, { actions: n }) : null;
         },
         Tags: function () {
-          const t = Ct(),
+          const t = gt(),
             { tags: c } = t;
           return c && c.length
             ? (0, e.jsxs)(V.EY, {
@@ -1485,7 +1487,7 @@
             : null;
         },
         AssetProperties: function () {
-          const t = xt();
+          const t = mt();
           return t && t.asset_properties && 0 != t.asset_properties.length
             ? (0, e.jsx)(l.s, {
                 direction: "column",
@@ -1500,30 +1502,31 @@
             : null;
         },
         SellOnMarket: function () {
-          const t = Ct(),
-            c = _t(),
-            n = (function (t) {
+          const t = gt(),
+            c = mt(),
+            n = Ct(),
+            l = (function (t) {
               switch (null == t ? void 0 : t.toUpperCase()) {
                 case "AE":
-                  return St.k_ECurrencyCodeAED;
+                  return wt.k_ECurrencyCodeAED;
                 case "AU":
-                  return St.k_ECurrencyCodeAUD;
+                  return wt.k_ECurrencyCodeAUD;
                 case "BR":
-                  return St.k_ECurrencyCodeBRL;
+                  return wt.k_ECurrencyCodeBRL;
                 case "CA":
-                  return St.k_ECurrencyCodeCAD;
+                  return wt.k_ECurrencyCodeCAD;
                 case "CH":
                 case "LI":
-                  return St.k_ECurrencyCodeCHF;
+                  return wt.k_ECurrencyCodeCHF;
                 case "CL":
-                  return St.k_ECurrencyCodeCLP;
+                  return wt.k_ECurrencyCodeCLP;
                 case "CN":
                 case "XC":
-                  return St.k_ECurrencyCodeCNY;
+                  return wt.k_ECurrencyCodeCNY;
                 case "CO":
-                  return St.k_ECurrencyCodeCOP;
+                  return wt.k_ECurrencyCodeCOP;
                 case "CR":
-                  return St.k_ECurrencyCodeCRC;
+                  return wt.k_ECurrencyCodeCRC;
                 case "AD":
                 case "AL":
                 case "AT":
@@ -1569,57 +1572,57 @@
                 case "SK":
                 case "SM":
                 case "VA":
-                  return St.k_ECurrencyCodeEUR;
+                  return wt.k_ECurrencyCodeEUR;
                 case "GB":
                 case "GG":
                 case "GS":
                 case "IM":
                 case "JE":
-                  return St.k_ECurrencyCodeGBP;
+                  return wt.k_ECurrencyCodeGBP;
                 case "HK":
-                  return St.k_ECurrencyCodeHKD;
+                  return wt.k_ECurrencyCodeHKD;
                 case "ID":
-                  return St.k_ECurrencyCodeIDR;
+                  return wt.k_ECurrencyCodeIDR;
                 case "IL":
-                  return St.k_ECurrencyCodeILS;
+                  return wt.k_ECurrencyCodeILS;
                 case "IN":
-                  return St.k_ECurrencyCodeINR;
+                  return wt.k_ECurrencyCodeINR;
                 case "JP":
-                  return St.k_ECurrencyCodeJPY;
+                  return wt.k_ECurrencyCodeJPY;
                 case "KR":
-                  return St.k_ECurrencyCodeKRW;
+                  return wt.k_ECurrencyCodeKRW;
                 case "KW":
-                  return St.k_ECurrencyCodeKWD;
+                  return wt.k_ECurrencyCodeKWD;
                 case "KZ":
-                  return St.k_ECurrencyCodeKZT;
+                  return wt.k_ECurrencyCodeKZT;
                 case "MX":
-                  return St.k_ECurrencyCodeMXN;
+                  return wt.k_ECurrencyCodeMXN;
                 case "MY":
-                  return St.k_ECurrencyCodeMYR;
+                  return wt.k_ECurrencyCodeMYR;
                 case "NO":
-                  return St.k_ECurrencyCodeNOK;
+                  return wt.k_ECurrencyCodeNOK;
                 case "NZ":
-                  return St.k_ECurrencyCodeNZD;
+                  return wt.k_ECurrencyCodeNZD;
                 case "PE":
-                  return St.k_ECurrencyCodePEN;
+                  return wt.k_ECurrencyCodePEN;
                 case "PH":
-                  return St.k_ECurrencyCodePHP;
+                  return wt.k_ECurrencyCodePHP;
                 case "PL":
-                  return St.k_ECurrencyCodePLN;
+                  return wt.k_ECurrencyCodePLN;
                 case "QA":
-                  return St.k_ECurrencyCodeQAR;
+                  return wt.k_ECurrencyCodeQAR;
                 case "RU":
-                  return St.k_ECurrencyCodeRUB;
+                  return wt.k_ECurrencyCodeRUB;
                 case "SA":
-                  return St.k_ECurrencyCodeSAR;
+                  return wt.k_ECurrencyCodeSAR;
                 case "SG":
-                  return St.k_ECurrencyCodeSGD;
+                  return wt.k_ECurrencyCodeSGD;
                 case "TH":
-                  return St.k_ECurrencyCodeTHB;
+                  return wt.k_ECurrencyCodeTHB;
                 case "TW":
-                  return St.k_ECurrencyCodeTWD;
+                  return wt.k_ECurrencyCodeTWD;
                 case "UA":
-                  return St.k_ECurrencyCodeUAH;
+                  return wt.k_ECurrencyCodeUAH;
                 case "AF":
                 case "AG":
                 case "AI":
@@ -1776,30 +1779,32 @@
                 case "YT":
                 case "ZM":
                 case "ZW":
-                  return St.k_ECurrencyCodeUSD;
+                  return wt.k_ECurrencyCodeUSD;
                 case "UY":
-                  return St.k_ECurrencyCodeUYU;
+                  return wt.k_ECurrencyCodeUYU;
                 case "VN":
-                  return St.k_ECurrencyCodeVND;
+                  return wt.k_ECurrencyCodeVND;
                 case "ZA":
-                  return St.k_ECurrencyCodeZAR;
+                  return wt.k_ECurrencyCodeZAR;
                 default:
                   return (
                     console.assert(!1, `Unhandled country code: ${t}`),
-                    St.k_ECurrencyCodeUSD
+                    wt.k_ECurrencyCodeUSD
                   );
               }
             })(d.iA.country_code),
-            l = !!t.sealed;
+            s = c.assetid,
+            r = !!t.sealed && 1 == t.sealed_type;
           if (!t.marketable && 1 != t.sealed_type) return null;
-          const s = t.market_hash_name || t.market_name || t.name;
-          return s
-            ? (0, e.jsx)(kt, {
-                eWalletCurrency: n,
+          const a = t.market_hash_name || t.market_name || t.name;
+          return a
+            ? (0, e.jsx)(bt, {
+                eWalletCurrency: l,
                 appid: t.appid,
-                hashName: s,
-                bCanInteract: c,
-                bItemSealed: l,
+                hashName: a,
+                bCanInteract: n,
+                bItemSealed: r,
+                ulAssetID: s,
               })
             : null;
         },
@@ -2172,60 +2177,70 @@
             cssProperty: "--width",
             responsive: !0,
           },
+          {
+            prop: "minWidth",
+            className: r.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
         ],
         u = function (t) {
           const {
               variant: c = "default",
               size: n = "2",
-              color: l,
-              loading: a,
-              children: i,
-              onClick: h,
-              icon: u,
-              ...p
+              minWidth: l = "fit-content",
+              color: a,
+              loading: i,
+              children: h,
+              onClick: u,
+              icon: p,
+              ...f
             } = t,
-            f = a
+            g = i
               ? (0, e.jsx)(v.k, {
                   size: n,
-                  color: l,
+                  color: a,
                   variant: "bright",
-                  children: i,
+                  children: h,
                 })
-              : i,
-            g = a ? void 0 : h;
+              : h,
+            m = i ? void 0 : u;
           return (0, e.jsx)("button", {
             type: "button",
             ...(0, o.mz)(
               {
-                ...p,
+                ...f,
                 variant: c,
                 size: n,
-                color: l,
-                className: s()(r.Button, u && r.Icon),
-                onClick: g,
+                minWidth: l,
+                color: a,
+                className: s()(r.Button, p && r.Icon),
+                onClick: m,
               },
               d,
             ),
-            children: f,
+            children: g,
           });
         },
         p = function (t) {
           const {
               variant: c = "default",
               size: n = "2",
-              disabled: l,
-              icon: a,
-              ...v
+              minWidth: l = "fit-content",
+              disabled: a,
+              icon: v,
+              ...u
             } = t,
-            u = l ? h : void 0;
+            p = a ? h : void 0;
           return (0, e.jsx)("a", {
             ...(0, o.mz)(
               {
-                onClick: u,
-                ...v,
+                onClick: p,
+                ...u,
                 variant: c,
                 size: n,
-                className: s()(r.Button, a && r.Icon, (0, i.T)()),
+                minWidth: l,
+                className: s()(r.Button, v && r.Icon, (0, i.T)()),
               },
               d,
             ),
@@ -2480,8 +2495,8 @@
         h = n(64238),
         d = n.n(h);
       function u(t) {
-        const { level: c = "auto", color: n } = t,
-          s = (function (t, c) {
+        const { level: c = "auto", className: n, color: s } = t,
+          r = (function (t, c) {
             if ("auto" === t && 0 === c) return "h1";
             const n = "auto" === t ? c.toString() : t;
             if (!/^[1-6]$/.test(n))
@@ -2496,8 +2511,8 @@
                   "h1");
             return "h" + n;
           })(c, (0, o.useContext)(i).depth);
-        return (0, e.jsx)(s, {
-          ...(0, a.mz)({ ...t, className: d()((0, v.T)(), l.Heading) }, p),
+        return (0, e.jsx)(r, {
+          ...(0, a.mz)({ ...t, className: d()((0, v.T)(), l.Heading, n) }, p),
         });
       }
       const p = [
@@ -2797,63 +2812,85 @@
         b = n(24089);
       var S = n(61023);
       function k(t) {
+        return (0, e.jsx)(p, {
+          ...t,
+          viewBoxSize: 12,
+          children: (0, e.jsx)("path", {
+            d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      function z(t) {
         const { extracted: c, remaining: n } = (0, a.A4)(t),
           {
             value: l,
             onTextChange: s,
-            onChange: r,
-            radius: o,
-            variant: i,
-            size: v,
-            beforeContent: h,
-            afterContent: d,
-            inputRef: u,
-            ref: p,
-            ...f
+            clearable: r,
+            onChange: o,
+            radius: i,
+            variant: v,
+            size: h,
+            beforeContent: d,
+            afterContent: u,
+            inputRef: p,
+            ref: f,
+            disabled: g,
+            ...m
           } = n,
-          g = {
+          C = {
             ...c,
-            variant: i,
-            size: v,
-            radius: o,
-            beforeContent: h,
-            afterContent: d,
-            ref: p,
+            variant: v,
+            size: h,
+            radius: i,
+            beforeContent: d,
+            afterContent:
+              l && r
+                ? (0, e.jsx)(k, {
+                    onClick: () => s(""),
+                    cursor: "pointer",
+                    hitSlop: !0,
+                  })
+                : u,
+            ref: f,
+            disabled: g,
           };
         return (0, e.jsx)(S.j, {
           cursor: "text",
-          ...g,
+          ...C,
           children: (0, e.jsx)("input", {
-            ref: u,
+            ref: p,
             type: "text",
-            ...f,
+            ...m,
+            "aria-disabled": g,
+            readOnly: g,
             className: x()((0, w.T)(), b.TextEntry),
             value: l || "",
             onChange: (t) => {
-              s(t.target.value), r && r(t);
+              g || (s(t.target.value), o && o(t));
             },
           }),
         });
       }
-      var z = n(81393),
-        M = n(73788),
-        L = n(28505);
-      function I(t, c, n) {
+      var M = n(81393),
+        L = n(73788),
+        I = n(28505);
+      function T(t, c, n) {
         return "function" == typeof t ? t(c, n) : l.cloneElement(t, c);
       }
-      function T(t, c, n, e) {
-        return I(t || c, n, e);
+      function E(t, c, n, e) {
+        return T(t || c, n, e);
       }
-      var E = n(48093);
-      const H = Object.assign(
+      var H = n(48093);
+      const O = Object.assign(
         function (t) {
           const { render: c, ...n } = t;
-          return T(
+          return E(
             c,
             (0, e.jsx)(a.az, {
               radius: "sm",
               background: "dull-8",
-              className: E.ListBox,
+              className: H.ListBox,
             }),
             { role: "listbox", ...n },
           );
@@ -2870,13 +2907,13 @@
               } = t,
               i = c ? "true" : "false",
               v = n ? "true" : void 0;
-            return T(
+            return E(
               s,
               (0, e.jsx)(a.az, {
                 "data-selected": i,
                 "data-focused": v,
                 "aria-disabled": r,
-                className: E.ListBoxOption,
+                className: H.ListBoxOption,
                 paddingY: "2",
                 paddingX: "3",
               }),
@@ -2886,9 +2923,9 @@
           },
         },
       );
-      var O = n(49560);
-      const A = (0, l.createContext)(null);
-      function R(t) {
+      var A = n(49560);
+      const R = (0, l.createContext)(null);
+      function P(t) {
         const {
           open: c,
           onOpenChange: n,
@@ -2901,18 +2938,18 @@
           placement: v,
         } = t;
         let h = c;
-        const d = (0, M.we)({
+        const d = (0, L.we)({
             open: h,
             onOpenChange: n,
-            middleware: (0, O.p)(t),
-            whileElementsMounted: L.ll,
+            middleware: (0, A.p)(t),
+            whileElementsMounted: I.ll,
             placement: v && "object" == typeof v ? v.initial : v,
           }),
-          u = (0, M.kp)(d.context, { enabled: !!o.click }),
-          p = (0, M.iQ)(d.context, { enabled: !!o.focus }),
-          f = (0, M.s9)(d.context),
+          u = (0, L.kp)(d.context, { enabled: !!o.click }),
+          p = (0, L.iQ)(d.context, { enabled: !!o.focus }),
+          f = (0, L.s9)(d.context),
           g = (0, l.useRef)([]),
-          m = (0, M.C1)(d.context, {
+          m = (0, L.C1)(d.context, {
             listRef: g,
             activeIndex: e,
             selectedIndex: r,
@@ -2923,7 +2960,7 @@
           }),
           C = (0, l.useRef)([]),
           x = (0, l.useRef)(!1),
-          _ = (0, M.lY)(d.context, {
+          _ = (0, L.lY)(d.context, {
             enabled: !!o.typeahead,
             listRef: C,
             activeIndex: e,
@@ -2931,12 +2968,12 @@
             onMatch: h ? s : a,
             onTypingChange: (t) => (x.current = t),
           }),
-          j = (0, M.It)(d.context, { role: i }),
+          j = (0, L.It)(d.context, { role: i }),
           {
             getFloatingProps: y,
             getReferenceProps: V,
             getItemProps: w,
-          } = (0, M.bv)([j, u, p, f, m, _]);
+          } = (0, L.bv)([j, u, p, f, m, _]);
         return {
           floating: d,
           getFloatingProps: y,
@@ -2952,15 +2989,15 @@
           initialFocus: o.virtualItemFocus ? -1 : void 0,
         };
       }
-      const P = function (t) {
+      const N = function (t) {
           const { children: c, state: n } = t;
-          return (0, e.jsx)(A.Provider, { value: n, children: c });
+          return (0, e.jsx)(R.Provider, { value: n, children: c });
         },
-        N = function (t) {
+        Y = function (t) {
           const { children: c } = t,
             n = l.Children.only(c),
-            e = (0, l.useContext)(A),
-            s = (0, M.SV)([
+            e = (0, l.useContext)(R),
+            s = (0, L.SV)([
               null == e ? void 0 : e.floating.refs.setReference,
               null == n ? void 0 : n.props.ref,
             ]);
@@ -2975,25 +3012,25 @@
           const { ref: r, ...a } = n.props;
           return (0, l.cloneElement)(n, { ref: s, ...e.getReferenceProps(a) });
         },
-        Y = function (t) {
+        B = function (t) {
           const { children: c, render: n, ref: s } = t,
-            r = (0, l.useContext)(A),
-            a = (0, M.SV)([
+            r = (0, l.useContext)(R),
+            a = (0, L.SV)([
               s,
               null == r ? void 0 : r.floating.refs.setFloating,
             ]);
           return r
             ? r.open
-              ? (0, e.jsx)(M.s3, {
+              ? (0, e.jsx)(L.s3, {
                   context: r.floating.context,
                   initialFocus: r.initialFocus,
                   returnFocus: !1,
-                  children: (0, e.jsx)(H, {
+                  children: (0, e.jsx)(O, {
                     ref: a,
                     style: r.floating.floatingStyles,
                     ...r.getFloatingProps(),
                     render: n,
-                    children: (0, e.jsx)(M.ph, {
+                    children: (0, e.jsx)(L.ph, {
                       elementsRef: r.elementsRef,
                       labelsRef: r.labelsRef,
                       children: c,
@@ -3006,7 +3043,7 @@
               ),
               null);
         },
-        B = function (t) {
+        G = function (t) {
           const {
               children: c,
               label: n,
@@ -3016,9 +3053,9 @@
               disabled: o,
               ...i
             } = t,
-            v = (0, l.useContext)(A),
-            { ref: h, index: d } = (0, M.rm)({ label: n }),
-            u = (0, M.SV)([a, h]);
+            v = (0, l.useContext)(R),
+            { ref: h, index: d } = (0, L.rm)({ label: n }),
+            u = (0, L.SV)([a, h]);
           if (!v)
             return (
               console.error(
@@ -3028,7 +3065,7 @@
             );
           const p = d === v.activeIndex,
             f = d === v.selectedIndex || !!s;
-          return (0, e.jsx)(H.Option, {
+          return (0, e.jsx)(O.Option, {
             ref: u,
             selected: f,
             focused: p,
@@ -3050,16 +3087,6 @@
             children: c,
           });
         };
-      function G(t) {
-        return (0, e.jsx)(p, {
-          ...t,
-          viewBoxSize: 12,
-          children: (0, e.jsx)("path", {
-            d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
-            fill: "currentColor",
-          }),
-        });
-      }
       function D(t) {
         const { onTextChange: c, suggestions: n, onSuggestionSelected: e } = t,
           [s, r] = (0, l.useState)(null),
@@ -3096,7 +3123,7 @@
               }),
               o =
                 r.value && s
-                  ? (0, e.jsx)(G, {
+                  ? (0, e.jsx)(k, {
                       onClick: () => a.onTextChange(""),
                       cursor: "pointer",
                       hitSlop: !0,
@@ -3122,7 +3149,7 @@
                   popoverWidth: l = "dropdown",
                   ...s
                 } = t,
-                r = R({
+                r = P({
                   ...s.state,
                   width: l,
                   placement: n,
@@ -3133,7 +3160,7 @@
                 });
               return (0, e.jsx)(W.Provider, {
                 value: s,
-                children: (0, e.jsx)(P, { state: r, children: c }),
+                children: (0, e.jsx)(N, { state: r, children: c }),
               });
             },
             TextInput: function (t) {
@@ -3148,8 +3175,8 @@
                   },
                 } = U("<Autocomplete.TextInput>"),
                 i = (0, l.useRef)(null);
-              return (0, e.jsx)(N, {
-                children: (0, e.jsx)(k, {
+              return (0, e.jsx)(Y, {
+                children: (0, e.jsx)(z, {
                   ...t,
                   inputRef: i,
                   onTextChange: c,
@@ -3174,7 +3201,7 @@
               });
             },
             Suggestions: function (t) {
-              return (0, e.jsx)(Y, { ...t, returnFocus: !1 });
+              return (0, e.jsx)(B, { ...t, returnFocus: !1 });
             },
             Suggestion: function (t) {
               const { value: c, children: n, ...l } = t,
@@ -3186,7 +3213,7 @@
                     onSuggestionSelected: o,
                   },
                 } = U("<Autocomplete.TextInput>");
-              return (0, e.jsx)(B, {
+              return (0, e.jsx)(G, {
                 onSelect: (t) => {
                   o && o(c, t), t.defaultPrevented || s(c), a(null), r(!1);
                 },
@@ -3199,7 +3226,7 @@
         W = (0, l.createContext)(null);
       function U(t) {
         const c = (0, l.useContext)(W);
-        return (0, z.wT)(c, `${t} must be used within an <Autocomplete>!`), c;
+        return (0, M.wT)(c, `${t} must be used within an <Autocomplete>!`), c;
       }
       var $ = n(58256),
         J = n(20187),
@@ -3252,7 +3279,7 @@
             ref: p,
             children: t.children,
           });
-        return (0, e.jsx)(Y, {
+        return (0, e.jsx)(B, {
           ref: c,
           children: (0, e.jsxs)(i.s, {
             direction: "column",
@@ -3262,7 +3289,7 @@
               (0, e.jsx)(a.az, {
                 flexShrink: "0",
                 className: (0, ct.A)(lt.FilterBorder, f ? lt.Top : lt.Bottom),
-                children: (0, e.jsx)(k, {
+                children: (0, e.jsx)(z, {
                   margin: "3",
                   variant: "inset",
                   radius: "sm",
@@ -3303,7 +3330,7 @@
         let o = !1;
         return (
           (o = a ? Array.isArray(r) && r.includes(c) : c === r),
-          (0, e.jsxs)(B, {
+          (0, e.jsxs)(G, {
             onSelect: () => s(c),
             selected: o,
             disabled: l,
@@ -3418,7 +3445,7 @@
               () => n.rgFilteredOptions.findIndex((t) => t === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            p = R({
+            p = P({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: a,
@@ -3464,7 +3491,7 @@
             };
           return (0, e.jsx)(gt.Provider, {
             value: f,
-            children: (0, e.jsx)(P, { state: p, children: c }),
+            children: (0, e.jsx)(N, { state: p, children: c }),
           });
         },
         Option: at,
@@ -3499,7 +3526,7 @@
           const { virtualItem: c, ...n } = t,
             s = (0, l.useContext)(rt);
           return (
-            (0, z.wT)(s, "Virtual item rendered outside of a virtualizer!"),
+            (0, M.wT)(s, "Virtual item rendered outside of a virtualizer!"),
             (0, e.jsx)(a.az, {
               position: "absolute",
               width: "100%",
@@ -3535,26 +3562,26 @@
               popoverPlacement: w,
               ...b
             } = mt("<ComboboxTrigger>"),
-            k = { tabIndex: 0, children: c },
-            z = C ? Array.isArray(i) && i.length > 0 : !!i,
-            M =
-              z && j
-                ? (0, e.jsx)(G, { onClick: x, cursor: "pointer", hitSlop: !0 })
+            z = { tabIndex: 0, children: c },
+            M = C ? Array.isArray(i) && i.length > 0 : !!i,
+            L =
+              M && j
+                ? (0, e.jsx)(k, { onClick: x, cursor: "pointer", hitSlop: !0 })
                 : (0, e.jsx)(X, {}),
-            L = T(
+            I = E(
               l,
               (0, e.jsx)(S.j, {
                 beforeContent: n,
-                afterContent: M,
-                hasValue: z,
+                afterContent: L,
+                hasValue: M,
                 cursor: "pointer",
                 tabIndex: 0,
                 ...b,
               }),
-              k,
+              z,
               void 0,
             );
-          return (0, e.jsx)(N, { children: L });
+          return (0, e.jsx)(Y, { children: I });
         },
         DefaultOptionFilter: ot,
         Value: function (t) {
@@ -3753,7 +3780,7 @@
               focusedIndex: v,
               onFocusedIndexChange: h,
             },
-            f = R({
+            f = P({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: r,
@@ -3769,7 +3796,7 @@
             });
           return (0, e.jsx)(zt.Provider, {
             value: p,
-            children: (0, e.jsx)(P, { state: f, children: c }),
+            children: (0, e.jsx)(N, { state: f, children: c }),
           });
         },
         Option: function (t) {
@@ -3781,7 +3808,7 @@
             } = Mt("<SelectTrigger>"),
             o = "string" == typeof c ? c : void 0,
             v = r ? a.includes(c) : a === c;
-          return (0, e.jsxs)(B, {
+          return (0, e.jsxs)(G, {
             label: o,
             onSelect: () => s(c),
             selected: v,
@@ -3799,7 +3826,7 @@
         },
         Options: function (t) {
           const { refPopover: c } = Mt("<Select.Options>");
-          return (0, e.jsx)(Y, { ref: c, children: t.children });
+          return (0, e.jsx)(B, { ref: c, children: t.children });
         },
         Trigger: function (t) {
           const { children: c, render: n } = t,
@@ -3833,9 +3860,9 @@
             w = h ? Array.isArray(r) && r.length > 0 : !!r,
             b =
               w && g
-                ? (0, e.jsx)(G, { onClick: d, cursor: "pointer", hitSlop: !0 })
+                ? (0, e.jsx)(k, { onClick: d, cursor: "pointer", hitSlop: !0 })
                 : (0, e.jsx)(X, {}),
-            k = T(
+            z = E(
               n,
               (0, e.jsx)(S.j, {
                 afterContent: b,
@@ -3849,7 +3876,7 @@
               V,
               void 0,
             );
-          return (0, e.jsx)(N, { children: k });
+          return (0, e.jsx)(Y, { children: z });
         },
         Value: function (t) {
           return (0, e.jsx)(J.EY, {
@@ -4534,7 +4561,7 @@
           }
           default:
             return (
-              (0, z.z_)(c, `Unhandled facet field type: "${c.fieldType}"`), null
+              (0, M.z_)(c, `Unhandled facet field type: "${c.fieldType}"`), null
             );
         }
       }
@@ -4707,7 +4734,7 @@
       }
       function uc(t) {
         const { render: c, ...n } = t;
-        return T(
+        return E(
           c,
           (0, e.jsx)("div", { className: oc.SliderTrack }),
           n,
@@ -4717,11 +4744,11 @@
       function pc(t) {
         const { start: c, end: n, render: s } = t,
           r = (0, l.useContext)(vc);
-        (0, z.wT)(r, "SliderRange must be used within a SliderRoot!");
+        (0, M.wT)(r, "SliderRange must be used within a SliderRoot!");
         const { min: a, max: o } = r,
           i = Cc(c, a, o),
           v = 100 - Cc(n, a, o);
-        return T(
+        return E(
           s,
           (0, e.jsx)("div", {
             className: oc.SliderRange,
@@ -4734,7 +4761,7 @@
       function fc(t) {
         const { render: c } = t,
           n = (0, l.useContext)(vc);
-        (0, z.wT)(n, "SliderHandle must be used within a SliderRoot!");
+        (0, M.wT)(n, "SliderHandle must be used within a SliderRoot!");
         const {
             min: s,
             max: r,
@@ -4793,7 +4820,7 @@
             }
           },
         };
-        return T(
+        return E(
           c,
           (0, e.jsx)("span", { className: oc.SliderHandle, style: m }),
           C,
@@ -4826,7 +4853,7 @@
         const { price: c, onPriceChange: n, onPriceSettled: s } = t,
           { maxPrice: r, currency: a } = (function () {
             const t = (0, l.useContext)(xc);
-            return (0, z.wT)(t, "No filter config provider found!"), t;
+            return (0, M.wT)(t, "No filter config provider found!"), t;
           })(),
           [o, v] = (0, l.useState)(!1),
           h = [0, r],
@@ -4933,7 +4960,7 @@
           h = null != i ? i : wc(c, r.bWholeUnitsOnly);
         return (0, e.jsx)(a.az, {
           flexGrow: "1",
-          children: (0, e.jsx)(k, {
+          children: (0, e.jsx)(z, {
             variant: "inset-focus",
             value: h,
             onTextChange: (t) => {
@@ -6333,7 +6360,7 @@
             if ("Quality" === c.name) {
               const n = c.tags && c.tags.strange,
                 e = c.tags && c.tags.tournament;
-              (0, z.wT)(n && e, "Could not find expected toggle tags");
+              (0, M.wT)(n && e, "Could not find expected toggle tags");
               const l = te(t.trigger);
               return {
                 facet: {
@@ -6446,7 +6473,7 @@
         if ("string" == typeof t) return Gt.Localize(t);
         const n = c[t.facet];
         return (
-          (0, z.wT)(
+          (0, M.wT)(
             n && n.tags && n.tags[t.tag],
             "Could not find tag for label!",
             t,
@@ -6493,7 +6520,7 @@
                   case "togglegroup":
                     return t.rgToggles.map(({ facet: t, tag: c }) => [t, c]);
                   default:
-                    return (0, z.z_)(t, "Unhandled facet type"), [];
+                    return (0, M.z_)(t, "Unhandled facet type"), [];
                 }
               })(c);
               for (const [c, e] of n) t[c] || (t[c] = {}), (t[c][e] = !0);
@@ -6670,7 +6697,7 @@
               ? (0, e.jsx)(i.s, {
                   align: "center",
                   justify: "center",
-                  children: (0, e.jsx)(G, { onClick: v }),
+                  children: (0, e.jsx)(k, { onClick: v }),
                 })
               : (0, e.jsx)(X, {}),
           ],
@@ -6840,7 +6867,7 @@
                         (0, e.jsx)(i.s, {
                           align: "center",
                           justify: "center",
-                          children: (0, e.jsx)(G, {}),
+                          children: (0, e.jsx)(k, {}),
                         }),
                     ],
                   }),
@@ -6922,7 +6949,7 @@
                           inline: !0,
                           align: "center",
                           gap: "2",
-                          children: [d.strLabel, g && (0, e.jsx)(G, {})],
+                          children: [d.strLabel, g && (0, e.jsx)(k, {})],
                         }),
                       }),
                     ],
@@ -6956,7 +6983,7 @@
           align: "center",
           gap: "1",
           children: [
-            (0, e.jsx)(G, {}),
+            (0, e.jsx)(k, {}),
             Gt.Localize("#AdvancedSearch_AppSelect_Clear"),
           ],
         });
@@ -7040,7 +7067,7 @@
                         (0, e.jsx)(i.s, {
                           align: "center",
                           justify: "center",
-                          children: (0, e.jsx)(G, {}),
+                          children: (0, e.jsx)(k, {}),
                         }),
                     ],
                   }),
@@ -7592,17 +7619,16 @@
                 c.preventDefault());
             },
           }),
-          C = s ? (0, e.jsx)(G, { onClick: () => m.onTextChange("") }) : void 0,
-          [x, _] = (0, l.useState)(!1),
-          [j, y] = (0, l.useState)(!1),
-          V = x || !j,
-          w = (0, Ie.wY)(
+          [C, x] = (0, l.useState)(!1),
+          [_, j] = (0, l.useState)(!1),
+          y = C || !_,
+          V = (0, Ie.wY)(
             (0, l.useCallback)((t) => {
               const c = t.contentRect.width < 300;
-              _(c);
+              x(c);
             }, []),
           ),
-          b = o
+          w = o
             ? (0, e.jsxs)(i.s, {
                 cursor: "pointer",
                 radius: h.radius || "sm",
@@ -7621,13 +7647,13 @@
                     src: o.icon,
                     alt: "",
                   }),
-                  (0, e.jsx)(Be, { visible: !V, children: o.name }),
-                  (0, e.jsx)(G, {}),
+                  (0, e.jsx)(Be, { visible: !y, children: o.name }),
+                  (0, e.jsx)(k, {}),
                 ],
               })
             : null,
-          S =
-            o && !V
+          b =
+            o && !y
               ? Gt.Localize(
                   "#AdvancedSearch_TextSearch_PlaceholderWithApp",
                   o.name,
@@ -7638,14 +7664,14 @@
           children: [
             (0, e.jsx)(F.TextInput, {
               value: s,
-              placeholder: S,
+              placeholder: b,
               ...h,
-              afterContent: C,
               title: Gt.Localize("#AdvancedSearch_TextSearch_Tooltip"),
-              beforeContent: b,
-              ref: w,
-              onFocus: () => y(!0),
-              onBlur: () => y(!1),
+              beforeContent: w,
+              ref: V,
+              onFocus: () => j(!0),
+              onBlur: () => j(!1),
+              clearable: !0,
             }),
             (0, e.jsx)(F.Suggestions, {
               children: g.map((t, c) =>

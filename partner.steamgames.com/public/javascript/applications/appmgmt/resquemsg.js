@@ -1417,23 +1417,6 @@
         });
       }
     },
-    4434: (e, t, s) => {
-      "use strict";
-      s.d(t, { m: () => o });
-      var n = s(41735),
-        i = s.n(n),
-        r = s(90626);
-      function o(e) {
-        const t = r.useRef(i().CancelToken.source());
-        return (
-          r.useEffect(() => {
-            const s = t.current;
-            return () => s.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
-    },
     68797: (e, t, s) => {
       "use strict";
       s.d(t, { H: () => o });

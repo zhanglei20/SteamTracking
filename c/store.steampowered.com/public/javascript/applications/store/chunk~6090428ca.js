@@ -1262,6 +1262,7 @@
             { bLoading: _, eventModel: __webpack_require__ } = this.state;
           if (_)
             return (0, _.jsx)(_._, {
+              active: !0,
               children: (0, _.jsx)("div", {
                 className: _().FlexCenter,
                 style: {
@@ -1291,28 +1292,25 @@
                   _,
                   "steam://nav/games/details/" + __webpack_require__.appid,
                 )));
-          const _ = (0, _.jsx)("div", {
-            children: (0, _.jsx)(_._, {
-              initialEvent: __webpack_require__,
-              appid: _,
-              clanSteamID: _,
-              partnerEventStore: _,
-              emoticonStore: _._,
-              closeModal: !_ && _,
-              showAppHeader: _,
-              bShowOnlyInitialEvent: _,
-              additionalParams: _,
-              eventClassName: _,
-              onAppIconClick: _,
-            }),
+          const _ = (0, _.jsx)(_._, {
+            initialEvent: __webpack_require__,
+            appid: _,
+            clanSteamID: _,
+            partnerEventStore: _,
+            emoticonStore: _._,
+            closeModal: !_ && _,
+            showAppHeader: _,
+            bShowOnlyInitialEvent: _,
+            additionalParams: _,
+            eventClassName: _,
+            onAppIconClick: _,
           });
           return _
             ? _
             : (0, _.jsx)(_._, {
-                className: _,
-                children: (0, _.jsx)(_._, {
-                  navID: "WebRowEventInfiniteScroll",
-                  closeModal: _,
+                active: !0,
+                children: (0, _.jsx)("div", {
+                  className: _,
                   children: _,
                 }),
               });

@@ -533,7 +533,7 @@ function OnImagesLoadComplete( images )
 		let bShowStoreAssetPreventionWarning = false;
 		let bShowDeprecatedAssetWarning = false;
 		var imageType = DetermineImageType( image );
-		var selectType = $J( '<select class="image_type_select" onchange="return OnImageSelectTypeChanged( this );"></select>');
+		var selectType = $J( '<select id="image_type_select_form" class="image_type_select" onchange="return OnImageSelectTypeChanged( this );"></select>');
 		for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
 		{
 			const bPreventStoreTypeImages = bPreventStoreAssetUploads && IsImageTypeValid( image, g_ImageTypes[iImageType] ) && g_ImageTypes[iImageType].tab === 'store';
@@ -543,7 +543,6 @@ function OnImagesLoadComplete( images )
 				option.appendTo ( selectType );
 				if ( g_ImageTypes[ iImageType ].name == imageType )
 				{
-					option.prop ( 'selected', true );
 					localizedType = g_ImageTypes[ iImageType ].localized;
 
 					bShowAssetOverrideWarning = false;
@@ -585,6 +584,12 @@ function OnImagesLoadComplete( images )
 		}
 		else
 		{
+			if ( selectType.children().length > 1 )
+			{
+				const option = $J( '<option value="" selected disabled >Select Image Type...</option>' );
+				option.prependTo( selectType );
+			}
+
 			selectType.appendTo( targetDiv );
 			targetDiv.append( '<br>' );
 		}
@@ -722,9 +727,11 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		    if( !strSelectedType )
 		        strSelectedType = $J( preview.find( 'input.image_type_select' )[0] ).val();
 
-			// Skip if no valid type
 			if ( !strSelectedType )
-				continue;
+			{
+				alert( 'Please ensure that an image type is selected for every image uploaded.' );
+				return false;
+			}
 
 		    var nParentID = $J( preview.find( 'input.image_parent_input' )[0] ).val();
 		    var strSelectedLanguage = $J( preview.find( 'select.image_language_select :selected' )[0] ).val();

@@ -481,14 +481,14 @@
         V = t(1062),
         z = t(12155),
         K = t(4434),
-        Q = t(88680),
+        Q = t(84547),
         X = t(32545),
         Z = t.n(X);
       function Y(e) {
         const { appID: n, classOverride: t, styleOverride: o } = e,
           [r, a] = (0, s.useState)(!1),
           i = (0, K.m)("GameHoverFollowButton"),
-          { elDialogElement: l, fnShowLogonDialog: _ } = (0, Q.l)(),
+          { elDialogElement: l, fnShowLogonDialog: _ } = (0, Q.E)(),
           g = (0, U.Fh)(n),
           { mutateAsync: w } = (0, V.L)(n, !g, void 0);
         return (0, d.jsxs)(q.Z, {

@@ -5802,7 +5802,7 @@
     },
     81301: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => S, Y: () => g });
+      a.d(t, { H: () => g, Y: () => h });
       var n = a(34629),
         s = a(7850),
         r = a(75844),
@@ -5813,27 +5813,22 @@
         d = a(41550),
         u = a(738),
         _ = a(84933),
-        m = a(19332),
-        p = a(51706);
-      function h(e) {
+        m = a(19332);
+      function p(e) {
         const { event: t, closeModal: a } = e;
-        return (0, s.jsx)(p.Qs, {
-          navID: "SinglePartnerEventRoot",
+        return (0, s.jsx)(d.AD, {
+          initialEvent: t,
+          bShowOnlyInitialEvent: !0,
+          partnerEventStore: l.O3,
+          emoticonStore: c.A,
+          showAppHeader: !0,
           closeModal: a,
-          children: (0, s.jsx)(d.AD, {
-            initialEvent: t,
-            bShowOnlyInitialEvent: !0,
-            partnerEventStore: l.O3,
-            emoticonStore: c.A,
-            showAppHeader: !0,
-            closeModal: a,
-          }),
         });
       }
-      function g(e, t) {
-        (0, u.pg)((0, s.jsx)(h, { event: e }), t);
+      function h(e, t) {
+        (0, u.pg)((0, s.jsx)(p, { event: e }), t);
       }
-      let S = class extends i.Component {
+      let g = class extends i.Component {
         m_refFocus = i.createRef();
         componentDidMount() {
           this.props.fnClose &&
@@ -5872,9 +5867,9 @@
           });
         }
       };
-      (0, n.Cg)([_.oI], S.prototype, "escFunction", null),
-        (0, n.Cg)([_.oI], S.prototype, "OnBackgroundClick", null),
-        (S = (0, n.Cg)([r.PA], S));
+      (0, n.Cg)([_.oI], g.prototype, "escFunction", null),
+        (0, n.Cg)([_.oI], g.prototype, "OnBackgroundClick", null),
+        (g = (0, n.Cg)([r.PA], g));
     },
     53354: (e, t, a) => {
       "use strict";
@@ -6196,12 +6191,11 @@
             a.e(8970),
             a.e(7937),
             a.e(7403),
-            a.e(284),
-            a.e(9214),
             a.e(4796),
+            a.e(9742),
             a.e(4243),
             a.e(706),
-            a.e(6108),
+            a.e(6883),
             a.e(4998),
             a.e(6769),
             a.e(8759),
@@ -6210,7 +6204,9 @@
             a.e(6014),
             a.e(6178),
             a.e(5714),
-            a.e(321),
+            a.e(711),
+            a.e(2077),
+            a.e(283),
             a.e(177),
             a.e(8396),
           ]).then(a.bind(a, 74968)),
@@ -6307,7 +6303,7 @@
         u = a(95695),
         _ = a.n(u),
         m = a(28188),
-        p = a(46416),
+        p = a(22687),
         h = a(52038),
         g = a(56011),
         S = a(32630),
@@ -8619,7 +8615,7 @@
         static instance_count = 0;
       }
       var I = a(94095),
-        T = a(99956),
+        T = a(90421),
         B = a(12424),
         D = a(78588),
         j = a(8893),
@@ -10725,7 +10721,7 @@
       }
       var re = a(95695),
         ie = a.n(re),
-        oe = a(46416),
+        oe = a(22687),
         le = a(31335);
       const ce = [
           {
@@ -19230,7 +19226,7 @@
         Ir = a(18663),
         Tr = a(64753);
       const Br = s.lazy(() =>
-        Promise.all([a.e(321), a.e(3058)]).then(a.bind(a, 20482)),
+        Promise.all([a.e(283), a.e(3058)]).then(a.bind(a, 20482)),
       );
       function Dr(e) {
         const { event: t, section: a, language: s } = e,

@@ -955,6 +955,13 @@ enum ETwoFactorTokenSteamguardScheme
 	k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2;
 }
 
+enum EURLSite
+{
+	k_EURLSite_None = 0;
+	k_EURLSite_Store = 1;
+	k_EURLSite_Community = 2;
+}
+
 enum EVoiceCallState
 {
 	k_EVoiceCallState_None = 0;

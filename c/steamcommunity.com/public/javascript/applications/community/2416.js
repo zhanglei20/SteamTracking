@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "I miei ordini attivi",
 	"MyOrders_Heading_Sell": "Inserzioni",
 	"MyOrders_Heading_Buy": "Ordini d'acquisto",
+	"MyOrders_Heading_MyPurchaseOffers": "Acquisti - Le mie offerte",
+	"MyOrders_Heading_MyListings": "Vendite - I miei annunci",
 	"MyOrders_FailedToLoad": "Si è verificato un problema durante il caricamento dei dati dell'ordine per questo oggetto.",
 	"MyOrders_NoActiveOrders_Item": "Non hai ordini attivi per questo oggetto.",
 	"MyOrders_NoBuyOrders_Item": "Non hai ordini d'acquisto attivi per questo oggetto.",

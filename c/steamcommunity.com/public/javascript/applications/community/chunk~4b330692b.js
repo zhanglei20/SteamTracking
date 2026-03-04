@@ -722,6 +722,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(void 0),
           _ = (0, _._)(),
+          _ = (0, _._)(),
           _ = (function (_, _, _, _) {
             return (0, _._)({
               queryKey: ["UserReactions", _, _],
@@ -876,22 +877,27 @@
                     }),
                   (0, _.jsx)(_._, {
                     className: _.ButtonContainer,
-                    scrollDirection: "y",
+                    scrollDirection: _ ? "x" : "y",
                     "flow-children": "grid",
                     children:
                       !_ &&
                       _.map((_, _) => {
-                        var _, _;
+                        var _, _, _;
                         return (0, _.jsx)(
                           _,
                           {
-                            autoFocus: 0 == _,
+                            autoFocus:
+                              (void 0 === _ && 0 == _) ||
+                              (_ === _ &&
+                                !(null === (_ = _.data) || void 0 === _
+                                  ? void 0
+                                  : __webpack_require__.has(_))),
                             reaction: _,
                             selected:
                               _ === _ &&
                               !(null === (_ = _.data) || void 0 === _
                                 ? void 0
-                                : __webpack_require__.has(_)),
+                                : _.has(_)),
                             cost: _.get(_).points_cost,
                             alreadyAwarded:
                               null === (_ = _.data) || void 0 === _
@@ -1189,21 +1195,17 @@
             });
           }
         }
-        return (0, _.jsx)(_._, {
+        return (0, _.jsxs)(_._, {
           className: _.GrantAwardModal,
           active: _,
           onDismiss: _,
-          children: (0, _.jsxs)(_._, {
-            navID: "GrantAward",
-            closeModal: _,
-            children: [
-              _ &&
-                (0, _.jsx)(_, {
-                  eType: _.Default,
-                }),
-              _,
-            ],
-          }),
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                eType: _.Default,
+              }),
+            _,
+          ],
         });
       }
       const _ = ({ description: _ }) =>

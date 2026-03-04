@@ -123,7 +123,17 @@
 	"ItemFlag_OnWishlist": "SUR LISTE DE SOUHAITS",
 	"ItemFlag_InCart": "DANS LE PANIER",
 	"ItemFlag_Ignored": "IGNORÉS",
-	"ItemFlag_ExcludedByPreferences": "PRODUIT EXCLU SELON VOS PRÉFÉRENCES"
+	"ItemFlag_ExcludedByPreferences": "PRODUIT EXCLU SELON VOS PRÉFÉRENCES",
+	"Wishlist_Controls_Categories_Header": "Mes catégories :",
+	"Wishlist_Categories_None": "None",
+	"Wishlist_Gamepad_Filter_Category": "Filtrer par catégorie",
+	"Wishlist_Gamepad_Filter_Clear_Category": "Effacer les filtres de catégorie",
+	"Wishlist_Gamepad_Add_Category": "Ajouter une catégorie",
+	"Wishlist_Gamepad_Removecategory": "Remove category",
+	"Wishlist_Controls_Categories_Remove_Tooltip": "Remove this category from this item",
+	"Wishlist_Controls_Categories_Filter_Tooltip": "Filter your wishlist to items in this category",
+	"Wishlist_Controls_Categories_All": "All",
+	"Wishlist_Controls_Categories_Manage": "Ajouter ou supprimer des catégories"
 }`);
     },
   },

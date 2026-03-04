@@ -123,7 +123,17 @@
 	"ItemFlag_OnWishlist": "KÍVÁNSÁGLISTÁN",
 	"ItemFlag_InCart": "KOSÁRBAN",
 	"ItemFlag_Ignored": "MELLŐZVE",
-	"ItemFlag_ExcludedByPreferences": "BEÁLLÍTÁSOK ALAPJÁN KIZÁRVA"
+	"ItemFlag_ExcludedByPreferences": "BEÁLLÍTÁSOK ALAPJÁN KIZÁRVA",
+	"Wishlist_Controls_Categories_Header": "Kategóriáim:",
+	"Wishlist_Categories_None": "Nincs",
+	"Wishlist_Gamepad_Filter_Category": "Szűrés kategória szerint",
+	"Wishlist_Gamepad_Filter_Clear_Category": "Kategóriaszűrők törlése",
+	"Wishlist_Gamepad_Add_Category": "Kategória hozzáadása",
+	"Wishlist_Gamepad_Removecategory": "Kategória eltávolítása",
+	"Wishlist_Controls_Categories_Remove_Tooltip": "Remove this category from this item",
+	"Wishlist_Controls_Categories_Filter_Tooltip": "Kívánságlistád szűrése az e kategóriában található elemekre.",
+	"Wishlist_Controls_Categories_All": "Összes",
+	"Wishlist_Controls_Categories_Manage": "Kategóriák hozzáadása vagy eltávolítása"
 }`);
     },
   },

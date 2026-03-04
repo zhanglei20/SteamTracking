@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Mine aktive ordrer",
 	"MyOrders_Heading_Sell": "Salgsordrer",
 	"MyOrders_Heading_Buy": "Købsordrer",
+	"MyOrders_Heading_MyPurchaseOffers": "Køb – mine tilbud",
+	"MyOrders_Heading_MyListings": "Salg – mine opslag",
 	"MyOrders_FailedToLoad": "Der opstod et problem med at indlæse data for denne genstand.",
 	"MyOrders_NoActiveOrders_Item": "Du har ingen aktive ordrer for denne genstand.",
 	"MyOrders_NoBuyOrders_Item": "Du har ingen aktive købsordrer for denne genstand.",

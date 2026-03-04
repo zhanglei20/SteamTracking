@@ -1072,6 +1072,9 @@ a:link {
 ._0BH1ydyFmSnUvoVK2hIc:where(._3sJrbUPuxxtvf7RM9OYpwU) {
   width: var(--width);
 }
+._0BH1ydyFmSnUvoVK2hIc:where(._1SOkb8NGXTctRFJs2fKHh-) {
+  min-width: var(--min-width);
+}
 ._2DCKU_4nS3RTO87T3YPOx_ {
   --spinner-color: var(--color-accent-8);
   --spinner-track-color: rgb(from var(--color-dull-10) r g b / 60%);

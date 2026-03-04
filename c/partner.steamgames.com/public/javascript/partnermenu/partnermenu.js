@@ -38726,6 +38726,7 @@ Error generating stack: ` +
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
         static AddNavParamToURL(_, _) {
+          if (!_ || _.length == 0) return _;
           try {
             let _ = new URL(_(_)),
               _ = new URLSearchParams(_.search);
@@ -45234,9 +45235,6 @@ Error generating stack: ` +
   }
   var _,
     _,
-    _,
-    _,
-    _,
     _ = _(() => {
       "use strict";
       _();
@@ -45285,7 +45283,6 @@ Error generating stack: ` +
       _ = class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-        static s_Singleton = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
@@ -45306,8 +45303,12 @@ Error generating stack: ` +
         }
         async LoadSettings() {
           let _ = (_) => {
-            let _ = localStorage.getItem(_);
-            return _ ? JSON.parse(_) : void 0;
+            try {
+              let _ = localStorage.getItem(_);
+              return _ ? JSON.parse(_) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
@@ -45337,15 +45338,21 @@ Error generating stack: ` +
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(..._) {
+          _ &&
+            _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            _.s_Singleton == null && (_.s_Singleton = new _()), _.s_Singleton
+            window.g_LogManager == null && (window.g_LogManager = new _()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -45367,11 +45374,21 @@ Error generating stack: ` +
           this.SetDebugLogEnabled(_, !this.IsDebugLogEnabled(_));
         }
         async SetDebugLogEnabled(_, _) {
+          if (!this.IsLogName(_)) {
+            console.warn(
+              `No log named "${_}", available logs:`,
+              this.GetLogNames(),
+            );
+            return;
+          }
           _
             ? this.m_setEnabledDebugLogs.add(_)
             : this.m_setEnabledDebugLogs.delete(_),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        async SetDebugLogsEnabled(_, ..._) {
+          _.forEach((_) => this.SetDebugLogEnabled(_, _));
         }
         async SetAllDebugLogsEnabled(_) {
           (this.m_setEnabledDebugLogs = _
@@ -45391,30 +45408,20 @@ Error generating stack: ` +
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
         }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
+        }
       };
-      (_ = () => [..._.Get().LogNames].sort()),
-        (_ = (_, _) => {
-          _.Get().IsLogName(_)
-            ? _.Get().SetDebugLogEnabled(_, _)
-            : console.warn(`No log named "${_}", available logs:`, _());
-        }),
-        (_ = (..._) => {
-          _.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            _.Get().PrintEnabledLogs();
-        });
-      window.DebugLogEnable = (..._) => _.forEach((_) => _(_, !0));
-      window.DebugLogDisable = (..._) => _.forEach((_) => _(_, !1));
+      window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._);
+      window.DebugLogDisable = (..._) => _.Get().SetDebugLogsEnabled(!1, ..._);
       window.DebugLogEnableAll = () => _.Get().SetAllDebugLogsEnabled(!0);
       window.DebugLogDisableAll = () => _.Get().SetAllDebugLogsEnabled(!1);
       window.DebugLogEnableBacktrace = () =>
         _.Get().SetIncludeBacktraceInLog(!0);
       window.DebugLogDisableBacktrace = () =>
         _.Get().SetIncludeBacktraceInLog(!1);
-      window.DebugLogNames = _;
-      window.DebugLogEnabled = _;
+      window.DebugLogNames = () => _.Get().GetLogNames();
+      window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._);
       window.EnableSteamConsole = (_ = !0) =>
         _.Get().SetDebugLogEnabled("SteamClient", _);
     });
@@ -47237,8 +47244,9 @@ Error generating stack: ` +
       ),
       _ = (0, _.useCallback)(
         (_) => {
-          _.key === "Enter" && _ && _ ? _() : _(),
-            _.key === "Escape" && _ && (_(), _.stopPropagation());
+          _.current?.contains(_.target) &&
+            (_.key === "Enter" && _ && _ ? _() : _(),
+            _.key === "Escape" && _ && (_(), _.stopPropagation()));
         },
         [_, _, _, _],
       ),
@@ -49882,7 +49890,10 @@ Error generating stack: ` +
           return _;
         },
         [_._, _],
-      );
+      ),
+      _ = (0, _.useRef)(_);
+    _.current = _;
+    let _ = _.default.useCallback((..._) => _.current(..._), []);
     return (
       (0, _.useEffect)(() => {
         _(_.loaderData);
@@ -50105,12 +50116,10 @@ Error generating stack: ` +
     )
       return;
     let _ = await Promise.all(_.map(_)),
-      _ = _
-        ? void 0
-        : {
-            _: 0,
-            _: 0,
-          },
+      _ = {
+        _: 0,
+        _: 0,
+      },
       _ = {
         assetData: _,
         metadata: _,
@@ -50119,7 +50128,7 @@ Error generating stack: ` +
         _: _,
         scrollPosition: _,
       };
-    _ ? _(_) : _(_, _), _(_, _, _, _, _, _);
+    _ ? _(_) : _(_, _), await new Promise((_) => _(_, _, _, _, _, _, _));
   }
   async function _(_, _) {
     let { cssPromises: _, routeModules: _ } = await _(_.assetData);
@@ -50219,53 +50228,72 @@ Error generating stack: ` +
     let _ = "steam://";
     return _(_.EREALM) && (_ = "steamchina://"), _ + _;
   }
-  var _ = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
-  function _(_, _) {
-    let {
-        _: _,
-        external: _ = !0,
-        openInNewWindow: _,
+  var _ = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
+    _ = _.default.memo(function (_) {
+      let {
+          _: _,
+          external: _,
+          openInNewWindow: _,
+          onClick: _,
+          snr: _,
+          gamepadFocusable: _ = !0,
+          ref: _,
+          ..._
+        } = _,
+        _ = _,
+        _ = _(),
+        _ = _().manifest;
+      _ &&
+        (typeof _ == "boolean"
+          ? (_ = _(_, _))
+          : (_ = _(
+              {
+                ..._,
+                ..._,
+              },
+              _,
+            )));
+      let { bIsExternal: _, targetRoute: _ } = _.default.useMemo(() => {
+        let _ = _;
+        if (_ || _)
+          return {
+            bIsExternal: !0,
+            targetRoute: _,
+          };
+        if (_.test(_)) {
+          let _ = new URL(location.href),
+            _ = new URL(_.startsWith("//") ? _.protocol + _ : _);
+          if (_.origin !== _.origin)
+            return {
+              bIsExternal: !0,
+              targetRoute: _,
+            };
+          _ = _.pathname + _.search + _.hash;
+        }
+        return _ === !1 ||
+          _?.routes.some((_) => _.match(new RegExp(_.regex, "i")))
+          ? {
+              bIsExternal: !1,
+              targetRoute: _,
+            }
+          : {
+              bIsExternal: !0,
+              targetRoute: _,
+            };
+      }, [_, _, _, _?.routes]);
+      _ &&
+        (_.IN_CLIENT
+          ? (_ = _(`openurl/${_}`))
+          : ((_.target ??= "_blank"), (_.rel ??= "noreferrer noopener")));
+      let _ = _(_, _, _),
+        _ = _ && _.IN_GAMEPADUI ? _ : "a";
+      return (0, _.jsx)(_, {
+        ref: _,
+        href: _,
         onClick: _,
-        snr: _,
-        gamepadFocusable: _ = !0,
-        ..._
-      } = _,
-      _ = _,
-      _ = _();
-    _ &&
-      (typeof _ == "boolean"
-        ? (_ = _(_, _))
-        : (_ = _(
-            {
-              ..._,
-              ..._,
-            },
-            _,
-          )));
-    let _ = _,
-      _ = _ ?? _ ?? !1,
-      _ = _.test(_);
-    if (!_ && _) {
-      let _ = new URL(location.href),
-        _ = new URL(_.startsWith("//") ? _.protocol + _ : _);
-      _.origin === _.origin
-        ? ((_ = _.pathname + _.search + _.hash), (_ = !1))
-        : (_ = !0);
-    }
-    _ &&
-      (_.IN_CLIENT
-        ? (_ = _(`openurl/${_}`))
-        : ((_.target ??= "_blank"), (_.rel ??= "noreferrer noopener")));
-    let _ = _(_, _, _),
-      _ = _ && _.IN_GAMEPADUI ? _ : "a";
-    return (0, _.jsx)(_, {
-      ref: _,
-      href: _,
-      onClick: _,
-      ..._,
+        ..._,
+      });
     });
-  }
-  var _ = _.default.memo(_.default.forwardRef(_));
   var _ = _(_(), 1),
     _ = _(_(), 1);
   _();

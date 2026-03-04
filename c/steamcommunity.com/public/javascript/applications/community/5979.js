@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Ordinele mele active",
 	"MyOrders_Heading_Sell": "Ordine de vânzare",
 	"MyOrders_Heading_Buy": "Ordine de cumpărare",
+	"MyOrders_Heading_MyPurchaseOffers": "Cumpărare – ordinele mele de cumpărare",
+	"MyOrders_Heading_MyListings": "Vânzare – listările mele",
 	"MyOrders_FailedToLoad": "A intervenit o problemă la încărcarea datelor de ordin pentru acest obiect.",
 	"MyOrders_NoActiveOrders_Item": "Nu ai ordine active pentru acest obiect.",
 	"MyOrders_NoBuyOrders_Item": "Nu ai ordine de cumpărare active pentru acest obiect.",

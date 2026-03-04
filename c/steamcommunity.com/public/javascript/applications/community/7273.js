@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "koreana",
 	"SellOnMarket_View": "장터에서 보기",
+	"SellOnMarket_ViewListing": "내 판매 등록 보기",
 	"SellOnMarket_LowestPrice": "시작 가격: %1$s",
 	"SellOnMarket_Volume": "판매량: 지난 24시간 기준 %1$s개",
 	"SellOnMarket_SellThisItem": "판매",

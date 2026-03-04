@@ -602,50 +602,46 @@
     },
     78588: (e, t, n) => {
       "use strict";
-      n.d(t, { a: () => g });
+      n.d(t, { a: () => d });
       var a = n(7850),
         r = n(74812),
         s = n(8893),
         i = n(90717),
         o = n(26296),
         c = n(52038),
-        l = n(61859),
-        u = n(22797),
-        d = n(18654),
-        p = n.n(d);
-      function g(e) {
-        const { id: t, imageType: n, bPreferAssetWithoutOverride: d } = e,
-          { storeItemAsset: g, storeItemDefaultInfo: m } = (0, r.q)(t, n, d);
-        if (void 0 === g || !m)
-          return (0, a.jsx)(u.t, {
-            size: "small",
-            position: "center",
-            string: (0, l.we)("#Loading"),
-          });
-        if (null == g) return null;
+        l = n(18654),
+        u = n.n(l);
+      function d(e) {
+        const { id: t, imageType: n, bPreferAssetWithoutOverride: l } = e,
+          { storeItemAsset: d, storeItemDefaultInfo: p } = (0, r.q)(t, n, l);
         if ("library" === n || "vertical" == n)
-          return (0, a.jsx)(s.G, { id: t, bPreferAssetWithoutOverride: d });
-        let h,
-          f,
-          _ = (0, i.N)(g, "header" === n),
-          y = "";
+          return (0, a.jsx)(s.G, { id: t, bPreferAssetWithoutOverride: l });
+        let g,
+          m,
+          h = "";
         if ("main" === n)
-          (h = p().mainCapsuleImgWidth),
-            (f = p().mainCapsuleImgHeight),
-            (y = p().MainCapsuleImageContainer);
+          (g = u().mainCapsuleImgWidth),
+            (m = u().mainCapsuleImgHeight),
+            (h = u().MainCapsuleImageContainer);
         else
-          (h = p().headerCapsuleImgWidth),
-            (f = p().headerCapsuleImgHeight),
-            (y = p().HeaderCapsuleImageContainer);
+          (g = u().headerCapsuleImgWidth),
+            (m = u().headerCapsuleImgHeight),
+            (h = u().HeaderCapsuleImageContainer);
+        if (void 0 === d || !p)
+          return (0, a.jsx)("div", {
+            className: (0, c.A)(h, "CapsuleImageCtn"),
+          });
+        if (null == d) return null;
+        let f = (0, i.N)(d, "header" === n);
         return (0, a.jsx)("div", {
-          className: (0, c.A)(y, "CapsuleImageCtn"),
+          className: (0, c.A)(h, "CapsuleImageCtn"),
           children: (0, a.jsx)(o.o, {
             lazyLoad: !0,
-            srcs: _,
-            className: (0, c.A)(p().CapsuleImage),
-            width: h,
-            height: f,
-            alt: m.name,
+            srcs: f,
+            className: (0, c.A)(u().CapsuleImage),
+            width: g,
+            height: m,
+            alt: p.name,
           }),
         });
       }
@@ -909,25 +905,6 @@
           f = t && (!p || (p.appID != t && p.snr != u)),
           _ = (0, o.Ue)(l.props.ref, f ? h : void 0);
         return r.cloneElement(l, { ref: _ });
-      }
-    },
-    57876: (e, t, n) => {
-      "use strict";
-      n.d(t, { Jw: () => r, Xh: () => a });
-      n(30894), n(16021), n(62792), n(78327);
-      const a = {
-        include_assets: !0,
-        include_release: !0,
-        include_platforms: !0,
-        include_tag_count: 20,
-        include_basic_info: !0,
-        include_trailers: !0,
-        include_reviews: !0,
-        include_screenshots: !0,
-        include_supported_languages: !0,
-      };
-      function r() {
-        return { width: 231, height: 87 };
       }
     },
     96001: (e, t, n) => {
@@ -1313,23 +1290,24 @@
       n.d(t, { V: () => S });
       var a = n(7850),
         r = n(8527),
-        s = n(20194),
-        i = n(75233),
-        o = n(24484),
-        c = n(75515);
-      var l = n(63664),
-        u = n(39777),
-        d = (n(35380), n(90626));
-      function p() {
-        return (0, s.I)({
+        s = n(47911),
+        i = n(20194),
+        o = n(75233),
+        c = n(24484),
+        l = n(75515);
+      var u = n(63664),
+        d = n(39777),
+        p = (n(35380), n(90626));
+      function g() {
+        return (0, i.I)({
           queryKey: ["BroadcastApps"],
           queryFn: async () => {
             const e = await (async function () {
-              let e = (0, o.Tc)(
+              let e = (0, c.Tc)(
                 "broadcast_available_for_page",
                 "application_config",
               );
-              if ((0, c.h7)(e)) {
+              if ((0, l.h7)(e)) {
                 const t = new Set();
                 return (
                   e.filtered.forEach((e) => {
@@ -1344,33 +1322,32 @@
           },
         });
       }
-      var g = n(58918),
-        m = n(17376);
-      const h =
+      var m = n(58918),
+        h = n(17376);
+      const f =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
-      var f = n(18654),
-        _ = n.n(f),
-        y = n(12155),
-        b = n(52038),
-        I = n(61859),
+      var _ = n(18654),
+        y = n.n(_),
+        b = n(12155),
+        I = n(52038),
         v = n(94011);
       function S(e) {
-        const { appids: t, hide_status_banners: n, show_early_access: s } = e,
-          { data: o } = (0, g.$Y)(),
-          { data: c } = (0, m.F0)(),
-          f = t.length > 0 && t.every((e) => o && o.has(e)),
-          S = t.length > 0 && t.every((e) => c && c.has(e)),
+        const { appids: t, hide_status_banners: n, show_early_access: i } = e,
+          { data: c } = (0, m.$Y)(),
+          { data: l } = (0, h.F0)(),
+          _ = t.length > 0 && t.every((e) => c && c.has(e)),
+          S = t.length > 0 && t.every((e) => l && l.has(e)),
           A = (function (e) {
-            const { data: t } = p(),
-              [n, a] = (0, d.useState)(!1),
-              r = (0, i.jE)(),
-              s = (0, l.eG)();
+            const { data: t } = g(),
+              [n, a] = (0, p.useState)(!1),
+              r = (0, o.jE)(),
+              s = (0, u.eG)();
             return (
-              (0, d.useEffect)(() => {
+              (0, p.useEffect)(() => {
                 if (!e || 0 == e.length || !t) return a(!1);
                 (async () => {
                   const n = await Promise.all(
-                    e.map((e) => r.fetchQuery((0, u.us)(s, { appid: e }))),
+                    e.map((e) => r.fetchQuery((0, d.us)(s, { appid: e }))),
                   );
                   a(
                     n.some(
@@ -1385,32 +1362,32 @@
               n
             );
           })(t),
-          w = f && !n,
-          C = S && !n,
-          E = !n && s;
+          C = _ && !n,
+          w = S && !n,
+          E = !n && i;
         return (0, a.jsxs)("div", {
-          className: (0, b.A)(_().CapsuleDecorators, "CapsuleDecorators"),
+          className: (0, I.A)(y().CapsuleDecorators, "CapsuleDecorators"),
           children: [
-            w &&
-              (0, a.jsxs)("span", {
-                className: (0, b.A)(_().Banner, _().Blue),
-                children: [
-                  (0, a.jsx)("img", {
-                    src: (0, r.YJ)(h),
-                    className: _().LinesImg,
-                  }),
-                  (0, I.we)("#Sale_InLibrary"),
-                ],
-              }),
             C &&
               (0, a.jsxs)("span", {
-                className: _().Banner,
+                className: (0, I.A)(y().Banner, y().Blue),
                 children: [
-                  (0, a.jsx)(y.qnF, { className: _().LinesImg }),
-                  (0, I.we)("#Sale_OnWishlist"),
+                  (0, a.jsx)("img", {
+                    src: (0, r.YJ)(f),
+                    className: y().LinesImg,
+                  }),
+                  s.Z.Localize("#Sale_InLibrary"),
                 ],
               }),
-            E && !w && !C && (0, a.jsx)(x, { appids: t }),
+            w &&
+              (0, a.jsxs)("span", {
+                className: y().Banner,
+                children: [
+                  (0, a.jsx)(b.qnF, { className: y().LinesImg }),
+                  s.Z.Localize("#Sale_OnWishlist"),
+                ],
+              }),
+            E && !C && !w && (0, a.jsx)(x, { appids: t }),
             A && (0, a.jsx)(v.K, {}),
           ],
         });
@@ -1418,15 +1395,15 @@
       function x(e) {
         const { appids: t } = e,
           n = (function (e) {
-            const [t, n] = (0, d.useState)(!1),
-              a = (0, i.jE)(),
-              r = (0, l.eG)();
+            const [t, n] = (0, p.useState)(!1),
+              a = (0, o.jE)(),
+              r = (0, u.eG)();
             return (
-              (0, d.useEffect)(() => {
+              (0, p.useEffect)(() => {
                 if (!e || 0 == e.length) return n(!1);
                 (async () => {
                   const t = await Promise.all(
-                    e.map((e) => a.fetchQuery((0, u.us)(r, { appid: e }))),
+                    e.map((e) => a.fetchQuery((0, d.us)(r, { appid: e }))),
                   );
                   n(t.some((e) => e && e.is_early_access));
                 })();
@@ -1436,8 +1413,8 @@
           })(t);
         return n
           ? (0, a.jsx)("span", {
-              className: (0, b.A)(_().Banner, _().EarlyAccessGradient),
-              children: (0, I.we)("#Sale_EarlyAccess"),
+              className: (0, I.A)(y().Banner, y().EarlyAccessGradient),
+              children: s.Z.Localize("#Sale_EarlyAccess"),
             })
           : null;
       }

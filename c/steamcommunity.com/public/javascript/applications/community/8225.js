@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "japanese",
 	"SellOnMarket_View": "コミュニティマーケット内で表示",
+	"SellOnMarket_ViewListing": "自分の出品を表示",
 	"SellOnMarket_LowestPrice": "開始価格：%1$s",
 	"SellOnMarket_Volume": "数量：過去24時間で%1$s個販売",
 	"SellOnMarket_SellThisItem": "売却する",

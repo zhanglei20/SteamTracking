@@ -3264,6 +3264,11 @@ function BuildHover( prefix, item, owner )
 	else
 		url = ImageURL( imageName, 330, 192 );
 
+	if ( item.hide_image )
+	{
+		url = 'https://community.fastly.steamstatic.com/public/images//economy/gift_default_header.jpg';
+	}
+
 	var strHoverClass = 'item_desc_content';
 	if ( item.appid )
 		strHoverClass = strHoverClass + ' app' + item.appid + ' context' + item.contextid;

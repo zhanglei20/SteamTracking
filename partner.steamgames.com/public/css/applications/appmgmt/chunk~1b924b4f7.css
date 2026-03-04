@@ -104,6 +104,9 @@
 ._0BH1ydyFmSnUvoVK2hIc:where(._3sJrbUPuxxtvf7RM9OYpwU) {
   width: var(--width);
 }
+._0BH1ydyFmSnUvoVK2hIc:where(._1SOkb8NGXTctRFJs2fKHh-) {
+  min-width: var(--min-width);
+}
 ._3NvasCX7YWBZpC8aibkm0E {
   margin-top: var(--spacing-0);
   margin-right: var(--spacing-0);

@@ -1335,21 +1335,136 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const _ = _();
+        return (0, _.jsx)("div", {
+          children: (0, _.jsx)("ol", {
+            children: Array.from(_.entries()).map(([_, _]) =>
+              (0, _.jsx)(
+                "li",
+                {
+                  children: (0, _.jsx)("a", {
+                    href: `${_._.PARTNER_BASE_URL}meetsteam/surveyresults/${_}`,
+                    target: "_blank",
+                    children: _,
+                  }),
+                },
+                _,
+              ),
+            ),
+          }),
+        });
+      }
+      function _() {
+        const [_] = (0, _.useState)(() => {
+          const _ = (0, _._)("survey_list", "application_config") || {},
+            _ = new Map();
+          for (const _ of Object.keys(_)) _.set(_, _[_]);
+          return _;
+        });
+        return _;
+      }
+      function _(_, _) {
+        const _ = (function () {
+            const [_, _] = (0, _.useState)(location.search);
+            return (
+              (0, _.useEffect)(() => {
+                function _(_) {
+                  "urlchange" === _.data && _(location.search);
+                }
+                return (
+                  window.addEventListener("message", _),
+                  () => {
+                    window.removeEventListener("message", _);
+                  }
+                );
+              }, []),
+              _
+            );
+          })(),
+          _ = (0, _.useMemo)(() => {
+            const _ = new URLSearchParams(
+              __webpack_require__.substring("chunkid"),
+            ).get(_);
+            return null != _
+              ? null != _
+                ? "boolean" == typeof _
+                  ? _.constructor("false" !== _)
+                  : _.constructor(_)
+                : _
+              : _;
+          }, [_, _, _]),
+          [_, _] = (0, _.useState)(_),
+          _ = _.useCallback(
+            (_, _ = !1) => {
+              const _ = new URLSearchParams(
+                __webpack_require__.substring("chunkid"),
+              );
+              if (null != _) {
+                if (_.get(_) == _) return;
+                _.set(_, String(_));
+              } else {
+                if (!_.has(_)) return;
+                _.delete(_);
+              }
+              _
+                ? history.replaceState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  )
+                : history.pushState(
+                    history.state,
+                    "",
+                    decodeURIComponent(`${window.location.pathname}?${_}`),
+                  ),
+                (0, _.startTransition)(() => {
+                  _(_), window.postMessage("urlchange");
+                });
+            },
+            [_, _],
+          );
+        return [_, _];
+      }
+      const _ = _.createContext(void 0);
+      function _(_) {
+        const { children: _ } = _,
+          [__webpack_require__, _] = _("showpastevents", !1);
+        return (0, _.jsx)(_.Provider, {
+          value: {
+            bShowArchived: __webpack_require__,
+            setShowArchived: _,
+          },
+          children: _,
+        });
+      }
+      const _ = () => {
+        const _ = (0, _.useContext)(_);
+        if (!_)
+          throw new Error(
+            "useMeetSteamArchived must be used within MeetSteamArchivedProvider",
+          );
+        return _;
+      };
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1998,6 +2113,26 @@
             ],
             [],
           );
+        function _() {
+          const _ = [],
+            _ = [];
+          for (const _ of _) _.push(_.header);
+          _.push(_);
+          for (const _ of _) {
+            const _ = [];
+            for (const _ of _) {
+              const _ = _[_.accessorKey];
+              __webpack_require__.push(
+                "invitations" == _.accessorKey ||
+                  "registrations" == _.accessorKey
+                  ? _(_)
+                  : _.toString(),
+              );
+            }
+            _.push(_);
+          }
+          _._.WriteCSVToFile(_, "partneranalysis.csv");
+        }
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -2006,6 +2141,14 @@
             Boolean(_)
               ? (0, _.jsxs)(_._, {
                   children: [
+                    (0, _.jsx)(_._, {
+                      _: "download-csv",
+                      onClick: _,
+                      style: {
+                        width: "120px",
+                      },
+                      children: "Download CSV",
+                    }),
                     (0, _.jsx)(_._, {
                       columns: _,
                       data: _,
@@ -2017,26 +2160,7 @@
                     (0, _.jsx)("br", {}),
                     (0, _.jsx)(_._, {
                       _: "download-csv",
-                      onClick: function () {
-                        const _ = [],
-                          _ = [];
-                        for (const _ of _) _.push(_.header);
-                        _.push(_);
-                        for (const _ of _) {
-                          const _ = [];
-                          for (const _ of _) {
-                            const _ = _[_.accessorKey];
-                            __webpack_require__.push(
-                              "invitations" == _.accessorKey ||
-                                "registrations" == _.accessorKey
-                                ? _(_)
-                                : _.toString(),
-                            );
-                          }
-                          _.push(_);
-                        }
-                        _._.WriteCSVToFile(_, "partneranalysis.csv");
-                      },
+                      onClick: _,
                       style: {
                         width: "120px",
                       },
@@ -2053,30 +2177,45 @@
       }
       function _(_) {
         const { rgEventGIDs: _, fnSelectedEvents: __webpack_require__ } = _,
-          [_, _] = (0, _.useState)([]);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_._, {
-              children: "Choose Events",
-            }),
-            _.map((_) =>
-              (0, _.jsx)(
-                _,
-                {
-                  gidClanEvent: _,
-                  rgSelected: _,
-                  fnSetSelected: _,
-                },
-                _,
-              ),
-            ),
-            (0, _.jsx)(_._, {
-              disabled: 0 == _.length,
-              onClick: () => __webpack_require__(_),
-              children: "Continue",
-            }),
-          ],
-        });
+          [_, _] = (0, _.useState)([]),
+          { bShowArchived: _, setShowArchived: _ } = _(),
+          { bIsLoading: _, events: _ } = (0, _._)(_),
+          _ = (0, _.useMemo)(() => {
+            const _ = Math.floor(new Date().getTime() / 1e3);
+            return _ && _ ? [..._] : _?.filter((_) => _.endTime >= _);
+          }, [_, _]);
+        return _
+          ? (0, _.jsx)(_._, {
+              string: "Loading...",
+            })
+          : (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  checked: _,
+                  onChange: _,
+                  label: "Show Past Events",
+                }),
+                (0, _.jsx)(_._, {
+                  children: "Choose Events",
+                }),
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      gidClanEvent: _.GID,
+                      rgSelected: _,
+                      fnSetSelected: _,
+                    },
+                    _.GID,
+                  ),
+                ),
+                (0, _.jsx)(_._, {
+                  disabled: 0 == _.length,
+                  onClick: () => __webpack_require__(_),
+                  children: "Continue",
+                }),
+              ],
+            });
       }
       function _(_) {
         const {
@@ -2103,8 +2242,9 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { hideModal: _, gid: __webpack_require__ } = _,
           _ = _(__webpack_require__),
@@ -2290,20 +2430,21 @@
               className: _().ExportToCSV,
               children: (0, _.jsx)("a", {
                 onClick: () =>
-                  (function (_, _, _, _, _) {
+                  (function (_, _, _, _, _, _) {
                     const _ = [],
                       _ = [
                         "SteamID",
                         "Name",
                         "Invited",
                         "Partner",
+                        "Game",
                         "Email Override",
                         "Guest Count",
                         "Reg Confirmation Email Sent",
                       ];
                     _.ask_registration_question && _.push("Pre Reg Answer");
                     _.push(_),
-                      __webpack_require__.forEach((_) => {
+                      _.forEach((_) => {
                         const _ = [],
                           _ = _.partner_id ? (0, _._)(_.partner_id) : void 0;
                         __webpack_require__.push("" + _.steamid),
@@ -2311,6 +2452,9 @@
                           __webpack_require__.push(_.invited ? "YES" : ""),
                           __webpack_require__.push(
                             _ ? `${_?.name} (${_.partner_id})` : "",
+                          ),
+                          __webpack_require__.push(
+                            _.game ? `Game: ${_.game}` : "",
                           ),
                           __webpack_require__.push(_.email_override),
                           __webpack_require__.push(
@@ -2345,11 +2489,12 @@
                         }
                       });
                     const _ =
-                      "meetsteam_" +
-                      _.replace(/[ <>:"/\\|?*\x00-\x1F]/g, "_") +
-                      ".csv";
+                      `meetsteam_${_}_${(0, _._)(_.rtime_start)}_at_${(0, _._)(_.rtime_start)}.csv`.replace(
+                        /[ <>:"/\\|?*\x00-\x1F]/g,
+                        "_",
+                      );
                     _._.WriteCSVToFile(_, _);
-                  })(_, _, _, _, _),
+                  })(_, _, _, _, _, _),
                 children: "Export to CSV",
               }),
             }),
@@ -2370,6 +2515,9 @@
                       }),
                       (0, _.jsx)("th", {
                         children: "Partner",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Game",
                       }),
                       (0, _.jsx)("th", {
                         children: "Email Override",
@@ -2451,12 +2599,11 @@
             (0, _.jsx)("td", {
               children: Boolean(_.invited) ? "YES" : "",
             }),
-            (0, _.jsxs)("td", {
-              children: [
-                (_?.name ?? _.game) ? `Game: ${_.game}` : "",
-                " ",
-                _.partner_id ? `(${_.partner_id})` : "",
-              ],
+            (0, _.jsx)("td", {
+              children: _?.name ?? `(${_.partner_id})`,
+            }),
+            (0, _.jsx)("td", {
+              children: _.game ? `Game: ${_.game}` : "",
             }),
             (0, _.jsx)("td", {
               children: _.email_override,
@@ -2490,7 +2637,40 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _._)({
+          queryKey: [],
+          queryFn: async () =>
+            await (async function (_) {
+              const _ = {
+                  sessionid: (0, _._)(),
+                  gids: _,
+                },
+                _ = `${_._.PARTNER_BASE_URL}meetsteam/admin/ajaxgetregistrations`,
+                _ = await fetch(_, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(_),
+                });
+              if (!_._)
+                throw new Error(
+                  `Failed to read registrations for gids ${_.join(",")}`,
+                );
+              const _ = await _.json();
+              if (1 != _.success)
+                throw new Error(
+                  `Failed to read registrations for gids ${_.join(",")}: ${_.msg}`,
+                );
+              return _.lists ?? [];
+            })(_),
+          enabled: _ && _.length > 0,
+        });
+      }
       function _(_) {
         const { rgEventGIDs: _ } = _,
           [__webpack_require__, _, _] = (0, _._)(),
@@ -2539,85 +2719,109 @@
       const _ = (0, _._)();
       function _(_) {
         const { rgGidMeetSteamEvents: _ } = _,
-          { rgAllRegistrations: __webpack_require__, rgPartnerIDs: _ } =
-            (function (_) {
-              const _ = _(_),
-                [__webpack_require__, _] = (0, _.useMemo)(() => {
-                  if (_.filter((_) => !_.isLoading).length != _.length)
-                    return [null, null];
-                  const _ = new Array(),
-                    _ = new Set();
-                  return (
-                    _.forEach((_) => {
-                      _.data.forEach((_) => {
-                        _.guests_registered > 0 &&
-                          (_.push(_),
-                          _.partner_id &&
-                            __webpack_require__.add(_.partner_id));
+          {
+            rgAllRegistrations: __webpack_require__,
+            rgPartnerIDs: _,
+            rgValveAccounts: _,
+            rgMapAccountToSessionTimes: _,
+          } = (function (_) {
+            const _ = _(_),
+              _ = (0, _._)(),
+              { bIsLoading: _, events: _ } = (0, _._)(_),
+              { data: _ } = _(_),
+              [_, _, _] = (0, _.useMemo)(() => {
+                if (
+                  _ ||
+                  !_ ||
+                  0 == _.length ||
+                  _.filter((_) => !_.isLoading).length != _.length
+                )
+                  return [null, null, null];
+                const _ = new Array(),
+                  _ = new Set(),
+                  _ = new Map();
+                _.forEach((_) => {
+                  _.data.forEach((_) => {
+                    _.guests_registered > 0 &&
+                      (_.push(_),
+                      _.partner_id && __webpack_require__.add(_.partner_id));
+                  });
+                });
+                const _ = new Map();
+                return (
+                  _.forEach((_) => {
+                    _.jsondata.meet_steam_groups?.forEach((_) => {
+                      _.sessions?.forEach((_) => {
+                        _.set(
+                          `${_.GID}_${_.group_id}_${_._}`,
+                          `${_.localized_session_title[0]}@${(0, _._)(_.rtime_start)} ${(0, _._)(_.rtime_start)}`,
+                        );
                       });
-                    }),
-                    [Array.from(_), _]
-                  );
-                }, [_]);
-              return {
-                rgAllRegistrations: _,
-                rgPartnerIDs: __webpack_require__,
-              };
-            })(_),
+                    });
+                  }),
+                  _.forEach((_) => {
+                    _.rgRegistrations.forEach((_) => {
+                      const _ = new _._(_.steamid).GetAccountID(),
+                        _ =
+                          _.get(`${_.gid}_${_.group_id}_${_.session_id}`) ||
+                          `${_.group_id}:${_.session_id}`;
+                      _.has(_) ? _.set(_, _.get(_) + `,${_}`) : _.set(_, _);
+                    });
+                  }),
+                  [Array.from(_), _, _]
+                );
+              }, [_, _, _, _]);
+            return (0, _._)(_)
+              ? {
+                  rgAllRegistrations: _,
+                  rgPartnerIDs: _,
+                  rgValveAccounts: _,
+                  rgMapAccountToSessionTimes: _,
+                }
+              : {
+                  rgAllRegistrations: void 0,
+                  rgPartnerIDs: void 0,
+                  rgValveAccounts: void 0,
+                  rgMapAccountToSessionTimes: void 0,
+                };
+          })(_),
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
-            if (!_ || !__webpack_require__) return null;
+            if (!(_ && __webpack_require__ && _ && _)) return null;
+            const _ = new Map();
+            _.forEach((_) => _.set(_._, _));
             const _ = [];
             return (
               __webpack_require__.forEach((_) => {
-                (0, _._)(_.partner_id);
+                const _ = (0, _._)(_.partner_id),
+                  _ = (0, _._)(_.partner_id);
                 _.push({
                   partner_id: _.partner_id ? "" + _.partner_id : "",
-                  partner_name: (0, _._)(_.partner_id)?.name || "Unknown",
+                  partner_name: _?.name || "Unknown",
                   name: _.name,
+                  game: _.game || "",
                   accountid: _.accountid,
                   email: _.email_override,
                   guest_registrated: _.guests_registered - 1,
                   guest_names:
                     _.guest_names?.length > 0 ? _.guest_names.join(",") : "",
+                  business_contact:
+                    _ && _.length > 0
+                      ? _.filter((_) => _.is_business_contact)
+                          .map((_) => {
+                            const _ = new _._(_.steamid),
+                              _ = _.get(__webpack_require__.GetAccountID());
+                            return _?.displayName || _.steamid;
+                          })
+                          .join(",")
+                      : "",
+                  sessions: _.get(_.accountid) || "missing data",
                 });
               }),
               _
             );
-          }, [_, __webpack_require__]),
-          _ = (0, _.useMemo)(
-            () => [
-              _.accessor("name", {
-                header: "Name",
-                size: 200,
-              }),
-              _.accessor("accountid", {
-                header: "Account ID",
-                size: 150,
-              }),
-              _.accessor("email", {
-                header: "Email",
-                size: 150,
-              }),
-              _.accessor("guest_registrated", {
-                header: "Guest Count",
-                size: 100,
-              }),
-              _.accessor("guest_names", {
-                header: "Guest's Names",
-                size: 100,
-              }),
-              _.accessor("partner_id", {
-                header: "Partner ID",
-                size: 100,
-              }),
-              _.accessor("partner_name", {
-                header: "Partner Name",
-                size: 300,
-              }),
-            ],
-            [],
-          );
+          }, [_, __webpack_require__, _, _]),
+          _ = _();
         return _ && _ && _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
@@ -2627,6 +2831,9 @@
                 Boolean(_)
                   ? (0, _.jsxs)(_._, {
                       children: [
+                        (0, _.jsx)(_, {
+                          rgData: _,
+                        }),
                         (0, _.jsx)(_._, {
                           columns: _,
                           data: _,
@@ -2636,24 +2843,8 @@
                           overscan: _.length,
                         }),
                         (0, _.jsx)("br", {}),
-                        (0, _.jsx)(_._, {
-                          _: "download-csv",
-                          onClick: () =>
-                            (0, _._)(
-                              "registrationdump.csv",
-                              _,
-                              _.map((_) => ({
-                                accessorKey: _.accessorKey,
-                                header:
-                                  "string" == typeof _.header
-                                    ? _.header
-                                    : (_.accessorKey ?? ""),
-                              })),
-                            ),
-                          style: {
-                            width: "120px",
-                          },
-                          children: "Download CSV",
+                        (0, _.jsx)(_, {
+                          rgData: _,
                         }),
                       ],
                     })
@@ -2667,39 +2858,76 @@
               string: (0, _._)("#Loading"),
             });
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _();
-        return (0, _.jsx)("div", {
-          children: (0, _.jsx)("ol", {
-            children: Array.from(_.entries()).map(([_, _]) =>
-              (0, _.jsx)(
-                "li",
-                {
-                  children: (0, _.jsx)("a", {
-                    href: `${_._.PARTNER_BASE_URL}meetsteam/surveyresults/${_}`,
-                    target: "_blank",
-                    children: _,
-                  }),
-                },
-                _,
-              ),
-            ),
-          }),
-        });
-      }
       function _() {
-        const [_] = (0, _.useState)(() => {
-          const _ = (0, _._)("survey_list", "application_config") || {},
-            _ = new Map();
-          for (const _ of Object.keys(_)) _.set(_, _[_]);
-          return _;
-        });
-        return _;
+        return (0, _.useMemo)(
+          () => [
+            _.accessor("name", {
+              header: "Name",
+              size: 200,
+            }),
+            _.accessor("accountid", {
+              header: "Account ID",
+              size: 150,
+            }),
+            _.accessor("email", {
+              header: "Email",
+              size: 150,
+            }),
+            _.accessor("guest_registrated", {
+              header: "Guest Count",
+              size: 100,
+            }),
+            _.accessor("guest_names", {
+              header: "Guest's Names",
+              size: 100,
+            }),
+            _.accessor("partner_id", {
+              header: "Partner ID",
+              size: 100,
+            }),
+            _.accessor("partner_name", {
+              header: "Partner Name",
+              size: 300,
+            }),
+            _.accessor("game", {
+              header: "Game Name",
+              size: 150,
+            }),
+            _.accessor("business_contact", {
+              header: "Business Contact",
+              size: 150,
+            }),
+            _.accessor("sessions", {
+              header: "Sessions",
+              size: 150,
+            }),
+          ],
+          [],
+        );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+      function _(_) {
+        const { rgData: _ } = _,
+          _ = _();
+        return (0, _.jsx)(_._, {
+          _: "download-csv",
+          onClick: () =>
+            (0, _._)(
+              "registrationdump.csv",
+              _,
+              __webpack_require__.map((_) => ({
+                accessorKey: _.accessorKey,
+                header:
+                  "string" == typeof _.header
+                    ? _.header
+                    : (_.accessorKey ?? ""),
+              })),
+            ),
+          style: {
+            width: "120px",
+          },
+          children: "Download CSV",
+        });
+      }
       function _(_) {
         const _ = _._.InitFromClanID((0, _._)()),
           _ = (function () {
@@ -2708,7 +2936,7 @@
             );
             return _;
           })(),
-          [_, _] = (0, _._)("showpastevents", !1),
+          { bShowArchived: _, setShowArchived: _ } = _(),
           { bIsLoading: _, events: _ } = (0, _._)(_),
           _ = _.useMemo(() => {
             if (!_) return null;
@@ -3271,7 +3499,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4081,25 +4308,27 @@
               onClick: _,
             },
           ];
-        return (0, _.jsxs)("div", {
-          className: _().AdminPageCtn,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _().PageTitle,
-              children: [
-                "Meet Steam Admin Dashboard ",
-                (0, _._)("current_year", "application_config"),
-              ],
-            }),
-            (0, _.jsx)("hr", {}),
-            (0, _.jsx)(_._, {
-              tabs: _,
-            }),
-            (0, _.jsx)("div", {
-              className: _().ClearThings,
-            }),
-            (0, _.jsx)("br", {}),
-          ],
+        return (0, _.jsx)(_, {
+          children: (0, _.jsxs)("div", {
+            className: _().AdminPageCtn,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().PageTitle,
+                children: [
+                  "Meet Steam Admin Dashboard ",
+                  (0, _._)("current_year", "application_config"),
+                ],
+              }),
+              (0, _.jsx)("hr", {}),
+              (0, _.jsx)(_._, {
+                tabs: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _().ClearThings,
+              }),
+              (0, _.jsx)("br", {}),
+            ],
+          }),
         });
       }
       var _ = __webpack_require__("chunkid"),

@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Meine aktiven Aufträge",
 	"MyOrders_Heading_Sell": "Verkaufsaufträge",
 	"MyOrders_Heading_Buy": "Kaufaufträge",
+	"MyOrders_Heading_MyPurchaseOffers": "Kauf: Meine Angebote",
+	"MyOrders_Heading_MyListings": "Verkauf: Meine Verkaufsangebote",
 	"MyOrders_FailedToLoad": "Beim Laden der Auftragsdaten dieses Gegenstands ist ein Fehler aufgetreten.",
 	"MyOrders_NoActiveOrders_Item": "Für diesen Gegenstand gibt es derzeit keine aktiven Aufträge.",
 	"MyOrders_NoBuyOrders_Item": "Für diesen Gegenstand gibt es derzeit keine aktiven Kaufaufträge.",

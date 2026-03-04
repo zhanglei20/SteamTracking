@@ -774,6 +774,9 @@ a:link {
   letter-spacing: var(--letter-spacing);
   font-style: normal;
 }
+._1vE-LsK6l_D_5yjbywZV1p:read-only {
+  cursor: default;
+}
 textarea._1vE-LsK6l_D_5yjbywZV1p {
   padding-top: var(--spacing-1);
   padding-bottom: var(--spacing-1);

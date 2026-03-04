@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Aktív ajánlataim",
 	"MyOrders_Heading_Sell": "Eladási ajánlatok",
 	"MyOrders_Heading_Buy": "Vételi ajánlatok",
+	"MyOrders_Heading_MyPurchaseOffers": "Vétel – Saját ajánlataim",
+	"MyOrders_Heading_MyListings": "Eladás – Saját ajánlataim",
 	"MyOrders_FailedToLoad": "Probléma adódott e tétel ajánlati adatainak betöltésekor.",
 	"MyOrders_NoActiveOrders_Item": "Nincsenek aktív ajánlataid erre a tételre.",
 	"MyOrders_NoBuyOrders_Item": "Nincsenek aktív vételi ajánlataid erre a tételre.",

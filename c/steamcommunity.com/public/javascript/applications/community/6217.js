@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Mina aktiva beställningar",
 	"MyOrders_Heading_Sell": "Säljbeställningar",
 	"MyOrders_Heading_Buy": "Köpbeställningar",
+	"MyOrders_Heading_MyPurchaseOffers": "Köp — mina erbjudanden",
+	"MyOrders_Heading_MyListings": "Sälj – mina annonser",
 	"MyOrders_FailedToLoad": "Det uppstod ett problem med att läsa in beställningsdata för den här artikeln.",
 	"MyOrders_NoActiveOrders_Item": "Du har inga aktiva beställningar för den här artikeln.",
 	"MyOrders_NoBuyOrders_Item": "Du har inga aktiva köpbeställningar för den här artikeln.",

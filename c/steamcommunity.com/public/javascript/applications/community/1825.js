@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Moje aktywne zamówienia",
 	"MyOrders_Heading_Sell": "Zlecenia sprzedaży",
 	"MyOrders_Heading_Buy": "Zlecenia zakupu",
+	"MyOrders_Heading_MyPurchaseOffers": "Zakup – moje oferty",
+	"MyOrders_Heading_MyListings": "Sprzedaż – moje ogłoszenia",
 	"MyOrders_FailedToLoad": "Wystąpił problem podczas ładowania danych zamówienia dla tego produktu.",
 	"MyOrders_NoActiveOrders_Item": "Nie masz aktywnych zleceń dla tego przedmiotu.",
 	"MyOrders_NoBuyOrders_Item": "Nie masz aktywnych zleceń zakupu dla tego przedmiotu.",

@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "有効な注文",
 	"MyOrders_Heading_Sell": "売り注文",
 	"MyOrders_Heading_Buy": "買い注文",
+	"MyOrders_Heading_MyPurchaseOffers": "購入－自分のオファー",
+	"MyOrders_Heading_MyListings": "販売－自分の出品",
 	"MyOrders_FailedToLoad": "このアイテムの注文データを読み込む際に問題が発生しました。",
 	"MyOrders_NoActiveOrders_Item": "このアイテムの有効な注文はありません。",
 	"MyOrders_NoBuyOrders_Item": "このアイテムの有効な買い注文はありません。",

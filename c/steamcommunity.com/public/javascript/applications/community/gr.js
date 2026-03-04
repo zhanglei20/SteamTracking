@@ -19170,9 +19170,6 @@
         BIsMod() {
           return this.GetType() === _._.k_EGameIDTypeGameMod;
         }
-        BIsP2PFile() {
-          return this.GetType() === _._.k_EGameIDTypeP2P;
-        }
         GetInternalAppID() {
           return this.BIsSteamApp() ? this.GetAppID() : this.GetModID();
         }
@@ -19181,11 +19178,11 @@
             case _._.k_EGameIDTypeApp:
               return this.GetAppID() !== _._;
             case _._.k_EGameIDTypeGameMod:
-              return this.GetAppID() !== _._ && 2147483648 & this.GetModID();
+              return (
+                this.GetAppID() !== _._ && !!(2147483648 & this.GetModID())
+              );
             case _._.k_EGameIDTypeShortcut:
               return !!(2147483648 & this.GetModID());
-            case _._.k_EGameIDTypeP2P:
-              return this.GetAppID() === _._ && 2147483648 & this.GetModID();
             default:
               return (0, _._)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
           }

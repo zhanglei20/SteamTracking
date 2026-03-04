@@ -1482,8 +1482,8 @@ GHomepage = {
 			}
 		}
 
-		$InfoCtn.append( $RecommendedReason );
 		$InfoCtn.append( $ScreenshotCtn );
+		$InfoCtn.append( $RecommendedReason );
 
 		// Discount block
 		let $PriceCtn = ( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline' ) : '' );
@@ -2229,6 +2229,15 @@ GHomepage = {
 				cColumnsUsed++;
 			}
 
+			if ( cColumnsUsed === 1 )
+			{
+				$Page.addClass( 'spotlight_single_column' );
+			}
+			else if ( cColumnsUsed === 2 )
+			{
+				$Page.addClass( 'spotlight_double_column' );
+			}
+
 			// next prefer daily deals
 			while ( rgDailyDeals.length && cColumnsUsed < 3 )
 			{
@@ -2243,7 +2252,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', { 'class': 'spotlight_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
+					$Col = $J('<div/>', { 'class': 'spotlight_col capsules_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
@@ -2270,14 +2279,19 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', { 'class': 'spotlight_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
+					$Col = $J('<div/>', { 'class': 'spotlight_col capsules_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
 				if ( $Spotlights.hasClass( 'v2' ) )
 				{
+					var rgItemData = GStoreItemData.GetCapParamsForItem( 'spotlight_specials', oItem, {} );
+					if ( !rgItemData )
+						continue;
+
 					$Col.append ( GHomepage.BuildHomePageCapsule( oItem, 'spotlight_specials', {
 						'discount_class': 'daily_deal_discount discount_block_large',
+						'capsule_size': 'header',
 						'disable_autosizer': true,
 						lazy: 1,
 					}, iPage + 1 ) );

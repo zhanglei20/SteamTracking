@@ -574,8 +574,8 @@
         P = s(56011),
         T = s(61859),
         D = s(30470),
-        N = s(56520),
-        I = s(43104),
+        I = s(56520),
+        N = s(43104),
         L = s(53930),
         E = s(83247),
         F = s(40236);
@@ -596,13 +596,13 @@
           [A, C] = (0, i.OP)(),
           v = (0, o.DF)(f || A, 250),
           [y, P, D] = (0, o.uD)(),
-          N = (0, u.FD)(),
+          I = (0, u.FD)(),
           L = p.useCallback(() => {
             r(), D();
           }, [r, D]),
           E = p.useMemo(
-            () => N.find((e) => (0, d.q3)(e).toLowerCase() === t.toLowerCase()),
-            [t, N],
+            () => I.find((e) => (0, d.q3)(e).toLowerCase() === t.toLowerCase()),
+            [t, I],
           ),
           M = E ? (0, d.q3)(E) : null,
           { elLocalizedImageGroupDialog: R, elLocalizedImageGroupControl: G } =
@@ -617,7 +617,7 @@
           const e = (0, d.IP)(E, _, m);
           if (e) {
             const t = (0, d.Bv)(E, m),
-              s = (0, k.A)(I.ExtraAssetImg, x && I.Selected);
+              s = (0, k.A)(N.ExtraAssetImg, x && N.Selected);
             H =
               1 == e.usage
                 ? (0, n.jsx)(
@@ -646,7 +646,7 @@
                   );
           } else
             H = (0, n.jsx)("span", {
-              className: I.ExtraAssetError,
+              className: N.ExtraAssetError,
               children: (0, T.we)(
                 "#StoreAdmin_GameDescription_MissingImageLanguage",
                 t,
@@ -654,7 +654,7 @@
             });
         } else
           H = (0, n.jsx)("span", {
-            className: I.ExtraAssetError,
+            className: N.ExtraAssetError,
             children: (0, T.we)("#StoreAdmin_GameDescription_MissingImage", t),
           });
         const [V, $] = p.useState(0),
@@ -688,10 +688,10 @@
             (0, n.jsxs)("div", {
               ref: Q,
               className: (0, k.A)({
-                [I.ExtraAssetImgTag]: !0,
-                [I.ExtraAssetControlsContainer]: !0,
-                [I.Hovered]: v,
-                [I.InDeprecatedLink]: s,
+                [N.ExtraAssetImgTag]: !0,
+                [N.ExtraAssetControlsContainer]: !0,
+                [N.Hovered]: v,
+                [N.InDeprecatedLink]: s,
               }),
               title: "",
               ...S,
@@ -699,7 +699,7 @@
                 s && (0, n.jsx)(O, {}),
                 (0, n.jsxs)("div", {
                   ref: X,
-                  className: (0, k.A)(I.ExtraAssetControls, Y && I.SmallImage),
+                  className: (0, k.A)(N.ExtraAssetControls, Y && N.SmallImage),
                   style: { left: J },
                   ...C,
                   children: [
@@ -761,15 +761,15 @@
       }
       function O() {
         return (0, n.jsx)("span", {
-          className: I.ImageLinkDisabledWarning,
+          className: N.ImageLinkDisabledWarning,
           children: (0, n.jsx)("span", {
-            className: I.TopBar,
+            className: N.TopBar,
             children: (0, n.jsx)(y.Gq, {
               toolTipContent: (0, T.we)(
                 "#StoreAdmin_GameDescription_ImageLinkDisabled_Description",
               ),
               children: (0, n.jsx)("span", {
-                className: I.TopBarContent,
+                className: N.TopBarContent,
                 children: "Disabled",
               }),
             }),
@@ -832,7 +832,7 @@
             (0, n.jsx)(A.x_, {
               onEscKeypress: r,
               children: (0, n.jsxs)(h.U9, {
-                classNameContent: I.ExtraAssetDialogContent,
+                classNameContent: N.ExtraAssetDialogContent,
                 children: [
                   (0, n.jsx)(h.Y9, {
                     children: (0, T.we)(
@@ -840,7 +840,7 @@
                     ),
                   }),
                   (0, n.jsxs)("div", {
-                    className: I.ExtraAssetsDialogDescription,
+                    className: N.ExtraAssetsDialogDescription,
                     children: [
                       (0, n.jsx)("div", {
                         children: (0, T.we)(
@@ -848,7 +848,7 @@
                         ),
                       }),
                       (0, n.jsxs)("div", {
-                        className: I.UploadButtonContainer,
+                        className: N.UploadButtonContainer,
                         children: [
                           (0, n.jsx)("div", {
                             children: (0, T.we)(
@@ -856,7 +856,7 @@
                             ),
                           }),
                           (0, n.jsx)(h.jn, {
-                            className: I.UploadButton,
+                            className: N.UploadButton,
                             onClick: m,
                             children: (0, T.we)(
                               "#StoreAdmin_ExtraAssetUpload_BrowseForFile",
@@ -867,7 +867,7 @@
                     ],
                   }),
                   (0, n.jsx)("div", {
-                    className: I.ExtraAssetSearch,
+                    className: N.ExtraAssetSearch,
                     children: (0, n.jsx)(h.pd, {
                       type: "text",
                       value: x,
@@ -879,11 +879,11 @@
                     }),
                   }),
                   (0, n.jsx)(h.nB, {
-                    className: I.ExtraAssetsGridDialog,
+                    className: N.ExtraAssetsGridDialog,
                     children: (0, n.jsx)("div", {
                       className: (0, k.A)(
-                        I.ExtraAssetsGrid,
-                        I.ExtraAssetsChooser,
+                        N.ExtraAssetsGrid,
+                        N.ExtraAssetsChooser,
                       ),
                       children: i
                         .filter((e) => (0, d.q3)(e).includes(x))
@@ -905,7 +905,7 @@
                     children: [
                       s &&
                         (0, n.jsx)(h.Yh, {
-                          className: I.ReplaceAllCheck,
+                          className: N.ReplaceAllCheck,
                           checked: _,
                           onChange: g,
                           label: (0, T.we)(
@@ -952,7 +952,7 @@
           }, []),
           (0, n.jsx)("div", {
             ref: i,
-            className: (0, k.A)(I.ExtraAssetChoice, r && I.Selected),
+            className: (0, k.A)(N.ExtraAssetChoice, r && N.Selected),
             title: o,
             onClick: (e) => s(o),
             onDoubleClick: (e) => a(o),
@@ -976,7 +976,7 @@
             children: (0, n.jsx)(A.x_, {
               onEscKeypress: a,
               children: (0, n.jsxs)(h.U9, {
-                classNameContent: I.LocalizeAssetDialogContent,
+                classNameContent: N.LocalizeAssetDialogContent,
                 children: [
                   (0, n.jsx)(h.Y9, {
                     children: (0, T.we)(
@@ -984,7 +984,7 @@
                     ),
                   }),
                   (0, n.jsx)("div", {
-                    className: I.LocalizeAssetsDialogDescription,
+                    className: N.LocalizeAssetsDialogDescription,
                     children: (0, n.jsx)("div", {
                       children: (0, T.we)(
                         "#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Desc",
@@ -1032,7 +1032,7 @@
                   rgAssetLangs: a,
                   initialLang: s,
                   showDeleteAll: !1,
-                  imageClassname: I.DisplayLocImage,
+                  imageClassname: N.DisplayLocImage,
                   fnGetAssetUrl: i,
                   fnDeletAssetLang: (e) => {
                     u(e), h();
@@ -1104,7 +1104,7 @@
           value: t,
           children: [
             x &&
-              (0, n.jsx)(N.B, {
+              (0, n.jsx)(I.B, {
                 entries: _,
                 isLoading: !1,
                 hideModal: f,
@@ -1122,7 +1122,7 @@
               }),
             i.some(d.pN) &&
               (0, n.jsxs)("div", {
-                className: I.AltTextBtn,
+                className: N.AltTextBtn,
                 children: [
                   (0, n.jsx)("p", {
                     children: (0, T.we)("#StoreAdmin_CustomImages_Title"),
@@ -1134,9 +1134,9 @@
                 ],
               }),
             (0, n.jsx)("div", {
-              className: I.ExtraAssetsPageList,
+              className: N.ExtraAssetsPageList,
               children: (0, n.jsx)("div", {
-                className: I.ExtraAssetsGrid,
+                className: N.ExtraAssetsGrid,
                 children: [...i].map((e) =>
                   (0, n.jsx)(
                     K,
@@ -1198,7 +1198,7 @@
               elOverrideDragAndDropText: m,
               elAdditonalButtons: (0, n.jsx)(n.Fragment, {
                 children: (0, n.jsx)("div", {
-                  className: I.InstructionsForLocAssets,
+                  className: N.InstructionsForLocAssets,
                   children: (0, T.we)(
                     "#StoreAdmin_ExtraAssetUpload_Instructions_Note",
                   ),
@@ -1265,7 +1265,7 @@
           v = (0, u.TQ)(),
           { elLocalizedImageGroupDialog: y, elLocalizedImageGroupControl: D } =
             B(t, null, null),
-          N = (e) => {
+          I = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           },
@@ -1296,16 +1296,16 @@
             (0, n.jsxs)("div", {
               ref: m,
               className: (0, k.A)(
-                I.ExtraAssetStack,
-                I.ExtraAssetControlsContainer,
-                _ && I.Hovered,
+                N.ExtraAssetStack,
+                N.ExtraAssetControlsContainer,
+                _ && N.Hovered,
               ),
               title: S,
               children: [
                 h && (0, n.jsx)(q, { extraAsset: t, hideModal: x }),
                 a &&
                   (0, n.jsxs)("div", {
-                    className: I.ExtraAssetControls,
+                    className: N.ExtraAssetControls,
                     title: "",
                     children: [
                       D,
@@ -1353,15 +1353,15 @@
                     ],
                   }),
                 (0, n.jsx)("div", {
-                  className: I.StackedImageCtn,
+                  className: N.StackedImageCtn,
                   children: A.map((e, t) =>
                     1 == e.usage
                       ? (0, n.jsx)(
                           "video",
                           {
                             className: (0, k.A)(
-                              I.StackedImage,
-                              I[`Image-${t}`],
+                              N.StackedImage,
+                              N[`Image-${t}`],
                             ),
                             src: e.url + "?t=" + f,
                             onDoubleClick: a ? C : void 0,
@@ -1369,7 +1369,7 @@
                             loop: !0,
                             playsInline: !0,
                             autoPlay: !0,
-                            onClick: N,
+                            onClick: I,
                           },
                           e.url + t,
                         )
@@ -1377,8 +1377,8 @@
                           "img",
                           {
                             className: (0, k.A)(
-                              I.StackedImage,
-                              I[`Image-${t}`],
+                              N.StackedImage,
+                              N[`Image-${t}`],
                             ),
                             src: e.url + "?t=" + f,
                             onDoubleClick: a ? C : void 0,
@@ -1389,7 +1389,7 @@
                 }),
                 s &&
                   (0, n.jsx)("div", {
-                    className: I.ExtraAssetName,
+                    className: N.ExtraAssetName,
                     children: (0, d.K7)(t),
                   }),
               ],
@@ -2903,8 +2903,8 @@
         P = s(60863),
         T = s(92503),
         D = s(71696),
-        N = s(76217),
-        I = s(63512),
+        I = s(76217),
+        N = s(63512),
         L = s(73170),
         E = s(29287),
         F = s(37834),
@@ -3330,7 +3330,7 @@
                 }
               }, [s, e]),
               a = S.useCallback((e) => e.currentTarget == e.target, []),
-              r = (0, I.ak)(t, null, null, a);
+              r = (0, N.ak)(t, null, null, a);
             return { refDiv: t, onActivate: n, onGamepadDirection: r };
           })(p),
           x = (0, Z.Ue)(_, u);
@@ -3341,7 +3341,7 @@
           pmState: t,
           children: [
             (0, n.jsx)(
-              N.Z,
+              I.Z,
               {
                 className: (0, G.A)({
                   ["" + s]: !!s,
@@ -4112,8 +4112,8 @@
         } = V.nodes,
         {
           strong: De,
-          italic: Ne,
-          underline: Ie,
+          italic: Ie,
+          underline: Ne,
           link: Le,
           strike: Ee,
         } = V.marks;
@@ -4208,8 +4208,8 @@
                   },
                   marks: {
                     strong: De,
-                    italic: Ne,
-                    underline: Ie,
+                    italic: Ie,
+                    underline: Ne,
                     strike: Ee,
                     link: {
                       ...Le,
@@ -4562,14 +4562,14 @@
             rctLanguageSelect: P,
             mapValues: T,
           } = (0, g.eE)(v),
-          [D, N] = a.useState(new Map()),
-          [I, L] = a.useState(new Map());
+          [D, I] = a.useState(new Map()),
+          [N, L] = a.useState(new Map());
         a.useEffect(() => {
           const e = new Map(),
             t = new Map();
           for (const n of s)
             e.set(n.key, structuredClone(n)), t.set(n.key, structuredClone(n));
-          N(e), L(t);
+          I(e), L(t);
         }, [s]);
         const E = a.useCallback(() => {
           for (const e of v.keys()) {
@@ -4696,14 +4696,14 @@
                             try {
                               M.clear();
                               for (const [e, t] of D.entries()) {
-                                if (f(t.mapAltText, I.get(e).mapAltText))
+                                if (f(t.mapAltText, N.get(e).mapAltText))
                                   continue;
                                 const s = { ...t.mapAltText };
                                 for (const n of Object.keys(
-                                  I.get(e).mapAltText ?? {},
+                                  N.get(e).mapAltText ?? {},
                                 ))
                                   n in t.mapAltText || (s[n] = "");
-                                (await A(e, s)) ? I.set(e, { ...t }) : M.add(e);
+                                (await A(e, s)) ? N.set(e, { ...t }) : M.add(e);
                               }
                               x?.(), 0 == M.size && t();
                             } catch (e) {
@@ -4711,7 +4711,7 @@
                             }
                           })();
                       },
-                      bOKDisabled: B || S(D, I),
+                      bOKDisabled: B || S(D, N),
                       bCancelDisabled: B,
                       strOKText: (0, u.we)("#StoreAdmin_EditAltText_Save"),
                     }),
@@ -4803,7 +4803,7 @@
       s.d(t, {
         _M: () => D,
         aJ: () => B,
-        FD: () => I,
+        FD: () => N,
         L4: () => L,
         Z3: () => E,
         cz: () => F,
@@ -4953,10 +4953,10 @@
             t.activeLanguage,
           ),
           [T, D] = o.useState(P),
-          [N, I] = o.useState(void 0),
+          [I, N] = o.useState(void 0),
           E = r.name;
         o.useEffect(() => {
-          I(() => {
+          N(() => {
             if (!j) return;
             const { baseFilename: e } = (0, x.jj)(j),
               t = u.find((t) => (0, i.K7)(t) == e);
@@ -4975,7 +4975,7 @@
           M = o.useCallback(() => {
             t.onComplete((0, i.TQ)(j));
           }, [t, j]),
-          B = N
+          B = I
             ? (0, _.we)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
             : (0, _.we)("#Button_Upload");
         return (0, n.jsx)(c.mt, {
@@ -4995,7 +4995,7 @@
                   (0, n.jsx)(v, {
                     file: r,
                     isVideo: k(r),
-                    duplicate: N,
+                    duplicate: I,
                     bShowThrobber: s,
                     onUseDuplicate: M,
                   }),
@@ -5138,7 +5138,7 @@
             ),
             [],
           );
-        return (0, n.jsx)(N, {
+        return (0, n.jsx)(I, {
           queueExtraAssetUpload: i,
           children: (0, n.jsx)(z, {
             children: (0, n.jsxs)(P.jy, {
@@ -5147,7 +5147,7 @@
           }),
         });
       }
-      function N(e) {
+      function I(e) {
         const { children: t, queueExtraAssetUpload: s } = e,
           [a, i] = o.useState(void 0),
           [l, c] = o.useState([]),
@@ -5202,7 +5202,7 @@
           );
         return a ? (0, n.jsx)(U, { value: m, children: t }) : null;
       }
-      function I(e = !1) {
+      function N(e = !1) {
         const t = o.useContext(U).rgExtraAssetsData.rgExtraAssets;
         return o.useMemo(() => (e ? [...t].reverse() : t), [t, e]);
       }
@@ -5997,7 +5997,7 @@
           leftColumnContent: s,
         });
       }
-      function N(e) {
+      function I(e) {
         const { appid: t, onClose: s, onCommit: i, params: o } = e,
           [l, c] = a.useState(o),
           [d, u] = a.useState(o),
@@ -6065,7 +6065,7 @@
             strHeaderText: (0, r.we)("#ControllerSupportModal_Title"),
           }),
           f = 4 == _;
-        return (0, n.jsx)(I.Provider, {
+        return (0, n.jsx)(N.Provider, {
           value: d,
           children: (0, n.jsx)(F, {
             fnNext: f
@@ -6104,7 +6104,7 @@
             (e[(e.k_eNoSteamInputAPISupport = 1)] =
               "k_eNoSteamInputAPISupport");
         })(A || (A = {}));
-      const I = a.createContext(null);
+      const N = a.createContext(null);
       function L(e) {
         const { nPages: t, nPageIdx: s, strHeaderText: a } = e,
           i = (100 * (s + 1)) / (t + 1);
@@ -6212,7 +6212,7 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             s &&
-              (0, n.jsx)(N, { appid: t, onClose: u, onCommit: u, params: e }),
+              (0, n.jsx)(I, { appid: t, onClose: u, onCommit: u, params: e }),
             (0, n.jsxs)(C.nB, {
               children: [
                 (0, n.jsx)("div", {
@@ -6589,7 +6589,7 @@
         fe = s(24655),
         Se = s(95695),
         Ae = s.n(Se),
-        Ce = s(47715),
+        Ce = s(75753),
         je = s(56654),
         we = s(38135),
         ve = s(22797),
@@ -6775,13 +6775,13 @@
                       (0, n.jsx)(Ue, { oFeatured: l, fnSetFeatured: c }),
                     ],
                   }),
-                (0, n.jsx)(Ne, { oFeatured: l }),
+                (0, n.jsx)(Ie, { oFeatured: l }),
               ],
             }),
           ],
         });
       }
-      function Ne(e) {
+      function Ie(e) {
         const { oFeatured: t } = e,
           [s, r] = (0, a.useState)(() => t?.featured_appids?.length || 0);
         (0, a.useEffect)(() => {
@@ -6870,7 +6870,7 @@
           ],
         });
       }
-      const Ie = { include_assets: !0, include_release: !0 };
+      const Ne = { include_assets: !0, include_release: !0 };
       function Le(e) {
         const {
             creatorHomeClanAccountID: t,
@@ -6881,7 +6881,7 @@
           l = (0, ge.a)(),
           [c, d] = (0, a.useState)(null),
           u = (0, he.id)(l, t, !0),
-          p = (0, be.zX)(u, Ie),
+          p = (0, be.zX)(u, Ne),
           m = (0, a.useMemo)(
             () =>
               1 != p && u
@@ -7049,7 +7049,7 @@
       }
       function Me(e) {
         const { appid: t, elEditor: s, creatorClanID: i } = e,
-          [o] = (0, be.t7)(t, Ie),
+          [o] = (0, be.t7)(t, Ne),
           l = (0, a.useMemo)(() => ({ id: t, type: "game" }), [t]),
           c = (0, a.useMemo)(() => Be(i), [i]);
         return (0, n.jsxs)("div", {
@@ -8009,8 +8009,8 @@
         Pt = s(95034),
         Tt = s(76501),
         Dt = s(48479);
-      const Nt = { include_release: !0 };
-      var It = s(29903);
+      const It = { include_release: !0 };
+      var Nt = s(29903);
       function Lt(e) {
         const t = new Array();
         return (
@@ -8037,7 +8037,7 @@
           ?.amount;
       }
       function Ft(e, t, s, n, a, r) {
-        n.price * It.Oo < t.amount.amount
+        n.price * Nt.Oo < t.amount.amount
           ? a.push({
               strCurrency: s
                 ? (0, Tt.k8)(s)
@@ -8048,7 +8048,7 @@
               nGuidancePrice: n.price,
               nOriginalPrice: Et(e, s, t.amount.currency_code),
             })
-          : n.price / It.Oo > t.amount.amount &&
+          : n.price / Nt.Oo > t.amount.amount &&
             r.push({
               strCurrency: s
                 ? (0, Tt.k8)(s)
@@ -8098,7 +8098,7 @@
           { fnAcceptProposal: i } = vt(),
           [o, l] = (0, a.useState)(!1),
           [c, d] = (0, a.useState)(null),
-          [u] = (0, be.Gg)(t.packageid, Nt);
+          [u] = (0, be.Gg)(t.packageid, It);
         return o
           ? (0, n.jsx)("div", {
               children: (0, n.jsx)(ve.t, {
@@ -8451,8 +8451,8 @@
       var rs = s(3049);
       function is(e) {
         const { proposal: t, mapPartnerPaidByPackage: s } = e,
-          [a] = (0, be.Gg)(t.packageid, Nt),
-          [i] = (0, be.Gg)(a?.GetIncludedAppIDsOrSelf()?.[0], Nt),
+          [a] = (0, be.Gg)(t.packageid, It),
+          [i] = (0, be.Gg)(a?.GetIncludedAppIDsOrSelf()?.[0], It),
           o = `${St.TS.PARTNER_BASE_URL}store/packagelanding/${t.packageid}`;
         return (0, n.jsxs)("div", {
           className: (0, c.A)($t.PackageInfoColumn, Ot.PackageInfoColumn),
@@ -9087,7 +9087,7 @@
       }
       function ks(e) {
         const { proposal: t } = e,
-          [s] = (0, be.Gg)(t.packageid, Nt);
+          [s] = (0, be.Gg)(t.packageid, It);
         return s && Bt(s)
           ? (0, n.jsxs)("div", {
               className: Ot.ReleaseDateCallout,
@@ -9130,7 +9130,7 @@
                 {
                   children: [
                     (0, n.jsx)("hr", {}),
-                    (0, n.jsx)(Ns, {
+                    (0, n.jsx)(Is, {
                       oGuideline: s,
                       proposal: e,
                       mapCurrentPrices: a,
@@ -9156,18 +9156,18 @@
           ],
         });
       }
-      function Ns(e) {
+      function Is(e) {
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
               className: $t.RowCtn,
               children: [(0, n.jsx)(is, { ...e }), (0, n.jsx)(ps, { ...e })],
             }),
-            (0, n.jsx)(Is, { ...e }),
+            (0, n.jsx)(Ns, { ...e }),
           ],
         });
       }
-      function Is(e) {
+      function Ns(e) {
         const { proposal: t } = e,
           s = t.proposed_prices.country_amounts;
         return s?.length > 0
@@ -10471,7 +10471,7 @@
             })
           : (0, n.jsx)("span", { children: t.name });
       }
-      function Nn(e) {
+      function In(e) {
         const {
             mileStone: t,
             index: s,
@@ -10503,7 +10503,7 @@
           (0, n.jsxs)("div", {
             className: (0, c.A)(wn().EditBtn, Cn().BtnCtn),
             children: [
-              d && (0, n.jsx)(In, { hideModal: p, bCreate: i, ...e, ...g }),
+              d && (0, n.jsx)(Nn, { hideModal: p, bCreate: i, ...e, ...g }),
               !i && g.rctHiddenInputs,
               (0, n.jsxs)(C.$n, {
                 onClick: u,
@@ -10519,7 +10519,7 @@
           })
         );
       }
-      function In(e) {
+      function Nn(e) {
         const {
             hideModal: t,
             seasonPassID: s,
@@ -10542,8 +10542,8 @@
           [y] = (0, a.useState)(i?.milestone_desc || {}),
           [k, P] = (0, a.useState)(i?.coming_soon_appid),
           [T, D] = (0, a.useState)(Boolean(i?.backfilled_release)),
-          N = (0, a.useRef)(void 0),
-          [I, L] = (0, a.useState)(!1),
+          I = (0, a.useRef)(void 0),
+          [N, L] = (0, a.useState)(!1),
           E = (0, a.useMemo)(
             () =>
               m
@@ -10713,16 +10713,16 @@
                         ],
                       }),
                       (0, n.jsx)(C.Yh, {
-                        ref: N,
+                        ref: I,
                         label: (0, r.we)("#SeasonPass_Backfill_check"),
                         tooltip: (0, r.we)("#SeasonPass_Backfill_check_ttip"),
                         onChange: (e) => {
                           let t = !(!e && f < g);
-                          L(!t), t ? D(e) : N.current.SetChecked(!0, !1);
+                          L(!t), t ? D(e) : I.current.SetChecked(!0, !1);
                         },
                         checked: T,
                       }),
-                      I &&
+                      N &&
                         (0, n.jsx)("div", {
                           className: Qt.WarningStylesWithIcon,
                           children: (0, r.we)("#SeasonPass_Backfill_warning"),
@@ -11296,7 +11296,7 @@
                     index: s,
                     rgShippedMilestoneIDs: m,
                   }),
-                  (0, n.jsx)(Nn, {
+                  (0, n.jsx)(In, {
                     milestoneID: _.milestone_id,
                     mileStone: _,
                     onSave: h,
@@ -11503,7 +11503,7 @@
                 }),
                 (0, n.jsx)("div", {
                   className: Cn().MilestoneButton,
-                  children: (0, n.jsx)(Nn, {
+                  children: (0, n.jsx)(In, {
                     onSave: s,
                     milestoneID: a,
                     index: i,
@@ -12869,7 +12869,7 @@
       var Pa = s(56545),
         Ta = s(39862);
       const Da = "useCreatorHomeClanLinksByApp";
-      function Na(e) {
+      function Ia(e) {
         const t = (0, ge.a)(),
           s = (0, ze.I)({
             queryKey: [Da, e],
@@ -12891,7 +12891,7 @@
           });
         return s.isLoading ? null : s.data;
       }
-      var Ia = s(64177),
+      var Na = s(64177),
         La = s(59403),
         Ea = s(7860);
       function Fa() {
@@ -13197,7 +13197,7 @@
           [l, c] = (0, a.useState)(() => i),
           d = (function (e, t) {
             const [s, n] = (0, a.useState)(() => (t > 0 ? t : null)),
-              r = (0, Ia.O4)(s > 0 ? null : e);
+              r = (0, Na.O4)(s > 0 ? null : e);
             return (
               (0, a.useEffect)(() => {
                 !s && r?.length > 0 && n(r[0].partner_id);
@@ -13205,7 +13205,7 @@
               s
             );
           })(t, s),
-          p = Na(t),
+          p = Ia(t),
           m = p?.find(
             (e) =>
               e.linkname.trim().toLocaleLowerCase() ==
@@ -13398,7 +13398,7 @@
         er = s.n(Za);
       function tr(e) {
         const { nAppID: t, rgAllCreatorHomeNames: s, nPrimaryPartnerID: i } = e,
-          o = Na(t),
+          o = Ia(t),
           l = (0, a.useMemo)(
             () =>
               o
@@ -13715,7 +13715,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_Gameplay",
               ),
@@ -13772,7 +13772,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
               ),
@@ -13836,7 +13836,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_Feature_PlayableWithoutVision",
               ),
@@ -13892,7 +13892,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
               ),
@@ -13952,7 +13952,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio",
               ),
@@ -14019,7 +14019,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_Visual",
               ),
@@ -14094,7 +14094,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_Input",
               ),
@@ -14153,7 +14153,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents",
               ),
@@ -14223,7 +14223,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText",
               ),
@@ -14271,7 +14271,7 @@
         return (0, n.jsxs)("div", {
           className: _r.WizardContainer,
           children: [
-            (0, n.jsx)(Ir, {
+            (0, n.jsx)(Nr, {
               subtitle: (0, r.we)(
                 "#App_Landing_AccessibilityFeatures_Wizard_Summary",
               ),
@@ -14583,7 +14583,7 @@
               nPageIndex: d,
               bEditMode: i,
               children: [
-                (0, n.jsx)(Nr, { nPages: p.length }),
+                (0, n.jsx)(Ir, { nPages: p.length }),
                 (0, n.jsx)(C.nB, {
                   className: _r.WizardBody,
                   children: (0, n.jsx)(b, {}),
@@ -14600,7 +14600,7 @@
           ],
         });
       }
-      function Nr(e) {
+      function Ir(e) {
         const { nPages: t } = e,
           { nPageIndex: s } = Pr(),
           a = (100 * (s + 1)) / (t + 1);
@@ -14627,7 +14627,7 @@
           ],
         });
       }
-      function Ir(e) {
+      function Nr(e) {
         const { nPageIndex: t, bEditMode: s } = Pr();
         return s
           ? null
@@ -15258,64 +15258,65 @@
     },
     71696: (e, t, s) => {
       "use strict";
-      s.d(t, { Xv: () => b, pw: () => f, Y0: () => S });
+      s.d(t, { Xv: () => f, pw: () => S, Y0: () => A });
       var n = s(7850),
         a = s(81393),
-        r = s(21479),
-        i = s(52893),
-        o = s(29287),
-        l = s(90626);
-      var c = s(72739),
-        d = s(78395),
-        u = s(21869),
-        p = s(22797),
-        m = s(6144),
-        _ = s(61859),
-        h = s(27650),
-        g = s(64753),
-        x = s(73309);
-      function b(e) {
+        r = s(20737),
+        i = s(21479),
+        o = s(52893),
+        l = s(29287),
+        c = s(90626);
+      var d = s(72739),
+        u = s(78395),
+        p = s(21869),
+        m = s(22797),
+        _ = s(6144),
+        h = s(61859),
+        g = s(27650),
+        x = s(64753),
+        b = s(73309);
+      function f(e) {
         const {
             children: t,
             ProcessFileUpload: s,
             FetchImageURL: a,
             bAllowImageHotLinking: r = !1,
           } = e,
-          [i] = l.useState(() => ({ manager: new j(s, a, r) })),
+          [i] = c.useState(() => ({ manager: new w(s, a, r) })),
           { manager: o } = i;
         return (
           o.SetProps(s, a, r),
-          (0, n.jsxs)(w.Provider, {
+          (0, n.jsxs)(v.Provider, {
             value: i,
             children: [
-              (0, n.jsx)(y, { manager: o }),
-              (0, n.jsx)(k, { manager: o, children: t }),
+              (0, n.jsx)(k, { manager: o }),
+              (0, n.jsx)(P, { manager: o, children: t }),
             ],
           })
         );
       }
-      const f = l.memo(function (e) {
+      const S = c.memo(function (e) {
         const { nodeType: t } = e,
-          s = v(),
+          s = y(),
           {
             placeholderElements: a,
-            createPlaceholder: c,
+            createPlaceholder: r,
             replacePlaceholder: d,
           } = (function (e, t = "PlaceholderPlugin") {
-            const [s, n] = l.useState([]),
-              [a] = l.useState(
+            const [s, n] = c.useState([]),
+              [a] = c.useState(
                 () =>
-                  new i.k_({
-                    key: new i.hs(t),
+                  new o.k_({
+                    key: new o.hs(t),
                     state: {
-                      init: () => o.zF.empty,
+                      init: () => l.zF.empty,
                       apply(t, s) {
                         s = s.map(t.mapping, t.doc);
                         const a = t.getMeta(this) || [];
                         for (const r of a)
                           if (r?.add) {
                             const { id: a, data: i } = r.add,
-                              l = (t, s) => {
+                              o = (t, s) => {
                                 const r = document.createElement(e);
                                 return (
                                   n((e) => [
@@ -15328,7 +15329,7 @@
                               c = (e) => {
                                 n((t) => t.filter((t) => t.element != e));
                               },
-                              d = o.NZ.widget(r.add.pos, l, {
+                              d = l.NZ.widget(r.add.pos, o, {
                                 id: a,
                                 destroy: c,
                               });
@@ -15352,51 +15353,51 @@
                     },
                   }),
               );
-            (0, r.c$)(a);
-            const c = (0, r.Hd)(),
-              d = l.useRef(0),
-              u = l.useCallback(
+            (0, i.c$)(a);
+            const r = (0, i.Hd)(),
+              d = c.useRef(0),
+              u = c.useCallback(
                 (e, s, n) => {
-                  const r = `${t}_${d.current++}`;
-                  let i = n || c.state.tr;
+                  const i = `${t}_${d.current++}`;
+                  let o = n || r.state.tr;
                   void 0 === s &&
-                    (i.selection.empty || i.deleteSelection(),
-                    (s = i.selection.from));
-                  const o = n?.getMeta(a) || [];
+                    (o.selection.empty || o.deleteSelection(),
+                    (s = o.selection.from));
+                  const l = n?.getMeta(a) || [];
                   return (
-                    i.setMeta(a, [...o, { add: { id: r, pos: s, data: e } }]),
-                    n || c.dispatch(i),
-                    r
+                    o.setMeta(a, [...l, { add: { id: i, pos: s, data: e } }]),
+                    n || r.dispatch(o),
+                    i
                   );
                 },
-                [a, t, c],
+                [a, t, r],
               ),
-              p = l.useCallback(
+              p = c.useCallback(
                 (e) => {
-                  const t = a.getState(c.state),
+                  const t = a.getState(r.state),
                     s = t?.find(void 0, void 0, (t) => t.id == e);
                   return s?.length ? s[0].from : void 0;
                 },
-                [c, a],
+                [r, a],
               ),
-              m = l.useCallback(
+              m = c.useCallback(
                 (e, t) => {
                   const s = p(e);
                   return (
                     !!s &&
                     (t
-                      ? c.dispatch(
-                          c.state.tr
+                      ? r.dispatch(
+                          r.state.tr
                             .replaceWith(s, s, t)
                             .setMeta(a, [{ remove: { id: e } }]),
                         )
-                      : c.dispatch(
-                          c.state.tr.setMeta(a, [{ remove: { id: e } }]),
+                      : r.dispatch(
+                          r.state.tr.setMeta(a, [{ remove: { id: e } }]),
                         ),
                     !0)
                   );
                 },
-                [a, p, c],
+                [a, p, r],
               );
             return {
               placeholderElements: s,
@@ -15406,17 +15407,21 @@
             };
           })("span", "FileUploadPlaceholder");
         !(function (e, t) {
-          (0, r.c$)(
-            l.useMemo(
+          (0, i.c$)(
+            c.useMemo(
               () =>
-                new i.k_({
+                new o.k_({
                   props: {
                     handlePaste(s, n, a) {
-                      if (e.BAllowImageHotLinking()) return !1;
                       const r = [];
                       if (
-                        (a.content.descendants((e, s) => {
-                          e.type == t && r.push({ url: e.attrs.src, pos: s });
+                        (a.content.descendants((s, n) => {
+                          if (s.type == t) {
+                            const t = s.attrs.src;
+                            (!t.startsWith("data:") &&
+                              e.BAllowImageHotLinking()) ||
+                              r.push({ url: t, pos: n });
+                          }
                         }),
                         r.length)
                       ) {
@@ -15438,6 +15443,7 @@
                           !0
                         );
                       }
+                      return !1;
                     },
                     handleDOMEvents: {
                       paste(t, s) {
@@ -15455,63 +15461,63 @@
             ),
           );
         })(s, t);
-        const u = (0, r.Hd)();
+        const u = (0, i.Hd)();
         return (
-          l.useEffect(() => s.RegisterEditor(u, c, d), [s, u, c, d]),
+          c.useEffect(() => s.RegisterEditor(u, r, d), [s, u, r, d]),
           (0, n.jsx)(n.Fragment, {
             children: a.map(({ id: e, element: t, data: s }) =>
-              (0, n.jsx)(C, { element: t, data: s }, e),
+              (0, n.jsx)(j, { element: t, data: s }, e),
             ),
           })
         );
       });
-      function S(e, t) {
-        const s = v(),
-          n = l.useCallback(
+      function A(e, t) {
+        const s = y(),
+          n = c.useCallback(
             (t) => {
               for (const e of t) s.UploadFile(e);
               e && e();
             },
             [s, e],
           );
-        return (0, h.Ss)(n, { multiple: !0, accept: t });
+        return (0, g.Ss)(n, { multiple: !0, accept: t });
       }
-      class A extends Error {
+      class C extends Error {
         constructor(e) {
           super(e);
         }
       }
-      function C(e) {
+      function j(e) {
         const { element: t, data: s } = e,
           a = "file" in s ? s.file : void 0,
-          r = l.useMemo(() => a && URL.createObjectURL(a), [a]),
+          r = c.useMemo(() => a && URL.createObjectURL(a), [a]),
           i = "url" in s ? s.url : r,
-          o = a.type.startsWith("video/");
-        return c.createPortal(
+          o = a?.type.startsWith("video/");
+        return d.createPortal(
           (0, n.jsxs)("span", {
-            className: x.FileUploadPlaceholder,
+            className: b.FileUploadPlaceholder,
             children: [
               (0, n.jsx)("div", {
-                className: x.ThrobberCtn,
+                className: b.ThrobberCtn,
                 children: (0, n.jsxs)("div", {
-                  className: x.ThrobberRow,
+                  className: b.ThrobberRow,
                   children: [
                     (0, n.jsx)("div", {
-                      className: x.Throbber,
-                      children: (0, n.jsx)(p.t, {
+                      className: b.Throbber,
+                      children: (0, n.jsx)(m.t, {
                         size: "medium",
                         position: "center",
                       }),
                     }),
-                    (0, _.we)("#Prosemirror_FileUpload_Uploading"),
+                    (0, h.we)("#Prosemirror_FileUpload_Uploading"),
                   ],
                 }),
               }),
-              !o && (0, n.jsx)("img", { src: i, className: x.PendingImage }),
+              !o && (0, n.jsx)("img", { src: i, className: b.PendingImage }),
               o &&
                 (0, n.jsx)("video", {
                   src: i,
-                  className: x.PendingImage,
+                  className: b.PendingImage,
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
@@ -15522,11 +15528,11 @@
           t,
         );
       }
-      class j {
+      class w {
         m_fnProcessFileUpload;
         m_fnFetchImageURL;
         m_bAllowImageHotLinking;
-        m_errors = (0, m.Jc)([]);
+        m_errors = (0, _.Jc)([]);
         m_view;
         m_fnCreatePlaceholder;
         m_fnReplacePlaceholder;
@@ -15586,14 +15592,58 @@
           if (
             ((this.m_fnCreatePlaceholder && this.m_fnReplacePlaceholder) ||
               this.AddError("No editor registered to handle file upload"),
-            !this.m_fnFetchImageURL)
-          )
-            return void console.warn(
-              "The file upload manager does not have a way to fetch image URLs, so we cannot accept pasted <img> tags.",
+            console.log(`QueueUploadFileByURL: ${e} at pos ${t}`),
+            e.startsWith("data:"))
+          ) {
+            const n = this.m_fnCreatePlaceholder({ url: e }, t, s);
+            return this.ProcessDataURL(e, n), !0;
+          }
+          if (this.m_fnFetchImageURL) {
+            const n = this.m_fnCreatePlaceholder({ url: e }, t, s);
+            return this.FetchURLAndProcess(e, n), !0;
+          }
+          return (
+            (0, a.wT)(
+              this.m_bAllowImageHotLinking,
+              "A URL was posted but we don't have a fnFetchImageURL to process it",
+            ),
+            !1
+          );
+        }
+        async ProcessDataURL(e, t) {
+          const [s, n] = e.split(","),
+            a = s.match(/^data:(?<mimetype>[^;]*);(?<encoding>.*)$/);
+          if (!a || "base64" != a.groups.encoding)
+            return void this.AddError(
+              `Unable to data URL, unexpected format: ${s}`,
             );
-          console.log(`QueueUploadFileByURL: ${e} at pos ${t}`);
-          const n = this.m_fnCreatePlaceholder({ url: e }, t, s);
-          this.FetchURLAndProcess(e, n);
+          const i = a?.groups.mimetype,
+            o = (function (e) {
+              switch (e) {
+                case "image/jpeg":
+                  return "jpg";
+                case "image/png":
+                  return "png";
+                case "image/gif":
+                  return "gif";
+                case "image/webp":
+                  return "webp";
+                case "video/mp4":
+                  return "mp4";
+                case "video/webm":
+                  return "webm";
+                default:
+                  return;
+              }
+            })(i);
+          if (!o)
+            return void this.AddError(`Unsupported MIME type for image: ${i}`);
+          const l = atob(n),
+            c = new Uint8Array(l.length);
+          for (let e = 0; e < l.length; e++) c[e] = l.charCodeAt(e);
+          const d = await r.C(c.buffer),
+            u = new File([c], `upload_${d}.${o}`, { type: i });
+          await this.ProcessFile(u, t);
         }
         async FetchURLAndProcess(e, t) {
           try {
@@ -15616,7 +15666,7 @@
             console.log(`Processing file upload: "${e.name}"`),
               (s = await this.m_fnProcessFileUpload(e));
           } catch (e) {
-            e instanceof A
+            e instanceof C
               ? this.AddError(e.message)
               : this.AddError(`Error proccessing file upload: ${e}`);
           }
@@ -15625,40 +15675,40 @@
             : this.m_fnReplacePlaceholder(t);
         }
       }
-      const w = l.createContext(void 0);
-      function v() {
-        return l.useContext(w).manager;
+      const v = c.createContext(void 0);
+      function y() {
+        return c.useContext(v).manager;
       }
-      const y = l.memo(function (e) {
+      const k = c.memo(function (e) {
         const { manager: t } = e,
-          s = (0, g.gc)(t.GetErrors());
+          s = (0, x.gc)(t.GetErrors());
         return s.length
-          ? (0, n.jsx)(u.E, {
+          ? (0, n.jsx)(p.E, {
               active: !0,
-              children: (0, n.jsx)(d.o0, {
+              children: (0, n.jsx)(u.o0, {
                 bAlertDialog: !0,
-                strTitle: (0, _.we)("#Error_Generic"),
+                strTitle: (0, h.we)("#Error_Generic"),
                 strDescription: s.map((e, t) =>
                   (0, n.jsx)("div", { children: e }, t),
                 ),
-                strOKButtonText: (0, _.we)("#Button_OK"),
+                strOKButtonText: (0, h.we)("#Button_OK"),
                 onOK: () => t.ClearErrors(),
                 onCancel: () => t.ClearErrors(),
               }),
             })
           : null;
       });
-      function k(e) {
+      function P(e) {
         const { manager: t, children: s } = e,
-          n = l.useCallback(
+          n = c.useCallback(
             (e, s) => {
               for (const n of e)
                 t.UploadFile(n, t.GetViewPosition(s.clientX, s.clientY));
             },
             [t],
           ),
-          [a, r] = (0, h.hk)(n);
-        return l.cloneElement(s, { ...a, ...s.props });
+          [a, r] = (0, g.hk)(n);
+        return c.cloneElement(s, { ...a, ...s.props });
       }
     },
     30175: (e, t, s) => {

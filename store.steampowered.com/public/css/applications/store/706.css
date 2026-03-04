@@ -1057,6 +1057,10 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   grid-template-rows: auto min-content min-content auto;
   grid-template-areas: "title title" "bundle bundle" "platform platform" "price price";
 }
+.v9uRg57bwOaPsvAnkXESO._2GbhLyknhFLhpEOlbBXC3z ._2s-O5T3qJJYR2AUq4b9jIN {
+  background: #344654b9;
+  color: var(--color-text-light-subtitle, #d6d9dc);
+}
 .v9uRg57bwOaPsvAnkXESO._2GbhLyknhFLhpEOlbBXC3z ._3rrH9dPdtHVRMzAEw82AId {
   display: flex;
 }
@@ -1214,6 +1218,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 ._2s-O5T3qJJYR2AUq4b9jIN {
   display: flex;
   height: 38px;
+  width: fit-content;
   padding: 0px;
   position: relative;
   cursor: default;
@@ -1368,6 +1373,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
   padding-right: 8px;
   padding-left: 8px;
 }
@@ -1489,6 +1495,16 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   border-radius: 2px;
   padding: 0px 10px;
   box-shadow: 1px 1px 3px #000;
+}
+@media screen and (max-width: 910px) {
+  ._1Fru-E7WQMr8G_aR2sMg5F {
+    position: relative;
+    top: unset;
+  }
+  ._1Fru-E7WQMr8G_aR2sMg5F span {
+    align-content: center;
+    box-shadow: unset;
+  }
 }
 .BasicUI ._1Fru-E7WQMr8G_aR2sMg5F {
   color: #59bf40;
@@ -2192,6 +2208,15 @@ html.touch
   ._1_P15GG6AKyF_NMX2j4-Mu
   ._2hhNOdcC6yLwL_rugP3YLf
   ._111nfdz8Xyg7lDjTWv_OmK
+  .yvqq8z2k4i7-Mzx-JHeNC {
+  width: 100%;
+  aspect-ratio: 460 / 215;
+  background: linear-gradient(313deg, #00000096, #00000052);
+}
+.gASJ2lL_xmVNuZkWGvrWg
+  ._1_P15GG6AKyF_NMX2j4-Mu
+  ._2hhNOdcC6yLwL_rugP3YLf
+  ._111nfdz8Xyg7lDjTWv_OmK
   ._2oW_y7Mm3ihf1XQ0C1VWhx
   img {
   width: 100%;
@@ -2359,7 +2384,6 @@ html.touch
   margin: 2px;
   margin-left: 0;
   margin-right: 2px;
-  background: rgba(0, 0, 0, 0.1);
   border-radius: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -2396,7 +2420,6 @@ html.touch
   ._1JuIpzMtS7-xZrnUmEQ4my
   ._2s-O5T3qJJYR2AUq4b9jIN
   ._3j4dI1yA7cRfCvK8h406OB {
-  margin: 2px;
   margin-left: 0;
   border-radius: 0;
   border-top-right-radius: 3px;

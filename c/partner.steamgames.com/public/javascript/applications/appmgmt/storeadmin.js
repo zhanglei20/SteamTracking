@@ -16907,6 +16907,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17085,15 +17086,18 @@
                 new _._({
                   props: {
                     handlePaste(_, _, _) {
-                      if (_.BAllowImageHotLinking()) return !1;
                       const _ = [];
                       if (
                         (_.content.descendants((_, _) => {
-                          _.type == _ &&
-                            _.push({
-                              url: _.attrs.src,
-                              pos: _,
-                            });
+                          if (_.type == _) {
+                            const _ = _.attrs.src;
+                            (!_.startsWith("data:") &&
+                              _.BAllowImageHotLinking()) ||
+                              _.push({
+                                url: _,
+                                pos: _,
+                              });
+                          }
                         }),
                         _.length)
                       ) {
@@ -17115,6 +17119,7 @@
                           !0
                         );
                       }
+                      return !1;
                     },
                     handleDOMEvents: {
                       paste(_, _) {
@@ -17176,7 +17181,7 @@
           _ = "file" in __webpack_require__ ? __webpack_require__.file : void 0,
           _ = _.useMemo(() => _ && URL.createObjectURL(_), [_]),
           _ = "url" in __webpack_require__ ? __webpack_require__.url : _,
-          _ = _.type.startsWith("video/");
+          _ = _?.type.startsWith("video/");
         return _.createPortal(
           (0, _.jsxs)("span", {
             className: _.FileUploadPlaceholder,
@@ -17288,20 +17293,74 @@
           if (
             ((this.m_fnCreatePlaceholder && this.m_fnReplacePlaceholder) ||
               this.AddError("No editor registered to handle file upload"),
-            !this.m_fnFetchImageURL)
-          )
-            return void console.warn(
-              "The file upload manager does not have a way to fetch image URLs, so we cannot accept pasted <img> tags.",
+            console.log(`QueueUploadFileByURL: ${_} at pos ${_}`),
+            _.startsWith("data:"))
+          ) {
+            const _ = this.m_fnCreatePlaceholder(
+              {
+                url: _,
+              },
+              _,
+              _,
             );
-          console.log(`QueueUploadFileByURL: ${_} at pos ${_}`);
-          const _ = this.m_fnCreatePlaceholder(
-            {
-              url: _,
-            },
-            _,
-            _,
+            return this.ProcessDataURL(_, _), !0;
+          }
+          if (this.m_fnFetchImageURL) {
+            const _ = this.m_fnCreatePlaceholder(
+              {
+                url: _,
+              },
+              _,
+              _,
+            );
+            return this.FetchURLAndProcess(_, _), !0;
+          }
+          return (
+            (0, _._)(
+              this.m_bAllowImageHotLinking,
+              "A URL was posted but we don't have a fnFetchImageURL to process it",
+            ),
+            !1
           );
-          this.FetchURLAndProcess(_, _);
+        }
+        async ProcessDataURL(_, _) {
+          const [__webpack_require__, _] = _.split(","),
+            _ = __webpack_require__.match(
+              /^data:(?<mimetype>[^;]*);(?<encoding>.*)$/,
+            );
+          if (!_ || "base64" != _.groups.encoding)
+            return void this.AddError(
+              `Unable to data URL, unexpected format: ${__webpack_require__}`,
+            );
+          const _ = _?.groups.mimetype,
+            _ = (function (_) {
+              switch (_) {
+                case "image/jpeg":
+                  return "jpg";
+                case "image/png":
+                  return "png";
+                case "image/gif":
+                  return "gif";
+                case "image/webp":
+                  return "webp";
+                case "video/mp4":
+                  return "mp4";
+                case "video/webm":
+                  return "webm";
+                default:
+                  return;
+              }
+            })(_);
+          if (!_)
+            return void this.AddError(`Unsupported MIME type for image: ${_}`);
+          const _ = atob(_),
+            _ = new Uint8Array(_.length);
+          for (let _ = 0; _ < _.length; _++) _[_] = _.charCodeAt(_);
+          const _ = await _._(_.buffer),
+            _ = new File([_], `upload_${_}.${_}`, {
+              type: _,
+            });
+          await this.ProcessFile(_, _);
         }
         async FetchURLAndProcess(_, _) {
           try {

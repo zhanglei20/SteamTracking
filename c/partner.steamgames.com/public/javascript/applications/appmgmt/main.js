@@ -577,8 +577,6 @@
         BodyNoScroll: "_1Xs5dtPK2K37sd1U9BLX3S",
         BodyNoScrollDialog: "_3jhMIr8hczcBK_fOVtEVOK",
         OverlayModal: "_24YFXIVY7CC2quNzCN7015",
-        GamepadOnlyModalWrapper: "_1GlTsstfPZWsQc4umFIvrX",
-        GamepadOnlyPanelWrapper: "_1aY-rmUi48QSw7U1ZWa5DZ",
         ModalDialog: "_32QRvPPBL733SpNR9x0Gp3",
       };
     },
@@ -872,7 +870,7 @@
         "./shared_czech.json": [815, 7591],
         "./shared_danish.json": [4289, 6523],
         "./shared_dutch.json": [54978, 5110],
-        "./shared_english.json": [33800, 9875],
+        "./shared_english.json": [33800, 2256],
         "./shared_finnish.json": [3907, 6031],
         "./shared_french.json": [45040, 5018],
         "./shared_german.json": [94750, 6208],
@@ -920,7 +918,7 @@
         "./shared_czech.json": [815, 7591],
         "./shared_danish.json": [4289, 6523],
         "./shared_dutch.json": [54978, 5110],
-        "./shared_english.json": [33800, 9875],
+        "./shared_english.json": [33800, 2256],
         "./shared_finnish.json": [3907, 6031],
         "./shared_french.json": [45040, 5018],
         "./shared_german.json": [94750, 6208],
@@ -1634,26 +1632,33 @@
       }
       function _(_) {
         const {
-          accentColor: _,
-          dullColor: __webpack_require__,
-          bodyTextColor: _,
-          children: _,
-        } = _;
-        return (0, _.jsx)("div", {
-          "data-accent-color": _,
-          "data-dull-color": __webpack_require__,
-          "data-body-text-color": _,
-          style: {
-            display: "contents",
-          },
-          children: (0, _.jsx)("div", {
+            accentColor: _,
+            dullColor: __webpack_require__,
+            bodyTextColor: _,
+            children: _,
+            breakpoints: _,
+          } = _,
+          _ = (0, _.jsx)("div", {
+            "data-accent-color": _,
+            "data-dull-color": __webpack_require__,
+            "data-body-text-color": _,
             style: {
               display: "contents",
-              color: "var(--color-text-body-body)",
             },
-            children: _,
-          }),
-        });
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: _,
+            }),
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              breakpoints: _,
+              children: _,
+            })
+          : _;
       }
       const _ = _.memo(function (_) {
         const {
@@ -1919,7 +1924,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2089,59 +2093,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -2168,9 +2119,81 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        );
-      _.Fragment;
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ =
+          (_.Fragment,
+          _.lazy(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ));
       function _(_) {
         const _ = (0, _._)("publisherid", "application_config"),
           _ = _.useMemo(
@@ -2396,7 +2419,7 @@
                           }),
                           (0, _.jsx)(_._, {
                             path: _._.DeckVerified(),
-                            render: () =>
+                            render: (_) =>
                               (0, _.jsx)(_._, {
                                 config: {
                                   "deck-verified-results": () =>
@@ -2406,6 +2429,11 @@
                                         "application_config",
                                       ),
                                       bIncludeSteamOS: !0,
+                                    }),
+                                  "deck-performance-stats": (_) =>
+                                    (0, _.jsx)(_, {
+                                      appId: _.match.params.appid,
+                                      dataprops: _,
                                     }),
                                 },
                               }),
@@ -2626,16 +2654,20 @@
         return null;
       }
       const _ = ["initial", "sm", "md", "lg"],
-        _ = (0, _.createContext)("lg");
+        _ = (0, _.createContext)({
+          _: 768,
+          _: 940,
+          _: 1240,
+          _: "lg",
+        });
       function _(_) {
-        const {
-            children: _,
-            breakpoints: __webpack_require__ = {
-              _: 768,
-              _: 940,
-              _: 1240,
-            },
-          } = _,
+        const { children: _, breakpoints: __webpack_require__ = {} } = _,
+          _ = (0, _.useContext)(_),
+          _ = {
+            _: __webpack_require__._ ?? _._,
+            _: __webpack_require__._ ?? _._,
+            _: __webpack_require__._ ?? _._,
+          },
           _ = (function (_) {
             const _ = _(`(min-width: ${_._}px)`),
               _ = _(`(min-width: ${_._}px)`),
@@ -2645,14 +2677,32 @@
               (0, _.useEffect)(() => _(!0), []),
               _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
             );
-          })(__webpack_require__);
+          })(_),
+          { _: _, _: _, _: _ } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+            }),
+            [_, _, _, _],
+          );
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: _,
         });
       }
       function _(_) {
-        const { formFactor: _, children: __webpack_require__ } = _;
+        const { formFactor: _, children: __webpack_require__ } = _,
+          _ = (0, _.useContext)(_),
+          _ = (0, _.useMemo)(
+            () => ({
+              ..._,
+              _: _ ?? _._,
+            }),
+            [_, _],
+          );
         return _
           ? (0, _.jsx)(_.Provider, {
               value: _,
@@ -2663,7 +2713,7 @@
             });
       }
       function _() {
-        return (0, _.useContext)(_);
+        return (0, _.useContext)(_)._;
       }
       _.reduce((_, _, _) => ((_[_] = _), _), {});
     },
@@ -3103,8 +3153,7 @@
         (function (_) {
           (_[(_.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (_[(_.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (_[(_.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
@@ -3219,7 +3268,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3230,7 +3278,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
+      _.forwardRef(function (_, _) {
         const {
             navID: __webpack_require__,
             onActivated: _,
@@ -4336,7 +4384,8 @@
         (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
           (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
           (_[(_.APPLICATION = 2)] = "APPLICATION"),
-          (_[(_.BROWSER = 3)] = "BROWSER");
+          (_[(_.BROWSER = 3)] = "BROWSER"),
+          (_[(_.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(_ || (_ = {}));
       _._._, _._.CANCEL, _._.SECONDARY, _._.OPTIONS, _._.START;
       function _(_, _, _) {
@@ -5804,14 +5853,21 @@
                 _ = this.FindNextFocusableChildInDirection(_, _, _);
               }
             } else if (_ == _.PREFERRED_CHILD) {
-              for (const _ of this.m_rgChildren)
-                if (
-                  ((_ = _.BWantsPreferredFocus()
-                    ? _.FindFocusableNode(_)
-                    : void 0),
-                  _)
-                )
-                  return _;
+              let _ = this.m_rgChildren;
+              for (; _.length; ) {
+                let _ = [];
+                for (const _ of _) {
+                  if (
+                    ((_ = _.BWantsPreferredFocus()
+                      ? _.FindFocusableNode(_)
+                      : void 0),
+                    _)
+                  )
+                    return _;
+                  __webpack_require__.push(..._.m_rgChildren);
+                }
+                _ = _;
+              }
             } else
               _ == _.LAST &&
                 (_ = this.FindNextFocusableChildInDirection(
@@ -6248,78 +6304,81 @@
                 _(
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
-            (function (_, _) {
-              const _ = _.Element;
-              if (!_) return;
-              let _ = [
-                {
-                  node: _,
-                  eScrollType: _.m_Properties?.scrollIntoViewType,
-                },
-              ];
-              for (let _ = _.Parent; _; _ = _.Parent) {
-                const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
-                  _ = _.m_Properties?.scrollIntoViewType;
-                if (_) {
-                  const _ = {
+            this.m_Tree.BIsActive() &&
+              (function (_, _) {
+                const _ = _.Element;
+                if (!_) return;
+                let _ = [
+                  {
                     node: _,
-                    eScrollType: _,
-                  };
-                  "force" === _ ? (_ = [_]) : _.push(_);
+                    eScrollType: _.m_Properties?.scrollIntoViewType,
+                  },
+                ];
+                for (let _ = _.Parent; _; _ = _.Parent) {
+                  const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+                    _ = _.m_Properties?.scrollIntoViewType;
+                  if (_) {
+                    const _ = {
+                      node: _,
+                      eScrollType: _,
+                    };
+                    "force" === _ ? (_ = [_]) : _.push(_);
+                  }
+                  if (void 0 !== _)
+                    for (
+                      let _ = _.length - 1;
+                      _ >= 0 && void 0 === _[_].eScrollType;
+                      _--
+                    )
+                      _[_].eScrollType = _;
                 }
-                if (void 0 !== _)
-                  for (
-                    let _ = _.length - 1;
-                    _ >= 0 && void 0 === _[_].eScrollType;
-                    _--
+                for (; _.length; ) {
+                  let { node: _, eScrollType: _ } = _.pop(),
+                    _ = 0 == _.length;
+                  if (
+                    (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+                    _?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
                   )
-                    _[_].eScrollType = _;
-              }
-              for (; _.length; ) {
-                let { node: _, eScrollType: _ } = _.pop(),
-                  _ = 0 == _.length;
-                if (
-                  (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
-                  _?.m_Properties?.fnScrollIntoViewHandler &&
-                    !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
-                )
-                  continue;
-                const _ = _.m_element,
-                  _ =
-                    _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
-                if (_) {
-                  const _ = _ ? _(_) : _.getBoundingClientRect();
-                  let _ = !1;
-                  const _ = Math.max(1.4 * (_.bottom - _.top), 40),
-                    _ = _ && performance.now() - _ < 500;
-                  (_ ||
-                    _.bottom < -_ ||
-                    _.top > _.ownerDocument.defaultView.innerHeight + _) &&
-                    ((_ = !0),
-                    _ ||
-                      _(
-                        `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
-                      ));
-                  let _ = _ ? "auto" : "smooth";
-                  _ && (_ = performance.now()),
-                    _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
-                    _
-                      ? _(0, _, _)
-                      : _.scrollIntoView({
-                          behavior: _,
-                          block: "nearest",
-                        });
-                } else
-                  _("No previous element for scrolling, will jump"),
-                    _
-                      ? _(0, _, "auto")
-                      : _?.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, _);
+                    continue;
+                  const _ = _.m_element,
+                    _ =
+                      _ == _.NoTransform ||
+                      _ == _.NoTransformSparseContent ||
+                      !_;
+                  if (_) {
+                    const _ = _ ? _(_) : _.getBoundingClientRect();
+                    let _ = !1;
+                    const _ = Math.max(1.4 * (_.bottom - _.top), 40),
+                      _ = _ && performance.now() - _ < 500;
+                    (_ ||
+                      _.bottom < -_ ||
+                      _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+                      ((_ = !0),
+                      _ ||
+                        _(
+                          `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                        ));
+                    let _ = _ ? "auto" : "smooth";
+                    _ && (_ = performance.now()),
+                      _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+                      _
+                        ? _(0, _, _)
+                        : _.scrollIntoView({
+                            behavior: _,
+                            block: "nearest",
+                          });
+                  } else
+                    _("No previous element for scrolling, will jump"),
+                      _
+                        ? _(0, _, "auto")
+                        : _?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -6721,6 +6780,26 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      async function _(_, _ = "SHA-256") {
+        let _;
+        var _;
+        "string" == typeof _
+          ? ((_ = _), (_ = new TextEncoder().encode(_).buffer))
+          : (_ = _);
+        return (function (_) {
+          const _ = new Uint8Array(_);
+          let _ = "";
+          for (let _ = 0; _ < _.length; _++)
+            _ += ("00" + _[_].toString(16)).slice(-2);
+          return _;
+        })(await window.crypto.subtle.digest(_, _));
+      }
+      __webpack_require__._(module_exports, {
         _: () => _,
       });
     },
@@ -11344,6 +11423,11 @@
                     _: 3,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  framegen_frame_rate: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -18529,7 +18613,7 @@
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         _.useEffect(() => {
-          const _ = _?.current;
+          const _ = _ && "current" in _ ? _.current : _;
           if (_ && _)
             return (
               _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
@@ -23169,22 +23253,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_, _ = "SHA-256") {
-        let _;
-        var _;
-        "string" == typeof _
-          ? ((_ = _), (_ = new TextEncoder().encode(_).buffer))
-          : (_ = _);
-        const _ = await window.crypto.subtle.digest(_, _);
-        return (
-          (_ = _),
-          Array.prototype.map
-            .call(new Uint8Array(_), (_) => ("00" + _.toString(16)).slice(-2))
-            .join("")
-        );
-        var _;
-      }
       const _ =
         window.addEventListener ||
         (__webpack_require__._ && __webpack_require__._.addEventListener) ||
@@ -23587,7 +23657,7 @@
         };
       async function _(_) {
         try {
-          return (await _(_)).slice(0, 16);
+          return (await _._(_)).slice(0, 16);
         } catch (_) {
           return "";
         }
@@ -32908,7 +32978,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _._,
-        _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,
@@ -32917,37 +32986,10 @@
         _: () => _._,
         _: () => _._,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, navID: __webpack_require__, closeModal: _ } = _,
-          _ = _.createRef(),
-          _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
-        return (0, _._)() && !_._.IN_STEAMUI
-          ? (0, _.jsx)(_._, {
-              navID: __webpack_require__,
-              navTreeRef: _,
-              onCancelButton: _,
-              className: _.GamepadOnlyModalWrapper,
-              children: (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  className: _.GamepadOnlyPanelWrapper,
-                  onGamepadDirection: _,
-                  focusableIfEmpty: !0,
-                  children: _,
-                }),
-              }),
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: _,
-            });
-      }
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
@@ -39510,7 +39552,6 @@
       class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-        static s_Singleton = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
@@ -39531,8 +39572,12 @@
         }
         async LoadSettings() {
           const _ = (_) => {
-            const _ = localStorage.getItem(_);
-            return _ ? JSON.parse(_) : void 0;
+            try {
+              const _ = localStorage.getItem(_);
+              return _ ? JSON.parse(_) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
@@ -39562,15 +39607,21 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(..._) {
+          _ &&
+            _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
+            null == window.g_LogManager && (window.g_LogManager = new _()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -39592,11 +39643,19 @@
           this.SetDebugLogEnabled(_, !this.IsDebugLogEnabled(_));
         }
         async SetDebugLogEnabled(_, _) {
-          _
-            ? this.m_setEnabledDebugLogs.add(_)
-            : this.m_setEnabledDebugLogs.delete(_),
-            this.m_SettingsChangedCallback.Dispatch(),
-            await this.SaveSettings();
+          this.IsLogName(_)
+            ? (_
+                ? this.m_setEnabledDebugLogs.add(_)
+                : this.m_setEnabledDebugLogs.delete(_),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings())
+            : console.warn(
+                `No log named "${_}", available logs:`,
+                this.GetLogNames(),
+              );
+        }
+        async SetDebugLogsEnabled(_, ..._) {
+          _.forEach((_) => this.SetDebugLogEnabled(_, _));
         }
         async SetAllDebugLogsEnabled(_) {
           (this.m_setEnabledDebugLogs = _
@@ -39615,6 +39674,9 @@
           (this.m_bIncludeBacktraceInLog = _),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
         }
       }
       function _(_, _, _, _, _, ..._) {
@@ -39681,28 +39743,17 @@
                 : console.error(..._);
           }
       }
-      const _ = () => [..._.Get().LogNames].sort(),
-        _ = (_, _) => {
-          _.Get().IsLogName(_)
-            ? _.Get().SetDebugLogEnabled(_, _)
-            : console.warn(`No log named "${_}", available logs:`, _());
-        };
-      (window.DebugLogEnable = (..._) => _.forEach((_) => _(_, !0))),
-        (window.DebugLogDisable = (..._) => _.forEach((_) => _(_, !1))),
+      (window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._)),
+        (window.DebugLogDisable = (..._) =>
+          _.Get().SetDebugLogsEnabled(!1, ..._)),
         (window.DebugLogEnableAll = () => _.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => _.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = _),
-        (window.DebugLogEnabled = (..._) => {
-          _.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            _.Get().PrintEnabledLogs();
-        }),
+        (window.DebugLogNames = () => _.Get().GetLogNames()),
+        (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },

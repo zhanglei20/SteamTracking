@@ -123,7 +123,17 @@
 	"ItemFlag_OnWishlist": "ΣΤΗ ΛΙΣΤΑ ΕΠΙΘΥΜΙΩΝ",
 	"ItemFlag_InCart": "ΣΤΟ ΚΑΛΑΘΙ",
 	"ItemFlag_Ignored": "ΣΕ ΑΓΝΟΗΣΗ",
-	"ItemFlag_ExcludedByPreferences": "ΕΞΑΙΡΕΘΗΚΕ ΑΠΟ ΠΡΟΤΙΜΗΣΕΙΣ"
+	"ItemFlag_ExcludedByPreferences": "ΕΞΑΙΡΕΘΗΚΕ ΑΠΟ ΠΡΟΤΙΜΗΣΕΙΣ",
+	"Wishlist_Controls_Categories_Header": "Οι κατηγορίες μου:",
+	"Wishlist_Categories_None": "Καμία",
+	"Wishlist_Gamepad_Filter_Category": "Φιλτράρισμα ανά κατηγορία",
+	"Wishlist_Gamepad_Filter_Clear_Category": "Εκκαθάριση φίλτρων κατηγορίας",
+	"Wishlist_Gamepad_Add_Category": "Προσθήκη κατηγορίας",
+	"Wishlist_Gamepad_Removecategory": "Αφαίρεση κατηγορίας",
+	"Wishlist_Controls_Categories_Remove_Tooltip": "Αφαίρεση αυτής της κατηγορίας από αυτό το αντικείμενο",
+	"Wishlist_Controls_Categories_Filter_Tooltip": "Φιλτράρετε τη Λίστα Επιθυμιών σας για αντικείμενα αυτής της κατηγορίας",
+	"Wishlist_Controls_Categories_All": "Όλα",
+	"Wishlist_Controls_Categories_Manage": "Προσθήκη ή αφαίρεση κατηγοριών"
 }`);
     },
   },

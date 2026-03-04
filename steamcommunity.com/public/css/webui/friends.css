@@ -1978,18 +1978,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1500;
 }
-.modals_GamepadOnlyModalWrapper_1GlTs {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  max-height: 100vh;
-  overflow-y: scroll;
-}
-.modals_GamepadOnlyModalWrapper_1GlTs .modals_GamepadOnlyPanelWrapper_1aY-r {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
 dialog.modals_ModalDialog_32QRv {
   padding: 0;
   outline: none;
@@ -3020,7 +3008,7 @@ dialog.modals_ModalDialog_32QRv::backdrop {
 }
 .gamepaddialog_GamepadDialogContent_16sYN {
   background: none;
-  padding: calc(12px + 1.4vw) 2.8vw;
+  padding: calc(12px + 2.25vh) 2.8vw;
 }
 .gamepaddialog_GamepadDialogContent_16sYN
   .DialogControlsSection:not(:first-child),
@@ -3700,7 +3688,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   margin: auto;
   background-color: #0e141b;
   border: 2px solid #23262e;
-  padding: calc(12px + 1.4vw) 2.8vw;
+  padding: calc(12px + 2.25vh) 2.8vw;
   width: 660px;
   box-sizing: border-box;
   animation-name: gamepaddialog_slideInAnimation_2JseU;
@@ -27346,7 +27334,7 @@ svg.remoteplay_IconMobile_2371n {
 }
 .reorderablelist_ReorderableListDialog_2NTC7 {
   background: #0e141b;
-  padding: calc(12px + 1.4vw) 2.8vw;
+  padding: calc(12px + 2.25vh) 2.8vw;
   width: 100%;
   max-width: 420px;
   border: 2px solid #23262e;

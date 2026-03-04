@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Οι ενεργές παραγγελίες μου",
 	"MyOrders_Heading_Sell": "Παραγγελίες πώλησης",
 	"MyOrders_Heading_Buy": "Παραγγελίας αγοράς",
+	"MyOrders_Heading_MyPurchaseOffers": "Αγορά – Οι προσφορές μου",
+	"MyOrders_Heading_MyListings": "Πώληση – Οι καταχωρίσεις μου",
 	"MyOrders_FailedToLoad": "Παρουσιάστηκε πρόβλημα κατά τη φόρτωση δεδομένων παραγγελιών για αυτό το αντικείμενο.",
 	"MyOrders_NoActiveOrders_Item": "Δεν έχετε καμία ενεργή παραγγελία για αυτό το αντικείμενο.",
 	"MyOrders_NoBuyOrders_Item": "Δεν έχετε καμία ενεργή παραγγελία αγοράς για αυτό το αντικείμενο.",

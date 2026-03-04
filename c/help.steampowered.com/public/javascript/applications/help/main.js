@@ -118,6 +118,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Root: "_2KPA3I9eXE9r251_-GX_iv",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Bold: "_3cln317VYhwhE1fSeMCG48",
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
@@ -971,8 +976,6 @@
         BodyNoScroll: "_1Xs5dtPK2K37sd1U9BLX3S",
         BodyNoScrollDialog: "_3jhMIr8hczcBK_fOVtEVOK",
         OverlayModal: "_24YFXIVY7CC2quNzCN7015",
-        GamepadOnlyModalWrapper: "_1GlTsstfPZWsQc4umFIvrX",
-        GamepadOnlyPanelWrapper: "_1aY-rmUi48QSw7U1ZWa5DZ",
         ModalDialog: "_32QRvPPBL733SpNR9x0Gp3",
       };
     },
@@ -34334,11 +34337,184 @@
               }),
         });
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = "function" == typeof matchMedia ? matchMedia : _,
+          _ = (0, _.useMemo)(() => _(_), [_, _]),
+          [_, _] = (0, _.useState)(!!_ && _.matches);
+        return (
+          (0, _.useEffect)(() => {
+            if (!_) return () => {};
+            function _(_) {
+              _(_.matches);
+            }
+            return (
+              _(_.matches),
+              __webpack_require__.addEventListener("change", _),
+              () => __webpack_require__.removeEventListener("change", _)
+            );
+          }, [_]),
+          _
+        );
+      }
+      function _() {
+        return null;
+      }
+      const _ = (0, _.createContext)({
+        _: 768,
+        _: 940,
+        _: 1240,
+        _: "lg",
+      });
+      function _(_) {
+        const { children: _, breakpoints: __webpack_require__ = {} } = _,
+          _ = (0, _.useContext)(_),
+          _ = {
+            _: __webpack_require__._ ?? _._,
+            _: __webpack_require__._ ?? _._,
+            _: __webpack_require__._ ?? _._,
+          },
+          _ = (function (_) {
+            const _ = _(`(min-width: ${_._}px)`),
+              _ = _(`(min-width: ${_._}px)`),
+              _ = _(`(min-width: ${_._}px)`),
+              [_, _] = (0, _.useState)(!0);
+            return (
+              (0, _.useEffect)(() => _(!0), []),
+              _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
+            );
+          })(_),
+          { _: _, _: _, _: _ } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+            }),
+            [_, _, _, _],
+          );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { formFactor: _, children: __webpack_require__ } = _,
+          _ = (0, _.useContext)(_),
+          _ = (0, _.useMemo)(
+            () => ({
+              ..._,
+              _: _ ?? _._,
+            }),
+            [_, _],
+          );
+        return _
+          ? (0, _.jsx)(_.Provider, {
+              value: _,
+              children: __webpack_require__,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: __webpack_require__,
+            });
+      }
+      ["initial", "sm", "md", "lg"].reduce((_, _, _) => ((_[_] = _), _), {});
+      const _ = (0, _.createContext)({}),
+        _ = (0, _.createContext)(() => {});
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)({});
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsx)(_.Provider, {
+            value: __webpack_require__,
+            children: _.children,
+          }),
+        });
+      }
+      function _() {
+        return (0, _.useContext)(_);
+      }
+      function _(_) {
+        const {
+            accentColor: _,
+            dullColor: __webpack_require__,
+            bodyTextColor: _,
+            children: _,
+            breakpoints: _,
+          } = _,
+          _ = (0, _.jsx)("div", {
+            "data-accent-color": _,
+            "data-dull-color": __webpack_require__,
+            "data-body-text-color": _,
+            style: {
+              display: "contents",
+            },
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: _,
+            }),
+          });
+        return _
+          ? (0, _.jsx)(_, {
+              breakpoints: _,
+              children: _,
+            })
+          : _;
+      }
+      const _ = _.memo(function (_) {
+        const {
+          defaultTextSize: _,
+          accentColor: __webpack_require__ = "blue",
+          dullColor: _ = "greyneutral",
+          bodyTextColor: _ = "text-light",
+          breakpoints: _,
+          children: _,
+          zoo: _,
+        } = _;
+        let _;
+        return (
+          _ &&
+            (_ = {
+              "--default-font-size": `var(--text-size-${_})`,
+              "--default-line-height": `var(--line-height-${_})`,
+              "--default-letter-spacing": `var(--letter-spacing-${_})`,
+            }),
+          (0, _.jsx)(_, {
+            children: (0, _.jsx)(_, {
+              breakpoints: _,
+              children: (0, _.jsx)(_, {
+                children: (0, _.jsx)("div", {
+                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                  style: _,
+                  children: (0, _.jsxs)(_, {
+                    accentColor: __webpack_require__,
+                    dullColor: _,
+                    bodyTextColor: _,
+                    children: [_, !1],
+                  }),
+                }),
+              }),
+            }),
+          })
+        );
+      });
+      function _(_) {
+        const { children: _ } = _,
+          { formFactorOverride: __webpack_require__ } = _();
+        return (0, _.jsx)(_, {
+          formFactor: __webpack_require__,
+          children: _,
+        });
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
+        _ = _.Fragment,
         _ = (_) =>
           (0, _.jsx)(_._, {
             basename: _(),
@@ -34369,6 +34545,15 @@
                             }),
                         },
                       }),
+                    }),
+                    (0, _.jsx)(_, {
+                      config: {
+                        footer: () =>
+                          (0, _.jsx)(_.Suspense, {
+                            fallback: null,
+                            children: (0, _.jsx)(_, {}),
+                          }),
+                      },
                     }),
                     (0, _.jsx)(_.Suspense, {
                       fallback: null,
@@ -34438,9 +34623,11 @@
               children: (0, _.jsx)(_, {
                 children: (0, _.jsx)(_, {
                   children: (0, _.jsx)(_, {
-                    bRenderOverlayAtRoot: !0,
-                    bUsePopups: !1,
-                    children: _,
+                    children: (0, _.jsx)(_, {
+                      bRenderOverlayAtRoot: !0,
+                      bUsePopups: !1,
+                      children: _,
+                    }),
                   }),
                 }),
               }),
@@ -34982,8 +35169,7 @@
         (function (_) {
           (_[(_.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (_[(_.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-            (_[(_.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+            (_[(_.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
@@ -35906,7 +36092,8 @@
         (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
           (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
           (_[(_.APPLICATION = 2)] = "APPLICATION"),
-          (_[(_.BROWSER = 3)] = "BROWSER");
+          (_[(_.BROWSER = 3)] = "BROWSER"),
+          (_[(_.AUTOFOCUS = 4)] = "AUTOFOCUS");
       })(_ || (_ = {}));
       _._._, _._.CANCEL, _._.SECONDARY, _._.OPTIONS, _._.START;
       function _(_, _, _) {
@@ -37427,14 +37614,21 @@
                 _ = this.FindNextFocusableChildInDirection(_, _, _);
               }
             } else if (_ == _.PREFERRED_CHILD) {
-              for (const _ of this.m_rgChildren)
-                if (
-                  ((_ = _.BWantsPreferredFocus()
-                    ? _.FindFocusableNode(_)
-                    : void 0),
-                  _)
-                )
-                  return _;
+              let _ = this.m_rgChildren;
+              for (; _.length; ) {
+                let _ = [];
+                for (const _ of _) {
+                  if (
+                    ((_ = _.BWantsPreferredFocus()
+                      ? _.FindFocusableNode(_)
+                      : void 0),
+                    _)
+                  )
+                    return _;
+                  __webpack_require__.push(..._.m_rgChildren);
+                }
+                _ = _;
+              }
             } else
               _ == _.LAST &&
                 (_ = this.FindNextFocusableChildInDirection(
@@ -37871,78 +38065,81 @@
                 _(
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
-            (function (_, _) {
-              const _ = _.Element;
-              if (!_) return;
-              let _ = [
-                {
-                  node: _,
-                  eScrollType: _.m_Properties?.scrollIntoViewType,
-                },
-              ];
-              for (let _ = _.Parent; _; _ = _.Parent) {
-                const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
-                  _ = _.m_Properties?.scrollIntoViewType;
-                if (_) {
-                  const _ = {
+            this.m_Tree.BIsActive() &&
+              (function (_, _) {
+                const _ = _.Element;
+                if (!_) return;
+                let _ = [
+                  {
                     node: _,
-                    eScrollType: _,
-                  };
-                  "force" === _ ? (_ = [_]) : _.push(_);
+                    eScrollType: _.m_Properties?.scrollIntoViewType,
+                  },
+                ];
+                for (let _ = _.Parent; _; _ = _.Parent) {
+                  const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+                    _ = _.m_Properties?.scrollIntoViewType;
+                  if (_) {
+                    const _ = {
+                      node: _,
+                      eScrollType: _,
+                    };
+                    "force" === _ ? (_ = [_]) : _.push(_);
+                  }
+                  if (void 0 !== _)
+                    for (
+                      let _ = _.length - 1;
+                      _ >= 0 && void 0 === _[_].eScrollType;
+                      _--
+                    )
+                      _[_].eScrollType = _;
                 }
-                if (void 0 !== _)
-                  for (
-                    let _ = _.length - 1;
-                    _ >= 0 && void 0 === _[_].eScrollType;
-                    _--
+                for (; _.length; ) {
+                  let { node: _, eScrollType: _ } = _.pop(),
+                    _ = 0 == _.length;
+                  if (
+                    (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+                    _?.m_Properties?.fnScrollIntoViewHandler &&
+                      !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
                   )
-                    _[_].eScrollType = _;
-              }
-              for (; _.length; ) {
-                let { node: _, eScrollType: _ } = _.pop(),
-                  _ = 0 == _.length;
-                if (
-                  (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
-                  _?.m_Properties?.fnScrollIntoViewHandler &&
-                    !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
-                )
-                  continue;
-                const _ = _.m_element,
-                  _ =
-                    _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
-                if (_) {
-                  const _ = _ ? _(_) : _.getBoundingClientRect();
-                  let _ = !1;
-                  const _ = Math.max(1.4 * (_.bottom - _.top), 40),
-                    _ = _ && performance.now() - _ < 500;
-                  (_ ||
-                    _.bottom < -_ ||
-                    _.top > _.ownerDocument.defaultView.innerHeight + _) &&
-                    ((_ = !0),
-                    _ ||
-                      _(
-                        `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
-                      ));
-                  let _ = _ ? "auto" : "smooth";
-                  _ && (_ = performance.now()),
-                    _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
-                    _
-                      ? _(0, _, _)
-                      : _.scrollIntoView({
-                          behavior: _,
-                          block: "nearest",
-                        });
-                } else
-                  _("No previous element for scrolling, will jump"),
-                    _
-                      ? _(0, _, "auto")
-                      : _?.scrollIntoView({
-                          behavior: "auto",
-                          block: "nearest",
-                          inline: "nearest",
-                        });
-              }
-            })(this, _);
+                    continue;
+                  const _ = _.m_element,
+                    _ =
+                      _ == _.NoTransform ||
+                      _ == _.NoTransformSparseContent ||
+                      !_;
+                  if (_) {
+                    const _ = _ ? _(_) : _.getBoundingClientRect();
+                    let _ = !1;
+                    const _ = Math.max(1.4 * (_.bottom - _.top), 40),
+                      _ = _ && performance.now() - _ < 500;
+                    (_ ||
+                      _.bottom < -_ ||
+                      _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+                      ((_ = !0),
+                      _ ||
+                        _(
+                          `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                        ));
+                    let _ = _ ? "auto" : "smooth";
+                    _ && (_ = performance.now()),
+                      _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+                      _
+                        ? _(0, _, _)
+                        : _.scrollIntoView({
+                            behavior: _,
+                            block: "nearest",
+                          });
+                  } else
+                    _("No previous element for scrolling, will jump"),
+                      _
+                        ? _(0, _, "auto")
+                        : _?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                            inline: "nearest",
+                          });
+                }
+              })(this, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -62741,6 +62938,7 @@
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
         static AddNavParamToURL(_, _) {
+          if (!_ || 0 == _.length) return _;
           try {
             const _ = new URL((0, _._)(_)),
               _ = new URLSearchParams(_.search);
@@ -69402,6 +69600,11 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  framegen_frame_rate: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -69880,14 +70083,13 @@
         "string" == typeof _
           ? ((_ = _), (_ = new TextEncoder().encode(_).buffer))
           : (_ = _);
-        const _ = await window.crypto.subtle.digest(_, _);
-        return (
-          (_ = _),
-          Array.prototype.map
-            .call(new Uint8Array(_), (_) => ("00" + _.toString(16)).slice(-2))
-            .join("")
-        );
-        var _;
+        return (function (_) {
+          const _ = new Uint8Array(_);
+          let _ = "";
+          for (let _ = 0; _ < _.length; _++)
+            _ += ("00" + _[_].toString(16)).slice(-2);
+          return _;
+        })(await window.crypto.subtle.digest(_, _));
       }
       const _ =
         window.addEventListener ||
@@ -76373,7 +76575,6 @@
       class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-        static s_Singleton = null;
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
@@ -76394,8 +76595,12 @@
         }
         async LoadSettings() {
           const _ = (_) => {
-            const _ = localStorage.getItem(_);
-            return _ ? JSON.parse(_) : void 0;
+            try {
+              const _ = localStorage.getItem(_);
+              return _ ? JSON.parse(_) : void 0;
+            } catch {
+              return;
+            }
           };
           this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
@@ -76425,15 +76630,21 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
-        PrintEnabledLogs() {
-          this.LogAsLogManager(
-            "Will print log messages for:",
-            Array.from(this.m_setEnabledDebugLogs),
-          );
+        PrintEnabledLogs(..._) {
+          _ &&
+            _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
         }
         static Get() {
           return (
-            null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
+            null == window.g_LogManager && (window.g_LogManager = new _()),
+            window.g_LogManager
           );
         }
         get Loading() {
@@ -76455,11 +76666,19 @@
           this.SetDebugLogEnabled(_, !this.IsDebugLogEnabled(_));
         }
         async SetDebugLogEnabled(_, _) {
-          _
-            ? this.m_setEnabledDebugLogs.add(_)
-            : this.m_setEnabledDebugLogs.delete(_),
-            this.m_SettingsChangedCallback.Dispatch(),
-            await this.SaveSettings();
+          this.IsLogName(_)
+            ? (_
+                ? this.m_setEnabledDebugLogs.add(_)
+                : this.m_setEnabledDebugLogs.delete(_),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings())
+            : console.warn(
+                `No log named "${_}", available logs:`,
+                this.GetLogNames(),
+              );
+        }
+        async SetDebugLogsEnabled(_, ..._) {
+          _.forEach((_) => this.SetDebugLogEnabled(_, _));
         }
         async SetAllDebugLogsEnabled(_) {
           (this.m_setEnabledDebugLogs = _
@@ -76478,6 +76697,9 @@
           (this.m_bIncludeBacktraceInLog = _),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
+        }
+        GetLogNames() {
+          return Array.from(this.LogNames).sort();
         }
       }
       function _(_, _, _, _, _, ..._) {
@@ -76544,28 +76766,17 @@
                 : console.error(..._);
           }
       }
-      const _ = () => [..._.Get().LogNames].sort(),
-        _ = (_, _) => {
-          _.Get().IsLogName(_)
-            ? _.Get().SetDebugLogEnabled(_, _)
-            : console.warn(`No log named "${_}", available logs:`, _());
-        };
-      (window.DebugLogEnable = (..._) => _.forEach((_) => _(_, !0))),
-        (window.DebugLogDisable = (..._) => _.forEach((_) => _(_, !1))),
+      (window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._)),
+        (window.DebugLogDisable = (..._) =>
+          _.Get().SetDebugLogsEnabled(!1, ..._)),
         (window.DebugLogEnableAll = () => _.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => _.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = _),
-        (window.DebugLogEnabled = (..._) => {
-          _.length > 0 &&
-            console.warn(
-              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-            ),
-            _.Get().PrintEnabledLogs();
-        }),
+        (window.DebugLogNames = () => _.Get().GetLogNames()),
+        (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },
@@ -77195,7 +77406,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 4249), _((_._ = _));
+      return (_ = 7805), _((_._ = _));
       var _;
     });
     _._();

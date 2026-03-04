@@ -207,7 +207,8 @@
 	"moderatormessage_count_bannotice": "مرات الحظر: %1$s",
 	"moderatormessage_count_contentremoval": "إخطارات إزالة المحتوى: %1$s",
 	"reportforumpost_reason_notfound": "أخرى",
-	"reportedcontent_error": "حدث خطأ. يرجى المحاولة مرة أخرى لاحقًا."
+	"reportedcontent_error": "حدث خطأ. يرجى المحاولة مرة أخرى لاحقًا.",
+	"moderatedcontent_submit_dispute_title": "إدارة النزاعات"
 }`);
     },
   },

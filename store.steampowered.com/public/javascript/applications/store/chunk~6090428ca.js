@@ -1220,7 +1220,8 @@
           const { bShowOnlyInitialEvent: e } = this.props,
             { bLoading: t, eventModel: n } = this.state;
           if (t)
-            return (0, s.jsx)(p.of, {
+            return (0, s.jsx)(p.EN, {
+              active: !0,
               children: (0, s.jsx)("div", {
                 className: _().FlexCenter,
                 style: { height: "400px" },
@@ -1245,30 +1246,24 @@
             I.Fm.Get().BOwnsApp(n.appid) &&
               (S = (e) =>
                 (0, E.EP)(e, "steam://nav/games/details/" + n.appid)));
-          const f = (0, s.jsx)("div", {
-            children: (0, s.jsx)(m.AD, {
-              initialEvent: n,
-              appid: i,
-              clanSteamID: r,
-              partnerEventStore: l,
-              emoticonStore: c.A,
-              closeModal: !u && a,
-              showAppHeader: d,
-              bShowOnlyInitialEvent: e,
-              additionalParams: h,
-              eventClassName: v,
-              onAppIconClick: S,
-            }),
+          const f = (0, s.jsx)(m.AD, {
+            initialEvent: n,
+            appid: i,
+            clanSteamID: r,
+            partnerEventStore: l,
+            emoticonStore: c.A,
+            closeModal: !u && a,
+            showAppHeader: d,
+            bShowOnlyInitialEvent: e,
+            additionalParams: h,
+            eventClassName: v,
+            onAppIconClick: S,
           });
           return u
             ? f
-            : (0, s.jsx)(p.of, {
-                className: o,
-                children: (0, s.jsx)(p.Qs, {
-                  navID: "WebRowEventInfiniteScroll",
-                  closeModal: a,
-                  children: f,
-                }),
+            : (0, s.jsx)(p.EN, {
+                active: !0,
+                children: (0, s.jsx)("div", { className: o, children: f }),
               });
         }
       };

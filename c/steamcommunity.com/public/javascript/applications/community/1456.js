@@ -181,6 +181,8 @@
 	"MyOrders_Heading": "Penawaran Aktif Saya",
 	"MyOrders_Heading_Sell": "Penawaran Penjualan",
 	"MyOrders_Heading_Buy": "Penawaran Pembelian",
+	"MyOrders_Heading_MyPurchaseOffers": "Pembelian - Penawaran Saya",
+	"MyOrders_Heading_MyListings": "Penjualan - Iklan Penjualan Saya",
 	"MyOrders_FailedToLoad": "Terjadi kendala saat memuat data penawaran untuk item ini.",
 	"MyOrders_NoActiveOrders_Item": "Tidak ada penawaran aktif untuk item ini.",
 	"MyOrders_NoBuyOrders_Item": "Tidak ada penawaran pembelian aktif untuk item ini.",

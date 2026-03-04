@@ -2503,52 +2503,51 @@
           ? null
           : (0, _.jsx)("div", {
               className: (0, _._)(_.ManageButton, _.Clone),
-              onClick: (_) =>
-                (function (_, _, _) {
-                  _.stopPropagation(),
-                    _._.LoadEditorModel(_.clanSteamID, _.GID)
-                      .then((_) => {
-                        const _ = _(_, !0, !0, !0),
-                          _ = _.GetLanguagesWithTokens();
-                        _.length > 1
-                          ? (_.sort((_, _) =>
-                              (0, _._)(
-                                "#Language_" + (0, _._)(_),
-                              ).localeCompare(
-                                (0, _._)("#Language_" + (0, _._)(_)),
-                              ),
-                            ),
-                            (0, _._)(
-                              (0, _.jsx)(_, {
-                                langs: _,
-                                locData: _,
-                                fnOnGotoPage: _,
-                              }),
-                              window,
-                            ))
-                          : _(_, _);
-                      })
-                      .catch((_) => {
-                        let _ = (0, _._)(_);
-                        (0, _._)(
-                          (0, _.jsx)(_._, {
-                            strTitle: (0, _._)("#EventEditor_CloneError"),
-                            bAlertDialog: !0,
-                            bDestructiveWarning: !0,
-                            strDescription: (0, _._)(
-                              "#EventEditor_CloneError_Desc",
-                              _.strErrorMsg,
-                            ),
-                          }),
-                          window,
-                          {
-                            strTitle: (0, _._)("#EventEditor_CloneError"),
-                          },
-                        );
-                      });
-                })(_, _, __webpack_require__),
+              onClick: (_) => {
+                _.stopPropagation(), _(_, __webpack_require__);
+              },
               children: (0, _._)("#Button_Clone"),
             });
+      }
+      function _(_, _) {
+        _._.LoadEditorModel(_.clanSteamID, _.GID)
+          .then((_) => {
+            const _ = _(_, !0, !0, !0),
+              _ = __webpack_require__.GetLanguagesWithTokens();
+            _.length > 1
+              ? (_.sort((_, _) =>
+                  (0, _._)("#Language_" + (0, _._)(_)).localeCompare(
+                    (0, _._)("#Language_" + (0, _._)(_)),
+                  ),
+                ),
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    langs: _,
+                    locData: _,
+                    fnOnGotoPage: _,
+                  }),
+                  window,
+                ))
+              : _(_, _);
+          })
+          .catch((_) => {
+            let _ = (0, _._)(_);
+            (0, _._)(
+              (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#EventEditor_CloneError"),
+                bAlertDialog: !0,
+                bDestructiveWarning: !0,
+                strDescription: (0, _._)(
+                  "#EventEditor_CloneError_Desc",
+                  _.strErrorMsg,
+                ),
+              }),
+              window,
+              {
+                strTitle: (0, _._)("#EventEditor_CloneError"),
+              },
+            );
+          });
       }
       function _(_, _, _) {
         const _ = _._.CreateClone();
@@ -2562,7 +2561,7 @@
             _(_, _, _),
             (_.GetEventModel().jsondata.bSaleEnabled = !1);
         }
-        _(null, "clone");
+        _("clone");
       }
       function _(_) {
         const {
@@ -2835,14 +2834,13 @@
         OnFallbackClick(_) {
           _.target instanceof HTMLButtonElement ||
             _.target instanceof HTMLAnchorElement ||
-            this.OnGotoPage(_, "edit");
+            (this.OnGotoPage("edit"), _.stopPropagation());
         }
-        OnGotoPage(_, _) {
+        OnGotoPage(_) {
           (this.bRedirectUsed = !1),
             this.setState({
               redirectTarget: _,
-            }),
-            _ && _.stopPropagation();
+            });
         }
         OnIgnoreFallbackClick(_) {
           _.stopPropagation();
@@ -2887,19 +2885,21 @@
             }
           let _ = (0, _._)(_._.LANGUAGE);
           _.BIsLanguageValidForRealms(_) || (_ = _.BInRealmGlobal() ? 0 : 29);
-          let _,
-            _ = [_.GetImageURLWithFallback("capsule", _)],
-            _ = _.GetNameWithFallback(_),
-            _ = _.BHasSubTitle(_),
+          let _ = [_.GetImageURLWithFallback("capsule", _)],
+            _ = _.GetNameWithFallback(_);
+          const _ = _.BHasSubTitle(_),
             _ = !0,
             _ = _.BHasSaleEnabled(),
             _ = _.visibility_state != _._.k_EEventStateUnpublished,
-            _ = _.visibility_state != _._.k_EEventStateVisible;
+            _ = _.visibility_state != _._.k_EEventStateVisible,
+            _ = _.visibility_state == _._.k_EEventStateUnlisted;
+          let _;
           const _ = _.BShowLibrarySpotlight(!0);
           let _;
           if (
             (_ &&
               _ &&
+              !_ &&
               (_ =
                 _.visibilityStartTime == _.startTime
                   ? (0, _.jsx)("div", {
@@ -3185,9 +3185,10 @@
             );
         }
         render() {
-          const { eventModel: _, fnOnGotoPage: _ } = this.props;
-          let _ = _.bOldAnnouncement,
+          const { eventModel: _, fnOnGotoPage: _ } = this.props,
+            _ = _.bOldAnnouncement,
             _ = _.visibility_state != _._.k_EEventStateVisible,
+            _ = _.visibility_state == _._.k_EEventStateUnlisted,
             _ = _.visibility_state != _._.k_EEventStateUnpublished;
           return (0, _.jsxs)("div", {
             className: _.TileButtonContainer,
@@ -3215,6 +3216,7 @@
                   }),
                 }),
               _ &&
+                !_ &&
                 (0, _.jsx)(_._, {
                   className: (0, _._)(_.ManageButton, _.View),
                   eventModel: _,
@@ -3227,7 +3229,7 @@
                     children: (0, _._)("#EventDisplay_Preview"),
                   }),
                 }),
-              !_ &&
+              (!_ || _) &&
                 (0, _.jsx)(_._, {
                   className: (0, _._)(_.ManageButton, _.View),
                   eventModel: _,
@@ -8817,7 +8819,7 @@
                       children: (0, _.jsxs)(_._, {
                         children: [
                           (0, _.jsx)("div", {
-                            children: (0, _._)("#Sale_GameExport_Desc"),
+                            children: (0, _._)("#Sale_GameExport_Desc2"),
                           }),
                           (0, _.jsx)(_._, {
                             onClick: () => {
@@ -8980,7 +8982,6 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
-          _ = _.GetEventModel(),
           _ = [
             {
               label: (0, _._)("#Sale_Debug_LivePreview_Device_Desktop"),
@@ -9019,14 +9020,14 @@
               newWindow: !0,
             },
           ],
+          _ = (0, _._)(
+            _.GetEventModel(),
+            _._.k_eStoreSalePage,
+            "forceAbsolute",
+          ),
           _ = (_) => {
             var _;
-            const _ = _.find((_) => _.data == _),
-              _ = _.clanSteamID.GetAccountID(),
-              _ =
-                36 == __webpack_require__.GetEventType()
-                  ? `${_._.STORE_BASE_URL}curator/${_}`
-                  : __webpack_require__.GetSaleURL(),
+            const _ = __webpack_require__.find((_) => _.data == _),
               _ = !(
                 null !== (_ = null == _ ? void 0 : _.newWindow) &&
                 void 0 !== _ &&
@@ -19564,6 +19565,42 @@
               });
         }
       };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)(function (_) {
+        const _ = _._.GetEditModel(),
+          _ = _.GetEventModel(),
+          [_, _] = _.useState();
+        if ((_.useEffect(() => _(_, _), [_]), _))
+          switch (_) {
+            case "clone":
+              return (0, _.jsx)(_._, {
+                push: !0,
+                _: _._.Edit(_.match.params.appid_or_vanity_str, ""),
+              });
+            case "edit":
+              return (0, _.jsx)(_._, {
+                eventModel: _,
+                route: _._.k_eCommunityEdit,
+              });
+            case "view":
+              return __webpack_require__.BIsVisibleEvent()
+                ? (0, _.jsx)(_._, {
+                    eventModel: _,
+                    route: _._.k_eView,
+                  })
+                : (0, _.jsx)(_._, {
+                    eventModel: _,
+                    route: _._.k_eCommunityPreview,
+                  });
+            default:
+              console.log("EventCloneLandingInternal - Unexpected Case - " + _);
+          }
+        return (0, _.jsx)(_._, {
+          eventModel: _.GetEventModel(),
+          route: _._.k_eCommunityAdminPage,
+          children: (0, _._)("#EventDisplay_ReturnToDashboard"),
+        });
+      });
       function _(_) {
         const [_, __webpack_require__] = _.useState(!0),
           _ = (0, _._)(_._.LANGUAGE);
@@ -19766,6 +19803,18 @@
                         }),
                         (0, _.jsx)(_._, {
                           exact: !0,
+                          path: _._.Clone(
+                            ":appid_or_vanity_str",
+                            ":gid(\\d+)?",
+                          ),
+                          render: (_) =>
+                            (0, _.createElement)(_, {
+                              ..._,
+                              key: _.match.params.gid,
+                            }),
+                        }),
+                        (0, _.jsx)(_._, {
+                          exact: !0,
                           path: _._.Publish(
                             ":appid_or_vanity_str",
                             ":gid(\\d+)?",
@@ -19875,7 +19924,6 @@
               })
         );
       }
-      _ = (0, _._)([_._], _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

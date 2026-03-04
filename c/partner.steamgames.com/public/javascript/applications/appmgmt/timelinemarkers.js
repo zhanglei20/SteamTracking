@@ -21051,9 +21051,6 @@
         BIsMod() {
           return this.GetType() === _._.k_EGameIDTypeGameMod;
         }
-        BIsP2PFile() {
-          return this.GetType() === _._.k_EGameIDTypeP2P;
-        }
         GetInternalAppID() {
           return this.BIsSteamApp() ? this.GetAppID() : this.GetModID();
         }
@@ -21062,11 +21059,11 @@
             case _._.k_EGameIDTypeApp:
               return this.GetAppID() !== _._;
             case _._.k_EGameIDTypeGameMod:
-              return this.GetAppID() !== _._ && 2147483648 & this.GetModID();
+              return (
+                this.GetAppID() !== _._ && !!(2147483648 & this.GetModID())
+              );
             case _._.k_EGameIDTypeShortcut:
               return !!(2147483648 & this.GetModID());
-            case _._.k_EGameIDTypeP2P:
-              return this.GetAppID() === _._ && 2147483648 & this.GetModID();
             default:
               return (0, _._)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
           }
@@ -21077,6 +21074,26 @@
         static InitFromShortcutID(_) {
           return new _(_._.k_EGameIDTypeShortcut, 0, _);
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
