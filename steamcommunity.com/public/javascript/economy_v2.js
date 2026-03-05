@@ -4826,7 +4826,7 @@ var Filter = {
 					var bHide = !this.MatchItem( elItem, rgTerms, rgTags );
 					if ( bHide )
 					{
-						$J(elItemHolder).hide();
+						$J(elItemHolder).css( 'display', 'none' );
 						elItemHolder.filtered = true;
 					}
 				}
@@ -4835,7 +4835,7 @@ var Filter = {
 					var bShow = bDisplayAll || this.MatchItem( elItem, rgTerms, rgTags );
 					if ( bShow )
 					{
-						$J(elItemHolder).show();
+						$J(elItemHolder).css( 'display', 'block' );
 						elItemHolder.filtered=false;
 					}
 				}
