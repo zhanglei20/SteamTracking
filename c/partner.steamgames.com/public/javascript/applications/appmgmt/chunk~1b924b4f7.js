@@ -744,26 +744,24 @@
               (0, _._)(
                 "#PricingDashboard_PriceTooLow",
                 (0, _._)(_, _).join(""),
-              ))
-              ? (0, _._)(
-                  "#PricingDashboard_PriceMuchHigherThanMethod",
-                  (0, _._)(_, _).join(""),
-                )
-              : (0, _._)(
-                  "#PricingDashboard_PriceMuchHigherThanGuidelines",
-                  (0, _._)(_, _).join(""),
-                ) ||
-                (_ &&
-                  (0, _._)(
-                    "#PricingDashboard_PriceMuchLowerThanGuidelines",
-                    (0, _._)(_, _).join(""),
-                  )) ||
-                (_ &&
-                  (0, _._)(
-                    "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                    _,
-                  )) ||
-                (_ && (0, _._)("#PricingDashboard_PriceCheap", _)),
+              )) ||
+            (_ && !1) ||
+            (_ &&
+              (0, _._)(
+                "#PricingDashboard_PriceMuchHigherThanGuidelines",
+                (0, _._)(_, _).join(""),
+              )) ||
+            (_ &&
+              (0, _._)(
+                "#PricingDashboard_PriceMuchLowerThanGuidelines",
+                (0, _._)(_, _).join(""),
+              )) ||
+            (_ &&
+              (0, _._)(
+                "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
+                _,
+              )) ||
+            (_ && (0, _._)("#PricingDashboard_PriceCheap", _)),
           _ = _ || _,
           _ = _ || _,
           _ = _ || _ || _,
