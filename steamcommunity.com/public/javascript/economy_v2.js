@@ -330,7 +330,14 @@ var kStandardTag_Unmarketable =
 			localized_category_name: 'Misc'
 		};
 	
-
+	var kStandardTag_OnMarket =
+		{
+			localized_tag_name: 'Listed on Community Market',
+			internal_name: "onmarket",
+			category: "misc",
+			localized_category_name: 'Misc'
+		};
+	
 
 function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
 {
@@ -722,7 +729,13 @@ CInventory.prototype.AddInventoryData = function( data )
 				if ( !description.tags )
 					description.tags = [];
 
-				
+									if ( description.sealed && description.sealed_type == 1 )
+					{
+						description.tags.push( kStandardTag_OnMarket );
+					}
+					else
+					{
+					
 				if ( description.sealed )
 					description.tags.push( kStandardTag_Sealed );
 
@@ -742,7 +755,9 @@ CInventory.prototype.AddInventoryData = function( data )
 						description.tags.push( kStandardTag_Unmarketable );
 				}
 
-				
+				 
+          }
+					
 				description.use_count = 0;
 
 				this.m_rgDescriptions[key] = description;
@@ -1207,7 +1222,18 @@ CInventory.prototype.BuildItemElement = function( asset, $Item )
 	$Item.append( $Link );
 	this.BindMouseEvents( $Link, $Item, asset );
 
-		if ( description.sealed )
+			if ( description.sealed && description.sealed_type == 1 )
+		{
+			$Item.addClass('listed_item');
+			var $ListedItemBadge = $J('<div />', {
+				'class': 'listed_item_badge',
+				'data-tooltip-text': 'Listed on Steam Community Market.'
+			});
+			$Item.append($ListedItemBadge);
+			BindTooltips($Item, {tooltipCSSClass: 'community_tooltip'});
+		}
+		else
+			if ( description.sealed )
 	{
 		$Item.addClass('provisional_item');
 
@@ -4028,7 +4054,9 @@ SellItemDialog = {
 			$('market_sell_dialog_game_icon').alt = rgAppData.name;
 
 							$JFromIDOrElement('market_sell_dialog_game_name').text( rgAppData.name );
-						
+										$J('#market_dialog_topwarning_inplace').toggle( rgAppData[ 'inplace_listing' ] ?? 0 );
+				$J('#market_dialog_topwarning').toggle( ! ( rgAppData[ 'inplace_listing' ] ?? 0 ) );
+			
 			$J('#market_sell_dialog_item_type').text( description.type );
 			$('market_sell_dialog_game_info').show();
 		}
