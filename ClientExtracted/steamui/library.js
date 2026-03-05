@@ -1,4 +1,4 @@
-var CLSTAMP = "10483172";
+var CLSTAMP = "10496599";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -9675,7 +9675,7 @@ var CLSTAMP = "10483172";
           i = n(28864);
         function s(e, t, n, i) {
           r.useEffect(() => {
-            const r = e?.current;
+            const r = e && "current" in e ? e.current : e;
             if (r && n)
               return (
                 r.addEventListener(t, n, i), () => r.removeEventListener(t, n)
@@ -11638,9 +11638,9 @@ var CLSTAMP = "10483172";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Feb 27 2026 : 12:43:29",
-                BUILD_TIME_UTC: "Feb 27 2026 : 20:43:29",
-                BUILD_RTIME_UTC: 1772225009,
+                BUILD_TIME_LOCAL: "Mar 4 2026 : 20:47:33",
+                BUILD_TIME_UTC: "Mar 5 2026 : 04:47:33",
+                BUILD_RTIME_UTC: 1772686053,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -25377,9 +25377,9 @@ var CLSTAMP = "10483172";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Feb 27 2026 : 12:43:29",
-                    BUILD_TIME_UTC: "Feb 27 2026 : 20:43:29",
-                    BUILD_RTIME_UTC: 1772225009,
+                    BUILD_TIME_LOCAL: "Mar 4 2026 : 20:47:33",
+                    BUILD_TIME_UTC: "Mar 5 2026 : 04:47:33",
+                    BUILD_RTIME_UTC: 1772686053,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25999,7 +25999,7 @@ var CLSTAMP = "10483172";
         3366: "2931fba64a7ebce8c19f",
         3473: "aa2e2c813e7588319881",
         3518: "6edea4ba1ede2685e311",
-        3569: "2886356e584e6eb03ec7",
+        3569: "65ddce71aa64384a0aa1",
         3583: "f831ab7edbd9ffa591ac",
         3594: "4dccfcf8e4e0d7e55ff2",
         3669: "ab782b5954aef80b03fb",
@@ -26138,7 +26138,7 @@ var CLSTAMP = "10483172";
         9672: "7dfd324f169be3b1a619",
         9711: "2ed989ee7251a5d19c6f",
         9779: "59ef76674166d4b9e52e",
-        9858: "e14714a6f723a089b474",
+        9858: "0a7a72fe4c1c2f4265ad",
         9869: "b2ece828c2dad9ed96d4",
         9882: "e2ec58e438cb767bcc9c",
         9887: "8809dace78db1cfa202a",

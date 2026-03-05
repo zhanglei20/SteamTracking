@@ -1924,6 +1924,8 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+04:45:33
+04:45:43
 08bX
 0?0L
 0A/8
@@ -2427,8 +2429,6 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-20:16:36
-20:16:43
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2626,6 +2626,7 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
+524288
 52F*
 55Ly
 55j_WW
@@ -2649,10 +2650,7 @@ $ffn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
-8000
-8192
 65536
-524288
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2700,6 +2698,8 @@ $ffn
 7~8A
 8.K%G
 8/A0
+8000
+8192
 82\n:XPH
 83L3
 83N6
@@ -6951,7 +6951,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar  2 2026
+Mar  5 2026
 Marathi
 March
 Mask Algorithm:
@@ -8919,7 +8919,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Mar  2 2026 20:16:43
+Startup - updater built Mar  5 2026 04:45:43
 State
 StaticFileWriterThread()
 Steam
@@ -13241,7 +13241,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenr
+ggen
 givenName
 glBegin
 glBindTexture
