@@ -11597,6 +11597,7 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _, mode: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [_.GetGID(), _.GetEventType()]);
@@ -11615,37 +11616,41 @@
               });
       }
       function _(_) {
-        const { editModel: _, mode: __webpack_require__ } = _,
+        var _;
+        const { editModel: __webpack_require__, mode: _ } = _,
           [_, _, _, _, _, _, _] = (0, _._)(() => {
             var _;
             return [
-              _.GetEventType(),
-              _.GetEventModel().jsondata.sale_presenters,
-              _.GetEventModel().jsondata,
-              _.GetEventModel().clanSteamID,
-              _.GetGID(),
-              (null === (_ = _.GetEventModel().jsondata.sale_presenters) ||
-              void 0 === _
+              __webpack_require__.GetEventType(),
+              __webpack_require__.GetEventModel().jsondata.sale_presenters,
+              __webpack_require__.GetEventModel().jsondata,
+              __webpack_require__.GetEventModel().clanSteamID,
+              __webpack_require__.GetGID(),
+              (null ===
+                (_ =
+                  __webpack_require__.GetEventModel().jsondata
+                    .sale_presenters) || void 0 === _
                 ? void 0
                 : _.length) > 0,
-              _.BVisible(),
+              __webpack_require__.BVisible(),
             ];
           }),
           { creatorHome: _ } = (0, _._)(_.GetAccountID()),
+          { data: _ } = (0, _._)((0, _._)(_.GetAccountID())),
           { bRequiresHostDisclaimer: _ } = (0, _._)(_.GetAccountID(), _),
           _ = _._.includes(_.GetAccountID()),
           _ = 36 == _;
         (0, _.useEffect)(() => {
-          _._.Get().EnsureLoaded(_),
-            !_._.Get().BHasExplicitSettings(_) &&
-              _.GetSaleSectionCount() > 10 &&
+          _._.Get().EnsureLoaded(__webpack_require__),
+            !_._.Get().BHasExplicitSettings(__webpack_require__) &&
+              __webpack_require__.GetSaleSectionCount() > 10 &&
               (0, _._)();
-        }, [_]);
+        }, [__webpack_require__]);
         const _ = _.useCallback((_) => {
           (0, _._)(_.strSectionId) && (0, _._)(_.strSectionId);
         }, []);
         if (
-          !_.BIsSourceEventSaleEnabled() &&
+          !__webpack_require__.BIsSourceEventSaleEnabled() &&
           _.clone_from_event_gid &&
           _.clone_from_sale_enabled &&
           (!_ || !_.BHasClanAccountFlagSet(32))
@@ -11658,29 +11663,29 @@
                 children: (0, _._)("#Sale_CloneNotReady"),
               }),
               (0, _.jsx)(_, {
-                mode: __webpack_require__,
+                mode: _,
               }),
             ],
           });
         let _ = "#Sale_title",
           _ = "doc/marketing/event_tools/sales/tools";
-        1 == __webpack_require__
+        1 == _
           ? ((_ = "#Sale_UpdateLandingPage_title"),
             (_ = "doc/marketing/event_tools/updatelandingpages/tools"))
-          : 2 == __webpack_require__ &&
+          : 2 == _ &&
             ((_ = "#Sale_CreatorHome_title"),
             (_ = "doc/marketing/event_tools/creatorhome/tools"));
-        const _ = (0, _._)(_.GetClanSteamID()),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
-          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+        const _ = (0, _._)(__webpack_require__.GetClanSteamID()),
+          { bVisible: _ } = (0, _._)(__webpack_require__.GetEventModel()),
+          { bVisible: _ } = (0, _._)(__webpack_require__.GetEventModel()),
+          { bVisible: _ } = (0, _._)(__webpack_require__.GetEventModel()),
           _ = _ || _ || (_ && _);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.SaleContainer, "SaleContainer"),
           children: [
             !_ &&
               (0, _.jsx)(_, {
-                mode: __webpack_require__,
+                mode: _,
               }),
             (0, _.jsxs)("div", {
               className: _.EventEditorTextTitleCtn,
@@ -11700,7 +11705,7 @@
             }),
             _ &&
               (0, _.jsx)(_, {
-                editModel: _,
+                editModel: __webpack_require__,
               }),
             (0, _.jsxs)(_, {
               children: [
@@ -11711,8 +11716,9 @@
                     rgSalePresenters: _,
                     bIsEventVisible: _,
                     fnCleanSaleEventPresenters: () => {
-                      (_.GetEventModel().jsondata.sale_presenters = void 0),
-                        _.SetDirty(_._.jsondata_sales);
+                      (__webpack_require__.GetEventModel().jsondata.sale_presenters =
+                        void 0),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
                     },
                     bPublishTab: !1,
                   }),
@@ -11723,11 +11729,11 @@
                       children: (0, _.jsx)(_, {}),
                     }),
                     (0, _.jsx)(_, {
-                      editModel: _,
+                      editModel: __webpack_require__,
                       onSelected: _,
                     }),
                     (0, _.jsx)(_, {
-                      editModel: _,
+                      editModel: __webpack_require__,
                     }),
                     _ &&
                       (0, _.jsx)(_, {
@@ -11753,19 +11759,21 @@
                       strTitle: (0, _._)(
                         "#Sale_TaggedItemsSection",
                         _
-                          ? null == _
-                            ? void 0
-                            : _.GetAppIDList().length
-                          : _.GetEventModel().GetTaggedItems().length,
+                          ? null !== (_ = null == _ ? void 0 : _.length) &&
+                            void 0 !== _
+                            ? _
+                            : 0
+                          : __webpack_require__.GetEventModel().GetTaggedItems()
+                              .length,
                       ),
                       children: [
                         !_ &&
                           (0, _.jsx)(_._, {
-                            editModel: _,
+                            editModel: __webpack_require__,
                           }),
                         _ &&
                           (0, _.jsx)(_._, {
-                            editModel: _,
+                            editModel: __webpack_require__,
                           }),
                       ],
                     }),
@@ -11778,11 +11786,13 @@
                           : "#Sale_Artwork_Sections",
                       ),
                       children: (0, _.jsx)(_, {
-                        editModel: _,
+                        editModel: __webpack_require__,
                       }),
                     }),
-                    (_.BHasTag("contenthub") ||
-                      _.GetEventModel().BUsesContentHubForItemSource()) &&
+                    (__webpack_require__.BHasTag("contenthub") ||
+                      __webpack_require__
+                        .GetEventModel()
+                        .BUsesContentHubForItemSource()) &&
                       (0, _.jsx)(_, {
                         strSectionId: "SalePageEdit_ContentHub",
                         hasMinimize: !0,
@@ -11790,18 +11800,18 @@
                         strToolTip:
                           "Manage settings for content hubs, including overrides for specific hubs and hub-based sales.",
                         children: (0, _.jsx)(_, {
-                          editModel: _,
+                          editModel: __webpack_require__,
                         }),
                       }),
                     (0, _.jsx)(_, {
-                      editModel: _,
+                      editModel: __webpack_require__,
                     }),
                     (0, _.jsx)(_, {
                       strSectionId: "SalePageEdit_SocialModule",
                       hasMinimize: !0,
                       strTitle: (0, _._)("#Sale_DefaultSocialModule"),
                       children: (0, _.jsx)(_, {
-                        editModel: _,
+                        editModel: __webpack_require__,
                       }),
                     }),
                     (0, _.jsx)("div", {
@@ -11811,10 +11821,11 @@
                       (0, _.jsx)(_, {
                         strSectionId: "SalePageEdit_BrowseMore",
                         strTitle: `(VO) ${(0, _._)("#Sale_BrowseMore")}`,
-                        valveOnlyClanSteamID: _.GetClanSteamID(),
+                        valveOnlyClanSteamID:
+                          __webpack_require__.GetClanSteamID(),
                         requireAdmin: !0,
                         children: (0, _.jsx)(_, {
-                          editModel: _,
+                          editModel: __webpack_require__,
                         }),
                       }),
                     !_ &&
@@ -11822,19 +11833,21 @@
                         strSectionId: "SalePageEdit_SubMenuEditor",
                         hasMinimize: !0,
                         strTitle: "(VO) Sub Menu Editor",
-                        valveOnlyClanSteamID: _.GetClanSteamID(),
+                        valveOnlyClanSteamID:
+                          __webpack_require__.GetClanSteamID(),
                         dataToCopy: _._.k_EventData_SubMenu,
                         children: (0, _.jsx)(_, {
-                          editModel: _,
+                          editModel: __webpack_require__,
                         }),
                       }),
                     (0, _.jsx)(_, {
                       strSectionId: "SalePageEdit_CustomCSSCode",
                       hasMinimize: !0,
                       strTitle: "(VO) Custom CSS",
-                      valveOnlyClanSteamID: _.GetClanSteamID(),
+                      valveOnlyClanSteamID:
+                        __webpack_require__.GetClanSteamID(),
                       children: (0, _.jsx)(_, {
-                        editModel: _,
+                        editModel: __webpack_require__,
                       }),
                     }),
                   ],

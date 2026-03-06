@@ -186,6 +186,7 @@ ${COMMUNITY_BASE_URL}chat
 ${COMMUNITY_BASE_URL}chat/
 ${COMMUNITY_BASE_URL}chat/invite/${}
 ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
+${COMMUNITY_BASE_URL}creatorhome/${}/ajaxadmingetapps
 ${COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}economy/image/${}/512x512

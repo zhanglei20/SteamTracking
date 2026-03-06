@@ -1786,7 +1786,6 @@
               let _ = {
                 get_appids: !0,
                 _: _._.LANGUAGE,
-                origin: self.origin,
               };
               const _ = new URLSearchParams(_).toString(),
                 _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,

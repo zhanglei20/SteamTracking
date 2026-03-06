@@ -4220,6 +4220,33 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return {
+          queryKey: ["GetCreatorHomeAdminAppsQuery", _],
+          queryFn: async () => {
+            let _ = {
+                get_appids: !0,
+                _: _._.LANGUAGE,
+                origin: self.origin,
+              },
+              _ = _._.COMMUNITY_BASE_URL + `creatorhome/${_}/ajaxadmingetapps`,
+              _ = await _().get(_, {
+                params: _,
+                cancelToken: _ && _.token,
+              });
+            return _.data.success ? _.data.app_ids : [];
+          },
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -8172,6 +8199,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = -1,
         _ = (0, _._)((_) => {
@@ -8506,19 +8534,18 @@
               " - " +
               _.capsules.length,
             _ = (0, _._)(_ || "#Sale_Section_ReferencedProducts_Tooltip"),
-            { creatorHome: _ } = (0, _._)(
-              __webpack_require__.GetClanSteamID().GetAccountID(),
+            { data: _ } = (0, _._)(
+              (0, _._)(__webpack_require__.GetClanSteamID().GetAccountID()),
             ),
             _ = 36 == __webpack_require__.GetEventType(),
             _ = _.useMemo(
               () =>
-                _ &&
-                (null == _
-                  ? void 0
-                  : _.GetAppIDList().map((_) => ({
+                _ && _
+                  ? _.map((_) => ({
                       type: "game",
                       _: _,
-                    }))),
+                    }))
+                  : [],
               [_, _],
             ),
             _ =
@@ -28444,6 +28471,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (_ = (_ = (_ = _.replace('"', " ")).replace("<", " ")).replace(
@@ -28863,10 +28891,9 @@
         const { editModel: _ } = _,
           [__webpack_require__, _] = _.useState(""),
           [_] = (0, _._)(() => [_.GetEventModel().clanSteamID]),
-          { creatorHome: _ } = (0, _._)(_.GetAccountID()),
-          _ = null == _ ? void 0 : _.GetAppIDList();
+          { data: _ } = (0, _._)((0, _._)(_.GetAccountID()));
         let _ = [];
-        3 == (0, _._)(_, _._) &&
+        3 == (0, _._)(null != _ ? _ : [], _._) &&
           _ &&
           (_ = _._(_.map((_) => _._.Get().GetApp(_)))
             .filter((_) => {
@@ -30568,11 +30595,10 @@
             const _ = await _._.fetchQuery(
               (0, _._)(this.props.editModel.GetClanAccountID()),
             );
-            if (!_) return [];
-            await _._.Get().QueueMultipleAppRequests(_.GetAppIDList(), {
+            await _._.Get().QueueMultipleAppRequests(_, {
               include_basic_info: !0,
             });
-            const _ = _.GetAppIDList().map((_) => {
+            const _ = _.map((_) => {
               const _ = _._.Get().GetApp(_);
               return {
                 capsule: {

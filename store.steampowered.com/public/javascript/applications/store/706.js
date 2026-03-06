@@ -1558,7 +1558,7 @@
           queryKey: _(e),
           queryFn: async () => {
             const t = await (async function (e) {
-              let t = { get_appids: !0, l: m.TS.LANGUAGE, origin: self.origin };
+              let t = { get_appids: !0, l: m.TS.LANGUAGE };
               const n = new URLSearchParams(t).toString(),
                 r = `${m.TS.STORE_BASE_URL}curator/${e}/ajaxgetcreatorhomeinfo/?${n}`,
                 i = await fetch(r, { method: "GET" });
