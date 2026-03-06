@@ -48044,7 +48044,7 @@
               "ContentModeration.GetContentReportSubject#1",
               (0, g.I8)(je, t),
               xe,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { ePrivilege: 1 },
             );
           }),
           (e.GetContentReportSubjectGroup = function (e, t) {
@@ -48052,7 +48052,7 @@
               "ContentModeration.GetContentReportSubjectGroup#1",
               (0, g.I8)(Ie, t),
               Te,
-              { bConstMethod: !0, ePrivilege: 5 },
+              { ePrivilege: 5 },
             );
           }),
           (e.WriteToAuditLog = function (e, t) {

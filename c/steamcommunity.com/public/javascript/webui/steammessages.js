@@ -44713,7 +44713,6 @@ var CLSTAMP = "steamdb";
               (0, _._)(_, _),
               _,
               {
-                bConstMethod: !0,
                 ePrivilege: 1,
               },
             );
@@ -44724,7 +44723,6 @@ var CLSTAMP = "steamdb";
               (0, _._)(_, _),
               _,
               {
-                bConstMethod: !0,
                 ePrivilege: 5,
               },
             );
