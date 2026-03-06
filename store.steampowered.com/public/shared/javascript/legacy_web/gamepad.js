@@ -3,7 +3,7 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    402: (e) => {
+    21: (e) => {
       e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3FIjY",
         FocusRing: "focusring_FocusRing_1wPpl",
@@ -283,13 +283,13 @@
       "use strict";
       n(745);
     },
-    287: (e, t, n) => {
+    598: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => Nt });
       var o,
         i = n(669),
         s = n.n(i),
-        r = n(848);
+        r = n(591);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -352,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(77),
-        p = n(222),
-        _ = n(569),
-        f = n(384);
+        g = n(225),
+        p = n(402),
+        _ = n(573),
+        f = n(844);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -753,7 +753,7 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(796);
+        D = n(160);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1015,7 +1015,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var P = n(76);
+      var P = n(24);
       class G {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -4181,7 +4181,7 @@
         "OnMessage",
         null,
       );
-      var ut = n(402),
+      var ut = n(21),
         ht = n.n(ut);
       function dt(e) {
         let t = 0;
@@ -4756,7 +4756,7 @@
         },
       };
     },
-    222: (e, t, n) => {
+    402: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4769,12 +4769,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    384: (e, t, n) => {
+    844: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(77),
-        s = n(222);
+        i = n(225),
+        s = n(402);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

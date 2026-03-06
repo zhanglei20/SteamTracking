@@ -1067,7 +1067,7 @@
     },
     77724: (e, t, i) => {
       "use strict";
-      i.d(t, { A9: () => k, NN: () => R, bl: () => P });
+      i.d(t, { A9: () => R, NN: () => P, bl: () => G });
       var n = i(7850),
         a = i(43527),
         r = i(90871),
@@ -1093,11 +1093,10 @@
         x = i(41756),
         E = i(95034),
         j = i(65202),
-        T = i(24484),
-        M = i(8092),
-        I = i(78327),
-        A = i(7860);
-      const D = (e) => {
+        T = i(8092),
+        M = i(78327),
+        I = i(7860);
+      const A = (e) => {
         const { clanInfo: t, onCategoryChosen: i } = e;
         if (!t) return null;
         const a = v.KN.Get().GetPartnerEventPermissions(t.clanSteamID);
@@ -1115,7 +1114,7 @@
           ],
         });
       };
-      function G(e) {
+      function D(e) {
         const { onCategoryChosen: t } = e;
         return (0, n.jsxs)(n.Fragment, {
           children: [
@@ -1183,7 +1182,7 @@
           ],
         });
       }
-      const P = (0, m.PA)((e) => {
+      const G = (0, m.PA)((e) => {
         const { editModel: t } = e,
           [i, s] = (0, h.TB)(t.GetClanSteamID().GetAccountID()),
           [o, d] = _.useState(void 0);
@@ -1243,18 +1242,14 @@
           return (
             _.useEffect(() => {
               if (n) {
-                if (
-                  (0, T.Tc)("creator_home_v2_allowed", "application_config") &&
-                  e.is_creator_home &&
-                  !e.is_ogg
-                ) {
+                if (e.is_creator_home && !e.is_ogg) {
                   const e = (0, j.q)(r.B1.creatorhome);
                   return void t(e);
                 }
-                A.L.fetchQuery((0, M.A2)(e.clanAccountID)).then((e) => {
+                I.L.fetchQuery((0, T.A2)(e.clanAccountID)).then((e) => {
                   const t = e
                     ? e.GetCreatorHomeURL(null) + "admin"
-                    : I.TS.COMMUNITY_BASE_URL;
+                    : M.TS.COMMUNITY_BASE_URL;
                   window.location.replace(t);
                 });
               } else o(!1);
@@ -1331,7 +1326,7 @@
                                   )
                                   ? (0, n.jsxs)(n.Fragment, {
                                       children: [
-                                        (0, n.jsx)(D, {
+                                        (0, n.jsx)(A, {
                                           clanInfo: s,
                                           onCategoryChosen: m,
                                         }),
@@ -1342,7 +1337,7 @@
                                             (0, n.jsx)(l.MH, {
                                               fnOnCategoryChosen: m,
                                             }),
-                                            (0, n.jsx)(G, {
+                                            (0, n.jsx)(D, {
                                               onCategoryChosen: m,
                                             }),
                                           ],
@@ -1354,7 +1349,7 @@
                                         (0, n.jsx)(l.MH, {
                                           fnOnCategoryChosen: m,
                                         }),
-                                        (0, n.jsx)(G, { onCategoryChosen: m }),
+                                        (0, n.jsx)(D, { onCategoryChosen: m }),
                                       ],
                                     })
                                 : (0, n.jsx)(f.t, {
@@ -1371,7 +1366,7 @@
                 }),
               });
       });
-      function R(e) {
+      function P(e) {
         const t =
             e.GetEventModel().BIsOGGEvent() &&
             e.GetEventModel().BHasSaleEnabled(),
@@ -1394,8 +1389,8 @@
           { bCanChange: a, strReasonText: r }
         );
       }
-      const k = (0, o.L)((e) =>
-        (0, n.jsx)(P, { match: e.match, editModel: s.mh.GetEditModel() }),
+      const R = (0, o.L)((e) =>
+        (0, n.jsx)(G, { match: e.match, editModel: s.mh.GetEditModel() }),
       );
     },
     65202: (e, t, i) => {
@@ -25482,6 +25477,7 @@
         if (
           ((0, s.CU)(t) || t.sale_tag_filter) &&
           !t.enable_faceted_browsing &&
+          !t.disable_visibility_tracking &&
           c
         ) {
           c.MarkAllAppsNotVisible(t.unique_id), G.sort(c.SortKey.bind(c));

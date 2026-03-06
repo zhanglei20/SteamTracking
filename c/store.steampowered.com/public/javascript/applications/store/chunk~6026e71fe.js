@@ -15153,6 +15153,8 @@
         if (
           ((0, _._)(_) || _.sale_tag_filter) &&
           !_.enable_faceted_browsing &&
+          !_.disable_visibility_tracking &&
+          "trailercarousel" != _.section_type &&
           _
         ) {
           _.MarkAllAppsNotVisible(_.unique_id), _.sort(_.SortKey.bind(_));

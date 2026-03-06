@@ -1917,6 +1917,8 @@
     "Sale_Section_PreferDemoStorePage_tooltip": "When enabled, when a game has a demo with a standalone store page, clicking the link will take you to that page instead of the base game's.",
     "Sale_Section_UseHasParentLayout": "Show parent app",
     "Sale_Section_UseHasParentLayout_tooltip": "Applicable only when all of the apps in this section are either DLCs or Sound Tracks. This renders the base game underneath the capsule of the DLC or Soundtrack.",
+    "Sale_Section_DisableVisibiltyTracking": "Disable de-duplication tracking",
+    "Sale_Section_DisableVisibiltyTracking_ttip": "Normally, apps that are shown higher up on the page will be deemphasized lower down so popular apps aren't duplicated many times. Check this box to turn this tracking off for this section.",
     "Sale_Section_EnableSearch": "Enable Search",
     "Sale_Section_EnableSearch_ttip": "When checked, a search control will be added to the tabs allowing users to search for items by name",
     "Sale_Section_HidePrices": "Hide Prices",

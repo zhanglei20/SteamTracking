@@ -1135,7 +1135,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const { clanInfo: _, onCategoryChosen: __webpack_require__ } = _;
@@ -1304,11 +1303,7 @@
           return (
             _.useEffect(() => {
               if (_) {
-                if (
-                  (0, _._)("creator_home_v2_allowed", "application_config") &&
-                  _.is_creator_home &&
-                  !_.is_ogg
-                ) {
+                if (_.is_creator_home && !_.is_ogg) {
                   const _ = (0, _._)(_._.creatorhome);
                   return void _(_);
                 }
@@ -27233,6 +27228,7 @@
         if (
           ((0, _._)(_) || _.sale_tag_filter) &&
           !_.enable_faceted_browsing &&
+          !_.disable_visibility_tracking &&
           _
         ) {
           _.MarkAllAppsNotVisible(_.unique_id), _.sort(_.SortKey.bind(_));

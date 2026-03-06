@@ -14035,6 +14035,8 @@
         if (
           ((0, i.CU)(t) || t.sale_tag_filter) &&
           !t.enable_faceted_browsing &&
+          !t.disable_visibility_tracking &&
+          "trailercarousel" != t.section_type &&
           c
         ) {
           c.MarkAllAppsNotVisible(t.unique_id), G.sort(c.SortKey.bind(c));

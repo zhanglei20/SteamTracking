@@ -13338,6 +13338,14 @@
                     },
                     "ParentAppLayoutCheckbox",
                   ),
+                (0, _.jsx)(
+                  _,
+                  {
+                    editModel: _,
+                    section: _,
+                  },
+                  "DisableVisibilityTrackingCheckbox",
+                ),
                 _ &&
                   (0, _.jsx)(
                     _._,
@@ -13663,6 +13671,16 @@
           section: _.section,
           textToken: "#Sale_Section_UseHasParentLayout",
           ttipToken: "#Sale_Section_UseHasParentLayout_tooltip",
+        });
+      }
+      function _(_) {
+        const { section: _ } = _;
+        return (0, _.jsx)(_._, {
+          varName: "disable_visibility_tracking",
+          editModel: _.editModel,
+          section: _.section,
+          textToken: "#Sale_Section_DisableVisibiltyTracking",
+          ttipToken: "#Sale_Section_DisableVisibiltyTracking_ttip",
         });
       }
       function _(_) {
