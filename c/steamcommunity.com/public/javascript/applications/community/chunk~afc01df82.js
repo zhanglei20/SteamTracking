@@ -171,7 +171,9 @@
         AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
         BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
         OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
+        ButtonRow: "_2W9rAanKV4V6A7Exx4sWGF",
         BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        BackgroundColorResetBtn: "baRhk4ouyxcNfo_um5C76",
         UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
         HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
       };

@@ -1394,6 +1394,7 @@
     "Sale_SectionTitleFontSize": "Section Title Font Size",
     "Sale_SectionTitleFontSize_ttip": "The size of the font face (in px) to use for the title section text",
     "Sale_BackgroundColor": "Edit Overall Background Color",
+    "Sale_BackgroundColor_Reset": "Reset",
     "Sale_BackgroundVideo_Title": "Background Video",
     "Sale_BackgroundVideo_WebM": "Background Video (WebM format)",
     "Sale_BackgroundVideo_MP4": "Background Video (MP4 format)",

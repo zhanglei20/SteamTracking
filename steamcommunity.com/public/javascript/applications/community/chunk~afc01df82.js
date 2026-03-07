@@ -173,7 +173,9 @@
         AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
         BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
         OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
+        ButtonRow: "_2W9rAanKV4V6A7Exx4sWGF",
         BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        BackgroundColorResetBtn: "baRhk4ouyxcNfo_um5C76",
         UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
         HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
       };
@@ -290,8 +292,8 @@
         I = n.n(x),
         j = n(9154),
         w = n(738),
-        f = n(22797),
-        C = n(68797),
+        C = n(22797),
+        f = n(68797),
         E = n(52038),
         A = n(61859),
         S = n(73745),
@@ -334,7 +336,7 @@
                 );
               x.token.reason || h(a);
             } catch (e) {
-              let a = (0, C.H)(e);
+              let a = (0, f.H)(e);
               console.error("LocalizedImageDialog : " + a.strErrorMsg, a);
             }
           }, [x, i.clanAccountID, i.file_type, i.image_hash]),
@@ -343,7 +345,7 @@
               await k.R.DetermineAvailableLocalizationForGroup(x),
                 x.token.reason || _(!1);
             } catch (e) {
-              let a = (0, C.H)(e);
+              let a = (0, f.H)(e);
               console.error("LocalizedImageDialog : " + a.strErrorMsg, a);
             }
           }, [x]);
@@ -387,7 +389,7 @@
                   }),
                 }),
                 !U &&
-                  (0, t.jsx)(f.t, {
+                  (0, t.jsx)(C.t, {
                     position: "center",
                     string: (0, A.we)("#Loading"),
                   }),
@@ -568,7 +570,7 @@
               try {
                 await $(), q.token.reason || V(!1);
               } catch (e) {
-                let n = (0, C.H)(e);
+                let n = (0, f.H)(e);
                 console.error(
                   "ClanImagePicker Failed: " +
                     n.strErrorMsg +
@@ -617,7 +619,7 @@
             ],
           });
         if (F)
-          return (0, t.jsx)(f.t, {
+          return (0, t.jsx)(C.t, {
             position: "center",
             string: (0, A.we)("#Loading"),
           });
@@ -883,8 +885,8 @@
         I = n(3919),
         j = n(95695),
         w = n.n(j),
-        f = n(72860),
-        C = n(76684),
+        C = n(72860),
+        f = n(76684),
         E = n(12155),
         A = n(60014),
         S = n(62490),
@@ -914,8 +916,8 @@
             o = u.b.InitFromClanID(a),
             m = (0, c.useRef)(null),
             [p, v] = (0, c.useState)(null),
-            [j, f] = (0, c.useState)(!0),
-            [C, E] = (0, c.useState)(!1);
+            [j, C] = (0, c.useState)(!0),
+            [f, E] = (0, c.useState)(!1);
           if (
             ((0, c.useEffect)(
               () => (
@@ -944,7 +946,7 @@
                     const a = e
                       .slice(0, 3)
                       .map((e) => l.GetClanEventFromAnnouncementGID(e));
-                    if ((v(a), f(!1), s)) {
+                    if ((v(a), C(!1), s)) {
                       let e = _.KN.Get().GetTracker(),
                         t = !1;
                       if (l.BHasClanAnnouncementGID(n)) {
@@ -1028,7 +1030,7 @@
                     (0, t.jsx)(V, { event: e }, e.AnnouncementGID),
                   ),
                 }),
-                Boolean(C) &&
+                Boolean(f) &&
                   (0, t.jsx)(x.N, {
                     appid: p[0].appid,
                     clanSteamID: o,
@@ -1052,7 +1054,7 @@
             bHidePrices: g,
           } = e,
           u = (0, M.Zj)(a.appid),
-          [h, _, x, j, w, f] = (0, o.q3)(() => {
+          [h, _, x, j, w, C] = (0, o.q3)(() => {
             const e = i || (0, l.sf)(D.TS.LANGUAGE),
               t = Boolean(void 0 !== n)
                 ? n
@@ -1078,9 +1080,9 @@
           return (0, t.jsx)("div", { className: T().OtherEvents_EventCtn });
         const k = (0, v.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
           L = a ? a.GetStartTimeAndDateUnixSeconds() : 0;
-        let N = f;
+        let N = C;
         return (
-          f && (f.length > z || _.length > z) && (N = void 0),
+          C && (C.length > z || _.length > z) && (N = void 0),
           (0, t.jsxs)(t.Fragment, {
             children: [
               (0, t.jsxs)(I.tj, {
@@ -1146,13 +1148,13 @@
                                   T().UpcomingCtn,
                                   "UpcomingCtn",
                                 ),
-                                children: (0, t.jsx)(C.K4, {
+                                children: (0, t.jsx)(f.K4, {
                                   bSingleLine: !0,
                                   dateAndTime:
                                     a.GetStartTimeAndDateUnixSeconds(),
                                 }),
                               })
-                            : (0, t.jsx)(C.K4, {
+                            : (0, t.jsx)(f.K4, {
                                 bSingleLine: !0,
                                 bOnlyDate: !0,
                                 dateAndTime: a.GetStartTimeAndDateUnixSeconds(),
@@ -1183,7 +1185,7 @@
           appID: a,
           children: (0, t.jsxs)(d.Z, {
             className: (0, b.A)(T().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, f.S)(s, o, c, !1),
+            ...(0, C.S)(s, o, c, !1),
             children: [
               (0, t.jsx)(y.Q, {
                 id: l,
@@ -1278,7 +1280,7 @@
                           className: T().HorizontalDescription,
                           children: g,
                         }),
-                        (0, t.jsx)(C.K4, {
+                        (0, t.jsx)(f.K4, {
                           bSingleLine: !0,
                           dateAndTime: a.GetStartTimeAndDateUnixSeconds(),
                         }),
@@ -1331,9 +1333,9 @@
             fnSetImageURL: j,
             rgRealmList: w,
           } = e,
-          [f] = (0, l.q3)(() => [d.O.Get().GetCurEditLanguage()]),
-          C = (0, i.zO)(a, n, x),
-          E = e.uploaderOverride || C,
+          [C] = (0, l.q3)(() => [d.O.Get().GetCurEditLanguage()]),
+          f = (0, i.zO)(a, n, x),
+          E = e.uploaderOverride || f,
           [A, S] = s.useState(!1),
           b = s.useCallback(
             async (e, a) => {
@@ -1343,9 +1345,9 @@
                 try {
                   const { language: a } = (0, o.jj)(
                       null !== (n = e.file_name) && void 0 !== n ? n : "",
-                      f,
+                      C,
                     ),
-                    t = (0, o.PD)(a, f, w);
+                    t = (0, o.PD)(a, C, w);
                   await E.AddExistingClanImage(e, t);
                 } catch (e) {
                   let a = (0, p.H)(e);
@@ -1363,7 +1365,7 @@
                 S(!1);
               }
             },
-            [A, E, f, w],
+            [A, E, C, w],
           ),
           k = s.useMemo(
             () =>
@@ -1402,7 +1404,7 @@
             for (const t of e) {
               const e = t.uploadResult;
               if (null == e ? void 0 : e.origimagehash) {
-                const a = (0, o.PD)(e.language, f, w);
+                const a = (0, o.PD)(e.language, C, w);
                 r.R.AddLocalizeImageUploaded(e.origimagehash, a);
               } else {
                 const l = c.pU.GetClanImageByImageHash(
@@ -1414,7 +1416,7 @@
                   ),
                   s = t.image.GetCurrentImageOption();
                 if (l && s) {
-                  const e = (0, o.PD)(t.image.language, f, w);
+                  const e = (0, o.PD)(t.image.language, C, w);
                   j(s.artworkType, l, e);
                 }
               }
@@ -1445,8 +1447,8 @@
         I = n(61859),
         j = n(53732),
         w = n.n(j),
-        f = n(71647),
-        C = n.n(f),
+        C = n(71647),
+        f = n.n(C),
         E = n(36509),
         A = n(27666);
       const S = l.memo(function (e) {
@@ -1550,8 +1552,8 @@
             showImageActions: g,
             fnOnOpenLocalizedImageGroup: _,
           } = e,
-          [j, f] = l.useState(!1),
-          C = () => o(a, s._o.k_eInsertFullImage),
+          [j, C] = l.useState(!1),
+          f = () => o(a, s._o.k_eInsertFullImage),
           E = (e) => {
             console.log("ClanImageWrapper on delete error: " + e),
               (0, p.pg)(
@@ -1564,15 +1566,15 @@
               );
           },
           S = () => {
-            f(!0);
+            C(!0);
             let e = i.b.InitFromClanID(a.clanAccountID);
             r.pU
               .DeleteClanImage(e, a)
               .then((e) => {
-                1 != e.success && E((0, v.H)(e).strErrorMsg), f(!1);
+                1 != e.success && E((0, v.H)(e).strErrorMsg), C(!1);
               })
               .catch((e) => {
-                E((0, v.H)(e).strErrorMsg), f(!1);
+                E((0, v.H)(e).strErrorMsg), C(!1);
               }),
               b();
           },
@@ -1608,7 +1610,7 @@
                       e(i.b.InitFromClanID(a.clanAccountID), !1);
                     });
                 },
-                onDoubleClick: C,
+                onDoubleClick: f,
                 onClick: () => {
                   d && d(a);
                 },
@@ -1620,7 +1622,7 @@
               T &&
                 (0, t.jsx)("span", {
                   className: w().Full,
-                  onClick: C,
+                  onClick: f,
                   children: (0, I.we)("#ImagePicker_FullSize"),
                 }),
               j &&
@@ -1768,7 +1770,7 @@
       function y(e) {
         const { clanSteamID: a, OnClanImageSelected: n } = e;
         return (0, t.jsxs)("div", {
-          className: C().ImageUploadBar,
+          className: f().ImageUploadBar,
           children: [
             (0, t.jsxs)("label", {
               htmlFor: "clanimagedialog",
@@ -1777,7 +1779,7 @@
                   children: [(0, I.we)("#ImagePicker_PreviousImages"), " "],
                 }),
                 (0, t.jsx)("span", {
-                  className: C().SelectImageButton,
+                  className: f().SelectImageButton,
                   children: (0, I.we)("#ImagePicker_PreviousImages2"),
                 }),
               ],
@@ -1901,8 +1903,8 @@
         I = n.n(x),
         j = n(12155),
         w = n(22797),
-        f = n(68797),
-        C = n(52038),
+        C = n(68797),
+        f = n(52038),
         E = n(56011),
         A = n(66331),
         S = n(61859),
@@ -1950,7 +1952,7 @@
                         window,
                       ));
                 } catch (e) {
-                  let a = (0, f.H)(e);
+                  let a = (0, C.H)(e);
                   console.error(
                     "ImageUploaderPanel.OnDropFiles: " + a.strErrorMsg,
                     a,
@@ -2119,13 +2121,13 @@
                 ),
               )
             : null,
-          f = d.IsValidAssetType(e.forceResolution, e.forceFileType),
+          C = d.IsValidAssetType(e.forceResolution, e.forceFileType),
           E = "pending" == d.status;
         let b = v[d.status];
         "pending" == d.status &&
-          (f.needsCrop
+          (C.needsCrop
             ? (b = (0, S.we)("#ImageUpload_NeedsCrop"))
-            : f.error && (b = (0, S.we)("#ImageUpload_Invalid")));
+            : C.error && (b = (0, S.we)("#ImageUpload_Invalid")));
         let L;
         const N = d.GetCurrentImageOption();
         N &&
@@ -2167,7 +2169,7 @@
                 disabled: !E,
               }),
             E &&
-              (null === (s = f.warnings) || void 0 === s
+              (null === (s = C.warnings) || void 0 === s
                 ? void 0
                 : s.map((e, a) =>
                     (0, t.jsx)(
@@ -2177,7 +2179,7 @@
                     ),
                   )),
             E &&
-              (null === (i = f.messages) || void 0 === i
+              (null === (i = C.messages) || void 0 === i
                 ? void 0
                 : i.map((e, a) =>
                     (0, t.jsx)(
@@ -2187,7 +2189,7 @@
                     ),
                   )),
             (0, t.jsxs)("div", {
-              className: (0, C.A)({
+              className: (0, f.A)({
                 [h().FlexColumnContainer]: !0,
                 [k().UploadPreviewError]: "failed" == d.status,
               }),
@@ -2205,13 +2207,13 @@
               children: d.message,
             }),
             E &&
-              f.error &&
+              C.error &&
               (0, t.jsx)("div", {
                 className: k().UploadPreviewError,
-                children: f.error,
+                children: C.error,
               }),
             E &&
-              f.needsCrop &&
+              C.needsCrop &&
               (0, t.jsx)(m.jn, {
                 onClick: () =>
                   ((a) => {
@@ -2308,8 +2310,8 @@
         I = n.n(x),
         j = n(9154),
         w = n(738),
-        f = n(12155),
-        C = n(32754),
+        C = n(12155),
+        f = n(32754),
         E = n(52038),
         A = n(56011),
         S = n(61859),
@@ -3180,15 +3182,15 @@
                   o &&
                     (0, l.jsx)(u.$n, {
                       onClick: o,
-                      children: (0, l.jsx)(C.he, {
+                      children: (0, l.jsx)(f.he, {
                         toolTipContent: (0, S.we)(
                           e.bIsMinimized
                             ? "#Sale_Section_Maximize_Tooltip"
                             : "#Sale_Section_Minimize_Tooltip",
                         ),
                         children: e.bIsMinimized
-                          ? (0, l.jsx)(f.hz4, {})
-                          : (0, l.jsx)(f.Xjb, {}),
+                          ? (0, l.jsx)(C.hz4, {})
+                          : (0, l.jsx)(C.Xjb, {}),
                       }),
                     }),
                 ],
@@ -3298,7 +3300,7 @@
             },
             [I],
           ),
-          f = c.useCallback(
+          C = c.useCallback(
             (e, n, t) => {
               (0, i.h5)(() => {
                 var l;
@@ -3326,7 +3328,7 @@
               children: [
                 (0, l.jsx)(oe, {
                   list: I,
-                  fnOnArtworkLanguageChange: f,
+                  fnOnArtworkLanguageChange: C,
                   realms: n,
                   fnLangHasData: s,
                 }),
@@ -3343,7 +3345,7 @@
                         e != _ && x(e);
                       },
                       langOverride: _,
-                      fnOnArtworkLangChange: v ? null : f,
+                      fnOnArtworkLangChange: v ? null : C,
                       artworkType: a,
                       fnOnRemoveImage: v ? null : (e) => o(a, null, e),
                       realms: n,
@@ -3452,8 +3454,8 @@
         I = n(32754),
         j = n(61859),
         w = n(84811),
-        f = n(68255),
-        C = n(26408);
+        C = n(68255),
+        f = n(26408);
       function E(e) {
         const {
           clanSteamID: a,
@@ -3502,11 +3504,11 @@
               ),
             }),
             !!o &&
-              (0, t.jsxs)(f.$n, {
+              (0, t.jsxs)(C.$n, {
                 onClick: m,
                 children: [
                   (0, j.we)("#Sale_RemoveAll"),
-                  (0, t.jsx)(C.o, {
+                  (0, t.jsx)(f.o, {
                     tooltip: (0, j.we)("#Sale_RemoveAll_Tooltip"),
                   }),
                 ],

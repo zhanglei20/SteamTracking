@@ -1576,6 +1576,11 @@ p a:hover {
 ._3SVRvFP-sXikNXmksKkDQ7 ._2XnObldRTEs5T4Sswyv5Fo {
   flex-grow: 1;
 }
+._3SVRvFP-sXikNXmksKkDQ7 ._2W9rAanKV4V6A7Exx4sWGF {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
 ._3SVRvFP-sXikNXmksKkDQ7 button.DialogButton._2YD-avez2pqO4MJHAO5_v0 {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -1591,6 +1596,25 @@ p a:hover {
 }
 ._3SVRvFP-sXikNXmksKkDQ7
   button.DialogButton._2YD-avez2pqO4MJHAO5_v0
+  svg.SVGIcon_CutArrow:first-child {
+  transform: rotateZ(180deg);
+}
+._3SVRvFP-sXikNXmksKkDQ7 button.DialogButton.baRhk4ouyxcNfo_um5C76 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+._3SVRvFP-sXikNXmksKkDQ7
+  button.DialogButton.baRhk4ouyxcNfo_um5C76
+  svg.SVGIcon_CutArrow {
+  height: 30px;
+}
+._3SVRvFP-sXikNXmksKkDQ7
+  button.DialogButton.baRhk4ouyxcNfo_um5C76
   svg.SVGIcon_CutArrow:first-child {
   transform: rotateZ(180deg);
 }

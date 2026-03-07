@@ -4814,15 +4814,13 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { model: _, fnOnDirty: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [
             _.sale_background_color,
             _.sale_background_repeat,
-          ]),
-          [_, _] = _.useState(null == _);
+          ]);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
           children: [
@@ -4832,44 +4830,40 @@
                 (0, _.jsx)(_._, {
                   children: (0, _._)("#Sale_Section_Background_Color"),
                 }),
-                (0, _.jsx)(_._, {
-                  className: _().BackgroundColorBtn,
-                  onClick: (_) => {
-                    (0, _._)(
-                      (0, _.jsx)(_._, {
-                        color: _,
-                        onChange: (_) => {
-                          (_.sale_background_color = _), __webpack_require__();
-                        },
-                      }),
-                      _,
-                      {
-                        bDisablePopTop: !0,
+                (0, _.jsxs)("div", {
+                  className: _().ButtonRow,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _().BackgroundColorBtn,
+                      onClick: (_) => {
+                        (0, _._)(
+                          (0, _.jsx)(_._, {
+                            color: _,
+                            onChange: (_) => {
+                              (_.sale_background_color = _),
+                                __webpack_require__();
+                            },
+                          }),
+                          _,
+                          {
+                            bDisablePopTop: !0,
+                          },
+                        );
                       },
-                    );
-                  },
-                  style: {
-                    backgroundColor: _,
-                  },
-                  children: (0, _._)("#Sale_BackgroundColor"),
-                }),
-                Boolean(_._.is_support) &&
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _().ValveOnlyBackground,
-                      _().SaleEditorSpacing,
-                    ),
-                    children: (0, _.jsx)(_._, {
-                      label: "No Background color?",
-                      checked: _,
-                      onChange: (_) => {
-                        _(_),
-                          _ &&
-                            ((_.sale_background_color = void 0),
-                            __webpack_require__());
+                      style: {
+                        backgroundColor: _,
                       },
+                      children: (0, _._)("#Sale_BackgroundColor"),
                     }),
-                  }),
+                    (0, _.jsx)(_._, {
+                      className: _().BackgroundColorResetBtn,
+                      onClick: (_) => {
+                        (_.sale_background_color = ""), __webpack_require__();
+                      },
+                      children: (0, _._)("#Sale_BackgroundColor_Reset"),
+                    }),
+                  ],
+                }),
               ],
             }),
             (0, _.jsx)("div", {
@@ -10839,7 +10833,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _.jsx)("div", {
           className: _().HighlightBox,
