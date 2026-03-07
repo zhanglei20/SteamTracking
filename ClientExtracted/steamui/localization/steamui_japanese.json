@@ -1979,13 +1979,11 @@
     "OOBE_KeepScreenReaderOn_Header": "スクリーンリーダーをオンのままにしますか？",
     "OOBE_KeepScreenReaderOn_Yes": "はい、オンのままにします",
     "OOBE_KeepScreenReaderOn_No": "いいえ、オフにします",
-    "OOBE_PairSteamController_Explainer": "Steam ControllerをSteam Machineに直接接続するには、下の「ペアリング」を選択します",
     "OOBE_PairSteamController_Failure1": "Steam Controllerのペアリングに失敗しました（%1$s）",
     "OOBE_PairSteamController_Failure2": "Steam ControllerとPuckがUSBで接続されていることを確認してください",
     "OOBE_PairSteamController_Pair": "ペアリング",
     "OOBE_PairSteamController_Retry": "再試行",
     "OOBE_PairSteamController_Skip": "スキップ",
-    "OOBE_PairSteamController_Success1": "Steam ControllerがSteam Machineに直接ペアリングされました！",
     "OOBE_PairSteamController_Success2": "ワイヤレス接続にSteam Controller Puckを使用する必要はなくなりましたが、充電には引き続き使用できます。",
     "OOBE_Updates_TimeRemaining_Unknown": "更新中：残り時間を計算しています...",
     "OOBE_Updates_TimeRemaining": "更新中：%1$s",
@@ -9270,5 +9268,11 @@
     "Settings_Developer_DesktopSession_plasma": "KDE Plasma",
     "Settings_Developer_DesktopSession_plasmax11": "KDE Plasma（X11）",
     "ControllerBinding_Chord_AnyOrAll": "いずれかまたはすべてのコードボタンが必要です",
-    "ControllerBinding_Chord_AnyOrAll_Description": "コマンドが発動するタイミングを選択します：「いずれか」または「すべて」の追加のコードボタンが押されたとき。"
+    "ControllerBinding_Chord_AnyOrAll_Description": "コマンドが発動するタイミングを選択します：「いずれか」または「すべて」の追加のコードボタンが押されたとき。",
+    "OOBE_PairSteamController_Explainer_KnownHardware": "Steam Controllerを%1$sに直接接続するには、下の「ペアリング」を選択します。",
+    "OOBE_PairSteamController_Explainer_UnknownHardware": "Steam Controllerをこのデバイスに直接接続するには、下の「ペアリング」を選択します。",
+    "OOBE_PairSteamController_Success1_KnownHardware": "Steam Controllerが%1$sに直接ペアリングされました！",
+    "OOBE_PairSteamController_Success1_UnknownHardware": "Steam Controllerがこのデバイスに直接ペアリングされました！",
+    "PairControllerScreen_Explainer_Plural": "コントローラをペアリングするには、強調表示されたボタンを押してBluetoothペアリングモードにしてください",
+    "AudioChannelsScreen_PlayAudio": "Play test audio"
 }

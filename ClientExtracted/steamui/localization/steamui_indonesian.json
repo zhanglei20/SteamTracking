@@ -1979,13 +1979,11 @@
     "OOBE_KeepScreenReaderOn_Header": "Apakah kamu ingin pembaca layar tetap aktif?",
     "OOBE_KeepScreenReaderOn_Yes": "Ya, biarkan menyala.",
     "OOBE_KeepScreenReaderOn_No": "Tidak, matikan.",
-    "OOBE_PairSteamController_Explainer": "Pilih \"Hubungkan\" di bawah ini untuk menghubungkan Steam Controller secara langsung ke Steam Machine",
     "OOBE_PairSteamController_Failure1": "Gagal menghubungkan Steam Controller (%1$s)",
     "OOBE_PairSteamController_Failure2": "Pastikan Steam Controller dan Puck tersambung melalui USB",
     "OOBE_PairSteamController_Pair": "Hubungkan",
     "OOBE_PairSteamController_Retry": "Coba Lagi",
     "OOBE_PairSteamController_Skip": "Lewati",
-    "OOBE_PairSteamController_Success1": "Steam Controller sekarang terhubung langsung ke Steam Machine-mu!",
     "OOBE_PairSteamController_Success2": "Kamu tidak perlu lagi menggunakan Puck Steam Controller untuk koneksi nirkabel, tapi kamu tetap dapat menggunakannya untuk mengisi daya.",
     "OOBE_Updates_TimeRemaining_Unknown": "Memperbarui: Menghitung sisa waktu...",
     "OOBE_Updates_TimeRemaining": "Memperbarui: %1$s",
@@ -9270,5 +9268,11 @@
     "Settings_Developer_DesktopSession_plasma": "KDE Plasma",
     "Settings_Developer_DesktopSession_plasmax11": "KDE Plasma (X11)",
     "ControllerBinding_Chord_AnyOrAll": "Memerlukan Satu/Semua Tombol Pintasan",
-    "ControllerBinding_Chord_AnyOrAll_Description": "Pilih kapan perintah akan dijalankan: ketika Satu atau Semua tombol pintasan ekstra ditekan."
+    "ControllerBinding_Chord_AnyOrAll_Description": "Pilih kapan perintah akan dijalankan: ketika Satu atau Semua tombol pintasan ekstra ditekan.",
+    "OOBE_PairSteamController_Explainer_KnownHardware": "Pilih \"Hubungkan\" di bawah ini untuk menghubungkan Steam Controller langsung ke %1$s.",
+    "OOBE_PairSteamController_Explainer_UnknownHardware": "Pilih \"Hubungkan\" di bawah ini untuk menghubungkan Steam Controller langsung ke perangkat ini.",
+    "OOBE_PairSteamController_Success1_KnownHardware": "Steam Controller sekarang terhubung langsung ke %1$s milikmu!",
+    "OOBE_PairSteamController_Success1_UnknownHardware": "Steam Controller sekarang terhubung langsung ke perangkat ini!",
+    "PairControllerScreen_Explainer_Plural": "Untuk menghubungkan kontrolermu, tekan tombol yang disorot untuk masuk ke mode penghubungan Bluetooth",
+    "AudioChannelsScreen_PlayAudio": "Putar audio uji coba"
 }

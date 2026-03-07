@@ -1979,13 +1979,11 @@
     "OOBE_KeepScreenReaderOn_Header": "您是否希望保持屏幕朗读器开启？",
     "OOBE_KeepScreenReaderOn_Yes": "是的，保持开启",
     "OOBE_KeepScreenReaderOn_No": "不，将其关闭",
-    "OOBE_PairSteamController_Explainer": "选择下方的“配对”以将您的 Steam Controller 直接连接至您的 Steam Machine",
     "OOBE_PairSteamController_Failure1": "Steam Controller 配对失败（%1$s）",
     "OOBE_PairSteamController_Failure2": "请确保 Steam Controller 与 Puck 已通过 USB 连接",
     "OOBE_PairSteamController_Pair": "配对",
     "OOBE_PairSteamController_Retry": "重试",
     "OOBE_PairSteamController_Skip": "跳过",
-    "OOBE_PairSteamController_Success1": "您的 Steam Controller 现已与您的 Steam Machine 直接配对！",
     "OOBE_PairSteamController_Success2": "您不再需要使用 Steam Controller Puck 进行无线连接，但仍然可以用它来充电。",
     "OOBE_Updates_TimeRemaining_Unknown": "正在更新：正在计算剩余时间…",
     "OOBE_Updates_TimeRemaining": "正在更新：%1$s",
@@ -9270,5 +9268,11 @@
     "Settings_Developer_DesktopSession_plasma": "KDE Plasma",
     "Settings_Developer_DesktopSession_plasmax11": "KDE Plasma（X11）",
     "ControllerBinding_Chord_AnyOrAll": "需要任意/所有组合键",
-    "ControllerBinding_Chord_AnyOrAll_Description": "选择何时会触发命令：在按下任意或所有额外组合键时。"
+    "ControllerBinding_Chord_AnyOrAll_Description": "选择何时会触发命令：在按下任意或所有额外组合键时。",
+    "OOBE_PairSteamController_Explainer_KnownHardware": "选择下方的“配对”以将您的 Steam Controller 直接连接至您的 %1$s。",
+    "OOBE_PairSteamController_Explainer_UnknownHardware": "选择下方的“配对”以将您的 Steam Controller 直接连接至此设备。",
+    "OOBE_PairSteamController_Success1_KnownHardware": "您的 Steam Controller 现已与您的 %1$s 直接配对！",
+    "OOBE_PairSteamController_Success1_UnknownHardware": "您的 Steam Controller 现已与此设备直接配对！",
+    "PairControllerScreen_Explainer_Plural": "要配对您的控制器，请按下突出显示的按键，进入蓝牙配对模式",
+    "AudioChannelsScreen_PlayAudio": "播放测试音频"
 }

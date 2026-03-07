@@ -1979,13 +1979,11 @@
     "OOBE_KeepScreenReaderOn_Header": "คุณต้องการที่จะเปิดโปรแกรมอ่านหน้าจอไว้หรือไม่?",
     "OOBE_KeepScreenReaderOn_Yes": "ใช่ เปิดโปรแกรมอ่านหน้าจอไว้",
     "OOBE_KeepScreenReaderOn_No": "ไม่ ปิดโปรแกรมอ่านหน้าจอ",
-    "OOBE_PairSteamController_Explainer": "เลือก \"เชื่อมโยง\"ด้านล่างเพื่อเชื่อมโยง Steam Controller ของคุณกับ Steam Machine ของคุณโดยตรง",
     "OOBE_PairSteamController_Failure1": "จับคู่ Steam Controller ไม่สำเร็จ (%1$s)",
     "OOBE_PairSteamController_Failure2": "โปรดตรวจสอบให้แน่ใจว่าได้เชื่อมต่อ Steam Controller และ Puck ผ่านสาย USB แล้ว",
     "OOBE_PairSteamController_Pair": "เชื่อมโยง",
     "OOBE_PairSteamController_Retry": "ลองใหม่",
     "OOBE_PairSteamController_Skip": "ข้าม",
-    "OOBE_PairSteamController_Success1": "ตอนนี้ Steam Controller ของคุณเชื่อมโยงโดยตรงกับ Steam Machine ของคุณแล้ว!",
     "OOBE_PairSteamController_Success2": "คุณไม่จำเป็นต้องใช้ Steam Controller Puck ของคุณสำหรับการเชื่อมต่อแบบไร้สายอีกต่อไป แต่คุณยังสามารถใช้เพื่อชาร์จได้",
     "OOBE_Updates_TimeRemaining_Unknown": "กำลังอัปเดต: กำลังคำนวณเวลาคงเหลือ...",
     "OOBE_Updates_TimeRemaining": "กำลังอัปเดต: %1$s",
@@ -9270,5 +9268,11 @@
     "Settings_Developer_DesktopSession_plasma": "KDE Plasma",
     "Settings_Developer_DesktopSession_plasmax11": "KDE Plasma (X11)",
     "ControllerBinding_Chord_AnyOrAll": "จำเป็นต้องใช้ปุ่มคอร์ดปุ่มใดปุ่มหนึ่ง/ทุกปุ่ม",
-    "ControllerBinding_Chord_AnyOrAll_Description": "เลือกว่าจะให้คำสั่งทำงานเมื่อใด: เมื่อกดปุ่มคอร์ดพิเศษปุ่มใดปุ่มหนึ่งหรือทุกปุ่ม"
+    "ControllerBinding_Chord_AnyOrAll_Description": "เลือกว่าจะให้คำสั่งทำงานเมื่อใด: เมื่อกดปุ่มคอร์ดพิเศษปุ่มใดปุ่มหนึ่งหรือทุกปุ่ม",
+    "OOBE_PairSteamController_Explainer_KnownHardware": "เลือก \"เชื่อมโยง\" ด้านล่างเพื่อเชื่อมต่อ Steam Controller ของคุณกับ %1$s ของคุณโดยตรง",
+    "OOBE_PairSteamController_Explainer_UnknownHardware": "เลือก \"เชื่อมโยง\" ด้านล่างเพื่อเชื่อมต่อ Steam Controller ของคุณกับอุปกรณ์นี้โดยตรง",
+    "OOBE_PairSteamController_Success1_KnownHardware": "ขณะนี้ Steam Controller ของคุณเชื่อมโยงกับ %1$s ของคุณโดยตรงแล้ว!",
+    "OOBE_PairSteamController_Success1_UnknownHardware": "ขณะนี้ Steam Controller ของคุณเชื่อมโยงกับอุปกรณ์นี้โดยตรงแล้ว!",
+    "PairControllerScreen_Explainer_Plural": "หากต้องการจับคู่คอนโทรลเลอร์ของคุณ ให้กดปุ่มที่ไฮไลต์อยู่เพื่อเข้าสู่โหมดเชื่อมโยงบลูทูธ",
+    "AudioChannelsScreen_PlayAudio": "Play test audio"
 }

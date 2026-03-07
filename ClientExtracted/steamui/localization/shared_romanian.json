@@ -1975,7 +1975,7 @@
     "Sale_BrowserSortOption_TagRecommender_ttip": "Jocurile incluse în această pagină promoțională, ordonate în funcție de corespondența dintre etichetele din magazin și cele recomandate pentru utilizator.",
     "Sale_BrowserSortOption_PopularPurchasedDiscounted": "Populare și reduse",
     "Sale_BrowserSortOption_PopularPurchasedDiscounted_ttip": "Cele mai populare jocuri aflate acum la reducere, în funcție de numărul de achiziții.",
-    "Sale_BrowserSortOption_Discounted": "Valoarea reducerii",
+    "Sale_BrowserSortOption_Discounted": "Procentul reducerii",
     "Sale_BrowserSortOption_Discounted_ttip": "Articolele cu cea mai mare reducere în acest moment",
     "Sale_BrowserSortOption_Price": "Preț",
     "Sale_BrowserSortOption_Price_ttip": "Cele mai ieftine jocuri în acest moment",
