@@ -889,10 +889,11 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   height: auto;
   display: block;
   transition: transform .3s ease-in-out;
+  padding-bottom: 12px;
 }
 ._30RNOxqk1P9UdZBI76xoIw {
   position: relative;
-  margin: 8px;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
