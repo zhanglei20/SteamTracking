@@ -62,9 +62,9 @@ Steam = {
 
 		if ( typeof navigator != 'undefined' && navigator.userAgent )
 		{
-			var matches = navigator.userAgent.match( /Valve Steam [^\/]*\/([0-9]*)/ );
-			if ( matches && matches.length == 2 )
-				return matches[1];
+			var matches = navigator.userAgent.match( /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/ );
+			if ( matches && matches.groups && matches.groups.version )
+				return matches.groups.version;
 		}
 
 		return 0;
